@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 072b00b00719220875cbf64c016f85320d0262f45f10e5f599a4abb7e673a5a3 |
 | 파일 분류 | code |
 | 원본 크기/행 | 7,048 bytes / 293 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -66,7 +66,7 @@
 
 ### FieldDeclaration `_sync` · L6–6
 
-[Drilling.Common/Threading/CtrlThread.cs:6–6](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L6-L6)
+[Drilling.Common/Threading/CtrlThread.cs:6–6](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L6-L6)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -94,7 +94,7 @@
 
 ### FieldDeclaration `_pauseEvent` · L7–7
 
-[Drilling.Common/Threading/CtrlThread.cs:7–7](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L7-L7)
+[Drilling.Common/Threading/CtrlThread.cs:7–7](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L7-L7)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -122,7 +122,7 @@
 
 ### FieldDeclaration `_stopEvent` · L8–8
 
-[Drilling.Common/Threading/CtrlThread.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L8-L8)
+[Drilling.Common/Threading/CtrlThread.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -150,7 +150,7 @@
 
 ### FieldDeclaration `_thread` · L9–9
 
-[Drilling.Common/Threading/CtrlThread.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L9-L9)
+[Drilling.Common/Threading/CtrlThread.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -165,7 +165,7 @@
 
 ### FieldDeclaration `_stopRequested` · L10–10
 
-[Drilling.Common/Threading/CtrlThread.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L10-L10)
+[Drilling.Common/Threading/CtrlThread.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -180,7 +180,7 @@
 
 ### FieldDeclaration `_delayMs` · L11–11
 
-[Drilling.Common/Threading/CtrlThread.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L11-L11)
+[Drilling.Common/Threading/CtrlThread.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -201,7 +201,7 @@
 
 ### FieldDeclaration `_threadName` · L12–12
 
-[Drilling.Common/Threading/CtrlThread.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L12-L12)
+[Drilling.Common/Threading/CtrlThread.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -222,7 +222,7 @@
 
 ### FieldDeclaration `_state` · L13–13
 
-[Drilling.Common/Threading/CtrlThread.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L13-L13)
+[Drilling.Common/Threading/CtrlThread.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -243,7 +243,7 @@
 
 ### FieldDeclaration `_lastError` · L14–14
 
-[Drilling.Common/Threading/CtrlThread.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L14-L14)
+[Drilling.Common/Threading/CtrlThread.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -258,7 +258,7 @@
 
 ### FieldDeclaration `_disposed` · L15–15
 
-[Drilling.Common/Threading/CtrlThread.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L15-L15)
+[Drilling.Common/Threading/CtrlThread.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -273,7 +273,7 @@
 
 ### PropertyDeclaration `IsRunning` · L16–25
 
-[Drilling.Common/Threading/CtrlThread.cs:16–25](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L16-L25)
+[Drilling.Common/Threading/CtrlThread.cs:16–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L16-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -288,7 +288,7 @@
 
 ### GetAccessorDeclaration `get_IsRunning` · L18–24
 
-[Drilling.Common/Threading/CtrlThread.cs:18–24](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L18-L24)
+[Drilling.Common/Threading/CtrlThread.cs:18–24](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L18-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -319,7 +319,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsPaused` · L27–36
 
-[Drilling.Common/Threading/CtrlThread.cs:27–36](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L27-L36)
+[Drilling.Common/Threading/CtrlThread.cs:27–36](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L27-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -334,7 +334,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsPaused` · L29–35
 
-[Drilling.Common/Threading/CtrlThread.cs:29–35](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L29-L35)
+[Drilling.Common/Threading/CtrlThread.cs:29–35](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L29-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -365,7 +365,7 @@ flowchart TD
 
 ### PropertyDeclaration `ThreadState` · L38–47
 
-[Drilling.Common/Threading/CtrlThread.cs:38–47](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L38-L47)
+[Drilling.Common/Threading/CtrlThread.cs:38–47](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L38-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -380,7 +380,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ThreadState` · L40–46
 
-[Drilling.Common/Threading/CtrlThread.cs:40–46](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L40-L46)
+[Drilling.Common/Threading/CtrlThread.cs:40–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L40-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -411,7 +411,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastThreadError` · L49–58
 
-[Drilling.Common/Threading/CtrlThread.cs:49–58](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L49-L58)
+[Drilling.Common/Threading/CtrlThread.cs:49–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L49-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -426,7 +426,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LastThreadError` · L51–57
 
-[Drilling.Common/Threading/CtrlThread.cs:51–57](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L51-L57)
+[Drilling.Common/Threading/CtrlThread.cs:51–57](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L51-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -457,7 +457,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L60–96
 
-[Drilling.Common/Threading/CtrlThread.cs:60–96](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L60-L96)
+[Drilling.Common/Threading/CtrlThread.cs:60–96](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L60-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -477,13 +477,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Melsec/CMelsec.cs#L153-L153) | Start | False |
-| [Drilling.Common/Station/CStationProcess.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L319-L319) | base.Start | False |
-| [Drilling.Common/Station/CStationProcess.cs:1216–1216](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1216-L1216) | base.Start | False |
-| [Drilling.Common/Station/CStationProcess.cs:1277–1277](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1277-L1277) | base.Start | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:3991–3991](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L3991-L3991) | base.Start | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7829–7829](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7829-L7829) | base.Start | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L34-L34) | base.Start | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Melsec/CMelsec.cs#L153-L153) | Start | False |
+| [Drilling.Common/Station/CStationProcess.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L320-L320) | base.Start | False |
+| [Drilling.Common/Station/CStationProcess.cs:1217–1217](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1217-L1217) | base.Start | False |
+| [Drilling.Common/Station/CStationProcess.cs:1278–1278](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1278-L1278) | base.Start | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:4003–4003](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L4003-L4003) | base.Start | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7804–7804](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7804-L7804) | base.Start | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L34-L34) | base.Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -551,7 +551,7 @@ flowchart TD
 
 ### MethodDeclaration `Pause` · L98–111
 
-[Drilling.Common/Threading/CtrlThread.cs:98–111](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L98-L111)
+[Drilling.Common/Threading/CtrlThread.cs:98–111](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L98-L111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -595,7 +595,7 @@ flowchart TD
 
 ### MethodDeclaration `Resume` · L113–126
 
-[Drilling.Common/Threading/CtrlThread.cs:113–126](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L113-L126)
+[Drilling.Common/Threading/CtrlThread.cs:113–126](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L113-L126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -639,7 +639,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L128–188
 
-[Drilling.Common/Threading/CtrlThread.cs:128–188](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L128-L188)
+[Drilling.Common/Threading/CtrlThread.cs:128–188](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L128-L188)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -652,10 +652,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Melsec/CMelsec.cs#L168-L168) | Stop | False |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Melsec/CMelsec.cs#L171-L171) | Stop | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1081–1081](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L1081-L1081) | _motorStatusPollingService.Stop | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3844–3844](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3844-L3844) | _stageMotionPollingService.Stop | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Melsec/CMelsec.cs#L168-L168) | Stop | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Melsec/CMelsec.cs#L171-L171) | Stop | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1081–1081](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L1081-L1081) | _motorStatusPollingService.Stop | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3832–3832](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3832-L3832) | _stageMotionPollingService.Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -744,7 +744,7 @@ flowchart TD
 
 ### MethodDeclaration `Dispose` · L190–208
 
-[Drilling.Common/Threading/CtrlThread.cs:190–208](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L190-L208)
+[Drilling.Common/Threading/CtrlThread.cs:190–208](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L190-L208)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -757,7 +757,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Melsec/CMelsec.cs#L484-L484) | base.Dispose | False |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Melsec/CMelsec.cs#L484-L484) | base.Dispose | False |
 
 호출하는 대상과 해석 범위:
 
@@ -798,7 +798,7 @@ flowchart TD
 
 ### MethodDeclaration `Run` · L210–212
 
-[Drilling.Common/Threading/CtrlThread.cs:210–212](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L210-L212)
+[Drilling.Common/Threading/CtrlThread.cs:210–212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L210-L212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -811,13 +811,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Threading/CtrlThread.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L246-L246) | Run | True |
+| [Drilling.Common/Threading/CtrlThread.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L246-L246) | Run | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `IsStopRequested` · L214–217
 
-[Drilling.Common/Threading/CtrlThread.cs:214–217](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L214-L217)
+[Drilling.Common/Threading/CtrlThread.cs:214–217](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L214-L217)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -838,7 +838,7 @@ flowchart TD
 
 ### MethodDeclaration `OnThreadError` · L219–222
 
-[Drilling.Common/Threading/CtrlThread.cs:219–222](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L219-L222)
+[Drilling.Common/Threading/CtrlThread.cs:219–222](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L219-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -857,8 +857,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Melsec/CMelsec.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Melsec/CMelsec.cs#L235-L235) | base.OnThreadError | True |
-| [Drilling.Common/Threading/CtrlThread.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L257-L257) | OnThreadError | True |
+| [Drilling.Common/Interface/Melsec/CMelsec.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Melsec/CMelsec.cs#L235-L235) | base.OnThreadError | True |
+| [Drilling.Common/Threading/CtrlThread.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L257-L257) | OnThreadError | True |
 
 호출하는 대상과 해석 범위:
 
@@ -876,7 +876,7 @@ flowchart TD
 
 ### MethodDeclaration `ThrowIfDisposed` · L224–230
 
-[Drilling.Common/Threading/CtrlThread.cs:224–230](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L224-L230)
+[Drilling.Common/Threading/CtrlThread.cs:224–230](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L224-L230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -889,10 +889,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Threading/CtrlThread.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L64-L64) | ThrowIfDisposed | False |
-| [Drilling.Common/Threading/CtrlThread.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L102-L102) | ThrowIfDisposed | False |
-| [Drilling.Common/Threading/CtrlThread.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L117-L117) | ThrowIfDisposed | False |
-| [Drilling.Common/Threading/CtrlThread.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L134-L134) | ThrowIfDisposed | False |
+| [Drilling.Common/Threading/CtrlThread.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L64-L64) | ThrowIfDisposed | False |
+| [Drilling.Common/Threading/CtrlThread.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L102-L102) | ThrowIfDisposed | False |
+| [Drilling.Common/Threading/CtrlThread.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L117-L117) | ThrowIfDisposed | False |
+| [Drilling.Common/Threading/CtrlThread.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L134-L134) | ThrowIfDisposed | False |
 
 호출하는 대상과 해석 범위:
 
@@ -923,7 +923,7 @@ flowchart TD
 
 ### MethodDeclaration `ThreadProcess` · L232–283
 
-[Drilling.Common/Threading/CtrlThread.cs:232–283](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L232-L283)
+[Drilling.Common/Threading/CtrlThread.cs:232–283](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L232-L283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1006,7 +1006,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Stopped` · L288–288
 
-[Drilling.Common/Threading/CtrlThread.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L288-L288)
+[Drilling.Common/Threading/CtrlThread.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L288-L288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1021,7 +1021,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Running` · L289–289
 
-[Drilling.Common/Threading/CtrlThread.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L289-L289)
+[Drilling.Common/Threading/CtrlThread.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L289-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1036,7 +1036,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Paused` · L290–290
 
-[Drilling.Common/Threading/CtrlThread.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L290-L290)
+[Drilling.Common/Threading/CtrlThread.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L290-L290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1051,7 +1051,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Stopping` · L291–291
 
-[Drilling.Common/Threading/CtrlThread.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L291-L291)
+[Drilling.Common/Threading/CtrlThread.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L291-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1066,7 +1066,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Error` · L292–292
 
-[Drilling.Common/Threading/CtrlThread.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Threading/CtrlThread.cs#L292-L292)
+[Drilling.Common/Threading/CtrlThread.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Threading/CtrlThread.cs#L292-L292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

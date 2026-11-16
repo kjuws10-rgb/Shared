@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 19e3404eee387b96a805f3e677fecbc794ccfe4c26046cf320cb94ca713ceb24 |
 | 파일 분류 | code |
 | 원본 크기/행 | 722,363 bytes / 18,239 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Data/Script/BufferedRun/20261104_134718_DUMMY_20261104_134717756/PROCESS_H06.ascript) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Data/Script/BufferedRun/20261104_134718_DUMMY_20261104_134717756/PROCESS_H06.ascript) |
 
 ## 파일의 역할과 읽는 순서
 

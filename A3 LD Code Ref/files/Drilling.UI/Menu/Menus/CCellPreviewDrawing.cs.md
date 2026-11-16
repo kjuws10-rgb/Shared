@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | a77d6f93acf13f045473ef78010db693f9cc768f17769a00b87a0e8041642b27 |
 | 파일 분류 | code |
 | 원본 크기/행 | 8,453 bytes / 187 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -53,7 +53,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `DrawAlignKeys` · L9–59
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:9–59](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L9-L59)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:9–59](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L9-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -153,7 +153,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `DrawKey` · L36–40
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:36–40](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L36-L40)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:36–40](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L36-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -176,10 +176,10 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L31-L31) | DrawKey | False |
-| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L32-L32) | DrawKey | False |
-| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L33-L33) | DrawKey | False |
-| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L34-L34) | DrawKey | False |
+| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L31-L31) | DrawKey | False |
+| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L32-L32) | DrawKey | False |
+| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L33-L33) | DrawKey | False |
+| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L34-L34) | DrawKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -200,7 +200,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `DrawCross` · L42–46
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:42–46](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L42-L46)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:42–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L42-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -220,7 +220,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L38-L38) | DrawCross | False |
+| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L38-L38) | DrawCross | False |
 
 호출하는 대상과 해석 범위:
 
@@ -248,7 +248,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `DrawLabel` · L48–58
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:48–58](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L48-L58)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:48–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L48-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -270,7 +270,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L39-L39) | DrawLabel | False |
+| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L39-L39) | DrawLabel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -308,7 +308,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateDistortionKeyPreviews` · L61–72
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:61–72](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L61-L72)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:61–72](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L61-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -331,10 +331,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L110-L110) | CCellPreviewDrawing.CreateDistortionKeyPreviews | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1001–1001](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1001-L1001) | CCellPreviewDrawing.CreateDistortionKeyPreviews | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2142–2142](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2142-L2142) | CCellPreviewDrawing.CreateDistortionKeyPreviews | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:130–139](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L130-L139) | CCellPreviewDrawing.CreateDistortionKeyPreviews | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L110-L110) | CCellPreviewDrawing.CreateDistortionKeyPreviews | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1046–1046](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1046-L1046) | CCellPreviewDrawing.CreateDistortionKeyPreviews | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2142–2142](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2142-L2142) | CCellPreviewDrawing.CreateDistortionKeyPreviews | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:130–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L130-L139) | CCellPreviewDrawing.CreateDistortionKeyPreviews | False |
 
 호출하는 대상과 해석 범위:
 
@@ -395,7 +395,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawDistortionKeys` · L74–118
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:74–118](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L74-L118)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:74–118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L74-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -531,7 +531,7 @@ flowchart TD
 
 ### MethodDeclaration `ClampToRange` · L120–123
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:120–123](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L120-L123)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:120–123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L120-L123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -568,7 +568,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateCellLabel` · L125–139
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:125–139](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L125-L139)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:125–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L125-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -591,8 +591,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L218-L218) | CCellPreviewDrawing.CreateCellLabel | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:628–639](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L628-L639) | CCellPreviewDrawing.CreateCellLabel | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L218-L218) | CCellPreviewDrawing.CreateCellLabel | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:628–639](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L628-L639) | CCellPreviewDrawing.CreateCellLabel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -646,7 +646,7 @@ flowchart TD
 
 ### MethodDeclaration `CanDrawFormattedText` · L141–150
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:141–150](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L141-L150)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:141–150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L141-L150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -659,8 +659,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L13-L13) | CanDrawFormattedText | False |
-| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L83-L83) | CanDrawFormattedText | False |
+| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L13-L13) | CanDrawFormattedText | False |
+| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L83-L83) | CanDrawFormattedText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -694,7 +694,7 @@ flowchart TD
 
 ### MethodDeclaration `EstimateTextWidth` · L152–155
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:152–155](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L152-L155)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:152–155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L152-L155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -713,7 +713,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L132-L132) | EstimateTextWidth | False |
+| [Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L132-L132) | EstimateTextWidth | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -725,7 +725,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellBounds` · L160–160
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L160-L160)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L160-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -740,7 +740,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CellBounds` · L160–160
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L160-L160)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L160-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -755,7 +755,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CellBounds` · L160–160
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L160-L160)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L160-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -776,7 +776,7 @@ flowchart TD
 
 ### PropertyDeclaration `DisplayText` · L161–167
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:161–167](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L161-L167)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:161–167](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L161-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -791,7 +791,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DisplayText` · L163–166
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:163–166](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L163-L166)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:163–166](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L163-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -812,7 +812,7 @@ flowchart TD
 
 ### PropertyDeclaration `Height` · L169–175
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:169–175](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L169-L175)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:169–175](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L169-L175)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -827,7 +827,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Height` · L171–174
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:171–174](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L171-L174)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:171–174](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L171-L174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -848,7 +848,7 @@ flowchart TD
 
 ### PropertyDeclaration `DisplayText` · L180–186
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:180–186](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L180-L186)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:180–186](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L180-L186)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -863,7 +863,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DisplayText` · L182–185
 
-[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:182–185](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L182-L185)
+[Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs:182–185](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs#L182-L185)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

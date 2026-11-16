@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.Common/Managers/CRecipeManager.cs
-Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Managers
@@ -827,23 +827,46 @@ L000427 |         public const string Tab = "PROCESS"; ⟦EOL⟧
 L000428 |         public const string Group = "ProtectWindow"; ⟦EOL⟧
 // 해설 L429: 변수의 초기값을 지정합니다: MaximumCountKey = "MAX_PROCESS_COUNT"
 L000429 |         public const string MaximumCountKey = "MAX_PROCESS_COUNT"; ⟦EOL⟧
-// 해설 L430: 변수의 초기값을 지정합니다: CurrentCountKey = "CURRENT_PROCESS_COUNT"
-L000430 |         public const string CurrentCountKey = "CURRENT_PROCESS_COUNT"; ⟦EOL⟧
-// 해설 L431: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.CProtectWindowRecipeData.ParseCount(string?, string)
-L000431 |         public static int ParseCount(string? text, string key = CurrentCountKey) ⟦EOL⟧
-// 해설 L432: 구문 블록 경계입니다 · 소속 ParseCount.
-L000432 |         { ⟦EOL⟧
-// 해설 L433: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(count) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Truncate(count) / 조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) || !double.IsFinite(count) || count < 0 || count > int.MaxValue || count != Math.Truncate(count))
-L000433 |             if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) || !double.IsFinite(count) || count < 0 || count > int.MaxValue || count != Math.Truncate(count)) ⟦EOL⟧
-// 해설 L434: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{key} must be a nonnegative integer: {text}") / 예외를 발생/전달합니다: throw new InvalidDataException($"{key} must be a nonnegative integer: {text}");
-L000434 |                 throw new InvalidDataException($"{key} must be a nonnegative integer: {text}"); ⟦EOL⟧
-// 해설 L435: 호출자에게 값 또는 제어를 반환합니다: return (int)count;
-L000435 |             return (int)count; ⟦EOL⟧
-// 해설 L436: 구문 블록 경계입니다 · 소속 ParseCount.
-L000436 |         } ⟦EOL⟧
-// 해설 L437: 구문 블록 경계입니다.
-L000437 |     } ⟦EOL⟧
-// 해설 L438: 구문 블록 경계입니다.
-L000438 | } ⟦EOL⟧
+// 해설 L430: 변수의 초기값을 지정합니다: RetryCountKey = "PROTECT_WINDOW_RETRY_COUNT"
+L000430 |         public const string RetryCountKey = "PROTECT_WINDOW_RETRY_COUNT"; ⟦EOL⟧
+// 해설 L431: 변수의 초기값을 지정합니다: CurrentCountKey = "CURRENT_PROCESS_COUNT"
+L000431 |         public const string CurrentCountKey = "CURRENT_PROCESS_COUNT"; ⟦EOL⟧
+// 해설 L432: 변수의 초기값을 지정합니다: MaximumRetryCount = 3
+L000432 |         public const int MaximumRetryCount = 3; ⟦EOL⟧
+// 해설 L433: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.CProtectWindowRecipeData.ParseCount(string?, string)
+L000433 |         public static int ParseCount(string? text, string key = CurrentCountKey) ⟦EOL⟧
+// 해설 L434: 구문 블록 경계입니다 · 소속 ParseCount.
+L000434 |         { ⟦EOL⟧
+// 해설 L435: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(count) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Truncate(count) / 조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) || !double.IsFinite(count) || count < 0 || count > int.MaxValue || count != Math.Truncate(count))
+L000435 |             if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) || !double.IsFinite(count) || count < 0 || count > int.MaxValue || count != Math.Truncate(count)) ⟦EOL⟧
+// 해설 L436: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{key} must be a nonnegative integer: {text}") / 예외를 발생/전달합니다: throw new InvalidDataException($"{key} must be a nonnegative integer: {text}");
+L000436 |                 throw new InvalidDataException($"{key} must be a nonnegative integer: {text}"); ⟦EOL⟧
+// 해설 L437: 호출자에게 값 또는 제어를 반환합니다: return (int)count;
+L000437 |             return (int)count; ⟦EOL⟧
+// 해설 L438: 구문 블록 경계입니다 · 소속 ParseCount.
+L000438 |         } ⟦EOL⟧
 L000439 |  ⟦EOL⟧
-L000440 |  ⟦EOL⟧
+// 해설 L440: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Recipe.CProtectWindowRecipeData.ParseRetryCount(string?)
+L000440 |         public static int ParseRetryCount(string? text) ⟦EOL⟧
+// 해설 L441: 구문 블록 경계입니다 · 소속 ParseRetryCount.
+L000441 |         { ⟦EOL⟧
+// 해설 L442: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(text) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(text))
+L000442 |             if (string.IsNullOrWhiteSpace(text)) ⟦EOL⟧
+// 해설 L443: 호출자에게 값 또는 제어를 반환합니다: return 0;
+L000443 |                 return 0; ⟦EOL⟧
+// 해설 L444: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseCount(text, RetryCountKey) / 지역 변수를 선언합니다: var count = ParseCount(text, RetryCountKey); / 변수의 초기값을 지정합니다: count = ParseCount(text, RetryCountKey)
+L000444 |             var count = ParseCount(text, RetryCountKey); ⟦EOL⟧
+// 해설 L445: 조건에 따라 분기합니다: if (count > MaximumRetryCount)
+L000445 |             if (count > MaximumRetryCount) ⟦EOL⟧
+// 해설 L446: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{RetryCountKey} must be between 0 and {MaximumRetryCount}: {text}") / 예외를 발생/전달합니다: throw new InvalidDataException($"{RetryCountKey} must be between 0 and {MaximumRetryCount}: {text}");
+L000446 |                 throw new InvalidDataException($"{RetryCountKey} must be between 0 and {MaximumRetryCount}: {text}"); ⟦EOL⟧
+// 해설 L447: 호출자에게 값 또는 제어를 반환합니다: return count;
+L000447 |             return count; ⟦EOL⟧
+// 해설 L448: 구문 블록 경계입니다 · 소속 ParseRetryCount.
+L000448 |         } ⟦EOL⟧
+// 해설 L449: 구문 블록 경계입니다.
+L000449 |     } ⟦EOL⟧
+// 해설 L450: 구문 블록 경계입니다.
+L000450 | } ⟦EOL⟧
+L000451 |  ⟦EOL⟧
+L000452 |  ⟦EOL⟧

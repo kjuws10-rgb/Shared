@@ -2,20 +2,18 @@
 
 현재 A3Drilling 전체 코드의 파일·타입·멤버·호출·데이터 흐름을 찾아 읽는 코드 레퍼런스 초안입니다.
 
-- [초안 전체 다운로드](https://github.com/kjuws10-rgb/Shared/releases/tag/a3-code-ref-draft-v1-20261113) · 압축 해제 후 `index.html` 실행
-- [검증 결과](validation/README.md) · [변경 이력](CHANGELOG.md)
 - [오프라인 HTML 목차](index.html) · [전체 파일 목차](FILE_INDEX.md)
 - [전체 구조 그림](diagrams/architecture.svg) · [Offline Studio 첨부 방법](offline-studio/README.md)
-- [원본 저장소](https://github.com/kjuws10-rgb/A3Drilling) · 기준 master Commit `5aee8e58439c9b455cae7c9593c9be986c3e682e`
+- [원본 저장소](https://github.com/kjuws10-rgb/A3Drilling) · 기준 master Commit `dfa5920e6301d9ec4b0eab1452ae59521aafc986`
 
 |범위|수량|
 |---|---:|
-|Git 추적 파일/개별 문서|571 / 571|
-|C#|148|
-|타입/멤버|876 / 15282|
-|호출 구문|39483|
-|전체 행 주석 해설본|320파일|
-|RAG 근거 레코드|27483|
+|Git 추적 파일/개별 문서|610 / 610|
+|C#|153|
+|타입/멤버|914 / 15910|
+|호출 구문|41238|
+|전체 행 주석 해설본|336파일|
+|RAG 근거 레코드|31299|
 
 ## 읽는 순서
 
@@ -33,13 +31,14 @@
 - [05. Device Interface·Automation1·Motion·MELSEC의 경계](manual/architecture/05-device-interfaces-and-drivers.md)
 - [06. 스레드·스냅샷·취소·로그를 이용해 멈춤과 오동작 찾기](manual/architecture/06-threading-snapshots-and-logs.md)
 - [07. 변경 영향 검토와 Offline Studio에서 이 문서를 쓰는 방법](manual/architecture/07-change-impact-and-offline-reference.md)
+- [08. 알람 원인 분석: 전후 로그에서 무엇을 알 수 있는가](manual/architecture/08-alarm-cause-analysis.md)
 - [A3 전체 구조·데이터 흐름 상세 안내](manual/architecture/README.md)
 - [Review 계획과 좌표계: 설계 Shot이 카메라 측정점이 되는 과정](manual/review/01_Review_%EA%B3%84%ED%9A%8D%EA%B3%BC_%EC%A2%8C%ED%91%9C%EA%B3%84.md)
 - [Masking·Sampling·IOF: 검사점 제외와 실제 이동을 구별하기](manual/review/02_Masking_Sampling_IOF.md)
 - [Vision 통신: 1001 식별자 패킷, 1003 수신값, 픽셀→mm 오차](manual/review/03_Vision_%ED%8C%A8%ED%82%B7%EA%B3%BC_%EB%8B%A8%EC%9C%84.md)
 - [Review Offset: 누적 보정·좌표계 태그·중복 방지·원복](manual/review/04_ReviewOffset_%EC%A0%81%EC%9A%A9%EA%B3%BC_%EB%A1%A4%EB%B0%B1.md)
 - [ReviewResult·재검사 Revision·Product 이력의 결합](manual/review/05_%EA%B2%B0%EA%B3%BC_Revision_Product_%EC%97%B0%EA%B2%B0.md)
-- [Default Offset·Zero Order·First Beam: 중심 기준과 보정값의 역할](manual/review/06_DefaultOffset_ZeroOrder_FirstBeam.md)
+- [Default Offset·Zero Order·First Beam: AK 중앙·DOE 슬롯·복원 범위](manual/review/06_DefaultOffset_ZeroOrder_FirstBeam.md)
 - [Align·Distortion·보호윈도우·복구: 자동 시퀀스의 데이터 경계](manual/review/07_Align_Distortion_%EC%9C%88%EB%8F%84%EC%9A%B0_%EB%B3%B5%EA%B5%AC.md)
 
 ## 근거 수준과 범위

@@ -1,25 +1,34 @@
 {
   "schemaVersion": "a3-reference-validation/1",
-  "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "validatorVersion": "1.1.0",
+  "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
   "passed": true,
   "counts": {
-    "assertions": 756718,
-    "annotated_files": 320,
-    "annotated_source_lines": 514087,
-    "csharp_files": 148,
-    "types": 876,
-    "members": 15282,
-    "calls": 39483,
-    "symbol_ids": 15282,
-    "rag_source_lines": 563306,
-    "rag_records": 27483,
-    "rag_unique_annotated_source_lines": 514087,
-    "local_links": 3416,
-    "svg_files": 600,
-    "unique_source_citations": 26660,
-    "tracked_files": 571,
-    "output_files": 2276,
-    "output_bytes": 424422642
+    "assertions": 1069243,
+    "annotated_files": 336,
+    "annotated_source_lines": 663476,
+    "schema_only_files": 262,
+    "csharp_files": 153,
+    "types": 914,
+    "members": 15910,
+    "calls": 41238,
+    "xaml_namedElements": 369,
+    "xaml_events": 272,
+    "xaml_bindings": 2802,
+    "xaml_codeBehindClasses": 54,
+    "xaml_files": 57,
+    "symbol_ids": 15910,
+    "rag_source_lines": 714725,
+    "rag_records": 31299,
+    "rag_primary_records": 21025,
+    "rag_optional_records": 10274,
+    "rag_unique_annotated_source_lines": 663476,
+    "local_links": 3795,
+    "svg_files": 641,
+    "unique_source_citations": 27880,
+    "tracked_files": 610,
+    "output_files": 2483,
+    "output_bytes": 487621646
   },
   "errors": [],
   "sourceUnchanged": true,
@@ -27,7 +36,7 @@
     {
       "sourcePath": "Drilling.Common/Station/CStationProcess.cs",
       "lines": [
-        570
+        571
       ],
       "replacementCharacters": 9
     }

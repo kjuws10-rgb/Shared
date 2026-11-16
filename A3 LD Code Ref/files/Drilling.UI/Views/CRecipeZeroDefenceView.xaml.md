@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | b84943075a7eacf71b08226cc94113c216b79999d94646ac1e6aa29c80408a64 |
 | 파일 분류 | code |
 | 원본 크기/행 | 15,948 bytes / 134 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeZeroDefenceView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CRecipeZeroDefenceView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -26,85 +26,98 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 이벤트 개수 | 0 |
 | Binding 표현 개수 | 74 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| SelectCountCommand |
-| IsTwo |
-| SelectCountCommand |
-| IsFour |
-| ClearGroupCommand |
-| Summary |
-| GroupCards |
-| Background |
-| Foreground |
-| Number |
-| DataContext.SelectGroupCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| Name |
-| Detail |
-| BackToGlassCommand |
-| PreviewTitle |
-| GlassVisibility |
-| PreviewCanvasHeight |
-| PreviewImage |
-| GlassFrame.CanvasLeft |
-| GlassFrame.CanvasTop |
-| GlassFrame.Width |
-| GlassFrame.Height |
-| Cells |
-| Bounds.X |
-| Bounds.Y |
-| Bounds.Width |
-| Bounds.Height |
-| Number |
-| CanOpen |
-| Detail |
-| DataContext.SelectCellCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| SelectedHeads |
-| HasSelection |
-| IsUnavailable |
-| SelectionLabels |
-| PreviewCanvasHeight |
-| DataContext.PreviewCanvasHeight, RelativeSource={RelativeSource AncestorType=UserControl |
-| Leader |
-| Left |
-| Top |
-| Width |
-| Text |
-| FontSize |
-| ShotRows |
-| ShotVisibility |
-| Shots |
-| Background |
-| CanSelect |
-| Detail |
-| Key |
-| DataContext.SelectShotCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| Label |
-| HeadRows |
-| Head |
-| GroupNo |
-| Cell |
-| Shot |
-| Beam |
-| State |
-| Tooltip |
-| IsSelected |
-| CandidateText |
-| Beams |
-| Background |
-| Foreground |
-| CanSelect |
-| Detail |
-| Number |
-| DataContext.SelectBeamCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| Name |
-| Coordinates |
-| TimingSummary |
-| Status |
-| StatusBrush |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| ZeroGroupCards | L31–31 |
+| ZeroCellGrid | L56–56 |
+| CellBox | L62–62 |
+| ZeroSelectionLabels | L70–70 |
+| ZeroShotGrid | L83–83 |
+| ShotBox | L94–94 |
+| ZeroHeadGrid | L104–104 |
+| ZeroBeamGrid | L118–118 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding SelectCountCommand} | L17–17 |
+| {Binding IsTwo} | L18–18 |
+| {Binding SelectCountCommand} | L20–20 |
+| {Binding IsFour} | L21–21 |
+| {Binding ClearGroupCommand} | L23–23 |
+| {Binding Summary} | L24–24 |
+| {Binding GroupCards} | L31–31 |
+| {Binding Background} | L34–34 |
+| {Binding Foreground} | L34–34 |
+| {Binding Number} | L35–35 |
+| {Binding DataContext.SelectGroupCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L35–35 |
+| {Binding Name} | L36–36 |
+| {Binding Detail} | L36–36 |
+| {Binding BackToGlassCommand} | L42–42 |
+| {Binding PreviewTitle} | L43–43 |
+| {Binding GlassVisibility} | L51–51 |
+| {Binding PreviewCanvasHeight} | L52–52 |
+| {Binding PreviewImage} | L53–53 |
+| {Binding GlassFrame.CanvasLeft} | L54–54 |
+| {Binding GlassFrame.CanvasTop} | L54–54 |
+| {Binding GlassFrame.Width} | L55–55 |
+| {Binding GlassFrame.Height} | L55–55 |
+| {Binding Cells} | L56–56 |
+| {Binding Bounds.X} | L58–58 |
+| {Binding Bounds.Y} | L58–58 |
+| {Binding Bounds.Width} | L60–60 |
+| {Binding Bounds.Height} | L60–60 |
+| {Binding Number} | L60–60 |
+| {Binding CanOpen} | L60–60 |
+| {Binding Detail} | L61–61 |
+| {Binding DataContext.SelectCellCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L61–61 |
+| {Binding SelectedHeads} | L62–62 |
+| {Binding HasSelection} | L63–63 |
+| {Binding IsUnavailable} | L64–64 |
+| {Binding SelectionLabels} | L70–70 |
+| {Binding PreviewCanvasHeight} | L70–70 |
+| {Binding DataContext.PreviewCanvasHeight, RelativeSource={RelativeSource AncestorType=UserControl}} | L73–73 |
+| {Binding Leader} | L74–74 |
+| {Binding Left} | L75–75 |
+| {Binding Top} | L75–75 |
+| {Binding Width} | L75–75 |
+| {Binding Text} | L76–76 |
+| {Binding FontSize} | L76–76 |
+| {Binding ShotRows} | L83–83 |
+| {Binding ShotVisibility} | L83–83 |
+| {Binding Shots} | L87–87 |
+| {Binding Background} | L91–91 |
+| {Binding CanSelect} | L91–91 |
+| {Binding Detail} | L91–91 |
+| {Binding Key} | L92–92 |
+| {Binding DataContext.SelectShotCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L92–92 |
+| {Binding Label} | L93–93 |
+| {Binding HeadRows} | L104–104 |
+| {Binding Head} | L108–108 |
+| {Binding GroupNo} | L109–109 |
+| {Binding Cell} | L110–110 |
+| {Binding Shot} | L111–111 |
+| {Binding Beam} | L112–112 |
+| {Binding State} | L113–113 |
+| {Binding Tooltip} | L115–115 |
+| {Binding IsSelected} | L115–115 |
+| {Binding CandidateText} | L117–117 |
+| {Binding Beams} | L118–118 |
+| {Binding Background} | L121–121 |
+| {Binding Foreground} | L121–121 |
+| {Binding CanSelect} | L122–122 |
+| {Binding Detail} | L122–122 |
+| {Binding Number} | L122–122 |
+| {Binding DataContext.SelectBeamCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L123–123 |
+| {Binding Name} | L124–124 |
+| {Binding Coordinates} | L124–124 |
+| {Binding TimingSummary} | L129–129 |
+| {Binding Status} | L130–130 |
+| {Binding StatusBrush} | L130–130 |
 
 ## 원문 전체 주석 해설본
 

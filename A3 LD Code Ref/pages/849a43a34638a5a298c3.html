@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>5aee8e58439c9b455cae7c9593c9be986c3e682e</td></tr>
+<tr><td>원본 Commit</td><td>dfa5920e6301d9ec4b0eab1452ae59521aafc986</td></tr>
 <tr><td>원본 SHA256</td><td>973c837fe9fa3cc3b209e09522b760012ec8382b04a71f7cd158aa566e86bb30</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>9,527 bytes / 238 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
@@ -49,7 +49,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L9">FieldDeclaration <code>_snapshotLock</code> · L9–9</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L9-L9">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:9–9</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L9-L9">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:9–9</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader._snapshotLock</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -68,7 +68,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L10">FieldDeclaration <code>_snapshot</code> · L10–10</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L10-L10">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:10–10</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L10-L10">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:10–10</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM&gt; Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader._snapshot</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -82,7 +82,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L11">FieldDeclaration <code>_axisDefinitions</code> · L11–11</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L11-L11">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:11–11</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L11-L11">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:11–11</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt; Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader._axisDefinitions</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -96,7 +96,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L12">FieldDeclaration <code>_selectedHeadNo</code> · L12–12</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L12-L12">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:12–12</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L12-L12">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:12–12</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader._selectedHeadNo</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -110,7 +110,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L13">MethodDeclaration <code>SelectHead</code> · L13–27</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L13-L27">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:13–27</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L13-L27">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:13–27</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.SelectHead(int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -123,9 +123,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L961-L961">Drilling.UI/Menu/Menus/CMenuMain.cs:961–961</a></td><td>_scannerStatusSnapshotReader.SelectHead</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L1006-L1006">Drilling.UI/Menu/Menus/CMenuMain.cs:1006–1006</a></td><td>_scannerStatusSnapshotReader.SelectHead</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L1018-L1018">Drilling.UI/Menu/Menus/CMenuMain.cs:1018–1018</a></td><td>_scannerStatusSnapshotReader.SelectHead</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L961-L961">Drilling.UI/Menu/Menus/CMenuMain.cs:961–961</a></td><td>_scannerStatusSnapshotReader.SelectHead</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L1006-L1006">Drilling.UI/Menu/Menus/CMenuMain.cs:1006–1006</a></td><td>_scannerStatusSnapshotReader.SelectHead</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L1018-L1018">Drilling.UI/Menu/Menus/CMenuMain.cs:1018–1018</a></td><td>_scannerStatusSnapshotReader.SelectHead</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -152,7 +152,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L29">MethodDeclaration <code>SelectHead</code> · L29–44</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L29-L44">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:29–44</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L29-L44">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:29–44</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.SelectHead(int, System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -166,8 +166,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L714-L714">Drilling.UI/Menu/Menus/CMenuMain.cs:714–714</a></td><td>_scannerStatusSnapshotReader.SelectHead</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L836-L836">Drilling.UI/Menu/Menus/CMenuMain.cs:836–836</a></td><td>_scannerStatusSnapshotReader.SelectHead</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L714-L714">Drilling.UI/Menu/Menus/CMenuMain.cs:714–714</a></td><td>_scannerStatusSnapshotReader.SelectHead</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L836-L836">Drilling.UI/Menu/Menus/CMenuMain.cs:836–836</a></td><td>_scannerStatusSnapshotReader.SelectHead</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -200,7 +200,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L46">MethodDeclaration <code>GetSnapshot</code> · L46–50</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L46-L50">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:46–50</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L46-L50">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:46–50</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM&gt; Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.GetSnapshot()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -209,8 +209,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L717-L717">Drilling.UI/Menu/Menus/CMenuMain.cs:717–717</a></td><td>_scannerStatusSnapshotReader.GetSnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L837-L837">Drilling.UI/Menu/Menus/CMenuMain.cs:837–837</a></td><td>_scannerStatusSnapshotReader.GetSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L717-L717">Drilling.UI/Menu/Menus/CMenuMain.cs:717–717</a></td><td>_scannerStatusSnapshotReader.GetSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L837-L837">Drilling.UI/Menu/Menus/CMenuMain.cs:837–837</a></td><td>_scannerStatusSnapshotReader.GetSnapshot</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -229,7 +229,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L52">MethodDeclaration <code>RefreshSnapshot</code> · L52–70</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L52-L70">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:52–70</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L52-L70">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:52–70</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.RefreshSnapshot(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -242,7 +242,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L48-L48">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:48–48</a></td><td>RefreshSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L48-L48">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:48–48</a></td><td>RefreshSnapshot</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -284,7 +284,7 @@
  N0 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L72">MethodDeclaration <code>BuildScannerAxisStatusItem</code> · L72–118</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L72-L118">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:72–118</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L72-L118">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:72–118</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildScannerAxisStatusItem(Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -298,21 +298,21 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L61-L61">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:61–61</a></td><td>BuildScannerAxisStatusItem</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L61-L61">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:61–61</a></td><td>BuildScannerAxisStatusItem</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
 <tr><td>74</td><td>axis.AxisReference.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
 <tr><td>75</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
-<tr><td>79</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3915</td></tr>
+<tr><td>79</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3927</td></tr>
 <tr><td>82</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
-<tr><td>84</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3915</td></tr>
+<tr><td>84</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3927</td></tr>
 <tr><td>89</td><td>automationManager.IsSimul</td><td>resolved</td><td>bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63</td></tr>
 <tr><td>89</td><td>automationManager.IsConnect</td><td>resolved</td><td>bool Drilling.Common.Automation.CAutomationManager.IsConnect(int) · Drilling.Common/Automation/CAutomationManager.cs:58</td></tr>
-<tr><td>91</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3915</td></tr>
+<tr><td>91</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3927</td></tr>
 <tr><td>94</td><td>automationManager.StatusSnapshots.GetAxis</td><td>resolved</td><td>Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.GetAxis(string, int, int, bool) · Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:23</td></tr>
-<tr><td>96</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3915</td></tr>
-<tr><td>97</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3915</td></tr>
+<tr><td>96</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3927</td></tr>
+<tr><td>97</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3927</td></tr>
 <tr><td>103</td><td>FormatScannerPosition</td><td>resolved</td><td>string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatScannerPosition(double) · Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:192</td></tr>
 <tr><td>104</td><td>FormatExtendedScannerPosition</td><td>resolved</td><td>string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatExtendedScannerPosition(double, bool) · Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:202</td></tr>
 <tr><td>105</td><td>FormatExtendedScannerValue</td><td>resolved</td><td>string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatExtendedScannerValue(double, bool) · Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:217</td></tr>
@@ -320,7 +320,7 @@
 <tr><td>107</td><td>FormatExtendedScannerTemperature</td><td>resolved</td><td>string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatExtendedScannerTemperature(double, bool) · Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:227</td></tr>
 <tr><td>109</td><td>FormatFault</td><td>resolved</td><td>string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatFault(string) · Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:232</td></tr>
 <tr><td>111</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
-<tr><td>116</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3915</td></tr>
+<tr><td>116</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3927</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -386,7 +386,7 @@
  N2 --&gt;|포함| N5</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L120">MethodDeclaration <code>BuildAxisDefinitions</code> · L120–121</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L120-L121">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:120–121</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L120-L121">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:120–121</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt; Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
@@ -400,22 +400,22 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1795-L1795">Drilling.UI/Menu/Menus/CMenuManual.cs:1795–1795</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1876-L1876">Drilling.UI/Menu/Menus/CMenuManual.cs:1876–1876</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1887-L1887">Drilling.UI/Menu/Menus/CMenuManual.cs:1887–1887</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1921-L1921">Drilling.UI/Menu/Menus/CMenuManual.cs:1921–1921</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1942-L1942">Drilling.UI/Menu/Menus/CMenuManual.cs:1942–1942</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2507-L2507">Drilling.UI/Menu/Menus/CMenuManual.cs:2507–2507</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3101-L3101">Drilling.UI/Menu/Menus/CMenuManual.cs:3101–3101</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3251-L3251">Drilling.UI/Menu/Menus/CMenuManual.cs:3251–3251</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3473-L3473">Drilling.UI/Menu/Menus/CMenuManual.cs:3473–3473</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3614-L3614">Drilling.UI/Menu/Menus/CMenuManual.cs:3614–3614</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4229-L4229">Drilling.UI/Menu/Menus/CMenuManual.cs:4229–4229</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4450-L4450">Drilling.UI/Menu/Menus/CMenuManual.cs:4450–4450</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5371-L5371">Drilling.UI/Menu/Menus/CMenuManual.cs:5371–5371</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6791-L6791">Drilling.UI/Menu/Menus/CMenuManual.cs:6791–6791</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7631-L7631">Drilling.UI/Menu/Menus/CMenuManual.cs:7631–7631</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7660-L7660">Drilling.UI/Menu/Menus/CMenuManual.cs:7660–7660</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1785-L1785">Drilling.UI/Menu/Menus/CMenuManual.cs:1785–1785</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1866-L1866">Drilling.UI/Menu/Menus/CMenuManual.cs:1866–1866</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1877-L1877">Drilling.UI/Menu/Menus/CMenuManual.cs:1877–1877</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1911-L1911">Drilling.UI/Menu/Menus/CMenuManual.cs:1911–1911</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1932-L1932">Drilling.UI/Menu/Menus/CMenuManual.cs:1932–1932</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2495-L2495">Drilling.UI/Menu/Menus/CMenuManual.cs:2495–2495</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3089-L3089">Drilling.UI/Menu/Menus/CMenuManual.cs:3089–3089</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3239-L3239">Drilling.UI/Menu/Menus/CMenuManual.cs:3239–3239</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3461-L3461">Drilling.UI/Menu/Menus/CMenuManual.cs:3461–3461</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3602-L3602">Drilling.UI/Menu/Menus/CMenuManual.cs:3602–3602</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4217-L4217">Drilling.UI/Menu/Menus/CMenuManual.cs:4217–4217</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4438-L4438">Drilling.UI/Menu/Menus/CMenuManual.cs:4438–4438</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5359-L5359">Drilling.UI/Menu/Menus/CMenuManual.cs:5359–5359</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6766-L6766">Drilling.UI/Menu/Menus/CMenuManual.cs:6766–6766</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7606-L7606">Drilling.UI/Menu/Menus/CMenuManual.cs:7606–7606</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7635-L7635">Drilling.UI/Menu/Menus/CMenuManual.cs:7635–7635</a></td><td>CScannerStatusSnapshotReader.BuildAxisDefinitions</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -427,7 +427,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L123">MethodDeclaration <code>BuildAxisDefinitions</code> · L123–124</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L123-L124">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:123–124</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L123-L124">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:123–124</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt; Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
@@ -441,7 +441,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L32-L32">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:32–32</a></td><td>BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L32-L32">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:32–32</a></td><td>BuildAxisDefinitions</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -453,7 +453,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L126">MethodDeclaration <code>BuildEnabledHeadNumbers</code> · L126–127</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L126-L127">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:126–127</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L126-L127">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:126–127</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;int&gt; Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.BuildEnabledHeadNumbers(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
@@ -467,19 +467,19 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L557-L557">Drilling.UI/CRootView.cs:557–557</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1451-L1451">Drilling.UI/Menu/Menus/CMenuManual.cs:1451–1451</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1750-L1750">Drilling.UI/Menu/Menus/CMenuManual.cs:1750–1750</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1921-L1921">Drilling.UI/Menu/Menus/CMenuManual.cs:1921–1921</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1940-L1940">Drilling.UI/Menu/Menus/CMenuManual.cs:1940–1940</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2541-L2541">Drilling.UI/Menu/Menus/CMenuManual.cs:2541–2541</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3471-L3471">Drilling.UI/Menu/Menus/CMenuManual.cs:3471–3471</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3613-L3613">Drilling.UI/Menu/Menus/CMenuManual.cs:3613–3613</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4438-L4438">Drilling.UI/Menu/Menus/CMenuManual.cs:4438–4438</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4848-L4848">Drilling.UI/Menu/Menus/CMenuManual.cs:4848–4848</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6748-L6748">Drilling.UI/Menu/Menus/CMenuManual.cs:6748–6748</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6761-L6761">Drilling.UI/Menu/Menus/CMenuManual.cs:6761–6761</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2298-L2298">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2298–2298</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L560-L560">Drilling.UI/CRootView.cs:560–560</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1441-L1441">Drilling.UI/Menu/Menus/CMenuManual.cs:1441–1441</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1740-L1740">Drilling.UI/Menu/Menus/CMenuManual.cs:1740–1740</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1911-L1911">Drilling.UI/Menu/Menus/CMenuManual.cs:1911–1911</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1930-L1930">Drilling.UI/Menu/Menus/CMenuManual.cs:1930–1930</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2529-L2529">Drilling.UI/Menu/Menus/CMenuManual.cs:2529–2529</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3459-L3459">Drilling.UI/Menu/Menus/CMenuManual.cs:3459–3459</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3601-L3601">Drilling.UI/Menu/Menus/CMenuManual.cs:3601–3601</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4426-L4426">Drilling.UI/Menu/Menus/CMenuManual.cs:4426–4426</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4836-L4836">Drilling.UI/Menu/Menus/CMenuManual.cs:4836–4836</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6723-L6723">Drilling.UI/Menu/Menus/CMenuManual.cs:6723–6723</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6736-L6736">Drilling.UI/Menu/Menus/CMenuManual.cs:6736–6736</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2373-L2373">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2373–2373</a></td><td>CScannerStatusSnapshotReader.BuildEnabledHeadNumbers</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -491,7 +491,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L129">MethodDeclaration <code>IsHeadEnabled</code> · L129–130</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L129-L130">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:129–130</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L129-L130">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:129–130</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.IsHeadEnabled(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
@@ -505,7 +505,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1912-L1912">Drilling.UI/CRootView.cs:1912–1912</a></td><td>CScannerStatusSnapshotReader.IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1913-L1913">Drilling.UI/CRootView.cs:1913–1913</a></td><td>CScannerStatusSnapshotReader.IsHeadEnabled</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -517,7 +517,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L132">MethodDeclaration <code>IsHeadEnabled</code> · L132–133</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L132-L133">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:132–133</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L132-L133">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:132–133</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.IsHeadEnabled(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
@@ -540,7 +540,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L135">MethodDeclaration <code>CreatePollingErrorSnapshot</code> · L135–138</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L135-L138">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:135–138</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L135-L138">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:135–138</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM&gt; Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.CreatePollingErrorSnapshot(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -553,11 +553,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L68-L68">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:68–68</a></td><td>CreatePollingErrorSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L68-L68">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:68–68</a></td><td>CreatePollingErrorSnapshot</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
-<tr><td>137</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3915</td></tr>
+<tr><td>137</td><td>new ST_SCANNER_AXIS_STATUS_ITEM</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM.ST_SCANNER_AXIS_STATUS_ITEM(string, string, string, string, string, string, string, string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuMain.cs:3927</td></tr>
 <tr><td>137</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
@@ -569,7 +569,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L140">MethodDeclaration <code>SetSnapshot</code> · L140–146</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L140-L146">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:140–146</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L140-L146">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:140–146</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.SetSnapshot(System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -593,7 +593,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L148">MethodDeclaration <code>SetSnapshot</code> · L148–159</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L148-L159">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:148–159</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L148-L159">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:148–159</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.SetSnapshot(int, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_SCANNER_AXIS_STATUS_ITEM&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -607,8 +607,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L64-L64">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:64–64</a></td><td>SetSnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L68-L68">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:68–68</a></td><td>SetSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L64-L64">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:64–64</a></td><td>SetSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L68-L68">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:68–68</a></td><td>SetSnapshot</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -626,7 +626,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L161">MethodDeclaration <code>ReadPollingContext</code> · L161–167</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L161-L167">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:161–167</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L161-L167">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:161–167</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.ST_SCANNER_STATUS_POLLING_CONTEXT Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.ReadPollingContext()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -635,7 +635,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L54-L54">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:54–54</a></td><td>ReadPollingContext</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L54-L54">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:54–54</a></td><td>ReadPollingContext</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -654,7 +654,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L169">MethodDeclaration <code>IsSameAxisDefinitions</code> · L169–185</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L169-L185">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:169–185</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L169-L185">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:169–185</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.IsSameAxisDefinitions(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -668,7 +668,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L35-L35">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:35–35</a></td><td>IsSameAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L35-L35">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:35–35</a></td><td>IsSameAxisDefinitions</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -696,7 +696,7 @@
  N1 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L187">MethodDeclaration <code>NormalizeHeadNo</code> · L187–190</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L187-L190">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:187–190</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L187-L190">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:187–190</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.NormalizeHeadNo(int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -709,8 +709,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L15-L15">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:15–15</a></td><td>NormalizeHeadNo</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L31-L31">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:31–31</a></td><td>NormalizeHeadNo</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L15-L15">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:15–15</a></td><td>NormalizeHeadNo</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L31-L31">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:31–31</a></td><td>NormalizeHeadNo</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -723,7 +723,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L192">MethodDeclaration <code>FormatScannerPosition</code> · L192–200</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L192-L200">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:192–200</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L192-L200">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:192–200</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatScannerPosition(double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -736,8 +736,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L103-L103">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:103–103</a></td><td>FormatScannerPosition</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L204-L204">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:204–204</a></td><td>FormatScannerPosition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L103-L103">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:103–103</a></td><td>FormatScannerPosition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L204-L204">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:204–204</a></td><td>FormatScannerPosition</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -759,7 +759,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L202">MethodDeclaration <code>FormatExtendedScannerPosition</code> · L202–205</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L202-L205">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:202–205</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L202-L205">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:202–205</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatExtendedScannerPosition(double, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -773,7 +773,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L104-L104">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:104–104</a></td><td>FormatExtendedScannerPosition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L104-L104">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:104–104</a></td><td>FormatExtendedScannerPosition</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -787,7 +787,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L207">MethodDeclaration <code>FormatScannerValue</code> · L207–215</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L207-L215">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:207–215</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L207-L215">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:207–215</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatScannerValue(double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -800,7 +800,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L219-L219">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:219–219</a></td><td>FormatScannerValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L219-L219">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:219–219</a></td><td>FormatScannerValue</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -822,7 +822,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L217">MethodDeclaration <code>FormatExtendedScannerValue</code> · L217–220</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L217-L220">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:217–220</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L217-L220">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:217–220</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatExtendedScannerValue(double, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -836,8 +836,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L105-L105">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:105–105</a></td><td>FormatExtendedScannerValue</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L106-L106">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:106–106</a></td><td>FormatExtendedScannerValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L105-L105">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:105–105</a></td><td>FormatExtendedScannerValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L106-L106">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:106–106</a></td><td>FormatExtendedScannerValue</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -851,7 +851,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L222">MethodDeclaration <code>FormatScannerTemperature</code> · L222–225</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L222-L225">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:222–225</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L222-L225">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:222–225</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatScannerTemperature(double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -864,7 +864,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L229-L229">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:229–229</a></td><td>FormatScannerTemperature</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L229-L229">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:229–229</a></td><td>FormatScannerTemperature</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -877,7 +877,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L227">MethodDeclaration <code>FormatExtendedScannerTemperature</code> · L227–230</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L227-L230">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:227–230</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L227-L230">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:227–230</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatExtendedScannerTemperature(double, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -891,7 +891,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L107-L107">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:107–107</a></td><td>FormatExtendedScannerTemperature</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L107-L107">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:107–107</a></td><td>FormatExtendedScannerTemperature</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -905,7 +905,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L232">MethodDeclaration <code>FormatFault</code> · L232–235</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L232-L235">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:232–235</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L232-L235">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:232–235</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CScannerStatusSnapshotReader.FormatFault(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -918,7 +918,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L109-L109">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:109–109</a></td><td>FormatFault</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L109-L109">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:109–109</a></td><td>FormatFault</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>

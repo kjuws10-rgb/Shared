@@ -1,547 +1,898 @@
 {
   "schema_version": 1,
+  "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
   "diagrams": [
     {
       "id": "review-01",
-      "title": "Review 계획과 좌표계",
-      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
-      "chapter": "01_Review_계획과_좌표계.md",
+      "title": "Review 계획: 선택·목표·통신·결과를 분리",
       "nodes": [
         {
           "id": "recipe",
-          "label": "Recipe와 Setting"
+          "label": "Recipe·Setting\nShift와 Beam 조건",
+          "x": 50,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "process",
-          "label": "가공 Shot과 Head 배정"
+          "id": "assign",
+          "label": "가공 Shot·Head 배정\nMasking·CHESS → Use",
+          "x": 350,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "mask",
-          "label": "Masking 판정"
-        },
-        {
-          "id": "sample",
-          "label": "검사점 선택"
+          "id": "select",
+          "label": "ALL / ONE / ONE LINE\n같은 Glass Y 줄 선택",
+          "x": 650,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
           "id": "target",
-          "label": "카메라 X와 Stage Y"
+          "label": "카메라 X·Stage Y 목표\n설계→AK상대→Beam회전",
+          "x": 950,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "stage",
-          "label": "Stage와 IOF"
+          "id": "motion",
+          "label": "Stage·IOF 이동 준비\nVision 식별자와 별도",
+          "x": 950,
+          "y": 320,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "vision",
-          "label": "Vision 식별자 요청"
+          "id": "recv",
+          "label": "Vision 응답\n픽셀→mm→Flip→판정",
+          "x": 650,
+          "y": 320,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "error",
-          "label": "픽셀에서 mm 오차"
+          "id": "save",
+          "label": "RUN_TYPE별 결과 CSV\nONE_LINE 분류 추가",
+          "x": 350,
+          "y": 320,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "result",
-          "label": "판정과 저장"
+          "id": "open",
+          "label": "사용자 동의 후\nREVIEW DATA 정확한 파일 LOAD",
+          "x": 50,
+          "y": 320,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         }
       ],
       "edges": [
         {
           "from": "recipe",
-          "to": "process"
+          "to": "assign",
+          "label": ""
         },
         {
-          "from": "process",
-          "to": "mask"
+          "from": "assign",
+          "to": "select",
+          "label": ""
         },
         {
-          "from": "mask",
-          "to": "sample"
-        },
-        {
-          "from": "sample",
-          "to": "target"
+          "from": "select",
+          "to": "target",
+          "label": ""
         },
         {
           "from": "target",
-          "to": "stage"
+          "to": "motion",
+          "label": ""
         },
         {
-          "from": "sample",
-          "to": "vision"
+          "from": "motion",
+          "to": "recv",
+          "label": ""
         },
         {
-          "from": "vision",
-          "to": "error"
+          "from": "recv",
+          "to": "save",
+          "label": ""
         },
         {
-          "from": "error",
-          "to": "result"
+          "from": "save",
+          "to": "open",
+          "label": ""
         }
-      ]
+      ],
+      "notes": [
+        "ONE LINE은 실행가능한 Glass Y 줄이며 같은 Y의 다른 Cell도 포함할 수 있습니다.",
+        "AUTO는 Beam11·Shift0 정책을 유지합니다. ONE_LINE 결과 OFFSET APPLY는 지원목록에 없습니다."
+      ],
+      "chapter": "01_Review_계획과_좌표계.md",
+      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "evidence_level": "static_source_only",
+      "canvas": {
+        "width": 1260,
+        "height": 640
+      }
     },
     {
       "id": "review-02",
-      "title": "Masking과 Sampling",
-      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
-      "chapter": "02_Masking_Sampling_IOF.md",
+      "title": "Masking·Sampling·ONE LINE: 점 선택과 경로의 경계",
       "nodes": [
         {
           "id": "design",
-          "label": "설계 footprint"
-        },
-        {
-          "id": "mask",
-          "label": "Masking과 CHESS"
+          "label": "설계 Shot footprint\nBeam별 Masking 판정",
+          "x": 50,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
           "id": "use",
-          "label": "사용 가능 Shot"
+          "label": "Masking·CHESS 제외\n가공 Head·Use 확인",
+          "x": 350,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "sample",
-          "label": "Cell별 줄 선택"
+          "id": "fine",
+          "label": "FINE: Cell별 여러 row\n1·3·5·7줄 Sampling",
+          "x": 650,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "one",
+          "label": "ONE LINE: 기준 Shot\n전체 Glass Y 줄",
+          "x": 650,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
           "id": "buffer",
-          "label": "순서 고정 Buffer"
+          "label": "선택 키·Beam·순서 고정\n1001은 검색 식별자",
+          "x": 950,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
           "id": "iof",
-          "label": "IOF 배열과 Handshake"
+          "label": "IOF mm 배열·이동·Trigger\nreadback과 Count 확인",
+          "x": 950,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "count",
-          "label": "결과 Count 검증"
+          "id": "result",
+          "label": "현재 attempt 결과 결합\n반전 retry도 순서 일치",
+          "x": 350,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "limit",
+          "label": "점 제외 ≠ 경로 우회\nMask 영역 통과는 별도 시험",
+          "x": 50,
+          "y": 325,
+          "kind": "warn",
+          "width": 250,
+          "height": 100
         }
       ],
       "edges": [
         {
           "from": "design",
-          "to": "mask"
-        },
-        {
-          "from": "mask",
-          "to": "use"
+          "to": "use",
+          "label": ""
         },
         {
           "from": "use",
-          "to": "sample"
+          "to": "fine",
+          "label": ""
         },
         {
-          "from": "sample",
-          "to": "buffer"
+          "from": "use",
+          "to": "one",
+          "label": "수동 선택"
+        },
+        {
+          "from": "fine",
+          "to": "buffer",
+          "label": ""
+        },
+        {
+          "from": "one",
+          "to": "buffer",
+          "label": ""
         },
         {
           "from": "buffer",
-          "to": "iof"
+          "to": "iof",
+          "label": ""
         },
         {
           "from": "iof",
-          "to": "count"
+          "to": "result",
+          "label": ""
+        },
+        {
+          "from": "result",
+          "to": "limit",
+          "label": ""
         }
-      ]
+      ],
+      "notes": [
+        "ONE LINE의 줄 허용차는0.001 mm이며 기준 줄 Y와 비교합니다.",
+        "가려진 점을 빼는 것만으로 Stage 선분·가감속·Trigger window의 물리 회피가 입증되지 않습니다."
+      ],
+      "chapter": "02_Masking_Sampling_IOF.md",
+      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "evidence_level": "static_source_only",
+      "canvas": {
+        "width": 1260,
+        "height": 640
+      }
     },
     {
       "id": "review-03",
-      "title": "Vision 통신",
-      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
-      "chapter": "03_Vision_패킷과_단위.md",
+      "title": "Vision: 수신 성공·찾기·각축 판정·보정 적격",
       "nodes": [
         {
-          "id": "point",
-          "label": "검사점 식별자"
+          "id": "id",
+          "label": "1001 검색 식별자\n24-byte record",
+          "x": 50,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "packet",
-          "label": "1001 바이너리"
+          "id": "sequence",
+          "label": "1002 Count·1003 결과\nUniqueId·Command 확인",
+          "x": 350,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "tcp",
-          "label": "UniqueId TCP 대기"
-        },
-        {
-          "id": "done",
-          "label": "1002 Count"
-        },
-        {
-          "id": "recv",
-          "label": "1003 결과"
-        },
-        {
-          "id": "mm",
-          "label": "픽셀 차이 mm"
+          "id": "pixels",
+          "label": "Target−Hole 픽셀\nCameraResolution×nResolution",
+          "x": 650,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
           "id": "flip",
-          "label": "Flip과 Tolerance"
+          "label": "Vision Flip 한 번\n변환 후 X/Y tolerance",
+          "x": 950,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "reason",
+          "label": "찾기 NG 우선 분류\nX / Y / XY 초과 구분",
+          "x": 950,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
           "id": "save",
-          "label": "결과 저장"
+          "label": "VisionResultCode·NgReason\nCSV·실행 요약에 보관",
+          "x": 650,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "revision",
+          "label": "REINSP / EDIT 갱신\n코드 빈 값·원인 재분류",
+          "x": 350,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "product",
+          "label": "Active Product compact\n새 metadata 영속성 누락 위험",
+          "x": 50,
+          "y": 325,
+          "kind": "warn",
+          "width": 250,
+          "height": 100
         }
       ],
       "edges": [
         {
-          "from": "point",
-          "to": "packet"
+          "from": "id",
+          "to": "sequence",
+          "label": ""
         },
         {
-          "from": "packet",
-          "to": "tcp"
+          "from": "sequence",
+          "to": "pixels",
+          "label": ""
         },
         {
-          "from": "tcp",
-          "to": "done"
-        },
-        {
-          "from": "done",
-          "to": "recv"
-        },
-        {
-          "from": "recv",
-          "to": "mm"
-        },
-        {
-          "from": "mm",
-          "to": "flip"
+          "from": "pixels",
+          "to": "flip",
+          "label": ""
         },
         {
           "from": "flip",
-          "to": "save"
+          "to": "reason",
+          "label": ""
+        },
+        {
+          "from": "reason",
+          "to": "save",
+          "label": ""
+        },
+        {
+          "from": "save",
+          "to": "revision",
+          "label": ""
+        },
+        {
+          "from": "save",
+          "to": "product",
+          "label": ""
         }
-      ]
+      ],
+      "notes": [
+        "nResult0=찾기 성공입니다. 각축 tolerance와 보정 전체검증까지 통과한 뜻은 아닙니다.",
+        "CSV의 metadata 보존과 Active Product 재시작복구는 서로 다른 저장 경계입니다."
+      ],
+      "chapter": "03_Vision_패킷과_단위.md",
+      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "evidence_level": "static_source_only",
+      "canvas": {
+        "width": 1260,
+        "height": 640
+      }
     },
     {
       "id": "review-04",
-      "title": "Review Offset 적용과 원복",
-      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
-      "chapter": "04_ReviewOffset_적용과_롤백.md",
+      "title": "결과 편집·Offset 적용·보정율·원복의 경계",
       "nodes": [
         {
           "id": "result",
-          "label": "검사 결과"
+          "label": "BASE / REINSP / EDIT\nMEASURED 출처 확인",
+          "x": 50,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "valid",
-          "label": "전체 OK 검증"
+          "id": "filter",
+          "label": "형식별 적용 후보\n출처 없으면 Judge fallback",
+          "x": 350,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "interp",
-          "label": "열별 Y 보간"
+          "id": "delta",
+          "label": "직접 / ROUGH / FINE\nCurrent + Delta = Final",
+          "x": 650,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "design",
-          "label": "기존값 DESIGN 환산"
-        },
-        {
-          "id": "sum",
-          "label": "기존값과 Delta"
-        },
-        {
-          "id": "save",
-          "label": "새 Snapshot과 이력"
+          "id": "snapshot",
+          "label": "새 DESIGN Offset snapshot\nsource 경로 적용 이력",
+          "x": 950,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
           "id": "prepare",
-          "label": "다음 가공 병합"
+          "label": "다음 가공 준비 Load\nReview·Align 변환 후 %",
+          "x": 950,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
           "id": "rollback",
-          "label": "최신본 Rollback"
+          "label": "ReviewOffset Rollback\n최신 활성본 한 단계",
+          "x": 650,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "prev",
-          "label": "이전 활성본"
+          "id": "revision",
+          "label": "결과 EDIT 파일·판정\nOffset 원복과 별개",
+          "x": 350,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "risk",
+          "label": "새 Revision은 새 경로\n남은 MEASURED 재누적 시험",
+          "x": 50,
+          "y": 325,
+          "kind": "warn",
+          "width": 250,
+          "height": 100
         }
       ],
       "edges": [
         {
           "from": "result",
-          "to": "valid"
+          "to": "filter",
+          "label": ""
         },
         {
-          "from": "valid",
-          "to": "interp"
+          "from": "filter",
+          "to": "delta",
+          "label": ""
         },
         {
-          "from": "interp",
-          "to": "design"
+          "from": "delta",
+          "to": "snapshot",
+          "label": ""
         },
         {
-          "from": "design",
-          "to": "sum"
+          "from": "snapshot",
+          "to": "prepare",
+          "label": ""
         },
         {
-          "from": "sum",
-          "to": "save"
-        },
-        {
-          "from": "save",
-          "to": "prepare"
-        },
-        {
-          "from": "save",
-          "to": "rollback"
+          "from": "snapshot",
+          "to": "rollback",
+          "label": ""
         },
         {
           "from": "rollback",
-          "to": "prev"
-        }
-      ]
-    },
-    {
-      "id": "review-05",
-      "title": "결과 Revision과 Product",
-      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
-      "chapter": "05_결과_Revision_Product_연결.md",
-      "nodes": [
-        {
-          "id": "glass",
-          "label": "Glass와 Recipe"
-        },
-        {
-          "id": "product",
-          "label": "Product 진행"
-        },
-        {
-          "id": "measure",
-          "label": "Review 측정"
-        },
-        {
-          "id": "base",
-          "label": "BASE CSV"
-        },
-        {
-          "id": "retry",
-          "label": "선택 Shot 재검사"
-        },
-        {
-          "id": "revision",
-          "label": "새 REINSP CSV"
-        },
-        {
-          "id": "offset",
-          "label": "별도 Offset 적용"
-        }
-      ],
-      "edges": [
-        {
-          "from": "glass",
-          "to": "product"
-        },
-        {
-          "from": "glass",
-          "to": "measure"
-        },
-        {
-          "from": "measure",
-          "to": "base"
-        },
-        {
-          "from": "base",
-          "to": "retry"
-        },
-        {
-          "from": "retry",
-          "to": "revision"
+          "to": "revision",
+          "label": "복원대상 구별"
         },
         {
           "from": "revision",
-          "to": "offset"
-        },
-        {
-          "from": "measure",
-          "to": "product"
-        }
-      ]
-    },
-    {
-      "id": "review-06",
-      "title": "Default 중심 보정",
-      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
-      "chapter": "06_DefaultOffset_ZeroOrder_FirstBeam.md",
-      "nodes": [
-        {
-          "id": "center",
-          "label": "설정 중앙과 Head 간격"
-        },
-        {
-          "id": "target",
-          "label": "고정 목표 중심"
-        },
-        {
-          "id": "fire",
-          "label": "가공과 예상위치 이동"
-        },
-        {
-          "id": "measure",
-          "label": "중심 측정"
-        },
-        {
-          "id": "error",
-          "label": "목표와 실측 오차"
-        },
-        {
-          "id": "recommend",
-          "label": "현재 Default에서 오차 차감"
-        },
-        {
-          "id": "apply",
-          "label": "값 적용"
-        },
-        {
-          "id": "verify",
-          "label": "새 가공 재검증"
-        },
-        {
-          "id": "next",
-          "label": "다음 쌍"
-        },
-        {
-          "id": "restore",
-          "label": "실패 쌍 원복"
+          "to": "risk",
+          "label": ""
         }
       ],
-      "edges": [
-        {
-          "from": "center",
-          "to": "target"
-        },
-        {
-          "from": "fire",
-          "to": "measure"
-        },
-        {
-          "from": "target",
-          "to": "error"
-        },
-        {
-          "from": "measure",
-          "to": "error"
-        },
-        {
-          "from": "error",
-          "to": "recommend"
-        },
-        {
-          "from": "recommend",
-          "to": "apply"
-        },
-        {
-          "from": "apply",
-          "to": "verify"
-        },
-        {
-          "from": "verify",
-          "to": "next"
-        },
-        {
-          "from": "verify",
-          "to": "restore"
-        }
-      ]
+      "notes": [
+        "COPY는 결과 X/Y·JUDGE 후보를 복제합니다. 보정 snapshot 적용과 새 실측은 별도입니다.",
+        "보정율0%는 저장 이력 삭제가 아닙니다. 산포도 축/색도 품질판정을 다시 계산하지 않습니다."
+      ],
+      "chapter": "04_ReviewOffset_적용과_롤백.md",
+      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "evidence_level": "static_source_only",
+      "canvas": {
+        "width": 1260,
+        "height": 640
+      }
     },
     {
-      "id": "review-07",
-      "title": "자동 시퀀스 경계",
-      "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
-      "chapter": "07_Align_Distortion_윈도우_복구.md",
+      "id": "review-05",
+      "title": "결과 Revision: 재측정과 편집을 분리해 추적",
       "nodes": [
         {
-          "id": "request",
-          "label": "Distortion 요청"
+          "id": "base",
+          "label": "기존 BASE CSV\n원본은 보존",
+          "x": 50,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "prepare",
-          "label": "조건 동결과 기록"
+          "id": "reinspect",
+          "label": "RE-INSPECTION\n선택 Shot 새 측정",
+          "x": 350,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "complete",
-          "label": "Stage 완료"
+          "id": "reinsp",
+          "label": "새 _REINSP_ CSV\nMEASURED·REINSPECTION_NG",
+          "x": 650,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "edit",
+          "label": "KEY IN / COPY 후보\nX/Y·JUDGE 독립 선택",
+          "x": 350,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "edited",
+          "label": "새 _EDIT_ CSV\n열이 있으면 EDITED",
+          "x": 650,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
           "id": "load",
-          "label": "AK와 DK mm 수신"
+          "label": "선택하면 새 파일 LOAD\n산포도·표는 Judge 중심",
+          "x": 950,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "calc",
-          "label": "Base-LastLoad와 Tolerance"
+          "id": "offset",
+          "label": "별도 OFFSET APPLY\n형식·출처에 따라 소비",
+          "x": 950,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "id": "save",
-          "label": "Align 저장과 Handshake"
-        },
-        {
-          "id": "ready",
-          "label": "다음 DoReady 재생성"
-        },
-        {
-          "id": "task",
-          "label": "가공 Task 완료"
-        },
-        {
-          "id": "count",
-          "label": "윈도우 사용매수 확정"
-        },
-        {
-          "id": "handover",
-          "label": "Stage 인계 Count 저장"
-        },
-        {
-          "id": "off",
-          "label": "교체 요청 OFF"
-        },
-        {
-          "id": "follow",
-          "label": "ZeroLine 후속 미완료"
-        },
-        {
-          "id": "block",
-          "label": "다음 준비 차단"
+          "id": "audit",
+          "label": "부모 hash·기준 Offset ID\n전용 계보·작업자 기록 없음",
+          "x": 50,
+          "y": 325,
+          "kind": "warn",
+          "width": 250,
+          "height": 100
         }
       ],
       "edges": [
         {
-          "from": "request",
-          "to": "prepare"
+          "from": "base",
+          "to": "reinspect",
+          "label": ""
         },
         {
-          "from": "prepare",
-          "to": "complete"
+          "from": "reinspect",
+          "to": "reinsp",
+          "label": ""
         },
         {
-          "from": "complete",
-          "to": "load"
+          "from": "base",
+          "to": "edit",
+          "label": ""
+        },
+        {
+          "from": "edit",
+          "to": "edited",
+          "label": ""
+        },
+        {
+          "from": "edited",
+          "to": "load",
+          "label": ""
+        },
+        {
+          "from": "reinsp",
+          "to": "offset",
+          "label": ""
         },
         {
           "from": "load",
-          "to": "calc"
+          "to": "offset",
+          "label": ""
         },
         {
-          "from": "calc",
-          "to": "save"
+          "from": "edit",
+          "to": "audit",
+          "label": ""
+        }
+      ],
+      "notes": [
+        "EDIT는 변환열을 우선 수정하며 raw가 함께 있으면 기존 raw를 유지합니다.",
+        "ONE SHOT/Legacy처럼 RESULT_SOURCE 열이 없으면 EDITED 출처가 새로 생기지 않아 적용 정책이 달라집니다."
+      ],
+      "chapter": "05_결과_Revision_Product_연결.md",
+      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "evidence_level": "static_source_only",
+      "canvas": {
+        "width": 1260,
+        "height": 640
+      }
+    },
+    {
+      "id": "review-06",
+      "title": "Default: AK 평균·1/16슬롯·새 가공 검증",
+      "nodes": [
+        {
+          "id": "ak",
+          "label": "AK1 Recipe + AK3 세션\nAK3 기본은 설계값",
+          "x": 50,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "from": "save",
-          "to": "ready"
+          "id": "center",
+          "label": "Center=(AK1+AK3)/2\nHead 목표=center+(h−4.5)×gap",
+          "x": 350,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
         },
         {
-          "from": "task",
-          "to": "count"
+          "id": "find",
+          "label": "현재 Default 포함 예상위치\n최종 목표와 구별",
+          "x": 650,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "capture",
+          "label": "전역 DOE grid1 또는4\nShot·십자 모두1/16 Capture",
+          "x": 950,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "fit",
+          "label": "정확한 Beam 집합·전점OK\nFit·encoder−correction 중심",
+          "x": 950,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "recommend",
+          "label": "현재 Default − 중심오차\nRecipe 조건부 저장",
+          "x": 650,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "verify",
+          "label": "4/5→3/6→2/7→1/8\n각 쌍 새 가공·새 검증",
+          "x": 350,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "restore",
+          "label": "실패 쌍만 적용 전 복원\n앞의 검증된 쌍은 유지",
+          "x": 50,
+          "y": 325,
+          "kind": "warn",
+          "width": 250,
+          "height": 100
+        }
+      ],
+      "edges": [
+        {
+          "from": "ak",
+          "to": "center",
+          "label": ""
+        },
+        {
+          "from": "center",
+          "to": "find",
+          "label": ""
+        },
+        {
+          "from": "find",
+          "to": "capture",
+          "label": ""
+        },
+        {
+          "from": "capture",
+          "to": "fit",
+          "label": ""
+        },
+        {
+          "from": "fit",
+          "to": "recommend",
+          "label": ""
+        },
+        {
+          "from": "recommend",
+          "to": "verify",
+          "label": ""
+        },
+        {
+          "from": "verify",
+          "to": "restore",
+          "label": "실패·중단"
+        }
+      ],
+      "notes": [
+        "AK3 입력은 자동 새 측정이나 AK4점 글로벌 X/Y 회전 피팅이 아닙니다.",
+        "전역grid1/4 지원은 Head별 DOE3+원빔5 혼합구성·Beam11 자동대응 구현을 뜻하지 않습니다."
+      ],
+      "chapter": "06_DefaultOffset_ZeroOrder_FirstBeam.md",
+      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "evidence_level": "static_source_only",
+      "canvas": {
+        "width": 1260,
+        "height": 640
+      }
+    },
+    {
+      "id": "review-07",
+      "title": "Align·윈도우 retry·ZeroLine은 각자 수명이 다름",
+      "nodes": [
+        {
+          "id": "distortion",
+          "label": "Distortion: 조건 동결\nAK·DK mm 수신",
+          "x": 50,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "align",
+          "label": "Base−LastLoad·tolerance\n이번 Glass Align 저장",
+          "x": 350,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "ready",
+          "label": "다음 DoReady 재생성\nReview 누적과 별도",
+          "x": 650,
+          "y": 115,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "follow",
+          "label": "ZeroLine 후속 미완료\n다음 가공 준비 차단",
+          "x": 950,
+          "y": 115,
+          "kind": "warn",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "count",
+          "label": "가공완료→사용매수 확정\n교체완료→TrayCount 지속저장",
+          "x": 50,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "threshold",
+          "label": "인계Count ≥ Max\n추가retry 0~3회 정책",
+          "x": 350,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "edge",
+          "label": "Request0·Complete0 확인\n남은 횟수면 재요청1",
+          "x": 650,
+          "y": 325,
+          "kind": "step",
+          "width": 250,
+          "height": 100
+        },
+        {
+          "id": "exhaust",
+          "label": "소진: 경고 callback\nAUTO 계속·Count 유지",
+          "x": 950,
+          "y": 325,
+          "kind": "warn",
+          "width": 250,
+          "height": 100
+        }
+      ],
+      "edges": [
+        {
+          "from": "distortion",
+          "to": "align",
+          "label": ""
+        },
+        {
+          "from": "align",
+          "to": "ready",
+          "label": ""
+        },
+        {
+          "from": "ready",
+          "to": "follow",
+          "label": "별도 준비조건"
         },
         {
           "from": "count",
-          "to": "handover"
+          "to": "threshold",
+          "label": ""
         },
         {
-          "from": "handover",
-          "to": "off"
+          "from": "threshold",
+          "to": "edge",
+          "label": "횟수 남음"
         },
         {
-          "from": "follow",
-          "to": "block"
+          "from": "edge",
+          "to": "count",
+          "label": "새 완료"
+        },
+        {
+          "from": "threshold",
+          "to": "exhaust",
+          "label": "소진"
         }
-      ]
+      ],
+      "notes": [
+        "교체 인계값은 무조건0으로 초기화하지 않습니다. 최초요청과 추가retry 횟수를 구별합니다.",
+        "경고 이후 AUTO 계속은 현재 software 정책이며 실제 보호성능/운영합격을 뜻하지 않습니다."
+      ],
+      "chapter": "07_Align_Distortion_윈도우_복구.md",
+      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "evidence_level": "static_source_only",
+      "canvas": {
+        "width": 1260,
+        "height": 640
+      }
     }
   ]
 }

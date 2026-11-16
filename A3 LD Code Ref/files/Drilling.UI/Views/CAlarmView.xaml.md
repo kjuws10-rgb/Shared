@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
-| 원본 SHA256 | 2d1f8f95a36122e9d049f2856ada8e1080057d22436f365a171ee0a228503e4f |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 SHA256 | 13837ed24a1751d6cf813ac2dfd3dc1b8a5124fed885711e23c9ca0d5af8ff2f |
 | 파일 분류 | code |
-| 원본 크기/행 | 26,156 bytes / 291 physical lines |
+| 원본 크기/행 | 26,637 bytes / 296 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CAlarmView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CAlarmView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -24,80 +24,103 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 코드 비하인드 후보 | Drilling.UI/Views/CAlarmView.xaml.cs |
 | 이름 있는 요소 | AlarmTabs, PART_SelectedContentHost, CurrentAlarmGrid, AlarmFromTime, AlarmThroughTime, AlarmLast24Hours, AlarmHistoryGrid, AlarmHourView, AlarmCodeView, AlarmTrend, TrendRow, CauseRow, BarRow, TrendLabelColumn, AlarmListGrid |
 | 이벤트 개수 | 0 |
-| Binding 표현 개수 | 67 |
+| Binding 표현 개수 | 70 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| CanEdit |
-| IsHourView |
-| IsCodeView |
-| Text, RelativeSource={RelativeSource Self |
-| Level |
-| Level |
-| CurrentScreen.IsAlarmLayout, Converter={StaticResource BooleanToVisibilityConverter |
-| CurrentScreen.Alarm.SelectedTabIndex, Mode=TwoWay |
-| CurrentScreen.Alarm.AlarmResetCommand |
-| CurrentScreen.Alarm.BuzzerOffCommand |
-| CurrentScreen.Alarm.LogError |
-| CurrentScreen.Alarm.LogError |
-| CurrentScreen.Alarm.CurrentAlarmRows |
-| No |
-| Code |
-| Level |
-| Group |
-| Cause |
-| Action |
-| Time |
-| CurrentScreen.Alarm.CurrentAlarmRows.Count |
-| CurrentScreen.Alarm.HistoryPanel |
-| From |
-| CanEdit |
-| FromTime, UpdateSourceTrigger=PropertyChanged |
-| CanEdit |
-| Through |
-| CanEdit |
-| ThroughTime, UpdateSourceTrigger=PropertyChanged |
-| CanEdit |
-| SearchCommand |
-| Last24HoursCommand |
-| Status |
-| Rows |
-| No |
-| Time |
-| Code |
-| Level |
-| Group |
-| Cause |
-| Solution |
-| EmptyMessage |
-| Rows.Count |
-| HourViewCommand |
-| CodeViewCommand |
-| Bars |
-| Detail |
-| Label |
-| Cause |
-| FilledWidth |
-| EmptyWidth |
-| Count, StringFormat={ |
-| IsHourly |
-| Bars.Count |
-| TrendCaption |
-| CurrentScreen.Alarm.ListPanel |
-| Status |
-| Status |
-| Rows |
-| No |
-| Code |
-| Group |
-| Id |
-| Level |
-| Cause |
-| Solution |
-| CimAddress |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| AlarmTabs | L120–120 |
+| PART_SelectedContentHost | L128–128 |
+| CurrentAlarmGrid | L150–150 |
+| AlarmFromTime | L176–176 |
+| AlarmThroughTime | L181–181 |
+| AlarmLast24Hours | L185–185 |
+| AlarmHistoryGrid | L199–199 |
+| AlarmHourView | L224–224 |
+| AlarmCodeView | L225–225 |
+| AlarmTrend | L232–232 |
+| TrendRow | L234–234 |
+| CauseRow | L235–235 |
+| BarRow | L235–235 |
+| TrendLabelColumn | L236–236 |
+| AlarmListGrid | L279–279 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding CanEdit} | L25–25 |
+| {Binding IsHourView} | L28–28 |
+| {Binding IsCodeView} | L34–34 |
+| {Binding} | L85–85 |
+| {Binding Text, RelativeSource={RelativeSource Self}} | L94–94 |
+| {Binding Level} | L102–102 |
+| {Binding Level} | L103–103 |
+| {Binding CurrentScreen.IsAlarmLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L117–117 |
+| {Binding CurrentScreen.Alarm.SelectedTabIndex, Mode=TwoWay} | L120–120 |
+| {Binding CurrentScreen.Alarm.AlarmResetCommand} | L139–139 |
+| {Binding CurrentScreen.Alarm.BuzzerOffCommand} | L141–141 |
+| {Binding CurrentScreen.Alarm.LogError} | L145–145 |
+| {Binding CurrentScreen.Alarm.LogError} | L147–147 |
+| {Binding CurrentScreen.Alarm.CurrentAlarmRows} | L150–150 |
+| {Binding No} | L152–152 |
+| {Binding Code} | L153–153 |
+| {Binding Level} | L154–154 |
+| {Binding Group} | L155–155 |
+| {Binding Cause} | L156–156 |
+| {Binding Action} | L157–157 |
+| {Binding Time} | L158–158 |
+| {Binding CurrentScreen.Alarm.CurrentAlarmRows.Count} | L164–164 |
+| {Binding CurrentScreen.Alarm.HistoryPanel} | L171–171 |
+| {Binding From} | L175–175 |
+| {Binding CanEdit} | L175–175 |
+| {Binding FromTime, UpdateSourceTrigger=PropertyChanged} | L176–176 |
+| {Binding CanEdit} | L177–177 |
+| {Binding Through} | L180–180 |
+| {Binding CanEdit} | L180–180 |
+| {Binding ThroughTime, UpdateSourceTrigger=PropertyChanged} | L181–181 |
+| {Binding CanEdit} | L182–182 |
+| {Binding SearchCommand} | L184–184 |
+| {Binding Last24HoursCommand} | L185–185 |
+| {Binding Status} | L188–188 |
+| {Binding CauseAnalysisCommand} | L195–195 |
+| {Binding Rows} | L199–199 |
+| {Binding SelectedRow, Mode=TwoWay} | L200–200 |
+| {Binding No} | L202–202 |
+| {Binding Time} | L203–203 |
+| {Binding Code} | L204–204 |
+| {Binding Level} | L205–205 |
+| {Binding Group} | L206–206 |
+| {Binding Cause} | L207–207 |
+| {Binding Solution} | L208–208 |
+| {Binding EmptyMessage} | L211–211 |
+| {Binding Rows.Count} | L214–214 |
+| {Binding HourViewCommand} | L224–224 |
+| {Binding CodeViewCommand} | L225–225 |
+| {Binding Bars} | L232–232 |
+| {Binding Detail} | L234–234 |
+| {Binding Label} | L237–237 |
+| {Binding Cause} | L238–238 |
+| {Binding FilledWidth} | L241–241 |
+| {Binding EmptyWidth} | L241–241 |
+| {Binding Count, StringFormat={}{0:N0}} | L244–244 |
+| {Binding IsHourly} | L246–246 |
+| {Binding Bars.Count} | L258–258 |
+| {Binding TrendCaption} | L263–263 |
+| {Binding CurrentScreen.Alarm.ListPanel} | L270–270 |
+| {Binding Status} | L274–274 |
+| {Binding Status} | L276–276 |
+| {Binding Rows} | L279–279 |
+| {Binding No} | L281–281 |
+| {Binding Code} | L282–282 |
+| {Binding Group} | L283–283 |
+| {Binding Id} | L284–284 |
+| {Binding Level} | L285–285 |
+| {Binding Cause} | L286–286 |
+| {Binding Solution} | L287–287 |
+| {Binding CimAddress} | L288–288 |
 
 ## 원문 전체 주석 해설본
 

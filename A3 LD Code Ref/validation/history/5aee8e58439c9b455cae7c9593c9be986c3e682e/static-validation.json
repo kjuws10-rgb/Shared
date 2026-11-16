@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "a3-reference-validation/1",
+  "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "passed": true,
+  "counts": {
+    "assertions": 756718,
+    "annotated_files": 320,
+    "annotated_source_lines": 514087,
+    "csharp_files": 148,
+    "types": 876,
+    "members": 15282,
+    "calls": 39483,
+    "symbol_ids": 15282,
+    "rag_source_lines": 563306,
+    "rag_records": 27483,
+    "rag_unique_annotated_source_lines": 514087,
+    "local_links": 3416,
+    "svg_files": 600,
+    "unique_source_citations": 26660,
+    "tracked_files": 571,
+    "output_files": 2276,
+    "output_bytes": 424422642
+  },
+  "errors": [],
+  "sourceUnchanged": true,
+  "inheritedSourceEncodingFindings": [
+    {
+      "sourcePath": "Drilling.Common/Station/CStationProcess.cs",
+      "lines": [
+        570
+      ],
+      "replacementCharacters": 9
+    }
+  ],
+  "equipmentBuild": "not run",
+  "equipmentExecution": "not run",
+  "scope": "Static provenance/coverage/navigation validation; not runtime behavior or model accuracy certification"
+}

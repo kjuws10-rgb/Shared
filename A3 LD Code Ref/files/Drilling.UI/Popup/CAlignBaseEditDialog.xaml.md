@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 1bfd1c7297e1d7ec29c5d14f981a27f19f6750406248042061df04396bd6aef6 |
 | 파일 분류 | code |
 | 원본 크기/행 | 11,234 bytes / 144 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlignBaseEditDialog.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignBaseEditDialog.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -23,49 +23,64 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- |
 | 코드 비하인드 후보 | Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs |
 | 이름 있는 요소 | PreviewArea, CancelButton, SaveButton |
-| 이벤트 개수 | 3 |
+| 이벤트 개수 | 10 |
 | Binding 표현 개수 | 32 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
-| KeyDown | OnKeyDown | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | CancelClicked | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | SaveClicked | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| RecipeName, StringFormat='CURRENT RECIPE: {0 |
-| PreviewHeight |
-| PreviewImage |
-| PreviewHeight |
-| AlignKeys |
-| PreviewHeight |
-| EditorLeft |
-| EditorTop |
-| KeyBrush |
-| Name |
-| KeyBrush |
-| BaseX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
-| BaseY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
-| DistortionPairs |
-| PreviewHeight |
-| EditorLeft |
-| EditorTop |
-| KeyBrush |
-| Name |
-| KeyBrush |
-| Left.Name, StringFormat='좌 · {0 |
-| KeyBrush |
-| Right.Name, StringFormat='우 · {0 |
-| KeyBrush |
-| Left |
-| BaseX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
-| Right |
-| BaseX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
-| Left |
-| BaseY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
-| Right |
-| BaseY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| PreviewArea | L38–38 |
+| CancelButton | L137–137 |
+| SaveButton | L139–139 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+| Closing | OnClosing | L7–7 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| KeyDown | OnKeyDown | L7–7 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenCoordinateInput | L70–70 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenCoordinateInput | L74–74 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenCoordinateInput | L110–110 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenCoordinateInput | L113–113 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenCoordinateInput | L118–118 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenCoordinateInput | L121–121 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | CancelClicked | L137–137 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | SaveClicked | L139–139 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding RecipeName, StringFormat='CURRENT RECIPE: {0}'} | L34–34 |
+| {Binding PreviewHeight} | L39–39 |
+| {Binding PreviewImage} | L40–40 |
+| {Binding PreviewHeight} | L40–40 |
+| {Binding AlignKeys} | L41–41 |
+| {Binding PreviewHeight} | L41–41 |
+| {Binding EditorLeft} | L47–47 |
+| {Binding EditorTop} | L48–48 |
+| {Binding KeyBrush} | L54–54 |
+| {Binding Name} | L65–65 |
+| {Binding KeyBrush} | L66–66 |
+| {Binding BaseX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L69–69 |
+| {Binding BaseY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L73–73 |
+| {Binding DistortionPairs} | L80–80 |
+| {Binding PreviewHeight} | L80–80 |
+| {Binding EditorLeft} | L84–84 |
+| {Binding EditorTop} | L85–85 |
+| {Binding KeyBrush} | L90–90 |
+| {Binding Name} | L101–101 |
+| {Binding KeyBrush} | L101–101 |
+| {Binding Left.Name, StringFormat='좌 · {0}'} | L102–102 |
+| {Binding KeyBrush} | L103–103 |
+| {Binding Right.Name, StringFormat='우 · {0}'} | L104–104 |
+| {Binding KeyBrush} | L105–105 |
+| {Binding Left} | L108–108 |
+| {Binding BaseX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L109–109 |
+| {Binding Right} | L111–111 |
+| {Binding BaseX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L112–112 |
+| {Binding Left} | L116–116 |
+| {Binding BaseY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L117–117 |
+| {Binding Right} | L119–119 |
+| {Binding BaseY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L120–120 |
 
 ## 원문 전체 주석 해설본
 

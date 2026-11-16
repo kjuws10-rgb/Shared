@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | ef65f7a39d9a9b3b61ec94acf6d473c4a53b6a86e10302d4d5c85b81d03aa325 |
 | 파일 분류 | code |
 | 원본 크기/행 | 2,333 bytes / 43 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -42,7 +42,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `IsActiveProperty` · L9–10
 
-[Drilling.UI/CSignalBlink.cs:9–10](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L9-L10)
+[Drilling.UI/CSignalBlink.cs:9–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L9-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -72,7 +72,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `IsHookedProperty` · L11–12
 
-[Drilling.UI/CSignalBlink.cs:11–12](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L11-L12)
+[Drilling.UI/CSignalBlink.cs:11–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L11-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -102,7 +102,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetIsActive` · L13–13
 
-[Drilling.UI/CSignalBlink.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L13-L13)
+[Drilling.UI/CSignalBlink.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -135,7 +135,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SetIsActive` · L14–14
 
-[Drilling.UI/CSignalBlink.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L14-L14)
+[Drilling.UI/CSignalBlink.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -169,7 +169,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `ActiveChanged` · L16–27
 
-[Drilling.UI/CSignalBlink.cs:16–27](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L16-L27)
+[Drilling.UI/CSignalBlink.cs:16–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L16-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -232,7 +232,7 @@ flowchart TD
 
 ### MethodDeclaration `Loaded` · L28–29
 
-[Drilling.UI/CSignalBlink.cs:28–29](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L28-L29)
+[Drilling.UI/CSignalBlink.cs:28–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L28-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -278,7 +278,7 @@ flowchart TD
 
 ### MethodDeclaration `Unloaded` · L30–30
 
-[Drilling.UI/CSignalBlink.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L30-L30)
+[Drilling.UI/CSignalBlink.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -312,7 +312,7 @@ flowchart TD
 
 ### MethodDeclaration `VisibilityChanged` · L31–35
 
-[Drilling.UI/CSignalBlink.cs:31–35](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L31-L35)
+[Drilling.UI/CSignalBlink.cs:31–35](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L31-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -365,7 +365,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L36–37
 
-[Drilling.UI/CSignalBlink.cs:36–37](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L36-L37)
+[Drilling.UI/CSignalBlink.cs:36–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L36-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -384,9 +384,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CSignalBlink.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L26-L26) | Start | False |
-| [Drilling.UI/CSignalBlink.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L29-L29) | Start | False |
-| [Drilling.UI/CSignalBlink.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L34-L34) | Start | False |
+| [Drilling.UI/CSignalBlink.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L26-L26) | Start | False |
+| [Drilling.UI/CSignalBlink.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L29-L29) | Start | False |
+| [Drilling.UI/CSignalBlink.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L34-L34) | Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -410,7 +410,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L38–42
 
-[Drilling.UI/CSignalBlink.cs:38–42](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L38-L42)
+[Drilling.UI/CSignalBlink.cs:38–42](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L38-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -429,9 +429,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CSignalBlink.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L26-L26) | Stop | False |
-| [Drilling.UI/CSignalBlink.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L30-L30) | Stop | False |
-| [Drilling.UI/CSignalBlink.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CSignalBlink.cs#L34-L34) | Stop | False |
+| [Drilling.UI/CSignalBlink.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L26-L26) | Stop | False |
+| [Drilling.UI/CSignalBlink.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L30-L30) | Stop | False |
+| [Drilling.UI/CSignalBlink.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CSignalBlink.cs#L34-L34) | Stop | False |
 
 호출하는 대상과 해석 범위:
 

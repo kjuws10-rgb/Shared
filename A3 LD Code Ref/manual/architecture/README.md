@@ -2,7 +2,7 @@
 
 이 묶음은 프로그램 시작부터 조건 파일·좌표·Script·Product·장치·동시성까지 연결해서 읽는 상세 장입니다. 파일별 전체 레퍼런스와 함께 사용합니다. 원본 코드에 주석을 추가하거나 장비 프로그램을 변경한 산출물이 아닙니다.
 
-> 기준: `A3Drilling/master` · `5aee8e58439c9b455cae7c9593c9be986c3e682e`. 본 장은 해당 Commit의 소스를 정적으로 읽어 설명합니다. 장비 연결·가공·컴파일을 실행한 결과가 아닙니다.
+> 기준: `A3Drilling/master` · `dfa5920e6301d9ec4b0eab1452ae59521aafc986`. 본 장은 해당 Commit의 소스를 정적으로 읽어 설명합니다. 장비 연결·가공·컴파일을 실행한 결과가 아닙니다.
 
 
 | 장 | 설명 |
@@ -14,5 +14,8 @@
 | [05. Device Interface·Automation1·Motion·MELSEC의 경계](05-device-interfaces-and-drivers.md) | 통신 등록·SDK 래퍼·Motion·MELSEC |
 | [06. 스레드·스냅샷·취소·로그를 이용해 멈춤과 오동작 찾기](06-threading-snapshots-and-logs.md) | 잠금·취소·상태 취득·로그 |
 | [07. 변경 영향 검토와 Offline Studio에서 이 문서를 쓰는 방법](07-change-impact-and-offline-reference.md) | 변경 영향·출처·검색·유지보수 |
+| [08. 알람 원인 분석: 전후 로그에서 무엇을 알 수 있는가](08-alarm-cause-analysis.md) | 기준시각·비교구간·후보 규칙·NG 요약·표시 한계 |
 
 모든 그림은 오프라인에서도 읽을 수 있는 로컬 SVG와 Mermaid 원문을 함께 제공합니다. SVG는 설명용 구조도이며 실장비 타이밍 도면이 아닙니다. `diagram-spec.json`은 노드/연결을 재사용하기 위한 데이터입니다.
+
+이번 갱신은 Ver11.13.0 diff를 기준으로 보호윈도우 재시도·인계, Review 메뉴 소유권 이동, Default 보정 AK1/AK3·DOE, 좌표 미리보기, Product NG 필드의 저장 공백, 활성 Distortion 맵과 새 알람 분석을 반영했습니다. 코드 단위·수식·분기는 정적으로 확인했으며 장비 동작·물리 좌표·성능 수치는 실행 검증하지 않았습니다. 운영 측정 CSV의 실제 행과 현장 접속값은 싣지 않습니다.

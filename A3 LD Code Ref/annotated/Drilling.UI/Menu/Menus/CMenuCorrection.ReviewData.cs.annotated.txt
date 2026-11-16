@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs
-Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus
@@ -52,704 +52,839 @@ L000023 |             private readonly Func<Task> _rollbackReviewOffset; ⟦EOL�
 L000024 |             private readonly Func<string, IReadOnlyList<ST_REVIEW_OFFSET_ROW>, string, Task<ST_REVIEW_OFFSET_FILE_DATA?>> _saveReviewOffsetFromResult; ⟦EOL⟧
 // 해설 L25: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._isBusy
 L000025 |             private bool _isBusy; ⟦EOL⟧
-// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._selectedNode
-L000026 |             private ST_REVIEW_RESULT_TREE_NODE? _selectedNode; ⟦EOL⟧
-L000027 |  ⟦EOL⟧
-// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataPanel(Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, Drilling.Common.Review.CReviewManager, Drilli
-L000028 |             public CReviewDataPanel( ⟦EOL⟧
-// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataPanel(Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, Drilling.Common.Review.CReviewManager, Drilli
-L000029 |                 CReviewResultFileBase reviewResultFile, ⟦EOL⟧
+// 해설 L26: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._isResultEditMode
+L000026 |             private bool _isResultEditMode; ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._skipNextVisibleReload
+L000027 |             private int _skipNextVisibleReload; ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel._selectedNode
+L000028 |             private ST_REVIEW_RESULT_TREE_NODE? _selectedNode; ⟦EOL⟧
+L000029 |  ⟦EOL⟧
 // 해설 L30: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataPanel(Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, Drilling.Common.Review.CReviewManager, Drilli
-L000030 |                 CReviewOffsetFileBase reviewOffsetFile, ⟦EOL⟧
+L000030 |             public CReviewDataPanel( ⟦EOL⟧
 // 해설 L31: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataPanel(Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, Drilling.Common.Review.CReviewManager, Drilli
-L000031 |                 CReviewManager reviewManager, ⟦EOL⟧
+L000031 |                 CReviewResultFileBase reviewResultFile, ⟦EOL⟧
 // 해설 L32: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataPanel(Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, Drilling.Common.Review.CReviewManager, Drilli
-L000032 |                 CRecipeManager recipeManager, ⟦EOL⟧
+L000032 |                 CReviewOffsetFileBase reviewOffsetFile, ⟦EOL⟧
 // 해설 L33: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataPanel(Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, Drilling.Common.Review.CReviewManager, Drilli
-L000033 |                 CSettingManager settingManager, ⟦EOL⟧
+L000033 |                 CReviewManager reviewManager, ⟦EOL⟧
 // 해설 L34: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataPanel(Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, Drilling.Common.Review.CReviewManager, Drilli
-L000034 |                 Func<string> selectedRecipeIdProvider, ⟦EOL⟧
+L000034 |                 CRecipeManager recipeManager, ⟦EOL⟧
 // 해설 L35: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataPanel(Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, Drilling.Common.Review.CReviewManager, Drilli
-L000035 |                 Action<string> statusReporter, ⟦EOL⟧
+L000035 |                 CSettingManager settingManager, ⟦EOL⟧
 // 해설 L36: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataPanel(Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, Drilling.Common.Review.CReviewManager, Drilli
-L000036 |                 Func<Task> rollbackReviewOffset, ⟦EOL⟧
+L000036 |                 Func<string> selectedRecipeIdProvider, ⟦EOL⟧
 // 해설 L37: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataPanel(Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, Drilling.Common.Review.CReviewManager, Drilli
-L000037 |                 Func<string, IReadOnlyList<ST_REVIEW_OFFSET_ROW>, string, Task<ST_REVIEW_OFFSET_FILE_DATA?>> saveReviewOffsetFromResult) ⟦EOL⟧
-// 해설 L38: 구문 블록 경계입니다 · 소속 .ctor.
-L000038 |             { ⟦EOL⟧
-// 해설 L39: 값을 대상에 대입합니다: _reviewResultFile = reviewResultFile
-L000039 |                 _reviewResultFile = reviewResultFile; ⟦EOL⟧
-// 해설 L40: 값을 대상에 대입합니다: _reviewOffsetFile = reviewOffsetFile
-L000040 |                 _reviewOffsetFile = reviewOffsetFile; ⟦EOL⟧
-// 해설 L41: 값을 대상에 대입합니다: _reviewManager = reviewManager
-L000041 |                 _reviewManager = reviewManager; ⟦EOL⟧
-// 해설 L42: 값을 대상에 대입합니다: _recipeManager = recipeManager
-L000042 |                 _recipeManager = recipeManager; ⟦EOL⟧
-// 해설 L43: 값을 대상에 대입합니다: _settingManager = settingManager
-L000043 |                 _settingManager = settingManager; ⟦EOL⟧
-// 해설 L44: 값을 대상에 대입합니다: _selectedRecipeIdProvider = selectedRecipeIdProvider
-L000044 |                 _selectedRecipeIdProvider = selectedRecipeIdProvider; ⟦EOL⟧
-// 해설 L45: 값을 대상에 대입합니다: _statusReporter = statusReporter
-L000045 |                 _statusReporter = statusReporter; ⟦EOL⟧
-// 해설 L46: 값을 대상에 대입합니다: _rollbackReviewOffset = rollbackReviewOffset
-L000046 |                 _rollbackReviewOffset = rollbackReviewOffset; ⟦EOL⟧
-// 해설 L47: 값을 대상에 대입합니다: _saveReviewOffsetFromResult = saveReviewOffsetFromResult
-L000047 |                 _saveReviewOffsetFromResult = saveReviewOffsetFromResult; ⟦EOL⟧
-// 해설 L48: 값을 대상에 대입합니다: RefreshCommand = new CButtonCommand(RefreshRequested, _ => !IsBusy) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(RefreshRequested, _ => !IsBusy)
-L000048 |                 RefreshCommand = new CButtonCommand(RefreshRequested, _ => !IsBusy); ⟦EOL⟧
-// 해설 L49: 값을 대상에 대입합니다: LoadDataCommand = new CButtonCommand(LoadDataRequested, _ => CanLoadData) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(LoadDataRequested, _ => CanLoadData)
-L000049 |                 LoadDataCommand = new CButtonCommand(LoadDataRequested, _ => CanLoadData); ⟦EOL⟧
-// 해설 L50: 값을 대상에 대입합니다: SelectCellCommand = new CButtonCommand(SelectCell) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SelectCell)
-L000050 |                 SelectCellCommand = new CButtonCommand(SelectCell); ⟦EOL⟧
-// 해설 L51: 값을 대상에 대입합니다: OffsetApplyCommand = new CButtonCommand(OffsetApplyRequested, _ => CanApplyOffset) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(OffsetApplyRequested, _ => CanApplyOffset)
-L000051 |                 OffsetApplyCommand = new CButtonCommand(OffsetApplyRequested, _ => CanApplyOffset); ⟦EOL⟧
-// 해설 L52: 값을 대상에 대입합니다: OffsetRollbackCommand = new CButtonCommand(OffsetRollbackRequested, _ => CanEditOffsets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(OffsetRollbackRequested, _ => CanEditOffsets)
-L000052 |                 OffsetRollbackCommand = new CButtonCommand(OffsetRollbackRequested, _ => CanEditOffsets); ⟦EOL⟧
-// 해설 L53: 값을 대상에 대입합니다: OffsetInitCommand = new CButtonCommand(OffsetInitRequested, _ => CanEditOffsets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(OffsetInitRequested, _ => CanEditOffsets)
-L000053 |                 OffsetInitCommand = new CButtonCommand(OffsetInitRequested, _ => CanEditOffsets); ⟦EOL⟧
-// 해설 L54: 값을 대상에 대입합니다: OffsetViewCommand = new CButtonCommand(OffsetViewRequested, _ => CanEditOffsets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(OffsetViewRequested, _ => CanEditOffsets)
-L000054 |                 OffsetViewCommand = new CButtonCommand(OffsetViewRequested, _ => CanEditOffsets); ⟦EOL⟧
-// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeReinspectionCommands()
-L000055 |                 InitializeReinspectionCommands(); ⟦EOL⟧
-// 해설 L56: 값을 대상에 대입합니다: Nodes = BuildTree([]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildTree([])
-L000056 |                 Nodes = BuildTree([]); ⟦EOL⟧
-// 해설 L57: 구문 블록 경계입니다 · 소속 .ctor.
-L000057 |             } ⟦EOL⟧
-L000058 |  ⟦EOL⟧
-// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.PropertyChanged
-L000059 |             public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
-L000060 |  ⟦EOL⟧
-// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RefreshCommand
-L000061 |             public CButtonCommand RefreshCommand { get; } ⟦EOL⟧
-// 해설 L62: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.LoadDataCommand
-L000062 |             public CButtonCommand LoadDataCommand { get; } ⟦EOL⟧
-// 해설 L63: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectCellCommand
-L000063 |             public CButtonCommand SelectCellCommand { get; } ⟦EOL⟧
-// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetApplyCommand
-L000064 |             public CButtonCommand OffsetApplyCommand { get; } ⟦EOL⟧
-// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetRollbackCommand
-L000065 |             public CButtonCommand OffsetRollbackCommand { get; } ⟦EOL⟧
-// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetInitCommand
-L000066 |             public CButtonCommand OffsetInitCommand { get; } ⟦EOL⟧
-// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetViewCommand
-L000067 |             public CButtonCommand OffsetViewCommand { get; } ⟦EOL⟧
-// 해설 L68: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Nodes
-L000068 |             public IReadOnlyList<ST_REVIEW_RESULT_TREE_NODE> Nodes { get; private set; } ⟦EOL⟧
-// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_DETAIL_ITEM> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectedDetails
-L000069 |             public IReadOnlyList<ST_REVIEW_DATA_DETAIL_ITEM> SelectedDetails { get; private set; } = []; ⟦EOL⟧
-// 해설 L70: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StatusText
-L000070 |             public string StatusText { get; private set; } = "0 RESULTS"; ⟦EOL⟧
-// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectedTitle
-L000071 |             public string SelectedTitle { get; private set; } = "NO RESULT SELECTED"; ⟦EOL⟧
-// 해설 L72: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectedStatus
-L000072 |             public string SelectedStatus { get; private set; } = "WAIT"; ⟦EOL⟧
-// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectedPath
-L000073 |             public string SelectedPath { get; private set; } = ""; ⟦EOL⟧
-// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: StatusBrush(SelectedStatus)
-L000074 |             public Brush SelectedStatusBrush => StatusBrush(SelectedStatus); ⟦EOL⟧
-L000075 |  ⟦EOL⟧
-// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.IsBusy
-L000076 |             public bool IsBusy ⟦EOL⟧
-// 해설 L77: 구문 블록 경계입니다 · 소속 IsBusy.
-L000077 |             { ⟦EOL⟧
-// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.IsBusy.get
-L000078 |                 get => _isBusy; ⟦EOL⟧
-// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.IsBusy.set
-L000079 |                 private set ⟦EOL⟧
-// 해설 L80: 구문 블록 경계입니다 · 소속 set_IsBusy.
-L000080 |                 { ⟦EOL⟧
-// 해설 L81: 조건에 따라 분기합니다: if (_isBusy == value)
-L000081 |                     if (_isBusy == value) ⟦EOL⟧
-// 해설 L82: 구문 블록 경계입니다 · 소속 set_IsBusy.
-L000082 |                     { ⟦EOL⟧
-// 해설 L83: 호출자에게 값 또는 제어를 반환합니다: return;
-L000083 |                         return; ⟦EOL⟧
-// 해설 L84: 구문 블록 경계입니다 · 소속 set_IsBusy.
-L000084 |                     } ⟦EOL⟧
-L000085 |  ⟦EOL⟧
-// 해설 L86: 값을 대상에 대입합니다: _isBusy = value
-L000086 |                     _isBusy = value; ⟦EOL⟧
-// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsBusy)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsBusy)
-L000087 |                     Notify(nameof(IsBusy)); ⟦EOL⟧
-// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshCommand.NotifyCanExecuteChanged()
-L000088 |                     RefreshCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyLoadCommandState()
-L000089 |                     NotifyLoadCommandState(); ⟦EOL⟧
-// 해설 L90: 구문 블록 경계입니다 · 소속 set_IsBusy.
-L000090 |                 } ⟦EOL⟧
-// 해설 L91: 구문 블록 경계입니다 · 소속 IsBusy.
-L000091 |             } ⟦EOL⟧
-L000092 |  ⟦EOL⟧
-// 해설 L93: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Reload(System.Threading.CancellationToken)
-L000093 |             public Task Reload(CancellationToken cancellationToken = default) ⟦EOL⟧
-// 해설 L94: 구문 블록 경계입니다 · 소속 Reload.
-L000094 |             { ⟦EOL⟧
-// 해설 L95: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return Refresh(cancellationToken);
-L000095 |                 return Refresh(cancellationToken); ⟦EOL⟧
-// 해설 L96: 구문 블록 경계입니다 · 소속 Reload.
-L000096 |             } ⟦EOL⟧
-L000097 |  ⟦EOL⟧
-// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Select(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE)
-L000098 |             public void Select(ST_REVIEW_RESULT_TREE_NODE node) ⟦EOL⟧
-// 해설 L99: 구문 블록 경계입니다 · 소속 Select.
-L000099 |             { ⟦EOL⟧
-// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetSelectedTreeNode(node)
-L000100 |                 SetSelectedTreeNode(node); ⟦EOL⟧
-// 해설 L101: 값을 대상에 대입합니다: _selectedNode = node
-L000101 |                 _selectedNode = node; ⟦EOL⟧
-// 해설 L102: 값을 대상에 대입합니다: SelectedTitle = node.Name
-L000102 |                 SelectedTitle = node.Name; ⟦EOL⟧
-// 해설 L103: 값을 대상에 대입합니다: SelectedStatus = node.Result?.ResultStatus ?? node.Kind
-L000103 |                 SelectedStatus = node.Result?.ResultStatus ?? node.Kind; ⟦EOL⟧
-// 해설 L104: 값을 대상에 대입합니다: SelectedPath = node.Result?.FilePath ?? ""
-L000104 |                 SelectedPath = node.Result?.FilePath ?? ""; ⟦EOL⟧
-// 해설 L105: 값을 대상에 대입합니다: SelectedDetails = CreateDetails(node) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateDetails(node)
-L000105 |                 SelectedDetails = CreateDetails(node); ⟦EOL⟧
-// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedTitle)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedTitle)
-L000106 |                 Notify(nameof(SelectedTitle)); ⟦EOL⟧
-// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedStatus)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedStatus)
-L000107 |                 Notify(nameof(SelectedStatus)); ⟦EOL⟧
-// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedStatusBrush)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedStatusBrush)
-L000108 |                 Notify(nameof(SelectedStatusBrush)); ⟦EOL⟧
-// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedPath)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedPath)
-L000109 |                 Notify(nameof(SelectedPath)); ⟦EOL⟧
-// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedDetails)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedDetails)
-L000110 |                 Notify(nameof(SelectedDetails)); ⟦EOL⟧
-// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: PrepareSelectedResult(node.Result)
-L000111 |                 PrepareSelectedResult(node.Result); ⟦EOL⟧
-// 해설 L112: 조건에 따라 분기합니다: if (node.Result is not null)
-L000112 |                 if (node.Result is not null) ⟦EOL⟧
-// 해설 L113: 구문 블록 경계입니다 · 소속 Select.
-L000113 |                 { ⟦EOL⟧
-// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter($"Review Result selected: {node.Result.FileName}.")
-L000114 |                     _statusReporter($"Review Result selected: {node.Result.FileName}."); ⟦EOL⟧
-// 해설 L115: 구문 블록 경계입니다 · 소속 Select.
-L000115 |                 } ⟦EOL⟧
-// 해설 L116: 구문 블록 경계입니다 · 소속 Select.
-L000116 |             } ⟦EOL⟧
+L000037 |                 Action<string> statusReporter, ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataPanel(Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, Drilling.Common.Review.CReviewManager, Drilli
+L000038 |                 Func<Task> rollbackReviewOffset, ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CReviewDataPanel(Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, Drilling.Common.Review.CReviewManager, Drilli
+L000039 |                 Func<string, IReadOnlyList<ST_REVIEW_OFFSET_ROW>, string, Task<ST_REVIEW_OFFSET_FILE_DATA?>> saveReviewOffsetFromResult) ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 .ctor.
+L000040 |             { ⟦EOL⟧
+// 해설 L41: 값을 대상에 대입합니다: _reviewResultFile = reviewResultFile
+L000041 |                 _reviewResultFile = reviewResultFile; ⟦EOL⟧
+// 해설 L42: 값을 대상에 대입합니다: _reviewOffsetFile = reviewOffsetFile
+L000042 |                 _reviewOffsetFile = reviewOffsetFile; ⟦EOL⟧
+// 해설 L43: 값을 대상에 대입합니다: _reviewManager = reviewManager
+L000043 |                 _reviewManager = reviewManager; ⟦EOL⟧
+// 해설 L44: 값을 대상에 대입합니다: _recipeManager = recipeManager
+L000044 |                 _recipeManager = recipeManager; ⟦EOL⟧
+// 해설 L45: 값을 대상에 대입합니다: _settingManager = settingManager
+L000045 |                 _settingManager = settingManager; ⟦EOL⟧
+// 해설 L46: 값을 대상에 대입합니다: _selectedRecipeIdProvider = selectedRecipeIdProvider
+L000046 |                 _selectedRecipeIdProvider = selectedRecipeIdProvider; ⟦EOL⟧
+// 해설 L47: 값을 대상에 대입합니다: _statusReporter = statusReporter
+L000047 |                 _statusReporter = statusReporter; ⟦EOL⟧
+// 해설 L48: 값을 대상에 대입합니다: _rollbackReviewOffset = rollbackReviewOffset
+L000048 |                 _rollbackReviewOffset = rollbackReviewOffset; ⟦EOL⟧
+// 해설 L49: 값을 대상에 대입합니다: _saveReviewOffsetFromResult = saveReviewOffsetFromResult
+L000049 |                 _saveReviewOffsetFromResult = saveReviewOffsetFromResult; ⟦EOL⟧
+// 해설 L50: 값을 대상에 대입합니다: RefreshCommand = new CButtonCommand(RefreshRequested, _ => !IsBusy) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(RefreshRequested, _ => !IsBusy)
+L000050 |                 RefreshCommand = new CButtonCommand(RefreshRequested, _ => !IsBusy); ⟦EOL⟧
+// 해설 L51: 값을 대상에 대입합니다: LoadDataCommand = new CButtonCommand(LoadDataRequested, _ => CanLoadData) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(LoadDataRequested, _ => CanLoadData)
+L000051 |                 LoadDataCommand = new CButtonCommand(LoadDataRequested, _ => CanLoadData); ⟦EOL⟧
+// 해설 L52: 값을 대상에 대입합니다: SelectCellCommand = new CButtonCommand(SelectCell) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SelectCell)
+L000052 |                 SelectCellCommand = new CButtonCommand(SelectCell); ⟦EOL⟧
+// 해설 L53: 값을 대상에 대입합니다: ApplyScatterPlotScaleCommand = new CButtonCommand(ApplyScatterPlotScale) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(ApplyScatterPlotScale)
+L000053 |                 ApplyScatterPlotScaleCommand = new CButtonCommand(ApplyScatterPlotScale); ⟦EOL⟧
+// 해설 L54: 값을 대상에 대입합니다: ToggleResultEditModeCommand = new CButtonCommand(ToggleResultEditMode, _ => CanToggleResultEditMode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(ToggleResultEditMode, _ => CanToggleResultEditMode)
+L000054 |                 ToggleResultEditModeCommand = new CButtonCommand(ToggleResultEditMode, _ => CanToggleResultEditMode); ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeResultEditCommands()
+L000055 |                 InitializeResultEditCommands(); ⟦EOL⟧
+// 해설 L56: 값을 대상에 대입합니다: OffsetApplyCommand = new CButtonCommand(OffsetApplyRequested, _ => CanApplyOffset) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(OffsetApplyRequested, _ => CanApplyOffset)
+L000056 |                 OffsetApplyCommand = new CButtonCommand(OffsetApplyRequested, _ => CanApplyOffset); ⟦EOL⟧
+// 해설 L57: 값을 대상에 대입합니다: OffsetRollbackCommand = new CButtonCommand(OffsetRollbackRequested, _ => CanEditOffsets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(OffsetRollbackRequested, _ => CanEditOffsets)
+L000057 |                 OffsetRollbackCommand = new CButtonCommand(OffsetRollbackRequested, _ => CanEditOffsets); ⟦EOL⟧
+// 해설 L58: 값을 대상에 대입합니다: OffsetInitCommand = new CButtonCommand(OffsetInitRequested, _ => CanEditOffsets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(OffsetInitRequested, _ => CanEditOffsets)
+L000058 |                 OffsetInitCommand = new CButtonCommand(OffsetInitRequested, _ => CanEditOffsets); ⟦EOL⟧
+// 해설 L59: 값을 대상에 대입합니다: OffsetViewCommand = new CButtonCommand(OffsetViewRequested, _ => CanEditOffsets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(OffsetViewRequested, _ => CanEditOffsets)
+L000059 |                 OffsetViewCommand = new CButtonCommand(OffsetViewRequested, _ => CanEditOffsets); ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeReinspectionCommands()
+L000060 |                 InitializeReinspectionCommands(); ⟦EOL⟧
+// 해설 L61: 값을 대상에 대입합니다: Nodes = BuildTree([]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildTree([])
+L000061 |                 Nodes = BuildTree([]); ⟦EOL⟧
+// 해설 L62: 구문 블록 경계입니다 · 소속 .ctor.
+L000062 |             } ⟦EOL⟧
+L000063 |  ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.PropertyChanged
+L000064 |             public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+L000065 |  ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RefreshCommand
+L000066 |             public CButtonCommand RefreshCommand { get; } ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.LoadDataCommand
+L000067 |             public CButtonCommand LoadDataCommand { get; } ⟦EOL⟧
+// 해설 L68: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectCellCommand
+L000068 |             public CButtonCommand SelectCellCommand { get; } ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ApplyScatterPlotScaleCommand
+L000069 |             public CButtonCommand ApplyScatterPlotScaleCommand { get; } ⟦EOL⟧
+// 해설 L70: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ToggleResultEditModeCommand
+L000070 |             public CButtonCommand ToggleResultEditModeCommand { get; } ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetApplyCommand
+L000071 |             public CButtonCommand OffsetApplyCommand { get; } ⟦EOL⟧
+// 해설 L72: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetRollbackCommand
+L000072 |             public CButtonCommand OffsetRollbackCommand { get; } ⟦EOL⟧
+// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetInitCommand
+L000073 |             public CButtonCommand OffsetInitCommand { get; } ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OffsetViewCommand
+L000074 |             public CButtonCommand OffsetViewCommand { get; } ⟦EOL⟧
+// 해설 L75: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Nodes
+L000075 |             public IReadOnlyList<ST_REVIEW_RESULT_TREE_NODE> Nodes { get; private set; } ⟦EOL⟧
+// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_DETAIL_ITEM> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectedDetails
+L000076 |             public IReadOnlyList<ST_REVIEW_DATA_DETAIL_ITEM> SelectedDetails { get; private set; } = []; ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StatusText
+L000077 |             public string StatusText { get; private set; } = "0 RESULTS"; ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectedTitle
+L000078 |             public string SelectedTitle { get; private set; } = "NO RESULT SELECTED"; ⟦EOL⟧
+// 해설 L79: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectedStatus
+L000079 |             public string SelectedStatus { get; private set; } = "WAIT"; ⟦EOL⟧
+// 해설 L80: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectedPath
+L000080 |             public string SelectedPath { get; private set; } = ""; ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: StatusBrush(SelectedStatus)
+L000081 |             public Brush SelectedStatusBrush => StatusBrush(SelectedStatus); ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.IsResultEditMode
+L000082 |             public bool IsResultEditMode => _isResultEditMode; ⟦EOL⟧
+// 해설 L83: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanToggleResultEditMode
+L000083 |             public bool CanToggleResultEditMode => _isResultEditMode ⟦EOL⟧
+// 해설 L84: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanToggleResultEditMode
+L000084 |                 || (_hasLoadedData ⟦EOL⟧
+// 해설 L85: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanToggleResultEditMode
+L000085 |                     && !_isDataLoading ⟦EOL⟧
+// 해설 L86: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanToggleResultEditMode
+L000086 |                     && !IsBusy ⟦EOL⟧
+// 해설 L87: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CanToggleResultEditMode
+L000087 |                     && !IsReinspectionMode); ⟦EOL⟧
+L000088 |  ⟦EOL⟧
+// 해설 L89: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.IsBusy
+L000089 |             public bool IsBusy ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 IsBusy.
+L000090 |             { ⟦EOL⟧
+// 해설 L91: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.IsBusy.get
+L000091 |                 get => _isBusy; ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.IsBusy.set
+L000092 |                 private set ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 set_IsBusy.
+L000093 |                 { ⟦EOL⟧
+// 해설 L94: 조건에 따라 분기합니다: if (_isBusy == value)
+L000094 |                     if (_isBusy == value) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 set_IsBusy.
+L000095 |                     { ⟦EOL⟧
+// 해설 L96: 호출자에게 값 또는 제어를 반환합니다: return;
+L000096 |                         return; ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 set_IsBusy.
+L000097 |                     } ⟦EOL⟧
+L000098 |  ⟦EOL⟧
+// 해설 L99: 값을 대상에 대입합니다: _isBusy = value
+L000099 |                     _isBusy = value; ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsBusy)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsBusy)
+L000100 |                     Notify(nameof(IsBusy)); ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshCommand.NotifyCanExecuteChanged()
+L000101 |                     RefreshCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyLoadCommandState()
+L000102 |                     NotifyLoadCommandState(); ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 set_IsBusy.
+L000103 |                 } ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 IsBusy.
+L000104 |             } ⟦EOL⟧
+L000105 |  ⟦EOL⟧
+// 해설 L106: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Reload(System.Threading.CancellationToken)
+L000106 |             public Task Reload(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 Reload.
+L000107 |             { ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return Refresh(cancellationToken);
+L000108 |                 return Refresh(cancellationToken); ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 Reload.
+L000109 |             } ⟦EOL⟧
+L000110 |  ⟦EOL⟧
+// 해설 L111: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReloadWhenVisible(System.Threading.CancellationToken)
+L000111 |             public Task ReloadWhenVisible(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 ReloadWhenVisible.
+L000112 |             { ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Exchange(ref _skipNextVisibleReload, 0) / 조건에 따라 분기합니다: if (Interlocked.Exchange(ref _skipNextVisibleReload, 0) != 0)
+L000113 |                 if (Interlocked.Exchange(ref _skipNextVisibleReload, 0) != 0) ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 ReloadWhenVisible.
+L000114 |                 { ⟦EOL⟧
+// 해설 L115: 호출자에게 값 또는 제어를 반환합니다: return Task.CompletedTask;
+L000115 |                     return Task.CompletedTask; ⟦EOL⟧
+// 해설 L116: 구문 블록 경계입니다 · 소속 ReloadWhenVisible.
+L000116 |                 } ⟦EOL⟧
 L000117 |  ⟦EOL⟧
-// 해설 L118: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RefreshRequested(object?)
-L000118 |             private async void RefreshRequested(object? parameter) ⟦EOL⟧
-// 해설 L119: 구문 블록 경계입니다 · 소속 RefreshRequested.
-L000119 |             { ⟦EOL⟧
-// 해설 L120: 비동기 완료를 기다립니다: await Refresh() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
-L000120 |                 await Refresh(); ⟦EOL⟧
-// 해설 L121: 구문 블록 경계입니다 · 소속 RefreshRequested.
-L000121 |             } ⟦EOL⟧
-L000122 |  ⟦EOL⟧
-// 해설 L123: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Refresh(System.Threading.CancellationToken, string?)
-L000123 |             private async Task Refresh( ⟦EOL⟧
-// 해설 L124: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Refresh(System.Threading.CancellationToken, string?)
-L000124 |                 CancellationToken cancellationToken = default, ⟦EOL⟧
-// 해설 L125: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Refresh(System.Threading.CancellationToken, string?)
-L000125 |                 string? preferredResultPath = null) ⟦EOL⟧
-// 해설 L126: 구문 블록 경계입니다 · 소속 Refresh.
-L000126 |             { ⟦EOL⟧
-// 해설 L127: 조건에 따라 분기합니다: if (IsBusy)
-L000127 |                 if (IsBusy) ⟦EOL⟧
-// 해설 L128: 구문 블록 경계입니다 · 소속 Refresh.
-L000128 |                 { ⟦EOL⟧
-// 해설 L129: 호출자에게 값 또는 제어를 반환합니다: return;
-L000129 |                     return; ⟦EOL⟧
-// 해설 L130: 구문 블록 경계입니다 · 소속 Refresh.
-L000130 |                 } ⟦EOL⟧
-L000131 |  ⟦EOL⟧
-// 해설 L132: 값을 대상에 대입합니다: IsBusy = true
-L000132 |                 IsBusy = true; ⟦EOL⟧
-// 해설 L133: 예외 처리 범위입니다: try
-L000133 |                 try ⟦EOL⟧
-// 해설 L134: 구문 블록 경계입니다 · 소속 Refresh.
-L000134 |                 { ⟦EOL⟧
-// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(preferredResultPath) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(preferredResultPath) ? _selectedNode?.Result?.FilePath : preferredResultPath / 지역 변수를 선언합니다: var selectedPath = string.IsNullOrWhiteSpace(preferredResultPath) ? _selectedNode?.Result?.FilePath : preferredResultPath; / 변수의 초기값을 지정합니다: selectedPath = string.IsNullOrWhiteSpace(preferredResultPath) ? _selectedNode?.Result?.FilePath : preferredResultPath
-L000135 |                     var selectedPath = string.IsNullOrWhiteSpace(preferredResultPath) ⟦EOL⟧
-// 해설 L136: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Refresh(System.Threading.CancellationToken, string?)
-L000136 |                         ? _selectedNode?.Result?.FilePath ⟦EOL⟧
-// 해설 L137: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Refresh(System.Threading.CancellationToken, string?)
-L000137 |                         : preferredResultPath; ⟦EOL⟧
-// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeRecipeId(_selectedRecipeIdProvider()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _selectedRecipeIdProvider() / 지역 변수를 선언합니다: var selectedRecipeId = NormalizeRecipeId(_selectedRecipeIdProvider()); / 변수의 초기값을 지정합니다: selectedRecipeId = NormalizeRecipeId(_selectedRecipeIdProvider())
-L000138 |                     var selectedRecipeId = NormalizeRecipeId(_selectedRecipeIdProvider()); ⟦EOL⟧
-// 해설 L139: 비동기 완료를 기다립니다: await _reviewResultFile.ListCorrectionResults(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewResultFile.ListCorrectionResults(cancellationToken) / 지역 변수를 선언합니다: var allResults = await _reviewResultFile.ListCorrectionResults(cancellationToken); / 변수의 초기값을 지정합니다: allResults = await _reviewResultFile.ListCorrectionResults(cancellationToken)
-L000139 |                     var allResults = await _reviewResultFile.ListCorrectionResults(cancellationToken); ⟦EOL⟧
-// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(selectedRecipeId) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(selectedRecipeId) ? Array.Empty<ST_REVIEW_RESULT_CATALOG_ITEM>() : allResults .Where(result => NormalizeRecipeId(result.RecipeId).Equals(selectedRecipeId, StringComparison.OrdinalIgnoreCase)) .ToArray() / 지역 변수를 선언합니다: var results = string.IsNullOrWhiteSpace(selectedRecipeId) ? Array.Empty<ST_REVIEW_RESULT_CATALOG_ITEM>() : allResults .Where(result => NormalizeRecipeId(result.RecipeId).Equals(selectedRecipeId, StringCo
-L000140 |                     var results = string.IsNullOrWhiteSpace(selectedRecipeId) ⟦EOL⟧
-// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.Empty<ST_REVIEW_RESULT_CATALOG_ITEM>()
-L000141 |                         ? Array.Empty<ST_REVIEW_RESULT_CATALOG_ITEM>() ⟦EOL⟧
-// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: allResults .Where(result => NormalizeRecipeId(result.RecipeId).Equals(selectedRecipeId, StringComparison.OrdinalIgnoreCase)) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: allResults .Where(result => NormalizeRecipeId(result.RecipeId).Equals(selectedRecipeId, StringComparison.OrdinalIgnoreCase))
-L000142 |                         : allResults ⟦EOL⟧
-// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeRecipeId(result.RecipeId).Equals(selectedRecipeId, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeRecipeId(result.RecipeId)
-L000143 |                             .Where(result => NormalizeRecipeId(result.RecipeId).Equals(selectedRecipeId, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
-// 해설 L144: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Refresh(System.Threading.CancellationToken, string?)
-L000144 |                             .ToArray(); ⟦EOL⟧
-// 해설 L145: 값을 대상에 대입합니다: Nodes = BuildTree(results) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildTree(results)
-L000145 |                     Nodes = BuildTree(results); ⟦EOL⟧
-// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(selectedPath) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(selectedPath))
-L000146 |                     if (!string.IsNullOrWhiteSpace(selectedPath)) ⟦EOL⟧
-// 해설 L147: 구문 블록 경계입니다 · 소속 Refresh.
-L000147 |                     { ⟦EOL⟧
-// 해설 L148: 값을 대상에 대입합니다: Nodes = ExpandResultPath(Nodes, selectedPath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExpandResultPath(Nodes, selectedPath)
-L000148 |                         Nodes = ExpandResultPath(Nodes, selectedPath); ⟦EOL⟧
-// 해설 L149: 구문 블록 경계입니다 · 소속 Refresh.
-L000149 |                     } ⟦EOL⟧
-// 해설 L150: 값을 대상에 대입합니다: StatusText = $"{results.Length:N0} RESULTS"
-L000150 |                     StatusText = $"{results.Length:N0} RESULTS"; ⟦EOL⟧
-// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(Nodes)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Nodes)
-L000151 |                     Notify(nameof(Nodes)); ⟦EOL⟧
-// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(StatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(StatusText)
-L000152 |                     Notify(nameof(StatusText)); ⟦EOL⟧
-L000153 |  ⟦EOL⟧
-// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(selectedPath) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(selectedPath))
-L000154 |                     if (!string.IsNullOrWhiteSpace(selectedPath)) ⟦EOL⟧
-// 해설 L155: 구문 블록 경계입니다 · 소속 Refresh.
-L000155 |                     { ⟦EOL⟧
-// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: Flatten(Nodes) .FirstOrDefault(node => node.Result?.FilePath.Equals(selectedPath, StringComparison.OrdinalIgnoreCase) == true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Flatten(Nodes) / 지역 변수를 선언합니다: var selected = Flatten(Nodes) .FirstOrDefault(node => node.Result?.FilePath.Equals(selectedPath, StringComparison.OrdinalIgnoreCase) == true); / 변수의 초기값을 지정합니다: selected = Flatten(Nodes) .FirstOrDefault(node => node.Result?.FilePath.Equals(selectedPath, StringComparison.OrdinalIgnoreCase) == true)
-L000156 |                         var selected = Flatten(Nodes) ⟦EOL⟧
-// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: .FilePath.Equals(selectedPath, StringComparison.OrdinalIgnoreCase)
-L000157 |                             .FirstOrDefault(node => node.Result?.FilePath.Equals(selectedPath, StringComparison.OrdinalIgnoreCase) == true); ⟦EOL⟧
-// 해설 L158: 조건에 따라 분기합니다: if (selected is not null)
-L000158 |                         if (selected is not null) ⟦EOL⟧
-// 해설 L159: 구문 블록 경계입니다 · 소속 Refresh.
-L000159 |                         { ⟦EOL⟧
-// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: Select(selected)
-L000160 |                             Select(selected); ⟦EOL⟧
-// 해설 L161: 호출자에게 값 또는 제어를 반환합니다: return;
-L000161 |                             return; ⟦EOL⟧
-// 해설 L162: 구문 블록 경계입니다 · 소속 Refresh.
-L000162 |                         } ⟦EOL⟧
-// 해설 L163: 구문 블록 경계입니다 · 소속 Refresh.
-L000163 |                     } ⟦EOL⟧
-L000164 |  ⟦EOL⟧
-// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClearSelection()
-L000165 |                     ClearSelection(); ⟦EOL⟧
-// 해설 L166: 구문 블록 경계입니다 · 소속 Refresh.
-L000166 |                 } ⟦EOL⟧
-// 해설 L167: 지정 예외를 처리합니다: catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
-L000167 |                 catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested) ⟦EOL⟧
-// 해설 L168: 구문 블록 경계입니다 · 소속 Refresh.
-L000168 |                 { ⟦EOL⟧
-// 해설 L169: 예외를 발생/전달합니다: throw;
-L000169 |                     throw; ⟦EOL⟧
-// 해설 L170: 구문 블록 경계입니다 · 소속 Refresh.
-L000170 |                 } ⟦EOL⟧
-// 해설 L171: 지정 예외를 처리합니다: catch (Exception exception)
-L000171 |                 catch (Exception exception) ⟦EOL⟧
-// 해설 L172: 구문 블록 경계입니다 · 소속 Refresh.
-L000172 |                 { ⟦EOL⟧
-// 해설 L173: 값을 대상에 대입합니다: StatusText = "LOAD FAILED"
-L000173 |                     StatusText = "LOAD FAILED"; ⟦EOL⟧
-// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(StatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(StatusText)
-L000174 |                     Notify(nameof(StatusText)); ⟦EOL⟧
-// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter($"Review Result list load failed: {exception.Message}")
-L000175 |                     _statusReporter($"Review Result list load failed: {exception.Message}"); ⟦EOL⟧
-// 해설 L176: 구문 블록 경계입니다 · 소속 Refresh.
-L000176 |                 } ⟦EOL⟧
-// 해설 L177: 종료 정리 구간입니다: finally
-L000177 |                 finally ⟦EOL⟧
-// 해설 L178: 구문 블록 경계입니다 · 소속 Refresh.
-L000178 |                 { ⟦EOL⟧
-// 해설 L179: 값을 대상에 대입합니다: IsBusy = false
-L000179 |                     IsBusy = false; ⟦EOL⟧
-// 해설 L180: 구문 블록 경계입니다 · 소속 Refresh.
-L000180 |                 } ⟦EOL⟧
-// 해설 L181: 구문 블록 경계입니다 · 소속 Refresh.
-L000181 |             } ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return Refresh(cancellationToken);
+L000118 |                 return Refresh(cancellationToken); ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 ReloadWhenVisible.
+L000119 |             } ⟦EOL⟧
+L000120 |  ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.OpenResult(string, System.Threading.CancellationToken)
+L000121 |             public async Task OpenResult(string resultPath, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 OpenResult.
+L000122 |             { ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(resultPath) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(resultPath))
+L000123 |                 if (string.IsNullOrWhiteSpace(resultPath)) ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("검사 결과 경로가 없습니다.", nameof(resultPath)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(resultPath) / 예외를 발생/전달합니다: throw new ArgumentException("검사 결과 경로가 없습니다.", nameof(resultPath));
+L000124 |                     throw new ArgumentException("검사 결과 경로가 없습니다.", nameof(resultPath)); ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: File.Exists(resultPath) / 조건에 따라 분기합니다: if (!File.Exists(resultPath))
+L000125 |                 if (!File.Exists(resultPath)) ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FileNotFoundException("방금 저장한 검사 결과 파일을 찾을 수 없습니다.", resultPath) / 예외를 발생/전달합니다: throw new FileNotFoundException("방금 저장한 검사 결과 파일을 찾을 수 없습니다.", resultPath);
+L000126 |                     throw new FileNotFoundException("방금 저장한 검사 결과 파일을 찾을 수 없습니다.", resultPath); ⟦EOL⟧
+L000127 |  ⟦EOL⟧
+// 해설 L128: 비동기 완료를 기다립니다: await Refresh(cancellationToken, resultPath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh(cancellationToken, resultPath)
+L000128 |                 await Refresh(cancellationToken, resultPath); ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000129 |                 cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 지역 변수를 선언합니다: var selectedResult = _selectedNode?.Result; / 변수의 초기값을 지정합니다: selectedResult = _selectedNode?.Result
+L000131 |                 var selectedResult = _selectedNode?.Result; ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedResult.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (selectedResult is null || !selectedResult.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase))
+L000132 |                 if (selectedResult is null || !selectedResult.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("방금 저장한 검사 결과를 REVIEW DATA 목록에서 찾을 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("방금 저장한 검사 결과를 REVIEW DATA 목록에서 찾을 수 없습니다.");
+L000133 |                     throw new InvalidOperationException("방금 저장한 검사 결과를 REVIEW DATA 목록에서 찾을 수 없습니다."); ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: IsBlockedStatus(selectedResult.ResultStatus) / 조건에 따라 분기합니다: if (IsBlockedStatus(selectedResult.ResultStatus))
+L000134 |                 if (IsBlockedStatus(selectedResult.ResultStatus)) ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"검사 결과를 불러올 수 없습니다. 상태: {selectedResult.ResultStatus}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"검사 결과를 불러올 수 없습니다. 상태: {selectedResult.ResultStatus}");
+L000135 |                     throw new InvalidOperationException($"검사 결과를 불러올 수 없습니다. 상태: {selectedResult.ResultStatus}"); ⟦EOL⟧
+L000136 |  ⟦EOL⟧
+// 해설 L137: 비동기 완료를 기다립니다: await LoadSelectedData() / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadSelectedData()
+L000137 |                 await LoadSelectedData(); ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Exchange(ref _skipNextVisibleReload, 1)
+L000138 |                 Interlocked.Exchange(ref _skipNextVisibleReload, 1); ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 OpenResult.
+L000139 |             } ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Select(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE)
+L000141 |             public void Select(ST_REVIEW_RESULT_TREE_NODE node) ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 Select.
+L000142 |             { ⟦EOL⟧
+// 해설 L143: 지역 변수를 선언합니다: var preserveLoadedData = node.Result is { } selectedResult && _hasLoadedData && _loadedCatalog?.FilePath.Equals(selectedResult.FilePath, StringComparison.OrdinalIgnoreCase) == true; / 변수의 초기값을 지정합니다: preserveLoadedData = node.Result is { } selectedResult && _hasLoadedData && _loadedCatalog?.FilePath.Equals(selectedResult.FilePath, StringComparison.OrdinalIgnoreCase) == true
+L000143 |                 var preserveLoadedData = node.Result is { } selectedResult ⟦EOL⟧
+// 해설 L144: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Select(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE)
+L000144 |                     && _hasLoadedData ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: .FilePath.Equals(selectedResult.FilePath, StringComparison.OrdinalIgnoreCase)
+L000145 |                     && _loadedCatalog?.FilePath.Equals(selectedResult.FilePath, StringComparison.OrdinalIgnoreCase) == true; ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetSelectedTreeNode(node)
+L000146 |                 SetSelectedTreeNode(node); ⟦EOL⟧
+// 해설 L147: 값을 대상에 대입합니다: _selectedNode = node
+L000147 |                 _selectedNode = node; ⟦EOL⟧
+// 해설 L148: 값을 대상에 대입합니다: SelectedTitle = node.Name
+L000148 |                 SelectedTitle = node.Name; ⟦EOL⟧
+// 해설 L149: 값을 대상에 대입합니다: SelectedStatus = node.Result?.ResultStatus ?? node.Kind
+L000149 |                 SelectedStatus = node.Result?.ResultStatus ?? node.Kind; ⟦EOL⟧
+// 해설 L150: 값을 대상에 대입합니다: SelectedPath = node.Result?.FilePath ?? ""
+L000150 |                 SelectedPath = node.Result?.FilePath ?? ""; ⟦EOL⟧
+// 해설 L151: 값을 대상에 대입합니다: SelectedDetails = CreateDetails(node) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateDetails(node)
+L000151 |                 SelectedDetails = CreateDetails(node); ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedTitle)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedTitle)
+L000152 |                 Notify(nameof(SelectedTitle)); ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedStatus)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedStatus)
+L000153 |                 Notify(nameof(SelectedStatus)); ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedStatusBrush)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedStatusBrush)
+L000154 |                 Notify(nameof(SelectedStatusBrush)); ⟦EOL⟧
+// 해설 L155: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedPath)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedPath)
+L000155 |                 Notify(nameof(SelectedPath)); ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedDetails)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedDetails)
+L000156 |                 Notify(nameof(SelectedDetails)); ⟦EOL⟧
+// 해설 L157: 조건에 따라 분기합니다: if (!preserveLoadedData)
+L000157 |                 if (!preserveLoadedData) ⟦EOL⟧
+// 해설 L158: 구문 블록 경계입니다 · 소속 Select.
+L000158 |                 { ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: PrepareSelectedResult(node.Result)
+L000159 |                     PrepareSelectedResult(node.Result); ⟦EOL⟧
+// 해설 L160: 구문 블록 경계입니다 · 소속 Select.
+L000160 |                 } ⟦EOL⟧
+// 해설 L161: 조건에 따라 분기합니다: if (node.Result is not null)
+L000161 |                 if (node.Result is not null) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 Select.
+L000162 |                 { ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter($"Review Result selected: {node.Result.FileName}.")
+L000163 |                     _statusReporter($"Review Result selected: {node.Result.FileName}."); ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 Select.
+L000164 |                 } ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 Select.
+L000165 |             } ⟦EOL⟧
+L000166 |  ⟦EOL⟧
+// 해설 L167: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ToggleResultEditMode(object?)
+L000167 |             private void ToggleResultEditMode(object? parameter) ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 ToggleResultEditMode.
+L000168 |             { ⟦EOL⟧
+// 해설 L169: 조건에 따라 분기합니다: if (!CanToggleResultEditMode)
+L000169 |                 if (!CanToggleResultEditMode) ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 ToggleResultEditMode.
+L000170 |                 { ⟦EOL⟧
+// 해설 L171: 호출자에게 값 또는 제어를 반환합니다: return;
+L000171 |                     return; ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 ToggleResultEditMode.
+L000172 |                 } ⟦EOL⟧
+L000173 |  ⟦EOL⟧
+// 해설 L174: 값을 대상에 대입합니다: _isResultEditMode = !_isResultEditMode
+L000174 |                 _isResultEditMode = !_isResultEditMode; ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsResultEditMode)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsResultEditMode)
+L000175 |                 Notify(nameof(IsResultEditMode)); ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanToggleResultEditMode)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanToggleResultEditMode)
+L000176 |                 Notify(nameof(CanToggleResultEditMode)); ⟦EOL⟧
+// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToggleResultEditModeCommand.NotifyCanExecuteChanged()
+L000177 |                 ToggleResultEditModeCommand.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L178: 조건에 따라 분기합니다: if (!_isResultEditMode)
+L000178 |                 if (!_isResultEditMode) ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 ToggleResultEditMode.
+L000179 |                 { ⟦EOL⟧
+// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClearResultEditSelection()
+L000180 |                     ClearResultEditSelection(); ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 ToggleResultEditMode.
+L000181 |                 } ⟦EOL⟧
 L000182 |  ⟦EOL⟧
-// 해설 L183: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ClearSelection()
-L000183 |             private void ClearSelection() ⟦EOL⟧
-// 해설 L184: 구문 블록 경계입니다 · 소속 ClearSelection.
-L000184 |             { ⟦EOL⟧
-// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetSelectedTreeNode(null)
-L000185 |                 SetSelectedTreeNode(null); ⟦EOL⟧
-// 해설 L186: 값을 대상에 대입합니다: _selectedNode = null
-L000186 |                 _selectedNode = null; ⟦EOL⟧
-// 해설 L187: 값을 대상에 대입합니다: SelectedTitle = "NO RESULT SELECTED"
-L000187 |                 SelectedTitle = "NO RESULT SELECTED"; ⟦EOL⟧
-// 해설 L188: 값을 대상에 대입합니다: SelectedStatus = "WAIT"
-L000188 |                 SelectedStatus = "WAIT"; ⟦EOL⟧
-// 해설 L189: 값을 대상에 대입합니다: SelectedPath = ""
-L000189 |                 SelectedPath = ""; ⟦EOL⟧
-// 해설 L190: 값을 대상에 대입합니다: SelectedDetails = []
-L000190 |                 SelectedDetails = []; ⟦EOL⟧
-// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: PrepareSelectedResult(null)
-L000191 |                 PrepareSelectedResult(null); ⟦EOL⟧
-// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedTitle)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedTitle)
-L000192 |                 Notify(nameof(SelectedTitle)); ⟦EOL⟧
-// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedStatus)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedStatus)
-L000193 |                 Notify(nameof(SelectedStatus)); ⟦EOL⟧
-// 해설 L194: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedStatusBrush)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedStatusBrush)
-L000194 |                 Notify(nameof(SelectedStatusBrush)); ⟦EOL⟧
-// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedPath)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedPath)
-L000195 |                 Notify(nameof(SelectedPath)); ⟦EOL⟧
-// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedDetails)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedDetails)
-L000196 |                 Notify(nameof(SelectedDetails)); ⟦EOL⟧
-// 해설 L197: 구문 블록 경계입니다 · 소속 ClearSelection.
-L000197 |             } ⟦EOL⟧
-L000198 |  ⟦EOL⟧
-// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000199 |             private static IReadOnlyList<ST_REVIEW_RESULT_TREE_NODE> BuildTree( ⟦EOL⟧
-// 해설 L200: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000200 |                 IReadOnlyList<ST_REVIEW_RESULT_CATALOG_ITEM> results) ⟦EOL⟧
-// 해설 L201: 구문 블록 경계입니다 · 소속 BuildTree.
-L000201 |             { ⟦EOL⟧
-// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Where(result => result.Source.Equals("MANUAL", StringComparison.OrdinalIgnoreCase)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Where(result => result.Source.Equals("MANUAL", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Source.Equals("MANUAL", StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var manualResults = results.Where(result => result.Source.Equals("MANUAL", StringComparison.OrdinalIgnoreCase)).ToArray(); / 변수의 초기값을 지정합니다: manualResults = results.Where(result
-L000202 |                 var manualResults = results.Where(result => result.Source.Equals("MANUAL", StringComparison.OrdinalIgnoreCase)).ToArray(); ⟦EOL⟧
-// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: manualResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) .Select(recipe => new ST_REVIEW_RESULT_TREE_NODE( recipe.Key, "RECIPE", $… / 함수·델리게이트 또는 객체 생성자를 호출합니다: manualResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: manualResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) /
-L000203 |                 var manualRecipes = manualResults ⟦EOL⟧
-// 해설 L204: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000204 |                     .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
-// 해설 L205: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000205 |                     .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
-// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE( recipe.Key, "RECIPE", $"{recipe.Count():N0}", new[] { "ALL_SHOT", "ONE_SHOT", "BEAM_INSPECTION", "ROUGH", "FINE" } .Select(type => { var typeResults = recipe.Where(result => result.ResultT…
-L000206 |                     .Select(recipe => new ST_REVIEW_RESULT_TREE_NODE( ⟦EOL⟧
-// 해설 L207: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000207 |                         recipe.Key, ⟦EOL⟧
-// 해설 L208: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000208 |                         "RECIPE", ⟦EOL⟧
-// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Count()
-L000209 |                         $"{recipe.Count():N0}", ⟦EOL⟧
-// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { "ALL_SHOT", "ONE_SHOT", "BEAM_INSPECTION", "ROUGH", "FINE" } .Select(type => { var typeResults = recipe.Where(result => result.ResultType.Equals(type, StringComparison.OrdinalIgnoreCase)).OrderByDescending(result…
-L000210 |                         new[] { "ALL_SHOT", "ONE_SHOT", "BEAM_INSPECTION", "ROUGH", "FINE" } ⟦EOL⟧
-// 해설 L211: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000211 |                             .Select(type => ⟦EOL⟧
-// 해설 L212: 구문 블록 경계입니다 · 소속 BuildTree.
-L000212 |                             { ⟦EOL⟧
-// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Where(result => result.ResultType.Equals(type, StringComparison.OrdinalIgnoreCase)).OrderByDescending(result => result.SavedAt).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Where(result => result.ResultType.Equals(type, StringComparison.OrdinalIgnoreCase)).OrderByDescending(result => result.SavedAt) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Where(result => result.ResultType.Equals(type, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ResultType.Equals(type, StringComparison.Ordinal
-L000213 |                                 var typeResults = recipe.Where(result => result.ResultType.Equals(type, StringComparison.OrdinalIgnoreCase)).OrderByDescending(result => result.SavedAt).ToArray(); ⟦EOL⟧
-// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE(type.Replace('_', ' '), "TYPE", $"{typeResults.Length:N0}", typeResults.Select(CreateResultNode).ToArray(), null, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: type.Replace('_', ' ') / 함수·델리게이트 또는 객체 생성자를 호출합니다: typeResults.Select(CreateResultNode).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: typeResults.Select(CreateResultNode) / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_RESULT_TREE_NODE(type.Replace('_', ' '), "TYPE", $"{typeResults.Length:N0}", typeResults.Select(CreateResultNode).ToArray(
-L000214 |                                 return new ST_REVIEW_RESULT_TREE_NODE(type.Replace('_', ' '), "TYPE", $"{typeResults.Length:N0}", typeResults.Select(CreateResultNode).ToArray(), null, false); ⟦EOL⟧
-// 해설 L215: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000215 |                             }) ⟦EOL⟧
-// 해설 L216: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000216 |                             .ToArray(), ⟦EOL⟧
-// 해설 L217: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000217 |                         null, ⟦EOL⟧
-// 해설 L218: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000218 |                         false)) ⟦EOL⟧
-// 해설 L219: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000219 |                     .ToArray(); ⟦EOL⟧
-L000220 |  ⟦EOL⟧
-// 해설 L221: 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Where(result => result.Source.Equals("AUTO", StringComparison.OrdinalIgnoreCase)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Where(result => result.Source.Equals("AUTO", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Source.Equals("AUTO", StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var autoResults = results.Where(result => result.Source.Equals("AUTO", StringComparison.OrdinalIgnoreCase)).ToArray(); / 변수의 초기값을 지정합니다: autoResults = results.Where(result => result.So
-L000221 |                 var autoResults = results.Where(result => result.Source.Equals("AUTO", StringComparison.OrdinalIgnoreCase)).ToArray(); ⟦EOL⟧
-// 해설 L222: 함수·델리게이트 또는 객체 생성자를 호출합니다: autoResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) .Select(recipe => new ST_REVIEW_RESULT_TREE_NODE(recipe.Key, "RECIPE", $"{r… / 함수·델리게이트 또는 객체 생성자를 호출합니다: autoResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: autoResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) / 지역 변
-L000222 |                 var autoRecipes = autoResults ⟦EOL⟧
-// 해설 L223: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000223 |                     .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
-// 해설 L224: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000224 |                     .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
-// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE(recipe.Key, "RECIPE", $"{recipe.Count():N0}", recipe.OrderByDescending(result => result.SavedAt).Select(CreateResultNode).ToArray(), null, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.OrderByDescending(result => result.SavedAt).Select(CreateResultNode).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.OrderByDescending(result => result.SavedAt).Select(CreateResultNode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.OrderByDescending(result => result.S
-L000225 |                     .Select(recipe => new ST_REVIEW_RESULT_TREE_NODE(recipe.Key, "RECIPE", $"{recipe.Count():N0}", recipe.OrderByDescending(result => result.SavedAt).Select(CreateResultNode).ToArray(), null, false)) ⟦EOL⟧
-// 해설 L226: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000226 |                     .ToArray(); ⟦EOL⟧
-L000227 |  ⟦EOL⟧
-// 해설 L228: 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Where(result => result.Source.Equals("ZERO_DEFENCE", StringComparison.OrdinalIgnoreCase)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Where(result => result.Source.Equals("ZERO_DEFENCE", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Source.Equals("ZERO_DEFENCE", StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var zeroResults = results.Where(result => result.Source.Equals("ZERO_DEFENCE", StringComparison.OrdinalIgnoreCase)).ToArray(); / 변수의 초기값을 지정합니다: zeroResults = r
-L000228 |                 var zeroResults = results.Where(result => result.Source.Equals("ZERO_DEFENCE", StringComparison.OrdinalIgnoreCase)).ToArray(); ⟦EOL⟧
-// 해설 L229: 함수·델리게이트 또는 객체 생성자를 호출합니다: zeroResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) .Select(recipe => new ST_REVIEW_RESULT_TREE_NODE( recipe.Key, "RECIPE", $"{… / 함수·델리게이트 또는 객체 생성자를 호출합니다: zeroResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: zeroResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) / 지역 변
-L000229 |                 var zeroRecipes = zeroResults ⟦EOL⟧
-// 해설 L230: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000230 |                     .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
-// 해설 L231: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000231 |                     .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
-// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE( recipe.Key, "RECIPE", $"{recipe.Count():N0}", recipe.GroupBy(result => result.GlassId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) .Sel…
-L000232 |                     .Select(recipe => new ST_REVIEW_RESULT_TREE_NODE( ⟦EOL⟧
-// 해설 L233: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000233 |                         recipe.Key, ⟦EOL⟧
-// 해설 L234: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000234 |                         "RECIPE", ⟦EOL⟧
-// 해설 L235: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Count()
-L000235 |                         $"{recipe.Count():N0}", ⟦EOL⟧
-// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.GroupBy(result => result.GlassId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) .Select(glass => new ST_REVIEW_RESULT_TREE_NODE(glass.Key, "GLASS", $"{glass.Count… / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.GroupBy(result => result.GlassId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.GroupBy(result => result.GlassId, StringComparer.OrdinalIgnoreCase)
-L000236 |                         recipe.GroupBy(result => result.GlassId, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
-// 해설 L237: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000237 |                             .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
-// 해설 L238: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE(glass.Key, "GLASS", $"{glass.Count():N0}", glass.OrderByDescending(result => result.SavedAt).Select(CreateResultNode).ToArray(), null, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: glass.Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: glass.OrderByDescending(result => result.SavedAt).Select(CreateResultNode).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: glass.OrderByDescending(result => result.SavedAt).Select(CreateResultNode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: glass.OrderByDescending(result => result.SavedAt)
-L000238 |                             .Select(glass => new ST_REVIEW_RESULT_TREE_NODE(glass.Key, "GLASS", $"{glass.Count():N0}", glass.OrderByDescending(result => result.SavedAt).Select(CreateResultNode).ToArray(), null, false)) ⟦EOL⟧
-// 해설 L239: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000239 |                             .ToArray(), ⟦EOL⟧
-// 해설 L240: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000240 |                         null, ⟦EOL⟧
-// 해설 L241: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000241 |                         false)) ⟦EOL⟧
-// 해설 L242: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000242 |                     .ToArray(); ⟦EOL⟧
-L000243 |  ⟦EOL⟧
-// 해설 L244: 지역 변수를 선언합니다: var sourceNodes = new[] { new ST_REVIEW_RESULT_TREE_NODE("MANUAL", "SOURCE", $"{manualResults.Length:N0}", manualRecipes, null, true), new ST_REVIEW_RESULT_TREE_NODE("AUTO", "SOURCE", $"{autoResults.Length:N0}", autoRecipes, null, / 변수의 초기값을 지정합니다: sourceNodes = new[] { new ST_REVIEW_RESULT_TREE_NODE("MANUAL", "SOURCE", $"{manualResults.Length:N0}", manualRecipes, null, true), new ST_REVIEW_RESULT_TREE_NODE("AUTO", "SOURCE", $"{autoResults.Length:N0}", autoRecipes, null, tru
-L000244 |                 var sourceNodes = new[] ⟦EOL⟧
-// 해설 L245: 구문 블록 경계입니다 · 소속 BuildTree.
-L000245 |                 { ⟦EOL⟧
-// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE("MANUAL", "SOURCE", $"{manualResults.Length:N0}", manualRecipes, null, true)
-L000246 |                     new ST_REVIEW_RESULT_TREE_NODE("MANUAL", "SOURCE", $"{manualResults.Length:N0}", manualRecipes, null, true), ⟦EOL⟧
-// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE("AUTO", "SOURCE", $"{autoResults.Length:N0}", autoRecipes, null, true)
-L000247 |                     new ST_REVIEW_RESULT_TREE_NODE("AUTO", "SOURCE", $"{autoResults.Length:N0}", autoRecipes, null, true), ⟦EOL⟧
-// 해설 L248: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE("ZERO DEFENCE", "SOURCE", $"{zeroResults.Length:N0}", zeroRecipes, null, true)
-L000248 |                     new ST_REVIEW_RESULT_TREE_NODE("ZERO DEFENCE", "SOURCE", $"{zeroResults.Length:N0}", zeroRecipes, null, true) ⟦EOL⟧
-// 해설 L249: 구문 블록 경계입니다 · 소속 BuildTree.
-L000249 |                 }; ⟦EOL⟧
-L000250 |  ⟦EOL⟧
-// 해설 L251: 호출자에게 값 또는 제어를 반환합니다: return [ new ST_REVIEW_RESULT_TREE_NODE( "REVIEW RESULTS", "ROOT", $"{results.Count:N0}", sourceNodes, null, true) ];
-L000251 |                 return ⟦EOL⟧
-// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000252 |                 [ ⟦EOL⟧
-// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE( "REVIEW RESULTS", "ROOT", $"{results.Count:N0}", sourceNodes, null, true)
-L000253 |                     new ST_REVIEW_RESULT_TREE_NODE( ⟦EOL⟧
-// 해설 L254: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000254 |                         "REVIEW RESULTS", ⟦EOL⟧
-// 해설 L255: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000255 |                         "ROOT", ⟦EOL⟧
-// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000256 |                         $"{results.Count:N0}", ⟦EOL⟧
-// 해설 L257: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000257 |                         sourceNodes, ⟦EOL⟧
-// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000258 |                         null, ⟦EOL⟧
-// 해설 L259: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000259 |                         true) ⟦EOL⟧
-// 해설 L260: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
-L000260 |                 ]; ⟦EOL⟧
-// 해설 L261: 구문 블록 경계입니다 · 소속 BuildTree.
-L000261 |             } ⟦EOL⟧
-L000262 |  ⟦EOL⟧
-// 해설 L263: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateResultNode(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM)
-L000263 |             private static ST_REVIEW_RESULT_TREE_NODE CreateResultNode(ST_REVIEW_RESULT_CATALOG_ITEM result) ⟦EOL⟧
-// 해설 L264: 구문 블록 경계입니다 · 소속 CreateResultNode.
-L000264 |             { ⟦EOL⟧
-// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE(result.FileName, "RESULT", "", [], result, false) / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_RESULT_TREE_NODE(result.FileName, "RESULT", "", [], result, false);
-L000265 |                 return new ST_REVIEW_RESULT_TREE_NODE(result.FileName, "RESULT", "", [], result, false); ⟦EOL⟧
-// 해설 L266: 구문 블록 경계입니다 · 소속 CreateResultNode.
-L000266 |             } ⟦EOL⟧
-L000267 |  ⟦EOL⟧
-// 해설 L268: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_DETAIL_ITEM> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateDetails(Drilling.UI.Menu.Menus.CMenuCorr
-L000268 |             private static IReadOnlyList<ST_REVIEW_DATA_DETAIL_ITEM> CreateDetails(ST_REVIEW_RESULT_TREE_NODE node) ⟦EOL⟧
-// 해설 L269: 구문 블록 경계입니다 · 소속 CreateDetails.
-L000269 |             { ⟦EOL⟧
-// 해설 L270: 조건에 따라 분기합니다: if (node.Result is not { } result)
-L000270 |                 if (node.Result is not { } result) ⟦EOL⟧
-// 해설 L271: 구문 블록 경계입니다 · 소속 CreateDetails.
-L000271 |                 { ⟦EOL⟧
-// 해설 L272: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Result Count", CountResults(node).ToString("N0", CultureInfo.CurrentCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CountResults(node).ToString("N0", CultureInfo.CurrentCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CountResults(node) / 호출자에게 값 또는 제어를 반환합니다: return [new("Result Count", CountResults(node).ToString("N0", CultureInfo.CurrentCulture))];
-L000272 |                     return [new("Result Count", CountResults(node).ToString("N0", CultureInfo.CurrentCulture))]; ⟦EOL⟧
-// 해설 L273: 구문 블록 경계입니다 · 소속 CreateDetails.
-L000273 |                 } ⟦EOL⟧
-L000274 |  ⟦EOL⟧
-// 해설 L275: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_REVIEW_DATA_DETAIL_ITEM> { new("Source", result.Source), new("Type", result.ResultType), new("Recipe", result.RecipeId), new("Saved At", result.SavedAt.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.Invarian… / 지역 변수를 선언합니다: var details = new List<ST_REVIEW_DATA_DETAIL_ITEM> { new("Source", result.Source), new("Type", result.ResultType), new("Recipe", result.RecipeId), new("Saved At", result.SavedAt.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.Inva / 변수의 초기값을 지정합니다: details = new List<ST_REVI
-L000275 |                 var details = new List<ST_REVIEW_DATA_DETAIL_ITEM> ⟦EOL⟧
-// 해설 L276: 구문 블록 경계입니다 · 소속 CreateDetails.
-L000276 |                 { ⟦EOL⟧
-// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Source", result.Source)
-L000277 |                     new("Source", result.Source), ⟦EOL⟧
-// 해설 L278: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Type", result.ResultType)
-L000278 |                     new("Type", result.ResultType), ⟦EOL⟧
-// 해설 L279: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Recipe", result.RecipeId)
-L000279 |                     new("Recipe", result.RecipeId), ⟦EOL⟧
-// 해설 L280: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Saved At", result.SavedAt.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.SavedAt.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture)
-L000280 |                     new("Saved At", result.SavedAt.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture)), ⟦EOL⟧
-// 해설 L281: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Glass", result.GlassId)
-L000281 |                     new("Glass", result.GlassId), ⟦EOL⟧
-// 해설 L282: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Run Type", result.RunType)
-L000282 |                     new("Run Type", result.RunType), ⟦EOL⟧
-// 해설 L283: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Method", result.Method)
-L000283 |                     new("Method", result.Method), ⟦EOL⟧
-// 해설 L284: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Total Count", result.TotalCount?.ToString("N0", CultureInfo.CurrentCulture) ?? "-") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("N0", CultureInfo.CurrentCulture)
-L000284 |                     new("Total Count", result.TotalCount?.ToString("N0", CultureInfo.CurrentCulture) ?? "-") ⟦EOL⟧
-// 해설 L285: 구문 블록 경계입니다 · 소속 CreateDetails.
-L000285 |                 }; ⟦EOL⟧
-// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(result.ResultMessage) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(result.ResultMessage))
-L000286 |                 if (!string.IsNullOrWhiteSpace(result.ResultMessage)) ⟦EOL⟧
-// 해설 L287: 구문 블록 경계입니다 · 소속 CreateDetails.
-L000287 |                 { ⟦EOL⟧
-// 해설 L288: 함수·델리게이트 또는 객체 생성자를 호출합니다: details.Add(new("Message", result.ResultMessage)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Message", result.ResultMessage)
-L000288 |                     details.Add(new("Message", result.ResultMessage)); ⟦EOL⟧
-// 해설 L289: 구문 블록 경계입니다 · 소속 CreateDetails.
-L000289 |                 } ⟦EOL⟧
-L000290 |  ⟦EOL⟧
-// 해설 L291: 호출자에게 값 또는 제어를 반환합니다: return details;
-L000291 |                 return details; ⟦EOL⟧
-// 해설 L292: 구문 블록 경계입니다 · 소속 CreateDetails.
-L000292 |             } ⟦EOL⟧
-L000293 |  ⟦EOL⟧
-// 해설 L294: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Flatten(System.Collections.Generic.IEnumerable<D
-L000294 |             private static IEnumerable<ST_REVIEW_RESULT_TREE_NODE> Flatten( ⟦EOL⟧
-// 해설 L295: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Flatten(System.Collections.Generic.IEnumerable<D
-L000295 |                 IEnumerable<ST_REVIEW_RESULT_TREE_NODE> nodes) ⟦EOL⟧
-// 해설 L296: 구문 블록 경계입니다 · 소속 Flatten.
-L000296 |             { ⟦EOL⟧
-// 해설 L297: 컬렉션 요소를 순회합니다: foreach (var node in nodes)
-L000297 |                 foreach (var node in nodes) ⟦EOL⟧
-// 해설 L298: 구문 블록 경계입니다 · 소속 Flatten.
-L000298 |                 { ⟦EOL⟧
-// 해설 L299: 열거값/종료를 전달합니다: yield return node;
-L000299 |                     yield return node; ⟦EOL⟧
-// 해설 L300: 함수·델리게이트 또는 객체 생성자를 호출합니다: Flatten(node.Children) / 컬렉션 요소를 순회합니다: foreach (var child in Flatten(node.Children))
-L000300 |                     foreach (var child in Flatten(node.Children)) ⟦EOL⟧
-// 해설 L301: 구문 블록 경계입니다 · 소속 Flatten.
-L000301 |                     { ⟦EOL⟧
-// 해설 L302: 열거값/종료를 전달합니다: yield return child;
-L000302 |                         yield return child; ⟦EOL⟧
-// 해설 L303: 구문 블록 경계입니다 · 소속 Flatten.
-L000303 |                     } ⟦EOL⟧
-// 해설 L304: 구문 블록 경계입니다 · 소속 Flatten.
-L000304 |                 } ⟦EOL⟧
-// 해설 L305: 구문 블록 경계입니다 · 소속 Flatten.
-L000305 |             } ⟦EOL⟧
-L000306 |  ⟦EOL⟧
-// 해설 L307: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExpandResultPath(System.Collections.Generic.IE
-L000307 |             private static IReadOnlyList<ST_REVIEW_RESULT_TREE_NODE> ExpandResultPath( ⟦EOL⟧
-// 해설 L308: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExpandResultPath(System.Collections.Generic.IE
-L000308 |                 IEnumerable<ST_REVIEW_RESULT_TREE_NODE> nodes, ⟦EOL⟧
-// 해설 L309: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExpandResultPath(System.Collections.Generic.IE
-L000309 |                 string resultPath) ⟦EOL⟧
-// 해설 L310: 구문 블록 경계입니다 · 소속 ExpandResultPath.
-L000310 |             { ⟦EOL⟧
-// 해설 L311: 함수·델리게이트 또는 객체 생성자를 호출합니다: nodes.Select(node => { var children = ExpandResultPath(node.Children, resultPath); var containsResult = node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true || children.Any(ContainsExpande… / 호출자에게 값 또는 제어를 반환합니다: return nodes.Select(node => { var children = ExpandResultPath(node.Children, resultPath); var containsResult = node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true || children.Any(ContainsExpandedRe
-L000311 |                 return nodes.Select(node => ⟦EOL⟧
-// 해설 L312: 구문 블록 경계입니다 · 소속 ExpandResultPath.
-L000312 |                 { ⟦EOL⟧
-// 해설 L313: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExpandResultPath(node.Children, resultPath) / 지역 변수를 선언합니다: var children = ExpandResultPath(node.Children, resultPath); / 변수의 초기값을 지정합니다: children = ExpandResultPath(node.Children, resultPath)
-L000313 |                     var children = ExpandResultPath(node.Children, resultPath); ⟦EOL⟧
-// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: .FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var containsResult = node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true || children.Any(ContainsExpandedResult); / 변수의 초기값을 지정합니다: containsResult = node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true || children.Any(ContainsExpandedResult)
-L000314 |                     var containsResult = node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true ⟦EOL⟧
-// 해설 L315: 함수·델리게이트 또는 객체 생성자를 호출합니다: children.Any(ContainsExpandedResult)
-L000315 |                         || children.Any(ContainsExpandedResult); ⟦EOL⟧
-// 해설 L316: 호출자에게 값 또는 제어를 반환합니다: return node with { Children = children, IsExpanded = node.IsExpanded || containsResult };
-L000316 |                     return node with ⟦EOL⟧
-// 해설 L317: 구문 블록 경계입니다 · 소속 ExpandResultPath.
-L000317 |                     { ⟦EOL⟧
-// 해설 L318: 값을 대상에 대입합니다: Children = children
-L000318 |                         Children = children, ⟦EOL⟧
-// 해설 L319: 값을 대상에 대입합니다: IsExpanded = node.IsExpanded || containsResult
-L000319 |                         IsExpanded = node.IsExpanded || containsResult ⟦EOL⟧
-// 해설 L320: 구문 블록 경계입니다 · 소속 ExpandResultPath.
-L000320 |                     }; ⟦EOL⟧
-// 해설 L321: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExpandResultPath(System.Collections.Generic.IE
-L000321 |                 }).ToArray(); ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
+L000183 |                 NotifyResultEditState(); ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyReinspectionCommandState()
+L000184 |                 NotifyReinspectionCommandState(); ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter(_isResultEditMode ? "RESULT EDIT MODE opened." : "RESULT EDIT MODE closed.") / 조건에 따라 결과식을 선택합니다: _isResultEditMode ? "RESULT EDIT MODE opened." : "RESULT EDIT MODE closed."
+L000185 |                 _statusReporter(_isResultEditMode ⟦EOL⟧
+// 해설 L186: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ToggleResultEditMode(object?)
+L000186 |                     ? "RESULT EDIT MODE opened." ⟦EOL⟧
+// 해설 L187: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ToggleResultEditMode(object?)
+L000187 |                     : "RESULT EDIT MODE closed."); ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다 · 소속 ToggleResultEditMode.
+L000188 |             } ⟦EOL⟧
+L000189 |  ⟦EOL⟧
+// 해설 L190: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RefreshRequested(object?)
+L000190 |             private async void RefreshRequested(object? parameter) ⟦EOL⟧
+// 해설 L191: 구문 블록 경계입니다 · 소속 RefreshRequested.
+L000191 |             { ⟦EOL⟧
+// 해설 L192: 비동기 완료를 기다립니다: await Refresh() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
+L000192 |                 await Refresh(); ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 RefreshRequested.
+L000193 |             } ⟦EOL⟧
+L000194 |  ⟦EOL⟧
+// 해설 L195: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Refresh(System.Threading.CancellationToken, string?)
+L000195 |             private async Task Refresh( ⟦EOL⟧
+// 해설 L196: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Refresh(System.Threading.CancellationToken, string?)
+L000196 |                 CancellationToken cancellationToken = default, ⟦EOL⟧
+// 해설 L197: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Refresh(System.Threading.CancellationToken, string?)
+L000197 |                 string? preferredResultPath = null) ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 Refresh.
+L000198 |             { ⟦EOL⟧
+// 해설 L199: 조건에 따라 분기합니다: if (IsBusy)
+L000199 |                 if (IsBusy) ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 Refresh.
+L000200 |                 { ⟦EOL⟧
+// 해설 L201: 호출자에게 값 또는 제어를 반환합니다: return;
+L000201 |                     return; ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 Refresh.
+L000202 |                 } ⟦EOL⟧
+L000203 |  ⟦EOL⟧
+// 해설 L204: 값을 대상에 대입합니다: IsBusy = true
+L000204 |                 IsBusy = true; ⟦EOL⟧
+// 해설 L205: 예외 처리 범위입니다: try
+L000205 |                 try ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 Refresh.
+L000206 |                 { ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(preferredResultPath) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(preferredResultPath) ? _selectedNode?.Result?.FilePath : preferredResultPath / 지역 변수를 선언합니다: var selectedPath = string.IsNullOrWhiteSpace(preferredResultPath) ? _selectedNode?.Result?.FilePath : preferredResultPath; / 변수의 초기값을 지정합니다: selectedPath = string.IsNullOrWhiteSpace(preferredResultPath) ? _selectedNode?.Result?.FilePath : preferredResultPath
+L000207 |                     var selectedPath = string.IsNullOrWhiteSpace(preferredResultPath) ⟦EOL⟧
+// 해설 L208: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Refresh(System.Threading.CancellationToken, string?)
+L000208 |                         ? _selectedNode?.Result?.FilePath ⟦EOL⟧
+// 해설 L209: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Refresh(System.Threading.CancellationToken, string?)
+L000209 |                         : preferredResultPath; ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeRecipeId(_selectedRecipeIdProvider()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _selectedRecipeIdProvider() / 지역 변수를 선언합니다: var selectedRecipeId = NormalizeRecipeId(_selectedRecipeIdProvider()); / 변수의 초기값을 지정합니다: selectedRecipeId = NormalizeRecipeId(_selectedRecipeIdProvider())
+L000210 |                     var selectedRecipeId = NormalizeRecipeId(_selectedRecipeIdProvider()); ⟦EOL⟧
+// 해설 L211: 비동기 완료를 기다립니다: await _reviewResultFile.ListCorrectionResults(cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewResultFile.ListCorrectionResults(cancellationToken) / 지역 변수를 선언합니다: var allResults = await _reviewResultFile.ListCorrectionResults(cancellationToken); / 변수의 초기값을 지정합니다: allResults = await _reviewResultFile.ListCorrectionResults(cancellationToken)
+L000211 |                     var allResults = await _reviewResultFile.ListCorrectionResults(cancellationToken); ⟦EOL⟧
+// 해설 L212: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(selectedRecipeId) / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(selectedRecipeId) ? Array.Empty<ST_REVIEW_RESULT_CATALOG_ITEM>() : allResults .Where(result => NormalizeRecipeId(result.RecipeId).Equals(selectedRecipeId, StringComparison.OrdinalIgnoreCase)) .ToArray() / 지역 변수를 선언합니다: var results = string.IsNullOrWhiteSpace(selectedRecipeId) ? Array.Empty<ST_REVIEW_RESULT_CATALOG_ITEM>() : allResults .Where(result => NormalizeRecipeId(result.RecipeId).Equals(selectedRecipeId, StringCo
+L000212 |                     var results = string.IsNullOrWhiteSpace(selectedRecipeId) ⟦EOL⟧
+// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.Empty<ST_REVIEW_RESULT_CATALOG_ITEM>()
+L000213 |                         ? Array.Empty<ST_REVIEW_RESULT_CATALOG_ITEM>() ⟦EOL⟧
+// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: allResults .Where(result => NormalizeRecipeId(result.RecipeId).Equals(selectedRecipeId, StringComparison.OrdinalIgnoreCase)) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: allResults .Where(result => NormalizeRecipeId(result.RecipeId).Equals(selectedRecipeId, StringComparison.OrdinalIgnoreCase))
+L000214 |                         : allResults ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeRecipeId(result.RecipeId).Equals(selectedRecipeId, StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeRecipeId(result.RecipeId)
+L000215 |                             .Where(result => NormalizeRecipeId(result.RecipeId).Equals(selectedRecipeId, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L216: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Refresh(System.Threading.CancellationToken, string?)
+L000216 |                             .ToArray(); ⟦EOL⟧
+// 해설 L217: 값을 대상에 대입합니다: Nodes = BuildTree(results) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildTree(results)
+L000217 |                     Nodes = BuildTree(results); ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(selectedPath) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(selectedPath))
+L000218 |                     if (!string.IsNullOrWhiteSpace(selectedPath)) ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 Refresh.
+L000219 |                     { ⟦EOL⟧
+// 해설 L220: 값을 대상에 대입합니다: Nodes = ExpandResultPath(Nodes, selectedPath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ExpandResultPath(Nodes, selectedPath)
+L000220 |                         Nodes = ExpandResultPath(Nodes, selectedPath); ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 Refresh.
+L000221 |                     } ⟦EOL⟧
+// 해설 L222: 값을 대상에 대입합니다: StatusText = $"{results.Length:N0} RESULTS"
+L000222 |                     StatusText = $"{results.Length:N0} RESULTS"; ⟦EOL⟧
+// 해설 L223: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(Nodes)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Nodes)
+L000223 |                     Notify(nameof(Nodes)); ⟦EOL⟧
+// 해설 L224: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(StatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(StatusText)
+L000224 |                     Notify(nameof(StatusText)); ⟦EOL⟧
+L000225 |  ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(selectedPath) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(selectedPath))
+L000226 |                     if (!string.IsNullOrWhiteSpace(selectedPath)) ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 Refresh.
+L000227 |                     { ⟦EOL⟧
+// 해설 L228: 함수·델리게이트 또는 객체 생성자를 호출합니다: Flatten(Nodes) .FirstOrDefault(node => node.Result?.FilePath.Equals(selectedPath, StringComparison.OrdinalIgnoreCase) == true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Flatten(Nodes) / 지역 변수를 선언합니다: var selected = Flatten(Nodes) .FirstOrDefault(node => node.Result?.FilePath.Equals(selectedPath, StringComparison.OrdinalIgnoreCase) == true); / 변수의 초기값을 지정합니다: selected = Flatten(Nodes) .FirstOrDefault(node => node.Result?.FilePath.Equals(selectedPath, StringComparison.OrdinalIgnoreCase) == true)
+L000228 |                         var selected = Flatten(Nodes) ⟦EOL⟧
+// 해설 L229: 함수·델리게이트 또는 객체 생성자를 호출합니다: .FilePath.Equals(selectedPath, StringComparison.OrdinalIgnoreCase)
+L000229 |                             .FirstOrDefault(node => node.Result?.FilePath.Equals(selectedPath, StringComparison.OrdinalIgnoreCase) == true); ⟦EOL⟧
+// 해설 L230: 조건에 따라 분기합니다: if (selected is not null)
+L000230 |                         if (selected is not null) ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 Refresh.
+L000231 |                         { ⟦EOL⟧
+// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: Select(selected)
+L000232 |                             Select(selected); ⟦EOL⟧
+// 해설 L233: 호출자에게 값 또는 제어를 반환합니다: return;
+L000233 |                             return; ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다 · 소속 Refresh.
+L000234 |                         } ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 Refresh.
+L000235 |                     } ⟦EOL⟧
+L000236 |  ⟦EOL⟧
+// 해설 L237: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClearSelection()
+L000237 |                     ClearSelection(); ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 Refresh.
+L000238 |                 } ⟦EOL⟧
+// 해설 L239: 지정 예외를 처리합니다: catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+L000239 |                 catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested) ⟦EOL⟧
+// 해설 L240: 구문 블록 경계입니다 · 소속 Refresh.
+L000240 |                 { ⟦EOL⟧
+// 해설 L241: 예외를 발생/전달합니다: throw;
+L000241 |                     throw; ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 Refresh.
+L000242 |                 } ⟦EOL⟧
+// 해설 L243: 지정 예외를 처리합니다: catch (Exception exception)
+L000243 |                 catch (Exception exception) ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 Refresh.
+L000244 |                 { ⟦EOL⟧
+// 해설 L245: 값을 대상에 대입합니다: StatusText = "LOAD FAILED"
+L000245 |                     StatusText = "LOAD FAILED"; ⟦EOL⟧
+// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(StatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(StatusText)
+L000246 |                     Notify(nameof(StatusText)); ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter($"Review Result list load failed: {exception.Message}")
+L000247 |                     _statusReporter($"Review Result list load failed: {exception.Message}"); ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 Refresh.
+L000248 |                 } ⟦EOL⟧
+// 해설 L249: 종료 정리 구간입니다: finally
+L000249 |                 finally ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 Refresh.
+L000250 |                 { ⟦EOL⟧
+// 해설 L251: 값을 대상에 대입합니다: IsBusy = false
+L000251 |                     IsBusy = false; ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다 · 소속 Refresh.
+L000252 |                 } ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 Refresh.
+L000253 |             } ⟦EOL⟧
+L000254 |  ⟦EOL⟧
+// 해설 L255: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ClearSelection()
+L000255 |             private void ClearSelection() ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 ClearSelection.
+L000256 |             { ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetSelectedTreeNode(null)
+L000257 |                 SetSelectedTreeNode(null); ⟦EOL⟧
+// 해설 L258: 값을 대상에 대입합니다: _selectedNode = null
+L000258 |                 _selectedNode = null; ⟦EOL⟧
+// 해설 L259: 값을 대상에 대입합니다: SelectedTitle = "NO RESULT SELECTED"
+L000259 |                 SelectedTitle = "NO RESULT SELECTED"; ⟦EOL⟧
+// 해설 L260: 값을 대상에 대입합니다: SelectedStatus = "WAIT"
+L000260 |                 SelectedStatus = "WAIT"; ⟦EOL⟧
+// 해설 L261: 값을 대상에 대입합니다: SelectedPath = ""
+L000261 |                 SelectedPath = ""; ⟦EOL⟧
+// 해설 L262: 값을 대상에 대입합니다: SelectedDetails = []
+L000262 |                 SelectedDetails = []; ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: PrepareSelectedResult(null)
+L000263 |                 PrepareSelectedResult(null); ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedTitle)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedTitle)
+L000264 |                 Notify(nameof(SelectedTitle)); ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedStatus)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedStatus)
+L000265 |                 Notify(nameof(SelectedStatus)); ⟦EOL⟧
+// 해설 L266: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedStatusBrush)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedStatusBrush)
+L000266 |                 Notify(nameof(SelectedStatusBrush)); ⟦EOL⟧
+// 해설 L267: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedPath)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedPath)
+L000267 |                 Notify(nameof(SelectedPath)); ⟦EOL⟧
+// 해설 L268: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedDetails)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedDetails)
+L000268 |                 Notify(nameof(SelectedDetails)); ⟦EOL⟧
+// 해설 L269: 구문 블록 경계입니다 · 소속 ClearSelection.
+L000269 |             } ⟦EOL⟧
+L000270 |  ⟦EOL⟧
+// 해설 L271: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000271 |             private static IReadOnlyList<ST_REVIEW_RESULT_TREE_NODE> BuildTree( ⟦EOL⟧
+// 해설 L272: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000272 |                 IReadOnlyList<ST_REVIEW_RESULT_CATALOG_ITEM> results) ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 BuildTree.
+L000273 |             { ⟦EOL⟧
+// 해설 L274: 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Where(result => result.Source.Equals("MANUAL", StringComparison.OrdinalIgnoreCase)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Where(result => result.Source.Equals("MANUAL", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Source.Equals("MANUAL", StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var manualResults = results.Where(result => result.Source.Equals("MANUAL", StringComparison.OrdinalIgnoreCase)).ToArray(); / 변수의 초기값을 지정합니다: manualResults = results.Where(result
+L000274 |                 var manualResults = results.Where(result => result.Source.Equals("MANUAL", StringComparison.OrdinalIgnoreCase)).ToArray(); ⟦EOL⟧
+// 해설 L275: 함수·델리게이트 또는 객체 생성자를 호출합니다: manualResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) .Select(recipe => new ST_REVIEW_RESULT_TREE_NODE( recipe.Key, "RECIPE", $… / 함수·델리게이트 또는 객체 생성자를 호출합니다: manualResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: manualResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) /
+L000275 |                 var manualRecipes = manualResults ⟦EOL⟧
+// 해설 L276: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000276 |                     .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L277: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000277 |                     .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L278: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE( recipe.Key, "RECIPE", $"{recipe.Count():N0}", new[] { "ALL_SHOT", "ONE_SHOT", "ONE_LINE", "BEAM_INSPECTION", "ROUGH", "FINE" } .Select(type => { var typeResults = recipe.Where(result => re…
+L000278 |                     .Select(recipe => new ST_REVIEW_RESULT_TREE_NODE( ⟦EOL⟧
+// 해설 L279: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000279 |                         recipe.Key, ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000280 |                         "RECIPE", ⟦EOL⟧
+// 해설 L281: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Count()
+L000281 |                         $"{recipe.Count():N0}", ⟦EOL⟧
+// 해설 L282: 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { "ALL_SHOT", "ONE_SHOT", "ONE_LINE", "BEAM_INSPECTION", "ROUGH", "FINE" } .Select(type => { var typeResults = recipe.Where(result => result.ResultType.Equals(type, StringComparison.OrdinalIgnoreCase)).OrderByDesce…
+L000282 |                         new[] { "ALL_SHOT", "ONE_SHOT", "ONE_LINE", "BEAM_INSPECTION", "ROUGH", "FINE" } ⟦EOL⟧
+// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000283 |                             .Select(type => ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다 · 소속 BuildTree.
+L000284 |                             { ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Where(result => result.ResultType.Equals(type, StringComparison.OrdinalIgnoreCase)).OrderByDescending(result => result.SavedAt).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Where(result => result.ResultType.Equals(type, StringComparison.OrdinalIgnoreCase)).OrderByDescending(result => result.SavedAt) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Where(result => result.ResultType.Equals(type, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.ResultType.Equals(type, StringComparison.Ordinal
+L000285 |                                 var typeResults = recipe.Where(result => result.ResultType.Equals(type, StringComparison.OrdinalIgnoreCase)).OrderByDescending(result => result.SavedAt).ToArray(); ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE(type.Replace('_', ' '), "TYPE", $"{typeResults.Length:N0}", typeResults.Select(CreateResultNode).ToArray(), null, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: type.Replace('_', ' ') / 함수·델리게이트 또는 객체 생성자를 호출합니다: typeResults.Select(CreateResultNode).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: typeResults.Select(CreateResultNode) / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_RESULT_TREE_NODE(type.Replace('_', ' '), "TYPE", $"{typeResults.Length:N0}", typeResults.Select(CreateResultNode).ToArray(
+L000286 |                                 return new ST_REVIEW_RESULT_TREE_NODE(type.Replace('_', ' '), "TYPE", $"{typeResults.Length:N0}", typeResults.Select(CreateResultNode).ToArray(), null, false); ⟦EOL⟧
+// 해설 L287: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000287 |                             }) ⟦EOL⟧
+// 해설 L288: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000288 |                             .ToArray(), ⟦EOL⟧
+// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000289 |                         null, ⟦EOL⟧
+// 해설 L290: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000290 |                         false)) ⟦EOL⟧
+// 해설 L291: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000291 |                     .ToArray(); ⟦EOL⟧
+L000292 |  ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Where(result => result.Source.Equals("AUTO", StringComparison.OrdinalIgnoreCase)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Where(result => result.Source.Equals("AUTO", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Source.Equals("AUTO", StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var autoResults = results.Where(result => result.Source.Equals("AUTO", StringComparison.OrdinalIgnoreCase)).ToArray(); / 변수의 초기값을 지정합니다: autoResults = results.Where(result => result.So
+L000293 |                 var autoResults = results.Where(result => result.Source.Equals("AUTO", StringComparison.OrdinalIgnoreCase)).ToArray(); ⟦EOL⟧
+// 해설 L294: 함수·델리게이트 또는 객체 생성자를 호출합니다: autoResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) .Select(recipe => new ST_REVIEW_RESULT_TREE_NODE(recipe.Key, "RECIPE", $"{r… / 함수·델리게이트 또는 객체 생성자를 호출합니다: autoResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: autoResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) / 지역 변
+L000294 |                 var autoRecipes = autoResults ⟦EOL⟧
+// 해설 L295: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000295 |                     .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L296: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000296 |                     .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L297: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE(recipe.Key, "RECIPE", $"{recipe.Count():N0}", recipe.OrderByDescending(result => result.SavedAt).Select(CreateResultNode).ToArray(), null, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.OrderByDescending(result => result.SavedAt).Select(CreateResultNode).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.OrderByDescending(result => result.SavedAt).Select(CreateResultNode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.OrderByDescending(result => result.S
+L000297 |                     .Select(recipe => new ST_REVIEW_RESULT_TREE_NODE(recipe.Key, "RECIPE", $"{recipe.Count():N0}", recipe.OrderByDescending(result => result.SavedAt).Select(CreateResultNode).ToArray(), null, false)) ⟦EOL⟧
+// 해설 L298: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000298 |                     .ToArray(); ⟦EOL⟧
+L000299 |  ⟦EOL⟧
+// 해설 L300: 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Where(result => result.Source.Equals("ZERO_DEFENCE", StringComparison.OrdinalIgnoreCase)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Where(result => result.Source.Equals("ZERO_DEFENCE", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Source.Equals("ZERO_DEFENCE", StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var zeroResults = results.Where(result => result.Source.Equals("ZERO_DEFENCE", StringComparison.OrdinalIgnoreCase)).ToArray(); / 변수의 초기값을 지정합니다: zeroResults = r
+L000300 |                 var zeroResults = results.Where(result => result.Source.Equals("ZERO_DEFENCE", StringComparison.OrdinalIgnoreCase)).ToArray(); ⟦EOL⟧
+// 해설 L301: 함수·델리게이트 또는 객체 생성자를 호출합니다: zeroResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) .Select(recipe => new ST_REVIEW_RESULT_TREE_NODE( recipe.Key, "RECIPE", $"{… / 함수·델리게이트 또는 객체 생성자를 호출합니다: zeroResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: zeroResults .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) / 지역 변
+L000301 |                 var zeroRecipes = zeroResults ⟦EOL⟧
+// 해설 L302: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000302 |                     .GroupBy(result => result.RecipeId, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L303: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000303 |                     .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L304: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE( recipe.Key, "RECIPE", $"{recipe.Count():N0}", recipe.GroupBy(result => result.GlassId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) .Sel…
+L000304 |                     .Select(recipe => new ST_REVIEW_RESULT_TREE_NODE( ⟦EOL⟧
+// 해설 L305: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000305 |                         recipe.Key, ⟦EOL⟧
+// 해설 L306: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000306 |                         "RECIPE", ⟦EOL⟧
+// 해설 L307: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.Count()
+L000307 |                         $"{recipe.Count():N0}", ⟦EOL⟧
+// 해설 L308: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.GroupBy(result => result.GlassId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) .Select(glass => new ST_REVIEW_RESULT_TREE_NODE(glass.Key, "GLASS", $"{glass.Count… / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.GroupBy(result => result.GlassId, StringComparer.OrdinalIgnoreCase) .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipe.GroupBy(result => result.GlassId, StringComparer.OrdinalIgnoreCase)
+L000308 |                         recipe.GroupBy(result => result.GlassId, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L309: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000309 |                             .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L310: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE(glass.Key, "GLASS", $"{glass.Count():N0}", glass.OrderByDescending(result => result.SavedAt).Select(CreateResultNode).ToArray(), null, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: glass.Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: glass.OrderByDescending(result => result.SavedAt).Select(CreateResultNode).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: glass.OrderByDescending(result => result.SavedAt).Select(CreateResultNode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: glass.OrderByDescending(result => result.SavedAt)
+L000310 |                             .Select(glass => new ST_REVIEW_RESULT_TREE_NODE(glass.Key, "GLASS", $"{glass.Count():N0}", glass.OrderByDescending(result => result.SavedAt).Select(CreateResultNode).ToArray(), null, false)) ⟦EOL⟧
+// 해설 L311: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000311 |                             .ToArray(), ⟦EOL⟧
+// 해설 L312: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000312 |                         null, ⟦EOL⟧
+// 해설 L313: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000313 |                         false)) ⟦EOL⟧
+// 해설 L314: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000314 |                     .ToArray(); ⟦EOL⟧
+L000315 |  ⟦EOL⟧
+// 해설 L316: 지역 변수를 선언합니다: var sourceNodes = new[] { new ST_REVIEW_RESULT_TREE_NODE("MANUAL", "SOURCE", $"{manualResults.Length:N0}", manualRecipes, null, true), new ST_REVIEW_RESULT_TREE_NODE("AUTO", "SOURCE", $"{autoResults.Length:N0}", autoRecipes, null, / 변수의 초기값을 지정합니다: sourceNodes = new[] { new ST_REVIEW_RESULT_TREE_NODE("MANUAL", "SOURCE", $"{manualResults.Length:N0}", manualRecipes, null, true), new ST_REVIEW_RESULT_TREE_NODE("AUTO", "SOURCE", $"{autoResults.Length:N0}", autoRecipes, null, tru
+L000316 |                 var sourceNodes = new[] ⟦EOL⟧
+// 해설 L317: 구문 블록 경계입니다 · 소속 BuildTree.
+L000317 |                 { ⟦EOL⟧
+// 해설 L318: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE("MANUAL", "SOURCE", $"{manualResults.Length:N0}", manualRecipes, null, true)
+L000318 |                     new ST_REVIEW_RESULT_TREE_NODE("MANUAL", "SOURCE", $"{manualResults.Length:N0}", manualRecipes, null, true), ⟦EOL⟧
+// 해설 L319: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE("AUTO", "SOURCE", $"{autoResults.Length:N0}", autoRecipes, null, true)
+L000319 |                     new ST_REVIEW_RESULT_TREE_NODE("AUTO", "SOURCE", $"{autoResults.Length:N0}", autoRecipes, null, true), ⟦EOL⟧
+// 해설 L320: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE("ZERO DEFENCE", "SOURCE", $"{zeroResults.Length:N0}", zeroRecipes, null, true)
+L000320 |                     new ST_REVIEW_RESULT_TREE_NODE("ZERO DEFENCE", "SOURCE", $"{zeroResults.Length:N0}", zeroRecipes, null, true) ⟦EOL⟧
+// 해설 L321: 구문 블록 경계입니다 · 소속 BuildTree.
+L000321 |                 }; ⟦EOL⟧
 L000322 |  ⟦EOL⟧
-// 해설 L323: 선언·서명/매개변수·접근 조건입니다 · bool ContainsExpandedResult(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE)
-L000323 |                 bool ContainsExpandedResult(ST_REVIEW_RESULT_TREE_NODE node) ⟦EOL⟧
-// 해설 L324: 구문 블록 경계입니다 · 소속 ContainsExpandedResult.
-L000324 |                 { ⟦EOL⟧
-// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: .FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true || node.Children.Any(ContainsExpandedResult);
-L000325 |                     return node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true ⟦EOL⟧
-// 해설 L326: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Any(ContainsExpandedResult)
-L000326 |                         || node.Children.Any(ContainsExpandedResult); ⟦EOL⟧
-// 해설 L327: 구문 블록 경계입니다 · 소속 ContainsExpandedResult.
-L000327 |                 } ⟦EOL⟧
-// 해설 L328: 구문 블록 경계입니다 · 소속 ExpandResultPath.
-L000328 |             } ⟦EOL⟧
-L000329 |  ⟦EOL⟧
-// 해설 L330: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetSelectedTreeNode(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE?)
-L000330 |             private void SetSelectedTreeNode(ST_REVIEW_RESULT_TREE_NODE? selectedNode) ⟦EOL⟧
-// 해설 L331: 구문 블록 경계입니다 · 소속 SetSelectedTreeNode.
-L000331 |             { ⟦EOL⟧
-// 해설 L332: 함수·델리게이트 또는 객체 생성자를 호출합니다: Flatten(Nodes) / 컬렉션 요소를 순회합니다: foreach (var node in Flatten(Nodes))
-L000332 |                 foreach (var node in Flatten(Nodes)) ⟦EOL⟧
-// 해설 L333: 구문 블록 경계입니다 · 소속 SetSelectedTreeNode.
-L000333 |                 { ⟦EOL⟧
-// 해설 L334: 값을 대상에 대입합니다: node.IsSelected = ReferenceEquals(node, selectedNode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(node, selectedNode)
-L000334 |                     node.IsSelected = ReferenceEquals(node, selectedNode); ⟦EOL⟧
-// 해설 L335: 구문 블록 경계입니다 · 소속 SetSelectedTreeNode.
-L000335 |                 } ⟦EOL⟧
-// 해설 L336: 구문 블록 경계입니다 · 소속 SetSelectedTreeNode.
-L000336 |             } ⟦EOL⟧
-L000337 |  ⟦EOL⟧
-// 해설 L338: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CountResults(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE)
-L000338 |             private static int CountResults(ST_REVIEW_RESULT_TREE_NODE node) ⟦EOL⟧
-// 해설 L339: 구문 블록 경계입니다 · 소속 CountResults.
-L000339 |             { ⟦EOL⟧
-// 해설 L340: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Sum(CountResults) / 조건에 따라 결과식을 선택합니다: node.Result is null ? node.Children.Sum(CountResults) : 1 / 호출자에게 값 또는 제어를 반환합니다: return node.Result is null ? node.Children.Sum(CountResults) : 1;
-L000340 |                 return node.Result is null ? node.Children.Sum(CountResults) : 1; ⟦EOL⟧
-// 해설 L341: 구문 블록 경계입니다 · 소속 CountResults.
-L000341 |             } ⟦EOL⟧
-L000342 |  ⟦EOL⟧
-// 해설 L343: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StatusBrush(string)
-L000343 |             internal static Brush StatusBrush(string status) ⟦EOL⟧
-// 해설 L344: 구문 블록 경계입니다 · 소속 StatusBrush.
-L000344 |             { ⟦EOL⟧
-// 해설 L345: 함수·델리게이트 또는 객체 생성자를 호출합니다: status.ToUpperInvariant() / 지역 변수를 선언합니다: var displayState = status.ToUpperInvariant() switch { "COMPLETED" or "DONE" => "OK", "FAILED" or "INVALID" => "ERROR", "STOPPED" or "NG_PAUSED" => "WARN", _ => status }; / 값별 결과식을 선택합니다: status.ToUpperInvariant() switch { "COMPLETED" or "DONE" => "OK", "FAILED" or "INVALID" => "ERROR", "STOPPED" or "NG_PAUSED" => "WARN", _ => status } / 변수의 초기값을 지정합니다: displayState = status.ToUpperInvariant() switch { "COMPLETED" or "DONE" => "OK", "FAILED" or "INVALID" => "ERROR", "
-L000345 |                 var displayState = status.ToUpperInvariant() switch ⟦EOL⟧
-// 해설 L346: 구문 블록 경계입니다 · 소속 StatusBrush.
-L000346 |                 { ⟦EOL⟧
-// 해설 L347: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StatusBrush(string)
-L000347 |                     "COMPLETED" or "DONE" => "OK", ⟦EOL⟧
-// 해설 L348: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StatusBrush(string)
-L000348 |                     "FAILED" or "INVALID" => "ERROR", ⟦EOL⟧
-// 해설 L349: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StatusBrush(string)
-L000349 |                     "STOPPED" or "NG_PAUSED" => "WARN", ⟦EOL⟧
-// 해설 L350: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StatusBrush(string)
-L000350 |                     _ => status ⟦EOL⟧
-// 해설 L351: 구문 블록 경계입니다 · 소속 StatusBrush.
-L000351 |                 }; ⟦EOL⟧
-// 해설 L352: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForDisplayState(displayState) / 호출자에게 값 또는 제어를 반환합니다: return CStatusBrush.ForDisplayState(displayState);
-L000352 |                 return CStatusBrush.ForDisplayState(displayState); ⟦EOL⟧
-// 해설 L353: 구문 블록 경계입니다 · 소속 StatusBrush.
-L000353 |             } ⟦EOL⟧
-L000354 |  ⟦EOL⟧
-// 해설 L355: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Notify(string)
-L000355 |             private void Notify(string propertyName) ⟦EOL⟧
-// 해설 L356: 구문 블록 경계입니다 · 소속 Notify.
-L000356 |             { ⟦EOL⟧
-// 해설 L357: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(propertyName)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(propertyName)
-L000357 |                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); ⟦EOL⟧
-// 해설 L358: 구문 블록 경계입니다 · 소속 Notify.
-L000358 |             } ⟦EOL⟧
-// 해설 L359: 구문 블록 경계입니다.
-L000359 |         } ⟦EOL⟧
-L000360 |  ⟦EOL⟧
-// 해설 L361: 타입의 구조/상속 선언입니다: public sealed record ST_REVIEW_RESULT_TREE_NODE(
-L000361 |         public sealed record ST_REVIEW_RESULT_TREE_NODE( ⟦EOL⟧
-// 해설 L362: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000362 |             string Name, ⟦EOL⟧
-// 해설 L363: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000363 |             string Kind, ⟦EOL⟧
-// 해설 L364: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000364 |             string Detail, ⟦EOL⟧
-// 해설 L365: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000365 |             IReadOnlyList<ST_REVIEW_RESULT_TREE_NODE> Children, ⟦EOL⟧
-// 해설 L366: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000366 |             ST_REVIEW_RESULT_CATALOG_ITEM? Result, ⟦EOL⟧
-// 해설 L367: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000367 |             bool IsExpanded) ⟦EOL⟧
-// 해설 L368: 구문 블록 경계입니다.
-L000368 |         { ⟦EOL⟧
-// 해설 L369: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE._isSelected
-L000369 |             private bool _isSelected; ⟦EOL⟧
-L000370 |  ⟦EOL⟧
-// 해설 L371: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE.PropertyChanged
-L000371 |             public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
-// 해설 L372: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewDataPanel.StatusBrush(Result?.ResultStatus ?? Kind)
-L000372 |             public Brush DetailBrush => CReviewDataPanel.StatusBrush(Result?.ResultStatus ?? Kind); ⟦EOL⟧
-// 해설 L373: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE.IsDirectory
-L000373 |             public bool IsDirectory => Result is null; ⟦EOL⟧
-// 해설 L374: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE.IsSelected
-L000374 |             public bool IsSelected ⟦EOL⟧
-// 해설 L375: 구문 블록 경계입니다 · 소속 IsSelected.
-L000375 |             { ⟦EOL⟧
-// 해설 L376: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE.IsSelected.get
-L000376 |                 get => _isSelected; ⟦EOL⟧
-// 해설 L377: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE.IsSelected.set
-L000377 |                 set ⟦EOL⟧
-// 해설 L378: 구문 블록 경계입니다 · 소속 set_IsSelected.
-L000378 |                 { ⟦EOL⟧
-// 해설 L379: 조건에 따라 분기합니다: if (_isSelected == value)
-L000379 |                     if (_isSelected == value) ⟦EOL⟧
-// 해설 L380: 구문 블록 경계입니다 · 소속 set_IsSelected.
-L000380 |                     { ⟦EOL⟧
-// 해설 L381: 호출자에게 값 또는 제어를 반환합니다: return;
-L000381 |                         return; ⟦EOL⟧
-// 해설 L382: 구문 블록 경계입니다 · 소속 set_IsSelected.
-L000382 |                     } ⟦EOL⟧
-L000383 |  ⟦EOL⟧
-// 해설 L384: 값을 대상에 대입합니다: _isSelected = value
-L000384 |                     _isSelected = value; ⟦EOL⟧
-// 해설 L385: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(nameof(IsSelected))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(nameof(IsSelected)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsSelected)
-L000385 |                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsSelected))); ⟦EOL⟧
-// 해설 L386: 구문 블록 경계입니다 · 소속 set_IsSelected.
-L000386 |                 } ⟦EOL⟧
-// 해설 L387: 구문 블록 경계입니다 · 소속 IsSelected.
-L000387 |             } ⟦EOL⟧
-// 해설 L388: 구문 블록 경계입니다.
-L000388 |         } ⟦EOL⟧
-L000389 |  ⟦EOL⟧
-// 해설 L390: 타입의 구조/상속 선언입니다: public sealed record ST_REVIEW_DATA_DETAIL_ITEM(string Name, string Value);
-L000390 |         public sealed record ST_REVIEW_DATA_DETAIL_ITEM(string Name, string Value); ⟦EOL⟧
-// 해설 L391: 구문 블록 경계입니다.
-L000391 |     } ⟦EOL⟧
-// 해설 L392: 구문 블록 경계입니다.
-L000392 | } ⟦EOL⟧
+// 해설 L323: 호출자에게 값 또는 제어를 반환합니다: return [ new ST_REVIEW_RESULT_TREE_NODE( "REVIEW RESULTS", "ROOT", $"{results.Count:N0}", sourceNodes, null, true) ];
+L000323 |                 return ⟦EOL⟧
+// 해설 L324: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000324 |                 [ ⟦EOL⟧
+// 해설 L325: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE( "REVIEW RESULTS", "ROOT", $"{results.Count:N0}", sourceNodes, null, true)
+L000325 |                     new ST_REVIEW_RESULT_TREE_NODE( ⟦EOL⟧
+// 해설 L326: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000326 |                         "REVIEW RESULTS", ⟦EOL⟧
+// 해설 L327: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000327 |                         "ROOT", ⟦EOL⟧
+// 해설 L328: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000328 |                         $"{results.Count:N0}", ⟦EOL⟧
+// 해설 L329: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000329 |                         sourceNodes, ⟦EOL⟧
+// 해설 L330: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000330 |                         null, ⟦EOL⟧
+// 해설 L331: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000331 |                         true) ⟦EOL⟧
+// 해설 L332: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.BuildTree(System.Collections.Generic.IReadOnly
+L000332 |                 ]; ⟦EOL⟧
+// 해설 L333: 구문 블록 경계입니다 · 소속 BuildTree.
+L000333 |             } ⟦EOL⟧
+L000334 |  ⟦EOL⟧
+// 해설 L335: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateResultNode(Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM)
+L000335 |             private static ST_REVIEW_RESULT_TREE_NODE CreateResultNode(ST_REVIEW_RESULT_CATALOG_ITEM result) ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 CreateResultNode.
+L000336 |             { ⟦EOL⟧
+// 해설 L337: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_TREE_NODE(result.FileName, "RESULT", "", [], result, false) / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_RESULT_TREE_NODE(result.FileName, "RESULT", "", [], result, false);
+L000337 |                 return new ST_REVIEW_RESULT_TREE_NODE(result.FileName, "RESULT", "", [], result, false); ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 CreateResultNode.
+L000338 |             } ⟦EOL⟧
+L000339 |  ⟦EOL⟧
+// 해설 L340: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_DETAIL_ITEM> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CreateDetails(Drilling.UI.Menu.Menus.CMenuCorr
+L000340 |             private static IReadOnlyList<ST_REVIEW_DATA_DETAIL_ITEM> CreateDetails(ST_REVIEW_RESULT_TREE_NODE node) ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다 · 소속 CreateDetails.
+L000341 |             { ⟦EOL⟧
+// 해설 L342: 조건에 따라 분기합니다: if (node.Result is not { } result)
+L000342 |                 if (node.Result is not { } result) ⟦EOL⟧
+// 해설 L343: 구문 블록 경계입니다 · 소속 CreateDetails.
+L000343 |                 { ⟦EOL⟧
+// 해설 L344: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Result Count", CountResults(node).ToString("N0", CultureInfo.CurrentCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CountResults(node).ToString("N0", CultureInfo.CurrentCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CountResults(node) / 호출자에게 값 또는 제어를 반환합니다: return [new("Result Count", CountResults(node).ToString("N0", CultureInfo.CurrentCulture))];
+L000344 |                     return [new("Result Count", CountResults(node).ToString("N0", CultureInfo.CurrentCulture))]; ⟦EOL⟧
+// 해설 L345: 구문 블록 경계입니다 · 소속 CreateDetails.
+L000345 |                 } ⟦EOL⟧
+L000346 |  ⟦EOL⟧
+// 해설 L347: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_REVIEW_DATA_DETAIL_ITEM> { new("Source", result.Source), new("Type", result.ResultType), new("Recipe", result.RecipeId), new("Saved At", result.SavedAt.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.Invarian… / 지역 변수를 선언합니다: var details = new List<ST_REVIEW_DATA_DETAIL_ITEM> { new("Source", result.Source), new("Type", result.ResultType), new("Recipe", result.RecipeId), new("Saved At", result.SavedAt.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.Inva / 변수의 초기값을 지정합니다: details = new List<ST_REVI
+L000347 |                 var details = new List<ST_REVIEW_DATA_DETAIL_ITEM> ⟦EOL⟧
+// 해설 L348: 구문 블록 경계입니다 · 소속 CreateDetails.
+L000348 |                 { ⟦EOL⟧
+// 해설 L349: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Source", result.Source)
+L000349 |                     new("Source", result.Source), ⟦EOL⟧
+// 해설 L350: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Type", result.ResultType)
+L000350 |                     new("Type", result.ResultType), ⟦EOL⟧
+// 해설 L351: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Recipe", result.RecipeId)
+L000351 |                     new("Recipe", result.RecipeId), ⟦EOL⟧
+// 해설 L352: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Saved At", result.SavedAt.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.SavedAt.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture)
+L000352 |                     new("Saved At", result.SavedAt.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture)), ⟦EOL⟧
+// 해설 L353: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Glass", result.GlassId)
+L000353 |                     new("Glass", result.GlassId), ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Run Type", result.RunType)
+L000354 |                     new("Run Type", result.RunType), ⟦EOL⟧
+// 해설 L355: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Method", result.Method)
+L000355 |                     new("Method", result.Method), ⟦EOL⟧
+// 해설 L356: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Total Count", result.TotalCount?.ToString("N0", CultureInfo.CurrentCulture) ?? "-") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("N0", CultureInfo.CurrentCulture)
+L000356 |                     new("Total Count", result.TotalCount?.ToString("N0", CultureInfo.CurrentCulture) ?? "-") ⟦EOL⟧
+// 해설 L357: 구문 블록 경계입니다 · 소속 CreateDetails.
+L000357 |                 }; ⟦EOL⟧
+// 해설 L358: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(result.ResultMessage) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(result.ResultMessage))
+L000358 |                 if (!string.IsNullOrWhiteSpace(result.ResultMessage)) ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 CreateDetails.
+L000359 |                 { ⟦EOL⟧
+// 해설 L360: 함수·델리게이트 또는 객체 생성자를 호출합니다: details.Add(new("Message", result.ResultMessage)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Message", result.ResultMessage)
+L000360 |                     details.Add(new("Message", result.ResultMessage)); ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다 · 소속 CreateDetails.
+L000361 |                 } ⟦EOL⟧
+L000362 |  ⟦EOL⟧
+// 해설 L363: 호출자에게 값 또는 제어를 반환합니다: return details;
+L000363 |                 return details; ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 CreateDetails.
+L000364 |             } ⟦EOL⟧
+L000365 |  ⟦EOL⟧
+// 해설 L366: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Flatten(System.Collections.Generic.IEnumerable<D
+L000366 |             private static IEnumerable<ST_REVIEW_RESULT_TREE_NODE> Flatten( ⟦EOL⟧
+// 해설 L367: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Flatten(System.Collections.Generic.IEnumerable<D
+L000367 |                 IEnumerable<ST_REVIEW_RESULT_TREE_NODE> nodes) ⟦EOL⟧
+// 해설 L368: 구문 블록 경계입니다 · 소속 Flatten.
+L000368 |             { ⟦EOL⟧
+// 해설 L369: 컬렉션 요소를 순회합니다: foreach (var node in nodes)
+L000369 |                 foreach (var node in nodes) ⟦EOL⟧
+// 해설 L370: 구문 블록 경계입니다 · 소속 Flatten.
+L000370 |                 { ⟦EOL⟧
+// 해설 L371: 열거값/종료를 전달합니다: yield return node;
+L000371 |                     yield return node; ⟦EOL⟧
+// 해설 L372: 함수·델리게이트 또는 객체 생성자를 호출합니다: Flatten(node.Children) / 컬렉션 요소를 순회합니다: foreach (var child in Flatten(node.Children))
+L000372 |                     foreach (var child in Flatten(node.Children)) ⟦EOL⟧
+// 해설 L373: 구문 블록 경계입니다 · 소속 Flatten.
+L000373 |                     { ⟦EOL⟧
+// 해설 L374: 열거값/종료를 전달합니다: yield return child;
+L000374 |                         yield return child; ⟦EOL⟧
+// 해설 L375: 구문 블록 경계입니다 · 소속 Flatten.
+L000375 |                     } ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 Flatten.
+L000376 |                 } ⟦EOL⟧
+// 해설 L377: 구문 블록 경계입니다 · 소속 Flatten.
+L000377 |             } ⟦EOL⟧
+L000378 |  ⟦EOL⟧
+// 해설 L379: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExpandResultPath(System.Collections.Generic.IE
+L000379 |             private static IReadOnlyList<ST_REVIEW_RESULT_TREE_NODE> ExpandResultPath( ⟦EOL⟧
+// 해설 L380: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExpandResultPath(System.Collections.Generic.IE
+L000380 |                 IEnumerable<ST_REVIEW_RESULT_TREE_NODE> nodes, ⟦EOL⟧
+// 해설 L381: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExpandResultPath(System.Collections.Generic.IE
+L000381 |                 string resultPath) ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 ExpandResultPath.
+L000382 |             { ⟦EOL⟧
+// 해설 L383: 함수·델리게이트 또는 객체 생성자를 호출합니다: nodes.Select(node => { var children = ExpandResultPath(node.Children, resultPath); var containsResult = node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true || children.Any(ContainsExpande… / 호출자에게 값 또는 제어를 반환합니다: return nodes.Select(node => { var children = ExpandResultPath(node.Children, resultPath); var containsResult = node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true || children.Any(ContainsExpandedRe
+L000383 |                 return nodes.Select(node => ⟦EOL⟧
+// 해설 L384: 구문 블록 경계입니다 · 소속 ExpandResultPath.
+L000384 |                 { ⟦EOL⟧
+// 해설 L385: 함수·델리게이트 또는 객체 생성자를 호출합니다: ExpandResultPath(node.Children, resultPath) / 지역 변수를 선언합니다: var children = ExpandResultPath(node.Children, resultPath); / 변수의 초기값을 지정합니다: children = ExpandResultPath(node.Children, resultPath)
+L000385 |                     var children = ExpandResultPath(node.Children, resultPath); ⟦EOL⟧
+// 해설 L386: 함수·델리게이트 또는 객체 생성자를 호출합니다: .FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var containsResult = node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true || children.Any(ContainsExpandedResult); / 변수의 초기값을 지정합니다: containsResult = node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true || children.Any(ContainsExpandedResult)
+L000386 |                     var containsResult = node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true ⟦EOL⟧
+// 해설 L387: 함수·델리게이트 또는 객체 생성자를 호출합니다: children.Any(ContainsExpandedResult)
+L000387 |                         || children.Any(ContainsExpandedResult); ⟦EOL⟧
+// 해설 L388: 호출자에게 값 또는 제어를 반환합니다: return node with { Children = children, IsExpanded = node.IsExpanded || containsResult };
+L000388 |                     return node with ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 ExpandResultPath.
+L000389 |                     { ⟦EOL⟧
+// 해설 L390: 값을 대상에 대입합니다: Children = children
+L000390 |                         Children = children, ⟦EOL⟧
+// 해설 L391: 값을 대상에 대입합니다: IsExpanded = node.IsExpanded || containsResult
+L000391 |                         IsExpanded = node.IsExpanded || containsResult ⟦EOL⟧
+// 해설 L392: 구문 블록 경계입니다 · 소속 ExpandResultPath.
+L000392 |                     }; ⟦EOL⟧
+// 해설 L393: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ExpandResultPath(System.Collections.Generic.IE
+L000393 |                 }).ToArray(); ⟦EOL⟧
+L000394 |  ⟦EOL⟧
+// 해설 L395: 선언·서명/매개변수·접근 조건입니다 · bool ContainsExpandedResult(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE)
+L000395 |                 bool ContainsExpandedResult(ST_REVIEW_RESULT_TREE_NODE node) ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 ContainsExpandedResult.
+L000396 |                 { ⟦EOL⟧
+// 해설 L397: 함수·델리게이트 또는 객체 생성자를 호출합니다: .FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) / 호출자에게 값 또는 제어를 반환합니다: return node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true || node.Children.Any(ContainsExpandedResult);
+L000397 |                     return node.Result?.FilePath.Equals(resultPath, StringComparison.OrdinalIgnoreCase) == true ⟦EOL⟧
+// 해설 L398: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Any(ContainsExpandedResult)
+L000398 |                         || node.Children.Any(ContainsExpandedResult); ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 ContainsExpandedResult.
+L000399 |                 } ⟦EOL⟧
+// 해설 L400: 구문 블록 경계입니다 · 소속 ExpandResultPath.
+L000400 |             } ⟦EOL⟧
+L000401 |  ⟦EOL⟧
+// 해설 L402: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetSelectedTreeNode(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE?)
+L000402 |             private void SetSelectedTreeNode(ST_REVIEW_RESULT_TREE_NODE? selectedNode) ⟦EOL⟧
+// 해설 L403: 구문 블록 경계입니다 · 소속 SetSelectedTreeNode.
+L000403 |             { ⟦EOL⟧
+// 해설 L404: 함수·델리게이트 또는 객체 생성자를 호출합니다: Flatten(Nodes) / 컬렉션 요소를 순회합니다: foreach (var node in Flatten(Nodes))
+L000404 |                 foreach (var node in Flatten(Nodes)) ⟦EOL⟧
+// 해설 L405: 구문 블록 경계입니다 · 소속 SetSelectedTreeNode.
+L000405 |                 { ⟦EOL⟧
+// 해설 L406: 값을 대상에 대입합니다: node.IsSelected = ReferenceEquals(node, selectedNode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(node, selectedNode)
+L000406 |                     node.IsSelected = ReferenceEquals(node, selectedNode); ⟦EOL⟧
+// 해설 L407: 구문 블록 경계입니다 · 소속 SetSelectedTreeNode.
+L000407 |                 } ⟦EOL⟧
+// 해설 L408: 구문 블록 경계입니다 · 소속 SetSelectedTreeNode.
+L000408 |             } ⟦EOL⟧
+L000409 |  ⟦EOL⟧
+// 해설 L410: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CountResults(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE)
+L000410 |             private static int CountResults(ST_REVIEW_RESULT_TREE_NODE node) ⟦EOL⟧
+// 해설 L411: 구문 블록 경계입니다 · 소속 CountResults.
+L000411 |             { ⟦EOL⟧
+// 해설 L412: 함수·델리게이트 또는 객체 생성자를 호출합니다: node.Children.Sum(CountResults) / 조건에 따라 결과식을 선택합니다: node.Result is null ? node.Children.Sum(CountResults) : 1 / 호출자에게 값 또는 제어를 반환합니다: return node.Result is null ? node.Children.Sum(CountResults) : 1;
+L000412 |                 return node.Result is null ? node.Children.Sum(CountResults) : 1; ⟦EOL⟧
+// 해설 L413: 구문 블록 경계입니다 · 소속 CountResults.
+L000413 |             } ⟦EOL⟧
+L000414 |  ⟦EOL⟧
+// 해설 L415: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StatusBrush(string)
+L000415 |             internal static Brush StatusBrush(string status) ⟦EOL⟧
+// 해설 L416: 구문 블록 경계입니다 · 소속 StatusBrush.
+L000416 |             { ⟦EOL⟧
+// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: status.ToUpperInvariant() / 지역 변수를 선언합니다: var displayState = status.ToUpperInvariant() switch { "COMPLETED" or "DONE" => "OK", "FAILED" or "INVALID" => "ERROR", "STOPPED" or "NG_PAUSED" => "WARN", _ => status }; / 값별 결과식을 선택합니다: status.ToUpperInvariant() switch { "COMPLETED" or "DONE" => "OK", "FAILED" or "INVALID" => "ERROR", "STOPPED" or "NG_PAUSED" => "WARN", _ => status } / 변수의 초기값을 지정합니다: displayState = status.ToUpperInvariant() switch { "COMPLETED" or "DONE" => "OK", "FAILED" or "INVALID" => "ERROR", "
+L000417 |                 var displayState = status.ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L418: 구문 블록 경계입니다 · 소속 StatusBrush.
+L000418 |                 { ⟦EOL⟧
+// 해설 L419: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StatusBrush(string)
+L000419 |                     "COMPLETED" or "DONE" => "OK", ⟦EOL⟧
+// 해설 L420: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StatusBrush(string)
+L000420 |                     "FAILED" or "INVALID" => "ERROR", ⟦EOL⟧
+// 해설 L421: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StatusBrush(string)
+L000421 |                     "STOPPED" or "NG_PAUSED" => "WARN", ⟦EOL⟧
+// 해설 L422: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.StatusBrush(string)
+L000422 |                     _ => status ⟦EOL⟧
+// 해설 L423: 구문 블록 경계입니다 · 소속 StatusBrush.
+L000423 |                 }; ⟦EOL⟧
+// 해설 L424: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForDisplayState(displayState) / 호출자에게 값 또는 제어를 반환합니다: return CStatusBrush.ForDisplayState(displayState);
+L000424 |                 return CStatusBrush.ForDisplayState(displayState); ⟦EOL⟧
+// 해설 L425: 구문 블록 경계입니다 · 소속 StatusBrush.
+L000425 |             } ⟦EOL⟧
+L000426 |  ⟦EOL⟧
+// 해설 L427: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Notify(string)
+L000427 |             private void Notify(string propertyName) ⟦EOL⟧
+// 해설 L428: 구문 블록 경계입니다 · 소속 Notify.
+L000428 |             { ⟦EOL⟧
+// 해설 L429: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(propertyName)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(propertyName)
+L000429 |                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); ⟦EOL⟧
+// 해설 L430: 구문 블록 경계입니다 · 소속 Notify.
+L000430 |             } ⟦EOL⟧
+// 해설 L431: 구문 블록 경계입니다.
+L000431 |         } ⟦EOL⟧
+L000432 |  ⟦EOL⟧
+// 해설 L433: 타입의 구조/상속 선언입니다: public sealed record ST_REVIEW_RESULT_TREE_NODE(
+L000433 |         public sealed record ST_REVIEW_RESULT_TREE_NODE( ⟦EOL⟧
+// 해설 L434: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000434 |             string Name, ⟦EOL⟧
+// 해설 L435: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000435 |             string Kind, ⟦EOL⟧
+// 해설 L436: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000436 |             string Detail, ⟦EOL⟧
+// 해설 L437: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000437 |             IReadOnlyList<ST_REVIEW_RESULT_TREE_NODE> Children, ⟦EOL⟧
+// 해설 L438: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000438 |             ST_REVIEW_RESULT_CATALOG_ITEM? Result, ⟦EOL⟧
+// 해설 L439: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000439 |             bool IsExpanded) ⟦EOL⟧
+// 해설 L440: 구문 블록 경계입니다.
+L000440 |         { ⟦EOL⟧
+// 해설 L441: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE._isSelected
+L000441 |             private bool _isSelected; ⟦EOL⟧
+L000442 |  ⟦EOL⟧
+// 해설 L443: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE.PropertyChanged
+L000443 |             public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L444: 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewDataPanel.StatusBrush(Result?.ResultStatus ?? Kind)
+L000444 |             public Brush DetailBrush => CReviewDataPanel.StatusBrush(Result?.ResultStatus ?? Kind); ⟦EOL⟧
+// 해설 L445: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE.IsDirectory
+L000445 |             public bool IsDirectory => Result is null; ⟦EOL⟧
+// 해설 L446: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE.IsSelected
+L000446 |             public bool IsSelected ⟦EOL⟧
+// 해설 L447: 구문 블록 경계입니다 · 소속 IsSelected.
+L000447 |             { ⟦EOL⟧
+// 해설 L448: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE.IsSelected.get
+L000448 |                 get => _isSelected; ⟦EOL⟧
+// 해설 L449: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE.IsSelected.set
+L000449 |                 set ⟦EOL⟧
+// 해설 L450: 구문 블록 경계입니다 · 소속 set_IsSelected.
+L000450 |                 { ⟦EOL⟧
+// 해설 L451: 조건에 따라 분기합니다: if (_isSelected == value)
+L000451 |                     if (_isSelected == value) ⟦EOL⟧
+// 해설 L452: 구문 블록 경계입니다 · 소속 set_IsSelected.
+L000452 |                     { ⟦EOL⟧
+// 해설 L453: 호출자에게 값 또는 제어를 반환합니다: return;
+L000453 |                         return; ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 set_IsSelected.
+L000454 |                     } ⟦EOL⟧
+L000455 |  ⟦EOL⟧
+// 해설 L456: 값을 대상에 대입합니다: _isSelected = value
+L000456 |                     _isSelected = value; ⟦EOL⟧
+// 해설 L457: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(nameof(IsSelected))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(nameof(IsSelected)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsSelected)
+L000457 |                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsSelected))); ⟦EOL⟧
+// 해설 L458: 구문 블록 경계입니다 · 소속 set_IsSelected.
+L000458 |                 } ⟦EOL⟧
+// 해설 L459: 구문 블록 경계입니다 · 소속 IsSelected.
+L000459 |             } ⟦EOL⟧
+// 해설 L460: 구문 블록 경계입니다.
+L000460 |         } ⟦EOL⟧
+L000461 |  ⟦EOL⟧
+// 해설 L462: 타입의 구조/상속 선언입니다: public sealed record ST_REVIEW_DATA_DETAIL_ITEM(string Name, string Value);
+L000462 |         public sealed record ST_REVIEW_DATA_DETAIL_ITEM(string Name, string Value); ⟦EOL⟧
+// 해설 L463: 구문 블록 경계입니다.
+L000463 |     } ⟦EOL⟧
+// 해설 L464: 구문 블록 경계입니다.
+L000464 | } ⟦EOL⟧

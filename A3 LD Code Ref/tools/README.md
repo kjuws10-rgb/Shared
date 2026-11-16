@@ -27,12 +27,15 @@ Shared main을 먼저 최신화하고 현재 폴더의 `manual/`을 수동 해�
 
 ```powershell
 dotnet run --project tools\SymbolExtractor -c Release -- --self-test
+python tools\test_reference.py --report D:\A3RefWork\generator-regression.json
 dotnet run --project tools\SymbolExtractor -c Release -- --source D:\A3RefWork\source-readonly --out D:\A3RefWork\metadata\source-model.json
 python tools\build_reference.py --source D:\A3RefWork\source-readonly --model D:\A3RefWork\metadata\source-model.json --manual manual --output D:\A3RefWork\staging\A3Ref
 python tools\validate_reference.py --source D:\A3RefWork\source-readonly --output D:\A3RefWork\staging\A3Ref --report D:\A3RefWork\validation.json
 ```
 
-첫 추출은 코드 전체를 한 문서 분석용 부분 컴파일로 구성합니다. WPF·벤더 SDK·프로젝트별 정식 빌드를 재현하지 않습니다. 따라서 분석 진단 수를 장비 빌드 오류 수로 보고하면 안 됩니다. 로컬 함수는 원본 경로/선언 위치를 ID에 포함해 동명 함수가 섞이지 않게 합니다. 11개 합성 회귀검사에는 이 동명 함수 검사가 포함됩니다.
+첫 추출은 코드 전체를 한 문서 분석용 부분 컴파일로 구성합니다. WPF·벤더 SDK·프로젝트별 정식 빌드를 재현하지 않습니다. 따라서 분석 진단 수를 장비 빌드 오류 수로 보고하면 안 됩니다. 로컬 함수는 원본 경로/선언 위치를 ID에 포함해 동명 함수가 섞이지 않게 합니다. 18개 추출기 합성 회귀검사에는 동명 로컬 함수, record·primary constructor·partial·init, enum/operator/indexer 및 다중 필드 초기화 호출·연산 소속 검사가 포함됩니다. Python 합성 회귀 4개는 XAML 이벤트/생성 필드 후보, 민감 셀 미복제, 원문 복원과 생성 출력의 선택 자료 분리, 물리 CRLF→LF 정규화와 EOL 마커 앞 원문 공백 보존을 임시 fixture에서 확인합니다.
+
+현재 문서 생성기는 1.1.1, 검증기는 1.1.0, Roslyn 추출기는 1.0.3입니다. manifest의 `generatorVersion`과 `extractorVersion`을 따로 기록합니다. 1.1.1은 문서를 실제 바이트로 비교해 UTF-8/LF로 정규화하며, EOL 마커 앞 원문 공백은 유지합니다. 멤버 수는 명시적인 C# 원문 선언 기준이며 컴파일러가 합성하는 record 속성·primary constructor 멤버와 WPF 생성 필드를 원문 멤버로 주장하지 않습니다. XAML의 이름 있는 요소·이벤트·Binding은 원본 줄 범위를 포함해 `metadata/xaml/`에 별도로 보존합니다. 이 목록은 런타임 바인딩 성공을 증명하지 않습니다.
 
 ## 검증과 게시
 
@@ -60,3 +63,5 @@ python tools\validate_reference.py --source D:\A3RefWork\source-readonly --outpu
 | `validation/` | 정적 검증 결과, 에이전트 교차검증·한계 기록 |
 
 SDK 바이너리를 문서 본문에 복제하거나 역컴파일하지 않습니다. 운영/측정 CSV의 데이터 본문은 생략하고 스키마만 제공합니다. 이 자료를 첨부하는 것은 검색 지식을 갱신하는 것이며 모델 가중치를 학습시키는 동작이 아닙니다.
+
+CSV·bak 파일은 개별 문서/그림/목차에 포함하되 annotation 원문 사본을 만들지 않습니다. JHMI 정의 표는 앞 4개 정의 필드만 쓰고 인증 키가 있는 행은 제외하며 사설 IP가 있는 셀은 미복제로 표시합니다. 설정의 임의 텍스트 본문을 비밀값 탐지로 완전히 보호한다고 주장하지 않으므로 새 텍스트 설정은 게시 전에 별도 검토합니다. `Data/`에서 나온 검색 근거는 선택 Markdown으로 보내고 생성기 C# 원문은 기본 Markdown에 둡니다. JSONL에는 두 범위를 모두 보존합니다.

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | feaadaf35d5c8073f7ceb3e9b063d4a90b0b23d2816d8c2d7cab41aef8a7573a |
 | 파일 분류 | code |
 | 원본 크기/행 | 66,238 bytes / 1,857 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -88,7 +88,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CanvasWidth` · L13–13
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L13-L13)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -109,7 +109,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CanvasHeight` · L14–14
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L14-L14)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -130,7 +130,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `FrameLeft` · L15–15
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L15-L15)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -151,7 +151,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `FrameTop` · L16–16
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L16-L16)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -172,7 +172,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `FrameMaxWidth` · L17–17
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L17-L17)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -193,7 +193,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `FrameMaxHeight` · L18–18
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L18-L18)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -214,7 +214,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MinimumLayoutPatternWidth` · L22–22
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L22-L22)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -235,7 +235,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MinimumLayoutPatternHeight` · L23–23
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L23-L23)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -256,7 +256,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `RecipeParameterIndexes` · L24–26
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:24–26](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L24-L26)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:24–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L24-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -284,7 +284,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `Build` · L30–865
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:30–865](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L30-L865)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:30–865](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L30-L865)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -327,12 +327,11 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3034–3034](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3034-L3034) | CReviewGlassPreviewBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1034–1051](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L1034-L1051) | CReviewGlassPreviewBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2316–2316](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2316-L2316) | CReviewGlassPreviewBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2861–2871](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2861-L2871) | CReviewGlassPreviewBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3303–3316](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3303-L3316) | CReviewGlassPreviewBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3320–3337](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L3320-L3337) | CReviewGlassPreviewBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1053–1070](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L1053-L1070) | CReviewGlassPreviewBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2427–2435](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2427-L2435) | CReviewGlassPreviewBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3015–3027](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3015-L3027) | CReviewGlassPreviewBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3483–3498](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3483-L3498) | CReviewGlassPreviewBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3502–3519](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3502-L3519) | CReviewGlassPreviewBuilder.Build | False |
 
 호출하는 대상과 해석 범위:
 
@@ -391,7 +390,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 172 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 173 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 177 | CreateErrorPreview | resolved | Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.CreateErrorPreview(string) · Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1460 |
-| 181 | new ST_GLASS_PREVIEW_FRAME | resolved | Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME.ST_GLASS_PREVIEW_FRAME(double, double, double, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3462 |
+| 181 | new ST_GLASS_PREVIEW_FRAME | resolved | Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME.ST_GLASS_PREVIEW_FRAME(double, double, double, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3474 |
 | 182 | new DrawingGroup | unresolved | None |
 | 183 | new DrawingGroup | unresolved | None |
 | 184 | new List<ST_CELL_PREVIEW_LABEL> | resolved | System.Collections.Generic.List<Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL>.List() |
@@ -477,8 +476,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 551 | AddCircle | candidate | OverloadResolutionFailure |
 | 555 | geometry.Freeze | unresolved | None |
 | 556 | context.DrawGeometry | unresolved | None |
-| 558 | CReviewStatusBrush.ForSampleSelection | resolved | Brush Drilling.UI.Menu.Menus.CReviewStatusBrush.ForSampleSelection(Drilling.Common.Review.EN_REVIEW_POINT_STATE) · Drilling.UI/Menu/Menus/CMenuReview.cs:3851 |
-| 559 | CReviewStatusBrush.ForPreviewBaseState | resolved | Brush Drilling.UI.Menu.Menus.CReviewStatusBrush.ForPreviewBaseState(Drilling.Common.Review.EN_REVIEW_POINT_STATE) · Drilling.UI/Menu/Menus/CMenuReview.cs:3844 |
+| 558 | CReviewStatusBrush.ForSampleSelection | resolved | Brush Drilling.UI.Menu.Menus.CReviewStatusBrush.ForSampleSelection(Drilling.Common.Review.EN_REVIEW_POINT_STATE) · Drilling.UI/Menu/Menus/CMenuReview.cs:4048 |
+| 559 | CReviewStatusBrush.ForPreviewBaseState | resolved | Brush Drilling.UI.Menu.Menus.CReviewStatusBrush.ForPreviewBaseState(Drilling.Common.Review.EN_REVIEW_POINT_STATE) · Drilling.UI/Menu/Menus/CMenuReview.cs:4041 |
 | 573 | roughInspectionHeadNosByCell.ContainsKey | resolved | bool System.Collections.Generic.Dictionary<int, int>.ContainsKey(int) |
 | 581 | roughInspectionHeadNosByCell.TryGetValue | resolved | bool System.Collections.Generic.Dictionary<int, int>.TryGetValue(int, out int) |
 | 590 | requestedLocalScopeTargets.Contains | resolved | bool System.Collections.Generic.HashSet<(int HeadNo, int CellNo)>.Contains((int HeadNo, int CellNo)) |
@@ -1228,7 +1227,7 @@ flowchart TD
 
 ### LocalFunctionStatement `AddPreviewShot` · L487–540
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:487–540](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L487-L540)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:487–540](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L487-L540)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1247,7 +1246,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L483-L483) | AddPreviewShot | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L483-L483) | AddPreviewShot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1261,7 +1260,7 @@ flowchart TD
 | 517 | Math.Max | resolved | double System.Math.Max(double, double) |
 | 524 | cellPixels.Add | resolved | bool System.Collections.Generic.HashSet<long>.Add(long) |
 | 526 | .Contains | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlySet<string>.Contains(string) |
-| 527 | CReviewManager.ToShotKey | resolved | string Drilling.Common.Review.CReviewManager.ToShotKey(int, int) · Drilling.Common/Review/CReviewManager.cs:1160 |
+| 527 | CReviewManager.ToShotKey | resolved | string Drilling.Common.Review.CReviewManager.ToShotKey(int, int) · Drilling.Common/Review/CReviewManager.cs:1233 |
 | 529 | shotStates.GetValueOrDefault | resolved | Drilling.Common.Review.EN_REVIEW_POINT_STATE System.Collections.Generic.IReadOnlyDictionary<(int, int), Drilling.Common.Review.EN_REVIEW_POINT_STATE>.GetValueOrDefault<(int, int), Drilling.Common.Review.EN_REVIEW_POINT_STATE>((int, int), Drilling.Common.Review.EN_REVIEW_POINT_STATE) |
 | 534 | shotVisuals.Add | resolved | void System.Collections.Generic.List<(double X, double Y, double Size, Drilling.Common.Review.EN_REVIEW_POINT_STATE State)>.Add((double X, double Y, double Size, Drilling.Common.Review.EN_REVIEW_POINT_STATE State)) |
 
@@ -1318,7 +1317,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawInspectionPoints` · L867–925
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:867–925](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L867-L925)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:867–925](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L867-L925)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1404,7 +1403,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawEdgeInspectionAreas` · L927–984
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:927–984](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L927-L984)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:927–984](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L927-L984)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1427,7 +1426,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:890–890](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L890-L890) | DrawEdgeInspectionAreas | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:890–890](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L890-L890) | DrawEdgeInspectionAreas | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1521,7 +1520,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawFineInspectionLines` · L986–1033
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:986–1033](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L986-L1033)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:986–1033](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L986-L1033)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1543,7 +1542,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L884-L884) | DrawFineInspectionLines | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L884-L884) | DrawFineInspectionLines | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1632,7 +1631,7 @@ flowchart TD
 
 ### MethodDeclaration `TryProjectCellPoint` · L1035–1066
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1035–1066](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1035-L1066)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1035–1066](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1035-L1066)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1654,9 +1653,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:906–910](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L906-L910) | TryProjectCellPoint | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:957–961](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L957-L961) | TryProjectCellPoint | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1008–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1008-L1012) | TryProjectCellPoint | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:906–910](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L906-L910) | TryProjectCellPoint | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:957–961](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L957-L961) | TryProjectCellPoint | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1008–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1008-L1012) | TryProjectCellPoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1690,7 +1689,7 @@ flowchart TD
 
 ### MethodDeclaration `TryGetHeadScopeBounds` · L1068–1101
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1068–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1068-L1101)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1068–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1068-L1101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1752,7 +1751,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildHeadScopeColumnIndex` · L1103–1138
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1103–1138](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1103-L1138)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1103–1138](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1103-L1138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1771,7 +1770,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L254-L254) | BuildHeadScopeColumnIndex | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L254-L254) | BuildHeadScopeColumnIndex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1829,7 +1828,7 @@ flowchart TD
 
 ### MethodDeclaration `AddScopeCorners` · L1140–1151
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1140–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1140-L1151)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1140–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1140-L1151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1849,8 +1848,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L387-L387) | AddScopeCorners | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L443-L443) | AddScopeCorners | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L387-L387) | AddScopeCorners | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L443-L443) | AddScopeCorners | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1885,7 +1884,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawHeadScope` · L1153–1170
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1153–1170](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1153-L1170)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1153–1170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1153-L1170)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1906,7 +1905,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1275–1278](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1275-L1278) | DrawHeadScope | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1275–1278](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1275-L1278) | DrawHeadScope | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1948,7 +1947,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawHeadCellScope` · L1172–1185
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1172–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1172-L1185)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1172–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1172-L1185)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1969,7 +1968,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1300-L1300) | DrawHeadCellScope | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1300-L1300) | DrawHeadCellScope | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2006,7 +2005,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawCurrentCellOutline` · L1187–1204
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1187–1204](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1187-L1204)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1187–1204](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1187-L1204)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2029,7 +2028,7 @@ flowchart TD
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 1196 | new Pen | unresolved | None |
-| 1197 | CReviewStatusBrush.ForState | resolved | Brush Drilling.UI.Menu.Menus.CReviewStatusBrush.ForState(Drilling.Common.Review.EN_REVIEW_POINT_STATE) · Drilling.UI/Menu/Menus/CMenuReview.cs:3831 |
+| 1197 | CReviewStatusBrush.ForState | resolved | Brush Drilling.UI.Menu.Menus.CReviewStatusBrush.ForState(Drilling.Common.Review.EN_REVIEW_POINT_STATE) · Drilling.UI/Menu/Menus/CMenuReview.cs:4028 |
 | 1202 | stroke.Freeze | unresolved | None |
 | 1203 | context.DrawGeometry | unresolved | None |
 
@@ -2060,7 +2059,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawGlobalHeadScope` · L1206–1229
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1206–1229](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1206-L1229)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1206–1229](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1206-L1229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2145,7 +2144,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawPhysicalHeadScope` · L1231–1301
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1231–1301](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1231-L1301)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1231–1301](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1231-L1301)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2253,7 +2252,7 @@ flowchart TD
 
 ### MethodDeclaration `TryBuildRecipeCellBoundary` · L1303–1382
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1303–1382](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1303-L1382)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1303–1382](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1303-L1382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2278,7 +2277,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:319–334](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L319-L334) | TryBuildRecipeCellBoundary | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:319–334](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L319-L334) | TryBuildRecipeCellBoundary | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2380,7 +2379,7 @@ flowchart TD
 
 ### MethodDeclaration `ShouldUseExpandedPreviewBounds` · L1384–1389
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1384–1389](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1384-L1389)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1384–1389](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1384-L1389)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2416,7 +2415,7 @@ flowchart TD
 
 ### MethodDeclaration `ExpandPreviewBounds` · L1391–1406
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1391–1406](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1391-L1406)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1391–1406](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1391-L1406)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2477,7 +2476,7 @@ flowchart TD
 
 ### MethodDeclaration `TryProjectReviewPreviewPixel` · L1410–1458
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1410–1458](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1410-L1458)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1410–1458](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1410-L1458)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2503,8 +2502,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:492–509](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L492-L509) | TryProjectReviewPreviewPixel | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1042–1059](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1042-L1059) | TryProjectReviewPreviewPixel | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:492–509](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L492-L509) | TryProjectReviewPreviewPixel | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1042–1059](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1042-L1059) | TryProjectReviewPreviewPixel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2564,7 +2563,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateErrorPreview` · L1460–1467
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1460–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1460-L1467)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1460–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1460-L1467)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2583,14 +2582,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:97–99](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L97-L99) | CreateErrorPreview | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:104–105](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L104-L105) | CreateErrorPreview | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:110–111](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L110-L111) | CreateErrorPreview | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L127-L127) | CreateErrorPreview | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:177–178](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L177-L178) | CreateErrorPreview | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L310-L310) | CreateErrorPreview | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L336-L336) | CreateErrorPreview | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:456–458](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L456-L458) | CreateErrorPreview | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:97–99](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L97-L99) | CreateErrorPreview | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:104–105](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L104-L105) | CreateErrorPreview | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:110–111](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L110-L111) | CreateErrorPreview | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L127-L127) | CreateErrorPreview | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:177–178](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L177-L178) | CreateErrorPreview | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L310-L310) | CreateErrorPreview | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L336-L336) | CreateErrorPreview | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:456–458](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L456-L458) | CreateErrorPreview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2609,7 +2608,7 @@ flowchart TD
 
 ### MethodDeclaration `AddCircle` · L1469–1502
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1469–1502](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1469-L1502)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1469–1502](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1469-L1502)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2683,7 +2682,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawPreviewAxisIndicator` · L1504–1580
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1504–1580](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1504-L1580)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1504–1580](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1504-L1580)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2811,7 +2810,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPreviewAxisTitlePoint` · L1582–1605
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1582–1605](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1582-L1605)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1582–1605](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1582-L1605)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2832,7 +2831,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1576–1576](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1576-L1576) | GetPreviewAxisTitlePoint | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1576–1576](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1576-L1576) | GetPreviewAxisTitlePoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2883,7 +2882,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPreviewAxisOrigin` · L1607–1661
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1607–1661](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1607-L1661)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1607–1661](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1607-L1661)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2904,7 +2903,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1519–1519](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1519-L1519) | GetPreviewAxisOrigin | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1519–1519](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1519-L1519) | GetPreviewAxisOrigin | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2992,7 +2991,7 @@ flowchart TD
 
 ### MethodDeclaration `ClampPreviewAxisCoordinate` · L1663–1670
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1663–1670](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1663-L1670)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1663–1670](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1663-L1670)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3032,7 +3031,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawHorizontalArrowHead` · L1672–1681
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1672–1681](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1672-L1681)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1672–1681](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1672-L1681)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3054,7 +3053,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1530–1530](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1530-L1530) | DrawHorizontalArrowHead | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1530–1530](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1530-L1530) | DrawHorizontalArrowHead | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3081,7 +3080,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawVerticalArrowHead` · L1683–1692
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1683–1692](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1683-L1692)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1683–1692](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1683-L1692)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3103,7 +3102,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1536–1536](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1536-L1536) | DrawVerticalArrowHead | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1536–1536](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1536-L1536) | DrawVerticalArrowHead | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3130,7 +3129,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawPreviewAxisText` · L1694–1719
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1694–1719](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1694-L1719)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1694–1719](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1694-L1719)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3173,7 +3172,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L1721–1735
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1721–1735](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1721-L1735)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1721–1735](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1721-L1735)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3194,7 +3193,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L141-L141) | ReadInt | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L141-L141) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3233,7 +3232,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateParameterMap` · L1737–1742
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1737–1742](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1737-L1742)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1737–1742](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1737-L1742)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3252,7 +3251,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L142-L142) | CreateParameterMap | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L142-L142) | CreateParameterMap | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3275,7 +3274,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L1744–1754
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1744–1754](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1744-L1754)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1744–1754](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1744-L1754)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3296,16 +3295,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L82-L82) | ReadDouble | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L83-L83) | ReadDouble | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L84-L84) | ReadDouble | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L85-L85) | ReadDouble | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L90-L90) | ReadDouble | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L91-L91) | ReadDouble | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L140-L140) | ReadDouble | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:269–272](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L269-L272) | ReadDouble | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:273–276](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L273-L276) | ReadDouble | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:277–280](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L277-L280) | ReadDouble | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L82-L82) | ReadDouble | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L83-L83) | ReadDouble | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L84-L84) | ReadDouble | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L85-L85) | ReadDouble | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L90-L90) | ReadDouble | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L91-L91) | ReadDouble | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L140-L140) | ReadDouble | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:269–272](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L269-L272) | ReadDouble | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:273–276](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L273-L276) | ReadDouble | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:277–280](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L277-L280) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3329,7 +3328,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadNullableDouble` · L1756–1765
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1756–1765](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1756-L1765)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1756–1765](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1756-L1765)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3369,7 +3368,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadText` · L1767–1781
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1767–1781](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1767-L1781)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1767–1781](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1767-L1781)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3389,9 +3388,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1726–1726](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1726-L1726) | ReadText | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1749–1749](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1749-L1749) | ReadText | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1760–1760](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1760-L1760) | ReadText | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1726–1726](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1726-L1726) | ReadText | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1749–1749](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1749-L1749) | ReadText | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1760–1760](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1760-L1760) | ReadText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3426,7 +3425,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadParameterText` · L1783–1792
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1783–1792](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1783-L1792)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1783–1792](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1783-L1792)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3447,7 +3446,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1773–1773](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1773-L1773) | TryReadParameterText | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1773–1773](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1773-L1773) | TryReadParameterText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3472,7 +3471,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateRecipeParameterIndex` · L1794–1813
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1794–1813](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1794-L1813)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1794–1813](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1794-L1813)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3491,7 +3490,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1790–1790](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1790-L1790) | CreateRecipeParameterIndex | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1790–1790](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1790-L1790) | CreateRecipeParameterIndex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3540,7 +3539,7 @@ flowchart TD
 
 ### MethodDeclaration `FindParameter` · L1815–1822
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1815–1822](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1815-L1822)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1815–1822](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1815-L1822)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3560,7 +3559,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L114-L114) | FindParameter | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L114-L114) | FindParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3583,7 +3582,7 @@ flowchart TD
 
 ### MethodDeclaration `GetParameterMinimum` · L1824–1829
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1824–1829](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1824-L1829)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1824–1829](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1824-L1829)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3602,7 +3601,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L118-L118) | GetParameterMinimum | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L118-L118) | GetParameterMinimum | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3624,7 +3623,7 @@ flowchart TD
 
 ### MethodDeclaration `GetParameterMaximum` · L1831–1836
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1831–1836](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1831-L1836)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1831–1836](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1831-L1836)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3644,7 +3643,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L119-L119) | GetParameterMaximum | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L119-L119) | GetParameterMaximum | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3664,7 +3663,7 @@ flowchart TD
 
 ### PropertyDeclaration `GlassBounds` · L1845–1845
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1845–1845](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1845-L1845)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1845–1845](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1845-L1845)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3679,7 +3678,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_GlassBounds` · L1845–1845
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1845–1845](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1845-L1845)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1845–1845](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1845-L1845)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3694,7 +3693,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_GlassBounds` · L1845–1845
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1845–1845](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1845-L1845)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1845–1845](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1845-L1845)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3715,7 +3714,7 @@ flowchart TD
 
 ### PropertyDeclaration `CanvasSize` · L1846–1846
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1846–1846](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1846-L1846)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1846–1846](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1846-L1846)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3730,7 +3729,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CanvasSize` · L1846–1846
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1846–1846](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1846-L1846)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1846–1846](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1846-L1846)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3745,7 +3744,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_CanvasSize` · L1846–1846
 
-[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1846–1846](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1846-L1846)
+[Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:1846–1846](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L1846-L1846)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

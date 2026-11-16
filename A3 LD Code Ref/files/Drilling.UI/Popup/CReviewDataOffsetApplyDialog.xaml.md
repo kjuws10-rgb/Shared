@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 2c7fe317bf108c2ea5d9e3cbc89132690a183d78c070a2bbdd9bc26a30bd1faa |
 | 파일 분류 | code |
 | 원본 크기/행 | 25,028 bytes / 369 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -23,57 +23,64 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- |
 | 코드 비하인드 후보 | Drilling.UI/Popup/CReviewDataOffsetApplyDialog.xaml.cs |
 | 이름 있는 요소 | OffsetPreviewGrid |
-| 이벤트 개수 | 4 |
+| 이벤트 개수 | 5 |
 | Binding 표현 개수 | 39 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
-| KeyDown | OnKeyDown | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| SelectionChanged | OffsetPreviewGrid_SelectionChanged | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | SaveClicked | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | CancelClicked | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| IsIncluded |
-| IsSelected |
-| ApplicationTypes |
-| SelectedApplicationType, Mode=OneWay |
-| SelectedApplicationType.Detail |
-| RecipeName, StringFormat='RECIPE : {0 |
-| ResultFileName |
-| ResultFileName |
-| GlassSurfaceWidth |
-| GlassSurfaceHeight |
-| GlassPreviewImage |
-| CellLabels |
-| Left |
-| Top |
-| Width |
-| Height |
-| CellNo |
-| IsIncluded |
-| DataContext.SelectCellCommand, RelativeSource={RelativeSource AncestorType=Window |
-| CellNo |
-| SelectedCellTitle |
-| ShotMapSurfaceWidth |
-| ShotMapSurfaceHeight |
-| ShotMapImage |
-| Summary |
-| SelectedShotTitle |
-| Rows |
-| SelectedRow, Mode=OneWay |
-| RelativeSource={RelativeSource AncestorType=DataGridRow |
-| Head |
-| Cell |
-| ShotName |
-| CurrentXText |
-| CurrentYText |
-| AddXText |
-| AddYText |
-| FinalXText |
-| FinalYText |
-| CanSave |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| OffsetPreviewGrid | L273–273 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+| KeyDown | OnKeyDown | L11–11 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| MouseLeftButtonDown | ShotMap_MouseLeftButtonDown | L246–246 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| SelectionChanged | OffsetPreviewGrid_SelectionChanged | L293–293 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | SaveClicked | L358–358 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | CancelClicked | L365–365 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding IsIncluded} | L38–38 |
+| {Binding IsSelected} | L43–43 |
+| {Binding ApplicationTypes} | L115–115 |
+| {Binding SelectedApplicationType, Mode=OneWay} | L116–116 |
+| {Binding SelectedApplicationType.Detail} | L122–122 |
+| {Binding RecipeName, StringFormat='RECIPE : {0}'} | L128–128 |
+| {Binding ResultFileName} | L129–129 |
+| {Binding ResultFileName} | L129–129 |
+| {Binding GlassSurfaceWidth} | L174–174 |
+| {Binding GlassSurfaceHeight} | L174–174 |
+| {Binding GlassPreviewImage} | L175–175 |
+| {Binding CellLabels} | L176–176 |
+| {Binding Left} | L182–182 |
+| {Binding Top} | L183–183 |
+| {Binding Width} | L188–188 |
+| {Binding Height} | L189–189 |
+| {Binding CellNo} | L190–190 |
+| {Binding IsIncluded} | L191–191 |
+| {Binding DataContext.SelectCellCommand, RelativeSource={RelativeSource AncestorType=Window}} | L193–193 |
+| {Binding CellNo} | L194–194 |
+| {Binding SelectedCellTitle} | L217–217 |
+| {Binding ShotMapSurfaceWidth} | L242–242 |
+| {Binding ShotMapSurfaceHeight} | L243–243 |
+| {Binding ShotMapImage} | L247–247 |
+| {Binding Summary} | L268–268 |
+| {Binding SelectedShotTitle} | L271–271 |
+| {Binding Rows} | L275–275 |
+| {Binding SelectedRow, Mode=OneWay} | L276–276 |
+| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L314–314 |
+| {Binding Head} | L319–319 |
+| {Binding Cell} | L320–320 |
+| {Binding ShotName} | L321–321 |
+| {Binding CurrentXText} | L322–322 |
+| {Binding CurrentYText} | L324–324 |
+| {Binding AddXText} | L326–326 |
+| {Binding AddYText} | L328–328 |
+| {Binding FinalXText} | L330–330 |
+| {Binding FinalYText} | L332–332 |
+| {Binding CanSave} | L356–356 |
 
 ## 원문 전체 주석 해설본
 

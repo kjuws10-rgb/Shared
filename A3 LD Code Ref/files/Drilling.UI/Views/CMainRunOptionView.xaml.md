@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 5cef5a4e1591211b8dbef4df476f83b5bf5a0c4dcbd3c6c69fe278db3541fe1e |
 | 파일 분류 | code |
 | 원본 크기/행 | 11,108 bytes / 101 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMainRunOptionView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMainRunOptionView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -26,60 +26,76 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 이벤트 개수 | 0 |
 | Binding 표현 개수 | 49 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| ZeroLineChoices |
-| Label |
-| Background |
-| Foreground |
-| Value |
-| DataContext.SelectZeroLineCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| GroupText |
-| InitGroupCommand |
-| FollowUpChoices |
-| Label |
-| Background |
-| Foreground |
-| Value |
-| DataContext.SelectFollowUpCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| DistortionGroupChoices |
-| Background |
-| Foreground |
-| Index |
-| DataContext.ToggleDistortionGroupCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| Label |
-| Foreground |
-| PositionText |
-| CanEditReview |
-| CanEditReview |
-| ReviewMethodChoices |
-| Label |
-| Background |
-| Foreground |
-| Value |
-| DataContext.SelectReviewMethodCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| ReviewLineChoices |
-| Label |
-| Background |
-| Foreground |
-| Value |
-| DataContext.SelectReviewLineCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| ReviewInfoText |
-| ReviewImmediateRetryChoices |
-| Label |
-| Background |
-| Foreground |
-| Value |
-| DataContext.SelectReviewImmediateRetryCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| ReviewRetryChoices |
-| Label |
-| Background |
-| Foreground |
-| Value |
-| DataContext.SelectReviewRetryCommand, RelativeSource={RelativeSource AncestorType=UserControl |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| ZeroLineOptionsBorder | L19–19 |
+| ZeroLineChoices | L26–26 |
+| CurrentGroupText | L32–32 |
+| FollowUpChoices | L36–36 |
+| DistortionOptionsBorder | L43–43 |
+| DistortionGroupChoices | L47–47 |
+| ReviewOptionsBorder | L62–62 |
+| ReviewMethodChoices | L69–69 |
+| ReviewLineChoices | L74–74 |
+| ReviewImmediateRetryChoices | L82–82 |
+| ReviewRetryChoices | L91–91 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding ZeroLineChoices} | L26–26 |
+| {Binding Label} | L28–28 |
+| {Binding Background} | L28–28 |
+| {Binding Foreground} | L28–28 |
+| {Binding Value} | L28–28 |
+| {Binding DataContext.SelectZeroLineCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L29–29 |
+| {Binding GroupText} | L32–32 |
+| {Binding InitGroupCommand} | L34–34 |
+| {Binding FollowUpChoices} | L36–36 |
+| {Binding Label} | L38–38 |
+| {Binding Background} | L38–38 |
+| {Binding Foreground} | L38–38 |
+| {Binding Value} | L38–38 |
+| {Binding DataContext.SelectFollowUpCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L39–39 |
+| {Binding DistortionGroupChoices} | L47–47 |
+| {Binding Background} | L50–50 |
+| {Binding Foreground} | L50–50 |
+| {Binding Index} | L51–51 |
+| {Binding DataContext.ToggleDistortionGroupCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L51–51 |
+| {Binding Label} | L52–52 |
+| {Binding Foreground} | L52–52 |
+| {Binding PositionText} | L55–55 |
+| {Binding CanEditReview} | L62–62 |
+| {Binding CanEditReview} | L65–65 |
+| {Binding ReviewMethodChoices} | L69–69 |
+| {Binding Label} | L71–71 |
+| {Binding Background} | L71–71 |
+| {Binding Foreground} | L71–71 |
+| {Binding Value} | L71–71 |
+| {Binding DataContext.SelectReviewMethodCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L72–72 |
+| {Binding ReviewLineChoices} | L74–74 |
+| {Binding Label} | L76–76 |
+| {Binding Background} | L76–76 |
+| {Binding Foreground} | L76–76 |
+| {Binding Value} | L76–76 |
+| {Binding DataContext.SelectReviewLineCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L77–77 |
+| {Binding ReviewInfoText} | L79–79 |
+| {Binding ReviewImmediateRetryChoices} | L82–82 |
+| {Binding Label} | L84–84 |
+| {Binding Background} | L85–85 |
+| {Binding Foreground} | L85–85 |
+| {Binding Value} | L85–85 |
+| {Binding DataContext.SelectReviewImmediateRetryCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L86–86 |
+| {Binding ReviewRetryChoices} | L91–91 |
+| {Binding Label} | L93–93 |
+| {Binding Background} | L94–94 |
+| {Binding Foreground} | L94–94 |
+| {Binding Value} | L94–94 |
+| {Binding DataContext.SelectReviewRetryCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L95–95 |
 
 ## 원문 전체 주석 해설본
 

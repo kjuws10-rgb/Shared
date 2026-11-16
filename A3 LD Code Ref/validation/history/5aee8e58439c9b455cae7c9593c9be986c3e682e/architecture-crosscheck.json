@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "auditor": "architecture independent agent",
+  "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "scope": {
+    "structureAndLinks": "All 15 assembled manual Markdown pages and all rendered manual HTML pages at snapshot time",
+    "sourceAnchors": "Every manual GitHub source link checked for exact Commit, existing file and actual physical line bounds",
+    "semanticReview": "All seven architecture chapters reviewed against actual constructor/manager/save/coordinate/script/product/threading source; review chapters only introduction and cross-domain consistency spot checks",
+    "unverified": "Full member meaning of every generated file page, runtime hardware, SDK internal behavior and current Offline Studio implementation are outside this independent pass"
+  },
+  "final": {
+    "createdAt": "2026-11-13T05:10:03.971125+00:00",
+    "result": "PASS",
+    "checks": {
+      "chapter03StageShiftZero": true,
+      "chapter04DualEntry": true,
+      "chapter04DiagramScope": true,
+      "offlineFileLinks": 139,
+      "sourceAnchorCount": 309,
+      "sourceFiles": 37,
+      "invalidPins": [],
+      "brokenMdLinks": [],
+      "brokenHtmlLinks": [],
+      "architectureEquality": [
+        {
+          "file": "01-startup-and-composition.md",
+          "equal": true
+        },
+        {
+          "file": "02-recipe-settings-and-csv.md",
+          "equal": true
+        },
+        {
+          "file": "03-coordinate-script-and-mof.md",
+          "equal": true
+        },
+        {
+          "file": "04-product-and-station-lifecycle.md",
+          "equal": true
+        },
+        {
+          "file": "05-device-interfaces-and-drivers.md",
+          "equal": true
+        },
+        {
+          "file": "06-threading-snapshots-and-logs.md",
+          "equal": true
+        },
+        {
+          "file": "07-change-impact-and-offline-reference.md",
+          "equal": true
+        },
+        {
+          "file": "README.md",
+          "equal": true
+        }
+      ],
+      "toolsReadmeExists": true,
+      "sourceStatus": "",
+      "sourceHead": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+      "sourcePushUrl": "DISABLED",
+      "humanClaimReview": {
+        "positiveHumanCertificationFound": false,
+        "evidence": [
+          {
+            "file": "README.md",
+            "line": 45,
+            "text": "파일/멤버/행별 문서는 Roslyn 구문 및 부분 의미 분석으로 생성했습니다. 별도 정적 추적 상세 해설장은 `manual/`에 따로 있습니다. 모든 줄에 설명이 있다는 것과 모든 줄의 물리 의미를 사람이 확정했다는 것은 다릅니다. 바인딩 `resolved`는 이 부분 컴파일의 연결이며 런타임 동적 구현을 보증하지 않습니다. `candidate/unresolved`, 비활성 전처리, WPF/SDK/설정 경계는 확인 대상으로 남깁니다."
+          },
+          {
+            "file": "manifest.json",
+            "line": 143,
+            "text": "  \"detailedReview\": \"Agent-authored and cross-checked static tracing chapters cover selected critical domains; generated per-file/member/line explanations are structural analysis, not human semantic certification\","
+          },
+          {
+            "file": "offline-studio\\README.md",
+            "line": 13,
+            "text": "바이너리는 본문을 제공하지 않습니다. 실행 이력 CSV는 실제 레코드 대신 스키마만 수록합니다. 자동 구문 해설을 장비 검증이나 사람의 전체 의미 검토로 확장하지 않습니다."
+          },
+          {
+            "file": "manual\\review\\01_Review_계획과_좌표계.md",
+            "line": 10,
+            "text": "## 1. 처음 읽는 사람을 위한 핵심"
+          }
+        ],
+        "judgment": "README/manifest describe separate static tracing and agent-authored chapters; remaining human references are readability wording or explicit statements that generated documents are not human certification. No equipment/build/physical validation claim was inferred."
+      }
+    },
+    "sourceMutations": 0,
+    "outputFilesModifiedByAuditor": 0,
+    "limitations": [
+      "All checks are static text/file/source range checks, not real hardware or a complete runtime UI interaction test",
+      "Offline companion links lead to file explanations, not original source physical-line anchors"
+    ]
+  },
+  "resolvedFindings": [
+    {
+      "id": "ARCH-NAV-001",
+      "description": "Rendered manual chapter navigation",
+      "status": "resolved_in_final_recheck"
+    },
+    {
+      "id": "ARCH-OFFLINE-002",
+      "description": "Offline source access beside pinned Git links",
+      "status": "resolved_in_final_recheck"
+    },
+    {
+      "id": "ARCH-PKG-003",
+      "description": "README regeneration-tools navigation",
+      "status": "resolved_in_final_recheck"
+    },
+    {
+      "id": "ARCH-AUTO-004",
+      "description": "Differentiate Stage AUTO from MAIN START Semi Auto; document AUTO Shift normalization",
+      "status": "resolved_in_final_recheck"
+    }
+  ]
+}

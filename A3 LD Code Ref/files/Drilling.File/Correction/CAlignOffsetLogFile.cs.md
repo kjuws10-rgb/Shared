@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
-| 원본 SHA256 | e9c8b33fe1e31dbe1e8b115152140fc8a54eb2c58b2bc023fdc163a0eaef74dc |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 SHA256 | b85821ef493022e9f05d66e05fc692ff4d83d0acadc03585f2b9de26dd7caf87 |
 | 파일 분류 | code |
-| 원본 크기/행 | 10,145 bytes / 172 physical lines |
+| 원본 크기/행 | 10,259 bytes / 172 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -45,7 +45,7 @@
 
 ### MethodDeclaration `Save` · L10–37
 
-[Drilling.File/Correction/CAlignOffsetLogFile.cs:10–37](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L10-L37)
+[Drilling.File/Correction/CAlignOffsetLogFile.cs:10–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L10-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -65,7 +65,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3792–3792](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3792-L3792) | new Drilling.File.Correction.CDefaultOffsetLogFile(_defaultManager!.ConfigRoot).Save | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3833–3833](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3833-L3833) | new Drilling.File.Correction.CDefaultOffsetLogFile(_defaultManager!.ConfigRoot).Save | False |
 
 호출하는 대상과 해석 범위:
 
@@ -153,7 +153,7 @@ flowchart TD
 
 ### LocalFunctionStatement `F` · L17–17
 
-[Drilling.File/Correction/CAlignOffsetLogFile.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L17-L17)
+[Drilling.File/Correction/CAlignOffsetLogFile.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -172,34 +172,36 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L34-L34) | F | False |
 
 호출하는 대상과 해석 범위:
 
@@ -217,7 +219,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Rows` · L27–36
 
-[Drilling.File/Correction/CAlignOffsetLogFile.cs:27–36](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L27-L36)
+[Drilling.File/Correction/CAlignOffsetLogFile.cs:27–36](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L27-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -230,7 +232,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L21-L21) | Rows | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L21-L21) | Rows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -266,6 +268,8 @@ flowchart TD
 | 34 | data.Before.GetValueOrDefault | resolved | string System.Collections.Generic.IReadOnlyDictionary<string, string>.GetValueOrDefault<string, string>(string, string) |
 | 34 | data.After.GetValueOrDefault | resolved | string System.Collections.Generic.IReadOnlyDictionary<string, string>.GetValueOrDefault<string, string>(string, string) |
 | 34 | data.After.GetValueOrDefault | resolved | string System.Collections.Generic.IReadOnlyDictionary<string, string>.GetValueOrDefault<string, string>(string, string) |
+| 34 | F | resolved | string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17 |
+| 34 | F | resolved | string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17 |
 | 34 | F | resolved | string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17 |
 | 34 | F | resolved | string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17 |
 | 34 | F | resolved | string F(double) · Drilling.File/Correction/CAlignOffsetLogFile.cs:17 |
@@ -322,6 +326,8 @@ flowchart TD
 | 34 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: data.Before.GetValueOrDefault(prefix + "Y", "") |
 | 34 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: data.After.GetValueOrDefault(prefix + "X", "") |
 | 34 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: data.After.GetValueOrDefault(prefix + "Y", "") |
+| 34 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: F(data.Options.AlignKey1ReviewX) |
+| 34 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: F(data.Options.AlignKey3ReviewX) |
 | 34 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: F(data.Options.BoardCenterX) |
 | 34 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: F(data.Options.TestStageY) |
 | 34 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: F(data.Options.Tolerance) |
@@ -359,7 +365,7 @@ flowchart TD
 
 ### FieldDeclaration `Headers` · L42–74
 
-[Drilling.File/Correction/CAlignOffsetLogFile.cs:42–74](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L42-L74)
+[Drilling.File/Correction/CAlignOffsetLogFile.cs:42–74](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L42-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -380,7 +386,7 @@ flowchart TD
 
 ### PropertyDeclaration `RootPath` · L76–76
 
-[Drilling.File/Correction/CAlignOffsetLogFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L76-L76)
+[Drilling.File/Correction/CAlignOffsetLogFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L76-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -411,7 +417,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RootPath` · L76–76
 
-[Drilling.File/Correction/CAlignOffsetLogFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L76-L76)
+[Drilling.File/Correction/CAlignOffsetLogFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L76-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -426,7 +432,7 @@ flowchart TD
 
 ### MethodDeclaration `Save` · L78–79
 
-[Drilling.File/Correction/CAlignOffsetLogFile.cs:78–79](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L78-L79)
+[Drilling.File/Correction/CAlignOffsetLogFile.cs:78–79](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L78-L79)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -462,7 +468,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveCore` · L81–156
 
-[Drilling.File/Correction/CAlignOffsetLogFile.cs:81–156](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L81-L156)
+[Drilling.File/Correction/CAlignOffsetLogFile.cs:81–156](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L81-L156)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -482,7 +488,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L79-L79) | SaveCore | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L79-L79) | SaveCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -575,7 +581,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Rows` · L110–140
 
-[Drilling.File/Correction/CAlignOffsetLogFile.cs:110–140](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L110-L140)
+[Drilling.File/Correction/CAlignOffsetLogFile.cs:110–140](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L110-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -588,7 +594,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L93-L93) | Rows | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L93-L93) | Rows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -672,7 +678,7 @@ flowchart TD
 
 ### LocalFunctionStatement `CommonRow` · L142–155
 
-[Drilling.File/Correction/CAlignOffsetLogFile.cs:142–155](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L142-L155)
+[Drilling.File/Correction/CAlignOffsetLogFile.cs:142–155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L142-L155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -695,8 +701,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L115-L115) | CommonRow | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L129-L129) | CommonRow | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L115-L115) | CommonRow | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L129-L129) | CommonRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -744,7 +750,7 @@ flowchart TD
 
 ### MethodDeclaration `Number` · L158–158
 
-[Drilling.File/Correction/CAlignOffsetLogFile.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L158-L158)
+[Drilling.File/Correction/CAlignOffsetLogFile.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L158-L158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -763,19 +769,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L118-L118) | Number | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L119-L119) | Number | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L120-L120) | Number | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L121-L121) | Number | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L122-L122) | Number | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L123-L123) | Number | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L135-L135) | Number | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L136-L136) | Number | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L150-L150) | Number | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L152-L152) | Number | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L152-L152) | Number | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L154-L154) | Number | False |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L154-L154) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L118-L118) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L119-L119) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L120-L120) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L121-L121) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L122-L122) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L123-L123) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L135-L135) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L136-L136) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L150-L150) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L152-L152) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L152-L152) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L154-L154) | Number | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L154-L154) | Number | False |
 
 호출하는 대상과 해석 범위:
 
@@ -794,7 +800,7 @@ flowchart TD
 
 ### MethodDeclaration `SafeRecipeName` · L160–171
 
-[Drilling.File/Correction/CAlignOffsetLogFile.cs:160–171](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L160-L171)
+[Drilling.File/Correction/CAlignOffsetLogFile.cs:160–171](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L160-L171)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -813,7 +819,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Correction/CAlignOffsetLogFile.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Correction/CAlignOffsetLogFile.cs#L84-L84) | SafeRecipeName | False |
+| [Drilling.File/Correction/CAlignOffsetLogFile.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Correction/CAlignOffsetLogFile.cs#L84-L84) | SafeRecipeName | False |
 
 호출하는 대상과 해석 범위:
 

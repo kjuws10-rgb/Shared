@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 893675dbcdfcd93124de264b55511666a561a2dc747eba79a07e13e6c8be02c7 |
 | 파일 분류 | code |
 | 원본 크기/행 | 79,542 bytes / 1,806 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -323,7 +323,7 @@
 
 ### FieldDeclaration `DefaultControllerName` · L15–15
 
-[Drilling.Common/Motion/CMotionManager.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L15-L15)
+[Drilling.Common/Motion/CMotionManager.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -344,7 +344,7 @@
 
 ### FieldDeclaration `MotionControllerTypes` · L16–16
 
-[Drilling.Common/Motion/CMotionManager.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L16-L16)
+[Drilling.Common/Motion/CMotionManager.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -372,7 +372,7 @@
 
 ### FieldDeclaration `_interfaceManager` · L17–17
 
-[Drilling.Common/Motion/CMotionManager.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L17-L17)
+[Drilling.Common/Motion/CMotionManager.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -387,7 +387,7 @@
 
 ### FieldDeclaration `_motors` · L18–18
 
-[Drilling.Common/Motion/CMotionManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L18-L18)
+[Drilling.Common/Motion/CMotionManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -402,7 +402,7 @@
 
 ### FieldDeclaration `_axisData` · L19–19
 
-[Drilling.Common/Motion/CMotionManager.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L19-L19)
+[Drilling.Common/Motion/CMotionManager.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -417,7 +417,7 @@
 
 ### FieldDeclaration `_axes` · L20–20
 
-[Drilling.Common/Motion/CMotionManager.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L20-L20)
+[Drilling.Common/Motion/CMotionManager.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -432,7 +432,7 @@
 
 ### FieldDeclaration `_io` · L21–21
 
-[Drilling.Common/Motion/CMotionManager.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L21-L21)
+[Drilling.Common/Motion/CMotionManager.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -447,7 +447,7 @@
 
 ### FieldDeclaration `_controllers` · L22–22
 
-[Drilling.Common/Motion/CMotionManager.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L22-L22)
+[Drilling.Common/Motion/CMotionManager.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -475,7 +475,7 @@
 
 ### FieldDeclaration `_simulationMode` · L23–23
 
-[Drilling.Common/Motion/CMotionManager.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L23-L23)
+[Drilling.Common/Motion/CMotionManager.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -490,7 +490,7 @@
 
 ### ConstructorDeclaration `.ctor` · L24–26
 
-[Drilling.Common/Motion/CMotionManager.cs:24–26](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L24-L26)
+[Drilling.Common/Motion/CMotionManager.cs:24–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L24-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -511,7 +511,7 @@
 
 ### ConstructorDeclaration `.ctor` · L28–71
 
-[Drilling.Common/Motion/CMotionManager.cs:28–71](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L28-L71)
+[Drilling.Common/Motion/CMotionManager.cs:28–71](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L28-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -533,7 +533,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L114-L114) | new CMotionManager | False |
+| [Drilling.Common/Managers/CManager.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CManager.cs#L114-L114) | new CMotionManager | False |
 
 호출하는 대상과 해석 범위:
 
@@ -597,7 +597,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsUse` · L33–36
 
-[Drilling.Common/Motion/CMotionManager.cs:33–36](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L33-L36)
+[Drilling.Common/Motion/CMotionManager.cs:33–36](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L33-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -624,7 +624,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDictionaryKey` · L38–41
 
-[Drilling.Common/Motion/CMotionManager.cs:38–41](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L38-L41)
+[Drilling.Common/Motion/CMotionManager.cs:38–41](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L38-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -658,7 +658,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectAxisControllerRequest` · L46–49
 
-[Drilling.Common/Motion/CMotionManager.cs:46–49](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L46-L49)
+[Drilling.Common/Motion/CMotionManager.cs:46–49](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L46-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -685,7 +685,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectIoControllerRequest` · L51–54
 
-[Drilling.Common/Motion/CMotionManager.cs:51–54](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L51-L54)
+[Drilling.Common/Motion/CMotionManager.cs:51–54](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L51-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -712,7 +712,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectGroupKey` · L56–59
 
-[Drilling.Common/Motion/CMotionManager.cs:56–59](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L56-L59)
+[Drilling.Common/Motion/CMotionManager.cs:56–59](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L56-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -746,7 +746,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsSimulation` · L73–84
 
-[Drilling.Common/Motion/CMotionManager.cs:73–84](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L73-L84)
+[Drilling.Common/Motion/CMotionManager.cs:73–84](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L73-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -761,7 +761,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsSimulation` · L75–83
 
-[Drilling.Common/Motion/CMotionManager.cs:75–83](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L75-L83)
+[Drilling.Common/Motion/CMotionManager.cs:75–83](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L75-L83)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -789,7 +789,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L77–80
 
-[Drilling.Common/Motion/CMotionManager.cs:77–80](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L77-L80)
+[Drilling.Common/Motion/CMotionManager.cs:77–80](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L77-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -823,7 +823,7 @@ flowchart TD
 
 ### MethodDeclaration `SetSimulationMode` · L86–94
 
-[Drilling.Common/Motion/CMotionManager.cs:86–94](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L86-L94)
+[Drilling.Common/Motion/CMotionManager.cs:86–94](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L86-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -842,7 +842,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L196-L196) | _motionManager.SetSimulationMode | False |
+| [Drilling.Common/Managers/CManager.cs:204–204](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CManager.cs#L204-L204) | _motionManager.SetSimulationMode | False |
 
 호출하는 대상과 해석 범위:
 
@@ -874,7 +874,7 @@ flowchart TD
 
 ### MethodDeclaration `Initialize` · L96–124
 
-[Drilling.Common/Motion/CMotionManager.cs:96–124](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L96-L124)
+[Drilling.Common/Motion/CMotionManager.cs:96–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L96-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -893,7 +893,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L214-L214) | _motionManager.Initialize | False |
+| [Drilling.Common/Managers/CManager.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CManager.cs#L222-L222) | _motionManager.Initialize | False |
 
 호출하는 대상과 해석 범위:
 
@@ -950,7 +950,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectGroupKey` · L99–102
 
-[Drilling.Common/Motion/CMotionManager.cs:99–102](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L99-L102)
+[Drilling.Common/Motion/CMotionManager.cs:99–102](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L99-L102)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -984,7 +984,7 @@ flowchart TD
 
 ### MethodDeclaration `Destroy` · L126–133
 
-[Drilling.Common/Motion/CMotionManager.cs:126–133](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L126-L133)
+[Drilling.Common/Motion/CMotionManager.cs:126–133](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L126-L133)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1003,7 +1003,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L235-L235) | _motionManager.Destroy | False |
+| [Drilling.Common/Managers/CManager.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CManager.cs#L243-L243) | _motionManager.Destroy | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1034,7 +1034,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshStatus` · L135–144
 
-[Drilling.Common/Motion/CMotionManager.cs:135–144](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L135-L144)
+[Drilling.Common/Motion/CMotionManager.cs:135–144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L135-L144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1053,7 +1053,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L149-L149) | RefreshStatus | False |
+| [Drilling.Common/Motion/CMotionManager.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L149-L149) | RefreshStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1084,7 +1084,7 @@ flowchart TD
 
 ### MethodDeclaration `GetAxisStatus` · L146–151
 
-[Drilling.Common/Motion/CMotionManager.cs:146–151](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L146-L151)
+[Drilling.Common/Motion/CMotionManager.cs:146–151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L146-L151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1103,10 +1103,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L226-L226) | GetAxisStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:1403–1403](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1403-L1403) | _motionManager.GetAxisStatus | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:1057–1057](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1057-L1057) | _motionManager.GetAxisStatus | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L190-L190) | motionManager.GetAxisStatus | False |
+| [Drilling.Common/Motion/CMotionManager.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L226-L226) | GetAxisStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:1404–1404](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1404-L1404) | _motionManager.GetAxisStatus | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:1132–1132](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1132-L1132) | _motionManager.GetAxisStatus | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L190-L190) | motionManager.GetAxisStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1129,7 +1129,7 @@ flowchart TD
 
 ### MethodDeclaration `GetAxisStatusAsync` · L153–174
 
-[Drilling.Common/Motion/CMotionManager.cs:153–174](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L153-L174)
+[Drilling.Common/Motion/CMotionManager.cs:153–174](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L153-L174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1207,7 +1207,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCachedAxisStatus` · L176–205
 
-[Drilling.Common/Motion/CMotionManager.cs:176–205](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L176-L205)
+[Drilling.Common/Motion/CMotionManager.cs:176–205](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L176-L205)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1220,9 +1220,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L150-L150) | GetCachedAxisStatus | False |
-| [Drilling.Common/Motion/CMotionManager.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L173-L173) | GetCachedAxisStatus | False |
-| [Drilling.Common/Station/CStationProcess.cs:1403–1403](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1403-L1403) | _motionManager.GetCachedAxisStatus | False |
+| [Drilling.Common/Motion/CMotionManager.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L150-L150) | GetCachedAxisStatus | False |
+| [Drilling.Common/Motion/CMotionManager.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L173-L173) | GetCachedAxisStatus | False |
+| [Drilling.Common/Station/CStationProcess.cs:1404–1404](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1404-L1404) | _motionManager.GetCachedAxisStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1249,7 +1249,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDisplayOrder` · L179–182
 
-[Drilling.Common/Motion/CMotionManager.cs:179–182](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L179-L182)
+[Drilling.Common/Motion/CMotionManager.cs:179–182](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L179-L182)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1276,7 +1276,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildMotor` · L184–201
 
-[Drilling.Common/Motion/CMotionManager.cs:184–201](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L184-L201)
+[Drilling.Common/Motion/CMotionManager.cs:184–201](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L184-L201)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1310,7 +1310,7 @@ flowchart TD
 
 ### MethodDeclaration `GetIoStatus` · L207–222
 
-[Drilling.Common/Motion/CMotionManager.cs:207–222](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L207-L222)
+[Drilling.Common/Motion/CMotionManager.cs:207–222](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L207-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1352,7 +1352,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDisplayOrder` · L210–213
 
-[Drilling.Common/Motion/CMotionManager.cs:210–213](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L210-L213)
+[Drilling.Common/Motion/CMotionManager.cs:210–213](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L210-L213)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1379,7 +1379,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildIo` · L215–218
 
-[Drilling.Common/Motion/CMotionManager.cs:215–218](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L215-L218)
+[Drilling.Common/Motion/CMotionManager.cs:215–218](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L215-L218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1413,7 +1413,7 @@ flowchart TD
 
 ### MethodDeclaration `GetStationStatus` · L224–280
 
-[Drilling.Common/Motion/CMotionManager.cs:224–280](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L224-L280)
+[Drilling.Common/Motion/CMotionManager.cs:224–280](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L224-L280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1461,7 +1461,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectAxisId` · L227–230
 
-[Drilling.Common/Motion/CMotionManager.cs:227–230](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L227-L230)
+[Drilling.Common/Motion/CMotionManager.cs:227–230](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L227-L230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1488,7 +1488,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L233–236
 
-[Drilling.Common/Motion/CMotionManager.cs:233–236](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L233-L236)
+[Drilling.Common/Motion/CMotionManager.cs:233–236](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L233-L236)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1522,7 +1522,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L238–241
 
-[Drilling.Common/Motion/CMotionManager.cs:238–241](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L238-L241)
+[Drilling.Common/Motion/CMotionManager.cs:238–241](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L238-L241)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1549,7 +1549,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectMotor` · L243–246
 
-[Drilling.Common/Motion/CMotionManager.cs:243–246](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L243-L246)
+[Drilling.Common/Motion/CMotionManager.cs:243–246](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L243-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1586,7 +1586,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesMotor` · L248–251
 
-[Drilling.Common/Motion/CMotionManager.cs:248–251](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L248-L251)
+[Drilling.Common/Motion/CMotionManager.cs:248–251](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L248-L251)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1613,7 +1613,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectAxisId2` · L253–256
 
-[Drilling.Common/Motion/CMotionManager.cs:253–256](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L253-L256)
+[Drilling.Common/Motion/CMotionManager.cs:253–256](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L253-L256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1640,7 +1640,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSystem` · L258–261
 
-[Drilling.Common/Motion/CMotionManager.cs:258–261](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L258-L261)
+[Drilling.Common/Motion/CMotionManager.cs:258–261](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L258-L261)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1667,7 +1667,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L263–266
 
-[Drilling.Common/Motion/CMotionManager.cs:263–266](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L263-L266)
+[Drilling.Common/Motion/CMotionManager.cs:263–266](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L263-L266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1701,7 +1701,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsAlarmOn` · L268–271
 
-[Drilling.Common/Motion/CMotionManager.cs:268–271](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L268-L271)
+[Drilling.Common/Motion/CMotionManager.cs:268–271](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L268-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1728,7 +1728,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildMOTION_STATION_STATUS` · L273–277
 
-[Drilling.Common/Motion/CMotionManager.cs:273–277](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L273-L277)
+[Drilling.Common/Motion/CMotionManager.cs:273–277](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L273-L277)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1780,7 +1780,7 @@ flowchart TD
 
 ### MethodDeclaration `GetControllerStatus` · L282–320
 
-[Drilling.Common/Motion/CMotionManager.cs:282–320](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L282-L320)
+[Drilling.Common/Motion/CMotionManager.cs:282–320](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L282-L320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1828,7 +1828,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L285–288
 
-[Drilling.Common/Motion/CMotionManager.cs:285–288](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L285-L288)
+[Drilling.Common/Motion/CMotionManager.cs:285–288](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L285-L288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1862,7 +1862,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L290–293
 
-[Drilling.Common/Motion/CMotionManager.cs:290–293](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L290-L293)
+[Drilling.Common/Motion/CMotionManager.cs:290–293](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L290-L293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1896,7 +1896,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectAxis` · L295–298
 
-[Drilling.Common/Motion/CMotionManager.cs:295–298](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L295-L298)
+[Drilling.Common/Motion/CMotionManager.cs:295–298](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L295-L298)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1923,7 +1923,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildMOTION_CONTROLLER_STATUS` · L300–306
 
-[Drilling.Common/Motion/CMotionManager.cs:300–306](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L300-L306)
+[Drilling.Common/Motion/CMotionManager.cs:300–306](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L300-L306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1977,7 +1977,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDevType` · L308–311
 
-[Drilling.Common/Motion/CMotionManager.cs:308–311](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L308-L311)
+[Drilling.Common/Motion/CMotionManager.cs:308–311](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L308-L311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2004,7 +2004,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDevNo` · L313–316
 
-[Drilling.Common/Motion/CMotionManager.cs:313–316](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L313-L316)
+[Drilling.Common/Motion/CMotionManager.cs:313–316](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L313-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2031,7 +2031,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveAxis` · L322–325
 
-[Drilling.Common/Motion/CMotionManager.cs:322–325](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L322-L325)
+[Drilling.Common/Motion/CMotionManager.cs:322–325](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L322-L325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2067,7 +2067,7 @@ flowchart TD
 
 ### MethodDeclaration `ServoOn` · L327–330
 
-[Drilling.Common/Motion/CMotionManager.cs:327–330](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L327-L330)
+[Drilling.Common/Motion/CMotionManager.cs:327–330](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L327-L330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2102,7 +2102,7 @@ flowchart TD
 
 ### MethodDeclaration `ServoOff` · L332–335
 
-[Drilling.Common/Motion/CMotionManager.cs:332–335](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L332-L335)
+[Drilling.Common/Motion/CMotionManager.cs:332–335](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L332-L335)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2137,7 +2137,7 @@ flowchart TD
 
 ### MethodDeclaration `Home` · L337–340
 
-[Drilling.Common/Motion/CMotionManager.cs:337–340](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L337-L340)
+[Drilling.Common/Motion/CMotionManager.cs:337–340](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L337-L340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2172,7 +2172,7 @@ flowchart TD
 
 ### MethodDeclaration `Move` · L342–345
 
-[Drilling.Common/Motion/CMotionManager.cs:342–345](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L342-L345)
+[Drilling.Common/Motion/CMotionManager.cs:342–345](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L342-L345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2193,7 +2193,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L324-L324) | Move | False |
+| [Drilling.Common/Motion/CMotionManager.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L324-L324) | Move | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2212,7 +2212,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveRel` · L347–350
 
-[Drilling.Common/Motion/CMotionManager.cs:347–350](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L347-L350)
+[Drilling.Common/Motion/CMotionManager.cs:347–350](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L347-L350)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2248,7 +2248,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L352–355
 
-[Drilling.Common/Motion/CMotionManager.cs:352–355](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L352-L355)
+[Drilling.Common/Motion/CMotionManager.cs:352–355](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L352-L355)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2268,7 +2268,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:401–401](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L401-L401) | Stop | False |
+| [Drilling.Common/Motion/CMotionManager.cs:401–401](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L401-L401) | Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2287,7 +2287,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetAlarm` · L357–360
 
-[Drilling.Common/Motion/CMotionManager.cs:357–360](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L357-L360)
+[Drilling.Common/Motion/CMotionManager.cs:357–360](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L357-L360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2322,7 +2322,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteAxisCommand` · L362–397
 
-[Drilling.Common/Motion/CMotionManager.cs:362–397](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L362-L397)
+[Drilling.Common/Motion/CMotionManager.cs:362–397](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L362-L397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2345,17 +2345,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L329-L329) | ExecuteAxisCommand | False |
-| [Drilling.Common/Motion/CMotionManager.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L334-L334) | ExecuteAxisCommand | False |
-| [Drilling.Common/Motion/CMotionManager.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L339-L339) | ExecuteAxisCommand | False |
-| [Drilling.Common/Motion/CMotionManager.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L344-L344) | ExecuteAxisCommand | False |
-| [Drilling.Common/Motion/CMotionManager.cs:349–349](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L349-L349) | ExecuteAxisCommand | False |
-| [Drilling.Common/Motion/CMotionManager.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L354-L354) | ExecuteAxisCommand | False |
-| [Drilling.Common/Motion/CMotionManager.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L359-L359) | ExecuteAxisCommand | False |
-| [Drilling.Common/Motion/CMotionManager.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L431-L431) | ExecuteAxisCommand | False |
-| [Drilling.Common/Motion/CMotionManager.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L489-L489) | ExecuteAxisCommand | False |
-| [Drilling.Common/Motion/CMotionManager.cs:496–496](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L496-L496) | ExecuteAxisCommand | False |
-| [Drilling.Common/Motion/CMotionManager.cs:551–551](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L551-L551) | ExecuteAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L329-L329) | ExecuteAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L334-L334) | ExecuteAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L339-L339) | ExecuteAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L344-L344) | ExecuteAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:349–349](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L349-L349) | ExecuteAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L354-L354) | ExecuteAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L359-L359) | ExecuteAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L431-L431) | ExecuteAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L489-L489) | ExecuteAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:496–496](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L496-L496) | ExecuteAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:551–551](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L551-L551) | ExecuteAxisCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2436,7 +2436,7 @@ flowchart TD
 
 ### MethodDeclaration `StopMotion` · L399–402
 
-[Drilling.Common/Motion/CMotionManager.cs:399–402](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L399-L402)
+[Drilling.Common/Motion/CMotionManager.cs:399–402](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L399-L402)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2471,7 +2471,7 @@ flowchart TD
 
 ### MethodDeclaration `SetOutput` · L404–425
 
-[Drilling.Common/Motion/CMotionManager.cs:404–425](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L404-L425)
+[Drilling.Common/Motion/CMotionManager.cs:404–425](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L404-L425)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2492,7 +2492,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L525-L525) | SetOutput | False |
+| [Drilling.Common/Motion/CMotionManager.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L525-L525) | SetOutput | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2548,7 +2548,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteMotionCommand` · L427–438
 
-[Drilling.Common/Motion/CMotionManager.cs:427–438](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L427-L438)
+[Drilling.Common/Motion/CMotionManager.cs:427–438](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L427-L438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2571,10 +2571,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4358–4358](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4358-L4358) | _motionManager.ExecuteMotionCommand | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4445–4445](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4445-L4445) | _motionManager.ExecuteMotionCommand | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4492–4492](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4492-L4492) | _motionManager.ExecuteMotionCommand | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4522–4522](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4522-L4522) | _motionManager.ExecuteMotionCommand | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4829–4829](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4829-L4829) | _motionManager.ExecuteMotionCommand | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4916–4916](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4916-L4916) | _motionManager.ExecuteMotionCommand | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4963–4963](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4963-L4963) | _motionManager.ExecuteMotionCommand | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4993–4993](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4993-L4993) | _motionManager.ExecuteMotionCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2616,7 +2616,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteAbsoluteMoves` · L440–517
 
-[Drilling.Common/Motion/CMotionManager.cs:440–517](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L440-L517)
+[Drilling.Common/Motion/CMotionManager.cs:440–517](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L440-L517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2636,7 +2636,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4398–4398](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4398-L4398) | _motionManager.ExecuteAbsoluteMoves | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4869–4869](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4869-L4869) | _motionManager.ExecuteAbsoluteMoves | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2787,7 +2787,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectAxisId` · L451–454
 
-[Drilling.Common/Motion/CMotionManager.cs:451–454](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L451-L454)
+[Drilling.Common/Motion/CMotionManager.cs:451–454](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L451-L454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2814,7 +2814,7 @@ flowchart TD
 
 ### MethodDeclaration `SetOutputCommand` · L519–532
 
-[Drilling.Common/Motion/CMotionManager.cs:519–532](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L519-L532)
+[Drilling.Common/Motion/CMotionManager.cs:519–532](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L519-L532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2878,7 +2878,7 @@ flowchart TD
 
 ### MethodDeclaration `GetMotionController` · L534–537
 
-[Drilling.Common/Motion/CMotionManager.cs:534–537](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L534-L537)
+[Drilling.Common/Motion/CMotionManager.cs:534–537](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L534-L537)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2898,7 +2898,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L413-L413) | GetMotionController | False |
+| [Drilling.Common/Motion/CMotionManager.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L413-L413) | GetMotionController | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2920,7 +2920,7 @@ flowchart TD
 
 ### MethodDeclaration `IsAxisSimulation` · L539–542
 
-[Drilling.Common/Motion/CMotionManager.cs:539–542](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L539-L542)
+[Drilling.Common/Motion/CMotionManager.cs:539–542](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L539-L542)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2939,9 +2939,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:376–376](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L376-L376) | IsAxisSimulation | False |
-| [Drilling.Common/Motion/CMotionManager.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L477-L477) | IsAxisSimulation | False |
-| [Drilling.Common/Motion/CMotionManager.cs:617–617](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L617-L617) | IsAxisSimulation | False |
+| [Drilling.Common/Motion/CMotionManager.cs:376–376](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L376-L376) | IsAxisSimulation | False |
+| [Drilling.Common/Motion/CMotionManager.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L477-L477) | IsAxisSimulation | False |
+| [Drilling.Common/Motion/CMotionManager.cs:617–617](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L617-L617) | IsAxisSimulation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2964,7 +2964,7 @@ flowchart TD
 
 ### MethodDeclaration `StopStartedAxes` · L544–565
 
-[Drilling.Common/Motion/CMotionManager.cs:544–565](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L544-L565)
+[Drilling.Common/Motion/CMotionManager.cs:544–565](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L544-L565)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2983,8 +2983,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:503–503](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L503-L503) | StopStartedAxes | False |
-| [Drilling.Common/Motion/CMotionManager.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L513-L513) | StopStartedAxes | False |
+| [Drilling.Common/Motion/CMotionManager.cs:503–503](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L503-L503) | StopStartedAxes | False |
+| [Drilling.Common/Motion/CMotionManager.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L513-L513) | StopStartedAxes | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3039,7 +3039,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshAxisStatus` · L567–589
 
-[Drilling.Common/Motion/CMotionManager.cs:567–589](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L567-L589)
+[Drilling.Common/Motion/CMotionManager.cs:567–589](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L567-L589)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3058,7 +3058,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L143-L143) | RefreshAxisStatus | False |
+| [Drilling.Common/Motion/CMotionManager.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L143-L143) | RefreshAxisStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3111,7 +3111,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyAxisStatus` · L591–610
 
-[Drilling.Common/Motion/CMotionManager.cs:591–610](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L591-L610)
+[Drilling.Common/Motion/CMotionManager.cs:591–610](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L591-L610)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3130,8 +3130,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L164-L164) | ApplyAxisStatus | False |
-| [Drilling.Common/Motion/CMotionManager.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L581-L581) | ApplyAxisStatus | False |
+| [Drilling.Common/Motion/CMotionManager.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L164-L164) | ApplyAxisStatus | False |
+| [Drilling.Common/Motion/CMotionManager.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L581-L581) | ApplyAxisStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3177,7 +3177,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateSimulatedAxisPositions` · L612–624
 
-[Drilling.Common/Motion/CMotionManager.cs:612–624](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L612-L624)
+[Drilling.Common/Motion/CMotionManager.cs:612–624](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L612-L624)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3190,7 +3190,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L178-L178) | UpdateSimulatedAxisPositions | False |
+| [Drilling.Common/Motion/CMotionManager.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L178-L178) | UpdateSimulatedAxisPositions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3232,7 +3232,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateSimulatedAxisPosition` · L626–668
 
-[Drilling.Common/Motion/CMotionManager.cs:626–668](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L626-L668)
+[Drilling.Common/Motion/CMotionManager.cs:626–668](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L626-L668)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3253,9 +3253,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L379-L379) | UpdateSimulatedAxisPosition | False |
-| [Drilling.Common/Motion/CMotionManager.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L479-L479) | UpdateSimulatedAxisPosition | False |
-| [Drilling.Common/Motion/CMotionManager.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L622-L622) | UpdateSimulatedAxisPosition | False |
+| [Drilling.Common/Motion/CMotionManager.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L379-L379) | UpdateSimulatedAxisPosition | False |
+| [Drilling.Common/Motion/CMotionManager.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L479-L479) | UpdateSimulatedAxisPosition | False |
+| [Drilling.Common/Motion/CMotionManager.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L622-L622) | UpdateSimulatedAxisPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3325,7 +3325,7 @@ flowchart TD
 
 ### MethodDeclaration `MarkAxisAlarm` · L670–677
 
-[Drilling.Common/Motion/CMotionManager.cs:670–677](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L670-L677)
+[Drilling.Common/Motion/CMotionManager.cs:670–677](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L670-L677)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3344,8 +3344,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L168-L168) | MarkAxisAlarm | False |
-| [Drilling.Common/Motion/CMotionManager.cs:586–586](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L586-L586) | MarkAxisAlarm | False |
+| [Drilling.Common/Motion/CMotionManager.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L168-L168) | MarkAxisAlarm | False |
+| [Drilling.Common/Motion/CMotionManager.cs:586–586](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L586-L586) | MarkAxisAlarm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3378,7 +3378,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateMotionController` · L679–688
 
-[Drilling.Common/Motion/CMotionManager.cs:679–688](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L679-L688)
+[Drilling.Common/Motion/CMotionManager.cs:679–688](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L679-L688)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3398,7 +3398,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L65-L65) | CreateMotionController | False |
+| [Drilling.Common/Motion/CMotionManager.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L65-L65) | CreateMotionController | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3437,7 +3437,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateAxisCommand` · L690–714
 
-[Drilling.Common/Motion/CMotionManager.cs:690–714](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L690-L714)
+[Drilling.Common/Motion/CMotionManager.cs:690–714](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L690-L714)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3460,8 +3460,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L382-L382) | ValidateAxisCommand | False |
-| [Drilling.Common/Motion/CMotionManager.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L482-L482) | ValidateAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L382-L382) | ValidateAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L482-L482) | ValidateAxisCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3511,7 +3511,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateAxisCommandParameters` · L716–737
 
-[Drilling.Common/Motion/CMotionManager.cs:716–737](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L716-L737)
+[Drilling.Common/Motion/CMotionManager.cs:716–737](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L716-L737)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3533,7 +3533,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:692–692](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L692-L692) | ValidateAxisCommandParameters | False |
+| [Drilling.Common/Motion/CMotionManager.cs:692–692](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L692-L692) | ValidateAxisCommandParameters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3584,7 +3584,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidatePreCheckIo` · L739–754
 
-[Drilling.Common/Motion/CMotionManager.cs:739–754](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L739-L754)
+[Drilling.Common/Motion/CMotionManager.cs:739–754](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L739-L754)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3603,7 +3603,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:698–698](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L698-L698) | ValidatePreCheckIo | False |
+| [Drilling.Common/Motion/CMotionManager.cs:698–698](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L698-L698) | ValidatePreCheckIo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3651,7 +3651,7 @@ flowchart TD
 
 ### MethodDeclaration `SplitPreCheckIo` · L756–765
 
-[Drilling.Common/Motion/CMotionManager.cs:756–765](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L756-L765)
+[Drilling.Common/Motion/CMotionManager.cs:756–765](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L756-L765)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3670,7 +3670,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:746–746](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L746-L746) | SplitPreCheckIo | False |
+| [Drilling.Common/Motion/CMotionManager.cs:746–746](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L746-L746) | SplitPreCheckIo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3713,7 +3713,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyAxisCommand` · L767–843
 
-[Drilling.Common/Motion/CMotionManager.cs:767–843](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L767-L843)
+[Drilling.Common/Motion/CMotionManager.cs:767–843](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L767-L843)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3736,7 +3736,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L396-L396) | ApplyAxisCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L396-L396) | ApplyAxisCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3854,7 +3854,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateAxisPosition` · L845–853
 
-[Drilling.Common/Motion/CMotionManager.cs:845–853](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L845-L853)
+[Drilling.Common/Motion/CMotionManager.cs:845–853](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L845-L853)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3874,8 +3874,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:798–798](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L798-L798) | UpdateAxisPosition | False |
-| [Drilling.Common/Motion/CMotionManager.cs:801–801](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L801-L801) | UpdateAxisPosition | False |
+| [Drilling.Common/Motion/CMotionManager.cs:798–798](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L798-L798) | UpdateAxisPosition | False |
+| [Drilling.Common/Motion/CMotionManager.cs:801–801](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L801-L801) | UpdateAxisPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3899,7 +3899,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeMotors` · L855–864
 
-[Drilling.Common/Motion/CMotionManager.cs:855–864](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L855-L864)
+[Drilling.Common/Motion/CMotionManager.cs:855–864](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L855-L864)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3918,7 +3918,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L32-L32) | NormalizeMotors | False |
+| [Drilling.Common/Motion/CMotionManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L32-L32) | NormalizeMotors | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3944,7 +3944,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L857–860
 
-[Drilling.Common/Motion/CMotionManager.cs:857–860](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L857-L860)
+[Drilling.Common/Motion/CMotionManager.cs:857–860](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L857-L860)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3978,7 +3978,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAxes` · L866–885
 
-[Drilling.Common/Motion/CMotionManager.cs:866–885](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L866-L885)
+[Drilling.Common/Motion/CMotionManager.cs:866–885](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L866-L885)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3997,7 +3997,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L44-L44) | CreateAxes | False |
+| [Drilling.Common/Motion/CMotionManager.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L44-L44) | CreateAxes | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4020,7 +4020,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsUse` · L868–871
 
-[Drilling.Common/Motion/CMotionManager.cs:868–871](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L868-L871)
+[Drilling.Common/Motion/CMotionManager.cs:868–871](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L868-L871)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4047,7 +4047,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildAxis` · L873–877
 
-[Drilling.Common/Motion/CMotionManager.cs:873–877](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L873-L877)
+[Drilling.Common/Motion/CMotionManager.cs:873–877](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L873-L877)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4090,7 +4090,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectAxisId` · L879–882
 
-[Drilling.Common/Motion/CMotionManager.cs:879–882](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L879-L882)
+[Drilling.Common/Motion/CMotionManager.cs:879–882](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L879-L882)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4117,7 +4117,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateDefaultMotorData` · L887–890
 
-[Drilling.Common/Motion/CMotionManager.cs:887–890](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L887-L890)
+[Drilling.Common/Motion/CMotionManager.cs:887–890](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L887-L890)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4130,7 +4130,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:863–863](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L863-L863) | CreateDefaultMotorData | False |
+| [Drilling.Common/Motion/CMotionManager.cs:863–863](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L863-L863) | CreateDefaultMotorData | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4142,7 +4142,7 @@ flowchart TD
 
 ### MethodDeclaration `Motor` · L892–936
 
-[Drilling.Common/Motion/CMotionManager.cs:892–936](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L892-L936)
+[Drilling.Common/Motion/CMotionManager.cs:892–936](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L892-L936)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4181,7 +4181,7 @@ flowchart TD
 
 ### MethodDeclaration `GetInitialPosition` · L938–953
 
-[Drilling.Common/Motion/CMotionManager.cs:938–953](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L938-L953)
+[Drilling.Common/Motion/CMotionManager.cs:938–953](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L938-L953)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4200,7 +4200,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:875–875](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L875-L875) | GetInitialPosition | False |
+| [Drilling.Common/Motion/CMotionManager.cs:875–875](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L875-L875) | GetInitialPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4229,7 +4229,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeAxisId` · L955–958
 
-[Drilling.Common/Motion/CMotionManager.cs:955–958](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L955-L958)
+[Drilling.Common/Motion/CMotionManager.cs:955–958](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L955-L958)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4248,17 +4248,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L40-L40) | NormalizeAxisId | False |
-| [Drilling.Common/Motion/CMotionManager.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L245-L245) | NormalizeAxisId | False |
-| [Drilling.Common/Motion/CMotionManager.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L292-L292) | NormalizeAxisId | False |
-| [Drilling.Common/Motion/CMotionManager.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L365-L365) | NormalizeAxisId | False |
-| [Drilling.Common/Motion/CMotionManager.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L461-L461) | NormalizeAxisId | False |
-| [Drilling.Common/Motion/CMotionManager.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L555-L555) | NormalizeAxisId | False |
-| [Drilling.Common/Motion/CMotionManager.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L593-L593) | NormalizeAxisId | False |
-| [Drilling.Common/Motion/CMotionManager.cs:617–617](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L617-L617) | NormalizeAxisId | False |
-| [Drilling.Common/Motion/CMotionManager.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L672-L672) | NormalizeAxisId | False |
-| [Drilling.Common/Motion/CMotionManager.cs:876–876](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L876-L876) | NormalizeAxisId | False |
-| [Drilling.Common/Motion/CMotionManager.cs:940–940](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L940-L940) | NormalizeAxisId | False |
+| [Drilling.Common/Motion/CMotionManager.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L40-L40) | NormalizeAxisId | False |
+| [Drilling.Common/Motion/CMotionManager.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L245-L245) | NormalizeAxisId | False |
+| [Drilling.Common/Motion/CMotionManager.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L292-L292) | NormalizeAxisId | False |
+| [Drilling.Common/Motion/CMotionManager.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L365-L365) | NormalizeAxisId | False |
+| [Drilling.Common/Motion/CMotionManager.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L461-L461) | NormalizeAxisId | False |
+| [Drilling.Common/Motion/CMotionManager.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L555-L555) | NormalizeAxisId | False |
+| [Drilling.Common/Motion/CMotionManager.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L593-L593) | NormalizeAxisId | False |
+| [Drilling.Common/Motion/CMotionManager.cs:617–617](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L617-L617) | NormalizeAxisId | False |
+| [Drilling.Common/Motion/CMotionManager.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L672-L672) | NormalizeAxisId | False |
+| [Drilling.Common/Motion/CMotionManager.cs:876–876](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L876-L876) | NormalizeAxisId | False |
+| [Drilling.Common/Motion/CMotionManager.cs:940–940](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L940-L940) | NormalizeAxisId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4279,7 +4279,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeAddress` · L960–963
 
-[Drilling.Common/Motion/CMotionManager.cs:960–963](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L960-L963)
+[Drilling.Common/Motion/CMotionManager.cs:960–963](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L960-L963)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4298,8 +4298,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:973–973](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L973-L973) | NormalizeAddress | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1048–1048](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1048-L1048) | NormalizeAddress | False |
+| [Drilling.Common/Motion/CMotionManager.cs:973–973](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L973-L973) | NormalizeAddress | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1048–1048](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1048-L1048) | NormalizeAddress | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4320,7 +4320,7 @@ flowchart TD
 
 ### MethodDeclaration `GetIoChannelOrThrow` · L965–1013
 
-[Drilling.Common/Motion/CMotionManager.cs:965–1013](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L965-L1013)
+[Drilling.Common/Motion/CMotionManager.cs:965–1013](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L965-L1013)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4339,9 +4339,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L407-L407) | GetIoChannelOrThrow | False |
-| [Drilling.Common/Motion/CMotionManager.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L524-L524) | GetIoChannelOrThrow | False |
-| [Drilling.Common/Motion/CMotionManager.cs:748–748](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L748-L748) | GetIoChannelOrThrow | False |
+| [Drilling.Common/Motion/CMotionManager.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L407-L407) | GetIoChannelOrThrow | False |
+| [Drilling.Common/Motion/CMotionManager.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L524-L524) | GetIoChannelOrThrow | False |
+| [Drilling.Common/Motion/CMotionManager.cs:748–748](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L748-L748) | GetIoChannelOrThrow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4427,7 +4427,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L979–982
 
-[Drilling.Common/Motion/CMotionManager.cs:979–982](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L979-L982)
+[Drilling.Common/Motion/CMotionManager.cs:979–982](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L979-L982)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4461,7 +4461,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeIo` · L991–994
 
-[Drilling.Common/Motion/CMotionManager.cs:991–994](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L991-L994)
+[Drilling.Common/Motion/CMotionManager.cs:991–994](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L991-L994)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4497,7 +4497,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDisplayOrder` · L1007–1010
 
-[Drilling.Common/Motion/CMotionManager.cs:1007–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1007-L1010)
+[Drilling.Common/Motion/CMotionManager.cs:1007–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1007-L1010)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4524,7 +4524,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatIoReference` · L1015–1018
 
-[Drilling.Common/Motion/CMotionManager.cs:1015–1018](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1015-L1018)
+[Drilling.Common/Motion/CMotionManager.cs:1015–1018](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1015-L1018)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4543,9 +4543,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:410–410](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L410-L410) | FormatIoReference | False |
-| [Drilling.Common/Motion/CMotionManager.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L526-L526) | FormatIoReference | False |
-| [Drilling.Common/Motion/CMotionManager.cs:751–751](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L751-L751) | FormatIoReference | False |
+| [Drilling.Common/Motion/CMotionManager.cs:410–410](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L410-L410) | FormatIoReference | False |
+| [Drilling.Common/Motion/CMotionManager.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L526-L526) | FormatIoReference | False |
+| [Drilling.Common/Motion/CMotionManager.cs:751–751](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L751-L751) | FormatIoReference | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -4557,7 +4557,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeIoName` · L1020–1035
 
-[Drilling.Common/Motion/CMotionManager.cs:1020–1035](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1020-L1035)
+[Drilling.Common/Motion/CMotionManager.cs:1020–1035](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1020-L1035)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4576,10 +4576,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L974-L974) | NormalizeIoName | False |
-| [Drilling.Common/Motion/CMotionManager.cs:990–990](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L990-L990) | NormalizeIoName | False |
-| [Drilling.Common/Motion/CMotionManager.cs:993–993](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L993-L993) | NormalizeIoName | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1047–1047](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1047-L1047) | NormalizeIoName | False |
+| [Drilling.Common/Motion/CMotionManager.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L974-L974) | NormalizeIoName | False |
+| [Drilling.Common/Motion/CMotionManager.cs:990–990](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L990-L990) | NormalizeIoName | False |
+| [Drilling.Common/Motion/CMotionManager.cs:993–993](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L993-L993) | NormalizeIoName | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1047–1047](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1047-L1047) | NormalizeIoName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4627,7 +4627,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L1022–1025
 
-[Drilling.Common/Motion/CMotionManager.cs:1022–1025](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1022-L1025)
+[Drilling.Common/Motion/CMotionManager.cs:1022–1025](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1022-L1025)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4662,7 +4662,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateIo` · L1037–1065
 
-[Drilling.Common/Motion/CMotionManager.cs:1037–1065](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1037-L1065)
+[Drilling.Common/Motion/CMotionManager.cs:1037–1065](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1037-L1065)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4681,7 +4681,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L45-L45) | CreateIo | False |
+| [Drilling.Common/Motion/CMotionManager.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L45-L45) | CreateIo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4704,7 +4704,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsUse` · L1039–1042
 
-[Drilling.Common/Motion/CMotionManager.cs:1039–1042](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1039-L1042)
+[Drilling.Common/Motion/CMotionManager.cs:1039–1042](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1039-L1042)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4731,7 +4731,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildIo` · L1044–1057
 
-[Drilling.Common/Motion/CMotionManager.cs:1044–1057](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1044-L1057)
+[Drilling.Common/Motion/CMotionManager.cs:1044–1057](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1044-L1057)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4776,7 +4776,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectId` · L1059–1062
 
-[Drilling.Common/Motion/CMotionManager.cs:1059–1062](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1059-L1062)
+[Drilling.Common/Motion/CMotionManager.cs:1059–1062](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1059-L1062)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4803,7 +4803,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeStationName` · L1067–1070
 
-[Drilling.Common/Motion/CMotionManager.cs:1067–1070](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1067-L1070)
+[Drilling.Common/Motion/CMotionManager.cs:1067–1070](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1067-L1070)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4822,8 +4822,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L235-L235) | NormalizeStationName | False |
-| [Drilling.Common/Motion/CMotionManager.cs:712–712](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L712-L712) | NormalizeStationName | False |
+| [Drilling.Common/Motion/CMotionManager.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L235-L235) | NormalizeStationName | False |
+| [Drilling.Common/Motion/CMotionManager.cs:712–712](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L712-L712) | NormalizeStationName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4847,7 +4847,7 @@ flowchart TD
 
 ### MethodDeclaration `GetControllerKey` · L1072–1075
 
-[Drilling.Common/Motion/CMotionManager.cs:1072–1075](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1072-L1075)
+[Drilling.Common/Motion/CMotionManager.cs:1072–1075](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1072-L1075)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4867,14 +4867,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L58-L58) | GetControllerKey | False |
-| [Drilling.Common/Motion/CMotionManager.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L101-L101) | GetControllerKey | False |
-| [Drilling.Common/Motion/CMotionManager.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L158-L158) | GetControllerKey | False |
-| [Drilling.Common/Motion/CMotionManager.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L287-L287) | GetControllerKey | False |
-| [Drilling.Common/Motion/CMotionManager.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L385-L385) | GetControllerKey | False |
-| [Drilling.Common/Motion/CMotionManager.cs:536–536](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L536-L536) | GetControllerKey | False |
-| [Drilling.Common/Motion/CMotionManager.cs:541–541](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L541-L541) | GetControllerKey | False |
-| [Drilling.Common/Motion/CMotionManager.cs:571–571](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L571-L571) | GetControllerKey | False |
+| [Drilling.Common/Motion/CMotionManager.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L58-L58) | GetControllerKey | False |
+| [Drilling.Common/Motion/CMotionManager.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L101-L101) | GetControllerKey | False |
+| [Drilling.Common/Motion/CMotionManager.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L158-L158) | GetControllerKey | False |
+| [Drilling.Common/Motion/CMotionManager.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L287-L287) | GetControllerKey | False |
+| [Drilling.Common/Motion/CMotionManager.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L385-L385) | GetControllerKey | False |
+| [Drilling.Common/Motion/CMotionManager.cs:536–536](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L536-L536) | GetControllerKey | False |
+| [Drilling.Common/Motion/CMotionManager.cs:541–541](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L541-L541) | GetControllerKey | False |
+| [Drilling.Common/Motion/CMotionManager.cs:571–571](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L571-L571) | GetControllerKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4893,7 +4893,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadMotionControllerTypes` · L1077–1085
 
-[Drilling.Common/Motion/CMotionManager.cs:1077–1085](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1077-L1085)
+[Drilling.Common/Motion/CMotionManager.cs:1077–1085](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1077-L1085)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4906,7 +4906,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L16-L16) | LoadMotionControllerTypes | False |
+| [Drilling.Common/Motion/CMotionManager.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L16-L16) | LoadMotionControllerTypes | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4945,7 +4945,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1079–1082
 
-[Drilling.Common/Motion/CMotionManager.cs:1079–1082](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1079-L1082)
+[Drilling.Common/Motion/CMotionManager.cs:1079–1082](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1079-L1082)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4979,7 +4979,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateMotionControllerNotRegisteredException` · L1087–1090
 
-[Drilling.Common/Motion/CMotionManager.cs:1087–1090](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1087-L1090)
+[Drilling.Common/Motion/CMotionManager.cs:1087–1090](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1087-L1090)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4999,9 +4999,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L114-L114) | CreateMotionControllerNotRegisteredException | False |
-| [Drilling.Common/Motion/CMotionManager.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L387-L387) | CreateMotionControllerNotRegisteredException | False |
-| [Drilling.Common/Motion/CMotionManager.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L416-L416) | CreateMotionControllerNotRegisteredException | False |
+| [Drilling.Common/Motion/CMotionManager.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L114-L114) | CreateMotionControllerNotRegisteredException | False |
+| [Drilling.Common/Motion/CMotionManager.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L387-L387) | CreateMotionControllerNotRegisteredException | False |
+| [Drilling.Common/Motion/CMotionManager.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L416-L416) | CreateMotionControllerNotRegisteredException | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5020,7 +5020,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeControllerName` · L1092–1095
 
-[Drilling.Common/Motion/CMotionManager.cs:1092–1095](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1092-L1095)
+[Drilling.Common/Motion/CMotionManager.cs:1092–1095](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1092-L1095)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5039,11 +5039,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L305-L305) | NormalizeControllerName | False |
-| [Drilling.Common/Motion/CMotionManager.cs:681–681](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L681-L681) | NormalizeControllerName | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1052–1052](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1052-L1052) | NormalizeControllerName | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1074–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1074-L1074) | NormalizeControllerName | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1084–1084](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1084-L1084) | NormalizeControllerName | False |
+| [Drilling.Common/Motion/CMotionManager.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L305-L305) | NormalizeControllerName | False |
+| [Drilling.Common/Motion/CMotionManager.cs:681–681](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L681-L681) | NormalizeControllerName | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1052–1052](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1052-L1052) | NormalizeControllerName | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1074–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1074-L1074) | NormalizeControllerName | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1084–1084](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1084-L1084) | NormalizeControllerName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5069,7 +5069,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatMotionCommand` · L1097–1111
 
-[Drilling.Common/Motion/CMotionManager.cs:1097–1111](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1097-L1111)
+[Drilling.Common/Motion/CMotionManager.cs:1097–1111](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1097-L1111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5088,8 +5088,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L432-L432) | FormatMotionCommand | False |
-| [Drilling.Common/Motion/CMotionManager.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L436-L436) | FormatMotionCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L432-L432) | FormatMotionCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L436-L436) | FormatMotionCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5120,7 +5120,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatAggregateException` · L1113–1122
 
-[Drilling.Common/Motion/CMotionManager.cs:1113–1122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1113-L1122)
+[Drilling.Common/Motion/CMotionManager.cs:1113–1122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1113-L1122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5139,7 +5139,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L514-L514) | FormatAggregateException | False |
+| [Drilling.Common/Motion/CMotionManager.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L514-L514) | FormatAggregateException | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5176,7 +5176,7 @@ flowchart TD
 
 ### MethodDeclaration `IsOnText` · L1124–1127
 
-[Drilling.Common/Motion/CMotionManager.cs:1124–1127](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1124-L1127)
+[Drilling.Common/Motion/CMotionManager.cs:1124–1127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1124-L1127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5195,7 +5195,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:762–762](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L762-L762) | IsOnText | False |
+| [Drilling.Common/Motion/CMotionManager.cs:762–762](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L762-L762) | IsOnText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5216,7 +5216,7 @@ flowchart TD
 
 ### PropertyDeclaration `AxisId` · L1144–1144
 
-[Drilling.Common/Motion/CMotionManager.cs:1144–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1144-L1144)
+[Drilling.Common/Motion/CMotionManager.cs:1144–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1144-L1144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5231,7 +5231,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AxisId` · L1144–1144
 
-[Drilling.Common/Motion/CMotionManager.cs:1144–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1144-L1144)
+[Drilling.Common/Motion/CMotionManager.cs:1144–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1144-L1144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5246,7 +5246,7 @@ flowchart TD
 
 ### PropertyDeclaration `Name` · L1145–1145
 
-[Drilling.Common/Motion/CMotionManager.cs:1145–1145](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1145-L1145)
+[Drilling.Common/Motion/CMotionManager.cs:1145–1145](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1145-L1145)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5261,7 +5261,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Name` · L1145–1145
 
-[Drilling.Common/Motion/CMotionManager.cs:1145–1145](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1145-L1145)
+[Drilling.Common/Motion/CMotionManager.cs:1145–1145](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1145-L1145)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5276,7 +5276,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentPosition` · L1146–1146
 
-[Drilling.Common/Motion/CMotionManager.cs:1146–1146](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1146-L1146)
+[Drilling.Common/Motion/CMotionManager.cs:1146–1146](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1146-L1146)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5291,7 +5291,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CurrentPosition` · L1146–1146
 
-[Drilling.Common/Motion/CMotionManager.cs:1146–1146](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1146-L1146)
+[Drilling.Common/Motion/CMotionManager.cs:1146–1146](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1146-L1146)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5306,7 +5306,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CurrentPosition` · L1146–1146
 
-[Drilling.Common/Motion/CMotionManager.cs:1146–1146](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1146-L1146)
+[Drilling.Common/Motion/CMotionManager.cs:1146–1146](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1146-L1146)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5327,7 +5327,7 @@ flowchart TD
 
 ### PropertyDeclaration `TargetPosition` · L1147–1147
 
-[Drilling.Common/Motion/CMotionManager.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1147-L1147)
+[Drilling.Common/Motion/CMotionManager.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1147-L1147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5342,7 +5342,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_TargetPosition` · L1147–1147
 
-[Drilling.Common/Motion/CMotionManager.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1147-L1147)
+[Drilling.Common/Motion/CMotionManager.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1147-L1147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5357,7 +5357,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_TargetPosition` · L1147–1147
 
-[Drilling.Common/Motion/CMotionManager.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1147-L1147)
+[Drilling.Common/Motion/CMotionManager.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1147-L1147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5378,7 +5378,7 @@ flowchart TD
 
 ### PropertyDeclaration `CommandPosition` · L1148–1148
 
-[Drilling.Common/Motion/CMotionManager.cs:1148–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1148-L1148)
+[Drilling.Common/Motion/CMotionManager.cs:1148–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1148-L1148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5393,7 +5393,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CommandPosition` · L1148–1148
 
-[Drilling.Common/Motion/CMotionManager.cs:1148–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1148-L1148)
+[Drilling.Common/Motion/CMotionManager.cs:1148–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1148-L1148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5408,7 +5408,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CommandPosition` · L1148–1148
 
-[Drilling.Common/Motion/CMotionManager.cs:1148–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1148-L1148)
+[Drilling.Common/Motion/CMotionManager.cs:1148–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1148-L1148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5429,7 +5429,7 @@ flowchart TD
 
 ### PropertyDeclaration `FeedbackVelocity` · L1149–1149
 
-[Drilling.Common/Motion/CMotionManager.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1149-L1149)
+[Drilling.Common/Motion/CMotionManager.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1149-L1149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5444,7 +5444,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FeedbackVelocity` · L1149–1149
 
-[Drilling.Common/Motion/CMotionManager.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1149-L1149)
+[Drilling.Common/Motion/CMotionManager.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1149-L1149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5459,7 +5459,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_FeedbackVelocity` · L1149–1149
 
-[Drilling.Common/Motion/CMotionManager.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1149-L1149)
+[Drilling.Common/Motion/CMotionManager.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1149-L1149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5480,7 +5480,7 @@ flowchart TD
 
 ### PropertyDeclaration `FeedbackAcceleration` · L1150–1150
 
-[Drilling.Common/Motion/CMotionManager.cs:1150–1150](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1150-L1150)
+[Drilling.Common/Motion/CMotionManager.cs:1150–1150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1150-L1150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5495,7 +5495,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FeedbackAcceleration` · L1150–1150
 
-[Drilling.Common/Motion/CMotionManager.cs:1150–1150](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1150-L1150)
+[Drilling.Common/Motion/CMotionManager.cs:1150–1150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1150-L1150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5510,7 +5510,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_FeedbackAcceleration` · L1150–1150
 
-[Drilling.Common/Motion/CMotionManager.cs:1150–1150](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1150-L1150)
+[Drilling.Common/Motion/CMotionManager.cs:1150–1150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1150-L1150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5531,7 +5531,7 @@ flowchart TD
 
 ### PropertyDeclaration `SimulationLastTimestamp` · L1151–1151
 
-[Drilling.Common/Motion/CMotionManager.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1151-L1151)
+[Drilling.Common/Motion/CMotionManager.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1151-L1151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5558,7 +5558,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SimulationLastTimestamp` · L1151–1151
 
-[Drilling.Common/Motion/CMotionManager.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1151-L1151)
+[Drilling.Common/Motion/CMotionManager.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1151-L1151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5573,7 +5573,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SimulationLastTimestamp` · L1151–1151
 
-[Drilling.Common/Motion/CMotionManager.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1151-L1151)
+[Drilling.Common/Motion/CMotionManager.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1151-L1151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5594,7 +5594,7 @@ flowchart TD
 
 ### PropertyDeclaration `ServoOn` · L1152–1152
 
-[Drilling.Common/Motion/CMotionManager.cs:1152–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1152-L1152)
+[Drilling.Common/Motion/CMotionManager.cs:1152–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1152-L1152)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5609,7 +5609,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ServoOn` · L1152–1152
 
-[Drilling.Common/Motion/CMotionManager.cs:1152–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1152-L1152)
+[Drilling.Common/Motion/CMotionManager.cs:1152–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1152-L1152)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5624,7 +5624,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ServoOn` · L1152–1152
 
-[Drilling.Common/Motion/CMotionManager.cs:1152–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1152-L1152)
+[Drilling.Common/Motion/CMotionManager.cs:1152–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1152-L1152)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5645,7 +5645,7 @@ flowchart TD
 
 ### PropertyDeclaration `HomeCompleted` · L1153–1153
 
-[Drilling.Common/Motion/CMotionManager.cs:1153–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1153-L1153)
+[Drilling.Common/Motion/CMotionManager.cs:1153–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1153-L1153)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5660,7 +5660,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HomeCompleted` · L1153–1153
 
-[Drilling.Common/Motion/CMotionManager.cs:1153–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1153-L1153)
+[Drilling.Common/Motion/CMotionManager.cs:1153–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1153-L1153)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5675,7 +5675,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_HomeCompleted` · L1153–1153
 
-[Drilling.Common/Motion/CMotionManager.cs:1153–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1153-L1153)
+[Drilling.Common/Motion/CMotionManager.cs:1153–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1153-L1153)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5696,7 +5696,7 @@ flowchart TD
 
 ### PropertyDeclaration `LimitPlusOn` · L1154–1154
 
-[Drilling.Common/Motion/CMotionManager.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1154-L1154)
+[Drilling.Common/Motion/CMotionManager.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1154-L1154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5711,7 +5711,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LimitPlusOn` · L1154–1154
 
-[Drilling.Common/Motion/CMotionManager.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1154-L1154)
+[Drilling.Common/Motion/CMotionManager.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1154-L1154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5726,7 +5726,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_LimitPlusOn` · L1154–1154
 
-[Drilling.Common/Motion/CMotionManager.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1154-L1154)
+[Drilling.Common/Motion/CMotionManager.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1154-L1154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5747,7 +5747,7 @@ flowchart TD
 
 ### PropertyDeclaration `LimitMinusOn` · L1155–1155
 
-[Drilling.Common/Motion/CMotionManager.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1155-L1155)
+[Drilling.Common/Motion/CMotionManager.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1155-L1155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5762,7 +5762,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LimitMinusOn` · L1155–1155
 
-[Drilling.Common/Motion/CMotionManager.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1155-L1155)
+[Drilling.Common/Motion/CMotionManager.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1155-L1155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5777,7 +5777,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_LimitMinusOn` · L1155–1155
 
-[Drilling.Common/Motion/CMotionManager.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1155-L1155)
+[Drilling.Common/Motion/CMotionManager.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1155-L1155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5798,7 +5798,7 @@ flowchart TD
 
 ### PropertyDeclaration `AlarmOn` · L1156–1156
 
-[Drilling.Common/Motion/CMotionManager.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1156-L1156)
+[Drilling.Common/Motion/CMotionManager.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1156-L1156)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5813,7 +5813,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AlarmOn` · L1156–1156
 
-[Drilling.Common/Motion/CMotionManager.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1156-L1156)
+[Drilling.Common/Motion/CMotionManager.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1156-L1156)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5828,7 +5828,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_AlarmOn` · L1156–1156
 
-[Drilling.Common/Motion/CMotionManager.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1156-L1156)
+[Drilling.Common/Motion/CMotionManager.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1156-L1156)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5849,7 +5849,7 @@ flowchart TD
 
 ### PropertyDeclaration `DisplayOrder` · L1157–1157
 
-[Drilling.Common/Motion/CMotionManager.cs:1157–1157](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1157-L1157)
+[Drilling.Common/Motion/CMotionManager.cs:1157–1157](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1157-L1157)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5864,7 +5864,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DisplayOrder` · L1157–1157
 
-[Drilling.Common/Motion/CMotionManager.cs:1157–1157](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1157-L1157)
+[Drilling.Common/Motion/CMotionManager.cs:1157–1157](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1157-L1157)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5879,7 +5879,7 @@ flowchart TD
 
 ### PropertyDeclaration `Id` · L1162–1162
 
-[Drilling.Common/Motion/CMotionManager.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1162-L1162)
+[Drilling.Common/Motion/CMotionManager.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1162-L1162)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5894,7 +5894,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Id` · L1162–1162
 
-[Drilling.Common/Motion/CMotionManager.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1162-L1162)
+[Drilling.Common/Motion/CMotionManager.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1162-L1162)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5909,7 +5909,7 @@ flowchart TD
 
 ### PropertyDeclaration `Address` · L1163–1163
 
-[Drilling.Common/Motion/CMotionManager.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1163-L1163)
+[Drilling.Common/Motion/CMotionManager.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1163-L1163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5924,7 +5924,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Address` · L1163–1163
 
-[Drilling.Common/Motion/CMotionManager.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1163-L1163)
+[Drilling.Common/Motion/CMotionManager.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1163-L1163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5939,7 +5939,7 @@ flowchart TD
 
 ### PropertyDeclaration `Name` · L1164–1164
 
-[Drilling.Common/Motion/CMotionManager.cs:1164–1164](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1164-L1164)
+[Drilling.Common/Motion/CMotionManager.cs:1164–1164](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1164-L1164)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5954,7 +5954,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Name` · L1164–1164
 
-[Drilling.Common/Motion/CMotionManager.cs:1164–1164](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1164-L1164)
+[Drilling.Common/Motion/CMotionManager.cs:1164–1164](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1164-L1164)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5969,7 +5969,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsOn` · L1165–1165
 
-[Drilling.Common/Motion/CMotionManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1165-L1165)
+[Drilling.Common/Motion/CMotionManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1165-L1165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5984,7 +5984,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsOn` · L1165–1165
 
-[Drilling.Common/Motion/CMotionManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1165-L1165)
+[Drilling.Common/Motion/CMotionManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1165-L1165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5999,7 +5999,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_IsOn` · L1165–1165
 
-[Drilling.Common/Motion/CMotionManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1165-L1165)
+[Drilling.Common/Motion/CMotionManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1165-L1165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6020,7 +6020,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsOutput` · L1166–1166
 
-[Drilling.Common/Motion/CMotionManager.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1166-L1166)
+[Drilling.Common/Motion/CMotionManager.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1166-L1166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6035,7 +6035,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsOutput` · L1166–1166
 
-[Drilling.Common/Motion/CMotionManager.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1166-L1166)
+[Drilling.Common/Motion/CMotionManager.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1166-L1166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6050,7 +6050,7 @@ flowchart TD
 
 ### PropertyDeclaration `DevType` · L1167–1167
 
-[Drilling.Common/Motion/CMotionManager.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1167-L1167)
+[Drilling.Common/Motion/CMotionManager.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1167-L1167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6065,7 +6065,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DevType` · L1167–1167
 
-[Drilling.Common/Motion/CMotionManager.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1167-L1167)
+[Drilling.Common/Motion/CMotionManager.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1167-L1167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6080,7 +6080,7 @@ flowchart TD
 
 ### PropertyDeclaration `DevNo` · L1168–1168
 
-[Drilling.Common/Motion/CMotionManager.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1168-L1168)
+[Drilling.Common/Motion/CMotionManager.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1168-L1168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6095,7 +6095,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DevNo` · L1168–1168
 
-[Drilling.Common/Motion/CMotionManager.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1168-L1168)
+[Drilling.Common/Motion/CMotionManager.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1168-L1168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6110,7 +6110,7 @@ flowchart TD
 
 ### PropertyDeclaration `DisplayOrder` · L1169–1169
 
-[Drilling.Common/Motion/CMotionManager.cs:1169–1169](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1169-L1169)
+[Drilling.Common/Motion/CMotionManager.cs:1169–1169](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1169-L1169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6125,7 +6125,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DisplayOrder` · L1169–1169
 
-[Drilling.Common/Motion/CMotionManager.cs:1169–1169](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1169-L1169)
+[Drilling.Common/Motion/CMotionManager.cs:1169–1169](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1169-L1169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6140,7 +6140,7 @@ flowchart TD
 
 ### PropertyDeclaration `Description` · L1170–1170
 
-[Drilling.Common/Motion/CMotionManager.cs:1170–1170](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1170-L1170)
+[Drilling.Common/Motion/CMotionManager.cs:1170–1170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1170-L1170)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6155,7 +6155,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Description` · L1170–1170
 
-[Drilling.Common/Motion/CMotionManager.cs:1170–1170](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1170-L1170)
+[Drilling.Common/Motion/CMotionManager.cs:1170–1170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1170-L1170)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6170,7 +6170,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `StageY` · L1176–1176
 
-[Drilling.Common/Motion/CMotionManager.cs:1176–1176](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1176-L1176)
+[Drilling.Common/Motion/CMotionManager.cs:1176–1176](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1176-L1176)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6185,7 +6185,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ReviewX` · L1177–1177
 
-[Drilling.Common/Motion/CMotionManager.cs:1177–1177](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1177-L1177)
+[Drilling.Common/Motion/CMotionManager.cs:1177–1177](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1177-L1177)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6200,7 +6200,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsMoving` · L1182–1182
 
-[Drilling.Common/Motion/CMotionManager.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1182-L1182)
+[Drilling.Common/Motion/CMotionManager.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1182-L1182)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6215,7 +6215,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsMoving` · L1182–1182
 
-[Drilling.Common/Motion/CMotionManager.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1182-L1182)
+[Drilling.Common/Motion/CMotionManager.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1182-L1182)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6230,7 +6230,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_IsMoving` · L1182–1182
 
-[Drilling.Common/Motion/CMotionManager.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1182-L1182)
+[Drilling.Common/Motion/CMotionManager.cs:1182–1182](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1182-L1182)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6251,7 +6251,7 @@ flowchart TD
 
 ### FieldDeclaration `MoveSpeed` · L1188–1188
 
-[Drilling.Common/Motion/CMotionManager.cs:1188–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1188-L1188)
+[Drilling.Common/Motion/CMotionManager.cs:1188–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1188-L1188)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6272,7 +6272,7 @@ flowchart TD
 
 ### FieldDeclaration `_sync` · L1189–1189
 
-[Drilling.Common/Motion/CMotionManager.cs:1189–1189](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1189-L1189)
+[Drilling.Common/Motion/CMotionManager.cs:1189–1189](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1189-L1189)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6300,7 +6300,7 @@ flowchart TD
 
 ### FieldDeclaration `_clock` · L1190–1190
 
-[Drilling.Common/Motion/CMotionManager.cs:1190–1190](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1190-L1190)
+[Drilling.Common/Motion/CMotionManager.cs:1190–1190](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1190-L1190)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6328,7 +6328,7 @@ flowchart TD
 
 ### FieldDeclaration `_axes` · L1191–1195
 
-[Drilling.Common/Motion/CMotionManager.cs:1191–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1191-L1195)
+[Drilling.Common/Motion/CMotionManager.cs:1191–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1191-L1195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6362,7 +6362,7 @@ flowchart TD
 
 ### FieldDeclaration `_updatedAt` · L1196–1196
 
-[Drilling.Common/Motion/CMotionManager.cs:1196–1196](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1196-L1196)
+[Drilling.Common/Motion/CMotionManager.cs:1196–1196](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1196-L1196)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6377,7 +6377,7 @@ flowchart TD
 
 ### FieldDeclaration `_lease` · L1197–1197
 
-[Drilling.Common/Motion/CMotionManager.cs:1197–1197](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1197-L1197)
+[Drilling.Common/Motion/CMotionManager.cs:1197–1197](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1197-L1197)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6392,7 +6392,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsReserved` · L1198–1205
 
-[Drilling.Common/Motion/CMotionManager.cs:1198–1205](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1198-L1205)
+[Drilling.Common/Motion/CMotionManager.cs:1198–1205](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1198-L1205)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6407,7 +6407,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsReserved` · L1200–1204
 
-[Drilling.Common/Motion/CMotionManager.cs:1200–1204](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1200-L1204)
+[Drilling.Common/Motion/CMotionManager.cs:1200–1204](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1200-L1204)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6438,7 +6438,7 @@ flowchart TD
 
 ### MethodDeclaration `AcquireExclusiveMotion` · L1207–1216
 
-[Drilling.Common/Motion/CMotionManager.cs:1207–1216](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1207-L1216)
+[Drilling.Common/Motion/CMotionManager.cs:1207–1216](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1207-L1216)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6457,7 +6457,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStageReviewSequences.cs#L257-L257) | _motion.AcquireExclusiveMotion | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStageReviewSequences.cs#L257-L257) | _motion.AcquireExclusiveMotion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6499,7 +6499,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSnapshot` · L1218–1225
 
-[Drilling.Common/Motion/CMotionManager.cs:1218–1225](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1218-L1225)
+[Drilling.Common/Motion/CMotionManager.cs:1218–1225](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1218-L1225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6512,10 +6512,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:2170–2170](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L2170-L2170) | GetStageMotionSimulation(deviceNo).GetSnapshot | False |
-| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L193-L193) | _simulation.GetSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7429–7429](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7429-L7429) | _simulation().GetSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7463–7463](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7463-L7463) | _simulation().GetSnapshot | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:2170–2170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L2170-L2170) | GetStageMotionSimulation(deviceNo).GetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L193-L193) | _simulation.GetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7404–7404](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7404-L7404) | _simulation().GetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7438–7438](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7438-L7438) | _simulation().GetSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6551,7 +6551,7 @@ flowchart TD
 
 ### MethodDeclaration `Move` · L1227–1227
 
-[Drilling.Common/Motion/CMotionManager.cs:1227–1227](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1227-L1227)
+[Drilling.Common/Motion/CMotionManager.cs:1227–1227](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1227-L1227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6573,8 +6573,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L226-L226) | _simulation.Move | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7472–7472](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7472-L7472) | _simulation!().Move | False |
+| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L226-L226) | _simulation.Move | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7447–7447](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7447-L7447) | _simulation!().Move | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6592,7 +6592,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveCore` · L1228–1250
 
-[Drilling.Common/Motion/CMotionManager.cs:1228–1250](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1228-L1250)
+[Drilling.Common/Motion/CMotionManager.cs:1228–1250](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1228-L1250)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6616,8 +6616,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1227–1227](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1227-L1227) | MoveCore | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1364-L1364) | _owner.MoveCore | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1227–1227](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1227-L1227) | MoveCore | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1364-L1364) | _owner.MoveCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6700,7 +6700,7 @@ flowchart TD
 
 ### MethodDeclaration `StartJog` · L1252–1270
 
-[Drilling.Common/Motion/CMotionManager.cs:1252–1270](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1252-L1270)
+[Drilling.Common/Motion/CMotionManager.cs:1252–1270](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1252-L1270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6720,7 +6720,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L246-L246) | _simulation.StartJog | False |
+| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L246-L246) | _simulation.StartJog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6767,7 +6767,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L1272–1284
 
-[Drilling.Common/Motion/CMotionManager.cs:1272–1284](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1272-L1284)
+[Drilling.Common/Motion/CMotionManager.cs:1272–1284](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1272-L1284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6780,7 +6780,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L254-L254) | _simulation.Stop | False |
+| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L254-L254) | _simulation.Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6814,7 +6814,7 @@ flowchart TD
 
 ### MethodDeclaration `StopJog` · L1286–1294
 
-[Drilling.Common/Motion/CMotionManager.cs:1286–1294](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1286-L1294)
+[Drilling.Common/Motion/CMotionManager.cs:1286–1294](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1286-L1294)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6827,7 +6827,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L151-L151) | _simulation.StopJog | False |
+| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L151-L151) | _simulation.StopJog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6861,7 +6861,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L1296–1305
 
-[Drilling.Common/Motion/CMotionManager.cs:1296–1305](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1296-L1305)
+[Drilling.Common/Motion/CMotionManager.cs:1296–1305](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1296-L1305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6880,9 +6880,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStageReviewSequences.cs#L495-L495) | .Stop | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:497–497](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStageReviewSequences.cs#L497-L497) | .Stop | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7497–7497](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7497-L7497) | _simulation!().Stop | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStageReviewSequences.cs#L495-L495) | .Stop | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:497–497](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStageReviewSequences.cs#L497-L497) | .Stop | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7472–7472](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7472-L7472) | _simulation!().Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6913,7 +6913,7 @@ flowchart TD
 
 ### MethodDeclaration `Advance` · L1307–1348
 
-[Drilling.Common/Motion/CMotionManager.cs:1307–1348](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1307-L1348)
+[Drilling.Common/Motion/CMotionManager.cs:1307–1348](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1307-L1348)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6926,14 +6926,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1211–1211](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1211-L1211) | Advance | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1222–1222](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1222-L1222) | Advance | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1238–1238](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1238-L1238) | Advance | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1260–1260](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1260-L1260) | Advance | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1276–1276](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1276-L1276) | Advance | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1290–1290](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1290-L1290) | Advance | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1300-L1300) | Advance | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1374–1374](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1374-L1374) | _owner.Advance | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1211–1211](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1211-L1211) | Advance | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1222–1222](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1222-L1222) | Advance | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1238–1238](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1238-L1238) | Advance | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1260–1260](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1260-L1260) | Advance | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1276–1276](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1276-L1276) | Advance | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1290–1290](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1290-L1290) | Advance | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1300-L1300) | Advance | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1374–1374](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1374-L1374) | _owner.Advance | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7020,7 +7020,7 @@ flowchart TD
 
 ### FieldDeclaration `Position` · L1352–1352
 
-[Drilling.Common/Motion/CMotionManager.cs:1352–1352](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1352-L1352)
+[Drilling.Common/Motion/CMotionManager.cs:1352–1352](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1352-L1352)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7035,7 +7035,7 @@ flowchart TD
 
 ### FieldDeclaration `Speed` · L1353–1353
 
-[Drilling.Common/Motion/CMotionManager.cs:1353–1353](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1353-L1353)
+[Drilling.Common/Motion/CMotionManager.cs:1353–1353](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1353-L1353)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7050,7 +7050,7 @@ flowchart TD
 
 ### FieldDeclaration `Target` · L1354–1354
 
-[Drilling.Common/Motion/CMotionManager.cs:1354–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1354-L1354)
+[Drilling.Common/Motion/CMotionManager.cs:1354–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1354-L1354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7065,7 +7065,7 @@ flowchart TD
 
 ### FieldDeclaration `Profile` · L1355–1355
 
-[Drilling.Common/Motion/CMotionManager.cs:1355–1355](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1355-L1355)
+[Drilling.Common/Motion/CMotionManager.cs:1355–1355](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1355-L1355)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7080,7 +7080,7 @@ flowchart TD
 
 ### FieldDeclaration `ProfileStart` · L1356–1356
 
-[Drilling.Common/Motion/CMotionManager.cs:1356–1356](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1356-L1356)
+[Drilling.Common/Motion/CMotionManager.cs:1356–1356](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1356-L1356)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7095,7 +7095,7 @@ flowchart TD
 
 ### FieldDeclaration `ProfileOrigin` · L1357–1357
 
-[Drilling.Common/Motion/CMotionManager.cs:1357–1357](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1357-L1357)
+[Drilling.Common/Motion/CMotionManager.cs:1357–1357](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1357-L1357)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7110,7 +7110,7 @@ flowchart TD
 
 ### FieldDeclaration `_owner` · L1362–1362
 
-[Drilling.Common/Motion/CMotionManager.cs:1362–1362](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1362-L1362)
+[Drilling.Common/Motion/CMotionManager.cs:1362–1362](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1362-L1362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7125,7 +7125,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L1363–1363
 
-[Drilling.Common/Motion/CMotionManager.cs:1363–1363](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1363-L1363)
+[Drilling.Common/Motion/CMotionManager.cs:1363–1363](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1363-L1363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7144,7 +7144,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1214–1214](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1214-L1214) | new MotionLease | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1214–1214](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1214-L1214) | new MotionLease | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -7156,7 +7156,7 @@ flowchart TD
 
 ### MethodDeclaration `Move` · L1364–1364
 
-[Drilling.Common/Motion/CMotionManager.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1364-L1364)
+[Drilling.Common/Motion/CMotionManager.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1364-L1364)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7178,9 +7178,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:595–595](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStageReviewSequences.cs#L595-L595) | _lease!.Move | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStageReviewSequences.cs#L597-L597) | _lease!.Move | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:853–853](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStageReviewSequences.cs#L853-L853) | _lease!.Move | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:595–595](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStageReviewSequences.cs#L595-L595) | _lease!.Move | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:597–597](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStageReviewSequences.cs#L597-L597) | _lease!.Move | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:853–853](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStageReviewSequences.cs#L853-L853) | _lease!.Move | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7198,7 +7198,7 @@ flowchart TD
 
 ### MethodDeclaration `SetReportedPosition` · L1366–1381
 
-[Drilling.Common/Motion/CMotionManager.cs:1366–1381](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1366-L1381)
+[Drilling.Common/Motion/CMotionManager.cs:1366–1381](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1366-L1381)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7224,7 +7224,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:835–835](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStageReviewSequences.cs#L835-L835) | _lease!.SetReportedPosition | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:835–835](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStageReviewSequences.cs#L835-L835) | _lease!.SetReportedPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7276,7 +7276,7 @@ flowchart TD
 
 ### MethodDeclaration `Dispose` · L1383–1388
 
-[Drilling.Common/Motion/CMotionManager.cs:1383–1388](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1383-L1388)
+[Drilling.Common/Motion/CMotionManager.cs:1383–1388](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1383-L1388)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7289,7 +7289,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStageReviewSequences.cs#L505-L505) | .Dispose | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStageReviewSequences.cs#L505-L505) | .Dispose | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7321,7 +7321,7 @@ flowchart TD
 
 ### PropertyDeclaration `ControllerNames` · L1395–1395
 
-[Drilling.Common/Motion/CMotionManager.cs:1395–1395](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1395-L1395)
+[Drilling.Common/Motion/CMotionManager.cs:1395–1395](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1395-L1395)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7356,7 +7356,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ControllerNames` · L1395–1395
 
-[Drilling.Common/Motion/CMotionManager.cs:1395–1395](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1395-L1395)
+[Drilling.Common/Motion/CMotionManager.cs:1395–1395](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1395-L1395)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7371,7 +7371,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeControllerName` · L1397–1400
 
-[Drilling.Common/Motion/CMotionManager.cs:1397–1400](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1397-L1400)
+[Drilling.Common/Motion/CMotionManager.cs:1397–1400](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1397-L1400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7409,7 +7409,7 @@ flowchart TD
 
 ### FieldDeclaration `_interfaceManager` · L1405–1405
 
-[Drilling.Common/Motion/CMotionManager.cs:1405–1405](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1405-L1405)
+[Drilling.Common/Motion/CMotionManager.cs:1405–1405](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1405-L1405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7430,7 +7430,7 @@ flowchart TD
 
 ### PropertyDeclaration `Controller` · L1406–1406
 
-[Drilling.Common/Motion/CMotionManager.cs:1406–1406](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1406-L1406)
+[Drilling.Common/Motion/CMotionManager.cs:1406–1406](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1406-L1406)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7459,7 +7459,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Controller` · L1406–1406
 
-[Drilling.Common/Motion/CMotionManager.cs:1406–1406](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1406-L1406)
+[Drilling.Common/Motion/CMotionManager.cs:1406–1406](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1406-L1406)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7474,7 +7474,7 @@ flowchart TD
 
 ### PropertyDeclaration `DeviceNo` · L1407–1407
 
-[Drilling.Common/Motion/CMotionManager.cs:1407–1407](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1407-L1407)
+[Drilling.Common/Motion/CMotionManager.cs:1407–1407](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1407-L1407)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7489,7 +7489,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DeviceNo` · L1407–1407
 
-[Drilling.Common/Motion/CMotionManager.cs:1407–1407](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1407-L1407)
+[Drilling.Common/Motion/CMotionManager.cs:1407–1407](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1407-L1407)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7504,7 +7504,7 @@ flowchart TD
 
 ### PropertyDeclaration `PrimaryModule` · L1409–1415
 
-[Drilling.Common/Motion/CMotionManager.cs:1409–1415](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1409-L1415)
+[Drilling.Common/Motion/CMotionManager.cs:1409–1415](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1409-L1415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7519,7 +7519,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PrimaryModule` · L1411–1414
 
-[Drilling.Common/Motion/CMotionManager.cs:1411–1414](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1411-L1414)
+[Drilling.Common/Motion/CMotionManager.cs:1411–1414](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1411-L1414)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7540,7 +7540,7 @@ flowchart TD
 
 ### PropertyDeclaration `CommandPrefix` · L1417–1417
 
-[Drilling.Common/Motion/CMotionManager.cs:1417–1417](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1417-L1417)
+[Drilling.Common/Motion/CMotionManager.cs:1417–1417](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1417-L1417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7555,7 +7555,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CommandPrefix` · L1417–1417
 
-[Drilling.Common/Motion/CMotionManager.cs:1417–1417](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1417-L1417)
+[Drilling.Common/Motion/CMotionManager.cs:1417–1417](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1417-L1417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7570,7 +7570,7 @@ flowchart TD
 
 ### MethodDeclaration `IsSimulation` · L1419–1423
 
-[Drilling.Common/Motion/CMotionManager.cs:1419–1423](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1419-L1423)
+[Drilling.Common/Motion/CMotionManager.cs:1419–1423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1419-L1423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7583,14 +7583,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L79-L79) | controller.IsSimulation | False |
-| [Drilling.Common/Motion/CMotionManager.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L117-L117) | controller.IsSimulation | False |
-| [Drilling.Common/Motion/CMotionManager.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L158-L158) | controller.IsSimulation | False |
-| [Drilling.Common/Motion/CMotionManager.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L305-L305) | .IsSimulation | False |
-| [Drilling.Common/Motion/CMotionManager.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L390-L390) | controller.IsSimulation | False |
-| [Drilling.Common/Motion/CMotionManager.cs:419–419](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L419-L419) | controller.IsSimulation | False |
-| [Drilling.Common/Motion/CMotionManager.cs:541–541](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L541-L541) | controller.IsSimulation | False |
-| [Drilling.Common/Motion/CMotionManager.cs:571–571](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L571-L571) | controller.IsSimulation | False |
+| [Drilling.Common/Motion/CMotionManager.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L79-L79) | controller.IsSimulation | False |
+| [Drilling.Common/Motion/CMotionManager.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L117-L117) | controller.IsSimulation | False |
+| [Drilling.Common/Motion/CMotionManager.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L158-L158) | controller.IsSimulation | False |
+| [Drilling.Common/Motion/CMotionManager.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L305-L305) | .IsSimulation | False |
+| [Drilling.Common/Motion/CMotionManager.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L390-L390) | controller.IsSimulation | False |
+| [Drilling.Common/Motion/CMotionManager.cs:419–419](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L419-L419) | controller.IsSimulation | False |
+| [Drilling.Common/Motion/CMotionManager.cs:541–541](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L541-L541) | controller.IsSimulation | False |
+| [Drilling.Common/Motion/CMotionManager.cs:571–571](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L571-L571) | controller.IsSimulation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7613,7 +7613,7 @@ flowchart TD
 
 ### MethodDeclaration `Initialize` · L1425–1438
 
-[Drilling.Common/Motion/CMotionManager.cs:1425–1438](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1425-L1438)
+[Drilling.Common/Motion/CMotionManager.cs:1425–1438](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1425-L1438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7633,7 +7633,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L122-L122) | controller.Initialize | True |
+| [Drilling.Common/Motion/CMotionManager.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L122-L122) | controller.Initialize | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7674,7 +7674,7 @@ flowchart TD
 
 ### MethodDeclaration `Destroy` · L1440–1453
 
-[Drilling.Common/Motion/CMotionManager.cs:1440–1453](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1440-L1453)
+[Drilling.Common/Motion/CMotionManager.cs:1440–1453](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1440-L1453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7693,7 +7693,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L131-L131) | controller.Destroy | True |
+| [Drilling.Common/Motion/CMotionManager.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L131-L131) | controller.Destroy | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7734,7 +7734,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteAxisCommand` · L1455–1458
 
-[Drilling.Common/Motion/CMotionManager.cs:1455–1458](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1455-L1458)
+[Drilling.Common/Motion/CMotionManager.cs:1455–1458](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1455-L1458)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7757,7 +7757,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:392–392](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L392-L392) | controller.ExecuteAxisCommand | True |
+| [Drilling.Common/Motion/CMotionManager.cs:392–392](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L392-L392) | controller.ExecuteAxisCommand | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7778,7 +7778,7 @@ flowchart TD
 
 ### MethodDeclaration `SetOutput` · L1460–1463
 
-[Drilling.Common/Motion/CMotionManager.cs:1460–1463](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1460-L1463)
+[Drilling.Common/Motion/CMotionManager.cs:1460–1463](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1460-L1463)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7799,7 +7799,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L421-L421) | controller.SetOutput | True |
+| [Drilling.Common/Motion/CMotionManager.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L421-L421) | controller.SetOutput | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7819,7 +7819,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisStatus` · L1465–1469
 
-[Drilling.Common/Motion/CMotionManager.cs:1465–1469](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1465-L1469)
+[Drilling.Common/Motion/CMotionManager.cs:1465–1469](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1465-L1469)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7839,7 +7839,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:578–578](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L578-L578) | controller.ReadAxisStatus | True |
+| [Drilling.Common/Motion/CMotionManager.cs:578–578](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L578-L578) | controller.ReadAxisStatus | True |
 
 호출하는 대상과 해석 범위:
 
@@ -7868,7 +7868,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisStatusAsync` · L1471–1480
 
-[Drilling.Common/Motion/CMotionManager.cs:1471–1480](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1471-L1480)
+[Drilling.Common/Motion/CMotionManager.cs:1471–1480](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1471-L1480)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7888,7 +7888,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L162-L162) | controller.ReadAxisStatusAsync | False |
+| [Drilling.Common/Motion/CMotionManager.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L162-L162) | controller.ReadAxisStatusAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7939,7 +7939,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadIo` · L1482–1487
 
-[Drilling.Common/Motion/CMotionManager.cs:1482–1487](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1482-L1487)
+[Drilling.Common/Motion/CMotionManager.cs:1482–1487](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1482-L1487)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7991,7 +7991,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildAxisCommand` · L1489–1508
 
-[Drilling.Common/Motion/CMotionManager.cs:1489–1508](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1489-L1508)
+[Drilling.Common/Motion/CMotionManager.cs:1489–1508](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1489-L1508)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8013,9 +8013,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1457–1457](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1457-L1457) | BuildAxisCommand | True |
-| [Drilling.Common/Motion/CMotionManager.cs:1467–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1467-L1467) | BuildAxisCommand | True |
-| [Drilling.Common/Motion/CMotionManager.cs:1477–1477](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1477-L1477) | BuildAxisCommand | True |
+| [Drilling.Common/Motion/CMotionManager.cs:1457–1457](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1457-L1457) | BuildAxisCommand | True |
+| [Drilling.Common/Motion/CMotionManager.cs:1467–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1467-L1467) | BuildAxisCommand | True |
+| [Drilling.Common/Motion/CMotionManager.cs:1477–1477](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1477-L1477) | BuildAxisCommand | True |
 
 호출하는 대상과 해석 범위:
 
@@ -8074,7 +8074,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatProtocolDouble` · L1510–1518
 
-[Drilling.Common/Motion/CMotionManager.cs:1510–1518](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1510-L1518)
+[Drilling.Common/Motion/CMotionManager.cs:1510–1518](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1510-L1518)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8094,22 +8094,22 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1496–1496](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1496-L1496) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1497–1497](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1497-L1497) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1498–1498](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1498-L1498) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1498–1498](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1498-L1498) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1499–1499](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1499-L1499) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1499–1499](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1499-L1499) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1500–1500](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1500-L1500) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1500–1500](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1500-L1500) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsMotion.cs#L29-L29) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsMotion.cs#L30-L30) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsMotion.cs#L31-L31) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsMotion.cs#L31-L31) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsMotion.cs#L32-L32) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsMotion.cs#L32-L32) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsMotion.cs#L33-L33) | FormatProtocolDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsMotion.cs#L33-L33) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1496–1496](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1496-L1496) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1497–1497](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1497-L1497) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1498–1498](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1498-L1498) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1498–1498](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1498-L1498) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1499–1499](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1499-L1499) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1499–1499](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1499-L1499) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1500–1500](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1500-L1500) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1500–1500](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1500-L1500) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L29-L29) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L30-L30) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L31-L31) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L31-L31) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L32-L32) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L32-L32) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L33-L33) | FormatProtocolDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L33-L33) | FormatProtocolDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8143,7 +8143,7 @@ flowchart TD
 
 ### MethodDeclaration `RequireSecondaryParameter` · L1520–1528
 
-[Drilling.Common/Motion/CMotionManager.cs:1520–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1520-L1528)
+[Drilling.Common/Motion/CMotionManager.cs:1520–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1520-L1528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8163,12 +8163,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1498–1498](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1498-L1498) | RequireSecondaryParameter | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1499–1499](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1499-L1499) | RequireSecondaryParameter | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1500–1500](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1500-L1500) | RequireSecondaryParameter | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsMotion.cs#L31-L31) | RequireSecondaryParameter | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsMotion.cs#L32-L32) | RequireSecondaryParameter | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/XPS/CXpsMotion.cs#L33-L33) | RequireSecondaryParameter | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1498–1498](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1498-L1498) | RequireSecondaryParameter | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1499–1499](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1499-L1499) | RequireSecondaryParameter | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1500–1500](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1500-L1500) | RequireSecondaryParameter | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L31-L31) | RequireSecondaryParameter | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L32-L32) | RequireSecondaryParameter | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L33-L33) | RequireSecondaryParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8198,7 +8198,7 @@ flowchart TD
 
 ### MethodDeclaration `Send` · L1530–1594
 
-[Drilling.Common/Motion/CMotionManager.cs:1530–1594](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1530-L1594)
+[Drilling.Common/Motion/CMotionManager.cs:1530–1594](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1530-L1594)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8218,11 +8218,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1457–1457](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1457-L1457) | Send | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1462–1462](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1462-L1462) | Send | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1467–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1467-L1467) | Send | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1477–1477](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1477-L1477) | Send | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1484–1484](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1484-L1484) | Send | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1457–1457](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1457-L1457) | Send | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1462–1462](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1462-L1462) | Send | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1467–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1467-L1467) | Send | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1477–1477](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1477-L1477) | Send | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1484–1484](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1484-L1484) | Send | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8342,7 +8342,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPriorityStopTimeoutMs` · L1596–1605
 
-[Drilling.Common/Motion/CMotionManager.cs:1596–1605](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1596-L1605)
+[Drilling.Common/Motion/CMotionManager.cs:1596–1605](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1596-L1605)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8361,7 +8361,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1564–1564](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1564-L1564) | GetPriorityStopTimeoutMs | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1564–1564](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1564-L1564) | GetPriorityStopTimeoutMs | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8383,7 +8383,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L1598–1601
 
-[Drilling.Common/Motion/CMotionManager.cs:1598–1601](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1598-L1601)
+[Drilling.Common/Motion/CMotionManager.cs:1598–1601](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1598-L1601)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8410,7 +8410,7 @@ flowchart TD
 
 ### MethodDeclaration `IsPriorityXpsStopCommand` · L1607–1610
 
-[Drilling.Common/Motion/CMotionManager.cs:1607–1610](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1607-L1610)
+[Drilling.Common/Motion/CMotionManager.cs:1607–1610](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1607-L1610)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8429,7 +8429,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1532–1532](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1532-L1532) | IsPriorityXpsStopCommand | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1532–1532](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1532-L1532) | IsPriorityXpsStopCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8452,7 +8452,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParseAxisStatus` · L1612–1628
 
-[Drilling.Common/Motion/CMotionManager.cs:1612–1628](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1612-L1628)
+[Drilling.Common/Motion/CMotionManager.cs:1612–1628](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1612-L1628)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8472,8 +8472,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1468–1468](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1468-L1468) | TryParseAxisStatus | True |
-| [Drilling.Common/Motion/CMotionManager.cs:1479–1479](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1479-L1479) | TryParseAxisStatus | True |
+| [Drilling.Common/Motion/CMotionManager.cs:1468–1468](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1468-L1468) | TryParseAxisStatus | True |
+| [Drilling.Common/Motion/CMotionManager.cs:1479–1479](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1479-L1479) | TryParseAxisStatus | True |
 
 호출하는 대상과 해석 범위:
 
@@ -8537,7 +8537,7 @@ flowchart TD
 
 ### MethodDeclaration `GetInterfaceData` · L1630–1664
 
-[Drilling.Common/Motion/CMotionManager.cs:1630–1664](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1630-L1664)
+[Drilling.Common/Motion/CMotionManager.cs:1630–1664](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1630-L1664)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8550,11 +8550,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1421–1421](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1421-L1421) | GetInterfaceData | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1428–1428](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1428-L1428) | GetInterfaceData | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1443–1443](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1443-L1443) | GetInterfaceData | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1474–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1474-L1474) | GetInterfaceData | False |
-| [Drilling.Common/Motion/CMotionManager.cs:1538–1538](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1538-L1538) | GetInterfaceData | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1421–1421](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1421-L1421) | GetInterfaceData | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1428–1428](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1428-L1428) | GetInterfaceData | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1443–1443](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1443-L1443) | GetInterfaceData | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1474–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1474-L1474) | GetInterfaceData | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1538–1538](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1538-L1538) | GetInterfaceData | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8604,7 +8604,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L1637–1640
 
-[Drilling.Common/Motion/CMotionManager.cs:1637–1640](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1637-L1640)
+[Drilling.Common/Motion/CMotionManager.cs:1637–1640](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1637-L1640)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8631,7 +8631,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectNickName` · L1642–1645
 
-[Drilling.Common/Motion/CMotionManager.cs:1642–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1642-L1645)
+[Drilling.Common/Motion/CMotionManager.cs:1642–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1642-L1645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8658,7 +8658,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesNumber` · L1653–1656
 
-[Drilling.Common/Motion/CMotionManager.cs:1653–1656](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1653-L1656)
+[Drilling.Common/Motion/CMotionManager.cs:1653–1656](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1653-L1656)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8685,7 +8685,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectNickName2` · L1658–1661
 
-[Drilling.Common/Motion/CMotionManager.cs:1658–1661](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1658-L1661)
+[Drilling.Common/Motion/CMotionManager.cs:1658–1661](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1658-L1661)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8712,7 +8712,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ServoOn` · L1669–1669
 
-[Drilling.Common/Motion/CMotionManager.cs:1669–1669](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1669-L1669)
+[Drilling.Common/Motion/CMotionManager.cs:1669–1669](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1669-L1669)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8727,7 +8727,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ServoOff` · L1670–1670
 
-[Drilling.Common/Motion/CMotionManager.cs:1670–1670](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1670-L1670)
+[Drilling.Common/Motion/CMotionManager.cs:1670–1670](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1670-L1670)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8742,7 +8742,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Home` · L1671–1671
 
-[Drilling.Common/Motion/CMotionManager.cs:1671–1671](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1671-L1671)
+[Drilling.Common/Motion/CMotionManager.cs:1671–1671](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1671-L1671)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8757,7 +8757,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MoveAbs` · L1672–1672
 
-[Drilling.Common/Motion/CMotionManager.cs:1672–1672](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1672-L1672)
+[Drilling.Common/Motion/CMotionManager.cs:1672–1672](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1672-L1672)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8772,7 +8772,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MoveRel` · L1673–1673
 
-[Drilling.Common/Motion/CMotionManager.cs:1673–1673](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1673-L1673)
+[Drilling.Common/Motion/CMotionManager.cs:1673–1673](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1673-L1673)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8787,7 +8787,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Stop` · L1674–1674
 
-[Drilling.Common/Motion/CMotionManager.cs:1674–1674](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1674-L1674)
+[Drilling.Common/Motion/CMotionManager.cs:1674–1674](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1674-L1674)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8802,7 +8802,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ResetAlarm` · L1675–1675
 
-[Drilling.Common/Motion/CMotionManager.cs:1675–1675](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1675-L1675)
+[Drilling.Common/Motion/CMotionManager.cs:1675–1675](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1675-L1675)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8817,7 +8817,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetProfile` · L1676–1676
 
-[Drilling.Common/Motion/CMotionManager.cs:1676–1676](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1676-L1676)
+[Drilling.Common/Motion/CMotionManager.cs:1676–1676](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1676-L1676)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8832,7 +8832,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `JogPositive` · L1677–1677
 
-[Drilling.Common/Motion/CMotionManager.cs:1677–1677](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1677-L1677)
+[Drilling.Common/Motion/CMotionManager.cs:1677–1677](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1677-L1677)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8847,7 +8847,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `JogNegative` · L1678–1678
 
-[Drilling.Common/Motion/CMotionManager.cs:1678–1678](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1678-L1678)
+[Drilling.Common/Motion/CMotionManager.cs:1678–1678](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1678-L1678)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8862,7 +8862,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `JogStop` · L1679–1679
 
-[Drilling.Common/Motion/CMotionManager.cs:1679–1679](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1679-L1679)
+[Drilling.Common/Motion/CMotionManager.cs:1679–1679](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1679-L1679)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8877,7 +8877,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Refresh` · L1680–1680
 
-[Drilling.Common/Motion/CMotionManager.cs:1680–1680](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1680-L1680)
+[Drilling.Common/Motion/CMotionManager.cs:1680–1680](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1680-L1680)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8892,7 +8892,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadAll` · L1746–1746
 
-[Drilling.Common/Motion/CMotionManager.cs:1746–1746](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1746-L1746)
+[Drilling.Common/Motion/CMotionManager.cs:1746–1746](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1746-L1746)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8911,13 +8911,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L507-L507) | _motorFile.LoadAll | False |
+| [Drilling.Common/Managers/CManager.cs:515–515](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CManager.cs#L515-L515) | _motorFile.LoadAll | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### ConstructorDeclaration `.ctor` · L1752–1767
 
-[Drilling.Common/Motion/CMotionManager.cs:1752–1767](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1752-L1767)
+[Drilling.Common/Motion/CMotionManager.cs:1752–1767](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1752-L1767)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8939,10 +8939,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1243–1243](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1243-L1243) | new CTrapezoidalMotion | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L185-L185) | new CTrapezoidalMotion | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L186-L186) | new CTrapezoidalMotion | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L215-L215) | new CTrapezoidalMotion | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1243–1243](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1243-L1243) | new CTrapezoidalMotion | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L185-L185) | new CTrapezoidalMotion | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L186-L186) | new CTrapezoidalMotion | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L215-L215) | new CTrapezoidalMotion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8998,7 +8998,7 @@ flowchart TD
 
 ### PropertyDeclaration `Distance` · L1769–1769
 
-[Drilling.Common/Motion/CMotionManager.cs:1769–1769](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1769-L1769)
+[Drilling.Common/Motion/CMotionManager.cs:1769–1769](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1769-L1769)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9013,7 +9013,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Distance` · L1769–1769
 
-[Drilling.Common/Motion/CMotionManager.cs:1769–1769](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1769-L1769)
+[Drilling.Common/Motion/CMotionManager.cs:1769–1769](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1769-L1769)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9028,7 +9028,7 @@ flowchart TD
 
 ### PropertyDeclaration `PeakSpeed` · L1770–1770
 
-[Drilling.Common/Motion/CMotionManager.cs:1770–1770](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1770-L1770)
+[Drilling.Common/Motion/CMotionManager.cs:1770–1770](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1770-L1770)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9043,7 +9043,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PeakSpeed` · L1770–1770
 
-[Drilling.Common/Motion/CMotionManager.cs:1770–1770](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1770-L1770)
+[Drilling.Common/Motion/CMotionManager.cs:1770–1770](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1770-L1770)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9058,7 +9058,7 @@ flowchart TD
 
 ### PropertyDeclaration `Acceleration` · L1771–1771
 
-[Drilling.Common/Motion/CMotionManager.cs:1771–1771](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1771-L1771)
+[Drilling.Common/Motion/CMotionManager.cs:1771–1771](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1771-L1771)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9073,7 +9073,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Acceleration` · L1771–1771
 
-[Drilling.Common/Motion/CMotionManager.cs:1771–1771](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1771-L1771)
+[Drilling.Common/Motion/CMotionManager.cs:1771–1771](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1771-L1771)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9088,7 +9088,7 @@ flowchart TD
 
 ### PropertyDeclaration `Deceleration` · L1772–1772
 
-[Drilling.Common/Motion/CMotionManager.cs:1772–1772](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1772-L1772)
+[Drilling.Common/Motion/CMotionManager.cs:1772–1772](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1772-L1772)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9103,7 +9103,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Deceleration` · L1772–1772
 
-[Drilling.Common/Motion/CMotionManager.cs:1772–1772](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1772-L1772)
+[Drilling.Common/Motion/CMotionManager.cs:1772–1772](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1772-L1772)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9118,7 +9118,7 @@ flowchart TD
 
 ### PropertyDeclaration `AccelerationDistance` · L1773–1773
 
-[Drilling.Common/Motion/CMotionManager.cs:1773–1773](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1773-L1773)
+[Drilling.Common/Motion/CMotionManager.cs:1773–1773](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1773-L1773)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9133,7 +9133,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AccelerationDistance` · L1773–1773
 
-[Drilling.Common/Motion/CMotionManager.cs:1773–1773](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1773-L1773)
+[Drilling.Common/Motion/CMotionManager.cs:1773–1773](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1773-L1773)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9148,7 +9148,7 @@ flowchart TD
 
 ### PropertyDeclaration `DecelerationDistance` · L1774–1774
 
-[Drilling.Common/Motion/CMotionManager.cs:1774–1774](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1774-L1774)
+[Drilling.Common/Motion/CMotionManager.cs:1774–1774](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1774-L1774)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9163,7 +9163,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DecelerationDistance` · L1774–1774
 
-[Drilling.Common/Motion/CMotionManager.cs:1774–1774](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1774-L1774)
+[Drilling.Common/Motion/CMotionManager.cs:1774–1774](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1774-L1774)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9178,7 +9178,7 @@ flowchart TD
 
 ### PropertyDeclaration `CruiseDistance` · L1775–1775
 
-[Drilling.Common/Motion/CMotionManager.cs:1775–1775](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1775-L1775)
+[Drilling.Common/Motion/CMotionManager.cs:1775–1775](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1775-L1775)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9193,7 +9193,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CruiseDistance` · L1775–1775
 
-[Drilling.Common/Motion/CMotionManager.cs:1775–1775](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1775-L1775)
+[Drilling.Common/Motion/CMotionManager.cs:1775–1775](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1775-L1775)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9208,7 +9208,7 @@ flowchart TD
 
 ### PropertyDeclaration `AccelerationTime` · L1776–1776
 
-[Drilling.Common/Motion/CMotionManager.cs:1776–1776](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1776-L1776)
+[Drilling.Common/Motion/CMotionManager.cs:1776–1776](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1776-L1776)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9223,7 +9223,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AccelerationTime` · L1776–1776
 
-[Drilling.Common/Motion/CMotionManager.cs:1776–1776](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1776-L1776)
+[Drilling.Common/Motion/CMotionManager.cs:1776–1776](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1776-L1776)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9238,7 +9238,7 @@ flowchart TD
 
 ### PropertyDeclaration `CruiseTime` · L1777–1777
 
-[Drilling.Common/Motion/CMotionManager.cs:1777–1777](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1777-L1777)
+[Drilling.Common/Motion/CMotionManager.cs:1777–1777](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1777-L1777)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9253,7 +9253,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CruiseTime` · L1777–1777
 
-[Drilling.Common/Motion/CMotionManager.cs:1777–1777](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1777-L1777)
+[Drilling.Common/Motion/CMotionManager.cs:1777–1777](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1777-L1777)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9268,7 +9268,7 @@ flowchart TD
 
 ### PropertyDeclaration `Duration` · L1778–1778
 
-[Drilling.Common/Motion/CMotionManager.cs:1778–1778](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1778-L1778)
+[Drilling.Common/Motion/CMotionManager.cs:1778–1778](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1778-L1778)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9283,7 +9283,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Duration` · L1778–1778
 
-[Drilling.Common/Motion/CMotionManager.cs:1778–1778](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1778-L1778)
+[Drilling.Common/Motion/CMotionManager.cs:1778–1778](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1778-L1778)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9298,7 +9298,7 @@ flowchart TD
 
 ### MethodDeclaration `TimeAt` · L1780–1790
 
-[Drilling.Common/Motion/CMotionManager.cs:1780–1790](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1780-L1790)
+[Drilling.Common/Motion/CMotionManager.cs:1780–1790](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1780-L1790)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9317,8 +9317,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L198-L198) | stage.TimeAt | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L199-L199) | stage.TimeAt | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L198-L198) | stage.TimeAt | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L199-L199) | stage.TimeAt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9367,7 +9367,7 @@ flowchart TD
 
 ### MethodDeclaration `At` · L1792–1804
 
-[Drilling.Common/Motion/CMotionManager.cs:1792–1804](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1792-L1804)
+[Drilling.Common/Motion/CMotionManager.cs:1792–1804](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1792-L1804)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9386,7 +9386,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/CMotionManager.cs:1317–1317](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Motion/CMotionManager.cs#L1317-L1317) | profile.At | False |
+| [Drilling.Common/Motion/CMotionManager.cs:1317–1317](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/CMotionManager.cs#L1317-L1317) | profile.At | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
-| 원본 SHA256 | 0ae841c577d69f7dbbf0b8fae82ff9f890bda1b2b978238aee15e47d8617b625 |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 SHA256 | ed18bc5081d304c3ae249f70e2c4a09d2324f90efdca71db63686116b5f4453a |
 | 파일 분류 | code |
-| 원본 크기/행 | 17,927 bytes / 571 physical lines |
+| 원본 크기/행 | 18,955 bytes / 603 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -21,7 +21,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 타입 | 구분 | 원본 범위 | 선언/상속 |
 | --- | --- | --- | --- |
-| CMonitorView | ClassDeclaration | 10–571 | CMonitorView: UserControl |
+| CMonitorView | ClassDeclaration | 10–603 | CMonitorView: UserControl |
 
 ## 멤버 빠른 목록
 
@@ -39,40 +39,42 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | OuterScrollViewer_PreviewMouseWheel | MethodDeclaration | L120–136 | void Drilling.UI.Views.CMonitorView.OuterScrollViewer_PreviewMouseWheel(object, MouseWheelEventArgs) |
 | CoordinateCellPreviewLabel_MouseMove | MethodDeclaration | L138–149 | void Drilling.UI.Views.CMonitorView.CoordinateCellPreviewLabel_MouseMove(object, MouseEventArgs) |
 | CoordinateCellPreviewLabel_MouseLeave | MethodDeclaration | L151–154 | void Drilling.UI.Views.CMonitorView.CoordinateCellPreviewLabel_MouseLeave(object, MouseEventArgs) |
-| PositionCoordinateGlassPreviewHoverTip | MethodDeclaration | L156–177 | void Drilling.UI.Views.CMonitorView.PositionCoordinateGlassPreviewHoverTip(Point) |
-| HideCoordinateGlassPreviewHoverTip | MethodDeclaration | L179–183 | void Drilling.UI.Views.CMonitorView.HideCoordinateGlassPreviewHoverTip() |
-| AttenuatorScrollViewer_ScrollChanged | MethodDeclaration | L185–193 | void Drilling.UI.Views.CMonitorView.AttenuatorScrollViewer_ScrollChanged(object, ScrollChangedEventArgs) |
-| MelsecGrid_SizeChanged | MethodDeclaration | L195–214 | void Drilling.UI.Views.CMonitorView.MelsecGrid_SizeChanged(object, SizeChangedEventArgs) |
-| CloseOpenComboBoxes | MethodDeclaration | L216–227 | void Drilling.UI.Views.CMonitorView.CloseOpenComboBoxes(DependencyObject) |
-| OpenPowerMeterSettingInput | MethodDeclaration | L229–251 | void Drilling.UI.Views.CMonitorView.OpenPowerMeterSettingInput(object, RoutedEventArgs) |
-| PowerMeterSettingSelection_PreviewMouseDown | MethodDeclaration | L253–260 | void Drilling.UI.Views.CMonitorView.PowerMeterSettingSelection_PreviewMouseDown(object, MouseButtonEventArgs) |
-| PowerMeterSettingSelection_PreviewKeyDown | MethodDeclaration | L262–274 | void Drilling.UI.Views.CMonitorView.PowerMeterSettingSelection_PreviewKeyDown(object, KeyEventArgs) |
-| PowerMeterSettingSelection_PreviewMouseWheel | MethodDeclaration | L276–283 | void Drilling.UI.Views.CMonitorView.PowerMeterSettingSelection_PreviewMouseWheel(object, MouseWheelEventArgs) |
-| PowerMeterSettingSelection_DropDownOpened | MethodDeclaration | L285–294 | void Drilling.UI.Views.CMonitorView.PowerMeterSettingSelection_DropDownOpened(object, System.EventArgs) |
-| IsPowerMeterSettingSelectionKey | MethodDeclaration | L296–312 | bool Drilling.UI.Views.CMonitorView.IsPowerMeterSettingSelectionKey(Key) |
-| OpenLaserSettingInput | MethodDeclaration | L314–331 | void Drilling.UI.Views.CMonitorView.OpenLaserSettingInput(object, RoutedEventArgs) |
-| OpenMotorOperationInput | MethodDeclaration | L333–350 | void Drilling.UI.Views.CMonitorView.OpenMotorOperationInput(object, RoutedEventArgs) |
-| OpenXpsMultiMoveTargetInput | MethodDeclaration | L352–368 | void Drilling.UI.Views.CMonitorView.OpenXpsMultiMoveTargetInput(object, RoutedEventArgs) |
-| StartXpsJogNegative | MethodDeclaration | L370–374 | void Drilling.UI.Views.CMonitorView.StartXpsJogNegative(object, MouseButtonEventArgs) |
-| StartXpsJogPositive | MethodDeclaration | L376–380 | void Drilling.UI.Views.CMonitorView.StartXpsJogPositive(object, MouseButtonEventArgs) |
-| StopXpsJog | MethodDeclaration | L382–386 | void Drilling.UI.Views.CMonitorView.StopXpsJog(object, MouseButtonEventArgs) |
-| StopXpsJogOnMouseLeave | MethodDeclaration | L388–391 | void Drilling.UI.Views.CMonitorView.StopXpsJogOnMouseLeave(object, MouseEventArgs) |
-| StopXpsJogOnLostMouseCapture | MethodDeclaration | L393–396 | void Drilling.UI.Views.CMonitorView.StopXpsJogOnLostMouseCapture(object, MouseEventArgs) |
-| StopXpsJogOnLostKeyboardFocus | MethodDeclaration | L398–401 | void Drilling.UI.Views.CMonitorView.StopXpsJogOnLostKeyboardFocus(object, KeyboardFocusChangedEventArgs) |
-| ExecuteXpsJogEvent | MethodDeclaration | L403–429 | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) |
-| GetMonitorMenu | MethodDeclaration | L431–434 | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() |
-| OpenAttenuatorPositionInput | MethodDeclaration | L436–455 | void Drilling.UI.Views.CMonitorView.OpenAttenuatorPositionInput(object, RoutedEventArgs) |
-| OpenBetTableInput | MethodDeclaration | L457–497 | void Drilling.UI.Views.CMonitorView.OpenBetTableInput(object, RoutedEventArgs) |
-| OpenBetPositionInput | MethodDeclaration | L499–516 | void Drilling.UI.Views.CMonitorView.OpenBetPositionInput(object, RoutedEventArgs) |
-| OpenMelsecWriteInput | MethodDeclaration | L518–539 | void Drilling.UI.Views.CMonitorView.OpenMelsecWriteInput(object, RoutedEventArgs) |
-| MelsecWriteSelectionPreviewInput | MethodDeclaration | L541–551 | void Drilling.UI.Views.CMonitorView.MelsecWriteSelectionPreviewInput(object, RoutedEventArgs) |
-| EnsureMelsecWriteInputUnlocked | MethodDeclaration | L553–569 | bool Drilling.UI.Views.CMonitorView.EnsureMelsecWriteInputUnlocked(RoutedEventArgs) |
+| CoordinateShotMap_MouseLeftButtonDown | MethodDeclaration | L156–167 | void Drilling.UI.Views.CMonitorView.CoordinateShotMap_MouseLeftButtonDown(object, MouseButtonEventArgs) |
+| CoordinateShotCoordinateGrid_SelectionChanged | MethodDeclaration | L169–186 | void Drilling.UI.Views.CMonitorView.CoordinateShotCoordinateGrid_SelectionChanged(object, SelectionChangedEventArgs) |
+| PositionCoordinateGlassPreviewHoverTip | MethodDeclaration | L188–209 | void Drilling.UI.Views.CMonitorView.PositionCoordinateGlassPreviewHoverTip(Point) |
+| HideCoordinateGlassPreviewHoverTip | MethodDeclaration | L211–215 | void Drilling.UI.Views.CMonitorView.HideCoordinateGlassPreviewHoverTip() |
+| AttenuatorScrollViewer_ScrollChanged | MethodDeclaration | L217–225 | void Drilling.UI.Views.CMonitorView.AttenuatorScrollViewer_ScrollChanged(object, ScrollChangedEventArgs) |
+| MelsecGrid_SizeChanged | MethodDeclaration | L227–246 | void Drilling.UI.Views.CMonitorView.MelsecGrid_SizeChanged(object, SizeChangedEventArgs) |
+| CloseOpenComboBoxes | MethodDeclaration | L248–259 | void Drilling.UI.Views.CMonitorView.CloseOpenComboBoxes(DependencyObject) |
+| OpenPowerMeterSettingInput | MethodDeclaration | L261–283 | void Drilling.UI.Views.CMonitorView.OpenPowerMeterSettingInput(object, RoutedEventArgs) |
+| PowerMeterSettingSelection_PreviewMouseDown | MethodDeclaration | L285–292 | void Drilling.UI.Views.CMonitorView.PowerMeterSettingSelection_PreviewMouseDown(object, MouseButtonEventArgs) |
+| PowerMeterSettingSelection_PreviewKeyDown | MethodDeclaration | L294–306 | void Drilling.UI.Views.CMonitorView.PowerMeterSettingSelection_PreviewKeyDown(object, KeyEventArgs) |
+| PowerMeterSettingSelection_PreviewMouseWheel | MethodDeclaration | L308–315 | void Drilling.UI.Views.CMonitorView.PowerMeterSettingSelection_PreviewMouseWheel(object, MouseWheelEventArgs) |
+| PowerMeterSettingSelection_DropDownOpened | MethodDeclaration | L317–326 | void Drilling.UI.Views.CMonitorView.PowerMeterSettingSelection_DropDownOpened(object, System.EventArgs) |
+| IsPowerMeterSettingSelectionKey | MethodDeclaration | L328–344 | bool Drilling.UI.Views.CMonitorView.IsPowerMeterSettingSelectionKey(Key) |
+| OpenLaserSettingInput | MethodDeclaration | L346–363 | void Drilling.UI.Views.CMonitorView.OpenLaserSettingInput(object, RoutedEventArgs) |
+| OpenMotorOperationInput | MethodDeclaration | L365–382 | void Drilling.UI.Views.CMonitorView.OpenMotorOperationInput(object, RoutedEventArgs) |
+| OpenXpsMultiMoveTargetInput | MethodDeclaration | L384–400 | void Drilling.UI.Views.CMonitorView.OpenXpsMultiMoveTargetInput(object, RoutedEventArgs) |
+| StartXpsJogNegative | MethodDeclaration | L402–406 | void Drilling.UI.Views.CMonitorView.StartXpsJogNegative(object, MouseButtonEventArgs) |
+| StartXpsJogPositive | MethodDeclaration | L408–412 | void Drilling.UI.Views.CMonitorView.StartXpsJogPositive(object, MouseButtonEventArgs) |
+| StopXpsJog | MethodDeclaration | L414–418 | void Drilling.UI.Views.CMonitorView.StopXpsJog(object, MouseButtonEventArgs) |
+| StopXpsJogOnMouseLeave | MethodDeclaration | L420–423 | void Drilling.UI.Views.CMonitorView.StopXpsJogOnMouseLeave(object, MouseEventArgs) |
+| StopXpsJogOnLostMouseCapture | MethodDeclaration | L425–428 | void Drilling.UI.Views.CMonitorView.StopXpsJogOnLostMouseCapture(object, MouseEventArgs) |
+| StopXpsJogOnLostKeyboardFocus | MethodDeclaration | L430–433 | void Drilling.UI.Views.CMonitorView.StopXpsJogOnLostKeyboardFocus(object, KeyboardFocusChangedEventArgs) |
+| ExecuteXpsJogEvent | MethodDeclaration | L435–461 | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) |
+| GetMonitorMenu | MethodDeclaration | L463–466 | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() |
+| OpenAttenuatorPositionInput | MethodDeclaration | L468–487 | void Drilling.UI.Views.CMonitorView.OpenAttenuatorPositionInput(object, RoutedEventArgs) |
+| OpenBetTableInput | MethodDeclaration | L489–529 | void Drilling.UI.Views.CMonitorView.OpenBetTableInput(object, RoutedEventArgs) |
+| OpenBetPositionInput | MethodDeclaration | L531–548 | void Drilling.UI.Views.CMonitorView.OpenBetPositionInput(object, RoutedEventArgs) |
+| OpenMelsecWriteInput | MethodDeclaration | L550–571 | void Drilling.UI.Views.CMonitorView.OpenMelsecWriteInput(object, RoutedEventArgs) |
+| MelsecWriteSelectionPreviewInput | MethodDeclaration | L573–583 | void Drilling.UI.Views.CMonitorView.MelsecWriteSelectionPreviewInput(object, RoutedEventArgs) |
+| EnsureMelsecWriteInputUnlocked | MethodDeclaration | L585–601 | bool Drilling.UI.Views.CMonitorView.EnsureMelsecWriteInputUnlocked(RoutedEventArgs) |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
 ### FieldDeclaration `_hostWindow` · L12–12
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L12-L12)
+[Drilling.UI/Views/CMonitorView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -87,7 +89,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_rootView` · L13–13
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L13-L13)
+[Drilling.UI/Views/CMonitorView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -102,7 +104,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_monitorMenu` · L14–14
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CMonitorView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -117,7 +119,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L16–19
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:16–19](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L16-L19)
+[Drilling.UI/Views/CMonitorView.xaml.cs:16–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L16-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -144,7 +146,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `MonitorViewLoaded` · L21–55
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:21–55](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L21-L55)
+[Drilling.UI/Views/CMonitorView.xaml.cs:21–55](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L21-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -219,7 +221,7 @@ flowchart TD
 
 ### MethodDeclaration `RootViewCurrentScreenChanged` · L57–71
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:57–71](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L57-L71)
+[Drilling.UI/Views/CMonitorView.xaml.cs:57–71](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L57-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -241,7 +243,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 66 | .HideAndLockMelsecWrite | resolved | void Drilling.UI.Menu.Menus.CMenuMonitor.HideAndLockMelsecWrite() · Drilling.UI/Menu/Menus/CMenuMonitor.cs:613 |
+| 66 | .HideAndLockMelsecWrite | resolved | void Drilling.UI.Menu.Menus.CMenuMonitor.HideAndLockMelsecWrite() · Drilling.UI/Menu/Menus/CMenuMonitor.cs:688 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -269,7 +271,7 @@ flowchart TD
 
 ### MethodDeclaration `MonitorViewPreviewKeyDown` · L73–86
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:73–86](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L73-L86)
+[Drilling.UI/Views/CMonitorView.xaml.cs:73–86](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L73-L86)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -291,7 +293,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 84 | monitor.ToggleMelsecWriteLockVisibility | resolved | void Drilling.UI.Menu.Menus.CMenuMonitor.ToggleMelsecWriteLockVisibility() · Drilling.UI/Menu/Menus/CMenuMonitor.cs:594 |
+| 84 | monitor.ToggleMelsecWriteLockVisibility | resolved | void Drilling.UI.Menu.Menus.CMenuMonitor.ToggleMelsecWriteLockVisibility() · Drilling.UI/Menu/Menus/CMenuMonitor.cs:669 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -319,7 +321,7 @@ flowchart TD
 
 ### MethodDeclaration `MonitorViewUnloaded` · L88–104
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:88–104](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L88-L104)
+[Drilling.UI/Views/CMonitorView.xaml.cs:88–104](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L88-L104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -341,7 +343,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 102 | .HideAndLockMelsecWrite | resolved | void Drilling.UI.Menu.Menus.CMenuMonitor.HideAndLockMelsecWrite() · Drilling.UI/Menu/Menus/CMenuMonitor.cs:613 |
+| 102 | .HideAndLockMelsecWrite | resolved | void Drilling.UI.Menu.Menus.CMenuMonitor.HideAndLockMelsecWrite() · Drilling.UI/Menu/Menus/CMenuMonitor.cs:688 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -371,7 +373,7 @@ flowchart TD
 
 ### MethodDeclaration `XpsMultiMoveGrid_PreviewMouseWheel` · L106–118
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:106–118](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L106-L118)
+[Drilling.UI/Views/CMonitorView.xaml.cs:106–118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L106-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -423,7 +425,7 @@ flowchart TD
 
 ### MethodDeclaration `OuterScrollViewer_PreviewMouseWheel` · L120–136
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:120–136](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L120-L136)
+[Drilling.UI/Views/CMonitorView.xaml.cs:120–136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L120-L136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -477,7 +479,7 @@ flowchart TD
 
 ### MethodDeclaration `CoordinateCellPreviewLabel_MouseMove` · L138–149
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:138–149](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L138-L149)
+[Drilling.UI/Views/CMonitorView.xaml.cs:138–149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L138-L149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -499,7 +501,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 142 | HideCoordinateGlassPreviewHoverTip | resolved | void Drilling.UI.Views.CMonitorView.HideCoordinateGlassPreviewHoverTip() · Drilling.UI/Views/CMonitorView.xaml.cs:179 |
+| 142 | HideCoordinateGlassPreviewHoverTip | resolved | void Drilling.UI.Views.CMonitorView.HideCoordinateGlassPreviewHoverTip() · Drilling.UI/Views/CMonitorView.xaml.cs:211 |
 | 148 | PositionCoordinateGlassPreviewHoverTip | candidate | OverloadResolutionFailure |
 | 148 | e.GetPosition | unresolved | None |
 
@@ -528,7 +530,7 @@ flowchart TD
 
 ### MethodDeclaration `CoordinateCellPreviewLabel_MouseLeave` · L151–154
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:151–154](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L151-L154)
+[Drilling.UI/Views/CMonitorView.xaml.cs:151–154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L151-L154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -550,7 +552,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 153 | HideCoordinateGlassPreviewHoverTip | resolved | void Drilling.UI.Views.CMonitorView.HideCoordinateGlassPreviewHoverTip() · Drilling.UI/Views/CMonitorView.xaml.cs:179 |
+| 153 | HideCoordinateGlassPreviewHoverTip | resolved | void Drilling.UI.Views.CMonitorView.HideCoordinateGlassPreviewHoverTip() · Drilling.UI/Views/CMonitorView.xaml.cs:211 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -560,9 +562,116 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `PositionCoordinateGlassPreviewHoverTip` · L156–177
+### MethodDeclaration `CoordinateShotMap_MouseLeftButtonDown` · L156–167
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:156–177](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L156-L177)
+[Drilling.UI/Views/CMonitorView.xaml.cs:156–167](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L156-L167)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | void Drilling.UI.Views.CMonitorView.CoordinateShotMap_MouseLeftButtonDown(object, MouseButtonEventArgs) |
+| 접근/수식자 | Private / private, async |
+| 반환/값 타입 | void |
+| 소속 타입 | NamedType:Drilling.UI.Views.CMonitorView |
+
+입력 계약:
+
+| 이름 | 타입 | 전달 | 선택/기본값 |
+| --- | --- | --- | --- |
+| sender | object | None | False /  |
+| e | MouseButtonEventArgs | None | False /  |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 164 | e.GetPosition | unresolved | None |
+| 166 | monitor.SelectCoordinateShotAt | candidate | OverloadResolutionFailure |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 158 | local-declaration | 지역 변수를 선언합니다: var monitor = _rootView?.CurrentScreen.Monitor ?? _monitorMenu; |
+| 158 | variable-initializer | 변수의 초기값을 지정합니다: monitor = _rootView?.CurrentScreen.Monitor ?? _monitorMenu |
+| 159 | if | 조건에 따라 분기합니다: if (sender is not FrameworkElement shotMap &#124;&#124; monitor is null) |
+| 161 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 164 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(shotMap) |
+| 164 | local-declaration | 지역 변수를 선언합니다: var point = e.GetPosition(shotMap); |
+| 164 | variable-initializer | 변수의 초기값을 지정합니다: point = e.GetPosition(shotMap) |
+| 165 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 166 | await | 비동기 완료를 기다립니다: await monitor.SelectCoordinateShotAt(point.X, point.Y) |
+| 166 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.SelectCoordinateShotAt(point.X, point.Y) |
+
+제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
+
+```mermaid
+flowchart TD
+ M["CoordinateShotMap_MouseLeftButtonDown"]
+ N0["L159 if"]
+ M -->|포함| N0
+```
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### MethodDeclaration `CoordinateShotCoordinateGrid_SelectionChanged` · L169–186
+
+[Drilling.UI/Views/CMonitorView.xaml.cs:169–186](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L169-L186)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | void Drilling.UI.Views.CMonitorView.CoordinateShotCoordinateGrid_SelectionChanged(object, SelectionChangedEventArgs) |
+| 접근/수식자 | Private / private, async |
+| 반환/값 타입 | void |
+| 소속 타입 | NamedType:Drilling.UI.Views.CMonitorView |
+
+입력 계약:
+
+| 이름 | 타입 | 전달 | 선택/기본값 |
+| --- | --- | --- | --- |
+| sender | object | None | False /  |
+| e | SelectionChangedEventArgs | None | False /  |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 179 | grid.ScrollIntoView | unresolved | None |
+| 185 | monitor.SelectCoordinateShotFromGrid | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuMonitor.SelectCoordinateShotFromGrid(string) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:2780 |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 171 | local-declaration | 지역 변수를 선언합니다: var monitor = _rootView?.CurrentScreen.Monitor ?? _monitorMenu; |
+| 171 | variable-initializer | 변수의 초기값을 지정합니다: monitor = _rootView?.CurrentScreen.Monitor ?? _monitorMenu |
+| 172 | if | 조건에 따라 분기합니다: if (sender is not DataGrid grid &#124;&#124; grid.SelectedItem is not ST_MONITOR_COORDINATE_SHOT_COORDINATE_ROW row &#124;&#124; monitor is null) |
+| 176 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 179 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: grid.ScrollIntoView(row) |
+| 180 | if | 조건에 따라 분기합니다: if (row.IsSelected) |
+| 182 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 185 | await | 비동기 완료를 기다립니다: await monitor.SelectCoordinateShotFromGrid(row.ShotKey) |
+| 185 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.SelectCoordinateShotFromGrid(row.ShotKey) |
+
+제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
+
+```mermaid
+flowchart TD
+ M["CoordinateShotCoordinateGrid_SelectionChanged"]
+ N0["L172 if"]
+ M -->|포함| N0
+ N1["L180 if"]
+ M -->|포함| N1
+```
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### MethodDeclaration `PositionCoordinateGlassPreviewHoverTip` · L188–209
+
+[Drilling.UI/Views/CMonitorView.xaml.cs:188–209](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L188-L209)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -583,58 +692,58 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 161 | CoordinateGlassPreviewHoverTip.Measure | unresolved | None |
-| 161 | new Size | unresolved | None |
-| 167 | Math.Clamp | candidate | OverloadResolutionFailure |
-| 167 | Math.Max | candidate | OverloadResolutionFailure |
-| 172 | Math.Clamp | candidate | OverloadResolutionFailure |
-| 172 | Math.Max | candidate | OverloadResolutionFailure |
+| 193 | CoordinateGlassPreviewHoverTip.Measure | unresolved | None |
+| 193 | new Size | unresolved | None |
+| 199 | Math.Clamp | candidate | OverloadResolutionFailure |
+| 199 | Math.Max | candidate | OverloadResolutionFailure |
+| 204 | Math.Clamp | candidate | OverloadResolutionFailure |
+| 204 | Math.Max | candidate | OverloadResolutionFailure |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 158 | local-declaration | 지역 변수를 선언합니다: const double margin = 4.0; |
-| 158 | variable-initializer | 변수의 초기값을 지정합니다: margin = 4.0 |
-| 159 | local-declaration | 지역 변수를 선언합니다: const double offsetX = 12.0; |
-| 159 | variable-initializer | 변수의 초기값을 지정합니다: offsetX = 12.0 |
-| 160 | local-declaration | 지역 변수를 선언합니다: const double offsetY = 14.0; |
-| 160 | variable-initializer | 변수의 초기값을 지정합니다: offsetY = 14.0 |
-| 161 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CoordinateGlassPreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)) |
-| 161 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(double.PositiveInfinity, double.PositiveInfinity) |
-| 162 | local-declaration | 지역 변수를 선언합니다: var tipSize = CoordinateGlassPreviewHoverTip.DesiredSize; |
-| 162 | variable-initializer | 변수의 초기값을 지정합니다: tipSize = CoordinateGlassPreviewHoverTip.DesiredSize |
-| 163 | local-declaration | 지역 변수를 선언합니다: var x = pointer.X + offsetX; |
-| 163 | variable-initializer | 변수의 초기값을 지정합니다: x = pointer.X + offsetX |
-| 164 | local-declaration | 지역 변수를 선언합니다: var y = pointer.Y + offsetY; |
-| 164 | variable-initializer | 변수의 초기값을 지정합니다: y = pointer.Y + offsetY |
-| 165 | if | 조건에 따라 분기합니다: if (CoordinateGlassPreviewViewport.ActualWidth > 0) |
-| 167 | assignment | 값을 대상에 대입합니다: x = Math.Clamp(x, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualWidth - tipSize.Width - margin)) |
-| 167 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(x, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualWidth - tipSize.Width - margin)) |
-| 167 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, CoordinateGlassPreviewViewport.ActualWidth - tipSize.Width - margin) |
-| 170 | if | 조건에 따라 분기합니다: if (CoordinateGlassPreviewViewport.ActualHeight > 0) |
-| 172 | assignment | 값을 대상에 대입합니다: y = Math.Clamp(y, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualHeight - tipSize.Height - margin)) |
-| 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(y, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualHeight - tipSize.Height - margin)) |
-| 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, CoordinateGlassPreviewViewport.ActualHeight - tipSize.Height - margin) |
-| 175 | assignment | 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTipTranslateTransform.X = x |
-| 176 | assignment | 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTipTranslateTransform.Y = y |
+| 190 | local-declaration | 지역 변수를 선언합니다: const double margin = 4.0; |
+| 190 | variable-initializer | 변수의 초기값을 지정합니다: margin = 4.0 |
+| 191 | local-declaration | 지역 변수를 선언합니다: const double offsetX = 12.0; |
+| 191 | variable-initializer | 변수의 초기값을 지정합니다: offsetX = 12.0 |
+| 192 | local-declaration | 지역 변수를 선언합니다: const double offsetY = 14.0; |
+| 192 | variable-initializer | 변수의 초기값을 지정합니다: offsetY = 14.0 |
+| 193 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CoordinateGlassPreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)) |
+| 193 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(double.PositiveInfinity, double.PositiveInfinity) |
+| 194 | local-declaration | 지역 변수를 선언합니다: var tipSize = CoordinateGlassPreviewHoverTip.DesiredSize; |
+| 194 | variable-initializer | 변수의 초기값을 지정합니다: tipSize = CoordinateGlassPreviewHoverTip.DesiredSize |
+| 195 | local-declaration | 지역 변수를 선언합니다: var x = pointer.X + offsetX; |
+| 195 | variable-initializer | 변수의 초기값을 지정합니다: x = pointer.X + offsetX |
+| 196 | local-declaration | 지역 변수를 선언합니다: var y = pointer.Y + offsetY; |
+| 196 | variable-initializer | 변수의 초기값을 지정합니다: y = pointer.Y + offsetY |
+| 197 | if | 조건에 따라 분기합니다: if (CoordinateGlassPreviewViewport.ActualWidth > 0) |
+| 199 | assignment | 값을 대상에 대입합니다: x = Math.Clamp(x, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualWidth - tipSize.Width - margin)) |
+| 199 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(x, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualWidth - tipSize.Width - margin)) |
+| 199 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, CoordinateGlassPreviewViewport.ActualWidth - tipSize.Width - margin) |
+| 202 | if | 조건에 따라 분기합니다: if (CoordinateGlassPreviewViewport.ActualHeight > 0) |
+| 204 | assignment | 값을 대상에 대입합니다: y = Math.Clamp(y, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualHeight - tipSize.Height - margin)) |
+| 204 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(y, margin, Math.Max(margin, CoordinateGlassPreviewViewport.ActualHeight - tipSize.Height - margin)) |
+| 204 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, CoordinateGlassPreviewViewport.ActualHeight - tipSize.Height - margin) |
+| 207 | assignment | 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTipTranslateTransform.X = x |
+| 208 | assignment | 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTipTranslateTransform.Y = y |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["PositionCoordinateGlassPreviewHoverTip"]
- N0["L165 if"]
+ N0["L197 if"]
  M -->|포함| N0
- N1["L170 if"]
+ N1["L202 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `HideCoordinateGlassPreviewHoverTip` · L179–183
+### MethodDeclaration `HideCoordinateGlassPreviewHoverTip` · L211–215
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:179–183](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L179-L183)
+[Drilling.UI/Views/CMonitorView.xaml.cs:211–215](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L211-L215)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -647,21 +756,21 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L142-L142) | HideCoordinateGlassPreviewHoverTip | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L153-L153) | HideCoordinateGlassPreviewHoverTip | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L142-L142) | HideCoordinateGlassPreviewHoverTip | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L153-L153) | HideCoordinateGlassPreviewHoverTip | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 181 | assignment | 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTip.Visibility = Visibility.Collapsed |
-| 182 | assignment | 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTipText.Text = "" |
+| 213 | assignment | 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTip.Visibility = Visibility.Collapsed |
+| 214 | assignment | 값을 대상에 대입합니다: CoordinateGlassPreviewHoverTipText.Text = "" |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `AttenuatorScrollViewer_ScrollChanged` · L185–193
+### MethodDeclaration `AttenuatorScrollViewer_ScrollChanged` · L217–225
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:185–193](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L185-L193)
+[Drilling.UI/Views/CMonitorView.xaml.cs:217–225](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L217-L225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -683,30 +792,30 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 192 | CloseOpenComboBoxes | resolved | void Drilling.UI.Views.CMonitorView.CloseOpenComboBoxes(DependencyObject) · Drilling.UI/Views/CMonitorView.xaml.cs:216 |
+| 224 | CloseOpenComboBoxes | resolved | void Drilling.UI.Views.CMonitorView.CloseOpenComboBoxes(DependencyObject) · Drilling.UI/Views/CMonitorView.xaml.cs:248 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 187 | if | 조건에 따라 분기합니다: if (e.VerticalChange == 0 &#124;&#124; sender is not DependencyObject root) |
-| 189 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 192 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseOpenComboBoxes(root) |
+| 219 | if | 조건에 따라 분기합니다: if (e.VerticalChange == 0 &#124;&#124; sender is not DependencyObject root) |
+| 221 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 224 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseOpenComboBoxes(root) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["AttenuatorScrollViewer_ScrollChanged"]
- N0["L187 if"]
+ N0["L219 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `MelsecGrid_SizeChanged` · L195–214
+### MethodDeclaration `MelsecGrid_SizeChanged` · L227–246
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:195–214](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L195-L214)
+[Drilling.UI/Views/CMonitorView.xaml.cs:227–246](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L227-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -728,44 +837,44 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 213 | new DataGridLength | unresolved | None |
-| 213 | Math.Max | candidate | OverloadResolutionFailure |
+| 245 | new DataGridLength | unresolved | None |
+| 245 | Math.Max | candidate | OverloadResolutionFailure |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 197 | if | 조건에 따라 분기합니다: if (sender is not DataGrid grid &#124;&#124; grid.Columns.Count == 0) |
-| 199 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 202 | local-declaration | 지역 변수를 선언합니다: var fixedColumnsWidth = 0.0; |
-| 202 | variable-initializer | 변수의 초기값을 지정합니다: fixedColumnsWidth = 0.0 |
-| 203 | variable-initializer | 변수의 초기값을 지정합니다: index = 1 |
-| 203 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 1; index < grid.Columns.Count; index++) |
-| 205 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: fixedColumnsWidth += grid.Columns[index].Width.Value |
-| 208 | local-declaration | 지역 변수를 선언합니다: const double minimumIdWidth = 160.0; |
-| 208 | variable-initializer | 변수의 초기값을 지정합니다: minimumIdWidth = 160.0 |
-| 209 | local-declaration | 지역 변수를 선언합니다: var availableIdWidth = grid.ActualWidth - fixedColumnsWidth - SystemParameters.VerticalScrollBarWidth - 2.0; |
-| 209 | variable-initializer | 변수의 초기값을 지정합니다: availableIdWidth = grid.ActualWidth - fixedColumnsWidth - SystemParameters.VerticalScrollBarWidth - 2.0 |
-| 213 | assignment | 값을 대상에 대입합니다: grid.Columns[0].Width = new DataGridLength(Math.Max(minimumIdWidth, availableIdWidth)) |
-| 213 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new DataGridLength(Math.Max(minimumIdWidth, availableIdWidth)) |
-| 213 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(minimumIdWidth, availableIdWidth) |
+| 229 | if | 조건에 따라 분기합니다: if (sender is not DataGrid grid &#124;&#124; grid.Columns.Count == 0) |
+| 231 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 234 | local-declaration | 지역 변수를 선언합니다: var fixedColumnsWidth = 0.0; |
+| 234 | variable-initializer | 변수의 초기값을 지정합니다: fixedColumnsWidth = 0.0 |
+| 235 | variable-initializer | 변수의 초기값을 지정합니다: index = 1 |
+| 235 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 1; index < grid.Columns.Count; index++) |
+| 237 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: fixedColumnsWidth += grid.Columns[index].Width.Value |
+| 240 | local-declaration | 지역 변수를 선언합니다: const double minimumIdWidth = 160.0; |
+| 240 | variable-initializer | 변수의 초기값을 지정합니다: minimumIdWidth = 160.0 |
+| 241 | local-declaration | 지역 변수를 선언합니다: var availableIdWidth = grid.ActualWidth - fixedColumnsWidth - SystemParameters.VerticalScrollBarWidth - 2.0; |
+| 241 | variable-initializer | 변수의 초기값을 지정합니다: availableIdWidth = grid.ActualWidth - fixedColumnsWidth - SystemParameters.VerticalScrollBarWidth - 2.0 |
+| 245 | assignment | 값을 대상에 대입합니다: grid.Columns[0].Width = new DataGridLength(Math.Max(minimumIdWidth, availableIdWidth)) |
+| 245 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new DataGridLength(Math.Max(minimumIdWidth, availableIdWidth)) |
+| 245 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(minimumIdWidth, availableIdWidth) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["MelsecGrid_SizeChanged"]
- N0["L197 if"]
+ N0["L229 if"]
  M -->|포함| N0
- N1["L203 for"]
+ N1["L235 for"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CloseOpenComboBoxes` · L216–227
+### MethodDeclaration `CloseOpenComboBoxes` · L248–259
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:216–227](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L216-L227)
+[Drilling.UI/Views/CMonitorView.xaml.cs:248–259](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L248-L259)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -784,44 +893,44 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:192–192](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L192-L192) | CloseOpenComboBoxes | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L224-L224) | CloseOpenComboBoxes | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 223 | VisualTreeHelper.GetChildrenCount | unresolved | None |
-| 225 | CloseOpenComboBoxes | candidate | OverloadResolutionFailure |
-| 225 | VisualTreeHelper.GetChild | unresolved | None |
+| 255 | VisualTreeHelper.GetChildrenCount | unresolved | None |
+| 257 | CloseOpenComboBoxes | candidate | OverloadResolutionFailure |
+| 257 | VisualTreeHelper.GetChild | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 218 | if | 조건에 따라 분기합니다: if (root is ComboBox { IsDropDownOpen: true } comboBox) |
-| 220 | assignment | 값을 대상에 대입합니다: comboBox.IsDropDownOpen = false |
-| 223 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChildrenCount(root) |
-| 223 | variable-initializer | 변수의 초기값을 지정합니다: index = 0 |
-| 223 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < VisualTreeHelper.GetChildrenCount(root); index++) |
-| 225 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseOpenComboBoxes(VisualTreeHelper.GetChild(root, index)) |
-| 225 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChild(root, index) |
+| 250 | if | 조건에 따라 분기합니다: if (root is ComboBox { IsDropDownOpen: true } comboBox) |
+| 252 | assignment | 값을 대상에 대입합니다: comboBox.IsDropDownOpen = false |
+| 255 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChildrenCount(root) |
+| 255 | variable-initializer | 변수의 초기값을 지정합니다: index = 0 |
+| 255 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < VisualTreeHelper.GetChildrenCount(root); index++) |
+| 257 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CloseOpenComboBoxes(VisualTreeHelper.GetChild(root, index)) |
+| 257 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChild(root, index) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["CloseOpenComboBoxes"]
- N0["L218 if"]
+ N0["L250 if"]
  M -->|포함| N0
- N1["L223 for"]
+ N1["L255 for"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `OpenPowerMeterSettingInput` · L229–251
+### MethodDeclaration `OpenPowerMeterSettingInput` · L261–283
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:229–251](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L229-L251)
+[Drilling.UI/Views/CMonitorView.xaml.cs:261–283](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L261-L283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -843,52 +952,52 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 237 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:431 |
-| 238 | .TryNotifyPowerMeterTuneLocked | resolved | bool Drilling.UI.Menu.Menus.CMenuMonitor.TryNotifyPowerMeterTuneLocked(string) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:5311 |
-| 243 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
-| 245 | Window.GetWindow | unresolved | None |
-| 247 | dialog.ShowDialog | unresolved | None |
+| 269 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:463 |
+| 270 | .TryNotifyPowerMeterTuneLocked | resolved | bool Drilling.UI.Menu.Menus.CMenuMonitor.TryNotifyPowerMeterTuneLocked(string) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:5782 |
+| 275 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
+| 277 | Window.GetWindow | unresolved | None |
+| 279 | dialog.ShowDialog | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 231 | if | 조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_PWM_SETTING_ROW row } &#124;&#124; row.UsesSelectionEditor) |
-| 233 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 236 | assignment | 값을 대상에 대입합니다: e.Handled = true |
-| 237 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
-| 237 | local-declaration | 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); |
-| 237 | variable-initializer | 변수의 초기값을 지정합니다: monitor = GetMonitorMenu() |
-| 238 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") |
-| 238 | if | 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true) |
-| 240 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.Parameter, row.Value, row.DataType, 0, 0) { Owner = Window.GetWindow(this) } |
-| 243 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.Parameter, row.Value, row.DataType, 0, 0) { Owner = Window.GetWindow(this) }; |
-| 243 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.Parameter, row.Value, row.DataType, 0, 0) { Owner = Window.GetWindow(this) } |
-| 245 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
-| 245 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
-| 247 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
-| 247 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true) |
-| 249 | assignment | 값을 대상에 대입합니다: row.Value = dialog.ResultValue |
+| 263 | if | 조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_PWM_SETTING_ROW row } &#124;&#124; row.UsesSelectionEditor) |
+| 265 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 268 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 269 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
+| 269 | local-declaration | 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); |
+| 269 | variable-initializer | 변수의 초기값을 지정합니다: monitor = GetMonitorMenu() |
+| 270 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") |
+| 270 | if | 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true) |
+| 272 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 275 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.Parameter, row.Value, row.DataType, 0, 0) { Owner = Window.GetWindow(this) } |
+| 275 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.Parameter, row.Value, row.DataType, 0, 0) { Owner = Window.GetWindow(this) }; |
+| 275 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.Parameter, row.Value, row.DataType, 0, 0) { Owner = Window.GetWindow(this) } |
+| 277 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
+| 277 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
+| 279 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
+| 279 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true) |
+| 281 | assignment | 값을 대상에 대입합니다: row.Value = dialog.ResultValue |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["OpenPowerMeterSettingInput"]
- N0["L231 if"]
+ N0["L263 if"]
  M -->|포함| N0
- N1["L238 if"]
+ N1["L270 if"]
  M -->|포함| N1
- N2["L247 if"]
+ N2["L279 if"]
  M -->|포함| N2
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `PowerMeterSettingSelection_PreviewMouseDown` · L253–260
+### MethodDeclaration `PowerMeterSettingSelection_PreviewMouseDown` · L285–292
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:253–260](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L253-L260)
+[Drilling.UI/Views/CMonitorView.xaml.cs:285–292](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L285-L292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -910,34 +1019,34 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 255 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:431 |
-| 256 | .TryNotifyPowerMeterTuneLocked | resolved | bool Drilling.UI.Menu.Menus.CMenuMonitor.TryNotifyPowerMeterTuneLocked(string) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:5311 |
+| 287 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:463 |
+| 288 | .TryNotifyPowerMeterTuneLocked | resolved | bool Drilling.UI.Menu.Menus.CMenuMonitor.TryNotifyPowerMeterTuneLocked(string) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:5782 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 255 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
-| 255 | local-declaration | 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); |
-| 255 | variable-initializer | 변수의 초기값을 지정합니다: monitor = GetMonitorMenu() |
-| 256 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") |
-| 256 | if | 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true) |
-| 258 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 287 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
+| 287 | local-declaration | 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); |
+| 287 | variable-initializer | 변수의 초기값을 지정합니다: monitor = GetMonitorMenu() |
+| 288 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") |
+| 288 | if | 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true) |
+| 290 | assignment | 값을 대상에 대입합니다: e.Handled = true |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["PowerMeterSettingSelection_PreviewMouseDown"]
- N0["L256 if"]
+ N0["L288 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `PowerMeterSettingSelection_PreviewKeyDown` · L262–274
+### MethodDeclaration `PowerMeterSettingSelection_PreviewKeyDown` · L294–306
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:262–274](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L262-L274)
+[Drilling.UI/Views/CMonitorView.xaml.cs:294–306](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L294-L306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -959,40 +1068,40 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 264 | IsPowerMeterSettingSelectionKey | candidate | OverloadResolutionFailure |
-| 269 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:431 |
-| 270 | .TryNotifyPowerMeterTuneLocked | resolved | bool Drilling.UI.Menu.Menus.CMenuMonitor.TryNotifyPowerMeterTuneLocked(string) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:5311 |
+| 296 | IsPowerMeterSettingSelectionKey | candidate | OverloadResolutionFailure |
+| 301 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:463 |
+| 302 | .TryNotifyPowerMeterTuneLocked | resolved | bool Drilling.UI.Menu.Menus.CMenuMonitor.TryNotifyPowerMeterTuneLocked(string) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:5782 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 264 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsPowerMeterSettingSelectionKey(e.Key) |
-| 264 | if | 조건에 따라 분기합니다: if (!IsPowerMeterSettingSelectionKey(e.Key)) |
-| 266 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 269 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
-| 269 | local-declaration | 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); |
-| 269 | variable-initializer | 변수의 초기값을 지정합니다: monitor = GetMonitorMenu() |
-| 270 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") |
-| 270 | if | 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true) |
-| 272 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 296 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsPowerMeterSettingSelectionKey(e.Key) |
+| 296 | if | 조건에 따라 분기합니다: if (!IsPowerMeterSettingSelectionKey(e.Key)) |
+| 298 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 301 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
+| 301 | local-declaration | 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); |
+| 301 | variable-initializer | 변수의 초기값을 지정합니다: monitor = GetMonitorMenu() |
+| 302 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") |
+| 302 | if | 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true) |
+| 304 | assignment | 값을 대상에 대입합니다: e.Handled = true |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["PowerMeterSettingSelection_PreviewKeyDown"]
- N0["L264 if"]
+ N0["L296 if"]
  M -->|포함| N0
- N1["L270 if"]
+ N1["L302 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `PowerMeterSettingSelection_PreviewMouseWheel` · L276–283
+### MethodDeclaration `PowerMeterSettingSelection_PreviewMouseWheel` · L308–315
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:276–283](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L276-L283)
+[Drilling.UI/Views/CMonitorView.xaml.cs:308–315](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L308-L315)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1014,34 +1123,34 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 278 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:431 |
-| 279 | .TryNotifyPowerMeterTuneLocked | resolved | bool Drilling.UI.Menu.Menus.CMenuMonitor.TryNotifyPowerMeterTuneLocked(string) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:5311 |
+| 310 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:463 |
+| 311 | .TryNotifyPowerMeterTuneLocked | resolved | bool Drilling.UI.Menu.Menus.CMenuMonitor.TryNotifyPowerMeterTuneLocked(string) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:5782 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 278 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
-| 278 | local-declaration | 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); |
-| 278 | variable-initializer | 변수의 초기값을 지정합니다: monitor = GetMonitorMenu() |
-| 279 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") |
-| 279 | if | 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true) |
-| 281 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 310 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
+| 310 | local-declaration | 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); |
+| 310 | variable-initializer | 변수의 초기값을 지정합니다: monitor = GetMonitorMenu() |
+| 311 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") |
+| 311 | if | 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") == true) |
+| 313 | assignment | 값을 대상에 대입합니다: e.Handled = true |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["PowerMeterSettingSelection_PreviewMouseWheel"]
- N0["L279 if"]
+ N0["L311 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `PowerMeterSettingSelection_DropDownOpened` · L285–294
+### MethodDeclaration `PowerMeterSettingSelection_DropDownOpened` · L317–326
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:285–294](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L285-L294)
+[Drilling.UI/Views/CMonitorView.xaml.cs:317–326](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L317-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1063,35 +1172,35 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 287 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:431 |
-| 288 | .TryNotifyPowerMeterTuneLocked | resolved | bool Drilling.UI.Menu.Menus.CMenuMonitor.TryNotifyPowerMeterTuneLocked(string) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:5311 |
+| 319 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:463 |
+| 320 | .TryNotifyPowerMeterTuneLocked | resolved | bool Drilling.UI.Menu.Menus.CMenuMonitor.TryNotifyPowerMeterTuneLocked(string) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:5782 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 287 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
-| 287 | local-declaration | 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); |
-| 287 | variable-initializer | 변수의 초기값을 지정합니다: monitor = GetMonitorMenu() |
-| 288 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") |
-| 288 | if | 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") != true &#124;&#124; sender is not ComboBox comboBox) |
-| 290 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 293 | assignment | 값을 대상에 대입합니다: comboBox.IsDropDownOpen = false |
+| 319 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
+| 319 | local-declaration | 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); |
+| 319 | variable-initializer | 변수의 초기값을 지정합니다: monitor = GetMonitorMenu() |
+| 320 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryNotifyPowerMeterTuneLocked("SETTING 변경") |
+| 320 | if | 조건에 따라 분기합니다: if (monitor?.TryNotifyPowerMeterTuneLocked("SETTING 변경") != true &#124;&#124; sender is not ComboBox comboBox) |
+| 322 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 325 | assignment | 값을 대상에 대입합니다: comboBox.IsDropDownOpen = false |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["PowerMeterSettingSelection_DropDownOpened"]
- N0["L288 if"]
+ N0["L320 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `IsPowerMeterSettingSelectionKey` · L296–312
+### MethodDeclaration `IsPowerMeterSettingSelectionKey` · L328–344
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:296–312](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L296-L312)
+[Drilling.UI/Views/CMonitorView.xaml.cs:328–344](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L328-L344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1112,33 +1221,33 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 298 | switch | 값에 따라 분기합니다: switch (key) |
-| 300 | case | 분기값/패턴의 구간입니다: case Key.Enter: |
-| 301 | case | 분기값/패턴의 구간입니다: case Key.Space: |
-| 302 | case | 분기값/패턴의 구간입니다: case Key.Up: |
-| 303 | case | 분기값/패턴의 구간입니다: case Key.Down: |
-| 304 | case | 분기값/패턴의 구간입니다: case Key.PageUp: |
-| 305 | case | 분기값/패턴의 구간입니다: case Key.PageDown: |
-| 306 | case | 분기값/패턴의 구간입니다: case Key.Home: |
-| 307 | case | 분기값/패턴의 구간입니다: case Key.End: |
-| 308 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
-| 309 | case | 분기값/패턴의 구간입니다: default: |
-| 310 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 330 | switch | 값에 따라 분기합니다: switch (key) |
+| 332 | case | 분기값/패턴의 구간입니다: case Key.Enter: |
+| 333 | case | 분기값/패턴의 구간입니다: case Key.Space: |
+| 334 | case | 분기값/패턴의 구간입니다: case Key.Up: |
+| 335 | case | 분기값/패턴의 구간입니다: case Key.Down: |
+| 336 | case | 분기값/패턴의 구간입니다: case Key.PageUp: |
+| 337 | case | 분기값/패턴의 구간입니다: case Key.PageDown: |
+| 338 | case | 분기값/패턴의 구간입니다: case Key.Home: |
+| 339 | case | 분기값/패턴의 구간입니다: case Key.End: |
+| 340 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
+| 341 | case | 분기값/패턴의 구간입니다: default: |
+| 342 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["IsPowerMeterSettingSelectionKey"]
- N0["L298 switch"]
+ N0["L330 switch"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `OpenLaserSettingInput` · L314–331
+### MethodDeclaration `OpenLaserSettingInput` · L346–363
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:314–331](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L314-L331)
+[Drilling.UI/Views/CMonitorView.xaml.cs:346–363](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L346-L363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1160,43 +1269,43 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 322 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
-| 324 | Window.GetWindow | unresolved | None |
-| 326 | dialog.ShowDialog | unresolved | None |
+| 354 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
+| 356 | Window.GetWindow | unresolved | None |
+| 358 | dialog.ShowDialog | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 316 | if | 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_MONITOR_LASER_CONTROL_ROW row } button &#124;&#124; !row.CanCommand) |
-| 318 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 321 | assignment | 값을 대상에 대입합니다: e.Handled = true |
-| 322 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.CurrentLabel, row.Setting.Value, EN_RECIPE_DATA_TYPE.Int, 0, int.MaxValue) { Owner = Window.GetWindow(this) } |
-| 322 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.CurrentLabel, row.Setting.Value, EN_RECIPE_DATA_TYPE.Int, 0, int.MaxValue) { Owner = Window.GetWindow(this) }; |
-| 322 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.CurrentLabel, row.Setting.Value, EN_RECIPE_DATA_TYPE.Int, 0, int.MaxValue) { Owner = Window.GetWindow(this) } |
-| 324 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
-| 324 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
-| 326 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
-| 326 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true) |
-| 328 | assignment | 값을 대상에 대입합니다: row.Setting.Value = dialog.ResultValue |
-| 329 | assignment | 값을 대상에 대입합니다: button.Content = dialog.ResultValue |
+| 348 | if | 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_MONITOR_LASER_CONTROL_ROW row } button &#124;&#124; !row.CanCommand) |
+| 350 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 353 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 354 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.CurrentLabel, row.Setting.Value, EN_RECIPE_DATA_TYPE.Int, 0, int.MaxValue) { Owner = Window.GetWindow(this) } |
+| 354 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.CurrentLabel, row.Setting.Value, EN_RECIPE_DATA_TYPE.Int, 0, int.MaxValue) { Owner = Window.GetWindow(this) }; |
+| 354 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.CurrentLabel, row.Setting.Value, EN_RECIPE_DATA_TYPE.Int, 0, int.MaxValue) { Owner = Window.GetWindow(this) } |
+| 356 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
+| 356 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
+| 358 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
+| 358 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true) |
+| 360 | assignment | 값을 대상에 대입합니다: row.Setting.Value = dialog.ResultValue |
+| 361 | assignment | 값을 대상에 대입합니다: button.Content = dialog.ResultValue |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["OpenLaserSettingInput"]
- N0["L316 if"]
+ N0["L348 if"]
  M -->|포함| N0
- N1["L326 if"]
+ N1["L358 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `OpenMotorOperationInput` · L333–350
+### MethodDeclaration `OpenMotorOperationInput` · L365–382
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:333–350](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L333-L350)
+[Drilling.UI/Views/CMonitorView.xaml.cs:365–382](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L365-L382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1218,43 +1327,43 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 341 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
-| 343 | Window.GetWindow | unresolved | None |
-| 345 | dialog.ShowDialog | unresolved | None |
+| 373 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
+| 375 | Window.GetWindow | unresolved | None |
+| 377 | dialog.ShowDialog | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 335 | if | 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button) |
-| 337 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 340 | assignment | 값을 대상에 대입합니다: e.Handled = true |
-| 341 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) } |
-| 341 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }; |
-| 341 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) } |
-| 343 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
-| 343 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
-| 345 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
-| 345 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true) |
-| 347 | assignment | 값을 대상에 대입합니다: row.Value = dialog.ResultValue |
-| 348 | assignment | 값을 대상에 대입합니다: button.Content = dialog.ResultValue |
+| 367 | if | 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button) |
+| 369 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 372 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 373 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) } |
+| 373 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }; |
+| 373 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) } |
+| 375 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
+| 375 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
+| 377 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
+| 377 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true) |
+| 379 | assignment | 값을 대상에 대입합니다: row.Value = dialog.ResultValue |
+| 380 | assignment | 값을 대상에 대입합니다: button.Content = dialog.ResultValue |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["OpenMotorOperationInput"]
- N0["L335 if"]
+ N0["L367 if"]
  M -->|포함| N0
- N1["L345 if"]
+ N1["L377 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `OpenXpsMultiMoveTargetInput` · L352–368
+### MethodDeclaration `OpenXpsMultiMoveTargetInput` · L384–400
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:352–368](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L352-L368)
+[Drilling.UI/Views/CMonitorView.xaml.cs:384–400](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L384-L400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1276,42 +1385,42 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 360 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
-| 362 | Window.GetWindow | unresolved | None |
-| 364 | dialog.ShowDialog | unresolved | None |
+| 392 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
+| 394 | Window.GetWindow | unresolved | None |
+| 396 | dialog.ShowDialog | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 354 | if | 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_MULTI_MOVE_AXIS_ROW row }) |
-| 356 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 359 | assignment | 값을 대상에 대입합니다: e.Handled = true |
-| 360 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog($"Axis {row.Axis} Target Position", row.TargetPosition, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) } |
-| 360 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog($"Axis {row.Axis} Target Position", row.TargetPosition, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }; |
-| 360 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog($"Axis {row.Axis} Target Position", row.TargetPosition, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) } |
-| 362 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
-| 362 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
-| 364 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
-| 364 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true) |
-| 366 | assignment | 값을 대상에 대입합니다: row.TargetPosition = dialog.ResultValue |
+| 386 | if | 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_MULTI_MOVE_AXIS_ROW row }) |
+| 388 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 391 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 392 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog($"Axis {row.Axis} Target Position", row.TargetPosition, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) } |
+| 392 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog($"Axis {row.Axis} Target Position", row.TargetPosition, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) }; |
+| 392 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog($"Axis {row.Axis} Target Position", row.TargetPosition, EN_RECIPE_DATA_TYPE.Double, 0, 0) { Owner = Window.GetWindow(this) } |
+| 394 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
+| 394 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
+| 396 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
+| 396 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true) |
+| 398 | assignment | 값을 대상에 대입합니다: row.TargetPosition = dialog.ResultValue |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["OpenXpsMultiMoveTargetInput"]
- N0["L354 if"]
+ N0["L386 if"]
  M -->|포함| N0
- N1["L364 if"]
+ N1["L396 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StartXpsJogNegative` · L370–374
+### MethodDeclaration `StartXpsJogNegative` · L402–406
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:370–374](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L370-L374)
+[Drilling.UI/Views/CMonitorView.xaml.cs:402–406](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L402-L406)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1333,21 +1442,21 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 373 | ExecuteXpsJogEvent | resolved | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) · Drilling.UI/Views/CMonitorView.xaml.cs:403 |
+| 405 | ExecuteXpsJogEvent | resolved | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) · Drilling.UI/Views/CMonitorView.xaml.cs:435 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 372 | assignment | 값을 대상에 대입합니다: e.Handled = true |
-| 373 | await | 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: false) |
-| 373 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: false) |
+| 404 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 405 | await | 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: false) |
+| 405 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: false) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StartXpsJogPositive` · L376–380
+### MethodDeclaration `StartXpsJogPositive` · L408–412
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:376–380](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L376-L380)
+[Drilling.UI/Views/CMonitorView.xaml.cs:408–412](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L408-L412)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1369,21 +1478,21 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 379 | ExecuteXpsJogEvent | resolved | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) · Drilling.UI/Views/CMonitorView.xaml.cs:403 |
+| 411 | ExecuteXpsJogEvent | resolved | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) · Drilling.UI/Views/CMonitorView.xaml.cs:435 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 378 | assignment | 값을 대상에 대입합니다: e.Handled = true |
-| 379 | await | 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: true) |
-| 379 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: true) |
+| 410 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 411 | await | 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: true) |
+| 411 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: true) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StopXpsJog` · L382–386
+### MethodDeclaration `StopXpsJog` · L414–418
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:382–386](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L382-L386)
+[Drilling.UI/Views/CMonitorView.xaml.cs:414–418](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L414-L418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1405,21 +1514,21 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 385 | ExecuteXpsJogEvent | resolved | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) · Drilling.UI/Views/CMonitorView.xaml.cs:403 |
+| 417 | ExecuteXpsJogEvent | resolved | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) · Drilling.UI/Views/CMonitorView.xaml.cs:435 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 384 | assignment | 값을 대상에 대입합니다: e.Handled = true |
-| 385 | await | 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: null) |
-| 385 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: null) |
+| 416 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 417 | await | 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: null) |
+| 417 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: null) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StopXpsJogOnMouseLeave` · L388–391
+### MethodDeclaration `StopXpsJogOnMouseLeave` · L420–423
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:388–391](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L388-L391)
+[Drilling.UI/Views/CMonitorView.xaml.cs:420–423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L420-L423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1441,20 +1550,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 390 | ExecuteXpsJogEvent | resolved | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) · Drilling.UI/Views/CMonitorView.xaml.cs:403 |
+| 422 | ExecuteXpsJogEvent | resolved | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) · Drilling.UI/Views/CMonitorView.xaml.cs:435 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 390 | await | 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: null) |
-| 390 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: null) |
+| 422 | await | 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: null) |
+| 422 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: null) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StopXpsJogOnLostMouseCapture` · L393–396
+### MethodDeclaration `StopXpsJogOnLostMouseCapture` · L425–428
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:393–396](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L393-L396)
+[Drilling.UI/Views/CMonitorView.xaml.cs:425–428](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L425-L428)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1476,20 +1585,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 395 | ExecuteXpsJogEvent | resolved | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) · Drilling.UI/Views/CMonitorView.xaml.cs:403 |
+| 427 | ExecuteXpsJogEvent | resolved | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) · Drilling.UI/Views/CMonitorView.xaml.cs:435 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 395 | await | 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: null) |
-| 395 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: null) |
+| 427 | await | 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: null) |
+| 427 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: null) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StopXpsJogOnLostKeyboardFocus` · L398–401
+### MethodDeclaration `StopXpsJogOnLostKeyboardFocus` · L430–433
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:398–401](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L398-L401)
+[Drilling.UI/Views/CMonitorView.xaml.cs:430–433](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L430-L433)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1511,20 +1620,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 400 | ExecuteXpsJogEvent | resolved | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) · Drilling.UI/Views/CMonitorView.xaml.cs:403 |
+| 432 | ExecuteXpsJogEvent | resolved | System.Threading.Tasks.Task Drilling.UI.Views.CMonitorView.ExecuteXpsJogEvent(bool?) · Drilling.UI/Views/CMonitorView.xaml.cs:435 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 400 | await | 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: null) |
-| 400 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: null) |
+| 432 | await | 비동기 완료를 기다립니다: await ExecuteXpsJogEvent(positive: null) |
+| 432 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteXpsJogEvent(positive: null) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ExecuteXpsJogEvent` · L403–429
+### MethodDeclaration `ExecuteXpsJogEvent` · L435–461
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:403–429](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L403-L429)
+[Drilling.UI/Views/CMonitorView.xaml.cs:435–461](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L435-L461)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1543,64 +1652,64 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L373-L373) | ExecuteXpsJogEvent | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L379-L379) | ExecuteXpsJogEvent | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L385-L385) | ExecuteXpsJogEvent | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L390-L390) | ExecuteXpsJogEvent | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L395-L395) | ExecuteXpsJogEvent | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:400–400](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L400-L400) | ExecuteXpsJogEvent | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:405–405](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L405-L405) | ExecuteXpsJogEvent | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L411-L411) | ExecuteXpsJogEvent | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L417-L417) | ExecuteXpsJogEvent | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L422-L422) | ExecuteXpsJogEvent | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L427-L427) | ExecuteXpsJogEvent | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L432-L432) | ExecuteXpsJogEvent | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 405 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:431 |
-| 414 | monitor.StartXpsJog | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuMonitor.StartXpsJog(bool) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:4401 |
-| 418 | monitor.StopXpsJog | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuMonitor.StopXpsJog() · Drilling.UI/Menu/Menus/CMenuMonitor.cs:4471 |
-| 427 | monitor.ReportXpsJogFailure | resolved | void Drilling.UI.Menu.Menus.CMenuMonitor.ReportXpsJogFailure(System.Exception) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:4507 |
+| 437 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:463 |
+| 446 | monitor.StartXpsJog | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuMonitor.StartXpsJog(bool) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:4872 |
+| 450 | monitor.StopXpsJog | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuMonitor.StopXpsJog() · Drilling.UI/Menu/Menus/CMenuMonitor.cs:4942 |
+| 459 | monitor.ReportXpsJogFailure | resolved | void Drilling.UI.Menu.Menus.CMenuMonitor.ReportXpsJogFailure(System.Exception) · Drilling.UI/Menu/Menus/CMenuMonitor.cs:4978 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 405 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
-| 405 | if | 조건에 따라 분기합니다: if (GetMonitorMenu()is not { } monitor) |
-| 407 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 410 | try | 예외 처리 범위입니다: try |
-| 412 | if | 조건에 따라 분기합니다: if (positive.HasValue) |
-| 414 | await | 비동기 완료를 기다립니다: await monitor.StartXpsJog(positive.Value) |
-| 414 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.StartXpsJog(positive.Value) |
-| 416 | else | 앞 조건이 거짓인 경로입니다: else |
-| 418 | await | 비동기 완료를 기다립니다: await monitor.StopXpsJog() |
-| 418 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.StopXpsJog() |
-| 421 | catch | 지정 예외를 처리합니다: catch (OperationCanceledException) when (positive.HasValue) |
-| 425 | catch | 지정 예외를 처리합니다: catch (Exception exception) |
-| 427 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.ReportXpsJogFailure(exception) |
+| 437 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
+| 437 | if | 조건에 따라 분기합니다: if (GetMonitorMenu()is not { } monitor) |
+| 439 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 442 | try | 예외 처리 범위입니다: try |
+| 444 | if | 조건에 따라 분기합니다: if (positive.HasValue) |
+| 446 | await | 비동기 완료를 기다립니다: await monitor.StartXpsJog(positive.Value) |
+| 446 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.StartXpsJog(positive.Value) |
+| 448 | else | 앞 조건이 거짓인 경로입니다: else |
+| 450 | await | 비동기 완료를 기다립니다: await monitor.StopXpsJog() |
+| 450 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.StopXpsJog() |
+| 453 | catch | 지정 예외를 처리합니다: catch (OperationCanceledException) when (positive.HasValue) |
+| 457 | catch | 지정 예외를 처리합니다: catch (Exception exception) |
+| 459 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: monitor.ReportXpsJogFailure(exception) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ExecuteXpsJogEvent"]
- N0["L405 if"]
+ N0["L437 if"]
  M -->|포함| N0
- N1["L410 try"]
+ N1["L442 try"]
  M -->|포함| N1
- N2["L412 if"]
+ N2["L444 if"]
  N1 -->|포함| N2
- N3["L416 else"]
+ N3["L448 else"]
  N2 -->|포함| N3
- N4["L421 catch"]
+ N4["L453 catch"]
  N1 -->|포함| N4
- N5["L425 catch"]
+ N5["L457 catch"]
  N1 -->|포함| N5
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `GetMonitorMenu` · L431–434
+### MethodDeclaration `GetMonitorMenu` · L463–466
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:431–434](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L431-L434)
+[Drilling.UI/Views/CMonitorView.xaml.cs:463–466](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L463-L466)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1613,26 +1722,26 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L237-L237) | GetMonitorMenu | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L255-L255) | GetMonitorMenu | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L269-L269) | GetMonitorMenu | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:278–278](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L278-L278) | GetMonitorMenu | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L287-L287) | GetMonitorMenu | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:405–405](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L405-L405) | GetMonitorMenu | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L555-L555) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L269-L269) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L287-L287) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L301-L301) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L310-L310) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L319-L319) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L437-L437) | GetMonitorMenu | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L587-L587) | GetMonitorMenu | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 433 | conditional-expression | 조건에 따라 결과식을 선택합니다: DataContext is CRootView rootView ? rootView.CurrentScreen.Monitor : null |
-| 433 | return | 호출자에게 값 또는 제어를 반환합니다: return DataContext is CRootView rootView ? rootView.CurrentScreen.Monitor : null; |
+| 465 | conditional-expression | 조건에 따라 결과식을 선택합니다: DataContext is CRootView rootView ? rootView.CurrentScreen.Monitor : null |
+| 465 | return | 호출자에게 값 또는 제어를 반환합니다: return DataContext is CRootView rootView ? rootView.CurrentScreen.Monitor : null; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `OpenAttenuatorPositionInput` · L436–455
+### MethodDeclaration `OpenAttenuatorPositionInput` · L468–487
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:436–455](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L436-L455)
+[Drilling.UI/Views/CMonitorView.xaml.cs:468–487](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L468-L487)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1654,50 +1763,50 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 445 | string.Equals | resolved | bool string.Equals(string?, string?, System.StringComparison) |
-| 446 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
-| 448 | Window.GetWindow | unresolved | None |
-| 450 | dialog.ShowDialog | unresolved | None |
+| 477 | string.Equals | resolved | bool string.Equals(string?, string?, System.StringComparison) |
+| 478 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
+| 480 | Window.GetWindow | unresolved | None |
+| 482 | dialog.ShowDialog | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 438 | if | 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button) |
-| 440 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 443 | assignment | 값을 대상에 대입합니다: e.Handled = true |
-| 444 | local-declaration | 지역 변수를 선언합니다: var parameter = row.Parameter ?? string.Empty; |
-| 444 | variable-initializer | 변수의 초기값을 지정합니다: parameter = row.Parameter ?? string.Empty |
-| 445 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) |
-| 445 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double |
-| 445 | local-declaration | 지역 변수를 선언합니다: var dataType = string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double; |
-| 445 | variable-initializer | 변수의 초기값을 지정합니다: dataType = string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double |
-| 446 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(parameter, row.Value, dataType, 0, 0) { Owner = Window.GetWindow(this) } |
-| 446 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog(parameter, row.Value, dataType, 0, 0) { Owner = Window.GetWindow(this) }; |
-| 446 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(parameter, row.Value, dataType, 0, 0) { Owner = Window.GetWindow(this) } |
-| 448 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
-| 448 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
-| 450 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
-| 450 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true) |
-| 452 | assignment | 값을 대상에 대입합니다: row.Value = dialog.ResultValue |
-| 453 | assignment | 값을 대상에 대입합니다: button.Content = dialog.ResultValue |
+| 470 | if | 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button) |
+| 472 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 475 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 476 | local-declaration | 지역 변수를 선언합니다: var parameter = row.Parameter ?? string.Empty; |
+| 476 | variable-initializer | 변수의 초기값을 지정합니다: parameter = row.Parameter ?? string.Empty |
+| 477 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) |
+| 477 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double |
+| 477 | local-declaration | 지역 변수를 선언합니다: var dataType = string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double; |
+| 477 | variable-initializer | 변수의 초기값을 지정합니다: dataType = string.Equals(parameter, "Home Type", StringComparison.OrdinalIgnoreCase) ? EN_RECIPE_DATA_TYPE.Int : EN_RECIPE_DATA_TYPE.Double |
+| 478 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(parameter, row.Value, dataType, 0, 0) { Owner = Window.GetWindow(this) } |
+| 478 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog(parameter, row.Value, dataType, 0, 0) { Owner = Window.GetWindow(this) }; |
+| 478 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(parameter, row.Value, dataType, 0, 0) { Owner = Window.GetWindow(this) } |
+| 480 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
+| 480 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
+| 482 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
+| 482 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true) |
+| 484 | assignment | 값을 대상에 대입합니다: row.Value = dialog.ResultValue |
+| 485 | assignment | 값을 대상에 대입합니다: button.Content = dialog.ResultValue |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["OpenAttenuatorPositionInput"]
- N0["L438 if"]
+ N0["L470 if"]
  M -->|포함| N0
- N1["L450 if"]
+ N1["L482 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `OpenBetTableInput` · L457–497
+### MethodDeclaration `OpenBetTableInput` · L489–529
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:457–497](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L457-L497)
+[Drilling.UI/Views/CMonitorView.xaml.cs:489–529](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L489-L529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1719,66 +1828,66 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 474 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
-| 476 | Window.GetWindow | unresolved | None |
-| 478 | dialog.ShowDialog | unresolved | None |
+| 506 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
+| 508 | Window.GetWindow | unresolved | None |
+| 510 | dialog.ShowDialog | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 459 | if | 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_MONITOR_BET_TABLE_ROW row, Tag: string field } button) |
-| 461 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 464 | assignment | 값을 대상에 대입합니다: e.Handled = true |
-| 465 | local-declaration | 지역 변수를 선언합니다: var currentValue = field switch { "DESCRIPTION" => row.Description, "DIV" => row.Div, "MAG" => row.Mag, _ => "" }; |
-| 465 | switch-expression | 값별 결과식을 선택합니다: field switch { "DESCRIPTION" => row.Description, "DIV" => row.Div, "MAG" => row.Mag, _ => "" } |
-| 465 | variable-initializer | 변수의 초기값을 지정합니다: currentValue = field switch { "DESCRIPTION" => row.Description, "DIV" => row.Div, "MAG" => row.Mag, _ => "" } |
-| 472 | conditional-expression | 조건에 따라 결과식을 선택합니다: field == "DESCRIPTION" ? EN_RECIPE_DATA_TYPE.String : EN_RECIPE_DATA_TYPE.Int |
-| 472 | local-declaration | 지역 변수를 선언합니다: var dataType = field == "DESCRIPTION" ? EN_RECIPE_DATA_TYPE.String : EN_RECIPE_DATA_TYPE.Int; |
-| 472 | variable-initializer | 변수의 초기값을 지정합니다: dataType = field == "DESCRIPTION" ? EN_RECIPE_DATA_TYPE.String : EN_RECIPE_DATA_TYPE.Int |
-| 473 | conditional-expression | 조건에 따라 결과식을 선택합니다: field is "DIV" or "MAG" ? 4500 : 0 |
-| 473 | local-declaration | 지역 변수를 선언합니다: var max = field is "DIV" or "MAG" ? 4500 : 0; |
-| 473 | variable-initializer | 변수의 초기값을 지정합니다: max = field is "DIV" or "MAG" ? 4500 : 0 |
-| 474 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(field, currentValue, dataType, 0, max) { Owner = Window.GetWindow(this) } |
-| 474 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog(field, currentValue, dataType, 0, max) { Owner = Window.GetWindow(this) }; |
-| 474 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(field, currentValue, dataType, 0, max) { Owner = Window.GetWindow(this) } |
-| 476 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
-| 476 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
-| 478 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
-| 478 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() != true) |
-| 480 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 483 | switch | 값에 따라 분기합니다: switch (field) |
-| 485 | case | 분기값/패턴의 구간입니다: case "DESCRIPTION": |
-| 486 | assignment | 값을 대상에 대입합니다: row.Description = dialog.ResultValue |
-| 487 | break | 해당 반복/분기 구간을 종료합니다: break; |
-| 488 | case | 분기값/패턴의 구간입니다: case "DIV": |
-| 489 | assignment | 값을 대상에 대입합니다: row.Div = dialog.ResultValue |
-| 490 | break | 해당 반복/분기 구간을 종료합니다: break; |
-| 491 | case | 분기값/패턴의 구간입니다: case "MAG": |
-| 492 | assignment | 값을 대상에 대입합니다: row.Mag = dialog.ResultValue |
-| 493 | break | 해당 반복/분기 구간을 종료합니다: break; |
-| 496 | assignment | 값을 대상에 대입합니다: button.Content = dialog.ResultValue |
+| 491 | if | 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_MONITOR_BET_TABLE_ROW row, Tag: string field } button) |
+| 493 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 496 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 497 | local-declaration | 지역 변수를 선언합니다: var currentValue = field switch { "DESCRIPTION" => row.Description, "DIV" => row.Div, "MAG" => row.Mag, _ => "" }; |
+| 497 | switch-expression | 값별 결과식을 선택합니다: field switch { "DESCRIPTION" => row.Description, "DIV" => row.Div, "MAG" => row.Mag, _ => "" } |
+| 497 | variable-initializer | 변수의 초기값을 지정합니다: currentValue = field switch { "DESCRIPTION" => row.Description, "DIV" => row.Div, "MAG" => row.Mag, _ => "" } |
+| 504 | conditional-expression | 조건에 따라 결과식을 선택합니다: field == "DESCRIPTION" ? EN_RECIPE_DATA_TYPE.String : EN_RECIPE_DATA_TYPE.Int |
+| 504 | local-declaration | 지역 변수를 선언합니다: var dataType = field == "DESCRIPTION" ? EN_RECIPE_DATA_TYPE.String : EN_RECIPE_DATA_TYPE.Int; |
+| 504 | variable-initializer | 변수의 초기값을 지정합니다: dataType = field == "DESCRIPTION" ? EN_RECIPE_DATA_TYPE.String : EN_RECIPE_DATA_TYPE.Int |
+| 505 | conditional-expression | 조건에 따라 결과식을 선택합니다: field is "DIV" or "MAG" ? 4500 : 0 |
+| 505 | local-declaration | 지역 변수를 선언합니다: var max = field is "DIV" or "MAG" ? 4500 : 0; |
+| 505 | variable-initializer | 변수의 초기값을 지정합니다: max = field is "DIV" or "MAG" ? 4500 : 0 |
+| 506 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(field, currentValue, dataType, 0, max) { Owner = Window.GetWindow(this) } |
+| 506 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog(field, currentValue, dataType, 0, max) { Owner = Window.GetWindow(this) }; |
+| 506 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(field, currentValue, dataType, 0, max) { Owner = Window.GetWindow(this) } |
+| 508 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
+| 508 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
+| 510 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
+| 510 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() != true) |
+| 512 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 515 | switch | 값에 따라 분기합니다: switch (field) |
+| 517 | case | 분기값/패턴의 구간입니다: case "DESCRIPTION": |
+| 518 | assignment | 값을 대상에 대입합니다: row.Description = dialog.ResultValue |
+| 519 | break | 해당 반복/분기 구간을 종료합니다: break; |
+| 520 | case | 분기값/패턴의 구간입니다: case "DIV": |
+| 521 | assignment | 값을 대상에 대입합니다: row.Div = dialog.ResultValue |
+| 522 | break | 해당 반복/분기 구간을 종료합니다: break; |
+| 523 | case | 분기값/패턴의 구간입니다: case "MAG": |
+| 524 | assignment | 값을 대상에 대입합니다: row.Mag = dialog.ResultValue |
+| 525 | break | 해당 반복/분기 구간을 종료합니다: break; |
+| 528 | assignment | 값을 대상에 대입합니다: button.Content = dialog.ResultValue |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["OpenBetTableInput"]
- N0["L459 if"]
+ N0["L491 if"]
  M -->|포함| N0
- N1["L465 switch-expression"]
+ N1["L497 switch-expression"]
  M -->|포함| N1
- N2["L478 if"]
+ N2["L510 if"]
  M -->|포함| N2
- N3["L483 switch"]
+ N3["L515 switch"]
  M -->|포함| N3
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `OpenBetPositionInput` · L499–516
+### MethodDeclaration `OpenBetPositionInput` · L531–548
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:499–516](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L499-L516)
+[Drilling.UI/Views/CMonitorView.xaml.cs:531–548](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L531-L548)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1800,43 +1909,43 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 507 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
-| 509 | Window.GetWindow | unresolved | None |
-| 511 | dialog.ShowDialog | unresolved | None |
+| 539 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
+| 541 | Window.GetWindow | unresolved | None |
+| 543 | dialog.ShowDialog | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 501 | if | 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button) |
-| 503 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 506 | assignment | 값을 대상에 대입합니다: e.Handled = true |
-| 507 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Int, 0, 4500) { Owner = Window.GetWindow(this) } |
-| 507 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Int, 0, 4500) { Owner = Window.GetWindow(this) }; |
-| 507 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Int, 0, 4500) { Owner = Window.GetWindow(this) } |
-| 509 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
-| 509 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
-| 511 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
-| 511 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true) |
-| 513 | assignment | 값을 대상에 대입합니다: row.Value = dialog.ResultValue |
-| 514 | assignment | 값을 대상에 대입합니다: button.Content = dialog.ResultValue |
+| 533 | if | 조건에 따라 분기합니다: if (sender is not Button { Tag: ST_MONITOR_PARAMETER_ROW row } button) |
+| 535 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 538 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 539 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Int, 0, 4500) { Owner = Window.GetWindow(this) } |
+| 539 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Int, 0, 4500) { Owner = Window.GetWindow(this) }; |
+| 539 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog(row.Parameter, row.Value, EN_RECIPE_DATA_TYPE.Int, 0, 4500) { Owner = Window.GetWindow(this) } |
+| 541 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
+| 541 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
+| 543 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
+| 543 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true) |
+| 545 | assignment | 값을 대상에 대입합니다: row.Value = dialog.ResultValue |
+| 546 | assignment | 값을 대상에 대입합니다: button.Content = dialog.ResultValue |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["OpenBetPositionInput"]
- N0["L501 if"]
+ N0["L533 if"]
  M -->|포함| N0
- N1["L511 if"]
+ N1["L543 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `OpenMelsecWriteInput` · L518–539
+### MethodDeclaration `OpenMelsecWriteInput` · L550–571
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:518–539](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L518-L539)
+[Drilling.UI/Views/CMonitorView.xaml.cs:550–571](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L550-L571)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1858,50 +1967,50 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 526 | EnsureMelsecWriteInputUnlocked | resolved | bool Drilling.UI.Views.CMonitorView.EnsureMelsecWriteInputUnlocked(RoutedEventArgs) · Drilling.UI/Views/CMonitorView.xaml.cs:553 |
-| 531 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
-| 533 | Window.GetWindow | unresolved | None |
-| 535 | dialog.ShowDialog | unresolved | None |
-| 535 | EnsureMelsecWriteInputUnlocked | resolved | bool Drilling.UI.Views.CMonitorView.EnsureMelsecWriteInputUnlocked(RoutedEventArgs) · Drilling.UI/Views/CMonitorView.xaml.cs:553 |
+| 558 | EnsureMelsecWriteInputUnlocked | resolved | bool Drilling.UI.Views.CMonitorView.EnsureMelsecWriteInputUnlocked(RoutedEventArgs) · Drilling.UI/Views/CMonitorView.xaml.cs:585 |
+| 563 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
+| 565 | Window.GetWindow | unresolved | None |
+| 567 | dialog.ShowDialog | unresolved | None |
+| 567 | EnsureMelsecWriteInputUnlocked | resolved | bool Drilling.UI.Views.CMonitorView.EnsureMelsecWriteInputUnlocked(RoutedEventArgs) · Drilling.UI/Views/CMonitorView.xaml.cs:585 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 520 | if | 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_MONITOR_MELSEC_ROW row } &#124;&#124; !row.CanWrite &#124;&#124; row.UsesWriteSelection) |
-| 522 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 525 | assignment | 값을 대상에 대입합니다: e.Handled = true |
-| 526 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureMelsecWriteInputUnlocked(e) |
-| 526 | if | 조건에 따라 분기합니다: if (!EnsureMelsecWriteInputUnlocked(e)) |
-| 528 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 531 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog($"{row.Id} Write Value", row.WriteValue, row.WriteInputType, 0, 0) { Owner = Window.GetWindow(this) } |
-| 531 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog($"{row.Id} Write Value", row.WriteValue, row.WriteInputType, 0, 0) { Owner = Window.GetWindow(this) }; |
-| 531 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog($"{row.Id} Write Value", row.WriteValue, row.WriteInputType, 0, 0) { Owner = Window.GetWindow(this) } |
-| 533 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
-| 533 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
-| 535 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
-| 535 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureMelsecWriteInputUnlocked(e) |
-| 535 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true && EnsureMelsecWriteInputUnlocked(e)) |
-| 537 | assignment | 값을 대상에 대입합니다: row.WriteValue = dialog.ResultValue |
+| 552 | if | 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_MONITOR_MELSEC_ROW row } &#124;&#124; !row.CanWrite &#124;&#124; row.UsesWriteSelection) |
+| 554 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 557 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 558 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureMelsecWriteInputUnlocked(e) |
+| 558 | if | 조건에 따라 분기합니다: if (!EnsureMelsecWriteInputUnlocked(e)) |
+| 560 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 563 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CValueInputDialog($"{row.Id} Write Value", row.WriteValue, row.WriteInputType, 0, 0) { Owner = Window.GetWindow(this) } |
+| 563 | local-declaration | 지역 변수를 선언합니다: var dialog = new CValueInputDialog($"{row.Id} Write Value", row.WriteValue, row.WriteInputType, 0, 0) { Owner = Window.GetWindow(this) }; |
+| 563 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new CValueInputDialog($"{row.Id} Write Value", row.WriteValue, row.WriteInputType, 0, 0) { Owner = Window.GetWindow(this) } |
+| 565 | assignment | 값을 대상에 대입합니다: Owner = Window.GetWindow(this) |
+| 565 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
+| 567 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
+| 567 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureMelsecWriteInputUnlocked(e) |
+| 567 | if | 조건에 따라 분기합니다: if (dialog.ShowDialog() == true && EnsureMelsecWriteInputUnlocked(e)) |
+| 569 | assignment | 값을 대상에 대입합니다: row.WriteValue = dialog.ResultValue |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["OpenMelsecWriteInput"]
- N0["L520 if"]
+ N0["L552 if"]
  M -->|포함| N0
- N1["L526 if"]
+ N1["L558 if"]
  M -->|포함| N1
- N2["L535 if"]
+ N2["L567 if"]
  M -->|포함| N2
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `MelsecWriteSelectionPreviewInput` · L541–551
+### MethodDeclaration `MelsecWriteSelectionPreviewInput` · L573–583
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:541–551](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L541-L551)
+[Drilling.UI/Views/CMonitorView.xaml.cs:573–583](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L573-L583)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1923,30 +2032,30 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 550 | EnsureMelsecWriteInputUnlocked | resolved | bool Drilling.UI.Views.CMonitorView.EnsureMelsecWriteInputUnlocked(RoutedEventArgs) · Drilling.UI/Views/CMonitorView.xaml.cs:553 |
+| 582 | EnsureMelsecWriteInputUnlocked | resolved | bool Drilling.UI.Views.CMonitorView.EnsureMelsecWriteInputUnlocked(RoutedEventArgs) · Drilling.UI/Views/CMonitorView.xaml.cs:585 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 544 | if | 조건에 따라 분기합니다: if (e is KeyEventArgs key && key.Key is Key.Tab or Key.Escape or Key.LeftShift or Key.RightShift or Key.LeftCtrl or Key.RightCtrl or Key.LeftAlt or Key.RightAlt) |
-| 547 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 550 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureMelsecWriteInputUnlocked(e) |
+| 576 | if | 조건에 따라 분기합니다: if (e is KeyEventArgs key && key.Key is Key.Tab or Key.Escape or Key.LeftShift or Key.RightShift or Key.LeftCtrl or Key.RightCtrl or Key.LeftAlt or Key.RightAlt) |
+| 579 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 582 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureMelsecWriteInputUnlocked(e) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["MelsecWriteSelectionPreviewInput"]
- N0["L544 if"]
+ N0["L576 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `EnsureMelsecWriteInputUnlocked` · L553–569
+### MethodDeclaration `EnsureMelsecWriteInputUnlocked` · L585–601
 
-[Drilling.UI/Views/CMonitorView.xaml.cs:553–569](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L553-L569)
+[Drilling.UI/Views/CMonitorView.xaml.cs:585–601](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L585-L601)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1965,41 +2074,41 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L526-L526) | EnsureMelsecWriteInputUnlocked | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L535-L535) | EnsureMelsecWriteInputUnlocked | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMonitorView.xaml.cs#L550-L550) | EnsureMelsecWriteInputUnlocked | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L558-L558) | EnsureMelsecWriteInputUnlocked | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L567-L567) | EnsureMelsecWriteInputUnlocked | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:582–582](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L582-L582) | EnsureMelsecWriteInputUnlocked | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 555 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:431 |
-| 564 | CRecipeConfirmDialog.ShowWarning | candidate | OverloadResolutionFailure |
-| 566 | Window.GetWindow | unresolved | None |
+| 587 | GetMonitorMenu | resolved | Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Views.CMonitorView.GetMonitorMenu() · Drilling.UI/Views/CMonitorView.xaml.cs:463 |
+| 596 | CRecipeConfirmDialog.ShowWarning | candidate | OverloadResolutionFailure |
+| 598 | Window.GetWindow | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 555 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
-| 555 | local-declaration | 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); |
-| 555 | variable-initializer | 변수의 초기값을 지정합니다: monitor = GetMonitorMenu() |
-| 556 | if | 조건에 따라 분기합니다: if (monitor?.IsMelsecWriteUnlocked == true) |
-| 558 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
-| 561 | assignment | 값을 대상에 대입합니다: e.Handled = true |
-| 562 | if | 조건에 따라 분기합니다: if (monitor is not null) |
-| 564 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("MELSEC WRITE LOCK", "WRITE LOCK 상태에서는 값을 입력하거나 변경할 수 없습니다.\nWRITE UNLOCK 후 다시 입력해 주세요.", Window.GetWindow(this)) |
-| 566 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
-| 568 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 587 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMonitorMenu() |
+| 587 | local-declaration | 지역 변수를 선언합니다: var monitor = GetMonitorMenu(); |
+| 587 | variable-initializer | 변수의 초기값을 지정합니다: monitor = GetMonitorMenu() |
+| 588 | if | 조건에 따라 분기합니다: if (monitor?.IsMelsecWriteUnlocked == true) |
+| 590 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
+| 593 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 594 | if | 조건에 따라 분기합니다: if (monitor is not null) |
+| 596 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("MELSEC WRITE LOCK", "WRITE LOCK 상태에서는 값을 입력하거나 변경할 수 없습니다.\nWRITE UNLOCK 후 다시 입력해 주세요.", Window.GetWindow(this)) |
+| 598 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Window.GetWindow(this) |
+| 600 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["EnsureMelsecWriteInputUnlocked"]
- N0["L556 if"]
+ N0["L588 if"]
  M -->|포함| N0
- N1["L562 if"]
+ N1["L594 if"]
  M -->|포함| N1
 ```
 

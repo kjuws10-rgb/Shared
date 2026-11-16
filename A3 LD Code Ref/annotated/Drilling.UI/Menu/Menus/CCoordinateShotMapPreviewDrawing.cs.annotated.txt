@@ -1,0 +1,441 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs
+Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000002 | using System.Windows.Media; ⟦EOL⟧
+L000003 |  ⟦EOL⟧
+// 해설 L4: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus;
+L000004 | namespace Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입의 구조/상속 선언입니다: internal static class CCoordinateShotMapPreviewDrawing
+L000006 | internal static class CCoordinateShotMapPreviewDrawing ⟦EOL⟧
+// 해설 L7: 구문 블록 경계입니다.
+L000007 | { ⟦EOL⟧
+// 해설 L8: 변수의 초기값을 지정합니다: LandscapeWidth = 680.0
+L000008 |     private const double LandscapeWidth = 680.0; ⟦EOL⟧
+// 해설 L9: 변수의 초기값을 지정합니다: LandscapeHeight = 420.0
+L000009 |     private const double LandscapeHeight = 420.0; ⟦EOL⟧
+// 해설 L10: 변수의 초기값을 지정합니다: PortraitWidth = 420.0
+L000010 |     private const double PortraitWidth = 420.0; ⟦EOL⟧
+// 해설 L11: 변수의 초기값을 지정합니다: PortraitHeight = 680.0
+L000011 |     private const double PortraitHeight = 680.0; ⟦EOL⟧
+// 해설 L12: 변수의 초기값을 지정합니다: MapMargin = 28.0
+L000012 |     private const double MapMargin = 28.0; ⟦EOL⟧
+L000013 |  ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_RENDER Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.Create(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT>,
+L000014 |     public static ST_COORDINATE_SHOT_MAP_RENDER Create( ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_RENDER Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.Create(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT>,
+L000015 |         IReadOnlyList<ST_COORDINATE_SHOT_MAP_POINT> shots, ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_RENDER Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.Create(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT>,
+L000016 |         string selectedShotKey) ⟦EOL⟧
+// 해설 L17: 구문 블록 경계입니다 · 소속 Create.
+L000017 |     { ⟦EOL⟧
+// 해설 L18: 조건에 따라 분기합니다: if (shots.Count == 0)
+L000018 |         if (shots.Count == 0) ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 Create.
+L000019 |         { ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_COORDINATE_SHOT_MAP_RENDER(null, LandscapeWidth, LandscapeHeight) / 호출자에게 값 또는 제어를 반환합니다: return new ST_COORDINATE_SHOT_MAP_RENDER(null, LandscapeWidth, LandscapeHeight);
+L000020 |             return new ST_COORDINATE_SHOT_MAP_RENDER(null, LandscapeWidth, LandscapeHeight); ⟦EOL⟧
+// 해설 L21: 구문 블록 경계입니다 · 소속 Create.
+L000021 |         } ⟦EOL⟧
+L000022 |  ⟦EOL⟧
+// 해설 L23: 지역 변수를 선언합니다: var first = shots[0]; / 변수의 초기값을 지정합니다: first = shots[0]
+L000023 |         var first = shots[0]; ⟦EOL⟧
+// 해설 L24: 조건에 따라 분기합니다: if (first.GroupCountX <= 0 || first.GroupCountY <= 0)
+L000024 |         if (first.GroupCountX <= 0 || first.GroupCountY <= 0) ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 Create.
+L000025 |         { ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_COORDINATE_SHOT_MAP_RENDER(null, LandscapeWidth, LandscapeHeight) / 호출자에게 값 또는 제어를 반환합니다: return new ST_COORDINATE_SHOT_MAP_RENDER(null, LandscapeWidth, LandscapeHeight);
+L000026 |             return new ST_COORDINATE_SHOT_MAP_RENDER(null, LandscapeWidth, LandscapeHeight); ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 Create.
+L000027 |         } ⟦EOL⟧
+L000028 |  ⟦EOL⟧
+// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSurfaceSize(first.GroupCountX, first.GroupCountY) / 지역 변수를 선언합니다: var size = GetSurfaceSize(first.GroupCountX, first.GroupCountY); / 변수의 초기값을 지정합니다: size = GetSurfaceSize(first.GroupCountX, first.GroupCountY)
+L000029 |         var size = GetSurfaceSize(first.GroupCountX, first.GroupCountY); ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapRect(first.GroupCountX, first.GroupCountY) / 지역 변수를 선언합니다: var mapRect = GetMapRect(first.GroupCountX, first.GroupCountY); / 변수의 초기값을 지정합니다: mapRect = GetMapRect(first.GroupCountX, first.GroupCountY)
+L000030 |         var mapRect = GetMapRect(first.GroupCountX, first.GroupCountY); ⟦EOL⟧
+// 해설 L31: 지역 변수를 선언합니다: var cellWidth = mapRect.Width / first.GroupCountX; / 변수의 초기값을 지정합니다: cellWidth = mapRect.Width / first.GroupCountX
+L000031 |         var cellWidth = mapRect.Width / first.GroupCountX; ⟦EOL⟧
+// 해설 L32: 지역 변수를 선언합니다: var cellHeight = mapRect.Height / first.GroupCountY; / 변수의 초기값을 지정합니다: cellHeight = mapRect.Height / first.GroupCountY
+L000032 |         var cellHeight = mapRect.Height / first.GroupCountY; ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(Math.Min(cellWidth, cellHeight) * 0.07, 0.15, 1.1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(cellWidth, cellHeight) / 지역 변수를 선언합니다: var cellInset = Math.Clamp(Math.Min(cellWidth, cellHeight) * 0.07, 0.15, 1.1); / 변수의 초기값을 지정합니다: cellInset = Math.Clamp(Math.Min(cellWidth, cellHeight) * 0.07, 0.15, 1.1)
+L000033 |         var cellInset = Math.Clamp(Math.Min(cellWidth, cellHeight) * 0.07, 0.15, 1.1); ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: new DrawingGroup() / 지역 변수를 선언합니다: var drawing = new DrawingGroup(); / 변수의 초기값을 지정합니다: drawing = new DrawingGroup()
+L000034 |         var drawing = new DrawingGroup(); ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawing.Open() / 자원 사용과 정리 범위를 지정합니다: using (var context = drawing.Open()) / 변수의 초기값을 지정합니다: context = drawing.Open()
+L000035 |         using (var context = drawing.Open()) ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 Create.
+L000036 |         { ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(new SolidColorBrush(Color.FromArgb(1, 0, 0, 0)), null, new Rect(0.0, 0.0, size.Width, size.Height)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromArgb(1, 0, 0, 0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromArgb(1, 0, 0, 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect(0.0, 0.0, size.Width, size.Height)
+L000037 |             context.DrawRectangle(new SolidColorBrush(Color.FromArgb(1, 0, 0, 0)), null, new Rect(0.0, 0.0, size.Width, size.Height)); ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(new SolidColorBrush(Color.FromArgb(12, 102, 136, 164)), null, mapRect) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromArgb(12, 102, 136, 164)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromArgb(12, 102, 136, 164)
+L000038 |             context.DrawRectangle(new SolidColorBrush(Color.FromArgb(12, 102, 136, 164)), null, mapRect); ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawGrid(context, mapRect, first.GroupCountX, first.GroupCountY)
+L000039 |             DrawGrid(context, mapRect, first.GroupCountX, first.GroupCountY); ⟦EOL⟧
+L000040 |  ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StreamGeometry() / 지역 변수를 선언합니다: var normalGeometry = new StreamGeometry(); / 변수의 초기값을 지정합니다: normalGeometry = new StreamGeometry()
+L000041 |             var normalGeometry = new StreamGeometry(); ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StreamGeometry() / 지역 변수를 선언합니다: var maskingCellGeometry = new StreamGeometry(); / 변수의 초기값을 지정합니다: maskingCellGeometry = new StreamGeometry()
+L000042 |             var maskingCellGeometry = new StreamGeometry(); ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StreamGeometry() / 지역 변수를 선언합니다: var maskingGeometry = new StreamGeometry(); / 변수의 초기값을 지정합니다: maskingGeometry = new StreamGeometry()
+L000043 |             var maskingGeometry = new StreamGeometry(); ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: new StreamGeometry() / 지역 변수를 선언합니다: var chessGeometry = new StreamGeometry(); / 변수의 초기값을 지정합니다: chessGeometry = new StreamGeometry()
+L000044 |             var chessGeometry = new StreamGeometry(); ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: normalGeometry.Open() / 자원 사용과 정리 범위를 지정합니다: using (var normalContext = normalGeometry.Open()) / 변수의 초기값을 지정합니다: normalContext = normalGeometry.Open()
+L000045 |             using (var normalContext = normalGeometry.Open()) ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: maskingCellGeometry.Open() / 자원 사용과 정리 범위를 지정합니다: using (var maskingCellContext = maskingCellGeometry.Open()) / 변수의 초기값을 지정합니다: maskingCellContext = maskingCellGeometry.Open()
+L000046 |             using (var maskingCellContext = maskingCellGeometry.Open()) ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: maskingGeometry.Open() / 자원 사용과 정리 범위를 지정합니다: using (var maskingContext = maskingGeometry.Open()) / 변수의 초기값을 지정합니다: maskingContext = maskingGeometry.Open()
+L000047 |             using (var maskingContext = maskingGeometry.Open()) ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: chessGeometry.Open() / 자원 사용과 정리 범위를 지정합니다: using (var chessContext = chessGeometry.Open()) / 변수의 초기값을 지정합니다: chessContext = chessGeometry.Open()
+L000048 |             using (var chessContext = chessGeometry.Open()) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 Create.
+L000049 |             { ⟦EOL⟧
+// 해설 L50: 컬렉션 요소를 순회합니다: foreach (var shot in shots)
+L000050 |                 foreach (var shot in shots) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 Create.
+L000051 |                 { ⟦EOL⟧
+// 해설 L52: 지역 변수를 선언합니다: var x = mapRect.Left + ((shot.GroupColumn + 0.5) * cellWidth); / 변수의 초기값을 지정합니다: x = mapRect.Left + ((shot.GroupColumn + 0.5) * cellWidth)
+L000052 |                     var x = mapRect.Left + ((shot.GroupColumn + 0.5) * cellWidth); ⟦EOL⟧
+// 해설 L53: 지역 변수를 선언합니다: var y = mapRect.Top + ((shot.GroupRow + 0.5) * cellHeight); / 변수의 초기값을 지정합니다: y = mapRect.Top + ((shot.GroupRow + 0.5) * cellHeight)
+L000053 |                     var y = mapRect.Top + ((shot.GroupRow + 0.5) * cellHeight); ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect( mapRect.Left + (shot.GroupColumn * cellWidth) + cellInset, mapRect.Top + (shot.GroupRow * cellHeight) + cellInset, Math.Max(0.1, cellWidth - (cellInset * 2.0)), Math.Max(0.1, cellHeight - (cellInset * 2.0))) / 지역 변수를 선언합니다: var cellRect = new Rect( mapRect.Left + (shot.GroupColumn * cellWidth) + cellInset, mapRect.Top + (shot.GroupRow * cellHeight) + cellInset, Math.Max(0.1, cellWidth - (cellInset * 2.0)), Math.Max(0.1, cellHeight - (cellInset * 2.0) / 변수의 초기값을 지정합니다: cellRect = new Rect( mapRect.L
+L000054 |                     var cellRect = new Rect( ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_RENDER Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.Create(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT>,
+L000055 |                         mapRect.Left + (shot.GroupColumn * cellWidth) + cellInset, ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_RENDER Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.Create(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT>,
+L000056 |                         mapRect.Top + (shot.GroupRow * cellHeight) + cellInset, ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.1, cellWidth - (cellInset * 2.0))
+L000057 |                         Math.Max(0.1, cellWidth - (cellInset * 2.0)), ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.1, cellHeight - (cellInset * 2.0))
+L000058 |                         Math.Max(0.1, cellHeight - (cellInset * 2.0))); ⟦EOL⟧
+// 해설 L59: 조건에 따라 분기합니다: if (shot.IsMasked)
+L000059 |                     if (shot.IsMasked) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 Create.
+L000060 |                     { ⟦EOL⟧
+// 해설 L61: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddRectangle(maskingCellContext, cellRect)
+L000061 |                         AddRectangle(maskingCellContext, cellRect); ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddMaskCross(maskingContext, x, y, Math.Max(1.8, Math.Min(cellWidth, cellHeight) * 0.28)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.8, Math.Min(cellWidth, cellHeight) * 0.28) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(cellWidth, cellHeight)
+L000062 |                         AddMaskCross(maskingContext, x, y, Math.Max(1.8, Math.Min(cellWidth, cellHeight) * 0.28)); ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 Create.
+L000063 |                     } ⟦EOL⟧
+// 해설 L64: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (shot.IsChessSkipped)
+L000064 |                     else if (shot.IsChessSkipped) ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 Create.
+L000065 |                     { ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddRectangle(chessContext, cellRect)
+L000066 |                         AddRectangle(chessContext, cellRect); ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 Create.
+L000067 |                     } ⟦EOL⟧
+// 해설 L68: 앞 조건이 거짓인 경로입니다: else
+L000068 |                     else ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 Create.
+L000069 |                     { ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddRectangle(normalContext, cellRect)
+L000070 |                         AddRectangle(normalContext, cellRect); ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 Create.
+L000071 |                     } ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 Create.
+L000072 |                 } ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 Create.
+L000073 |             } ⟦EOL⟧
+L000074 |  ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: normalGeometry.Freeze()
+L000075 |             normalGeometry.Freeze(); ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: maskingCellGeometry.Freeze()
+L000076 |             maskingCellGeometry.Freeze(); ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: maskingGeometry.Freeze()
+L000077 |             maskingGeometry.Freeze(); ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: chessGeometry.Freeze()
+L000078 |             chessGeometry.Freeze(); ⟦EOL⟧
+// 해설 L79: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(239, 68, 68) / 지역 변수를 선언합니다: var maskingBrush = CreateBrush(239, 68, 68); / 변수의 초기값을 지정합니다: maskingBrush = CreateBrush(239, 68, 68)
+L000079 |             var maskingBrush = CreateBrush(239, 68, 68); ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(168, 85, 247) / 지역 변수를 선언합니다: var chessBrush = CreateBrush(168, 85, 247); / 변수의 초기값을 지정합니다: chessBrush = CreateBrush(168, 85, 247)
+L000080 |             var chessBrush = CreateBrush(168, 85, 247); ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(maskingBrush, 1.8) / 지역 변수를 선언합니다: var maskingPen = new Pen(maskingBrush, 1.8); / 변수의 초기값을 지정합니다: maskingPen = new Pen(maskingBrush, 1.8)
+L000081 |             var maskingPen = new Pen(maskingBrush, 1.8); ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(chessBrush, 1.5) / 지역 변수를 선언합니다: var chessPen = new Pen(chessBrush, 1.5); / 변수의 초기값을 지정합니다: chessPen = new Pen(chessBrush, 1.5)
+L000082 |             var chessPen = new Pen(chessBrush, 1.5); ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: maskingPen.Freeze()
+L000083 |             maskingPen.Freeze(); ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: chessPen.Freeze()
+L000084 |             chessPen.Freeze(); ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawGeometry(new SolidColorBrush(Color.FromArgb(78, 100, 116, 139)), null, normalGeometry) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromArgb(78, 100, 116, 139)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromArgb(78, 100, 116, 139)
+L000085 |             context.DrawGeometry(new SolidColorBrush(Color.FromArgb(78, 100, 116, 139)), null, normalGeometry); ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawGeometry(new SolidColorBrush(Color.FromArgb(90, 239, 68, 68)), null, maskingCellGeometry) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromArgb(90, 239, 68, 68)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromArgb(90, 239, 68, 68)
+L000086 |             context.DrawGeometry(new SolidColorBrush(Color.FromArgb(90, 239, 68, 68)), null, maskingCellGeometry); ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawGeometry(null, maskingPen, maskingGeometry)
+L000087 |             context.DrawGeometry(null, maskingPen, maskingGeometry); ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawGeometry(new SolidColorBrush(Color.FromArgb(105, 168, 85, 247)), chessPen, chessGeometry) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromArgb(105, 168, 85, 247)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromArgb(105, 168, 85, 247)
+L000088 |             context.DrawGeometry(new SolidColorBrush(Color.FromArgb(105, 168, 85, 247)), chessPen, chessGeometry); ⟦EOL⟧
+L000089 |  ⟦EOL⟧
+// 해설 L90: 지역 변수를 선언합니다: ST_COORDINATE_SHOT_MAP_POINT? selectedShot = null; / 변수의 초기값을 지정합니다: selectedShot = null
+L000090 |             ST_COORDINATE_SHOT_MAP_POINT? selectedShot = null; ⟦EOL⟧
+// 해설 L91: 컬렉션 요소를 순회합니다: foreach (var shot in shots)
+L000091 |             foreach (var shot in shots) ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 Create.
+L000092 |             { ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: shot.ShotKey.Equals(selectedShotKey, StringComparison.OrdinalIgnoreCase) / 조건에 따라 분기합니다: if (shot.ShotKey.Equals(selectedShotKey, StringComparison.OrdinalIgnoreCase))
+L000093 |                 if (shot.ShotKey.Equals(selectedShotKey, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 Create.
+L000094 |                 { ⟦EOL⟧
+// 해설 L95: 값을 대상에 대입합니다: selectedShot = shot
+L000095 |                     selectedShot = shot; ⟦EOL⟧
+// 해설 L96: 해당 반복/분기 구간을 종료합니다: break;
+L000096 |                     break; ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 Create.
+L000097 |                 } ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 Create.
+L000098 |             } ⟦EOL⟧
+L000099 |  ⟦EOL⟧
+// 해설 L100: 조건에 따라 분기합니다: if (selectedShot is not null)
+L000100 |             if (selectedShot is not null) ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 Create.
+L000101 |             { ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawSelectedShot(context, mapRect, cellWidth, cellHeight, selectedShot)
+L000102 |                 DrawSelectedShot(context, mapRect, cellWidth, cellHeight, selectedShot); ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 Create.
+L000103 |             } ⟦EOL⟧
+L000104 |  ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(102, 136, 164), 1.4) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(102, 136, 164) / 지역 변수를 선언합니다: var framePen = new Pen(CreateBrush(102, 136, 164), 1.4); / 변수의 초기값을 지정합니다: framePen = new Pen(CreateBrush(102, 136, 164), 1.4)
+L000105 |             var framePen = new Pen(CreateBrush(102, 136, 164), 1.4); ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: framePen.Freeze()
+L000106 |             framePen.Freeze(); ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(null, framePen, mapRect)
+L000107 |             context.DrawRectangle(null, framePen, mapRect); ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 Create.
+L000108 |         } ⟦EOL⟧
+L000109 |  ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawing.Freeze()
+L000110 |         drawing.Freeze(); ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: new DrawingImage(drawing) / 지역 변수를 선언합니다: var image = new DrawingImage(drawing); / 변수의 초기값을 지정합니다: image = new DrawingImage(drawing)
+L000111 |         var image = new DrawingImage(drawing); ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: image.Freeze()
+L000112 |         image.Freeze(); ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_COORDINATE_SHOT_MAP_RENDER(image, size.Width, size.Height) / 호출자에게 값 또는 제어를 반환합니다: return new ST_COORDINATE_SHOT_MAP_RENDER(image, size.Width, size.Height);
+L000113 |         return new ST_COORDINATE_SHOT_MAP_RENDER(image, size.Width, size.Height); ⟦EOL⟧
+// 해설 L114: 구문 블록 경계입니다 · 소속 Create.
+L000114 |     } ⟦EOL⟧
+L000115 |  ⟦EOL⟧
+// 해설 L116: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.TryResolveShot(double, double, int, int, out int, out int)
+L000116 |     public static bool TryResolveShot( ⟦EOL⟧
+// 해설 L117: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.TryResolveShot(double, double, int, int, out int, out int)
+L000117 |         double x, ⟦EOL⟧
+// 해설 L118: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.TryResolveShot(double, double, int, int, out int, out int)
+L000118 |         double y, ⟦EOL⟧
+// 해설 L119: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.TryResolveShot(double, double, int, int, out int, out int)
+L000119 |         int groupCountX, ⟦EOL⟧
+// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.TryResolveShot(double, double, int, int, out int, out int)
+L000120 |         int groupCountY, ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.TryResolveShot(double, double, int, int, out int, out int)
+L000121 |         out int groupColumn, ⟦EOL⟧
+// 해설 L122: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.TryResolveShot(double, double, int, int, out int, out int)
+L000122 |         out int groupRow) ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 TryResolveShot.
+L000123 |     { ⟦EOL⟧
+// 해설 L124: 값을 대상에 대입합니다: groupColumn = -1
+L000124 |         groupColumn = -1; ⟦EOL⟧
+// 해설 L125: 값을 대상에 대입합니다: groupRow = -1
+L000125 |         groupRow = -1; ⟦EOL⟧
+// 해설 L126: 조건에 따라 분기합니다: if (groupCountX <= 0 || groupCountY <= 0)
+L000126 |         if (groupCountX <= 0 || groupCountY <= 0) ⟦EOL⟧
+// 해설 L127: 구문 블록 경계입니다 · 소속 TryResolveShot.
+L000127 |         { ⟦EOL⟧
+// 해설 L128: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000128 |             return false; ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 TryResolveShot.
+L000129 |         } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMapRect(groupCountX, groupCountY) / 지역 변수를 선언합니다: var mapRect = GetMapRect(groupCountX, groupCountY); / 변수의 초기값을 지정합니다: mapRect = GetMapRect(groupCountX, groupCountY)
+L000131 |         var mapRect = GetMapRect(groupCountX, groupCountY); ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: mapRect.Contains(new Point(x, y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, y) / 조건에 따라 분기합니다: if (!mapRect.Contains(new Point(x, y)))
+L000132 |         if (!mapRect.Contains(new Point(x, y))) ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 TryResolveShot.
+L000133 |         { ⟦EOL⟧
+// 해설 L134: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000134 |             return false; ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 TryResolveShot.
+L000135 |         } ⟦EOL⟧
+L000136 |  ⟦EOL⟧
+// 해설 L137: 값을 대상에 대입합니다: groupColumn = Math.Clamp((int)((x - mapRect.Left) / mapRect.Width * groupCountX), 0, groupCountX - 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp((int)((x - mapRect.Left) / mapRect.Width * groupCountX), 0, groupCountX - 1)
+L000137 |         groupColumn = Math.Clamp((int)((x - mapRect.Left) / mapRect.Width * groupCountX), 0, groupCountX - 1); ⟦EOL⟧
+// 해설 L138: 값을 대상에 대입합니다: groupRow = Math.Clamp((int)((y - mapRect.Top) / mapRect.Height * groupCountY), 0, groupCountY - 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp((int)((y - mapRect.Top) / mapRect.Height * groupCountY), 0, groupCountY - 1)
+L000138 |         groupRow = Math.Clamp((int)((y - mapRect.Top) / mapRect.Height * groupCountY), 0, groupCountY - 1); ⟦EOL⟧
+// 해설 L139: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000139 |         return true; ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 TryResolveShot.
+L000140 |     } ⟦EOL⟧
+L000141 |  ⟦EOL⟧
+// 해설 L142: 선언·서명/매개변수·접근 조건입니다 · Size Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.GetSurfaceSize(int, int)
+L000142 |     private static Size GetSurfaceSize(int groupCountX, int groupCountY) ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 GetSurfaceSize.
+L000143 |     { ⟦EOL⟧
+// 해설 L144: 조건에 따라 결과식을 선택합니다: groupCountX > groupCountY ? new Size(LandscapeWidth, LandscapeHeight) : new Size(PortraitWidth, PortraitHeight) / 호출자에게 값 또는 제어를 반환합니다: return groupCountX > groupCountY ? new Size(LandscapeWidth, LandscapeHeight) : new Size(PortraitWidth, PortraitHeight);
+L000144 |         return groupCountX > groupCountY ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(LandscapeWidth, LandscapeHeight)
+L000145 |             ? new Size(LandscapeWidth, LandscapeHeight) ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(PortraitWidth, PortraitHeight)
+L000146 |             : new Size(PortraitWidth, PortraitHeight); ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 GetSurfaceSize.
+L000147 |     } ⟦EOL⟧
+L000148 |  ⟦EOL⟧
+// 해설 L149: 선언·서명/매개변수·접근 조건입니다 · Rect Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.GetMapRect(int, int)
+L000149 |     private static Rect GetMapRect(int groupCountX, int groupCountY) ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 GetMapRect.
+L000150 |     { ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSurfaceSize(groupCountX, groupCountY) / 지역 변수를 선언합니다: var size = GetSurfaceSize(groupCountX, groupCountY); / 변수의 초기값을 지정합니다: size = GetSurfaceSize(groupCountX, groupCountY)
+L000151 |         var size = GetSurfaceSize(groupCountX, groupCountY); ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect(MapMargin, MapMargin, size.Width - (MapMargin * 2.0), size.Height - (MapMargin * 2.0)) / 호출자에게 값 또는 제어를 반환합니다: return new Rect(MapMargin, MapMargin, size.Width - (MapMargin * 2.0), size.Height - (MapMargin * 2.0));
+L000152 |         return new Rect(MapMargin, MapMargin, size.Width - (MapMargin * 2.0), size.Height - (MapMargin * 2.0)); ⟦EOL⟧
+// 해설 L153: 구문 블록 경계입니다 · 소속 GetMapRect.
+L000153 |     } ⟦EOL⟧
+L000154 |  ⟦EOL⟧
+// 해설 L155: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.DrawGrid(DrawingContext, Rect, int, int)
+L000155 |     private static void DrawGrid(DrawingContext context, Rect mapRect, int groupCountX, int groupCountY) ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000156 |     { ⟦EOL⟧
+// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(new SolidColorBrush(Color.FromArgb(55, 100, 116, 139)), 0.8) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromArgb(55, 100, 116, 139)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromArgb(55, 100, 116, 139) / 지역 변수를 선언합니다: var gridPen = new Pen(new SolidColorBrush(Color.FromArgb(55, 100, 116, 139)), 0.8); / 변수의 초기값을 지정합니다: gridPen = new Pen(new SolidColorBrush(Color.FromArgb(55, 100, 116, 139)), 0.8)
+L000157 |         var gridPen = new Pen(new SolidColorBrush(Color.FromArgb(55, 100, 116, 139)), 0.8); ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: gridPen.Freeze()
+L000158 |         gridPen.Freeze(); ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, groupCountX / 40) / 조건에 따라 결과식을 선택합니다: mapRect.Width / groupCountX >= 1.25 ? 1 : Math.Max(1, groupCountX / 40) / 지역 변수를 선언합니다: var columnStep = mapRect.Width / groupCountX >= 1.25 ? 1 : Math.Max(1, groupCountX / 40); / 변수의 초기값을 지정합니다: columnStep = mapRect.Width / groupCountX >= 1.25 ? 1 : Math.Max(1, groupCountX / 40)
+L000159 |         var columnStep = mapRect.Width / groupCountX >= 1.25 ? 1 : Math.Max(1, groupCountX / 40); ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, groupCountY / 60) / 조건에 따라 결과식을 선택합니다: mapRect.Height / groupCountY >= 1.25 ? 1 : Math.Max(1, groupCountY / 60) / 지역 변수를 선언합니다: var rowStep = mapRect.Height / groupCountY >= 1.25 ? 1 : Math.Max(1, groupCountY / 60); / 변수의 초기값을 지정합니다: rowStep = mapRect.Height / groupCountY >= 1.25 ? 1 : Math.Max(1, groupCountY / 60)
+L000160 |         var rowStep = mapRect.Height / groupCountY >= 1.25 ? 1 : Math.Max(1, groupCountY / 60); ⟦EOL⟧
+// 해설 L161: 복합 대입 또는 이벤트 구독/해지 표현입니다: column += columnStep / 초기화·조건·증감이 있는 반복입니다: for (var column = columnStep; column < groupCountX; column += columnStep) / 변수의 초기값을 지정합니다: column = columnStep
+L000161 |         for (var column = columnStep; column < groupCountX; column += columnStep) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000162 |         { ⟦EOL⟧
+// 해설 L163: 지역 변수를 선언합니다: var x = mapRect.Left + (mapRect.Width * column / groupCountX); / 변수의 초기값을 지정합니다: x = mapRect.Left + (mapRect.Width * column / groupCountX)
+L000163 |             var x = mapRect.Left + (mapRect.Width * column / groupCountX); ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(gridPen, new Point(x, mapRect.Top), new Point(x, mapRect.Bottom)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, mapRect.Top) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, mapRect.Bottom)
+L000164 |             context.DrawLine(gridPen, new Point(x, mapRect.Top), new Point(x, mapRect.Bottom)); ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000165 |         } ⟦EOL⟧
+L000166 |  ⟦EOL⟧
+// 해설 L167: 복합 대입 또는 이벤트 구독/해지 표현입니다: row += rowStep / 초기화·조건·증감이 있는 반복입니다: for (var row = rowStep; row < groupCountY; row += rowStep) / 변수의 초기값을 지정합니다: row = rowStep
+L000167 |         for (var row = rowStep; row < groupCountY; row += rowStep) ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000168 |         { ⟦EOL⟧
+// 해설 L169: 지역 변수를 선언합니다: var y = mapRect.Top + (mapRect.Height * row / groupCountY); / 변수의 초기값을 지정합니다: y = mapRect.Top + (mapRect.Height * row / groupCountY)
+L000169 |             var y = mapRect.Top + (mapRect.Height * row / groupCountY); ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(gridPen, new Point(mapRect.Left, y), new Point(mapRect.Right, y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(mapRect.Left, y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(mapRect.Right, y)
+L000170 |             context.DrawLine(gridPen, new Point(mapRect.Left, y), new Point(mapRect.Right, y)); ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000171 |         } ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000172 |     } ⟦EOL⟧
+L000173 |  ⟦EOL⟧
+// 해설 L174: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.DrawSelectedShot(DrawingContext, Rect, double, double, Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT)
+L000174 |     private static void DrawSelectedShot( ⟦EOL⟧
+// 해설 L175: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.DrawSelectedShot(DrawingContext, Rect, double, double, Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT)
+L000175 |         DrawingContext context, ⟦EOL⟧
+// 해설 L176: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.DrawSelectedShot(DrawingContext, Rect, double, double, Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT)
+L000176 |         Rect mapRect, ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.DrawSelectedShot(DrawingContext, Rect, double, double, Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT)
+L000177 |         double cellWidth, ⟦EOL⟧
+// 해설 L178: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.DrawSelectedShot(DrawingContext, Rect, double, double, Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT)
+L000178 |         double cellHeight, ⟦EOL⟧
+// 해설 L179: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.DrawSelectedShot(DrawingContext, Rect, double, double, Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT)
+L000179 |         ST_COORDINATE_SHOT_MAP_POINT selectedShot) ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 DrawSelectedShot.
+L000180 |     { ⟦EOL⟧
+// 해설 L181: 지역 변수를 선언합니다: var x = mapRect.Left + ((selectedShot.GroupColumn + 0.5) * cellWidth); / 변수의 초기값을 지정합니다: x = mapRect.Left + ((selectedShot.GroupColumn + 0.5) * cellWidth)
+L000181 |         var x = mapRect.Left + ((selectedShot.GroupColumn + 0.5) * cellWidth); ⟦EOL⟧
+// 해설 L182: 지역 변수를 선언합니다: var y = mapRect.Top + ((selectedShot.GroupRow + 0.5) * cellHeight); / 변수의 초기값을 지정합니다: y = mapRect.Top + ((selectedShot.GroupRow + 0.5) * cellHeight)
+L000182 |         var y = mapRect.Top + ((selectedShot.GroupRow + 0.5) * cellHeight); ⟦EOL⟧
+// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect( mapRect.Left + (selectedShot.GroupColumn * cellWidth) + 0.6, mapRect.Top + (selectedShot.GroupRow * cellHeight) + 0.6, Math.Max(0.1, cellWidth - 1.2), Math.Max(0.1, cellHeight - 1.2)) / 지역 변수를 선언합니다: var selectedRect = new Rect( mapRect.Left + (selectedShot.GroupColumn * cellWidth) + 0.6, mapRect.Top + (selectedShot.GroupRow * cellHeight) + 0.6, Math.Max(0.1, cellWidth - 1.2), Math.Max(0.1, cellHeight - 1.2)); / 변수의 초기값을 지정합니다: selectedRect = new Rect( mapRect.Left + (selectedShot.GroupColumn * cel
+L000183 |         var selectedRect = new Rect( ⟦EOL⟧
+// 해설 L184: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.DrawSelectedShot(DrawingContext, Rect, double, double, Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT)
+L000184 |             mapRect.Left + (selectedShot.GroupColumn * cellWidth) + 0.6, ⟦EOL⟧
+// 해설 L185: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.DrawSelectedShot(DrawingContext, Rect, double, double, Drilling.UI.Menu.Menus.ST_COORDINATE_SHOT_MAP_POINT)
+L000185 |             mapRect.Top + (selectedShot.GroupRow * cellHeight) + 0.6, ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.1, cellWidth - 1.2)
+L000186 |             Math.Max(0.1, cellWidth - 1.2), ⟦EOL⟧
+// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.1, cellHeight - 1.2)
+L000187 |             Math.Max(0.1, cellHeight - 1.2)); ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(246, 196, 83) / 지역 변수를 선언합니다: var selectedBrush = CreateBrush(246, 196, 83); / 변수의 초기값을 지정합니다: selectedBrush = CreateBrush(246, 196, 83)
+L000188 |         var selectedBrush = CreateBrush(246, 196, 83); ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(selectedBrush, 2.2) / 지역 변수를 선언합니다: var selectedPen = new Pen(selectedBrush, 2.2); / 변수의 초기값을 지정합니다: selectedPen = new Pen(selectedBrush, 2.2)
+L000189 |         var selectedPen = new Pen(selectedBrush, 2.2); ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedPen.Freeze()
+L000190 |         selectedPen.Freeze(); ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(new SolidColorBrush(Color.FromArgb(92, 246, 196, 83)), selectedPen, selectedRect) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromArgb(92, 246, 196, 83)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromArgb(92, 246, 196, 83)
+L000191 |         context.DrawRectangle(new SolidColorBrush(Color.FromArgb(92, 246, 196, 83)), selectedPen, selectedRect); ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(Math.Min(cellWidth, cellHeight) * 0.28, 1.5, 6.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(cellWidth, cellHeight) / 지역 변수를 선언합니다: var crossRadius = Math.Clamp(Math.Min(cellWidth, cellHeight) * 0.28, 1.5, 6.0); / 변수의 초기값을 지정합니다: crossRadius = Math.Clamp(Math.Min(cellWidth, cellHeight) * 0.28, 1.5, 6.0)
+L000192 |         var crossRadius = Math.Clamp(Math.Min(cellWidth, cellHeight) * 0.28, 1.5, 6.0); ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(selectedPen, new Point(x - crossRadius, y), new Point(x + crossRadius, y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x - crossRadius, y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x + crossRadius, y)
+L000193 |         context.DrawLine(selectedPen, new Point(x - crossRadius, y), new Point(x + crossRadius, y)); ⟦EOL⟧
+// 해설 L194: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(selectedPen, new Point(x, y - crossRadius), new Point(x, y + crossRadius)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, y - crossRadius) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, y + crossRadius)
+L000194 |         context.DrawLine(selectedPen, new Point(x, y - crossRadius), new Point(x, y + crossRadius)); ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 DrawSelectedShot.
+L000195 |     } ⟦EOL⟧
+L000196 |  ⟦EOL⟧
+// 해설 L197: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.AddRectangle(StreamGeometryContext, Rect)
+L000197 |     private static void AddRectangle(StreamGeometryContext context, Rect rect) ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 AddRectangle.
+L000198 |     { ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.BeginFigure(rect.TopLeft, true, true)
+L000199 |         context.BeginFigure(rect.TopLeft, true, true); ⟦EOL⟧
+// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.LineTo(rect.TopRight, true, false)
+L000200 |         context.LineTo(rect.TopRight, true, false); ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.LineTo(rect.BottomRight, true, false)
+L000201 |         context.LineTo(rect.BottomRight, true, false); ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.LineTo(rect.BottomLeft, true, false)
+L000202 |         context.LineTo(rect.BottomLeft, true, false); ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 AddRectangle.
+L000203 |     } ⟦EOL⟧
+L000204 |  ⟦EOL⟧
+// 해설 L205: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.AddMaskCross(StreamGeometryContext, double, double, double)
+L000205 |     private static void AddMaskCross(StreamGeometryContext context, double centerX, double centerY, double radius) ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 AddMaskCross.
+L000206 |     { ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.BeginFigure(new Point(centerX - radius, centerY - radius), false, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX - radius, centerY - radius)
+L000207 |         context.BeginFigure(new Point(centerX - radius, centerY - radius), false, false); ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.LineTo(new Point(centerX + radius, centerY + radius), true, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX + radius, centerY + radius)
+L000208 |         context.LineTo(new Point(centerX + radius, centerY + radius), true, false); ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.BeginFigure(new Point(centerX - radius, centerY + radius), false, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX - radius, centerY + radius)
+L000209 |         context.BeginFigure(new Point(centerX - radius, centerY + radius), false, false); ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.LineTo(new Point(centerX + radius, centerY - radius), true, false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(centerX + radius, centerY - radius)
+L000210 |         context.LineTo(new Point(centerX + radius, centerY - radius), true, false); ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 AddMaskCross.
+L000211 |     } ⟦EOL⟧
+L000212 |  ⟦EOL⟧
+// 해설 L213: 선언·서명/매개변수·접근 조건입니다 · SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateShotMapPreviewDrawing.CreateBrush(byte, byte, byte)
+L000213 |     private static SolidColorBrush CreateBrush(byte red, byte green, byte blue) ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 CreateBrush.
+L000214 |     { ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromRgb(red, green, blue)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(red, green, blue) / 지역 변수를 선언합니다: var brush = new SolidColorBrush(Color.FromRgb(red, green, blue)); / 변수의 초기값을 지정합니다: brush = new SolidColorBrush(Color.FromRgb(red, green, blue))
+L000215 |         var brush = new SolidColorBrush(Color.FromRgb(red, green, blue)); ⟦EOL⟧
+// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze()
+L000216 |         brush.Freeze(); ⟦EOL⟧
+// 해설 L217: 호출자에게 값 또는 제어를 반환합니다: return brush;
+L000217 |         return brush; ⟦EOL⟧
+// 해설 L218: 구문 블록 경계입니다 · 소속 CreateBrush.
+L000218 |     } ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다.
+L000219 | } ⟦EOL⟧
+L000220 |  ⟦EOL⟧
+// 해설 L221: 타입의 구조/상속 선언입니다: internal sealed record ST_COORDINATE_SHOT_MAP_POINT(
+L000221 | internal sealed record ST_COORDINATE_SHOT_MAP_POINT( ⟦EOL⟧
+// 해설 L222: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000222 |     string ShotKey, ⟦EOL⟧
+// 해설 L223: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000223 |     int GroupColumn, ⟦EOL⟧
+// 해설 L224: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000224 |     int GroupRow, ⟦EOL⟧
+// 해설 L225: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000225 |     int GroupCountX, ⟦EOL⟧
+// 해설 L226: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000226 |     int GroupCountY, ⟦EOL⟧
+// 해설 L227: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000227 |     bool IsMasked, ⟦EOL⟧
+// 해설 L228: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000228 |     bool IsChessSkipped); ⟦EOL⟧
+L000229 |  ⟦EOL⟧
+// 해설 L230: 타입의 구조/상속 선언입니다: internal sealed record ST_COORDINATE_SHOT_MAP_RENDER(ImageSource? Image, double Width, double Height);
+L000230 | internal sealed record ST_COORDINATE_SHOT_MAP_RENDER(ImageSource? Image, double Width, double Height); ⟦EOL⟧

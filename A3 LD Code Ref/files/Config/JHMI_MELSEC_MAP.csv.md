@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
-| 원본 SHA256 | bae279e6b08900a970c8a7260e9b5632a52b74cd7532ef7f7698174b410fd31b |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 SHA256 | ddc543334aaa64e579b61a69857cd5005d2d8dcd4df2849059d5418ae18b8d19 |
 | 파일 분류 | data_schema |
-| 원본 크기/행 | 250,022 bytes / 690 physical lines |
+| 원본 크기/행 | 250,158 bytes / 690 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Config/JHMI_MELSEC_MAP.csv) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Config/JHMI_MELSEC_MAP.csv) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -27,7 +27,7 @@
 | 첫 행 필드 개수 | 14 |
 | 첫 행 컬럼 후보 | ID / USE / GROUP / NAME / DEVICE NO / ADDRESS / DATA TYPE / DIRECTION / ACCESS / READ_SCALE / WRITE_SCALE / LENGTH / POLL_MS / DESCRIPTION |
 
-정의 항목 목록(인증 관련 값은 포함하지 않음):
+정의 항목 목록(인증 관련 값과 사설 IP는 포함하지 않음):
 
 | CSV 행 | 정의 키/형식 |
 | --- | --- |
@@ -717,9 +717,9 @@
 | 685 | PROCESS_DISTORTION_INDEX_1_POSITION / 1 / DISTORTION / PROCESS_DISTORTION_INDEX_1_POSITION |
 | 686 | PROCESS_DISTORTION_INDEX_2_POSITION / 1 / DISTORTION / PROCESS_DISTORTION_INDEX_2_POSITION |
 | 687 | HANDSHAKE_PRC_DISTORTION_ABLE / 1 / DISTORTION / HANDSHAKE_PRC_DISTORTION_ABLE |
-| 688 | HANDSHAKE_STG_DISTORTION_ABLE / 0 / DISTORTION / HANDSHAKE_STG_DISTORTION_ABLE |
+| 688 | HANDSHAKE_STG_DISTORTION_ABLE / 1 / DISTORTION / HANDSHAKE_STG_DISTORTION_ABLE |
 | 689 | HANDSHAKE_PRC_DISTORTION_COMPLETE / 1 / DISTORTION / HANDSHAKE_PRC_DISTORTION_COMPLETE |
-| 690 | HANDSHAKE_STG_DISTORTION_COMPLETE / 0 / DISTORTION / HANDSHAKE_STG_DISTORTION_COMPLETE |
+| 690 | HANDSHAKE_STG_DISTORTION_COMPLETE / 1 / DISTORTION / HANDSHAKE_STG_DISTORTION_COMPLETE |
 
 ## 수정·재검증 체크
 

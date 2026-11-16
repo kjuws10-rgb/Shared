@@ -1,7 +1,11 @@
 """Validate A3 source-pinned reference coverage. Read-only toward original source."""
 from pathlib import Path
+import html
 from urllib.parse import unquote,urlsplit
 import argparse,collections,hashlib,json,re,subprocess,xml.etree.ElementTree as ET
+from build_reference import WPF_EVENTS
+
+VERSION='1.1.0'
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def text(p):
@@ -25,7 +29,7 @@ def validate(source,output):
     check(manifest['sourceCommit']==head,'manifest HEAD mismatch')
     check({p['path'] for p in inventory}==set(tracked),'tracked-file coverage mismatch')
     check(len(inventory)==len(tracked),'duplicate file inventory')
-    sources={};hashes={};symbol_ids=[];expected_bad=collections.Counter();inherited_bad=[]
+    sources={};hashes={};symbol_ids=[];expected_bad=collections.Counter();inherited_bad=[];xaml_paths=[];cs_paths=[]
     for item in inventory:
         rel=item['path'];p=source/rel;hashes[rel]=sha(p)
         check(item['sha256']==hashes[rel],rel+' SHA mismatch')
@@ -47,28 +51,76 @@ def validate(source,output):
             counts['annotated_files']+=1;counts['annotated_source_lines']+=len(lines)
         model=output/'metadata/files'/Path(rel+'.json')
         if p.suffix.lower()=='.cs':
+            cs_paths.append(rel)
             data=json.loads(model.read_text(encoding='utf-8'))
             check(data['sha256']==hashes[rel],rel+' metadata SHA mismatch')
+            check(item['types']==len(data['types']) and item['members']==len(data['members']) and item['calls']==len(data['calls']),rel+' inventory/model count mismatch')
+            declarations=[]
+            for t in data['types']:
+                check(1<=t['startLine']<=t['endLine']<=len(lines),rel+' type range invalid')
+                declarations.append((t['id'],t['kind'],t['startLine'],t['endLine']))
+            check(len(declarations)==len(set(declarations)),rel+' duplicate type source declaration')
             for m in data['members']:
                 symbol_ids.append(m['id']);check(1<=m['startLine']<=m['endLine']<=len(lines),rel+' member range invalid')
+            for collection in ['calls','operations']:
+                for entry in data[collection]:check(1<=entry['startLine']<=entry['endLine']<=len(lines),rel+' '+collection+' range invalid')
             counts['csharp_files']+=1;counts['types']+=len(data['types']);counts['members']+=len(data['members']);counts['calls']+=len(data['calls'])
+        if p.suffix.lower()=='.xaml':
+            xaml_paths.append(rel);data=json.loads((output/'metadata/xaml'/Path(rel+'.json')).read_text(encoding='utf-8'))
+            check(data['sha256']==hashes[rel] and data['sourceCommit']==head and data['sourcePath']==rel,rel+' XAML provenance mismatch')
+            try:
+                xml=ET.fromstring('\n'.join(lines));expected_names=collections.Counter(value for node in xml.iter() for name,value in node.attrib.items() if name in ['Name','{http://schemas.microsoft.com/winfx/2006/xaml}Name'])
+                check(expected_names==collections.Counter(entry['name'] for entry in data['namedElements']),rel+' XAML named-element coverage mismatch')
+                expected_events=collections.Counter()
+                for node in xml.iter():
+                    for name,value in node.attrib.items():
+                        if name.split('.')[-1] in WPF_EVENTS and re.fullmatch(r'[A-Za-z_]\w*',value):expected_events[(name,value)]+=1
+                    if node.tag.split('}')[-1]=='EventSetter' and 'Event' in node.attrib and 'Handler' in node.attrib:expected_events[(node.attrib['Event'],node.attrib['Handler'])]+=1
+                check(expected_events==collections.Counter((entry['event'],entry['handler']) for entry in data['events']),rel+' XAML event declaration coverage mismatch')
+            except ET.ParseError as e:errors.append(rel+' invalid XAML XML '+str(e))
+            for collection in ['namedElements','events','bindings','codeBehindClasses']:
+                for entry in data[collection]:
+                    a,b=entry['startLine'],entry['endLine'];check(1<=a<=b<=len(lines),rel+' XAML '+collection+' range invalid')
+                    value=entry.get('name') or entry.get('handler') or entry.get('expression')
+                    check(value.replace('\r\n','\n').replace('\r','\n') in html.unescape('\n'.join(lines[a-1:b])),rel+' XAML '+collection+' source evidence mismatch')
+                counts['xaml_'+collection]+=len(data[collection])
+            counts['xaml_files']+=1
+        if p.suffix.lower() in ['.csv','.bak']:
+            check(item['kind']=='data_schema' and item['coverage']=='schema_only' and not item['annotation'],rel+' operational CSV must remain schema-only')
+            private_ips=set(re.findall(r'(?<![\w.])(?:10\.(?:\d{1,3}\.){2}\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3})(?![\w.])','\n'.join(lines)))
+            for document in ['document','html']:
+                body=(output/item[document]).read_text(encoding='utf-8')
+                check(not any(value in body for value in private_ips),rel+' private endpoint copied to schema document')
+            counts['schema_only_files']+=1
     check(len(set(symbol_ids))==len(symbol_ids),'duplicate member IDs')
+    check(set(cs_paths)=={rel for rel in tracked if Path(rel).suffix.lower()=='.cs'},'C# tracked-file/model coverage mismatch')
+    check({str(p.relative_to(output/'metadata/files')).replace('\\','/')[:-5] for p in (output/'metadata/files').rglob('*.cs.json')}==set(cs_paths),'missing/stale C# metadata files')
+    check({str(p.relative_to(output/'metadata/xaml')).replace('\\','/')[:-5] for p in (output/'metadata/xaml').rglob('*.xaml.json')}==set(xaml_paths),'missing/stale XAML metadata files')
+    for key,count in [('csharpFiles',counts['csharp_files']),('typeCount',counts['types']),('memberCount',counts['members']),('callSites',counts['calls']),('annotatedFiles',counts['annotated_files'])]:check(manifest['coverage'][key]==count,'manifest '+key+' mismatch')
     index=json.loads((output/'metadata/symbol-index.json').read_text(encoding='utf-8'))
     check({s['id'] for s in index['symbols']}==set(symbol_ids),'symbol index missing/extra IDs')
     counts['symbol_ids']=len(symbol_ids)
-    ragids=set();rag_covered={r:bytearray(len(ls)) for r,ls in sources.items()}
+    ragids=set();rag_covered={r:bytearray(len(ls)) for r,ls in sources.items()};rag_routes={'primary':collections.Counter(),'optional':collections.Counter()}
     for p in sorted((output/'offline-studio').glob('reference-*.jsonl')):
         for line in p.read_text(encoding='utf-8').splitlines():
             rec=json.loads(line);r=rec['source_path'];a,b=rec['source_start_line'],rec['source_end_line']
+            rag_routes['optional' if r.startswith('Data/') else 'primary'][r]+=1
             bad=rec['text'].count('\ufffd');expected_bad[str(p.relative_to(output)).replace('\\','/')]+=bad
             expected_bad['offline-studio/'+('A3_LD_Generated_Output_Optional.md' if r.startswith('Data/') else 'A3_LD_Code_Ref_OfflineStudio.md')]+=bad
             check(rec['source_commit']==head and rec['source_sha256']==hashes[r],r+' RAG provenance mismatch')
             check(1<=a<=b<=max(1,len(sources[r])),r+' RAG range mismatch')
             check(rec['id'] not in ragids,'duplicate RAG ID: '+rec['id']);ragids.add(rec['id'])
+            if Path(r).suffix.lower() in ['.csv','.bak']:
+                check(rec['evidence_kind']=='schema_inventory' and not re.search(r'^L\d+ \| ',rec['text'],re.M),r+' operational CSV raw records in RAG')
             for n,value in re.findall(r'^L(\d+) \| (.*) ⟦EOL⟧$',rec['text'],re.M):
                 n=int(n);check(a<=n<=b and value==sources[r][n-1],r+' RAG source line mismatch '+str(n));counts['rag_source_lines']+=1;rag_covered[r][n-1]=1
             counts['rag_records']+=1
     check(counts['rag_records']==manifest['coverage']['ragRecords'],'RAG coverage mismatch')
+    for route,filename in [('primary','A3_LD_Code_Ref_OfflineStudio.md'),('optional','A3_LD_Generated_Output_Optional.md')]:
+        body=(output/'offline-studio'/filename).read_text(encoding='utf-8')
+        actual=collections.Counter(re.findall(r'^source_path: (.+)$',body,re.M))
+        check(actual==rag_routes[route],route+' combined RAG source routing/count mismatch')
+        counts['rag_'+route+'_records']=sum(actual.values())
     for item in inventory:
         if item['annotation']:
             check(all(rag_covered[item['path']]),item['path']+' RAG original source coverage gap')
@@ -118,7 +170,7 @@ def validate(source,output):
     check(subprocess.check_output(['git','-C',str(source),'rev-parse','HEAD'],text=True).strip()==head,'source HEAD changed')
     for rel,value in hashes.items():check(sha(source/rel)==value,'source changed during validation: '+rel)
     source_unchanged=(not subprocess.check_output(['git','-C',str(source),'status','--porcelain']) and all(sha(source/r)==v for r,v in hashes.items()) and subprocess.check_output(['git','-C',str(source),'rev-parse','HEAD'],text=True).strip()==head)
-    return {'schemaVersion':'a3-reference-validation/1','sourceCommit':head,'passed':not errors,'counts':dict(counts),'errors':errors,'sourceUnchanged':source_unchanged,'inheritedSourceEncodingFindings':inherited_bad,'equipmentBuild':'not run','equipmentExecution':'not run','scope':'Static provenance/coverage/navigation validation; not runtime behavior or model accuracy certification'}
+    return {'schemaVersion':'a3-reference-validation/1','validatorVersion':VERSION,'sourceCommit':head,'passed':not errors,'counts':dict(counts),'errors':errors,'sourceUnchanged':source_unchanged,'inheritedSourceEncodingFindings':inherited_bad,'equipmentBuild':'not run','equipmentExecution':'not run','scope':'Static provenance/coverage/navigation validation; not runtime behavior or model accuracy certification'}
 
 if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('--source',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);ap.add_argument('--report',type=Path,required=True);a=ap.parse_args()

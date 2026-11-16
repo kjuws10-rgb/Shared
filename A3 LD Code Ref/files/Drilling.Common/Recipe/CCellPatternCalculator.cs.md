@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 2d09557b69d8cf7e03b380e9adf01f5938a8d0b9f7bdf79dff397778013431fd |
 | 파일 분류 | code |
 | 원본 크기/행 | 23,539 bytes / 490 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -110,7 +110,7 @@
 
 ### FieldDeclaration `MinCellCount` · L7–7
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:7–7](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L7-L7)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:7–7](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L7-L7)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -131,7 +131,7 @@
 
 ### FieldDeclaration `MaxTotalShotGroupCount` · L8–8
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L8-L8)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -152,7 +152,7 @@
 
 ### FieldDeclaration `MaxGroupCountPerCell` · L9–9
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L9-L9)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -173,7 +173,7 @@
 
 ### FieldDeclaration `MaximumPreviewPointsPerCell` · L12–12
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L12-L12)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -194,7 +194,7 @@
 
 ### FieldDeclaration `MinimumPreviewPointSize` · L13–13
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L13-L13)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -215,7 +215,7 @@
 
 ### FieldDeclaration `MaximumPreviewPointSize` · L14–14
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L14-L14)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -236,7 +236,7 @@
 
 ### MethodDeclaration `IsSupportedSplitBeamCount` · L15–18
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:15–18](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L15-L18)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:15–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L15-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -255,11 +255,11 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L93-L93) | IsSupportedSplitBeamCount | False |
-| [Drilling.Common/Review/CReviewManager.cs:935–935](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L935-L935) | CCellPatternCalculator.IsSupportedSplitBeamCount | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5985–5985](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5985-L5985) | CCellPatternCalculator.IsSupportedSplitBeamCount | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L561-L561) | CCellPatternCalculator.IsSupportedSplitBeamCount | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L74-L74) | CCellPatternCalculator.IsSupportedSplitBeamCount | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L93-L93) | IsSupportedSplitBeamCount | False |
+| [Drilling.Common/Review/CReviewManager.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L975-L975) | CCellPatternCalculator.IsSupportedSplitBeamCount | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6090–6090](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6090-L6090) | CCellPatternCalculator.IsSupportedSplitBeamCount | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:573–573](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L573-L573) | CCellPatternCalculator.IsSupportedSplitBeamCount | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L74-L74) | CCellPatternCalculator.IsSupportedSplitBeamCount | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -271,7 +271,7 @@
 
 ### MethodDeclaration `CalculatePreviewPointSize` · L20–20
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L20-L20)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -291,7 +291,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L452-L452) | CCellPatternCalculator.CalculatePreviewPointSize | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L452-L452) | CCellPatternCalculator.CalculatePreviewPointSize | False |
 
 호출하는 대상과 해석 범위:
 
@@ -309,7 +309,7 @@
 
 ### MethodDeclaration `CalculatePreviewSampleStep` · L21–27
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:21–27](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L21-L27)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:21–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L21-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -329,7 +329,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:471–471](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L471-L471) | CCellPatternCalculator.CalculatePreviewSampleStep | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:471–471](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L471-L471) | CCellPatternCalculator.CalculatePreviewSampleStep | False |
 
 호출하는 대상과 해석 범위:
 
@@ -366,7 +366,7 @@
 
 ### MethodDeclaration `CalculatePreviewBeamHalfSpan` · L29–29
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L29-L29)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -386,7 +386,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L453-L453) | CCellPatternCalculator.CalculatePreviewBeamHalfSpan | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L453-L453) | CCellPatternCalculator.CalculatePreviewBeamHalfSpan | False |
 
 호출하는 대상과 해석 범위:
 
@@ -404,7 +404,7 @@
 
 ### MethodDeclaration `TryParseCellCount` · L30–33
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:30–33](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L30-L33)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:30–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L30-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -425,7 +425,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L100-L100) | CCellPatternCalculator.TryParseCellCount | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L100-L100) | CCellPatternCalculator.TryParseCellCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -444,7 +444,7 @@
 
 ### MethodDeclaration `TryParseCellCount` · L35–63
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:35–63](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L35-L63)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:35–63](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L35-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -467,10 +467,10 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L32-L32) | TryParseCellCount | False |
-| [Drilling.Common/Review/CReviewManager.cs:1219–1219](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L1219-L1219) | CCellPatternCalculator.TryParseCellCount | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:676–676](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CJhmiRecipeFile.cs#L676-L676) | CCellPatternCalculator.TryParseCellCount | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:120–125](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L120-L125) | CCellPatternCalculator.TryParseCellCount | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L32-L32) | TryParseCellCount | False |
+| [Drilling.Common/Review/CReviewManager.cs:1292–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L1292-L1292) | CCellPatternCalculator.TryParseCellCount | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:676–676](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L676-L676) | CCellPatternCalculator.TryParseCellCount | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:120–125](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L120-L125) | CCellPatternCalculator.TryParseCellCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -542,7 +542,7 @@ flowchart TD
 
 ### MethodDeclaration `Calculate` · L65–65
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L65-L65)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L65-L65)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -561,12 +561,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L356-L356) | CCellPatternCalculator.Calculate | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:234–246](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L234-L246) | CCellPatternCalculator.Calculate | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L154-L154) | CCellPatternCalculator.Calculate | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1499–1509](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1499-L1509) | CCellPatternCalculator.Calculate | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2855–2865](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2855-L2865) | CCellPatternCalculator.Calculate | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3225–3235](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3225-L3235) | CCellPatternCalculator.Calculate | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L356-L356) | CCellPatternCalculator.Calculate | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:234–246](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L234-L246) | CCellPatternCalculator.Calculate | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L154-L154) | CCellPatternCalculator.Calculate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1499–1509](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1499-L1509) | CCellPatternCalculator.Calculate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2855–2865](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2855-L2865) | CCellPatternCalculator.Calculate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3225–3235](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3225-L3235) | CCellPatternCalculator.Calculate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -584,7 +584,7 @@ flowchart TD
 
 ### MethodDeclaration `Calculate` · L66–222
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:66–222](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L66-L222)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:66–222](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L66-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -604,15 +604,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L65-L65) | Calculate | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L323-L323) | CCellPatternCalculator.Calculate | False |
-| [Drilling.Common/Review/CReviewManager.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L174-L174) | CCellPatternCalculator.Calculate | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:316–329](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L316-L329) | CCellPatternCalculator.Calculate | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1025–1025](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1025-L1025) | CCellPatternCalculator.Calculate | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4631–4632](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4631-L4632) | CCellPatternCalculator.Calculate | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1866–1866](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1866-L1866) | CCellPatternCalculator.Calculate | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2688–2688](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2688-L2688) | CCellPatternCalculator.Calculate | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L307-L307) | CCellPatternCalculator.Calculate | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L65-L65) | Calculate | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L325-L325) | CCellPatternCalculator.Calculate | False |
+| [Drilling.Common/Review/CReviewManager.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L174-L174) | CCellPatternCalculator.Calculate | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:371–384](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L371-L384) | CCellPatternCalculator.Calculate | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1070–1070](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1070-L1070) | CCellPatternCalculator.Calculate | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4730–4731](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4730-L4731) | CCellPatternCalculator.Calculate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1866–1866](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1866-L1866) | CCellPatternCalculator.Calculate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2688–2688](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2688-L2688) | CCellPatternCalculator.Calculate | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L307-L307) | CCellPatternCalculator.Calculate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -831,7 +831,7 @@ flowchart TD
 
 ### MethodDeclaration `CalculateShotCenter` · L224–248
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:224–248](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L224-L248)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:224–248](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L224-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -853,9 +853,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L389-L389) | CCellPatternCalculator.CalculateShotCenter | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L329-L329) | CCellPatternCalculator.CalculateShotCenter | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:478–482](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L478-L482) | CCellPatternCalculator.CalculateShotCenter | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L389-L389) | CCellPatternCalculator.CalculateShotCenter | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L331-L331) | CCellPatternCalculator.CalculateShotCenter | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:478–482](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L478-L482) | CCellPatternCalculator.CalculateShotCenter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -907,7 +907,7 @@ flowchart TD
 
 ### MethodDeclaration `Invalid` · L250–269
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:250–269](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L250-L269)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:250–269](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L250-L269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -934,16 +934,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L70-L70) | Invalid | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L75-L75) | Invalid | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L80-L80) | Invalid | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L85-L85) | Invalid | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L90-L90) | Invalid | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L95-L95) | Invalid | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:110–120](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L110-L120) | Invalid | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:126–136](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L126-L136) | Invalid | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:148–158](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L148-L158) | Invalid | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:192–202](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L192-L202) | Invalid | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L70-L70) | Invalid | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L75-L75) | Invalid | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L80-L80) | Invalid | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L85-L85) | Invalid | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L90-L90) | Invalid | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L95-L95) | Invalid | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:110–120](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L110-L120) | Invalid | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:126–136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L126-L136) | Invalid | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:148–158](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L148-L158) | Invalid | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:192–202](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L192-L202) | Invalid | False |
 
 호출하는 대상과 해석 범위:
 
@@ -966,7 +966,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCurrentValue` · L271–274
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:271–274](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L271-L274)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:271–274](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L271-L274)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -985,8 +985,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L52-L52) | FormatCurrentValue | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L52-L52) | FormatCurrentValue | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L52-L52) | FormatCurrentValue | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L52-L52) | FormatCurrentValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1006,7 +1006,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsValid` · L302–308
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:302–308](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L302-L308)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:302–308](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L302-L308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1021,7 +1021,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsValid` · L304–307
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:304–307](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L304-L307)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:304–307](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L304-L307)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1049,7 +1049,7 @@ flowchart TD
 
 ### PropertyDeclaration `ProcessedTargetCountX` · L310–310
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L310-L310)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L310-L310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1064,7 +1064,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ProcessedTargetCountX` · L310–310
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L310-L310)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L310-L310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1079,7 +1079,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ProcessedTargetCountX` · L310–310
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L310-L310)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L310-L310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1100,7 +1100,7 @@ flowchart TD
 
 ### PropertyDeclaration `ProcessedTargetCountY` · L311–311
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L311-L311)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L311-L311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1115,7 +1115,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ProcessedTargetCountY` · L311–311
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L311-L311)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L311-L311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1130,7 +1130,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ProcessedTargetCountY` · L311–311
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L311-L311)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L311-L311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1151,7 +1151,7 @@ flowchart TD
 
 ### PropertyDeclaration `ExcludedTargetCountX` · L312–312
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L312-L312)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L312-L312)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1166,7 +1166,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ExcludedTargetCountX` · L312–312
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L312-L312)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L312-L312)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1181,7 +1181,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ExcludedTargetCountX` · L312–312
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L312-L312)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L312-L312)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1202,7 +1202,7 @@ flowchart TD
 
 ### PropertyDeclaration `ExcludedTargetCountY` · L313–313
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L313-L313)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L313-L313)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1217,7 +1217,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ExcludedTargetCountY` · L313–313
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L313-L313)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L313-L313)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1232,7 +1232,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ExcludedTargetCountY` · L313–313
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L313-L313)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L313-L313)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1253,7 +1253,7 @@ flowchart TD
 
 ### PropertyDeclaration `PixelCountX` · L314–314
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L314-L314)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L314-L314)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1268,7 +1268,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PixelCountX` · L314–314
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L314-L314)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L314-L314)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1283,7 +1283,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_PixelCountX` · L314–314
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L314-L314)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L314-L314)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1304,7 +1304,7 @@ flowchart TD
 
 ### PropertyDeclaration `PixelCountY` · L315–315
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L315-L315)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L315-L315)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1319,7 +1319,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PixelCountY` · L315–315
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L315-L315)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L315-L315)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1334,7 +1334,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_PixelCountY` · L315–315
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L315-L315)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L315-L315)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1355,7 +1355,7 @@ flowchart TD
 
 ### PropertyDeclaration `ProcessedPixelCountX` · L316–316
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L316-L316)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L316-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1370,7 +1370,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ProcessedPixelCountX` · L316–316
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L316-L316)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L316-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1385,7 +1385,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ProcessedPixelCountX` · L316–316
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L316-L316)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L316-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1406,7 +1406,7 @@ flowchart TD
 
 ### PropertyDeclaration `ProcessedPixelCountY` · L317–317
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L317-L317)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L317-L317)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1421,7 +1421,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ProcessedPixelCountY` · L317–317
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L317-L317)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L317-L317)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1436,7 +1436,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ProcessedPixelCountY` · L317–317
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L317-L317)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L317-L317)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1457,7 +1457,7 @@ flowchart TD
 
 ### PropertyDeclaration `BeamPitchMillimeters` · L318–318
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L318-L318)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L318-L318)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1472,7 +1472,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BeamPitchMillimeters` · L318–318
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L318-L318)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L318-L318)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1487,7 +1487,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_BeamPitchMillimeters` · L318–318
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L318-L318)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L318-L318)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1508,7 +1508,7 @@ flowchart TD
 
 ### PropertyDeclaration `BeamHalfSpanMillimeters` · L319–319
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L319-L319)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L319-L319)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1523,7 +1523,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BeamHalfSpanMillimeters` · L319–319
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L319-L319)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L319-L319)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1538,7 +1538,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_BeamHalfSpanMillimeters` · L319–319
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L319-L319)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L319-L319)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1559,7 +1559,7 @@ flowchart TD
 
 ### PropertyDeclaration `HasExcludedTargets` · L321–327
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:321–327](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L321-L327)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:321–327](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L321-L327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1574,7 +1574,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HasExcludedTargets` · L323–326
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:323–326](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L323-L326)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:323–326](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L323-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1595,7 +1595,7 @@ flowchart TD
 
 ### FieldDeclaration `_cells` · L338–338
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L338-L338)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L338-L338)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1610,7 +1610,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L339–343
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:339–343](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L339-L343)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:339–343](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L339-L343)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1630,7 +1630,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L372-L372) | new CRecipeCellPatternCatalog | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L372-L372) | new CRecipeCellPatternCatalog | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1643,7 +1643,7 @@ flowchart TD
 
 ### PropertyDeclaration `Count` · L345–345
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L345-L345)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L345-L345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1658,7 +1658,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Count` · L345–345
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L345-L345)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:345–345](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L345-L345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1673,7 +1673,7 @@ flowchart TD
 
 ### PropertyDeclaration `CellCount` · L346–346
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L346-L346)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L346-L346)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1688,7 +1688,7 @@ flowchart TD
 
 ### PropertyDeclaration `Cells` · L347–347
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L347-L347)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L347-L347)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1703,7 +1703,7 @@ flowchart TD
 
 ### MethodDeclaration `Create` · L349–373
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:349–373](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L349-L373)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:349–373](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L349-L373)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1722,7 +1722,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:670–670](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L670-L670) | CRecipeCellPatternCatalog.Create | False |
+| [Drilling.Common/Review/CReviewManager.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L710-L710) | CRecipeCellPatternCatalog.Create | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1784,7 +1784,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCell` · L375–375
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:375–375](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L375-L375)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:375–375](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L375-L375)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1822,7 +1822,7 @@ flowchart TD
 
 ### MethodDeclaration `GetShotCenter` · L376–380
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:376–380](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L376-L380)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:376–380](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L376-L380)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1859,7 +1859,7 @@ flowchart TD
 
 ### MethodDeclaration `GetShotCenter` · L382–390
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:382–390](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L382-L390)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:382–390](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L382-L390)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1879,8 +1879,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L379-L379) | GetShotCenter | False |
-| [Drilling.Common/Review/CReviewManager.cs:682–682](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L682-L682) | CRecipeCellPatternCatalog.GetShotCenter | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L379-L379) | GetShotCenter | False |
+| [Drilling.Common/Review/CReviewManager.cs:722–722](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L722-L722) | CRecipeCellPatternCatalog.GetShotCenter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1914,7 +1914,7 @@ flowchart TD
 
 ### MethodDeclaration `Resolve` · L392–420
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:392–420](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L392-L420)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:392–420](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L392-L420)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1933,8 +1933,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L378-L378) | Resolve | False |
-| [Drilling.Common/Review/CReviewManager.cs:894–894](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L894-L894) | catalog.Resolve | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L378-L378) | Resolve | False |
+| [Drilling.Common/Review/CReviewManager.cs:934–934](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L934-L934) | catalog.Resolve | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1996,7 +1996,7 @@ flowchart TD
 
 ### FieldDeclaration `MaximumCellModelTypeCount` · L427–427
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L427-L427)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L427-L427)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2017,7 +2017,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadModelTypeCount` · L428–431
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:428–431](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L428-L431)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:428–431](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L428-L431)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2036,15 +2036,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L435-L435) | ReadModelTypeCount | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L228-L228) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
-| [Drilling.Common/Review/CReviewManager.cs:656–656](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L656-L656) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L113-L113) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L313-L313) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:684–684](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L684-L684) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:990–990](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L990-L990) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4430–4430](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4430-L4430) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L143-L143) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L435-L435) | ReadModelTypeCount | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L228-L228) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
+| [Drilling.Common/Review/CReviewManager.cs:696–696](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L696-L696) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L113-L113) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L368-L368) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1009–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1009-L1009) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1035–1035](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1035-L1035) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4472–4472](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4472-L4472) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L143-L143) | CRecipeModelPixelCountReader.ReadModelTypeCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2065,7 +2065,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadCellModelType` · L433–437
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:433–437](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L433-L437)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:433–437](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L433-L437)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2086,18 +2086,18 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:441–441](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L441-L441) | ReadCellModelType | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L446-L446) | ReadCellModelType | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L232-L232) | CRecipeModelPixelCountReader.ReadCellModelType | False |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L258-L258) | CRecipeModelPixelCountReader.ReadCellModelType | False |
-| [Drilling.Common/Review/CReviewManager.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L664-L664) | CRecipeModelPixelCountReader.ReadCellModelType | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L152-L152) | CRecipeModelPixelCountReader.ReadCellModelType | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L314-L314) | CRecipeModelPixelCountReader.ReadCellModelType | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L694-L694) | CRecipeModelPixelCountReader.ReadCellModelType | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1023–1023](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1023-L1023) | CRecipeModelPixelCountReader.ReadCellModelType | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6084–6084](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6084-L6084) | CRecipeModelPixelCountReader.ReadCellModelType | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6352–6352](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6352-L6352) | CRecipeModelPixelCountReader.ReadCellModelType | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:281–281](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L281-L281) | CRecipeModelPixelCountReader.ReadCellModelType | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:441–441](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L441-L441) | ReadCellModelType | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L446-L446) | ReadCellModelType | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L232-L232) | CRecipeModelPixelCountReader.ReadCellModelType | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L260-L260) | CRecipeModelPixelCountReader.ReadCellModelType | False |
+| [Drilling.Common/Review/CReviewManager.cs:704–704](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L704-L704) | CRecipeModelPixelCountReader.ReadCellModelType | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L152-L152) | CRecipeModelPixelCountReader.ReadCellModelType | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:369–369](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L369-L369) | CRecipeModelPixelCountReader.ReadCellModelType | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1019–1019](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1019-L1019) | CRecipeModelPixelCountReader.ReadCellModelType | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1068–1068](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1068-L1068) | CRecipeModelPixelCountReader.ReadCellModelType | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6188–6188](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6188-L6188) | CRecipeModelPixelCountReader.ReadCellModelType | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6456–6456](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6456-L6456) | CRecipeModelPixelCountReader.ReadCellModelType | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:281–281](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L281-L281) | CRecipeModelPixelCountReader.ReadCellModelType | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2127,7 +2127,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadForCell` · L439–442
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:439–442](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L439-L442)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:439–442](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L439-L442)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2164,7 +2164,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadPatternForCell` · L444–447
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:444–447](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L444-L447)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:444–447](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L444-L447)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2184,8 +2184,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L321-L321) | CRecipeModelPixelCountReader.ReadPatternForCell | False |
-| [Drilling.Common/Review/CReviewManager.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L172-L172) | CRecipeModelPixelCountReader.ReadPatternForCell | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L323-L323) | CRecipeModelPixelCountReader.ReadPatternForCell | False |
+| [Drilling.Common/Review/CReviewManager.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L172-L172) | CRecipeModelPixelCountReader.ReadPatternForCell | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2206,7 +2206,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadForModel` · L449–453
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:449–453](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L449-L453)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:449–453](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L449-L453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2226,7 +2226,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:441–441](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L441-L441) | ReadForModel | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:441–441](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L441-L441) | ReadForModel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2253,7 +2253,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadPatternForModel` · L455–465
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:455–465](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L455-L465)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:455–465](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L455-L465)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2273,17 +2273,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L110-L110) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L446-L446) | ReadPatternForModel | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L233-L233) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
-| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:823–823](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L823-L823) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
-| [Drilling.Common/Review/CReviewManager.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L665-L665) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L153-L153) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L315-L315) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L695-L695) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1024–1024](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1024-L1024) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4630–4630](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4630-L4630) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
-| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:282–282](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L282-L282) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L141-L141) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L446-L446) | ReadPatternForModel | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L233-L233) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
+| [Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:823–823](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L823-L823) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
+| [Drilling.Common/Review/CReviewManager.cs:705–705](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L705-L705) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L153-L153) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:370–370](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L370-L370) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1020–1020](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1020-L1020) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1069–1069](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1069-L1069) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4729–4729](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4729-L4729) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
+| [Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs:282–282](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs#L282-L282) | CRecipeModelPixelCountReader.ReadPatternForModel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2320,7 +2320,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L467–488
 
-[Drilling.Common/Recipe/CCellPatternCalculator.cs:467–488](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L467-L488)
+[Drilling.Common/Recipe/CCellPatternCalculator.cs:467–488](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L467-L488)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2341,15 +2341,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L430-L430) | ReadInt | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L436-L436) | ReadInt | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L452-L452) | ReadInt | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L452-L452) | ReadInt | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L459-L459) | ReadInt | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L460-L460) | ReadInt | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L461-L461) | ReadInt | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:462–462](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L462-L462) | ReadInt | False |
-| [Drilling.Common/Recipe/CCellPatternCalculator.cs:463–463](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CCellPatternCalculator.cs#L463-L463) | ReadInt | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L430-L430) | ReadInt | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L436-L436) | ReadInt | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L452-L452) | ReadInt | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L452-L452) | ReadInt | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L459-L459) | ReadInt | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L460-L460) | ReadInt | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L461-L461) | ReadInt | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:462–462](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L462-L462) | ReadInt | False |
+| [Drilling.Common/Recipe/CCellPatternCalculator.cs:463–463](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CCellPatternCalculator.cs#L463-L463) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 

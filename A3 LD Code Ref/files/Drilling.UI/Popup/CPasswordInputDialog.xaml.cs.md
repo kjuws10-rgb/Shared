@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 605f668c0559885fd5eeff71c6db76017f29a2b8ed3aadc0175ebeb4c3b0576b |
 | 파일 분류 | code |
 | 원본 크기/행 | 2,730 bytes / 108 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -46,7 +46,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `SelectPasswordText` · L9–11
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:9–11](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L9-L11)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:9–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L9-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -74,7 +74,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L13–19
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:13–19](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L13-L19)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:13–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L13-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -113,7 +113,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ResultPassword` · L21–27
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:21–27](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L21-L27)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:21–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L21-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -128,7 +128,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_ResultPassword` · L23–26
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:23–26](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L23-L26)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:23–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L23-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -149,7 +149,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `BuildKeys` · L29–47
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:29–47](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L29-L47)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:29–47](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L29-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -162,7 +162,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L17-L17) | BuildKeys | False |
+| [Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L17-L17) | BuildKeys | False |
 
 호출하는 대상과 해석 범위:
 
@@ -202,7 +202,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L31–34
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:31–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L31-L34)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:31–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L31-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -236,7 +236,7 @@ flowchart TD
 
 ### MethodDeclaration `KeyClick` · L49–56
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:49–56](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L49-L56)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:49–56](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L49-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -281,7 +281,7 @@ flowchart TD
 
 ### MethodDeclaration `SpaceClick` · L58–62
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:58–62](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L58-L62)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:58–62](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L58-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -316,7 +316,7 @@ flowchart TD
 
 ### MethodDeclaration `BackClick` · L64–71
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:64–71](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L64-L71)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:64–71](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L64-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -361,7 +361,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearClick` · L73–77
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:73–77](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L73-L77)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:73–77](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L73-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -397,7 +397,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveCaretToEnd` · L79–83
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:79–83](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L79-L83)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:79–83](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L79-L83)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -410,11 +410,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L18-L18) | MoveCaretToEnd | False |
-| [Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L54-L54) | MoveCaretToEnd | False |
-| [Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L61-L61) | MoveCaretToEnd | False |
-| [Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L69-L69) | MoveCaretToEnd | False |
-| [Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L76-L76) | MoveCaretToEnd | False |
+| [Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L18-L18) | MoveCaretToEnd | False |
+| [Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L54-L54) | MoveCaretToEnd | False |
+| [Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L61-L61) | MoveCaretToEnd | False |
+| [Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L69-L69) | MoveCaretToEnd | False |
+| [Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L76-L76) | MoveCaretToEnd | False |
 
 호출하는 대상과 해석 범위:
 
@@ -434,7 +434,7 @@ flowchart TD
 
 ### MethodDeclaration `CancelClick` · L85–88
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:85–88](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L85-L88)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:85–88](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L85-L88)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -462,7 +462,7 @@ flowchart TD
 
 ### MethodDeclaration `OkClick` · L90–93
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:90–93](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L90-L93)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:90–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L90-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -490,7 +490,7 @@ flowchart TD
 
 ### MethodDeclaration `WindowKeyDown` · L95–107
 
-[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:95–107](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L95-L107)
+[Drilling.UI/Popup/CPasswordInputDialog.xaml.cs:95–107](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CPasswordInputDialog.xaml.cs#L95-L107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

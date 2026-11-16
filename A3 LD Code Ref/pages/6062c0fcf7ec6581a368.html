@@ -1,0 +1,1520 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs</h1>
+<table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
+<tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
+<tr><td>원본 Commit</td><td>dfa5920e6301d9ec4b0eab1452ae59521aafc986</td></tr>
+<tr><td>원본 SHA256</td><td>8d2a3f1e2aa8de3a7f87950633058eb294c7145af6ddfcbceb2b0904dde75439</td></tr>
+<tr><td>파일 분류</td><td>code</td></tr>
+<tr><td>원본 크기/행</td><td>20,344 bytes / 418 physical lines</td></tr>
+<tr><td>인코딩</td><td>utf-8-sig</td></tr>
+<tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs">고정 Commit 원본</a></td></tr>
+</tbody></table>
+<h2>파일의 역할과 읽는 순서</h2>
+<p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
+<p><img alt="파일 관계도" src="../diagrams/files/6062c0fcf7ec6581a368.svg"></p>
+<h2>네임스페이스·타입·상속</h2>
+<table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
+<tr><td>CCoordinateOffsetPreviewDrawing</td><td>ClassDeclaration</td><td>7–418</td><td>CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<h2>멤버 빠른 목록</h2>
+<table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
+<tr><td>DesignWidth</td><td>FieldDeclaration</td><td>L9–9</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DesignWidth</td></tr>
+<tr><td>DesignHeight</td><td>FieldDeclaration</td><td>L10–10</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DesignHeight</td></tr>
+<tr><td>GridDivisionCount</td><td>FieldDeclaration</td><td>L11–11</td><td>int Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GridDivisionCount</td></tr>
+<tr><td>DefaultMinimum</td><td>FieldDeclaration</td><td>L12–12</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DefaultMinimum</td></tr>
+<tr><td>DefaultMaximum</td><td>FieldDeclaration</td><td>L13–13</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DefaultMaximum</td></tr>
+<tr><td>PlotRect</td><td>FieldDeclaration</td><td>L14–14</td><td>Rect Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.PlotRect</td></tr>
+<tr><td>Create</td><td>MethodDeclaration</td><td>L16–84</td><td>ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.Create(string, string, double, double, Vector, Vector, double, double)</td></tr>
+<tr><td>CreateReviewCamera</td><td>MethodDeclaration</td><td>L86–168</td><td>ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)</td></tr>
+<tr><td>DrawInspectionMarker</td><td>MethodDeclaration</td><td>L170–178</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawInspectionMarker(DrawingContext, Point, Brush)</td></tr>
+<tr><td>GetMarkerLabelOrigin</td><td>MethodDeclaration</td><td>L180–192</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetMarkerLabelOrigin(Point, bool)</td></tr>
+<tr><td>GetAppliedLabelOrigin</td><td>MethodDeclaration</td><td>L194–203</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetAppliedLabelOrigin(Point)</td></tr>
+<tr><td>CalculateOrigin</td><td>MethodDeclaration</td><td>L205–211</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CalculateOrigin(double, double, Vector, Vector)</td></tr>
+<tr><td>SetAxisOrigin</td><td>MethodDeclaration</td><td>L213–226</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.SetAxisOrigin(ref Point, Vector, double, double)</td></tr>
+<tr><td>ClipToPlot</td><td>MethodDeclaration</td><td>L228–246</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.ClipToPlot(Point, Point)</td></tr>
+<tr><td>NormalizeDirection</td><td>MethodDeclaration</td><td>L248–259</td><td>Vector Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.NormalizeDirection(Vector, Vector)</td></tr>
+<tr><td>GetDirectionalScale</td><td>MethodDeclaration</td><td>L261–264</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetDirectionalScale(Vector, double, double)</td></tr>
+<tr><td>DrawPositiveAxis</td><td>MethodDeclaration</td><td>L266–298</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawPositiveAxis(DrawingContext, Point, Vector, string, Pen, Brush)</td></tr>
+<tr><td>DrawGrid</td><td>MethodDeclaration</td><td>L300–342</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawGrid(DrawingContext, Point, double, double, Vector, Vector)</td></tr>
+<tr><td>GetScreenTickValue</td><td>MethodDeclaration</td><td>L344–350</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetScreenTickValue(int, bool, double, double)</td></tr>
+<tr><td>FormatTick</td><td>MethodDeclaration</td><td>L352–358</td><td>string Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.FormatTick(double, double)</td></tr>
+<tr><td>DrawArrowHead</td><td>MethodDeclaration</td><td>L360–373</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawArrowHead(DrawingContext, Pen, Point, Point)</td></tr>
+<tr><td>DrawText</td><td>MethodDeclaration</td><td>L375–378</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawText(DrawingContext, string, Point, double, Brush)</td></tr>
+<tr><td>DrawCenteredText</td><td>MethodDeclaration</td><td>L380–384</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawCenteredText(DrawingContext, string, Point, double, Brush)</td></tr>
+<tr><td>DrawRightAlignedText</td><td>MethodDeclaration</td><td>L386–390</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawRightAlignedText(DrawingContext, string, Point, double, Brush)</td></tr>
+<tr><td>DrawTextWithin</td><td>MethodDeclaration</td><td>L392–398</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawTextWithin(DrawingContext, string, Point, double, Brush, Rect)</td></tr>
+<tr><td>CreateText</td><td>MethodDeclaration</td><td>L400–410</td><td>FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush)</td></tr>
+<tr><td>CreateBrush</td><td>MethodDeclaration</td><td>L412–417</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte)</td></tr>
+</tbody></table>
+<h2>멤버별 상세 계약·호출·처리 해설</h2>
+<h3 id="L9">FieldDeclaration <code>DesignWidth</code> · L9–9</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L9-L9">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:9–9</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DesignWidth</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>9</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DesignWidth = 520.0</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L10">FieldDeclaration <code>DesignHeight</code> · L10–10</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L10-L10">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:10–10</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DesignHeight</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>10</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DesignHeight = 280.0</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L11">FieldDeclaration <code>GridDivisionCount</code> · L11–11</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L11-L11">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:11–11</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>int Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GridDivisionCount</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, const</td></tr>
+<tr><td>반환/값 타입</td><td>int</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>11</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: GridDivisionCount = 20</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L12">FieldDeclaration <code>DefaultMinimum</code> · L12–12</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L12-L12">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:12–12</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DefaultMinimum</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>12</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DefaultMinimum = -5.0</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L13">FieldDeclaration <code>DefaultMaximum</code> · L13–13</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L13-L13">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:13–13</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DefaultMaximum</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>13</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: DefaultMaximum = 5.0</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L14">FieldDeclaration <code>PlotRect</code> · L14–14</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L14-L14">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:14–14</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Rect Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.PlotRect</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
+<tr><td>반환/값 타입</td><td>Rect</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>14</td><td>new</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>14</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(58.0, 24.0, 406.0, 210.0)</td></tr>
+<tr><td>14</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: PlotRect = new(58.0, 24.0, 406.0, 210.0)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L16">MethodDeclaration <code>Create</code> · L16–84</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L16-L84">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:16–84</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.Create(string, string, double, double, Vector, Vector, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>ImageSource</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>xAxisLabel</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>yAxisLabel</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>offsetX</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>offsetY</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>xPositiveDirection</td><td>Vector</td><td>None</td><td>False /</td></tr>
+<tr><td>yPositiveDirection</td><td>Vector</td><td>None</td><td>False /</td></tr>
+<tr><td>minimum</td><td>double</td><td>None</td><td>True / -5</td></tr>
+<tr><td>maximum</td><td>double</td><td>None</td><td>True / 5</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3256-L3264">Drilling.UI/Menu/Menus/CMenuMonitor.cs:3256–3264</a></td><td>CCoordinateOffsetPreviewDrawing.Create</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>26</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>26</td><td>xAxisLabel.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>26</td><td>xAxisLabel.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>27</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>27</td><td>yAxisLabel.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>27</td><td>yAxisLabel.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>28</td><td>NormalizeDirection</td><td>resolved</td><td>Vector Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.NormalizeDirection(Vector, Vector) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:248</td></tr>
+<tr><td>28</td><td>new Vector</td><td>unresolved</td><td>None</td></tr>
+<tr><td>29</td><td>NormalizeDirection</td><td>resolved</td><td>Vector Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.NormalizeDirection(Vector, Vector) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:248</td></tr>
+<tr><td>29</td><td>new Vector</td><td>unresolved</td><td>None</td></tr>
+<tr><td>30</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>30</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>38</td><td>CalculateOrigin</td><td>resolved</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CalculateOrigin(double, double, Vector, Vector) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:205</td></tr>
+<tr><td>39</td><td>GetDirectionalScale</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>40</td><td>GetDirectionalScale</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>43</td><td>ClipToPlot</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>44</td><td>new DrawingGroup</td><td>unresolved</td><td>None</td></tr>
+<tr><td>45</td><td>drawing.Open</td><td>unresolved</td><td>None</td></tr>
+<tr><td>47</td><td>context.DrawRectangle</td><td>unresolved</td><td>None</td></tr>
+<tr><td>47</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>47</td><td>new Rect</td><td>unresolved</td><td>None</td></tr>
+<tr><td>48</td><td>DrawGrid</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>50</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>51</td><td>DrawText</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>51</td><td>gridStep.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>51</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>52</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>53</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>55</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>56</td><td>vectorPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>57</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>58</td><td>DrawArrowHead</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>60</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>61</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>62</td><td>designPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>63</td><td>context.DrawEllipse</td><td>unresolved</td><td>None</td></tr>
+<tr><td>63</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>65</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>65</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>66</td><td>appliedPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>67</td><td>context.DrawEllipse</td><td>unresolved</td><td>None</td></tr>
+<tr><td>69</td><td>DrawTextWithin</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>69</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>70</td><td>offsetX.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>70</td><td>offsetY.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>71</td><td>DrawTextWithin</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>71</td><td>GetAppliedLabelOrigin</td><td>resolved</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetAppliedLabelOrigin(Point) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:194</td></tr>
+<tr><td>72</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>73</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>74</td><td>axisPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>75</td><td>DrawPositiveAxis</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>76</td><td>DrawPositiveAxis</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>77</td><td>context.DrawRectangle</td><td>unresolved</td><td>None</td></tr>
+<tr><td>77</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>77</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>80</td><td>drawing.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>81</td><td>new DrawingImage</td><td>unresolved</td><td>None</td></tr>
+<tr><td>82</td><td>image.Freeze</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>26</td><td>assignment</td><td>값을 대상에 대입합니다: xAxisLabel = string.IsNullOrWhiteSpace(xAxisLabel) ? &quot;X&quot; : xAxisLabel.Trim().ToUpperInvariant()</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(xAxisLabel)</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: xAxisLabel.Trim().ToUpperInvariant()</td></tr>
+<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: xAxisLabel.Trim()</td></tr>
+<tr><td>26</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(xAxisLabel) ? &quot;X&quot; : xAxisLabel.Trim().ToUpperInvariant()</td></tr>
+<tr><td>27</td><td>assignment</td><td>값을 대상에 대입합니다: yAxisLabel = string.IsNullOrWhiteSpace(yAxisLabel) ? &quot;Y&quot; : yAxisLabel.Trim().ToUpperInvariant()</td></tr>
+<tr><td>27</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(yAxisLabel)</td></tr>
+<tr><td>27</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: yAxisLabel.Trim().ToUpperInvariant()</td></tr>
+<tr><td>27</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: yAxisLabel.Trim()</td></tr>
+<tr><td>27</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(yAxisLabel) ? &quot;Y&quot; : yAxisLabel.Trim().ToUpperInvariant()</td></tr>
+<tr><td>28</td><td>assignment</td><td>값을 대상에 대입합니다: xPositiveDirection = NormalizeDirection(xPositiveDirection, new Vector(1.0, 0.0))</td></tr>
+<tr><td>28</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeDirection(xPositiveDirection, new Vector(1.0, 0.0))</td></tr>
+<tr><td>28</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Vector(1.0, 0.0)</td></tr>
+<tr><td>29</td><td>assignment</td><td>값을 대상에 대입합니다: yPositiveDirection = NormalizeDirection(yPositiveDirection, new Vector(0.0, 1.0))</td></tr>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeDirection(yPositiveDirection, new Vector(0.0, 1.0))</td></tr>
+<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Vector(0.0, 1.0)</td></tr>
+<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(minimum)</td></tr>
+<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(maximum)</td></tr>
+<tr><td>30</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(minimum) || !double.IsFinite(maximum) || minimum &gt;= 0.0 || maximum &lt;= 0.0 || minimum &gt;= maximum)</td></tr>
+<tr><td>32</td><td>assignment</td><td>값을 대상에 대입합니다: minimum = DefaultMinimum</td></tr>
+<tr><td>33</td><td>assignment</td><td>값을 대상에 대입합니다: maximum = DefaultMaximum</td></tr>
+<tr><td>36</td><td>local-declaration</td><td>지역 변수를 선언합니다: var span = maximum - minimum;</td></tr>
+<tr><td>36</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: span = maximum - minimum</td></tr>
+<tr><td>37</td><td>local-declaration</td><td>지역 변수를 선언합니다: var gridStep = span / GridDivisionCount;</td></tr>
+<tr><td>37</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: gridStep = span / GridDivisionCount</td></tr>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection)</td></tr>
+<tr><td>38</td><td>local-declaration</td><td>지역 변수를 선언합니다: var origin = CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection);</td></tr>
+<tr><td>38</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: origin = CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection)</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span)</td></tr>
+<tr><td>39</td><td>local-declaration</td><td>지역 변수를 선언합니다: var xScale = GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span);</td></tr>
+<tr><td>39</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: xScale = GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span)</td></tr>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span)</td></tr>
+<tr><td>40</td><td>local-declaration</td><td>지역 변수를 선언합니다: var yScale = GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span);</td></tr>
+<tr><td>40</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: yScale = GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span)</td></tr>
+<tr><td>41</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rawApplied = origin + (xPositiveDirection * (offsetX * xScale)) + (yPositiveDirection * (offsetY * yScale));</td></tr>
+<tr><td>41</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rawApplied = origin + (xPositiveDirection * (offsetX * xScale)) + (yPositiveDirection * (offsetY * yScale))</td></tr>
+<tr><td>42</td><td>local-declaration</td><td>지역 변수를 선언합니다: var outOfRange = offsetX &lt; minimum || offsetX &gt; maximum || offsetY &lt; minimum || offsetY &gt; maximum;</td></tr>
+<tr><td>42</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: outOfRange = offsetX &lt; minimum || offsetX &gt; maximum || offsetY &lt; minimum || offsetY &gt; maximum</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ClipToPlot(origin, rawApplied)</td></tr>
+<tr><td>43</td><td>local-declaration</td><td>지역 변수를 선언합니다: var applied = ClipToPlot(origin, rawApplied);</td></tr>
+<tr><td>43</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: applied = ClipToPlot(origin, rawApplied)</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DrawingGroup()</td></tr>
+<tr><td>44</td><td>local-declaration</td><td>지역 변수를 선언합니다: var drawing = new DrawingGroup();</td></tr>
+<tr><td>44</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: drawing = new DrawingGroup()</td></tr>
+<tr><td>45</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: drawing.Open()</td></tr>
+<tr><td>45</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: context = drawing.Open()</td></tr>
+<tr><td>45</td><td>using</td><td>자원 사용과 정리 범위를 지정합니다: using (var context = drawing.Open())</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(CreateBrush(17, 24, 32), null, new Rect(0.0, 0.0, DesignWidth, DesignHeight))</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(17, 24, 32)</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect(0.0, 0.0, DesignWidth, DesignHeight)</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawGrid(context, origin, minimum, maximum, xPositiveDirection, yPositiveDirection)</td></tr>
+<tr><td>50</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(148, 163, 184)</td></tr>
+<tr><td>50</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scaleBrush = CreateBrush(148, 163, 184);</td></tr>
+<tr><td>50</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scaleBrush = CreateBrush(148, 163, 184)</td></tr>
+<tr><td>51</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawText(context, $&quot;GRID {gridStep.ToString(&quot;0.###&quot;, CultureInfo.InvariantCulture)} mm / DIV&quot;, new Point(PlotRect.Left, 4.0), 9.0, scaleBrush)</td></tr>
+<tr><td>51</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: gridStep.ToString(&quot;0.###&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>51</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left, 4.0)</td></tr>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(74, 222, 128)</td></tr>
+<tr><td>52</td><td>local-declaration</td><td>지역 변수를 선언합니다: var appliedBrush = CreateBrush(74, 222, 128);</td></tr>
+<tr><td>52</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: appliedBrush = CreateBrush(74, 222, 128)</td></tr>
+<tr><td>53</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(248, 113, 113)</td></tr>
+<tr><td>53</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: outOfRange ? CreateBrush(248, 113, 113) : appliedBrush</td></tr>
+<tr><td>53</td><td>local-declaration</td><td>지역 변수를 선언합니다: var deltaBrush = outOfRange ? CreateBrush(248, 113, 113) : appliedBrush;</td></tr>
+<tr><td>53</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: deltaBrush = outOfRange ? CreateBrush(248, 113, 113) : appliedBrush</td></tr>
+<tr><td>55</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(appliedBrush, 1.6)</td></tr>
+<tr><td>55</td><td>local-declaration</td><td>지역 변수를 선언합니다: var vectorPen = new Pen(appliedBrush, 1.6);</td></tr>
+<tr><td>55</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: vectorPen = new Pen(appliedBrush, 1.6)</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: vectorPen.Freeze()</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(vectorPen, origin, applied)</td></tr>
+<tr><td>58</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawArrowHead(context, vectorPen, origin, applied)</td></tr>
+<tr><td>60</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(203, 213, 225)</td></tr>
+<tr><td>60</td><td>local-declaration</td><td>지역 변수를 선언합니다: var designBrush = CreateBrush(203, 213, 225);</td></tr>
+<tr><td>60</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: designBrush = CreateBrush(203, 213, 225)</td></tr>
+<tr><td>61</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(designBrush, 1.8)</td></tr>
+<tr><td>61</td><td>local-declaration</td><td>지역 변수를 선언합니다: var designPen = new Pen(designBrush, 1.8);</td></tr>
+<tr><td>61</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: designPen = new Pen(designBrush, 1.8)</td></tr>
+<tr><td>62</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: designPen.Freeze()</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawEllipse(CreateBrush(30, 41, 59), designPen, origin, 6.0, 6.0)</td></tr>
+<tr><td>63</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(30, 41, 59)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(187, 247, 208), 1.0)</td></tr>
+<tr><td>65</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(187, 247, 208)</td></tr>
+<tr><td>65</td><td>local-declaration</td><td>지역 변수를 선언합니다: var appliedPen = new Pen(CreateBrush(187, 247, 208), 1.0);</td></tr>
+<tr><td>65</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: appliedPen = new Pen(CreateBrush(187, 247, 208), 1.0)</td></tr>
+<tr><td>66</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: appliedPen.Freeze()</td></tr>
+<tr><td>67</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawEllipse(appliedBrush, appliedPen, applied, 4.5, 4.5)</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawTextWithin(context, &quot;BASE&quot;, new Point(origin.X + 9.0, origin.Y + 7.0), 10.0, designBrush, PlotRect)</td></tr>
+<tr><td>69</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X + 9.0, origin.Y + 7.0)</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: offsetX.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>70</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: offsetY.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>70</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: outOfRange ? &quot;APPLIED · OUT&quot; : &quot;APPLIED&quot;</td></tr>
+<tr><td>70</td><td>local-declaration</td><td>지역 변수를 선언합니다: var appliedLabel = $&quot;{(outOfRange ? &quot;APPLIED · OUT&quot; : &quot;APPLIED&quot;)}\nΔX {offsetX.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)} / ΔY {offsetY.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)} mm&quot;;</td></tr>
+<tr><td>70</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: appliedLabel = $&quot;{(outOfRange ? &quot;APPLIED · OUT&quot; : &quot;APPLIED&quot;)}\nΔX {offsetX.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)} / ΔY {offsetY.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)} mm&quot;</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawTextWithin(context, appliedLabel, GetAppliedLabelOrigin(applied), 9.0, deltaBrush, PlotRect)</td></tr>
+<tr><td>71</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetAppliedLabelOrigin(applied)</td></tr>
+<tr><td>72</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(125, 211, 252)</td></tr>
+<tr><td>72</td><td>local-declaration</td><td>지역 변수를 선언합니다: var axisBrush = CreateBrush(125, 211, 252);</td></tr>
+<tr><td>72</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: axisBrush = CreateBrush(125, 211, 252)</td></tr>
+<tr><td>73</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(axisBrush, 1.4)</td></tr>
+<tr><td>73</td><td>local-declaration</td><td>지역 변수를 선언합니다: var axisPen = new Pen(axisBrush, 1.4);</td></tr>
+<tr><td>73</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: axisPen = new Pen(axisBrush, 1.4)</td></tr>
+<tr><td>74</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: axisPen.Freeze()</td></tr>
+<tr><td>75</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawPositiveAxis(context, origin, xPositiveDirection, xAxisLabel, axisPen, axisBrush)</td></tr>
+<tr><td>76</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawPositiveAxis(context, origin, yPositiveDirection, yAxisLabel, axisPen, axisBrush)</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(null, new Pen(CreateBrush(71, 85, 105), 1.0), PlotRect)</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(71, 85, 105), 1.0)</td></tr>
+<tr><td>77</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(71, 85, 105)</td></tr>
+<tr><td>80</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: drawing.Freeze()</td></tr>
+<tr><td>81</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DrawingImage(drawing)</td></tr>
+<tr><td>81</td><td>local-declaration</td><td>지역 변수를 선언합니다: var image = new DrawingImage(drawing);</td></tr>
+<tr><td>81</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: image = new DrawingImage(drawing)</td></tr>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: image.Freeze()</td></tr>
+<tr><td>83</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return image;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;Create&quot;]
+ N0[&quot;L30 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L45 using&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L86">MethodDeclaration <code>CreateReviewCamera</code> · L86–168</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L86-L168">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:86–168</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, static</td></tr>
+<tr><td>반환/값 타입</td><td>ImageSource</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>xAxisLabel</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>yAxisLabel</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>machiningOffsetX</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>machiningOffsetY</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>inspectionOffsetX</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>inspectionOffsetY</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>xPositiveDirection</td><td>Vector</td><td>None</td><td>False /</td></tr>
+<tr><td>yPositiveDirection</td><td>Vector</td><td>None</td><td>False /</td></tr>
+<tr><td>minimum</td><td>double</td><td>None</td><td>True / -5</td></tr>
+<tr><td>maximum</td><td>double</td><td>None</td><td>True / 5</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3241-L3251">Drilling.UI/Menu/Menus/CMenuMonitor.cs:3241–3251</a></td><td>CCoordinateOffsetPreviewDrawing.CreateReviewCamera</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>98</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>98</td><td>xAxisLabel.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>98</td><td>xAxisLabel.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>99</td><td>string.IsNullOrWhiteSpace</td><td>resolved</td><td>bool string.IsNullOrWhiteSpace(string?)</td></tr>
+<tr><td>99</td><td>yAxisLabel.Trim().ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+<tr><td>99</td><td>yAxisLabel.Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>100</td><td>NormalizeDirection</td><td>resolved</td><td>Vector Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.NormalizeDirection(Vector, Vector) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:248</td></tr>
+<tr><td>100</td><td>new Vector</td><td>unresolved</td><td>None</td></tr>
+<tr><td>101</td><td>NormalizeDirection</td><td>resolved</td><td>Vector Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.NormalizeDirection(Vector, Vector) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:248</td></tr>
+<tr><td>101</td><td>new Vector</td><td>unresolved</td><td>None</td></tr>
+<tr><td>102</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>102</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>110</td><td>CalculateOrigin</td><td>resolved</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CalculateOrigin(double, double, Vector, Vector) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:205</td></tr>
+<tr><td>111</td><td>GetDirectionalScale</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>112</td><td>GetDirectionalScale</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>117</td><td>ClipToPlot</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>118</td><td>ClipToPlot</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>119</td><td>new DrawingGroup</td><td>unresolved</td><td>None</td></tr>
+<tr><td>120</td><td>drawing.Open</td><td>unresolved</td><td>None</td></tr>
+<tr><td>122</td><td>context.DrawRectangle</td><td>unresolved</td><td>None</td></tr>
+<tr><td>122</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>122</td><td>new Rect</td><td>unresolved</td><td>None</td></tr>
+<tr><td>123</td><td>DrawGrid</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>125</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>126</td><td>DrawText</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>126</td><td>gridStep.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>126</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>128</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>129</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>130</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>131</td><td>machiningVectorPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>132</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>134</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>135</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>136</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>137</td><td>inspectionVectorPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>138</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>140</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>141</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>142</td><td>designPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>143</td><td>context.DrawEllipse</td><td>unresolved</td><td>None</td></tr>
+<tr><td>143</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>144</td><td>DrawTextWithin</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>144</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>146</td><td>DrawInspectionMarker</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>147</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>147</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>148</td><td>machiningPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>149</td><td>context.DrawEllipse</td><td>unresolved</td><td>None</td></tr>
+<tr><td>151</td><td>machiningOffsetX.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>151</td><td>machiningOffsetY.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>152</td><td>inspectionOffsetX.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>152</td><td>inspectionOffsetY.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>153</td><td>DrawTextWithin</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>153</td><td>GetMarkerLabelOrigin</td><td>resolved</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetMarkerLabelOrigin(Point, bool) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:180</td></tr>
+<tr><td>154</td><td>DrawTextWithin</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>154</td><td>GetMarkerLabelOrigin</td><td>resolved</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetMarkerLabelOrigin(Point, bool) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:180</td></tr>
+<tr><td>156</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>157</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>158</td><td>axisPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>159</td><td>DrawPositiveAxis</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>160</td><td>DrawPositiveAxis</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>161</td><td>context.DrawRectangle</td><td>unresolved</td><td>None</td></tr>
+<tr><td>161</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>161</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>164</td><td>drawing.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>165</td><td>new DrawingImage</td><td>unresolved</td><td>None</td></tr>
+<tr><td>166</td><td>image.Freeze</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>98</td><td>assignment</td><td>값을 대상에 대입합니다: xAxisLabel = string.IsNullOrWhiteSpace(xAxisLabel) ? &quot;X&quot; : xAxisLabel.Trim().ToUpperInvariant()</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(xAxisLabel)</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: xAxisLabel.Trim().ToUpperInvariant()</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: xAxisLabel.Trim()</td></tr>
+<tr><td>98</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(xAxisLabel) ? &quot;X&quot; : xAxisLabel.Trim().ToUpperInvariant()</td></tr>
+<tr><td>99</td><td>assignment</td><td>값을 대상에 대입합니다: yAxisLabel = string.IsNullOrWhiteSpace(yAxisLabel) ? &quot;Y&quot; : yAxisLabel.Trim().ToUpperInvariant()</td></tr>
+<tr><td>99</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(yAxisLabel)</td></tr>
+<tr><td>99</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: yAxisLabel.Trim().ToUpperInvariant()</td></tr>
+<tr><td>99</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: yAxisLabel.Trim()</td></tr>
+<tr><td>99</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(yAxisLabel) ? &quot;Y&quot; : yAxisLabel.Trim().ToUpperInvariant()</td></tr>
+<tr><td>100</td><td>assignment</td><td>값을 대상에 대입합니다: xPositiveDirection = NormalizeDirection(xPositiveDirection, new Vector(1.0, 0.0))</td></tr>
+<tr><td>100</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeDirection(xPositiveDirection, new Vector(1.0, 0.0))</td></tr>
+<tr><td>100</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Vector(1.0, 0.0)</td></tr>
+<tr><td>101</td><td>assignment</td><td>값을 대상에 대입합니다: yPositiveDirection = NormalizeDirection(yPositiveDirection, new Vector(0.0, 1.0))</td></tr>
+<tr><td>101</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeDirection(yPositiveDirection, new Vector(0.0, 1.0))</td></tr>
+<tr><td>101</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Vector(0.0, 1.0)</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(minimum)</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(maximum)</td></tr>
+<tr><td>102</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(minimum) || !double.IsFinite(maximum) || minimum &gt;= 0.0 || maximum &lt;= 0.0 || minimum &gt;= maximum)</td></tr>
+<tr><td>104</td><td>assignment</td><td>값을 대상에 대입합니다: minimum = DefaultMinimum</td></tr>
+<tr><td>105</td><td>assignment</td><td>값을 대상에 대입합니다: maximum = DefaultMaximum</td></tr>
+<tr><td>108</td><td>local-declaration</td><td>지역 변수를 선언합니다: var span = maximum - minimum;</td></tr>
+<tr><td>108</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: span = maximum - minimum</td></tr>
+<tr><td>109</td><td>local-declaration</td><td>지역 변수를 선언합니다: var gridStep = span / GridDivisionCount;</td></tr>
+<tr><td>109</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: gridStep = span / GridDivisionCount</td></tr>
+<tr><td>110</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection)</td></tr>
+<tr><td>110</td><td>local-declaration</td><td>지역 변수를 선언합니다: var origin = CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection);</td></tr>
+<tr><td>110</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: origin = CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection)</td></tr>
+<tr><td>111</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span)</td></tr>
+<tr><td>111</td><td>local-declaration</td><td>지역 변수를 선언합니다: var xScale = GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span);</td></tr>
+<tr><td>111</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: xScale = GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span)</td></tr>
+<tr><td>112</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span)</td></tr>
+<tr><td>112</td><td>local-declaration</td><td>지역 변수를 선언합니다: var yScale = GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span);</td></tr>
+<tr><td>112</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: yScale = GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span)</td></tr>
+<tr><td>113</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rawMachining = origin + (xPositiveDirection * (machiningOffsetX * xScale)) + (yPositiveDirection * (machiningOffsetY * yScale));</td></tr>
+<tr><td>113</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rawMachining = origin + (xPositiveDirection * (machiningOffsetX * xScale)) + (yPositiveDirection * (machiningOffsetY * yScale))</td></tr>
+<tr><td>114</td><td>local-declaration</td><td>지역 변수를 선언합니다: var rawInspection = origin + (xPositiveDirection * (inspectionOffsetX * xScale)) + (yPositiveDirection * (inspectionOffsetY * yScale));</td></tr>
+<tr><td>114</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: rawInspection = origin + (xPositiveDirection * (inspectionOffsetX * xScale)) + (yPositiveDirection * (inspectionOffsetY * yScale))</td></tr>
+<tr><td>115</td><td>local-declaration</td><td>지역 변수를 선언합니다: var machiningOutOfRange = machiningOffsetX &lt; minimum || machiningOffsetX &gt; maximum || machiningOffsetY &lt; minimum || machiningOffsetY &gt; maximum;</td></tr>
+<tr><td>115</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: machiningOutOfRange = machiningOffsetX &lt; minimum || machiningOffsetX &gt; maximum || machiningOffsetY &lt; minimum || machiningOffsetY &gt; maximum</td></tr>
+<tr><td>116</td><td>local-declaration</td><td>지역 변수를 선언합니다: var inspectionOutOfRange = inspectionOffsetX &lt; minimum || inspectionOffsetX &gt; maximum || inspectionOffsetY &lt; minimum || inspectionOffsetY &gt; maximum;</td></tr>
+<tr><td>116</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: inspectionOutOfRange = inspectionOffsetX &lt; minimum || inspectionOffsetX &gt; maximum || inspectionOffsetY &lt; minimum || inspectionOffsetY &gt; maximum</td></tr>
+<tr><td>117</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ClipToPlot(origin, rawMachining)</td></tr>
+<tr><td>117</td><td>local-declaration</td><td>지역 변수를 선언합니다: var machining = ClipToPlot(origin, rawMachining);</td></tr>
+<tr><td>117</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: machining = ClipToPlot(origin, rawMachining)</td></tr>
+<tr><td>118</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ClipToPlot(origin, rawInspection)</td></tr>
+<tr><td>118</td><td>local-declaration</td><td>지역 변수를 선언합니다: var inspection = ClipToPlot(origin, rawInspection);</td></tr>
+<tr><td>118</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: inspection = ClipToPlot(origin, rawInspection)</td></tr>
+<tr><td>119</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DrawingGroup()</td></tr>
+<tr><td>119</td><td>local-declaration</td><td>지역 변수를 선언합니다: var drawing = new DrawingGroup();</td></tr>
+<tr><td>119</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: drawing = new DrawingGroup()</td></tr>
+<tr><td>120</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: drawing.Open()</td></tr>
+<tr><td>120</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: context = drawing.Open()</td></tr>
+<tr><td>120</td><td>using</td><td>자원 사용과 정리 범위를 지정합니다: using (var context = drawing.Open())</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(CreateBrush(17, 24, 32), null, new Rect(0.0, 0.0, DesignWidth, DesignHeight))</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(17, 24, 32)</td></tr>
+<tr><td>122</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect(0.0, 0.0, DesignWidth, DesignHeight)</td></tr>
+<tr><td>123</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawGrid(context, origin, minimum, maximum, xPositiveDirection, yPositiveDirection)</td></tr>
+<tr><td>125</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(148, 163, 184)</td></tr>
+<tr><td>125</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scaleBrush = CreateBrush(148, 163, 184);</td></tr>
+<tr><td>125</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scaleBrush = CreateBrush(148, 163, 184)</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawText(context, $&quot;GRID {gridStep.ToString(&quot;0.###&quot;, CultureInfo.InvariantCulture)} mm / DIV&quot;, new Point(PlotRect.Left, 4.0), 9.0, scaleBrush)</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: gridStep.ToString(&quot;0.###&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left, 4.0)</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(74, 222, 128)</td></tr>
+<tr><td>128</td><td>local-declaration</td><td>지역 변수를 선언합니다: var machiningBrush = CreateBrush(74, 222, 128);</td></tr>
+<tr><td>128</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: machiningBrush = CreateBrush(74, 222, 128)</td></tr>
+<tr><td>129</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(248, 113, 113)</td></tr>
+<tr><td>129</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: machiningOutOfRange ? CreateBrush(248, 113, 113) : machiningBrush</td></tr>
+<tr><td>129</td><td>local-declaration</td><td>지역 변수를 선언합니다: var machiningLabelBrush = machiningOutOfRange ? CreateBrush(248, 113, 113) : machiningBrush;</td></tr>
+<tr><td>129</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: machiningLabelBrush = machiningOutOfRange ? CreateBrush(248, 113, 113) : machiningBrush</td></tr>
+<tr><td>130</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(machiningBrush, 1.4)</td></tr>
+<tr><td>130</td><td>local-declaration</td><td>지역 변수를 선언합니다: var machiningVectorPen = new Pen(machiningBrush, 1.4);</td></tr>
+<tr><td>130</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: machiningVectorPen = new Pen(machiningBrush, 1.4)</td></tr>
+<tr><td>131</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: machiningVectorPen.Freeze()</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(machiningVectorPen, origin, machining)</td></tr>
+<tr><td>134</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(251, 191, 36)</td></tr>
+<tr><td>134</td><td>local-declaration</td><td>지역 변수를 선언합니다: var inspectionBrush = CreateBrush(251, 191, 36);</td></tr>
+<tr><td>134</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: inspectionBrush = CreateBrush(251, 191, 36)</td></tr>
+<tr><td>135</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(248, 113, 113)</td></tr>
+<tr><td>135</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: inspectionOutOfRange ? CreateBrush(248, 113, 113) : inspectionBrush</td></tr>
+<tr><td>135</td><td>local-declaration</td><td>지역 변수를 선언합니다: var inspectionLabelBrush = inspectionOutOfRange ? CreateBrush(248, 113, 113) : inspectionBrush;</td></tr>
+<tr><td>135</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: inspectionLabelBrush = inspectionOutOfRange ? CreateBrush(248, 113, 113) : inspectionBrush</td></tr>
+<tr><td>136</td><td>assignment</td><td>값을 대상에 대입합니다: DashStyle = DashStyles.Dash</td></tr>
+<tr><td>136</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(inspectionBrush, 1.2) { DashStyle = DashStyles.Dash }</td></tr>
+<tr><td>136</td><td>local-declaration</td><td>지역 변수를 선언합니다: var inspectionVectorPen = new Pen(inspectionBrush, 1.2) { DashStyle = DashStyles.Dash };</td></tr>
+<tr><td>136</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: inspectionVectorPen = new Pen(inspectionBrush, 1.2) { DashStyle = DashStyles.Dash }</td></tr>
+<tr><td>137</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: inspectionVectorPen.Freeze()</td></tr>
+<tr><td>138</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(inspectionVectorPen, origin, inspection)</td></tr>
+<tr><td>140</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(203, 213, 225)</td></tr>
+<tr><td>140</td><td>local-declaration</td><td>지역 변수를 선언합니다: var designBrush = CreateBrush(203, 213, 225);</td></tr>
+<tr><td>140</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: designBrush = CreateBrush(203, 213, 225)</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(designBrush, 1.5)</td></tr>
+<tr><td>141</td><td>local-declaration</td><td>지역 변수를 선언합니다: var designPen = new Pen(designBrush, 1.5);</td></tr>
+<tr><td>141</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: designPen = new Pen(designBrush, 1.5)</td></tr>
+<tr><td>142</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: designPen.Freeze()</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawEllipse(CreateBrush(30, 41, 59), designPen, origin, 4.0, 4.0)</td></tr>
+<tr><td>143</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(30, 41, 59)</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawTextWithin(context, &quot;BASE&quot;, new Point(origin.X + 8.0, origin.Y + 6.0), 9.0, designBrush, PlotRect)</td></tr>
+<tr><td>144</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X + 8.0, origin.Y + 6.0)</td></tr>
+<tr><td>146</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawInspectionMarker(context, inspection, inspectionBrush)</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(187, 247, 208), 1.0)</td></tr>
+<tr><td>147</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(187, 247, 208)</td></tr>
+<tr><td>147</td><td>local-declaration</td><td>지역 변수를 선언합니다: var machiningPen = new Pen(CreateBrush(187, 247, 208), 1.0);</td></tr>
+<tr><td>147</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: machiningPen = new Pen(CreateBrush(187, 247, 208), 1.0)</td></tr>
+<tr><td>148</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: machiningPen.Freeze()</td></tr>
+<tr><td>149</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawEllipse(machiningBrush, machiningPen, machining, 4.5, 4.5)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: machiningOffsetX.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>151</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: machiningOffsetY.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>151</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: machiningOutOfRange ? &quot;MACHINING · OUT&quot; : &quot;MACHINING&quot;</td></tr>
+<tr><td>151</td><td>local-declaration</td><td>지역 변수를 선언합니다: var machiningLabel = $&quot;{(machiningOutOfRange ? &quot;MACHINING · OUT&quot; : &quot;MACHINING&quot;)}\nΔX {machiningOffsetX.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)} / ΔY {machiningOffsetY.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)} mm&quot;;</td></tr>
+<tr><td>151</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: machiningLabel = $&quot;{(machiningOutOfRange ? &quot;MACHINING · OUT&quot; : &quot;MACHINING&quot;)}\nΔX {machiningOffsetX.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)} / ΔY {machiningOffsetY.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)} mm&quot;</td></tr>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: inspectionOffsetX.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>152</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: inspectionOffsetY.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>152</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: inspectionOutOfRange ? &quot;INSPECTION · OUT&quot; : &quot;INSPECTION&quot;</td></tr>
+<tr><td>152</td><td>local-declaration</td><td>지역 변수를 선언합니다: var inspectionLabel = $&quot;{(inspectionOutOfRange ? &quot;INSPECTION · OUT&quot; : &quot;INSPECTION&quot;)}\nΔX {inspectionOffsetX.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)} / ΔY {inspectionOffsetY.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)}</td></tr>
+<tr><td>152</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: inspectionLabel = $&quot;{(inspectionOutOfRange ? &quot;INSPECTION · OUT&quot; : &quot;INSPECTION&quot;)}\nΔX {inspectionOffsetX.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)} / ΔY {inspectionOffsetY.ToString(&quot;0.000&quot;, CultureInfo.InvariantCulture)} mm&quot;</td></tr>
+<tr><td>153</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawTextWithin(context, machiningLabel, GetMarkerLabelOrigin(machining, above: true), 8.5, machiningLabelBrush, PlotRect)</td></tr>
+<tr><td>153</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetMarkerLabelOrigin(machining, above: true)</td></tr>
+<tr><td>154</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawTextWithin(context, inspectionLabel, GetMarkerLabelOrigin(inspection, above: false), 8.5, inspectionLabelBrush, PlotRect)</td></tr>
+<tr><td>154</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetMarkerLabelOrigin(inspection, above: false)</td></tr>
+<tr><td>156</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(125, 211, 252)</td></tr>
+<tr><td>156</td><td>local-declaration</td><td>지역 변수를 선언합니다: var axisBrush = CreateBrush(125, 211, 252);</td></tr>
+<tr><td>156</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: axisBrush = CreateBrush(125, 211, 252)</td></tr>
+<tr><td>157</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(axisBrush, 1.4)</td></tr>
+<tr><td>157</td><td>local-declaration</td><td>지역 변수를 선언합니다: var axisPen = new Pen(axisBrush, 1.4);</td></tr>
+<tr><td>157</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: axisPen = new Pen(axisBrush, 1.4)</td></tr>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: axisPen.Freeze()</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawPositiveAxis(context, origin, xPositiveDirection, xAxisLabel, axisPen, axisBrush)</td></tr>
+<tr><td>160</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawPositiveAxis(context, origin, yPositiveDirection, yAxisLabel, axisPen, axisBrush)</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(null, new Pen(CreateBrush(71, 85, 105), 1.0), PlotRect)</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(71, 85, 105), 1.0)</td></tr>
+<tr><td>161</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(71, 85, 105)</td></tr>
+<tr><td>164</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: drawing.Freeze()</td></tr>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new DrawingImage(drawing)</td></tr>
+<tr><td>165</td><td>local-declaration</td><td>지역 변수를 선언합니다: var image = new DrawingImage(drawing);</td></tr>
+<tr><td>165</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: image = new DrawingImage(drawing)</td></tr>
+<tr><td>166</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: image.Freeze()</td></tr>
+<tr><td>167</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return image;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CreateReviewCamera&quot;]
+ N0[&quot;L102 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L120 using&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L170">MethodDeclaration <code>DrawInspectionMarker</code> · L170–178</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L170-L178">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:170–178</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawInspectionMarker(DrawingContext, Point, Brush)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>context</td><td>DrawingContext</td><td>None</td><td>False /</td></tr>
+<tr><td>position</td><td>Point</td><td>None</td><td>False /</td></tr>
+<tr><td>brush</td><td>Brush</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>172</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>173</td><td>pen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>175</td><td>context.DrawRectangle</td><td>unresolved</td><td>None</td></tr>
+<tr><td>175</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>175</td><td>new Rect</td><td>unresolved</td><td>None</td></tr>
+<tr><td>176</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>176</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>176</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>177</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>177</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>177</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>172</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(brush, 1.8)</td></tr>
+<tr><td>172</td><td>local-declaration</td><td>지역 변수를 선언합니다: var pen = new Pen(brush, 1.8);</td></tr>
+<tr><td>172</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: pen = new Pen(brush, 1.8)</td></tr>
+<tr><td>173</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: pen.Freeze()</td></tr>
+<tr><td>174</td><td>local-declaration</td><td>지역 변수를 선언합니다: const double halfSize = 7.0;</td></tr>
+<tr><td>174</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: halfSize = 7.0</td></tr>
+<tr><td>175</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(CreateBrush(17, 24, 32), pen, new Rect(position.X - halfSize, position.Y - halfSize, halfSize * 2.0, halfSize * 2.0))</td></tr>
+<tr><td>175</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(17, 24, 32)</td></tr>
+<tr><td>175</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect(position.X - halfSize, position.Y - halfSize, halfSize * 2.0, halfSize * 2.0)</td></tr>
+<tr><td>176</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(pen, new Point(position.X - 5.0, position.Y), new Point(position.X + 5.0, position.Y))</td></tr>
+<tr><td>176</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X - 5.0, position.Y)</td></tr>
+<tr><td>176</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X + 5.0, position.Y)</td></tr>
+<tr><td>177</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(pen, new Point(position.X, position.Y - 5.0), new Point(position.X, position.Y + 5.0))</td></tr>
+<tr><td>177</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X, position.Y - 5.0)</td></tr>
+<tr><td>177</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X, position.Y + 5.0)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L180">MethodDeclaration <code>GetMarkerLabelOrigin</code> · L180–192</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L180-L192">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:180–192</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetMarkerLabelOrigin(Point, bool)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Point</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>position</td><td>Point</td><td>None</td><td>False /</td></tr>
+<tr><td>above</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L153-L153">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:153–153</a></td><td>GetMarkerLabelOrigin</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L154-L154">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:154–154</a></td><td>GetMarkerLabelOrigin</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>185</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>186</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>190</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>191</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>182</td><td>if</td><td>조건에 따라 분기합니다: if (above)</td></tr>
+<tr><td>184</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: position.Y &lt;= PlotRect.Top + 32.0 ? new Point(position.X + 11.0, position.Y + 10.0) : new Point(position.X + 11.0, position.Y - 32.0)</td></tr>
+<tr><td>184</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return position.Y &lt;= PlotRect.Top + 32.0 ? new Point(position.X + 11.0, position.Y + 10.0) : new Point(position.X + 11.0, position.Y - 32.0);</td></tr>
+<tr><td>185</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X + 11.0, position.Y + 10.0)</td></tr>
+<tr><td>186</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X + 11.0, position.Y - 32.0)</td></tr>
+<tr><td>189</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: position.Y &gt;= PlotRect.Bottom - 32.0 ? new Point(position.X + 11.0, position.Y - 32.0) : new Point(position.X + 11.0, position.Y + 10.0)</td></tr>
+<tr><td>189</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return position.Y &gt;= PlotRect.Bottom - 32.0 ? new Point(position.X + 11.0, position.Y - 32.0) : new Point(position.X + 11.0, position.Y + 10.0);</td></tr>
+<tr><td>190</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X + 11.0, position.Y - 32.0)</td></tr>
+<tr><td>191</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X + 11.0, position.Y + 10.0)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;GetMarkerLabelOrigin&quot;]
+ N0[&quot;L182 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L194">MethodDeclaration <code>GetAppliedLabelOrigin</code> · L194–203</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L194-L203">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:194–203</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetAppliedLabelOrigin(Point)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Point</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>applied</td><td>Point</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L71-L71">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:71–71</a></td><td>GetAppliedLabelOrigin</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>197</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>199</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>201</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>202</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>196</td><td>if</td><td>조건에 따라 분기합니다: if (applied.Y &gt;= PlotRect.Bottom - 12.0)</td></tr>
+<tr><td>197</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(applied.X + 12.0, applied.Y - 36.0)</td></tr>
+<tr><td>197</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new Point(applied.X + 12.0, applied.Y - 36.0);</td></tr>
+<tr><td>198</td><td>if</td><td>조건에 따라 분기합니다: if (applied.Y &lt;= PlotRect.Top + 12.0)</td></tr>
+<tr><td>199</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(applied.X + 12.0, applied.Y + 12.0)</td></tr>
+<tr><td>199</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new Point(applied.X + 12.0, applied.Y + 12.0);</td></tr>
+<tr><td>200</td><td>if</td><td>조건에 따라 분기합니다: if (applied.X &gt;= PlotRect.Right - 12.0)</td></tr>
+<tr><td>201</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(applied.X - 86.0, applied.Y - 18.0)</td></tr>
+<tr><td>201</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new Point(applied.X - 86.0, applied.Y - 18.0);</td></tr>
+<tr><td>202</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(applied.X + 12.0, applied.Y - 18.0)</td></tr>
+<tr><td>202</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new Point(applied.X + 12.0, applied.Y - 18.0);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;GetAppliedLabelOrigin&quot;]
+ N0[&quot;L196 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L198 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L200 if&quot;]
+ M --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L205">MethodDeclaration <code>CalculateOrigin</code> · L205–211</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L205-L211">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:205–211</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CalculateOrigin(double, double, Vector, Vector)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Point</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>minimum</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>maximum</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>xDirection</td><td>Vector</td><td>None</td><td>False /</td></tr>
+<tr><td>yDirection</td><td>Vector</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L38-L38">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:38–38</a></td><td>CalculateOrigin</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L110-L110">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:110–110</a></td><td>CalculateOrigin</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>207</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>208</td><td>SetAxisOrigin</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.SetAxisOrigin(ref Point, Vector, double, double) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:213</td></tr>
+<tr><td>209</td><td>SetAxisOrigin</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.SetAxisOrigin(ref Point, Vector, double, double) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:213</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>207</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left + (PlotRect.Width / 2.0), PlotRect.Top + (PlotRect.Height / 2.0))</td></tr>
+<tr><td>207</td><td>local-declaration</td><td>지역 변수를 선언합니다: var origin = new Point(PlotRect.Left + (PlotRect.Width / 2.0), PlotRect.Top + (PlotRect.Height / 2.0));</td></tr>
+<tr><td>207</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: origin = new Point(PlotRect.Left + (PlotRect.Width / 2.0), PlotRect.Top + (PlotRect.Height / 2.0))</td></tr>
+<tr><td>208</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetAxisOrigin(ref origin, xDirection, minimum, maximum)</td></tr>
+<tr><td>209</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: SetAxisOrigin(ref origin, yDirection, minimum, maximum)</td></tr>
+<tr><td>210</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return origin;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L213">MethodDeclaration <code>SetAxisOrigin</code> · L213–226</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L213-L226">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:213–226</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.SetAxisOrigin(ref Point, Vector, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>origin</td><td>Point</td><td>Ref</td><td>False /</td></tr>
+<tr><td>direction</td><td>Vector</td><td>None</td><td>False /</td></tr>
+<tr><td>minimum</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>maximum</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L208-L208">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:208–208</a></td><td>SetAxisOrigin</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L209-L209">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:209–209</a></td><td>SetAxisOrigin</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>216</td><td>Math.Abs</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>216</td><td>Math.Abs</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>215</td><td>local-declaration</td><td>지역 변수를 선언합니다: var span = maximum - minimum;</td></tr>
+<tr><td>215</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: span = maximum - minimum</td></tr>
+<tr><td>216</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(direction.X)</td></tr>
+<tr><td>216</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(direction.Y)</td></tr>
+<tr><td>216</td><td>if</td><td>조건에 따라 분기합니다: if (Math.Abs(direction.X) &gt;= Math.Abs(direction.Y))</td></tr>
+<tr><td>218</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: direction.X &gt;= 0.0 ? -minimum / span : maximum / span</td></tr>
+<tr><td>218</td><td>local-declaration</td><td>지역 변수를 선언합니다: var fraction = direction.X &gt;= 0.0 ? -minimum / span : maximum / span;</td></tr>
+<tr><td>218</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: fraction = direction.X &gt;= 0.0 ? -minimum / span : maximum / span</td></tr>
+<tr><td>219</td><td>assignment</td><td>값을 대상에 대입합니다: origin.X = PlotRect.Left + (PlotRect.Width * fraction)</td></tr>
+<tr><td>221</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>223</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: direction.Y &gt;= 0.0 ? -minimum / span : maximum / span</td></tr>
+<tr><td>223</td><td>local-declaration</td><td>지역 변수를 선언합니다: var fraction = direction.Y &gt;= 0.0 ? -minimum / span : maximum / span;</td></tr>
+<tr><td>223</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: fraction = direction.Y &gt;= 0.0 ? -minimum / span : maximum / span</td></tr>
+<tr><td>224</td><td>assignment</td><td>값을 대상에 대입합니다: origin.Y = PlotRect.Top + (PlotRect.Height * fraction)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;SetAxisOrigin&quot;]
+ N0[&quot;L216 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L221 else&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L228">MethodDeclaration <code>ClipToPlot</code> · L228–246</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L228-L246">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:228–246</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.ClipToPlot(Point, Point)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Point</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>origin</td><td>Point</td><td>None</td><td>False /</td></tr>
+<tr><td>target</td><td>Point</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>230</td><td>PlotRect.Contains</td><td>unresolved</td><td>None</td></tr>
+<tr><td>238</td><td>Math.Min</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>240</td><td>Math.Min</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>242</td><td>Math.Min</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>244</td><td>Math.Min</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>245</td><td>Math.Clamp</td><td>resolved</td><td>double System.Math.Clamp(double, double, double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>230</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: PlotRect.Contains(target)</td></tr>
+<tr><td>230</td><td>if</td><td>조건에 따라 분기합니다: if (PlotRect.Contains(target))</td></tr>
+<tr><td>232</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return target;</td></tr>
+<tr><td>235</td><td>local-declaration</td><td>지역 변수를 선언합니다: var delta = target - origin;</td></tr>
+<tr><td>235</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: delta = target - origin</td></tr>
+<tr><td>236</td><td>local-declaration</td><td>지역 변수를 선언합니다: var scale = 1.0;</td></tr>
+<tr><td>236</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: scale = 1.0</td></tr>
+<tr><td>237</td><td>if</td><td>조건에 따라 분기합니다: if (delta.X &gt; 0.0)</td></tr>
+<tr><td>238</td><td>assignment</td><td>값을 대상에 대입합니다: scale = Math.Min(scale, (PlotRect.Right - origin.X) / delta.X)</td></tr>
+<tr><td>238</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(scale, (PlotRect.Right - origin.X) / delta.X)</td></tr>
+<tr><td>239</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>239</td><td>if</td><td>조건에 따라 분기합니다: if (delta.X &lt; 0.0)</td></tr>
+<tr><td>240</td><td>assignment</td><td>값을 대상에 대입합니다: scale = Math.Min(scale, (PlotRect.Left - origin.X) / delta.X)</td></tr>
+<tr><td>240</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(scale, (PlotRect.Left - origin.X) / delta.X)</td></tr>
+<tr><td>241</td><td>if</td><td>조건에 따라 분기합니다: if (delta.Y &gt; 0.0)</td></tr>
+<tr><td>242</td><td>assignment</td><td>값을 대상에 대입합니다: scale = Math.Min(scale, (PlotRect.Bottom - origin.Y) / delta.Y)</td></tr>
+<tr><td>242</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(scale, (PlotRect.Bottom - origin.Y) / delta.Y)</td></tr>
+<tr><td>243</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>243</td><td>if</td><td>조건에 따라 분기합니다: if (delta.Y &lt; 0.0)</td></tr>
+<tr><td>244</td><td>assignment</td><td>값을 대상에 대입합니다: scale = Math.Min(scale, (PlotRect.Top - origin.Y) / delta.Y)</td></tr>
+<tr><td>244</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(scale, (PlotRect.Top - origin.Y) / delta.Y)</td></tr>
+<tr><td>245</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(scale, 0.0, 1.0)</td></tr>
+<tr><td>245</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return origin + (delta * Math.Clamp(scale, 0.0, 1.0));</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;ClipToPlot&quot;]
+ N0[&quot;L230 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L237 if&quot;]
+ M --&gt;|포함| N1
+ N2[&quot;L239 else&quot;]
+ N1 --&gt;|포함| N2
+ N3[&quot;L239 if&quot;]
+ N1 --&gt;|포함| N3
+ N4[&quot;L241 if&quot;]
+ M --&gt;|포함| N4
+ N5[&quot;L243 else&quot;]
+ N4 --&gt;|포함| N5
+ N6[&quot;L243 if&quot;]
+ N4 --&gt;|포함| N6</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L248">MethodDeclaration <code>NormalizeDirection</code> · L248–259</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L248-L259">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:248–259</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Vector Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.NormalizeDirection(Vector, Vector)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>Vector</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>direction</td><td>Vector</td><td>None</td><td>False /</td></tr>
+<tr><td>fallback</td><td>Vector</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L28-L28">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:28–28</a></td><td>NormalizeDirection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L29-L29">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:29–29</a></td><td>NormalizeDirection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L100-L100">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:100–100</a></td><td>NormalizeDirection</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L101-L101">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:101–101</a></td><td>NormalizeDirection</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>250</td><td>double.IsFinite</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>251</td><td>double.IsFinite</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>257</td><td>direction.Normalize</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>250</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(direction.X)</td></tr>
+<tr><td>250</td><td>if</td><td>조건에 따라 분기합니다: if (!double.IsFinite(direction.X) || !double.IsFinite(direction.Y) || direction.LengthSquared &lt;= double.Epsilon)</td></tr>
+<tr><td>251</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(direction.Y)</td></tr>
+<tr><td>254</td><td>assignment</td><td>값을 대상에 대입합니다: direction = fallback</td></tr>
+<tr><td>257</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: direction.Normalize()</td></tr>
+<tr><td>258</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return direction;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;NormalizeDirection&quot;]
+ N0[&quot;L250 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L261">MethodDeclaration <code>GetDirectionalScale</code> · L261–264</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L261-L264">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:261–264</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetDirectionalScale(Vector, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>direction</td><td>Vector</td><td>None</td><td>False /</td></tr>
+<tr><td>horizontalScale</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>verticalScale</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>263</td><td>Math.Abs</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>263</td><td>Math.Abs</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>263</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(direction.X)</td></tr>
+<tr><td>263</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(direction.Y)</td></tr>
+<tr><td>263</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Math.Abs(direction.X) &gt;= Math.Abs(direction.Y) ? horizontalScale : verticalScale</td></tr>
+<tr><td>263</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Math.Abs(direction.X) &gt;= Math.Abs(direction.Y) ? horizontalScale : verticalScale;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L266">MethodDeclaration <code>DrawPositiveAxis</code> · L266–298</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L266-L298">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:266–298</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawPositiveAxis(DrawingContext, Point, Vector, string, Pen, Brush)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>context</td><td>DrawingContext</td><td>None</td><td>False /</td></tr>
+<tr><td>origin</td><td>Point</td><td>None</td><td>False /</td></tr>
+<tr><td>direction</td><td>Vector</td><td>None</td><td>False /</td></tr>
+<tr><td>label</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>pen</td><td>Pen</td><td>None</td><td>False /</td></tr>
+<tr><td>brush</td><td>Brush</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>274</td><td>Math.Abs</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>274</td><td>Math.Abs</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>278</td><td>Math.Max</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>279</td><td>DrawArrowHead</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>285</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
+<tr><td>287</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>288</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>293</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>294</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>297</td><td>DrawTextWithin</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawTextWithin(DrawingContext, string, Point, double, Brush, Rect) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:392</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>274</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(direction.X)</td></tr>
+<tr><td>274</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(direction.Y)</td></tr>
+<tr><td>274</td><td>local-declaration</td><td>지역 변수를 선언합니다: var horizontal = Math.Abs(direction.X) &gt;= Math.Abs(direction.Y);</td></tr>
+<tr><td>274</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: horizontal = Math.Abs(direction.X) &gt;= Math.Abs(direction.Y)</td></tr>
+<tr><td>275</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: horizontal ? direction.X &gt;= 0.0 ? PlotRect.Right - origin.X - 8.0 : origin.X - PlotRect.Left - 8.0 : direction.Y &gt;= 0.0 ? PlotRect.Bottom - origin.Y - 8.0 : origin.Y - PlotRect.Top - 8.0</td></tr>
+<tr><td>275</td><td>local-declaration</td><td>지역 변수를 선언합니다: var length = horizontal ? direction.X &gt;= 0.0 ? PlotRect.Right - origin.X - 8.0 : origin.X - PlotRect.Left - 8.0 : direction.Y &gt;= 0.0 ? PlotRect.Bottom - origin.Y - 8.0 : origin.Y - PlotRect.Top - 8.0;</td></tr>
+<tr><td>275</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: length = horizontal ? direction.X &gt;= 0.0 ? PlotRect.Right - origin.X - 8.0 : origin.X - PlotRect.Left - 8.0 : direction.Y &gt;= 0.0 ? PlotRect.Bottom - origin.Y - 8.0 : origin.Y - PlotRect.Top - 8.0</td></tr>
+<tr><td>276</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: direction.X &gt;= 0.0 ? PlotRect.Right - origin.X - 8.0 : origin.X - PlotRect.Left - 8.0</td></tr>
+<tr><td>277</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: direction.Y &gt;= 0.0 ? PlotRect.Bottom - origin.Y - 8.0 : origin.Y - PlotRect.Top - 8.0</td></tr>
+<tr><td>278</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, length)</td></tr>
+<tr><td>278</td><td>local-declaration</td><td>지역 변수를 선언합니다: var end = origin + (direction * Math.Max(0.0, length));</td></tr>
+<tr><td>278</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: end = origin + (direction * Math.Max(0.0, length))</td></tr>
+<tr><td>279</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawArrowHead(context, pen, origin, end)</td></tr>
+<tr><td>281</td><td>local-declaration</td><td>지역 변수를 선언합니다: var displayText = $&quot;{label}+&quot;;</td></tr>
+<tr><td>281</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: displayText = $&quot;{label}+&quot;</td></tr>
+<tr><td>282</td><td>local-declaration</td><td>지역 변수를 선언합니다: Point labelPoint;</td></tr>
+<tr><td>283</td><td>if</td><td>조건에 따라 분기합니다: if (horizontal)</td></tr>
+<tr><td>285</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(48.0, displayText.Length * 6.4)</td></tr>
+<tr><td>285</td><td>local-declaration</td><td>지역 변수를 선언합니다: var estimatedWidth = Math.Max(48.0, displayText.Length * 6.4);</td></tr>
+<tr><td>285</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: estimatedWidth = Math.Max(48.0, displayText.Length * 6.4)</td></tr>
+<tr><td>286</td><td>assignment</td><td>값을 대상에 대입합니다: labelPoint = direction.X &gt;= 0.0 ? new Point(PlotRect.Right - estimatedWidth - 4.0, origin.Y + 6.0) : new Point(PlotRect.Left + 6.0, origin.Y + 6.0)</td></tr>
+<tr><td>286</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: direction.X &gt;= 0.0 ? new Point(PlotRect.Right - estimatedWidth - 4.0, origin.Y + 6.0) : new Point(PlotRect.Left + 6.0, origin.Y + 6.0)</td></tr>
+<tr><td>287</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Right - estimatedWidth - 4.0, origin.Y + 6.0)</td></tr>
+<tr><td>288</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left + 6.0, origin.Y + 6.0)</td></tr>
+<tr><td>290</td><td>else</td><td>앞 조건이 거짓인 경로입니다: else</td></tr>
+<tr><td>292</td><td>assignment</td><td>값을 대상에 대입합니다: labelPoint = direction.Y &gt;= 0.0 ? new Point(origin.X + 7.0, PlotRect.Bottom - 18.0) : new Point(origin.X + 7.0, PlotRect.Top + 2.0)</td></tr>
+<tr><td>292</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: direction.Y &gt;= 0.0 ? new Point(origin.X + 7.0, PlotRect.Bottom - 18.0) : new Point(origin.X + 7.0, PlotRect.Top + 2.0)</td></tr>
+<tr><td>293</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X + 7.0, PlotRect.Bottom - 18.0)</td></tr>
+<tr><td>294</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X + 7.0, PlotRect.Top + 2.0)</td></tr>
+<tr><td>297</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawTextWithin(context, displayText, labelPoint, 10.0, brush, PlotRect)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;DrawPositiveAxis&quot;]
+ N0[&quot;L283 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L290 else&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L300">MethodDeclaration <code>DrawGrid</code> · L300–342</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L300-L342">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:300–342</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawGrid(DrawingContext, Point, double, double, Vector, Vector)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>context</td><td>DrawingContext</td><td>None</td><td>False /</td></tr>
+<tr><td>origin</td><td>Point</td><td>None</td><td>False /</td></tr>
+<tr><td>minimum</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>maximum</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>xDirection</td><td>Vector</td><td>None</td><td>False /</td></tr>
+<tr><td>yDirection</td><td>Vector</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>308</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>308</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>309</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>309</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>310</td><td>minorPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>311</td><td>majorPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>312</td><td>Math.Abs</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>312</td><td>Math.Abs</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>313</td><td>Math.Abs</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>313</td><td>Math.Abs</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>314</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>323</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>323</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>323</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>324</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>324</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>324</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>332</td><td>GetScreenTickValue</td><td>resolved</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetScreenTickValue(int, bool, double, double) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:344</td></tr>
+<tr><td>333</td><td>GetScreenTickValue</td><td>resolved</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetScreenTickValue(int, bool, double, double) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:344</td></tr>
+<tr><td>334</td><td>DrawCenteredText</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>334</td><td>FormatTick</td><td>resolved</td><td>string Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.FormatTick(double, double) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:352</td></tr>
+<tr><td>334</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>335</td><td>DrawRightAlignedText</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>335</td><td>FormatTick</td><td>resolved</td><td>string Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.FormatTick(double, double) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:352</td></tr>
+<tr><td>335</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>338</td><td>new Pen</td><td>unresolved</td><td>None</td></tr>
+<tr><td>338</td><td>CreateBrush</td><td>resolved</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412</td></tr>
+<tr><td>339</td><td>axisPen.Freeze</td><td>unresolved</td><td>None</td></tr>
+<tr><td>340</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>340</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>340</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>341</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>341</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+<tr><td>341</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>308</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(43, 56, 74), 0.55)</td></tr>
+<tr><td>308</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(43, 56, 74)</td></tr>
+<tr><td>308</td><td>local-declaration</td><td>지역 변수를 선언합니다: var minorPen = new Pen(CreateBrush(43, 56, 74), 0.55);</td></tr>
+<tr><td>308</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: minorPen = new Pen(CreateBrush(43, 56, 74), 0.55)</td></tr>
+<tr><td>309</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(57, 74, 96), 0.85)</td></tr>
+<tr><td>309</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(57, 74, 96)</td></tr>
+<tr><td>309</td><td>local-declaration</td><td>지역 변수를 선언합니다: var majorPen = new Pen(CreateBrush(57, 74, 96), 0.85);</td></tr>
+<tr><td>309</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: majorPen = new Pen(CreateBrush(57, 74, 96), 0.85)</td></tr>
+<tr><td>310</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: minorPen.Freeze()</td></tr>
+<tr><td>311</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: majorPen.Freeze()</td></tr>
+<tr><td>312</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(xDirection.X)</td></tr>
+<tr><td>312</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(xDirection.Y)</td></tr>
+<tr><td>312</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Math.Abs(xDirection.X) &gt;= Math.Abs(xDirection.Y) ? xDirection : yDirection</td></tr>
+<tr><td>312</td><td>local-declaration</td><td>지역 변수를 선언합니다: var horizontalDirection = Math.Abs(xDirection.X) &gt;= Math.Abs(xDirection.Y) ? xDirection : yDirection;</td></tr>
+<tr><td>312</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: horizontalDirection = Math.Abs(xDirection.X) &gt;= Math.Abs(xDirection.Y) ? xDirection : yDirection</td></tr>
+<tr><td>313</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(xDirection.Y)</td></tr>
+<tr><td>313</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(xDirection.X)</td></tr>
+<tr><td>313</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Math.Abs(xDirection.Y) &gt; Math.Abs(xDirection.X) ? xDirection : yDirection</td></tr>
+<tr><td>313</td><td>local-declaration</td><td>지역 변수를 선언합니다: var verticalDirection = Math.Abs(xDirection.Y) &gt; Math.Abs(xDirection.X) ? xDirection : yDirection;</td></tr>
+<tr><td>313</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: verticalDirection = Math.Abs(xDirection.Y) &gt; Math.Abs(xDirection.X) ? xDirection : yDirection</td></tr>
+<tr><td>314</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(126, 145, 166)</td></tr>
+<tr><td>314</td><td>local-declaration</td><td>지역 변수를 선언합니다: var tickBrush = CreateBrush(126, 145, 166);</td></tr>
+<tr><td>314</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: tickBrush = CreateBrush(126, 145, 166)</td></tr>
+<tr><td>315</td><td>local-declaration</td><td>지역 변수를 선언합니다: var step = (maximum - minimum) / GridDivisionCount;</td></tr>
+<tr><td>315</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: step = (maximum - minimum) / GridDivisionCount</td></tr>
+<tr><td>316</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: index = 0</td></tr>
+<tr><td>316</td><td>for</td><td>초기화·조건·증감이 있는 반복입니다: for (var index = 0; index &lt;= GridDivisionCount; index++)</td></tr>
+<tr><td>318</td><td>local-declaration</td><td>지역 변수를 선언합니다: var x = PlotRect.Left + (PlotRect.Width * index / GridDivisionCount);</td></tr>
+<tr><td>318</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: x = PlotRect.Left + (PlotRect.Width * index / GridDivisionCount)</td></tr>
+<tr><td>319</td><td>local-declaration</td><td>지역 변수를 선언합니다: var y = PlotRect.Top + (PlotRect.Height * index / GridDivisionCount);</td></tr>
+<tr><td>319</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: y = PlotRect.Top + (PlotRect.Height * index / GridDivisionCount)</td></tr>
+<tr><td>320</td><td>if</td><td>조건에 따라 분기합니다: if (index is &gt; 0 and &lt; GridDivisionCount)</td></tr>
+<tr><td>322</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: index % 2 == 0 ? majorPen : minorPen</td></tr>
+<tr><td>322</td><td>local-declaration</td><td>지역 변수를 선언합니다: var pen = index % 2 == 0 ? majorPen : minorPen;</td></tr>
+<tr><td>322</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: pen = index % 2 == 0 ? majorPen : minorPen</td></tr>
+<tr><td>323</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(pen, new Point(x, PlotRect.Top), new Point(x, PlotRect.Bottom))</td></tr>
+<tr><td>323</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, PlotRect.Top)</td></tr>
+<tr><td>323</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, PlotRect.Bottom)</td></tr>
+<tr><td>324</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(pen, new Point(PlotRect.Left, y), new Point(PlotRect.Right, y))</td></tr>
+<tr><td>324</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left, y)</td></tr>
+<tr><td>324</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Right, y)</td></tr>
+<tr><td>327</td><td>if</td><td>조건에 따라 분기합니다: if (index % 2 != 0)</td></tr>
+<tr><td>329</td><td>continue</td><td>다음 반복으로 진행합니다: continue;</td></tr>
+<tr><td>332</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetScreenTickValue(index, horizontalDirection.X &gt;= 0.0, minimum, maximum)</td></tr>
+<tr><td>332</td><td>local-declaration</td><td>지역 변수를 선언합니다: var horizontalValue = GetScreenTickValue(index, horizontalDirection.X &gt;= 0.0, minimum, maximum);</td></tr>
+<tr><td>332</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: horizontalValue = GetScreenTickValue(index, horizontalDirection.X &gt;= 0.0, minimum, maximum)</td></tr>
+<tr><td>333</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: GetScreenTickValue(index, verticalDirection.Y &gt;= 0.0, minimum, maximum)</td></tr>
+<tr><td>333</td><td>local-declaration</td><td>지역 변수를 선언합니다: var verticalValue = GetScreenTickValue(index, verticalDirection.Y &gt;= 0.0, minimum, maximum);</td></tr>
+<tr><td>333</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: verticalValue = GetScreenTickValue(index, verticalDirection.Y &gt;= 0.0, minimum, maximum)</td></tr>
+<tr><td>334</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawCenteredText(context, FormatTick(horizontalValue, step), new Point(x, PlotRect.Bottom + 3.0), 7.5, tickBrush)</td></tr>
+<tr><td>334</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatTick(horizontalValue, step)</td></tr>
+<tr><td>334</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, PlotRect.Bottom + 3.0)</td></tr>
+<tr><td>335</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DrawRightAlignedText(context, FormatTick(verticalValue, step), new Point(PlotRect.Left - 5.0, y - 4.5), 7.5, tickBrush)</td></tr>
+<tr><td>335</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatTick(verticalValue, step)</td></tr>
+<tr><td>335</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left - 5.0, y - 4.5)</td></tr>
+<tr><td>338</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(102, 136, 164), 1.3)</td></tr>
+<tr><td>338</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(102, 136, 164)</td></tr>
+<tr><td>338</td><td>local-declaration</td><td>지역 변수를 선언합니다: var axisPen = new Pen(CreateBrush(102, 136, 164), 1.3);</td></tr>
+<tr><td>338</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: axisPen = new Pen(CreateBrush(102, 136, 164), 1.3)</td></tr>
+<tr><td>339</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: axisPen.Freeze()</td></tr>
+<tr><td>340</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(axisPen, new Point(PlotRect.Left, origin.Y), new Point(PlotRect.Right, origin.Y))</td></tr>
+<tr><td>340</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left, origin.Y)</td></tr>
+<tr><td>340</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Right, origin.Y)</td></tr>
+<tr><td>341</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(axisPen, new Point(origin.X, PlotRect.Top), new Point(origin.X, PlotRect.Bottom))</td></tr>
+<tr><td>341</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X, PlotRect.Top)</td></tr>
+<tr><td>341</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X, PlotRect.Bottom)</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;DrawGrid&quot;]
+ N0[&quot;L316 for&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L320 if&quot;]
+ N0 --&gt;|포함| N1
+ N2[&quot;L327 if&quot;]
+ N0 --&gt;|포함| N2</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L344">MethodDeclaration <code>GetScreenTickValue</code> · L344–350</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L344-L350">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:344–350</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetScreenTickValue(int, bool, double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>double</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>index</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>positiveTowardsIncreasingScreen</td><td>bool</td><td>None</td><td>False /</td></tr>
+<tr><td>minimum</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>maximum</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L332-L332">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:332–332</a></td><td>GetScreenTickValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L333-L333">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:333–333</a></td><td>GetScreenTickValue</td><td>False</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>346</td><td>local-declaration</td><td>지역 변수를 선언합니다: var fraction = (double)index / GridDivisionCount;</td></tr>
+<tr><td>346</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: fraction = (double)index / GridDivisionCount</td></tr>
+<tr><td>347</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: positiveTowardsIncreasingScreen ? minimum + ((maximum - minimum) * fraction) : maximum - ((maximum - minimum) * fraction)</td></tr>
+<tr><td>347</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return positiveTowardsIncreasingScreen ? minimum + ((maximum - minimum) * fraction) : maximum - ((maximum - minimum) * fraction);</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L352">MethodDeclaration <code>FormatTick</code> · L352–358</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L352-L358">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:352–358</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.FormatTick(double, double)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>step</td><td>double</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L334-L334">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:334–334</a></td><td>FormatTick</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L335-L335">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:335–335</a></td><td>FormatTick</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>354</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>354</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>356</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>356</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>356</td><td>Math.Abs</td><td>resolved</td><td>double System.Math.Abs(double)</td></tr>
+<tr><td>357</td><td>value.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>354</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(value)</td></tr>
+<tr><td>354</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(step)</td></tr>
+<tr><td>354</td><td>if</td><td>조건에 따라 분기합니다: if (Math.Abs(value) &lt; Math.Abs(step) * 1e-6)</td></tr>
+<tr><td>355</td><td>assignment</td><td>값을 대상에 대입합니다: value = 0.0</td></tr>
+<tr><td>356</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(step)</td></tr>
+<tr><td>356</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(step)</td></tr>
+<tr><td>356</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(step)</td></tr>
+<tr><td>356</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Math.Abs(step) &lt; 0.01 ? &quot;0.000&quot; : Math.Abs(step) &lt; 0.1 ? &quot;0.00&quot; : Math.Abs(step) &lt; 1.0 ? &quot;0.0&quot; : &quot;0.##&quot;</td></tr>
+<tr><td>356</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Math.Abs(step) &lt; 0.1 ? &quot;0.00&quot; : Math.Abs(step) &lt; 1.0 ? &quot;0.0&quot; : &quot;0.##&quot;</td></tr>
+<tr><td>356</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: Math.Abs(step) &lt; 1.0 ? &quot;0.0&quot; : &quot;0.##&quot;</td></tr>
+<tr><td>356</td><td>local-declaration</td><td>지역 변수를 선언합니다: var format = Math.Abs(step) &lt; 0.01 ? &quot;0.000&quot; : Math.Abs(step) &lt; 0.1 ? &quot;0.00&quot; : Math.Abs(step) &lt; 1.0 ? &quot;0.0&quot; : &quot;0.##&quot;;</td></tr>
+<tr><td>356</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: format = Math.Abs(step) &lt; 0.01 ? &quot;0.000&quot; : Math.Abs(step) &lt; 0.1 ? &quot;0.00&quot; : Math.Abs(step) &lt; 1.0 ? &quot;0.0&quot; : &quot;0.##&quot;</td></tr>
+<tr><td>357</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString(format, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>357</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return value.ToString(format, CultureInfo.InvariantCulture);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;FormatTick&quot;]
+ N0[&quot;L354 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L360">MethodDeclaration <code>DrawArrowHead</code> · L360–373</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L360-L373">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:360–373</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawArrowHead(DrawingContext, Pen, Point, Point)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>context</td><td>DrawingContext</td><td>None</td><td>False /</td></tr>
+<tr><td>pen</td><td>Pen</td><td>None</td><td>False /</td></tr>
+<tr><td>start</td><td>Point</td><td>None</td><td>False /</td></tr>
+<tr><td>end</td><td>Point</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>368</td><td>delta.Normalize</td><td>unresolved</td><td>None</td></tr>
+<tr><td>369</td><td>new Vector</td><td>unresolved</td><td>None</td></tr>
+<tr><td>371</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+<tr><td>372</td><td>context.DrawLine</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>362</td><td>local-declaration</td><td>지역 변수를 선언합니다: var delta = end - start;</td></tr>
+<tr><td>362</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: delta = end - start</td></tr>
+<tr><td>363</td><td>if</td><td>조건에 따라 분기합니다: if (delta.Length &lt; 5.0)</td></tr>
+<tr><td>365</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return;</td></tr>
+<tr><td>368</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: delta.Normalize()</td></tr>
+<tr><td>369</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Vector(-delta.Y, delta.X)</td></tr>
+<tr><td>369</td><td>local-declaration</td><td>지역 변수를 선언합니다: var normal = new Vector(-delta.Y, delta.X);</td></tr>
+<tr><td>369</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: normal = new Vector(-delta.Y, delta.X)</td></tr>
+<tr><td>370</td><td>local-declaration</td><td>지역 변수를 선언합니다: var basePoint = end - (delta * 9.0);</td></tr>
+<tr><td>370</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: basePoint = end - (delta * 9.0)</td></tr>
+<tr><td>371</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(pen, end, basePoint + (normal * 4.0))</td></tr>
+<tr><td>372</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(pen, end, basePoint - (normal * 4.0))</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;DrawArrowHead&quot;]
+ N0[&quot;L363 if&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L375">MethodDeclaration <code>DrawText</code> · L375–378</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L375-L378">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:375–378</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawText(DrawingContext, string, Point, double, Brush)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>context</td><td>DrawingContext</td><td>None</td><td>False /</td></tr>
+<tr><td>text</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>origin</td><td>Point</td><td>None</td><td>False /</td></tr>
+<tr><td>fontSize</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>brush</td><td>Brush</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>377</td><td>context.DrawText</td><td>unresolved</td><td>None</td></tr>
+<tr><td>377</td><td>CreateText</td><td>resolved</td><td>FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:400</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>377</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawText(CreateText(text, fontSize, brush), origin)</td></tr>
+<tr><td>377</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateText(text, fontSize, brush)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L380">MethodDeclaration <code>DrawCenteredText</code> · L380–384</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L380-L384">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:380–384</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawCenteredText(DrawingContext, string, Point, double, Brush)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>context</td><td>DrawingContext</td><td>None</td><td>False /</td></tr>
+<tr><td>text</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>origin</td><td>Point</td><td>None</td><td>False /</td></tr>
+<tr><td>fontSize</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>brush</td><td>Brush</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>382</td><td>CreateText</td><td>resolved</td><td>FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:400</td></tr>
+<tr><td>383</td><td>context.DrawText</td><td>unresolved</td><td>None</td></tr>
+<tr><td>383</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>382</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateText(text, fontSize, brush)</td></tr>
+<tr><td>382</td><td>local-declaration</td><td>지역 변수를 선언합니다: var formatted = CreateText(text, fontSize, brush);</td></tr>
+<tr><td>382</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: formatted = CreateText(text, fontSize, brush)</td></tr>
+<tr><td>383</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawText(formatted, new Point(origin.X - (formatted.Width / 2.0), origin.Y))</td></tr>
+<tr><td>383</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X - (formatted.Width / 2.0), origin.Y)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L386">MethodDeclaration <code>DrawRightAlignedText</code> · L386–390</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L386-L390">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:386–390</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawRightAlignedText(DrawingContext, string, Point, double, Brush)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>context</td><td>DrawingContext</td><td>None</td><td>False /</td></tr>
+<tr><td>text</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>origin</td><td>Point</td><td>None</td><td>False /</td></tr>
+<tr><td>fontSize</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>brush</td><td>Brush</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>388</td><td>CreateText</td><td>resolved</td><td>FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:400</td></tr>
+<tr><td>389</td><td>context.DrawText</td><td>unresolved</td><td>None</td></tr>
+<tr><td>389</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>388</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateText(text, fontSize, brush)</td></tr>
+<tr><td>388</td><td>local-declaration</td><td>지역 변수를 선언합니다: var formatted = CreateText(text, fontSize, brush);</td></tr>
+<tr><td>388</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: formatted = CreateText(text, fontSize, brush)</td></tr>
+<tr><td>389</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawText(formatted, new Point(origin.X - formatted.Width, origin.Y))</td></tr>
+<tr><td>389</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X - formatted.Width, origin.Y)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L392">MethodDeclaration <code>DrawTextWithin</code> · L392–398</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L392-L398">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:392–398</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawTextWithin(DrawingContext, string, Point, double, Brush, Rect)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>context</td><td>DrawingContext</td><td>None</td><td>False /</td></tr>
+<tr><td>text</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>origin</td><td>Point</td><td>None</td><td>False /</td></tr>
+<tr><td>fontSize</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>brush</td><td>Brush</td><td>None</td><td>False /</td></tr>
+<tr><td>bounds</td><td>Rect</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L297-L297">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:297–297</a></td><td>DrawTextWithin</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>394</td><td>CreateText</td><td>resolved</td><td>FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush) · Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:400</td></tr>
+<tr><td>395</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>395</td><td>Math.Max</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>396</td><td>Math.Clamp</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>396</td><td>Math.Max</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>397</td><td>context.DrawText</td><td>unresolved</td><td>None</td></tr>
+<tr><td>397</td><td>new Point</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>394</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateText(text, fontSize, brush)</td></tr>
+<tr><td>394</td><td>local-declaration</td><td>지역 변수를 선언합니다: var formatted = CreateText(text, fontSize, brush);</td></tr>
+<tr><td>394</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: formatted = CreateText(text, fontSize, brush)</td></tr>
+<tr><td>395</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(origin.X, bounds.Left + 2.0, Math.Max(bounds.Left + 2.0, bounds.Right - formatted.Width - 2.0))</td></tr>
+<tr><td>395</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(bounds.Left + 2.0, bounds.Right - formatted.Width - 2.0)</td></tr>
+<tr><td>395</td><td>local-declaration</td><td>지역 변수를 선언합니다: var x = Math.Clamp(origin.X, bounds.Left + 2.0, Math.Max(bounds.Left + 2.0, bounds.Right - formatted.Width - 2.0));</td></tr>
+<tr><td>395</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: x = Math.Clamp(origin.X, bounds.Left + 2.0, Math.Max(bounds.Left + 2.0, bounds.Right - formatted.Width - 2.0))</td></tr>
+<tr><td>396</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(origin.Y, bounds.Top + 2.0, Math.Max(bounds.Top + 2.0, bounds.Bottom - formatted.Height - 2.0))</td></tr>
+<tr><td>396</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(bounds.Top + 2.0, bounds.Bottom - formatted.Height - 2.0)</td></tr>
+<tr><td>396</td><td>local-declaration</td><td>지역 변수를 선언합니다: var y = Math.Clamp(origin.Y, bounds.Top + 2.0, Math.Max(bounds.Top + 2.0, bounds.Bottom - formatted.Height - 2.0));</td></tr>
+<tr><td>396</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: y = Math.Clamp(origin.Y, bounds.Top + 2.0, Math.Max(bounds.Top + 2.0, bounds.Bottom - formatted.Height - 2.0))</td></tr>
+<tr><td>397</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawText(formatted, new Point(x, y))</td></tr>
+<tr><td>397</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, y)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L400">MethodDeclaration <code>CreateText</code> · L400–410</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L400-L410">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:400–410</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>FormattedText</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>text</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>fontSize</td><td>double</td><td>None</td><td>False /</td></tr>
+<tr><td>brush</td><td>Brush</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L377-L377">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:377–377</a></td><td>CreateText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L382-L382">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:382–382</a></td><td>CreateText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L388-L388">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:388–388</a></td><td>CreateText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L394-L394">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:394–394</a></td><td>CreateText</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>402</td><td>new FormattedText</td><td>unresolved</td><td>None</td></tr>
+<tr><td>406</td><td>new Typeface</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>402</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new FormattedText( text, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, new Typeface(&quot;Segoe UI&quot;), fontSize, brush, 1.0)</td></tr>
+<tr><td>402</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new FormattedText( text, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, new Typeface(&quot;Segoe UI&quot;), fontSize, brush, 1.0);</td></tr>
+<tr><td>406</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new Typeface(&quot;Segoe UI&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L412">MethodDeclaration <code>CreateBrush</code> · L412–417</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L412-L417">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:412–417</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>SolidColorBrush</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>red</td><td>byte</td><td>None</td><td>False /</td></tr>
+<tr><td>green</td><td>byte</td><td>None</td><td>False /</td></tr>
+<tr><td>blue</td><td>byte</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L47-L47">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:47–47</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L50-L50">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:50–50</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L52-L52">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:52–52</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L53-L53">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:53–53</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L60-L60">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:60–60</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L63-L63">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:63–63</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L65-L65">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:65–65</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L72-L72">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:72–72</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L77-L77">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:77–77</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L122-L122">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:122–122</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L125-L125">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:125–125</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L128-L128">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:128–128</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L129-L129">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:129–129</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L134-L134">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:134–134</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L135-L135">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:135–135</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L140-L140">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:140–140</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L143-L143">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:143–143</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L147-L147">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:147–147</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L156-L156">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:156–156</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L161-L161">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:161–161</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L175-L175">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:175–175</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L308-L308">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:308–308</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L309-L309">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:309–309</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L314-L314">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:314–314</a></td><td>CreateBrush</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs#L338-L338">Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs:338–338</a></td><td>CreateBrush</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>414</td><td>new SolidColorBrush</td><td>unresolved</td><td>None</td></tr>
+<tr><td>414</td><td>Color.FromRgb</td><td>unresolved</td><td>None</td></tr>
+<tr><td>415</td><td>brush.Freeze</td><td>unresolved</td><td>None</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>414</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromRgb(red, green, blue))</td></tr>
+<tr><td>414</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(red, green, blue)</td></tr>
+<tr><td>414</td><td>local-declaration</td><td>지역 변수를 선언합니다: var brush = new SolidColorBrush(Color.FromRgb(red, green, blue));</td></tr>
+<tr><td>414</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: brush = new SolidColorBrush(Color.FromRgb(red, green, blue))</td></tr>
+<tr><td>415</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze()</td></tr>
+<tr><td>416</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return brush;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h2>구문·바인딩 한계</h2>
+<p>전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. <code>resolved</code>는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. <code>candidate</code>와 <code>unresolved</code>는 후속 확인 대상으로 남깁니다.</p>
+<h2>원문 전체 주석 해설본</h2>
+<p><a href="../annotated/Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs.annotated.txt">원본 모든 행과 행별 해설 보기</a></p>
+<p>원본을 빠뜨리거나 임의로 줄이지 않았습니다. <code>L000001 |</code> 표시는 원본 행 번호, <code>// 해설</code>은 별도 설명입니다. 실행용 소스가 아닌 문서입니다.</p>
+<h2>수정·재검증 체크</h2>
+<p>• 원본 Commit과 현재 작업 파일 SHA가 같은지 먼저 확인합니다. 다르면 이 문서를 과거 버전 자료로 취급합니다.</p>
+<p>• 선언·직접 호출·이벤트/인터페이스 경계·설정 소비를 함께 확인합니다. 정적 연결의 빈 곳을 정상 경로로 추정하지 않습니다.</p>
+<p>• 저장 형식/단위/식별자·재시도·취소·예외·롤백에 영향을 주는 변경은 상세 해설장과 호출자를 다시 검토합니다.</p>
+<p>• 도구의 구문 추출과 별도 정적 추적 해설, 실제 빌드·시뮬레이션·실장비 검증 결과를 분리합니다.</p></main></html>

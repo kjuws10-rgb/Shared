@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Views/CMainProtectWindowView.xaml
-Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: XAML UI 구조·속성·리소스 선언입니다: <UserControl x:Class="Drilling.UI.Views.CMainProtectWindowView"
@@ -79,8 +79,8 @@ L000036 |             </Border> ⟦EOL⟧
 L000037 |         </Grid> ⟦EOL⟧
 // 해설 L38: XAML UI 구조·속성·리소스 선언입니다: <Grid Grid.Row="1">
 L000038 |         <Grid Grid.Row="1"> ⟦EOL⟧
-// 해설 L39: XAML UI 구조·속성·리소스 선언입니다: <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
-L000039 |             <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions> ⟦EOL⟧
+// 해설 L39: XAML UI 구조·속성·리소스 선언입니다: <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+L000039 |             <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions> ⟦EOL⟧
 // 해설 L40: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Column="0" Margin="0,0,6,6" Style="{StaticResource ProtectCard}">
 L000040 |             <Border Grid.Column="0" Margin="0,0,6,6" Style="{StaticResource ProtectCard}"> ⟦EOL⟧
 // 해설 L41: XAML UI 구조·속성·리소스 선언입니다: <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
@@ -105,8 +105,8 @@ L000049 |                     <ContentControl Grid.Row="1" Content="{Binding Cur
 L000050 |                 </Grid> ⟦EOL⟧
 // 해설 L51: XAML 요소 범위를 닫습니다.
 L000051 |             </Border> ⟦EOL⟧
-// 해설 L52: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Column="2" Margin="0,0,0,6" Style="{StaticResource ProtectCard}">
-L000052 |             <Border Grid.Column="2" Margin="0,0,0,6" Style="{StaticResource ProtectCard}"> ⟦EOL⟧
+// 해설 L52: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Column="2" Margin="0,0,6,6" Style="{StaticResource ProtectCard}">
+L000052 |             <Border Grid.Column="2" Margin="0,0,6,6" Style="{StaticResource ProtectCard}"> ⟦EOL⟧
 // 해설 L53: XAML UI 구조·속성·리소스 선언입니다: <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
 L000053 |                 <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions> ⟦EOL⟧
 // 해설 L54: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="Tray Count" Style="{StaticResource ProtectLabel}"/>
@@ -117,43 +117,55 @@ L000055 |                     <ContentControl Grid.Row="1" Content="{Binding Tra
 L000056 |                 </Grid> ⟦EOL⟧
 // 해설 L57: XAML 요소 범위를 닫습니다.
 L000057 |             </Border> ⟦EOL⟧
-// 해설 L58: XAML 요소 범위를 닫습니다.
-L000058 |         </Grid> ⟦EOL⟧
-// 해설 L59: XAML UI 구조·속성·리소스 선언입니다: <Grid Grid.Row="2">
-L000059 |         <Grid Grid.Row="2"> ⟦EOL⟧
-// 해설 L60: XAML UI 구조·속성·리소스 선언입니다: <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
-L000060 |             <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions> ⟦EOL⟧
-// 해설 L61: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Column="0" Margin="0,0,6,6" Style="{StaticResource ProtectCard}">
-L000061 |             <Border Grid.Column="0" Margin="0,0,6,6" Style="{StaticResource ProtectCard}"> ⟦EOL⟧
-// 해설 L62: XAML UI 구조·속성·리소스 선언입니다: <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
-L000062 |                 <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions> ⟦EOL⟧
-// 해설 L63: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="교체요청 신호상태" Style="{StaticResource ProtectLabel}" Margin="0,0,0,5"/>
-L000063 |                     <TextBlock Text="교체요청 신호상태" Style="{StaticResource ProtectLabel}" Margin="0,0,0,5"/> ⟦EOL⟧
-// 해설 L64: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <ContentControl Grid.Row="1" Content="{Binding Request}" ContentTemplate="{StaticResource SignalValue}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
-L000064 |                     <ContentControl Grid.Row="1" Content="{Binding Request}" ContentTemplate="{StaticResource SignalValue}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/> ⟦EOL⟧
-// 해설 L65: XAML 요소 범위를 닫습니다.
-L000065 |                 </Grid> ⟦EOL⟧
-// 해설 L66: XAML 요소 범위를 닫습니다.
-L000066 |             </Border> ⟦EOL⟧
-// 해설 L67: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Column="1" Margin="0,0,0,6" Style="{StaticResource ProtectCard}">
-L000067 |             <Border Grid.Column="1" Margin="0,0,0,6" Style="{StaticResource ProtectCard}"> ⟦EOL⟧
+// 해설 L58: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Column="3" Margin="0,0,0,6" Style="{StaticResource ProtectCard}">
+L000058 |             <Border Grid.Column="3" Margin="0,0,0,6" Style="{StaticResource ProtectCard}"> ⟦EOL⟧
+// 해설 L59: XAML UI 구조·속성·리소스 선언입니다: <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+L000059 |                 <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L60: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="재시도 횟수" Style="{StaticResource ProtectLabel}"/>
+L000060 |                     <TextBlock Text="재시도 횟수" Style="{StaticResource ProtectLabel}"/> ⟦EOL⟧
+// 해설 L61: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <ContentControl Grid.Row="1" Content="{Binding RetryCount}" ContentTemplate="{StaticResource CountValue}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+L000061 |                     <ContentControl Grid.Row="1" Content="{Binding RetryCount}" ContentTemplate="{StaticResource CountValue}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/> ⟦EOL⟧
+// 해설 L62: XAML 요소 범위를 닫습니다.
+L000062 |                 </Grid> ⟦EOL⟧
+// 해설 L63: XAML 요소 범위를 닫습니다.
+L000063 |             </Border> ⟦EOL⟧
+// 해설 L64: XAML 요소 범위를 닫습니다.
+L000064 |         </Grid> ⟦EOL⟧
+// 해설 L65: XAML UI 구조·속성·리소스 선언입니다: <Grid Grid.Row="2">
+L000065 |         <Grid Grid.Row="2"> ⟦EOL⟧
+// 해설 L66: XAML UI 구조·속성·리소스 선언입니다: <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+L000066 |             <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions> ⟦EOL⟧
+// 해설 L67: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Column="0" Margin="0,0,6,6" Style="{StaticResource ProtectCard}">
+L000067 |             <Border Grid.Column="0" Margin="0,0,6,6" Style="{StaticResource ProtectCard}"> ⟦EOL⟧
 // 해설 L68: XAML UI 구조·속성·리소스 선언입니다: <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
 L000068 |                 <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions> ⟦EOL⟧
-// 해설 L69: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="교체완료 신호상태" Style="{StaticResource ProtectLabel}" Margin="0,0,0,5"/>
-L000069 |                     <TextBlock Text="교체완료 신호상태" Style="{StaticResource ProtectLabel}" Margin="0,0,0,5"/> ⟦EOL⟧
-// 해설 L70: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <ContentControl Grid.Row="1" Content="{Binding Complete}" ContentTemplate="{StaticResource SignalValue}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
-L000070 |                     <ContentControl Grid.Row="1" Content="{Binding Complete}" ContentTemplate="{StaticResource SignalValue}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/> ⟦EOL⟧
+// 해설 L69: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="교체요청 신호상태" Style="{StaticResource ProtectLabel}" Margin="0,0,0,5"/>
+L000069 |                     <TextBlock Text="교체요청 신호상태" Style="{StaticResource ProtectLabel}" Margin="0,0,0,5"/> ⟦EOL⟧
+// 해설 L70: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <ContentControl Grid.Row="1" Content="{Binding Request}" ContentTemplate="{StaticResource SignalValue}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+L000070 |                     <ContentControl Grid.Row="1" Content="{Binding Request}" ContentTemplate="{StaticResource SignalValue}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/> ⟦EOL⟧
 // 해설 L71: XAML 요소 범위를 닫습니다.
 L000071 |                 </Grid> ⟦EOL⟧
 // 해설 L72: XAML 요소 범위를 닫습니다.
 L000072 |             </Border> ⟦EOL⟧
-// 해설 L73: XAML 요소 범위를 닫습니다.
-L000073 |         </Grid> ⟦EOL⟧
-// 해설 L74: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Grid.Row="3" Text="교체 완료는 Shift/교체 구간 기준입니다. TPM 완료는 별도입니다."
-L000074 |         <TextBlock Grid.Row="3" Text="교체 완료는 Shift/교체 구간 기준입니다. TPM 완료는 별도입니다." ⟦EOL⟧
-// 해설 L75: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" TextWrapping="Wrap"/>
-L000075 |                    Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" TextWrapping="Wrap"/> ⟦EOL⟧
-// 해설 L76: XAML 요소 범위를 닫습니다.
-L000076 |     </Grid> ⟦EOL⟧
+// 해설 L73: XAML UI 구조·속성·리소스 선언입니다: <Border Grid.Column="1" Margin="0,0,0,6" Style="{StaticResource ProtectCard}">
+L000073 |             <Border Grid.Column="1" Margin="0,0,0,6" Style="{StaticResource ProtectCard}"> ⟦EOL⟧
+// 해설 L74: XAML UI 구조·속성·리소스 선언입니다: <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+L000074 |                 <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions> ⟦EOL⟧
+// 해설 L75: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Text="교체완료 신호상태" Style="{StaticResource ProtectLabel}" Margin="0,0,0,5"/>
+L000075 |                     <TextBlock Text="교체완료 신호상태" Style="{StaticResource ProtectLabel}" Margin="0,0,0,5"/> ⟦EOL⟧
+// 해설 L76: 바인딩 표현입니다. DataContext/속성 변경 알림과 연결을 확인합니다: <ContentControl Grid.Row="1" Content="{Binding Complete}" ContentTemplate="{StaticResource SignalValue}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+L000076 |                     <ContentControl Grid.Row="1" Content="{Binding Complete}" ContentTemplate="{StaticResource SignalValue}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/> ⟦EOL⟧
 // 해설 L77: XAML 요소 범위를 닫습니다.
-L000077 | </UserControl> ⟦EOL⟧
+L000077 |                 </Grid> ⟦EOL⟧
+// 해설 L78: XAML 요소 범위를 닫습니다.
+L000078 |             </Border> ⟦EOL⟧
+// 해설 L79: XAML 요소 범위를 닫습니다.
+L000079 |         </Grid> ⟦EOL⟧
+// 해설 L80: XAML UI 구조·속성·리소스 선언입니다: <TextBlock Grid.Row="3" Text="교체 완료는 Shift/교체 구간 기준입니다. TPM 완료는 별도입니다."
+L000080 |         <TextBlock Grid.Row="3" Text="교체 완료는 Shift/교체 구간 기준입니다. TPM 완료는 별도입니다." ⟦EOL⟧
+// 해설 L81: XAML UI 구조·속성·리소스 선언입니다: Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" TextWrapping="Wrap"/>
+L000081 |                    Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" TextWrapping="Wrap"/> ⟦EOL⟧
+// 해설 L82: XAML 요소 범위를 닫습니다.
+L000082 |     </Grid> ⟦EOL⟧
+// 해설 L83: XAML 요소 범위를 닫습니다.
+L000083 | </UserControl> ⟦EOL⟧

@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Menu/Menus/CMenuBase.cs
-Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
@@ -841,7 +841,7 @@ L000439 |     public CMenuAlarm? Alarm { get; } = alarm; ⟦EOL⟧
 // 해설 L440: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuMonitor? Drilling.UI.Menu.Menus.CScreenViewModel.Monitor
 L000440 |     public CMenuMonitor? Monitor { get; } = monitor; ⟦EOL⟧
 // 해설 L441: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuReview? Drilling.UI.Menu.Menus.CScreenViewModel.Review
-L000441 |     public CMenuReview? Review { get; } = review ?? manual?.Review; ⟦EOL⟧
+L000441 |     public CMenuReview? Review { get; } = review; ⟦EOL⟧
 // 해설 L442: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection? Drilling.UI.Menu.Menus.CScreenViewModel.Correction
 L000442 |     public CMenuCorrection? Correction { get; } = correction; ⟦EOL⟧
 // 해설 L443: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuPm? Drilling.UI.Menu.Menus.CScreenViewModel.Pm

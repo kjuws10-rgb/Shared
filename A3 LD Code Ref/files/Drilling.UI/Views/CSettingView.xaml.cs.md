@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | f2587e20f619e65e44bd005eb4e53ca55d6aee17bb3ad78ac8edcc3b0a9d9380 |
 | 파일 분류 | code |
 | 원본 크기/행 | 4,141 bytes / 123 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSettingView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -39,7 +39,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isHistoryExpanded` · L11–11
 
-[Drilling.UI/Views/CSettingView.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSettingView.xaml.cs#L11-L11)
+[Drilling.UI/Views/CSettingView.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -54,7 +54,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L13–16
 
-[Drilling.UI/Views/CSettingView.xaml.cs:13–16](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSettingView.xaml.cs#L13-L16)
+[Drilling.UI/Views/CSettingView.xaml.cs:13–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml.cs#L13-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -81,7 +81,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `ToggleHistory_Click` · L18–28
 
-[Drilling.UI/Views/CSettingView.xaml.cs:18–28](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSettingView.xaml.cs#L18-L28)
+[Drilling.UI/Views/CSettingView.xaml.cs:18–28](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml.cs#L18-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -133,7 +133,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CommitSettingGridEdits` · L30–40
 
-[Drilling.UI/Views/CSettingView.xaml.cs:30–40](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSettingView.xaml.cs#L30-L40)
+[Drilling.UI/Views/CSettingView.xaml.cs:30–40](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml.cs#L30-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -153,7 +153,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CSettingView.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSettingView.xaml.cs#L20-L20) | CommitSettingGridEdits | False |
+| [Drilling.UI/Views/CSettingView.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml.cs#L20-L20) | CommitSettingGridEdits | False |
 
 호출하는 대상과 해석 범위:
 
@@ -189,7 +189,7 @@ flowchart TD
 
 ### MethodDeclaration `CommitGridEdit` · L42–46
 
-[Drilling.UI/Views/CSettingView.xaml.cs:42–46](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSettingView.xaml.cs#L42-L46)
+[Drilling.UI/Views/CSettingView.xaml.cs:42–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml.cs#L42-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -224,7 +224,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenParameterValueInput` · L48–62
 
-[Drilling.UI/Views/CSettingView.xaml.cs:48–62](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSettingView.xaml.cs#L48-L62)
+[Drilling.UI/Views/CSettingView.xaml.cs:48–62](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml.cs#L48-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -283,7 +283,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenInterfaceValueInput` · L64–122
 
-[Drilling.UI/Views/CSettingView.xaml.cs:64–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSettingView.xaml.cs#L64-L122)
+[Drilling.UI/Views/CSettingView.xaml.cs:64–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml.cs#L64-L122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

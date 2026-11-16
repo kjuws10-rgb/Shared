@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 6eb5679e2bedbc38cfd134f78abbba4eaca1cf263a4d13751f7a0561d9e5c149 |
 | 파일 분류 | code |
 | 원본 크기/행 | 17,250 bytes / 278 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -76,7 +76,7 @@
 
 ### FieldDeclaration `Rules` · L15–27
 
-[Drilling.Common/InterLock/CInterLockManager.cs:15–27](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L15-L27)
+[Drilling.Common/InterLock/CInterLockManager.cs:15–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L15-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -124,7 +124,7 @@
 
 ### MethodDeclaration `Evaluate` · L28–69
 
-[Drilling.Common/InterLock/CInterLockManager.cs:28–69](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L28-L69)
+[Drilling.Common/InterLock/CInterLockManager.cs:28–69](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L28-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -143,9 +143,9 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Alarm/CAlarmManager.cs#L423-L423) | interLocks.Evaluate | False |
-| [Drilling.Common/Station/CStationProcess.cs:1372–1372](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1372-L1372) | _interLockManager.Evaluate | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4555–4555](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4555-L4555) | _interLockManager.Evaluate | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Alarm/CAlarmManager.cs#L423-L423) | interLocks.Evaluate | False |
+| [Drilling.Common/Station/CStationProcess.cs:1373–1373](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1373-L1373) | _interLockManager.Evaluate | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:5026–5026](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L5026-L5026) | _interLockManager.Evaluate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -231,7 +231,7 @@ flowchart TD
 
 ### LocalFunctionStatement `EvaluateInterlockRule` · L30–33
 
-[Drilling.Common/InterLock/CInterLockManager.cs:30–33](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L30-L33)
+[Drilling.Common/InterLock/CInterLockManager.cs:30–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L30-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -265,7 +265,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectInterlockItem` · L36–42
 
-[Drilling.Common/InterLock/CInterLockManager.cs:36–42](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L36-L42)
+[Drilling.Common/InterLock/CInterLockManager.cs:36–42](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L36-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -300,7 +300,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsAlarmOn` · L45–48
 
-[Drilling.Common/InterLock/CInterLockManager.cs:45–48](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L45-L48)
+[Drilling.Common/InterLock/CInterLockManager.cs:45–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L45-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -327,7 +327,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L59–62
 
-[Drilling.Common/InterLock/CInterLockManager.cs:59–62](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L59-L62)
+[Drilling.Common/InterLock/CInterLockManager.cs:59–62](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L59-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -354,7 +354,7 @@ flowchart TD
 
 ### MethodDeclaration `EvaluateRule` · L71–86
 
-[Drilling.Common/InterLock/CInterLockManager.cs:71–86](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L71-L86)
+[Drilling.Common/InterLock/CInterLockManager.cs:71–86](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L71-L86)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -374,7 +374,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/InterLock/CInterLockManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L32-L32) | EvaluateRule | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L32-L32) | EvaluateRule | False |
 
 호출하는 대상과 해석 범위:
 
@@ -420,7 +420,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L73–76
 
-[Drilling.Common/InterLock/CInterLockManager.cs:73–76](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L73-L76)
+[Drilling.Common/InterLock/CInterLockManager.cs:73–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L73-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -456,7 +456,7 @@ flowchart TD
 
 ### MethodDeclaration `IsTargetOk` · L88–101
 
-[Drilling.Common/InterLock/CInterLockManager.cs:88–101](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L88-L101)
+[Drilling.Common/InterLock/CInterLockManager.cs:88–101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L88-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -476,9 +476,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/InterLock/CInterLockManager.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L65-L65) | IsTargetOk | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L66-L66) | IsTargetOk | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L67-L67) | IsTargetOk | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L65-L65) | IsTargetOk | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L66-L66) | IsTargetOk | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L67-L67) | IsTargetOk | False |
 
 호출하는 대상과 해석 범위:
 
@@ -499,7 +499,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L90–93
 
-[Drilling.Common/InterLock/CInterLockManager.cs:90–93](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L90-L93)
+[Drilling.Common/InterLock/CInterLockManager.cs:90–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L90-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -533,7 +533,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsIsOk` · L95–98
 
-[Drilling.Common/InterLock/CInterLockManager.cs:95–98](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L95-L98)
+[Drilling.Common/InterLock/CInterLockManager.cs:95–98](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L95-L98)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -560,7 +560,7 @@ flowchart TD
 
 ### MethodDeclaration `Rule` · L103–106
 
-[Drilling.Common/InterLock/CInterLockManager.cs:103–106](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L103-L106)
+[Drilling.Common/InterLock/CInterLockManager.cs:103–106](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L103-L106)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -585,17 +585,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/InterLock/CInterLockManager.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L16-L16) | Rule | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L17-L17) | Rule | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L18-L18) | Rule | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L19-L19) | Rule | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L20-L20) | Rule | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L21-L21) | Rule | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L22-L22) | Rule | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L23-L23) | Rule | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L24-L24) | Rule | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L25-L25) | Rule | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L26-L26) | Rule | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L16-L16) | Rule | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L17-L17) | Rule | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L18-L18) | Rule | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L19-L19) | Rule | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L20-L20) | Rule | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L21-L21) | Rule | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L22-L22) | Rule | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L23-L23) | Rule | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L24-L24) | Rule | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L25-L25) | Rule | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L26-L26) | Rule | False |
 
 호출하는 대상과 해석 범위:
 
@@ -614,7 +614,7 @@ flowchart TD
 
 ### MethodDeclaration `EvaluateHeadUse` · L110–121
 
-[Drilling.Common/InterLock/CInterLockManager.cs:110–121](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L110-L121)
+[Drilling.Common/InterLock/CInterLockManager.cs:110–121](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L110-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -633,8 +633,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L270-L270) | CInterLockManager.EvaluateHeadUse | False |
-| [Drilling.Common/Station/CStationProcess.cs:1386–1386](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1386-L1386) | CInterLockManager.EvaluateHeadUse | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L270-L270) | CInterLockManager.EvaluateHeadUse | False |
+| [Drilling.Common/Station/CStationProcess.cs:1387–1387](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1387-L1387) | CInterLockManager.EvaluateHeadUse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -683,7 +683,7 @@ flowchart TD
 
 ### MethodDeclaration `EvaluateDoeZ` · L124–166
 
-[Drilling.Common/InterLock/CInterLockManager.cs:124–166](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L124-L166)
+[Drilling.Common/InterLock/CInterLockManager.cs:124–166](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L124-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -703,7 +703,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1375–1375](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1375-L1375) | CInterLockManager.EvaluateDoeZ | False |
+| [Drilling.Common/Station/CStationProcess.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1376-L1376) | CInterLockManager.EvaluateDoeZ | False |
 
 호출하는 대상과 해석 범위:
 
@@ -802,7 +802,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Add` · L132–132
 
-[Drilling.Common/InterLock/CInterLockManager.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L132-L132)
+[Drilling.Common/InterLock/CInterLockManager.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L132-L132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -823,11 +823,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/InterLock/CInterLockManager.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L135-L135) | Add | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L141-L141) | Add | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L147-L147) | Add | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L156-L156) | Add | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L162-L162) | Add | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L135-L135) | Add | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L141-L141) | Add | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L147-L147) | Add | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L156-L156) | Add | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L162-L162) | Add | False |
 
 호출하는 대상과 해석 범위:
 
@@ -851,7 +851,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDoeZNumber` · L168–172
 
-[Drilling.Common/InterLock/CInterLockManager.cs:168–172](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L168-L172)
+[Drilling.Common/InterLock/CInterLockManager.cs:168–172](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L168-L172)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -872,8 +872,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/InterLock/CInterLockManager.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L139-L139) | ReadDoeZNumber | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L145-L145) | ReadDoeZNumber | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L139-L139) | ReadDoeZNumber | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L145-L145) | ReadDoeZNumber | False |
 
 호출하는 대상과 해석 범위:
 
@@ -897,7 +897,7 @@ flowchart TD
 
 ### FieldDeclaration `OpticPositionTolerance` · L176–176
 
-[Drilling.Common/InterLock/CInterLockManager.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L176-L176)
+[Drilling.Common/InterLock/CInterLockManager.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L176-L176)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -918,7 +918,7 @@ flowchart TD
 
 ### MethodDeclaration `EvaluateOptics` · L177–241
 
-[Drilling.Common/InterLock/CInterLockManager.cs:177–241](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L177-L241)
+[Drilling.Common/InterLock/CInterLockManager.cs:177–241](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L177-L241)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -941,7 +941,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1375–1375](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1375-L1375) | CInterLockManager.EvaluateOptics | False |
+| [Drilling.Common/Station/CStationProcess.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1376-L1376) | CInterLockManager.EvaluateOptics | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1092,7 +1092,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Add` · L191–191
 
-[Drilling.Common/InterLock/CInterLockManager.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L191-L191)
+[Drilling.Common/InterLock/CInterLockManager.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L191-L191)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1114,13 +1114,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/InterLock/CInterLockManager.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L198-L198) | Add | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L199-L199) | Add | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L200-L200) | Add | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L206-L206) | Add | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:212–217](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L212-L217) | Add | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L224-L224) | Add | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:230–235](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L230-L235) | Add | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L198-L198) | Add | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:199–199](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L199-L199) | Add | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L200-L200) | Add | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L206-L206) | Add | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:212–217](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L212-L217) | Add | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L224-L224) | Add | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:230–235](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L230-L235) | Add | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1144,7 +1144,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Registered` · L192–192
 
-[Drilling.Common/InterLock/CInterLockManager.cs:192–192](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L192-L192)
+[Drilling.Common/InterLock/CInterLockManager.cs:192–192](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L192-L192)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1163,9 +1163,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/InterLock/CInterLockManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L193-L193) | Registered | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L203-L203) | Registered | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L221-L221) | Registered | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L193-L193) | Registered | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L203-L203) | Registered | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L221-L221) | Registered | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1183,7 +1183,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadOpticNumber` · L243–247
 
-[Drilling.Common/InterLock/CInterLockManager.cs:243–247](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L243-L247)
+[Drilling.Common/InterLock/CInterLockManager.cs:243–247](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L243-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1204,9 +1204,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/InterLock/CInterLockManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L205-L205) | ReadOpticNumber | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L205-L205) | ReadOpticNumber | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L223-L223) | ReadOpticNumber | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L205-L205) | ReadOpticNumber | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L205-L205) | ReadOpticNumber | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L223-L223) | ReadOpticNumber | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1230,7 +1230,7 @@ flowchart TD
 
 ### MethodDeclaration `NearOpticPosition` · L249–249
 
-[Drilling.Common/InterLock/CInterLockManager.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L249-L249)
+[Drilling.Common/InterLock/CInterLockManager.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L249-L249)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1250,9 +1250,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/InterLock/CInterLockManager.cs:211–211](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L211-L211) | NearOpticPosition | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:211–211](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L211-L211) | NearOpticPosition | False |
-| [Drilling.Common/InterLock/CInterLockManager.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L229-L229) | NearOpticPosition | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:211–211](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L211-L211) | NearOpticPosition | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:211–211](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L211-L211) | NearOpticPosition | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L229-L229) | NearOpticPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1272,7 +1272,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `None` · L256–256
 
-[Drilling.Common/InterLock/CInterLockManager.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L256-L256)
+[Drilling.Common/InterLock/CInterLockManager.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L256-L256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1287,7 +1287,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `AutoRun` · L257–257
 
-[Drilling.Common/InterLock/CInterLockManager.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L257-L257)
+[Drilling.Common/InterLock/CInterLockManager.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L257-L257)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1302,7 +1302,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ManualMove` · L258–258
 
-[Drilling.Common/InterLock/CInterLockManager.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L258-L258)
+[Drilling.Common/InterLock/CInterLockManager.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L258-L258)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1317,7 +1317,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `LaserOn` · L259–259
 
-[Drilling.Common/InterLock/CInterLockManager.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L259-L259)
+[Drilling.Common/InterLock/CInterLockManager.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L259-L259)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1332,7 +1332,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Ok` · L264–264
 
-[Drilling.Common/InterLock/CInterLockManager.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L264-L264)
+[Drilling.Common/InterLock/CInterLockManager.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L264-L264)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1347,7 +1347,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Warn` · L265–265
 
-[Drilling.Common/InterLock/CInterLockManager.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L265-L265)
+[Drilling.Common/InterLock/CInterLockManager.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L265-L265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1362,7 +1362,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Error` · L266–266
 
-[Drilling.Common/InterLock/CInterLockManager.cs:266–266](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L266-L266)
+[Drilling.Common/InterLock/CInterLockManager.cs:266–266](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L266-L266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1377,7 +1377,7 @@ flowchart TD
 
 ### PropertyDeclaration `Group` · L271–271
 
-[Drilling.Common/InterLock/CInterLockManager.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L271-L271)
+[Drilling.Common/InterLock/CInterLockManager.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L271-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1392,7 +1392,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Group` · L271–271
 
-[Drilling.Common/InterLock/CInterLockManager.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L271-L271)
+[Drilling.Common/InterLock/CInterLockManager.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L271-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1407,7 +1407,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Group` · L271–271
 
-[Drilling.Common/InterLock/CInterLockManager.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L271-L271)
+[Drilling.Common/InterLock/CInterLockManager.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L271-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1428,7 +1428,7 @@ flowchart TD
 
 ### PropertyDeclaration `BlocksAutoRun` · L272–272
 
-[Drilling.Common/InterLock/CInterLockManager.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L272-L272)
+[Drilling.Common/InterLock/CInterLockManager.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L272-L272)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1443,7 +1443,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BlocksAutoRun` · L272–272
 
-[Drilling.Common/InterLock/CInterLockManager.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L272-L272)
+[Drilling.Common/InterLock/CInterLockManager.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L272-L272)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1458,7 +1458,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_BlocksAutoRun` · L272–272
 
-[Drilling.Common/InterLock/CInterLockManager.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L272-L272)
+[Drilling.Common/InterLock/CInterLockManager.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L272-L272)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1479,7 +1479,7 @@ flowchart TD
 
 ### PropertyDeclaration `HeadNo` · L273–273
 
-[Drilling.Common/InterLock/CInterLockManager.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L273-L273)
+[Drilling.Common/InterLock/CInterLockManager.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L273-L273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1494,7 +1494,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HeadNo` · L273–273
 
-[Drilling.Common/InterLock/CInterLockManager.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L273-L273)
+[Drilling.Common/InterLock/CInterLockManager.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L273-L273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1509,7 +1509,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_HeadNo` · L273–273
 
-[Drilling.Common/InterLock/CInterLockManager.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/InterLock/CInterLockManager.cs#L273-L273)
+[Drilling.Common/InterLock/CInterLockManager.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L273-L273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

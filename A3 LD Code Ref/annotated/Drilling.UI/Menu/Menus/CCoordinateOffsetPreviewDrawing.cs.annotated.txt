@@ -1,0 +1,793 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs
+Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000002 | using System.Windows; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000003 | using System.Windows.Media; ⟦EOL⟧
+L000004 |  ⟦EOL⟧
+// 해설 L5: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus;
+L000005 | namespace Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000006 |  ⟦EOL⟧
+// 해설 L7: 타입의 구조/상속 선언입니다: internal static class CCoordinateOffsetPreviewDrawing
+L000007 | internal static class CCoordinateOffsetPreviewDrawing ⟦EOL⟧
+// 해설 L8: 구문 블록 경계입니다.
+L000008 | { ⟦EOL⟧
+// 해설 L9: 변수의 초기값을 지정합니다: DesignWidth = 520.0
+L000009 |     public const double DesignWidth = 520.0; ⟦EOL⟧
+// 해설 L10: 변수의 초기값을 지정합니다: DesignHeight = 280.0
+L000010 |     public const double DesignHeight = 280.0; ⟦EOL⟧
+// 해설 L11: 변수의 초기값을 지정합니다: GridDivisionCount = 20
+L000011 |     public const int GridDivisionCount = 20; ⟦EOL⟧
+// 해설 L12: 변수의 초기값을 지정합니다: DefaultMinimum = -5.0
+L000012 |     private const double DefaultMinimum = -5.0; ⟦EOL⟧
+// 해설 L13: 변수의 초기값을 지정합니다: DefaultMaximum = 5.0
+L000013 |     private const double DefaultMaximum = 5.0; ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(58.0, 24.0, 406.0, 210.0) / 변수의 초기값을 지정합니다: PlotRect = new(58.0, 24.0, 406.0, 210.0)
+L000014 |     private static readonly Rect PlotRect = new(58.0, 24.0, 406.0, 210.0); ⟦EOL⟧
+L000015 |  ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.Create(string, string, double, double, Vector, Vector, double, double)
+L000016 |     public static ImageSource Create( ⟦EOL⟧
+// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.Create(string, string, double, double, Vector, Vector, double, double)
+L000017 |         string xAxisLabel, ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.Create(string, string, double, double, Vector, Vector, double, double)
+L000018 |         string yAxisLabel, ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.Create(string, string, double, double, Vector, Vector, double, double)
+L000019 |         double offsetX, ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.Create(string, string, double, double, Vector, Vector, double, double)
+L000020 |         double offsetY, ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.Create(string, string, double, double, Vector, Vector, double, double)
+L000021 |         Vector xPositiveDirection, ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.Create(string, string, double, double, Vector, Vector, double, double)
+L000022 |         Vector yPositiveDirection, ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.Create(string, string, double, double, Vector, Vector, double, double)
+L000023 |         double minimum = DefaultMinimum, ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.Create(string, string, double, double, Vector, Vector, double, double)
+L000024 |         double maximum = DefaultMaximum) ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 Create.
+L000025 |     { ⟦EOL⟧
+// 해설 L26: 값을 대상에 대입합니다: xAxisLabel = string.IsNullOrWhiteSpace(xAxisLabel) ? "X" : xAxisLabel.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(xAxisLabel) / 함수·델리게이트 또는 객체 생성자를 호출합니다: xAxisLabel.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: xAxisLabel.Trim() / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(xAxisLabel) ? "X" : xAxisLabel.Trim().ToUpperInvariant()
+L000026 |         xAxisLabel = string.IsNullOrWhiteSpace(xAxisLabel) ? "X" : xAxisLabel.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L27: 값을 대상에 대입합니다: yAxisLabel = string.IsNullOrWhiteSpace(yAxisLabel) ? "Y" : yAxisLabel.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(yAxisLabel) / 함수·델리게이트 또는 객체 생성자를 호출합니다: yAxisLabel.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: yAxisLabel.Trim() / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(yAxisLabel) ? "Y" : yAxisLabel.Trim().ToUpperInvariant()
+L000027 |         yAxisLabel = string.IsNullOrWhiteSpace(yAxisLabel) ? "Y" : yAxisLabel.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L28: 값을 대상에 대입합니다: xPositiveDirection = NormalizeDirection(xPositiveDirection, new Vector(1.0, 0.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeDirection(xPositiveDirection, new Vector(1.0, 0.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Vector(1.0, 0.0)
+L000028 |         xPositiveDirection = NormalizeDirection(xPositiveDirection, new Vector(1.0, 0.0)); ⟦EOL⟧
+// 해설 L29: 값을 대상에 대입합니다: yPositiveDirection = NormalizeDirection(yPositiveDirection, new Vector(0.0, 1.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeDirection(yPositiveDirection, new Vector(0.0, 1.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Vector(0.0, 1.0)
+L000029 |         yPositiveDirection = NormalizeDirection(yPositiveDirection, new Vector(0.0, 1.0)); ⟦EOL⟧
+// 해설 L30: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(minimum) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(maximum) / 조건에 따라 분기합니다: if (!double.IsFinite(minimum) || !double.IsFinite(maximum) || minimum >= 0.0 || maximum <= 0.0 || minimum >= maximum)
+L000030 |         if (!double.IsFinite(minimum) || !double.IsFinite(maximum) || minimum >= 0.0 || maximum <= 0.0 || minimum >= maximum) ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 Create.
+L000031 |         { ⟦EOL⟧
+// 해설 L32: 값을 대상에 대입합니다: minimum = DefaultMinimum
+L000032 |             minimum = DefaultMinimum; ⟦EOL⟧
+// 해설 L33: 값을 대상에 대입합니다: maximum = DefaultMaximum
+L000033 |             maximum = DefaultMaximum; ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 Create.
+L000034 |         } ⟦EOL⟧
+L000035 |  ⟦EOL⟧
+// 해설 L36: 지역 변수를 선언합니다: var span = maximum - minimum; / 변수의 초기값을 지정합니다: span = maximum - minimum
+L000036 |         var span = maximum - minimum; ⟦EOL⟧
+// 해설 L37: 지역 변수를 선언합니다: var gridStep = span / GridDivisionCount; / 변수의 초기값을 지정합니다: gridStep = span / GridDivisionCount
+L000037 |         var gridStep = span / GridDivisionCount; ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection) / 지역 변수를 선언합니다: var origin = CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection); / 변수의 초기값을 지정합니다: origin = CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection)
+L000038 |         var origin = CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection); ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span) / 지역 변수를 선언합니다: var xScale = GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span); / 변수의 초기값을 지정합니다: xScale = GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span)
+L000039 |         var xScale = GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span); ⟦EOL⟧
+// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span) / 지역 변수를 선언합니다: var yScale = GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span); / 변수의 초기값을 지정합니다: yScale = GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span)
+L000040 |         var yScale = GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span); ⟦EOL⟧
+// 해설 L41: 지역 변수를 선언합니다: var rawApplied = origin + (xPositiveDirection * (offsetX * xScale)) + (yPositiveDirection * (offsetY * yScale)); / 변수의 초기값을 지정합니다: rawApplied = origin + (xPositiveDirection * (offsetX * xScale)) + (yPositiveDirection * (offsetY * yScale))
+L000041 |         var rawApplied = origin + (xPositiveDirection * (offsetX * xScale)) + (yPositiveDirection * (offsetY * yScale)); ⟦EOL⟧
+// 해설 L42: 지역 변수를 선언합니다: var outOfRange = offsetX < minimum || offsetX > maximum || offsetY < minimum || offsetY > maximum; / 변수의 초기값을 지정합니다: outOfRange = offsetX < minimum || offsetX > maximum || offsetY < minimum || offsetY > maximum
+L000042 |         var outOfRange = offsetX < minimum || offsetX > maximum || offsetY < minimum || offsetY > maximum; ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClipToPlot(origin, rawApplied) / 지역 변수를 선언합니다: var applied = ClipToPlot(origin, rawApplied); / 변수의 초기값을 지정합니다: applied = ClipToPlot(origin, rawApplied)
+L000043 |         var applied = ClipToPlot(origin, rawApplied); ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: new DrawingGroup() / 지역 변수를 선언합니다: var drawing = new DrawingGroup(); / 변수의 초기값을 지정합니다: drawing = new DrawingGroup()
+L000044 |         var drawing = new DrawingGroup(); ⟦EOL⟧
+// 해설 L45: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawing.Open() / 자원 사용과 정리 범위를 지정합니다: using (var context = drawing.Open()) / 변수의 초기값을 지정합니다: context = drawing.Open()
+L000045 |         using (var context = drawing.Open()) ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Create.
+L000046 |         { ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(CreateBrush(17, 24, 32), null, new Rect(0.0, 0.0, DesignWidth, DesignHeight)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(17, 24, 32) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect(0.0, 0.0, DesignWidth, DesignHeight)
+L000047 |             context.DrawRectangle(CreateBrush(17, 24, 32), null, new Rect(0.0, 0.0, DesignWidth, DesignHeight)); ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawGrid(context, origin, minimum, maximum, xPositiveDirection, yPositiveDirection)
+L000048 |             DrawGrid(context, origin, minimum, maximum, xPositiveDirection, yPositiveDirection); ⟦EOL⟧
+L000049 |  ⟦EOL⟧
+// 해설 L50: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(148, 163, 184) / 지역 변수를 선언합니다: var scaleBrush = CreateBrush(148, 163, 184); / 변수의 초기값을 지정합니다: scaleBrush = CreateBrush(148, 163, 184)
+L000050 |             var scaleBrush = CreateBrush(148, 163, 184); ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawText(context, $"GRID {gridStep.ToString("0.###", CultureInfo.InvariantCulture)} mm / DIV", new Point(PlotRect.Left, 4.0), 9.0, scaleBrush) / 함수·델리게이트 또는 객체 생성자를 호출합니다: gridStep.ToString("0.###", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left, 4.0)
+L000051 |             DrawText(context, $"GRID {gridStep.ToString("0.###", CultureInfo.InvariantCulture)} mm / DIV", new Point(PlotRect.Left, 4.0), 9.0, scaleBrush); ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(74, 222, 128) / 지역 변수를 선언합니다: var appliedBrush = CreateBrush(74, 222, 128); / 변수의 초기값을 지정합니다: appliedBrush = CreateBrush(74, 222, 128)
+L000052 |             var appliedBrush = CreateBrush(74, 222, 128); ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(248, 113, 113) / 조건에 따라 결과식을 선택합니다: outOfRange ? CreateBrush(248, 113, 113) : appliedBrush / 지역 변수를 선언합니다: var deltaBrush = outOfRange ? CreateBrush(248, 113, 113) : appliedBrush; / 변수의 초기값을 지정합니다: deltaBrush = outOfRange ? CreateBrush(248, 113, 113) : appliedBrush
+L000053 |             var deltaBrush = outOfRange ? CreateBrush(248, 113, 113) : appliedBrush; ⟦EOL⟧
+L000054 |  ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(appliedBrush, 1.6) / 지역 변수를 선언합니다: var vectorPen = new Pen(appliedBrush, 1.6); / 변수의 초기값을 지정합니다: vectorPen = new Pen(appliedBrush, 1.6)
+L000055 |             var vectorPen = new Pen(appliedBrush, 1.6); ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: vectorPen.Freeze()
+L000056 |             vectorPen.Freeze(); ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(vectorPen, origin, applied)
+L000057 |             context.DrawLine(vectorPen, origin, applied); ⟦EOL⟧
+// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawArrowHead(context, vectorPen, origin, applied)
+L000058 |             DrawArrowHead(context, vectorPen, origin, applied); ⟦EOL⟧
+L000059 |  ⟦EOL⟧
+// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(203, 213, 225) / 지역 변수를 선언합니다: var designBrush = CreateBrush(203, 213, 225); / 변수의 초기값을 지정합니다: designBrush = CreateBrush(203, 213, 225)
+L000060 |             var designBrush = CreateBrush(203, 213, 225); ⟦EOL⟧
+// 해설 L61: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(designBrush, 1.8) / 지역 변수를 선언합니다: var designPen = new Pen(designBrush, 1.8); / 변수의 초기값을 지정합니다: designPen = new Pen(designBrush, 1.8)
+L000061 |             var designPen = new Pen(designBrush, 1.8); ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: designPen.Freeze()
+L000062 |             designPen.Freeze(); ⟦EOL⟧
+// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawEllipse(CreateBrush(30, 41, 59), designPen, origin, 6.0, 6.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(30, 41, 59)
+L000063 |             context.DrawEllipse(CreateBrush(30, 41, 59), designPen, origin, 6.0, 6.0); ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(187, 247, 208), 1.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(187, 247, 208) / 지역 변수를 선언합니다: var appliedPen = new Pen(CreateBrush(187, 247, 208), 1.0); / 변수의 초기값을 지정합니다: appliedPen = new Pen(CreateBrush(187, 247, 208), 1.0)
+L000065 |             var appliedPen = new Pen(CreateBrush(187, 247, 208), 1.0); ⟦EOL⟧
+// 해설 L66: 함수·델리게이트 또는 객체 생성자를 호출합니다: appliedPen.Freeze()
+L000066 |             appliedPen.Freeze(); ⟦EOL⟧
+// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawEllipse(appliedBrush, appliedPen, applied, 4.5, 4.5)
+L000067 |             context.DrawEllipse(appliedBrush, appliedPen, applied, 4.5, 4.5); ⟦EOL⟧
+L000068 |  ⟦EOL⟧
+// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawTextWithin(context, "BASE", new Point(origin.X + 9.0, origin.Y + 7.0), 10.0, designBrush, PlotRect) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X + 9.0, origin.Y + 7.0)
+L000069 |             DrawTextWithin(context, "BASE", new Point(origin.X + 9.0, origin.Y + 7.0), 10.0, designBrush, PlotRect); ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: offsetX.ToString("0.000", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: offsetY.ToString("0.000", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: outOfRange ? "APPLIED · OUT" : "APPLIED" / 지역 변수를 선언합니다: var appliedLabel = $"{(outOfRange ? "APPLIED · OUT" : "APPLIED")}\nΔX {offsetX.ToString("0.000", CultureInfo.InvariantCulture)} / ΔY {offsetY.ToString("0.000", CultureInfo.InvariantCulture)} mm"; / 변수의 초기값을 지정합니다: appliedLabel = $"{(outOfRange ? "APPLIED · OUT" : "APPLIED")}\nΔX {offsetX.ToStr
+L000070 |             var appliedLabel = $"{(outOfRange ? "APPLIED · OUT" : "APPLIED")}\nΔX {offsetX.ToString("0.000", CultureInfo.InvariantCulture)} / ΔY {offsetY.ToString("0.000", CultureInfo.InvariantCulture)} mm"; ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawTextWithin(context, appliedLabel, GetAppliedLabelOrigin(applied), 9.0, deltaBrush, PlotRect) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetAppliedLabelOrigin(applied)
+L000071 |             DrawTextWithin(context, appliedLabel, GetAppliedLabelOrigin(applied), 9.0, deltaBrush, PlotRect); ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(125, 211, 252) / 지역 변수를 선언합니다: var axisBrush = CreateBrush(125, 211, 252); / 변수의 초기값을 지정합니다: axisBrush = CreateBrush(125, 211, 252)
+L000072 |             var axisBrush = CreateBrush(125, 211, 252); ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(axisBrush, 1.4) / 지역 변수를 선언합니다: var axisPen = new Pen(axisBrush, 1.4); / 변수의 초기값을 지정합니다: axisPen = new Pen(axisBrush, 1.4)
+L000073 |             var axisPen = new Pen(axisBrush, 1.4); ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: axisPen.Freeze()
+L000074 |             axisPen.Freeze(); ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawPositiveAxis(context, origin, xPositiveDirection, xAxisLabel, axisPen, axisBrush)
+L000075 |             DrawPositiveAxis(context, origin, xPositiveDirection, xAxisLabel, axisPen, axisBrush); ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawPositiveAxis(context, origin, yPositiveDirection, yAxisLabel, axisPen, axisBrush)
+L000076 |             DrawPositiveAxis(context, origin, yPositiveDirection, yAxisLabel, axisPen, axisBrush); ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(null, new Pen(CreateBrush(71, 85, 105), 1.0), PlotRect) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(71, 85, 105), 1.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(71, 85, 105)
+L000077 |             context.DrawRectangle(null, new Pen(CreateBrush(71, 85, 105), 1.0), PlotRect); ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 Create.
+L000078 |         } ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawing.Freeze()
+L000080 |         drawing.Freeze(); ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: new DrawingImage(drawing) / 지역 변수를 선언합니다: var image = new DrawingImage(drawing); / 변수의 초기값을 지정합니다: image = new DrawingImage(drawing)
+L000081 |         var image = new DrawingImage(drawing); ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: image.Freeze()
+L000082 |         image.Freeze(); ⟦EOL⟧
+// 해설 L83: 호출자에게 값 또는 제어를 반환합니다: return image;
+L000083 |         return image; ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 Create.
+L000084 |     } ⟦EOL⟧
+L000085 |  ⟦EOL⟧
+// 해설 L86: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)
+L000086 |     public static ImageSource CreateReviewCamera( ⟦EOL⟧
+// 해설 L87: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)
+L000087 |         string xAxisLabel, ⟦EOL⟧
+// 해설 L88: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)
+L000088 |         string yAxisLabel, ⟦EOL⟧
+// 해설 L89: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)
+L000089 |         double machiningOffsetX, ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)
+L000090 |         double machiningOffsetY, ⟦EOL⟧
+// 해설 L91: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)
+L000091 |         double inspectionOffsetX, ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)
+L000092 |         double inspectionOffsetY, ⟦EOL⟧
+// 해설 L93: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)
+L000093 |         Vector xPositiveDirection, ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)
+L000094 |         Vector yPositiveDirection, ⟦EOL⟧
+// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)
+L000095 |         double minimum = DefaultMinimum, ⟦EOL⟧
+// 해설 L96: 선언·서명/매개변수·접근 조건입니다 · ImageSource Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateReviewCamera(string, string, double, double, double, double, Vector, Vector, double, double)
+L000096 |         double maximum = DefaultMaximum) ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 CreateReviewCamera.
+L000097 |     { ⟦EOL⟧
+// 해설 L98: 값을 대상에 대입합니다: xAxisLabel = string.IsNullOrWhiteSpace(xAxisLabel) ? "X" : xAxisLabel.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(xAxisLabel) / 함수·델리게이트 또는 객체 생성자를 호출합니다: xAxisLabel.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: xAxisLabel.Trim() / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(xAxisLabel) ? "X" : xAxisLabel.Trim().ToUpperInvariant()
+L000098 |         xAxisLabel = string.IsNullOrWhiteSpace(xAxisLabel) ? "X" : xAxisLabel.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L99: 값을 대상에 대입합니다: yAxisLabel = string.IsNullOrWhiteSpace(yAxisLabel) ? "Y" : yAxisLabel.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(yAxisLabel) / 함수·델리게이트 또는 객체 생성자를 호출합니다: yAxisLabel.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: yAxisLabel.Trim() / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(yAxisLabel) ? "Y" : yAxisLabel.Trim().ToUpperInvariant()
+L000099 |         yAxisLabel = string.IsNullOrWhiteSpace(yAxisLabel) ? "Y" : yAxisLabel.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L100: 값을 대상에 대입합니다: xPositiveDirection = NormalizeDirection(xPositiveDirection, new Vector(1.0, 0.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeDirection(xPositiveDirection, new Vector(1.0, 0.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Vector(1.0, 0.0)
+L000100 |         xPositiveDirection = NormalizeDirection(xPositiveDirection, new Vector(1.0, 0.0)); ⟦EOL⟧
+// 해설 L101: 값을 대상에 대입합니다: yPositiveDirection = NormalizeDirection(yPositiveDirection, new Vector(0.0, 1.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeDirection(yPositiveDirection, new Vector(0.0, 1.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Vector(0.0, 1.0)
+L000101 |         yPositiveDirection = NormalizeDirection(yPositiveDirection, new Vector(0.0, 1.0)); ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(minimum) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(maximum) / 조건에 따라 분기합니다: if (!double.IsFinite(minimum) || !double.IsFinite(maximum) || minimum >= 0.0 || maximum <= 0.0 || minimum >= maximum)
+L000102 |         if (!double.IsFinite(minimum) || !double.IsFinite(maximum) || minimum >= 0.0 || maximum <= 0.0 || minimum >= maximum) ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 CreateReviewCamera.
+L000103 |         { ⟦EOL⟧
+// 해설 L104: 값을 대상에 대입합니다: minimum = DefaultMinimum
+L000104 |             minimum = DefaultMinimum; ⟦EOL⟧
+// 해설 L105: 값을 대상에 대입합니다: maximum = DefaultMaximum
+L000105 |             maximum = DefaultMaximum; ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 CreateReviewCamera.
+L000106 |         } ⟦EOL⟧
+L000107 |  ⟦EOL⟧
+// 해설 L108: 지역 변수를 선언합니다: var span = maximum - minimum; / 변수의 초기값을 지정합니다: span = maximum - minimum
+L000108 |         var span = maximum - minimum; ⟦EOL⟧
+// 해설 L109: 지역 변수를 선언합니다: var gridStep = span / GridDivisionCount; / 변수의 초기값을 지정합니다: gridStep = span / GridDivisionCount
+L000109 |         var gridStep = span / GridDivisionCount; ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection) / 지역 변수를 선언합니다: var origin = CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection); / 변수의 초기값을 지정합니다: origin = CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection)
+L000110 |         var origin = CalculateOrigin(minimum, maximum, xPositiveDirection, yPositiveDirection); ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span) / 지역 변수를 선언합니다: var xScale = GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span); / 변수의 초기값을 지정합니다: xScale = GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span)
+L000111 |         var xScale = GetDirectionalScale(xPositiveDirection, PlotRect.Width / span, PlotRect.Height / span); ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span) / 지역 변수를 선언합니다: var yScale = GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span); / 변수의 초기값을 지정합니다: yScale = GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span)
+L000112 |         var yScale = GetDirectionalScale(yPositiveDirection, PlotRect.Width / span, PlotRect.Height / span); ⟦EOL⟧
+// 해설 L113: 지역 변수를 선언합니다: var rawMachining = origin + (xPositiveDirection * (machiningOffsetX * xScale)) + (yPositiveDirection * (machiningOffsetY * yScale)); / 변수의 초기값을 지정합니다: rawMachining = origin + (xPositiveDirection * (machiningOffsetX * xScale)) + (yPositiveDirection * (machiningOffsetY * yScale))
+L000113 |         var rawMachining = origin + (xPositiveDirection * (machiningOffsetX * xScale)) + (yPositiveDirection * (machiningOffsetY * yScale)); ⟦EOL⟧
+// 해설 L114: 지역 변수를 선언합니다: var rawInspection = origin + (xPositiveDirection * (inspectionOffsetX * xScale)) + (yPositiveDirection * (inspectionOffsetY * yScale)); / 변수의 초기값을 지정합니다: rawInspection = origin + (xPositiveDirection * (inspectionOffsetX * xScale)) + (yPositiveDirection * (inspectionOffsetY * yScale))
+L000114 |         var rawInspection = origin + (xPositiveDirection * (inspectionOffsetX * xScale)) + (yPositiveDirection * (inspectionOffsetY * yScale)); ⟦EOL⟧
+// 해설 L115: 지역 변수를 선언합니다: var machiningOutOfRange = machiningOffsetX < minimum || machiningOffsetX > maximum || machiningOffsetY < minimum || machiningOffsetY > maximum; / 변수의 초기값을 지정합니다: machiningOutOfRange = machiningOffsetX < minimum || machiningOffsetX > maximum || machiningOffsetY < minimum || machiningOffsetY > maximum
+L000115 |         var machiningOutOfRange = machiningOffsetX < minimum || machiningOffsetX > maximum || machiningOffsetY < minimum || machiningOffsetY > maximum; ⟦EOL⟧
+// 해설 L116: 지역 변수를 선언합니다: var inspectionOutOfRange = inspectionOffsetX < minimum || inspectionOffsetX > maximum || inspectionOffsetY < minimum || inspectionOffsetY > maximum; / 변수의 초기값을 지정합니다: inspectionOutOfRange = inspectionOffsetX < minimum || inspectionOffsetX > maximum || inspectionOffsetY < minimum || inspectionOffsetY > maximum
+L000116 |         var inspectionOutOfRange = inspectionOffsetX < minimum || inspectionOffsetX > maximum || inspectionOffsetY < minimum || inspectionOffsetY > maximum; ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClipToPlot(origin, rawMachining) / 지역 변수를 선언합니다: var machining = ClipToPlot(origin, rawMachining); / 변수의 초기값을 지정합니다: machining = ClipToPlot(origin, rawMachining)
+L000117 |         var machining = ClipToPlot(origin, rawMachining); ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: ClipToPlot(origin, rawInspection) / 지역 변수를 선언합니다: var inspection = ClipToPlot(origin, rawInspection); / 변수의 초기값을 지정합니다: inspection = ClipToPlot(origin, rawInspection)
+L000118 |         var inspection = ClipToPlot(origin, rawInspection); ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: new DrawingGroup() / 지역 변수를 선언합니다: var drawing = new DrawingGroup(); / 변수의 초기값을 지정합니다: drawing = new DrawingGroup()
+L000119 |         var drawing = new DrawingGroup(); ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawing.Open() / 자원 사용과 정리 범위를 지정합니다: using (var context = drawing.Open()) / 변수의 초기값을 지정합니다: context = drawing.Open()
+L000120 |         using (var context = drawing.Open()) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 CreateReviewCamera.
+L000121 |         { ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(CreateBrush(17, 24, 32), null, new Rect(0.0, 0.0, DesignWidth, DesignHeight)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(17, 24, 32) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect(0.0, 0.0, DesignWidth, DesignHeight)
+L000122 |             context.DrawRectangle(CreateBrush(17, 24, 32), null, new Rect(0.0, 0.0, DesignWidth, DesignHeight)); ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawGrid(context, origin, minimum, maximum, xPositiveDirection, yPositiveDirection)
+L000123 |             DrawGrid(context, origin, minimum, maximum, xPositiveDirection, yPositiveDirection); ⟦EOL⟧
+L000124 |  ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(148, 163, 184) / 지역 변수를 선언합니다: var scaleBrush = CreateBrush(148, 163, 184); / 변수의 초기값을 지정합니다: scaleBrush = CreateBrush(148, 163, 184)
+L000125 |             var scaleBrush = CreateBrush(148, 163, 184); ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawText(context, $"GRID {gridStep.ToString("0.###", CultureInfo.InvariantCulture)} mm / DIV", new Point(PlotRect.Left, 4.0), 9.0, scaleBrush) / 함수·델리게이트 또는 객체 생성자를 호출합니다: gridStep.ToString("0.###", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left, 4.0)
+L000126 |             DrawText(context, $"GRID {gridStep.ToString("0.###", CultureInfo.InvariantCulture)} mm / DIV", new Point(PlotRect.Left, 4.0), 9.0, scaleBrush); ⟦EOL⟧
+L000127 |  ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(74, 222, 128) / 지역 변수를 선언합니다: var machiningBrush = CreateBrush(74, 222, 128); / 변수의 초기값을 지정합니다: machiningBrush = CreateBrush(74, 222, 128)
+L000128 |             var machiningBrush = CreateBrush(74, 222, 128); ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(248, 113, 113) / 조건에 따라 결과식을 선택합니다: machiningOutOfRange ? CreateBrush(248, 113, 113) : machiningBrush / 지역 변수를 선언합니다: var machiningLabelBrush = machiningOutOfRange ? CreateBrush(248, 113, 113) : machiningBrush; / 변수의 초기값을 지정합니다: machiningLabelBrush = machiningOutOfRange ? CreateBrush(248, 113, 113) : machiningBrush
+L000129 |             var machiningLabelBrush = machiningOutOfRange ? CreateBrush(248, 113, 113) : machiningBrush; ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(machiningBrush, 1.4) / 지역 변수를 선언합니다: var machiningVectorPen = new Pen(machiningBrush, 1.4); / 변수의 초기값을 지정합니다: machiningVectorPen = new Pen(machiningBrush, 1.4)
+L000130 |             var machiningVectorPen = new Pen(machiningBrush, 1.4); ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: machiningVectorPen.Freeze()
+L000131 |             machiningVectorPen.Freeze(); ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(machiningVectorPen, origin, machining)
+L000132 |             context.DrawLine(machiningVectorPen, origin, machining); ⟦EOL⟧
+L000133 |  ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(251, 191, 36) / 지역 변수를 선언합니다: var inspectionBrush = CreateBrush(251, 191, 36); / 변수의 초기값을 지정합니다: inspectionBrush = CreateBrush(251, 191, 36)
+L000134 |             var inspectionBrush = CreateBrush(251, 191, 36); ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(248, 113, 113) / 조건에 따라 결과식을 선택합니다: inspectionOutOfRange ? CreateBrush(248, 113, 113) : inspectionBrush / 지역 변수를 선언합니다: var inspectionLabelBrush = inspectionOutOfRange ? CreateBrush(248, 113, 113) : inspectionBrush; / 변수의 초기값을 지정합니다: inspectionLabelBrush = inspectionOutOfRange ? CreateBrush(248, 113, 113) : inspectionBrush
+L000135 |             var inspectionLabelBrush = inspectionOutOfRange ? CreateBrush(248, 113, 113) : inspectionBrush; ⟦EOL⟧
+// 해설 L136: 값을 대상에 대입합니다: DashStyle = DashStyles.Dash / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(inspectionBrush, 1.2) { DashStyle = DashStyles.Dash } / 지역 변수를 선언합니다: var inspectionVectorPen = new Pen(inspectionBrush, 1.2) { DashStyle = DashStyles.Dash }; / 변수의 초기값을 지정합니다: inspectionVectorPen = new Pen(inspectionBrush, 1.2) { DashStyle = DashStyles.Dash }
+L000136 |             var inspectionVectorPen = new Pen(inspectionBrush, 1.2) { DashStyle = DashStyles.Dash }; ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: inspectionVectorPen.Freeze()
+L000137 |             inspectionVectorPen.Freeze(); ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(inspectionVectorPen, origin, inspection)
+L000138 |             context.DrawLine(inspectionVectorPen, origin, inspection); ⟦EOL⟧
+L000139 |  ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(203, 213, 225) / 지역 변수를 선언합니다: var designBrush = CreateBrush(203, 213, 225); / 변수의 초기값을 지정합니다: designBrush = CreateBrush(203, 213, 225)
+L000140 |             var designBrush = CreateBrush(203, 213, 225); ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(designBrush, 1.5) / 지역 변수를 선언합니다: var designPen = new Pen(designBrush, 1.5); / 변수의 초기값을 지정합니다: designPen = new Pen(designBrush, 1.5)
+L000141 |             var designPen = new Pen(designBrush, 1.5); ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: designPen.Freeze()
+L000142 |             designPen.Freeze(); ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawEllipse(CreateBrush(30, 41, 59), designPen, origin, 4.0, 4.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(30, 41, 59)
+L000143 |             context.DrawEllipse(CreateBrush(30, 41, 59), designPen, origin, 4.0, 4.0); ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawTextWithin(context, "BASE", new Point(origin.X + 8.0, origin.Y + 6.0), 9.0, designBrush, PlotRect) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X + 8.0, origin.Y + 6.0)
+L000144 |             DrawTextWithin(context, "BASE", new Point(origin.X + 8.0, origin.Y + 6.0), 9.0, designBrush, PlotRect); ⟦EOL⟧
+L000145 |  ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawInspectionMarker(context, inspection, inspectionBrush)
+L000146 |             DrawInspectionMarker(context, inspection, inspectionBrush); ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(187, 247, 208), 1.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(187, 247, 208) / 지역 변수를 선언합니다: var machiningPen = new Pen(CreateBrush(187, 247, 208), 1.0); / 변수의 초기값을 지정합니다: machiningPen = new Pen(CreateBrush(187, 247, 208), 1.0)
+L000147 |             var machiningPen = new Pen(CreateBrush(187, 247, 208), 1.0); ⟦EOL⟧
+// 해설 L148: 함수·델리게이트 또는 객체 생성자를 호출합니다: machiningPen.Freeze()
+L000148 |             machiningPen.Freeze(); ⟦EOL⟧
+// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawEllipse(machiningBrush, machiningPen, machining, 4.5, 4.5)
+L000149 |             context.DrawEllipse(machiningBrush, machiningPen, machining, 4.5, 4.5); ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: machiningOffsetX.ToString("0.000", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: machiningOffsetY.ToString("0.000", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: machiningOutOfRange ? "MACHINING · OUT" : "MACHINING" / 지역 변수를 선언합니다: var machiningLabel = $"{(machiningOutOfRange ? "MACHINING · OUT" : "MACHINING")}\nΔX {machiningOffsetX.ToString("0.000", CultureInfo.InvariantCulture)} / ΔY {machiningOffsetY.ToString("0.000", CultureInfo.InvariantCulture)} mm"; / 변수의 초기값을 지정합니다: machiningLabel =
+L000151 |             var machiningLabel = $"{(machiningOutOfRange ? "MACHINING · OUT" : "MACHINING")}\nΔX {machiningOffsetX.ToString("0.000", CultureInfo.InvariantCulture)} / ΔY {machiningOffsetY.ToString("0.000", CultureInfo.InvariantCulture)} mm"; ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: inspectionOffsetX.ToString("0.000", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: inspectionOffsetY.ToString("0.000", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: inspectionOutOfRange ? "INSPECTION · OUT" : "INSPECTION" / 지역 변수를 선언합니다: var inspectionLabel = $"{(inspectionOutOfRange ? "INSPECTION · OUT" : "INSPECTION")}\nΔX {inspectionOffsetX.ToString("0.000", CultureInfo.InvariantCulture)} / ΔY {inspectionOffsetY.ToString("0.000", CultureInfo.InvariantCulture)}  / 변수의 초기값을 지정합니다: inspectio
+L000152 |             var inspectionLabel = $"{(inspectionOutOfRange ? "INSPECTION · OUT" : "INSPECTION")}\nΔX {inspectionOffsetX.ToString("0.000", CultureInfo.InvariantCulture)} / ΔY {inspectionOffsetY.ToString("0.000", CultureInfo.InvariantCulture)} mm"; ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawTextWithin(context, machiningLabel, GetMarkerLabelOrigin(machining, above: true), 8.5, machiningLabelBrush, PlotRect) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMarkerLabelOrigin(machining, above: true)
+L000153 |             DrawTextWithin(context, machiningLabel, GetMarkerLabelOrigin(machining, above: true), 8.5, machiningLabelBrush, PlotRect); ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawTextWithin(context, inspectionLabel, GetMarkerLabelOrigin(inspection, above: false), 8.5, inspectionLabelBrush, PlotRect) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetMarkerLabelOrigin(inspection, above: false)
+L000154 |             DrawTextWithin(context, inspectionLabel, GetMarkerLabelOrigin(inspection, above: false), 8.5, inspectionLabelBrush, PlotRect); ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(125, 211, 252) / 지역 변수를 선언합니다: var axisBrush = CreateBrush(125, 211, 252); / 변수의 초기값을 지정합니다: axisBrush = CreateBrush(125, 211, 252)
+L000156 |             var axisBrush = CreateBrush(125, 211, 252); ⟦EOL⟧
+// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(axisBrush, 1.4) / 지역 변수를 선언합니다: var axisPen = new Pen(axisBrush, 1.4); / 변수의 초기값을 지정합니다: axisPen = new Pen(axisBrush, 1.4)
+L000157 |             var axisPen = new Pen(axisBrush, 1.4); ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: axisPen.Freeze()
+L000158 |             axisPen.Freeze(); ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawPositiveAxis(context, origin, xPositiveDirection, xAxisLabel, axisPen, axisBrush)
+L000159 |             DrawPositiveAxis(context, origin, xPositiveDirection, xAxisLabel, axisPen, axisBrush); ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawPositiveAxis(context, origin, yPositiveDirection, yAxisLabel, axisPen, axisBrush)
+L000160 |             DrawPositiveAxis(context, origin, yPositiveDirection, yAxisLabel, axisPen, axisBrush); ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(null, new Pen(CreateBrush(71, 85, 105), 1.0), PlotRect) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(71, 85, 105), 1.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(71, 85, 105)
+L000161 |             context.DrawRectangle(null, new Pen(CreateBrush(71, 85, 105), 1.0), PlotRect); ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 CreateReviewCamera.
+L000162 |         } ⟦EOL⟧
+L000163 |  ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawing.Freeze()
+L000164 |         drawing.Freeze(); ⟦EOL⟧
+// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: new DrawingImage(drawing) / 지역 변수를 선언합니다: var image = new DrawingImage(drawing); / 변수의 초기값을 지정합니다: image = new DrawingImage(drawing)
+L000165 |         var image = new DrawingImage(drawing); ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: image.Freeze()
+L000166 |         image.Freeze(); ⟦EOL⟧
+// 해설 L167: 호출자에게 값 또는 제어를 반환합니다: return image;
+L000167 |         return image; ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 CreateReviewCamera.
+L000168 |     } ⟦EOL⟧
+L000169 |  ⟦EOL⟧
+// 해설 L170: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawInspectionMarker(DrawingContext, Point, Brush)
+L000170 |     private static void DrawInspectionMarker(DrawingContext context, Point position, Brush brush) ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 DrawInspectionMarker.
+L000171 |     { ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(brush, 1.8) / 지역 변수를 선언합니다: var pen = new Pen(brush, 1.8); / 변수의 초기값을 지정합니다: pen = new Pen(brush, 1.8)
+L000172 |         var pen = new Pen(brush, 1.8); ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: pen.Freeze()
+L000173 |         pen.Freeze(); ⟦EOL⟧
+// 해설 L174: 지역 변수를 선언합니다: const double halfSize = 7.0; / 변수의 초기값을 지정합니다: halfSize = 7.0
+L000174 |         const double halfSize = 7.0; ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawRectangle(CreateBrush(17, 24, 32), pen, new Rect(position.X - halfSize, position.Y - halfSize, halfSize * 2.0, halfSize * 2.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(17, 24, 32) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect(position.X - halfSize, position.Y - halfSize, halfSize * 2.0, halfSize * 2.0)
+L000175 |         context.DrawRectangle(CreateBrush(17, 24, 32), pen, new Rect(position.X - halfSize, position.Y - halfSize, halfSize * 2.0, halfSize * 2.0)); ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(pen, new Point(position.X - 5.0, position.Y), new Point(position.X + 5.0, position.Y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X - 5.0, position.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X + 5.0, position.Y)
+L000176 |         context.DrawLine(pen, new Point(position.X - 5.0, position.Y), new Point(position.X + 5.0, position.Y)); ⟦EOL⟧
+// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(pen, new Point(position.X, position.Y - 5.0), new Point(position.X, position.Y + 5.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X, position.Y - 5.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X, position.Y + 5.0)
+L000177 |         context.DrawLine(pen, new Point(position.X, position.Y - 5.0), new Point(position.X, position.Y + 5.0)); ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 DrawInspectionMarker.
+L000178 |     } ⟦EOL⟧
+L000179 |  ⟦EOL⟧
+// 해설 L180: 선언·서명/매개변수·접근 조건입니다 · Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetMarkerLabelOrigin(Point, bool)
+L000180 |     private static Point GetMarkerLabelOrigin(Point position, bool above) ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 GetMarkerLabelOrigin.
+L000181 |     { ⟦EOL⟧
+// 해설 L182: 조건에 따라 분기합니다: if (above)
+L000182 |         if (above) ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 GetMarkerLabelOrigin.
+L000183 |         { ⟦EOL⟧
+// 해설 L184: 조건에 따라 결과식을 선택합니다: position.Y <= PlotRect.Top + 32.0 ? new Point(position.X + 11.0, position.Y + 10.0) : new Point(position.X + 11.0, position.Y - 32.0) / 호출자에게 값 또는 제어를 반환합니다: return position.Y <= PlotRect.Top + 32.0 ? new Point(position.X + 11.0, position.Y + 10.0) : new Point(position.X + 11.0, position.Y - 32.0);
+L000184 |             return position.Y <= PlotRect.Top + 32.0 ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X + 11.0, position.Y + 10.0)
+L000185 |                 ? new Point(position.X + 11.0, position.Y + 10.0) ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X + 11.0, position.Y - 32.0)
+L000186 |                 : new Point(position.X + 11.0, position.Y - 32.0); ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 GetMarkerLabelOrigin.
+L000187 |         } ⟦EOL⟧
+L000188 |  ⟦EOL⟧
+// 해설 L189: 조건에 따라 결과식을 선택합니다: position.Y >= PlotRect.Bottom - 32.0 ? new Point(position.X + 11.0, position.Y - 32.0) : new Point(position.X + 11.0, position.Y + 10.0) / 호출자에게 값 또는 제어를 반환합니다: return position.Y >= PlotRect.Bottom - 32.0 ? new Point(position.X + 11.0, position.Y - 32.0) : new Point(position.X + 11.0, position.Y + 10.0);
+L000189 |         return position.Y >= PlotRect.Bottom - 32.0 ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X + 11.0, position.Y - 32.0)
+L000190 |             ? new Point(position.X + 11.0, position.Y - 32.0) ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(position.X + 11.0, position.Y + 10.0)
+L000191 |             : new Point(position.X + 11.0, position.Y + 10.0); ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 GetMarkerLabelOrigin.
+L000192 |     } ⟦EOL⟧
+L000193 |  ⟦EOL⟧
+// 해설 L194: 선언·서명/매개변수·접근 조건입니다 · Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetAppliedLabelOrigin(Point)
+L000194 |     private static Point GetAppliedLabelOrigin(Point applied) ⟦EOL⟧
+// 해설 L195: 구문 블록 경계입니다 · 소속 GetAppliedLabelOrigin.
+L000195 |     { ⟦EOL⟧
+// 해설 L196: 조건에 따라 분기합니다: if (applied.Y >= PlotRect.Bottom - 12.0)
+L000196 |         if (applied.Y >= PlotRect.Bottom - 12.0) ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(applied.X + 12.0, applied.Y - 36.0) / 호출자에게 값 또는 제어를 반환합니다: return new Point(applied.X + 12.0, applied.Y - 36.0);
+L000197 |             return new Point(applied.X + 12.0, applied.Y - 36.0); ⟦EOL⟧
+// 해설 L198: 조건에 따라 분기합니다: if (applied.Y <= PlotRect.Top + 12.0)
+L000198 |         if (applied.Y <= PlotRect.Top + 12.0) ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(applied.X + 12.0, applied.Y + 12.0) / 호출자에게 값 또는 제어를 반환합니다: return new Point(applied.X + 12.0, applied.Y + 12.0);
+L000199 |             return new Point(applied.X + 12.0, applied.Y + 12.0); ⟦EOL⟧
+// 해설 L200: 조건에 따라 분기합니다: if (applied.X >= PlotRect.Right - 12.0)
+L000200 |         if (applied.X >= PlotRect.Right - 12.0) ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(applied.X - 86.0, applied.Y - 18.0) / 호출자에게 값 또는 제어를 반환합니다: return new Point(applied.X - 86.0, applied.Y - 18.0);
+L000201 |             return new Point(applied.X - 86.0, applied.Y - 18.0); ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(applied.X + 12.0, applied.Y - 18.0) / 호출자에게 값 또는 제어를 반환합니다: return new Point(applied.X + 12.0, applied.Y - 18.0);
+L000202 |         return new Point(applied.X + 12.0, applied.Y - 18.0); ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 GetAppliedLabelOrigin.
+L000203 |     } ⟦EOL⟧
+L000204 |  ⟦EOL⟧
+// 해설 L205: 선언·서명/매개변수·접근 조건입니다 · Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CalculateOrigin(double, double, Vector, Vector)
+L000205 |     private static Point CalculateOrigin(double minimum, double maximum, Vector xDirection, Vector yDirection) ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 CalculateOrigin.
+L000206 |     { ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left + (PlotRect.Width / 2.0), PlotRect.Top + (PlotRect.Height / 2.0)) / 지역 변수를 선언합니다: var origin = new Point(PlotRect.Left + (PlotRect.Width / 2.0), PlotRect.Top + (PlotRect.Height / 2.0)); / 변수의 초기값을 지정합니다: origin = new Point(PlotRect.Left + (PlotRect.Width / 2.0), PlotRect.Top + (PlotRect.Height / 2.0))
+L000207 |         var origin = new Point(PlotRect.Left + (PlotRect.Width / 2.0), PlotRect.Top + (PlotRect.Height / 2.0)); ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetAxisOrigin(ref origin, xDirection, minimum, maximum)
+L000208 |         SetAxisOrigin(ref origin, xDirection, minimum, maximum); ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetAxisOrigin(ref origin, yDirection, minimum, maximum)
+L000209 |         SetAxisOrigin(ref origin, yDirection, minimum, maximum); ⟦EOL⟧
+// 해설 L210: 호출자에게 값 또는 제어를 반환합니다: return origin;
+L000210 |         return origin; ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 CalculateOrigin.
+L000211 |     } ⟦EOL⟧
+L000212 |  ⟦EOL⟧
+// 해설 L213: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.SetAxisOrigin(ref Point, Vector, double, double)
+L000213 |     private static void SetAxisOrigin(ref Point origin, Vector direction, double minimum, double maximum) ⟦EOL⟧
+// 해설 L214: 구문 블록 경계입니다 · 소속 SetAxisOrigin.
+L000214 |     { ⟦EOL⟧
+// 해설 L215: 지역 변수를 선언합니다: var span = maximum - minimum; / 변수의 초기값을 지정합니다: span = maximum - minimum
+L000215 |         var span = maximum - minimum; ⟦EOL⟧
+// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(direction.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(direction.Y) / 조건에 따라 분기합니다: if (Math.Abs(direction.X) >= Math.Abs(direction.Y))
+L000216 |         if (Math.Abs(direction.X) >= Math.Abs(direction.Y)) ⟦EOL⟧
+// 해설 L217: 구문 블록 경계입니다 · 소속 SetAxisOrigin.
+L000217 |         { ⟦EOL⟧
+// 해설 L218: 조건에 따라 결과식을 선택합니다: direction.X >= 0.0 ? -minimum / span : maximum / span / 지역 변수를 선언합니다: var fraction = direction.X >= 0.0 ? -minimum / span : maximum / span; / 변수의 초기값을 지정합니다: fraction = direction.X >= 0.0 ? -minimum / span : maximum / span
+L000218 |             var fraction = direction.X >= 0.0 ? -minimum / span : maximum / span; ⟦EOL⟧
+// 해설 L219: 값을 대상에 대입합니다: origin.X = PlotRect.Left + (PlotRect.Width * fraction)
+L000219 |             origin.X = PlotRect.Left + (PlotRect.Width * fraction); ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 SetAxisOrigin.
+L000220 |         } ⟦EOL⟧
+// 해설 L221: 앞 조건이 거짓인 경로입니다: else
+L000221 |         else ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 SetAxisOrigin.
+L000222 |         { ⟦EOL⟧
+// 해설 L223: 조건에 따라 결과식을 선택합니다: direction.Y >= 0.0 ? -minimum / span : maximum / span / 지역 변수를 선언합니다: var fraction = direction.Y >= 0.0 ? -minimum / span : maximum / span; / 변수의 초기값을 지정합니다: fraction = direction.Y >= 0.0 ? -minimum / span : maximum / span
+L000223 |             var fraction = direction.Y >= 0.0 ? -minimum / span : maximum / span; ⟦EOL⟧
+// 해설 L224: 값을 대상에 대입합니다: origin.Y = PlotRect.Top + (PlotRect.Height * fraction)
+L000224 |             origin.Y = PlotRect.Top + (PlotRect.Height * fraction); ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 SetAxisOrigin.
+L000225 |         } ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 SetAxisOrigin.
+L000226 |     } ⟦EOL⟧
+L000227 |  ⟦EOL⟧
+// 해설 L228: 선언·서명/매개변수·접근 조건입니다 · Point Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.ClipToPlot(Point, Point)
+L000228 |     private static Point ClipToPlot(Point origin, Point target) ⟦EOL⟧
+// 해설 L229: 구문 블록 경계입니다 · 소속 ClipToPlot.
+L000229 |     { ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: PlotRect.Contains(target) / 조건에 따라 분기합니다: if (PlotRect.Contains(target))
+L000230 |         if (PlotRect.Contains(target)) ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다 · 소속 ClipToPlot.
+L000231 |         { ⟦EOL⟧
+// 해설 L232: 호출자에게 값 또는 제어를 반환합니다: return target;
+L000232 |             return target; ⟦EOL⟧
+// 해설 L233: 구문 블록 경계입니다 · 소속 ClipToPlot.
+L000233 |         } ⟦EOL⟧
+L000234 |  ⟦EOL⟧
+// 해설 L235: 지역 변수를 선언합니다: var delta = target - origin; / 변수의 초기값을 지정합니다: delta = target - origin
+L000235 |         var delta = target - origin; ⟦EOL⟧
+// 해설 L236: 지역 변수를 선언합니다: var scale = 1.0; / 변수의 초기값을 지정합니다: scale = 1.0
+L000236 |         var scale = 1.0; ⟦EOL⟧
+// 해설 L237: 조건에 따라 분기합니다: if (delta.X > 0.0)
+L000237 |         if (delta.X > 0.0) ⟦EOL⟧
+// 해설 L238: 값을 대상에 대입합니다: scale = Math.Min(scale, (PlotRect.Right - origin.X) / delta.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(scale, (PlotRect.Right - origin.X) / delta.X)
+L000238 |             scale = Math.Min(scale, (PlotRect.Right - origin.X) / delta.X); ⟦EOL⟧
+// 해설 L239: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (delta.X < 0.0)
+L000239 |         else if (delta.X < 0.0) ⟦EOL⟧
+// 해설 L240: 값을 대상에 대입합니다: scale = Math.Min(scale, (PlotRect.Left - origin.X) / delta.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(scale, (PlotRect.Left - origin.X) / delta.X)
+L000240 |             scale = Math.Min(scale, (PlotRect.Left - origin.X) / delta.X); ⟦EOL⟧
+// 해설 L241: 조건에 따라 분기합니다: if (delta.Y > 0.0)
+L000241 |         if (delta.Y > 0.0) ⟦EOL⟧
+// 해설 L242: 값을 대상에 대입합니다: scale = Math.Min(scale, (PlotRect.Bottom - origin.Y) / delta.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(scale, (PlotRect.Bottom - origin.Y) / delta.Y)
+L000242 |             scale = Math.Min(scale, (PlotRect.Bottom - origin.Y) / delta.Y); ⟦EOL⟧
+// 해설 L243: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (delta.Y < 0.0)
+L000243 |         else if (delta.Y < 0.0) ⟦EOL⟧
+// 해설 L244: 값을 대상에 대입합니다: scale = Math.Min(scale, (PlotRect.Top - origin.Y) / delta.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(scale, (PlotRect.Top - origin.Y) / delta.Y)
+L000244 |             scale = Math.Min(scale, (PlotRect.Top - origin.Y) / delta.Y); ⟦EOL⟧
+// 해설 L245: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(scale, 0.0, 1.0) / 호출자에게 값 또는 제어를 반환합니다: return origin + (delta * Math.Clamp(scale, 0.0, 1.0));
+L000245 |         return origin + (delta * Math.Clamp(scale, 0.0, 1.0)); ⟦EOL⟧
+// 해설 L246: 구문 블록 경계입니다 · 소속 ClipToPlot.
+L000246 |     } ⟦EOL⟧
+L000247 |  ⟦EOL⟧
+// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · Vector Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.NormalizeDirection(Vector, Vector)
+L000248 |     private static Vector NormalizeDirection(Vector direction, Vector fallback) ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 NormalizeDirection.
+L000249 |     { ⟦EOL⟧
+// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(direction.X) / 조건에 따라 분기합니다: if (!double.IsFinite(direction.X) || !double.IsFinite(direction.Y) || direction.LengthSquared <= double.Epsilon)
+L000250 |         if (!double.IsFinite(direction.X) ⟦EOL⟧
+// 해설 L251: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(direction.Y)
+L000251 |             || !double.IsFinite(direction.Y) ⟦EOL⟧
+// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · Vector Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.NormalizeDirection(Vector, Vector)
+L000252 |             || direction.LengthSquared <= double.Epsilon) ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 NormalizeDirection.
+L000253 |         { ⟦EOL⟧
+// 해설 L254: 값을 대상에 대입합니다: direction = fallback
+L000254 |             direction = fallback; ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 NormalizeDirection.
+L000255 |         } ⟦EOL⟧
+L000256 |  ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: direction.Normalize()
+L000257 |         direction.Normalize(); ⟦EOL⟧
+// 해설 L258: 호출자에게 값 또는 제어를 반환합니다: return direction;
+L000258 |         return direction; ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 NormalizeDirection.
+L000259 |     } ⟦EOL⟧
+L000260 |  ⟦EOL⟧
+// 해설 L261: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetDirectionalScale(Vector, double, double)
+L000261 |     private static double GetDirectionalScale(Vector direction, double horizontalScale, double verticalScale) ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 GetDirectionalScale.
+L000262 |     { ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(direction.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(direction.Y) / 조건에 따라 결과식을 선택합니다: Math.Abs(direction.X) >= Math.Abs(direction.Y) ? horizontalScale : verticalScale / 호출자에게 값 또는 제어를 반환합니다: return Math.Abs(direction.X) >= Math.Abs(direction.Y) ? horizontalScale : verticalScale;
+L000263 |         return Math.Abs(direction.X) >= Math.Abs(direction.Y) ? horizontalScale : verticalScale; ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 GetDirectionalScale.
+L000264 |     } ⟦EOL⟧
+L000265 |  ⟦EOL⟧
+// 해설 L266: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawPositiveAxis(DrawingContext, Point, Vector, string, Pen, Brush)
+L000266 |     private static void DrawPositiveAxis( ⟦EOL⟧
+// 해설 L267: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawPositiveAxis(DrawingContext, Point, Vector, string, Pen, Brush)
+L000267 |         DrawingContext context, ⟦EOL⟧
+// 해설 L268: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawPositiveAxis(DrawingContext, Point, Vector, string, Pen, Brush)
+L000268 |         Point origin, ⟦EOL⟧
+// 해설 L269: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawPositiveAxis(DrawingContext, Point, Vector, string, Pen, Brush)
+L000269 |         Vector direction, ⟦EOL⟧
+// 해설 L270: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawPositiveAxis(DrawingContext, Point, Vector, string, Pen, Brush)
+L000270 |         string label, ⟦EOL⟧
+// 해설 L271: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawPositiveAxis(DrawingContext, Point, Vector, string, Pen, Brush)
+L000271 |         Pen pen, ⟦EOL⟧
+// 해설 L272: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawPositiveAxis(DrawingContext, Point, Vector, string, Pen, Brush)
+L000272 |         Brush brush) ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 DrawPositiveAxis.
+L000273 |     { ⟦EOL⟧
+// 해설 L274: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(direction.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(direction.Y) / 지역 변수를 선언합니다: var horizontal = Math.Abs(direction.X) >= Math.Abs(direction.Y); / 변수의 초기값을 지정합니다: horizontal = Math.Abs(direction.X) >= Math.Abs(direction.Y)
+L000274 |         var horizontal = Math.Abs(direction.X) >= Math.Abs(direction.Y); ⟦EOL⟧
+// 해설 L275: 조건에 따라 결과식을 선택합니다: horizontal ? direction.X >= 0.0 ? PlotRect.Right - origin.X - 8.0 : origin.X - PlotRect.Left - 8.0 : direction.Y >= 0.0 ? PlotRect.Bottom - origin.Y - 8.0 : origin.Y - PlotRect.Top - 8.0 / 지역 변수를 선언합니다: var length = horizontal ? direction.X >= 0.0 ? PlotRect.Right - origin.X - 8.0 : origin.X - PlotRect.Left - 8.0 : direction.Y >= 0.0 ? PlotRect.Bottom - origin.Y - 8.0 : origin.Y - PlotRect.Top - 8.0; / 변수의 초기값을 지정합니다: length = horizontal ? direction.X >= 0.0 ? PlotRect.Right - origin.X - 8.0 : origin.X - PlotRect.Le
+L000275 |         var length = horizontal ⟦EOL⟧
+// 해설 L276: 조건에 따라 결과식을 선택합니다: direction.X >= 0.0 ? PlotRect.Right - origin.X - 8.0 : origin.X - PlotRect.Left - 8.0
+L000276 |             ? direction.X >= 0.0 ? PlotRect.Right - origin.X - 8.0 : origin.X - PlotRect.Left - 8.0 ⟦EOL⟧
+// 해설 L277: 조건에 따라 결과식을 선택합니다: direction.Y >= 0.0 ? PlotRect.Bottom - origin.Y - 8.0 : origin.Y - PlotRect.Top - 8.0
+L000277 |             : direction.Y >= 0.0 ? PlotRect.Bottom - origin.Y - 8.0 : origin.Y - PlotRect.Top - 8.0; ⟦EOL⟧
+// 해설 L278: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0.0, length) / 지역 변수를 선언합니다: var end = origin + (direction * Math.Max(0.0, length)); / 변수의 초기값을 지정합니다: end = origin + (direction * Math.Max(0.0, length))
+L000278 |         var end = origin + (direction * Math.Max(0.0, length)); ⟦EOL⟧
+// 해설 L279: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawArrowHead(context, pen, origin, end)
+L000279 |         DrawArrowHead(context, pen, origin, end); ⟦EOL⟧
+L000280 |  ⟦EOL⟧
+// 해설 L281: 지역 변수를 선언합니다: var displayText = $"{label}+"; / 변수의 초기값을 지정합니다: displayText = $"{label}+"
+L000281 |         var displayText = $"{label}+"; ⟦EOL⟧
+// 해설 L282: 지역 변수를 선언합니다: Point labelPoint;
+L000282 |         Point labelPoint; ⟦EOL⟧
+// 해설 L283: 조건에 따라 분기합니다: if (horizontal)
+L000283 |         if (horizontal) ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다 · 소속 DrawPositiveAxis.
+L000284 |         { ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(48.0, displayText.Length * 6.4) / 지역 변수를 선언합니다: var estimatedWidth = Math.Max(48.0, displayText.Length * 6.4); / 변수의 초기값을 지정합니다: estimatedWidth = Math.Max(48.0, displayText.Length * 6.4)
+L000285 |             var estimatedWidth = Math.Max(48.0, displayText.Length * 6.4); ⟦EOL⟧
+// 해설 L286: 값을 대상에 대입합니다: labelPoint = direction.X >= 0.0 ? new Point(PlotRect.Right - estimatedWidth - 4.0, origin.Y + 6.0) : new Point(PlotRect.Left + 6.0, origin.Y + 6.0) / 조건에 따라 결과식을 선택합니다: direction.X >= 0.0 ? new Point(PlotRect.Right - estimatedWidth - 4.0, origin.Y + 6.0) : new Point(PlotRect.Left + 6.0, origin.Y + 6.0)
+L000286 |             labelPoint = direction.X >= 0.0 ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Right - estimatedWidth - 4.0, origin.Y + 6.0)
+L000287 |                 ? new Point(PlotRect.Right - estimatedWidth - 4.0, origin.Y + 6.0) ⟦EOL⟧
+// 해설 L288: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left + 6.0, origin.Y + 6.0)
+L000288 |                 : new Point(PlotRect.Left + 6.0, origin.Y + 6.0); ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다 · 소속 DrawPositiveAxis.
+L000289 |         } ⟦EOL⟧
+// 해설 L290: 앞 조건이 거짓인 경로입니다: else
+L000290 |         else ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 DrawPositiveAxis.
+L000291 |         { ⟦EOL⟧
+// 해설 L292: 값을 대상에 대입합니다: labelPoint = direction.Y >= 0.0 ? new Point(origin.X + 7.0, PlotRect.Bottom - 18.0) : new Point(origin.X + 7.0, PlotRect.Top + 2.0) / 조건에 따라 결과식을 선택합니다: direction.Y >= 0.0 ? new Point(origin.X + 7.0, PlotRect.Bottom - 18.0) : new Point(origin.X + 7.0, PlotRect.Top + 2.0)
+L000292 |             labelPoint = direction.Y >= 0.0 ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X + 7.0, PlotRect.Bottom - 18.0)
+L000293 |                 ? new Point(origin.X + 7.0, PlotRect.Bottom - 18.0) ⟦EOL⟧
+// 해설 L294: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X + 7.0, PlotRect.Top + 2.0)
+L000294 |                 : new Point(origin.X + 7.0, PlotRect.Top + 2.0); ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 DrawPositiveAxis.
+L000295 |         } ⟦EOL⟧
+L000296 |  ⟦EOL⟧
+// 해설 L297: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawTextWithin(context, displayText, labelPoint, 10.0, brush, PlotRect)
+L000297 |         DrawTextWithin(context, displayText, labelPoint, 10.0, brush, PlotRect); ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 DrawPositiveAxis.
+L000298 |     } ⟦EOL⟧
+L000299 |  ⟦EOL⟧
+// 해설 L300: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawGrid(DrawingContext, Point, double, double, Vector, Vector)
+L000300 |     private static void DrawGrid( ⟦EOL⟧
+// 해설 L301: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawGrid(DrawingContext, Point, double, double, Vector, Vector)
+L000301 |         DrawingContext context, ⟦EOL⟧
+// 해설 L302: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawGrid(DrawingContext, Point, double, double, Vector, Vector)
+L000302 |         Point origin, ⟦EOL⟧
+// 해설 L303: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawGrid(DrawingContext, Point, double, double, Vector, Vector)
+L000303 |         double minimum, ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawGrid(DrawingContext, Point, double, double, Vector, Vector)
+L000304 |         double maximum, ⟦EOL⟧
+// 해설 L305: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawGrid(DrawingContext, Point, double, double, Vector, Vector)
+L000305 |         Vector xDirection, ⟦EOL⟧
+// 해설 L306: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawGrid(DrawingContext, Point, double, double, Vector, Vector)
+L000306 |         Vector yDirection) ⟦EOL⟧
+// 해설 L307: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000307 |     { ⟦EOL⟧
+// 해설 L308: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(43, 56, 74), 0.55) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(43, 56, 74) / 지역 변수를 선언합니다: var minorPen = new Pen(CreateBrush(43, 56, 74), 0.55); / 변수의 초기값을 지정합니다: minorPen = new Pen(CreateBrush(43, 56, 74), 0.55)
+L000308 |         var minorPen = new Pen(CreateBrush(43, 56, 74), 0.55); ⟦EOL⟧
+// 해설 L309: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(57, 74, 96), 0.85) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(57, 74, 96) / 지역 변수를 선언합니다: var majorPen = new Pen(CreateBrush(57, 74, 96), 0.85); / 변수의 초기값을 지정합니다: majorPen = new Pen(CreateBrush(57, 74, 96), 0.85)
+L000309 |         var majorPen = new Pen(CreateBrush(57, 74, 96), 0.85); ⟦EOL⟧
+// 해설 L310: 함수·델리게이트 또는 객체 생성자를 호출합니다: minorPen.Freeze()
+L000310 |         minorPen.Freeze(); ⟦EOL⟧
+// 해설 L311: 함수·델리게이트 또는 객체 생성자를 호출합니다: majorPen.Freeze()
+L000311 |         majorPen.Freeze(); ⟦EOL⟧
+// 해설 L312: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(xDirection.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(xDirection.Y) / 조건에 따라 결과식을 선택합니다: Math.Abs(xDirection.X) >= Math.Abs(xDirection.Y) ? xDirection : yDirection / 지역 변수를 선언합니다: var horizontalDirection = Math.Abs(xDirection.X) >= Math.Abs(xDirection.Y) ? xDirection : yDirection; / 변수의 초기값을 지정합니다: horizontalDirection = Math.Abs(xDirection.X) >= Math.Abs(xDirection.Y) ? xDirection : yDirection
+L000312 |         var horizontalDirection = Math.Abs(xDirection.X) >= Math.Abs(xDirection.Y) ? xDirection : yDirection; ⟦EOL⟧
+// 해설 L313: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(xDirection.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(xDirection.X) / 조건에 따라 결과식을 선택합니다: Math.Abs(xDirection.Y) > Math.Abs(xDirection.X) ? xDirection : yDirection / 지역 변수를 선언합니다: var verticalDirection = Math.Abs(xDirection.Y) > Math.Abs(xDirection.X) ? xDirection : yDirection; / 변수의 초기값을 지정합니다: verticalDirection = Math.Abs(xDirection.Y) > Math.Abs(xDirection.X) ? xDirection : yDirection
+L000313 |         var verticalDirection = Math.Abs(xDirection.Y) > Math.Abs(xDirection.X) ? xDirection : yDirection; ⟦EOL⟧
+// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(126, 145, 166) / 지역 변수를 선언합니다: var tickBrush = CreateBrush(126, 145, 166); / 변수의 초기값을 지정합니다: tickBrush = CreateBrush(126, 145, 166)
+L000314 |         var tickBrush = CreateBrush(126, 145, 166); ⟦EOL⟧
+// 해설 L315: 지역 변수를 선언합니다: var step = (maximum - minimum) / GridDivisionCount; / 변수의 초기값을 지정합니다: step = (maximum - minimum) / GridDivisionCount
+L000315 |         var step = (maximum - minimum) / GridDivisionCount; ⟦EOL⟧
+// 해설 L316: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index <= GridDivisionCount; index++) / 변수의 초기값을 지정합니다: index = 0
+L000316 |         for (var index = 0; index <= GridDivisionCount; index++) ⟦EOL⟧
+// 해설 L317: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000317 |         { ⟦EOL⟧
+// 해설 L318: 지역 변수를 선언합니다: var x = PlotRect.Left + (PlotRect.Width * index / GridDivisionCount); / 변수의 초기값을 지정합니다: x = PlotRect.Left + (PlotRect.Width * index / GridDivisionCount)
+L000318 |             var x = PlotRect.Left + (PlotRect.Width * index / GridDivisionCount); ⟦EOL⟧
+// 해설 L319: 지역 변수를 선언합니다: var y = PlotRect.Top + (PlotRect.Height * index / GridDivisionCount); / 변수의 초기값을 지정합니다: y = PlotRect.Top + (PlotRect.Height * index / GridDivisionCount)
+L000319 |             var y = PlotRect.Top + (PlotRect.Height * index / GridDivisionCount); ⟦EOL⟧
+// 해설 L320: 조건에 따라 분기합니다: if (index is > 0 and < GridDivisionCount)
+L000320 |             if (index is > 0 and < GridDivisionCount) ⟦EOL⟧
+// 해설 L321: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000321 |             { ⟦EOL⟧
+// 해설 L322: 조건에 따라 결과식을 선택합니다: index % 2 == 0 ? majorPen : minorPen / 지역 변수를 선언합니다: var pen = index % 2 == 0 ? majorPen : minorPen; / 변수의 초기값을 지정합니다: pen = index % 2 == 0 ? majorPen : minorPen
+L000322 |                 var pen = index % 2 == 0 ? majorPen : minorPen; ⟦EOL⟧
+// 해설 L323: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(pen, new Point(x, PlotRect.Top), new Point(x, PlotRect.Bottom)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, PlotRect.Top) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, PlotRect.Bottom)
+L000323 |                 context.DrawLine(pen, new Point(x, PlotRect.Top), new Point(x, PlotRect.Bottom)); ⟦EOL⟧
+// 해설 L324: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(pen, new Point(PlotRect.Left, y), new Point(PlotRect.Right, y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left, y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Right, y)
+L000324 |                 context.DrawLine(pen, new Point(PlotRect.Left, y), new Point(PlotRect.Right, y)); ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000325 |             } ⟦EOL⟧
+L000326 |  ⟦EOL⟧
+// 해설 L327: 조건에 따라 분기합니다: if (index % 2 != 0)
+L000327 |             if (index % 2 != 0) ⟦EOL⟧
+// 해설 L328: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000328 |             { ⟦EOL⟧
+// 해설 L329: 다음 반복으로 진행합니다: continue;
+L000329 |                 continue; ⟦EOL⟧
+// 해설 L330: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000330 |             } ⟦EOL⟧
+L000331 |  ⟦EOL⟧
+// 해설 L332: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetScreenTickValue(index, horizontalDirection.X >= 0.0, minimum, maximum) / 지역 변수를 선언합니다: var horizontalValue = GetScreenTickValue(index, horizontalDirection.X >= 0.0, minimum, maximum); / 변수의 초기값을 지정합니다: horizontalValue = GetScreenTickValue(index, horizontalDirection.X >= 0.0, minimum, maximum)
+L000332 |             var horizontalValue = GetScreenTickValue(index, horizontalDirection.X >= 0.0, minimum, maximum); ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetScreenTickValue(index, verticalDirection.Y >= 0.0, minimum, maximum) / 지역 변수를 선언합니다: var verticalValue = GetScreenTickValue(index, verticalDirection.Y >= 0.0, minimum, maximum); / 변수의 초기값을 지정합니다: verticalValue = GetScreenTickValue(index, verticalDirection.Y >= 0.0, minimum, maximum)
+L000333 |             var verticalValue = GetScreenTickValue(index, verticalDirection.Y >= 0.0, minimum, maximum); ⟦EOL⟧
+// 해설 L334: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawCenteredText(context, FormatTick(horizontalValue, step), new Point(x, PlotRect.Bottom + 3.0), 7.5, tickBrush) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatTick(horizontalValue, step) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, PlotRect.Bottom + 3.0)
+L000334 |             DrawCenteredText(context, FormatTick(horizontalValue, step), new Point(x, PlotRect.Bottom + 3.0), 7.5, tickBrush); ⟦EOL⟧
+// 해설 L335: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawRightAlignedText(context, FormatTick(verticalValue, step), new Point(PlotRect.Left - 5.0, y - 4.5), 7.5, tickBrush) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatTick(verticalValue, step) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left - 5.0, y - 4.5)
+L000335 |             DrawRightAlignedText(context, FormatTick(verticalValue, step), new Point(PlotRect.Left - 5.0, y - 4.5), 7.5, tickBrush); ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000336 |         } ⟦EOL⟧
+L000337 |  ⟦EOL⟧
+// 해설 L338: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(CreateBrush(102, 136, 164), 1.3) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBrush(102, 136, 164) / 지역 변수를 선언합니다: var axisPen = new Pen(CreateBrush(102, 136, 164), 1.3); / 변수의 초기값을 지정합니다: axisPen = new Pen(CreateBrush(102, 136, 164), 1.3)
+L000338 |         var axisPen = new Pen(CreateBrush(102, 136, 164), 1.3); ⟦EOL⟧
+// 해설 L339: 함수·델리게이트 또는 객체 생성자를 호출합니다: axisPen.Freeze()
+L000339 |         axisPen.Freeze(); ⟦EOL⟧
+// 해설 L340: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(axisPen, new Point(PlotRect.Left, origin.Y), new Point(PlotRect.Right, origin.Y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Left, origin.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(PlotRect.Right, origin.Y)
+L000340 |         context.DrawLine(axisPen, new Point(PlotRect.Left, origin.Y), new Point(PlotRect.Right, origin.Y)); ⟦EOL⟧
+// 해설 L341: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(axisPen, new Point(origin.X, PlotRect.Top), new Point(origin.X, PlotRect.Bottom)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X, PlotRect.Top) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X, PlotRect.Bottom)
+L000341 |         context.DrawLine(axisPen, new Point(origin.X, PlotRect.Top), new Point(origin.X, PlotRect.Bottom)); ⟦EOL⟧
+// 해설 L342: 구문 블록 경계입니다 · 소속 DrawGrid.
+L000342 |     } ⟦EOL⟧
+L000343 |  ⟦EOL⟧
+// 해설 L344: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetScreenTickValue(int, bool, double, double)
+L000344 |     private static double GetScreenTickValue(int index, bool positiveTowardsIncreasingScreen, double minimum, double maximum) ⟦EOL⟧
+// 해설 L345: 구문 블록 경계입니다 · 소속 GetScreenTickValue.
+L000345 |     { ⟦EOL⟧
+// 해설 L346: 지역 변수를 선언합니다: var fraction = (double)index / GridDivisionCount; / 변수의 초기값을 지정합니다: fraction = (double)index / GridDivisionCount
+L000346 |         var fraction = (double)index / GridDivisionCount; ⟦EOL⟧
+// 해설 L347: 조건에 따라 결과식을 선택합니다: positiveTowardsIncreasingScreen ? minimum + ((maximum - minimum) * fraction) : maximum - ((maximum - minimum) * fraction) / 호출자에게 값 또는 제어를 반환합니다: return positiveTowardsIncreasingScreen ? minimum + ((maximum - minimum) * fraction) : maximum - ((maximum - minimum) * fraction);
+L000347 |         return positiveTowardsIncreasingScreen ⟦EOL⟧
+// 해설 L348: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetScreenTickValue(int, bool, double, double)
+L000348 |             ? minimum + ((maximum - minimum) * fraction) ⟦EOL⟧
+// 해설 L349: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.GetScreenTickValue(int, bool, double, double)
+L000349 |             : maximum - ((maximum - minimum) * fraction); ⟦EOL⟧
+// 해설 L350: 구문 블록 경계입니다 · 소속 GetScreenTickValue.
+L000350 |     } ⟦EOL⟧
+L000351 |  ⟦EOL⟧
+// 해설 L352: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.FormatTick(double, double)
+L000352 |     private static string FormatTick(double value, double step) ⟦EOL⟧
+// 해설 L353: 구문 블록 경계입니다 · 소속 FormatTick.
+L000353 |     { ⟦EOL⟧
+// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(step) / 조건에 따라 분기합니다: if (Math.Abs(value) < Math.Abs(step) * 1e-6)
+L000354 |         if (Math.Abs(value) < Math.Abs(step) * 1e-6) ⟦EOL⟧
+// 해설 L355: 값을 대상에 대입합니다: value = 0.0
+L000355 |             value = 0.0; ⟦EOL⟧
+// 해설 L356: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(step) / 조건에 따라 결과식을 선택합니다: Math.Abs(step) < 0.01 ? "0.000" : Math.Abs(step) < 0.1 ? "0.00" : Math.Abs(step) < 1.0 ? "0.0" : "0.##" / 조건에 따라 결과식을 선택합니다: Math.Abs(step) < 0.1 ? "0.00" : Math.Abs(step) < 1.0 ? "0.0" : "0.##" / 조건에 따라 결과식을 선택합니다: Math.Abs(step) < 1.0 ? "0.0" : "0.##" / 지역 변수를 선언합니다: var format = Math.Abs(step) < 0.01 ? "0.000" : Math.Abs(step) < 0.1 ? "0.00" : Math.Abs(step) < 1.0 ? "0.0" : "0.##"; / 변수의 초기값을 지정합니다: format = Math.Abs(step) < 0.01 ? "0.000" : Math.Abs(step) < 0.1 ? "0.00
+L000356 |         var format = Math.Abs(step) < 0.01 ? "0.000" : Math.Abs(step) < 0.1 ? "0.00" : Math.Abs(step) < 1.0 ? "0.0" : "0.##"; ⟦EOL⟧
+// 해설 L357: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString(format, CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return value.ToString(format, CultureInfo.InvariantCulture);
+L000357 |         return value.ToString(format, CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L358: 구문 블록 경계입니다 · 소속 FormatTick.
+L000358 |     } ⟦EOL⟧
+L000359 |  ⟦EOL⟧
+// 해설 L360: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawArrowHead(DrawingContext, Pen, Point, Point)
+L000360 |     private static void DrawArrowHead(DrawingContext context, Pen pen, Point start, Point end) ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다 · 소속 DrawArrowHead.
+L000361 |     { ⟦EOL⟧
+// 해설 L362: 지역 변수를 선언합니다: var delta = end - start; / 변수의 초기값을 지정합니다: delta = end - start
+L000362 |         var delta = end - start; ⟦EOL⟧
+// 해설 L363: 조건에 따라 분기합니다: if (delta.Length < 5.0)
+L000363 |         if (delta.Length < 5.0) ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 DrawArrowHead.
+L000364 |         { ⟦EOL⟧
+// 해설 L365: 호출자에게 값 또는 제어를 반환합니다: return;
+L000365 |             return; ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 DrawArrowHead.
+L000366 |         } ⟦EOL⟧
+L000367 |  ⟦EOL⟧
+// 해설 L368: 함수·델리게이트 또는 객체 생성자를 호출합니다: delta.Normalize()
+L000368 |         delta.Normalize(); ⟦EOL⟧
+// 해설 L369: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Vector(-delta.Y, delta.X) / 지역 변수를 선언합니다: var normal = new Vector(-delta.Y, delta.X); / 변수의 초기값을 지정합니다: normal = new Vector(-delta.Y, delta.X)
+L000369 |         var normal = new Vector(-delta.Y, delta.X); ⟦EOL⟧
+// 해설 L370: 지역 변수를 선언합니다: var basePoint = end - (delta * 9.0); / 변수의 초기값을 지정합니다: basePoint = end - (delta * 9.0)
+L000370 |         var basePoint = end - (delta * 9.0); ⟦EOL⟧
+// 해설 L371: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(pen, end, basePoint + (normal * 4.0))
+L000371 |         context.DrawLine(pen, end, basePoint + (normal * 4.0)); ⟦EOL⟧
+// 해설 L372: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawLine(pen, end, basePoint - (normal * 4.0))
+L000372 |         context.DrawLine(pen, end, basePoint - (normal * 4.0)); ⟦EOL⟧
+// 해설 L373: 구문 블록 경계입니다 · 소속 DrawArrowHead.
+L000373 |     } ⟦EOL⟧
+L000374 |  ⟦EOL⟧
+// 해설 L375: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawText(DrawingContext, string, Point, double, Brush)
+L000375 |     private static void DrawText(DrawingContext context, string text, Point origin, double fontSize, Brush brush) ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 DrawText.
+L000376 |     { ⟦EOL⟧
+// 해설 L377: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawText(CreateText(text, fontSize, brush), origin) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateText(text, fontSize, brush)
+L000377 |         context.DrawText(CreateText(text, fontSize, brush), origin); ⟦EOL⟧
+// 해설 L378: 구문 블록 경계입니다 · 소속 DrawText.
+L000378 |     } ⟦EOL⟧
+L000379 |  ⟦EOL⟧
+// 해설 L380: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawCenteredText(DrawingContext, string, Point, double, Brush)
+L000380 |     private static void DrawCenteredText(DrawingContext context, string text, Point origin, double fontSize, Brush brush) ⟦EOL⟧
+// 해설 L381: 구문 블록 경계입니다 · 소속 DrawCenteredText.
+L000381 |     { ⟦EOL⟧
+// 해설 L382: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateText(text, fontSize, brush) / 지역 변수를 선언합니다: var formatted = CreateText(text, fontSize, brush); / 변수의 초기값을 지정합니다: formatted = CreateText(text, fontSize, brush)
+L000382 |         var formatted = CreateText(text, fontSize, brush); ⟦EOL⟧
+// 해설 L383: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawText(formatted, new Point(origin.X - (formatted.Width / 2.0), origin.Y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X - (formatted.Width / 2.0), origin.Y)
+L000383 |         context.DrawText(formatted, new Point(origin.X - (formatted.Width / 2.0), origin.Y)); ⟦EOL⟧
+// 해설 L384: 구문 블록 경계입니다 · 소속 DrawCenteredText.
+L000384 |     } ⟦EOL⟧
+L000385 |  ⟦EOL⟧
+// 해설 L386: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawRightAlignedText(DrawingContext, string, Point, double, Brush)
+L000386 |     private static void DrawRightAlignedText(DrawingContext context, string text, Point origin, double fontSize, Brush brush) ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 DrawRightAlignedText.
+L000387 |     { ⟦EOL⟧
+// 해설 L388: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateText(text, fontSize, brush) / 지역 변수를 선언합니다: var formatted = CreateText(text, fontSize, brush); / 변수의 초기값을 지정합니다: formatted = CreateText(text, fontSize, brush)
+L000388 |         var formatted = CreateText(text, fontSize, brush); ⟦EOL⟧
+// 해설 L389: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawText(formatted, new Point(origin.X - formatted.Width, origin.Y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(origin.X - formatted.Width, origin.Y)
+L000389 |         context.DrawText(formatted, new Point(origin.X - formatted.Width, origin.Y)); ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다 · 소속 DrawRightAlignedText.
+L000390 |     } ⟦EOL⟧
+L000391 |  ⟦EOL⟧
+// 해설 L392: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.DrawTextWithin(DrawingContext, string, Point, double, Brush, Rect)
+L000392 |     private static void DrawTextWithin(DrawingContext context, string text, Point origin, double fontSize, Brush brush, Rect bounds) ⟦EOL⟧
+// 해설 L393: 구문 블록 경계입니다 · 소속 DrawTextWithin.
+L000393 |     { ⟦EOL⟧
+// 해설 L394: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateText(text, fontSize, brush) / 지역 변수를 선언합니다: var formatted = CreateText(text, fontSize, brush); / 변수의 초기값을 지정합니다: formatted = CreateText(text, fontSize, brush)
+L000394 |         var formatted = CreateText(text, fontSize, brush); ⟦EOL⟧
+// 해설 L395: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(origin.X, bounds.Left + 2.0, Math.Max(bounds.Left + 2.0, bounds.Right - formatted.Width - 2.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(bounds.Left + 2.0, bounds.Right - formatted.Width - 2.0) / 지역 변수를 선언합니다: var x = Math.Clamp(origin.X, bounds.Left + 2.0, Math.Max(bounds.Left + 2.0, bounds.Right - formatted.Width - 2.0)); / 변수의 초기값을 지정합니다: x = Math.Clamp(origin.X, bounds.Left + 2.0, Math.Max(bounds.Left + 2.0, bounds.Right - formatted.Width - 2.0))
+L000395 |         var x = Math.Clamp(origin.X, bounds.Left + 2.0, Math.Max(bounds.Left + 2.0, bounds.Right - formatted.Width - 2.0)); ⟦EOL⟧
+// 해설 L396: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(origin.Y, bounds.Top + 2.0, Math.Max(bounds.Top + 2.0, bounds.Bottom - formatted.Height - 2.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(bounds.Top + 2.0, bounds.Bottom - formatted.Height - 2.0) / 지역 변수를 선언합니다: var y = Math.Clamp(origin.Y, bounds.Top + 2.0, Math.Max(bounds.Top + 2.0, bounds.Bottom - formatted.Height - 2.0)); / 변수의 초기값을 지정합니다: y = Math.Clamp(origin.Y, bounds.Top + 2.0, Math.Max(bounds.Top + 2.0, bounds.Bottom - formatted.Height - 2.0))
+L000396 |         var y = Math.Clamp(origin.Y, bounds.Top + 2.0, Math.Max(bounds.Top + 2.0, bounds.Bottom - formatted.Height - 2.0)); ⟦EOL⟧
+// 해설 L397: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawText(formatted, new Point(x, y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(x, y)
+L000397 |         context.DrawText(formatted, new Point(x, y)); ⟦EOL⟧
+// 해설 L398: 구문 블록 경계입니다 · 소속 DrawTextWithin.
+L000398 |     } ⟦EOL⟧
+L000399 |  ⟦EOL⟧
+// 해설 L400: 선언·서명/매개변수·접근 조건입니다 · FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush)
+L000400 |     private static FormattedText CreateText(string text, double fontSize, Brush brush) ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 CreateText.
+L000401 |     { ⟦EOL⟧
+// 해설 L402: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FormattedText( text, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, new Typeface("Segoe UI"), fontSize, brush, 1.0) / 호출자에게 값 또는 제어를 반환합니다: return new FormattedText( text, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, new Typeface("Segoe UI"), fontSize, brush, 1.0);
+L000402 |         return new FormattedText( ⟦EOL⟧
+// 해설 L403: 선언·서명/매개변수·접근 조건입니다 · FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush)
+L000403 |             text, ⟦EOL⟧
+// 해설 L404: 선언·서명/매개변수·접근 조건입니다 · FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush)
+L000404 |             CultureInfo.InvariantCulture, ⟦EOL⟧
+// 해설 L405: 선언·서명/매개변수·접근 조건입니다 · FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush)
+L000405 |             FlowDirection.LeftToRight, ⟦EOL⟧
+// 해설 L406: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Typeface("Segoe UI")
+L000406 |             new Typeface("Segoe UI"), ⟦EOL⟧
+// 해설 L407: 선언·서명/매개변수·접근 조건입니다 · FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush)
+L000407 |             fontSize, ⟦EOL⟧
+// 해설 L408: 선언·서명/매개변수·접근 조건입니다 · FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush)
+L000408 |             brush, ⟦EOL⟧
+// 해설 L409: 선언·서명/매개변수·접근 조건입니다 · FormattedText Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateText(string, double, Brush)
+L000409 |             1.0); ⟦EOL⟧
+// 해설 L410: 구문 블록 경계입니다 · 소속 CreateText.
+L000410 |     } ⟦EOL⟧
+L000411 |  ⟦EOL⟧
+// 해설 L412: 선언·서명/매개변수·접근 조건입니다 · SolidColorBrush Drilling.UI.Menu.Menus.CCoordinateOffsetPreviewDrawing.CreateBrush(byte, byte, byte)
+L000412 |     private static SolidColorBrush CreateBrush(byte red, byte green, byte blue) ⟦EOL⟧
+// 해설 L413: 구문 블록 경계입니다 · 소속 CreateBrush.
+L000413 |     { ⟦EOL⟧
+// 해설 L414: 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromRgb(red, green, blue)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(red, green, blue) / 지역 변수를 선언합니다: var brush = new SolidColorBrush(Color.FromRgb(red, green, blue)); / 변수의 초기값을 지정합니다: brush = new SolidColorBrush(Color.FromRgb(red, green, blue))
+L000414 |         var brush = new SolidColorBrush(Color.FromRgb(red, green, blue)); ⟦EOL⟧
+// 해설 L415: 함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze()
+L000415 |         brush.Freeze(); ⟦EOL⟧
+// 해설 L416: 호출자에게 값 또는 제어를 반환합니다: return brush;
+L000416 |         return brush; ⟦EOL⟧
+// 해설 L417: 구문 블록 경계입니다 · 소속 CreateBrush.
+L000417 |     } ⟦EOL⟧
+// 해설 L418: 구문 블록 경계입니다.
+L000418 | } ⟦EOL⟧

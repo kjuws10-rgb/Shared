@@ -1,0 +1,293 @@
+{
+  "status": "passed",
+  "auditor": "review independent agent",
+  "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "scope": "Read-only final cross-validation of7manual chapters and7offline SVGs",
+  "semanticChecks": [
+    {
+      "topic": "Review targets",
+      "status": "confirmed",
+      "source": [
+        "Drilling.Common/Review/CReviewManager.cs:151–193",
+        "Drilling.Common/Review/CReviewManager.cs:954–974",
+        "Drilling.Common/Review/CReviewManager.cs:2408–2411"
+      ],
+      "result": "AK-relative shot plus rotated beam localoffset; ReviewX/StageY consumed by Stage motion and IOF."
+    },
+    {
+      "topic": "Vision actual send boundary",
+      "status": "confirmed",
+      "source": [
+        "Drilling.Common/Review/CReviewManager.cs:1964–1994",
+        "Drilling.Common/Interface/Vision/CVisionComm.cs:93–123",
+        "Drilling.Common/Interface/Vision/CVisionComm.cs:272–337",
+        "Drilling.Common/Interface/Vision/CVisionComm.cs:576–594",
+        "Drilling.Common/Interface/Vision/CVisionComm.cs:643–667",
+        "Drilling.Common/Interface/Vision/CVisionComm.cs:955–975"
+      ],
+      "result": "1001 contains six-int identifiers, not target-mm coordinates; actual TCP bytes use protocol Encode and NetworkStream WriteAsync."
+    },
+    {
+      "topic": "Shift",
+      "status": "confirmed",
+      "source": [
+        "Drilling.Common/Review/CAutoFineReviewCoordinator.cs:203–223",
+        "Drilling.Common/Station/CStationProcess.cs:3983–3994"
+      ],
+      "result": "Manual MOF shift is zeroed in both AUTO processing request and AUTO Review frozen parameters; this is current implementation, not approval of changed user policy."
+    },
+    {
+      "topic": "Masking",
+      "status": "confirmed",
+      "source": [
+        "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:767–785",
+        "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:853–910",
+        "Drilling.Common/Review/CAutoFineReviewCoordinator.cs:224–276",
+        "Drilling.Common/Station/CStageReviewSequences.cs:742–815"
+      ],
+      "result": "Whole-shot footprint/CHESS exclusion is distinct from physical path avoidance; docs correctly avoid proving 2D obstacle routing."
+    },
+    {
+      "topic": "Default midpoint and55/110",
+      "status": "confirmed",
+      "source": [
+        "Drilling.Common/Correction/CDefaultOffsetCalibration.cs:175–201"
+      ],
+      "result": "Configured center+ (Head−4.5)*HeadGapX. ±55 occurs only if HeadGapX110; live two-AK average and rotation are not computed here."
+    },
+    {
+      "topic": "Zero order versus original beam",
+      "status": "confirmed_with_optical_limitation",
+      "source": [
+        "Drilling.Common/Correction/CDefaultOffsetCalibration.cs:107–171",
+        "Drilling.Common/Correction/CDefaultOffsetCalibration.cs:175–228",
+        "Drilling.UI/Menu/Menus/CMenuCorrection.cs:3702–3765"
+      ],
+      "result": "16-point Shot fit and one-point Cross are separate software contracts; neither proves DOE physically removed; docs preserve no-DOE original-beam requirement as optical concept."
+    },
+    {
+      "topic": "Offset repeated application",
+      "status": "confirmed",
+      "source": [
+        "Drilling.Common/Review/CAutoFineReviewCoordinator.cs:78–149",
+        "Drilling.File/ReviewOffset/CReviewOffsetFile.cs:145–211",
+        "Drilling.File/ReviewOffset/CReviewOffsetFile.cs:565–609"
+      ],
+      "result": "Save gate plus dated path-identity apply history; not global lifetime content hash. Legacy scanner offsets converted to design before cumulative save."
+    },
+    {
+      "topic": "Rollback semantics",
+      "status": "confirmed",
+      "source": [
+        "Drilling.File/ReviewOffset/CReviewOffsetFile.cs:260–387"
+      ],
+      "result": "Move latest active snapshot to Rollback, prior active becomes current or Empty; stale expectedLatest rejects. Offset and matching apply history compensate on error; no whole-project restore claim."
+    },
+    {
+      "topic": "Revision and Product",
+      "status": "confirmed",
+      "source": [
+        "Drilling.File/ReviewResult/CReviewResultFile.cs:135–209",
+        "Drilling.File/ReviewResult/CReviewResultFile.cs:293–338",
+        "Drilling.Common/Product/CProductManager.cs:444–506"
+      ],
+      "result": "Revision new CSV and Product Review state persistence are distinct; docs avoid saying Revision automatically mutates historical Product."
+    }
+  ],
+  "final": {
+    "checked_at": "2026-11-13T05:16:17.630403+00:00",
+    "status": "pass",
+    "source_commit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "three_corrections": {
+      "input_type": true,
+      "rollback_history_range": true,
+      "stage_bridge": true
+    },
+    "markdown_files": 7,
+    "fixed_commit_source_links": 170,
+    "offline_image_links": 7,
+    "diagram_spec_identical_copy": true,
+    "markdown_content_identical_to_manual_after_line_ending_normalization": true,
+    "svg_identical_to_manual": false,
+    "line_ending_note": "Final generator normalized LF, per-line trailing whitespace, and EOF to one final newline. Seven chapters match manual after per-line rstrip and EOF normalization; source line content is unchanged in the read-only source clone.",
+    "chapter_snapshots": [
+      {
+        "file": "01_Review_계획과_좌표계.md",
+        "sha256": "8168746bcb687a6328b39713223e33616169f6482dc6d54dec7cb692de1e29f0",
+        "bytes": 14604,
+        "lines": 114,
+        "source_links": 25,
+        "manual_content_identical_after_per_line_rstrip_and_eof_normalization": true,
+        "lf_no_trailing_space_single_final_newline": true
+      },
+      {
+        "file": "02_Masking_Sampling_IOF.md",
+        "sha256": "34b077403e5aa3123e97a8f26693fb3bdf5bad62632def3b5d32475b93571b85",
+        "bytes": 13578,
+        "lines": 95,
+        "source_links": 18,
+        "manual_content_identical_after_per_line_rstrip_and_eof_normalization": true,
+        "lf_no_trailing_space_single_final_newline": true
+      },
+      {
+        "file": "03_Vision_패킷과_단위.md",
+        "sha256": "4075dbb8325cb2ca6cd0cc444c7e50385d84cd607e2e2326c19ac7b0b78bf5d0",
+        "bytes": 14728,
+        "lines": 126,
+        "source_links": 28,
+        "manual_content_identical_after_per_line_rstrip_and_eof_normalization": true,
+        "lf_no_trailing_space_single_final_newline": true
+      },
+      {
+        "file": "04_ReviewOffset_적용과_롤백.md",
+        "sha256": "af8bf71475e4a382b6aebba2908b00ba1816f981c044aebf0c4c9a9ddcaac08a",
+        "bytes": 15619,
+        "lines": 120,
+        "source_links": 24,
+        "manual_content_identical_after_per_line_rstrip_and_eof_normalization": true,
+        "lf_no_trailing_space_single_final_newline": true
+      },
+      {
+        "file": "05_결과_Revision_Product_연결.md",
+        "sha256": "f815cb51d948738e9e60e9784d8e0e0ba8c6260fa9377c51747caa049b3a82f1",
+        "bytes": 14322,
+        "lines": 119,
+        "source_links": 22,
+        "manual_content_identical_after_per_line_rstrip_and_eof_normalization": true,
+        "lf_no_trailing_space_single_final_newline": true
+      },
+      {
+        "file": "06_DefaultOffset_ZeroOrder_FirstBeam.md",
+        "sha256": "960b713d0180928560956de2959415db84e1aee509aa1f86252659d41779e03f",
+        "bytes": 17501,
+        "lines": 136,
+        "source_links": 29,
+        "manual_content_identical_after_per_line_rstrip_and_eof_normalization": true,
+        "lf_no_trailing_space_single_final_newline": true
+      },
+      {
+        "file": "07_Align_Distortion_윈도우_복구.md",
+        "sha256": "a53b60c9a1daf431be8bbf9f538907438e3f1664452a90585322d99febb0c3d1",
+        "bytes": 17788,
+        "lines": 122,
+        "source_links": 24,
+        "manual_content_identical_after_per_line_rstrip_and_eof_normalization": true,
+        "lf_no_trailing_space_single_final_newline": true
+      }
+    ],
+    "svg_snapshots": [
+      {
+        "file": "review-01.svg",
+        "sha256": "3280e93567aaeac7e566b4aba26b1af169b3779179321a53249f3335a4498b3d",
+        "bytes": 2983,
+        "manual_content_identical_after_whitespace_normalization": true,
+        "xml_parse": "pass",
+        "self_contained": true
+      },
+      {
+        "file": "review-02.svg",
+        "sha256": "cde6ff6f31cefbb38d77bdbeef87ca1a065fe8dbec5ed4de5fe493631cc1f233",
+        "bytes": 2378,
+        "manual_content_identical_after_whitespace_normalization": true,
+        "xml_parse": "pass",
+        "self_contained": true
+      },
+      {
+        "file": "review-03.svg",
+        "sha256": "ca84c218b2fa486753374a5f32eda015d5ad70ff7bff51fa910de0607c567366",
+        "bytes": 2644,
+        "manual_content_identical_after_whitespace_normalization": true,
+        "xml_parse": "pass",
+        "self_contained": true
+      },
+      {
+        "file": "review-04.svg",
+        "sha256": "ea05c09f2b65f656de86cf7b2d82687cdac7be9f19510589f8d486844df955fc",
+        "bytes": 2980,
+        "manual_content_identical_after_whitespace_normalization": true,
+        "xml_parse": "pass",
+        "self_contained": true
+      },
+      {
+        "file": "review-05.svg",
+        "sha256": "2b7b0c569af5bd0b4ea2cbe714adf820ab91b88abd71bb7fe70d49e61b655277",
+        "bytes": 2459,
+        "manual_content_identical_after_whitespace_normalization": true,
+        "xml_parse": "pass",
+        "self_contained": true
+      },
+      {
+        "file": "review-06.svg",
+        "sha256": "6fd1d50bd763da392b9e08c5f9661a6310ea6dec3909c6b5879f9e3710929fa5",
+        "bytes": 3293,
+        "manual_content_identical_after_whitespace_normalization": true,
+        "xml_parse": "pass",
+        "self_contained": true
+      },
+      {
+        "file": "review-07.svg",
+        "sha256": "5ebb948904b34f9f3ed9d50a98f99683707bdb13af87d5c804b0aae7663a522e",
+        "bytes": 4007,
+        "manual_content_identical_after_whitespace_normalization": true,
+        "xml_parse": "pass",
+        "self_contained": true
+      }
+    ],
+    "other_relative_links": [],
+    "source_state": {
+      "head": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+      "status": "",
+      "push_url": "DISABLED"
+    },
+    "errors": [],
+    "scope": "Read-only output inspection. No source/manual/Shared document mutation. Audit only.",
+    "markdown_content_identical_to_manual_after_per_line_rstrip_and_eof_normalization": true,
+    "svg_identical_to_manual_after_whitespace_normalization": true
+  },
+  "formatNormalizationRecheck": {
+    "checked_at": "2026-11-13T05:16:17.630403+00:00",
+    "status": "pass",
+    "normalization": "LF; every line rstrip; remove EOF blank lines; append exactly one final newline",
+    "chapters_checked": 7,
+    "source_links": 170,
+    "offline_svg_images": 7,
+    "three_corrections_preserved": {
+      "input_type": true,
+      "rollback_history_range": true,
+      "stage_bridge": true
+    },
+    "errors": [],
+    "public_files_modified_by_reviewer": false,
+    "source_unchanged": true
+  },
+  "resolvedFindings": [
+    {
+      "id": "REVIEW-DOC-001",
+      "severity": "minor",
+      "status": "fixed_in_final_shared_output_verified",
+      "file": "02_Masking_Sampling_IOF.md",
+      "section": "5",
+      "problem": "PrepareIof input type is written ST_STAGE_REVIEW_POINT, but actual type is ST_STAGE_IOF_POINT.",
+      "source": "Drilling.Common/Station/CStageReviewSequences.cs:742",
+      "fix": "Replace symbol only; flow semantics do not change.",
+      "verification_scope": "Regenerated Shared output and source commit checked"
+    },
+    {
+      "id": "REVIEW-DOC-002",
+      "severity": "minor",
+      "status": "fixed_in_final_shared_output_verified",
+      "file": "04_ReviewOffset_적용과_롤백.md",
+      "section": "7 paragraph2",
+      "problem": "History restore claim cites307–348, before the actual WriteApplyHistory originalHistory at352 and combined recovery errors366–370.",
+      "source": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs:307–374",
+      "fix": "Expand the supporting link to307–374.",
+      "verification_scope": "Regenerated Shared output and source commit checked"
+    }
+  ],
+  "limitations": [
+    "No source or public document changes performed in this review.",
+    "No build, unit execution, hardware movement, MELSEC write, actual Vision traffic, optical/precision evaluation.",
+    "SVG XML and dependency checks only; no raster rendering of SVGs in this child review.",
+    "Full all-file encyclopedia and generated source-comment pages are root/other-agent scope."
+  ]
+}

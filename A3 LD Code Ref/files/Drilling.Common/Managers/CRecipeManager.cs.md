@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
-| 원본 SHA256 | 489bd204fadb9948929e6d665db38a2e3bc7aa2b0a4343fd74975809c3490106 |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 SHA256 | c09f70d09f8225715c4b53f6d42a78fcc00001814dc1dfd4c961ceedec099d22 |
 | 파일 분류 | code |
-| 원본 크기/행 | 24,590 bytes / 440 physical lines |
+| 원본 크기/행 | 25,120 bytes / 452 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -31,7 +31,7 @@
 | ST_RECIPE_FORM_ITEM | RecordDeclaration | 386–404 | ST_RECIPE_FORM_ITEM |
 | ST_RECIPE_VALUE | RecordDeclaration | 405–405 | ST_RECIPE_VALUE |
 | CRecipeFileBase | ClassDeclaration | 406–418 | CRecipeFileBase |
-| CProtectWindowRecipeData | ClassDeclaration | 425–437 | CProtectWindowRecipeData |
+| CProtectWindowRecipeData | ClassDeclaration | 425–449 | CProtectWindowRecipeData |
 
 ## 멤버 빠른 목록
 
@@ -92,14 +92,17 @@
 | Tab | FieldDeclaration | L427–427 | string Drilling.Common.Recipe.CProtectWindowRecipeData.Tab |
 | Group | FieldDeclaration | L428–428 | string Drilling.Common.Recipe.CProtectWindowRecipeData.Group |
 | MaximumCountKey | FieldDeclaration | L429–429 | string Drilling.Common.Recipe.CProtectWindowRecipeData.MaximumCountKey |
-| CurrentCountKey | FieldDeclaration | L430–430 | string Drilling.Common.Recipe.CProtectWindowRecipeData.CurrentCountKey |
-| ParseCount | MethodDeclaration | L431–436 | int Drilling.Common.Recipe.CProtectWindowRecipeData.ParseCount(string?, string) |
+| RetryCountKey | FieldDeclaration | L430–430 | string Drilling.Common.Recipe.CProtectWindowRecipeData.RetryCountKey |
+| CurrentCountKey | FieldDeclaration | L431–431 | string Drilling.Common.Recipe.CProtectWindowRecipeData.CurrentCountKey |
+| MaximumRetryCount | FieldDeclaration | L432–432 | int Drilling.Common.Recipe.CProtectWindowRecipeData.MaximumRetryCount |
+| ParseCount | MethodDeclaration | L433–438 | int Drilling.Common.Recipe.CProtectWindowRecipeData.ParseCount(string?, string) |
+| ParseRetryCount | MethodDeclaration | L440–448 | int Drilling.Common.Recipe.CProtectWindowRecipeData.ParseRetryCount(string?) |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
 ### FieldDeclaration `_cacheLock` · L13–13
 
-[Drilling.Common/Managers/CRecipeManager.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L13-L13)
+[Drilling.Common/Managers/CRecipeManager.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -127,7 +130,7 @@
 
 ### FieldDeclaration `_recipeOperationGate` · L14–14
 
-[Drilling.Common/Managers/CRecipeManager.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L14-L14)
+[Drilling.Common/Managers/CRecipeManager.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -155,7 +158,7 @@
 
 ### FieldDeclaration `_recipeCache` · L15–15
 
-[Drilling.Common/Managers/CRecipeManager.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L15-L15)
+[Drilling.Common/Managers/CRecipeManager.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -170,7 +173,7 @@
 
 ### FieldDeclaration `_historyGate` · L16–16
 
-[Drilling.Common/Managers/CRecipeManager.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L16-L16)
+[Drilling.Common/Managers/CRecipeManager.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -198,7 +201,7 @@
 
 ### FieldDeclaration `_historyCache` · L17–17
 
-[Drilling.Common/Managers/CRecipeManager.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L17-L17)
+[Drilling.Common/Managers/CRecipeManager.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -213,7 +216,7 @@
 
 ### MethodDeclaration `LoadHistory` · L18–18
 
-[Drilling.Common/Managers/CRecipeManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L18-L18)
+[Drilling.Common/Managers/CRecipeManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -232,7 +235,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L567-L567) | _recipeManager.LoadHistory | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L567-L567) | _recipeManager.LoadHistory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -250,7 +253,7 @@
 
 ### MethodDeclaration `LoadHistoryCore` · L19–32
 
-[Drilling.Common/Managers/CRecipeManager.cs:19–32](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L19-L32)
+[Drilling.Common/Managers/CRecipeManager.cs:19–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L19-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -270,14 +273,14 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L18-L18) | LoadHistoryCore | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L37-L37) | LoadHistoryCore | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L90-L90) | LoadHistoryCore | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L106-L106) | LoadHistoryCore | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L143-L143) | LoadHistoryCore | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L156-L156) | LoadHistoryCore | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L187-L187) | LoadHistoryCore | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:204–204](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L204-L204) | LoadHistoryCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L18-L18) | LoadHistoryCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L37-L37) | LoadHistoryCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L90-L90) | LoadHistoryCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L106-L106) | LoadHistoryCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L143-L143) | LoadHistoryCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L156-L156) | LoadHistoryCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L187-L187) | LoadHistoryCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:204–204](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L204-L204) | LoadHistoryCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -325,7 +328,7 @@ flowchart TD
 
 ### MethodDeclaration `RecordSelection` · L34–38
 
-[Drilling.Common/Managers/CRecipeManager.cs:34–38](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L34-L38)
+[Drilling.Common/Managers/CRecipeManager.cs:34–38](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L34-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -346,7 +349,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:769–769](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L769-L769) | _recipeManager.RecordSelection | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:769–769](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L769-L769) | _recipeManager.RecordSelection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -368,7 +371,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadRecipes` · L40–71
 
-[Drilling.Common/Managers/CRecipeManager.cs:40–71](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L40-L71)
+[Drilling.Common/Managers/CRecipeManager.cs:40–71](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L40-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -387,25 +390,26 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4363–4363](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4363-L4363) | recipes.LoadRecipes | False |
-| [Drilling.Common/Station/CStationProcess.cs:6088–6088](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L6088-L6088) | recipes.LoadRecipes | False |
-| [Drilling.UI/CRootView.cs:1253–1253](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1253-L1253) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/CRootView.cs:1354–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1354-L1354) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/CRootView.cs:2842–2842](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2842-L2842) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/CRootView.cs:2887–2887](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2887-L2887) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/CRootView.cs:2895–2895](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2895-L2895) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L122-L122) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:711–711](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L711-L711) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1793–1793](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1793-L1793) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2719–2719](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2719-L2719) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2161–2161](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2161-L2161) | recipeManager.LoadRecipes | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1620–1620](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1620-L1620) | _manager.Recipe().LoadRecipes | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3050–3050](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3050-L3050) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3999–3999](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3999-L3999) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L566-L566) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1092–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1092-L1092) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1185–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1185-L1185) | _recipeManager.LoadRecipes | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L470-L470) | _recipeManager.LoadRecipes | False |
+| [Drilling.Common/Station/CStationProcess.cs:4374–4374](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4374-L4374) | recipes.LoadRecipes | False |
+| [Drilling.Common/Station/CStationProcess.cs:4719–4719](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4719-L4719) | recipes.LoadRecipes | False |
+| [Drilling.Common/Station/CStationProcess.cs:6181–6181](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6181-L6181) | recipes.LoadRecipes | False |
+| [Drilling.UI/CRootView.cs:1254–1254](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1254-L1254) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/CRootView.cs:1355–1355](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1355-L1355) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/CRootView.cs:2844–2844](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2844-L2844) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/CRootView.cs:2889–2889](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2889-L2889) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/CRootView.cs:2897–2897](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2897-L2897) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:177–177](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L177-L177) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:756–756](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L756-L756) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1838–1838](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1838-L1838) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2766–2766](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2766-L2766) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2161–2161](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L2161-L2161) | recipeManager.LoadRecipes | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1610–1610](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1610-L1610) | _manager.Recipe().LoadRecipes | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3302–3302](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3302-L3302) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4470–4470](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4470-L4470) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L566-L566) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1092–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1092-L1092) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1185–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1185-L1185) | _recipeManager.LoadRecipes | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L479-L479) | _recipeManager.LoadRecipes | False |
 
 호출하는 대상과 해석 범위:
 
@@ -471,7 +475,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveRecipe` · L73–73
 
-[Drilling.Common/Managers/CRecipeManager.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L73-L73)
+[Drilling.Common/Managers/CRecipeManager.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L73-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -491,10 +495,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2718–2718](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2718-L2718) | _recipeManager.SaveRecipe | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2810–2810](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2810-L2810) | _recipeManager.SaveRecipe | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1061–1061](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1061-L1061) | _recipeManager.SaveRecipe | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1149-L1149) | _recipeManager.SaveRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2765–2765](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2765-L2765) | _recipeManager.SaveRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2857–2857](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2857-L2857) | _recipeManager.SaveRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1061–1061](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1061-L1061) | _recipeManager.SaveRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1149–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1149-L1149) | _recipeManager.SaveRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -517,7 +521,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveParametersIfUnchanged` · L74–93
 
-[Drilling.Common/Managers/CRecipeManager.cs:74–93](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L74-L93)
+[Drilling.Common/Managers/CRecipeManager.cs:74–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L74-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -538,8 +542,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3403–3403](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3403-L3403) | _recipeManager.SaveParametersIfUnchanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3774–3774](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3774-L3774) | _recipeManager.SaveParametersIfUnchanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3454–3454](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3454-L3454) | _recipeManager.SaveParametersIfUnchanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3815–3815](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3815-L3815) | _recipeManager.SaveParametersIfUnchanged | False |
 
 호출하는 대상과 해석 범위:
 
@@ -648,7 +652,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveAlignOffsetsIfUnchanged` · L94–109
 
-[Drilling.Common/Managers/CRecipeManager.cs:94–109](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L94-L109)
+[Drilling.Common/Managers/CRecipeManager.cs:94–109](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L94-L109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -669,7 +673,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CAlignInterpolation.cs#L334-L334) | recipes.SaveAlignOffsetsIfUnchanged | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Correction/CAlignInterpolation.cs#L334-L334) | recipes.SaveAlignOffsetsIfUnchanged | False |
 
 호출하는 대상과 해석 범위:
 
@@ -761,7 +765,7 @@ flowchart TD
 
 ### MethodDeclaration `SavePowerMeasureAngles` · L112–126
 
-[Drilling.Common/Managers/CRecipeManager.cs:112–126](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L112-L126)
+[Drilling.Common/Managers/CRecipeManager.cs:112–126](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L112-L126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -782,7 +786,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L116-L116) | manager.Recipe().SavePowerMeasureAngles | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L116-L116) | manager.Recipe().SavePowerMeasureAngles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -858,7 +862,7 @@ flowchart TD
 
 ### MethodDeclaration `ListCompanionFolders` · L127–127
 
-[Drilling.Common/Managers/CRecipeManager.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L127-L127)
+[Drilling.Common/Managers/CRecipeManager.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L127-L127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -879,9 +883,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1133–1133](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1133-L1133) | _recipeManager.ListCompanionFolders | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1216–1216](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1216-L1216) | _recipeManager.ListCompanionFolders | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1268–1268](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1268-L1268) | _recipeManager.ListCompanionFolders | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1133–1133](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1133-L1133) | _recipeManager.ListCompanionFolders | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1216–1216](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1216-L1216) | _recipeManager.ListCompanionFolders | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1268–1268](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1268-L1268) | _recipeManager.ListCompanionFolders | False |
 
 호출하는 대상과 해석 범위:
 
@@ -902,7 +906,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateRecipeCopy` · L128–144
 
-[Drilling.Common/Managers/CRecipeManager.cs:128–144](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L128-L144)
+[Drilling.Common/Managers/CRecipeManager.cs:128–144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L128-L144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -924,7 +928,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1218–1218](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1218-L1218) | _recipeManager.CreateRecipeCopy | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1218–1218](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1218-L1218) | _recipeManager.CreateRecipeCopy | False |
 
 호출하는 대상과 해석 범위:
 
@@ -996,7 +1000,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveRecipeCore` · L145–157
 
-[Drilling.Common/Managers/CRecipeManager.cs:145–157](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L145-L157)
+[Drilling.Common/Managers/CRecipeManager.cs:145–157](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L145-L157)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1016,8 +1020,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L73-L73) | SaveRecipeCore | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L125-L125) | SaveRecipeCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L73-L73) | SaveRecipeCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L125-L125) | SaveRecipeCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1069,7 +1073,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshRecipe` · L159–159
 
-[Drilling.Common/Managers/CRecipeManager.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L159-L159)
+[Drilling.Common/Managers/CRecipeManager.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L159-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1089,10 +1093,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Correction/CAlignInterpolation.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Correction/CAlignInterpolation.cs#L271-L271) | recipes.RefreshRecipe | False |
-| [Drilling.UI/CRootView.cs:2782–2782](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2782-L2782) | _recipeManager.RefreshRecipe | False |
-| [Drilling.UI/CRootView.cs:2935–2935](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2935-L2935) | _recipeManager.RefreshRecipe | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2571–2571](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2571-L2571) | _recipeManager.RefreshRecipe | False |
+| [Drilling.Common/Correction/CAlignInterpolation.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Correction/CAlignInterpolation.cs#L271-L271) | recipes.RefreshRecipe | False |
+| [Drilling.UI/CRootView.cs:2784–2784](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2784-L2784) | _recipeManager.RefreshRecipe | False |
+| [Drilling.UI/CRootView.cs:2937–2937](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2937-L2937) | _recipeManager.RefreshRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2618–2618](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2618-L2618) | _recipeManager.RefreshRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1115,7 +1119,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshRecipeCore` · L160–168
 
-[Drilling.Common/Managers/CRecipeManager.cs:160–168](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L160-L168)
+[Drilling.Common/Managers/CRecipeManager.cs:160–168](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L160-L168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1135,7 +1139,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L159-L159) | RefreshRecipeCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L159-L159) | RefreshRecipeCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1174,7 +1178,7 @@ flowchart TD
 
 ### MethodDeclaration `RenameRecipe` · L170–170
 
-[Drilling.Common/Managers/CRecipeManager.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L170-L170)
+[Drilling.Common/Managers/CRecipeManager.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L170-L170)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1214,7 +1218,7 @@ flowchart TD
 
 ### MethodDeclaration `RenameRecipe` · L171–171
 
-[Drilling.Common/Managers/CRecipeManager.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L171-L171)
+[Drilling.Common/Managers/CRecipeManager.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L171-L171)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1236,7 +1240,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1150–1150](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1150-L1150) | _recipeManager.RenameRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1150–1150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1150-L1150) | _recipeManager.RenameRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1256,7 +1260,7 @@ flowchart TD
 
 ### MethodDeclaration `RenameRecipeCore` · L172–188
 
-[Drilling.Common/Managers/CRecipeManager.cs:172–188](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L172-L188)
+[Drilling.Common/Managers/CRecipeManager.cs:172–188](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L172-L188)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1278,8 +1282,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L170-L170) | RenameRecipeCore | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L171-L171) | RenameRecipeCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L170-L170) | RenameRecipeCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L171-L171) | RenameRecipeCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1335,7 +1339,7 @@ flowchart TD
 
 ### MethodDeclaration `DeleteRecipe` · L190–190
 
-[Drilling.Common/Managers/CRecipeManager.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L190-L190)
+[Drilling.Common/Managers/CRecipeManager.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L190-L190)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1374,7 +1378,7 @@ flowchart TD
 
 ### MethodDeclaration `DeleteRecipe` · L191–191
 
-[Drilling.Common/Managers/CRecipeManager.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L191-L191)
+[Drilling.Common/Managers/CRecipeManager.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L191-L191)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1395,7 +1399,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1270–1270](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1270-L1270) | _recipeManager.DeleteRecipe | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1270–1270](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1270-L1270) | _recipeManager.DeleteRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1415,7 +1419,7 @@ flowchart TD
 
 ### MethodDeclaration `DeleteRecipeCore` · L192–205
 
-[Drilling.Common/Managers/CRecipeManager.cs:192–205](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L192-L205)
+[Drilling.Common/Managers/CRecipeManager.cs:192–205](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L192-L205)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1436,8 +1440,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L190-L190) | DeleteRecipeCore | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L191-L191) | DeleteRecipeCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L190-L190) | DeleteRecipeCore | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L191-L191) | DeleteRecipeCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1483,7 +1487,7 @@ flowchart TD
 
 ### MethodDeclaration `IncrementProtectWindowCount` · L207–207
 
-[Drilling.Common/Managers/CRecipeManager.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L207-L207)
+[Drilling.Common/Managers/CRecipeManager.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L207-L207)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1503,7 +1507,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3778–3778](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3778-L3778) | _recipeManager.IncrementProtectWindowCount | False |
+| [Drilling.Common/Station/CStationProcess.cs:3779–3779](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L3779-L3779) | _recipeManager.IncrementProtectWindowCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1523,7 +1527,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetProtectWindowCount` · L208–208
 
-[Drilling.Common/Managers/CRecipeManager.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L208-L208)
+[Drilling.Common/Managers/CRecipeManager.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L208-L208)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1559,7 +1563,7 @@ flowchart TD
 
 ### MethodDeclaration `SetProtectWindowCount` · L209–209
 
-[Drilling.Common/Managers/CRecipeManager.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L209-L209)
+[Drilling.Common/Managers/CRecipeManager.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L209-L209)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1580,7 +1584,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4619–4619](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4619-L4619) | recipes.SetProtectWindowCount | False |
+| [Drilling.Common/Station/CStationProcess.cs:4661–4661](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4661-L4661) | recipes.SetProtectWindowCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1607,7 +1611,7 @@ flowchart TD
 
 ### MethodDeclaration `ChangeProtectWindowCount` · L210–221
 
-[Drilling.Common/Managers/CRecipeManager.cs:210–221](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L210-L221)
+[Drilling.Common/Managers/CRecipeManager.cs:210–221](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L210-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1628,9 +1632,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L207-L207) | ChangeProtectWindowCount | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L208-L208) | ChangeProtectWindowCount | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L209-L209) | ChangeProtectWindowCount | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L207-L207) | ChangeProtectWindowCount | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L208-L208) | ChangeProtectWindowCount | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L209-L209) | ChangeProtectWindowCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1688,7 +1692,7 @@ flowchart TD
 
 ### MethodDeclaration `WithRecipeOperation` · L222–233
 
-[Drilling.Common/Managers/CRecipeManager.cs:222–233](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L222-L233)
+[Drilling.Common/Managers/CRecipeManager.cs:222–233](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L222-L233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1708,13 +1712,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L73-L73) | WithRecipeOperation | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:112–126](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L112-L126) | WithRecipeOperation | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:128–144](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L128-L144) | WithRecipeOperation | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L170-L170) | WithRecipeOperation | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L171-L171) | WithRecipeOperation | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L190-L190) | WithRecipeOperation | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L191-L191) | WithRecipeOperation | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L73-L73) | WithRecipeOperation | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:112–126](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L112-L126) | WithRecipeOperation | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:128–144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L128-L144) | WithRecipeOperation | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L170-L170) | WithRecipeOperation | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L171-L171) | WithRecipeOperation | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L190-L190) | WithRecipeOperation | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L191-L191) | WithRecipeOperation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1755,7 +1759,7 @@ flowchart TD
 
 ### MethodDeclaration `WithRecipeOperation` · L235–246
 
-[Drilling.Common/Managers/CRecipeManager.cs:235–246](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L235-L246)
+[Drilling.Common/Managers/CRecipeManager.cs:235–246](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L235-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1775,10 +1779,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:74–93](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L74-L93) | WithRecipeOperation | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:94–109](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L94-L109) | WithRecipeOperation | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L159-L159) | WithRecipeOperation | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:210–221](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L210-L221) | WithRecipeOperation | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:74–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L74-L93) | WithRecipeOperation | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:94–109](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L94-L109) | WithRecipeOperation | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L159-L159) | WithRecipeOperation | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:210–221](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L210-L221) | WithRecipeOperation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1820,7 +1824,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateCachedRecipe` · L248–278
 
-[Drilling.Common/Managers/CRecipeManager.cs:248–278](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L248-L278)
+[Drilling.Common/Managers/CRecipeManager.cs:248–278](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L248-L278)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1839,12 +1843,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L89-L89) | UpdateCachedRecipe | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L105-L105) | UpdateCachedRecipe | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L142-L142) | UpdateCachedRecipe | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L155-L155) | UpdateCachedRecipe | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L164-L164) | UpdateCachedRecipe | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L186-L186) | UpdateCachedRecipe | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L89-L89) | UpdateCachedRecipe | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L105-L105) | UpdateCachedRecipe | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L142-L142) | UpdateCachedRecipe | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L155-L155) | UpdateCachedRecipe | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L164-L164) | UpdateCachedRecipe | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L186-L186) | UpdateCachedRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1906,7 +1910,7 @@ flowchart TD
 
 ### MethodDeclaration `RenameCachedRecipe` · L280–303
 
-[Drilling.Common/Managers/CRecipeManager.cs:280–303](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L280-L303)
+[Drilling.Common/Managers/CRecipeManager.cs:280–303](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L280-L303)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1926,7 +1930,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L183-L183) | RenameCachedRecipe | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L183-L183) | RenameCachedRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1980,7 +1984,7 @@ flowchart TD
 
 ### MethodDeclaration `DeleteCachedRecipe` · L305–325
 
-[Drilling.Common/Managers/CRecipeManager.cs:305–325](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L305-L325)
+[Drilling.Common/Managers/CRecipeManager.cs:305–325](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L305-L325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1999,8 +2003,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L166-L166) | DeleteCachedRecipe | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L203-L203) | DeleteCachedRecipe | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L166-L166) | DeleteCachedRecipe | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L203-L203) | DeleteCachedRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2047,7 +2051,7 @@ flowchart TD
 
 ### MethodDeclaration `CloneRecipe` · L327–334
 
-[Drilling.Common/Managers/CRecipeManager.cs:327–334](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L327-L334)
+[Drilling.Common/Managers/CRecipeManager.cs:327–334](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L327-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2066,9 +2070,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L263-L263) | CloneRecipe | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L273-L273) | CloneRecipe | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L294-L294) | CloneRecipe | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L263-L263) | CloneRecipe | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L273-L273) | CloneRecipe | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L294-L294) | CloneRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2091,7 +2095,7 @@ flowchart TD
 
 ### MethodDeclaration `ListCompanionFolders` · L341–341
 
-[Drilling.Common/Managers/CRecipeManager.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L341-L341)
+[Drilling.Common/Managers/CRecipeManager.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L341-L341)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2112,13 +2116,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L127-L127) | store.ListCompanionFolders | True |
+| [Drilling.Common/Managers/CRecipeManager.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L127-L127) | store.ListCompanionFolders | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `CreateCopy` · L342–342
 
-[Drilling.Common/Managers/CRecipeManager.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L342-L342)
+[Drilling.Common/Managers/CRecipeManager.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L342-L342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2140,13 +2144,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L131-L131) | store.CreateCopy | True |
+| [Drilling.Common/Managers/CRecipeManager.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L131-L131) | store.CreateCopy | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `RenameWithCompanions` · L343–343
 
-[Drilling.Common/Managers/CRecipeManager.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L343-L343)
+[Drilling.Common/Managers/CRecipeManager.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L343-L343)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2168,13 +2172,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L175-L175) | store.RenameWithCompanions | True |
+| [Drilling.Common/Managers/CRecipeManager.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L175-L175) | store.RenameWithCompanions | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `DeleteWithCompanions` · L344–344
 
-[Drilling.Common/Managers/CRecipeManager.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L344-L344)
+[Drilling.Common/Managers/CRecipeManager.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L344-L344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2195,13 +2199,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L195-L195) | store.DeleteWithCompanions | True |
+| [Drilling.Common/Managers/CRecipeManager.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L195-L195) | store.DeleteWithCompanions | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### EnumMemberDeclaration `String` · L349–349
 
-[Drilling.Common/Managers/CRecipeManager.cs:349–349](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L349-L349)
+[Drilling.Common/Managers/CRecipeManager.cs:349–349](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L349-L349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2216,7 +2220,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Int` · L350–350
 
-[Drilling.Common/Managers/CRecipeManager.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L350-L350)
+[Drilling.Common/Managers/CRecipeManager.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L350-L350)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2231,7 +2235,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Double` · L351–351
 
-[Drilling.Common/Managers/CRecipeManager.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L351-L351)
+[Drilling.Common/Managers/CRecipeManager.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L351-L351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2246,7 +2250,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Bool` · L352–352
 
-[Drilling.Common/Managers/CRecipeManager.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L352-L352)
+[Drilling.Common/Managers/CRecipeManager.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L352-L352)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2261,7 +2265,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadAll` · L408–408
 
-[Drilling.Common/Managers/CRecipeManager.cs:408–408](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L408-L408)
+[Drilling.Common/Managers/CRecipeManager.cs:408–408](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L408-L408)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2280,13 +2284,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L60-L60) | recipeFile.LoadAll | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L60-L60) | recipeFile.LoadAll | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `Find` · L409–409
 
-[Drilling.Common/Managers/CRecipeManager.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L409-L409)
+[Drilling.Common/Managers/CRecipeManager.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L409-L409)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2306,23 +2310,23 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L76-L76) | recipeFile.Find | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L88-L88) | recipeFile.Find | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L96-L96) | recipeFile.Find | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L104-L104) | recipeFile.Find | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L116-L116) | recipeFile.Find | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L136-L136) | recipeFile.Find | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L141-L141) | recipeFile.Find | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L150-L150) | recipeFile.Find | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L154-L154) | recipeFile.Find | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L162-L162) | recipeFile.Find | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L184-L184) | recipeFile.Find | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L76-L76) | recipeFile.Find | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L88-L88) | recipeFile.Find | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L96-L96) | recipeFile.Find | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L104-L104) | recipeFile.Find | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L116-L116) | recipeFile.Find | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L136-L136) | recipeFile.Find | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L141-L141) | recipeFile.Find | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L150-L150) | recipeFile.Find | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L154-L154) | recipeFile.Find | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:162–162](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L162-L162) | recipeFile.Find | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L184-L184) | recipeFile.Find | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `Save` · L410–410
 
-[Drilling.Common/Managers/CRecipeManager.cs:410–410](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L410-L410)
+[Drilling.Common/Managers/CRecipeManager.cs:410–410](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L410-L410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2342,16 +2346,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L87-L87) | recipeFile.Save | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L103-L103) | recipeFile.Save | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L138-L138) | recipeFile.Save | False |
-| [Drilling.Common/Managers/CRecipeManager.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L152-L152) | recipeFile.Save | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L87-L87) | recipeFile.Save | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L103-L103) | recipeFile.Save | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L138-L138) | recipeFile.Save | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L152-L152) | recipeFile.Save | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `Rename` · L411–411
 
-[Drilling.Common/Managers/CRecipeManager.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L411-L411)
+[Drilling.Common/Managers/CRecipeManager.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L411-L411)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2372,13 +2376,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L180-L180) | recipeFile.Rename | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L180-L180) | recipeFile.Rename | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `Delete` · L412–412
 
-[Drilling.Common/Managers/CRecipeManager.cs:412–412](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L412-L412)
+[Drilling.Common/Managers/CRecipeManager.cs:412–412](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L412-L412)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2398,13 +2402,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L200-L200) | recipeFile.Delete | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L200-L200) | recipeFile.Delete | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `LoadHistory` · L413–413
 
-[Drilling.Common/Managers/CRecipeManager.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L413-L413)
+[Drilling.Common/Managers/CRecipeManager.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L413-L413)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2423,13 +2427,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L25-L25) | recipeFile.LoadHistory | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L25-L25) | recipeFile.LoadHistory | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `RecordSelection` · L414–414
 
-[Drilling.Common/Managers/CRecipeManager.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L414-L414)
+[Drilling.Common/Managers/CRecipeManager.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L414-L414)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2450,13 +2454,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L36-L36) | recipeFile.RecordSelection | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L36-L36) | recipeFile.RecordSelection | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `IncrementProtectWindowCount` · L415–415
 
-[Drilling.Common/Managers/CRecipeManager.cs:415–415](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L415-L415)
+[Drilling.Common/Managers/CRecipeManager.cs:415–415](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L415-L415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2476,7 +2480,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L207-L207) | recipeFile.IncrementProtectWindowCount | True |
+| [Drilling.Common/Managers/CRecipeManager.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L207-L207) | recipeFile.IncrementProtectWindowCount | True |
 
 호출하는 대상과 해석 범위:
 
@@ -2495,7 +2499,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetProtectWindowCount` · L416–416
 
-[Drilling.Common/Managers/CRecipeManager.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L416-L416)
+[Drilling.Common/Managers/CRecipeManager.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L416-L416)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2515,7 +2519,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L208-L208) | recipeFile.ResetProtectWindowCount | True |
+| [Drilling.Common/Managers/CRecipeManager.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L208-L208) | recipeFile.ResetProtectWindowCount | True |
 
 호출하는 대상과 해석 범위:
 
@@ -2534,7 +2538,7 @@ flowchart TD
 
 ### MethodDeclaration `SetProtectWindowCount` · L417–417
 
-[Drilling.Common/Managers/CRecipeManager.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L417-L417)
+[Drilling.Common/Managers/CRecipeManager.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L417-L417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2555,7 +2559,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CRecipeManager.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L209-L209) | recipeFile.SetProtectWindowCount | True |
+| [Drilling.Common/Managers/CRecipeManager.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L209-L209) | recipeFile.SetProtectWindowCount | True |
 
 호출하는 대상과 해석 범위:
 
@@ -2574,7 +2578,7 @@ flowchart TD
 
 ### FieldDeclaration `Tab` · L427–427
 
-[Drilling.Common/Managers/CRecipeManager.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L427-L427)
+[Drilling.Common/Managers/CRecipeManager.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L427-L427)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2595,7 +2599,7 @@ flowchart TD
 
 ### FieldDeclaration `Group` · L428–428
 
-[Drilling.Common/Managers/CRecipeManager.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L428-L428)
+[Drilling.Common/Managers/CRecipeManager.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L428-L428)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2616,7 +2620,7 @@ flowchart TD
 
 ### FieldDeclaration `MaximumCountKey` · L429–429
 
-[Drilling.Common/Managers/CRecipeManager.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L429-L429)
+[Drilling.Common/Managers/CRecipeManager.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L429-L429)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2635,9 +2639,30 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `CurrentCountKey` · L430–430
+### FieldDeclaration `RetryCountKey` · L430–430
 
-[Drilling.Common/Managers/CRecipeManager.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L430-L430)
+[Drilling.Common/Managers/CRecipeManager.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L430-L430)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | string Drilling.Common.Recipe.CProtectWindowRecipeData.RetryCountKey |
+| 접근/수식자 | Public / public, const |
+| 반환/값 타입 | string |
+| 소속 타입 | NamedType:Drilling.Common.Recipe.CProtectWindowRecipeData |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 430 | variable-initializer | 변수의 초기값을 지정합니다: RetryCountKey = "PROTECT_WINDOW_RETRY_COUNT" |
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### FieldDeclaration `CurrentCountKey` · L431–431
+
+[Drilling.Common/Managers/CRecipeManager.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L431-L431)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2652,13 +2677,34 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 430 | variable-initializer | 변수의 초기값을 지정합니다: CurrentCountKey = "CURRENT_PROCESS_COUNT" |
+| 431 | variable-initializer | 변수의 초기값을 지정합니다: CurrentCountKey = "CURRENT_PROCESS_COUNT" |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseCount` · L431–436
+### FieldDeclaration `MaximumRetryCount` · L432–432
 
-[Drilling.Common/Managers/CRecipeManager.cs:431–436](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CRecipeManager.cs#L431-L436)
+[Drilling.Common/Managers/CRecipeManager.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L432-L432)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | int Drilling.Common.Recipe.CProtectWindowRecipeData.MaximumRetryCount |
+| 접근/수식자 | Public / public, const |
+| 반환/값 타입 | int |
+| 소속 타입 | NamedType:Drilling.Common.Recipe.CProtectWindowRecipeData |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 432 | variable-initializer | 변수의 초기값을 지정합니다: MaximumRetryCount = 3 |
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### MethodDeclaration `ParseCount` · L433–438
+
+[Drilling.Common/Managers/CRecipeManager.cs:433–438](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L433-L438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2678,38 +2724,101 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4364–4364](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4364-L4364) | CProtectWindowRecipeData.ParseCount | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1420–1420](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1420-L1420) | CProtectWindowRecipeData.ParseCount | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2676–2676](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2676-L2676) | CProtectWindowRecipeData.ParseCount | False |
+| [Drilling.Common/Managers/CRecipeManager.cs:444–444](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L444-L444) | ParseCount | False |
+| [Drilling.Common/Station/CStationProcess.cs:4376–4376](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4376-L4376) | CProtectWindowRecipeData.ParseCount | False |
+| [Drilling.Common/Station/CStationProcess.cs:4724–4724](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4724-L4724) | CProtectWindowRecipeData.ParseCount | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1420–1420](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1420-L1420) | CProtectWindowRecipeData.ParseCount | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2687–2687](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L2687-L2687) | CProtectWindowRecipeData.ParseCount | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 433 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
-| 433 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 433 | Math.Truncate | resolved | double System.Math.Truncate(double) |
-| 434 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
+| 435 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
+| 435 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 435 | Math.Truncate | resolved | double System.Math.Truncate(double) |
+| 436 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 433 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) |
-| 433 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(count) |
-| 433 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Truncate(count) |
-| 433 | if | 조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) &#124;&#124; !double.IsFinite(count) &#124;&#124; count < 0 &#124;&#124; count > int.MaxValue &#124;&#124; count != Math.Truncate(count)) |
-| 434 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{key} must be a nonnegative integer: {text}") |
-| 434 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"{key} must be a nonnegative integer: {text}"); |
-| 435 | return | 호출자에게 값 또는 제어를 반환합니다: return (int)count; |
+| 435 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) |
+| 435 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(count) |
+| 435 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Truncate(count) |
+| 435 | if | 조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var count) &#124;&#124; !double.IsFinite(count) &#124;&#124; count < 0 &#124;&#124; count > int.MaxValue &#124;&#124; count != Math.Truncate(count)) |
+| 436 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{key} must be a nonnegative integer: {text}") |
+| 436 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"{key} must be a nonnegative integer: {text}"); |
+| 437 | return | 호출자에게 값 또는 제어를 반환합니다: return (int)count; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ParseCount"]
- N0["L433 if"]
+ N0["L435 if"]
  M -->|포함| N0
+```
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### MethodDeclaration `ParseRetryCount` · L440–448
+
+[Drilling.Common/Managers/CRecipeManager.cs:440–448](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CRecipeManager.cs#L440-L448)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | int Drilling.Common.Recipe.CProtectWindowRecipeData.ParseRetryCount(string?) |
+| 접근/수식자 | Public / public, static |
+| 반환/값 타입 | int |
+| 소속 타입 | NamedType:Drilling.Common.Recipe.CProtectWindowRecipeData |
+
+입력 계약:
+
+| 이름 | 타입 | 전달 | 선택/기본값 |
+| --- | --- | --- | --- |
+| text | string? | None | False /  |
+
+정적 호출자로 확인된 위치:
+
+| 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
+| --- | --- | --- |
+| [Drilling.Common/Station/CStationProcess.cs:4379–4379](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4379-L4379) | CProtectWindowRecipeData.ParseRetryCount | False |
+| [Drilling.Common/Station/CStationProcess.cs:4725–4725](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4725-L4725) | CProtectWindowRecipeData.ParseRetryCount | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2678–2678](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L2678-L2678) | CProtectWindowRecipeData.ParseRetryCount | False |
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 442 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 444 | ParseCount | resolved | int Drilling.Common.Recipe.CProtectWindowRecipeData.ParseCount(string?, string) · Drilling.Common/Managers/CRecipeManager.cs:433 |
+| 446 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 442 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(text) |
+| 442 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(text)) |
+| 443 | return | 호출자에게 값 또는 제어를 반환합니다: return 0; |
+| 444 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseCount(text, RetryCountKey) |
+| 444 | local-declaration | 지역 변수를 선언합니다: var count = ParseCount(text, RetryCountKey); |
+| 444 | variable-initializer | 변수의 초기값을 지정합니다: count = ParseCount(text, RetryCountKey) |
+| 445 | if | 조건에 따라 분기합니다: if (count > MaximumRetryCount) |
+| 446 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{RetryCountKey} must be between 0 and {MaximumRetryCount}: {text}") |
+| 446 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"{RetryCountKey} must be between 0 and {MaximumRetryCount}: {text}"); |
+| 447 | return | 호출자에게 값 또는 제어를 반환합니다: return count; |
+
+제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
+
+```mermaid
+flowchart TD
+ M["ParseRetryCount"]
+ N0["L442 if"]
+ M -->|포함| N0
+ N1["L445 if"]
+ M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.

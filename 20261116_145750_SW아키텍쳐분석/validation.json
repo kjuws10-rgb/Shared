@@ -1,0 +1,49 @@
+{
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "comparisonBaseCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "passed": true,
+  "architectureChecks": {
+    "markdownFiles": 8,
+    "svgFiles": 1,
+    "localLinks": 24,
+    "sourceCitations": 117
+  },
+  "errors": [],
+  "referenceStatic": {
+    "passed": true,
+    "assertions": 1069243,
+    "report": "../A3 LD Code Ref/validation/static-validation.json"
+  },
+  "browserChecks": 36,
+  "browserPassed": 36,
+  "browserHttpRequests": 0,
+  "sourcePreservation": {
+    "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+    "trackedFiles": 610,
+    "allTrackedByteHashesEqual": true,
+    "headUnchanged": true,
+    "statusBefore": "clean",
+    "statusAfter": "clean",
+    "pushUrl": "DISABLED",
+    "sourceWrites": false,
+    "sourceCommitOrPush": false,
+    "vendorAssemblyLoaded": false,
+    "equipmentOrScriptExecution": false,
+    "hashAlgorithm": "SHA256",
+    "passed": true
+  },
+  "equipmentBuild": "not_run",
+  "equipmentExecution": "not_run",
+  "modelWeightTraining": "not_run",
+  "gitDiffCheck": "passed",
+  "publicationScope": {
+    "allowedPrefixes": [
+      "A3 LD Code Ref/",
+      "20261116_145750_SW아키텍쳐분석/"
+    ],
+    "outsideScopeChanges": 0,
+    "preExistingStagedChanges": 0
+  }
+}

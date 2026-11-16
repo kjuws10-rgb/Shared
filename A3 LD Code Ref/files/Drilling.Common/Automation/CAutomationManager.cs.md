@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 078cdb5110b41429bfa891ea3d01e39801f9263b6c0671e448bb891ab30dfc31 |
 | 파일 분류 | code |
 | 원본 크기/행 | 92,121 bytes / 1,779 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -221,7 +221,7 @@
 
 ### FieldDeclaration `_simulationConfiguredHomeSpeeds` · L15–15
 
-[Drilling.Common/Automation/CAutomationManager.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L15-L15)
+[Drilling.Common/Automation/CAutomationManager.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -249,7 +249,7 @@
 
 ### FieldDeclaration `LocalScriptPathKey` · L16–16
 
-[Drilling.Common/Automation/CAutomationManager.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L16-L16)
+[Drilling.Common/Automation/CAutomationManager.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -270,7 +270,7 @@
 
 ### FieldDeclaration `AutomationScriptPathKey` · L17–17
 
-[Drilling.Common/Automation/CAutomationManager.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L17-L17)
+[Drilling.Common/Automation/CAutomationManager.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -291,7 +291,7 @@
 
 ### FieldDeclaration `Automation1DriveStatusEnabledMask` · L18–18
 
-[Drilling.Common/Automation/CAutomationManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L18-L18)
+[Drilling.Common/Automation/CAutomationManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -312,7 +312,7 @@
 
 ### FieldDeclaration `Automation1AxisStatusHomedMask` · L19–19
 
-[Drilling.Common/Automation/CAutomationManager.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L19-L19)
+[Drilling.Common/Automation/CAutomationManager.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -333,7 +333,7 @@
 
 ### FieldDeclaration `AxisNoMap` · L20–24
 
-[Drilling.Common/Automation/CAutomationManager.cs:20–24](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L20-L24)
+[Drilling.Common/Automation/CAutomationManager.cs:20–24](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L20-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -363,7 +363,7 @@
 
 ### FieldDeclaration `_interfaceManager` · L25–25
 
-[Drilling.Common/Automation/CAutomationManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L25-L25)
+[Drilling.Common/Automation/CAutomationManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -378,7 +378,7 @@
 
 ### FieldDeclaration `_settingManager` · L26–26
 
-[Drilling.Common/Automation/CAutomationManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L26-L26)
+[Drilling.Common/Automation/CAutomationManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -393,7 +393,7 @@
 
 ### FieldDeclaration `_projectRoot` · L27–27
 
-[Drilling.Common/Automation/CAutomationManager.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L27-L27)
+[Drilling.Common/Automation/CAutomationManager.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -408,7 +408,7 @@
 
 ### FieldDeclaration `_defaultLocalScriptDirectory` · L28–28
 
-[Drilling.Common/Automation/CAutomationManager.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L28-L28)
+[Drilling.Common/Automation/CAutomationManager.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -423,7 +423,7 @@
 
 ### FieldDeclaration `_simulationAxisAbleStates` · L29–29
 
-[Drilling.Common/Automation/CAutomationManager.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L29-L29)
+[Drilling.Common/Automation/CAutomationManager.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -451,7 +451,7 @@
 
 ### FieldDeclaration `_simulationAxisPositions` · L30–30
 
-[Drilling.Common/Automation/CAutomationManager.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L30-L30)
+[Drilling.Common/Automation/CAutomationManager.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -479,7 +479,7 @@
 
 ### FieldDeclaration `_simulatedMofReadiness` · L31–31
 
-[Drilling.Common/Automation/CAutomationManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L31-L31)
+[Drilling.Common/Automation/CAutomationManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -507,7 +507,7 @@
 
 ### FieldDeclaration `_stageSimulationTasks` · L32–32
 
-[Drilling.Common/Automation/CAutomationManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L32-L32)
+[Drilling.Common/Automation/CAutomationManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -535,7 +535,7 @@
 
 ### ConstructorDeclaration `.ctor` · L35–42
 
-[Drilling.Common/Automation/CAutomationManager.cs:35–42](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L35-L42)
+[Drilling.Common/Automation/CAutomationManager.cs:35–42](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L35-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -557,7 +557,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L107-L107) | new CAutomationManager | False |
+| [Drilling.Common/Managers/CManager.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CManager.cs#L107-L107) | new CAutomationManager | False |
 
 호출하는 대상과 해석 범위:
 
@@ -588,7 +588,7 @@
 
 ### PropertyDeclaration `StatusSnapshots` · L46–46
 
-[Drilling.Common/Automation/CAutomationManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L46-L46)
+[Drilling.Common/Automation/CAutomationManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -603,7 +603,7 @@
 
 ### GetAccessorDeclaration `get_StatusSnapshots` · L46–46
 
-[Drilling.Common/Automation/CAutomationManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L46-L46)
+[Drilling.Common/Automation/CAutomationManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -618,7 +618,7 @@
 
 ### MethodDeclaration `Connect` · L48–51
 
-[Drilling.Common/Automation/CAutomationManager.cs:48–51](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L48-L51)
+[Drilling.Common/Automation/CAutomationManager.cs:48–51](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L48-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -653,7 +653,7 @@
 
 ### MethodDeclaration `Disconnect` · L53–56
 
-[Drilling.Common/Automation/CAutomationManager.cs:53–56](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L53-L56)
+[Drilling.Common/Automation/CAutomationManager.cs:53–56](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L53-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -688,7 +688,7 @@
 
 ### MethodDeclaration `IsConnect` · L58–61
 
-[Drilling.Common/Automation/CAutomationManager.cs:58–61](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L58-L61)
+[Drilling.Common/Automation/CAutomationManager.cs:58–61](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L58-L61)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -707,36 +707,36 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Alarm/CAlarmManager.cs#L594-L594) | automation.IsConnect | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1602–1602](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1602-L1602) | automation.IsConnect | False |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L128-L128) | _automation.IsConnect | False |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L287-L287) | _automation.IsConnect | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L265-L265) | Automation.IsConnect | False |
-| [Drilling.Common/Station/CStationProcess.cs:1375–1375](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1375-L1375) | _automationManager.IsConnect | False |
-| [Drilling.Common/Station/CStationProcess.cs:2788–2788](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L2788-L2788) | _owner._automationManager.IsConnect | False |
-| [Drilling.Common/Station/CStationProcess.cs:2904–2904](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L2904-L2904) | _owner._automationManager.IsConnect | False |
-| [Drilling.Common/Station/CStationProcess.cs:2937–2937](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L2937-L2937) | _owner._automationManager.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3501–3501](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3501-L3501) | manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L1160-L1160) | automationManager.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1333–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L1333-L1333) | automationManager.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1798–1798](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1798-L1798) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1890–1890](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1890-L1890) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1989–1989](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1989-L1989) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2191–2191](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2191-L2191) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2349–2349](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2349-L2349) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2370–2370](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2370-L2370) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2580–2580](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2580-L2580) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2724–2724](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2724-L2724) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3476–3476](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3476-L3476) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4064–4064](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4064-L4064) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4221–4221](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4221-L4221) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4400–4400](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4400-L4400) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4683–4683](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4683-L4683) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4891–4891](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4891-L4891) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5303–5303](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5303-L5303) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5405–5405](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5405-L5405) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7729–7729](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7729-L7729) | automationManager.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L89-L89) | automationManager.IsConnect | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Alarm/CAlarmManager.cs#L594-L594) | automation.IsConnect | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1602–1602](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1602-L1602) | automation.IsConnect | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L128-L128) | _automation.IsConnect | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L287-L287) | _automation.IsConnect | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L265-L265) | Automation.IsConnect | False |
+| [Drilling.Common/Station/CStationProcess.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1376-L1376) | _automationManager.IsConnect | False |
+| [Drilling.Common/Station/CStationProcess.cs:2789–2789](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L2789-L2789) | _owner._automationManager.IsConnect | False |
+| [Drilling.Common/Station/CStationProcess.cs:2905–2905](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L2905-L2905) | _owner._automationManager.IsConnect | False |
+| [Drilling.Common/Station/CStationProcess.cs:2938–2938](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L2938-L2938) | _owner._automationManager.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3552–3552](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3552-L3552) | manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L1160-L1160) | automationManager.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1333–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L1333-L1333) | automationManager.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1788–1788](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1788-L1788) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1880–1880](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1880-L1880) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1979–1979](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1979-L1979) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2179–2179](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2179-L2179) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2337–2337](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2337-L2337) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2358–2358](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2358-L2358) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2568–2568](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2568-L2568) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2712–2712](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2712-L2712) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3464–3464](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3464-L3464) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4052–4052](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4052-L4052) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4209–4209](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4209-L4209) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4388–4388](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4388-L4388) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4671–4671](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4671-L4671) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4879–4879](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4879-L4879) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5291–5291](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5291-L5291) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5393–5393](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5393-L5393) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7704–7704](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7704-L7704) | automationManager.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L89-L89) | automationManager.IsConnect | False |
 
 호출하는 대상과 해석 범위:
 
@@ -755,7 +755,7 @@
 
 ### MethodDeclaration `IsSimul` · L63–66
 
-[Drilling.Common/Automation/CAutomationManager.cs:63–66](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L63-L66)
+[Drilling.Common/Automation/CAutomationManager.cs:63–66](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L63-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -774,73 +774,73 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Alarm/CAlarmManager.cs#L594-L594) | automation.IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L89-L89) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L257-L257) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L277-L277) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L292-L292) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L307-L307) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L328-L328) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L341-L341) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L454-L454) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L509-L509) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L526-L526) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:537–537](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L537-L537) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L602-L602) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:609–609](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L609-L609) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1102–1102](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1102-L1102) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1137–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1137-L1137) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1151-L1151) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1172–1172](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1172-L1172) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1200–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1200-L1200) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1241–1241](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1241-L1241) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1258–1258](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1258-L1258) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1309–1309](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1309-L1309) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1602–1602](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1602-L1602) | automation.IsSimul | False |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L128-L128) | _automation.IsSimul | False |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L287-L287) | _automation.IsSimul | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167) | Automation.IsSimul | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L265-L265) | Automation.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:1375–1375](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1375-L1375) | _automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:2788–2788](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L2788-L2788) | _owner._automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:2900–2900](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L2900-L2900) | _owner._automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:2933–2933](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L2933-L2933) | _owner._automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:3832–3832](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3832-L3832) | _automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:3838–3838](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3838-L3838) | _automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:3877–3877](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3877-L3877) | _automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:3880–3880](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3880-L3880) | _automationManager.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3501–3501](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3501-L3501) | manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3505–3505](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3505-L3505) | manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3619–3619](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3619-L3619) | manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3625–3625](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3625-L3625) | manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3655–3655](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3655-L3655) | manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1128–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L1128-L1128) | automationManager.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L1155-L1155) | automationManager.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1333–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L1333-L1333) | automationManager.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1342–1342](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L1342-L1342) | automationManager.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1798–1798](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1798-L1798) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1890–1890](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1890-L1890) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1988–1988](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1988-L1988) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2191–2191](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2191-L2191) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2349–2349](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2349-L2349) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2361–2361](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2361-L2361) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2580–2580](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2580-L2580) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2663–2663](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2663-L2663) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2724–2724](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2724-L2724) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3476–3476](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3476-L3476) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3792–3792](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3792-L3792) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4064–4064](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4064-L4064) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4113–4113](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4113-L4113) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4221–4221](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4221-L4221) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4400–4400](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4400-L4400) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4520–4520](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4520-L4520) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4683–4683](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4683-L4683) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4891–4891](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4891-L4891) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5303–5303](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5303-L5303) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5327–5327](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5327-L5327) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5405–5405](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5405-L5405) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7729–7729](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7729-L7729) | automationManager.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L89-L89) | automationManager.IsSimul | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Alarm/CAlarmManager.cs#L594-L594) | automation.IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L89-L89) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L257-L257) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L277-L277) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L292-L292) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L307-L307) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L328-L328) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L341-L341) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L454-L454) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L509-L509) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L526-L526) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:537–537](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L537-L537) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L602-L602) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:609–609](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L609-L609) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1102–1102](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1102-L1102) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1137–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1137-L1137) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1151-L1151) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1172–1172](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1172-L1172) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1200–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1200-L1200) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1241–1241](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1241-L1241) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1258–1258](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1258-L1258) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1309–1309](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1309-L1309) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1602–1602](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1602-L1602) | automation.IsSimul | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L128-L128) | _automation.IsSimul | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L287-L287) | _automation.IsSimul | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167) | Automation.IsSimul | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L265-L265) | Automation.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1376-L1376) | _automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:2789–2789](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L2789-L2789) | _owner._automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:2901–2901](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L2901-L2901) | _owner._automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:2934–2934](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L2934-L2934) | _owner._automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:3833–3833](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L3833-L3833) | _automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:3839–3839](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L3839-L3839) | _automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:3878–3878](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L3878-L3878) | _automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:3881–3881](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L3881-L3881) | _automationManager.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3552–3552](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3552-L3552) | manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3556–3556](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3556-L3556) | manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3670–3670](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3670-L3670) | manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3676–3676](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3676-L3676) | manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3706–3706](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3706-L3706) | manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1128–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L1128-L1128) | automationManager.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L1155-L1155) | automationManager.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1333–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L1333-L1333) | automationManager.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1342–1342](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L1342-L1342) | automationManager.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1788–1788](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1788-L1788) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1880–1880](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1880-L1880) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1978–1978](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1978-L1978) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2179–2179](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2179-L2179) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2337–2337](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2337-L2337) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2349–2349](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2349-L2349) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2568–2568](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2568-L2568) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2651–2651](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2651-L2651) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2712–2712](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2712-L2712) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3464–3464](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3464-L3464) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3780–3780](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3780-L3780) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4052–4052](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4052-L4052) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4101–4101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4101-L4101) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4209–4209](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4209-L4209) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4388–4388](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4388-L4388) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4508–4508](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4508-L4508) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4671–4671](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4671-L4671) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4879–4879](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4879-L4879) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5291–5291](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5291-L5291) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5315–5315](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5315-L5315) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5393–5393](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5393-L5393) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7704–7704](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7704-L7704) | automationManager.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L89-L89) | automationManager.IsSimul | False |
 
 호출하는 대상과 해석 범위:
 
@@ -859,7 +859,7 @@
 
 ### MethodDeclaration `ReadStatus` · L68–71
 
-[Drilling.Common/Automation/CAutomationManager.cs:68–71](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L68-L71)
+[Drilling.Common/Automation/CAutomationManager.cs:68–71](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L68-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -879,7 +879,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2372–2372](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2372-L2372) | _manager.automation.ReadStatus | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2360–2360](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2360-L2360) | _manager.automation.ReadStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -898,7 +898,7 @@
 
 ### MethodDeclaration `ReadControllerAxes` · L73–80
 
-[Drilling.Common/Automation/CAutomationManager.cs:73–80](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L73-L80)
+[Drilling.Common/Automation/CAutomationManager.cs:73–80](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L73-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -918,8 +918,8 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1992–1992](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1992-L1992) | _manager.automation.ReadControllerAxes | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2006–2006](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2006-L2006) | _manager.automation.ReadControllerAxes | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1982–1982](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1982-L1982) | _manager.automation.ReadControllerAxes | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1996–1996](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1996-L1996) | _manager.automation.ReadControllerAxes | False |
 
 호출하는 대상과 해석 범위:
 
@@ -966,7 +966,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadProcessorUsage` · L82–85
 
-[Drilling.Common/Automation/CAutomationManager.cs:82–85](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L82-L85)
+[Drilling.Common/Automation/CAutomationManager.cs:82–85](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L82-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -986,7 +986,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L45-L45) | _automation.ReadProcessorUsage | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L45-L45) | _automation.ReadProcessorUsage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1005,7 +1005,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetController` · L87–95
 
-[Drilling.Common/Automation/CAutomationManager.cs:87–95](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L87-L95)
+[Drilling.Common/Automation/CAutomationManager.cs:87–95](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L87-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1025,8 +1025,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2213–2213](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2213-L2213) | _manager.automation.ResetController | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2354–2354](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2354-L2354) | _manager.automation.ResetController | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2201–2201](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2201-L2201) | _manager.automation.ResetController | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2342–2342](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2342-L2342) | _manager.automation.ResetController | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1062,7 +1062,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadIo` · L97–101
 
-[Drilling.Common/Automation/CAutomationManager.cs:97–101](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L97-L101)
+[Drilling.Common/Automation/CAutomationManager.cs:97–101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L97-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1083,9 +1083,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1752–1752](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1752-L1752) | _manager.automation.ReadIo | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2476–2476](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2476-L2476) | _manager.automation.ReadIo | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2869–2869](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2869-L2869) | _manager.automation.ReadIo | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1742–1742](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1742-L1742) | _manager.automation.ReadIo | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2464–2464](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2464-L2464) | _manager.automation.ReadIo | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2857–2857](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2857-L2857) | _manager.automation.ReadIo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1108,7 +1108,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIo` · L103–107
 
-[Drilling.Common/Automation/CAutomationManager.cs:103–107](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L103-L107)
+[Drilling.Common/Automation/CAutomationManager.cs:103–107](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L103-L107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1130,9 +1130,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1752–1752](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1752-L1752) | _manager.automation.SetIo | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2468–2468](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2468-L2468) | _manager.automation.SetIo | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2933–2933](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2933-L2933) | _manager.automation.SetIo | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1742–1742](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1742-L1742) | _manager.automation.SetIo | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2456–2456](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2456-L2456) | _manager.automation.SetIo | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2921–2921](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2921-L2921) | _manager.automation.SetIo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1156,7 +1156,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateIoAddress` · L109–163
 
-[Drilling.Common/Automation/CAutomationManager.cs:109–163](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L109-L163)
+[Drilling.Common/Automation/CAutomationManager.cs:109–163](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L109-L163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1176,8 +1176,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L99-L99) | ValidateIoAddress | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L105-L105) | ValidateIoAddress | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L99-L99) | ValidateIoAddress | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L105-L105) | ValidateIoAddress | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1292,7 +1292,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L113–116
 
-[Drilling.Common/Automation/CAutomationManager.cs:113–116](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L113-L116)
+[Drilling.Common/Automation/CAutomationManager.cs:113–116](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L113-L116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1328,7 +1328,7 @@ flowchart TD
 
 ### MethodDeclaration `TrimIoAxisPrefix` · L165–173
 
-[Drilling.Common/Automation/CAutomationManager.cs:165–173](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L165-L173)
+[Drilling.Common/Automation/CAutomationManager.cs:165–173](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L165-L173)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1347,7 +1347,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L130-L130) | TrimIoAxisPrefix | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L130-L130) | TrimIoAxisPrefix | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1380,7 +1380,7 @@ flowchart TD
 
 ### MethodDeclaration `IsUnsignedInteger` · L175–178
 
-[Drilling.Common/Automation/CAutomationManager.cs:175–178](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L175-L178)
+[Drilling.Common/Automation/CAutomationManager.cs:175–178](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L175-L178)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1399,8 +1399,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L157-L157) | IsUnsignedInteger | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L157-L157) | IsUnsignedInteger | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L157-L157) | IsUnsignedInteger | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L157-L157) | IsUnsignedInteger | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1419,7 +1419,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteRaw` · L180–184
 
-[Drilling.Common/Automation/CAutomationManager.cs:180–184](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L180-L184)
+[Drilling.Common/Automation/CAutomationManager.cs:180–184](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L180-L184)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1441,31 +1441,31 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L70-L70) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L75-L75) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L84-L84) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L94-L94) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L100-L100) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L106-L106) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L312-L312) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L320-L320) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L333-L333) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L343-L343) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L484-L484) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L520-L520) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:531–531](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L531-L531) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L542-L542) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L549-L549) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L559-L559) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:580–580](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L580-L580) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:633–633](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L633-L633) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:657–657](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L657-L657) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1139–1139](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1139-L1139) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1153–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1153-L1153) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1174–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1174-L1174) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1207–1207](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1207-L1207) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1247–1247](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1247-L1247) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1260–1260](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1260-L1260) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L70-L70) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L75-L75) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L84-L84) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L94-L94) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L100-L100) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L106-L106) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L312-L312) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L320-L320) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L333-L333) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L343-L343) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L484-L484) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L520-L520) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:531–531](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L531-L531) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L542-L542) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L549-L549) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L559-L559) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:580–580](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L580-L580) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:633–633](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L633-L633) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:657–657](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L657-L657) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1139–1139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1139-L1139) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1153–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1153-L1153) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1174–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1174-L1174) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1207–1207](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1207-L1207) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1247–1247](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1247-L1247) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1260–1260](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1260-L1260) | ExecuteRaw | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1489,7 +1489,7 @@ flowchart TD
 
 ### MethodDeclaration `Move` · L186–189
 
-[Drilling.Common/Automation/CAutomationManager.cs:186–189](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L186-L189)
+[Drilling.Common/Automation/CAutomationManager.cs:186–189](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L186-L189)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1531,7 +1531,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveRel` · L191–194
 
-[Drilling.Common/Automation/CAutomationManager.cs:191–194](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L191-L194)
+[Drilling.Common/Automation/CAutomationManager.cs:191–194](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L191-L194)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1573,7 +1573,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L196–199
 
-[Drilling.Common/Automation/CAutomationManager.cs:196–199](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L196-L199)
+[Drilling.Common/Automation/CAutomationManager.cs:196–199](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L196-L199)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1609,7 +1609,7 @@ flowchart TD
 
 ### MethodDeclaration `ManualMove` · L201–206
 
-[Drilling.Common/Automation/CAutomationManager.cs:201–206](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L201-L206)
+[Drilling.Common/Automation/CAutomationManager.cs:201–206](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L201-L206)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1633,9 +1633,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1562–1562](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1562-L1562) | automation.ManualMove | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3542–3542](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3542-L3542) | _manager.automation.ManualMove | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3548–3548](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3548-L3548) | _manager.automation.ManualMove | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1562–1562](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1562-L1562) | automation.ManualMove | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3530–3530](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3530-L3530) | _manager.automation.ManualMove | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3536–3536](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3536-L3536) | _manager.automation.ManualMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1678,7 +1678,7 @@ flowchart TD
 
 ### MethodDeclaration `JogStart` · L208–213
 
-[Drilling.Common/Automation/CAutomationManager.cs:208–213](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L208-L213)
+[Drilling.Common/Automation/CAutomationManager.cs:208–213](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L208-L213)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1699,7 +1699,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3581–3581](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3581-L3581) | _manager.automation.JogStart | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3569–3569](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3569-L3569) | _manager.automation.JogStart | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1737,7 +1737,7 @@ flowchart TD
 
 ### MethodDeclaration `JogStop` · L215–215
 
-[Drilling.Common/Automation/CAutomationManager.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L215-L215)
+[Drilling.Common/Automation/CAutomationManager.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L215-L215)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1757,7 +1757,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3582–3582](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3582-L3582) | _manager.automation.JogStop | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3570–3570](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3570-L3570) | _manager.automation.JogStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1775,7 +1775,7 @@ flowchart TD
 
 ### MethodDeclaration `AbortMotion` · L216–216
 
-[Drilling.Common/Automation/CAutomationManager.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L216-L216)
+[Drilling.Common/Automation/CAutomationManager.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L216-L216)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1796,10 +1796,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1584–1584](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1584-L1584) | automation.AbortMotion | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3627–3627](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3627-L3627) | _manager.automation.AbortMotion | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3736–3736](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3736-L3736) | _manager.automation.AbortMotion | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6377–6377](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6377-L6377) | _manager.automation.AbortMotion | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1584–1584](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1584-L1584) | automation.AbortMotion | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3615–3615](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3615-L3615) | _manager.automation.AbortMotion | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3724–3724](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3724-L3724) | _manager.automation.AbortMotion | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6363–6363](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6363-L6363) | _manager.automation.AbortMotion | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1817,7 +1817,7 @@ flowchart TD
 
 ### MethodDeclaration `ServoOn` · L217–220
 
-[Drilling.Common/Automation/CAutomationManager.cs:217–220](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L217-L220)
+[Drilling.Common/Automation/CAutomationManager.cs:217–220](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L217-L220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1838,8 +1838,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2392–2392](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2392-L2392) | _manager.automation.ServoOn | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2752–2752](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2752-L2752) | _manager.automation.ServoOn | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2380–2380](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2380-L2380) | _manager.automation.ServoOn | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2740–2740](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2740-L2740) | _manager.automation.ServoOn | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1858,7 +1858,7 @@ flowchart TD
 
 ### MethodDeclaration `ServoOff` · L222–225
 
-[Drilling.Common/Automation/CAutomationManager.cs:222–225](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L222-L225)
+[Drilling.Common/Automation/CAutomationManager.cs:222–225](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L222-L225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1879,7 +1879,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2756–2756](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2756-L2756) | _manager.automation.ServoOff | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2744–2744](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2744-L2744) | _manager.automation.ServoOff | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1898,7 +1898,7 @@ flowchart TD
 
 ### MethodDeclaration `Home` · L227–230
 
-[Drilling.Common/Automation/CAutomationManager.cs:227–230](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L227-L230)
+[Drilling.Common/Automation/CAutomationManager.cs:227–230](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L227-L230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1934,7 +1934,7 @@ flowchart TD
 
 ### MethodDeclaration `HomeAsync` · L232–235
 
-[Drilling.Common/Automation/CAutomationManager.cs:232–235](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L232-L235)
+[Drilling.Common/Automation/CAutomationManager.cs:232–235](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L232-L235)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1955,8 +1955,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2408–2408](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2408-L2408) | _manager.automation.HomeAsync | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2748–2748](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2748-L2748) | _manager.automation.HomeAsync | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2396–2396](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2396-L2396) | _manager.automation.HomeAsync | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2736–2736](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2736-L2736) | _manager.automation.HomeAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1975,7 +1975,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetAlarm` · L237–240
 
-[Drilling.Common/Automation/CAutomationManager.cs:237–240](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L237-L240)
+[Drilling.Common/Automation/CAutomationManager.cs:237–240](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L237-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1996,7 +1996,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1812–1812](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1812-L1812) | _manager.automation.ResetAlarm | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1802–1802](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1802-L1802) | _manager.automation.ResetAlarm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2015,7 +2015,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxis` · L242–245
 
-[Drilling.Common/Automation/CAutomationManager.cs:242–245](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L242-L245)
+[Drilling.Common/Automation/CAutomationManager.cs:242–245](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L242-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2051,7 +2051,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisStatus` · L247–250
 
-[Drilling.Common/Automation/CAutomationManager.cs:247–250](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L247-L250)
+[Drilling.Common/Automation/CAutomationManager.cs:247–250](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L247-L250)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2087,7 +2087,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisStatus` · L252–264
 
-[Drilling.Common/Automation/CAutomationManager.cs:252–264](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L252-L264)
+[Drilling.Common/Automation/CAutomationManager.cs:252–264](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L252-L264)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2109,7 +2109,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L249-L249) | ReadAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L249-L249) | ReadAxisStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2159,7 +2159,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisStatusByName` · L266–269
 
-[Drilling.Common/Automation/CAutomationManager.cs:266–269](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L266-L269)
+[Drilling.Common/Automation/CAutomationManager.cs:266–269](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L266-L269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2195,7 +2195,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisStatusByName` · L271–284
 
-[Drilling.Common/Automation/CAutomationManager.cs:271–284](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L271-L284)
+[Drilling.Common/Automation/CAutomationManager.cs:271–284](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L271-L284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2217,7 +2217,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L268-L268) | ReadAxisStatusByName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L268-L268) | ReadAxisStatusByName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2269,7 +2269,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisStatusByNameNoLog` · L286–299
 
-[Drilling.Common/Automation/CAutomationManager.cs:286–299](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L286-L299)
+[Drilling.Common/Automation/CAutomationManager.cs:286–299](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L286-L299)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2292,8 +2292,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L23-L23) | _automation.ReadAxisStatusByNameNoLog | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2456–2456](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2456-L2456) | _manager.automation.ReadAxisStatusByNameNoLog | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L23-L23) | _automation.ReadAxisStatusByNameNoLog | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2444–2444](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2444-L2444) | _manager.automation.ReadAxisStatusByNameNoLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2345,7 +2345,7 @@ flowchart TD
 
 ### MethodDeclaration `RunLocalScript` · L301–313
 
-[Drilling.Common/Automation/CAutomationManager.cs:301–313](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L301-L313)
+[Drilling.Common/Automation/CAutomationManager.cs:301–313](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L301-L313)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2416,7 +2416,7 @@ flowchart TD
 
 ### MethodDeclaration `UploadScript` · L315–321
 
-[Drilling.Common/Automation/CAutomationManager.cs:315–321](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L315-L321)
+[Drilling.Common/Automation/CAutomationManager.cs:315–321](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L315-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2438,15 +2438,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L446-L446) | UploadScript | True |
-| [Drilling.Common/Station/CStationProcess.cs:683–683](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L683-L683) | _automationManager.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3618–3618](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3618-L3618) | manager.automation.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2023–2023](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2023-L2023) | _manager.automation.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2648–2648](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2648-L2648) | _manager.automation.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3693–3693](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3693-L3693) | _manager.automation.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4103–4103](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4103-L4103) | _manager.automation.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4494–4494](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4494-L4494) | _manager.automation.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5316–5316](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5316-L5316) | _manager.automation.UploadScript | True |
+| [Drilling.Common/Automation/CAutomationManager.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L446-L446) | UploadScript | True |
+| [Drilling.Common/Station/CStationProcess.cs:684–684](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L684-L684) | _automationManager.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3669–3669](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3669-L3669) | manager.automation.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2013–2013](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2013-L2013) | _manager.automation.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2636–2636](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2636-L2636) | _manager.automation.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3681–3681](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3681-L3681) | _manager.automation.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4091-L4091) | _manager.automation.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4482–4482](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4482-L4482) | _manager.automation.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5304–5304](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5304-L5304) | _manager.automation.UploadScript | True |
 
 호출하는 대상과 해석 범위:
 
@@ -2481,7 +2481,7 @@ flowchart TD
 
 ### MethodDeclaration `RunScript` · L323–334
 
-[Drilling.Common/Automation/CAutomationManager.cs:323–334](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L323-L334)
+[Drilling.Common/Automation/CAutomationManager.cs:323–334](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L323-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2503,12 +2503,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:726–726](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L726-L726) | _automationManager.RunScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2650–2650](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2650-L2650) | _manager.automation.RunScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3708–3708](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3708-L3708) | _manager.automation.RunScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4105–4105](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4105-L4105) | _manager.automation.RunScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4510–4510](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4510-L4510) | _manager.automation.RunScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5319–5319](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5319-L5319) | _manager.automation.RunScript | True |
+| [Drilling.Common/Station/CStationProcess.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L727-L727) | _automationManager.RunScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2638–2638](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2638-L2638) | _manager.automation.RunScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3696–3696](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3696-L3696) | _manager.automation.RunScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4093–4093](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4093-L4093) | _manager.automation.RunScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4498–4498](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4498-L4498) | _manager.automation.RunScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5307–5307](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5307-L5307) | _manager.automation.RunScript | True |
 
 호출하는 대상과 해석 범위:
 
@@ -2551,7 +2551,7 @@ flowchart TD
 
 ### MethodDeclaration `RunScriptIfIdle` · L336–344
 
-[Drilling.Common/Automation/CAutomationManager.cs:336–344](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L336-L344)
+[Drilling.Common/Automation/CAutomationManager.cs:336–344](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L336-L344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2573,9 +2573,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1100–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1100-L1100) | RunScriptIfIdle | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3631–3631](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3631-L3631) | manager.automation.RunScriptIfIdle | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2025–2025](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2025-L2025) | _manager.automation.RunScriptIfIdle | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1100–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1100-L1100) | RunScriptIfIdle | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3682–3682](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3682-L3682) | manager.automation.RunScriptIfIdle | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2015–2015](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2015-L2015) | _manager.automation.RunScriptIfIdle | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2618,7 +2618,7 @@ flowchart TD
 
 ### MethodDeclaration `RunBufferedScript` · L346–358
 
-[Drilling.Common/Automation/CAutomationManager.cs:346–358](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L346-L358)
+[Drilling.Common/Automation/CAutomationManager.cs:346–358](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L346-L358)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2662,7 +2662,7 @@ flowchart TD
 
 ### MethodDeclaration `RunBufferedScripts` · L360–367
 
-[Drilling.Common/Automation/CAutomationManager.cs:360–367](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L360-L367)
+[Drilling.Common/Automation/CAutomationManager.cs:360–367](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L360-L367)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2686,8 +2686,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L357-L357) | RunBufferedScripts | False |
-| [Drilling.Common/Station/CStationProcess.cs:1100–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1100-L1100) | _automationManager.RunBufferedScripts | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L357-L357) | RunBufferedScripts | False |
+| [Drilling.Common/Station/CStationProcess.cs:1101–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1101-L1101) | _automationManager.RunBufferedScripts | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2708,7 +2708,7 @@ flowchart TD
 
 ### MethodDeclaration `RunStagePreparedBufferedScripts` · L372–372
 
-[Drilling.Common/Automation/CAutomationManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L372-L372)
+[Drilling.Common/Automation/CAutomationManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L372-L372)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2732,7 +2732,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4086–4086](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4086-L4086) | _automationManager.RunStagePreparedBufferedScripts | True |
+| [Drilling.Common/Station/CStationProcess.cs:4087–4087](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4087-L4087) | _automationManager.RunStagePreparedBufferedScripts | True |
 
 호출하는 대상과 해석 범위:
 
@@ -2750,7 +2750,7 @@ flowchart TD
 
 ### MethodDeclaration `RunBufferedScriptsCore` · L373–487
 
-[Drilling.Common/Automation/CAutomationManager.cs:373–487](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L373-L487)
+[Drilling.Common/Automation/CAutomationManager.cs:373–487](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L373-L487)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2776,8 +2776,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:367–367](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L367-L367) | RunBufferedScriptsCore | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L372-L372) | RunBufferedScriptsCore | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:367–367](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L367-L367) | RunBufferedScriptsCore | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L372-L372) | RunBufferedScriptsCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2985,7 +2985,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateBufferedRunControllerFileName` · L489–493
 
-[Drilling.Common/Automation/CAutomationManager.cs:489–493](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L489-L493)
+[Drilling.Common/Automation/CAutomationManager.cs:489–493](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L489-L493)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3006,7 +3006,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L423-L423) | CreateBufferedRunControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L423-L423) | CreateBufferedRunControllerFileName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3032,7 +3032,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateTaskScopedScriptFileName` · L495–504
 
-[Drilling.Common/Automation/CAutomationManager.cs:495–504](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L495-L504)
+[Drilling.Common/Automation/CAutomationManager.cs:495–504](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L495-L504)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3052,7 +3052,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:491–491](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L491-L491) | CreateTaskScopedScriptFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:491–491](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L491-L491) | CreateTaskScopedScriptFileName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3088,7 +3088,7 @@ flowchart TD
 
 ### MethodDeclaration `StopTask` · L506–521
 
-[Drilling.Common/Automation/CAutomationManager.cs:506–521](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L506-L521)
+[Drilling.Common/Automation/CAutomationManager.cs:506–521](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L506-L521)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3109,13 +3109,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1109–1109](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1109-L1109) | StopTask | True |
-| [Drilling.Common/Station/CStationProcess.cs:951–951](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L951-L951) | _automationManager.StopTask | True |
-| [Drilling.Common/Station/CStationProcess.cs:1122–1122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1122-L1122) | _automationManager.StopTask | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3831–3831](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3831-L3831) | _manager.automation.StopTask | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4573–4573](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4573-L4573) | _manager.automation.StopTask | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4911–4911](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4911-L4911) | _manager.automation.StopTask | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5417–5417](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5417-L5417) | _manager.automation.StopTask | True |
+| [Drilling.Common/Automation/CAutomationManager.cs:1109–1109](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1109-L1109) | StopTask | True |
+| [Drilling.Common/Station/CStationProcess.cs:952–952](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L952-L952) | _automationManager.StopTask | True |
+| [Drilling.Common/Station/CStationProcess.cs:1123–1123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1123-L1123) | _automationManager.StopTask | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3819–3819](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3819-L3819) | _manager.automation.StopTask | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4561–4561](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4561-L4561) | _manager.automation.StopTask | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4899–4899](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4899-L4899) | _manager.automation.StopTask | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5405–5405](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5405-L5405) | _manager.automation.StopTask | True |
 
 호출하는 대상과 해석 범위:
 
@@ -3165,7 +3165,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTaskStatus` · L523–532
 
-[Drilling.Common/Automation/CAutomationManager.cs:523–532](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L523-L532)
+[Drilling.Common/Automation/CAutomationManager.cs:523–532](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L523-L532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3186,13 +3186,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L44-L44) | _automation.ReadTaskStatus | True |
-| [Drilling.Common/Station/CStationProcess.cs:896–896](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L896-L896) | _automationManager.ReadTaskStatus | True |
-| [Drilling.Common/Station/CStationProcess.cs:985–985](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L985-L985) | _automationManager.ReadTaskStatus | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2010–2010](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2010-L2010) | _manager.automation.ReadTaskStatus | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3783–3783](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3783-L3783) | _manager.automation.ReadTaskStatus | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4478–4478](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4478-L4478) | _manager.automation.ReadTaskStatus | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5516–5516](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L5516-L5516) | _manager.automation.ReadTaskStatus | True |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L44-L44) | _automation.ReadTaskStatus | True |
+| [Drilling.Common/Station/CStationProcess.cs:897–897](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L897-L897) | _automationManager.ReadTaskStatus | True |
+| [Drilling.Common/Station/CStationProcess.cs:986–986](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L986-L986) | _automationManager.ReadTaskStatus | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2000–2000](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2000-L2000) | _manager.automation.ReadTaskStatus | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3771–3771](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3771-L3771) | _manager.automation.ReadTaskStatus | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4466–4466](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4466-L4466) | _manager.automation.ReadTaskStatus | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5504–5504](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5504-L5504) | _manager.automation.ReadTaskStatus | True |
 
 호출하는 대상과 해석 범위:
 
@@ -3235,7 +3235,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTaskLineStatus` · L534–543
 
-[Drilling.Common/Automation/CAutomationManager.cs:534–543](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L534-L543)
+[Drilling.Common/Automation/CAutomationManager.cs:534–543](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L534-L543)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3256,7 +3256,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1036–1036](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1036-L1036) | _automationManager.ReadTaskLineStatus | True |
+| [Drilling.Common/Station/CStationProcess.cs:1037–1037](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1037-L1037) | _automationManager.ReadTaskLineStatus | True |
 
 호출하는 대상과 해석 범위:
 
@@ -3296,7 +3296,7 @@ flowchart TD
 
 ### MethodDeclaration `ReleaseEncoderScaleFactor` · L545–552
 
-[Drilling.Common/Automation/CAutomationManager.cs:545–552](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L545-L552)
+[Drilling.Common/Automation/CAutomationManager.cs:545–552](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L545-L552)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3348,7 +3348,7 @@ flowchart TD
 
 ### MethodDeclaration `SetGalvoLaserOutput` · L554–562
 
-[Drilling.Common/Automation/CAutomationManager.cs:554–562](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L554-L562)
+[Drilling.Common/Automation/CAutomationManager.cs:554–562](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L554-L562)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3371,14 +3371,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:572–572](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L572-L572) | SetGalvoLaserOutput | True |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L364-L364) | Automation.SetGalvoLaserOutput | True |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:376–376](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L376-L376) | Automation.SetGalvoLaserOutput | True |
-| [Drilling.Common/Station/CStationProcess.cs:4169–4169](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4169-L4169) | _automationManager.SetGalvoLaserOutput | True |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3663–3663](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3663-L3663) | manager.automation.SetGalvoLaserOutput | True |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3709–3709](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3709-L3709) | _defaultManager!.automation.SetGalvoLaserOutput | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4588–4588](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4588-L4588) | _manager.automation.SetGalvoLaserOutput | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4930–4930](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L4930-L4930) | _manager.automation.SetGalvoLaserOutput | True |
+| [Drilling.Common/Automation/CAutomationManager.cs:572–572](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L572-L572) | SetGalvoLaserOutput | True |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L364-L364) | Automation.SetGalvoLaserOutput | True |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:376–376](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L376-L376) | Automation.SetGalvoLaserOutput | True |
+| [Drilling.Common/Station/CStationProcess.cs:4170–4170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4170-L4170) | _automationManager.SetGalvoLaserOutput | True |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3714–3714](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3714-L3714) | manager.automation.SetGalvoLaserOutput | True |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3760–3760](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3760-L3760) | _defaultManager!.automation.SetGalvoLaserOutput | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4576–4576](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4576-L4576) | _manager.automation.SetGalvoLaserOutput | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4918–4918](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4918-L4918) | _manager.automation.SetGalvoLaserOutput | True |
 
 호출하는 대상과 해석 범위:
 
@@ -3415,7 +3415,7 @@ flowchart TD
 
 ### MethodDeclaration `ConfigurePowerMeasurement` · L565–583
 
-[Drilling.Common/Automation/CAutomationManager.cs:565–583](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L565-L583)
+[Drilling.Common/Automation/CAutomationManager.cs:565–583](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L565-L583)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3444,7 +3444,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L303-L303) | Automation.ConfigurePowerMeasurement | True |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L303-L303) | Automation.ConfigurePowerMeasurement | True |
 
 호출하는 대상과 해석 범위:
 
@@ -3504,7 +3504,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateTaskIndex` · L585–591
 
-[Drilling.Common/Automation/CAutomationManager.cs:585–591](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L585-L591)
+[Drilling.Common/Automation/CAutomationManager.cs:585–591](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L585-L591)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3523,17 +3523,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L304-L304) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L326-L326) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L339-L339) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L395-L395) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:508–508](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L508-L508) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L525-L525) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:536–536](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L536-L536) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L548-L548) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L557-L557) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L568-L568) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1238–1238](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1238-L1238) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L304-L304) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L326-L326) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L339-L339) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L395-L395) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:508–508](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L508-L508) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L525-L525) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:536–536](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L536-L536) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L548-L548) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L557-L557) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L568-L568) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1238–1238](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1238-L1238) | ValidateTaskIndex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3564,7 +3564,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateSimulationTaskStatus` · L593–596
 
-[Drilling.Common/Automation/CAutomationManager.cs:593–596](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L593-L596)
+[Drilling.Common/Automation/CAutomationManager.cs:593–596](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L593-L596)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3586,13 +3586,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L309-L309) | CreateSimulationTaskStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L330-L330) | CreateSimulationTaskStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L342-L342) | CreateSimulationTaskStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L514-L514) | CreateSimulationTaskStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L517-L517) | CreateSimulationTaskStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L528-L528) | CreateSimulationTaskStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L528-L528) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L309-L309) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L330-L330) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L342-L342) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L514-L514) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L517-L517) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L528-L528) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L528-L528) | CreateSimulationTaskStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3613,7 +3613,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteAxis` · L598–634
 
-[Drilling.Common/Automation/CAutomationManager.cs:598–634](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L598-L634)
+[Drilling.Common/Automation/CAutomationManager.cs:598–634](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L598-L634)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3635,20 +3635,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L188-L188) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L193-L193) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L198-L198) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L205-L205) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L212-L212) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L215-L215) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L216-L216) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L219-L219) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L224-L224) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L229-L229) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L234-L234) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L239-L239) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L244-L244) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:639–639](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L639-L639) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L188-L188) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L193-L193) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L198-L198) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L205-L205) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L212-L212) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L215-L215) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L216-L216) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L219-L219) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L224-L224) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L229-L229) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L234-L234) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L239-L239) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L244-L244) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:639–639](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L639-L639) | ExecuteAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3744,7 +3744,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxis` · L636–640
 
-[Drilling.Common/Automation/CAutomationManager.cs:636–640](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L636-L640)
+[Drilling.Common/Automation/CAutomationManager.cs:636–640](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L636-L640)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3766,7 +3766,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L262-L262) | ReadAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L262-L262) | ReadAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3789,7 +3789,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisByName` · L642–645
 
-[Drilling.Common/Automation/CAutomationManager.cs:642–645](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L642-L645)
+[Drilling.Common/Automation/CAutomationManager.cs:642–645](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L642-L645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3811,7 +3811,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:282–282](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L282-L282) | ReadAxisByName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:282–282](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L282-L282) | ReadAxisByName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3830,7 +3830,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisByName` · L647–650
 
-[Drilling.Common/Automation/CAutomationManager.cs:647–650](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L647-L650)
+[Drilling.Common/Automation/CAutomationManager.cs:647–650](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L647-L650)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3853,7 +3853,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L644-L644) | ReadAxisByName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L644-L644) | ReadAxisByName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3872,7 +3872,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisByName` · L652–658
 
-[Drilling.Common/Automation/CAutomationManager.cs:652–658](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L652-L658)
+[Drilling.Common/Automation/CAutomationManager.cs:652–658](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L652-L658)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3896,8 +3896,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L297-L297) | ReadAxisByName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L649-L649) | ReadAxisByName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L297-L297) | ReadAxisByName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L649-L649) | ReadAxisByName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3927,7 +3927,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateAxisNameOnly` · L660–667
 
-[Drilling.Common/Automation/CAutomationManager.cs:660–667](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L660-L667)
+[Drilling.Common/Automation/CAutomationManager.cs:660–667](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L660-L667)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3946,11 +3946,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L276-L276) | ValidateAxisNameOnly | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L291-L291) | ValidateAxisNameOnly | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L655-L655) | ValidateAxisNameOnly | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1136–1136](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1136-L1136) | ValidateAxisNameOnly | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1148–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1148-L1148) | ValidateAxisNameOnly | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L276-L276) | ValidateAxisNameOnly | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L291-L291) | ValidateAxisNameOnly | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L655-L655) | ValidateAxisNameOnly | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1136–1136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1136-L1136) | ValidateAxisNameOnly | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1148–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1148-L1148) | ValidateAxisNameOnly | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3985,7 +3985,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateAnalogInputNo` · L669–675
 
-[Drilling.Common/Automation/CAutomationManager.cs:669–675](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L669-L675)
+[Drilling.Common/Automation/CAutomationManager.cs:669–675](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L669-L675)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4004,11 +4004,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L255-L255) | ValidateAnalogInputNo | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L274-L274) | ValidateAnalogInputNo | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L289-L289) | ValidateAnalogInputNo | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:638–638](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L638-L638) | ValidateAnalogInputNo | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:654–654](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L654-L654) | ValidateAnalogInputNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L255-L255) | ValidateAnalogInputNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L274-L274) | ValidateAnalogInputNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L289-L289) | ValidateAnalogInputNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:638–638](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L638-L638) | ValidateAnalogInputNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:654–654](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L654-L654) | ValidateAnalogInputNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4039,7 +4039,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateBufferedRunScriptFile` · L677–700
 
-[Drilling.Common/Automation/CAutomationManager.cs:677–700](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L677-L700)
+[Drilling.Common/Automation/CAutomationManager.cs:677–700](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L677-L700)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4058,7 +4058,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L422-L422) | ValidateBufferedRunScriptFile | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L422-L422) | ValidateBufferedRunScriptFile | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4126,7 +4126,7 @@ flowchart TD
 
 ### MethodDeclaration `GetAeroScriptToken` · L702–706
 
-[Drilling.Common/Automation/CAutomationManager.cs:702–706](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L702-L706)
+[Drilling.Common/Automation/CAutomationManager.cs:702–706](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L702-L706)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4163,7 +4163,7 @@ flowchart TD
 
 ### MethodDeclaration `IsBufferedGlobalIntegerAssignment` · L709–719
 
-[Drilling.Common/Automation/CAutomationManager.cs:709–719](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L709-L719)
+[Drilling.Common/Automation/CAutomationManager.cs:709–719](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L709-L719)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4234,7 +4234,7 @@ flowchart TD
 
 ### MethodDeclaration `IsBufferedRunBlockedToken` · L721–724
 
-[Drilling.Common/Automation/CAutomationManager.cs:721–724](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L721-L724)
+[Drilling.Common/Automation/CAutomationManager.cs:721–724](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L721-L724)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4253,7 +4253,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L695-L695) | IsBufferedRunBlockedToken | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L695-L695) | IsBufferedRunBlockedToken | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4308,7 +4308,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureAutomationResponseSucceeded` · L726–734
 
-[Drilling.Common/Automation/CAutomationManager.cs:726–734](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L726-L734)
+[Drilling.Common/Automation/CAutomationManager.cs:726–734](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L726-L734)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4328,15 +4328,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L447-L447) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:485–485](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L485-L485) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L550-L550) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L560-L560) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L581-L581) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1101–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1101-L1101) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1110–1110](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1110-L1110) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1154-L1154) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1248–1248](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1248-L1248) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L447-L447) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:485–485](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L485-L485) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L550-L550) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L560-L560) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L581-L581) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1101–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1101-L1101) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1110–1110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1110-L1110) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1154-L1154) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1248–1248](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1248-L1248) | EnsureAutomationResponseSucceeded | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4370,7 +4370,7 @@ flowchart TD
 
 ### MethodDeclaration `IsAutomationSuccessResponse` · L736–750
 
-[Drilling.Common/Automation/CAutomationManager.cs:736–750](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L736-L750)
+[Drilling.Common/Automation/CAutomationManager.cs:736–750](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L736-L750)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4389,7 +4389,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:728–728](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L728-L728) | IsAutomationSuccessResponse | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:728–728](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L728-L728) | IsAutomationSuccessResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4435,7 +4435,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatAutomationResponse` · L752–761
 
-[Drilling.Common/Automation/CAutomationManager.cs:752–761](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L752-L761)
+[Drilling.Common/Automation/CAutomationManager.cs:752–761](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L752-L761)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4454,7 +4454,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L733-L733) | FormatAutomationResponse | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L733-L733) | FormatAutomationResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4493,7 +4493,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatAutomationErrorResponse` · L763–777
 
-[Drilling.Common/Automation/CAutomationManager.cs:763–777](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L763-L777)
+[Drilling.Common/Automation/CAutomationManager.cs:763–777](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L763-L777)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4512,8 +4512,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:759–759](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L759-L759) | FormatAutomationErrorResponse | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:881–881](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L881-L881) | FormatAutomationErrorResponse | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:759–759](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L759-L759) | FormatAutomationErrorResponse | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:881–881](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L881-L881) | FormatAutomationErrorResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4557,7 +4557,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveAutomationAxis` · L779–783
 
-[Drilling.Common/Automation/CAutomationManager.cs:779–783](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L779-L783)
+[Drilling.Common/Automation/CAutomationManager.cs:779–783](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L779-L783)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4576,9 +4576,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L601-L601) | ResolveAutomationAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:842–842](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L842-L842) | ResolveAutomationAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:843–843](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L843-L843) | ResolveAutomationAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L601-L601) | ResolveAutomationAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:842–842](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L842-L842) | ResolveAutomationAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:843–843](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L843-L843) | ResolveAutomationAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4604,7 +4604,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveAeroScriptAxis` · L785–795
 
-[Drilling.Common/Automation/CAutomationManager.cs:785–795](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L785-L795)
+[Drilling.Common/Automation/CAutomationManager.cs:785–795](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L785-L795)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4623,9 +4623,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L547-L547) | ResolveAeroScriptAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L556-L556) | ResolveAeroScriptAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L567-L567) | ResolveAeroScriptAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L547-L547) | ResolveAeroScriptAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L556-L556) | ResolveAeroScriptAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L567-L567) | ResolveAeroScriptAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4668,7 +4668,7 @@ flowchart TD
 
 ### MethodDeclaration `IsAeroScriptAxisIdentifier` · L797–815
 
-[Drilling.Common/Automation/CAutomationManager.cs:797–815](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L797-L815)
+[Drilling.Common/Automation/CAutomationManager.cs:797–815](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L797-L815)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4687,8 +4687,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:789–789](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L789-L789) | IsAeroScriptAxisIdentifier | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1224–1224](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1224-L1224) | IsAeroScriptAxisIdentifier | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:789–789](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L789-L789) | IsAeroScriptAxisIdentifier | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1224–1224](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1224-L1224) | IsAeroScriptAxisIdentifier | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4726,7 +4726,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L809–812
 
-[Drilling.Common/Automation/CAutomationManager.cs:809–812](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L809-L812)
+[Drilling.Common/Automation/CAutomationManager.cs:809–812](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L809-L812)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4762,7 +4762,7 @@ flowchart TD
 
 ### MethodDeclaration `IsAxisNameOnlyIdentifier` · L817–838
 
-[Drilling.Common/Automation/CAutomationManager.cs:817–838](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L817-L838)
+[Drilling.Common/Automation/CAutomationManager.cs:817–838](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L817-L838)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4781,7 +4781,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L663-L663) | IsAxisNameOnlyIdentifier | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L663-L663) | IsAxisNameOnlyIdentifier | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4828,7 +4828,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateSimulationAxisStatus` · L840–867
 
-[Drilling.Common/Automation/CAutomationManager.cs:840–867](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L840-L867)
+[Drilling.Common/Automation/CAutomationManager.cs:840–867](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L840-L867)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4848,9 +4848,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L259-L259) | CreateSimulationAxisStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L279-L279) | CreateSimulationAxisStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L294-L294) | CreateSimulationAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L259-L259) | CreateSimulationAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L279-L279) | CreateSimulationAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L294-L294) | CreateSimulationAxisStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4890,7 +4890,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateSimulationAxisKey` · L869–872
 
-[Drilling.Common/Automation/CAutomationManager.cs:869–872](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L869-L872)
+[Drilling.Common/Automation/CAutomationManager.cs:869–872](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L869-L872)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4910,13 +4910,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L605-L605) | CreateSimulationAxisKey | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:618–618](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L618-L618) | CreateSimulationAxisKey | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:625–625](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L625-L625) | CreateSimulationAxisKey | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:842–842](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L842-L842) | CreateSimulationAxisKey | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:843–843](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L843-L843) | CreateSimulationAxisKey | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1173-L1173) | CreateSimulationAxisKey | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1202–1202](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1202-L1202) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L605-L605) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:618–618](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L618-L618) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:625–625](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L625-L625) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:842–842](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L842-L842) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:843–843](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L843-L843) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1173-L1173) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1202–1202](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1202-L1202) | CreateSimulationAxisKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4937,7 +4937,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseAxisStatus` · L874–927
 
-[Drilling.Common/Automation/CAutomationManager.cs:874–927](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L874-L927)
+[Drilling.Common/Automation/CAutomationManager.cs:874–927](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L874-L927)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4958,9 +4958,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L263-L263) | ParseAxisStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L283-L283) | ParseAxisStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L298-L298) | ParseAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L263-L263) | ParseAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L283-L283) | ParseAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L298-L298) | ParseAxisStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5089,7 +5089,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadMotionStatusFlag` · L929–939
 
-[Drilling.Common/Automation/CAutomationManager.cs:929–939](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L929-L939)
+[Drilling.Common/Automation/CAutomationManager.cs:929–939](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L929-L939)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5109,8 +5109,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:924–924](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L924-L924) | ReadMotionStatusFlag | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:925–925](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L925-L925) | ReadMotionStatusFlag | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:924–924](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L924-L924) | ReadMotionStatusFlag | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:925–925](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L925-L925) | ReadMotionStatusFlag | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5145,7 +5145,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadGalvoTemperatureCelsius` · L941–944
 
-[Drilling.Common/Automation/CAutomationManager.cs:941–944](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L941-L944)
+[Drilling.Common/Automation/CAutomationManager.cs:941–944](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L941-L944)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5164,7 +5164,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L913-L913) | ReadGalvoTemperatureCelsius | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L913-L913) | ReadGalvoTemperatureCelsius | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5188,7 +5188,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateErrorAxisStatus` · L946–949
 
-[Drilling.Common/Automation/CAutomationManager.cs:946–949](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L946-L949)
+[Drilling.Common/Automation/CAutomationManager.cs:946–949](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L946-L949)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5210,9 +5210,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:878–878](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L878-L878) | CreateErrorAxisStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L884-L884) | CreateErrorAxisStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:890–890](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L890-L890) | CreateErrorAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:878–878](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L878-L878) | CreateErrorAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L884-L884) | CreateErrorAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:890–890](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L890-L890) | CreateErrorAxisStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5233,7 +5233,7 @@ flowchart TD
 
 ### MethodDeclaration `TryGetAxisNo` · L951–960
 
-[Drilling.Common/Automation/CAutomationManager.cs:951–960](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L951-L960)
+[Drilling.Common/Automation/CAutomationManager.cs:951–960](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L951-L960)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5252,9 +5252,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:847–847](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L847-L847) | TryGetAxisNo | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:907–907](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L907-L907) | TryGetAxisNo | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L948-L948) | TryGetAxisNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:847–847](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L847-L847) | TryGetAxisNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:907–907](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L907-L907) | TryGetAxisNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L948-L948) | TryGetAxisNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5291,7 +5291,7 @@ flowchart TD
 
 ### MethodDeclaration `GetValue` · L962–965
 
-[Drilling.Common/Automation/CAutomationManager.cs:962–965](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L962-L965)
+[Drilling.Common/Automation/CAutomationManager.cs:962–965](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L962-L965)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5311,9 +5311,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:900–900](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L900-L900) | GetValue | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:901–901](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L901-L901) | GetValue | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:902–902](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L902-L902) | GetValue | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:900–900](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L900-L900) | GetValue | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:901–901](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L901-L901) | GetValue | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:902–902](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L902-L902) | GetValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5333,7 +5333,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L967–970
 
-[Drilling.Common/Automation/CAutomationManager.cs:967–970](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L967-L970)
+[Drilling.Common/Automation/CAutomationManager.cs:967–970](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L967-L970)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5353,11 +5353,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:908–908](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L908-L908) | ReadDouble | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:909–909](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L909-L909) | ReadDouble | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:910–910](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L910-L910) | ReadDouble | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:911–911](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L911-L911) | ReadDouble | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:912–912](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L912-L912) | ReadDouble | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:908–908](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L908-L908) | ReadDouble | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:909–909](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L909-L909) | ReadDouble | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:910–910](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L910-L910) | ReadDouble | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:911–911](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L911-L911) | ReadDouble | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:912–912](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L912-L912) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5379,7 +5379,7 @@ flowchart TD
 
 ### MethodDeclaration `IsDriveAble` · L972–980
 
-[Drilling.Common/Automation/CAutomationManager.cs:972–980](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L972-L980)
+[Drilling.Common/Automation/CAutomationManager.cs:972–980](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L972-L980)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5398,7 +5398,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:914–914](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L914-L914) | IsDriveAble | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:914–914](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L914-L914) | IsDriveAble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5432,7 +5432,7 @@ flowchart TD
 
 ### MethodDeclaration `IsHomeDone` · L982–991
 
-[Drilling.Common/Automation/CAutomationManager.cs:982–991](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L982-L991)
+[Drilling.Common/Automation/CAutomationManager.cs:982–991](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L982-L991)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5451,7 +5451,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:915–915](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L915-L915) | IsHomeDone | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:915–915](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L915-L915) | IsHomeDone | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5495,7 +5495,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadStatusWord` · L993–1014
 
-[Drilling.Common/Automation/CAutomationManager.cs:993–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L993-L1014)
+[Drilling.Common/Automation/CAutomationManager.cs:993–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L993-L1014)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5515,8 +5515,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L974-L974) | TryReadStatusWord | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:985–985](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L985-L985) | TryReadStatusWord | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L974-L974) | TryReadStatusWord | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:985–985](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L985-L985) | TryReadStatusWord | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5572,7 +5572,7 @@ flowchart TD
 
 ### MethodDeclaration `IsFaultActive` · L1016–1020
 
-[Drilling.Common/Automation/CAutomationManager.cs:1016–1020](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1016-L1020)
+[Drilling.Common/Automation/CAutomationManager.cs:1016–1020](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1016-L1020)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5591,7 +5591,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:916–916](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L916-L916) | IsFaultActive | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:916–916](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L916-L916) | IsFaultActive | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5618,7 +5618,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveLocalScriptPath` · L1022–1039
 
-[Drilling.Common/Automation/CAutomationManager.cs:1022–1039](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1022-L1039)
+[Drilling.Common/Automation/CAutomationManager.cs:1022–1039](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1022-L1039)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5638,9 +5638,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L305-L305) | ResolveLocalScriptPath | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L318-L318) | ResolveLocalScriptPath | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L421-L421) | ResolveLocalScriptPath | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L305-L305) | ResolveLocalScriptPath | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L318-L318) | ResolveLocalScriptPath | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L421-L421) | ResolveLocalScriptPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5700,7 +5700,7 @@ flowchart TD
 
 ### MethodDeclaration `GetLocalScriptDirectory` · L1041–1045
 
-[Drilling.Common/Automation/CAutomationManager.cs:1041–1045](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1041-L1045)
+[Drilling.Common/Automation/CAutomationManager.cs:1041–1045](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1041-L1045)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5719,7 +5719,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1034–1034](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1034-L1034) | GetLocalScriptDirectory | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1034–1034](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1034-L1034) | GetLocalScriptDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5743,7 +5743,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveLocalDirectory` · L1047–1051
 
-[Drilling.Common/Automation/CAutomationManager.cs:1047–1051](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1047-L1051)
+[Drilling.Common/Automation/CAutomationManager.cs:1047–1051](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1047-L1051)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5763,7 +5763,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1044–1044](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1044-L1044) | ResolveLocalDirectory | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1044–1044](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1044-L1044) | ResolveLocalDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5796,7 +5796,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateControllerFileName` · L1053–1065
 
-[Drilling.Common/Automation/CAutomationManager.cs:1053–1065](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1053-L1065)
+[Drilling.Common/Automation/CAutomationManager.cs:1053–1065](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1053-L1065)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5816,14 +5816,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L306-L306) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L306-L306) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L319-L319) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L319-L319) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L327-L327) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L340-L340) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L429-L429) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:492–492](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L492-L492) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L306-L306) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L306-L306) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L319-L319) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L319-L319) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L327-L327) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L340-L340) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L429-L429) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:492–492](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L492-L492) | CreateControllerFileName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5871,7 +5871,7 @@ flowchart TD
 
 ### MethodDeclaration `GetControllerScriptDirectory` · L1067–1077
 
-[Drilling.Common/Automation/CAutomationManager.cs:1067–1077](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1067-L1077)
+[Drilling.Common/Automation/CAutomationManager.cs:1067–1077](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1067-L1077)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5890,7 +5890,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1062–1062](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1062-L1062) | GetControllerScriptDirectory | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1062–1062](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1062-L1062) | GetControllerScriptDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5934,7 +5934,7 @@ flowchart TD
 
 ### MethodDeclaration `CombineControllerPath` · L1079–1089
 
-[Drilling.Common/Automation/CAutomationManager.cs:1079–1089](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1079-L1089)
+[Drilling.Common/Automation/CAutomationManager.cs:1079–1089](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1079-L1089)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5954,7 +5954,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1064–1064](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1064-L1064) | CombineControllerPath | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1064–1064](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1064-L1064) | CombineControllerPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5997,7 +5997,7 @@ flowchart TD
 
 ### MethodDeclaration `Format` · L1091–1094
 
-[Drilling.Common/Automation/CAutomationManager.cs:1091–1094](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1091-L1094)
+[Drilling.Common/Automation/CAutomationManager.cs:1091–1094](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1091-L1094)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6016,13 +6016,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L188-L188) | Format | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L188-L188) | Format | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L193-L193) | Format | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L193-L193) | Format | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L205-L205) | Format | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L205-L205) | Format | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L212-L212) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L188-L188) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L188-L188) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L193-L193) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L193-L193) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L205-L205) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L205-L205) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L212-L212) | Format | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6041,7 +6041,7 @@ flowchart TD
 
 ### MethodDeclaration `RunStagePreparedScript` · L1098–1105
 
-[Drilling.Common/Automation/CAutomationManager.cs:1098–1105](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1098-L1105)
+[Drilling.Common/Automation/CAutomationManager.cs:1098–1105](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1098-L1105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6063,8 +6063,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4063–4063](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4063-L4063) | _automationManager.RunStagePreparedScript | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3627–3627](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3627-L3627) | manager.automation.RunStagePreparedScript | False |
+| [Drilling.Common/Station/CStationProcess.cs:4064–4064](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4064-L4064) | _automationManager.RunStagePreparedScript | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3678–3678](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3678-L3678) | manager.automation.RunStagePreparedScript | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6105,7 +6105,7 @@ flowchart TD
 
 ### MethodDeclaration `StopStagePreparedTask` · L1107–1132
 
-[Drilling.Common/Automation/CAutomationManager.cs:1107–1132](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1107-L1132)
+[Drilling.Common/Automation/CAutomationManager.cs:1107–1132](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1107-L1132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6126,8 +6126,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4164–4164](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4164-L4164) | _automationManager.StopStagePreparedTask | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3666–3666](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3666-L3666) | manager.automation.StopStagePreparedTask | False |
+| [Drilling.Common/Station/CStationProcess.cs:4165–4165](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4165-L4165) | _automationManager.StopStagePreparedTask | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3717–3717](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3717-L3717) | manager.automation.StopStagePreparedTask | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6209,7 +6209,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAuxiliaryFeedback` · L1134–1144
 
-[Drilling.Common/Automation/CAutomationManager.cs:1134–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1134-L1144)
+[Drilling.Common/Automation/CAutomationManager.cs:1134–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1134-L1144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6230,7 +6230,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L354-L354) | _automation.ReadAuxiliaryFeedback | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L354-L354) | _automation.ReadAuxiliaryFeedback | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6287,7 +6287,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAuxiliaryFeedbackZero` · L1146–1158
 
-[Drilling.Common/Automation/CAutomationManager.cs:1146–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1146-L1158)
+[Drilling.Common/Automation/CAutomationManager.cs:1146–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1146-L1158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6309,7 +6309,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160) | SetAuxiliaryFeedbackZero | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160) | SetAuxiliaryFeedbackZero | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6358,7 +6358,7 @@ flowchart TD
 
 ### MethodDeclaration `ZeroMofFeedbackIfNeeded` · L1160–1160
 
-[Drilling.Common/Automation/CAutomationManager.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160)
+[Drilling.Common/Automation/CAutomationManager.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6378,8 +6378,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3544–3544](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3544-L3544) | _automationManager.ZeroMofFeedbackIfNeeded | False |
-| [Drilling.Common/Station/CStationProcess.cs:4013–4013](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4013-L4013) | _automationManager.ZeroMofFeedbackIfNeeded | False |
+| [Drilling.Common/Station/CStationProcess.cs:3545–3545](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L3545-L3545) | _automationManager.ZeroMofFeedbackIfNeeded | False |
+| [Drilling.Common/Station/CStationProcess.cs:4014–4014](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4014-L4014) | _automationManager.ZeroMofFeedbackIfNeeded | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6403,7 +6403,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadConfiguredHomeSpeeds` · L1164–1188
 
-[Drilling.Common/Automation/CAutomationManager.cs:1164–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1164-L1188)
+[Drilling.Common/Automation/CAutomationManager.cs:1164–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1164-L1188)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6430,7 +6430,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L293-L293) | _automation.ReadConfiguredHomeSpeeds | True |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L293-L293) | _automation.ReadConfiguredHomeSpeeds | True |
 
 호출하는 대상과 해석 범위:
 
@@ -6554,7 +6554,7 @@ flowchart TD
 
 ### MethodDeclaration `SetConfiguredHomeSpeed` · L1191–1218
 
-[Drilling.Common/Automation/CAutomationManager.cs:1191–1218](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1191-L1218)
+[Drilling.Common/Automation/CAutomationManager.cs:1191–1218](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1191-L1218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6582,7 +6582,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1892–1892](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1892-L1892) | _manager.automation.SetConfiguredHomeSpeed | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1882–1882](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1882-L1882) | _manager.automation.SetConfiguredHomeSpeed | True |
 
 호출하는 대상과 해석 범위:
 
@@ -6666,7 +6666,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateConfiguredHomeAxis` · L1220–1231
 
-[Drilling.Common/Automation/CAutomationManager.cs:1220–1231](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1220-L1231)
+[Drilling.Common/Automation/CAutomationManager.cs:1220–1231](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1220-L1231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6685,7 +6685,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1193–1193](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1193-L1193) | ValidateConfiguredHomeAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1193–1193](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1193-L1193) | ValidateConfiguredHomeAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6743,7 +6743,7 @@ flowchart TD
 
 ### MethodDeclaration `PrepareMofReadiness` · L1235–1252
 
-[Drilling.Common/Automation/CAutomationManager.cs:1235–1252](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1235-L1252)
+[Drilling.Common/Automation/CAutomationManager.cs:1235–1252](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1235-L1252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6765,7 +6765,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4050–4050](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L4050-L4050) | _automationManager.PrepareMofReadiness | True |
+| [Drilling.Common/Station/CStationProcess.cs:4051–4051](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4051-L4051) | _automationManager.PrepareMofReadiness | True |
 
 호출하는 대상과 해석 범위:
 
@@ -6822,7 +6822,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadMofReadiness` · L1254–1265
 
-[Drilling.Common/Automation/CAutomationManager.cs:1254–1265](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1254-L1265)
+[Drilling.Common/Automation/CAutomationManager.cs:1254–1265](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1254-L1265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6843,7 +6843,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L384-L384) | _automation.ReadMofReadiness | True |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L384-L384) | _automation.ReadMofReadiness | True |
 
 호출하는 대상과 해석 범위:
 
@@ -6907,7 +6907,7 @@ flowchart TD
 
 ### MethodDeclaration `PublishSimulatedMofReadiness` · L1267–1276
 
-[Drilling.Common/Automation/CAutomationManager.cs:1267–1276](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1267-L1276)
+[Drilling.Common/Automation/CAutomationManager.cs:1267–1276](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1267-L1276)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6928,7 +6928,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1293–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1293-L1293) | PublishSimulatedMofReadiness | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1293–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1293-L1293) | PublishSimulatedMofReadiness | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6978,7 +6978,7 @@ flowchart TD
 
 ### FieldDeclaration `_value` · L1280–1280
 
-[Drilling.Common/Automation/CAutomationManager.cs:1280–1280](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1280-L1280)
+[Drilling.Common/Automation/CAutomationManager.cs:1280–1280](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1280-L1280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6993,7 +6993,7 @@ flowchart TD
 
 ### PropertyDeclaration `Value` · L1281–1281
 
-[Drilling.Common/Automation/CAutomationManager.cs:1281–1281](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1281-L1281)
+[Drilling.Common/Automation/CAutomationManager.cs:1281–1281](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1281-L1281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7020,7 +7020,7 @@ flowchart TD
 
 ### MethodDeclaration `Publish` · L1283–1283
 
-[Drilling.Common/Automation/CAutomationManager.cs:1283–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1283-L1283)
+[Drilling.Common/Automation/CAutomationManager.cs:1283–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1283-L1283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7033,7 +7033,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1274–1274](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1274-L1274) | ready.Publish | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1274–1274](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1274-L1274) | ready.Publish | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7051,7 +7051,7 @@ flowchart TD
 
 ### MethodDeclaration `RegisterStageSimulationTask` · L1288–1295
 
-[Drilling.Common/Automation/CAutomationManager.cs:1288–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1288-L1295)
+[Drilling.Common/Automation/CAutomationManager.cs:1288–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1288-L1295)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7073,8 +7073,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L460-L460) | RegisterStageSimulationTask | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1103–1103](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1103-L1103) | RegisterStageSimulationTask | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L460-L460) | RegisterStageSimulationTask | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1103–1103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1103-L1103) | RegisterStageSimulationTask | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7108,7 +7108,7 @@ flowchart TD
 
 ### MethodDeclaration `StartStageMachiningSimulation` · L1298–1319
 
-[Drilling.Common/Automation/CAutomationManager.cs:1298–1319](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1298-L1319)
+[Drilling.Common/Automation/CAutomationManager.cs:1298–1319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1298-L1319)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7134,8 +7134,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3804–3804](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3804-L3804) | _automationManager.StartStageMachiningSimulation | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3628–3628](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3628-L3628) | manager.automation.StartStageMachiningSimulation | False |
+| [Drilling.Common/Station/CStationProcess.cs:3805–3805](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L3805-L3805) | _automationManager.StartStageMachiningSimulation | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3679–3679](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3679-L3679) | manager.automation.StartStageMachiningSimulation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7190,7 +7190,7 @@ flowchart TD
 
 ### FieldDeclaration `_sync` · L1323–1323
 
-[Drilling.Common/Automation/CAutomationManager.cs:1323–1323](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1323-L1323)
+[Drilling.Common/Automation/CAutomationManager.cs:1323–1323](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1323-L1323)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7218,7 +7218,7 @@ flowchart TD
 
 ### FieldDeclaration `_completion` · L1324–1324
 
-[Drilling.Common/Automation/CAutomationManager.cs:1324–1324](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1324-L1324)
+[Drilling.Common/Automation/CAutomationManager.cs:1324–1324](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1324-L1324)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7246,7 +7246,7 @@ flowchart TD
 
 ### FieldDeclaration `_stop` · L1325–1325
 
-[Drilling.Common/Automation/CAutomationManager.cs:1325–1325](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1325-L1325)
+[Drilling.Common/Automation/CAutomationManager.cs:1325–1325](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1325-L1325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7274,7 +7274,7 @@ flowchart TD
 
 ### FieldDeclaration `_state` · L1326–1326
 
-[Drilling.Common/Automation/CAutomationManager.cs:1326–1326](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1326-L1326)
+[Drilling.Common/Automation/CAutomationManager.cs:1326–1326](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1326-L1326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7296,7 +7296,7 @@ flowchart TD
 
 ### FieldDeclaration `_started` · L1327–1327
 
-[Drilling.Common/Automation/CAutomationManager.cs:1327–1327](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1327-L1327)
+[Drilling.Common/Automation/CAutomationManager.cs:1327–1327](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1327-L1327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7311,7 +7311,7 @@ flowchart TD
 
 ### PropertyDeclaration `File` · L1328–1328
 
-[Drilling.Common/Automation/CAutomationManager.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1328-L1328)
+[Drilling.Common/Automation/CAutomationManager.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1328-L1328)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7326,7 +7326,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_File` · L1328–1328
 
-[Drilling.Common/Automation/CAutomationManager.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1328-L1328)
+[Drilling.Common/Automation/CAutomationManager.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1328-L1328)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7341,7 +7341,7 @@ flowchart TD
 
 ### PropertyDeclaration `State` · L1330–1337
 
-[Drilling.Common/Automation/CAutomationManager.cs:1330–1337](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1330-L1337)
+[Drilling.Common/Automation/CAutomationManager.cs:1330–1337](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1330-L1337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7356,7 +7356,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_State` · L1332–1336
 
-[Drilling.Common/Automation/CAutomationManager.cs:1332–1336](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1332-L1336)
+[Drilling.Common/Automation/CAutomationManager.cs:1332–1336](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1332-L1336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7387,7 +7387,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsActive` · L1339–1339
 
-[Drilling.Common/Automation/CAutomationManager.cs:1339–1339](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1339-L1339)
+[Drilling.Common/Automation/CAutomationManager.cs:1339–1339](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1339-L1339)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7402,7 +7402,7 @@ flowchart TD
 
 ### PropertyDeclaration `Completion` · L1340–1340
 
-[Drilling.Common/Automation/CAutomationManager.cs:1340–1340](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1340-L1340)
+[Drilling.Common/Automation/CAutomationManager.cs:1340–1340](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1340-L1340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7417,7 +7417,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L1342–1354
 
-[Drilling.Common/Automation/CAutomationManager.cs:1342–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1342-L1354)
+[Drilling.Common/Automation/CAutomationManager.cs:1342–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1342-L1354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7437,7 +7437,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1317–1317](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1317-L1317) | session.Start | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1317–1317](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1317-L1317) | session.Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7479,7 +7479,7 @@ flowchart TD
 
 ### MethodDeclaration `CompleteAfter` · L1356–1382
 
-[Drilling.Common/Automation/CAutomationManager.cs:1356–1382](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1356-L1382)
+[Drilling.Common/Automation/CAutomationManager.cs:1356–1382](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1356-L1382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7499,7 +7499,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1353–1353](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1353-L1353) | CompleteAfter | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1353–1353](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1353-L1353) | CompleteAfter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7562,7 +7562,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L1384–1398
 
-[Drilling.Common/Automation/CAutomationManager.cs:1384–1398](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1384-L1398)
+[Drilling.Common/Automation/CAutomationManager.cs:1384–1398](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1384-L1398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7575,9 +7575,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L477-L477) | session.Stop | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L513-L513) | session.Stop | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1375–1375](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1375-L1375) | Stop | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L477-L477) | session.Stop | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L513-L513) | session.Stop | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1375–1375](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1375-L1375) | Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7619,7 +7619,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseMask` · L1405–1413
 
-[Drilling.Common/Automation/CAutomationManager.cs:1405–1413](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1405-L1413)
+[Drilling.Common/Automation/CAutomationManager.cs:1405–1413](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1405-L1413)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7638,8 +7638,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1801–1801](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1801-L1801) | CAutomationAxisFault.ParseMask | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7762–7762](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7762-L7762) | CAutomationAxisFault.ParseMask | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1791–1791](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1791-L1791) | CAutomationAxisFault.ParseMask | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7737–7737](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7737-L7737) | CAutomationAxisFault.ParseMask | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7685,7 +7685,7 @@ flowchart TD
 
 ### MethodDeclaration `RequiresReset` · L1415–1415
 
-[Drilling.Common/Automation/CAutomationManager.cs:1415–1415](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1415-L1415)
+[Drilling.Common/Automation/CAutomationManager.cs:1415–1415](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1415-L1415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7704,15 +7704,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1435–1435](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1435-L1435) | RequiresReset | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1804–1804](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1804-L1804) | CAutomationAxisFault.RequiresReset | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8373–8373](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L8373-L8373) | CAutomationAxisFault.RequiresReset | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1435–1435](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1435-L1435) | RequiresReset | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1794–1794](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1794-L1794) | CAutomationAxisFault.RequiresReset | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8348–8348](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L8348-L8348) | CAutomationAxisFault.RequiresReset | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `HasLimitFault` · L1416–1416
 
-[Drilling.Common/Automation/CAutomationManager.cs:1416–1416](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1416-L1416)
+[Drilling.Common/Automation/CAutomationManager.cs:1416–1416](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1416-L1416)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7731,13 +7731,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1789–1789](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L1789-L1789) | CAutomationAxisFault.HasLimitFault | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1779–1779](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1779-L1779) | CAutomationAxisFault.HasLimitFault | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `Describe` · L1417–1438
 
-[Drilling.Common/Automation/CAutomationManager.cs:1417–1438](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1417-L1438)
+[Drilling.Common/Automation/CAutomationManager.cs:1417–1438](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1417-L1438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7756,7 +7756,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8371–8371](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L8371-L8371) | CAutomationAxisFault.Describe | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8346–8346](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L8346-L8346) | CAutomationAxisFault.Describe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7826,7 +7826,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L1446–1489
 
-[Drilling.Common/Automation/CAutomationManager.cs:1446–1489](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1446-L1489)
+[Drilling.Common/Automation/CAutomationManager.cs:1446–1489](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1446-L1489)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7846,7 +7846,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160) | new CMofZeroOperation(target => StatusSnapshots.GetAuxiliaryFeedback(target.Axis, target.Controller), (target, ct) => SetAuxiliaryFeedbackZero(target.Axis, target.Task, target.Controller, ct)).Execute | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160) | new CMofZeroOperation(target => StatusSnapshots.GetAuxiliaryFeedback(target.Axis, target.Controller), (target, ct) => SetAuxiliaryFeedbackZero(target.Axis, target.Task, target.Controller, ct)).Execute | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7957,7 +7957,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitForValue` · L1491–1503
 
-[Drilling.Common/Automation/CAutomationManager.cs:1491–1503](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1491-L1503)
+[Drilling.Common/Automation/CAutomationManager.cs:1491–1503](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1491-L1503)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7978,8 +7978,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1466–1466](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1466-L1466) | WaitForValue | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1478–1478](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1478-L1478) | WaitForValue | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1466–1466](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1466-L1466) | WaitForValue | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1478–1478](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1478-L1478) | WaitForValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8032,7 +8032,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsInPosition` · L1528–1528
 
-[Drilling.Common/Automation/CAutomationManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1528-L1528)
+[Drilling.Common/Automation/CAutomationManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1528-L1528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8047,7 +8047,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsInPosition` · L1528–1528
 
-[Drilling.Common/Automation/CAutomationManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1528-L1528)
+[Drilling.Common/Automation/CAutomationManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1528-L1528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8062,7 +8062,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_IsInPosition` · L1528–1528
 
-[Drilling.Common/Automation/CAutomationManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1528-L1528)
+[Drilling.Common/Automation/CAutomationManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1528-L1528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8083,7 +8083,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsMotionDone` · L1529–1529
 
-[Drilling.Common/Automation/CAutomationManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1529-L1529)
+[Drilling.Common/Automation/CAutomationManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1529-L1529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8098,7 +8098,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsMotionDone` · L1529–1529
 
-[Drilling.Common/Automation/CAutomationManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1529-L1529)
+[Drilling.Common/Automation/CAutomationManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1529-L1529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8113,7 +8113,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_IsMotionDone` · L1529–1529
 
-[Drilling.Common/Automation/CAutomationManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1529-L1529)
+[Drilling.Common/Automation/CAutomationManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1529-L1529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8134,7 +8134,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveAndWait` · L1537–1598
 
-[Drilling.Common/Automation/CAutomationManager.cs:1537–1598](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1537-L1598)
+[Drilling.Common/Automation/CAutomationManager.cs:1537–1598](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1537-L1598)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8154,8 +8154,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CPowerMeasureRun.cs#L304-L304) | new CAutomationPositioningService(Automation).MoveAndWait | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2317–2317](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L2317-L2317) | new CAutomationPositioningService(_manager.automation).MoveAndWait | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L304-L304) | new CAutomationPositioningService(Automation).MoveAndWait | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2305–2305](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2305-L2305) | new CAutomationPositioningService(_manager.automation).MoveAndWait | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8330,7 +8330,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureConnected` · L1600–1604
 
-[Drilling.Common/Automation/CAutomationManager.cs:1600–1604](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1600-L1604)
+[Drilling.Common/Automation/CAutomationManager.cs:1600–1604](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1600-L1604)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8349,9 +8349,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1544–1544](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1544-L1544) | EnsureConnected | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1558–1558](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1558-L1558) | EnsureConnected | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1609–1609](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1609-L1609) | EnsureConnected | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1544–1544](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1544-L1544) | EnsureConnected | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1558–1558](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1558-L1558) | EnsureConnected | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1609–1609](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1609-L1609) | EnsureConnected | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8384,7 +8384,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L1606–1606
 
-[Drilling.Common/Automation/CAutomationManager.cs:1606–1606](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1606-L1606)
+[Drilling.Common/Automation/CAutomationManager.cs:1606–1606](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1606-L1606)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8403,9 +8403,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1545–1545](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1545-L1545) | Read | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1569–1569](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1569-L1569) | Read | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1610–1610](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1610-L1610) | Read | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1545–1545](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1545-L1545) | Read | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1569–1569](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1569-L1569) | Read | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1610–1610](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1610-L1610) | Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8423,7 +8423,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadReady` · L1607–1618
 
-[Drilling.Common/Automation/CAutomationManager.cs:1607–1618](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1607-L1618)
+[Drilling.Common/Automation/CAutomationManager.cs:1607–1618](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1607-L1618)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8443,8 +8443,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1554–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1554-L1554) | ReadReady | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1572–1572](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1572-L1572) | ReadReady | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1554–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1554-L1554) | ReadReady | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1572–1572](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1572-L1572) | ReadReady | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8489,7 +8489,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitUntil` · L1620–1633
 
-[Drilling.Common/Automation/CAutomationManager.cs:1620–1633](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1620-L1633)
+[Drilling.Common/Automation/CAutomationManager.cs:1620–1633](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1620-L1633)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8510,8 +8510,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1554–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1554-L1554) | WaitUntil | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1567–1574](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1567-L1574) | WaitUntil | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1554–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1554-L1554) | WaitUntil | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1567–1574](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1567-L1574) | WaitUntil | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8570,7 +8570,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureResponse` · L1635–1639
 
-[Drilling.Common/Automation/CAutomationManager.cs:1635–1639](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1635-L1639)
+[Drilling.Common/Automation/CAutomationManager.cs:1635–1639](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1635-L1639)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8590,8 +8590,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1562–1562](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1562-L1562) | EnsureResponse | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1584–1584](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1584-L1584) | EnsureResponse | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1562–1562](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1562-L1562) | EnsureResponse | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1584–1584](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1584-L1584) | EnsureResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8624,7 +8624,7 @@ flowchart TD
 
 ### PropertyDeclaration `Units` · L1645–1645
 
-[Drilling.Common/Automation/CAutomationManager.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1645-L1645)
+[Drilling.Common/Automation/CAutomationManager.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1645-L1645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8639,7 +8639,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Units` · L1645–1645
 
-[Drilling.Common/Automation/CAutomationManager.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1645-L1645)
+[Drilling.Common/Automation/CAutomationManager.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1645-L1645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8654,7 +8654,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L1647–1655
 
-[Drilling.Common/Automation/CAutomationManager.cs:1647–1655](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1647-L1655)
+[Drilling.Common/Automation/CAutomationManager.cs:1647–1655](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1647-L1655)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8674,10 +8674,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1171–1171](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1171-L1171) | new CConfiguredHomeSpeedValues | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1173-L1173) | new CConfiguredHomeSpeedValues | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1184–1184](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1184-L1184) | new CConfiguredHomeSpeedValues | False |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L325-L325) | new CConfiguredHomeSpeedValues | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1171–1171](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1171-L1171) | new CConfiguredHomeSpeedValues | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1173-L1173) | new CConfiguredHomeSpeedValues | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1184–1184](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1184-L1184) | new CConfiguredHomeSpeedValues | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L325-L325) | new CConfiguredHomeSpeedValues | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8725,7 +8725,7 @@ flowchart TD
 
 ### MethodDeclaration `FromAnalogInput` · L1660–1664
 
-[Drilling.Common/Automation/CAutomationManager.cs:1660–1664](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1660-L1664)
+[Drilling.Common/Automation/CAutomationManager.cs:1660–1664](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1660-L1664)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8744,7 +8744,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:943–943](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L943-L943) | CGalvoTemperature.FromAnalogInput | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:943–943](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L943-L943) | CGalvoTemperature.FromAnalogInput | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8764,7 +8764,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCelsius` · L1666–1669
 
-[Drilling.Common/Automation/CAutomationManager.cs:1666–1669](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1666-L1669)
+[Drilling.Common/Automation/CAutomationManager.cs:1666–1669](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1666-L1669)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8783,8 +8783,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3042–3042](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L3042-L3042) | CGalvoTemperature.FormatCelsius | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L224-L224) | CGalvoTemperature.FormatCelsius | False |
+| [Drilling.Common/Station/CStationProcess.cs:3043–3043](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L3043-L3043) | CGalvoTemperature.FormatCelsius | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L224-L224) | CGalvoTemperature.FormatCelsius | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8806,7 +8806,7 @@ flowchart TD
 
 ### FieldDeclaration `_gate` · L1675–1675
 
-[Drilling.Common/Automation/CAutomationManager.cs:1675–1675](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1675-L1675)
+[Drilling.Common/Automation/CAutomationManager.cs:1675–1675](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1675-L1675)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8834,7 +8834,7 @@ flowchart TD
 
 ### FieldDeclaration `_generation` · L1676–1676
 
-[Drilling.Common/Automation/CAutomationManager.cs:1676–1676](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1676-L1676)
+[Drilling.Common/Automation/CAutomationManager.cs:1676–1676](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1676-L1676)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8849,7 +8849,7 @@ flowchart TD
 
 ### FieldDeclaration `_stopJog` · L1677–1677
 
-[Drilling.Common/Automation/CAutomationManager.cs:1677–1677](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1677-L1677)
+[Drilling.Common/Automation/CAutomationManager.cs:1677–1677](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1677-L1677)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8864,7 +8864,7 @@ flowchart TD
 
 ### PropertyDeclaration `Generation` · L1678–1678
 
-[Drilling.Common/Automation/CAutomationManager.cs:1678–1678](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1678-L1678)
+[Drilling.Common/Automation/CAutomationManager.cs:1678–1678](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1678-L1678)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8891,7 +8891,7 @@ flowchart TD
 
 ### MethodDeclaration `Invalidate` · L1680–1680
 
-[Drilling.Common/Automation/CAutomationManager.cs:1680–1680](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1680-L1680)
+[Drilling.Common/Automation/CAutomationManager.cs:1680–1680](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1680-L1680)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8904,9 +8904,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1702–1702](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1702-L1702) | Invalidate | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1719–1719](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1719-L1719) | Invalidate | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3429–3429](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3429-L3429) | MotionSession.Invalidate | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1702–1702](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1702-L1702) | Invalidate | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1719–1719](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1719-L1719) | Invalidate | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3417–3417](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3417-L3417) | MotionSession.Invalidate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8924,7 +8924,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L1681–1698
 
-[Drilling.Common/Automation/CAutomationManager.cs:1681–1698](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1681-L1698)
+[Drilling.Common/Automation/CAutomationManager.cs:1681–1698](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1681-L1698)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8945,9 +8945,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3537–3552](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3537-L3552) | MotionSession.Execute | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3576–3582](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3576-L3582) | MotionSession.Execute | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3688–3711](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3688-L3711) | MotionSession.Execute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3525–3540](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3525-L3540) | MotionSession.Execute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3564–3570](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3564-L3570) | MotionSession.Execute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3676–3699](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3676-L3699) | MotionSession.Execute | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8995,7 +8995,7 @@ flowchart TD
 
 ### MethodDeclaration `StopJog` · L1700–1715
 
-[Drilling.Common/Automation/CAutomationManager.cs:1700–1715](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1700-L1715)
+[Drilling.Common/Automation/CAutomationManager.cs:1700–1715](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1700-L1715)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9008,7 +9008,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3436–3436](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3436-L3436) | MotionSession.StopJog | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3424–3424](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3424-L3424) | MotionSession.StopJog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9052,7 +9052,7 @@ flowchart TD
 
 ### MethodDeclaration `StopAll` · L1717–1753
 
-[Drilling.Common/Automation/CAutomationManager.cs:1717–1753](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1717-L1753)
+[Drilling.Common/Automation/CAutomationManager.cs:1717–1753](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1717-L1753)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9071,8 +9071,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3597–3639](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L3597-L3639) | MotionSession.StopAll | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6362–6387](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L6362-L6387) | _motionSession.StopAll | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3585–3627](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3585-L3627) | MotionSession.StopAll | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6348–6373](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6348-L6373) | _motionSession.StopAll | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9144,7 +9144,7 @@ flowchart TD
 
 ### FieldDeclaration `_lastRunId` · L1761–1761
 
-[Drilling.Common/Automation/CAutomationManager.cs:1761–1761](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1761-L1761)
+[Drilling.Common/Automation/CAutomationManager.cs:1761–1761](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1761-L1761)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9172,7 +9172,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateRunId` · L1762–1762
 
-[Drilling.Common/Automation/CAutomationManager.cs:1762–1762](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1762-L1762)
+[Drilling.Common/Automation/CAutomationManager.cs:1762–1762](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1762-L1762)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9185,7 +9185,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Script/CAutomation1ScriptFile.cs#L55-L55) | CMofReadiness.CreateRunId | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Script/CAutomation1ScriptFile.cs#L55-L55) | CMofReadiness.CreateRunId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9203,7 +9203,7 @@ flowchart TD
 
 ### MethodDeclaration `VariableIndex` · L1763–1768
 
-[Drilling.Common/Automation/CAutomationManager.cs:1763–1768](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1763-L1768)
+[Drilling.Common/Automation/CAutomationManager.cs:1763–1768](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1763-L1768)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9222,8 +9222,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1257–1257](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1257-L1257) | CMofReadiness.VariableIndex | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Script/CAutomation1ScriptFile.cs#L437-L437) | CMofReadiness.VariableIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1257–1257](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1257-L1257) | CMofReadiness.VariableIndex | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Script/CAutomation1ScriptFile.cs#L437-L437) | CMofReadiness.VariableIndex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -9255,7 +9255,7 @@ flowchart TD
 
 ### MethodDeclaration `VariableIndex` · L1770–1777
 
-[Drilling.Common/Automation/CAutomationManager.cs:1770–1777](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L1770-L1777)
+[Drilling.Common/Automation/CAutomationManager.cs:1770–1777](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1770-L1777)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9275,7 +9275,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:1905–1905](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L1905-L1905) | CMofReadiness.VariableIndex | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:1905–1905](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L1905-L1905) | CMofReadiness.VariableIndex | False |
 
 호출하는 대상과 해석 범위:
 

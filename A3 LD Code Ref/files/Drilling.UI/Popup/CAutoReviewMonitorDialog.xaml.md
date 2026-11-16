@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | ea238e600c4df8565426d421d437b815841e50aa6d9745fa19d5ae49c892808c |
 | 파일 분류 | code |
 | 원본 크기/행 | 8,460 bytes / 89 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAutoReviewMonitorDialog.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAutoReviewMonitorDialog.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -23,57 +23,68 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- |
 | 코드 비하인드 후보 | Drilling.UI/Popup/CAutoReviewMonitorDialog.xaml.cs |
 | 이름 있는 요소 | MonitorPreview, MonitorTabs, NgGrid, LineGrid, FinalGrid |
-| 이벤트 개수 | 1 |
+| 이벤트 개수 | 2 |
 | Binding 표현 개수 | 42 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
-| Click | CloseClicked | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| Header |
-| ProgressText |
-| Status |
-| Tolerance |
-| Preview |
-| StageY |
-| ReviewX |
-| Mode |
-| Preview |
-| FocusText |
-| NgResults |
-| SelectedNg |
-| LineNo |
-| Head |
-| Cell |
-| Shot |
-| Beam |
-| Received |
-| Converted |
-| Excess |
-| Preview.Lines |
-| OrderNo |
-| StateText |
-| ResultSummary |
-| Statistics[0].Minimum |
-| Statistics[0].Maximum |
-| Statistics[0].Average |
-| Statistics[1].Minimum |
-| Statistics[1].Maximum |
-| Statistics[1].Average |
-| FinalVisibility |
-| FinalResults |
-| LineNo |
-| Head |
-| Cell |
-| Shot |
-| Beam |
-| Received |
-| Converted |
-| Judge |
-| OffsetStatus |
-| ResultFile |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| MonitorPreview | L36–36 |
+| MonitorTabs | L40–40 |
+| NgGrid | L41–41 |
+| LineGrid | L53–53 |
+| FinalGrid | L66–66 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+| Click | CloseClicked | L22–22 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| MouseDoubleClick | LineDoubleClicked | L53–53 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding Header} | L23–23 |
+| {Binding ProgressText} | L24–24 |
+| {Binding Status} | L25–25 |
+| {Binding Tolerance} | L27–27 |
+| {Binding Preview} | L28–28 |
+| {Binding StageY} | L29–29 |
+| {Binding ReviewX} | L30–30 |
+| {Binding Mode} | L30–30 |
+| {Binding Preview} | L36–36 |
+| {Binding FocusText} | L39–39 |
+| {Binding NgResults} | L41–41 |
+| {Binding SelectedNg} | L41–41 |
+| {Binding LineNo} | L43–43 |
+| {Binding Head} | L44–44 |
+| {Binding Cell} | L45–45 |
+| {Binding Shot} | L46–46 |
+| {Binding Beam} | L47–47 |
+| {Binding Received} | L48–48 |
+| {Binding Converted} | L49–49 |
+| {Binding Excess} | L50–50 |
+| {Binding Preview.Lines} | L53–53 |
+| {Binding OrderNo} | L55–55 |
+| {Binding StateText} | L56–56 |
+| {Binding ResultSummary} | L57–57 |
+| {Binding Statistics[0].Minimum} | L58–58 |
+| {Binding Statistics[0].Maximum} | L59–59 |
+| {Binding Statistics[0].Average} | L60–60 |
+| {Binding Statistics[1].Minimum} | L61–61 |
+| {Binding Statistics[1].Maximum} | L62–62 |
+| {Binding Statistics[1].Average} | L63–63 |
+| {Binding FinalVisibility} | L66–66 |
+| {Binding FinalResults} | L66–66 |
+| {Binding LineNo} | L68–68 |
+| {Binding Head} | L69–69 |
+| {Binding Cell} | L70–70 |
+| {Binding Shot} | L71–71 |
+| {Binding Beam} | L72–72 |
+| {Binding Received} | L73–73 |
+| {Binding Converted} | L74–74 |
+| {Binding Judge} | L75–75 |
+| {Binding OffsetStatus} | L83–83 |
+| {Binding ResultFile} | L84–84 |
 
 ## 원문 전체 주석 해설본
 

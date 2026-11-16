@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 3483e19c0f2d47dfc533a0b9967a0308e654dd43e582ab0b560cad020c4477a4 |
 | 파일 분류 | code |
 | 원본 크기/행 | 49,449 bytes / 994 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -143,7 +143,7 @@
 
 ### FieldDeclaration `_pending` · L13–13
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L13-L13)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -171,7 +171,7 @@
 
 ### FieldDeclaration `_lifecycleLock` · L14–14
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L14-L14)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -199,7 +199,7 @@
 
 ### FieldDeclaration `_writeLock` · L15–15
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L15-L15)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -227,7 +227,7 @@
 
 ### FieldDeclaration `_clientReady` · L16–16
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L16-L16)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -255,7 +255,7 @@
 
 ### FieldDeclaration `_listener` · L17–17
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L17-L17)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -270,7 +270,7 @@
 
 ### FieldDeclaration `_client` · L18–18
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L18-L18)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -285,7 +285,7 @@
 
 ### FieldDeclaration `_stream` · L19–19
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L19-L19)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -300,7 +300,7 @@
 
 ### FieldDeclaration `_serverCancellation` · L20–20
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L20-L20)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -315,7 +315,7 @@
 
 ### FieldDeclaration `_acceptTask` · L21–21
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L21-L21)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -330,7 +330,7 @@
 
 ### FieldDeclaration `_receiveTask` · L22–22
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L22-L22)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -345,7 +345,7 @@
 
 ### FieldDeclaration `_uniqueId` · L23–23
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L23-L23)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -360,7 +360,7 @@
 
 ### FieldDeclaration `_flyingLineCapacity` · L24–24
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L24-L24)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L24-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -375,7 +375,7 @@
 
 ### PropertyDeclaration `HasConnectedClient` · L27–27
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L27-L27)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -402,7 +402,7 @@
 
 ### PropertyDeclaration `LineCapacityProvider` · L28–28
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L28-L28)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -417,7 +417,7 @@
 
 ### GetAccessorDeclaration `get_LineCapacityProvider` · L28–28
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L28-L28)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -432,7 +432,7 @@
 
 ### SetAccessorDeclaration `set_LineCapacityProvider` · L28–28
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L28-L28)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -453,7 +453,7 @@
 
 ### PropertyDeclaration `ConfiguredLineCapacity` · L29–29
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L29-L29)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -482,7 +482,7 @@
 
 ### PropertyDeclaration `ResponseLineCapacity` · L30–30
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L30-L30)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -510,7 +510,7 @@
 
 ### EventFieldDeclaration `ProtocolTrace` · L31–31
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L31-L31)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -525,7 +525,7 @@
 
 ### MethodDeclaration `Connect` · L32–76
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:32–76](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L32-L76)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:32–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L32-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -544,7 +544,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L108-L108) | Connect | True |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L108-L108) | Connect | True |
 
 호출하는 대상과 해석 범위:
 
@@ -624,7 +624,7 @@ flowchart TD
 
 ### LocalFunctionStatement `AcceptLoopCallback` · L55–58
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:55–58](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L55-L58)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:55–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L55-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -652,7 +652,7 @@ flowchart TD
 
 ### MethodDeclaration `Disconnect` · L78–91
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:78–91](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L78-L91)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:78–91](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L78-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -708,7 +708,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L93–142
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:93–142](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L93-L142)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:93–142](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L93-L142)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -828,7 +828,7 @@ flowchart TD
 
 ### MethodDeclaration `AcceptLoop` · L144–165
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:144–165](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L144-L165)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:144–165](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L144-L165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -848,7 +848,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L57-L57) | AcceptLoop | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L57-L57) | AcceptLoop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -896,7 +896,7 @@ flowchart TD
 
 ### MethodDeclaration `ReplaceClient` · L167–186
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:167–186](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L167-L186)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:167–186](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L167-L186)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -916,7 +916,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L153-L153) | ReplaceClient | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L153-L153) | ReplaceClient | False |
 
 호출하는 대상과 해석 범위:
 
@@ -960,7 +960,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ReceiveLoopCallback` · L172–175
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:172–175](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L172-L175)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:172–175](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L172-L175)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -988,7 +988,7 @@ flowchart TD
 
 ### MethodDeclaration `ReceiveLoop` · L188–249
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:188–249](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L188-L249)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:188–249](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L188-L249)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1009,7 +1009,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L174-L174) | ReceiveLoop | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L174-L174) | ReceiveLoop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1119,7 +1119,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitForClient` · L251–270
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:251–270](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L251-L270)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:251–270](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L251-L270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1138,7 +1138,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L111-L111) | WaitForClient | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L111-L111) | WaitForClient | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1189,7 +1189,7 @@ flowchart TD
 
 ### MethodDeclaration `SendRequest` · L272–309
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:272–309](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L272-L309)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:272–309](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L272-L309)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1210,7 +1210,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L117-L117) | SendRequest | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L117-L117) | SendRequest | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1291,7 +1291,7 @@ flowchart TD
 
 ### MethodDeclaration `SendPacket` · L311–327
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:311–327](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L311-L327)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:311–327](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L311-L327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1312,9 +1312,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L206-L206) | SendPacket | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L212-L212) | SendPacket | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:282–282](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L282-L282) | SendPacket | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L206-L206) | SendPacket | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L212-L212) | SendPacket | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:282–282](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L282-L282) | SendPacket | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1366,7 +1366,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadPacket` · L329–341
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:329–341](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L329-L341)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:329–341](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L329-L341)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1386,7 +1386,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L194-L194) | ReadPacket | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L194-L194) | ReadPacket | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1429,7 +1429,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseRequest` · L343–357
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:343–357](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L343-L357)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:343–357](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L343-L357)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1450,7 +1450,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L114-L114) | ParseRequest | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L114-L114) | ParseRequest | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1505,7 +1505,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseFlyingReady` · L359–378
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:359–378](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L359-L378)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:359–378](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L359-L378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1526,7 +1526,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L351-L351) | ParseFlyingReady | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L351-L351) | ParseFlyingReady | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1584,7 +1584,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseMarkSearch` · L380–389
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:380–389](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L380-L389)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:380–389](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L380-L389)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1603,8 +1603,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L350-L350) | ParseMarkSearch | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L373-L373) | ParseMarkSearch | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L350-L350) | ParseMarkSearch | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L373-L373) | ParseMarkSearch | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1652,7 +1652,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeCommand` · L391–403
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:391–403](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L391-L403)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:391–403](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L391-L403)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1671,8 +1671,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L112-L112) | NormalizeCommand | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L346-L346) | NormalizeCommand | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L112-L112) | NormalizeCommand | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:346–346](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L346-L346) | NormalizeCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1710,7 +1710,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseInt` · L405–405
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:405–405](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L405-L405)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:405–405](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L405-L405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1730,12 +1730,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L388-L388) | ParseInt | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L388-L388) | ParseInt | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L388-L388) | ParseInt | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L388-L388) | ParseInt | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L388-L388) | ParseInt | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L388-L388) | ParseInt | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L388-L388) | ParseInt | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L388-L388) | ParseInt | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L388-L388) | ParseInt | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L388-L388) | ParseInt | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L388-L388) | ParseInt | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L388-L388) | ParseInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1757,7 +1757,7 @@ flowchart TD
 
 ### MethodDeclaration `DescribeResponse` · L406–441
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:406–441](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L406-L441)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:406–441](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L406-L441)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1777,7 +1777,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L118-L118) | DescribeResponse | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L118-L118) | DescribeResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1889,7 +1889,7 @@ flowchart TD
 
 ### MethodDeclaration `DescribePacket` · L443–443
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L443-L443)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L443-L443)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1908,14 +1908,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L195-L195) | DescribePacket | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L319-L319) | DescribePacket | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L195-L195) | DescribePacket | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L319-L319) | DescribePacket | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `NextUniqueId` · L444–454
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:444–454](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L444-L454)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:444–454](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L444-L454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1928,7 +1928,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L114-L114) | NextUniqueId | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L114-L114) | NextUniqueId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1962,7 +1962,7 @@ flowchart TD
 
 ### MethodDeclaration `RaiseProtocolTrace` · L456–459
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:456–459](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L456-L459)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:456–459](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L456-L459)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1982,11 +1982,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L65-L65) | RaiseProtocolTrace | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L185-L185) | RaiseProtocolTrace | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L203-L203) | RaiseProtocolTrace | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L244-L244) | RaiseProtocolTrace | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L321-L321) | RaiseProtocolTrace | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L65-L65) | RaiseProtocolTrace | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L185-L185) | RaiseProtocolTrace | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L203-L203) | RaiseProtocolTrace | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L244-L244) | RaiseProtocolTrace | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L321-L321) | RaiseProtocolTrace | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2006,7 +2006,7 @@ flowchart TD
 
 ### MethodDeclaration `IsServerListening` · L461–464
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:461–464](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L461-L464)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:461–464](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L461-L464)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2019,7 +2019,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L243-L243) | IsServerListening | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L243-L243) | IsServerListening | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2031,7 +2031,7 @@ flowchart TD
 
 ### MethodDeclaration `StopServer` · L466–495
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:466–495](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L466-L495)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:466–495](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L466-L495)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2044,9 +2044,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L44-L44) | StopServer | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L69-L69) | StopServer | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L84-L84) | StopServer | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L44-L44) | StopServer | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L69-L69) | StopServer | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L84-L84) | StopServer | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2106,7 +2106,7 @@ flowchart TD
 
 ### MethodDeclaration `FailPending` · L497–506
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:497–506](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L497-L506)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:497–506](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L497-L506)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2125,8 +2125,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L241-L241) | FailPending | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L494-L494) | FailPending | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L241-L241) | FailPending | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L494-L494) | FailPending | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2161,7 +2161,7 @@ flowchart TD
 
 ### MethodDeclaration `IgnoreCancellation` · L508–517
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:508–517](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L508-L517)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:508–517](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L508-L517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2180,8 +2180,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:474–474](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L474-L474) | IgnoreCancellation | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L479-L479) | IgnoreCancellation | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:474–474](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L474-L474) | IgnoreCancellation | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:479–479](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L479-L479) | IgnoreCancellation | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2206,7 +2206,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveBindAddress` · L519–527
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:519–527](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L519-L527)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:519–527](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L519-L527)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2225,7 +2225,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L51-L51) | ResolveBindAddress | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L51-L51) | ResolveBindAddress | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2261,7 +2261,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MarkFindSingle` · L532–532
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:532–532](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L532-L532)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:532–532](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L532-L532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2276,7 +2276,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `FlyingReady` · L533–533
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:533–533](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L533-L533)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:533–533](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L533-L533)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2291,7 +2291,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `FlyingMoveDone` · L534–534
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L534-L534)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L534-L534)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2306,7 +2306,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MarkFindLine` · L535–535
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L535-L535)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L535-L535)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2321,7 +2321,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MarkFindSettingSingle` · L536–536
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:536–536](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L536-L536)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:536–536](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L536-L536)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2336,7 +2336,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MarkFindManual` · L537–537
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:537–537](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L537-L537)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:537–537](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L537-L537)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2351,7 +2351,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `KeepAliveRequest` · L538–538
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:538–538](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L538-L538)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:538–538](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L538-L538)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2366,7 +2366,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `KeepAlive` · L539–539
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:539–539](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L539-L539)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:539–539](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L539-L539)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2381,7 +2381,7 @@ flowchart TD
 
 ### PropertyDeclaration `ActualCount` · L551–551
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:551–551](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L551-L551)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:551–551](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L551-L551)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2396,7 +2396,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ActualCount` · L551–551
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:551–551](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L551-L551)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:551–551](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L551-L551)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2411,7 +2411,7 @@ flowchart TD
 
 ### PropertyDeclaration `MaximumCount` · L552–552
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L552-L552)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L552-L552)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2426,7 +2426,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_MaximumCount` · L552–552
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L552-L552)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L552-L552)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2441,7 +2441,7 @@ flowchart TD
 
 ### FieldDeclaration `PacketLogSeparator` · L556–556
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L556-L556)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L556-L556)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2462,7 +2462,7 @@ flowchart TD
 
 ### FieldDeclaration `PacketLogBodyIndent` · L557–557
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L557-L557)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L557-L557)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2483,7 +2483,7 @@ flowchart TD
 
 ### FieldDeclaration `HeaderSize` · L558–558
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L558-L558)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L558-L558)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2504,7 +2504,7 @@ flowchart TD
 
 ### FieldDeclaration `MarkSearchSize` · L559–559
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L559-L559)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L559-L559)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2525,7 +2525,7 @@ flowchart TD
 
 ### FieldDeclaration `MarkFindPackedSize` · L560–560
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L560-L560)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L560-L560)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2546,7 +2546,7 @@ flowchart TD
 
 ### FieldDeclaration `SingleResultBodySize` · L561–561
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L561-L561)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L561-L561)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2567,7 +2567,7 @@ flowchart TD
 
 ### FieldDeclaration `MaximumBodySize` · L562–562
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L562-L562)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L562-L562)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2588,7 +2588,7 @@ flowchart TD
 
 ### FieldDeclaration `MaximumMarkCount` · L565–565
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:565–565](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L565-L565)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:565–565](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L565-L565)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2609,7 +2609,7 @@ flowchart TD
 
 ### FieldDeclaration `DefaultMaxHoleCountPerLine` · L566–566
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L566-L566)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L566-L566)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2630,7 +2630,7 @@ flowchart TD
 
 ### FieldDeclaration `MaxHoleCountPerLineSettingKey` · L567–567
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L567-L567)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L567-L567)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2651,7 +2651,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateLineCapacity` · L568–573
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:568–573](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L568-L573)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:568–573](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L568-L573)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2670,13 +2670,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/CInterfaceManager.cs#L90-L90) | CVisionProtocol.ValidateLineCapacity | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L29-L29) | CVisionProtocol.ValidateLineCapacity | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:579–579](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L579-L579) | ValidateLineCapacity | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:613–613](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L613-L613) | ValidateLineCapacity | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:711–711](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L711-L711) | ValidateLineCapacity | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:778–778](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L778-L778) | ValidateLineCapacity | False |
-| [Drilling.Common/Managers/CSettingManager.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CSettingManager.cs#L110-L110) | CVisionProtocol.ValidateLineCapacity | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L90-L90) | CVisionProtocol.ValidateLineCapacity | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L29-L29) | CVisionProtocol.ValidateLineCapacity | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:579–579](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L579-L579) | ValidateLineCapacity | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:613–613](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L613-L613) | ValidateLineCapacity | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:711–711](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L711-L711) | ValidateLineCapacity | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:778–778](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L778-L778) | ValidateLineCapacity | False |
+| [Drilling.Common/Managers/CSettingManager.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CSettingManager.cs#L110-L110) | CVisionProtocol.ValidateLineCapacity | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2708,7 +2708,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateEmpty` · L574–574
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L574-L574)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L574-L574)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2729,12 +2729,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L206-L206) | CVisionProtocol.CreateEmpty | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L212-L212) | CVisionProtocol.CreateEmpty | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L352-L352) | CVisionProtocol.CreateEmpty | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L353-L353) | CVisionProtocol.CreateEmpty | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L354-L354) | CVisionProtocol.CreateEmpty | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:355–355](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L355-L355) | CVisionProtocol.CreateEmpty | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L206-L206) | CVisionProtocol.CreateEmpty | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L212-L212) | CVisionProtocol.CreateEmpty | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:352–352](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L352-L352) | CVisionProtocol.CreateEmpty | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L353-L353) | CVisionProtocol.CreateEmpty | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L354-L354) | CVisionProtocol.CreateEmpty | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:355–355](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L355-L355) | CVisionProtocol.CreateEmpty | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2752,7 +2752,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateMarkFindSingle` · L575–575
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:575–575](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L575-L575)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:575–575](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L575-L575)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2772,7 +2772,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L350-L350) | CVisionProtocol.CreateMarkFindSingle | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L350-L350) | CVisionProtocol.CreateMarkFindSingle | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2792,7 +2792,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateFlyingReady` · L576–595
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:576–595](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L576-L595)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:576–595](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L576-L595)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2814,7 +2814,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L377-L377) | CVisionProtocol.CreateFlyingReady | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L377-L377) | CVisionProtocol.CreateFlyingReady | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2866,7 +2866,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateSingleResult` · L597–608
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:597–608](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L597-L608)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:597–608](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L597-L608)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2925,7 +2925,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateLineResult` · L610–630
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:610–630](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L610-L630)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:610–630](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L610-L630)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3002,7 +3002,7 @@ flowchart TD
 
 ### MethodDeclaration `Create` · L632–637
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:632–637](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L632-L637)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:632–637](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L632-L637)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3024,11 +3024,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L574-L574) | Create | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:575–575](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L575-L575) | Create | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L594-L594) | Create | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L607-L607) | Create | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:629–629](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L629-L629) | Create | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:574–574](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L574-L574) | Create | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:575–575](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L575-L575) | Create | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L594-L594) | Create | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L607-L607) | Create | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:629–629](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L629-L629) | Create | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3053,7 +3053,7 @@ flowchart TD
 
 ### MethodDeclaration `Encode` · L639–656
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:639–656](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L639-L656)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:639–656](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L639-L656)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3072,7 +3072,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L313-L313) | CVisionProtocol.Encode | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L313-L313) | CVisionProtocol.Encode | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3120,7 +3120,7 @@ flowchart TD
 
 ### MethodDeclaration `DecodeHeader` · L658–668
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:658–668](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L658-L668)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:658–668](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L658-L668)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3139,8 +3139,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L333-L333) | CVisionProtocol.DecodeHeader | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L672-L672) | DecodeHeader | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L333-L333) | CVisionProtocol.DecodeHeader | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L672-L672) | DecodeHeader | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3184,7 +3184,7 @@ flowchart TD
 
 ### MethodDeclaration `Decode` · L670–680
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:670–680](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L670-L680)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:670–680](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L670-L680)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3241,7 +3241,7 @@ flowchart TD
 
 ### MethodDeclaration `DecodeMarkSearchRequest` · L682–696
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:682–696](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L682-L696)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:682–696](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L682-L696)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3260,7 +3260,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:890–890](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L890-L890) | DecodeMarkSearchRequest | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:890–890](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L890-L890) | DecodeMarkSearchRequest | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3300,7 +3300,7 @@ flowchart TD
 
 ### MethodDeclaration `DecodeFlyingReadyRequest` · L698–732
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:698–732](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L698-L732)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:698–732](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L698-L732)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3320,7 +3320,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L905-L905) | DecodeFlyingReadyRequest | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L905-L905) | DecodeFlyingReadyRequest | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3393,7 +3393,7 @@ flowchart TD
 
 ### MethodDeclaration `DecodeFlyingMoveDoneResponse` · L735–746
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:735–746](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L735-L746)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:735–746](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L735-L746)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3418,8 +3418,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:412–412](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L412-L412) | CVisionProtocol.DecodeFlyingMoveDoneResponse | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:864–864](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L864-L864) | DecodeFlyingMoveDoneResponse | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:412–412](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L412-L412) | CVisionProtocol.DecodeFlyingMoveDoneResponse | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:864–864](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L864-L864) | DecodeFlyingMoveDoneResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3467,7 +3467,7 @@ flowchart TD
 
 ### MethodDeclaration `DecodeSingleResult` · L748–762
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:748–762](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L748-L762)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:748–762](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L748-L762)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3486,8 +3486,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L417-L417) | CVisionProtocol.DecodeSingleResult | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:918–918](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L918-L918) | DecodeSingleResult | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L417-L417) | CVisionProtocol.DecodeSingleResult | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:918–918](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L918-L918) | DecodeSingleResult | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3531,7 +3531,7 @@ flowchart TD
 
 ### MethodDeclaration `DecodeLineResult` · L764–803
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:764–803](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L764-L803)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:764–803](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L764-L803)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3551,8 +3551,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L423-L423) | CVisionProtocol.DecodeLineResult | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:925–925](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L925-L925) | DecodeLineResult | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L423-L423) | CVisionProtocol.DecodeLineResult | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:925–925](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L925-L925) | DecodeLineResult | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3631,7 +3631,7 @@ flowchart TD
 
 ### MethodDeclaration `EncodeMarkSearch` · L805–810
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:805–810](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L805-L810)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:805–810](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L805-L810)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3650,7 +3650,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:575–575](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L575-L575) | EncodeMarkSearch | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:575–575](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L575-L575) | EncodeMarkSearch | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3671,7 +3671,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatPacketLog` · L812–827
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:812–827](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L812-L827)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:812–827](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L812-L827)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3693,8 +3693,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L203-L203) | CVisionProtocol.FormatPacketLog | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L321-L321) | CVisionProtocol.FormatPacketLog | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L203-L203) | CVisionProtocol.FormatPacketLog | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L321-L321) | CVisionProtocol.FormatPacketLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3771,7 +3771,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCommandName` · L829–842
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:829–842](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L829-L842)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:829–842](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L829-L842)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3790,7 +3790,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:823–823](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L823-L823) | GetCommandName | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:823–823](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L823-L823) | GetCommandName | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -3812,7 +3812,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendPacketLogBody` · L844–884
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:844–884](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L844-L884)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:844–884](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L844-L884)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3833,7 +3833,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:825–825](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L825-L825) | AppendPacketLogBody | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:825–825](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L825-L825) | AppendPacketLogBody | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3913,7 +3913,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendMarkFindSingleLogBody` · L886–901
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:886–901](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L886-L901)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:886–901](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L886-L901)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3933,7 +3933,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:858–858](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L858-L858) | AppendMarkFindSingleLogBody | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:858–858](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L858-L858) | AppendMarkFindSingleLogBody | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4010,7 +4010,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendFlyingReadyLogBody` · L903–914
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:903–914](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L903-L914)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:903–914](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L903-L914)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4031,7 +4031,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:861–861](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L861-L861) | AppendFlyingReadyLogBody | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:861–861](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L861-L861) | AppendFlyingReadyLogBody | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4108,7 +4108,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendSingleResultLogBody` · L916–921
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:916–921](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L916-L921)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:916–921](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L916-L921)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4128,8 +4128,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:873–873](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L873-L873) | AppendSingleResultLogBody | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:900–900](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L900-L900) | AppendSingleResultLogBody | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:873–873](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L873-L873) | AppendSingleResultLogBody | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:900–900](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L900-L900) | AppendSingleResultLogBody | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4157,7 +4157,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendLineResultLogBody` · L923–933
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:923–933](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L923-L933)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:923–933](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L923-L933)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4178,7 +4178,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:869–869](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L869-L869) | AppendLineResultLogBody | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:869–869](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L869-L869) | AppendLineResultLogBody | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4225,7 +4225,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendMarkResultLog` · L935–948
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:935–948](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L935-L948)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:935–948](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L935-L948)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4246,8 +4246,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:920–920](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L920-L920) | AppendMarkResultLog | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:931–931](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L931-L931) | AppendMarkResultLog | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:920–920](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L920-L920) | AppendMarkResultLog | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:931–931](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L931-L931) | AppendMarkResultLog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4314,7 +4314,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatLogNumber` · L950–953
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:950–953](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L950-L953)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:950–953](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L950-L953)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4333,10 +4333,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L947-L947) | FormatLogNumber | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L947-L947) | FormatLogNumber | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L947-L947) | FormatLogNumber | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L947-L947) | FormatLogNumber | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L947-L947) | FormatLogNumber | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L947-L947) | FormatLogNumber | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L947-L947) | FormatLogNumber | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:947–947](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L947-L947) | FormatLogNumber | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4355,7 +4355,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteMarkSearch` · L955–963
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:955–963](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L955-L963)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:955–963](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L955-L963)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4376,8 +4376,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:591–591](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L591-L591) | WriteMarkSearch | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:808–808](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L808-L808) | WriteMarkSearch | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:591–591](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L591-L591) | WriteMarkSearch | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:808–808](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L808-L808) | WriteMarkSearch | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4405,7 +4405,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteMarkFind` · L965–972
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:965–972](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L965-L972)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:965–972](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L965-L972)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4426,9 +4426,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L606-L606) | WriteMarkFind | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:624–624](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L624-L624) | WriteMarkFind | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:627–627](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L627-L627) | WriteMarkFind | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L606-L606) | WriteMarkFind | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:624–624](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L624-L624) | WriteMarkFind | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:627–627](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L627-L627) | WriteMarkFind | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4454,7 +4454,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadPackedMarkFind` · L974–974
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4474,8 +4474,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:761–761](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L761-L761) | ReadPackedMarkFind | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:799–799](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L799-L799) | ReadPackedMarkFind | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:761–761](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L761-L761) | ReadPackedMarkFind | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:799–799](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L799-L799) | ReadPackedMarkFind | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4503,7 +4503,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadMarkSearch` · L975–975
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4523,8 +4523,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L695-L695) | ReadMarkSearch | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:728–728](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L728-L728) | ReadMarkSearch | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L695-L695) | ReadMarkSearch | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:728–728](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L728-L728) | ReadMarkSearch | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4554,7 +4554,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateBodyLength` · L976–982
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:976–982](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L976-L982)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:976–982](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L976-L982)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4573,9 +4573,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:635–635](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L635-L635) | ValidateBodyLength | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L648-L648) | ValidateBodyLength | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L666-L666) | ValidateBodyLength | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:635–635](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L635-L635) | ValidateBodyLength | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L648-L648) | ValidateBodyLength | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:666–666](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L666-L666) | ValidateBodyLength | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4604,7 +4604,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt32` · L984–984
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:984–984](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L984-L984)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:984–984](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L984-L984)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4624,23 +4624,23 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L665-L665) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L665-L665) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L665-L665) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L665-L665) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:712–712](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L712-L712) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L713-L713) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:742–742](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L742-L742) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:761–761](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L761-L761) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:779–779](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L779-L779) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:780–780](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L780-L780) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975) | ReadInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L665-L665) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L665-L665) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L665-L665) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:665–665](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L665-L665) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:712–712](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L712-L712) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L713-L713) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:742–742](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L742-L742) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:761–761](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L761-L761) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:779–779](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L779-L779) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:780–780](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L780-L780) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975) | ReadInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:975–975](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L975-L975) | ReadInt32 | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4660,7 +4660,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L985–989
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:985–989](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L985-L989)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:985–989](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L985-L989)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4680,10 +4680,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974) | ReadDouble | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974) | ReadDouble | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974) | ReadDouble | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974) | ReadDouble | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974) | ReadDouble | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974) | ReadDouble | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974) | ReadDouble | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L974-L974) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4708,7 +4708,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteInt32` · L991–991
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:991–991](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L991-L991)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:991–991](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L991-L991)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4729,22 +4729,22 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L587-L587) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:588–588](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L588-L588) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L605-L605) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L620-L620) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L621-L621) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:650–650](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L650-L650) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L651-L651) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:652–652](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L652-L652) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L653-L653) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:957–957](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L957-L957) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:958–958](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L958-L958) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:959–959](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L959-L959) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:960–960](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L960-L960) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:961–961](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L961-L961) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:962–962](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L962-L962) | WriteInt32 | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:967–967](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L967-L967) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L587-L587) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:588–588](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L588-L588) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L605-L605) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L620-L620) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L621-L621) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:650–650](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L650-L650) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L651-L651) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:652–652](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L652-L652) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L653-L653) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:957–957](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L957-L957) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:958–958](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L958-L958) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:959–959](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L959-L959) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:960–960](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L960-L960) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:961–961](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L961-L961) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:962–962](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L962-L962) | WriteInt32 | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:967–967](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L967-L967) | WriteInt32 | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4764,7 +4764,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteDouble` · L992–992
 
-[Drilling.Common/Interface/Vision/CVisionComm.cs:992–992](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L992-L992)
+[Drilling.Common/Interface/Vision/CVisionComm.cs:992–992](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L992-L992)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4785,10 +4785,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:968–968](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L968-L968) | WriteDouble | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:969–969](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L969-L969) | WriteDouble | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:970–970](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L970-L970) | WriteDouble | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:971–971](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Interface/Vision/CVisionComm.cs#L971-L971) | WriteDouble | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:968–968](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L968-L968) | WriteDouble | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:969–969](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L969-L969) | WriteDouble | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:970–970](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L970-L970) | WriteDouble | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:971–971](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L971-L971) | WriteDouble | False |
 
 호출하는 대상과 해석 범위:
 

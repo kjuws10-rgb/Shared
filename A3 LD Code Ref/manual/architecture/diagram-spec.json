@@ -1,381 +1,542 @@
 {
   "schema": "a3-diagram-spec-v1",
-  "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "evidenceScope": "static_source_only",
+  "runtimeValidated": false,
   "diagrams": [
     {
       "id": "01-startup",
-      "title": "프로그램 시작과 객체 소유",
+      "title": "시작·공유 객체·새 메뉴 의존성",
       "nodes": [
         {
           "id": "n0",
-          "label": "CApp.OnStartup"
+          "label": "CAppStartup · 공유 Manager 조립",
+          "lines": [
+            "CAppStartup",
+            "공유 Manager 조립"
+          ],
+          "x": 30,
+          "y": 100
         },
         {
           "id": "n1",
-          "label": "CAppStartup 조립"
+          "label": "RootView · 메뉴·파일서비스 전달",
+          "lines": [
+            "RootView",
+            "메뉴·파일서비스 전달"
+          ],
+          "x": 430,
+          "y": 100
         },
         {
           "id": "n2",
-          "label": "파일 어댑터·CManager"
+          "label": "Correction · CMenuReview 소유",
+          "lines": [
+            "Correction",
+            "CMenuReview 소유"
+          ],
+          "x": 830,
+          "y": 100
         },
         {
           "id": "n3",
-          "label": "비동기 Interface/Motion 초기화"
+          "label": "CManager → Station · 보호윈도우 소진 callback",
+          "lines": [
+            "CManager → Station",
+            "보호윈도우 소진 callback"
+          ],
+          "x": 30,
+          "y": 315
         },
         {
           "id": "n4",
-          "label": "CRootView·Menu 생성"
+          "label": "Monitor · ReviewOffsetFile 입력",
+          "lines": [
+            "Monitor",
+            "ReviewOffsetFile 입력"
+          ],
+          "x": 430,
+          "y": 315
         },
         {
           "id": "n5",
-          "label": "창 표시·백그라운드 감시"
+          "label": "Alarm · LogDirectory 입력",
+          "lines": [
+            "Alarm",
+            "LogDirectory 입력"
+          ],
+          "x": 830,
+          "y": 315
         }
       ],
       "edges": [
         {
           "source": "n0",
           "target": "n1",
-          "label": "진입"
+          "label": "주입"
         },
         {
           "source": "n1",
           "target": "n2",
-          "label": "구성 로드"
+          "label": "Review"
         },
         {
-          "source": "n2",
+          "source": "n0",
           "target": "n3",
-          "label": "Task.Run"
+          "label": "콜백"
         },
         {
-          "source": "n2",
+          "source": "n1",
           "target": "n4",
-          "label": "Manager 주입"
+          "label": "Offset"
         },
         {
-          "source": "n4",
+          "source": "n1",
           "target": "n5",
-          "label": "DataContext"
+          "label": "로그"
         }
       ]
     },
     {
       "id": "02-recipe",
-      "title": "정의·값·실행 스냅샷",
+      "title": "정의·정책값·런타임 카운터의 저장 경계",
       "nodes": [
         {
           "id": "n0",
-          "label": "JHMI 항목 정의"
+          "label": "JHMI_RCP 정의 · Retry 0~3",
+          "lines": [
+            "JHMI_RCP 정의",
+            "Retry 0~3"
+          ],
+          "x": 30,
+          "y": 100
         },
         {
           "id": "n1",
-          "label": "Recipe/Setting 값 CSV"
+          "label": "Recipe·Setting 파일 · 값·메타데이터",
+          "lines": [
+            "Recipe·Setting 파일",
+            "값·메타데이터"
+          ],
+          "x": 430,
+          "y": 100
         },
         {
           "id": "n2",
-          "label": "File 어댑터·검증"
+          "label": "Manager 캐시 · 정규화·검증",
+          "lines": [
+            "Manager 캐시",
+            "정규화·검증"
+          ],
+          "x": 830,
+          "y": 100
         },
         {
           "id": "n3",
-          "label": "Manager 캐시"
+          "label": "실행 합성 사본 · Setting·최신 Offset",
+          "lines": [
+            "실행 합성 사본",
+            "Setting·최신 Offset"
+          ],
+          "x": 30,
+          "y": 315
         },
         {
           "id": "n4",
-          "label": "Setting·최신 Offset 합성"
+          "label": "UsageRequest · 정책과 Current 구분",
+          "lines": [
+            "UsageRequest",
+            "정책과 Current 구분"
+          ],
+          "x": 430,
+          "y": 315
         },
         {
           "id": "n5",
-          "label": "ProcessModel 입력 사본"
+          "label": "파일·캐시·MELSEC · 인계매수 일치 확인",
+          "lines": [
+            "파일·캐시·MELSEC",
+            "인계매수 일치 확인"
+          ],
+          "x": 830,
+          "y": 315
         }
       ],
       "edges": [
         {
           "source": "n0",
-          "target": "n2",
-          "label": "항목 메타데이터"
+          "target": "n1",
+          "label": "정의"
         },
         {
           "source": "n1",
           "target": "n2",
-          "label": "값"
+          "label": "로드"
         },
         {
           "source": "n2",
           "target": "n3",
-          "label": "로드/저장"
+          "label": "사본"
         },
         {
-          "source": "n3",
+          "source": "n2",
           "target": "n4",
-          "label": "선택 Recipe"
+          "label": "Retry 정책"
         },
         {
           "source": "n4",
           "target": "n5",
-          "label": "실행값"
+          "label": "인계 저장"
         }
       ]
     },
     {
       "id": "03-coordinate",
-      "title": "좌표 계산에서 Controller 입력까지",
+      "title": "같은 계산기·다른 스냅샷과 소비자",
       "nodes": [
         {
           "id": "n0",
-          "label": "실행 Parameter 사본"
+          "label": "Recipe·Setting·Offset · 입력 시점 확인",
+          "lines": [
+            "Recipe·Setting·Offset",
+            "입력 시점 확인"
+          ],
+          "x": 30,
+          "y": 100
         },
         {
           "id": "n1",
-          "label": "설계 Shot·Head 배정"
+          "label": "좌표 계획 · Design·변환·Head",
+          "lines": [
+            "좌표 계획",
+            "Design·변환·Head"
+          ],
+          "x": 430,
+          "y": 100
         },
         {
           "id": "n2",
-          "label": "축변환·Offset·Encoder"
+          "label": "Station 준비 스냅샷 · Head별 ProcessModel",
+          "lines": [
+            "Station 준비 스냅샷",
+            "Head별 ProcessModel"
+          ],
+          "x": 830,
+          "y": 100
         },
         {
           "id": "n3",
-          "label": "Head별 ProcessModel"
+          "label": "Monitor 미리보기 · 현재 선택값·기준",
+          "lines": [
+            "Monitor 미리보기",
+            "현재 선택값·기준"
+          ],
+          "x": 30,
+          "y": 315
         },
         {
           "id": "n4",
-          "label": "ascript·CSV·manifest"
+          "label": "DrawingImage·Shot 표 · 가공점 / 검사점 구분",
+          "lines": [
+            "DrawingImage·Shot 표",
+            "가공점 / 검사점 구분"
+          ],
+          "x": 430,
+          "y": 315
         },
         {
           "id": "n5",
-          "label": "업로드·Task 실행·완료"
+          "label": "Manifest·Script 실행 · Controller 결과 별도 확인",
+          "lines": [
+            "Manifest·Script 실행",
+            "Controller 결과 별도 확인"
+          ],
+          "x": 830,
+          "y": 315
         }
       ],
       "edges": [
         {
           "source": "n0",
           "target": "n1",
-          "label": "계획"
+          "label": "합성"
         },
         {
           "source": "n1",
           "target": "n2",
-          "label": "중간값"
+          "label": "준비"
         },
         {
-          "source": "n2",
+          "source": "n1",
           "target": "n3",
-          "label": "ST_HEAD_SHOT_POINT"
+          "label": "미리보기"
         },
         {
           "source": "n3",
           "target": "n4",
-          "label": "빌드"
+          "label": "표시"
         },
         {
-          "source": "n4",
+          "source": "n2",
           "target": "n5",
-          "label": "정확한 FilePath"
+          "label": "빌드·실행"
         }
       ]
     },
     {
       "id": "04-product",
-      "title": "기판 조건과 실행 결과",
+      "title": "보호윈도우 인계·추가 요청·소진",
       "nodes": [
         {
           "id": "n0",
-          "label": "Recipe·현재 Product"
+          "label": "Current ≥ Max · 최초 교체가 필요한 회차",
+          "lines": [
+            "Current ≥ Max",
+            "최초 교체가 필요한 회차"
+          ],
+          "x": 30,
+          "y": 100
         },
         {
           "id": "n1",
-          "label": "Prepare: 모델 스냅샷"
+          "label": "Request ON · 유효한 Complete 대기",
+          "lines": [
+            "Request ON",
+            "유효한 Complete 대기"
+          ],
+          "x": 430,
+          "y": 100
         },
         {
           "id": "n2",
-          "label": "Start: Offset·인터락"
+          "label": "Stage Tray Count 인계 · 저장 → Count 보고 → OFF",
+          "lines": [
+            "Stage Tray Count 인계",
+            "저장 → Count 보고 → OFF"
+          ],
+          "x": 830,
+          "y": 100
         },
         {
           "id": "n3",
-          "label": "Station 단계 실행"
+          "label": "두 신호 OFF 확인 · 이전 Complete 재사용 방지",
+          "lines": [
+            "두 신호 OFF 확인",
+            "이전 Complete 재사용 방지"
+          ],
+          "x": 30,
+          "y": 315
         },
         {
           "id": "n4",
-          "label": "Product 상태·결과"
+          "label": "추가 요청 횟수 남음 · 다음 Request ON 준비",
+          "lines": [
+            "추가 요청 횟수 남음",
+            "다음 Request ON 준비"
+          ],
+          "x": 430,
+          "y": 315
         },
         {
           "id": "n5",
-          "label": "Active 저장·History·복구"
+          "label": "한도 소진 · LIGHT 알람·AUTO 계속",
+          "lines": [
+            "한도 소진",
+            "LIGHT 알람·AUTO 계속"
+          ],
+          "x": 830,
+          "y": 315
         }
       ],
       "edges": [
         {
           "source": "n0",
           "target": "n1",
-          "label": "선택"
+          "label": "최초 요청"
         },
         {
           "source": "n1",
           "target": "n2",
-          "label": "준비 완료"
+          "label": "완료 인정"
         },
         {
           "source": "n2",
-          "target": "n3",
-          "label": "한 실행 소유"
-        },
-        {
-          "source": "n3",
           "target": "n4",
-          "label": "완료/중단/오류"
+          "label": "한도 남음"
         },
         {
           "source": "n4",
+          "target": "n3",
+          "label": "OFF 대기"
+        },
+        {
+          "source": "n3",
+          "target": "n1",
+          "label": "추가 요청"
+        },
+        {
+          "source": "n2",
           "target": "n5",
-          "label": "영속화"
+          "label": "한도 소진"
         }
       ]
     },
     {
       "id": "05-device",
-      "title": "장치별 명령 경계",
+      "title": "기존 통신 소유자와 새 신호 정책",
       "nodes": [
         {
           "id": "n0",
-          "label": "Station·UI 요청"
+          "label": "Station·UI 요청 · 대상과 번호 구분",
+          "lines": [
+            "Station·UI 요청",
+            "대상과 번호 구분"
+          ],
+          "x": 30,
+          "y": 100
         },
         {
           "id": "n1",
-          "label": "AutomationManager"
+          "label": "Interface·Motion · 기존 장치 소유자",
+          "lines": [
+            "Interface·Motion",
+            "기존 장치 소유자"
+          ],
+          "x": 430,
+          "y": 100
         },
         {
           "id": "n2",
-          "label": "InterfaceManager·Device"
+          "label": "Comm·SDK 래퍼 · 벤더 내부는 미확인",
+          "lines": [
+            "Comm·SDK 래퍼",
+            "벤더 내부는 미확인"
+          ],
+          "x": 830,
+          "y": 100
         },
         {
           "id": "n3",
-          "label": "장치 Comm·SDK 래퍼"
+          "label": "Stage Distortion 입력 · 활성 DWord·Scale",
+          "lines": [
+            "Stage Distortion 입력",
+            "활성 DWord·Scale"
+          ],
+          "x": 30,
+          "y": 315
         },
         {
           "id": "n4",
-          "label": "MotionManager·Controller"
+          "label": "MELSEC 중앙 Snapshot · typed I/O·fresh/readback",
+          "lines": [
+            "MELSEC 중앙 Snapshot",
+            "typed I/O·fresh/readback"
+          ],
+          "x": 430,
+          "y": 315
         },
         {
           "id": "n5",
-          "label": "CMelsec typed I/O"
+          "label": "보호윈도우 추가 요청 · 같은 통신 경로 사용",
+          "lines": [
+            "보호윈도우 추가 요청",
+            "같은 통신 경로 사용"
+          ],
+          "x": 830,
+          "y": 315
         }
       ],
       "edges": [
         {
           "source": "n0",
           "target": "n1",
-          "label": "Script/Scanner"
+          "label": "명령"
         },
         {
           "source": "n1",
           "target": "n2",
-          "label": "명령"
+          "label": "전달"
         },
         {
-          "source": "n2",
-          "target": "n3",
-          "label": "등록된 Comm"
-        },
-        {
-          "source": "n0",
+          "source": "n3",
           "target": "n4",
-          "label": "축 명령"
+          "label": "입력"
+        },
+        {
+          "source": "n5",
+          "target": "n4",
+          "label": "쓰기·확인"
         },
         {
           "source": "n0",
           "target": "n5",
-          "label": "Stage I/F"
+          "label": "정책"
         }
       ]
     },
     {
       "id": "06-thread",
-      "title": "동작·상태 취득·진단",
+      "title": "분석 Task·좌표 표시·상태 감시의 경계",
       "nodes": [
         {
           "id": "n0",
-          "label": "UI Dispatcher·버튼"
+          "label": "UI 선택·버튼 · 중복 요청·취소",
+          "lines": [
+            "UI 선택·버튼",
+            "중복 요청·취소"
+          ],
+          "x": 30,
+          "y": 100
         },
         {
           "id": "n1",
-          "label": "Manager·gate"
+          "label": "Alarm Task.Run · 로그 읽기·규칙 분류",
+          "lines": [
+            "Alarm Task.Run",
+            "로그 읽기·규칙 분류"
+          ],
+          "x": 430,
+          "y": 100
         },
         {
           "id": "n2",
-          "label": "Station CtrlThread·통신"
+          "label": "Alarm 표시 · 영역당 최대 1200행",
+          "lines": [
+            "Alarm 표시",
+            "영역당 최대 1200행"
+          ],
+          "x": 830,
+          "y": 100
         },
         {
           "id": "n3",
-          "label": "공유 Snapshot 취득"
+          "label": "Monitor 새로고침 · Cell 전체 좌표 계산",
+          "lines": [
+            "Monitor 새로고침",
+            "Cell 전체 좌표 계산"
+          ],
+          "x": 30,
+          "y": 315
         },
         {
           "id": "n4",
-          "label": "UI 표시·Alarm 평가"
+          "label": "Geometry·Drawing Freeze · 표시 객체 수 감소 의도",
+          "lines": [
+            "Geometry·Drawing Freeze",
+            "표시 객체 수 감소 의도"
+          ],
+          "x": 430,
+          "y": 315
         },
         {
           "id": "n5",
-          "label": "UI/시퀀스/통신/Product 로그"
-        }
-      ],
-      "edges": [
-        {
-          "source": "n0",
-          "target": "n1",
-          "label": "요청"
-        },
-        {
-          "source": "n1",
-          "target": "n2",
-          "label": "소유권"
-        },
-        {
-          "source": "n2",
-          "target": "n3",
-          "label": "상태 취득 분리"
-        },
-        {
-          "source": "n3",
-          "target": "n4",
-          "label": "메모리 읽기"
-        },
-        {
-          "source": "n2",
-          "target": "n5",
-          "label": "실제 진행 근거"
-        },
-        {
-          "source": "n0",
-          "target": "n5",
-          "label": "사용자 조작"
-        }
-      ]
-    },
-    {
-      "id": "07-change",
-      "title": "변경 근거에서 Offline 답변까지",
-      "nodes": [
-        {
-          "id": "n0",
-          "label": "새 Source Commit·diff"
-        },
-        {
-          "id": "n1",
-          "label": "호출자·소비자 영향"
-        },
-        {
-          "id": "n2",
-          "label": "상세 장·파일 레퍼런스"
-        },
-        {
-          "id": "n3",
-          "label": "링크·범위·상태 검증"
-        },
-        {
-          "id": "n4",
-          "label": "Offline Studio 색인"
-        },
-        {
-          "id": "n5",
-          "label": "소스 근거로 답변"
+          "label": "Station gate·감시 · 파일·readback 대기",
+          "lines": [
+            "Station gate·감시",
+            "파일·readback 대기"
+          ],
+          "x": 830,
+          "y": 315
         }
       ],
       "edges": [
@@ -387,22 +548,213 @@
         {
           "source": "n1",
           "target": "n2",
-          "label": "갱신"
+          "label": "결과"
         },
         {
-          "source": "n2",
+          "source": "n0",
           "target": "n3",
-          "label": "확인"
+          "label": "선택 변경"
         },
         {
           "source": "n3",
           "target": "n4",
-          "label": "지식자료"
+          "label": "그림"
+        },
+        {
+          "source": "n0",
+          "target": "n5",
+          "label": "제어 요청"
+        }
+      ]
+    },
+    {
+      "id": "07-change",
+      "title": "변경 생산자에서 저장·검증 경계까지",
+      "nodes": [
+        {
+          "id": "n0",
+          "label": "Git diff·새 Commit · 바뀐 구현과 정의",
+          "lines": [
+            "Git diff·새 Commit",
+            "바뀐 구현과 정의"
+          ],
+          "x": 30,
+          "y": 100
+        },
+        {
+          "id": "n1",
+          "label": "생산자·호출자·소비자 · UI·파일·PLC 연결",
+          "lines": [
+            "생산자·호출자·소비자",
+            "UI·파일·PLC 연결"
+          ],
+          "x": 430,
+          "y": 100
+        },
+        {
+          "id": "n2",
+          "label": "저장·복구 계약 · 메모리와 CSV 구분",
+          "lines": [
+            "저장·복구 계약",
+            "메모리와 CSV 구분"
+          ],
+          "x": 830,
+          "y": 100
+        },
+        {
+          "id": "n3",
+          "label": "위험과 검증 시나리오 · 단위·회차·재시작·동시성",
+          "lines": [
+            "위험과 검증 시나리오",
+            "단위·회차·재시작·동시성"
+          ],
+          "x": 30,
+          "y": 315
+        },
+        {
+          "id": "n4",
+          "label": "줄 인용·상세 매뉴얼 · 현재 Commit에 고정",
+          "lines": [
+            "줄 인용·상세 매뉴얼",
+            "현재 Commit에 고정"
+          ],
+          "x": 430,
+          "y": 315
+        },
+        {
+          "id": "n5",
+          "label": "Offline 검색·답변 · 정적 확인 / 실행 미확인",
+          "lines": [
+            "Offline 검색·답변",
+            "정적 확인 / 실행 미확인"
+          ],
+          "x": 830,
+          "y": 315
+        }
+      ],
+      "edges": [
+        {
+          "source": "n0",
+          "target": "n1",
+          "label": "추적"
+        },
+        {
+          "source": "n1",
+          "target": "n2",
+          "label": "계약"
+        },
+        {
+          "source": "n2",
+          "target": "n3",
+          "label": "영향"
+        },
+        {
+          "source": "n3",
+          "target": "n4",
+          "label": "문서화"
         },
         {
           "source": "n4",
           "target": "n5",
-          "label": "검색 context"
+          "label": "활용"
+        }
+      ]
+    },
+    {
+      "id": "08-alarm",
+      "title": "알람 한 건의 시각에서 조사 후보까지",
+      "nodes": [
+        {
+          "id": "n0",
+          "label": "선택 Alarm 이력 · Code·OccurredAt",
+          "lines": [
+            "선택 Alarm 이력",
+            "Code·OccurredAt"
+          ],
+          "x": 30,
+          "y": 100
+        },
+        {
+          "id": "n1",
+          "label": "시간창·로컬 로그 · 기본 전 60초 / 후 30초",
+          "lines": [
+            "시간창·로컬 로그",
+            "기본 전 60초 / 후 30초"
+          ],
+          "x": 430,
+          "y": 100
+        },
+        {
+          "id": "n2",
+          "label": "4개 영역 분류 · 전이·비교·정상폴링 묶음",
+          "lines": [
+            "4개 영역 분류",
+            "전이·비교·정상폴링 묶음"
+          ],
+          "x": 830,
+          "y": 100
+        },
+        {
+          "id": "n3",
+          "label": "이전 비교구간 탐색 · 최대 8개·무알람·10행",
+          "lines": [
+            "이전 비교구간 탐색",
+            "최대 8개·무알람·10행"
+          ],
+          "x": 30,
+          "y": 315
+        },
+        {
+          "id": "n4",
+          "label": "후보 최대 3개·NG 요약 · 규칙 순위·원인 확정 아님",
+          "lines": [
+            "후보 최대 3개·NG 요약",
+            "규칙 순위·원인 확정 아님"
+          ],
+          "x": 430,
+          "y": 315
+        },
+        {
+          "id": "n5",
+          "label": "근거 시간축·커서 · 가까운 행 선택·최대 7근거",
+          "lines": [
+            "근거 시간축·커서",
+            "가까운 행 선택·최대 7근거"
+          ],
+          "x": 830,
+          "y": 315
+        }
+      ],
+      "edges": [
+        {
+          "source": "n0",
+          "target": "n1",
+          "label": "기준"
+        },
+        {
+          "source": "n1",
+          "target": "n2",
+          "label": "읽기"
+        },
+        {
+          "source": "n1",
+          "target": "n3",
+          "label": "비교"
+        },
+        {
+          "source": "n2",
+          "target": "n4",
+          "label": "후보"
+        },
+        {
+          "source": "n3",
+          "target": "n4",
+          "label": "차이"
+        },
+        {
+          "source": "n4",
+          "target": "n5",
+          "label": "조사"
         }
       ]
     }

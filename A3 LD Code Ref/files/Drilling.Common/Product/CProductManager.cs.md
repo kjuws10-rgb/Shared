@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
-| 원본 SHA256 | 262b986df8da1e5a582659ef4133d1035dab8ea718565c3ac3b0a38b4ce3afb7 |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 SHA256 | 93d3416633fddbcbd2ea9efe7958bd79a32c00eff8c017fb6cebfe757068596d |
 | 파일 분류 | code |
-| 원본 크기/행 | 43,011 bytes / 1,170 physical lines |
+| 원본 크기/행 | 43,114 bytes / 1,174 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -28,15 +28,15 @@
 | EN_PRODUCT_PROCESS_STATE | EnumDeclaration | 987–994 | EN_PRODUCT_PROCESS_STATE |
 | ST_PRODUCT_ALIGN_DATA | RecordDeclaration | 996–996 | ST_PRODUCT_ALIGN_DATA |
 | ST_PRODUCT_DISTORTION_DATA | RecordDeclaration | 997–997 | ST_PRODUCT_DISTORTION_DATA |
-| ST_PRODUCT_REVIEW_RESULT | RecordDeclaration | 998–998 | ST_PRODUCT_REVIEW_RESULT |
-| ST_PRODUCT_REVIEW_DATA | RecordDeclaration | 999–1011 | ST_PRODUCT_REVIEW_DATA |
-| ST_PRODUCT_INFO | RecordDeclaration | 1013–1028 | ST_PRODUCT_INFO |
-| ST_PRODUCT_RECIPE_DATA | RecordDeclaration | 1030–1030 | ST_PRODUCT_RECIPE_DATA |
-| ST_PRODUCT_RUNTIME_DATA | RecordDeclaration | 1031–1031 | ST_PRODUCT_RUNTIME_DATA |
-| ST_PRODUCT_HEAD_RESULT | RecordDeclaration | 1032–1042 | ST_PRODUCT_HEAD_RESULT |
-| ST_PRODUCT_DATA | RecordDeclaration | 1043–1160 | ST_PRODUCT_DATA |
-| ST_PRODUCT_HISTORY | RecordDeclaration | 1162–1162 | ST_PRODUCT_HISTORY |
-| CProductFileBase | ClassDeclaration | 1163–1170 | CProductFileBase |
+| ST_PRODUCT_REVIEW_RESULT | RecordDeclaration | 998–1002 | ST_PRODUCT_REVIEW_RESULT |
+| ST_PRODUCT_REVIEW_DATA | RecordDeclaration | 1003–1015 | ST_PRODUCT_REVIEW_DATA |
+| ST_PRODUCT_INFO | RecordDeclaration | 1017–1032 | ST_PRODUCT_INFO |
+| ST_PRODUCT_RECIPE_DATA | RecordDeclaration | 1034–1034 | ST_PRODUCT_RECIPE_DATA |
+| ST_PRODUCT_RUNTIME_DATA | RecordDeclaration | 1035–1035 | ST_PRODUCT_RUNTIME_DATA |
+| ST_PRODUCT_HEAD_RESULT | RecordDeclaration | 1036–1046 | ST_PRODUCT_HEAD_RESULT |
+| ST_PRODUCT_DATA | RecordDeclaration | 1047–1164 | ST_PRODUCT_DATA |
+| ST_PRODUCT_HISTORY | RecordDeclaration | 1166–1166 | ST_PRODUCT_HISTORY |
+| CProductFileBase | ClassDeclaration | 1167–1174 | CProductFileBase |
 
 ## 멤버 빠른 목록
 
@@ -113,76 +113,82 @@
 | Completed | EnumMemberDeclaration | L991–991 | Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE.Completed |
 | Stopped | EnumMemberDeclaration | L992–992 | Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE.Stopped |
 | Error | EnumMemberDeclaration | L993–993 | Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE.Error |
-| InspectionMethod | PropertyDeclaration | L1001–1001 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.InspectionMethod |
-| get_InspectionMethod | GetAccessorDeclaration | L1001–1001 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.InspectionMethod.get |
-| set_InspectionMethod | InitAccessorDeclaration | L1001–1001 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.InspectionMethod.init |
-| RecipeId | PropertyDeclaration | L1002–1002 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RecipeId |
-| get_RecipeId | GetAccessorDeclaration | L1002–1002 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RecipeId.get |
-| set_RecipeId | InitAccessorDeclaration | L1002–1002 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RecipeId.init |
-| Rule | PropertyDeclaration | L1003–1003 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.Rule |
-| get_Rule | GetAccessorDeclaration | L1003–1003 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.Rule.get |
-| set_Rule | InitAccessorDeclaration | L1003–1003 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.Rule.init |
-| RuleScope | PropertyDeclaration | L1004–1004 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RuleScope |
-| get_RuleScope | GetAccessorDeclaration | L1004–1004 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RuleScope.get |
-| set_RuleScope | InitAccessorDeclaration | L1004–1004 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RuleScope.init |
-| BeamNo | PropertyDeclaration | L1005–1005 | int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.BeamNo |
-| get_BeamNo | GetAccessorDeclaration | L1005–1005 | int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.BeamNo.get |
-| set_BeamNo | InitAccessorDeclaration | L1005–1005 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.BeamNo.init |
-| ReferenceCellNo | PropertyDeclaration | L1006–1006 | int? Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceCellNo |
-| get_ReferenceCellNo | GetAccessorDeclaration | L1006–1006 | int? Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceCellNo.get |
-| set_ReferenceCellNo | InitAccessorDeclaration | L1006–1006 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceCellNo.init |
-| ReferenceShot | PropertyDeclaration | L1007–1007 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceShot |
-| get_ReferenceShot | GetAccessorDeclaration | L1007–1007 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceShot.get |
-| set_ReferenceShot | InitAccessorDeclaration | L1007–1007 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceShot.init |
-| RoughReference | PropertyDeclaration | L1008–1008 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RoughReference |
-| get_RoughReference | GetAccessorDeclaration | L1008–1008 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RoughReference.get |
-| set_RoughReference | InitAccessorDeclaration | L1008–1008 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RoughReference.init |
-| FineLineCount | PropertyDeclaration | L1009–1009 | int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.FineLineCount |
-| get_FineLineCount | GetAccessorDeclaration | L1009–1009 | int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.FineLineCount.get |
-| set_FineLineCount | InitAccessorDeclaration | L1009–1009 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.FineLineCount.init |
-| TotalCount | PropertyDeclaration | L1010–1010 | int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.TotalCount |
-| get_TotalCount | GetAccessorDeclaration | L1010–1010 | int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.TotalCount.get |
-| set_TotalCount | InitAccessorDeclaration | L1010–1010 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.TotalCount.init |
-| Get | MethodDeclaration | L1015–1018 | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) |
-| Set | MethodDeclaration | L1020–1027 | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) |
-| GlassId | PropertyDeclaration | L1052–1052 | string Drilling.Common.Product.ST_PRODUCT_DATA.GlassId |
-| ProductId | PropertyDeclaration | L1054–1060 | string Drilling.Common.Product.ST_PRODUCT_DATA.ProductId |
-| get_ProductId | GetAccessorDeclaration | L1056–1059 | string Drilling.Common.Product.ST_PRODUCT_DATA.ProductId.get |
-| PanelId | PropertyDeclaration | L1062–1068 | string Drilling.Common.Product.ST_PRODUCT_DATA.PanelId |
-| get_PanelId | GetAccessorDeclaration | L1064–1067 | string Drilling.Common.Product.ST_PRODUCT_DATA.PanelId.get |
-| LotId | PropertyDeclaration | L1070–1076 | string Drilling.Common.Product.ST_PRODUCT_DATA.LotId |
-| get_LotId | GetAccessorDeclaration | L1072–1075 | string Drilling.Common.Product.ST_PRODUCT_DATA.LotId.get |
-| ProcessId | PropertyDeclaration | L1078–1084 | string Drilling.Common.Product.ST_PRODUCT_DATA.ProcessId |
-| get_ProcessId | GetAccessorDeclaration | L1080–1083 | string Drilling.Common.Product.ST_PRODUCT_DATA.ProcessId.get |
-| RecipeId | PropertyDeclaration | L1086–1092 | string Drilling.Common.Product.ST_PRODUCT_DATA.RecipeId |
-| get_RecipeId | GetAccessorDeclaration | L1088–1091 | string Drilling.Common.Product.ST_PRODUCT_DATA.RecipeId.get |
-| State | PropertyDeclaration | L1094–1100 | Drilling.Common.Product.EN_PRODUCT_STATE Drilling.Common.Product.ST_PRODUCT_DATA.State |
-| get_State | GetAccessorDeclaration | L1096–1099 | Drilling.Common.Product.EN_PRODUCT_STATE Drilling.Common.Product.ST_PRODUCT_DATA.State.get |
-| Result | PropertyDeclaration | L1102–1108 | Drilling.Common.Product.EN_PRODUCT_RESULT Drilling.Common.Product.ST_PRODUCT_DATA.Result |
-| get_Result | GetAccessorDeclaration | L1104–1107 | Drilling.Common.Product.EN_PRODUCT_RESULT Drilling.Common.Product.ST_PRODUCT_DATA.Result.get |
-| CreatedAt | PropertyDeclaration | L1110–1116 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CreatedAt |
-| get_CreatedAt | GetAccessorDeclaration | L1112–1115 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CreatedAt.get |
-| StartedAt | PropertyDeclaration | L1118–1124 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.StartedAt |
-| get_StartedAt | GetAccessorDeclaration | L1120–1123 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.StartedAt.get |
-| CompletedAt | PropertyDeclaration | L1126–1132 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CompletedAt |
-| get_CompletedAt | GetAccessorDeclaration | L1128–1131 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CompletedAt.get |
-| Parameters | PropertyDeclaration | L1134–1140 | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.Common.Product.ST_PRODUCT_DATA.Parameters |
-| get_Parameters | GetAccessorDeclaration | L1136–1139 | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.Common.Product.ST_PRODUCT_DATA.Parameters.get |
-| Heads | PropertyDeclaration | L1142–1148 | System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT> Drilling.Common.Product.ST_PRODUCT_DATA.Heads |
-| get_Heads | GetAccessorDeclaration | L1144–1147 | System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT> Drilling.Common.Product.ST_PRODUCT_DATA.Heads.get |
-| ParseEnum | MethodDeclaration | L1150–1154 | T Drilling.Common.Product.ST_PRODUCT_DATA.ParseEnum<T>(string, T) |
-| ParseDate | MethodDeclaration | L1156–1159 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.ParseDate(string) |
-| LoadActive | MethodDeclaration | L1165–1165 | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?> Drilling.Common.Product.CProductFileBase.LoadActive(System.Threading.CancellationToken) |
-| SaveActive | MethodDeclaration | L1166–1166 | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.SaveActive(Drilling.Common.Product.ST_PRODUCT_DATA, System.Threading.CancellationToken) |
-| ClearActive | MethodDeclaration | L1167–1167 | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.ClearActive(System.Threading.CancellationToken) |
-| AppendHistory | MethodDeclaration | L1168–1168 | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken) |
-| LoadHistory | MethodDeclaration | L1169–1169 | System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>> Drilling.Common.Product.CProductFileBase.LoadHistory(int, int, System.Threading.CancellationToken) |
+| VisionResultCode | PropertyDeclaration | L1000–1000 | int? Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.VisionResultCode |
+| get_VisionResultCode | GetAccessorDeclaration | L1000–1000 | int? Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.VisionResultCode.get |
+| set_VisionResultCode | InitAccessorDeclaration | L1000–1000 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.VisionResultCode.init |
+| NgReason | PropertyDeclaration | L1001–1001 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.NgReason |
+| get_NgReason | GetAccessorDeclaration | L1001–1001 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.NgReason.get |
+| set_NgReason | InitAccessorDeclaration | L1001–1001 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.NgReason.init |
+| InspectionMethod | PropertyDeclaration | L1005–1005 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.InspectionMethod |
+| get_InspectionMethod | GetAccessorDeclaration | L1005–1005 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.InspectionMethod.get |
+| set_InspectionMethod | InitAccessorDeclaration | L1005–1005 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.InspectionMethod.init |
+| RecipeId | PropertyDeclaration | L1006–1006 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RecipeId |
+| get_RecipeId | GetAccessorDeclaration | L1006–1006 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RecipeId.get |
+| set_RecipeId | InitAccessorDeclaration | L1006–1006 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RecipeId.init |
+| Rule | PropertyDeclaration | L1007–1007 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.Rule |
+| get_Rule | GetAccessorDeclaration | L1007–1007 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.Rule.get |
+| set_Rule | InitAccessorDeclaration | L1007–1007 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.Rule.init |
+| RuleScope | PropertyDeclaration | L1008–1008 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RuleScope |
+| get_RuleScope | GetAccessorDeclaration | L1008–1008 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RuleScope.get |
+| set_RuleScope | InitAccessorDeclaration | L1008–1008 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RuleScope.init |
+| BeamNo | PropertyDeclaration | L1009–1009 | int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.BeamNo |
+| get_BeamNo | GetAccessorDeclaration | L1009–1009 | int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.BeamNo.get |
+| set_BeamNo | InitAccessorDeclaration | L1009–1009 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.BeamNo.init |
+| ReferenceCellNo | PropertyDeclaration | L1010–1010 | int? Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceCellNo |
+| get_ReferenceCellNo | GetAccessorDeclaration | L1010–1010 | int? Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceCellNo.get |
+| set_ReferenceCellNo | InitAccessorDeclaration | L1010–1010 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceCellNo.init |
+| ReferenceShot | PropertyDeclaration | L1011–1011 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceShot |
+| get_ReferenceShot | GetAccessorDeclaration | L1011–1011 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceShot.get |
+| set_ReferenceShot | InitAccessorDeclaration | L1011–1011 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceShot.init |
+| RoughReference | PropertyDeclaration | L1012–1012 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RoughReference |
+| get_RoughReference | GetAccessorDeclaration | L1012–1012 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RoughReference.get |
+| set_RoughReference | InitAccessorDeclaration | L1012–1012 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RoughReference.init |
+| FineLineCount | PropertyDeclaration | L1013–1013 | int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.FineLineCount |
+| get_FineLineCount | GetAccessorDeclaration | L1013–1013 | int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.FineLineCount.get |
+| set_FineLineCount | InitAccessorDeclaration | L1013–1013 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.FineLineCount.init |
+| TotalCount | PropertyDeclaration | L1014–1014 | int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.TotalCount |
+| get_TotalCount | GetAccessorDeclaration | L1014–1014 | int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.TotalCount.get |
+| set_TotalCount | InitAccessorDeclaration | L1014–1014 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.TotalCount.init |
+| Get | MethodDeclaration | L1019–1022 | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) |
+| Set | MethodDeclaration | L1024–1031 | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) |
+| GlassId | PropertyDeclaration | L1056–1056 | string Drilling.Common.Product.ST_PRODUCT_DATA.GlassId |
+| ProductId | PropertyDeclaration | L1058–1064 | string Drilling.Common.Product.ST_PRODUCT_DATA.ProductId |
+| get_ProductId | GetAccessorDeclaration | L1060–1063 | string Drilling.Common.Product.ST_PRODUCT_DATA.ProductId.get |
+| PanelId | PropertyDeclaration | L1066–1072 | string Drilling.Common.Product.ST_PRODUCT_DATA.PanelId |
+| get_PanelId | GetAccessorDeclaration | L1068–1071 | string Drilling.Common.Product.ST_PRODUCT_DATA.PanelId.get |
+| LotId | PropertyDeclaration | L1074–1080 | string Drilling.Common.Product.ST_PRODUCT_DATA.LotId |
+| get_LotId | GetAccessorDeclaration | L1076–1079 | string Drilling.Common.Product.ST_PRODUCT_DATA.LotId.get |
+| ProcessId | PropertyDeclaration | L1082–1088 | string Drilling.Common.Product.ST_PRODUCT_DATA.ProcessId |
+| get_ProcessId | GetAccessorDeclaration | L1084–1087 | string Drilling.Common.Product.ST_PRODUCT_DATA.ProcessId.get |
+| RecipeId | PropertyDeclaration | L1090–1096 | string Drilling.Common.Product.ST_PRODUCT_DATA.RecipeId |
+| get_RecipeId | GetAccessorDeclaration | L1092–1095 | string Drilling.Common.Product.ST_PRODUCT_DATA.RecipeId.get |
+| State | PropertyDeclaration | L1098–1104 | Drilling.Common.Product.EN_PRODUCT_STATE Drilling.Common.Product.ST_PRODUCT_DATA.State |
+| get_State | GetAccessorDeclaration | L1100–1103 | Drilling.Common.Product.EN_PRODUCT_STATE Drilling.Common.Product.ST_PRODUCT_DATA.State.get |
+| Result | PropertyDeclaration | L1106–1112 | Drilling.Common.Product.EN_PRODUCT_RESULT Drilling.Common.Product.ST_PRODUCT_DATA.Result |
+| get_Result | GetAccessorDeclaration | L1108–1111 | Drilling.Common.Product.EN_PRODUCT_RESULT Drilling.Common.Product.ST_PRODUCT_DATA.Result.get |
+| CreatedAt | PropertyDeclaration | L1114–1120 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CreatedAt |
+| get_CreatedAt | GetAccessorDeclaration | L1116–1119 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CreatedAt.get |
+| StartedAt | PropertyDeclaration | L1122–1128 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.StartedAt |
+| get_StartedAt | GetAccessorDeclaration | L1124–1127 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.StartedAt.get |
+| CompletedAt | PropertyDeclaration | L1130–1136 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CompletedAt |
+| get_CompletedAt | GetAccessorDeclaration | L1132–1135 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CompletedAt.get |
+| Parameters | PropertyDeclaration | L1138–1144 | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.Common.Product.ST_PRODUCT_DATA.Parameters |
+| get_Parameters | GetAccessorDeclaration | L1140–1143 | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.Common.Product.ST_PRODUCT_DATA.Parameters.get |
+| Heads | PropertyDeclaration | L1146–1152 | System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT> Drilling.Common.Product.ST_PRODUCT_DATA.Heads |
+| get_Heads | GetAccessorDeclaration | L1148–1151 | System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT> Drilling.Common.Product.ST_PRODUCT_DATA.Heads.get |
+| ParseEnum | MethodDeclaration | L1154–1158 | T Drilling.Common.Product.ST_PRODUCT_DATA.ParseEnum<T>(string, T) |
+| ParseDate | MethodDeclaration | L1160–1163 | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.ParseDate(string) |
+| LoadActive | MethodDeclaration | L1169–1169 | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?> Drilling.Common.Product.CProductFileBase.LoadActive(System.Threading.CancellationToken) |
+| SaveActive | MethodDeclaration | L1170–1170 | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.SaveActive(Drilling.Common.Product.ST_PRODUCT_DATA, System.Threading.CancellationToken) |
+| ClearActive | MethodDeclaration | L1171–1171 | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.ClearActive(System.Threading.CancellationToken) |
+| AppendHistory | MethodDeclaration | L1172–1172 | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken) |
+| LoadHistory | MethodDeclaration | L1173–1173 | System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>> Drilling.Common.Product.CProductFileBase.LoadHistory(int, int, System.Threading.CancellationToken) |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
 ### FieldDeclaration `_updateGate` · L6–6
 
-[Drilling.Common/Product/CProductManager.cs:6–6](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L6-L6)
+[Drilling.Common/Product/CProductManager.cs:6–6](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L6-L6)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -210,7 +216,7 @@
 
 ### FieldDeclaration `_current` · L7–7
 
-[Drilling.Common/Product/CProductManager.cs:7–7](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L7-L7)
+[Drilling.Common/Product/CProductManager.cs:7–7](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L7-L7)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -225,7 +231,7 @@
 
 ### FieldDeclaration `_hasActiveDataLoadError` · L8–8
 
-[Drilling.Common/Product/CProductManager.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L8-L8)
+[Drilling.Common/Product/CProductManager.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -240,7 +246,7 @@
 
 ### PropertyDeclaration `Current` · L9–15
 
-[Drilling.Common/Product/CProductManager.cs:9–15](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L9-L15)
+[Drilling.Common/Product/CProductManager.cs:9–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L9-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -255,7 +261,7 @@
 
 ### GetAccessorDeclaration `get_Current` · L11–14
 
-[Drilling.Common/Product/CProductManager.cs:11–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L11-L14)
+[Drilling.Common/Product/CProductManager.cs:11–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L11-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -283,7 +289,7 @@
 
 ### PropertyDeclaration `HasActiveDataLoadError` · L17–23
 
-[Drilling.Common/Product/CProductManager.cs:17–23](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L17-L23)
+[Drilling.Common/Product/CProductManager.cs:17–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L17-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -298,7 +304,7 @@
 
 ### GetAccessorDeclaration `get_HasActiveDataLoadError` · L19–22
 
-[Drilling.Common/Product/CProductManager.cs:19–22](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L19-L22)
+[Drilling.Common/Product/CProductManager.cs:19–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L19-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -326,7 +332,7 @@
 
 ### MethodDeclaration `LoadActive` · L25–47
 
-[Drilling.Common/Product/CProductManager.cs:25–47](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L25-L47)
+[Drilling.Common/Product/CProductManager.cs:25–47](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L25-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -345,10 +351,10 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:539–539](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L539-L539) | _productManager.LoadActive | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3906–3906](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3906-L3906) | _productManager.LoadActive | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3930–3930](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3930-L3930) | _productManager.LoadActive | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3962–3962](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3962-L3962) | _productManager.LoadActive | False |
+| [Drilling.Common/Managers/CManager.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CManager.cs#L547-L547) | _productManager.LoadActive | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4377–4377](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4377-L4377) | _productManager.LoadActive | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4401–4401](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4401-L4401) | _productManager.LoadActive | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4433–4433](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4433-L4433) | _productManager.LoadActive | False |
 
 호출하는 대상과 해석 범위:
 
@@ -358,7 +364,7 @@
 | 28 | _updateGate.WaitAsync(cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool) |
 | 28 | _updateGate.WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken) |
 | 33 | productFile.LoadActive(cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<Drilling.Common.Product.ST_PRODUCT_DATA?> System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?>.ConfigureAwait(bool) |
-| 33 | productFile.LoadActive | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?> Drilling.Common.Product.CProductFileBase.LoadActive(System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1165 |
+| 33 | productFile.LoadActive | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?> Drilling.Common.Product.CProductFileBase.LoadActive(System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1169 |
 | 34 | Volatile.Write | resolved | void System.Threading.Volatile.Write(ref int, int) |
 | 39 | Volatile.Write | resolved | void System.Threading.Volatile.Write(ref int, int) |
 | 45 | _updateGate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
@@ -404,7 +410,7 @@ flowchart TD
 
 ### MethodDeclaration `RecoverInterrupted` · L49–127
 
-[Drilling.Common/Product/CProductManager.cs:49–127](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L49-L127)
+[Drilling.Common/Product/CProductManager.cs:49–127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L49-L127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -423,7 +429,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:540–540](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Managers/CManager.cs#L540-L540) | _productManager.RecoverInterrupted | False |
+| [Drilling.Common/Managers/CManager.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CManager.cs#L548-L548) | _productManager.RecoverInterrupted | False |
 
 호출하는 대상과 해석 범위:
 
@@ -512,7 +518,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesState` · L53–56
 
-[Drilling.Common/Product/CProductManager.cs:53–56](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L53-L56)
+[Drilling.Common/Product/CProductManager.cs:53–56](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L53-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -539,7 +545,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L80–91
 
-[Drilling.Common/Product/CProductManager.cs:80–91](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L80-L91)
+[Drilling.Common/Product/CProductManager.cs:80–91](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L80-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -571,7 +577,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateProduct` · L129–200
 
-[Drilling.Common/Product/CProductManager.cs:129–200](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L129-L200)
+[Drilling.Common/Product/CProductManager.cs:129–200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L129-L200)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -596,7 +602,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3943–3943](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3943-L3943) | _productManager.CreateProduct | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4414–4414](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4414-L4414) | _productManager.CreateProduct | False |
 
 호출하는 대상과 해석 범위:
 
@@ -607,7 +613,7 @@ flowchart TD
 | 140 | _updateGate.WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken) |
 | 155 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
 | 163 | productFile.LoadActive(cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<Drilling.Common.Product.ST_PRODUCT_DATA?> System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?>.ConfigureAwait(bool) |
-| 163 | productFile.LoadActive | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?> Drilling.Common.Product.CProductFileBase.LoadActive(System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1165 |
+| 163 | productFile.LoadActive | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?> Drilling.Common.Product.CProductFileBase.LoadActive(System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1169 |
 | 164 | Volatile.Write | resolved | void System.Threading.Volatile.Write(ref int, int) |
 | 168 | Volatile.Write | resolved | void System.Threading.Volatile.Write(ref int, int) |
 | 174 | Volatile.Write | resolved | void System.Threading.Volatile.Write<Drilling.Common.Product.ST_PRODUCT_DATA?>(ref Drilling.Common.Product.ST_PRODUCT_DATA?, Drilling.Common.Product.ST_PRODUCT_DATA?) |
@@ -616,14 +622,14 @@ flowchart TD
 | 185 | headPointCounts.OrderBy(SelectKey).Select(BuildProduct).ToArray | resolved | Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT[] System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>.ToArray<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>() |
 | 185 | headPointCounts.OrderBy(SelectKey).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<int, int>>.Select<System.Collections.Generic.KeyValuePair<int, int>, Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>(System.Func<System.Collections.Generic.KeyValuePair<int, int>, Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>) |
 | 185 | headPointCounts.OrderBy | resolved | System.Linq.IOrderedEnumerable<System.Collections.Generic.KeyValuePair<int, int>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<int, int>>.OrderBy<System.Collections.Generic.KeyValuePair<int, int>, int>(System.Func<System.Collections.Generic.KeyValuePair<int, int>, int>) |
-| 186 | new ST_PRODUCT_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_DATA.ST_PRODUCT_DATA(Drilling.Common.Product.ST_PRODUCT_INFO, Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA, Drilling.Common.Product.ST_PRODUCT_ALIGN_DATA, Drilling.Common.Product.ST_PRODUCT_DISTORTION_DATA, Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA, Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA) · Drilling.Common/Product/CProductManager.cs:1043 |
+| 186 | new ST_PRODUCT_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_DATA.ST_PRODUCT_DATA(Drilling.Common.Product.ST_PRODUCT_INFO, Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA, Drilling.Common.Product.ST_PRODUCT_ALIGN_DATA, Drilling.Common.Product.ST_PRODUCT_DISTORTION_DATA, Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA, Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA) · Drilling.Common/Product/CProductManager.cs:1047 |
 | 187 | CreateProductInfo | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.CProductManager.CreateProductInfo(string, string, string, string, System.Collections.Generic.IReadOnlyDictionary<string, string>, System.DateTimeOffset) · Drilling.Common/Product/CProductManager.cs:822 |
-| 188 | new ST_PRODUCT_RECIPE_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA.ST_PRODUCT_RECIPE_DATA(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1030 |
+| 188 | new ST_PRODUCT_RECIPE_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA.ST_PRODUCT_RECIPE_DATA(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1034 |
 | 188 | new Dictionary<string, string> | resolved | System.Collections.Generic.Dictionary<string, string>.Dictionary(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>, System.Collections.Generic.IEqualityComparer<string>?) |
 | 189 | new ST_PRODUCT_ALIGN_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_ALIGN_DATA.ST_PRODUCT_ALIGN_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, string, double?, double?, double?) · Drilling.Common/Product/CProductManager.cs:996 |
 | 190 | new ST_PRODUCT_DISTORTION_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_DISTORTION_DATA.ST_PRODUCT_DISTORTION_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, string, double?) · Drilling.Common/Product/CProductManager.cs:997 |
-| 191 | new ST_PRODUCT_REVIEW_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ST_PRODUCT_REVIEW_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, System.DateTimeOffset?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>) · Drilling.Common/Product/CProductManager.cs:999 |
-| 192 | new ST_PRODUCT_RUNTIME_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA.ST_PRODUCT_RUNTIME_DATA(System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>) · Drilling.Common/Product/CProductManager.cs:1031 |
+| 191 | new ST_PRODUCT_REVIEW_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ST_PRODUCT_REVIEW_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, System.DateTimeOffset?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>) · Drilling.Common/Product/CProductManager.cs:1003 |
+| 192 | new ST_PRODUCT_RUNTIME_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA.ST_PRODUCT_RUNTIME_DATA(System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>) · Drilling.Common/Product/CProductManager.cs:1035 |
 | 194 | PersistAndLog | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.PersistAndLog(Drilling.Common.Product.ST_PRODUCT_DATA, string, string, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:789 |
 | 198 | _updateGate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
 
@@ -711,7 +717,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L141–144
 
-[Drilling.Common/Product/CProductManager.cs:141–144](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L141-L144)
+[Drilling.Common/Product/CProductManager.cs:141–144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L141-L144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -738,7 +744,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildProduct` · L146–149
 
-[Drilling.Common/Product/CProductManager.cs:146–149](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L146-L149)
+[Drilling.Common/Product/CProductManager.cs:146–149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L146-L149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -759,7 +765,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 148 | new ST_PRODUCT_HEAD_RESULT | resolved | Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT.ST_PRODUCT_HEAD_RESULT(int, Drilling.Common.Product.EN_PRODUCT_HEAD_STATE, int, int, Drilling.Common.Product.EN_PRODUCT_RESULT, string, string, System.DateTimeOffset?, System.DateTimeOffset?) · Drilling.Common/Product/CProductManager.cs:1032 |
+| 148 | new ST_PRODUCT_HEAD_RESULT | resolved | Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT.ST_PRODUCT_HEAD_RESULT(int, Drilling.Common.Product.EN_PRODUCT_HEAD_STATE, int, int, Drilling.Common.Product.EN_PRODUCT_RESULT, string, string, System.DateTimeOffset?, System.DateTimeOffset?) · Drilling.Common/Product/CProductManager.cs:1036 |
 | 148 | Math.Max | resolved | int System.Math.Max(int, int) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -775,7 +781,7 @@ flowchart TD
 
 ### MethodDeclaration `PrepareProductForProcess` · L202–237
 
-[Drilling.Common/Product/CProductManager.cs:202–237](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L202-L237)
+[Drilling.Common/Product/CProductManager.cs:202–237](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L202-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -809,17 +815,17 @@ flowchart TD
 | 221 | headPointCounts.OrderBy(item => item.Key).Select(item => new ST_PRODUCT_HEAD_RESULT(item.Key, item.Value > 0 ? EN_PRODUCT_HEAD_STATE.Ready : EN_PRODUCT_HEAD_STATE.Disabled, Math.Max(0, item.Value), 0, EN_PRODUCT_RESULT.Pending, "", "", null, null)).ToArray | resolved | Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT[] System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>.ToArray<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>() |
 | 221 | headPointCounts.OrderBy(item => item.Key).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<int, int>>.Select<System.Collections.Generic.KeyValuePair<int, int>, Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>(System.Func<System.Collections.Generic.KeyValuePair<int, int>, Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>) |
 | 221 | headPointCounts.OrderBy | resolved | System.Linq.IOrderedEnumerable<System.Collections.Generic.KeyValuePair<int, int>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<int, int>>.OrderBy<System.Collections.Generic.KeyValuePair<int, int>, int>(System.Func<System.Collections.Generic.KeyValuePair<int, int>, int>) |
-| 221 | new ST_PRODUCT_HEAD_RESULT | resolved | Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT.ST_PRODUCT_HEAD_RESULT(int, Drilling.Common.Product.EN_PRODUCT_HEAD_STATE, int, int, Drilling.Common.Product.EN_PRODUCT_RESULT, string, string, System.DateTimeOffset?, System.DateTimeOffset?) · Drilling.Common/Product/CProductManager.cs:1032 |
+| 221 | new ST_PRODUCT_HEAD_RESULT | resolved | Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT.ST_PRODUCT_HEAD_RESULT(int, Drilling.Common.Product.EN_PRODUCT_HEAD_STATE, int, int, Drilling.Common.Product.EN_PRODUCT_RESULT, string, string, System.DateTimeOffset?, System.DateTimeOffset?) · Drilling.Common/Product/CProductManager.cs:1036 |
 | 221 | Math.Max | resolved | int System.Math.Max(int, int) |
 | 224 | SetProductState | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.CProductManager.SetProductState(Drilling.Common.Product.ST_PRODUCT_INFO, Drilling.Common.Product.EN_PRODUCT_STATE, Drilling.Common.Product.EN_PRODUCT_RESULT, System.DateTimeOffset?, System.DateTimeOffset?) · Drilling.Common/Product/CProductManager.cs:853 |
-| 224 | product.Product.Set("PROCESS_ID", processId).Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1020 |
-| 224 | product.Product.Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1020 |
-| 225 | new ST_PRODUCT_RECIPE_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA.ST_PRODUCT_RECIPE_DATA(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1030 |
+| 224 | product.Product.Set("PROCESS_ID", processId).Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1024 |
+| 224 | product.Product.Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1024 |
+| 225 | new ST_PRODUCT_RECIPE_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA.ST_PRODUCT_RECIPE_DATA(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1034 |
 | 225 | new Dictionary<string, string> | resolved | System.Collections.Generic.Dictionary<string, string>.Dictionary(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>, System.Collections.Generic.IEqualityComparer<string>?) |
 | 226 | new ST_PRODUCT_ALIGN_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_ALIGN_DATA.ST_PRODUCT_ALIGN_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, string, double?, double?, double?) · Drilling.Common/Product/CProductManager.cs:996 |
 | 227 | new ST_PRODUCT_DISTORTION_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_DISTORTION_DATA.ST_PRODUCT_DISTORTION_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, string, double?) · Drilling.Common/Product/CProductManager.cs:997 |
-| 228 | new ST_PRODUCT_REVIEW_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ST_PRODUCT_REVIEW_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, System.DateTimeOffset?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>) · Drilling.Common/Product/CProductManager.cs:999 |
-| 229 | new ST_PRODUCT_RUNTIME_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA.ST_PRODUCT_RUNTIME_DATA(System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>) · Drilling.Common/Product/CProductManager.cs:1031 |
+| 228 | new ST_PRODUCT_REVIEW_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ST_PRODUCT_REVIEW_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, System.DateTimeOffset?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>) · Drilling.Common/Product/CProductManager.cs:1003 |
+| 229 | new ST_PRODUCT_RUNTIME_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA.ST_PRODUCT_RUNTIME_DATA(System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>) · Drilling.Common/Product/CProductManager.cs:1035 |
 | 231 | PersistAndLog | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.PersistAndLog(Drilling.Common.Product.ST_PRODUCT_DATA, string, string, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:789 |
 | 235 | _updateGate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
 
@@ -886,7 +892,7 @@ flowchart TD
 
 ### MethodDeclaration `StartProduct` · L239–275
 
-[Drilling.Common/Product/CProductManager.cs:239–275](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L239-L275)
+[Drilling.Common/Product/CProductManager.cs:239–275](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L239-L275)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -961,7 +967,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L247–259
 
-[Drilling.Common/Product/CProductManager.cs:247–259](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L247-L259)
+[Drilling.Common/Product/CProductManager.cs:247–259](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L247-L259)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -992,7 +998,7 @@ flowchart TD
 
 ### MethodDeclaration `SetProductInfo` · L277–311
 
-[Drilling.Common/Product/CProductManager.cs:277–311](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L277-L311)
+[Drilling.Common/Product/CProductManager.cs:277–311](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L277-L311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1024,7 +1030,7 @@ flowchart TD
 | 291 | string.Join | resolved | string string.Join(string?, params string?[]) |
 | 291 | nameof | unresolved | None |
 | 294 | GetCurrent | resolved | Drilling.Common.Product.ST_PRODUCT_DATA Drilling.Common.Product.CProductManager.GetCurrent(string) · Drilling.Common/Product/CProductManager.cs:774 |
-| 298 | productInfo.Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1020 |
+| 298 | productInfo.Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1024 |
 | 305 | PersistAndLog | resolved | System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA> Drilling.Common.Product.CProductManager.PersistAndLog(Drilling.Common.Product.ST_PRODUCT_DATA, string, string, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:789 |
 | 309 | _updateGate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
 
@@ -1082,7 +1088,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L281–284
 
-[Drilling.Common/Product/CProductManager.cs:281–284](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L281-L284)
+[Drilling.Common/Product/CProductManager.cs:281–284](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L281-L284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1116,7 +1122,7 @@ flowchart TD
 
 ### MethodDeclaration `SetHeadRunning` · L313–345
 
-[Drilling.Common/Product/CProductManager.cs:313–345](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L313-L345)
+[Drilling.Common/Product/CProductManager.cs:313–345](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L313-L345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1189,7 +1195,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L321–330
 
-[Drilling.Common/Product/CProductManager.cs:321–330](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L321-L330)
+[Drilling.Common/Product/CProductManager.cs:321–330](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L321-L330)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1219,7 +1225,7 @@ flowchart TD
 
 ### MethodDeclaration `SetHeadResult` · L347–384
 
-[Drilling.Common/Product/CProductManager.cs:347–384](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L347-L384)
+[Drilling.Common/Product/CProductManager.cs:347–384](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L347-L384)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1299,7 +1305,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L355–369
 
-[Drilling.Common/Product/CProductManager.cs:355–369](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L355-L369)
+[Drilling.Common/Product/CProductManager.cs:355–369](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L355-L369)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1337,7 +1343,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAlign` · L386–403
 
-[Drilling.Common/Product/CProductManager.cs:386–403](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L386-L403)
+[Drilling.Common/Product/CProductManager.cs:386–403](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L386-L403)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1403,7 +1409,7 @@ flowchart TD
 
 ### MethodDeclaration `SetDistortion` · L405–422
 
-[Drilling.Common/Product/CProductManager.cs:405–422](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L405-L422)
+[Drilling.Common/Product/CProductManager.cs:405–422](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L405-L422)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1469,7 +1475,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAlignment` · L424–442
 
-[Drilling.Common/Product/CProductManager.cs:424–442](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L424-L442)
+[Drilling.Common/Product/CProductManager.cs:424–442](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L424-L442)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1491,7 +1497,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:536–547](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L536-L547) | _productManager.SetAlignment | False |
+| [Drilling.Common/Station/CStationProcess.cs:537–548](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L537-L548) | _productManager.SetAlignment | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1541,7 +1547,7 @@ flowchart TD
 
 ### MethodDeclaration `SetReviewRunning` · L444–464
 
-[Drilling.Common/Product/CProductManager.cs:444–464](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L444-L464)
+[Drilling.Common/Product/CProductManager.cs:444–464](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L444-L464)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1562,8 +1568,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L301-L301) | productManager.SetReviewRunning | False |
-| [Drilling.Common/Review/CReviewManager.cs:2254–2254](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L2254-L2254) | productManager.SetReviewRunning | False |
+| [Drilling.Common/Review/CReviewManager.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L338-L338) | productManager.SetReviewRunning | False |
+| [Drilling.Common/Review/CReviewManager.cs:2364–2364](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L2364-L2364) | productManager.SetReviewRunning | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1613,7 +1619,7 @@ flowchart TD
 
 ### MethodDeclaration `SetReviewProgress` · L466–488
 
-[Drilling.Common/Product/CProductManager.cs:466–488](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L466-L488)
+[Drilling.Common/Product/CProductManager.cs:466–488](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L466-L488)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1634,7 +1640,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1488–1488](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L1488-L1488) | productManager.SetReviewProgress | False |
+| [Drilling.Common/Review/CReviewManager.cs:1561–1561](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L1561-L1561) | productManager.SetReviewProgress | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1645,7 +1651,7 @@ flowchart TD
 | 469 | _updateGate.WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken) |
 | 472 | GetCurrent | resolved | Drilling.Common.Product.ST_PRODUCT_DATA Drilling.Common.Product.CProductManager.GetCurrent(string) · Drilling.Common/Product/CProductManager.cs:774 |
 | 480 | productFile.SaveActive(next, cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool) |
-| 480 | productFile.SaveActive | resolved | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.SaveActive(Drilling.Common.Product.ST_PRODUCT_DATA, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1166 |
+| 480 | productFile.SaveActive | resolved | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.SaveActive(Drilling.Common.Product.ST_PRODUCT_DATA, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1170 |
 | 481 | Volatile.Write | resolved | void System.Threading.Volatile.Write<Drilling.Common.Product.ST_PRODUCT_DATA?>(ref Drilling.Common.Product.ST_PRODUCT_DATA?, Drilling.Common.Product.ST_PRODUCT_DATA?) |
 | 486 | _updateGate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
 
@@ -1688,7 +1694,7 @@ flowchart TD
 
 ### MethodDeclaration `SetReviewCompleted` · L490–512
 
-[Drilling.Common/Product/CProductManager.cs:490–512](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L490-L512)
+[Drilling.Common/Product/CProductManager.cs:490–512](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L490-L512)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1710,7 +1716,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1478–1478](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L1478-L1478) | productManager.SetReviewCompleted | False |
+| [Drilling.Common/Review/CReviewManager.cs:1551–1551](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L1551-L1551) | productManager.SetReviewCompleted | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1764,7 +1770,7 @@ flowchart TD
 
 ### MethodDeclaration `SetReviewStopped` · L514–534
 
-[Drilling.Common/Product/CProductManager.cs:514–534](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L514-L534)
+[Drilling.Common/Product/CProductManager.cs:514–534](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L514-L534)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1785,7 +1791,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1700–1700](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L1700-L1700) | productManager.SetReviewStopped | False |
+| [Drilling.Common/Review/CReviewManager.cs:1781–1781](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L1781-L1781) | productManager.SetReviewStopped | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1835,7 +1841,7 @@ flowchart TD
 
 ### MethodDeclaration `SetReviewError` · L536–556
 
-[Drilling.Common/Product/CProductManager.cs:536–556](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L536-L556)
+[Drilling.Common/Product/CProductManager.cs:536–556](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L536-L556)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1856,7 +1862,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewManager.cs:1682–1682](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Review/CReviewManager.cs#L1682-L1682) | productManager.SetReviewError | False |
+| [Drilling.Common/Review/CReviewManager.cs:1763–1763](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CReviewManager.cs#L1763-L1763) | productManager.SetReviewError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1906,7 +1912,7 @@ flowchart TD
 
 ### MethodDeclaration `CompleteProduct` · L558–608
 
-[Drilling.Common/Product/CProductManager.cs:558–608](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L558-L608)
+[Drilling.Common/Product/CProductManager.cs:558–608](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L558-L608)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1929,7 +1935,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1421–1421](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1421-L1421) | _productManager.CompleteProduct | False |
+| [Drilling.Common/Station/CStationProcess.cs:1422–1422](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1422-L1422) | _productManager.CompleteProduct | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1990,7 +1996,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L566–592
 
-[Drilling.Common/Product/CProductManager.cs:566–592](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L566-L592)
+[Drilling.Common/Product/CProductManager.cs:566–592](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L566-L592)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2036,7 +2042,7 @@ flowchart TD
 
 ### MethodDeclaration `StopProduct` · L610–645
 
-[Drilling.Common/Product/CProductManager.cs:610–645](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L610-L645)
+[Drilling.Common/Product/CProductManager.cs:610–645](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L610-L645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2057,7 +2063,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1433–1433](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1433-L1433) | _productManager.StopProduct | False |
+| [Drilling.Common/Station/CStationProcess.cs:1434–1434](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1434-L1434) | _productManager.StopProduct | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2116,7 +2122,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L618–629
 
-[Drilling.Common/Product/CProductManager.cs:618–629](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L618-L629)
+[Drilling.Common/Product/CProductManager.cs:618–629](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L618-L629)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2148,7 +2154,7 @@ flowchart TD
 
 ### MethodDeclaration `SetError` · L647–683
 
-[Drilling.Common/Product/CProductManager.cs:647–683](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L647-L683)
+[Drilling.Common/Product/CProductManager.cs:647–683](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L647-L683)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2169,7 +2175,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1457–1457](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1457-L1457) | _productManager.SetError | False |
+| [Drilling.Common/Station/CStationProcess.cs:1458–1458](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1458-L1458) | _productManager.SetError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2228,7 +2234,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L655–667
 
-[Drilling.Common/Product/CProductManager.cs:655–667](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L655-L667)
+[Drilling.Common/Product/CProductManager.cs:655–667](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L655-L667)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2261,7 +2267,7 @@ flowchart TD
 
 ### MethodDeclaration `ScrapProduct` · L685–702
 
-[Drilling.Common/Product/CProductManager.cs:685–702](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L685-L702)
+[Drilling.Common/Product/CProductManager.cs:685–702](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L685-L702)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2329,7 +2335,7 @@ flowchart TD
 
 ### MethodDeclaration `DeleteProduct` · L704–738
 
-[Drilling.Common/Product/CProductManager.cs:704–738](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L704-L738)
+[Drilling.Common/Product/CProductManager.cs:704–738](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L704-L738)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2349,7 +2355,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3975–3975](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3975-L3975) | _productManager.DeleteProduct | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4446–4446](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4446-L4446) | _productManager.DeleteProduct | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2361,11 +2367,11 @@ flowchart TD
 | 710 | GetCurrent | resolved | Drilling.Common.Product.ST_PRODUCT_DATA Drilling.Common.Product.CProductManager.GetCurrent(string) · Drilling.Common/Product/CProductManager.cs:774 |
 | 713 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
 | 716 | productFile.ClearActive(cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool) |
-| 716 | productFile.ClearActive | resolved | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.ClearActive(System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1167 |
+| 716 | productFile.ClearActive | resolved | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.ClearActive(System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1171 |
 | 717 | Volatile.Write | resolved | void System.Threading.Volatile.Write<Drilling.Common.Product.ST_PRODUCT_DATA?>(ref Drilling.Common.Product.ST_PRODUCT_DATA?, Drilling.Common.Product.ST_PRODUCT_DATA?) |
 | 720 | productFile.AppendHistory(new ST_PRODUCT_HISTORY(DateTimeOffset.Now, product.GlassId, product.ProcessId, product.RecipeId, "DELETE", product.State.ToString().ToUpperInvariant(), product.Result.ToString().ToUpperInvariant(), "Product deleted."), CancellationToken.None).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool) |
-| 720 | productFile.AppendHistory | resolved | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1168 |
-| 720 | new ST_PRODUCT_HISTORY | resolved | Drilling.Common.Product.ST_PRODUCT_HISTORY.ST_PRODUCT_HISTORY(System.DateTimeOffset, string, string, string, string, string, string, string) · Drilling.Common/Product/CProductManager.cs:1162 |
+| 720 | productFile.AppendHistory | resolved | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1172 |
+| 720 | new ST_PRODUCT_HISTORY | resolved | Drilling.Common.Product.ST_PRODUCT_HISTORY.ST_PRODUCT_HISTORY(System.DateTimeOffset, string, string, string, string, string, string, string) · Drilling.Common/Product/CProductManager.cs:1166 |
 | 720 | product.State.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
 | 720 | product.State.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
 | 720 | product.Result.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
@@ -2441,7 +2447,7 @@ flowchart TD
 
 ### MethodDeclaration `ReleaseCompletedProduct` · L740–759
 
-[Drilling.Common/Product/CProductManager.cs:740–759](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L740-L759)
+[Drilling.Common/Product/CProductManager.cs:740–759](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L740-L759)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2469,7 +2475,7 @@ flowchart TD
 | 746 | GetCurrent | resolved | Drilling.Common.Product.ST_PRODUCT_DATA Drilling.Common.Product.CProductManager.GetCurrent(string) · Drilling.Common/Product/CProductManager.cs:774 |
 | 749 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
 | 752 | productFile.ClearActive(cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool) |
-| 752 | productFile.ClearActive | resolved | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.ClearActive(System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1167 |
+| 752 | productFile.ClearActive | resolved | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.ClearActive(System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1171 |
 | 753 | Volatile.Write | resolved | void System.Threading.Volatile.Write<Drilling.Common.Product.ST_PRODUCT_DATA?>(ref Drilling.Common.Product.ST_PRODUCT_DATA?, Drilling.Common.Product.ST_PRODUCT_DATA?) |
 | 757 | _updateGate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
 
@@ -2512,7 +2518,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadHistory` · L761–772
 
-[Drilling.Common/Product/CProductManager.cs:761–772](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L761-L772)
+[Drilling.Common/Product/CProductManager.cs:761–772](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L761-L772)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2533,7 +2539,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3908–3908](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3908-L3908) | _productManager.LoadHistory | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4379–4379](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4379-L4379) | _productManager.LoadHistory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2542,7 +2548,7 @@ flowchart TD
 | 763 | _updateGate.WaitAsync(cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool) |
 | 763 | _updateGate.WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync(System.Threading.CancellationToken) |
 | 766 | productFile.LoadHistory(maxRows, days, cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>> System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>>.ConfigureAwait(bool) |
-| 766 | productFile.LoadHistory | resolved | System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>> Drilling.Common.Product.CProductFileBase.LoadHistory(int, int, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1169 |
+| 766 | productFile.LoadHistory | resolved | System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>> Drilling.Common.Product.CProductFileBase.LoadHistory(int, int, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1173 |
 | 770 | _updateGate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -2575,7 +2581,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCurrent` · L774–787
 
-[Drilling.Common/Product/CProductManager.cs:774–787](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L774-L787)
+[Drilling.Common/Product/CProductManager.cs:774–787](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L774-L787)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2594,25 +2600,25 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L215-L215) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L245-L245) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L294-L294) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L319-L319) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L353-L353) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:392–392](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L392-L392) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L411-L411) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L430-L430) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L450-L450) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:472–472](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L472-L472) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:496–496](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L496-L496) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L520-L520) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L542-L542) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:564–564](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L564-L564) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:616–616](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L616-L616) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L653-L653) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:691–691](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L691-L691) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L710-L710) | GetCurrent | False |
-| [Drilling.Common/Product/CProductManager.cs:746–746](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L746-L746) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L215-L215) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L245-L245) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L294-L294) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L319-L319) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:353–353](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L353-L353) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:392–392](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L392-L392) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L411-L411) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L430-L430) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L450-L450) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:472–472](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L472-L472) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:496–496](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L496-L496) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L520-L520) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L542-L542) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:564–564](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L564-L564) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:616–616](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L616-L616) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L653-L653) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:691–691](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L691-L691) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:710–710](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L710-L710) | GetCurrent | False |
+| [Drilling.Common/Product/CProductManager.cs:746–746](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L746-L746) | GetCurrent | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2650,7 +2656,7 @@ flowchart TD
 
 ### MethodDeclaration `PersistAndLog` · L789–820
 
-[Drilling.Common/Product/CProductManager.cs:789–820](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L789-L820)
+[Drilling.Common/Product/CProductManager.cs:789–820](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L789-L820)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2672,39 +2678,39 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L121-L121) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L194-L194) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L231-L231) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L269-L269) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L305-L305) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L339-L339) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L378-L378) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:397–397](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L397-L397) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L416-L416) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L436-L436) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:458–458](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L458-L458) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L506-L506) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L528-L528) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L550-L550) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L602-L602) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:639–639](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L639-L639) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:677–677](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L677-L677) | PersistAndLog | False |
-| [Drilling.Common/Product/CProductManager.cs:696–696](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L696-L696) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L121-L121) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L194-L194) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L231-L231) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L269-L269) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L305-L305) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L339-L339) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:378–378](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L378-L378) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:397–397](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L397-L397) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L416-L416) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L436-L436) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:458–458](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L458-L458) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L506-L506) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L528-L528) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L550-L550) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L602-L602) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:639–639](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L639-L639) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:677–677](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L677-L677) | PersistAndLog | False |
+| [Drilling.Common/Product/CProductManager.cs:696–696](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L696-L696) | PersistAndLog | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 791 | productFile.SaveActive(product, cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool) |
-| 791 | productFile.SaveActive | resolved | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.SaveActive(Drilling.Common.Product.ST_PRODUCT_DATA, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1166 |
+| 791 | productFile.SaveActive | resolved | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.SaveActive(Drilling.Common.Product.ST_PRODUCT_DATA, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1170 |
 | 792 | Volatile.Write | resolved | void System.Threading.Volatile.Write<Drilling.Common.Product.ST_PRODUCT_DATA?>(ref Drilling.Common.Product.ST_PRODUCT_DATA?, Drilling.Common.Product.ST_PRODUCT_DATA?) |
-| 793 | new ST_PRODUCT_HISTORY | resolved | Drilling.Common.Product.ST_PRODUCT_HISTORY.ST_PRODUCT_HISTORY(System.DateTimeOffset, string, string, string, string, string, string, string) · Drilling.Common/Product/CProductManager.cs:1162 |
+| 793 | new ST_PRODUCT_HISTORY | resolved | Drilling.Common.Product.ST_PRODUCT_HISTORY.ST_PRODUCT_HISTORY(System.DateTimeOffset, string, string, string, string, string, string, string) · Drilling.Common/Product/CProductManager.cs:1166 |
 | 793 | product.State.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
 | 793 | product.State.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
 | 793 | product.Result.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
 | 793 | product.Result.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
 | 796 | productFile.AppendHistory(history, CancellationToken.None).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool) |
-| 796 | productFile.AppendHistory | resolved | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1168 |
+| 796 | productFile.AppendHistory | resolved | System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken) · Drilling.Common/Product/CProductManager.cs:1172 |
 | 802 | .WriteProductEvent | unresolved | None |
 | 802 | product.State.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
 | 802 | product.State.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
@@ -2775,7 +2781,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateProductInfo` · L822–851
 
-[Drilling.Common/Product/CProductManager.cs:822–851](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L822-L851)
+[Drilling.Common/Product/CProductManager.cs:822–851](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L822-L851)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2799,7 +2805,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L187-L187) | CreateProductInfo | False |
+| [Drilling.Common/Product/CProductManager.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L187-L187) | CreateProductInfo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2813,7 +2819,7 @@ flowchart TD
 | 848 | EN_PRODUCT_RESULT.Pending.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
 | 848 | EN_PRODUCT_RESULT.Pending.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
 | 849 | createdAt.ToString | resolved | string System.DateTimeOffset.ToString(string?, System.IFormatProvider?) |
-| 850 | new ST_PRODUCT_INFO | resolved | Drilling.Common.Product.ST_PRODUCT_INFO.ST_PRODUCT_INFO(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1013 |
+| 850 | new ST_PRODUCT_INFO | resolved | Drilling.Common.Product.ST_PRODUCT_INFO.ST_PRODUCT_INFO(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1017 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2857,7 +2863,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectName` · L824–827
 
-[Drilling.Common/Product/CProductManager.cs:824–827](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L824-L827)
+[Drilling.Common/Product/CProductManager.cs:824–827](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L824-L827)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2884,7 +2890,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L829–832
 
-[Drilling.Common/Product/CProductManager.cs:829–832](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L829-L832)
+[Drilling.Common/Product/CProductManager.cs:829–832](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L829-L832)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2911,7 +2917,7 @@ flowchart TD
 
 ### MethodDeclaration `SetProductState` · L853–856
 
-[Drilling.Common/Product/CProductManager.cs:853–856](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L853-L856)
+[Drilling.Common/Product/CProductManager.cs:853–856](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L853-L856)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2934,22 +2940,22 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L95-L95) | SetProductState | False |
-| [Drilling.Common/Product/CProductManager.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L224-L224) | SetProductState | False |
-| [Drilling.Common/Product/CProductManager.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L263-L263) | SetProductState | False |
-| [Drilling.Common/Product/CProductManager.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L596-L596) | SetProductState | False |
-| [Drilling.Common/Product/CProductManager.cs:633–633](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L633-L633) | SetProductState | False |
-| [Drilling.Common/Product/CProductManager.cs:671–671](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L671-L671) | SetProductState | False |
-| [Drilling.Common/Product/CProductManager.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L694-L694) | SetProductState | False |
+| [Drilling.Common/Product/CProductManager.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L95-L95) | SetProductState | False |
+| [Drilling.Common/Product/CProductManager.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L224-L224) | SetProductState | False |
+| [Drilling.Common/Product/CProductManager.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L263-L263) | SetProductState | False |
+| [Drilling.Common/Product/CProductManager.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L596-L596) | SetProductState | False |
+| [Drilling.Common/Product/CProductManager.cs:633–633](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L633-L633) | SetProductState | False |
+| [Drilling.Common/Product/CProductManager.cs:671–671](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L671-L671) | SetProductState | False |
+| [Drilling.Common/Product/CProductManager.cs:694–694](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L694-L694) | SetProductState | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 855 | product.Set("PRODUCT_STATE", state.ToString().ToUpperInvariant()).Set("JUDGEMENT", result.ToString().ToUpperInvariant()).Set("STARTED_AT", startedAt?.ToString("O", System.Globalization.CultureInfo.InvariantCulture) ?? "").Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1020 |
-| 855 | product.Set("PRODUCT_STATE", state.ToString().ToUpperInvariant()).Set("JUDGEMENT", result.ToString().ToUpperInvariant()).Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1020 |
-| 855 | product.Set("PRODUCT_STATE", state.ToString().ToUpperInvariant()).Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1020 |
-| 855 | product.Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1020 |
+| 855 | product.Set("PRODUCT_STATE", state.ToString().ToUpperInvariant()).Set("JUDGEMENT", result.ToString().ToUpperInvariant()).Set("STARTED_AT", startedAt?.ToString("O", System.Globalization.CultureInfo.InvariantCulture) ?? "").Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1024 |
+| 855 | product.Set("PRODUCT_STATE", state.ToString().ToUpperInvariant()).Set("JUDGEMENT", result.ToString().ToUpperInvariant()).Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1024 |
+| 855 | product.Set("PRODUCT_STATE", state.ToString().ToUpperInvariant()).Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1024 |
+| 855 | product.Set | resolved | Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string) · Drilling.Common/Product/CProductManager.cs:1024 |
 | 855 | state.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
 | 855 | state.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
 | 855 | result.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
@@ -2977,7 +2983,7 @@ flowchart TD
 
 ### FieldDeclaration `HostWritableProductFieldNames` · L858–890
 
-[Drilling.Common/Product/CProductManager.cs:858–890](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L858-L890)
+[Drilling.Common/Product/CProductManager.cs:858–890](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L858-L890)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3005,7 +3011,7 @@ flowchart TD
 
 ### FieldDeclaration `ProductFieldNames` · L891–930
 
-[Drilling.Common/Product/CProductManager.cs:891–930](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L891-L930)
+[Drilling.Common/Product/CProductManager.cs:891–930](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L891-L930)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3026,7 +3032,7 @@ flowchart TD
 
 ### MethodDeclaration `ChooseGlassId` · L931–956
 
-[Drilling.Common/Product/CProductManager.cs:931–956](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L931-L956)
+[Drilling.Common/Product/CProductManager.cs:931–956](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L931-L956)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3047,7 +3053,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L183-L183) | ChooseGlassId | False |
+| [Drilling.Common/Product/CProductManager.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L183-L183) | ChooseGlassId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3099,7 +3105,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Created` · L961–961
 
-[Drilling.Common/Product/CProductManager.cs:961–961](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L961-L961)
+[Drilling.Common/Product/CProductManager.cs:961–961](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L961-L961)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3114,7 +3120,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Running` · L962–962
 
-[Drilling.Common/Product/CProductManager.cs:962–962](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L962-L962)
+[Drilling.Common/Product/CProductManager.cs:962–962](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L962-L962)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3129,7 +3135,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Completed` · L963–963
 
-[Drilling.Common/Product/CProductManager.cs:963–963](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L963-L963)
+[Drilling.Common/Product/CProductManager.cs:963–963](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L963-L963)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3144,7 +3150,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Stopped` · L964–964
 
-[Drilling.Common/Product/CProductManager.cs:964–964](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L964-L964)
+[Drilling.Common/Product/CProductManager.cs:964–964](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L964-L964)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3159,7 +3165,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Error` · L965–965
 
-[Drilling.Common/Product/CProductManager.cs:965–965](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L965-L965)
+[Drilling.Common/Product/CProductManager.cs:965–965](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L965-L965)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3174,7 +3180,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Scrapped` · L966–966
 
-[Drilling.Common/Product/CProductManager.cs:966–966](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L966-L966)
+[Drilling.Common/Product/CProductManager.cs:966–966](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L966-L966)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3189,7 +3195,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Pending` · L971–971
 
-[Drilling.Common/Product/CProductManager.cs:971–971](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L971-L971)
+[Drilling.Common/Product/CProductManager.cs:971–971](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L971-L971)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3204,7 +3210,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Skipped` · L972–972
 
-[Drilling.Common/Product/CProductManager.cs:972–972](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L972-L972)
+[Drilling.Common/Product/CProductManager.cs:972–972](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L972-L972)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3219,7 +3225,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `OK` · L973–973
 
-[Drilling.Common/Product/CProductManager.cs:973–973](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L973-L973)
+[Drilling.Common/Product/CProductManager.cs:973–973](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L973-L973)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3234,7 +3240,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `NG` · L974–974
 
-[Drilling.Common/Product/CProductManager.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L974-L974)
+[Drilling.Common/Product/CProductManager.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L974-L974)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3249,7 +3255,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Ready` · L979–979
 
-[Drilling.Common/Product/CProductManager.cs:979–979](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L979-L979)
+[Drilling.Common/Product/CProductManager.cs:979–979](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L979-L979)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3264,7 +3270,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Running` · L980–980
 
-[Drilling.Common/Product/CProductManager.cs:980–980](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L980-L980)
+[Drilling.Common/Product/CProductManager.cs:980–980](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L980-L980)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3279,7 +3285,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Completed` · L981–981
 
-[Drilling.Common/Product/CProductManager.cs:981–981](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L981-L981)
+[Drilling.Common/Product/CProductManager.cs:981–981](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L981-L981)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3294,7 +3300,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Stopped` · L982–982
 
-[Drilling.Common/Product/CProductManager.cs:982–982](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L982-L982)
+[Drilling.Common/Product/CProductManager.cs:982–982](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L982-L982)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3309,7 +3315,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Error` · L983–983
 
-[Drilling.Common/Product/CProductManager.cs:983–983](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L983-L983)
+[Drilling.Common/Product/CProductManager.cs:983–983](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L983-L983)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3324,7 +3330,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Disabled` · L984–984
 
-[Drilling.Common/Product/CProductManager.cs:984–984](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L984-L984)
+[Drilling.Common/Product/CProductManager.cs:984–984](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L984-L984)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3339,7 +3345,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `NotStarted` · L989–989
 
-[Drilling.Common/Product/CProductManager.cs:989–989](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L989-L989)
+[Drilling.Common/Product/CProductManager.cs:989–989](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L989-L989)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3354,7 +3360,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Running` · L990–990
 
-[Drilling.Common/Product/CProductManager.cs:990–990](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L990-L990)
+[Drilling.Common/Product/CProductManager.cs:990–990](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L990-L990)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3369,7 +3375,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Completed` · L991–991
 
-[Drilling.Common/Product/CProductManager.cs:991–991](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L991-L991)
+[Drilling.Common/Product/CProductManager.cs:991–991](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L991-L991)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3384,7 +3390,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Stopped` · L992–992
 
-[Drilling.Common/Product/CProductManager.cs:992–992](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L992-L992)
+[Drilling.Common/Product/CProductManager.cs:992–992](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L992-L992)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3399,7 +3405,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Error` · L993–993
 
-[Drilling.Common/Product/CProductManager.cs:993–993](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L993-L993)
+[Drilling.Common/Product/CProductManager.cs:993–993](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L993-L993)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3412,9 +3418,111 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `InspectionMethod` · L1001–1001
+### PropertyDeclaration `VisionResultCode` · L1000–1000
 
-[Drilling.Common/Product/CProductManager.cs:1001–1001](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1001-L1001)
+[Drilling.Common/Product/CProductManager.cs:1000–1000](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1000-L1000)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | int? Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.VisionResultCode |
+| 접근/수식자 | Public / public |
+| 반환/값 타입 | int? |
+| 소속 타입 | NamedType:Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### GetAccessorDeclaration `get_VisionResultCode` · L1000–1000
+
+[Drilling.Common/Product/CProductManager.cs:1000–1000](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1000-L1000)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | int? Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.VisionResultCode.get |
+| 접근/수식자 | Public / get |
+| 반환/값 타입 | int? |
+| 소속 타입 | NamedType:Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### InitAccessorDeclaration `set_VisionResultCode` · L1000–1000
+
+[Drilling.Common/Product/CProductManager.cs:1000–1000](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1000-L1000)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.VisionResultCode.init |
+| 접근/수식자 | Public / init |
+| 반환/값 타입 | void |
+| 소속 타입 | NamedType:Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT |
+
+입력 계약:
+
+| 이름 | 타입 | 전달 | 선택/기본값 |
+| --- | --- | --- | --- |
+| value | int? | None | False /  |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### PropertyDeclaration `NgReason` · L1001–1001
+
+[Drilling.Common/Product/CProductManager.cs:1001–1001](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1001-L1001)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.NgReason |
+| 접근/수식자 | Public / public |
+| 반환/값 타입 | string |
+| 소속 타입 | NamedType:Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### GetAccessorDeclaration `get_NgReason` · L1001–1001
+
+[Drilling.Common/Product/CProductManager.cs:1001–1001](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1001-L1001)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | string Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.NgReason.get |
+| 접근/수식자 | Public / get |
+| 반환/값 타입 | string |
+| 소속 타입 | NamedType:Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### InitAccessorDeclaration `set_NgReason` · L1001–1001
+
+[Drilling.Common/Product/CProductManager.cs:1001–1001](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1001-L1001)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | void Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.NgReason.init |
+| 접근/수식자 | Public / init |
+| 반환/값 타입 | void |
+| 소속 타입 | NamedType:Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT |
+
+입력 계약:
+
+| 이름 | 타입 | 전달 | 선택/기본값 |
+| --- | --- | --- | --- |
+| value | string | None | False /  |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### PropertyDeclaration `InspectionMethod` · L1005–1005
+
+[Drilling.Common/Product/CProductManager.cs:1005–1005](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1005-L1005)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3427,9 +3535,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_InspectionMethod` · L1001–1001
+### GetAccessorDeclaration `get_InspectionMethod` · L1005–1005
 
-[Drilling.Common/Product/CProductManager.cs:1001–1001](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1001-L1001)
+[Drilling.Common/Product/CProductManager.cs:1005–1005](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1005-L1005)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3442,9 +3550,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_InspectionMethod` · L1001–1001
+### InitAccessorDeclaration `set_InspectionMethod` · L1005–1005
 
-[Drilling.Common/Product/CProductManager.cs:1001–1001](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1001-L1001)
+[Drilling.Common/Product/CProductManager.cs:1005–1005](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1005-L1005)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3463,9 +3571,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `RecipeId` · L1002–1002
+### PropertyDeclaration `RecipeId` · L1006–1006
 
-[Drilling.Common/Product/CProductManager.cs:1002–1002](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1002-L1002)
+[Drilling.Common/Product/CProductManager.cs:1006–1006](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1006-L1006)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3478,9 +3586,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_RecipeId` · L1002–1002
+### GetAccessorDeclaration `get_RecipeId` · L1006–1006
 
-[Drilling.Common/Product/CProductManager.cs:1002–1002](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1002-L1002)
+[Drilling.Common/Product/CProductManager.cs:1006–1006](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1006-L1006)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3493,9 +3601,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_RecipeId` · L1002–1002
+### InitAccessorDeclaration `set_RecipeId` · L1006–1006
 
-[Drilling.Common/Product/CProductManager.cs:1002–1002](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1002-L1002)
+[Drilling.Common/Product/CProductManager.cs:1006–1006](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1006-L1006)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3514,9 +3622,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Rule` · L1003–1003
+### PropertyDeclaration `Rule` · L1007–1007
 
-[Drilling.Common/Product/CProductManager.cs:1003–1003](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1003-L1003)
+[Drilling.Common/Product/CProductManager.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1007-L1007)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3529,9 +3637,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Rule` · L1003–1003
+### GetAccessorDeclaration `get_Rule` · L1007–1007
 
-[Drilling.Common/Product/CProductManager.cs:1003–1003](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1003-L1003)
+[Drilling.Common/Product/CProductManager.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1007-L1007)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3544,9 +3652,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_Rule` · L1003–1003
+### InitAccessorDeclaration `set_Rule` · L1007–1007
 
-[Drilling.Common/Product/CProductManager.cs:1003–1003](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1003-L1003)
+[Drilling.Common/Product/CProductManager.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1007-L1007)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3565,9 +3673,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `RuleScope` · L1004–1004
+### PropertyDeclaration `RuleScope` · L1008–1008
 
-[Drilling.Common/Product/CProductManager.cs:1004–1004](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1004-L1004)
+[Drilling.Common/Product/CProductManager.cs:1008–1008](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1008-L1008)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3580,9 +3688,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_RuleScope` · L1004–1004
+### GetAccessorDeclaration `get_RuleScope` · L1008–1008
 
-[Drilling.Common/Product/CProductManager.cs:1004–1004](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1004-L1004)
+[Drilling.Common/Product/CProductManager.cs:1008–1008](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1008-L1008)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3595,9 +3703,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_RuleScope` · L1004–1004
+### InitAccessorDeclaration `set_RuleScope` · L1008–1008
 
-[Drilling.Common/Product/CProductManager.cs:1004–1004](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1004-L1004)
+[Drilling.Common/Product/CProductManager.cs:1008–1008](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1008-L1008)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3616,9 +3724,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `BeamNo` · L1005–1005
+### PropertyDeclaration `BeamNo` · L1009–1009
 
-[Drilling.Common/Product/CProductManager.cs:1005–1005](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1005-L1005)
+[Drilling.Common/Product/CProductManager.cs:1009–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1009-L1009)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3631,9 +3739,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_BeamNo` · L1005–1005
+### GetAccessorDeclaration `get_BeamNo` · L1009–1009
 
-[Drilling.Common/Product/CProductManager.cs:1005–1005](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1005-L1005)
+[Drilling.Common/Product/CProductManager.cs:1009–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1009-L1009)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3646,9 +3754,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_BeamNo` · L1005–1005
+### InitAccessorDeclaration `set_BeamNo` · L1009–1009
 
-[Drilling.Common/Product/CProductManager.cs:1005–1005](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1005-L1005)
+[Drilling.Common/Product/CProductManager.cs:1009–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1009-L1009)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3667,9 +3775,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ReferenceCellNo` · L1006–1006
+### PropertyDeclaration `ReferenceCellNo` · L1010–1010
 
-[Drilling.Common/Product/CProductManager.cs:1006–1006](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1006-L1006)
+[Drilling.Common/Product/CProductManager.cs:1010–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1010-L1010)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3682,9 +3790,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ReferenceCellNo` · L1006–1006
+### GetAccessorDeclaration `get_ReferenceCellNo` · L1010–1010
 
-[Drilling.Common/Product/CProductManager.cs:1006–1006](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1006-L1006)
+[Drilling.Common/Product/CProductManager.cs:1010–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1010-L1010)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3697,9 +3805,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_ReferenceCellNo` · L1006–1006
+### InitAccessorDeclaration `set_ReferenceCellNo` · L1010–1010
 
-[Drilling.Common/Product/CProductManager.cs:1006–1006](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1006-L1006)
+[Drilling.Common/Product/CProductManager.cs:1010–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1010-L1010)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3718,9 +3826,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ReferenceShot` · L1007–1007
+### PropertyDeclaration `ReferenceShot` · L1011–1011
 
-[Drilling.Common/Product/CProductManager.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1007-L1007)
+[Drilling.Common/Product/CProductManager.cs:1011–1011](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1011-L1011)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3733,9 +3841,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ReferenceShot` · L1007–1007
+### GetAccessorDeclaration `get_ReferenceShot` · L1011–1011
 
-[Drilling.Common/Product/CProductManager.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1007-L1007)
+[Drilling.Common/Product/CProductManager.cs:1011–1011](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1011-L1011)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3748,9 +3856,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_ReferenceShot` · L1007–1007
+### InitAccessorDeclaration `set_ReferenceShot` · L1011–1011
 
-[Drilling.Common/Product/CProductManager.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1007-L1007)
+[Drilling.Common/Product/CProductManager.cs:1011–1011](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1011-L1011)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3769,9 +3877,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `RoughReference` · L1008–1008
+### PropertyDeclaration `RoughReference` · L1012–1012
 
-[Drilling.Common/Product/CProductManager.cs:1008–1008](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1008-L1008)
+[Drilling.Common/Product/CProductManager.cs:1012–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1012-L1012)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3784,9 +3892,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_RoughReference` · L1008–1008
+### GetAccessorDeclaration `get_RoughReference` · L1012–1012
 
-[Drilling.Common/Product/CProductManager.cs:1008–1008](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1008-L1008)
+[Drilling.Common/Product/CProductManager.cs:1012–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1012-L1012)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3799,9 +3907,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_RoughReference` · L1008–1008
+### InitAccessorDeclaration `set_RoughReference` · L1012–1012
 
-[Drilling.Common/Product/CProductManager.cs:1008–1008](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1008-L1008)
+[Drilling.Common/Product/CProductManager.cs:1012–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1012-L1012)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3820,9 +3928,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `FineLineCount` · L1009–1009
+### PropertyDeclaration `FineLineCount` · L1013–1013
 
-[Drilling.Common/Product/CProductManager.cs:1009–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1009-L1009)
+[Drilling.Common/Product/CProductManager.cs:1013–1013](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1013-L1013)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3835,9 +3943,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_FineLineCount` · L1009–1009
+### GetAccessorDeclaration `get_FineLineCount` · L1013–1013
 
-[Drilling.Common/Product/CProductManager.cs:1009–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1009-L1009)
+[Drilling.Common/Product/CProductManager.cs:1013–1013](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1013-L1013)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3850,9 +3958,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_FineLineCount` · L1009–1009
+### InitAccessorDeclaration `set_FineLineCount` · L1013–1013
 
-[Drilling.Common/Product/CProductManager.cs:1009–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1009-L1009)
+[Drilling.Common/Product/CProductManager.cs:1013–1013](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1013-L1013)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3871,9 +3979,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `TotalCount` · L1010–1010
+### PropertyDeclaration `TotalCount` · L1014–1014
 
-[Drilling.Common/Product/CProductManager.cs:1010–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1010-L1010)
+[Drilling.Common/Product/CProductManager.cs:1014–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1014-L1014)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3886,9 +3994,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_TotalCount` · L1010–1010
+### GetAccessorDeclaration `get_TotalCount` · L1014–1014
 
-[Drilling.Common/Product/CProductManager.cs:1010–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1010-L1010)
+[Drilling.Common/Product/CProductManager.cs:1014–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1014-L1014)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3901,9 +4009,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_TotalCount` · L1010–1010
+### InitAccessorDeclaration `set_TotalCount` · L1014–1014
 
-[Drilling.Common/Product/CProductManager.cs:1010–1010](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1010-L1010)
+[Drilling.Common/Product/CProductManager.cs:1014–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1014-L1014)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3922,9 +4030,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Get` · L1015–1018
+### MethodDeclaration `Get` · L1019–1022
 
-[Drilling.Common/Product/CProductManager.cs:1015–1018](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1015-L1018)
+[Drilling.Common/Product/CProductManager.cs:1019–1022](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1019-L1022)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3943,39 +4051,39 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:1052–1052](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1052-L1052) | Product.Get | False |
-| [Drilling.Common/Product/CProductManager.cs:1058–1058](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1058-L1058) | Product.Get | False |
-| [Drilling.Common/Product/CProductManager.cs:1066–1066](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1066-L1066) | Product.Get | False |
-| [Drilling.Common/Product/CProductManager.cs:1074–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1074-L1074) | Product.Get | False |
-| [Drilling.Common/Product/CProductManager.cs:1082–1082](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1082-L1082) | Product.Get | False |
-| [Drilling.Common/Product/CProductManager.cs:1090–1090](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1090-L1090) | Product.Get | False |
-| [Drilling.Common/Product/CProductManager.cs:1098–1098](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1098-L1098) | Product.Get | False |
-| [Drilling.Common/Product/CProductManager.cs:1106–1106](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1106-L1106) | Product.Get | False |
-| [Drilling.Common/Product/CProductManager.cs:1114–1114](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1114-L1114) | Product.Get | False |
-| [Drilling.Common/Product/CProductManager.cs:1122–1122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1122-L1122) | Product.Get | False |
-| [Drilling.Common/Product/CProductManager.cs:1130–1130](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1130-L1130) | Product.Get | False |
-| [Drilling.File/Product/CProductFile.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L115-L115) | product.Product.Get | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4070–4070](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4070-L4070) | product.Product.Get | False |
+| [Drilling.Common/Product/CProductManager.cs:1056–1056](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1056-L1056) | Product.Get | False |
+| [Drilling.Common/Product/CProductManager.cs:1062–1062](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1062-L1062) | Product.Get | False |
+| [Drilling.Common/Product/CProductManager.cs:1070–1070](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1070-L1070) | Product.Get | False |
+| [Drilling.Common/Product/CProductManager.cs:1078–1078](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1078-L1078) | Product.Get | False |
+| [Drilling.Common/Product/CProductManager.cs:1086–1086](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1086-L1086) | Product.Get | False |
+| [Drilling.Common/Product/CProductManager.cs:1094–1094](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1094-L1094) | Product.Get | False |
+| [Drilling.Common/Product/CProductManager.cs:1102–1102](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1102-L1102) | Product.Get | False |
+| [Drilling.Common/Product/CProductManager.cs:1110–1110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1110-L1110) | Product.Get | False |
+| [Drilling.Common/Product/CProductManager.cs:1118–1118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1118-L1118) | Product.Get | False |
+| [Drilling.Common/Product/CProductManager.cs:1126–1126](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1126-L1126) | Product.Get | False |
+| [Drilling.Common/Product/CProductManager.cs:1134–1134](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1134-L1134) | Product.Get | False |
+| [Drilling.File/Product/CProductFile.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L115-L115) | product.Product.Get | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:4541–4541](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4541-L4541) | product.Product.Get | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1017 | Values.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, string>.TryGetValue(string, out string) |
+| 1021 | Values.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, string>.TryGetValue(string, out string) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1017 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Values.TryGetValue(name, out var value) |
-| 1017 | conditional-expression | 조건에 따라 결과식을 선택합니다: Values.TryGetValue(name, out var value) ? value : "" |
-| 1017 | return | 호출자에게 값 또는 제어를 반환합니다: return Values.TryGetValue(name, out var value) ? value : ""; |
+| 1021 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Values.TryGetValue(name, out var value) |
+| 1021 | conditional-expression | 조건에 따라 결과식을 선택합니다: Values.TryGetValue(name, out var value) ? value : "" |
+| 1021 | return | 호출자에게 값 또는 제어를 반환합니다: return Values.TryGetValue(name, out var value) ? value : ""; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Set` · L1020–1027
+### MethodDeclaration `Set` · L1024–1031
 
-[Drilling.Common/Product/CProductManager.cs:1020–1027](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1020-L1027)
+[Drilling.Common/Product/CProductManager.cs:1024–1031](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1024-L1031)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3995,37 +4103,37 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L224-L224) | product.Product.Set("PROCESS_ID", processId).Set | False |
-| [Drilling.Common/Product/CProductManager.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L224-L224) | product.Product.Set | False |
-| [Drilling.Common/Product/CProductManager.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L298-L298) | productInfo.Set | False |
-| [Drilling.Common/Product/CProductManager.cs:855–855](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L855-L855) | product.Set("PRODUCT_STATE", state.ToString().ToUpperInvariant()).Set("JUDGEMENT", result.ToString().ToUpperInvariant()).Set("STARTED_AT", startedAt?.ToString("O", System.Globalization.CultureInfo.InvariantCulture) ?? "").Set | False |
-| [Drilling.Common/Product/CProductManager.cs:855–855](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L855-L855) | product.Set("PRODUCT_STATE", state.ToString().ToUpperInvariant()).Set("JUDGEMENT", result.ToString().ToUpperInvariant()).Set | False |
-| [Drilling.Common/Product/CProductManager.cs:855–855](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L855-L855) | product.Set("PRODUCT_STATE", state.ToString().ToUpperInvariant()).Set | False |
-| [Drilling.Common/Product/CProductManager.cs:855–855](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L855-L855) | product.Set | False |
+| [Drilling.Common/Product/CProductManager.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L224-L224) | product.Product.Set("PROCESS_ID", processId).Set | False |
+| [Drilling.Common/Product/CProductManager.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L224-L224) | product.Product.Set | False |
+| [Drilling.Common/Product/CProductManager.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L298-L298) | productInfo.Set | False |
+| [Drilling.Common/Product/CProductManager.cs:855–855](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L855-L855) | product.Set("PRODUCT_STATE", state.ToString().ToUpperInvariant()).Set("JUDGEMENT", result.ToString().ToUpperInvariant()).Set("STARTED_AT", startedAt?.ToString("O", System.Globalization.CultureInfo.InvariantCulture) ?? "").Set | False |
+| [Drilling.Common/Product/CProductManager.cs:855–855](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L855-L855) | product.Set("PRODUCT_STATE", state.ToString().ToUpperInvariant()).Set("JUDGEMENT", result.ToString().ToUpperInvariant()).Set | False |
+| [Drilling.Common/Product/CProductManager.cs:855–855](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L855-L855) | product.Set("PRODUCT_STATE", state.ToString().ToUpperInvariant()).Set | False |
+| [Drilling.Common/Product/CProductManager.cs:855–855](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L855-L855) | product.Set | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1022 | new Dictionary<string, string> | resolved | System.Collections.Generic.Dictionary<string, string>.Dictionary(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>, System.Collections.Generic.IEqualityComparer<string>?) |
-| 1026 | new ST_PRODUCT_INFO | resolved | Drilling.Common.Product.ST_PRODUCT_INFO.ST_PRODUCT_INFO(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1013 |
+| 1026 | new Dictionary<string, string> | resolved | System.Collections.Generic.Dictionary<string, string>.Dictionary(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>, System.Collections.Generic.IEqualityComparer<string>?) |
+| 1030 | new ST_PRODUCT_INFO | resolved | Drilling.Common.Product.ST_PRODUCT_INFO.ST_PRODUCT_INFO(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1017 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1022 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) { [name] = value } |
-| 1022 | local-declaration | 지역 변수를 선언합니다: var values = new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) { [name] = value }; |
-| 1022 | variable-initializer | 변수의 초기값을 지정합니다: values = new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) { [name] = value } |
-| 1024 | assignment | 값을 대상에 대입합니다: [name] = value |
-| 1026 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_INFO(values) |
-| 1026 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_INFO(values); |
+| 1026 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) { [name] = value } |
+| 1026 | local-declaration | 지역 변수를 선언합니다: var values = new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) { [name] = value }; |
+| 1026 | variable-initializer | 변수의 초기값을 지정합니다: values = new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) { [name] = value } |
+| 1028 | assignment | 값을 대상에 대입합니다: [name] = value |
+| 1030 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_INFO(values) |
+| 1030 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_INFO(values); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `GlassId` · L1052–1052
+### PropertyDeclaration `GlassId` · L1056–1056
 
-[Drilling.Common/Product/CProductManager.cs:1052–1052](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1052-L1052)
+[Drilling.Common/Product/CProductManager.cs:1056–1056](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1056-L1056)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4040,19 +4148,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1052 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1015 |
+| 1056 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1052 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("H_GLASSID") |
+| 1056 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("H_GLASSID") |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ProductId` · L1054–1060
+### PropertyDeclaration `ProductId` · L1058–1064
 
-[Drilling.Common/Product/CProductManager.cs:1054–1060](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1054-L1060)
+[Drilling.Common/Product/CProductManager.cs:1058–1064](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1058-L1064)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4065,9 +4173,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ProductId` · L1056–1059
+### GetAccessorDeclaration `get_ProductId` · L1060–1063
 
-[Drilling.Common/Product/CProductManager.cs:1056–1059](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1056-L1059)
+[Drilling.Common/Product/CProductManager.cs:1060–1063](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1060-L1063)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4082,20 +4190,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1058 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1015 |
+| 1062 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1058 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PRODUCTID") |
-| 1058 | return | 호출자에게 값 또는 제어를 반환합니다: return Product.Get("PRODUCTID"); |
+| 1062 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PRODUCTID") |
+| 1062 | return | 호출자에게 값 또는 제어를 반환합니다: return Product.Get("PRODUCTID"); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `PanelId` · L1062–1068
+### PropertyDeclaration `PanelId` · L1066–1072
 
-[Drilling.Common/Product/CProductManager.cs:1062–1068](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1062-L1068)
+[Drilling.Common/Product/CProductManager.cs:1066–1072](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1066-L1072)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4108,9 +4216,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_PanelId` · L1064–1067
+### GetAccessorDeclaration `get_PanelId` · L1068–1071
 
-[Drilling.Common/Product/CProductManager.cs:1064–1067](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1064-L1067)
+[Drilling.Common/Product/CProductManager.cs:1068–1071](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1068-L1071)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4125,20 +4233,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1066 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1015 |
+| 1070 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1066 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("H_GLASSID") |
-| 1066 | return | 호출자에게 값 또는 제어를 반환합니다: return Product.Get("H_GLASSID"); |
+| 1070 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("H_GLASSID") |
+| 1070 | return | 호출자에게 값 또는 제어를 반환합니다: return Product.Get("H_GLASSID"); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `LotId` · L1070–1076
+### PropertyDeclaration `LotId` · L1074–1080
 
-[Drilling.Common/Product/CProductManager.cs:1070–1076](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1070-L1076)
+[Drilling.Common/Product/CProductManager.cs:1074–1080](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1074-L1080)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4151,9 +4259,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_LotId` · L1072–1075
+### GetAccessorDeclaration `get_LotId` · L1076–1079
 
-[Drilling.Common/Product/CProductManager.cs:1072–1075](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1072-L1075)
+[Drilling.Common/Product/CProductManager.cs:1076–1079](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1076-L1079)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4168,20 +4276,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1074 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1015 |
+| 1078 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1074 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("LOTID") |
-| 1074 | return | 호출자에게 값 또는 제어를 반환합니다: return Product.Get("LOTID"); |
+| 1078 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("LOTID") |
+| 1078 | return | 호출자에게 값 또는 제어를 반환합니다: return Product.Get("LOTID"); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ProcessId` · L1078–1084
+### PropertyDeclaration `ProcessId` · L1082–1088
 
-[Drilling.Common/Product/CProductManager.cs:1078–1084](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1078-L1084)
+[Drilling.Common/Product/CProductManager.cs:1082–1088](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1082-L1088)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4194,9 +4302,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ProcessId` · L1080–1083
+### GetAccessorDeclaration `get_ProcessId` · L1084–1087
 
-[Drilling.Common/Product/CProductManager.cs:1080–1083](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1080-L1083)
+[Drilling.Common/Product/CProductManager.cs:1084–1087](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1084-L1087)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4211,20 +4319,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1082 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1015 |
+| 1086 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1082 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PROCESS_ID") |
-| 1082 | return | 호출자에게 값 또는 제어를 반환합니다: return Product.Get("PROCESS_ID"); |
+| 1086 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PROCESS_ID") |
+| 1086 | return | 호출자에게 값 또는 제어를 반환합니다: return Product.Get("PROCESS_ID"); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `RecipeId` · L1086–1092
+### PropertyDeclaration `RecipeId` · L1090–1096
 
-[Drilling.Common/Product/CProductManager.cs:1086–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1086-L1092)
+[Drilling.Common/Product/CProductManager.cs:1090–1096](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1090-L1096)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4237,9 +4345,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_RecipeId` · L1088–1091
+### GetAccessorDeclaration `get_RecipeId` · L1092–1095
 
-[Drilling.Common/Product/CProductManager.cs:1088–1091](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1088-L1091)
+[Drilling.Common/Product/CProductManager.cs:1092–1095](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1092-L1095)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4254,20 +4362,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1090 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1015 |
+| 1094 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1090 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PPID") |
-| 1090 | return | 호출자에게 값 또는 제어를 반환합니다: return Product.Get("PPID"); |
+| 1094 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PPID") |
+| 1094 | return | 호출자에게 값 또는 제어를 반환합니다: return Product.Get("PPID"); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `State` · L1094–1100
+### PropertyDeclaration `State` · L1098–1104
 
-[Drilling.Common/Product/CProductManager.cs:1094–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1094-L1100)
+[Drilling.Common/Product/CProductManager.cs:1098–1104](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1098-L1104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4280,9 +4388,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_State` · L1096–1099
+### GetAccessorDeclaration `get_State` · L1100–1103
 
-[Drilling.Common/Product/CProductManager.cs:1096–1099](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1096-L1099)
+[Drilling.Common/Product/CProductManager.cs:1100–1103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1100-L1103)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4297,22 +4405,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1098 | ParseEnum | resolved | Drilling.Common.Product.EN_PRODUCT_STATE Drilling.Common.Product.ST_PRODUCT_DATA.ParseEnum<Drilling.Common.Product.EN_PRODUCT_STATE>(string, Drilling.Common.Product.EN_PRODUCT_STATE) · Drilling.Common/Product/CProductManager.cs:1150 |
-| 1098 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1015 |
+| 1102 | ParseEnum | resolved | Drilling.Common.Product.EN_PRODUCT_STATE Drilling.Common.Product.ST_PRODUCT_DATA.ParseEnum<Drilling.Common.Product.EN_PRODUCT_STATE>(string, Drilling.Common.Product.EN_PRODUCT_STATE) · Drilling.Common/Product/CProductManager.cs:1154 |
+| 1102 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1098 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(Product.Get("PRODUCT_STATE"), EN_PRODUCT_STATE.Created) |
-| 1098 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PRODUCT_STATE") |
-| 1098 | return | 호출자에게 값 또는 제어를 반환합니다: return ParseEnum(Product.Get("PRODUCT_STATE"), EN_PRODUCT_STATE.Created); |
+| 1102 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(Product.Get("PRODUCT_STATE"), EN_PRODUCT_STATE.Created) |
+| 1102 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PRODUCT_STATE") |
+| 1102 | return | 호출자에게 값 또는 제어를 반환합니다: return ParseEnum(Product.Get("PRODUCT_STATE"), EN_PRODUCT_STATE.Created); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Result` · L1102–1108
+### PropertyDeclaration `Result` · L1106–1112
 
-[Drilling.Common/Product/CProductManager.cs:1102–1108](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1102-L1108)
+[Drilling.Common/Product/CProductManager.cs:1106–1112](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1106-L1112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4325,9 +4433,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Result` · L1104–1107
+### GetAccessorDeclaration `get_Result` · L1108–1111
 
-[Drilling.Common/Product/CProductManager.cs:1104–1107](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1104-L1107)
+[Drilling.Common/Product/CProductManager.cs:1108–1111](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1108-L1111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4342,22 +4450,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1106 | ParseEnum | resolved | Drilling.Common.Product.EN_PRODUCT_RESULT Drilling.Common.Product.ST_PRODUCT_DATA.ParseEnum<Drilling.Common.Product.EN_PRODUCT_RESULT>(string, Drilling.Common.Product.EN_PRODUCT_RESULT) · Drilling.Common/Product/CProductManager.cs:1150 |
-| 1106 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1015 |
+| 1110 | ParseEnum | resolved | Drilling.Common.Product.EN_PRODUCT_RESULT Drilling.Common.Product.ST_PRODUCT_DATA.ParseEnum<Drilling.Common.Product.EN_PRODUCT_RESULT>(string, Drilling.Common.Product.EN_PRODUCT_RESULT) · Drilling.Common/Product/CProductManager.cs:1154 |
+| 1110 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1106 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(Product.Get("JUDGEMENT"), EN_PRODUCT_RESULT.Pending) |
-| 1106 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("JUDGEMENT") |
-| 1106 | return | 호출자에게 값 또는 제어를 반환합니다: return ParseEnum(Product.Get("JUDGEMENT"), EN_PRODUCT_RESULT.Pending); |
+| 1110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(Product.Get("JUDGEMENT"), EN_PRODUCT_RESULT.Pending) |
+| 1110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("JUDGEMENT") |
+| 1110 | return | 호출자에게 값 또는 제어를 반환합니다: return ParseEnum(Product.Get("JUDGEMENT"), EN_PRODUCT_RESULT.Pending); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `CreatedAt` · L1110–1116
+### PropertyDeclaration `CreatedAt` · L1114–1120
 
-[Drilling.Common/Product/CProductManager.cs:1110–1116](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1110-L1116)
+[Drilling.Common/Product/CProductManager.cs:1114–1120](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1114-L1120)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4370,9 +4478,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_CreatedAt` · L1112–1115
+### GetAccessorDeclaration `get_CreatedAt` · L1116–1119
 
-[Drilling.Common/Product/CProductManager.cs:1112–1115](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1112-L1115)
+[Drilling.Common/Product/CProductManager.cs:1116–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1116-L1119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4387,22 +4495,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1114 | ParseDate | resolved | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.ParseDate(string) · Drilling.Common/Product/CProductManager.cs:1156 |
-| 1114 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1015 |
+| 1118 | ParseDate | resolved | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.ParseDate(string) · Drilling.Common/Product/CProductManager.cs:1160 |
+| 1118 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1114 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(Product.Get("CREATED_AT")) |
-| 1114 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("CREATED_AT") |
-| 1114 | return | 호출자에게 값 또는 제어를 반환합니다: return ParseDate(Product.Get("CREATED_AT")); |
+| 1118 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(Product.Get("CREATED_AT")) |
+| 1118 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("CREATED_AT") |
+| 1118 | return | 호출자에게 값 또는 제어를 반환합니다: return ParseDate(Product.Get("CREATED_AT")); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `StartedAt` · L1118–1124
+### PropertyDeclaration `StartedAt` · L1122–1128
 
-[Drilling.Common/Product/CProductManager.cs:1118–1124](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1118-L1124)
+[Drilling.Common/Product/CProductManager.cs:1122–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1122-L1128)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4415,9 +4523,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_StartedAt` · L1120–1123
+### GetAccessorDeclaration `get_StartedAt` · L1124–1127
 
-[Drilling.Common/Product/CProductManager.cs:1120–1123](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1120-L1123)
+[Drilling.Common/Product/CProductManager.cs:1124–1127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1124-L1127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4432,22 +4540,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1122 | ParseDate | resolved | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.ParseDate(string) · Drilling.Common/Product/CProductManager.cs:1156 |
-| 1122 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1015 |
+| 1126 | ParseDate | resolved | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.ParseDate(string) · Drilling.Common/Product/CProductManager.cs:1160 |
+| 1126 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1122 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(Product.Get("STARTED_AT")) |
-| 1122 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("STARTED_AT") |
-| 1122 | return | 호출자에게 값 또는 제어를 반환합니다: return ParseDate(Product.Get("STARTED_AT")); |
+| 1126 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(Product.Get("STARTED_AT")) |
+| 1126 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("STARTED_AT") |
+| 1126 | return | 호출자에게 값 또는 제어를 반환합니다: return ParseDate(Product.Get("STARTED_AT")); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `CompletedAt` · L1126–1132
+### PropertyDeclaration `CompletedAt` · L1130–1136
 
-[Drilling.Common/Product/CProductManager.cs:1126–1132](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1126-L1132)
+[Drilling.Common/Product/CProductManager.cs:1130–1136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1130-L1136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4460,9 +4568,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_CompletedAt` · L1128–1131
+### GetAccessorDeclaration `get_CompletedAt` · L1132–1135
 
-[Drilling.Common/Product/CProductManager.cs:1128–1131](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1128-L1131)
+[Drilling.Common/Product/CProductManager.cs:1132–1135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1132-L1135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4477,22 +4585,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1130 | ParseDate | resolved | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.ParseDate(string) · Drilling.Common/Product/CProductManager.cs:1156 |
-| 1130 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1015 |
+| 1134 | ParseDate | resolved | System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.ParseDate(string) · Drilling.Common/Product/CProductManager.cs:1160 |
+| 1134 | Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1130 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(Product.Get("COMPLETED_AT")) |
-| 1130 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("COMPLETED_AT") |
-| 1130 | return | 호출자에게 값 또는 제어를 반환합니다: return ParseDate(Product.Get("COMPLETED_AT")); |
+| 1134 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(Product.Get("COMPLETED_AT")) |
+| 1134 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("COMPLETED_AT") |
+| 1134 | return | 호출자에게 값 또는 제어를 반환합니다: return ParseDate(Product.Get("COMPLETED_AT")); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Parameters` · L1134–1140
+### PropertyDeclaration `Parameters` · L1138–1144
 
-[Drilling.Common/Product/CProductManager.cs:1134–1140](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1134-L1140)
+[Drilling.Common/Product/CProductManager.cs:1138–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1138-L1144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4505,9 +4613,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Parameters` · L1136–1139
+### GetAccessorDeclaration `get_Parameters` · L1140–1143
 
-[Drilling.Common/Product/CProductManager.cs:1136–1139](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1136-L1139)
+[Drilling.Common/Product/CProductManager.cs:1140–1143](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1140-L1143)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4522,13 +4630,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1138 | return | 호출자에게 값 또는 제어를 반환합니다: return Recipe.Parameters; |
+| 1142 | return | 호출자에게 값 또는 제어를 반환합니다: return Recipe.Parameters; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Heads` · L1142–1148
+### PropertyDeclaration `Heads` · L1146–1152
 
-[Drilling.Common/Product/CProductManager.cs:1142–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1142-L1148)
+[Drilling.Common/Product/CProductManager.cs:1146–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1146-L1152)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4541,9 +4649,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Heads` · L1144–1147
+### GetAccessorDeclaration `get_Heads` · L1148–1151
 
-[Drilling.Common/Product/CProductManager.cs:1144–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1144-L1147)
+[Drilling.Common/Product/CProductManager.cs:1148–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1148-L1151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4558,13 +4666,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1146 | return | 호출자에게 값 또는 제어를 반환합니다: return Runtime.Heads; |
+| 1150 | return | 호출자에게 값 또는 제어를 반환합니다: return Runtime.Heads; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseEnum` · L1150–1154
+### MethodDeclaration `ParseEnum` · L1154–1158
 
-[Drilling.Common/Product/CProductManager.cs:1150–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1150-L1154)
+[Drilling.Common/Product/CProductManager.cs:1154–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1154-L1158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4584,28 +4692,28 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:1098–1098](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1098-L1098) | ParseEnum | False |
-| [Drilling.Common/Product/CProductManager.cs:1106–1106](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1106-L1106) | ParseEnum | False |
+| [Drilling.Common/Product/CProductManager.cs:1102–1102](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1102-L1102) | ParseEnum | False |
+| [Drilling.Common/Product/CProductManager.cs:1110–1110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1110-L1110) | ParseEnum | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1153 | Enum.TryParse<T> | resolved | bool System.Enum.TryParse<T>(string?, bool, out T) |
+| 1157 | Enum.TryParse<T> | resolved | bool System.Enum.TryParse<T>(string?, bool, out T) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1153 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.TryParse<T>(value, true, out var parsed) |
-| 1153 | conditional-expression | 조건에 따라 결과식을 선택합니다: Enum.TryParse<T>(value, true, out var parsed) ? parsed : defaultValue |
-| 1153 | return | 호출자에게 값 또는 제어를 반환합니다: return Enum.TryParse<T>(value, true, out var parsed) ? parsed : defaultValue; |
+| 1157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.TryParse<T>(value, true, out var parsed) |
+| 1157 | conditional-expression | 조건에 따라 결과식을 선택합니다: Enum.TryParse<T>(value, true, out var parsed) ? parsed : defaultValue |
+| 1157 | return | 호출자에게 값 또는 제어를 반환합니다: return Enum.TryParse<T>(value, true, out var parsed) ? parsed : defaultValue; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseDate` · L1156–1159
+### MethodDeclaration `ParseDate` · L1160–1163
 
-[Drilling.Common/Product/CProductManager.cs:1156–1159](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1156-L1159)
+[Drilling.Common/Product/CProductManager.cs:1160–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1160-L1163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4624,29 +4732,29 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:1114–1114](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1114-L1114) | ParseDate | False |
-| [Drilling.Common/Product/CProductManager.cs:1122–1122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1122-L1122) | ParseDate | False |
-| [Drilling.Common/Product/CProductManager.cs:1130–1130](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1130-L1130) | ParseDate | False |
+| [Drilling.Common/Product/CProductManager.cs:1118–1118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1118-L1118) | ParseDate | False |
+| [Drilling.Common/Product/CProductManager.cs:1126–1126](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1126-L1126) | ParseDate | False |
+| [Drilling.Common/Product/CProductManager.cs:1134–1134](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1134-L1134) | ParseDate | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1158 | DateTimeOffset.TryParse | resolved | bool System.DateTimeOffset.TryParse(string?, out System.DateTimeOffset) |
+| 1162 | DateTimeOffset.TryParse | resolved | bool System.DateTimeOffset.TryParse(string?, out System.DateTimeOffset) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1158 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.TryParse(value, out var parsed) |
-| 1158 | conditional-expression | 조건에 따라 결과식을 선택합니다: DateTimeOffset.TryParse(value, out var parsed) ? parsed : null |
-| 1158 | return | 호출자에게 값 또는 제어를 반환합니다: return DateTimeOffset.TryParse(value, out var parsed) ? parsed : null; |
+| 1162 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.TryParse(value, out var parsed) |
+| 1162 | conditional-expression | 조건에 따라 결과식을 선택합니다: DateTimeOffset.TryParse(value, out var parsed) ? parsed : null |
+| 1162 | return | 호출자에게 값 또는 제어를 반환합니다: return DateTimeOffset.TryParse(value, out var parsed) ? parsed : null; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `LoadActive` · L1165–1165
+### MethodDeclaration `LoadActive` · L1169–1169
 
-[Drilling.Common/Product/CProductManager.cs:1165–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1165-L1165)
+[Drilling.Common/Product/CProductManager.cs:1169–1169](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1169-L1169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4665,14 +4773,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L33-L33) | productFile.LoadActive | False |
-| [Drilling.Common/Product/CProductManager.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L163-L163) | productFile.LoadActive | False |
+| [Drilling.Common/Product/CProductManager.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L33-L33) | productFile.LoadActive | False |
+| [Drilling.Common/Product/CProductManager.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L163-L163) | productFile.LoadActive | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `SaveActive` · L1166–1166
+### MethodDeclaration `SaveActive` · L1170–1170
 
-[Drilling.Common/Product/CProductManager.cs:1166–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1166-L1166)
+[Drilling.Common/Product/CProductManager.cs:1170–1170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1170-L1170)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4692,14 +4800,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L480-L480) | productFile.SaveActive | False |
-| [Drilling.Common/Product/CProductManager.cs:791–791](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L791-L791) | productFile.SaveActive | False |
+| [Drilling.Common/Product/CProductManager.cs:480–480](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L480-L480) | productFile.SaveActive | False |
+| [Drilling.Common/Product/CProductManager.cs:791–791](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L791-L791) | productFile.SaveActive | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ClearActive` · L1167–1167
+### MethodDeclaration `ClearActive` · L1171–1171
 
-[Drilling.Common/Product/CProductManager.cs:1167–1167](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1167-L1167)
+[Drilling.Common/Product/CProductManager.cs:1171–1171](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1171-L1171)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4718,14 +4826,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:716–716](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L716-L716) | productFile.ClearActive | False |
-| [Drilling.Common/Product/CProductManager.cs:752–752](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L752-L752) | productFile.ClearActive | False |
+| [Drilling.Common/Product/CProductManager.cs:716–716](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L716-L716) | productFile.ClearActive | False |
+| [Drilling.Common/Product/CProductManager.cs:752–752](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L752-L752) | productFile.ClearActive | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `AppendHistory` · L1168–1168
+### MethodDeclaration `AppendHistory` · L1172–1172
 
-[Drilling.Common/Product/CProductManager.cs:1168–1168](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1168-L1168)
+[Drilling.Common/Product/CProductManager.cs:1172–1172](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1172-L1172)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4745,14 +4853,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:720–720](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L720-L720) | productFile.AppendHistory | False |
-| [Drilling.Common/Product/CProductManager.cs:796–796](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L796-L796) | productFile.AppendHistory | False |
+| [Drilling.Common/Product/CProductManager.cs:720–720](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L720-L720) | productFile.AppendHistory | False |
+| [Drilling.Common/Product/CProductManager.cs:796–796](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L796-L796) | productFile.AppendHistory | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `LoadHistory` · L1169–1169
+### MethodDeclaration `LoadHistory` · L1173–1173
 
-[Drilling.Common/Product/CProductManager.cs:1169–1169](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L1169-L1169)
+[Drilling.Common/Product/CProductManager.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L1173-L1173)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4773,7 +4881,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Product/CProductManager.cs:766–766](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L766-L766) | productFile.LoadHistory | False |
+| [Drilling.Common/Product/CProductManager.cs:766–766](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L766-L766) | productFile.LoadHistory | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 

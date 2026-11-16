@@ -1,0 +1,127 @@
+{
+  "generatorVersion": "1.0.1",
+  "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+  "metadataBytes": 89536952,
+  "metadataSha256": "7a9cbafbe233135deb1c862fbb4194cd03ebf248849b2c8baa91d86aab0986ab",
+  "members": 15282,
+  "uniqueMemberIds": 15282,
+  "duplicateMemberIds": [],
+  "localFunctions": 1042,
+  "uniqueLocalFunctionIds": 1042,
+  "localSourceCalls": 388,
+  "localCallerRows": 1565,
+  "localOperations": 3441,
+  "allLocalReferencesMatchDeclaringSource": true,
+  "selfTestPasses": 11,
+  "verification": {
+    "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
+    "originalTrackedStatusPreserved": true,
+    "originalHeadPreserved": true,
+    "allCSharpByteHashesPreserved": true,
+    "sourcePushUrl": "DISABLED",
+    "validation": {
+      "allFileHashesRecorded": true,
+      "sourceRangesChecked": 144787,
+      "everyRangeWithinPhysicalFile": true,
+      "allTypeAndCallNodesCovered": true,
+      "localFunctionCount": 1042,
+      "localFunctionSourceIdsUnique": true,
+      "parsedCSharpFiles": 148
+    },
+    "outputBytes": 89536952,
+    "outputSha256": "7a9cbafbe233135deb1c862fbb4194cd03ebf248849b2c8baa91d86aab0986ab"
+  },
+  "summary": {
+    "trackedFiles": 571,
+    "csharpFiles": 148,
+    "sourceLines": 113350,
+    "types": 876,
+    "members": 15282,
+    "calls": 39483,
+    "operations": 89146,
+    "callResolution": {
+      "resolved": 35705,
+      "unresolved": 3201,
+      "candidate": 577
+    },
+    "compilationDiagnostics": {
+      "Error": 3787,
+      "Hidden": 423,
+      "Warning": 3
+    },
+    "diagnosticCodes": [
+      {
+        "code": "CS0246",
+        "count": 1959
+      },
+      {
+        "code": "CS0103",
+        "count": 1393
+      },
+      {
+        "code": "CS8019",
+        "count": 404
+      },
+      {
+        "code": "CS1061",
+        "count": 186
+      },
+      {
+        "code": "CS0234",
+        "count": 150
+      },
+      {
+        "code": "CS0117",
+        "count": 60
+      },
+      {
+        "code": "CS8933",
+        "count": 13
+      },
+      {
+        "code": "CS1503",
+        "count": 13
+      },
+      {
+        "code": "CS0165",
+        "count": 11
+      },
+      {
+        "code": "CS1069",
+        "count": 9
+      },
+      {
+        "code": "CS9335",
+        "count": 6
+      },
+      {
+        "code": "CS0403",
+        "count": 3
+      },
+      {
+        "code": "CS0029",
+        "count": 1
+      },
+      {
+        "code": "CS7036",
+        "count": 1
+      },
+      {
+        "code": "CS8602",
+        "count": 1
+      },
+      {
+        "code": "CS8604",
+        "count": 1
+      },
+      {
+        "code": "CS0019",
+        "count": 1
+      },
+      {
+        "code": "CS8619",
+        "count": 1
+      }
+    ]
+  }
+}

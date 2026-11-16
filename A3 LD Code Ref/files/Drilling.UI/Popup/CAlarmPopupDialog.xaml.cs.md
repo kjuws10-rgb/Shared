@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
-| 원본 SHA256 | 7157f550eaf4f1ab2d2154a9e6ceca3b9345eacead545bdb40ad1b57629ee48c |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 SHA256 | e1ffed980afb9a56e23d8f6ebbe252a93a7eeaed75e9276537dddd3773fc62f9 |
 | 파일 분류 | code |
-| 원본 크기/행 | 3,289 bytes / 87 physical lines |
+| 원본 크기/행 | 4,395 bytes / 112 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -21,38 +21,40 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 타입 | 구분 | 원본 범위 | 선언/상속 |
 | --- | --- | --- | --- |
-| CAlarmPopupDialog | ClassDeclaration | 9–24 | CAlarmPopupDialog: Window |
-| CAlarmPopupPanel | ClassDeclaration | 26–84 | CAlarmPopupPanel: INotifyPropertyChanged |
-| CAlarmPopupRow | RecordDeclaration | 86–86 | CAlarmPopupRow |
+| CAlarmPopupDialog | ClassDeclaration | 10–49 | CAlarmPopupDialog: Window |
+| CAlarmPopupPanel | ClassDeclaration | 51–109 | CAlarmPopupPanel: INotifyPropertyChanged |
+| CAlarmPopupRow | RecordDeclaration | 111–111 | CAlarmPopupRow |
 
 ## 멤버 빠른 목록
 
 | 이름 | 종류 | 범위 | 서명 |
 | --- | --- | --- | --- |
-| Panel | PropertyDeclaration | L11–11 | Drilling.UI.Popup.CAlarmPopupPanel Drilling.UI.Popup.CAlarmPopupDialog.Panel |
-| get_Panel | GetAccessorDeclaration | L11–11 | Drilling.UI.Popup.CAlarmPopupPanel Drilling.UI.Popup.CAlarmPopupDialog.Panel.get |
-| .ctor | ConstructorDeclaration | L13–21 | Drilling.UI.Popup.CAlarmPopupDialog.CAlarmPopupDialog(Drilling.UI.Popup.CAlarmPopupPanel) |
-| CloseClicked | MethodDeclaration | L23–23 | void Drilling.UI.Popup.CAlarmPopupDialog.CloseClicked(object, RoutedEventArgs) |
-| _revision | FieldDeclaration | L28–28 | long Drilling.UI.Popup.CAlarmPopupPanel._revision |
-| _resetting | FieldDeclaration | L29–29 | bool Drilling.UI.Popup.CAlarmPopupPanel._resetting |
-| PropertyChanged | EventFieldDeclaration | L30–30 | System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.CAlarmPopupPanel.PropertyChanged |
-| Rows | PropertyDeclaration | L31–31 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.CAlarmPopupRow> Drilling.UI.Popup.CAlarmPopupPanel.Rows |
-| get_Rows | GetAccessorDeclaration | L31–31 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.CAlarmPopupRow> Drilling.UI.Popup.CAlarmPopupPanel.Rows.get |
-| set_Rows | SetAccessorDeclaration | L31–31 | void Drilling.UI.Popup.CAlarmPopupPanel.Rows.set |
-| Summary | PropertyDeclaration | L32–32 | string Drilling.UI.Popup.CAlarmPopupPanel.Summary |
-| RecoveryStatus | PropertyDeclaration | L33–33 | string Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus |
-| get_RecoveryStatus | GetAccessorDeclaration | L33–33 | string Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus.get |
-| set_RecoveryStatus | SetAccessorDeclaration | L33–33 | void Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus.set |
-| ResetCommand | PropertyDeclaration | L34–55 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CAlarmPopupPanel.ResetCommand |
-| _resetCommand | FieldDeclaration | L57–57 | Drilling.UI.Menu.CButtonCommand? Drilling.UI.Popup.CAlarmPopupPanel._resetCommand |
-| SetRecoveryStatus | MethodDeclaration | L58–64 | void Drilling.UI.Popup.CAlarmPopupPanel.SetRecoveryStatus(string) |
-| Refresh | MethodDeclaration | L66–83 | void Drilling.UI.Popup.CAlarmPopupPanel.Refresh() |
+| Panel | PropertyDeclaration | L12–12 | Drilling.UI.Popup.CAlarmPopupPanel Drilling.UI.Popup.CAlarmPopupDialog.Panel |
+| get_Panel | GetAccessorDeclaration | L12–12 | Drilling.UI.Popup.CAlarmPopupPanel Drilling.UI.Popup.CAlarmPopupDialog.Panel.get |
+| .ctor | ConstructorDeclaration | L14–23 | Drilling.UI.Popup.CAlarmPopupDialog.CAlarmPopupDialog(Drilling.UI.Popup.CAlarmPopupPanel) |
+| ApplySeverityTheme | MethodDeclaration | L25–39 | void Drilling.UI.Popup.CAlarmPopupDialog.ApplySeverityTheme(Drilling.UI.Popup.CAlarmPopupPanel) |
+| Brush | MethodDeclaration | L41–46 | SolidColorBrush Drilling.UI.Popup.CAlarmPopupDialog.Brush(byte, byte, byte) |
+| CloseClicked | MethodDeclaration | L48–48 | void Drilling.UI.Popup.CAlarmPopupDialog.CloseClicked(object, RoutedEventArgs) |
+| _revision | FieldDeclaration | L53–53 | long Drilling.UI.Popup.CAlarmPopupPanel._revision |
+| _resetting | FieldDeclaration | L54–54 | bool Drilling.UI.Popup.CAlarmPopupPanel._resetting |
+| PropertyChanged | EventFieldDeclaration | L55–55 | System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.CAlarmPopupPanel.PropertyChanged |
+| Rows | PropertyDeclaration | L56–56 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.CAlarmPopupRow> Drilling.UI.Popup.CAlarmPopupPanel.Rows |
+| get_Rows | GetAccessorDeclaration | L56–56 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.CAlarmPopupRow> Drilling.UI.Popup.CAlarmPopupPanel.Rows.get |
+| set_Rows | SetAccessorDeclaration | L56–56 | void Drilling.UI.Popup.CAlarmPopupPanel.Rows.set |
+| Summary | PropertyDeclaration | L57–57 | string Drilling.UI.Popup.CAlarmPopupPanel.Summary |
+| RecoveryStatus | PropertyDeclaration | L58–58 | string Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus |
+| get_RecoveryStatus | GetAccessorDeclaration | L58–58 | string Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus.get |
+| set_RecoveryStatus | SetAccessorDeclaration | L58–58 | void Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus.set |
+| ResetCommand | PropertyDeclaration | L59–80 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CAlarmPopupPanel.ResetCommand |
+| _resetCommand | FieldDeclaration | L82–82 | Drilling.UI.Menu.CButtonCommand? Drilling.UI.Popup.CAlarmPopupPanel._resetCommand |
+| SetRecoveryStatus | MethodDeclaration | L83–89 | void Drilling.UI.Popup.CAlarmPopupPanel.SetRecoveryStatus(string) |
+| Refresh | MethodDeclaration | L91–108 | void Drilling.UI.Popup.CAlarmPopupPanel.Refresh() |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
-### PropertyDeclaration `Panel` · L11–11
+### PropertyDeclaration `Panel` · L12–12
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L11-L11)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -65,9 +67,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Panel` · L11–11
+### GetAccessorDeclaration `get_Panel` · L12–12
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L11-L11)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -80,9 +82,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### ConstructorDeclaration `.ctor` · L13–21
+### ConstructorDeclaration `.ctor` · L14–23
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:13–21](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L13-L21)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:14–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L14-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -101,35 +103,162 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2601–2601](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2601-L2601) | new CAlarmPopupDialog | False |
+| [Drilling.UI/CRootView.cs:2603–2603](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2603-L2603) | new CAlarmPopupDialog | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 15 | InitializeComponent | unresolved | None |
-| 18 | panel.Refresh | resolved | void Drilling.UI.Popup.CAlarmPopupPanel.Refresh() · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:66 |
-| 19 | Math.Min | candidate | OverloadResolutionFailure |
-| 20 | Math.Min | candidate | OverloadResolutionFailure |
+| 16 | InitializeComponent | unresolved | None |
+| 19 | panel.Refresh | resolved | void Drilling.UI.Popup.CAlarmPopupPanel.Refresh() · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:91 |
+| 20 | ApplySeverityTheme | resolved | void Drilling.UI.Popup.CAlarmPopupDialog.ApplySeverityTheme(Drilling.UI.Popup.CAlarmPopupPanel) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:25 |
+| 21 | Math.Min | candidate | OverloadResolutionFailure |
+| 22 | Math.Min | candidate | OverloadResolutionFailure |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 15 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent() |
-| 16 | assignment | 값을 대상에 대입합니다: Panel = panel |
-| 17 | assignment | 값을 대상에 대입합니다: DataContext = panel |
-| 18 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Refresh() |
-| 19 | assignment | 값을 대상에 대입합니다: Width = Math.Min(Width, SystemParameters.WorkArea.Width) |
-| 19 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Width, SystemParameters.WorkArea.Width) |
-| 20 | assignment | 값을 대상에 대입합니다: Height = Math.Min(Height, SystemParameters.WorkArea.Height) |
-| 20 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Height, SystemParameters.WorkArea.Height) |
+| 16 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent() |
+| 17 | assignment | 값을 대상에 대입합니다: Panel = panel |
+| 18 | assignment | 값을 대상에 대입합니다: DataContext = panel |
+| 19 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Refresh() |
+| 20 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplySeverityTheme(panel) |
+| 21 | assignment | 값을 대상에 대입합니다: Width = Math.Min(Width, SystemParameters.WorkArea.Width) |
+| 21 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Width, SystemParameters.WorkArea.Width) |
+| 22 | assignment | 값을 대상에 대입합니다: Height = Math.Min(Height, SystemParameters.WorkArea.Height) |
+| 22 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Height, SystemParameters.WorkArea.Height) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CloseClicked` · L23–23
+### MethodDeclaration `ApplySeverityTheme` · L25–39
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L23-L23)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:25–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L25-L39)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | void Drilling.UI.Popup.CAlarmPopupDialog.ApplySeverityTheme(Drilling.UI.Popup.CAlarmPopupPanel) |
+| 접근/수식자 | Private / private |
+| 반환/값 타입 | void |
+| 소속 타입 | NamedType:Drilling.UI.Popup.CAlarmPopupDialog |
+
+입력 계약:
+
+| 이름 | 타입 | 전달 | 선택/기본값 |
+| --- | --- | --- | --- |
+| panel | Drilling.UI.Popup.CAlarmPopupPanel | None | False /  |
+
+정적 호출자로 확인된 위치:
+
+| 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
+| --- | --- | --- |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L20-L20) | ApplySeverityTheme | False |
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 27 | panel.Rows.Any | resolved | bool System.Collections.Generic.IEnumerable<Drilling.UI.Popup.CAlarmPopupRow>.Any<Drilling.UI.Popup.CAlarmPopupRow>(System.Func<Drilling.UI.Popup.CAlarmPopupRow, bool>) |
+| 28 | panel.Rows.All | resolved | bool System.Collections.Generic.IEnumerable<Drilling.UI.Popup.CAlarmPopupRow>.All<Drilling.UI.Popup.CAlarmPopupRow>(System.Func<Drilling.UI.Popup.CAlarmPopupRow, bool>) |
+| 32 | Brush | resolved | SolidColorBrush Drilling.UI.Popup.CAlarmPopupDialog.Brush(byte, byte, byte) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:41 |
+| 33 | Brush | resolved | SolidColorBrush Drilling.UI.Popup.CAlarmPopupDialog.Brush(byte, byte, byte) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:41 |
+| 34 | Brush | resolved | SolidColorBrush Drilling.UI.Popup.CAlarmPopupDialog.Brush(byte, byte, byte) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:41 |
+| 35 | Brush | resolved | SolidColorBrush Drilling.UI.Popup.CAlarmPopupDialog.Brush(byte, byte, byte) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:41 |
+| 36 | Brush | resolved | SolidColorBrush Drilling.UI.Popup.CAlarmPopupDialog.Brush(byte, byte, byte) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:41 |
+| 37 | Brush | resolved | SolidColorBrush Drilling.UI.Popup.CAlarmPopupDialog.Brush(byte, byte, byte) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:41 |
+| 38 | Brush | resolved | SolidColorBrush Drilling.UI.Popup.CAlarmPopupDialog.Brush(byte, byte, byte) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:41 |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 27 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Rows.Any(row => row.Level == "LIGHT") |
+| 27 | local-declaration | 지역 변수를 선언합니다: var lightOnly = panel.Rows.Any(row => row.Level == "LIGHT") && panel.Rows.All(row => row.Level != "HEAVY"); |
+| 27 | variable-initializer | 변수의 초기값을 지정합니다: lightOnly = panel.Rows.Any(row => row.Level == "LIGHT") && panel.Rows.All(row => row.Level != "HEAVY") |
+| 28 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Rows.All(row => row.Level != "HEAVY") |
+| 29 | if | 조건에 따라 분기합니다: if (!lightOnly) |
+| 30 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 32 | assignment | 값을 대상에 대입합니다: Resources["AlarmSurfaceBrush"] = Brush(0xFF, 0xF7, 0xED) |
+| 32 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xFF, 0xF7, 0xED) |
+| 33 | assignment | 값을 대상에 대입합니다: Resources["GridAltBackgroundBrush"] = Brush(0xFF, 0xFB, 0xF5) |
+| 33 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xFF, 0xFB, 0xF5) |
+| 34 | assignment | 값을 대상에 대입합니다: Resources["GridHeaderBackgroundBrush"] = Brush(0xB4, 0x53, 0x09) |
+| 34 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xB4, 0x53, 0x09) |
+| 35 | assignment | 값을 대상에 대입합니다: Resources["GridLineBrush"] = Brush(0xF0, 0xC8, 0x9D) |
+| 35 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xF0, 0xC8, 0x9D) |
+| 36 | assignment | 값을 대상에 대입합니다: Resources["MenuItemSelectedBackgroundBrush"] = Brush(0xB4, 0x53, 0x09) |
+| 36 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xB4, 0x53, 0x09) |
+| 37 | assignment | 값을 대상에 대입합니다: Resources["AccentBrush"] = Brush(0xD9, 0x77, 0x06) |
+| 37 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xD9, 0x77, 0x06) |
+| 38 | assignment | 값을 대상에 대입합니다: Resources["AccentDarkBrush"] = Brush(0xB4, 0x53, 0x09) |
+| 38 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xB4, 0x53, 0x09) |
+
+제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
+
+```mermaid
+flowchart TD
+ M["ApplySeverityTheme"]
+ N0["L29 if"]
+ M -->|포함| N0
+```
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### MethodDeclaration `Brush` · L41–46
+
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:41–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L41-L46)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | SolidColorBrush Drilling.UI.Popup.CAlarmPopupDialog.Brush(byte, byte, byte) |
+| 접근/수식자 | Private / private, static |
+| 반환/값 타입 | SolidColorBrush |
+| 소속 타입 | NamedType:Drilling.UI.Popup.CAlarmPopupDialog |
+
+입력 계약:
+
+| 이름 | 타입 | 전달 | 선택/기본값 |
+| --- | --- | --- | --- |
+| red | byte | None | False /  |
+| green | byte | None | False /  |
+| blue | byte | None | False /  |
+
+정적 호출자로 확인된 위치:
+
+| 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
+| --- | --- | --- |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L32-L32) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L33-L33) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L34-L34) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L35-L35) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L36-L36) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L37-L37) | Brush | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L38-L38) | Brush | False |
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 43 | new SolidColorBrush | unresolved | None |
+| 43 | Color.FromRgb | unresolved | None |
+| 44 | brush.Freeze | unresolved | None |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 43 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromRgb(red, green, blue)) |
+| 43 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(red, green, blue) |
+| 43 | local-declaration | 지역 변수를 선언합니다: var brush = new SolidColorBrush(Color.FromRgb(red, green, blue)); |
+| 43 | variable-initializer | 변수의 초기값을 지정합니다: brush = new SolidColorBrush(Color.FromRgb(red, green, blue)) |
+| 44 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze() |
+| 45 | return | 호출자에게 값 또는 제어를 반환합니다: return brush; |
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### MethodDeclaration `CloseClicked` · L48–48
+
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -151,19 +280,19 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 23 | Close | unresolved | None |
+| 48 | Close | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 23 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Close() |
+| 48 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Close() |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_revision` · L28–28
+### FieldDeclaration `_revision` · L53–53
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L28-L28)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L53-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -178,13 +307,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 28 | variable-initializer | 변수의 초기값을 지정합니다: _revision = -1 |
+| 53 | variable-initializer | 변수의 초기값을 지정합니다: _revision = -1 |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_resetting` · L29–29
+### FieldDeclaration `_resetting` · L54–54
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L29-L29)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -197,9 +326,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### EventFieldDeclaration `PropertyChanged` · L30–30
+### EventFieldDeclaration `PropertyChanged` · L55–55
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L30-L30)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L55-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -212,9 +341,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Rows` · L31–31
+### PropertyDeclaration `Rows` · L56–56
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L31-L31)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -227,9 +356,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Rows` · L31–31
+### GetAccessorDeclaration `get_Rows` · L56–56
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L31-L31)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -242,9 +371,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_Rows` · L31–31
+### SetAccessorDeclaration `set_Rows` · L56–56
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L31-L31)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -263,9 +392,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Summary` · L32–32
+### PropertyDeclaration `Summary` · L57–57
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L32-L32)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L57-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -280,21 +409,21 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 32 | Rows.Count | resolved | int System.Collections.Generic.IEnumerable<Drilling.UI.Popup.CAlarmPopupRow>.Count<Drilling.UI.Popup.CAlarmPopupRow>(System.Func<Drilling.UI.Popup.CAlarmPopupRow, bool>) |
-| 32 | Rows.Count | resolved | int System.Collections.Generic.IEnumerable<Drilling.UI.Popup.CAlarmPopupRow>.Count<Drilling.UI.Popup.CAlarmPopupRow>(System.Func<Drilling.UI.Popup.CAlarmPopupRow, bool>) |
+| 57 | Rows.Count | resolved | int System.Collections.Generic.IEnumerable<Drilling.UI.Popup.CAlarmPopupRow>.Count<Drilling.UI.Popup.CAlarmPopupRow>(System.Func<Drilling.UI.Popup.CAlarmPopupRow, bool>) |
+| 57 | Rows.Count | resolved | int System.Collections.Generic.IEnumerable<Drilling.UI.Popup.CAlarmPopupRow>.Count<Drilling.UI.Popup.CAlarmPopupRow>(System.Func<Drilling.UI.Popup.CAlarmPopupRow, bool>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 32 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Count(row => row.Level == "HEAVY") |
-| 32 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Count(row => row.Level == "LIGHT") |
+| 57 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Count(row => row.Level == "HEAVY") |
+| 57 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Count(row => row.Level == "LIGHT") |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `RecoveryStatus` · L33–33
+### PropertyDeclaration `RecoveryStatus` · L58–58
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L33-L33)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -307,9 +436,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_RecoveryStatus` · L33–33
+### GetAccessorDeclaration `get_RecoveryStatus` · L58–58
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L33-L33)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -322,9 +451,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_RecoveryStatus` · L33–33
+### SetAccessorDeclaration `set_RecoveryStatus` · L58–58
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L33-L33)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -343,9 +472,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ResetCommand` · L34–55
+### PropertyDeclaration `ResetCommand` · L59–80
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:34–55](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L34-L55)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:59–80](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L59-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -360,55 +489,55 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 34 | new | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
-| 39 | .NotifyCanExecuteChanged | resolved | void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24 |
-| 42 | reset | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
-| 43 | Refresh | resolved | void Drilling.UI.Popup.CAlarmPopupPanel.Refresh() · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:66 |
-| 47 | SetRecoveryStatus | resolved | void Drilling.UI.Popup.CAlarmPopupPanel.SetRecoveryStatus(string) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58 |
-| 48 | Refresh | resolved | void Drilling.UI.Popup.CAlarmPopupPanel.Refresh() · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:66 |
-| 53 | .NotifyCanExecuteChanged | resolved | void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24 |
+| 59 | new | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
+| 64 | .NotifyCanExecuteChanged | resolved | void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24 |
+| 67 | reset | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 68 | Refresh | resolved | void Drilling.UI.Popup.CAlarmPopupPanel.Refresh() · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:91 |
+| 72 | SetRecoveryStatus | resolved | void Drilling.UI.Popup.CAlarmPopupPanel.SetRecoveryStatus(string) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:83 |
+| 73 | Refresh | resolved | void Drilling.UI.Popup.CAlarmPopupPanel.Refresh() · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:91 |
+| 78 | .NotifyCanExecuteChanged | resolved | void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 34 | assignment | 값을 대상에 대입합니다: _resetCommand ??= new(async _ => { if (_resetting) return; _resetting = true; _resetCommand?.NotifyCanExecuteChanged(); try { await reset(); Refresh(); } catch (Exception error) { SetRecoveryStatus("ALARM RESET 실패: " + error.Messa |
-| 34 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ => { if (_resetting) return; _resetting = true; _resetCommand?.NotifyCanExecuteChanged(); try { await reset(); Refresh(); } catch (Exception error) { SetRecoveryStatus("ALARM RESET 실패: " + error.Message); Ref… |
-| 36 | if | 조건에 따라 분기합니다: if (_resetting) |
-| 37 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 38 | assignment | 값을 대상에 대입합니다: _resetting = true |
-| 39 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged() |
-| 40 | try | 예외 처리 범위입니다: try |
-| 42 | await | 비동기 완료를 기다립니다: await reset() |
-| 42 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reset() |
-| 43 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh() |
-| 45 | catch | 지정 예외를 처리합니다: catch (Exception error) |
-| 47 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetRecoveryStatus("ALARM RESET 실패: " + error.Message) |
-| 48 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh() |
-| 50 | finally | 종료 정리 구간입니다: finally |
-| 52 | assignment | 값을 대상에 대입합니다: _resetting = false |
-| 53 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged() |
+| 59 | assignment | 값을 대상에 대입합니다: _resetCommand ??= new(async _ => { if (_resetting) return; _resetting = true; _resetCommand?.NotifyCanExecuteChanged(); try { await reset(); Refresh(); } catch (Exception error) { SetRecoveryStatus("ALARM RESET 실패: " + error.Messa |
+| 59 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ => { if (_resetting) return; _resetting = true; _resetCommand?.NotifyCanExecuteChanged(); try { await reset(); Refresh(); } catch (Exception error) { SetRecoveryStatus("ALARM RESET 실패: " + error.Message); Ref… |
+| 61 | if | 조건에 따라 분기합니다: if (_resetting) |
+| 62 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 63 | assignment | 값을 대상에 대입합니다: _resetting = true |
+| 64 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged() |
+| 65 | try | 예외 처리 범위입니다: try |
+| 67 | await | 비동기 완료를 기다립니다: await reset() |
+| 67 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reset() |
+| 68 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh() |
+| 70 | catch | 지정 예외를 처리합니다: catch (Exception error) |
+| 72 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetRecoveryStatus("ALARM RESET 실패: " + error.Message) |
+| 73 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh() |
+| 75 | finally | 종료 정리 구간입니다: finally |
+| 77 | assignment | 값을 대상에 대입합니다: _resetting = false |
+| 78 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ResetCommand"]
- N0["L36 if"]
+ N0["L61 if"]
  M -->|포함| N0
- N1["L40 try"]
+ N1["L65 try"]
  M -->|포함| N1
- N2["L45 catch"]
+ N2["L70 catch"]
  N1 -->|포함| N2
- N3["L50 finally"]
+ N3["L75 finally"]
  N1 -->|포함| N3
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_resetCommand` · L57–57
+### FieldDeclaration `_resetCommand` · L82–82
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L57-L57)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L82-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -421,9 +550,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `SetRecoveryStatus` · L58–64
+### MethodDeclaration `SetRecoveryStatus` · L83–89
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:58–64](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L58-L64)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:83–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L83-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -442,43 +571,43 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2600–2600](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2600-L2600) | panel.SetRecoveryStatus | False |
-| [Drilling.UI/CRootView.cs:2636–2636](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2636-L2636) | .Panel.SetRecoveryStatus | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L47-L47) | SetRecoveryStatus | False |
+| [Drilling.UI/CRootView.cs:2602–2602](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2602-L2602) | panel.SetRecoveryStatus | False |
+| [Drilling.UI/CRootView.cs:2638–2638](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2638-L2638) | .Panel.SetRecoveryStatus | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L72-L72) | SetRecoveryStatus | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 63 | .Invoke | resolved · 동적 구현 선택 가능 | void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs) |
-| 63 | new | resolved | System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?) |
-| 63 | nameof | unresolved | None |
+| 88 | .Invoke | resolved · 동적 구현 선택 가능 | void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs) |
+| 88 | new | resolved | System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?) |
+| 88 | nameof | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 60 | if | 조건에 따라 분기합니다: if (RecoveryStatus == text) |
-| 61 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 62 | assignment | 값을 대상에 대입합니다: RecoveryStatus = text |
-| 63 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(RecoveryStatus))) |
-| 63 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(RecoveryStatus)) |
-| 63 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(RecoveryStatus) |
+| 85 | if | 조건에 따라 분기합니다: if (RecoveryStatus == text) |
+| 86 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 87 | assignment | 값을 대상에 대입합니다: RecoveryStatus = text |
+| 88 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(RecoveryStatus))) |
+| 88 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(RecoveryStatus)) |
+| 88 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(RecoveryStatus) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["SetRecoveryStatus"]
- N0["L60 if"]
+ N0["L85 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Refresh` · L66–83
+### MethodDeclaration `Refresh` · L91–108
 
-[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:66–83](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L66-L83)
+[Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:91–108](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L91-L108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -491,53 +620,53 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2592–2592](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2592-L2592) | open.Panel.Refresh | False |
-| [Drilling.UI/CRootView.cs:2625–2625](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2625-L2625) | .Panel.Refresh | False |
-| [Drilling.UI/CRootView.cs:2755–2755](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2755-L2755) | .Panel.Refresh | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L18-L18) | panel.Refresh | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L43-L43) | Refresh | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L48-L48) | Refresh | False |
+| [Drilling.UI/CRootView.cs:2594–2594](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2594-L2594) | open.Panel.Refresh | False |
+| [Drilling.UI/CRootView.cs:2627–2627](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2627-L2627) | .Panel.Refresh | False |
+| [Drilling.UI/CRootView.cs:2757–2757](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2757-L2757) | .Panel.Refresh | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L19-L19) | panel.Refresh | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L68-L68) | Refresh | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L73-L73) | Refresh | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 68 | alarms.GetCurrentSnapshot | resolved | Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT Drilling.Common.Alarm.CAlarmManager.GetCurrentSnapshot() · Drilling.Common/Alarm/CAlarmManager.cs:223 |
-| 72 | snapshot.Rows.Select((row, index) => new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.RecoveryAction, row.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) )).ToArray | resolved | Drilling.UI.Popup.CAlarmPopupRow[] System.Collections.Generic.IEnumerable<Drilling.UI.Popup.CAlarmPopupRow>.ToArray<Drilling.UI.Popup.CAlarmPopupRow>() |
-| 72 | snapshot.Rows.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Popup.CAlarmPopupRow> System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA>.Select<Drilling.Common.Alarm.ST_ALARM_DATA, Drilling.UI.Popup.CAlarmPopupRow>(System.Func<Drilling.Common.Alarm.ST_ALARM_DATA, int, Drilling.UI.Popup.CAlarmPopupRow>) |
-| 72 | new CAlarmPopupRow | resolved | Drilling.UI.Popup.CAlarmPopupRow.CAlarmPopupRow(int, int, string, string, string, string, string) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:86 |
-| 79 | row.OccurredAt.ToString | resolved | string System.DateTimeOffset.ToString(string?, System.IFormatProvider?) |
-| 81 | .Invoke | resolved · 동적 구현 선택 가능 | void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs) |
-| 81 | new | resolved | System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?) |
-| 82 | .NotifyCanExecuteChanged | resolved | void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24 |
+| 93 | alarms.GetCurrentSnapshot | resolved | Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT Drilling.Common.Alarm.CAlarmManager.GetCurrentSnapshot() · Drilling.Common/Alarm/CAlarmManager.cs:223 |
+| 97 | snapshot.Rows.Select((row, index) => new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.RecoveryAction, row.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) )).ToArray | resolved | Drilling.UI.Popup.CAlarmPopupRow[] System.Collections.Generic.IEnumerable<Drilling.UI.Popup.CAlarmPopupRow>.ToArray<Drilling.UI.Popup.CAlarmPopupRow>() |
+| 97 | snapshot.Rows.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Popup.CAlarmPopupRow> System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA>.Select<Drilling.Common.Alarm.ST_ALARM_DATA, Drilling.UI.Popup.CAlarmPopupRow>(System.Func<Drilling.Common.Alarm.ST_ALARM_DATA, int, Drilling.UI.Popup.CAlarmPopupRow>) |
+| 97 | new CAlarmPopupRow | resolved | Drilling.UI.Popup.CAlarmPopupRow.CAlarmPopupRow(int, int, string, string, string, string, string) · Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:111 |
+| 104 | row.OccurredAt.ToString | resolved | string System.DateTimeOffset.ToString(string?, System.IFormatProvider?) |
+| 106 | .Invoke | resolved · 동적 구현 선택 가능 | void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs) |
+| 106 | new | resolved | System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?) |
+| 107 | .NotifyCanExecuteChanged | resolved | void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 68 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.GetCurrentSnapshot() |
-| 68 | local-declaration | 지역 변수를 선언합니다: var snapshot = alarms.GetCurrentSnapshot(); |
-| 68 | variable-initializer | 변수의 초기값을 지정합니다: snapshot = alarms.GetCurrentSnapshot() |
-| 69 | if | 조건에 따라 분기합니다: if (snapshot.Revision == _revision) |
-| 70 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 71 | assignment | 값을 대상에 대입합니다: _revision = snapshot.Revision |
-| 72 | assignment | 값을 대상에 대입합니다: Rows = snapshot.Rows.Select((row, index) => new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.Recove |
-| 72 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Rows.Select((row, index) => new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.Rec… |
-| 72 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Rows.Select((row, index) => new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.Rec… |
-| 72 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.RecoveryAction, row.OccurredAt.ToString(… |
-| 75 | conditional-expression | 조건에 따라 결과식을 선택합니다: row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO" |
-| 75 | conditional-expression | 조건에 따라 결과식을 선택합니다: row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO" |
-| 79 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) |
-| 81 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(null)) |
-| 81 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(null) |
-| 82 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged() |
+| 93 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.GetCurrentSnapshot() |
+| 93 | local-declaration | 지역 변수를 선언합니다: var snapshot = alarms.GetCurrentSnapshot(); |
+| 93 | variable-initializer | 변수의 초기값을 지정합니다: snapshot = alarms.GetCurrentSnapshot() |
+| 94 | if | 조건에 따라 분기합니다: if (snapshot.Revision == _revision) |
+| 95 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 96 | assignment | 값을 대상에 대입합니다: _revision = snapshot.Revision |
+| 97 | assignment | 값을 대상에 대입합니다: Rows = snapshot.Rows.Select((row, index) => new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.Recove |
+| 97 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Rows.Select((row, index) => new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.Rec… |
+| 97 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Rows.Select((row, index) => new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.Rec… |
+| 97 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.RecoveryAction, row.OccurredAt.ToString(… |
+| 100 | conditional-expression | 조건에 따라 결과식을 선택합니다: row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO" |
+| 100 | conditional-expression | 조건에 따라 결과식을 선택합니다: row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO" |
+| 104 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) |
+| 106 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(null)) |
+| 106 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(null) |
+| 107 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["Refresh"]
- N0["L69 if"]
+ N0["L94 if"]
  M -->|포함| N0
 ```
 

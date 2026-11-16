@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | ab5577450474404f94f346ec8745af3cb5e4df29128302c486e0a6de450d2298 |
 | 파일 분류 | code |
 | 원본 크기/행 | 1,585 bytes / 34 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -40,7 +40,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L8–24
 
-[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:8–24](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L8-L24)
+[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:8–24](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L8-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -60,7 +60,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2374–2377](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuReview.cs#L2374-L2377) | new CSelectedReviewShotsDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2495–2498](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2495-L2498) | new CSelectedReviewShotsDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -122,7 +122,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnCloseClicked` · L26–26
 
-[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L26-L26)
+[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -156,7 +156,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsEmpty` · L31–31
 
-[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L31-L31)
+[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -171,7 +171,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_IsEmpty` · L31–31
 
-[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L31-L31)
+[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -186,7 +186,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### InitAccessorDeclaration `set_IsEmpty` · L31–31
 
-[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L31-L31)
+[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -207,7 +207,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Head` · L32–32
 
-[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L32-L32)
+[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -228,7 +228,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Cell` · L33–33
 
-[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L33-L33)
+[Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

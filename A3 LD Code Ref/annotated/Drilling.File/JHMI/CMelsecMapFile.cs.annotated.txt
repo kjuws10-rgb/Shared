@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.File/JHMI/CMelsecMapFile.cs
-Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.JHMI
@@ -3296,60 +3296,62 @@ L001661 |                 var id = "HANDSHAKE_PRC_DISTORTION_" + signal; ⟦EOL�
 L001662 |                 yield return Row(id, "DISTORTION", id, 0, signal == "ABLE" ? "W8056" : "W8058", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "100", "Spec 0.12; Stage ABLE/COMPLETE OFF 확인 후 우리 신호 OFF"); ⟦EOL⟧
 // 해설 L1663: 값을 대상에 대입합니다: id = "HANDSHAKE_STG_DISTORTION_" + signal
 L001663 |                 id = "HANDSHAKE_STG_DISTORTION_" + signal; ⟦EOL⟧
-// 해설 L1664: 함수·델리게이트 또는 객체 생성자를 호출합니다: Row(id, "DISTORTION", id, 0, "UNASSIGNED", "DWORD", "IN", "R", "0.0001", "10000", "2", "100", "Stage 수신 주소 미정; 확정 주소 입력 후 USE=1", use: false) / 열거값/종료를 전달합니다: yield return Row(id, "DISTORTION", id, 0, "UNASSIGNED", "DWORD", "IN", "R", "0.0001", "10000", "2", "100", "Stage 수신 주소 미정; 확정 주소 입력 후 USE=1", use: false);
-L001664 |                 yield return Row(id, "DISTORTION", id, 0, "UNASSIGNED", "DWORD", "IN", "R", "0.0001", "10000", "2", "100", "Stage 수신 주소 미정; 확정 주소 입력 후 USE=1", use: false); ⟦EOL⟧
-// 해설 L1665: 구문 블록 경계입니다 · 소속 CreateAlignDistortionRows.
-L001665 |             } ⟦EOL⟧
-// 해설 L1666: 초기화·조건·증감이 있는 반복입니다: for (var position = 0; position <= 3; position++) / 변수의 초기값을 지정합니다: position = 0
-L001666 |             for (var position = 0; position <= 3; position++) ⟦EOL⟧
-// 해설 L1667: 조건에 따라 결과식을 선택합니다: position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 } / 컬렉션 요소를 순회합니다: foreach (var camera in position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 })
-L001667 |             foreach (var camera in position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 }) ⟦EOL⟧
-// 해설 L1668: 컬렉션 요소를 순회합니다: foreach (var axis in new[] { "X", "Y" })
-L001668 |             foreach (var axis in new[] { "X", "Y" }) ⟦EOL⟧
-// 해설 L1669: 구문 블록 경계입니다 · 소속 CreateAlignDistortionRows.
-L001669 |             { ⟦EOL⟧
-// 해설 L1670: 조건에 따라 결과식을 선택합니다: position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0) / 조건에 따라 결과식을 선택합니다: camera == 4 ? 4 : 0 / 지역 변수를 선언합니다: var address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0); / 변수의 초기값을 지정합니다: address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0)
-L001670 |                 var address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0); ⟦EOL⟧
-// 해설 L1671: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음") / 조건에 따라 결과식을 선택합니다: axis == "Y" ? 2 : 0 / 열거값/종료를 전달합니다: yield return Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음");
-L001671 |                 yield return Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음"); ⟦EOL⟧
-// 해설 L1672: 구문 블록 경계입니다 · 소속 CreateAlignDistortionRows.
-L001672 |             } ⟦EOL⟧
-// 해설 L1673: 컬렉션 요소를 순회합니다: foreach (var axis in new[] { "X", "Y" })
-L001673 |             foreach (var axis in new[] { "X", "Y" }) ⟦EOL⟧
-// 해설 L1674: 초기화·조건·증감이 있는 반복입니다: for (var camera = 1; camera <= 4; camera++) / 변수의 초기값을 지정합니다: camera = 1
-L001674 |             for (var camera = 1; camera <= 4; camera++) ⟦EOL⟧
-// 해설 L1675: 구문 블록 경계입니다 · 소속 CreateAlignDistortionRows.
-L001675 |             { ⟦EOL⟧
-// 해설 L1676: 조건에 따라 결과식을 선택합니다: axis == "X" ? 0 : 4 / 지역 변수를 선언합니다: var index = (axis == "X" ? 0 : 4) + camera - 1; / 변수의 초기값을 지정합니다: index = (axis == "X" ? 0 : 4) + camera - 1
-L001676 |                 var index = (axis == "X" ? 0 : 4) + camera - 1; ⟦EOL⟧
-// 해설 L1677: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사") / 조건에 따라 결과식을 선택합니다: axis == "Y" ? 2 : 0 / 열거값/종료를 전달합니다: yield return Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사");
-L001677 |                 yield return Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사"); ⟦EOL⟧
-// 해설 L1678: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서") / 열거값/종료를 전달합니다: yield return Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서");
-L001678 |                 yield return Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서"); ⟦EOL⟧
-// 해설 L1679: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel") / 열거값/종료를 전달합니다: yield return Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel");
-L001679 |                 yield return Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel"); ⟦EOL⟧
-// 해설 L1680: 구문 블록 경계입니다 · 소속 CreateAlignDistortionRows.
-L001680 |             } ⟦EOL⟧
+// 해설 L1664: 조건에 따라 결과식을 선택합니다: signal == "ABLE" ? "WC0DB" : "WC0DD" / 지역 변수를 선언합니다: var address = signal == "ABLE" ? "WC0DB" : "WC0DD"; / 변수의 초기값을 지정합니다: address = signal == "ABLE" ? "WC0DB" : "WC0DD"
+L001664 |                 var address = signal == "ABLE" ? "WC0DB" : "WC0DD"; ⟦EOL⟧
+// 해설 L1665: 함수·델리게이트 또는 객체 생성자를 호출합니다: Row(id, "DISTORTION", id, 0, address, "DWORD", "IN", "R", "0.0001", "10000", "2", "100", $"Spec 0.13; IPS_DISTORTION_{signal}; Int32 raw 0/10000; logical 0/1") / 열거값/종료를 전달합니다: yield return Row(id, "DISTORTION", id, 0, address, "DWORD", "IN", "R", "0.0001", "10000", "2", "100", $"Spec 0.13; IPS_DISTORTION_{signal}; Int32 raw 0/10000; logical 0/1");
+L001665 |                 yield return Row(id, "DISTORTION", id, 0, address, "DWORD", "IN", "R", "0.0001", "10000", "2", "100", $"Spec 0.13; IPS_DISTORTION_{signal}; Int32 raw 0/10000; logical 0/1"); ⟦EOL⟧
+// 해설 L1666: 구문 블록 경계입니다 · 소속 CreateAlignDistortionRows.
+L001666 |             } ⟦EOL⟧
+// 해설 L1667: 초기화·조건·증감이 있는 반복입니다: for (var position = 0; position <= 3; position++) / 변수의 초기값을 지정합니다: position = 0
+L001667 |             for (var position = 0; position <= 3; position++) ⟦EOL⟧
+// 해설 L1668: 조건에 따라 결과식을 선택합니다: position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 } / 컬렉션 요소를 순회합니다: foreach (var camera in position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 })
+L001668 |             foreach (var camera in position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 }) ⟦EOL⟧
+// 해설 L1669: 컬렉션 요소를 순회합니다: foreach (var axis in new[] { "X", "Y" })
+L001669 |             foreach (var axis in new[] { "X", "Y" }) ⟦EOL⟧
+// 해설 L1670: 구문 블록 경계입니다 · 소속 CreateAlignDistortionRows.
+L001670 |             { ⟦EOL⟧
+// 해설 L1671: 조건에 따라 결과식을 선택합니다: position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0) / 조건에 따라 결과식을 선택합니다: camera == 4 ? 4 : 0 / 지역 변수를 선언합니다: var address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0); / 변수의 초기값을 지정합니다: address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0)
+L001671 |                 var address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0); ⟦EOL⟧
+// 해설 L1672: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음") / 조건에 따라 결과식을 선택합니다: axis == "Y" ? 2 : 0 / 열거값/종료를 전달합니다: yield return Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음");
+L001672 |                 yield return Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음"); ⟦EOL⟧
+// 해설 L1673: 구문 블록 경계입니다 · 소속 CreateAlignDistortionRows.
+L001673 |             } ⟦EOL⟧
+// 해설 L1674: 컬렉션 요소를 순회합니다: foreach (var axis in new[] { "X", "Y" })
+L001674 |             foreach (var axis in new[] { "X", "Y" }) ⟦EOL⟧
+// 해설 L1675: 초기화·조건·증감이 있는 반복입니다: for (var camera = 1; camera <= 4; camera++) / 변수의 초기값을 지정합니다: camera = 1
+L001675 |             for (var camera = 1; camera <= 4; camera++) ⟦EOL⟧
+// 해설 L1676: 구문 블록 경계입니다 · 소속 CreateAlignDistortionRows.
+L001676 |             { ⟦EOL⟧
+// 해설 L1677: 조건에 따라 결과식을 선택합니다: axis == "X" ? 0 : 4 / 지역 변수를 선언합니다: var index = (axis == "X" ? 0 : 4) + camera - 1; / 변수의 초기값을 지정합니다: index = (axis == "X" ? 0 : 4) + camera - 1
+L001677 |                 var index = (axis == "X" ? 0 : 4) + camera - 1; ⟦EOL⟧
+// 해설 L1678: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사") / 조건에 따라 결과식을 선택합니다: axis == "Y" ? 2 : 0 / 열거값/종료를 전달합니다: yield return Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사");
+L001678 |                 yield return Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사"); ⟦EOL⟧
+// 해설 L1679: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서") / 열거값/종료를 전달합니다: yield return Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서");
+L001679 |                 yield return Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서"); ⟦EOL⟧
+// 해설 L1680: 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel") / 열거값/종료를 전달합니다: yield return Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel");
+L001680 |                 yield return Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel"); ⟦EOL⟧
 // 해설 L1681: 구문 블록 경계입니다 · 소속 CreateAlignDistortionRows.
-L001681 |         } ⟦EOL⟧
-L001682 |  ⟦EOL⟧
-// 해설 L1683: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateIofPositionRows()
-L001683 |         private static IEnumerable<IReadOnlyDictionary<string, string>> CreateIofPositionRows() ⟦EOL⟧
-// 해설 L1684: 구문 블록 경계입니다 · 소속 CreateIofPositionRows.
-L001684 |         { ⟦EOL⟧
-// 해설 L1685: 초기화·조건·증감이 있는 반복입니다: for (var index = 1; index <= 500; index++) / 변수의 초기값을 지정합니다: index = 1
-L001685 |             for (var index = 1; index <= 500; index++) ⟦EOL⟧
-// 해설 L1686: 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), 0, "W" + (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantC… / 함수·델리게이트 또는 객체 생성자를 호출합니다: index.ToString(CultureInfo.InvariantCulture) / 열거값/종료를 전달합니다: yield return Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), 0, "W" + (0x8300 + (index - 1) * 2).ToS
-L001686 |                 yield return Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
-// 해설 L1687: 함수·델리게이트 또는 객체 생성자를 호출합니다: (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantCulture)
-L001687 |                     0, "W" + (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantCulture), "DOUBLE", "OUT", "RW", "0.0001", "10000", "2", "0", ⟦EOL⟧
-// 해설 L1688: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateIofPositionRows()
-L001688 |                     $"Spec 0.10 가공 D{557 + index}:G{557 + index}; 촬영 순서 {index}; signed Int32 2 Word; 입력 mm; WRITE_SCALE=10000 / READ_SCALE=0.0001; 0선은 Y 2/4개, 일반 IOF는 해당 라인의 X를 실제 Count만 전송/읽기 확인; 역방향도 실제 촬영 순서; Count 밖 영역은 미사용/변경 안 함; 자동 폴링 없음"); ⟦EOL⟧
-// 해설 L1689: 구문 블록 경계입니다 · 소속 CreateIofPositionRows.
-L001689 |         } ⟦EOL⟧
-// 해설 L1690: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
-L001690 | #endregion ⟦EOL⟧
-// 해설 L1691: 구문 블록 경계입니다.
-L001691 |     } ⟦EOL⟧
+L001681 |             } ⟦EOL⟧
+// 해설 L1682: 구문 블록 경계입니다 · 소속 CreateAlignDistortionRows.
+L001682 |         } ⟦EOL⟧
+L001683 |  ⟦EOL⟧
+// 해설 L1684: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateIofPositionRows()
+L001684 |         private static IEnumerable<IReadOnlyDictionary<string, string>> CreateIofPositionRows() ⟦EOL⟧
+// 해설 L1685: 구문 블록 경계입니다 · 소속 CreateIofPositionRows.
+L001685 |         { ⟦EOL⟧
+// 해설 L1686: 초기화·조건·증감이 있는 반복입니다: for (var index = 1; index <= 500; index++) / 변수의 초기값을 지정합니다: index = 1
+L001686 |             for (var index = 1; index <= 500; index++) ⟦EOL⟧
+// 해설 L1687: 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), 0, "W" + (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantC… / 함수·델리게이트 또는 객체 생성자를 호출합니다: index.ToString(CultureInfo.InvariantCulture) / 열거값/종료를 전달합니다: yield return Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), 0, "W" + (0x8300 + (index - 1) * 2).ToS
+L001687 |                 yield return Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L1688: 함수·델리게이트 또는 객체 생성자를 호출합니다: (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantCulture)
+L001688 |                     0, "W" + (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantCulture), "DOUBLE", "OUT", "RW", "0.0001", "10000", "2", "0", ⟦EOL⟧
+// 해설 L1689: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateIofPositionRows()
+L001689 |                     $"Spec 0.10 가공 D{557 + index}:G{557 + index}; 촬영 순서 {index}; signed Int32 2 Word; 입력 mm; WRITE_SCALE=10000 / READ_SCALE=0.0001; 0선은 Y 2/4개, 일반 IOF는 해당 라인의 X를 실제 Count만 전송/읽기 확인; 역방향도 실제 촬영 순서; Count 밖 영역은 미사용/변경 안 함; 자동 폴링 없음"); ⟦EOL⟧
+// 해설 L1690: 구문 블록 경계입니다 · 소속 CreateIofPositionRows.
+L001690 |         } ⟦EOL⟧
+// 해설 L1691: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
+L001691 | #endregion ⟦EOL⟧
 // 해설 L1692: 구문 블록 경계입니다.
-L001692 | } ⟦EOL⟧
+L001692 |     } ⟦EOL⟧
+// 해설 L1693: 구문 블록 경계입니다.
+L001693 | } ⟦EOL⟧

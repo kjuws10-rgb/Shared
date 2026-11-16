@@ -1,6 +1,8 @@
 # 07. 변경 영향 검토와 Offline Studio에서 이 문서를 쓰는 방법
 
-> 기준: `A3Drilling/master` · `5aee8e58439c9b455cae7c9593c9be986c3e682e`. 본 장은 해당 Commit의 소스를 정적으로 읽어 설명합니다. 장비 연결·가공·컴파일을 실행한 결과가 아닙니다.
+> 기준: `A3Drilling/master` · `dfa5920e6301d9ec4b0eab1452ae59521aafc986`. 본 장은 해당 Commit의 소스를 정적으로 읽어 설명합니다. 장비 연결·가공·컴파일을 실행한 결과가 아닙니다.
+
+> 이번 갱신 범위: 이전 `5aee8e5` → 현재 `dfa5920`(Ver11.13.0). Git diff에서 변경을 찾고 호출자·소비자·저장 경계를 확장했습니다. 링크의 현재 줄 범위와 이전 유지 구간을 검증했으며, 정적 소스 확인과 향후 실행 검증을 구분합니다.
 
 코드 레퍼런스는 현재 소스를 대신하는 정답 모음이 아니라 **찾아갈 파일과 호출 연결을 제공하는 지도**입니다. 문서가 최신 소스와 다른 Commit이면 틀린 기준으로 코드를 고칠 수 있으므로, 질문할 때 소스 Commit과 문서 기준을 함께 확인합니다.
 
@@ -26,6 +28,30 @@ flowchart LR
 | 기판/결과가 이전 상태로 보임 | [04 Product·Station](04-product-and-station-lifecycle.md) | PersistAndLog / CProductFile.LoadCompactActive |
 | 통신/SDK/모션 경로가 궁금함 | [05 장치](05-device-interfaces-and-drivers.md) | CInterfaceManager / CComm / CMotionManager |
 | 화면 지연·중복 실행·취소 문제 | [06 스레드·로그](06-threading-snapshots-and-logs.md) | CtrlThread / Snapshot / gate·Dispatcher |
+| 알람 전후 후보·정상 비교·시간 커서의 뜻 | [08 알람 분석](08-alarm-cause-analysis.md) | CAlarmIncidentLogReader / CauseCandidateAnalyzer |
+
+## 이번 변경을 검토하는 순서
+
+| 우선순위·영향 | 지금 확인한 구조 | 다음 검증에서 확인할 결과 |
+|---|---|---|
+| 높음 · 상태·PLC | 보호윈도우 추가 요청 0~3, 인계 저장 후 OFF 확인, 소진 LIGHT·AUTO 계속 | 임계값과 재시작 경계에서 요청 횟수·파일·캐시·신호가 일치 |
+| 높음 · 영속성 | Product 메모리 NG 필드 추가, Active compact의 새 필드 저장은 없음 | ReviewResult/Active/checkpoint 각각 round-trip하여 손실 범위 확인 |
+| 높음 · 좌표 의미 | Monitor는 현재 입력의 미리보기, Station은 준비 스냅샷, Camera는 Shift만 검사목표에 적용 | 동일 입력·Axis 변환·실행 회차를 맞춘 모델/Script/Vision 대조 |
+| 높음 · 보정 기준 | Default 중심은 AK1·AK3 중점, DOE 1×1/4×4, 로그 열 추가 | 세션 조건과 추천값 재현, 십자/샷의 실제 검사점 수 |
+| 중간 · 통신 계약 | Stage Distortion 입력 맵 활성화·DWord scale | 실제 상대 신호·주소 승인·ON/OFF와 캐시 최신성 |
+| 중간 · UI·운영 | Review 소유 메뉴가 Correction으로 이동, Alarm 원인 후보·비교구간 추가 | 메뉴 이동/취소·로그 누락·오탐·날짜 경계·큰 로그 응답성 |
+
+위 위험도는 정적 영향 검토의 우선순위입니다. 현장 고장 발생 빈도나 재현 완료 등급이 아닙니다. 구체 근거는 각 장의 새 절과 [08장](08-alarm-cause-analysis.md)을 따릅니다. 운영 측정 CSV 행·현장 접속값은 문서의 예제 데이터로 복제하지 않았습니다.
+
+```mermaid
+flowchart LR
+ D[새 diff] --> P[정의·메모리 생산자]
+ P --> C[호출자·UI·PLC 소비자]
+ C --> F[CSV 저장·복구 경계]
+ F --> U[단위·상태·재시작·동시성 위험]
+ U --> T[합성 데이터 검증 계획]
+ T --> R[현재 Commit 근거로 설명]
+```
 
 Review 좌표→Vision 요청→ReviewResult→보정 파일 연결은 별도의 리뷰 전문 챕터와 파일별 레퍼런스를 함께 읽습니다. 가공 ScannerGx/Gy를 찾았다는 이유만으로 그것이 Vision에 보내는 좌표라고 답변하면 안 됩니다.
 
@@ -44,7 +70,7 @@ Review 좌표→Vision 요청→ReviewResult→보정 파일 연결은 별도의
 | UI | Property 변경 이벤트·선택상태·실행 중 편집 금지 | 수정값이 안 보이거나 도중 모델 교체 |
 | 문서/색인 | 최신 Commit·파일 근거·용어·검증상태 | 개발도우미가 오래된 코드로 답변 |
 
-현재 실행 합성의 Setting 우선순위는 [BuildRuntimeParameters](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Station/CStationProcess.cs#L1526-L1559), 저장/실행 기준의 분리는 [Offset 변환·합성](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L139-L156)에서 확인할 수 있습니다. 표는 그 구조를 확장해 적용하는 검토 절차입니다.
+현재 실행 합성의 Setting 우선순위는 [BuildRuntimeParameters](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1527-L1560), 저장/실행 기준의 분리는 [Offset 변환·합성](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L139-L156)에서 확인할 수 있습니다. 표는 그 구조를 확장해 적용하는 검토 절차입니다.
 
 ## 3. 기존 자료와 소스를 섞을 때의 신뢰도
 
@@ -57,7 +83,7 @@ Review 좌표→Vision 요청→ReviewResult→보정 파일 연결은 별도의
 | 자동 추출 호출 관계 | 찾아갈 후보와 연결 힌트 | 정적 후보, 오버로드/동적 호출 한계 |
 | DLL 파일명 | 외부 의존성 존재 | 내부 로직은 미확인 |
 
-문서에 `검증 계획`이라고 쓰인 항목은 실행 통과 항목이 아닙니다. 예를 들어 `RunScript`에는 Simulation 반환 분기가 있으므로 합성 응답을 받은 것만으로 실제 SDK·Controller compiler·물리 가공 검증까지 통과했다고 표현할 수 없습니다. [Simulation RunScript 분기](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Automation/CAutomationManager.cs#L323-L333).
+문서에 `검증 계획`이라고 쓰인 항목은 실행 통과 항목이 아닙니다. 예를 들어 `RunScript`에는 Simulation 반환 분기가 있으므로 합성 응답을 받은 것만으로 실제 SDK·Controller compiler·물리 가공 검증까지 통과했다고 표현할 수 없습니다. [Simulation RunScript 분기](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L323-L333).
 
 ## 4. Offline Studio가 먼저 검색해야 할 단위
 
@@ -82,7 +108,7 @@ Review 좌표→Vision 요청→ReviewResult→보정 파일 연결은 별도의
 검증: 실제 수행한 것 / 아직 해야 할 것
 ```
 
-“자료에 없으니 못 찾는다”라고 끝내기 전에 색인된 소스 경로·파일 수·검색어·후보 누락 여부를 확인해야 합니다. 다만 실제 소스에 없는 계약을 억지로 추론해서 답변하지 않습니다. 예를 들어 Stage Glass/Lot 매핑 TODO가 남은 경로는 합의 완료로 설명하지 않습니다. [미합의 매핑 표시](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L2892-L2905).
+“자료에 없으니 못 찾는다”라고 끝내기 전에 색인된 소스 경로·파일 수·검색어·후보 누락 여부를 확인해야 합니다. 다만 실제 소스에 없는 계약을 억지로 추론해서 답변하지 않습니다. 예를 들어 Stage Glass/Lot 매핑 TODO가 남은 경로는 합의 완료로 설명하지 않습니다. [미합의 매핑 표시](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2894-L2907).
 
 ## 6. 주석을 많이 쓸 때도 우선순위가 필요하다
 
@@ -100,7 +126,7 @@ Review 좌표→Vision 요청→ReviewResult→보정 파일 연결은 별도의
 | fallback/default | 구버전 호환인지 설치 기본값인지 임시 미합의값인지 |
 | 미확인 | 코드에 근거가 없어 판정할 수 없는 조건 |
 
-예시: Product `PersistAndLog`는 Active 저장 후 로그 실패가 전이를 뒤집지 않게 처리합니다. 여기에는 단순히 “로그 저장”이 아니라 **이미 커밋된 상태를 중복 실행시키지 않는 경계**를 설명하는 것이 유용합니다. [주석 우선순위가 높은 commit 경계](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.Common/Product/CProductManager.cs#L789-L819).
+예시: Product `PersistAndLog`는 Active 저장 후 로그 실패가 전이를 뒤집지 않게 처리합니다. 여기에는 단순히 “로그 저장”이 아니라 **이미 커밋된 상태를 중복 실행시키지 않는 경계**를 설명하는 것이 유용합니다. [주석 우선순위가 높은 commit 경계](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Product/CProductManager.cs#L789-L819).
 
 ## 7. 주기적 업데이트의 완료 조건
 

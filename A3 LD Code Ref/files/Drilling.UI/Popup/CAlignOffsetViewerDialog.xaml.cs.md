@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | b8cdd252f3ef53e97d90b864b65703f45217b454dc59a437d2ef26317f7ff3af |
 | 파일 분류 | code |
 | 원본 크기/행 | 1,550 bytes / 47 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -38,7 +38,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L10–14
 
-[Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:10–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L10-L14)
+[Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:10–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L10-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -57,9 +57,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:234–237](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L234-L237) | new CAlignOffsetViewerDialog | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2752–2755](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2752-L2755) | new CAlignOffsetViewerDialog | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4134–4137](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4134-L4137) | new CAlignOffsetViewerDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:234–237](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L234-L237) | new CAlignOffsetViewerDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2799–2802](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2799-L2802) | new CAlignOffsetViewerDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4175–4178](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4175-L4178) | new CAlignOffsetViewerDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -78,7 +78,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SelectShotFromMap` · L16–25
 
-[Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:16–25](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L16-L25)
+[Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:16–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L16-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -130,7 +130,7 @@ flowchart TD
 
 ### MethodDeclaration `OffsetGrid_SelectionChanged` · L27–34
 
-[Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:27–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L27-L34)
+[Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:27–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L27-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -152,7 +152,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 33 | panel.SelectShotByKey | resolved | void Drilling.UI.Menu.Menus.CAlignOffsetViewerPanel.SelectShotByKey(string) · Drilling.UI/Menu/Menus/CMenuCorrection.cs:5577 |
+| 33 | panel.SelectShotByKey | resolved | void Drilling.UI.Menu.Menus.CAlignOffsetViewerPanel.SelectShotByKey(string) · Drilling.UI/Menu/Menus/CMenuCorrection.cs:5681 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -175,7 +175,7 @@ flowchart TD
 
 ### MethodDeclaration `ScrollSelectedShotIntoView` · L36–43
 
-[Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:36–43](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L36-L43)
+[Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:36–43](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L36-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -194,7 +194,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L23-L23) | ScrollSelectedShotIntoView | False |
+| [Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L23-L23) | ScrollSelectedShotIntoView | False |
 
 호출하는 대상과 해석 범위:
 
@@ -226,7 +226,7 @@ flowchart TD
 
 ### MethodDeclaration `OnCloseClicked` · L45–45
 
-[Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L45-L45)
+[Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -260,7 +260,7 @@ flowchart TD
 
 ### MethodDeclaration `OnKeyDown` · L46–46
 
-[Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L46-L46)
+[Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

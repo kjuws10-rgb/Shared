@@ -11,7 +11,7 @@ using Microsoft.CodeAnalysis.Text;
 
 internal static class Program
 {
-    private const string Version = "1.0.1";
+    private const string Version = "1.0.3";
     private static readonly JsonSerializerOptions Json = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
@@ -282,7 +282,9 @@ internal static class Program
     {
         var owner = node.Ancestors().FirstOrDefault(parent => parent is BaseMethodDeclarationSyntax or LocalFunctionStatementSyntax or AccessorDeclarationSyntax or PropertyDeclarationSyntax or EventDeclarationSyntax or FieldDeclarationSyntax or EventFieldDeclarationSyntax or EnumMemberDeclarationSyntax);
         if (owner is null) return null;
-        if (owner is BaseFieldDeclarationSyntax field) owner = field.Declaration.Variables.First();
+        if (owner is BaseFieldDeclarationSyntax field)
+            owner = node.AncestorsAndSelf().OfType<VariableDeclaratorSyntax>().FirstOrDefault(variable => variable.Parent == field.Declaration)
+                ?? field.Declaration.Variables.First();
         return Id(Declared(owner, semantic), owner);
     }
 
@@ -390,12 +392,24 @@ internal static class Program
             var treeRoot = files.First(input => input.Path == file.Path).Tree.GetRoot();
             int expectedTypes = treeRoot.DescendantNodes().Count(node => node is BaseTypeDeclarationSyntax or DelegateDeclarationSyntax);
             int expectedCalls = treeRoot.DescendantNodes().Count(node => node is InvocationExpressionSyntax or ObjectCreationExpressionSyntax or ImplicitObjectCreationExpressionSyntax);
-            if (expectedTypes != file.Types.Count || expectedCalls != file.Calls.Count) throw new InvalidDataException("AST coverage mismatch: " + file.Path);
+            int expectedMembers = treeRoot.DescendantNodes().Sum(node => node switch
+            {
+                BaseMethodDeclarationSyntax or PropertyDeclarationSyntax or IndexerDeclarationSyntax or EventDeclarationSyntax or DelegateDeclarationSyntax or LocalFunctionStatementSyntax or AccessorDeclarationSyntax or EnumMemberDeclarationSyntax => 1,
+                BaseFieldDeclarationSyntax field => field.Declaration.Variables.Count,
+                _ => 0
+            });
+            if (expectedTypes != file.Types.Count || expectedCalls != file.Calls.Count || expectedMembers != file.Members.Count)
+                throw new InvalidDataException("Type/member/call AST coverage mismatch: " + file.Path);
         }
+        var allMembers = models.SelectMany(model => model.Members).ToArray();
+        if (allMembers.Select(member => member.Id).Distinct(StringComparer.Ordinal).Count() != allMembers.Length)
+            throw new InvalidDataException("Member IDs are not unique across source declarations.");
         var locals = models.SelectMany(model => model.Members).Where(member => member.Kind == nameof(SyntaxKind.LocalFunctionStatement)).ToArray();
         if (locals.Select(local => local.Id).Distinct(StringComparer.Ordinal).Count() != locals.Length)
             throw new InvalidDataException("Local function source IDs are not unique across scopes.");
         return new { allFileHashesRecorded = true, sourceRangesChecked = ranges, everyRangeWithinPhysicalFile = true, allTypeAndCallNodesCovered = true,
+            allExplicitMemberNodesCovered = true, allMemberSourceIdsUnique = true,
+            memberScope = "Explicit source declarations, including accessors, enum values and local functions. Compiler-synthesized primary-constructor/record members and WPF-generated XAML fields are not counted as source declarations.",
             localFunctionCount = locals.Length, localFunctionSourceIdsUnique = true, parsedCSharpFiles = models.Count };
     }
     private static IEnumerable<MetadataReference> RuntimeReferences() => ((string?)AppContext.GetData("TRUSTED_PLATFORM_ASSEMBLIES") ?? "")
@@ -448,6 +462,21 @@ internal static class Program
         Check(readCalls.Length == 2 && readCalls.Select(call => call.TargetSymbolId).Distinct().Count() == 2 && readCalls.All(call => localFunctions.Any(member => member.Id == call.TargetSymbolId)), "local call target IDs match the correct source declarations");
         Check(localFunctions.All(member => localModel.Operations.Any(operation => operation.MemberId == member.Id)), "local operation ownership uses the same disambiguated IDs");
         _ = Validate([localModel], [localInput]);
+        const string modernSource = "partial class Modern(int seed) { int first = Make(1), second = Make(2); static int Make(int n) => n; public int Value { get; init; } public int this[int n] => n; public static Modern operator +(Modern a, Modern b) => a; public event System.Action Changed { add { } remove { } } enum Status { Idle, Busy } } partial class Modern { } record Snapshot(int X) { public required string Label { get; init; } } delegate int Reader(int n);";
+        var modernText = SourceText.From(modernSource); var modernTree = CSharpSyntaxTree.ParseText(modernText, new CSharpParseOptions(LanguageVersion.Preview), path: "Modern.cs");
+        var modernCompilation = CSharpCompilation.Create("ModernFixture", [modernTree], RuntimeReferences(), new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
+        var modernInput = new InputFile("Modern.cs", Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(modernSource))).ToLowerInvariant(), Encoding.UTF8.GetByteCount(modernSource), modernText, modernTree);
+        var modernModel = Extract(modernInput, modernCompilation.GetSemanticModel(modernTree));
+        Check(!modernModel.ParseDiagnostics.Any(diagnostic => diagnostic.Severity == "Error"), "modern record, primary constructor, required/init and partial syntax parses");
+        Check(modernModel.Types.Count == 5 && modernModel.Types.Count(type => type.Name == "Modern") == 2, "partial declarations retain distinct source ranges and a shared type identity");
+        Check(modernModel.Members.Any(member => member.Kind == "OperatorDeclaration") && modernModel.Members.Any(member => member.Kind == "IndexerDeclaration") && modernModel.Members.Any(member => member.Name == "Busy"), "operator, indexer and enum member coverage");
+        Check(modernModel.Members.Count(member => member.Kind.EndsWith("AccessorDeclaration", StringComparison.Ordinal)) == 6, "explicit get, init, add and remove accessors are preserved");
+        var fieldMembers = modernModel.Members.Where(member => member.Kind == "FieldDeclaration").ToDictionary(member => member.Name);
+        var fieldCalls = modernModel.Calls.Where(call => call.Expression == "Make").ToArray();
+        Check(fieldMembers.Count == 2 && fieldCalls.Length == 2 && fieldCalls[0].CallerMemberId == fieldMembers["first"].Id && fieldCalls[1].CallerMemberId == fieldMembers["second"].Id, "multi-variable field initializers retain the correct caller ownership");
+        Check(fieldMembers.All(field => modernModel.Operations.Any(operation => operation.Kind == "variable-initializer" && operation.Detail?.StartsWith("name=" + field.Key + ";", StringComparison.Ordinal) == true && operation.MemberId == field.Value.Id)), "each field initializer operation belongs to its own declared variable");
+        Check(modernModel.Members.All(member => member.Name != "X" && member.Name != ".ctor"), "compiler-synthesized record properties and primary constructors are not claimed as explicit source members");
+        _ = Validate([modernModel], [modernInput]);
     }
     private static void Check(bool ok, string message) { if (!ok) throw new InvalidDataException("SELF TEST FAILED: " + message); Console.WriteLine("PASS " + message); }
 }
