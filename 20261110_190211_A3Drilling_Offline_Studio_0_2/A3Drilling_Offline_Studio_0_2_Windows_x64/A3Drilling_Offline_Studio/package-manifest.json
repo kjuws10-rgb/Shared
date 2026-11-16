@@ -1,0 +1,246 @@
+{
+  "version": "0.2.0",
+  "sourceCommit": "57f9be8869467fb96bb856fff843e19e4af5427f",
+  "publicToolOnly": true,
+  "modelIncluded": false,
+  "equipmentCodeIncluded": false,
+  "documentsIncluded": false,
+  "sdkIncluded": false,
+  "files": [
+    {
+      "path": "A3.OfflineStudio.exe",
+      "bytes": 144123542,
+      "sha256": "6381d7a77e08d1f419c790675b22fae9ddd3ad61718ebc5d200f39387800e233"
+    },
+    {
+      "path": "A3.OfflineStudio.staticwebassets.endpoints.json",
+      "bytes": 53,
+      "sha256": "c1686417e8d5c31bba969f12b6f3d2b35e6609adb5ca42f212261a3a02771aac"
+    },
+    {
+      "path": "Licenses/Microsoft-DotNET-LICENSE.txt",
+      "bytes": 9519,
+      "sha256": "7f6839a61ce892b79c6549e2dc5a81fdbd240a0b260f8881216b45b7fda8b45d"
+    },
+    {
+      "path": "Licenses/Microsoft-DotNET-THIRD-PARTY-NOTICES.txt",
+      "bytes": 78887,
+      "sha256": "deb4427a295e1ed474b0d81c5a0d972c1b550b9a715cda939cdfa9236b1b418f"
+    },
+    {
+      "path": "Models/모델_준비.txt",
+      "bytes": 502,
+      "sha256": "7b3ed4fea71c166a7339ec57335f7a77bc9be27e4cad8647b68bee24dd81261d"
+    },
+    {
+      "path": "Prerequisites/manifest.json",
+      "bytes": 390,
+      "sha256": "ee38d937eaf89f9975d38ff6117a0efe4697d25597211c2c8169e3628b309bcc"
+    },
+    {
+      "path": "Prerequisites/vc_redist.x64.exe",
+      "bytes": 18731856,
+      "sha256": "843068991daaa1f73ad9f6239bce4d0f6a07a51f18c37ea2a867e9beca71295c"
+    },
+    {
+      "path": "Runtime/ggml-base.dll",
+      "bytes": 805888,
+      "sha256": "200cd9b6f0a7934c2e1c85e55289d5498332713321b03e83eb2ae3da5eeb6137"
+    },
+    {
+      "path": "Runtime/ggml-cpu-alderlake.dll",
+      "bytes": 1416704,
+      "sha256": "8ae4c14de9eeb5528e42cff69ed8485e6cd0e3f8601837add873a9d12199ca95"
+    },
+    {
+      "path": "Runtime/ggml-cpu-cannonlake.dll",
+      "bytes": 1612800,
+      "sha256": "779a9d0ede6215fba8a00fb680c1295dd62836f9d8a124437d48f9c086fc1f07"
+    },
+    {
+      "path": "Runtime/ggml-cpu-cascadelake.dll",
+      "bytes": 1585664,
+      "sha256": "71f6275d8aa7df86545975e02510e10280abfcc274ae419dee898746a5b2ce1b"
+    },
+    {
+      "path": "Runtime/ggml-cpu-cooperlake.dll",
+      "bytes": 1595392,
+      "sha256": "c0b3f9445cbd4490504c13d06e89b25bdbe9dea73784fc62c0c10ae7069de6cb"
+    },
+    {
+      "path": "Runtime/ggml-cpu-haswell.dll",
+      "bytes": 1422336,
+      "sha256": "0bc8209ebe520b43d8549db7d45ca87382df88c3a8b238f3dda42d96e2af178e"
+    },
+    {
+      "path": "Runtime/ggml-cpu-icelake.dll",
+      "bytes": 1592832,
+      "sha256": "81f86f655c82dfe330f9ee269b97a2b21352e5e876bd385d48bc61d9a6ca230b"
+    },
+    {
+      "path": "Runtime/ggml-cpu-ivybridge.dll",
+      "bytes": 1303552,
+      "sha256": "52f262a610ac189d0375472c66c46b7b366d618916ed67a2b119e69023c3f943"
+    },
+    {
+      "path": "Runtime/ggml-cpu-piledriver.dll",
+      "bytes": 1296384,
+      "sha256": "340c9dc4c5618fa4f89e6311c31f2f472d3277a87858c79b3c44890b0e92d1e7"
+    },
+    {
+      "path": "Runtime/ggml-cpu-sandybridge.dll",
+      "bytes": 1292800,
+      "sha256": "6251d2dc50745bad1d0f16ea95a4484ef5d8c7cb49b5a4a33af85d199c08be61"
+    },
+    {
+      "path": "Runtime/ggml-cpu-sapphirerapids.dll",
+      "bytes": 1872384,
+      "sha256": "cdfdc20cb7f953f87e61ab90e234c864df4e2c2615f5651bd83a4cf27fdc4e3d"
+    },
+    {
+      "path": "Runtime/ggml-cpu-skylakex.dll",
+      "bytes": 1606656,
+      "sha256": "da5c7c86df8409c08fb748ed5596eba65285ead7747581daa124a7fff2f65704"
+    },
+    {
+      "path": "Runtime/ggml-cpu-sse42.dll",
+      "bytes": 918016,
+      "sha256": "00efeb321bb728616cde5719bab06ea575679f7ca4967367faa70fd5ca1c8ba6"
+    },
+    {
+      "path": "Runtime/ggml-cpu-x64.dll",
+      "bytes": 910848,
+      "sha256": "af7233344eec5587d531b4e875ec5bf2b1aa62c2be57b657f69cca503f0db918"
+    },
+    {
+      "path": "Runtime/ggml-cpu-zen4.dll",
+      "bytes": 1602560,
+      "sha256": "4ebbee0eb0c5a4e9e3c3b437d7a2876ede8f1d3e00526dad33db50f39f46e831"
+    },
+    {
+      "path": "Runtime/ggml-rpc.dll",
+      "bytes": 231424,
+      "sha256": "c28c2da0de23d39a7aca2dbccf20215087bbab2bd26caea38dc782698f6dc070"
+    },
+    {
+      "path": "Runtime/ggml.dll",
+      "bytes": 78848,
+      "sha256": "d2e63157b90c0fd15f010fb2952d032d9f3296b8406b78ff0950211cc144705b"
+    },
+    {
+      "path": "Runtime/libomp.dll",
+      "bytes": 768000,
+      "sha256": "a12116ba72d1d6820407cf30be23da04ce79d6bb8a71a5ee71759c5a1faa6f1c"
+    },
+    {
+      "path": "Runtime/licenses/LICENSE-LLVM-OpenMP.txt",
+      "bytes": 19741,
+      "sha256": "fdad1758a9e1f9d5a81e18879b3406772115edc92c24bfa36b70c654f325e8e4"
+    },
+    {
+      "path": "Runtime/licenses/llama.cpp-MIT.txt",
+      "bytes": 1078,
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+    },
+    {
+      "path": "Runtime/licenses/Qwen-Apache-2.0.txt",
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    {
+      "path": "Runtime/llama-batched-bench-impl.dll",
+      "bytes": 61952,
+      "sha256": "f826a0ec3f4ea79d19c4c16594bd5e0e1e7941d845b65b6580be926548fff389"
+    },
+    {
+      "path": "Runtime/llama-bench-impl.dll",
+      "bytes": 404480,
+      "sha256": "a2ce853eaae3c165da85643d6cb92c3bb043f1aab4ac3c3da60bacab3871752e"
+    },
+    {
+      "path": "Runtime/llama-cli-impl.dll",
+      "bytes": 3365376,
+      "sha256": "2e4aa4b28dffe02fdc1022621e1ce1955bed33f4b2de96732d01992fbc5ae42f"
+    },
+    {
+      "path": "Runtime/llama-common.dll",
+      "bytes": 8337920,
+      "sha256": "34370fd48c31112b2ebe4e7bb234747c1a9b39325a29e61302659c525a6049d9"
+    },
+    {
+      "path": "Runtime/llama-completion-impl.dll",
+      "bytes": 138752,
+      "sha256": "db9ea9071f4fa4954a05dd91ebb4c70d6294ff359437a2e2fe639c0b17374601"
+    },
+    {
+      "path": "Runtime/llama-fit-params-impl.dll",
+      "bytes": 43520,
+      "sha256": "afaa9591c4112bcd6cc419a323c6d7aed5ec2134e0a2fcf5abf0915beaead2a9"
+    },
+    {
+      "path": "Runtime/llama-perplexity-impl.dll",
+      "bytes": 198144,
+      "sha256": "c74f4c51d927e626528dc14c1a82e488e408478d2cfe506cb55848aaf863d570"
+    },
+    {
+      "path": "Runtime/llama-quantize-impl.dll",
+      "bytes": 137216,
+      "sha256": "42a1ac2b1b2d4db4d4cfa389b64e57dc08e3f7f7f0b2bbadf65196696e2b0e9f"
+    },
+    {
+      "path": "Runtime/llama-server-impl.dll",
+      "bytes": 10076672,
+      "sha256": "0b329dcfdece6a43f34d0554dec5ca0cc2efe6ee23d5aabd8141c51487668564"
+    },
+    {
+      "path": "Runtime/llama-server.exe",
+      "bytes": 9216,
+      "sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "path": "Runtime/llama.dll",
+      "bytes": 3695616,
+      "sha256": "af13ed8cb1454a80689dbd390310995b6c4b23333e096152453fe6d0fef17356"
+    },
+    {
+      "path": "Runtime/mtmd.dll",
+      "bytes": 2142720,
+      "sha256": "e82d563ae9dad225a3d15d0f189e046909713e26759ae9a046f89430bc845bd3"
+    },
+    {
+      "path": "Runtime/runtime-manifest.json",
+      "bytes": 5455,
+      "sha256": "809034b39f2a0fbf2b69ff0ba84f6744fcc51701f267fe75056800710c47a2e8"
+    },
+    {
+      "path": "Start-OfflineStudio.ps1",
+      "bytes": 3074,
+      "sha256": "891c00d9a5147dfa8aed2197bab391863310419d111d68aaa39f968d304fcbe9"
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.txt",
+      "bytes": 747,
+      "sha256": "b9eba5c3bf645a277b34821ec5973ffe177854db9b19116b949a278549db14af"
+    },
+    {
+      "path": "web.config",
+      "bytes": 483,
+      "sha256": "4d18abc7473c70df09e28313552a1bb84fb7addafa18215ace3237888531d641"
+    },
+    {
+      "path": "시작안내.html",
+      "bytes": 21327,
+      "sha256": "bfb6fea2aa954c69f7a58de348ed26c5be0d89f14ca5ef3bc59095e3397415f6"
+    },
+    {
+      "path": "시작하기.cmd",
+      "bytes": 431,
+      "sha256": "b080763323217faed382de0e774e4f66d88e96ceee192f00ba89105c83922a00"
+    },
+    {
+      "path": "읽어주세요.txt",
+      "bytes": 654,
+      "sha256": "b879fbc4ae1ac802a465466d2d3cbad17eb4f4515191cbd5c37a90ff311fccce"
+    }
+  ]
+}
