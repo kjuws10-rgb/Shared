@@ -23,3 +23,5 @@ The output records:
 Line ranges are original source ranges. Documentation annotations must not renumber original source references. Every extraction checks source HEAD, tracked Git status and all parsed file byte hashes again after writing metadata.
 
 Local function IDs include the declaring source path and syntax span. Equal local signatures in separate containing methods therefore remain separate in declarations, call targets, caller IDs and operation ownership. The self-test includes this collision regression as well as binding, members, control operations and source range checks.
+
+Version 1.0.3 adds explicit member AST-count and global member-ID validation, correct call/operation ownership for each variable in a multi-variable field initializer, and 18 total synthetic self-test assertions. Modern record/primary-constructor/partial/init syntax, operators, indexers, enums and accessors are covered. Counts describe explicit source declarations. Compiler-synthesized record properties/primary constructors and WPF-generated XAML fields are outside those counts; named XAML elements are inventoried separately by the document generator.

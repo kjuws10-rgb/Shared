@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 9bb8fc8be490c371c1a9ac95f52c4de752d58cd48c9f7f903d197b3e0186e595 |
 | 파일 분류 | code |
 | 원본 크기/행 | 16,349 bytes / 479 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -99,7 +99,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `DefaultModelOption` · L14–14
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L14-L14)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -120,7 +120,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastAppliedResult` · L15–15
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L15-L15)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -135,7 +135,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_maxCellCount` · L16–16
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L16-L16)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -150,7 +150,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_modelTypeCount` · L17–17
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L17-L17)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -165,7 +165,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_glassSizeX` · L18–18
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L18-L18)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -180,7 +180,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_glassSizeY` · L19–19
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L19-L19)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -195,7 +195,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_akMarginX` · L20–20
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L20-L20)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -210,7 +210,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_akMarginY` · L21–21
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L21-L21)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -225,7 +225,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_defaultModelOptions` · L22–22
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L22-L22)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -240,7 +240,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_overrideModelOptions` · L23–23
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L23-L23)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -255,7 +255,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isInitialized` · L24–24
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L24-L24)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L24-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -270,7 +270,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_modelApplySequence` · L25–25
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L25-L25)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -285,7 +285,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L27–72
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:27–72](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L27-L72)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:27–72](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L27-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -304,7 +304,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:318–321](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CRecipeView.xaml.cs#L318-L321) | new CCellPlacementWizardDialog | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:318–321](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CRecipeView.xaml.cs#L318-L321) | new CCellPlacementWizardDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -397,7 +397,7 @@ flowchart TD
 
 ### PropertyDeclaration `RowModelRows` · L74–74
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L74-L74)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L74-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -412,7 +412,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RowModelRows` · L74–74
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L74-L74)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L74-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -427,7 +427,7 @@ flowchart TD
 
 ### PropertyDeclaration `ColumnModelRows` · L75–75
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L75-L75)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L75-L75)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -442,7 +442,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ColumnModelRows` · L75–75
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L75-L75)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L75-L75)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -457,7 +457,7 @@ flowchart TD
 
 ### PropertyDeclaration `Result` · L76–76
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L76-L76)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L76-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -472,7 +472,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Result` · L76–76
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L76-L76)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L76-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -487,7 +487,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Result` · L76–76
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L76-L76)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L76-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -508,7 +508,7 @@ flowchart TD
 
 ### MethodDeclaration `GridCountTextChanged` · L78–86
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:78–86](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L78-L86)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:78–86](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L78-L86)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -553,7 +553,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshModelRows` · L88–99
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:88–99](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L88-L99)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:88–99](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L88-L99)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -566,9 +566,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L62-L62) | RefreshModelRows | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L85-L85) | RefreshModelRows | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L146-L146) | RefreshModelRows | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L62-L62) | RefreshModelRows | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L85-L85) | RefreshModelRows | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L146-L146) | RefreshModelRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -602,7 +602,7 @@ flowchart TD
 
 ### MethodDeclaration `SyncModelRows` · L101–114
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:101–114](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L101-L114)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:101–114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L101-L114)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -623,8 +623,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L97-L97) | SyncModelRows | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L98-L98) | SyncModelRows | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L97-L97) | SyncModelRows | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L98-L98) | SyncModelRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -662,7 +662,7 @@ flowchart TD
 
 ### MethodDeclaration `OnModelRuleChanged` · L116–121
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:116–121](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L116-L121)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:116–121](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L116-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -697,7 +697,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyClick` · L123–134
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:123–134](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L123-L134)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:123–134](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L123-L134)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -747,7 +747,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyInitialResult` · L136–169
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:136–169](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L136-L169)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:136–169](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L136-L169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -766,7 +766,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L58-L58) | ApplyInitialResult | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L58-L58) | ApplyInitialResult | False |
 
 호출하는 대상과 해석 범위:
 
@@ -852,7 +852,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenWizardInputKeypad` · L171–188
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:171–188](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L171-L188)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:171–188](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L171-L188)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -910,7 +910,7 @@ flowchart TD
 
 ### MethodDeclaration `GetInputKeypadInfo` · L190–219
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:190–219](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L190-L219)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:190–219](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L190-L219)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -929,7 +929,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:179–179](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L179-L179) | GetInputKeypadInfo | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:179–179](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L179-L179) | GetInputKeypadInfo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -985,7 +985,7 @@ flowchart TD
 
 ### MethodDeclaration `TryCreateResult` · L221–301
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:221–301](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L221-L301)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:221–301](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L221-L301)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1005,7 +1005,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L125-L125) | TryCreateResult | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L125-L125) | TryCreateResult | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1107,7 +1107,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadPositiveInt` · L303–306
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:303–306](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L303-L306)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:303–306](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L303-L306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1144,7 +1144,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadDouble` · L308–311
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:308–311](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L308-L311)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:308–311](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L308-L311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1183,7 +1183,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadModel` · L313–318
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:313–318](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L313-L318)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:313–318](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L313-L318)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1203,9 +1203,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L118-L118) | ReadModel | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L295-L295) | ReadModel | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L297-L297) | ReadModel | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L118-L118) | ReadModel | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L295-L295) | ReadModel | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L297-L297) | ReadModel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1225,7 +1225,7 @@ flowchart TD
 
 ### MethodDeclaration `TryValidateGlassBounds` · L320–361
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:320–361](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L320-L361)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:320–361](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L320-L361)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1250,7 +1250,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L263-L263) | TryValidateGlassBounds | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L263-L263) | TryValidateGlassBounds | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1320,7 +1320,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatValidationDouble` · L363–366
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363–366](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L363-L366)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:363–366](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L363-L366)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1339,16 +1339,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L140-L140) | FormatValidationDouble | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L141-L141) | FormatValidationDouble | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L142-L142) | FormatValidationDouble | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L143-L143) | FormatValidationDouble | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L358-L358) | FormatValidationDouble | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L358-L358) | FormatValidationDouble | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L358-L358) | FormatValidationDouble | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L359-L359) | FormatValidationDouble | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L359-L359) | FormatValidationDouble | False |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L359-L359) | FormatValidationDouble | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L140-L140) | FormatValidationDouble | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L141-L141) | FormatValidationDouble | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L142-L142) | FormatValidationDouble | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L143-L143) | FormatValidationDouble | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L358-L358) | FormatValidationDouble | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L358-L358) | FormatValidationDouble | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L358-L358) | FormatValidationDouble | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L359-L359) | FormatValidationDouble | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L359-L359) | FormatValidationDouble | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L359-L359) | FormatValidationDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1367,7 +1367,7 @@ flowchart TD
 
 ### MethodDeclaration `CancelClick` · L368–371
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:368–371](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L368-L371)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:368–371](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L368-L371)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1395,7 +1395,7 @@ flowchart TD
 
 ### MethodDeclaration `WindowKeyDown` · L373–380
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:373–380](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L373-L380)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:373–380](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L373-L380)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1434,7 +1434,7 @@ flowchart TD
 
 ### PropertyDeclaration `Empty` · L416–416
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L416-L416)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L416-L416)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1461,7 +1461,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Empty` · L416–416
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L416-L416)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:416–416](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L416-L416)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1476,7 +1476,7 @@ flowchart TD
 
 ### FieldDeclaration `HorizontalFirst` · L423–423
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L423-L423)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L423-L423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1497,7 +1497,7 @@ flowchart TD
 
 ### FieldDeclaration `VerticalFirst` · L424–424
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L424-L424)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:424–424](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L424-L424)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1518,7 +1518,7 @@ flowchart TD
 
 ### PropertyDeclaration `Options` · L426–430
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:426–430](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L426-L430)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:426–430](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L426-L430)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1547,7 +1547,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Options` · L426–426
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:426–426](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L426-L426)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:426–426](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L426-L426)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1562,7 +1562,7 @@ flowchart TD
 
 ### MethodDeclaration `ToString` · L432–435
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:432–435](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L432-L435)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:432–435](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L432-L435)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1583,7 +1583,7 @@ flowchart TD
 
 ### FieldDeclaration `_selectedModel` · L440–440
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:440–440](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L440-L440)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:440–440](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L440-L440)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1598,7 +1598,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L442–449
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:442–449](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L442-L449)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:442–449](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L442-L449)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1620,7 +1620,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L110-L110) | new ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L110-L110) | new ST_CELL_PLACEMENT_MODEL_SELECTOR_ROW | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1643,7 +1643,7 @@ flowchart TD
 
 ### EventFieldDeclaration `PropertyChanged` · L451–451
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L451-L451)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L451-L451)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1658,7 +1658,7 @@ flowchart TD
 
 ### EventFieldDeclaration `ModelChanged` · L452–452
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L452-L452)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L452-L452)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1673,7 +1673,7 @@ flowchart TD
 
 ### PropertyDeclaration `Scope` · L453–453
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L453-L453)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L453-L453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1688,7 +1688,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Scope` · L453–453
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L453-L453)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L453-L453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1703,7 +1703,7 @@ flowchart TD
 
 ### PropertyDeclaration `Index` · L454–454
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L454-L454)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L454-L454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1718,7 +1718,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Index` · L454–454
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L454-L454)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L454-L454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1733,7 +1733,7 @@ flowchart TD
 
 ### PropertyDeclaration `Label` · L455–455
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L455-L455)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L455-L455)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1748,7 +1748,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Label` · L455–455
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L455-L455)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L455-L455)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1763,7 +1763,7 @@ flowchart TD
 
 ### PropertyDeclaration `ModelOptions` · L456–456
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:456–456](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L456-L456)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:456–456](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L456-L456)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1778,7 +1778,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ModelOptions` · L456–456
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:456–456](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L456-L456)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:456–456](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L456-L456)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1793,7 +1793,7 @@ flowchart TD
 
 ### PropertyDeclaration `ApplyOrder` · L457–457
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L457-L457)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L457-L457)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1808,7 +1808,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ApplyOrder` · L457–457
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L457-L457)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L457-L457)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1823,7 +1823,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ApplyOrder` · L457–457
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L457-L457)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L457-L457)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1844,7 +1844,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedModel` · L459–473
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:459–473](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L459-L473)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:459–473](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L459-L473)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1859,7 +1859,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedModel` · L461–461
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L461-L461)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:461–461](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L461-L461)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1874,7 +1874,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SelectedModel` · L462–472
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:462–472](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L462-L472)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:462–472](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L462-L472)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1921,7 +1921,7 @@ flowchart TD
 
 ### MethodDeclaration `OnPropertyChanged` · L475–478
 
-[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:475–478](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L475-L478)
+[Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:475–478](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L475-L478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1940,7 +1940,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L470-L470) | OnPropertyChanged | False |
+| [Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs#L470-L470) | OnPropertyChanged | False |
 
 호출하는 대상과 해석 범위:
 

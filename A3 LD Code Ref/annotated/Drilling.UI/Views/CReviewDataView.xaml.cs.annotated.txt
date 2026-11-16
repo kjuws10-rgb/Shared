@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Views/CReviewDataView.xaml.cs
-Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views
@@ -15,270 +15,649 @@ L000004 |     using System.Windows.Controls; ⟦EOL⟧
 L000005 |     using System.Windows.Input; ⟦EOL⟧
 // 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
 L000006 |     using System.Windows.Media; ⟦EOL⟧
-// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Threading;
-L000007 |     using System.Windows.Threading; ⟦EOL⟧
-// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
-L000008 |     using Drilling.UI.Menu.Menus; ⟦EOL⟧
-L000009 |  ⟦EOL⟧
-// 해설 L10: 타입의 구조/상속 선언입니다: internal sealed class CBindingProxy : Freezable
-L000010 |     internal sealed class CBindingProxy : Freezable ⟦EOL⟧
-// 해설 L11: 구문 블록 경계입니다.
-L000011 |     { ⟦EOL⟧
-// 해설 L12: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.Register( nameof(Data), typeof(object), typeof(CBindingProxy)) / 변수의 초기값을 지정합니다: DataProperty = DependencyProperty.Register( nameof(Data), typeof(object), typeof(CBindingProxy))
-L000012 |         public static readonly DependencyProperty DataProperty = DependencyProperty.Register( ⟦EOL⟧
-// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Data)
-L000013 |             nameof(Data), ⟦EOL⟧
-// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · DependencyProperty Drilling.UI.Views.CBindingProxy.DataProperty
-L000014 |             typeof(object), ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Shapes;
+L000007 |     using System.Windows.Shapes; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Threading;
+L000008 |     using System.Windows.Threading; ⟦EOL⟧
+// 해설 L9: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000009 |     using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000010 |  ⟦EOL⟧
+// 해설 L11: 타입의 구조/상속 선언입니다: internal sealed class CBindingProxy : Freezable
+L000011 |     internal sealed class CBindingProxy : Freezable ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 |     { ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.Register( nameof(Data), typeof(object), typeof(CBindingProxy)) / 변수의 초기값을 지정합니다: DataProperty = DependencyProperty.Register( nameof(Data), typeof(object), typeof(CBindingProxy))
+L000013 |         public static readonly DependencyProperty DataProperty = DependencyProperty.Register( ⟦EOL⟧
+// 해설 L14: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Data)
+L000014 |             nameof(Data), ⟦EOL⟧
 // 해설 L15: 선언·서명/매개변수·접근 조건입니다 · DependencyProperty Drilling.UI.Views.CBindingProxy.DataProperty
-L000015 |             typeof(CBindingProxy)); ⟦EOL⟧
-L000016 |  ⟦EOL⟧
-// 해설 L17: 선언·서명/매개변수·접근 조건입니다 · object? Drilling.UI.Views.CBindingProxy.Data
-L000017 |         public object? Data ⟦EOL⟧
-// 해설 L18: 구문 블록 경계입니다 · 소속 Data.
-L000018 |         { ⟦EOL⟧
-// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(DataProperty)
-L000019 |             get => GetValue(DataProperty); ⟦EOL⟧
-// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetValue(DataProperty, value)
-L000020 |             set => SetValue(DataProperty, value); ⟦EOL⟧
-// 해설 L21: 구문 블록 경계입니다 · 소속 Data.
-L000021 |         } ⟦EOL⟧
-L000022 |  ⟦EOL⟧
-// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · Freezable Drilling.UI.Views.CBindingProxy.CreateInstanceCore()
-L000023 |         protected override Freezable CreateInstanceCore() ⟦EOL⟧
-// 해설 L24: 구문 블록 경계입니다 · 소속 CreateInstanceCore.
-L000024 |         { ⟦EOL⟧
-// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CBindingProxy() / 호출자에게 값 또는 제어를 반환합니다: return new CBindingProxy();
-L000025 |             return new CBindingProxy(); ⟦EOL⟧
-// 해설 L26: 구문 블록 경계입니다 · 소속 CreateInstanceCore.
-L000026 |         } ⟦EOL⟧
-// 해설 L27: 구문 블록 경계입니다.
-L000027 |     } ⟦EOL⟧
-L000028 |  ⟦EOL⟧
-// 해설 L29: 타입의 구조/상속 선언입니다: public partial class CReviewDataView : UserControl
-L000029 |     public partial class CReviewDataView : UserControl ⟦EOL⟧
-// 해설 L30: 구문 블록 경계입니다.
-L000030 |     { ⟦EOL⟧
-// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CReviewDataView.CReviewDataView()
-L000031 |         public CReviewDataView() ⟦EOL⟧
-// 해설 L32: 구문 블록 경계입니다 · 소속 .ctor.
-L000032 |         { ⟦EOL⟧
-// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
-L000033 |             InitializeComponent(); ⟦EOL⟧
-// 해설 L34: 구문 블록 경계입니다 · 소속 .ctor.
-L000034 |         } ⟦EOL⟧
-L000035 |  ⟦EOL⟧
-// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs)
-L000036 |         private async void ReviewDataView_IsVisibleChanged( ⟦EOL⟧
-// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs)
-L000037 |             object sender, ⟦EOL⟧
-// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs)
-L000038 |             DependencyPropertyChangedEventArgs eventArgs) ⟦EOL⟧
-// 해설 L39: 구문 블록 경계입니다 · 소속 ReviewDataView_IsVisibleChanged.
-L000039 |         { ⟦EOL⟧
-// 해설 L40: 조건에 따라 분기합니다: if (IsVisible && DataContext is CMenuCorrection.CReviewDataPanel panel)
-L000040 |             if (IsVisible && DataContext is CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
-// 해설 L41: 구문 블록 경계입니다 · 소속 ReviewDataView_IsVisibleChanged.
-L000041 |             { ⟦EOL⟧
-// 해설 L42: 비동기 완료를 기다립니다: await panel.Reload() / 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Reload()
-L000042 |                 await panel.Reload(); ⟦EOL⟧
-// 해설 L43: 구문 블록 경계입니다 · 소속 ReviewDataView_IsVisibleChanged.
-L000043 |             } ⟦EOL⟧
-// 해설 L44: 구문 블록 경계입니다 · 소속 ReviewDataView_IsVisibleChanged.
-L000044 |         } ⟦EOL⟧
-L000045 |  ⟦EOL⟧
-// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewResultsTree_SelectedItemChanged(object, RoutedPropertyChangedEventArgs<object>)
-L000046 |         private void ReviewResultsTree_SelectedItemChanged( ⟦EOL⟧
-// 해설 L47: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewResultsTree_SelectedItemChanged(object, RoutedPropertyChangedEventArgs<object>)
-L000047 |             object sender, ⟦EOL⟧
-// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewResultsTree_SelectedItemChanged(object, RoutedPropertyChangedEventArgs<object>)
-L000048 |             RoutedPropertyChangedEventArgs<object> eventArgs) ⟦EOL⟧
-// 해설 L49: 구문 블록 경계입니다 · 소속 ReviewResultsTree_SelectedItemChanged.
-L000049 |         { ⟦EOL⟧
-// 해설 L50: 조건에 따라 분기합니다: if (DataContext is CMenuCorrection.CReviewDataPanel panel && eventArgs.NewValue is CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE node)
-L000050 |             if (DataContext is CMenuCorrection.CReviewDataPanel panel ⟦EOL⟧
-// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewResultsTree_SelectedItemChanged(object, RoutedPropertyChangedEventArgs<object>)
-L000051 |                 && eventArgs.NewValue is CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE node) ⟦EOL⟧
-// 해설 L52: 구문 블록 경계입니다 · 소속 ReviewResultsTree_SelectedItemChanged.
-L000052 |             { ⟦EOL⟧
-// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Select(node)
-L000053 |                 panel.Select(node); ⟦EOL⟧
-// 해설 L54: 구문 블록 경계입니다 · 소속 ReviewResultsTree_SelectedItemChanged.
-L000054 |             } ⟦EOL⟧
-L000055 |  ⟦EOL⟧
-// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReviewResultsTree.Dispatcher.BeginInvoke( DispatcherPriority.ContextIdle, new Action(() => FindVisualChild<ScrollViewer>(ReviewResultsTree)?.ScrollToLeftEnd()))
-L000056 |             ReviewResultsTree.Dispatcher.BeginInvoke( ⟦EOL⟧
+L000015 |             typeof(object), ⟦EOL⟧
+// 해설 L16: 선언·서명/매개변수·접근 조건입니다 · DependencyProperty Drilling.UI.Views.CBindingProxy.DataProperty
+L000016 |             typeof(CBindingProxy)); ⟦EOL⟧
+L000017 |  ⟦EOL⟧
+// 해설 L18: 선언·서명/매개변수·접근 조건입니다 · object? Drilling.UI.Views.CBindingProxy.Data
+L000018 |         public object? Data ⟦EOL⟧
+// 해설 L19: 구문 블록 경계입니다 · 소속 Data.
+L000019 |         { ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(DataProperty)
+L000020 |             get => GetValue(DataProperty); ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetValue(DataProperty, value)
+L000021 |             set => SetValue(DataProperty, value); ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 Data.
+L000022 |         } ⟦EOL⟧
+L000023 |  ⟦EOL⟧
+// 해설 L24: 선언·서명/매개변수·접근 조건입니다 · Freezable Drilling.UI.Views.CBindingProxy.CreateInstanceCore()
+L000024 |         protected override Freezable CreateInstanceCore() ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 CreateInstanceCore.
+L000025 |         { ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CBindingProxy() / 호출자에게 값 또는 제어를 반환합니다: return new CBindingProxy();
+L000026 |             return new CBindingProxy(); ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 CreateInstanceCore.
+L000027 |         } ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다.
+L000028 |     } ⟦EOL⟧
+L000029 |  ⟦EOL⟧
+// 해설 L30: 타입의 구조/상속 선언입니다: public partial class CReviewDataView : UserControl
+L000030 |     public partial class CReviewDataView : UserControl ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다.
+L000031 |     { ⟦EOL⟧
+// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · FrameworkElement? Drilling.UI.Views.CReviewDataView._resultEditDragSurface
+L000032 |         private FrameworkElement? _resultEditDragSurface; ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · Rectangle? Drilling.UI.Views.CReviewDataView._resultEditDragRectangle
+L000033 |         private Rectangle? _resultEditDragRectangle; ⟦EOL⟧
+// 해설 L34: 선언·서명/매개변수·접근 조건입니다 · Point Drilling.UI.Views.CReviewDataView._resultEditDragStart
+L000034 |         private Point _resultEditDragStart; ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CReviewDataView._resultEditDragIsScatter
+L000035 |         private bool _resultEditDragIsScatter; ⟦EOL⟧
+L000036 |  ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CReviewDataView.CReviewDataView()
+L000037 |         public CReviewDataView() ⟦EOL⟧
+// 해설 L38: 구문 블록 경계입니다 · 소속 .ctor.
+L000038 |         { ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000039 |             InitializeComponent(); ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 .ctor.
+L000040 |         } ⟦EOL⟧
+L000041 |  ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs)
+L000042 |         private async void ReviewDataView_IsVisibleChanged( ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs)
+L000043 |             object sender, ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs)
+L000044 |             DependencyPropertyChangedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L45: 구문 블록 경계입니다 · 소속 ReviewDataView_IsVisibleChanged.
+L000045 |         { ⟦EOL⟧
+// 해설 L46: 조건에 따라 분기합니다: if (IsVisible && DataContext is CMenuCorrection.CReviewDataPanel panel)
+L000046 |             if (IsVisible && DataContext is CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 ReviewDataView_IsVisibleChanged.
+L000047 |             { ⟦EOL⟧
+// 해설 L48: 비동기 완료를 기다립니다: await panel.ReloadWhenVisible() / 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.ReloadWhenVisible()
+L000048 |                 await panel.ReloadWhenVisible(); ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 ReviewDataView_IsVisibleChanged.
+L000049 |             } ⟦EOL⟧
+// 해설 L50: 구문 블록 경계입니다 · 소속 ReviewDataView_IsVisibleChanged.
+L000050 |         } ⟦EOL⟧
+L000051 |  ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewResultsTree_SelectedItemChanged(object, RoutedPropertyChangedEventArgs<object>)
+L000052 |         private void ReviewResultsTree_SelectedItemChanged( ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewResultsTree_SelectedItemChanged(object, RoutedPropertyChangedEventArgs<object>)
+L000053 |             object sender, ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewResultsTree_SelectedItemChanged(object, RoutedPropertyChangedEventArgs<object>)
+L000054 |             RoutedPropertyChangedEventArgs<object> eventArgs) ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 ReviewResultsTree_SelectedItemChanged.
+L000055 |         { ⟦EOL⟧
+// 해설 L56: 조건에 따라 분기합니다: if (DataContext is CMenuCorrection.CReviewDataPanel panel && eventArgs.NewValue is CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE node)
+L000056 |             if (DataContext is CMenuCorrection.CReviewDataPanel panel ⟦EOL⟧
 // 해설 L57: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewResultsTree_SelectedItemChanged(object, RoutedPropertyChangedEventArgs<object>)
-L000057 |                 DispatcherPriority.ContextIdle, ⟦EOL⟧
-// 해설 L58: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Action(() => FindVisualChild<ScrollViewer>(ReviewResultsTree)?.ScrollToLeftEnd()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FindVisualChild<ScrollViewer>(ReviewResultsTree) / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ScrollToLeftEnd()
-L000058 |                 new Action(() => FindVisualChild<ScrollViewer>(ReviewResultsTree)?.ScrollToLeftEnd())); ⟦EOL⟧
-// 해설 L59: 구문 블록 경계입니다 · 소속 ReviewResultsTree_SelectedItemChanged.
-L000059 |         } ⟦EOL⟧
-L000060 |  ⟦EOL⟧
-// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataShotMap_MouseLeftButtonDown(object, MouseButtonEventArgs)
-L000061 |         private void ReviewDataShotMap_MouseLeftButtonDown(object sender, MouseButtonEventArgs eventArgs) ⟦EOL⟧
-// 해설 L62: 구문 블록 경계입니다 · 소속 ReviewDataShotMap_MouseLeftButtonDown.
-L000062 |         { ⟦EOL⟧
-// 해설 L63: 조건에 따라 분기합니다: if (sender is not FrameworkElement map || DataContext is not CMenuCorrection.CReviewDataPanel panel)
-L000063 |             if (sender is not FrameworkElement map || DataContext is not CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
-// 해설 L64: 구문 블록 경계입니다 · 소속 ReviewDataShotMap_MouseLeftButtonDown.
-L000064 |             { ⟦EOL⟧
-// 해설 L65: 호출자에게 값 또는 제어를 반환합니다: return;
-L000065 |                 return; ⟦EOL⟧
-// 해설 L66: 구문 블록 경계입니다 · 소속 ReviewDataShotMap_MouseLeftButtonDown.
-L000066 |             } ⟦EOL⟧
-L000067 |  ⟦EOL⟧
-// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(map) / 지역 변수를 선언합니다: var point = eventArgs.GetPosition(map); / 변수의 초기값을 지정합니다: point = eventArgs.GetPosition(map)
-L000068 |             var point = eventArgs.GetPosition(map); ⟦EOL⟧
-// 해설 L69: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectShotAt(point.X, point.Y)
-L000069 |             panel.SelectShotAt(point.X, point.Y); ⟦EOL⟧
-// 해설 L70: 값을 대상에 대입합니다: eventArgs.Handled = true
-L000070 |             eventArgs.Handled = true; ⟦EOL⟧
-// 해설 L71: 구문 블록 경계입니다 · 소속 ReviewDataShotMap_MouseLeftButtonDown.
-L000071 |         } ⟦EOL⟧
-L000072 |  ⟦EOL⟧
-// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_SelectionChanged(object, SelectionChangedEventArgs)
-L000073 |         private void ReviewDataResultGrid_SelectionChanged(object sender, SelectionChangedEventArgs eventArgs) ⟦EOL⟧
-// 해설 L74: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_SelectionChanged.
-L000074 |         { ⟦EOL⟧
-// 해설 L75: 조건에 따라 분기합니다: if (sender is not DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row } || DataContext is not CMenuCorrection.CReviewDataPanel panel)
-L000075 |             if (sender is not DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row } ⟦EOL⟧
-// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_SelectionChanged(object, SelectionChangedEventArgs)
-L000076 |                 || DataContext is not CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
-// 해설 L77: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_SelectionChanged.
-L000077 |             { ⟦EOL⟧
-// 해설 L78: 호출자에게 값 또는 제어를 반환합니다: return;
-L000078 |                 return; ⟦EOL⟧
-// 해설 L79: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_SelectionChanged.
-L000079 |             } ⟦EOL⟧
-L000080 |  ⟦EOL⟧
-// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectRow(row)
-L000081 |             panel.SelectRow(row); ⟦EOL⟧
-// 해설 L82: 조건에 따라 분기합니다: if (panel.SelectedRow is { } selectedRow)
-L000082 |             if (panel.SelectedRow is { } selectedRow) ⟦EOL⟧
-// 해설 L83: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_SelectionChanged.
-L000083 |             { ⟦EOL⟧
-// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReviewDataResultGrid.Dispatcher.BeginInvoke( DispatcherPriority.Background, new Action(() => ReviewDataResultGrid.ScrollIntoView(selectedRow)))
-L000084 |                 ReviewDataResultGrid.Dispatcher.BeginInvoke( ⟦EOL⟧
-// 해설 L85: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_SelectionChanged(object, SelectionChangedEventArgs)
-L000085 |                     DispatcherPriority.Background, ⟦EOL⟧
-// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Action(() => ReviewDataResultGrid.ScrollIntoView(selectedRow)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReviewDataResultGrid.ScrollIntoView(selectedRow)
-L000086 |                     new Action(() => ReviewDataResultGrid.ScrollIntoView(selectedRow))); ⟦EOL⟧
-// 해설 L87: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_SelectionChanged.
-L000087 |             } ⟦EOL⟧
-// 해설 L88: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_SelectionChanged.
-L000088 |         } ⟦EOL⟧
-L000089 |  ⟦EOL⟧
-// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_LoadingRow(object, DataGridRowEventArgs)
-L000090 |         private void ReviewDataResultGrid_LoadingRow(object sender, DataGridRowEventArgs eventArgs) ⟦EOL⟧
-// 해설 L91: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_LoadingRow.
-L000091 |         { ⟦EOL⟧
-// 해설 L92: 조건에 따라 분기합니다: if (DataContext is CMenuCorrection.CReviewDataPanel panel)
-L000092 |             if (DataContext is CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
-// 해설 L93: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_LoadingRow.
-L000093 |             { ⟦EOL⟧
-// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.Row.SetCurrentValue( DataGridRow.IsSelectedProperty, ReferenceEquals(eventArgs.Row.Item, panel.SelectedRow))
-L000094 |                 eventArgs.Row.SetCurrentValue( ⟦EOL⟧
-// 해설 L95: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_LoadingRow(object, DataGridRowEventArgs)
-L000095 |                     DataGridRow.IsSelectedProperty, ⟦EOL⟧
-// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(eventArgs.Row.Item, panel.SelectedRow)
-L000096 |                     ReferenceEquals(eventArgs.Row.Item, panel.SelectedRow)); ⟦EOL⟧
-// 해설 L97: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_LoadingRow.
-L000097 |             } ⟦EOL⟧
-// 해설 L98: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_LoadingRow.
-L000098 |         } ⟦EOL⟧
-L000099 |  ⟦EOL⟧
-// 해설 L100: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionGrid_SelectionChanged(object, SelectionChangedEventArgs)
-L000100 |         private void ReviewDataReinspectionGrid_SelectionChanged( ⟦EOL⟧
-// 해설 L101: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionGrid_SelectionChanged(object, SelectionChangedEventArgs)
-L000101 |             object sender, ⟦EOL⟧
-// 해설 L102: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionGrid_SelectionChanged(object, SelectionChangedEventArgs)
-L000102 |             SelectionChangedEventArgs eventArgs) ⟦EOL⟧
-// 해설 L103: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionGrid_SelectionChanged.
-L000103 |         { ⟦EOL⟧
-// 해설 L104: 조건에 따라 분기합니다: if (sender is DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM item } && DataContext is CMenuCorrection.CReviewDataPanel panel)
-L000104 |             if (sender is DataGrid ⟦EOL⟧
-// 해설 L105: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionGrid_SelectionChanged.
-L000105 |                 { ⟦EOL⟧
-// 해설 L106: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionGrid_SelectionChanged(object, SelectionChangedEventArgs)
-L000106 |                     SelectedItem: CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM item ⟦EOL⟧
-// 해설 L107: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionGrid_SelectionChanged.
-L000107 |                 } ⟦EOL⟧
-// 해설 L108: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionGrid_SelectionChanged(object, SelectionChangedEventArgs)
-L000108 |                 && DataContext is CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
-// 해설 L109: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionGrid_SelectionChanged.
-L000109 |             { ⟦EOL⟧
-// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectReinspectionShot(item)
-L000110 |                 panel.SelectReinspectionShot(item); ⟦EOL⟧
-// 해설 L111: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionGrid_SelectionChanged.
-L000111 |             } ⟦EOL⟧
-// 해설 L112: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionGrid_SelectionChanged.
-L000112 |         } ⟦EOL⟧
-L000113 |  ⟦EOL⟧
-// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionCheckBox_Changed(object, RoutedEventArgs)
-L000114 |         private void ReviewDataReinspectionCheckBox_Changed(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
-// 해설 L115: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionCheckBox_Changed.
-L000115 |         { ⟦EOL⟧
-// 해설 L116: 조건에 따라 분기합니다: if (sender is CheckBox { DataContext: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row, IsChecked: var isChecked } && DataContext is CMenuCorrection.CReviewDataPanel panel)
-L000116 |             if (sender is CheckBox ⟦EOL⟧
-// 해설 L117: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionCheckBox_Changed.
-L000117 |                 { ⟦EOL⟧
-// 해설 L118: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionCheckBox_Changed(object, RoutedEventArgs)
-L000118 |                     DataContext: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row, ⟦EOL⟧
-// 해설 L119: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionCheckBox_Changed(object, RoutedEventArgs)
-L000119 |                     IsChecked: var isChecked ⟦EOL⟧
-// 해설 L120: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionCheckBox_Changed.
-L000120 |                 } ⟦EOL⟧
-// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionCheckBox_Changed(object, RoutedEventArgs)
-L000121 |                 && DataContext is CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
-// 해설 L122: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionCheckBox_Changed.
-L000122 |             { ⟦EOL⟧
-// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SetReinspectionRowSelection(row, isChecked == true)
-L000123 |                 panel.SetReinspectionRowSelection(row, isChecked == true); ⟦EOL⟧
-// 해설 L124: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionCheckBox_Changed.
-L000124 |             } ⟦EOL⟧
-// 해설 L125: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionCheckBox_Changed.
-L000125 |         } ⟦EOL⟧
-L000126 |  ⟦EOL⟧
-// 해설 L127: 선언·서명/매개변수·접근 조건입니다 · T? Drilling.UI.Views.CReviewDataView.FindVisualChild<T>(DependencyObject)
-L000127 |         private static T? FindVisualChild<T>(DependencyObject parent) ⟦EOL⟧
-// 해설 L128: 선언·서명/매개변수·접근 조건입니다 · T? Drilling.UI.Views.CReviewDataView.FindVisualChild<T>(DependencyObject)
-L000128 |             where T : DependencyObject ⟦EOL⟧
-// 해설 L129: 구문 블록 경계입니다 · 소속 FindVisualChild.
-L000129 |         { ⟦EOL⟧
-// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChildrenCount(parent) / 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < VisualTreeHelper.GetChildrenCount(parent); index++) / 변수의 초기값을 지정합니다: index = 0
-L000130 |             for (var index = 0; index < VisualTreeHelper.GetChildrenCount(parent); index++) ⟦EOL⟧
-// 해설 L131: 구문 블록 경계입니다 · 소속 FindVisualChild.
-L000131 |             { ⟦EOL⟧
-// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChild(parent, index) / 지역 변수를 선언합니다: var child = VisualTreeHelper.GetChild(parent, index); / 변수의 초기값을 지정합니다: child = VisualTreeHelper.GetChild(parent, index)
-L000132 |                 var child = VisualTreeHelper.GetChild(parent, index); ⟦EOL⟧
-// 해설 L133: 조건에 따라 분기합니다: if (child is T match)
-L000133 |                 if (child is T match) ⟦EOL⟧
-// 해설 L134: 구문 블록 경계입니다 · 소속 FindVisualChild.
-L000134 |                 { ⟦EOL⟧
-// 해설 L135: 호출자에게 값 또는 제어를 반환합니다: return match;
-L000135 |                     return match; ⟦EOL⟧
-// 해설 L136: 구문 블록 경계입니다 · 소속 FindVisualChild.
-L000136 |                 } ⟦EOL⟧
-L000137 |  ⟦EOL⟧
-// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindVisualChild<T>(child) / 지역 변수를 선언합니다: var descendant = FindVisualChild<T>(child); / 변수의 초기값을 지정합니다: descendant = FindVisualChild<T>(child)
-L000138 |                 var descendant = FindVisualChild<T>(child); ⟦EOL⟧
-// 해설 L139: 조건에 따라 분기합니다: if (descendant is not null)
-L000139 |                 if (descendant is not null) ⟦EOL⟧
-// 해설 L140: 구문 블록 경계입니다 · 소속 FindVisualChild.
-L000140 |                 { ⟦EOL⟧
-// 해설 L141: 호출자에게 값 또는 제어를 반환합니다: return descendant;
-L000141 |                     return descendant; ⟦EOL⟧
-// 해설 L142: 구문 블록 경계입니다 · 소속 FindVisualChild.
-L000142 |                 } ⟦EOL⟧
-// 해설 L143: 구문 블록 경계입니다 · 소속 FindVisualChild.
-L000143 |             } ⟦EOL⟧
-L000144 |  ⟦EOL⟧
-// 해설 L145: 호출자에게 값 또는 제어를 반환합니다: return null;
-L000145 |             return null; ⟦EOL⟧
-// 해설 L146: 구문 블록 경계입니다 · 소속 FindVisualChild.
-L000146 |         } ⟦EOL⟧
-// 해설 L147: 구문 블록 경계입니다.
-L000147 |     } ⟦EOL⟧
-// 해설 L148: 구문 블록 경계입니다.
-L000148 | } ⟦EOL⟧
+L000057 |                 && eventArgs.NewValue is CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE node) ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 ReviewResultsTree_SelectedItemChanged.
+L000058 |             { ⟦EOL⟧
+// 해설 L59: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Select(node)
+L000059 |                 panel.Select(node); ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 ReviewResultsTree_SelectedItemChanged.
+L000060 |             } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReviewResultsTree.Dispatcher.BeginInvoke( DispatcherPriority.ContextIdle, new Action(() => FindVisualChild<ScrollViewer>(ReviewResultsTree)?.ScrollToLeftEnd()))
+L000062 |             ReviewResultsTree.Dispatcher.BeginInvoke( ⟦EOL⟧
+// 해설 L63: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewResultsTree_SelectedItemChanged(object, RoutedPropertyChangedEventArgs<object>)
+L000063 |                 DispatcherPriority.ContextIdle, ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Action(() => FindVisualChild<ScrollViewer>(ReviewResultsTree)?.ScrollToLeftEnd()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FindVisualChild<ScrollViewer>(ReviewResultsTree) / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ScrollToLeftEnd()
+L000064 |                 new Action(() => FindVisualChild<ScrollViewer>(ReviewResultsTree)?.ScrollToLeftEnd())); ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 ReviewResultsTree_SelectedItemChanged.
+L000065 |         } ⟦EOL⟧
+L000066 |  ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataShotMap_MouseLeftButtonDown(object, MouseButtonEventArgs)
+L000067 |         private void ReviewDataShotMap_MouseLeftButtonDown(object sender, MouseButtonEventArgs eventArgs) ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 ReviewDataShotMap_MouseLeftButtonDown.
+L000068 |         { ⟦EOL⟧
+// 해설 L69: 조건에 따라 분기합니다: if (sender is not FrameworkElement map || DataContext is not CMenuCorrection.CReviewDataPanel panel)
+L000069 |             if (sender is not FrameworkElement map || DataContext is not CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 ReviewDataShotMap_MouseLeftButtonDown.
+L000070 |             { ⟦EOL⟧
+// 해설 L71: 호출자에게 값 또는 제어를 반환합니다: return;
+L000071 |                 return; ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 ReviewDataShotMap_MouseLeftButtonDown.
+L000072 |             } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 조건에 따라 분기합니다: if (panel.IsResultEditMode)
+L000074 |             if (panel.IsResultEditMode) ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 ReviewDataShotMap_MouseLeftButtonDown.
+L000075 |             { ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: BeginResultEditDrag(map, ShotMapEditSelectionRectangle, isScatter: false, eventArgs)
+L000076 |                 BeginResultEditDrag(map, ShotMapEditSelectionRectangle, isScatter: false, eventArgs); ⟦EOL⟧
+// 해설 L77: 호출자에게 값 또는 제어를 반환합니다: return;
+L000077 |                 return; ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 ReviewDataShotMap_MouseLeftButtonDown.
+L000078 |             } ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(map) / 지역 변수를 선언합니다: var point = eventArgs.GetPosition(map); / 변수의 초기값을 지정합니다: point = eventArgs.GetPosition(map)
+L000080 |             var point = eventArgs.GetPosition(map); ⟦EOL⟧
+// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectShotAt(point.X, point.Y)
+L000081 |             panel.SelectShotAt(point.X, point.Y); ⟦EOL⟧
+// 해설 L82: 값을 대상에 대입합니다: eventArgs.Handled = true
+L000082 |             eventArgs.Handled = true; ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 ReviewDataShotMap_MouseLeftButtonDown.
+L000083 |         } ⟦EOL⟧
+L000084 |  ⟦EOL⟧
+// 해설 L85: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataScatterPlot_MouseLeftButtonDown(object, MouseButtonEventArgs)
+L000085 |         private void ReviewDataScatterPlot_MouseLeftButtonDown(object sender, MouseButtonEventArgs eventArgs) ⟦EOL⟧
+// 해설 L86: 구문 블록 경계입니다 · 소속 ReviewDataScatterPlot_MouseLeftButtonDown.
+L000086 |         { ⟦EOL⟧
+// 해설 L87: 조건에 따라 분기합니다: if (sender is not FrameworkElement plot || plot.ActualWidth <= 0.0 || plot.ActualHeight <= 0.0 || DataContext is not CMenuCorrection.CReviewDataPanel panel)
+L000087 |             if (sender is not FrameworkElement plot ⟦EOL⟧
+// 해설 L88: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataScatterPlot_MouseLeftButtonDown(object, MouseButtonEventArgs)
+L000088 |                 || plot.ActualWidth <= 0.0 ⟦EOL⟧
+// 해설 L89: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataScatterPlot_MouseLeftButtonDown(object, MouseButtonEventArgs)
+L000089 |                 || plot.ActualHeight <= 0.0 ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataScatterPlot_MouseLeftButtonDown(object, MouseButtonEventArgs)
+L000090 |                 || DataContext is not CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 ReviewDataScatterPlot_MouseLeftButtonDown.
+L000091 |             { ⟦EOL⟧
+// 해설 L92: 호출자에게 값 또는 제어를 반환합니다: return;
+L000092 |                 return; ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 ReviewDataScatterPlot_MouseLeftButtonDown.
+L000093 |             } ⟦EOL⟧
+L000094 |  ⟦EOL⟧
+// 해설 L95: 조건에 따라 분기합니다: if (panel.IsResultEditMode)
+L000095 |             if (panel.IsResultEditMode) ⟦EOL⟧
+// 해설 L96: 구문 블록 경계입니다 · 소속 ReviewDataScatterPlot_MouseLeftButtonDown.
+L000096 |             { ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: BeginResultEditDrag(plot, ScatterEditSelectionRectangle, isScatter: true, eventArgs)
+L000097 |                 BeginResultEditDrag(plot, ScatterEditSelectionRectangle, isScatter: true, eventArgs); ⟦EOL⟧
+// 해설 L98: 호출자에게 값 또는 제어를 반환합니다: return;
+L000098 |                 return; ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 ReviewDataScatterPlot_MouseLeftButtonDown.
+L000099 |             } ⟦EOL⟧
+L000100 |  ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(plot) / 지역 변수를 선언합니다: var point = eventArgs.GetPosition(plot); / 변수의 초기값을 지정합니다: point = eventArgs.GetPosition(plot)
+L000101 |             var point = eventArgs.GetPosition(plot); ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectScatterPointAt( point.X * panel.ScatterPlotSurfaceWidth / plot.ActualWidth, point.Y * panel.ScatterPlotSurfaceHeight / plot.ActualHeight)
+L000102 |             panel.SelectScatterPointAt( ⟦EOL⟧
+// 해설 L103: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataScatterPlot_MouseLeftButtonDown(object, MouseButtonEventArgs)
+L000103 |                 point.X * panel.ScatterPlotSurfaceWidth / plot.ActualWidth, ⟦EOL⟧
+// 해설 L104: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataScatterPlot_MouseLeftButtonDown(object, MouseButtonEventArgs)
+L000104 |                 point.Y * panel.ScatterPlotSurfaceHeight / plot.ActualHeight); ⟦EOL⟧
+// 해설 L105: 값을 대상에 대입합니다: eventArgs.Handled = true
+L000105 |             eventArgs.Handled = true; ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 ReviewDataScatterPlot_MouseLeftButtonDown.
+L000106 |         } ⟦EOL⟧
+L000107 |  ⟦EOL⟧
+// 해설 L108: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.BeginResultEditDrag(FrameworkElement, Rectangle, bool, MouseButtonEventArgs)
+L000108 |         private void BeginResultEditDrag( ⟦EOL⟧
+// 해설 L109: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.BeginResultEditDrag(FrameworkElement, Rectangle, bool, MouseButtonEventArgs)
+L000109 |             FrameworkElement surface, ⟦EOL⟧
+// 해설 L110: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.BeginResultEditDrag(FrameworkElement, Rectangle, bool, MouseButtonEventArgs)
+L000110 |             Rectangle rectangle, ⟦EOL⟧
+// 해설 L111: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.BeginResultEditDrag(FrameworkElement, Rectangle, bool, MouseButtonEventArgs)
+L000111 |             bool isScatter, ⟦EOL⟧
+// 해설 L112: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.BeginResultEditDrag(FrameworkElement, Rectangle, bool, MouseButtonEventArgs)
+L000112 |             MouseButtonEventArgs eventArgs) ⟦EOL⟧
+// 해설 L113: 구문 블록 경계입니다 · 소속 BeginResultEditDrag.
+L000113 |         { ⟦EOL⟧
+// 해설 L114: 조건에 따라 분기합니다: if (eventArgs.ChangedButton != MouseButton.Left)
+L000114 |             if (eventArgs.ChangedButton != MouseButton.Left) ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 BeginResultEditDrag.
+L000115 |             { ⟦EOL⟧
+// 해설 L116: 호출자에게 값 또는 제어를 반환합니다: return;
+L000116 |                 return; ⟦EOL⟧
+// 해설 L117: 구문 블록 경계입니다 · 소속 BeginResultEditDrag.
+L000117 |             } ⟦EOL⟧
+L000118 |  ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: _resultEditDragSurface = surface
+L000119 |             _resultEditDragSurface = surface; ⟦EOL⟧
+// 해설 L120: 값을 대상에 대입합니다: _resultEditDragRectangle = rectangle
+L000120 |             _resultEditDragRectangle = rectangle; ⟦EOL⟧
+// 해설 L121: 값을 대상에 대입합니다: _resultEditDragIsScatter = isScatter
+L000121 |             _resultEditDragIsScatter = isScatter; ⟦EOL⟧
+// 해설 L122: 값을 대상에 대입합니다: _resultEditDragStart = eventArgs.GetPosition(surface) / 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(surface)
+L000122 |             _resultEditDragStart = eventArgs.GetPosition(surface); ⟦EOL⟧
+// 해설 L123: 값을 대상에 대입합니다: rectangle.Width = 0.0
+L000123 |             rectangle.Width = 0.0; ⟦EOL⟧
+// 해설 L124: 값을 대상에 대입합니다: rectangle.Height = 0.0
+L000124 |             rectangle.Height = 0.0; ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(rectangle, _resultEditDragStart.X)
+L000125 |             Canvas.SetLeft(rectangle, _resultEditDragStart.X); ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(rectangle, _resultEditDragStart.Y)
+L000126 |             Canvas.SetTop(rectangle, _resultEditDragStart.Y); ⟦EOL⟧
+// 해설 L127: 값을 대상에 대입합니다: rectangle.Visibility = Visibility.Visible
+L000127 |             rectangle.Visibility = Visibility.Visible; ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: surface.CaptureMouse()
+L000128 |             surface.CaptureMouse(); ⟦EOL⟧
+// 해설 L129: 값을 대상에 대입합니다: eventArgs.Handled = true
+L000129 |             eventArgs.Handled = true; ⟦EOL⟧
+// 해설 L130: 구문 블록 경계입니다 · 소속 BeginResultEditDrag.
+L000130 |         } ⟦EOL⟧
+L000131 |  ⟦EOL⟧
+// 해설 L132: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_MouseMove(object, MouseEventArgs)
+L000132 |         private void ReviewDataEditSurface_MouseMove(object sender, MouseEventArgs eventArgs) ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseMove.
+L000133 |         { ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(sender, _resultEditDragSurface) / 조건에 따라 분기합니다: if (!ReferenceEquals(sender, _resultEditDragSurface) || _resultEditDragSurface is null || _resultEditDragRectangle is null)
+L000134 |             if (!ReferenceEquals(sender, _resultEditDragSurface) ⟦EOL⟧
+// 해설 L135: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_MouseMove(object, MouseEventArgs)
+L000135 |                 || _resultEditDragSurface is null ⟦EOL⟧
+// 해설 L136: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_MouseMove(object, MouseEventArgs)
+L000136 |                 || _resultEditDragRectangle is null) ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseMove.
+L000137 |             { ⟦EOL⟧
+// 해설 L138: 호출자에게 값 또는 제어를 반환합니다: return;
+L000138 |                 return; ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseMove.
+L000139 |             } ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 조건에 따라 분기합니다: if (eventArgs.LeftButton != MouseButtonState.Pressed)
+L000141 |             if (eventArgs.LeftButton != MouseButtonState.Pressed) ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseMove.
+L000142 |             { ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelResultEditDrag()
+L000143 |                 CancelResultEditDrag(); ⟦EOL⟧
+// 해설 L144: 호출자에게 값 또는 제어를 반환합니다: return;
+L000144 |                 return; ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseMove.
+L000145 |             } ⟦EOL⟧
+L000146 |  ⟦EOL⟧
+// 해설 L147: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateResultEditDragRectangle(eventArgs.GetPosition(_resultEditDragSurface)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(_resultEditDragSurface)
+L000147 |             UpdateResultEditDragRectangle(eventArgs.GetPosition(_resultEditDragSurface)); ⟦EOL⟧
+// 해설 L148: 값을 대상에 대입합니다: eventArgs.Handled = true
+L000148 |             eventArgs.Handled = true; ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseMove.
+L000149 |         } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_MouseLeftButtonUp(object, MouseButtonEventArgs)
+L000151 |         private void ReviewDataEditSurface_MouseLeftButtonUp(object sender, MouseButtonEventArgs eventArgs) ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000152 |         { ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(sender, _resultEditDragSurface) / 조건에 따라 분기합니다: if (!ReferenceEquals(sender, _resultEditDragSurface) || _resultEditDragSurface is null || _resultEditDragRectangle is null || DataContext is not CMenuCorrection.CReviewDataPanel panel)
+L000153 |             if (!ReferenceEquals(sender, _resultEditDragSurface) ⟦EOL⟧
+// 해설 L154: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_MouseLeftButtonUp(object, MouseButtonEventArgs)
+L000154 |                 || _resultEditDragSurface is null ⟦EOL⟧
+// 해설 L155: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_MouseLeftButtonUp(object, MouseButtonEventArgs)
+L000155 |                 || _resultEditDragRectangle is null ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_MouseLeftButtonUp(object, MouseButtonEventArgs)
+L000156 |                 || DataContext is not CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000157 |             { ⟦EOL⟧
+// 해설 L158: 호출자에게 값 또는 제어를 반환합니다: return;
+L000158 |                 return; ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000159 |             } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 지역 변수를 선언합니다: var surface = _resultEditDragSurface; / 변수의 초기값을 지정합니다: surface = _resultEditDragSurface
+L000161 |             var surface = _resultEditDragSurface; ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(surface) / 지역 변수를 선언합니다: var end = eventArgs.GetPosition(surface); / 변수의 초기값을 지정합니다: end = eventArgs.GetPosition(surface)
+L000162 |             var end = eventArgs.GetPosition(surface); ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateResultEditDragRectangle(end)
+L000163 |             UpdateResultEditDragRectangle(end); ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(end.X - _resultEditDragStart.X) / 지역 변수를 선언합니다: var deltaX = Math.Abs(end.X - _resultEditDragStart.X); / 변수의 초기값을 지정합니다: deltaX = Math.Abs(end.X - _resultEditDragStart.X)
+L000164 |             var deltaX = Math.Abs(end.X - _resultEditDragStart.X); ⟦EOL⟧
+// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(end.Y - _resultEditDragStart.Y) / 지역 변수를 선언합니다: var deltaY = Math.Abs(end.Y - _resultEditDragStart.Y); / 변수의 초기값을 지정합니다: deltaY = Math.Abs(end.Y - _resultEditDragStart.Y)
+L000165 |             var deltaY = Math.Abs(end.Y - _resultEditDragStart.Y); ⟦EOL⟧
+// 해설 L166: 조건에 따라 분기합니다: if (deltaX < 5.0 && deltaY < 5.0)
+L000166 |             if (deltaX < 5.0 && deltaY < 5.0) ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000167 |             { ⟦EOL⟧
+// 해설 L168: 조건에 따라 분기합니다: if (_resultEditDragIsScatter)
+L000168 |                 if (_resultEditDragIsScatter) ⟦EOL⟧
+// 해설 L169: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000169 |                 { ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectScatterPointAt( end.X * panel.ScatterPlotSurfaceWidth / Math.Max(1.0, surface.ActualWidth), end.Y * panel.ScatterPlotSurfaceHeight / Math.Max(1.0, surface.ActualHeight))
+L000170 |                     panel.SelectScatterPointAt( ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth)
+L000171 |                         end.X * panel.ScatterPlotSurfaceWidth / Math.Max(1.0, surface.ActualWidth), ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight)
+L000172 |                         end.Y * panel.ScatterPlotSurfaceHeight / Math.Max(1.0, surface.ActualHeight)); ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000173 |                 } ⟦EOL⟧
+// 해설 L174: 앞 조건이 거짓인 경로입니다: else
+L000174 |                 else ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000175 |                 { ⟦EOL⟧
+// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectShotAt( end.X * panel.ShotMapSurfaceWidth / Math.Max(1.0, surface.ActualWidth), end.Y * panel.ShotMapSurfaceHeight / Math.Max(1.0, surface.ActualHeight))
+L000176 |                     panel.SelectShotAt( ⟦EOL⟧
+// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth)
+L000177 |                         end.X * panel.ShotMapSurfaceWidth / Math.Max(1.0, surface.ActualWidth), ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight)
+L000178 |                         end.Y * panel.ShotMapSurfaceHeight / Math.Max(1.0, surface.ActualHeight)); ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000179 |                 } ⟦EOL⟧
+L000180 |  ⟦EOL⟧
+// 해설 L181: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectCurrentShotForResultEdit()
+L000181 |                 panel.SelectCurrentShotForResultEdit(); ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000182 |             } ⟦EOL⟧
+// 해설 L183: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (_resultEditDragIsScatter)
+L000183 |             else if (_resultEditDragIsScatter) ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000184 |             { ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectResultEditShotsInScatter( _resultEditDragStart.X * panel.ScatterPlotSurfaceWidth / Math.Max(1.0, surface.ActualWidth), _resultEditDragStart.Y * panel.ScatterPlotSurfaceHeight / Math.Max(1.0, surface.ActualHei…
+L000185 |                 panel.SelectResultEditShotsInScatter( ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth)
+L000186 |                     _resultEditDragStart.X * panel.ScatterPlotSurfaceWidth / Math.Max(1.0, surface.ActualWidth), ⟦EOL⟧
+// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight)
+L000187 |                     _resultEditDragStart.Y * panel.ScatterPlotSurfaceHeight / Math.Max(1.0, surface.ActualHeight), ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth)
+L000188 |                     end.X * panel.ScatterPlotSurfaceWidth / Math.Max(1.0, surface.ActualWidth), ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight)
+L000189 |                     end.Y * panel.ScatterPlotSurfaceHeight / Math.Max(1.0, surface.ActualHeight)); ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000190 |             } ⟦EOL⟧
+// 해설 L191: 앞 조건이 거짓인 경로입니다: else
+L000191 |             else ⟦EOL⟧
+// 해설 L192: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000192 |             { ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectResultEditShotsInMap( _resultEditDragStart.X * panel.ShotMapSurfaceWidth / Math.Max(1.0, surface.ActualWidth), _resultEditDragStart.Y * panel.ShotMapSurfaceHeight / Math.Max(1.0, surface.ActualHeight), end.X …
+L000193 |                 panel.SelectResultEditShotsInMap( ⟦EOL⟧
+// 해설 L194: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth)
+L000194 |                     _resultEditDragStart.X * panel.ShotMapSurfaceWidth / Math.Max(1.0, surface.ActualWidth), ⟦EOL⟧
+// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight)
+L000195 |                     _resultEditDragStart.Y * panel.ShotMapSurfaceHeight / Math.Max(1.0, surface.ActualHeight), ⟦EOL⟧
+// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth)
+L000196 |                     end.X * panel.ShotMapSurfaceWidth / Math.Max(1.0, surface.ActualWidth), ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight)
+L000197 |                     end.Y * panel.ShotMapSurfaceHeight / Math.Max(1.0, surface.ActualHeight)); ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000198 |             } ⟦EOL⟧
+L000199 |  ⟦EOL⟧
+// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelResultEditDrag()
+L000200 |             CancelResultEditDrag(); ⟦EOL⟧
+// 해설 L201: 값을 대상에 대입합니다: eventArgs.Handled = true
+L000201 |             eventArgs.Handled = true; ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_MouseLeftButtonUp.
+L000202 |         } ⟦EOL⟧
+L000203 |  ⟦EOL⟧
+// 해설 L204: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_LostMouseCapture(object, MouseEventArgs)
+L000204 |         private void ReviewDataEditSurface_LostMouseCapture(object sender, MouseEventArgs eventArgs) ⟦EOL⟧
+// 해설 L205: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_LostMouseCapture.
+L000205 |         { ⟦EOL⟧
+// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(sender, _resultEditDragSurface) / 조건에 따라 분기합니다: if (ReferenceEquals(sender, _resultEditDragSurface))
+L000206 |             if (ReferenceEquals(sender, _resultEditDragSurface)) ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_LostMouseCapture.
+L000207 |             { ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelResultEditDrag()
+L000208 |                 CancelResultEditDrag(); ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_LostMouseCapture.
+L000209 |             } ⟦EOL⟧
+// 해설 L210: 구문 블록 경계입니다 · 소속 ReviewDataEditSurface_LostMouseCapture.
+L000210 |         } ⟦EOL⟧
+L000211 |  ⟦EOL⟧
+// 해설 L212: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.UpdateResultEditDragRectangle(Point)
+L000212 |         private void UpdateResultEditDragRectangle(Point end) ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 UpdateResultEditDragRectangle.
+L000213 |         { ⟦EOL⟧
+// 해설 L214: 조건에 따라 분기합니다: if (_resultEditDragRectangle is null)
+L000214 |             if (_resultEditDragRectangle is null) ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 UpdateResultEditDragRectangle.
+L000215 |             { ⟦EOL⟧
+// 해설 L216: 호출자에게 값 또는 제어를 반환합니다: return;
+L000216 |                 return; ⟦EOL⟧
+// 해설 L217: 구문 블록 경계입니다 · 소속 UpdateResultEditDragRectangle.
+L000217 |             } ⟦EOL⟧
+L000218 |  ⟦EOL⟧
+// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(_resultEditDragStart.X, end.X) / 지역 변수를 선언합니다: var left = Math.Min(_resultEditDragStart.X, end.X); / 변수의 초기값을 지정합니다: left = Math.Min(_resultEditDragStart.X, end.X)
+L000219 |             var left = Math.Min(_resultEditDragStart.X, end.X); ⟦EOL⟧
+// 해설 L220: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(_resultEditDragStart.Y, end.Y) / 지역 변수를 선언합니다: var top = Math.Min(_resultEditDragStart.Y, end.Y); / 변수의 초기값을 지정합니다: top = Math.Min(_resultEditDragStart.Y, end.Y)
+L000220 |             var top = Math.Min(_resultEditDragStart.Y, end.Y); ⟦EOL⟧
+// 해설 L221: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(_resultEditDragRectangle, left)
+L000221 |             Canvas.SetLeft(_resultEditDragRectangle, left); ⟦EOL⟧
+// 해설 L222: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(_resultEditDragRectangle, top)
+L000222 |             Canvas.SetTop(_resultEditDragRectangle, top); ⟦EOL⟧
+// 해설 L223: 값을 대상에 대입합니다: _resultEditDragRectangle.Width = Math.Abs(end.X - _resultEditDragStart.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(end.X - _resultEditDragStart.X)
+L000223 |             _resultEditDragRectangle.Width = Math.Abs(end.X - _resultEditDragStart.X); ⟦EOL⟧
+// 해설 L224: 값을 대상에 대입합니다: _resultEditDragRectangle.Height = Math.Abs(end.Y - _resultEditDragStart.Y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(end.Y - _resultEditDragStart.Y)
+L000224 |             _resultEditDragRectangle.Height = Math.Abs(end.Y - _resultEditDragStart.Y); ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 UpdateResultEditDragRectangle.
+L000225 |         } ⟦EOL⟧
+L000226 |  ⟦EOL⟧
+// 해설 L227: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.CancelResultEditDrag()
+L000227 |         private void CancelResultEditDrag() ⟦EOL⟧
+// 해설 L228: 구문 블록 경계입니다 · 소속 CancelResultEditDrag.
+L000228 |         { ⟦EOL⟧
+// 해설 L229: 조건에 따라 분기합니다: if (_resultEditDragRectangle is not null)
+L000229 |             if (_resultEditDragRectangle is not null) ⟦EOL⟧
+// 해설 L230: 구문 블록 경계입니다 · 소속 CancelResultEditDrag.
+L000230 |             { ⟦EOL⟧
+// 해설 L231: 값을 대상에 대입합니다: _resultEditDragRectangle.Visibility = Visibility.Collapsed
+L000231 |                 _resultEditDragRectangle.Visibility = Visibility.Collapsed; ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 CancelResultEditDrag.
+L000232 |             } ⟦EOL⟧
+L000233 |  ⟦EOL⟧
+// 해설 L234: 조건에 따라 분기합니다: if (_resultEditDragSurface?.IsMouseCaptured == true)
+L000234 |             if (_resultEditDragSurface?.IsMouseCaptured == true) ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 CancelResultEditDrag.
+L000235 |             { ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditDragSurface.ReleaseMouseCapture()
+L000236 |                 _resultEditDragSurface.ReleaseMouseCapture(); ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 CancelResultEditDrag.
+L000237 |             } ⟦EOL⟧
+L000238 |  ⟦EOL⟧
+// 해설 L239: 값을 대상에 대입합니다: _resultEditDragSurface = null
+L000239 |             _resultEditDragSurface = null; ⟦EOL⟧
+// 해설 L240: 값을 대상에 대입합니다: _resultEditDragRectangle = null
+L000240 |             _resultEditDragRectangle = null; ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 CancelResultEditDrag.
+L000241 |         } ⟦EOL⟧
+L000242 |  ⟦EOL⟧
+// 해설 L243: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000243 |         private void ReviewDataResultGrid_SelectionChanged(object sender, SelectionChangedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_SelectionChanged.
+L000244 |         { ⟦EOL⟧
+// 해설 L245: 조건에 따라 분기합니다: if (sender is not DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row } || DataContext is not CMenuCorrection.CReviewDataPanel panel)
+L000245 |             if (sender is not DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row } ⟦EOL⟧
+// 해설 L246: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000246 |                 || DataContext is not CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_SelectionChanged.
+L000247 |             { ⟦EOL⟧
+// 해설 L248: 호출자에게 값 또는 제어를 반환합니다: return;
+L000248 |                 return; ⟦EOL⟧
+// 해설 L249: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_SelectionChanged.
+L000249 |             } ⟦EOL⟧
+L000250 |  ⟦EOL⟧
+// 해설 L251: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectRow(row)
+L000251 |             panel.SelectRow(row); ⟦EOL⟧
+// 해설 L252: 조건에 따라 분기합니다: if (panel.SelectedRow is { } selectedRow)
+L000252 |             if (panel.SelectedRow is { } selectedRow) ⟦EOL⟧
+// 해설 L253: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_SelectionChanged.
+L000253 |             { ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReviewDataResultGrid.Dispatcher.BeginInvoke( DispatcherPriority.Background, new Action(() => ReviewDataResultGrid.ScrollIntoView(selectedRow)))
+L000254 |                 ReviewDataResultGrid.Dispatcher.BeginInvoke( ⟦EOL⟧
+// 해설 L255: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000255 |                     DispatcherPriority.Background, ⟦EOL⟧
+// 해설 L256: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Action(() => ReviewDataResultGrid.ScrollIntoView(selectedRow)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReviewDataResultGrid.ScrollIntoView(selectedRow)
+L000256 |                     new Action(() => ReviewDataResultGrid.ScrollIntoView(selectedRow))); ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_SelectionChanged.
+L000257 |             } ⟦EOL⟧
+// 해설 L258: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_SelectionChanged.
+L000258 |         } ⟦EOL⟧
+L000259 |  ⟦EOL⟧
+// 해설 L260: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_LoadingRow(object, DataGridRowEventArgs)
+L000260 |         private void ReviewDataResultGrid_LoadingRow(object sender, DataGridRowEventArgs eventArgs) ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_LoadingRow.
+L000261 |         { ⟦EOL⟧
+// 해설 L262: 조건에 따라 분기합니다: if (DataContext is CMenuCorrection.CReviewDataPanel panel)
+L000262 |             if (DataContext is CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_LoadingRow.
+L000263 |             { ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.Row.SetCurrentValue( DataGridRow.IsSelectedProperty, ReferenceEquals(eventArgs.Row.Item, panel.SelectedRow))
+L000264 |                 eventArgs.Row.SetCurrentValue( ⟦EOL⟧
+// 해설 L265: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_LoadingRow(object, DataGridRowEventArgs)
+L000265 |                     DataGridRow.IsSelectedProperty, ⟦EOL⟧
+// 해설 L266: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(eventArgs.Row.Item, panel.SelectedRow)
+L000266 |                     ReferenceEquals(eventArgs.Row.Item, panel.SelectedRow)); ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_LoadingRow.
+L000267 |             } ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 ReviewDataResultGrid_LoadingRow.
+L000268 |         } ⟦EOL⟧
+L000269 |  ⟦EOL⟧
+// 해설 L270: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000270 |         private void ReviewDataReinspectionGrid_SelectionChanged( ⟦EOL⟧
+// 해설 L271: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000271 |             object sender, ⟦EOL⟧
+// 해설 L272: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000272 |             SelectionChangedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionGrid_SelectionChanged.
+L000273 |         { ⟦EOL⟧
+// 해설 L274: 조건에 따라 분기합니다: if (sender is DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM item } && DataContext is CMenuCorrection.CReviewDataPanel panel)
+L000274 |             if (sender is DataGrid ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionGrid_SelectionChanged.
+L000275 |                 { ⟦EOL⟧
+// 해설 L276: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000276 |                     SelectedItem: CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM item ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionGrid_SelectionChanged.
+L000277 |                 } ⟦EOL⟧
+// 해설 L278: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000278 |                 && DataContext is CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
+// 해설 L279: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionGrid_SelectionChanged.
+L000279 |             { ⟦EOL⟧
+// 해설 L280: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectReinspectionShot(item)
+L000280 |                 panel.SelectReinspectionShot(item); ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionGrid_SelectionChanged.
+L000281 |             } ⟦EOL⟧
+// 해설 L282: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionGrid_SelectionChanged.
+L000282 |         } ⟦EOL⟧
+L000283 |  ⟦EOL⟧
+// 해설 L284: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionCheckBox_Changed(object, RoutedEventArgs)
+L000284 |         private void ReviewDataReinspectionCheckBox_Changed(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionCheckBox_Changed.
+L000285 |         { ⟦EOL⟧
+// 해설 L286: 조건에 따라 분기합니다: if (sender is CheckBox { DataContext: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row, IsChecked: var isChecked } && DataContext is CMenuCorrection.CReviewDataPanel panel)
+L000286 |             if (sender is CheckBox ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionCheckBox_Changed.
+L000287 |                 { ⟦EOL⟧
+// 해설 L288: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionCheckBox_Changed(object, RoutedEventArgs)
+L000288 |                     DataContext: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row, ⟦EOL⟧
+// 해설 L289: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionCheckBox_Changed(object, RoutedEventArgs)
+L000289 |                     IsChecked: var isChecked ⟦EOL⟧
+// 해설 L290: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionCheckBox_Changed.
+L000290 |                 } ⟦EOL⟧
+// 해설 L291: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionCheckBox_Changed(object, RoutedEventArgs)
+L000291 |                 && DataContext is CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
+// 해설 L292: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionCheckBox_Changed.
+L000292 |             { ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SetReinspectionRowSelection(row, isChecked == true)
+L000293 |                 panel.SetReinspectionRowSelection(row, isChecked == true); ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionCheckBox_Changed.
+L000294 |             } ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 ReviewDataReinspectionCheckBox_Changed.
+L000295 |         } ⟦EOL⟧
+L000296 |  ⟦EOL⟧
+// 해설 L297: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditCheckBox_Changed(object, RoutedEventArgs)
+L000297 |         private void ReviewDataResultEditCheckBox_Changed(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다 · 소속 ReviewDataResultEditCheckBox_Changed.
+L000298 |         { ⟦EOL⟧
+// 해설 L299: 조건에 따라 분기합니다: if (sender is CheckBox { DataContext: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row, IsChecked: var isChecked } && DataContext is CMenuCorrection.CReviewDataPanel panel)
+L000299 |             if (sender is CheckBox ⟦EOL⟧
+// 해설 L300: 구문 블록 경계입니다 · 소속 ReviewDataResultEditCheckBox_Changed.
+L000300 |                 { ⟦EOL⟧
+// 해설 L301: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditCheckBox_Changed(object, RoutedEventArgs)
+L000301 |                     DataContext: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row, ⟦EOL⟧
+// 해설 L302: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditCheckBox_Changed(object, RoutedEventArgs)
+L000302 |                     IsChecked: var isChecked ⟦EOL⟧
+// 해설 L303: 구문 블록 경계입니다 · 소속 ReviewDataResultEditCheckBox_Changed.
+L000303 |                 } ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditCheckBox_Changed(object, RoutedEventArgs)
+L000304 |                 && DataContext is CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 ReviewDataResultEditCheckBox_Changed.
+L000305 |             { ⟦EOL⟧
+// 해설 L306: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SetResultEditRowSelection(row, isChecked == true)
+L000306 |                 panel.SetResultEditRowSelection(row, isChecked == true); ⟦EOL⟧
+// 해설 L307: 구문 블록 경계입니다 · 소속 ReviewDataResultEditCheckBox_Changed.
+L000307 |             } ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 ReviewDataResultEditCheckBox_Changed.
+L000308 |         } ⟦EOL⟧
+L000309 |  ⟦EOL⟧
+// 해설 L310: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditKeyInGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000310 |         private void ReviewDataResultEditKeyInGrid_SelectionChanged(object sender, SelectionChangedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L311: 구문 블록 경계입니다 · 소속 ReviewDataResultEditKeyInGrid_SelectionChanged.
+L000311 |         { ⟦EOL⟧
+// 해설 L312: 조건에 따라 분기합니다: if (sender is DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM item } && DataContext is CMenuCorrection.CReviewDataPanel panel)
+L000312 |             if (sender is DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM item } ⟦EOL⟧
+// 해설 L313: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditKeyInGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000313 |                 && DataContext is CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
+// 해설 L314: 구문 블록 경계입니다 · 소속 ReviewDataResultEditKeyInGrid_SelectionChanged.
+L000314 |             { ⟦EOL⟧
+// 해설 L315: 값을 대상에 대입합니다: panel.SelectedResultEditKeyInItem = item
+L000315 |                 panel.SelectedResultEditKeyInItem = item; ⟦EOL⟧
+// 해설 L316: 구문 블록 경계입니다 · 소속 ReviewDataResultEditKeyInGrid_SelectionChanged.
+L000316 |             } ⟦EOL⟧
+// 해설 L317: 구문 블록 경계입니다 · 소속 ReviewDataResultEditKeyInGrid_SelectionChanged.
+L000317 |         } ⟦EOL⟧
+L000318 |  ⟦EOL⟧
+// 해설 L319: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditCopyGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000319 |         private void ReviewDataResultEditCopyGrid_SelectionChanged(object sender, SelectionChangedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 ReviewDataResultEditCopyGrid_SelectionChanged.
+L000320 |         { ⟦EOL⟧
+// 해설 L321: 조건에 따라 분기합니다: if (sender is DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM item } && DataContext is CMenuCorrection.CReviewDataPanel panel)
+L000321 |             if (sender is DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM item } ⟦EOL⟧
+// 해설 L322: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditCopyGrid_SelectionChanged(object, SelectionChangedEventArgs)
+L000322 |                 && DataContext is CMenuCorrection.CReviewDataPanel panel) ⟦EOL⟧
+// 해설 L323: 구문 블록 경계입니다 · 소속 ReviewDataResultEditCopyGrid_SelectionChanged.
+L000323 |             { ⟦EOL⟧
+// 해설 L324: 값을 대상에 대입합니다: panel.SelectedResultEditCopyTarget = item
+L000324 |                 panel.SelectedResultEditCopyTarget = item; ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 ReviewDataResultEditCopyGrid_SelectionChanged.
+L000325 |             } ⟦EOL⟧
+// 해설 L326: 구문 블록 경계입니다 · 소속 ReviewDataResultEditCopyGrid_SelectionChanged.
+L000326 |         } ⟦EOL⟧
+L000327 |  ⟦EOL⟧
+// 해설 L328: 선언·서명/매개변수·접근 조건입니다 · T? Drilling.UI.Views.CReviewDataView.FindVisualChild<T>(DependencyObject)
+L000328 |         private static T? FindVisualChild<T>(DependencyObject parent) ⟦EOL⟧
+// 해설 L329: 선언·서명/매개변수·접근 조건입니다 · T? Drilling.UI.Views.CReviewDataView.FindVisualChild<T>(DependencyObject)
+L000329 |             where T : DependencyObject ⟦EOL⟧
+// 해설 L330: 구문 블록 경계입니다 · 소속 FindVisualChild.
+L000330 |         { ⟦EOL⟧
+// 해설 L331: 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChildrenCount(parent) / 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < VisualTreeHelper.GetChildrenCount(parent); index++) / 변수의 초기값을 지정합니다: index = 0
+L000331 |             for (var index = 0; index < VisualTreeHelper.GetChildrenCount(parent); index++) ⟦EOL⟧
+// 해설 L332: 구문 블록 경계입니다 · 소속 FindVisualChild.
+L000332 |             { ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChild(parent, index) / 지역 변수를 선언합니다: var child = VisualTreeHelper.GetChild(parent, index); / 변수의 초기값을 지정합니다: child = VisualTreeHelper.GetChild(parent, index)
+L000333 |                 var child = VisualTreeHelper.GetChild(parent, index); ⟦EOL⟧
+// 해설 L334: 조건에 따라 분기합니다: if (child is T match)
+L000334 |                 if (child is T match) ⟦EOL⟧
+// 해설 L335: 구문 블록 경계입니다 · 소속 FindVisualChild.
+L000335 |                 { ⟦EOL⟧
+// 해설 L336: 호출자에게 값 또는 제어를 반환합니다: return match;
+L000336 |                     return match; ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 FindVisualChild.
+L000337 |                 } ⟦EOL⟧
+L000338 |  ⟦EOL⟧
+// 해설 L339: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindVisualChild<T>(child) / 지역 변수를 선언합니다: var descendant = FindVisualChild<T>(child); / 변수의 초기값을 지정합니다: descendant = FindVisualChild<T>(child)
+L000339 |                 var descendant = FindVisualChild<T>(child); ⟦EOL⟧
+// 해설 L340: 조건에 따라 분기합니다: if (descendant is not null)
+L000340 |                 if (descendant is not null) ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다 · 소속 FindVisualChild.
+L000341 |                 { ⟦EOL⟧
+// 해설 L342: 호출자에게 값 또는 제어를 반환합니다: return descendant;
+L000342 |                     return descendant; ⟦EOL⟧
+// 해설 L343: 구문 블록 경계입니다 · 소속 FindVisualChild.
+L000343 |                 } ⟦EOL⟧
+// 해설 L344: 구문 블록 경계입니다 · 소속 FindVisualChild.
+L000344 |             } ⟦EOL⟧
+L000345 |  ⟦EOL⟧
+// 해설 L346: 호출자에게 값 또는 제어를 반환합니다: return null;
+L000346 |             return null; ⟦EOL⟧
+// 해설 L347: 구문 블록 경계입니다 · 소속 FindVisualChild.
+L000347 |         } ⟦EOL⟧
+// 해설 L348: 구문 블록 경계입니다.
+L000348 |     } ⟦EOL⟧
+// 해설 L349: 구문 블록 경계입니다.
+L000349 | } ⟦EOL⟧

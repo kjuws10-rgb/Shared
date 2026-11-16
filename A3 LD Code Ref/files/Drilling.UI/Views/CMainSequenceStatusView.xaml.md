@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 760ff4dcd8d3b6080ece46994dc15b8a444fa76b89bf6a2747ce0b6822cd092e |
 | 파일 분류 | code |
 | 원본 크기/행 | 15,917 bytes / 200 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CMainSequenceStatusView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMainSequenceStatusView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -23,47 +23,62 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- |
 | 코드 비하인드 후보 | Drilling.UI/Views/CMainSequenceStatusView.xaml.cs |
 | 이름 있는 요소 | SequenceCardRoot, SequenceCardBackground, RunningPulse, ActionPulse, LegendPulse, ScenarioTabPulse, ScenarioPulse, SequenceCardList |
-| 이벤트 개수 | 0 |
+| 이벤트 개수 | 2 |
 | Binding 표현 개수 | 33 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| Detail |
-| IsCompact |
-| OpensMonitor |
-| StateBrush |
-| IsBlinking |
-| IsCompact |
-| Order |
-| TextBrush |
-| IsCompact |
-| FlowTitle |
-| TextBrush |
-| Title |
-| IsCompact |
-| FlowTitle |
-| ProgressText |
-| ProgressText |
-| TextBrush |
-| IsCompact |
-| ProgressText |
-| State |
-| TextBrush |
-| Tabs |
-| Name |
-| BackgroundBrush |
-| BorderBrush |
-| TextBrush |
-| DataContext.SelectScenarioCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| Key |
-| IsBlinking |
-| FlowRows |
-| Stage |
-| Arrow |
-| Process |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| SequenceCardRoot | L7–7 |
+| SequenceCardBackground | L17–17 |
+| RunningPulse | L18–18 |
+| ActionPulse | L25–25 |
+| LegendPulse | L118–118 |
+| ScenarioTabPulse | L156–156 |
+| ScenarioPulse | L162–162 |
+| SequenceCardList | L185–185 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+| MouseLeftButtonUp | CardClicked | L7–7 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| KeyUp | CardKeyUp | L7–7 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding Detail} | L7–7 |
+| {Binding IsCompact} | L12–12 |
+| {Binding OpensMonitor} | L13–13 |
+| {Binding StateBrush} | L17–17 |
+| {Binding IsBlinking} | L23–23 |
+| {Binding IsCompact} | L42–42 |
+| {Binding Order} | L50–50 |
+| {Binding TextBrush} | L50–50 |
+| {Binding IsCompact} | L51–51 |
+| {Binding FlowTitle} | L54–54 |
+| {Binding TextBrush} | L54–54 |
+| {Binding Title} | L56–56 |
+| {Binding IsCompact} | L56–56 |
+| {Binding FlowTitle} | L56–56 |
+| {Binding ProgressText} | L59–59 |
+| {Binding ProgressText} | L59–59 |
+| {Binding TextBrush} | L59–59 |
+| {Binding IsCompact} | L64–64 |
+| {Binding ProgressText} | L65–65 |
+| {Binding State} | L73–73 |
+| {Binding TextBrush} | L73–73 |
+| {Binding Tabs} | L143–143 |
+| {Binding Name} | L147–147 |
+| {Binding BackgroundBrush} | L148–148 |
+| {Binding BorderBrush} | L148–148 |
+| {Binding TextBrush} | L148–148 |
+| {Binding DataContext.SelectScenarioCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L149–149 |
+| {Binding Key} | L150–150 |
+| {Binding IsBlinking} | L160–160 |
+| {Binding FlowRows} | L185–185 |
+| {Binding Stage} | L191–191 |
+| {Binding Arrow} | L192–192 |
+| {Binding Process} | L193–193 |
 
 ## 원문 전체 주석 해설본
 

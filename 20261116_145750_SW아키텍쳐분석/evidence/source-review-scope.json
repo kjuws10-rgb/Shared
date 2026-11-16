@@ -1,0 +1,2509 @@
+{
+  "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "scope": "Targeted source sections, actual diff and affected callers/consumers; not a claim of every original line being read by a person. No operational CSV records.",
+  "architecture": [
+    {
+      "path": "Config/JHMI_ALARMLIST.csv",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 320,
+          "endLine": 320
+        }
+      ]
+    },
+    {
+      "path": "Config/JHMI_INTERFACE.csv",
+      "reviewLevel": "Diff keys/schema only; operating values withheld",
+      "citedRanges": []
+    },
+    {
+      "path": "Config/JHMI_MELSEC_MAP.csv",
+      "reviewLevel": "Diff keys/schema only; operating values withheld",
+      "citedRanges": []
+    },
+    {
+      "path": "Config/JHMI_RCP.csv",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 177,
+          "endLine": 179
+        }
+      ]
+    },
+    {
+      "path": "Config/Setting/Setting.csv",
+      "reviewLevel": "Diff keys/schema only; operating values withheld",
+      "citedRanges": []
+    },
+    {
+      "path": "Drilling.Common/Automation/CAutomationManager.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 315,
+          "endLine": 333
+        },
+        {
+          "startLine": 323,
+          "endLine": 333
+        },
+        {
+          "startLine": 301,
+          "endLine": 343
+        },
+        {
+          "startLine": 346,
+          "endLine": 372
+        },
+        {
+          "startLine": 323,
+          "endLine": 333
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 29,
+          "endLine": 56
+        },
+        {
+          "startLine": 130,
+          "endLine": 174
+        },
+        {
+          "startLine": 265,
+          "endLine": 288
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Interface/Automation1/CAutomation1Comm.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 13,
+          "endLine": 25
+        },
+        {
+          "startLine": 76,
+          "endLine": 157
+        },
+        {
+          "startLine": 123,
+          "endLine": 143
+        },
+        {
+          "startLine": 16,
+          "endLine": 25
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Interface/CComm.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 12,
+          "endLine": 60
+        },
+        {
+          "startLine": 138,
+          "endLine": 153
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Interface/CInterfaceManager.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 658,
+          "endLine": 695
+        },
+        {
+          "startLine": 630,
+          "endLine": 655
+        },
+        {
+          "startLine": 2984,
+          "endLine": 3003
+        },
+        {
+          "startLine": 97,
+          "endLine": 107
+        },
+        {
+          "startLine": 3144,
+          "endLine": 3161
+        },
+        {
+          "startLine": 168,
+          "endLine": 180
+        },
+        {
+          "startLine": 3144,
+          "endLine": 3149
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 15,
+          "endLine": 58
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Managers/CManager.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 93,
+          "endLine": 142
+        },
+        {
+          "startLine": 212,
+          "endLine": 226
+        },
+        {
+          "startLine": 267,
+          "endLine": 276
+        },
+        {
+          "startLine": 278,
+          "endLine": 286
+        },
+        {
+          "startLine": 228,
+          "endLine": 265
+        },
+        {
+          "startLine": 126,
+          "endLine": 151
+        },
+        {
+          "startLine": 267,
+          "endLine": 276
+        },
+        {
+          "startLine": 288,
+          "endLine": 311
+        },
+        {
+          "startLine": 146,
+          "endLine": 151
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Managers/CRecipeManager.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 406,
+          "endLine": 418
+        },
+        {
+          "startLine": 355,
+          "endLine": 405
+        },
+        {
+          "startLine": 347,
+          "endLine": 353
+        },
+        {
+          "startLine": 73,
+          "endLine": 93
+        },
+        {
+          "startLine": 147,
+          "endLine": 168
+        },
+        {
+          "startLine": 74,
+          "endLine": 93
+        },
+        {
+          "startLine": 74,
+          "endLine": 109
+        },
+        {
+          "startLine": 425,
+          "endLine": 449
+        },
+        {
+          "startLine": 11,
+          "endLine": 32
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Managers/CSettingManager.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 246,
+          "endLine": 278
+        },
+        {
+          "startLine": 26,
+          "endLine": 70
+        },
+        {
+          "startLine": 72,
+          "endLine": 102
+        },
+        {
+          "startLine": 104,
+          "endLine": 148
+        },
+        {
+          "startLine": 16,
+          "endLine": 22
+        },
+        {
+          "startLine": 104,
+          "endLine": 148
+        },
+        {
+          "startLine": 23,
+          "endLine": 49
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Motion/CMotionManager.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 376,
+          "endLine": 396
+        },
+        {
+          "startLine": 362,
+          "endLine": 396
+        },
+        {
+          "startLine": 96,
+          "endLine": 123
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 822,
+          "endLine": 846
+        },
+        {
+          "startLine": 996,
+          "endLine": 1053
+        },
+        {
+          "startLine": 959,
+          "endLine": 994
+        },
+        {
+          "startLine": 558,
+          "endLine": 602
+        },
+        {
+          "startLine": 129,
+          "endLine": 199
+        },
+        {
+          "startLine": 789,
+          "endLine": 819
+        },
+        {
+          "startLine": 25,
+          "endLine": 47
+        },
+        {
+          "startLine": 49,
+          "endLine": 88
+        },
+        {
+          "startLine": 996,
+          "endLine": 1003
+        },
+        {
+          "startLine": 25,
+          "endLine": 45
+        },
+        {
+          "startLine": 789,
+          "endLine": 819
+        },
+        {
+          "startLine": 789,
+          "endLine": 819
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 11,
+          "endLine": 34
+        },
+        {
+          "startLine": 203,
+          "endLine": 209
+        },
+        {
+          "startLine": 21,
+          "endLine": 55
+        },
+        {
+          "startLine": 212,
+          "endLine": 214
+        },
+        {
+          "startLine": 50,
+          "endLine": 87
+        },
+        {
+          "startLine": 90,
+          "endLine": 138
+        },
+        {
+          "startLine": 139,
+          "endLine": 156
+        },
+        {
+          "startLine": 157,
+          "endLine": 200
+        },
+        {
+          "startLine": 139,
+          "endLine": 156
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 1589,
+          "endLine": 1605
+        },
+        {
+          "startLine": 1120,
+          "endLine": 1152
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Station/CStationManager.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 31,
+          "endLine": 66
+        },
+        {
+          "startLine": 300,
+          "endLine": 338
+        },
+        {
+          "startLine": 263,
+          "endLine": 297
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 1527,
+          "endLine": 1560
+        },
+        {
+          "startLine": 3984,
+          "endLine": 3996
+        },
+        {
+          "startLine": 1604,
+          "endLine": 1640
+        },
+        {
+          "startLine": 1604,
+          "endLine": 1674
+        },
+        {
+          "startLine": 657,
+          "endLine": 689
+        },
+        {
+          "startLine": 692,
+          "endLine": 749
+        },
+        {
+          "startLine": 3972,
+          "endLine": 3984
+        },
+        {
+          "startLine": 3972,
+          "endLine": 3984
+        },
+        {
+          "startLine": 5028,
+          "endLine": 5063
+        },
+        {
+          "startLine": 3984,
+          "endLine": 4016
+        },
+        {
+          "startLine": 5198,
+          "endLine": 5215
+        },
+        {
+          "startLine": 5243,
+          "endLine": 5270
+        },
+        {
+          "startLine": 210,
+          "endLine": 268
+        },
+        {
+          "startLine": 271,
+          "endLine": 321
+        },
+        {
+          "startLine": 1564,
+          "endLine": 1596
+        },
+        {
+          "startLine": 324,
+          "endLine": 380
+        },
+        {
+          "startLine": 383,
+          "endLine": 431
+        },
+        {
+          "startLine": 3765,
+          "endLine": 3790
+        },
+        {
+          "startLine": 4367,
+          "endLine": 4406
+        },
+        {
+          "startLine": 4603,
+          "endLine": 4618
+        },
+        {
+          "startLine": 4652,
+          "endLine": 4702
+        },
+        {
+          "startLine": 4728,
+          "endLine": 4738
+        },
+        {
+          "startLine": 4631,
+          "endLine": 4642
+        },
+        {
+          "startLine": 4414,
+          "endLine": 4458
+        },
+        {
+          "startLine": 4740,
+          "endLine": 4761
+        },
+        {
+          "startLine": 296,
+          "endLine": 320
+        },
+        {
+          "startLine": 372,
+          "endLine": 404
+        },
+        {
+          "startLine": 220,
+          "endLine": 224
+        },
+        {
+          "startLine": 4583,
+          "endLine": 4589
+        },
+        {
+          "startLine": 4728,
+          "endLine": 4738
+        },
+        {
+          "startLine": 1527,
+          "endLine": 1560
+        }
+      ]
+    },
+    {
+      "path": "Drilling.Common/Threading/CtrlThread.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 4,
+          "endLine": 15
+        },
+        {
+          "startLine": 232,
+          "endLine": 281
+        },
+        {
+          "startLine": 286,
+          "endLine": 293
+        },
+        {
+          "startLine": 128,
+          "endLine": 186
+        }
+      ]
+    },
+    {
+      "path": "Drilling.File/Correction/CAlignOffsetLogFile.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 14,
+          "endLine": 35
+        }
+      ]
+    },
+    {
+      "path": "Drilling.File/JHMI/CInterfaceFile.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 107,
+          "endLine": 110
+        }
+      ]
+    },
+    {
+      "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 26,
+          "endLine": 30
+        },
+        {
+          "startLine": 847,
+          "endLine": 886
+        },
+        {
+          "startLine": 889,
+          "endLine": 923
+        },
+        {
+          "startLine": 120,
+          "endLine": 165
+        },
+        {
+          "startLine": 166,
+          "endLine": 241
+        },
+        {
+          "startLine": 188,
+          "endLine": 206
+        }
+      ]
+    },
+    {
+      "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 1659,
+          "endLine": 1670
+        }
+      ]
+    },
+    {
+      "path": "Drilling.File/JHMI/CSettingFile.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 289,
+          "endLine": 346
+        },
+        {
+          "startLine": 52,
+          "endLine": 120
+        },
+        {
+          "startLine": 328,
+          "endLine": 367
+        }
+      ]
+    },
+    {
+      "path": "Drilling.File/Parser/CCsvParser.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 8,
+          "endLine": 10
+        },
+        {
+          "startLine": 58,
+          "endLine": 93
+        },
+        {
+          "startLine": 432,
+          "endLine": 475
+        }
+      ]
+    },
+    {
+      "path": "Drilling.File/Product/CProductFile.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 8,
+          "endLine": 11
+        },
+        {
+          "startLine": 8,
+          "endLine": 11
+        },
+        {
+          "startLine": 258,
+          "endLine": 265
+        },
+        {
+          "startLine": 109,
+          "endLine": 178
+        },
+        {
+          "startLine": 73,
+          "endLine": 106
+        },
+        {
+          "startLine": 182,
+          "endLine": 201
+        },
+        {
+          "startLine": 168,
+          "endLine": 176
+        },
+        {
+          "startLine": 298,
+          "endLine": 325
+        }
+      ]
+    },
+    {
+      "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": []
+    },
+    {
+      "path": "Drilling.File/Script/CAutomation1ScriptFile.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 9,
+          "endLine": 19
+        },
+        {
+          "startLine": 51,
+          "endLine": 107
+        },
+        {
+          "startLine": 174,
+          "endLine": 243
+        },
+        {
+          "startLine": 431,
+          "endLine": 512
+        },
+        {
+          "startLine": 701,
+          "endLine": 713
+        },
+        {
+          "startLine": 711,
+          "endLine": 713
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/CApp.xaml.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 23,
+          "endLine": 45
+        },
+        {
+          "startLine": 53,
+          "endLine": 71
+        },
+        {
+          "startLine": 47,
+          "endLine": 51
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/CAppStartup.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 14,
+          "endLine": 69
+        },
+        {
+          "startLine": 36,
+          "endLine": 68
+        },
+        {
+          "startLine": 16,
+          "endLine": 35
+        },
+        {
+          "startLine": 121,
+          "endLine": 135
+        },
+        {
+          "startLine": 137,
+          "endLine": 151
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/CRootView.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 248,
+          "endLine": 255
+        },
+        {
+          "startLine": 128,
+          "endLine": 165
+        },
+        {
+          "startLine": 230,
+          "endLine": 235
+        },
+        {
+          "startLine": 542,
+          "endLine": 555
+        },
+        {
+          "startLine": 2235,
+          "endLine": 2269
+        },
+        {
+          "startLine": 2894,
+          "endLine": 2907
+        },
+        {
+          "startLine": 1622,
+          "endLine": 1648
+        },
+        {
+          "startLine": 611,
+          "endLine": 622
+        },
+        {
+          "startLine": 1622,
+          "endLine": 1648
+        },
+        {
+          "startLine": 2894,
+          "endLine": 2907
+        },
+        {
+          "startLine": 2894,
+          "endLine": 2907
+        },
+        {
+          "startLine": 2235,
+          "endLine": 2248
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/CUiLogService.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 17,
+          "endLine": 69
+        },
+        {
+          "startLine": 72,
+          "endLine": 92
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/Drilling.UI.csproj",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": []
+    },
+    {
+      "path": "Drilling.UI/Menu/CBindingBase.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 737,
+          "endLine": 790
+        },
+        {
+          "startLine": 737,
+          "endLine": 790
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 209,
+          "endLine": 271
+        },
+        {
+          "startLine": 485,
+          "endLine": 518
+        },
+        {
+          "startLine": 545,
+          "endLine": 568
+        },
+        {
+          "startLine": 852,
+          "endLine": 887
+        },
+        {
+          "startLine": 14,
+          "endLine": 43
+        },
+        {
+          "startLine": 209,
+          "endLine": 243
+        },
+        {
+          "startLine": 316,
+          "endLine": 320
+        },
+        {
+          "startLine": 790,
+          "endLine": 850
+        },
+        {
+          "startLine": 571,
+          "endLine": 611
+        },
+        {
+          "startLine": 852,
+          "endLine": 887
+        },
+        {
+          "startLine": 916,
+          "endLine": 946
+        },
+        {
+          "startLine": 394,
+          "endLine": 405
+        },
+        {
+          "startLine": 545,
+          "endLine": 611
+        },
+        {
+          "startLine": 633,
+          "endLine": 704
+        },
+        {
+          "startLine": 711,
+          "endLine": 774
+        },
+        {
+          "startLine": 1275,
+          "endLine": 1332
+        },
+        {
+          "startLine": 1033,
+          "endLine": 1107
+        },
+        {
+          "startLine": 1145,
+          "endLine": 1161
+        },
+        {
+          "startLine": 1475,
+          "endLine": 1534
+        },
+        {
+          "startLine": 451,
+          "endLine": 477
+        },
+        {
+          "startLine": 485,
+          "endLine": 518
+        },
+        {
+          "startLine": 1038,
+          "endLine": 1044
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 9,
+          "endLine": 43
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 29,
+          "endLine": 58
+        },
+        {
+          "startLine": 116,
+          "endLine": 152
+        },
+        {
+          "startLine": 41,
+          "endLine": 113
+        },
+        {
+          "startLine": 155,
+          "endLine": 171
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuAlarm.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 289,
+          "endLine": 319
+        },
+        {
+          "startLine": 418,
+          "endLine": 425
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuBase.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 434,
+          "endLine": 446
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 3790,
+          "endLine": 3805
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuMain.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": []
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 3077,
+          "endLine": 3134
+        },
+        {
+          "startLine": 3317,
+          "endLine": 3344
+        },
+        {
+          "startLine": 3447,
+          "endLine": 3487
+        },
+        {
+          "startLine": 3531,
+          "endLine": 3595
+        },
+        {
+          "startLine": 4190,
+          "endLine": 4196
+        },
+        {
+          "startLine": 2859,
+          "endLine": 2887
+        },
+        {
+          "startLine": 3802,
+          "endLine": 3809
+        },
+        {
+          "startLine": 2665,
+          "endLine": 2676
+        },
+        {
+          "startLine": 3177,
+          "endLine": 3233
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs",
+      "reviewLevel": "Inherited cited source ranges compared unchanged to previous baseline",
+      "citedRanges": [
+        {
+          "startLine": 17,
+          "endLine": 31
+        },
+        {
+          "startLine": 9,
+          "endLine": 59
+        },
+        {
+          "startLine": 108,
+          "endLine": 136
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 15,
+          "endLine": 37
+        },
+        {
+          "startLine": 95,
+          "endLine": 139
+        }
+      ]
+    },
+    {
+      "path": "Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": []
+    },
+    {
+      "path": "Drilling.UI/Views/CDefaultOffsetView.xaml.cs",
+      "reviewLevel": "Targeted current source sections and/or source diff; not a claim of every line review",
+      "citedRanges": [
+        {
+          "startLine": 78,
+          "endLine": 114
+        }
+      ]
+    }
+  ],
+  "review": [
+    {
+      "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+      "sha256": "a956a1513d4cb63fdb949e6879e356e4e4f4224aae2b644f38e5ea87c81c6431",
+      "bytes": 35008,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          266,
+          281
+        ],
+        [
+          282,
+          304
+        ],
+        [
+          237,
+          251
+        ],
+        [
+          364,
+          375
+        ],
+        [
+          408,
+          437
+        ],
+        [
+          306,
+          316
+        ],
+        [
+          408,
+          418
+        ],
+        [
+          367,
+          375
+        ],
+        [
+          433,
+          442
+        ],
+        [
+          444,
+          475
+        ],
+        [
+          258,
+          263
+        ],
+        [
+          318,
+          327
+        ],
+        [
+          329,
+          359
+        ]
+      ],
+      "changed_in_interval": false
+    },
+    {
+      "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+      "sha256": "f23b437ff6e2837327bb10f269f3b672f4099889b1f0d803efdb83f76e5d0a5c",
+      "bytes": 21933,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          29,
+          55
+        ],
+        [
+          14,
+          19
+        ],
+        [
+          97,
+          108
+        ],
+        [
+          265,
+          285
+        ],
+        [
+          207,
+          231
+        ],
+        [
+          204,
+          220
+        ],
+        [
+          129,
+          157
+        ],
+        [
+          111,
+          126
+        ],
+        [
+          265,
+          284
+        ],
+        [
+          207,
+          231
+        ],
+        [
+          160,
+          173
+        ],
+        [
+          174,
+          201
+        ],
+        [
+          34,
+          39
+        ],
+        [
+          237,
+          260
+        ],
+        [
+          58,
+          67
+        ],
+        [
+          89,
+          126
+        ],
+        [
+          160,
+          201
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+      "sha256": "3483e19c0f2d47dfc533a0b9967a0308e654dd43e582ab0b560cad020c4477a4",
+      "bytes": 49449,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          93,
+          123
+        ],
+        [
+          272,
+          337
+        ],
+        [
+          93,
+          123
+        ],
+        [
+          576,
+          594
+        ],
+        [
+          272,
+          308
+        ],
+        [
+          311,
+          337
+        ],
+        [
+          558,
+          559
+        ],
+        [
+          643,
+          667
+        ],
+        [
+          984,
+          985
+        ],
+        [
+          329,
+          337
+        ],
+        [
+          530,
+          548
+        ],
+        [
+          955,
+          975
+        ],
+        [
+          576,
+          594
+        ],
+        [
+          955,
+          975
+        ],
+        [
+          272,
+          308
+        ],
+        [
+          543,
+          547
+        ]
+      ],
+      "changed_in_interval": false
+    },
+    {
+      "path": "Drilling.Common/Managers/CManager.cs",
+      "sha256": "6db41ef7d7938136bce10c0d3acd4d9293a57cc4336ff26dc3a79041db2914f8",
+      "bytes": 29421,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          146,
+          151
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.Common/Managers/CRecipeManager.cs",
+      "sha256": "c09f70d09f8225715c4b53f6d42a78fcc00001814dc1dfd4c961ceedec099d22",
+      "bytes": 25120,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          426,
+          450
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.Common/Product/CProductManager.cs",
+      "sha256": "93d3416633fddbcbd2ea9efe7958bd79a32c00eff8c017fb6cebfe757068596d",
+      "bytes": 43114,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          444,
+          506
+        ],
+        [
+          444,
+          506
+        ],
+        [
+          25,
+          121
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "sha256": "b3ef33b6730ad5543213def4ca3b239fae82634ff288777d2ff05af311cd1b16",
+      "bytes": 70005,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          853,
+          910
+        ],
+        [
+          788,
+          850
+        ],
+        [
+          853,
+          910
+        ],
+        [
+          813,
+          850
+        ],
+        [
+          881,
+          947
+        ],
+        [
+          767,
+          785
+        ],
+        [
+          928,
+          974
+        ],
+        [
+          928,
+          947
+        ],
+        [
+          139,
+          155
+        ],
+        [
+          1140,
+          1193
+        ],
+        [
+          1114,
+          1138
+        ],
+        [
+          1167,
+          1193
+        ],
+        [
+          139,
+          155
+        ],
+        [
+          31,
+          35
+        ],
+        [
+          139,
+          155
+        ],
+        [
+          203,
+          209
+        ],
+        [
+          59,
+          65
+        ],
+        [
+          139,
+          155
+        ],
+        [
+          139,
+          155
+        ],
+        [
+          139,
+          155
+        ]
+      ],
+      "changed_in_interval": false
+    },
+    {
+      "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+      "sha256": "bb019c240da5f1f89e014c4521db55e5cbb2afbbcc38916d622bd1c344a057f5",
+      "bytes": 29088,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          203,
+          288
+        ],
+        [
+          269,
+          278
+        ],
+        [
+          211,
+          226
+        ],
+        [
+          236,
+          278
+        ],
+        [
+          171,
+          198
+        ],
+        [
+          43,
+          76
+        ],
+        [
+          226,
+          246
+        ],
+        [
+          246,
+          283
+        ],
+        [
+          171,
+          198
+        ],
+        [
+          95,
+          151
+        ],
+        [
+          43,
+          77
+        ],
+        [
+          95,
+          122
+        ],
+        [
+          29,
+          76
+        ],
+        [
+          165,
+          168
+        ],
+        [
+          79,
+          122
+        ],
+        [
+          103,
+          121
+        ],
+        [
+          123,
+          151
+        ],
+        [
+          123,
+          168
+        ],
+        [
+          43,
+          76
+        ],
+        [
+          171,
+          198
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "sha256": "3829f3b7ea71efc2d57985ef2001e32bfd34a8c3a58e380831838adfddcc7e95",
+      "bytes": 240994,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          151,
+          193
+        ],
+        [
+          2046,
+          2076
+        ],
+        [
+          496,
+          547
+        ],
+        [
+          674,
+          770
+        ],
+        [
+          151,
+          193
+        ],
+        [
+          994,
+          1014
+        ],
+        [
+          174,
+          193
+        ],
+        [
+          735,
+          770
+        ],
+        [
+          151,
+          184
+        ],
+        [
+          179,
+          193
+        ],
+        [
+          994,
+          1014
+        ],
+        [
+          1004,
+          1014
+        ],
+        [
+          3607,
+          3633
+        ],
+        [
+          496,
+          565
+        ],
+        [
+          735,
+          770
+        ],
+        [
+          151,
+          193
+        ],
+        [
+          2633,
+          2681
+        ],
+        [
+          211,
+          246
+        ],
+        [
+          2763,
+          2814
+        ],
+        [
+          2817,
+          2848
+        ],
+        [
+          27,
+          33
+        ],
+        [
+          211,
+          246
+        ],
+        [
+          2124,
+          2142
+        ],
+        [
+          2520,
+          2523
+        ],
+        [
+          2046,
+          2076
+        ],
+        [
+          2281,
+          2307
+        ],
+        [
+          2069,
+          2076
+        ],
+        [
+          2763,
+          2814
+        ],
+        [
+          2817,
+          2848
+        ],
+        [
+          2281,
+          2294
+        ],
+        [
+          2297,
+          2307
+        ],
+        [
+          2297,
+          2307
+        ],
+        [
+          2235,
+          2266
+        ],
+        [
+          3607,
+          3626
+        ],
+        [
+          2235,
+          2267
+        ],
+        [
+          2281,
+          2307
+        ],
+        [
+          1122,
+          1162
+        ],
+        [
+          4009,
+          4046
+        ],
+        [
+          3537,
+          3576
+        ],
+        [
+          3551,
+          3602
+        ],
+        [
+          2297,
+          2307
+        ],
+        [
+          3607,
+          3633
+        ],
+        [
+          2235,
+          2267
+        ],
+        [
+          1590,
+          1606
+        ],
+        [
+          1690,
+          1713
+        ],
+        [
+          3120,
+          3140
+        ],
+        [
+          3077,
+          3106
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+      "sha256": "fec50e7ea6890b4831eeed538aee7eff6c6570e4f1d7ea3f009368fa2bafb84b",
+      "bytes": 24934,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          361,
+          401
+        ],
+        [
+          361,
+          401
+        ]
+      ],
+      "changed_in_interval": false
+    },
+    {
+      "path": "Drilling.Common/Station/CStageReviewSequences.cs",
+      "sha256": "a0def46bc2becd08154a2478e307414f0499955a68bf878ab496bf79ef544e6a",
+      "bytes": 58195,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          742,
+          805
+        ],
+        [
+          742,
+          761
+        ],
+        [
+          753,
+          805
+        ]
+      ],
+      "changed_in_interval": false
+    },
+    {
+      "path": "Drilling.Common/Station/CStationManager.cs",
+      "sha256": "c375c6a07673237ba95c136309ffdcfe9d1407ec899ac959e371b074dc47982b",
+      "bytes": 27699,
+      "review_mode": "supporting source or UI fragment/search review; not a claim of whole-file semantic review",
+      "cited_ranges": [],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "sha256": "934432b2d9173acb24fcb516330ef562c117dac79dfbc626e7b25755e64924c1",
+      "bytes": 348466,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          3984,
+          3995
+        ],
+        [
+          1543,
+          1561
+        ],
+        [
+          1547,
+          1561
+        ],
+        [
+          5713,
+          5730
+        ],
+        [
+          5728,
+          5748
+        ],
+        [
+          3765,
+          3786
+        ],
+        [
+          4333,
+          4406
+        ],
+        [
+          4333,
+          4364
+        ],
+        [
+          4631,
+          4661
+        ],
+        [
+          4652,
+          4697
+        ],
+        [
+          4603,
+          4617
+        ],
+        [
+          4665,
+          4697
+        ],
+        [
+          4682,
+          4697
+        ],
+        [
+          4728,
+          4737
+        ],
+        [
+          4347,
+          4357
+        ],
+        [
+          4388,
+          4406
+        ],
+        [
+          4631,
+          4642
+        ],
+        [
+          3984,
+          3995
+        ],
+        [
+          4257,
+          4265
+        ],
+        [
+          5789,
+          5811
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.File/Product/CProductFile.cs",
+      "sha256": "95c7adb3e3b691e4df22deaf53a5cc713ff2a1e77cd066c911935f963b79b965",
+      "bytes": 22109,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          168,
+          175
+        ],
+        [
+          309,
+          320
+        ]
+      ],
+      "changed_in_interval": false
+    },
+    {
+      "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "sha256": "b19d8135beeb0115fad9b33858224ae26ab4383738383a6f82956152f328a35b",
+      "bytes": 29435,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          636,
+          709
+        ],
+        [
+          214,
+          257
+        ],
+        [
+          145,
+          211
+        ],
+        [
+          565,
+          609
+        ],
+        [
+          260,
+          348
+        ],
+        [
+          307,
+          374
+        ],
+        [
+          565,
+          609
+        ],
+        [
+          145,
+          211
+        ]
+      ],
+      "changed_in_interval": false
+    },
+    {
+      "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+      "sha256": "6a0a8dc27d14e56e7e5bfb3abff4845393e6bfb266763edeee713a9ae4e0e1aa",
+      "bytes": 74456,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          351,
+          400
+        ],
+        [
+          531,
+          570
+        ],
+        [
+          1023,
+          1076
+        ],
+        [
+          157,
+          183
+        ],
+        [
+          396,
+          400
+        ],
+        [
+          1027,
+          1036
+        ],
+        [
+          228,
+          267
+        ],
+        [
+          142,
+          256
+        ],
+        [
+          142,
+          226
+        ],
+        [
+          228,
+          256
+        ],
+        [
+          251,
+          267
+        ],
+        [
+          351,
+          425
+        ],
+        [
+          359,
+          363
+        ],
+        [
+          228,
+          248
+        ],
+        [
+          369,
+          401
+        ],
+        [
+          157,
+          267
+        ],
+        [
+          228,
+          267
+        ],
+        [
+          376,
+          426
+        ],
+        [
+          503,
+          521
+        ],
+        [
+          503,
+          521
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/CRootView.cs",
+      "sha256": "47cdf3c77b3f372eb23037d22d99def3ed8b796f5c5825fb62aa73c4ecaebc56",
+      "bytes": 126392,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          2260,
+          2270
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Menu/CBindingBase.cs",
+      "sha256": "a80149030260c0e2e9b0a7439c90565f1a875449d3b968ee83bb2a6e1b5ccc64",
+      "bytes": 140581,
+      "review_mode": "supporting source or UI fragment/search review; not a claim of whole-file semantic review",
+      "cited_ranges": [],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs",
+      "sha256": "8d2a3f1e2aa8de3a7f87950633058eb294c7145af6ddfcbceb2b0904dde75439",
+      "bytes": 20344,
+      "review_mode": "supporting source or UI fragment/search review; not a claim of whole-file semantic review",
+      "cited_ranges": [],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+      "sha256": "94d3504ad6234fc4dab43b8243b321cc50ae2d804d17429bca5deb5d417e3b67",
+      "bytes": 471835,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          383,
+          409
+        ],
+        [
+          3175,
+          3199
+        ],
+        [
+          3350,
+          3364
+        ],
+        [
+          3788,
+          3805
+        ],
+        [
+          3778,
+          3805
+        ],
+        [
+          3213,
+          3238
+        ],
+        [
+          3265,
+          3325
+        ],
+        [
+          3807,
+          3828
+        ],
+        [
+          3350,
+          3364
+        ],
+        [
+          3385,
+          3444
+        ],
+        [
+          3447,
+          3465
+        ],
+        [
+          3599,
+          3613
+        ],
+        [
+          3593,
+          3597
+        ],
+        [
+          3753,
+          3777
+        ],
+        [
+          5955,
+          5966
+        ],
+        [
+          6088,
+          6096
+        ],
+        [
+          7189,
+          7200
+        ],
+        [
+          7253,
+          7261
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs",
+      "sha256": "a98f68b5dfca62eabb101212e505b496a9654353b880eb9f38bb90b77bc181fd",
+      "bytes": 21943,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          81,
+          89
+        ],
+        [
+          166,
+          188
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+      "sha256": "27fb4c971185eab8043ca8e3bbbca92ca4b5f7a52b4a515fc7aee2aadea77721",
+      "bytes": 69660,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          744,
+          774
+        ],
+        [
+          887,
+          910
+        ],
+        [
+          1128,
+          1185
+        ],
+        [
+          672,
+          715
+        ],
+        [
+          865,
+          869
+        ],
+        [
+          650,
+          812
+        ],
+        [
+          272,
+          285
+        ],
+        [
+          1374,
+          1396
+        ],
+        [
+          167,
+          180
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs",
+      "sha256": "6de1a2033ed4cee447d29aa14b384a7aca0b6e26d514df62e96a34950a988384",
+      "bytes": 33483,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          302,
+          343
+        ],
+        [
+          369,
+          405
+        ],
+        [
+          554,
+          573
+        ],
+        [
+          244,
+          277
+        ],
+        [
+          407,
+          458
+        ],
+        [
+          628,
+          708
+        ],
+        [
+          234,
+          238
+        ],
+        [
+          302,
+          405
+        ],
+        [
+          158,
+          214
+        ],
+        [
+          407,
+          519
+        ],
+        [
+          428,
+          456
+        ],
+        [
+          659,
+          665
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+      "sha256": "b721dfa2304b96dfc6d5c22ac9a9c361b5c5d07b533481431e9d47db75383fae",
+      "bytes": 39903,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          263,
+          268
+        ],
+        [
+          274,
+          283
+        ],
+        [
+          514,
+          521
+        ],
+        [
+          274,
+          283
+        ],
+        [
+          250,
+          337
+        ],
+        [
+          433,
+          458
+        ],
+        [
+          74,
+          114
+        ],
+        [
+          375,
+          405
+        ],
+        [
+          433,
+          466
+        ],
+        [
+          284,
+          287
+        ],
+        [
+          433,
+          466
+        ],
+        [
+          433,
+          458
+        ],
+        [
+          461,
+          466
+        ],
+        [
+          299,
+          331
+        ]
+      ],
+      "changed_in_interval": false
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs",
+      "sha256": "f5ba162be1fb07f05954469f04a5cb959a3f47734f6ec0babd36e170762b91ff",
+      "bytes": 43511,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          339,
+          395
+        ],
+        [
+          385,
+          411
+        ],
+        [
+          346,
+          398
+        ],
+        [
+          39,
+          49
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+      "sha256": "b2df0de85807d47b52d150c3b330a2ca7efc53508992d570526320565af64e42",
+      "bytes": 356980,
+      "review_mode": "supporting source or UI fragment/search review; not a claim of whole-file semantic review",
+      "cited_ranges": [],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+      "sha256": "a3c777c74094942c21833c4a36c5654e02dd10623a590992bbdf517e812f6116",
+      "bytes": 214686,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          1090,
+          1109
+        ],
+        [
+          1163,
+          1195
+        ],
+        [
+          1807,
+          1859
+        ],
+        [
+          3163,
+          3195
+        ],
+        [
+          3221,
+          3258
+        ],
+        [
+          1160,
+          1195
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Views/CCorrectionView.xaml",
+      "sha256": "869901af44bf114d89ba3c6b608d1bd77508616d97c83b24fcb122c5a1afd0e7",
+      "bytes": 60192,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          225,
+          281
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Views/CCorrectionView.xaml.cs",
+      "sha256": "a1a61079de45070cee11939d3e2148a1c42a77017f1f130bf46e6ad394e68f07",
+      "bytes": 4911,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          18,
+          54
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Views/CDefaultOffsetView.xaml",
+      "sha256": "0a2a3ccf2862b0207f857502f6c6945a6f36c1ab4260c7f241a90a625448ac19",
+      "bytes": 27264,
+      "review_mode": "supporting source or UI fragment/search review; not a claim of whole-file semantic review",
+      "cited_ranges": [],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Views/CDefaultOffsetView.xaml.cs",
+      "sha256": "fb1b57861febe9a6918c7942e19a1dd01fcfb66756b685a874d611662bc6e5aa",
+      "bytes": 16554,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          78,
+          112
+        ],
+        [
+          176,
+          192
+        ],
+        [
+          78,
+          147
+        ],
+        [
+          176,
+          194
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Views/CMonitorView.xaml",
+      "sha256": "d7595c09cb605ad998ce8c1805ff06d14319f655f3356d90d39b0374811fa42d",
+      "bytes": 284245,
+      "review_mode": "supporting source or UI fragment/search review; not a claim of whole-file semantic review",
+      "cited_ranges": [],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Views/CReviewDataView.xaml",
+      "sha256": "320d10f4b95659262e5925d522de580e4fa0e400d4d8630364daff1357910498",
+      "bytes": 108427,
+      "review_mode": "supporting source or UI fragment/search review; not a claim of whole-file semantic review",
+      "cited_ranges": [],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Views/CReviewDataView.xaml.cs",
+      "sha256": "0a2ab0d2de63faefcb4eba373bb8b3f2b46cf50e9897e3ddfbbb500bd7ac2138",
+      "bytes": 13295,
+      "review_mode": "cited function ranges plus actual diff and affected callers/consumers",
+      "cited_ranges": [
+        [
+          157,
+          219
+        ]
+      ],
+      "changed_in_interval": true
+    },
+    {
+      "path": "Drilling.UI/Views/CReviewView.xaml",
+      "sha256": "cf25ef28dc0b2c33f9ac69f56757e9c134f1a1da8a5bf647b255c62b7c511a97",
+      "bytes": 96904,
+      "review_mode": "supporting source or UI fragment/search review; not a claim of whole-file semantic review",
+      "cited_ranges": [],
+      "changed_in_interval": true
+    }
+  ],
+  "privateAuditFiles": "Detailed working audit paths and private workspace context are not published. Public check summaries are in the reference validation directory."
+}

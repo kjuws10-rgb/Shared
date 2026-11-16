@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 166fe76a3ae11df7e528e56d7aab66e56cdc745a0224350e7c8f72b40947dd22 |
 | 파일 분류 | code |
 | 원본 크기/행 | 23,387 bytes / 267 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CManualPowerMeasureView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CManualPowerMeasureView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -23,84 +23,99 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- |
 | 코드 비하인드 후보 | Drilling.UI/Views/CManualPowerMeasureView.xaml.cs |
 | 이름 있는 요소 | PowerMeasureContent, HeadGrid, AutoToleranceColumn, AutoAttemptsColumn, HeadGraphs, ViewToggle |
-| 이벤트 개수 | 1 |
-| Binding 표현 개수 | 69 |
+| 이벤트 개수 | 4 |
+| Binding 표현 개수 | 70 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
-| Loaded | FitHeadRows | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| Maximum |
-| TargetLineY |
-| TargetLineY |
-| Points |
-| LastPointLeft |
-| LastPointTop |
-| LastPointVisibility |
-| Attempts |
-| IsGraphSelected |
-| IsReadOnly |
-| StageText |
-| RunControlsVisibility |
-| Modes |
-| Mode |
-| CanEdit |
-| ToleranceText |
-| AutoSettingsVisibility |
-| QueueText |
-| QueueText |
-| Heads |
-| SelectedHead |
-| GridViewVisibility |
-| HeadName |
-| SelectedPowerMeter.DisplayText |
-| SettleTime, UpdateSourceTrigger=PropertyChanged |
-| DataContext.CanEdit, RelativeSource={RelativeSource AncestorType=DataGrid |
-| MeasureCount, UpdateSourceTrigger=PropertyChanged |
-| DataContext.CanEdit, RelativeSource={RelativeSource AncestorType=DataGrid |
-| MeasureInterval, UpdateSourceTrigger=PropertyChanged |
-| DataContext.CanEdit, RelativeSource={RelativeSource AncestorType=DataGrid |
-| Target, UpdateSourceTrigger=PropertyChanged |
-| DataContext.CanEdit, RelativeSource={RelativeSource AncestorType=DataGrid |
-| Measured |
-| Error |
-| Angle |
-| Tolerance |
-| AttemptProgress |
-| StateBackground |
-| Snapshot.Message |
-| State |
-| GraphViewVisibility |
-| Heads |
-| DataContext.GraphColumns, RelativeSource={RelativeSource AncestorType=ItemsControl |
-| DataContext.SelectGraphHeadCommand, RelativeSource={RelativeSource AncestorType=ItemsControl |
-| StateBackground |
-| State |
-| HeadName |
-| Measured, StringFormat='Measured {0 |
-| Target, StringFormat='Target {0 |
-| Graph |
-| GraphSummary |
-| HasHeads |
-| DetailTitle |
-| DetailTitle |
-| Graph |
-| DetailMessage |
-| DetailMessage |
-| Samples |
-| Attempt |
-| Angle, StringFormat=F4 |
-| Power, StringFormat=F4 |
-| Error, StringFormat=F4 |
-| Result |
-| ViewToggleText |
-| ToggleViewCommand |
-| RunControlsVisibility |
-| StartCommand |
-| StopCommand |
-| Summary |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| PowerMeasureContent | L120–120 |
+| HeadGrid | L143–143 |
+| AutoToleranceColumn | L191–191 |
+| AutoAttemptsColumn | L194–194 |
+| HeadGraphs | L205–205 |
+| ViewToggle | L258–258 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+| PreviewMouseLeftButtonDown | OpenPowerMeasureInput | L24–24 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewKeyDown | PowerMeasureInputKeyDown | L25–25 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Loaded | FitHeadRows | L146–146 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| SizeChanged | FitHeadRows | L146–146 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding Maximum} | L35–35 |
+| {Binding TargetLineY} | L40–40 |
+| {Binding TargetLineY} | L40–40 |
+| {Binding Points} | L41–41 |
+| {Binding LastPointLeft} | L42–42 |
+| {Binding LastPointTop} | L42–42 |
+| {Binding LastPointVisibility} | L42–42 |
+| {Binding Attempts} | L46–46 |
+| {Binding IsGraphSelected} | L67–67 |
+| {Binding IsReadOnly} | L121–121 |
+| {Binding StageText} | L128–128 |
+| {Binding RunControlsVisibility} | L129–129 |
+| {Binding Modes} | L131–131 |
+| {Binding Mode} | L131–131 |
+| {Binding CanEdit} | L131–131 |
+| {Binding ToleranceText} | L132–132 |
+| {Binding AutoSettingsVisibility} | L134–134 |
+| {Binding QueueText} | L136–136 |
+| {Binding QueueText} | L136–136 |
+| {Binding Heads} | L144–144 |
+| {Binding SelectedHead} | L144–144 |
+| {Binding GridViewVisibility} | L145–145 |
+| {Binding HeadName} | L148–148 |
+| {Binding SelectedPowerMeter.DisplayText} | L151–151 |
+| {Binding SettleTime, UpdateSourceTrigger=PropertyChanged} | L157–157 |
+| {Binding DataContext.CanEdit, RelativeSource={RelativeSource AncestorType=DataGrid}} | L158–158 |
+| {Binding MeasureCount, UpdateSourceTrigger=PropertyChanged} | L164–164 |
+| {Binding DataContext.CanEdit, RelativeSource={RelativeSource AncestorType=DataGrid}} | L165–165 |
+| {Binding MeasureInterval, UpdateSourceTrigger=PropertyChanged} | L171–171 |
+| {Binding DataContext.CanEdit, RelativeSource={RelativeSource AncestorType=DataGrid}} | L172–172 |
+| {Binding Target, UpdateSourceTrigger=PropertyChanged} | L178–178 |
+| {Binding DataContext.CanEdit, RelativeSource={RelativeSource AncestorType=DataGrid}} | L179–179 |
+| {Binding Measured} | L182–182 |
+| {Binding Error} | L185–185 |
+| {Binding Angle} | L188–188 |
+| {Binding Tolerance} | L191–191 |
+| {Binding AttemptProgress} | L194–194 |
+| {Binding StateBackground} | L198–198 |
+| {Binding Snapshot.Message} | L198–198 |
+| {Binding State} | L199–199 |
+| {Binding GraphViewVisibility} | L204–204 |
+| {Binding Heads} | L205–205 |
+| {Binding DataContext.GraphColumns, RelativeSource={RelativeSource AncestorType=ItemsControl}} | L207–207 |
+| {Binding DataContext.SelectGraphHeadCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}} | L210–210 |
+| {Binding} | L210–210 |
+| {Binding StateBackground} | L214–214 |
+| {Binding State} | L215–215 |
+| {Binding HeadName} | L217–217 |
+| {Binding Measured, StringFormat='Measured {0} W'} | L221–221 |
+| {Binding Target, StringFormat='Target {0} W'} | L222–222 |
+| {Binding Graph} | L224–224 |
+| {Binding GraphSummary} | L225–225 |
+| {Binding HasHeads} | L233–233 |
+| {Binding DetailTitle} | L241–241 |
+| {Binding DetailTitle} | L241–241 |
+| {Binding Graph} | L243–243 |
+| {Binding DetailMessage} | L244–244 |
+| {Binding DetailMessage} | L244–244 |
+| {Binding Samples} | L247–247 |
+| {Binding Attempt} | L249–249 |
+| {Binding Angle, StringFormat=F4} | L250–250 |
+| {Binding Power, StringFormat=F4} | L251–251 |
+| {Binding Error, StringFormat=F4} | L252–252 |
+| {Binding Result} | L253–253 |
+| {Binding ViewToggleText} | L258–258 |
+| {Binding ToggleViewCommand} | L258–258 |
+| {Binding RunControlsVisibility} | L259–259 |
+| {Binding StartCommand} | L260–260 |
+| {Binding StopCommand} | L261–261 |
+| {Binding Summary} | L263–263 |
 
 ## 원문 전체 주석 해설본
 

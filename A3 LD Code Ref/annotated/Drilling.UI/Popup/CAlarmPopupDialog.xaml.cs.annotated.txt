@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs
-Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup
@@ -17,156 +17,203 @@ L000005 |     using System.Globalization; ⟦EOL⟧
 L000006 |     using Drilling.Common.Alarm; ⟦EOL⟧
 // 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu;
 L000007 |     using Drilling.UI.Menu; ⟦EOL⟧
-L000008 |  ⟦EOL⟧
-// 해설 L9: 타입의 구조/상속 선언입니다: public partial class CAlarmPopupDialog : Window
-L000009 |     public partial class CAlarmPopupDialog : Window ⟦EOL⟧
-// 해설 L10: 구문 블록 경계입니다.
-L000010 |     { ⟦EOL⟧
-// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CAlarmPopupPanel Drilling.UI.Popup.CAlarmPopupDialog.Panel
-L000011 |         public CAlarmPopupPanel Panel { get; } ⟦EOL⟧
-L000012 |  ⟦EOL⟧
-// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CAlarmPopupDialog.CAlarmPopupDialog(Drilling.UI.Popup.CAlarmPopupPanel)
-L000013 |         public CAlarmPopupDialog(CAlarmPopupPanel panel) ⟦EOL⟧
-// 해설 L14: 구문 블록 경계입니다 · 소속 .ctor.
-L000014 |         { ⟦EOL⟧
-// 해설 L15: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
-L000015 |             InitializeComponent(); ⟦EOL⟧
-// 해설 L16: 값을 대상에 대입합니다: Panel = panel
-L000016 |             Panel = panel; ⟦EOL⟧
-// 해설 L17: 값을 대상에 대입합니다: DataContext = panel
-L000017 |             DataContext = panel; ⟦EOL⟧
-// 해설 L18: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Refresh()
-L000018 |             panel.Refresh(); ⟦EOL⟧
-// 해설 L19: 값을 대상에 대입합니다: Width = Math.Min(Width, SystemParameters.WorkArea.Width) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Width, SystemParameters.WorkArea.Width)
-L000019 |             Width = Math.Min(Width, SystemParameters.WorkArea.Width); ⟦EOL⟧
-// 해설 L20: 값을 대상에 대입합니다: Height = Math.Min(Height, SystemParameters.WorkArea.Height) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Height, SystemParameters.WorkArea.Height)
-L000020 |             Height = Math.Min(Height, SystemParameters.WorkArea.Height); ⟦EOL⟧
-// 해설 L21: 구문 블록 경계입니다 · 소속 .ctor.
-L000021 |         } ⟦EOL⟧
-L000022 |  ⟦EOL⟧
-// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: Close()
-L000023 |         private void CloseClicked(object sender, RoutedEventArgs e) => Close(); ⟦EOL⟧
-// 해설 L24: 구문 블록 경계입니다.
-L000024 |     } ⟦EOL⟧
-L000025 |  ⟦EOL⟧
-// 해설 L26: 타입의 구조/상속 선언입니다: public sealed class CAlarmPopupPanel(CAlarmManager alarms, Func<Task> reset) : INotifyPropertyChanged
-L000026 |     public sealed class CAlarmPopupPanel(CAlarmManager alarms, Func<Task> reset) : INotifyPropertyChanged ⟦EOL⟧
-// 해설 L27: 구문 블록 경계입니다.
-L000027 |     { ⟦EOL⟧
-// 해설 L28: 변수의 초기값을 지정합니다: _revision = -1
-L000028 |         private long _revision = -1; ⟦EOL⟧
-// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CAlarmPopupPanel._resetting
-L000029 |         private bool _resetting; ⟦EOL⟧
-// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.CAlarmPopupPanel.PropertyChanged
-L000030 |         public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
-// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.CAlarmPopupRow> Drilling.UI.Popup.CAlarmPopupPanel.Rows
-L000031 |         public IReadOnlyList<CAlarmPopupRow> Rows { get; private set; } = []; ⟦EOL⟧
-// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Count(row => row.Level == "HEAVY") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Count(row => row.Level == "LIGHT")
-L000032 |         public string Summary => $"현재 알람 {Rows.Count}건 · HEAVY {Rows.Count(row => row.Level == "HEAVY")} · LIGHT {Rows.Count(row => row.Level == "LIGHT")}"; ⟦EOL⟧
-// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus
-L000033 |         public string RecoveryStatus { get; private set; } = ""; ⟦EOL⟧
-// 해설 L34: 값을 대상에 대입합니다: _resetCommand ??= new(async _ => { if (_resetting) return; _resetting = true; _resetCommand?.NotifyCanExecuteChanged(); try { await reset(); Refresh(); } catch (Exception error) { SetRecoveryStatus("ALARM RESET 실패: " + error.Messa / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ => { if (_resetting) return; _resetting = true; _resetCommand?.NotifyCanExecuteChanged(); try { await reset(); Refresh(); } catch (Exception error) { SetRecoveryStatus("ALARM RESET 실패: " + error.Message); Ref…
-L000034 |         public CButtonCommand ResetCommand => _resetCommand ??= new(async _ => ⟦EOL⟧
-// 해설 L35: 구문 블록 경계입니다 · 소속 ResetCommand.
-L000035 |         { ⟦EOL⟧
-// 해설 L36: 조건에 따라 분기합니다: if (_resetting)
-L000036 |             if (_resetting) ⟦EOL⟧
-// 해설 L37: 호출자에게 값 또는 제어를 반환합니다: return;
-L000037 |                 return; ⟦EOL⟧
-// 해설 L38: 값을 대상에 대입합니다: _resetting = true
-L000038 |             _resetting = true; ⟦EOL⟧
-// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000039 |             _resetCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L40: 예외 처리 범위입니다: try
-L000040 |             try ⟦EOL⟧
-// 해설 L41: 구문 블록 경계입니다 · 소속 ResetCommand.
-L000041 |             { ⟦EOL⟧
-// 해설 L42: 비동기 완료를 기다립니다: await reset() / 함수·델리게이트 또는 객체 생성자를 호출합니다: reset()
-L000042 |                 await reset(); ⟦EOL⟧
-// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
-L000043 |                 Refresh(); ⟦EOL⟧
-// 해설 L44: 구문 블록 경계입니다 · 소속 ResetCommand.
-L000044 |             } ⟦EOL⟧
-// 해설 L45: 지정 예외를 처리합니다: catch (Exception error)
-L000045 |             catch (Exception error) ⟦EOL⟧
-// 해설 L46: 구문 블록 경계입니다 · 소속 ResetCommand.
-L000046 |             { ⟦EOL⟧
-// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetRecoveryStatus("ALARM RESET 실패: " + error.Message)
-L000047 |                 SetRecoveryStatus("ALARM RESET 실패: " + error.Message); ⟦EOL⟧
-// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
-L000048 |                 Refresh(); ⟦EOL⟧
-// 해설 L49: 구문 블록 경계입니다 · 소속 ResetCommand.
-L000049 |             } ⟦EOL⟧
-// 해설 L50: 종료 정리 구간입니다: finally
-L000050 |             finally ⟦EOL⟧
-// 해설 L51: 구문 블록 경계입니다 · 소속 ResetCommand.
-L000051 |             { ⟦EOL⟧
-// 해설 L52: 값을 대상에 대입합니다: _resetting = false
-L000052 |                 _resetting = false; ⟦EOL⟧
-// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000053 |                 _resetCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L54: 구문 블록 경계입니다 · 소속 ResetCommand.
-L000054 |             } ⟦EOL⟧
-// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CAlarmPopupPanel.ResetCommand
-L000055 |         }, _ => !_resetting && Rows.Count > 0); ⟦EOL⟧
-L000056 |  ⟦EOL⟧
-// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand? Drilling.UI.Popup.CAlarmPopupPanel._resetCommand
-L000057 |         private CButtonCommand? _resetCommand; ⟦EOL⟧
-// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.SetRecoveryStatus(string)
-L000058 |         public void SetRecoveryStatus(string text) ⟦EOL⟧
-// 해설 L59: 구문 블록 경계입니다 · 소속 SetRecoveryStatus.
-L000059 |         { ⟦EOL⟧
-// 해설 L60: 조건에 따라 분기합니다: if (RecoveryStatus == text)
-L000060 |             if (RecoveryStatus == text) ⟦EOL⟧
-// 해설 L61: 호출자에게 값 또는 제어를 반환합니다: return;
-L000061 |                 return; ⟦EOL⟧
-// 해설 L62: 값을 대상에 대입합니다: RecoveryStatus = text
-L000062 |             RecoveryStatus = text; ⟦EOL⟧
-// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(RecoveryStatus))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(RecoveryStatus)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(RecoveryStatus)
-L000063 |             PropertyChanged?.Invoke(this, new(nameof(RecoveryStatus))); ⟦EOL⟧
-// 해설 L64: 구문 블록 경계입니다 · 소속 SetRecoveryStatus.
-L000064 |         } ⟦EOL⟧
-L000065 |  ⟦EOL⟧
-// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
-L000066 |         public void Refresh() ⟦EOL⟧
-// 해설 L67: 구문 블록 경계입니다 · 소속 Refresh.
-L000067 |         { ⟦EOL⟧
-// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.GetCurrentSnapshot() / 지역 변수를 선언합니다: var snapshot = alarms.GetCurrentSnapshot(); / 변수의 초기값을 지정합니다: snapshot = alarms.GetCurrentSnapshot()
-L000068 |             var snapshot = alarms.GetCurrentSnapshot(); ⟦EOL⟧
-// 해설 L69: 조건에 따라 분기합니다: if (snapshot.Revision == _revision)
-L000069 |             if (snapshot.Revision == _revision) ⟦EOL⟧
-// 해설 L70: 호출자에게 값 또는 제어를 반환합니다: return;
-L000070 |                 return; ⟦EOL⟧
-// 해설 L71: 값을 대상에 대입합니다: _revision = snapshot.Revision
-L000071 |             _revision = snapshot.Revision; ⟦EOL⟧
-// 해설 L72: 값을 대상에 대입합니다: Rows = snapshot.Rows.Select((row, index) => new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.Recove / 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Rows.Select((row, index) => new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.Rec… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAlarmPopup
-L000072 |             Rows = snapshot.Rows.Select((row, index) => new CAlarmPopupRow( ⟦EOL⟧
-// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
-L000073 |                 index + 1,  ⟦EOL⟧
-// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
-L000074 |                 row.Code,  ⟦EOL⟧
-// 해설 L75: 조건에 따라 결과식을 선택합니다: row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO" / 조건에 따라 결과식을 선택합니다: row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO"
-L000075 |                 row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO",  ⟦EOL⟧
-// 해설 L76: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
-L000076 |                 row.Group,  ⟦EOL⟧
-// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
-L000077 |                 row.Message,  ⟦EOL⟧
-// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
-L000078 |                 row.RecoveryAction,  ⟦EOL⟧
-// 해설 L79: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
-L000079 |                 row.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) ⟦EOL⟧
-// 해설 L80: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
-L000080 |             )).ToArray(); ⟦EOL⟧
-// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(null)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(null)
-L000081 |             PropertyChanged?.Invoke(this, new(null)); ⟦EOL⟧
-// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000082 |             _resetCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L83: 구문 블록 경계입니다 · 소속 Refresh.
-L000083 |         } ⟦EOL⟧
-// 해설 L84: 구문 블록 경계입니다.
-L000084 |     } ⟦EOL⟧
-L000085 |  ⟦EOL⟧
-// 해설 L86: 타입의 구조/상속 선언입니다: public sealed record CAlarmPopupRow(int No, int Code, string Level, string Group, string Cause, string Solution, string Time);
-L000086 |     public sealed record CAlarmPopupRow(int No, int Code, string Level, string Group, string Cause, string Solution, string Time); ⟦EOL⟧
-// 해설 L87: 구문 블록 경계입니다.
-L000087 | } ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000008 |     using System.Windows.Media; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 타입의 구조/상속 선언입니다: public partial class CAlarmPopupDialog : Window
+L000010 |     public partial class CAlarmPopupDialog : Window ⟦EOL⟧
+// 해설 L11: 구문 블록 경계입니다.
+L000011 |     { ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CAlarmPopupPanel Drilling.UI.Popup.CAlarmPopupDialog.Panel
+L000012 |         public CAlarmPopupPanel Panel { get; } ⟦EOL⟧
+L000013 |  ⟦EOL⟧
+// 해설 L14: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CAlarmPopupDialog.CAlarmPopupDialog(Drilling.UI.Popup.CAlarmPopupPanel)
+L000014 |         public CAlarmPopupDialog(CAlarmPopupPanel panel) ⟦EOL⟧
+// 해설 L15: 구문 블록 경계입니다 · 소속 .ctor.
+L000015 |         { ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000016 |             InitializeComponent(); ⟦EOL⟧
+// 해설 L17: 값을 대상에 대입합니다: Panel = panel
+L000017 |             Panel = panel; ⟦EOL⟧
+// 해설 L18: 값을 대상에 대입합니다: DataContext = panel
+L000018 |             DataContext = panel; ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Refresh()
+L000019 |             panel.Refresh(); ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplySeverityTheme(panel)
+L000020 |             ApplySeverityTheme(panel); ⟦EOL⟧
+// 해설 L21: 값을 대상에 대입합니다: Width = Math.Min(Width, SystemParameters.WorkArea.Width) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Width, SystemParameters.WorkArea.Width)
+L000021 |             Width = Math.Min(Width, SystemParameters.WorkArea.Width); ⟦EOL⟧
+// 해설 L22: 값을 대상에 대입합니다: Height = Math.Min(Height, SystemParameters.WorkArea.Height) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Height, SystemParameters.WorkArea.Height)
+L000022 |             Height = Math.Min(Height, SystemParameters.WorkArea.Height); ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 .ctor.
+L000023 |         } ⟦EOL⟧
+L000024 |  ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupDialog.ApplySeverityTheme(Drilling.UI.Popup.CAlarmPopupPanel)
+L000025 |         private void ApplySeverityTheme(CAlarmPopupPanel panel) ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 ApplySeverityTheme.
+L000026 |         { ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Rows.Any(row => row.Level == "LIGHT") / 지역 변수를 선언합니다: var lightOnly = panel.Rows.Any(row => row.Level == "LIGHT") && panel.Rows.All(row => row.Level != "HEAVY"); / 변수의 초기값을 지정합니다: lightOnly = panel.Rows.Any(row => row.Level == "LIGHT") && panel.Rows.All(row => row.Level != "HEAVY")
+L000027 |             var lightOnly = panel.Rows.Any(row => row.Level == "LIGHT") ⟦EOL⟧
+// 해설 L28: 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Rows.All(row => row.Level != "HEAVY")
+L000028 |                 && panel.Rows.All(row => row.Level != "HEAVY"); ⟦EOL⟧
+// 해설 L29: 조건에 따라 분기합니다: if (!lightOnly)
+L000029 |             if (!lightOnly) ⟦EOL⟧
+// 해설 L30: 호출자에게 값 또는 제어를 반환합니다: return;
+L000030 |                 return; ⟦EOL⟧
+L000031 |  ⟦EOL⟧
+// 해설 L32: 값을 대상에 대입합니다: Resources["AlarmSurfaceBrush"] = Brush(0xFF, 0xF7, 0xED) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xFF, 0xF7, 0xED)
+L000032 |             Resources["AlarmSurfaceBrush"] = Brush(0xFF, 0xF7, 0xED); ⟦EOL⟧
+// 해설 L33: 값을 대상에 대입합니다: Resources["GridAltBackgroundBrush"] = Brush(0xFF, 0xFB, 0xF5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xFF, 0xFB, 0xF5)
+L000033 |             Resources["GridAltBackgroundBrush"] = Brush(0xFF, 0xFB, 0xF5); ⟦EOL⟧
+// 해설 L34: 값을 대상에 대입합니다: Resources["GridHeaderBackgroundBrush"] = Brush(0xB4, 0x53, 0x09) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xB4, 0x53, 0x09)
+L000034 |             Resources["GridHeaderBackgroundBrush"] = Brush(0xB4, 0x53, 0x09); ⟦EOL⟧
+// 해설 L35: 값을 대상에 대입합니다: Resources["GridLineBrush"] = Brush(0xF0, 0xC8, 0x9D) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xF0, 0xC8, 0x9D)
+L000035 |             Resources["GridLineBrush"] = Brush(0xF0, 0xC8, 0x9D); ⟦EOL⟧
+// 해설 L36: 값을 대상에 대입합니다: Resources["MenuItemSelectedBackgroundBrush"] = Brush(0xB4, 0x53, 0x09) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xB4, 0x53, 0x09)
+L000036 |             Resources["MenuItemSelectedBackgroundBrush"] = Brush(0xB4, 0x53, 0x09); ⟦EOL⟧
+// 해설 L37: 값을 대상에 대입합니다: Resources["AccentBrush"] = Brush(0xD9, 0x77, 0x06) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xD9, 0x77, 0x06)
+L000037 |             Resources["AccentBrush"] = Brush(0xD9, 0x77, 0x06); ⟦EOL⟧
+// 해설 L38: 값을 대상에 대입합니다: Resources["AccentDarkBrush"] = Brush(0xB4, 0x53, 0x09) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Brush(0xB4, 0x53, 0x09)
+L000038 |             Resources["AccentDarkBrush"] = Brush(0xB4, 0x53, 0x09); ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 ApplySeverityTheme.
+L000039 |         } ⟦EOL⟧
+L000040 |  ⟦EOL⟧
+// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · SolidColorBrush Drilling.UI.Popup.CAlarmPopupDialog.Brush(byte, byte, byte)
+L000041 |         private static SolidColorBrush Brush(byte red, byte green, byte blue) ⟦EOL⟧
+// 해설 L42: 구문 블록 경계입니다 · 소속 Brush.
+L000042 |         { ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromRgb(red, green, blue)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromRgb(red, green, blue) / 지역 변수를 선언합니다: var brush = new SolidColorBrush(Color.FromRgb(red, green, blue)); / 변수의 초기값을 지정합니다: brush = new SolidColorBrush(Color.FromRgb(red, green, blue))
+L000043 |             var brush = new SolidColorBrush(Color.FromRgb(red, green, blue)); ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze()
+L000044 |             brush.Freeze(); ⟦EOL⟧
+// 해설 L45: 호출자에게 값 또는 제어를 반환합니다: return brush;
+L000045 |             return brush; ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 Brush.
+L000046 |         } ⟦EOL⟧
+L000047 |  ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: Close()
+L000048 |         private void CloseClicked(object sender, RoutedEventArgs e) => Close(); ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다.
+L000049 |     } ⟦EOL⟧
+L000050 |  ⟦EOL⟧
+// 해설 L51: 타입의 구조/상속 선언입니다: public sealed class CAlarmPopupPanel(CAlarmManager alarms, Func<Task> reset) : INotifyPropertyChanged
+L000051 |     public sealed class CAlarmPopupPanel(CAlarmManager alarms, Func<Task> reset) : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다.
+L000052 |     { ⟦EOL⟧
+// 해설 L53: 변수의 초기값을 지정합니다: _revision = -1
+L000053 |         private long _revision = -1; ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CAlarmPopupPanel._resetting
+L000054 |         private bool _resetting; ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.CAlarmPopupPanel.PropertyChanged
+L000055 |         public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L56: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Popup.CAlarmPopupRow> Drilling.UI.Popup.CAlarmPopupPanel.Rows
+L000056 |         public IReadOnlyList<CAlarmPopupRow> Rows { get; private set; } = []; ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Count(row => row.Level == "HEAVY") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Count(row => row.Level == "LIGHT")
+L000057 |         public string Summary => $"현재 알람 {Rows.Count}건 · HEAVY {Rows.Count(row => row.Level == "HEAVY")} · LIGHT {Rows.Count(row => row.Level == "LIGHT")}"; ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CAlarmPopupPanel.RecoveryStatus
+L000058 |         public string RecoveryStatus { get; private set; } = ""; ⟦EOL⟧
+// 해설 L59: 값을 대상에 대입합니다: _resetCommand ??= new(async _ => { if (_resetting) return; _resetting = true; _resetCommand?.NotifyCanExecuteChanged(); try { await reset(); Refresh(); } catch (Exception error) { SetRecoveryStatus("ALARM RESET 실패: " + error.Messa / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(async _ => { if (_resetting) return; _resetting = true; _resetCommand?.NotifyCanExecuteChanged(); try { await reset(); Refresh(); } catch (Exception error) { SetRecoveryStatus("ALARM RESET 실패: " + error.Message); Ref…
+L000059 |         public CButtonCommand ResetCommand => _resetCommand ??= new(async _ => ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 ResetCommand.
+L000060 |         { ⟦EOL⟧
+// 해설 L61: 조건에 따라 분기합니다: if (_resetting)
+L000061 |             if (_resetting) ⟦EOL⟧
+// 해설 L62: 호출자에게 값 또는 제어를 반환합니다: return;
+L000062 |                 return; ⟦EOL⟧
+// 해설 L63: 값을 대상에 대입합니다: _resetting = true
+L000063 |             _resetting = true; ⟦EOL⟧
+// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000064 |             _resetCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L65: 예외 처리 범위입니다: try
+L000065 |             try ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 ResetCommand.
+L000066 |             { ⟦EOL⟧
+// 해설 L67: 비동기 완료를 기다립니다: await reset() / 함수·델리게이트 또는 객체 생성자를 호출합니다: reset()
+L000067 |                 await reset(); ⟦EOL⟧
+// 해설 L68: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
+L000068 |                 Refresh(); ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 ResetCommand.
+L000069 |             } ⟦EOL⟧
+// 해설 L70: 지정 예외를 처리합니다: catch (Exception error)
+L000070 |             catch (Exception error) ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 ResetCommand.
+L000071 |             { ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetRecoveryStatus("ALARM RESET 실패: " + error.Message)
+L000072 |                 SetRecoveryStatus("ALARM RESET 실패: " + error.Message); ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh()
+L000073 |                 Refresh(); ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 ResetCommand.
+L000074 |             } ⟦EOL⟧
+// 해설 L75: 종료 정리 구간입니다: finally
+L000075 |             finally ⟦EOL⟧
+// 해설 L76: 구문 블록 경계입니다 · 소속 ResetCommand.
+L000076 |             { ⟦EOL⟧
+// 해설 L77: 값을 대상에 대입합니다: _resetting = false
+L000077 |                 _resetting = false; ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000078 |                 _resetCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 ResetCommand.
+L000079 |             } ⟦EOL⟧
+// 해설 L80: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Popup.CAlarmPopupPanel.ResetCommand
+L000080 |         }, _ => !_resetting && Rows.Count > 0); ⟦EOL⟧
+L000081 |  ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand? Drilling.UI.Popup.CAlarmPopupPanel._resetCommand
+L000082 |         private CButtonCommand? _resetCommand; ⟦EOL⟧
+// 해설 L83: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.SetRecoveryStatus(string)
+L000083 |         public void SetRecoveryStatus(string text) ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 SetRecoveryStatus.
+L000084 |         { ⟦EOL⟧
+// 해설 L85: 조건에 따라 분기합니다: if (RecoveryStatus == text)
+L000085 |             if (RecoveryStatus == text) ⟦EOL⟧
+// 해설 L86: 호출자에게 값 또는 제어를 반환합니다: return;
+L000086 |                 return; ⟦EOL⟧
+// 해설 L87: 값을 대상에 대입합니다: RecoveryStatus = text
+L000087 |             RecoveryStatus = text; ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(nameof(RecoveryStatus))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(nameof(RecoveryStatus)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(RecoveryStatus)
+L000088 |             PropertyChanged?.Invoke(this, new(nameof(RecoveryStatus))); ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다 · 소속 SetRecoveryStatus.
+L000089 |         } ⟦EOL⟧
+L000090 |  ⟦EOL⟧
+// 해설 L91: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
+L000091 |         public void Refresh() ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 Refresh.
+L000092 |         { ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.GetCurrentSnapshot() / 지역 변수를 선언합니다: var snapshot = alarms.GetCurrentSnapshot(); / 변수의 초기값을 지정합니다: snapshot = alarms.GetCurrentSnapshot()
+L000093 |             var snapshot = alarms.GetCurrentSnapshot(); ⟦EOL⟧
+// 해설 L94: 조건에 따라 분기합니다: if (snapshot.Revision == _revision)
+L000094 |             if (snapshot.Revision == _revision) ⟦EOL⟧
+// 해설 L95: 호출자에게 값 또는 제어를 반환합니다: return;
+L000095 |                 return; ⟦EOL⟧
+// 해설 L96: 값을 대상에 대입합니다: _revision = snapshot.Revision
+L000096 |             _revision = snapshot.Revision; ⟦EOL⟧
+// 해설 L97: 값을 대상에 대입합니다: Rows = snapshot.Rows.Select((row, index) => new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.Recove / 함수·델리게이트 또는 객체 생성자를 호출합니다: snapshot.Rows.Select((row, index) => new CAlarmPopupRow( index + 1, row.Code, row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO", row.Group, row.Message, row.Rec… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CAlarmPopup
+L000097 |             Rows = snapshot.Rows.Select((row, index) => new CAlarmPopupRow( ⟦EOL⟧
+// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
+L000098 |                 index + 1,  ⟦EOL⟧
+// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
+L000099 |                 row.Code,  ⟦EOL⟧
+// 해설 L100: 조건에 따라 결과식을 선택합니다: row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO" / 조건에 따라 결과식을 선택합니다: row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO"
+L000100 |                 row.Severity == EN_ALARM_LEVEL.Critical ? "HEAVY" : row.Severity == EN_ALARM_LEVEL.Warning ? "LIGHT" : "INFO",  ⟦EOL⟧
+// 해설 L101: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
+L000101 |                 row.Group,  ⟦EOL⟧
+// 해설 L102: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
+L000102 |                 row.Message,  ⟦EOL⟧
+// 해설 L103: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
+L000103 |                 row.RecoveryAction,  ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: row.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
+L000104 |                 row.OccurredAt.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) ⟦EOL⟧
+// 해설 L105: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmPopupPanel.Refresh()
+L000105 |             )).ToArray(); ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new(null)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(null)
+L000106 |             PropertyChanged?.Invoke(this, new(null)); ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000107 |             _resetCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 Refresh.
+L000108 |         } ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다.
+L000109 |     } ⟦EOL⟧
+L000110 |  ⟦EOL⟧
+// 해설 L111: 타입의 구조/상속 선언입니다: public sealed record CAlarmPopupRow(int No, int Code, string Level, string Group, string Cause, string Solution, string Time);
+L000111 |     public sealed record CAlarmPopupRow(int No, int Code, string Level, string Group, string Cause, string Solution, string Time); ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다.
+L000112 | } ⟦EOL⟧

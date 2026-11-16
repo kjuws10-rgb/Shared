@@ -1,0 +1,270 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs
+Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Threading;
+L000003 | using System.Windows.Threading; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000004 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup;
+L000006 | namespace Drilling.UI.Popup; ⟦EOL⟧
+L000007 |  ⟦EOL⟧
+// 해설 L8: 타입의 구조/상속 선언입니다: public partial class CAlarmCauseAnalysisDialog : Window
+L000008 | public partial class CAlarmCauseAnalysisDialog : Window ⟦EOL⟧
+// 해설 L9: 구문 블록 경계입니다.
+L000009 | { ⟦EOL⟧
+// 해설 L10: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CAlarmCauseAnalysisPanel Drilling.UI.Popup.CAlarmCauseAnalysisDialog._panel
+L000010 |     private readonly CAlarmCauseAnalysisPanel _panel; ⟦EOL⟧
+// 해설 L11: 변수의 초기값을 지정합니다: _logGrids = []
+L000011 |     private readonly HashSet<DataGrid> _logGrids = []; ⟦EOL⟧
+// 해설 L12: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CAlarmCauseAnalysisDialog._loaded
+L000012 |     private bool _loaded; ⟦EOL⟧
+// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CAlarmCauseAnalysisDialog._synchronizingSelection
+L000013 |     private bool _synchronizingSelection; ⟦EOL⟧
+L000014 |  ⟦EOL⟧
+// 해설 L15: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CAlarmCauseAnalysisDialog.CAlarmCauseAnalysisDialog(string, Drilling.UI.Menu.Menus.ST_ALARM_HISTORY_ROW)
+L000015 |     public CAlarmCauseAnalysisDialog(string logDirectory, ST_ALARM_HISTORY_ROW alarm) ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다 · 소속 .ctor.
+L000016 |     { ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000017 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L18: 값을 대상에 대입합니다: _panel = new(logDirectory, alarm) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(logDirectory, alarm)
+L000018 |         _panel = new(logDirectory, alarm); ⟦EOL⟧
+// 해설 L19: 값을 대상에 대입합니다: DataContext = _panel
+L000019 |         DataContext = _panel; ⟦EOL⟧
+// 해설 L20: 복합 대입 또는 이벤트 구독/해지 표현입니다: _panel.AnalysisLoaded += AnalysisLoaded
+L000020 |         _panel.AnalysisLoaded += AnalysisLoaded; ⟦EOL⟧
+// 해설 L21: 복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += OnLoaded
+L000021 |         Loaded += OnLoaded; ⟦EOL⟧
+// 해설 L22: 복합 대입 또는 이벤트 구독/해지 표현입니다: Closed += OnClosed
+L000022 |         Closed += OnClosed; ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 .ctor.
+L000023 |     } ⟦EOL⟧
+L000024 |  ⟦EOL⟧
+// 해설 L25: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.OnLoaded(object, RoutedEventArgs)
+L000025 |     private async void OnLoaded(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L26: 구문 블록 경계입니다 · 소속 OnLoaded.
+L000026 |     { ⟦EOL⟧
+// 해설 L27: 조건에 따라 분기합니다: if (_loaded)
+L000027 |         if (_loaded) ⟦EOL⟧
+// 해설 L28: 호출자에게 값 또는 제어를 반환합니다: return;
+L000028 |             return; ⟦EOL⟧
+// 해설 L29: 값을 대상에 대입합니다: _loaded = true
+L000029 |         _loaded = true; ⟦EOL⟧
+// 해설 L30: 비동기 완료를 기다립니다: await _panel.LoadAsync() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _panel.LoadAsync()
+L000030 |         await _panel.LoadAsync(); ⟦EOL⟧
+// 해설 L31: 구문 블록 경계입니다 · 소속 OnLoaded.
+L000031 |     } ⟦EOL⟧
+L000032 |  ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.OnClosed(object?, System.EventArgs)
+L000033 |     private void OnClosed(object? sender, EventArgs e) ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 OnClosed.
+L000034 |     { ⟦EOL⟧
+// 해설 L35: 복합 대입 또는 이벤트 구독/해지 표현입니다: _panel.AnalysisLoaded -= AnalysisLoaded
+L000035 |         _panel.AnalysisLoaded -= AnalysisLoaded; ⟦EOL⟧
+// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: _panel.Dispose()
+L000036 |         _panel.Dispose(); ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 OnClosed.
+L000037 |     } ⟦EOL⟧
+L000038 |  ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.QuickRangeClicked(object, RoutedEventArgs)
+L000039 |     private async void QuickRangeClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 QuickRangeClicked.
+L000040 |     { ⟦EOL⟧
+// 해설 L41: 조건에 따라 분기합니다: if (sender is not Button { Tag: string rangeText } || !int.TryParse(rangeText, out var rangeSeconds))
+L000041 |         if (sender is not Button { Tag: string rangeText } ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(rangeText, out var rangeSeconds)
+L000042 |             || !int.TryParse(rangeText, out var rangeSeconds)) ⟦EOL⟧
+// 해설 L43: 호출자에게 값 또는 제어를 반환합니다: return;
+L000043 |             return; ⟦EOL⟧
+L000044 |  ⟦EOL⟧
+// 해설 L45: 값을 대상에 대입합니다: _panel.BeforeSeconds = rangeSeconds.ToString(System.Globalization.CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rangeSeconds.ToString(System.Globalization.CultureInfo.InvariantCulture)
+L000045 |         _panel.BeforeSeconds = rangeSeconds.ToString(System.Globalization.CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L46: 값을 대상에 대입합니다: _panel.AfterSeconds = rangeSeconds.ToString(System.Globalization.CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: rangeSeconds.ToString(System.Globalization.CultureInfo.InvariantCulture)
+L000046 |         _panel.AfterSeconds = rangeSeconds.ToString(System.Globalization.CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L47: 비동기 완료를 기다립니다: await _panel.LoadAsync() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _panel.LoadAsync()
+L000047 |         await _panel.LoadAsync(); ⟦EOL⟧
+// 해설 L48: 구문 블록 경계입니다 · 소속 QuickRangeClicked.
+L000048 |     } ⟦EOL⟧
+L000049 |  ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.LogGridLoaded(object, RoutedEventArgs)
+L000050 |     private void LogGridLoaded(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 LogGridLoaded.
+L000051 |     { ⟦EOL⟧
+// 해설 L52: 조건에 따라 분기합니다: if (sender is not DataGrid grid)
+L000052 |         if (sender is not DataGrid grid) ⟦EOL⟧
+// 해설 L53: 호출자에게 값 또는 제어를 반환합니다: return;
+L000053 |             return; ⟦EOL⟧
+// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: _logGrids.Add(grid)
+L000054 |         _logGrids.Add(grid); ⟦EOL⟧
+// 해설 L55: 조건에 따라 분기합니다: if (_panel.CursorOccurredAt is { } cursor)
+L000055 |         if (_panel.CursorOccurredAt is { } cursor) ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: SynchronizeGrid(grid, cursor)
+L000056 |             SynchronizeGrid(grid, cursor); ⟦EOL⟧
+// 해설 L57: 구문 블록 경계입니다 · 소속 LogGridLoaded.
+L000057 |     } ⟦EOL⟧
+L000058 |  ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.LogGridUnloaded(object, RoutedEventArgs)
+L000059 |     private void LogGridUnloaded(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 LogGridUnloaded.
+L000060 |     { ⟦EOL⟧
+// 해설 L61: 조건에 따라 분기합니다: if (sender is DataGrid grid)
+L000061 |         if (sender is DataGrid grid) ⟦EOL⟧
+// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: _logGrids.Remove(grid)
+L000062 |             _logGrids.Remove(grid); ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 LogGridUnloaded.
+L000063 |     } ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.LogGridSelectionChanged(object, SelectionChangedEventArgs)
+L000065 |     private void LogGridSelectionChanged(object sender, SelectionChangedEventArgs e) ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 LogGridSelectionChanged.
+L000066 |     { ⟦EOL⟧
+// 해설 L67: 조건에 따라 분기합니다: if (_synchronizingSelection || sender is not DataGrid { SelectedItem: ST_ALARM_ANALYSIS_LOG_ROW row })
+L000067 |         if (_synchronizingSelection ⟦EOL⟧
+// 해설 L68: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.LogGridSelectionChanged(object, SelectionChangedEventArgs)
+L000068 |             || sender is not DataGrid { SelectedItem: ST_ALARM_ANALYSIS_LOG_ROW row }) ⟦EOL⟧
+// 해설 L69: 호출자에게 값 또는 제어를 반환합니다: return;
+L000069 |             return; ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: SynchronizeTo(row.OccurredAt)
+L000070 |         SynchronizeTo(row.OccurredAt); ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 LogGridSelectionChanged.
+L000071 |     } ⟦EOL⟧
+L000072 |  ⟦EOL⟧
+// 해설 L73: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.CandidateClicked(object, RoutedEventArgs)
+L000073 |     private void CandidateClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 CandidateClicked.
+L000074 |     { ⟦EOL⟧
+// 해설 L75: 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_ALARM_CAUSE_CANDIDATE candidate })
+L000075 |         if (sender is not Button { DataContext: ST_ALARM_CAUSE_CANDIDATE candidate }) ⟦EOL⟧
+// 해설 L76: 호출자에게 값 또는 제어를 반환합니다: return;
+L000076 |             return; ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: SynchronizeTo(candidate.Evidence.OccurredAt, candidate.Evidence)
+L000077 |         SynchronizeTo(candidate.Evidence.OccurredAt, candidate.Evidence); ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 CandidateClicked.
+L000078 |     } ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.TimelineClicked(object, RoutedEventArgs)
+L000080 |     private void TimelineClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 TimelineClicked.
+L000081 |     { ⟦EOL⟧
+// 해설 L82: 조건에 따라 분기합니다: if (sender is not Button { DataContext: ST_ALARM_TIMELINE_ITEM item })
+L000082 |         if (sender is not Button { DataContext: ST_ALARM_TIMELINE_ITEM item }) ⟦EOL⟧
+// 해설 L83: 호출자에게 값 또는 제어를 반환합니다: return;
+L000083 |             return; ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: SynchronizeTo(item.OccurredAt, item.Evidence)
+L000084 |         SynchronizeTo(item.OccurredAt, item.Evidence); ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 TimelineClicked.
+L000085 |     } ⟦EOL⟧
+L000086 |  ⟦EOL⟧
+// 해설 L87: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.AnalysisLoaded(System.DateTimeOffset)
+L000087 |     private void AnalysisLoaded(DateTimeOffset alarmTime) ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 AnalysisLoaded.
+L000088 |     { ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: Dispatcher.BeginInvoke(() => SynchronizeTo(alarmTime), DispatcherPriority.Loaded) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SynchronizeTo(alarmTime)
+L000089 |         Dispatcher.BeginInvoke(() => SynchronizeTo(alarmTime), DispatcherPriority.Loaded); ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 AnalysisLoaded.
+L000090 |     } ⟦EOL⟧
+L000091 |  ⟦EOL⟧
+// 해설 L92: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.SynchronizeTo(System.DateTimeOffset, Drilling.UI.Menu.Menus.ST_ALARM_ANALYSIS_LOG_ROW?)
+L000092 |     private void SynchronizeTo(DateTimeOffset cursor, ST_ALARM_ANALYSIS_LOG_ROW? preferredRow = null) ⟦EOL⟧
+// 해설 L93: 구문 블록 경계입니다 · 소속 SynchronizeTo.
+L000093 |     { ⟦EOL⟧
+// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: _panel.SetCursor(cursor)
+L000094 |         _panel.SetCursor(cursor); ⟦EOL⟧
+// 해설 L95: 값을 대상에 대입합니다: _synchronizingSelection = true
+L000095 |         _synchronizingSelection = true; ⟦EOL⟧
+// 해설 L96: 예외 처리 범위입니다: try
+L000096 |         try ⟦EOL⟧
+// 해설 L97: 구문 블록 경계입니다 · 소속 SynchronizeTo.
+L000097 |         { ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: _logGrids.ToArray() / 컬렉션 요소를 순회합니다: foreach (var grid in _logGrids.ToArray())
+L000098 |             foreach (var grid in _logGrids.ToArray()) ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: SynchronizeGrid(grid, cursor, preferredRow)
+L000099 |                 SynchronizeGrid(grid, cursor, preferredRow); ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 SynchronizeTo.
+L000100 |         } ⟦EOL⟧
+// 해설 L101: 종료 정리 구간입니다: finally
+L000101 |         finally ⟦EOL⟧
+// 해설 L102: 구문 블록 경계입니다 · 소속 SynchronizeTo.
+L000102 |         { ⟦EOL⟧
+// 해설 L103: 값을 대상에 대입합니다: _synchronizingSelection = false
+L000103 |             _synchronizingSelection = false; ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 SynchronizeTo.
+L000104 |         } ⟦EOL⟧
+// 해설 L105: 구문 블록 경계입니다 · 소속 SynchronizeTo.
+L000105 |     } ⟦EOL⟧
+L000106 |  ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.SynchronizeGrid(DataGrid, System.DateTimeOffset, Drilling.UI.Menu.Menus.ST_ALARM_ANALYSIS_LOG_ROW?)
+L000107 |     private static void SynchronizeGrid( ⟦EOL⟧
+// 해설 L108: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.SynchronizeGrid(DataGrid, System.DateTimeOffset, Drilling.UI.Menu.Menus.ST_ALARM_ANALYSIS_LOG_ROW?)
+L000108 |         DataGrid grid, ⟦EOL⟧
+// 해설 L109: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.SynchronizeGrid(DataGrid, System.DateTimeOffset, Drilling.UI.Menu.Menus.ST_ALARM_ANALYSIS_LOG_ROW?)
+L000109 |         DateTimeOffset cursor, ⟦EOL⟧
+// 해설 L110: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CAlarmCauseAnalysisDialog.SynchronizeGrid(DataGrid, System.DateTimeOffset, Drilling.UI.Menu.Menus.ST_ALARM_ANALYSIS_LOG_ROW?)
+L000110 |         ST_ALARM_ANALYSIS_LOG_ROW? preferredRow = null) ⟦EOL⟧
+// 해설 L111: 구문 블록 경계입니다 · 소속 SynchronizeGrid.
+L000111 |     { ⟦EOL⟧
+// 해설 L112: 조건에 따라 분기합니다: if (grid.ItemsSource is not IEnumerable<ST_ALARM_ANALYSIS_LOG_ROW> rows)
+L000112 |         if (grid.ItemsSource is not IEnumerable<ST_ALARM_ANALYSIS_LOG_ROW> rows) ⟦EOL⟧
+// 해설 L113: 호출자에게 값 또는 제어를 반환합니다: return;
+L000113 |             return; ⟦EOL⟧
+L000114 |  ⟦EOL⟧
+// 해설 L115: 지역 변수를 선언합니다: ST_ALARM_ANALYSIS_LOG_ROW? nearest = null; / 변수의 초기값을 지정합니다: nearest = null
+L000115 |         ST_ALARM_ANALYSIS_LOG_ROW? nearest = null; ⟦EOL⟧
+// 해설 L116: 지역 변수를 선언합니다: var nearestDistance = double.MaxValue; / 변수의 초기값을 지정합니다: nearestDistance = double.MaxValue
+L000116 |         var nearestDistance = double.MaxValue; ⟦EOL⟧
+// 해설 L117: 컬렉션 요소를 순회합니다: foreach (var row in rows)
+L000117 |         foreach (var row in rows) ⟦EOL⟧
+// 해설 L118: 구문 블록 경계입니다 · 소속 SynchronizeGrid.
+L000118 |         { ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(row, preferredRow) / 조건에 따라 분기합니다: if (preferredRow is not null && ReferenceEquals(row, preferredRow))
+L000119 |             if (preferredRow is not null && ReferenceEquals(row, preferredRow)) ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다 · 소속 SynchronizeGrid.
+L000120 |             { ⟦EOL⟧
+// 해설 L121: 값을 대상에 대입합니다: nearest = row
+L000121 |                 nearest = row; ⟦EOL⟧
+// 해설 L122: 해당 반복/분기 구간을 종료합니다: break;
+L000122 |                 break; ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 SynchronizeGrid.
+L000123 |             } ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs((row.OccurredAt - cursor).TotalMilliseconds) / 지역 변수를 선언합니다: var distance = Math.Abs((row.OccurredAt - cursor).TotalMilliseconds); / 변수의 초기값을 지정합니다: distance = Math.Abs((row.OccurredAt - cursor).TotalMilliseconds)
+L000124 |             var distance = Math.Abs((row.OccurredAt - cursor).TotalMilliseconds); ⟦EOL⟧
+// 해설 L125: 조건에 따라 분기합니다: if (distance >= nearestDistance)
+L000125 |             if (distance >= nearestDistance) ⟦EOL⟧
+// 해설 L126: 다음 반복으로 진행합니다: continue;
+L000126 |                 continue; ⟦EOL⟧
+// 해설 L127: 값을 대상에 대입합니다: nearest = row
+L000127 |             nearest = row; ⟦EOL⟧
+// 해설 L128: 값을 대상에 대입합니다: nearestDistance = distance
+L000128 |             nearestDistance = distance; ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 SynchronizeGrid.
+L000129 |         } ⟦EOL⟧
+L000130 |  ⟦EOL⟧
+// 해설 L131: 조건에 따라 분기합니다: if (nearest is null)
+L000131 |         if (nearest is null) ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 SynchronizeGrid.
+L000132 |         { ⟦EOL⟧
+// 해설 L133: 값을 대상에 대입합니다: grid.SelectedItem = null
+L000133 |             grid.SelectedItem = null; ⟦EOL⟧
+// 해설 L134: 호출자에게 값 또는 제어를 반환합니다: return;
+L000134 |             return; ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 SynchronizeGrid.
+L000135 |         } ⟦EOL⟧
+L000136 |  ⟦EOL⟧
+// 해설 L137: 값을 대상에 대입합니다: grid.SelectedItem = nearest
+L000137 |         grid.SelectedItem = nearest; ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: grid.ScrollIntoView(nearest)
+L000138 |         grid.ScrollIntoView(nearest); ⟦EOL⟧
+// 해설 L139: 구문 블록 경계입니다 · 소속 SynchronizeGrid.
+L000139 |     } ⟦EOL⟧
+L000140 |  ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: Close()
+L000141 |     private void CloseClicked(object sender, RoutedEventArgs e) => Close(); ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다.
+L000142 | } ⟦EOL⟧

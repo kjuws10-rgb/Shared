@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 4f0734c7e46f77a225b37aa296ce98ed47c2af052d912739bc4661e6eb52b852 |
 | 파일 분류 | code |
 | 원본 크기/행 | 32,585 bytes / 677 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -76,7 +76,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CellMapPortraitDesignWidth` · L9–9
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L9-L9)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -97,7 +97,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CellMapPortraitDesignHeight` · L10–10
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L10-L10)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -118,7 +118,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CellMapLandscapeDesignWidth` · L11–11
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L11-L11)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -139,7 +139,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CellMapLandscapeDesignHeight` · L12–12
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L12-L12)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -160,7 +160,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ShotDetailDesignWidth` · L13–13
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L13-L13)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -181,7 +181,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ShotDetailDesignHeight` · L14–14
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L14-L14)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -202,7 +202,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CellMapPortraitRect` · L15–15
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L15-L15)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -230,7 +230,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CellMapLandscapeRect` · L16–16
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L16-L16)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -258,7 +258,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ShotDetailRect` · L17–17
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L17-L17)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -286,7 +286,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetCellMapDesignWidth` · L18–21
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:18–21](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L18-L21)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:18–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L18-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -305,8 +305,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L430-L430) | CRecipeCellPatternPreviewDrawing.GetCellMapDesignWidth | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L43-L43) | GetCellMapDesignWidth | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L430-L430) | CRecipeCellPatternPreviewDrawing.GetCellMapDesignWidth | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L43-L43) | GetCellMapDesignWidth | False |
 
 호출하는 대상과 해석 범위:
 
@@ -326,7 +326,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetCellMapDesignHeight` · L23–26
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:23–26](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L23-L26)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:23–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L23-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -345,8 +345,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:439–439](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L439-L439) | CRecipeCellPatternPreviewDrawing.GetCellMapDesignHeight | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L44-L44) | GetCellMapDesignHeight | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:439–439](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L439-L439) | CRecipeCellPatternPreviewDrawing.GetCellMapDesignHeight | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L44-L44) | GetCellMapDesignHeight | False |
 
 호출하는 대상과 해석 범위:
 
@@ -366,7 +366,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CreateCellMap` · L28–70
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:28–70](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L28-L70)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:28–70](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L28-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -389,7 +389,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2079–2079](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2079-L2079) | CRecipeCellPatternPreviewDrawing.CreateCellMap | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2079–2079](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2079-L2079) | CRecipeCellPatternPreviewDrawing.CreateCellMap | False |
 
 호출하는 대상과 해석 범위:
 
@@ -495,7 +495,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateShotDetail` · L72–122
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:72–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L72-L122)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:72–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L72-L122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -517,7 +517,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2080–2080](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2080-L2080) | CRecipeCellPatternPreviewDrawing.CreateShotDetail | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:2080–2080](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L2080-L2080) | CRecipeCellPatternPreviewDrawing.CreateShotDetail | False |
 
 호출하는 대상과 해석 범위:
 
@@ -644,7 +644,7 @@ flowchart TD
 
 ### MethodDeclaration `TryResolveCellShotNo` · L124–139
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:124–139](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L124-L139)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:124–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L124-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -666,8 +666,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:835–835](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L835-L835) | CRecipeCellPatternPreviewDrawing.TryResolveCellShotNo | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:846–846](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L846-L846) | CRecipeCellPatternPreviewDrawing.TryResolveCellShotNo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:835–835](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L835-L835) | CRecipeCellPatternPreviewDrawing.TryResolveCellShotNo | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:846–846](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L846-L846) | CRecipeCellPatternPreviewDrawing.TryResolveCellShotNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -719,7 +719,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawMapGrid` · L141–157
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:141–157](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L141-L157)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:141–157](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L141-L157)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -798,7 +798,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawShotCenters` · L159–185
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:159–185](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L159-L185)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:159–185](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L159-L185)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -892,7 +892,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawMaskingAreas` · L187–212
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:187–212](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L187-L212)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:187–212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L187-L212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -972,7 +972,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawEdgeMaskingArea` · L214–240
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:214–240](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L214-L240)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:214–240](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L214-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1054,7 +1054,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawEdgeMaskingOutline` · L242–258
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:242–258](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L242-L258)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:242–258](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L242-L258)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1117,7 +1117,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildEdgeMaskingGeometry` · L260–289
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:260–289](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L260-L289)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:260–289](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L260-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1138,8 +1138,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L221-L221) | BuildEdgeMaskingGeometry | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L249-L249) | BuildEdgeMaskingGeometry | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L221-L221) | BuildEdgeMaskingGeometry | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L249-L249) | BuildEdgeMaskingGeometry | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1196,7 +1196,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildEdgeMaskingRectGeometry` · L291–311
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:291–311](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L291-L311)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:291–311](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L291-L311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1217,7 +1217,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L270-L270) | BuildEdgeMaskingRectGeometry | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L270-L270) | BuildEdgeMaskingRectGeometry | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1277,7 +1277,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildMaskingAreaGeometry` · L313–340
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:313–340](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L313-L340)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:313–340](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L313-L340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1298,7 +1298,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L200-L200) | BuildMaskingAreaGeometry | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L200-L200) | BuildMaskingAreaGeometry | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1364,7 +1364,7 @@ flowchart TD
 
 ### MethodDeclaration `TryProjectDoeOriginToCellMap` · L342–360
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:342–360](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L342-L360)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:342–360](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L342-L360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1386,11 +1386,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L294-L294) | TryProjectDoeOriginToCellMap | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L295-L295) | TryProjectDoeOriginToCellMap | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L296-L296) | TryProjectDoeOriginToCellMap | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L297-L297) | TryProjectDoeOriginToCellMap | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L325-L325) | TryProjectDoeOriginToCellMap | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L294-L294) | TryProjectDoeOriginToCellMap | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L295-L295) | TryProjectDoeOriginToCellMap | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L296-L296) | TryProjectDoeOriginToCellMap | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L297-L297) | TryProjectDoeOriginToCellMap | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L325-L325) | TryProjectDoeOriginToCellMap | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1448,7 +1448,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawMaskingHatches` · L362–377
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:362–377](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L362-L377)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:362–377](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L362-L377)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1510,7 +1510,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawMaskedShots` · L379–418
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:379–418](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L379-L418)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:379–418](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L379-L418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1609,7 +1609,7 @@ flowchart TD
 
 ### LocalFunctionStatement `DrawShotMarkers` · L406–417
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:406–417](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L406-L417)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:406–417](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L406-L417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1677,7 +1677,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawSelectedShot` · L420–438
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:420–438](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L420-L438)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:420–438](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L420-L438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1768,7 +1768,7 @@ flowchart TD
 
 ### MethodDeclaration `ToShotMapPoint` · L440–450
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:440–450](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L440-L450)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:440–450](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L440-L450)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1789,8 +1789,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L411-L411) | ToShotMapPoint | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L427-L427) | ToShotMapPoint | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L411-L411) | ToShotMapPoint | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L427-L427) | ToShotMapPoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1825,7 +1825,7 @@ flowchart TD
 
 ### MethodDeclaration `IsLandscape` · L452–455
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:452–455](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L452-L455)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:452–455](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L452-L455)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1844,9 +1844,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L20-L20) | IsLandscape | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L25-L25) | IsLandscape | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L459-L459) | IsLandscape | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L20-L20) | IsLandscape | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L25-L25) | IsLandscape | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L459-L459) | IsLandscape | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1858,7 +1858,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellMapRect` · L457–460
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:457–460](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L457-L460)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:457–460](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L457-L460)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1877,8 +1877,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L45-L45) | GetCellMapRect | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L129-L129) | GetCellMapRect | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L45-L45) | GetCellMapRect | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L129-L129) | GetCellMapRect | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1898,7 +1898,7 @@ flowchart TD
 
 ### MethodDeclaration `GetProcessedMapRect` · L462–479
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:462–479](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L462-L479)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:462–479](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L462-L479)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1918,8 +1918,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L46-L46) | GetProcessedMapRect | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L129-L129) | GetProcessedMapRect | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L46-L46) | GetProcessedMapRect | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L129-L129) | GetProcessedMapRect | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1971,7 +1971,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawExcludedTargetEdges` · L481–498
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:481–498](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L481-L498)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:481–498](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L481-L498)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2038,7 +2038,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawBeamPitchGrid` · L500–513
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:500–513](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L500-L513)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:500–513](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L500-L513)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2110,7 +2110,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawPixelLattice` · L515–547
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:515–547](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L515-L547)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:515–547](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L515-L547)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2211,7 +2211,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawDoeBeams` · L549–576
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:549–576](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L549-L576)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:549–576](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L549-L576)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2334,7 +2334,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawLaserOffStamp` · L578–587
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:578–587](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L578-L587)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:578–587](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L578-L587)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2397,7 +2397,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatBeamList` · L589–616
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:589–616](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L589-L616)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:589–616](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L589-L616)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2416,7 +2416,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:585–585](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L585-L585) | FormatBeamList | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:585–585](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L585-L585) | FormatBeamList | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2485,7 +2485,7 @@ flowchart TD
 
 ### MethodDeclaration `ToDetailPoint` · L618–622
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:618–622](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L618-L622)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:618–622](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L618-L622)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2507,13 +2507,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L93-L93) | ToDetailPoint | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L506-L506) | ToDetailPoint | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L507-L507) | ToDetailPoint | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L509-L509) | ToDetailPoint | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:510–510](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L510-L510) | ToDetailPoint | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:539–539](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L539-L539) | ToDetailPoint | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L568-L568) | ToDetailPoint | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L93-L93) | ToDetailPoint | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L506-L506) | ToDetailPoint | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L507-L507) | ToDetailPoint | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L509-L509) | ToDetailPoint | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:510–510](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L510-L510) | ToDetailPoint | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:539–539](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L539-L539) | ToDetailPoint | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L568-L568) | ToDetailPoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2536,7 +2536,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawAxes` · L624–639
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:624–639](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L624-L639)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:624–639](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L624-L639)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2616,7 +2616,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawText` · L641–645
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:641–645](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L641-L645)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:641–645](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L641-L645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2659,7 +2659,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawCenteredText` · L647–651
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:647–651](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L647-L651)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:647–651](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L647-L651)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2704,7 +2704,7 @@ flowchart TD
 
 ### MethodDeclaration `CreatePen` · L653–658
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:653–658](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L653-L658)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:653–658](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L653-L658)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2727,21 +2727,21 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L62-L62) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L94-L94) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L114-L114) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L145-L145) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L195-L195) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L196-L196) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L233-L233) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L234-L234) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L256-L256) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:397–397](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L397-L397) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L399-L399) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L488-L488) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:502–502](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L502-L502) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:582–582](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L582-L582) | CreatePen | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:626–626](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L626-L626) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L62-L62) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L94-L94) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L114-L114) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L145-L145) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L195-L195) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L196-L196) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L233-L233) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L234-L234) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L256-L256) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:397–397](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L397-L397) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L399-L399) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:488–488](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L488-L488) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:502–502](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L502-L502) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:582–582](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L582-L582) | CreatePen | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:626–626](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L626-L626) | CreatePen | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2766,7 +2766,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateBrush` · L660–665
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:660–665](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L660-L665)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:660–665](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L660-L665)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2788,33 +2788,33 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L51-L51) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L52-L52) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L90-L90) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L91-L91) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L107-L107) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L107-L107) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L184-L184) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L194-L194) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L232-L232) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L396-L396) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L398-L398) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L431-L431) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L432-L432) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L432-L432) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L435-L435) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:546–546](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L546-L546) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L552-L552) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L553-L553) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:554–554](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L554-L554) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L555-L555) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L556-L556) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L557-L557) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L581-L581) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:584–584](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L584-L584) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:586–586](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L586-L586) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:636–636](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L636-L636) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L655-L655) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L51-L51) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L52-L52) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L90-L90) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L91-L91) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L107-L107) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L107-L107) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L184-L184) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L194-L194) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L232-L232) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L396-L396) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L398-L398) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L431-L431) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L432-L432) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L432-L432) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L435-L435) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:546–546](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L546-L546) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L552-L552) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L553-L553) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:554–554](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L554-L554) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L555-L555) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L556-L556) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L557-L557) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L581-L581) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:584–584](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L584-L584) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:586–586](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L586-L586) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:636–636](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L636-L636) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L655-L655) | CreateBrush | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2839,7 +2839,7 @@ flowchart TD
 
 ### MethodDeclaration `AddCircle` · L667–676
 
-[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:667–676](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L667-L676)
+[Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs:667–676](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CRecipeCellPatternPreviewDrawing.cs#L667-L676)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

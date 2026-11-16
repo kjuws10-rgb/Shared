@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 766dbce15e8dd64b80d342370294b0a2c29c27a5aa3e538ba51b6814d8b85b13 |
 | 파일 분류 | code |
 | 원본 크기/행 | 6,336 bytes / 161 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -63,7 +63,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `PositionXProperty` · L8–8
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L8-L8)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -91,7 +91,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `PositionYProperty` · L9–9
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L9-L9)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -119,7 +119,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ContainerWidthProperty` · L10–10
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L10-L10)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -147,7 +147,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ContainerHeightProperty` · L11–11
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L11-L11)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -175,7 +175,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `DesignWidthProperty` · L12–12
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L12-L12)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -203,7 +203,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `DesignHeightProperty` · L13–13
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L13-L13)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -231,7 +231,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ElementWidthProperty` · L14–14
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L14-L14)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -259,7 +259,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ElementHeightProperty` · L15–15
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L15-L15)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -287,7 +287,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `UseStretchScaleProperty` · L16–16
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L16-L16)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -317,7 +317,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetPositionX` · L17–20
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:17–20](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L17-L20)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:17–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L17-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -351,7 +351,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SetPositionX` · L22–25
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:22–25](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L22-L25)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:22–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L22-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -385,7 +385,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetPositionY` · L27–30
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:27–30](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L27-L30)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:27–30](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L27-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -419,7 +419,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SetPositionY` · L32–35
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:32–35](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L32-L35)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:32–35](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L32-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -453,7 +453,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetContainerWidth` · L37–40
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:37–40](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L37-L40)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:37–40](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L37-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -487,7 +487,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SetContainerWidth` · L42–45
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:42–45](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L42-L45)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:42–45](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L42-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -521,7 +521,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetContainerHeight` · L47–50
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:47–50](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L47-L50)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:47–50](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L47-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -555,7 +555,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SetContainerHeight` · L52–55
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:52–55](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L52-L55)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:52–55](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L52-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -589,7 +589,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetDesignWidth` · L57–60
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:57–60](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L57-L60)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:57–60](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L57-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -623,7 +623,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SetDesignWidth` · L62–65
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:62–65](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L62-L65)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:62–65](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L62-L65)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -657,7 +657,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetDesignHeight` · L67–70
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:67–70](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L67-L70)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:67–70](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L67-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -691,7 +691,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SetDesignHeight` · L72–75
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:72–75](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L72-L75)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:72–75](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L72-L75)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -725,7 +725,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetElementWidth` · L77–80
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:77–80](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L77-L80)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:77–80](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L77-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -759,7 +759,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SetElementWidth` · L82–85
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:82–85](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L82-L85)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:82–85](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L82-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -793,7 +793,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetElementHeight` · L87–90
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:87–90](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L87-L90)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:87–90](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L87-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -827,7 +827,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SetElementHeight` · L92–95
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:92–95](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L92-L95)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:92–95](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L92-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -861,7 +861,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetUseStretchScale` · L97–100
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:97–100](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L97-L100)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:97–100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L97-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -895,7 +895,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SetUseStretchScale` · L102–105
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:102–105](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L102-L105)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:102–105](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L102-L105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -929,7 +929,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CreateInputProperty` · L107–110
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:107–110](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L107-L110)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:107–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L107-L110)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -948,14 +948,14 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L8-L8) | CreateInputProperty | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L9-L9) | CreateInputProperty | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L10-L10) | CreateInputProperty | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L11-L11) | CreateInputProperty | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L12-L12) | CreateInputProperty | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L13-L13) | CreateInputProperty | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L14-L14) | CreateInputProperty | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L15-L15) | CreateInputProperty | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L8-L8) | CreateInputProperty | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L9-L9) | CreateInputProperty | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L10-L10) | CreateInputProperty | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L11-L11) | CreateInputProperty | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L12-L12) | CreateInputProperty | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L13-L13) | CreateInputProperty | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L14-L14) | CreateInputProperty | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L15-L15) | CreateInputProperty | False |
 
 호출하는 대상과 해석 범위:
 
@@ -976,7 +976,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnInputChanged` · L112–118
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:112–118](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L112-L118)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:112–118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L112-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1020,7 +1020,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateCoordinates` · L120–149
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:120–149](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L120-L149)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:120–149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L120-L149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1039,7 +1039,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L116-L116) | UpdateCoordinates | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L116-L116) | UpdateCoordinates | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1132,7 +1132,7 @@ flowchart TD
 
 ### MethodDeclaration `TryDouble` · L151–160
 
-[Drilling.UI/CPreviewCoordinateBehavior.cs:151–160](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L151-L160)
+[Drilling.UI/CPreviewCoordinateBehavior.cs:151–160](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L151-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1152,14 +1152,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
-| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
+| [Drilling.UI/CPreviewCoordinateBehavior.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122) | TryDouble | False |
 
 호출하는 대상과 해석 범위:
 

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 865af8dc5eb3003e913c780485f57e746b39ca946e7673a84a9a2868f1989249 |
 | 파일 분류 | code |
 | 원본 크기/행 | 27,354 bytes / 594 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -70,7 +70,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MinimumPreviewCellAreaWidth` · L11–11
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L11-L11)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -91,7 +91,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MinimumPreviewCellAreaHeight` · L12–12
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L12-L12)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -112,7 +112,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `BuildEnabledHeadNumbers` · L13–26
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:13–26](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L13-L26)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:13–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L13-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -132,11 +132,11 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L116-L116) | BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L431-L431) | BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5991–5991](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5991-L5991) | CHeadAssignmentPreviewBuilder.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7532–7532](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7532-L7532) | CHeadAssignmentPreviewBuilder.BuildEnabledHeadNumbers | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7057–7057](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7057-L7057) | CHeadAssignmentPreviewBuilder.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L116-L116) | BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L431-L431) | BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6096–6096](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6096-L6096) | CHeadAssignmentPreviewBuilder.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7637–7637](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7637-L7637) | CHeadAssignmentPreviewBuilder.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7032–7032](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7032-L7032) | CHeadAssignmentPreviewBuilder.BuildEnabledHeadNumbers | False |
 
 호출하는 대상과 해석 범위:
 
@@ -179,7 +179,7 @@ flowchart TD
 
 ### MethodDeclaration `IsHeadEnabled` · L28–31
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:28–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L28-L31)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:28–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L28-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -199,7 +199,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L19-L19) | IsHeadEnabled | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L19-L19) | IsHeadEnabled | False |
 
 호출하는 대상과 해석 범위:
 
@@ -221,7 +221,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBoolOption` · L33–46
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:33–46](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L33-L46)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:33–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L33-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -241,7 +241,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L30-L30) | ReadBoolOption | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L30-L30) | ReadBoolOption | False |
 
 호출하는 대상과 해석 범위:
 
@@ -278,7 +278,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadIntAny` · L48–59
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:48–59](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L48-L59)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:48–59](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L48-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -299,7 +299,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L112-L112) | ReadIntAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L112-L112) | ReadIntAny | False |
 
 호출하는 대상과 해석 범위:
 
@@ -334,7 +334,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDoubleAny` · L61–72
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:61–72](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L61-L72)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:61–72](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L61-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -355,22 +355,22 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L85-L85) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L86-L86) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L87-L87) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L88-L88) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L111-L111) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L114-L114) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L114-L114) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L149-L149) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L150-L150) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L151-L151) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L429-L429) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L430-L430) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L530-L530) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:531–531](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L531-L531) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L552-L552) | ReadDoubleAny | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L553-L553) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L85-L85) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L86-L86) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L87-L87) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L88-L88) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L111-L111) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L114-L114) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L114-L114) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L149-L149) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L150-L150) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L151-L151) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L429-L429) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L430-L430) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L530-L530) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:531–531](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L531-L531) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:552–552](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L552-L552) | ReadDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L553-L553) | ReadDoubleAny | False |
 
 호출하는 대상과 해석 범위:
 
@@ -405,7 +405,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildRecipePreview` · L74–242
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:74–242](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L74-L242)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:74–242](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L74-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -428,12 +428,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6023–6023](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6023-L6023) | CHeadAssignmentPreviewBuilder.BuildRecipePreview | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6490–6490](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6490-L6490) | CHeadAssignmentPreviewBuilder.BuildRecipePreview | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7920–7920](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7920-L7920) | CHeadAssignmentPreviewBuilder.BuildRecipePreview | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:725–725](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L725-L725) | CHeadAssignmentPreviewBuilder.BuildRecipePreview | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7076–7076](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7076-L7076) | CHeadAssignmentPreviewBuilder.BuildRecipePreview | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4596–4596](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4596-L4596) | CHeadAssignmentPreviewBuilder.BuildRecipePreview | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6128–6128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6128-L6128) | CHeadAssignmentPreviewBuilder.BuildRecipePreview | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6594–6594](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6594-L6594) | CHeadAssignmentPreviewBuilder.BuildRecipePreview | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:8025–8025](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L8025-L8025) | CHeadAssignmentPreviewBuilder.BuildRecipePreview | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:725–725](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L725-L725) | CHeadAssignmentPreviewBuilder.BuildRecipePreview | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7051–7051](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7051-L7051) | CHeadAssignmentPreviewBuilder.BuildRecipePreview | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4596–4596](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4596-L4596) | CHeadAssignmentPreviewBuilder.BuildRecipePreview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -788,7 +788,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L105–108
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:105–108](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L105-L108)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:105–108](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L105-L108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -822,7 +822,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHeadNo` · L127–130
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:127–130](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L127-L130)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:127–130](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L127-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -849,7 +849,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectLong` · L132–135
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:132–135](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L132-L135)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:132–135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L132-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -876,7 +876,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateRecipePreviewError` · L244–247
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:244–247](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L244-L247)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:244–247](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L244-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -896,20 +896,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L91-L91) | CreateRecipePreviewError | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L96-L96) | CreateRecipePreviewError | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L102-L102) | CreateRecipePreviewError | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L122-L122) | CreateRecipePreviewError | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L157-L157) | CreateRecipePreviewError | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L163-L163) | CreateRecipePreviewError | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L170-L170) | CreateRecipePreviewError | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:197–197](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L197-L197) | CreateRecipePreviewError | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L91-L91) | CreateRecipePreviewError | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L96-L96) | CreateRecipePreviewError | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L102-L102) | CreateRecipePreviewError | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L122-L122) | CreateRecipePreviewError | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L157-L157) | CreateRecipePreviewError | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L163-L163) | CreateRecipePreviewError | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L170-L170) | CreateRecipePreviewError | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:197–197](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L197-L197) | CreateRecipePreviewError | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 246 | new ST_MAIN_RECIPE_PREVIEW | resolved | Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW.ST_MAIN_RECIPE_PREVIEW(ImageSource?, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, System.Collections.Generic.IReadOnlyDictionary<int, long>, long, long, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL>, string, int) · Drilling.UI/Menu/Menus/CMenuMain.cs:3437 |
+| 246 | new ST_MAIN_RECIPE_PREVIEW | resolved | Drilling.UI.Menu.Menus.ST_MAIN_RECIPE_PREVIEW.ST_MAIN_RECIPE_PREVIEW(ImageSource?, Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME, System.Collections.Generic.IReadOnlyDictionary<int, long>, long, long, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL>, string, int) · Drilling.UI/Menu/Menus/CMenuMain.cs:3449 |
 | 246 | new Dictionary<int, long> | resolved | System.Collections.Generic.Dictionary<int, long>.Dictionary() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -924,7 +924,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveCellPreviewHead` · L249–271
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:249–271](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L249-L271)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:249–271](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L249-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -945,7 +945,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L203-L203) | ResolveCellPreviewHead | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L203-L203) | ResolveCellPreviewHead | False |
 
 호출하는 대상과 해석 범위:
 
@@ -991,7 +991,7 @@ flowchart TD
 
 ### MethodDeclaration `ShouldUseExpandedPreviewBounds` · L273–276
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:273–276](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L273-L276)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:273–276](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L273-L276)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1028,7 +1028,7 @@ flowchart TD
 
 ### MethodDeclaration `ExpandPreviewBounds` · L278–287
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:278–287](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L278-L287)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:278–287](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L278-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1093,7 +1093,7 @@ flowchart TD
 
 ### MethodDeclaration `ClampPreviewCoordinate` · L289–293
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:289–293](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L289-L293)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:289–293](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L289-L293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1133,7 +1133,7 @@ flowchart TD
 
 ### MethodDeclaration `AssignPreviewHead` · L295–340
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:295–340](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L295-L340)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:295–340](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L295-L340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1156,7 +1156,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L183-L183) | AssignPreviewHead | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L183-L183) | AssignPreviewHead | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1203,7 +1203,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildPreview` · L302–311
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:302–311](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L302-L311)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:302–311](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L302-L311)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1225,7 +1225,7 @@ flowchart TD
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 304 | GetPreviewHeadRange | resolved | (double StartX, double EndX, double CenterX) Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.GetPreviewHeadRange(int, Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_LAYOUT, double) · Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:342 |
-| 310 | new ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE | resolved | Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE(int, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3533 |
+| 310 | new ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE | resolved | Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE.ST_PREVIEW_HEAD_ASSIGNMENT_CANDIDATE(int, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3545 |
 | 310 | Math.Abs | resolved | double System.Math.Abs(double) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -1254,7 +1254,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsHasValue` · L313–316
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:313–316](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L313-L316)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:313–316](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L313-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1281,7 +1281,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L318–321
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:318–321](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L318-L321)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:318–321](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L318-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1308,7 +1308,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDistance` · L324–327
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:324–327](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L324-L327)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:324–327](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L324-L327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1335,7 +1335,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L329–332
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:329–332](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L329-L332)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:329–332](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L329-L332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1370,7 +1370,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHeadNo` · L334–337
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:334–337](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L334-L337)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:334–337](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L334-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1397,7 +1397,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPreviewHeadRange` · L342–348
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:342–348](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L342-L348)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:342–348](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L342-L348)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1418,14 +1418,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L304-L304) | GetPreviewHeadRange | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L446-L446) | GetPreviewHeadRange | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L304-L304) | GetPreviewHeadRange | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L446-L446) | GetPreviewHeadRange | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 344 | headLayout.GetField | resolved | Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_LAYOUT.GetField(int) · Drilling.UI/Menu/Menus/CMenuMain.cs:3449 |
+| 344 | headLayout.GetField | resolved | Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_LAYOUT.GetField(int) · Drilling.UI/Menu/Menus/CMenuMain.cs:3461 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1444,7 +1444,7 @@ flowchart TD
 
 ### MethodDeclaration `TryProjectRecipePreviewPixel` · L350–371
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:350–371](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L350-L371)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:350–371](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L350-L371)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1526,7 +1526,7 @@ flowchart TD
 
 ### MethodDeclaration `TryBuildRecipeCellBoundary` · L373–423
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:373–423](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L373-L423)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:373–423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L373-L423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1555,7 +1555,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L195-L195) | TryBuildRecipeCellBoundary | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L195-L195) | TryBuildRecipeCellBoundary | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1646,7 +1646,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildHeadAssignmentMap` · L425–485
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:425–485](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L425-L485)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:425–485](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L425-L485)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1667,7 +1667,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7080–7080](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7080-L7080) | CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7055–7055](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7055-L7055) | CHeadAssignmentPreviewBuilder.BuildHeadAssignmentMap | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1681,11 +1681,11 @@ flowchart TD
 | 461 | selectedHeadNos.Contains | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlySet<int>.Contains(int) |
 | 465 | GetHeadRect | resolved | (double Left, double Top, double Width, double Height, double LabelLeft, double LabelWidth) GetHeadRect(int) · Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:433 |
 | 466 | areas.Add | resolved | void System.Collections.Generic.List<Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_AREA>.Add(Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_AREA) |
-| 466 | new ST_HEAD_ASSIGNMENT_AREA | resolved | Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_AREA.ST_HEAD_ASSIGNMENT_AREA(int, string, double, double, double, double, double, double, bool, int, Brush, Brush, Thickness, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3491 |
+| 466 | new ST_HEAD_ASSIGNMENT_AREA | resolved | Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_AREA.ST_HEAD_ASSIGNMENT_AREA(int, string, double, double, double, double, double, double, bool, int, Brush, Brush, Thickness, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3503 |
 | 477 | CreateHeadBrush | resolved | Brush Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.CreateHeadBrush(int, byte) · Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:557 |
 | 478 | CreateHeadBrush | resolved | Brush Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.CreateHeadBrush(int, byte) · Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:557 |
 | 479 | new Thickness | unresolved | None |
-| 484 | new ST_HEAD_ASSIGNMENT_MAP | resolved | Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP.ST_HEAD_ASSIGNMENT_MAP(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_AREA>) · Drilling.UI/Menu/Menus/CMenuMain.cs:3436 |
+| 484 | new ST_HEAD_ASSIGNMENT_MAP | resolved | Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_MAP.ST_HEAD_ASSIGNMENT_MAP(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_HEAD_ASSIGNMENT_AREA>) · Drilling.UI/Menu/Menus/CMenuMain.cs:3448 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1747,7 +1747,7 @@ flowchart TD
 
 ### LocalFunctionStatement `GetHeadRect` · L433–457
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:433–457](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L433-L457)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:433–457](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L433-L457)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1766,7 +1766,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:465–465](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L465-L465) | GetHeadRect | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:465–465](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L465-L465) | GetHeadRect | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1777,7 +1777,7 @@ flowchart TD
 | 441 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 446 | GetPreviewHeadRange | resolved | (double StartX, double EndX, double CenterX) Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.GetPreviewHeadRange(int, Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_LAYOUT, double) · Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:342 |
 | 451 | Math.Max | resolved | double System.Math.Max(double, double) |
-| 452 | headLayout.GetField | resolved | Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_LAYOUT.GetField(int) · Drilling.UI/Menu/Menus/CMenuMain.cs:3449 |
+| 452 | headLayout.GetField | resolved | Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_LAYOUT.GetField(int) · Drilling.UI/Menu/Menus/CMenuMain.cs:3461 |
 | 454 | Math.Clamp | resolved | double System.Math.Clamp(double, double, double) |
 | 455 | Math.Clamp | resolved | double System.Math.Clamp(double, double, double) |
 | 456 | Math.Max | resolved | double System.Math.Max(double, double) |
@@ -1834,7 +1834,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadPositionX` · L487–494
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:487–494](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L487-L494)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:487–494](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L487-L494)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1854,7 +1854,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:585–585](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L585-L585) | ReadHeadPositionX | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:585–585](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L585-L585) | ReadHeadPositionX | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1883,7 +1883,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadSettingDouble` · L496–517
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:496–517](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L496-L517)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:496–517](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L496-L517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1904,9 +1904,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:491–491](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L491-L491) | ReadSettingDouble | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:492–492](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L492-L492) | ReadSettingDouble | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L587-L587) | ReadSettingDouble | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:491–491](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L491-L491) | ReadSettingDouble | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:492–492](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L492-L492) | ReadSettingDouble | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:587–587](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L587-L587) | ReadSettingDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1945,7 +1945,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L500–503
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:500–503](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L500-L503)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:500–503](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L500-L503)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1981,7 +1981,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadNullableDoubleAny` · L519–522
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:519–522](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L519-L522)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:519–522](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L519-L522)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2001,7 +2001,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L107-L107) | ReadNullableDoubleAny | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L107-L107) | ReadNullableDoubleAny | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2023,7 +2023,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateGlassFrame` · L524–548
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:524–548](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L524-L548)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:524–548](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L524-L548)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2042,8 +2042,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L84-L84) | CreateGlassFrame | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L428-L428) | CreateGlassFrame | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L84-L84) | CreateGlassFrame | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L428-L428) | CreateGlassFrame | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2053,15 +2053,15 @@ flowchart TD
 | 531 | ReadDoubleAny | resolved | double Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ReadDoubleAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, double, params string[]) · Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:61 |
 | 532 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 532 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 534 | new ST_GLASS_PREVIEW_FRAME | resolved | Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME.ST_GLASS_PREVIEW_FRAME(double, double, double, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3462 |
+| 534 | new ST_GLASS_PREVIEW_FRAME | resolved | Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME.ST_GLASS_PREVIEW_FRAME(double, double, double, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3474 |
 | 537 | Math.Min | resolved | double System.Math.Min(double, double) |
 | 542 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 542 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 542 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 542 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 542 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 544 | new ST_GLASS_PREVIEW_FRAME | resolved | Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME.ST_GLASS_PREVIEW_FRAME(double, double, double, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3462 |
-| 547 | new ST_GLASS_PREVIEW_FRAME | resolved | Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME.ST_GLASS_PREVIEW_FRAME(double, double, double, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3462 |
+| 544 | new ST_GLASS_PREVIEW_FRAME | resolved | Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME.ST_GLASS_PREVIEW_FRAME(double, double, double, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3474 |
+| 547 | new ST_GLASS_PREVIEW_FRAME | resolved | Drilling.UI.Menu.Menus.ST_GLASS_PREVIEW_FRAME.ST_GLASS_PREVIEW_FRAME(double, double, double, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3474 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2123,7 +2123,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatGlassSizeText` · L550–555
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:550–555](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L550-L555)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:550–555](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L550-L555)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2142,7 +2142,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7081–7081](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7081-L7081) | CHeadAssignmentPreviewBuilder.FormatGlassSizeText | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7056–7056](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7056-L7056) | CHeadAssignmentPreviewBuilder.FormatGlassSizeText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2172,7 +2172,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateHeadBrush` · L557–572
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:557–572](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L557-L572)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:557–572](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L557-L572)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2192,11 +2192,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L207-L207) | CreateHeadBrush | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L210-L210) | CreateHeadBrush | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L477-L477) | CreateHeadBrush | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:478–478](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L478-L478) | CreateHeadBrush | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2246–2246](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2246-L2246) | CHeadAssignmentPreviewBuilder.CreateHeadBrush | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L207-L207) | CreateHeadBrush | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L210-L210) | CreateHeadBrush | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L477-L477) | CreateHeadBrush | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:478–478](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L478-L478) | CreateHeadBrush | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2246–2246](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L2246-L2246) | CHeadAssignmentPreviewBuilder.CreateHeadBrush | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2237,7 +2237,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateBrush` · L574–579
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:574–579](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L574-L579)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:574–579](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L574-L579)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2259,8 +2259,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L206-L206) | CreateBrush | False |
-| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L209-L209) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L206-L206) | CreateBrush | False |
+| [Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L209-L209) | CreateBrush | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2285,7 +2285,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildHeadLayout` · L581–593
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:581–593](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L581-L593)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:581–593](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L581-L593)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2304,13 +2304,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6023–6023](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6023-L6023) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6490–6490](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6490-L6490) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7425–7425](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7425-L7425) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7591–7591](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7591-L7591) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2211–2211](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuMain.cs#L2211-L2211) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7052–7052](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuManual.cs#L7052-L7052) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4596–4596](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4596-L4596) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6128–6128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6128-L6128) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6594–6594](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6594-L6594) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7530–7530](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7530-L7530) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7696–7696](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7696-L7696) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2211–2211](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L2211-L2211) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7027–7027](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7027-L7027) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4596–4596](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4596-L4596) | CHeadAssignmentPreviewBuilder.BuildHeadLayout | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2319,7 +2319,7 @@ flowchart TD
 | 591 | Enumerable.Range(1, 8).Select(BuildPreview).ToArray | resolved | Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD>.ToArray<Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD>() |
 | 591 | Enumerable.Range(1, 8).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD> System.Collections.Generic.IEnumerable<int>.Select<int, Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD>(System.Func<int, Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD>) |
 | 591 | Enumerable.Range | resolved | System.Collections.Generic.IEnumerable<int> System.Linq.Enumerable.Range(int, int) |
-| 592 | new ST_PREVIEW_HEAD_LAYOUT | resolved | Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_LAYOUT.ST_PREVIEW_HEAD_LAYOUT(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD>) · Drilling.UI/Menu/Menus/CMenuMain.cs:3447 |
+| 592 | new ST_PREVIEW_HEAD_LAYOUT | resolved | Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_LAYOUT.ST_PREVIEW_HEAD_LAYOUT(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD>) · Drilling.UI/Menu/Menus/CMenuMain.cs:3459 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2337,7 +2337,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildPreview` · L583–589
 
-[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:583–589](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L583-L589)
+[Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:583–589](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs#L583-L589)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2360,7 +2360,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | 585 | ReadHeadPositionX | resolved | double Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ReadHeadPositionX(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, int) · Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:487 |
 | 587 | ReadSettingDouble | resolved | double Drilling.UI.Menu.Menus.CHeadAssignmentPreviewBuilder.ReadSettingDouble(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, double, params string[]) · Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs:496 |
-| 588 | new ST_PREVIEW_HEAD_FIELD | resolved | Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD.ST_PREVIEW_HEAD_FIELD(int, double, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3461 |
+| 588 | new ST_PREVIEW_HEAD_FIELD | resolved | Drilling.UI.Menu.Menus.ST_PREVIEW_HEAD_FIELD.ST_PREVIEW_HEAD_FIELD(int, double, double) · Drilling.UI/Menu/Menus/CMenuMain.cs:3473 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 

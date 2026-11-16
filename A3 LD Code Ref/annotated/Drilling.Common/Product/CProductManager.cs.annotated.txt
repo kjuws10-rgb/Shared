@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.Common/Product/CProductManager.cs
-Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Log;
@@ -1919,331 +1919,339 @@ L000995 |  ⟦EOL⟧
 L000996 | public sealed record ST_PRODUCT_ALIGN_DATA(EN_PRODUCT_PROCESS_STATE State, string Result, double? OffsetX, double? OffsetY, double? Rotation); ⟦EOL⟧
 // 해설 L997: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_DISTORTION_DATA(EN_PRODUCT_PROCESS_STATE State, string Result, double? MaxDa);
 L000997 | public sealed record ST_PRODUCT_DISTORTION_DATA(EN_PRODUCT_PROCESS_STATE State, string Result, double? MaxDa); ⟦EOL⟧
-// 해설 L998: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_REVIEW_RESULT(string ShotKey, int HeadNo, int CellNo, int BeamNo, double ErrorX, double ErrorY, string Judge);
-L000998 | public sealed record ST_PRODUCT_REVIEW_RESULT(string ShotKey, int HeadNo, int CellNo, int BeamNo, double ErrorX, double ErrorY, string Judge); ⟦EOL⟧
-// 해설 L999: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_REVIEW_DATA(EN_PRODUCT_PROCESS_STATE State, DateTimeOffset? SavedAt, IReadOnlyList<ST_PRODUCT_REVIEW_RESULT> Results)
-L000999 | public sealed record ST_PRODUCT_REVIEW_DATA(EN_PRODUCT_PROCESS_STATE State, DateTimeOffset? SavedAt, IReadOnlyList<ST_PRODUCT_REVIEW_RESULT> Results) ⟦EOL⟧
-// 해설 L1000: 구문 블록 경계입니다.
-L001000 | { ⟦EOL⟧
-// 해설 L1001: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.InspectionMethod
-L001001 |     public string InspectionMethod { get; init; } = ""; ⟦EOL⟧
-// 해설 L1002: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RecipeId
-L001002 |     public string RecipeId { get; init; } = ""; ⟦EOL⟧
-// 해설 L1003: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.Rule
-L001003 |     public string Rule { get; init; } = ""; ⟦EOL⟧
-// 해설 L1004: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RuleScope
-L001004 |     public string RuleScope { get; init; } = ""; ⟦EOL⟧
-// 해설 L1005: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.BeamNo
-L001005 |     public int BeamNo { get; init; } = 1; ⟦EOL⟧
-// 해설 L1006: 선언·서명/매개변수·접근 조건입니다 · int? Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceCellNo
-L001006 |     public int? ReferenceCellNo { get; init; } ⟦EOL⟧
-// 해설 L1007: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceShot
-L001007 |     public string ReferenceShot { get; init; } = ""; ⟦EOL⟧
-// 해설 L1008: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RoughReference
-L001008 |     public string RoughReference { get; init; } = ""; ⟦EOL⟧
-// 해설 L1009: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.FineLineCount
-L001009 |     public int FineLineCount { get; init; } ⟦EOL⟧
-// 해설 L1010: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.TotalCount
-L001010 |     public int TotalCount { get; init; } ⟦EOL⟧
-// 해설 L1011: 구문 블록 경계입니다.
-L001011 | } ⟦EOL⟧
-L001012 |  ⟦EOL⟧
-// 해설 L1013: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_INFO(IReadOnlyDictionary<string, string> Values)
-L001013 | public sealed record ST_PRODUCT_INFO(IReadOnlyDictionary<string, string> Values) ⟦EOL⟧
-// 해설 L1014: 구문 블록 경계입니다.
-L001014 | { ⟦EOL⟧
-// 해설 L1015: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string)
-L001015 |     public string Get(string name) ⟦EOL⟧
-// 해설 L1016: 구문 블록 경계입니다 · 소속 Get.
-L001016 |     { ⟦EOL⟧
-// 해설 L1017: 함수·델리게이트 또는 객체 생성자를 호출합니다: Values.TryGetValue(name, out var value) / 조건에 따라 결과식을 선택합니다: Values.TryGetValue(name, out var value) ? value : "" / 호출자에게 값 또는 제어를 반환합니다: return Values.TryGetValue(name, out var value) ? value : "";
-L001017 |         return Values.TryGetValue(name, out var value) ? value : ""; ⟦EOL⟧
-// 해설 L1018: 구문 블록 경계입니다 · 소속 Get.
-L001018 |     } ⟦EOL⟧
-L001019 |  ⟦EOL⟧
-// 해설 L1020: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string)
-L001020 |     public ST_PRODUCT_INFO Set(string name, string value) ⟦EOL⟧
-// 해설 L1021: 구문 블록 경계입니다 · 소속 Set.
-L001021 |     { ⟦EOL⟧
-// 해설 L1022: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) { [name] = value } / 지역 변수를 선언합니다: var values = new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) { [name] = value }; / 변수의 초기값을 지정합니다: values = new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) { [name] = value }
-L001022 |         var values = new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
-// 해설 L1023: 구문 블록 경계입니다 · 소속 Set.
-L001023 |         { ⟦EOL⟧
-// 해설 L1024: 값을 대상에 대입합니다: [name] = value
-L001024 |             [name] = value ⟦EOL⟧
+// 해설 L998: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_REVIEW_RESULT(string ShotKey, int HeadNo, int CellNo, int BeamNo, double ErrorX, double ErrorY, string Judge)
+L000998 | public sealed record ST_PRODUCT_REVIEW_RESULT(string ShotKey, int HeadNo, int CellNo, int BeamNo, double ErrorX, double ErrorY, string Judge) ⟦EOL⟧
+// 해설 L999: 구문 블록 경계입니다.
+L000999 | { ⟦EOL⟧
+// 해설 L1000: 선언·서명/매개변수·접근 조건입니다 · int? Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.VisionResultCode
+L001000 |     public int? VisionResultCode { get; init; } ⟦EOL⟧
+// 해설 L1001: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT.NgReason
+L001001 |     public string NgReason { get; init; } = ""; ⟦EOL⟧
+// 해설 L1002: 구문 블록 경계입니다.
+L001002 | } ⟦EOL⟧
+// 해설 L1003: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_REVIEW_DATA(EN_PRODUCT_PROCESS_STATE State, DateTimeOffset? SavedAt, IReadOnlyList<ST_PRODUCT_REVIEW_RESULT> Results)
+L001003 | public sealed record ST_PRODUCT_REVIEW_DATA(EN_PRODUCT_PROCESS_STATE State, DateTimeOffset? SavedAt, IReadOnlyList<ST_PRODUCT_REVIEW_RESULT> Results) ⟦EOL⟧
+// 해설 L1004: 구문 블록 경계입니다.
+L001004 | { ⟦EOL⟧
+// 해설 L1005: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.InspectionMethod
+L001005 |     public string InspectionMethod { get; init; } = ""; ⟦EOL⟧
+// 해설 L1006: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RecipeId
+L001006 |     public string RecipeId { get; init; } = ""; ⟦EOL⟧
+// 해설 L1007: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.Rule
+L001007 |     public string Rule { get; init; } = ""; ⟦EOL⟧
+// 해설 L1008: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RuleScope
+L001008 |     public string RuleScope { get; init; } = ""; ⟦EOL⟧
+// 해설 L1009: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.BeamNo
+L001009 |     public int BeamNo { get; init; } = 1; ⟦EOL⟧
+// 해설 L1010: 선언·서명/매개변수·접근 조건입니다 · int? Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceCellNo
+L001010 |     public int? ReferenceCellNo { get; init; } ⟦EOL⟧
+// 해설 L1011: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ReferenceShot
+L001011 |     public string ReferenceShot { get; init; } = ""; ⟦EOL⟧
+// 해설 L1012: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.RoughReference
+L001012 |     public string RoughReference { get; init; } = ""; ⟦EOL⟧
+// 해설 L1013: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.FineLineCount
+L001013 |     public int FineLineCount { get; init; } ⟦EOL⟧
+// 해설 L1014: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.TotalCount
+L001014 |     public int TotalCount { get; init; } ⟦EOL⟧
+// 해설 L1015: 구문 블록 경계입니다.
+L001015 | } ⟦EOL⟧
+L001016 |  ⟦EOL⟧
+// 해설 L1017: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_INFO(IReadOnlyDictionary<string, string> Values)
+L001017 | public sealed record ST_PRODUCT_INFO(IReadOnlyDictionary<string, string> Values) ⟦EOL⟧
+// 해설 L1018: 구문 블록 경계입니다.
+L001018 | { ⟦EOL⟧
+// 해설 L1019: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string)
+L001019 |     public string Get(string name) ⟦EOL⟧
+// 해설 L1020: 구문 블록 경계입니다 · 소속 Get.
+L001020 |     { ⟦EOL⟧
+// 해설 L1021: 함수·델리게이트 또는 객체 생성자를 호출합니다: Values.TryGetValue(name, out var value) / 조건에 따라 결과식을 선택합니다: Values.TryGetValue(name, out var value) ? value : "" / 호출자에게 값 또는 제어를 반환합니다: return Values.TryGetValue(name, out var value) ? value : "";
+L001021 |         return Values.TryGetValue(name, out var value) ? value : ""; ⟦EOL⟧
+// 해설 L1022: 구문 블록 경계입니다 · 소속 Get.
+L001022 |     } ⟦EOL⟧
+L001023 |  ⟦EOL⟧
+// 해설 L1024: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.ST_PRODUCT_INFO Drilling.Common.Product.ST_PRODUCT_INFO.Set(string, string)
+L001024 |     public ST_PRODUCT_INFO Set(string name, string value) ⟦EOL⟧
 // 해설 L1025: 구문 블록 경계입니다 · 소속 Set.
-L001025 |         }; ⟦EOL⟧
-// 해설 L1026: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_INFO(values) / 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_INFO(values);
-L001026 |         return new ST_PRODUCT_INFO(values); ⟦EOL⟧
+L001025 |     { ⟦EOL⟧
+// 해설 L1026: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) { [name] = value } / 지역 변수를 선언합니다: var values = new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) { [name] = value }; / 변수의 초기값을 지정합니다: values = new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) { [name] = value }
+L001026 |         var values = new Dictionary<string, string>(Values, StringComparer.OrdinalIgnoreCase) ⟦EOL⟧
 // 해설 L1027: 구문 블록 경계입니다 · 소속 Set.
-L001027 |     } ⟦EOL⟧
-// 해설 L1028: 구문 블록 경계입니다.
-L001028 | } ⟦EOL⟧
-L001029 |  ⟦EOL⟧
-// 해설 L1030: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_RECIPE_DATA(IReadOnlyDictionary<string, string> Parameters);
-L001030 | public sealed record ST_PRODUCT_RECIPE_DATA(IReadOnlyDictionary<string, string> Parameters); ⟦EOL⟧
-// 해설 L1031: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_RUNTIME_DATA(IReadOnlyList<ST_PRODUCT_HEAD_RESULT> Heads);
-L001031 | public sealed record ST_PRODUCT_RUNTIME_DATA(IReadOnlyList<ST_PRODUCT_HEAD_RESULT> Heads); ⟦EOL⟧
-// 해설 L1032: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_HEAD_RESULT(
-L001032 | public sealed record ST_PRODUCT_HEAD_RESULT( ⟦EOL⟧
-// 해설 L1033: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001033 |     int HeadNo,  ⟦EOL⟧
-// 해설 L1034: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001034 |     EN_PRODUCT_HEAD_STATE State,  ⟦EOL⟧
-// 해설 L1035: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001035 |     int TotalPoints,  ⟦EOL⟧
-// 해설 L1036: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001036 |     int CompletedPoints,  ⟦EOL⟧
+L001027 |         { ⟦EOL⟧
+// 해설 L1028: 값을 대상에 대입합니다: [name] = value
+L001028 |             [name] = value ⟦EOL⟧
+// 해설 L1029: 구문 블록 경계입니다 · 소속 Set.
+L001029 |         }; ⟦EOL⟧
+// 해설 L1030: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PRODUCT_INFO(values) / 호출자에게 값 또는 제어를 반환합니다: return new ST_PRODUCT_INFO(values);
+L001030 |         return new ST_PRODUCT_INFO(values); ⟦EOL⟧
+// 해설 L1031: 구문 블록 경계입니다 · 소속 Set.
+L001031 |     } ⟦EOL⟧
+// 해설 L1032: 구문 블록 경계입니다.
+L001032 | } ⟦EOL⟧
+L001033 |  ⟦EOL⟧
+// 해설 L1034: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_RECIPE_DATA(IReadOnlyDictionary<string, string> Parameters);
+L001034 | public sealed record ST_PRODUCT_RECIPE_DATA(IReadOnlyDictionary<string, string> Parameters); ⟦EOL⟧
+// 해설 L1035: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_RUNTIME_DATA(IReadOnlyList<ST_PRODUCT_HEAD_RESULT> Heads);
+L001035 | public sealed record ST_PRODUCT_RUNTIME_DATA(IReadOnlyList<ST_PRODUCT_HEAD_RESULT> Heads); ⟦EOL⟧
+// 해설 L1036: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_HEAD_RESULT(
+L001036 | public sealed record ST_PRODUCT_HEAD_RESULT( ⟦EOL⟧
 // 해설 L1037: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001037 |     EN_PRODUCT_RESULT Result,  ⟦EOL⟧
+L001037 |     int HeadNo,  ⟦EOL⟧
 // 해설 L1038: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001038 |     string ErrorCode,  ⟦EOL⟧
+L001038 |     EN_PRODUCT_HEAD_STATE State,  ⟦EOL⟧
 // 해설 L1039: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001039 |     string Message,  ⟦EOL⟧
+L001039 |     int TotalPoints,  ⟦EOL⟧
 // 해설 L1040: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001040 |     DateTimeOffset? StartedAt,  ⟦EOL⟧
+L001040 |     int CompletedPoints,  ⟦EOL⟧
 // 해설 L1041: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001041 |     DateTimeOffset? CompletedAt ⟦EOL⟧
+L001041 |     EN_PRODUCT_RESULT Result,  ⟦EOL⟧
 // 해설 L1042: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001042 | ); ⟦EOL⟧
-// 해설 L1043: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_DATA(
-L001043 | public sealed record ST_PRODUCT_DATA( ⟦EOL⟧
+L001042 |     string ErrorCode,  ⟦EOL⟧
+// 해설 L1043: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L001043 |     string Message,  ⟦EOL⟧
 // 해설 L1044: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001044 |     ST_PRODUCT_INFO Product,  ⟦EOL⟧
+L001044 |     DateTimeOffset? StartedAt,  ⟦EOL⟧
 // 해설 L1045: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001045 |     ST_PRODUCT_RECIPE_DATA Recipe,  ⟦EOL⟧
+L001045 |     DateTimeOffset? CompletedAt ⟦EOL⟧
 // 해설 L1046: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001046 |     ST_PRODUCT_ALIGN_DATA Align,  ⟦EOL⟧
-// 해설 L1047: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001047 |     ST_PRODUCT_DISTORTION_DATA Distortion,  ⟦EOL⟧
+L001046 | ); ⟦EOL⟧
+// 해설 L1047: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_DATA(
+L001047 | public sealed record ST_PRODUCT_DATA( ⟦EOL⟧
 // 해설 L1048: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001048 |     ST_PRODUCT_REVIEW_DATA Review,  ⟦EOL⟧
+L001048 |     ST_PRODUCT_INFO Product,  ⟦EOL⟧
 // 해설 L1049: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001049 |     ST_PRODUCT_RUNTIME_DATA Runtime ⟦EOL⟧
+L001049 |     ST_PRODUCT_RECIPE_DATA Recipe,  ⟦EOL⟧
 // 해설 L1050: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L001050 | ) ⟦EOL⟧
-// 해설 L1051: 구문 블록 경계입니다.
-L001051 | { ⟦EOL⟧
-// 해설 L1052: 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("H_GLASSID")
-L001052 |     public string GlassId => Product.Get("H_GLASSID"); ⟦EOL⟧
-L001053 |  ⟦EOL⟧
-// 해설 L1054: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.ProductId
-L001054 |     public string ProductId ⟦EOL⟧
-// 해설 L1055: 구문 블록 경계입니다 · 소속 ProductId.
-L001055 |     { ⟦EOL⟧
-// 해설 L1056: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.ProductId.get
-L001056 |         get ⟦EOL⟧
-// 해설 L1057: 구문 블록 경계입니다 · 소속 get_ProductId.
-L001057 |         { ⟦EOL⟧
-// 해설 L1058: 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PRODUCTID") / 호출자에게 값 또는 제어를 반환합니다: return Product.Get("PRODUCTID");
-L001058 |             return Product.Get("PRODUCTID"); ⟦EOL⟧
-// 해설 L1059: 구문 블록 경계입니다 · 소속 get_ProductId.
-L001059 |         } ⟦EOL⟧
-// 해설 L1060: 구문 블록 경계입니다 · 소속 ProductId.
-L001060 |     } ⟦EOL⟧
-L001061 |  ⟦EOL⟧
-// 해설 L1062: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.PanelId
-L001062 |     public string PanelId ⟦EOL⟧
-// 해설 L1063: 구문 블록 경계입니다 · 소속 PanelId.
-L001063 |     { ⟦EOL⟧
-// 해설 L1064: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.PanelId.get
-L001064 |         get ⟦EOL⟧
-// 해설 L1065: 구문 블록 경계입니다 · 소속 get_PanelId.
-L001065 |         { ⟦EOL⟧
-// 해설 L1066: 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("H_GLASSID") / 호출자에게 값 또는 제어를 반환합니다: return Product.Get("H_GLASSID");
-L001066 |             return Product.Get("H_GLASSID"); ⟦EOL⟧
-// 해설 L1067: 구문 블록 경계입니다 · 소속 get_PanelId.
-L001067 |         } ⟦EOL⟧
-// 해설 L1068: 구문 블록 경계입니다 · 소속 PanelId.
-L001068 |     } ⟦EOL⟧
-L001069 |  ⟦EOL⟧
-// 해설 L1070: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.LotId
-L001070 |     public string LotId ⟦EOL⟧
-// 해설 L1071: 구문 블록 경계입니다 · 소속 LotId.
-L001071 |     { ⟦EOL⟧
-// 해설 L1072: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.LotId.get
-L001072 |         get ⟦EOL⟧
-// 해설 L1073: 구문 블록 경계입니다 · 소속 get_LotId.
-L001073 |         { ⟦EOL⟧
-// 해설 L1074: 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("LOTID") / 호출자에게 값 또는 제어를 반환합니다: return Product.Get("LOTID");
-L001074 |             return Product.Get("LOTID"); ⟦EOL⟧
-// 해설 L1075: 구문 블록 경계입니다 · 소속 get_LotId.
-L001075 |         } ⟦EOL⟧
-// 해설 L1076: 구문 블록 경계입니다 · 소속 LotId.
-L001076 |     } ⟦EOL⟧
-L001077 |  ⟦EOL⟧
-// 해설 L1078: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.ProcessId
-L001078 |     public string ProcessId ⟦EOL⟧
-// 해설 L1079: 구문 블록 경계입니다 · 소속 ProcessId.
-L001079 |     { ⟦EOL⟧
-// 해설 L1080: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.ProcessId.get
-L001080 |         get ⟦EOL⟧
-// 해설 L1081: 구문 블록 경계입니다 · 소속 get_ProcessId.
-L001081 |         { ⟦EOL⟧
-// 해설 L1082: 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PROCESS_ID") / 호출자에게 값 또는 제어를 반환합니다: return Product.Get("PROCESS_ID");
-L001082 |             return Product.Get("PROCESS_ID"); ⟦EOL⟧
-// 해설 L1083: 구문 블록 경계입니다 · 소속 get_ProcessId.
-L001083 |         } ⟦EOL⟧
-// 해설 L1084: 구문 블록 경계입니다 · 소속 ProcessId.
-L001084 |     } ⟦EOL⟧
-L001085 |  ⟦EOL⟧
-// 해설 L1086: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.RecipeId
-L001086 |     public string RecipeId ⟦EOL⟧
-// 해설 L1087: 구문 블록 경계입니다 · 소속 RecipeId.
-L001087 |     { ⟦EOL⟧
-// 해설 L1088: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.RecipeId.get
-L001088 |         get ⟦EOL⟧
-// 해설 L1089: 구문 블록 경계입니다 · 소속 get_RecipeId.
-L001089 |         { ⟦EOL⟧
-// 해설 L1090: 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PPID") / 호출자에게 값 또는 제어를 반환합니다: return Product.Get("PPID");
-L001090 |             return Product.Get("PPID"); ⟦EOL⟧
-// 해설 L1091: 구문 블록 경계입니다 · 소속 get_RecipeId.
-L001091 |         } ⟦EOL⟧
-// 해설 L1092: 구문 블록 경계입니다 · 소속 RecipeId.
-L001092 |     } ⟦EOL⟧
-L001093 |  ⟦EOL⟧
-// 해설 L1094: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.EN_PRODUCT_STATE Drilling.Common.Product.ST_PRODUCT_DATA.State
-L001094 |     public EN_PRODUCT_STATE State ⟦EOL⟧
-// 해설 L1095: 구문 블록 경계입니다 · 소속 State.
-L001095 |     { ⟦EOL⟧
-// 해설 L1096: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.EN_PRODUCT_STATE Drilling.Common.Product.ST_PRODUCT_DATA.State.get
-L001096 |         get ⟦EOL⟧
-// 해설 L1097: 구문 블록 경계입니다 · 소속 get_State.
-L001097 |         { ⟦EOL⟧
-// 해설 L1098: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(Product.Get("PRODUCT_STATE"), EN_PRODUCT_STATE.Created) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PRODUCT_STATE") / 호출자에게 값 또는 제어를 반환합니다: return ParseEnum(Product.Get("PRODUCT_STATE"), EN_PRODUCT_STATE.Created);
-L001098 |             return ParseEnum(Product.Get("PRODUCT_STATE"), EN_PRODUCT_STATE.Created); ⟦EOL⟧
-// 해설 L1099: 구문 블록 경계입니다 · 소속 get_State.
-L001099 |         } ⟦EOL⟧
-// 해설 L1100: 구문 블록 경계입니다 · 소속 State.
-L001100 |     } ⟦EOL⟧
-L001101 |  ⟦EOL⟧
-// 해설 L1102: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.EN_PRODUCT_RESULT Drilling.Common.Product.ST_PRODUCT_DATA.Result
-L001102 |     public EN_PRODUCT_RESULT Result ⟦EOL⟧
-// 해설 L1103: 구문 블록 경계입니다 · 소속 Result.
-L001103 |     { ⟦EOL⟧
-// 해설 L1104: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.EN_PRODUCT_RESULT Drilling.Common.Product.ST_PRODUCT_DATA.Result.get
-L001104 |         get ⟦EOL⟧
-// 해설 L1105: 구문 블록 경계입니다 · 소속 get_Result.
-L001105 |         { ⟦EOL⟧
-// 해설 L1106: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(Product.Get("JUDGEMENT"), EN_PRODUCT_RESULT.Pending) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("JUDGEMENT") / 호출자에게 값 또는 제어를 반환합니다: return ParseEnum(Product.Get("JUDGEMENT"), EN_PRODUCT_RESULT.Pending);
-L001106 |             return ParseEnum(Product.Get("JUDGEMENT"), EN_PRODUCT_RESULT.Pending); ⟦EOL⟧
-// 해설 L1107: 구문 블록 경계입니다 · 소속 get_Result.
-L001107 |         } ⟦EOL⟧
-// 해설 L1108: 구문 블록 경계입니다 · 소속 Result.
-L001108 |     } ⟦EOL⟧
-L001109 |  ⟦EOL⟧
-// 해설 L1110: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CreatedAt
-L001110 |     public DateTimeOffset? CreatedAt ⟦EOL⟧
-// 해설 L1111: 구문 블록 경계입니다 · 소속 CreatedAt.
-L001111 |     { ⟦EOL⟧
-// 해설 L1112: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CreatedAt.get
-L001112 |         get ⟦EOL⟧
-// 해설 L1113: 구문 블록 경계입니다 · 소속 get_CreatedAt.
-L001113 |         { ⟦EOL⟧
-// 해설 L1114: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(Product.Get("CREATED_AT")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("CREATED_AT") / 호출자에게 값 또는 제어를 반환합니다: return ParseDate(Product.Get("CREATED_AT"));
-L001114 |             return ParseDate(Product.Get("CREATED_AT")); ⟦EOL⟧
-// 해설 L1115: 구문 블록 경계입니다 · 소속 get_CreatedAt.
-L001115 |         } ⟦EOL⟧
-// 해설 L1116: 구문 블록 경계입니다 · 소속 CreatedAt.
-L001116 |     } ⟦EOL⟧
-L001117 |  ⟦EOL⟧
-// 해설 L1118: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.StartedAt
-L001118 |     public DateTimeOffset? StartedAt ⟦EOL⟧
-// 해설 L1119: 구문 블록 경계입니다 · 소속 StartedAt.
-L001119 |     { ⟦EOL⟧
-// 해설 L1120: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.StartedAt.get
-L001120 |         get ⟦EOL⟧
-// 해설 L1121: 구문 블록 경계입니다 · 소속 get_StartedAt.
-L001121 |         { ⟦EOL⟧
-// 해설 L1122: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(Product.Get("STARTED_AT")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("STARTED_AT") / 호출자에게 값 또는 제어를 반환합니다: return ParseDate(Product.Get("STARTED_AT"));
-L001122 |             return ParseDate(Product.Get("STARTED_AT")); ⟦EOL⟧
-// 해설 L1123: 구문 블록 경계입니다 · 소속 get_StartedAt.
-L001123 |         } ⟦EOL⟧
-// 해설 L1124: 구문 블록 경계입니다 · 소속 StartedAt.
-L001124 |     } ⟦EOL⟧
-L001125 |  ⟦EOL⟧
-// 해설 L1126: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CompletedAt
-L001126 |     public DateTimeOffset? CompletedAt ⟦EOL⟧
-// 해설 L1127: 구문 블록 경계입니다 · 소속 CompletedAt.
-L001127 |     { ⟦EOL⟧
-// 해설 L1128: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CompletedAt.get
-L001128 |         get ⟦EOL⟧
-// 해설 L1129: 구문 블록 경계입니다 · 소속 get_CompletedAt.
-L001129 |         { ⟦EOL⟧
-// 해설 L1130: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(Product.Get("COMPLETED_AT")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("COMPLETED_AT") / 호출자에게 값 또는 제어를 반환합니다: return ParseDate(Product.Get("COMPLETED_AT"));
-L001130 |             return ParseDate(Product.Get("COMPLETED_AT")); ⟦EOL⟧
-// 해설 L1131: 구문 블록 경계입니다 · 소속 get_CompletedAt.
-L001131 |         } ⟦EOL⟧
-// 해설 L1132: 구문 블록 경계입니다 · 소속 CompletedAt.
-L001132 |     } ⟦EOL⟧
-L001133 |  ⟦EOL⟧
-// 해설 L1134: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.Common.Product.ST_PRODUCT_DATA.Parameters
-L001134 |     public IReadOnlyDictionary<string, string> Parameters ⟦EOL⟧
-// 해설 L1135: 구문 블록 경계입니다 · 소속 Parameters.
-L001135 |     { ⟦EOL⟧
-// 해설 L1136: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.Common.Product.ST_PRODUCT_DATA.Parameters.get
-L001136 |         get ⟦EOL⟧
-// 해설 L1137: 구문 블록 경계입니다 · 소속 get_Parameters.
-L001137 |         { ⟦EOL⟧
-// 해설 L1138: 호출자에게 값 또는 제어를 반환합니다: return Recipe.Parameters;
-L001138 |             return Recipe.Parameters; ⟦EOL⟧
-// 해설 L1139: 구문 블록 경계입니다 · 소속 get_Parameters.
-L001139 |         } ⟦EOL⟧
-// 해설 L1140: 구문 블록 경계입니다 · 소속 Parameters.
-L001140 |     } ⟦EOL⟧
-L001141 |  ⟦EOL⟧
-// 해설 L1142: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT> Drilling.Common.Product.ST_PRODUCT_DATA.Heads
-L001142 |     public IReadOnlyList<ST_PRODUCT_HEAD_RESULT> Heads ⟦EOL⟧
-// 해설 L1143: 구문 블록 경계입니다 · 소속 Heads.
-L001143 |     { ⟦EOL⟧
-// 해설 L1144: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT> Drilling.Common.Product.ST_PRODUCT_DATA.Heads.get
-L001144 |         get ⟦EOL⟧
-// 해설 L1145: 구문 블록 경계입니다 · 소속 get_Heads.
-L001145 |         { ⟦EOL⟧
-// 해설 L1146: 호출자에게 값 또는 제어를 반환합니다: return Runtime.Heads;
-L001146 |             return Runtime.Heads; ⟦EOL⟧
-// 해설 L1147: 구문 블록 경계입니다 · 소속 get_Heads.
-L001147 |         } ⟦EOL⟧
-// 해설 L1148: 구문 블록 경계입니다 · 소속 Heads.
-L001148 |     } ⟦EOL⟧
-L001149 |  ⟦EOL⟧
-// 해설 L1150: 선언·서명/매개변수·접근 조건입니다 · T Drilling.Common.Product.ST_PRODUCT_DATA.ParseEnum<T>(string, T)
-L001150 |     private static T ParseEnum<T>(string value, T defaultValue) ⟦EOL⟧
-// 해설 L1151: 선언·서명/매개변수·접근 조건입니다 · T Drilling.Common.Product.ST_PRODUCT_DATA.ParseEnum<T>(string, T)
-L001151 |         where T : struct, Enum ⟦EOL⟧
-// 해설 L1152: 구문 블록 경계입니다 · 소속 ParseEnum.
-L001152 |     { ⟦EOL⟧
-// 해설 L1153: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.TryParse<T>(value, true, out var parsed) / 조건에 따라 결과식을 선택합니다: Enum.TryParse<T>(value, true, out var parsed) ? parsed : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return Enum.TryParse<T>(value, true, out var parsed) ? parsed : defaultValue;
-L001153 |         return Enum.TryParse<T>(value, true, out var parsed) ? parsed : defaultValue; ⟦EOL⟧
-// 해설 L1154: 구문 블록 경계입니다 · 소속 ParseEnum.
-L001154 |     } ⟦EOL⟧
-L001155 |  ⟦EOL⟧
-// 해설 L1156: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.ParseDate(string)
-L001156 |     private static DateTimeOffset? ParseDate(string value) ⟦EOL⟧
-// 해설 L1157: 구문 블록 경계입니다 · 소속 ParseDate.
-L001157 |     { ⟦EOL⟧
-// 해설 L1158: 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.TryParse(value, out var parsed) / 조건에 따라 결과식을 선택합니다: DateTimeOffset.TryParse(value, out var parsed) ? parsed : null / 호출자에게 값 또는 제어를 반환합니다: return DateTimeOffset.TryParse(value, out var parsed) ? parsed : null;
-L001158 |         return DateTimeOffset.TryParse(value, out var parsed) ? parsed : null; ⟦EOL⟧
-// 해설 L1159: 구문 블록 경계입니다 · 소속 ParseDate.
-L001159 |     } ⟦EOL⟧
-// 해설 L1160: 구문 블록 경계입니다.
-L001160 | } ⟦EOL⟧
-L001161 |  ⟦EOL⟧
-// 해설 L1162: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_HISTORY(DateTimeOffset OccurredAt, string GlassId, string ProcessId, string RecipeId, string Action, string State, string Result, string Detail);
-L001162 | public sealed record ST_PRODUCT_HISTORY(DateTimeOffset OccurredAt, string GlassId, string ProcessId, string RecipeId, string Action, string State, string Result, string Detail); ⟦EOL⟧
-// 해설 L1163: 타입의 구조/상속 선언입니다: public abstract class CProductFileBase
-L001163 | public abstract class CProductFileBase ⟦EOL⟧
+L001050 |     ST_PRODUCT_ALIGN_DATA Align,  ⟦EOL⟧
+// 해설 L1051: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L001051 |     ST_PRODUCT_DISTORTION_DATA Distortion,  ⟦EOL⟧
+// 해설 L1052: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L001052 |     ST_PRODUCT_REVIEW_DATA Review,  ⟦EOL⟧
+// 해설 L1053: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L001053 |     ST_PRODUCT_RUNTIME_DATA Runtime ⟦EOL⟧
+// 해설 L1054: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L001054 | ) ⟦EOL⟧
+// 해설 L1055: 구문 블록 경계입니다.
+L001055 | { ⟦EOL⟧
+// 해설 L1056: 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("H_GLASSID")
+L001056 |     public string GlassId => Product.Get("H_GLASSID"); ⟦EOL⟧
+L001057 |  ⟦EOL⟧
+// 해설 L1058: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.ProductId
+L001058 |     public string ProductId ⟦EOL⟧
+// 해설 L1059: 구문 블록 경계입니다 · 소속 ProductId.
+L001059 |     { ⟦EOL⟧
+// 해설 L1060: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.ProductId.get
+L001060 |         get ⟦EOL⟧
+// 해설 L1061: 구문 블록 경계입니다 · 소속 get_ProductId.
+L001061 |         { ⟦EOL⟧
+// 해설 L1062: 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PRODUCTID") / 호출자에게 값 또는 제어를 반환합니다: return Product.Get("PRODUCTID");
+L001062 |             return Product.Get("PRODUCTID"); ⟦EOL⟧
+// 해설 L1063: 구문 블록 경계입니다 · 소속 get_ProductId.
+L001063 |         } ⟦EOL⟧
+// 해설 L1064: 구문 블록 경계입니다 · 소속 ProductId.
+L001064 |     } ⟦EOL⟧
+L001065 |  ⟦EOL⟧
+// 해설 L1066: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.PanelId
+L001066 |     public string PanelId ⟦EOL⟧
+// 해설 L1067: 구문 블록 경계입니다 · 소속 PanelId.
+L001067 |     { ⟦EOL⟧
+// 해설 L1068: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.PanelId.get
+L001068 |         get ⟦EOL⟧
+// 해설 L1069: 구문 블록 경계입니다 · 소속 get_PanelId.
+L001069 |         { ⟦EOL⟧
+// 해설 L1070: 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("H_GLASSID") / 호출자에게 값 또는 제어를 반환합니다: return Product.Get("H_GLASSID");
+L001070 |             return Product.Get("H_GLASSID"); ⟦EOL⟧
+// 해설 L1071: 구문 블록 경계입니다 · 소속 get_PanelId.
+L001071 |         } ⟦EOL⟧
+// 해설 L1072: 구문 블록 경계입니다 · 소속 PanelId.
+L001072 |     } ⟦EOL⟧
+L001073 |  ⟦EOL⟧
+// 해설 L1074: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.LotId
+L001074 |     public string LotId ⟦EOL⟧
+// 해설 L1075: 구문 블록 경계입니다 · 소속 LotId.
+L001075 |     { ⟦EOL⟧
+// 해설 L1076: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.LotId.get
+L001076 |         get ⟦EOL⟧
+// 해설 L1077: 구문 블록 경계입니다 · 소속 get_LotId.
+L001077 |         { ⟦EOL⟧
+// 해설 L1078: 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("LOTID") / 호출자에게 값 또는 제어를 반환합니다: return Product.Get("LOTID");
+L001078 |             return Product.Get("LOTID"); ⟦EOL⟧
+// 해설 L1079: 구문 블록 경계입니다 · 소속 get_LotId.
+L001079 |         } ⟦EOL⟧
+// 해설 L1080: 구문 블록 경계입니다 · 소속 LotId.
+L001080 |     } ⟦EOL⟧
+L001081 |  ⟦EOL⟧
+// 해설 L1082: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.ProcessId
+L001082 |     public string ProcessId ⟦EOL⟧
+// 해설 L1083: 구문 블록 경계입니다 · 소속 ProcessId.
+L001083 |     { ⟦EOL⟧
+// 해설 L1084: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.ProcessId.get
+L001084 |         get ⟦EOL⟧
+// 해설 L1085: 구문 블록 경계입니다 · 소속 get_ProcessId.
+L001085 |         { ⟦EOL⟧
+// 해설 L1086: 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PROCESS_ID") / 호출자에게 값 또는 제어를 반환합니다: return Product.Get("PROCESS_ID");
+L001086 |             return Product.Get("PROCESS_ID"); ⟦EOL⟧
+// 해설 L1087: 구문 블록 경계입니다 · 소속 get_ProcessId.
+L001087 |         } ⟦EOL⟧
+// 해설 L1088: 구문 블록 경계입니다 · 소속 ProcessId.
+L001088 |     } ⟦EOL⟧
+L001089 |  ⟦EOL⟧
+// 해설 L1090: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.RecipeId
+L001090 |     public string RecipeId ⟦EOL⟧
+// 해설 L1091: 구문 블록 경계입니다 · 소속 RecipeId.
+L001091 |     { ⟦EOL⟧
+// 해설 L1092: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Product.ST_PRODUCT_DATA.RecipeId.get
+L001092 |         get ⟦EOL⟧
+// 해설 L1093: 구문 블록 경계입니다 · 소속 get_RecipeId.
+L001093 |         { ⟦EOL⟧
+// 해설 L1094: 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PPID") / 호출자에게 값 또는 제어를 반환합니다: return Product.Get("PPID");
+L001094 |             return Product.Get("PPID"); ⟦EOL⟧
+// 해설 L1095: 구문 블록 경계입니다 · 소속 get_RecipeId.
+L001095 |         } ⟦EOL⟧
+// 해설 L1096: 구문 블록 경계입니다 · 소속 RecipeId.
+L001096 |     } ⟦EOL⟧
+L001097 |  ⟦EOL⟧
+// 해설 L1098: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.EN_PRODUCT_STATE Drilling.Common.Product.ST_PRODUCT_DATA.State
+L001098 |     public EN_PRODUCT_STATE State ⟦EOL⟧
+// 해설 L1099: 구문 블록 경계입니다 · 소속 State.
+L001099 |     { ⟦EOL⟧
+// 해설 L1100: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.EN_PRODUCT_STATE Drilling.Common.Product.ST_PRODUCT_DATA.State.get
+L001100 |         get ⟦EOL⟧
+// 해설 L1101: 구문 블록 경계입니다 · 소속 get_State.
+L001101 |         { ⟦EOL⟧
+// 해설 L1102: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(Product.Get("PRODUCT_STATE"), EN_PRODUCT_STATE.Created) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("PRODUCT_STATE") / 호출자에게 값 또는 제어를 반환합니다: return ParseEnum(Product.Get("PRODUCT_STATE"), EN_PRODUCT_STATE.Created);
+L001102 |             return ParseEnum(Product.Get("PRODUCT_STATE"), EN_PRODUCT_STATE.Created); ⟦EOL⟧
+// 해설 L1103: 구문 블록 경계입니다 · 소속 get_State.
+L001103 |         } ⟦EOL⟧
+// 해설 L1104: 구문 블록 경계입니다 · 소속 State.
+L001104 |     } ⟦EOL⟧
+L001105 |  ⟦EOL⟧
+// 해설 L1106: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.EN_PRODUCT_RESULT Drilling.Common.Product.ST_PRODUCT_DATA.Result
+L001106 |     public EN_PRODUCT_RESULT Result ⟦EOL⟧
+// 해설 L1107: 구문 블록 경계입니다 · 소속 Result.
+L001107 |     { ⟦EOL⟧
+// 해설 L1108: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Product.EN_PRODUCT_RESULT Drilling.Common.Product.ST_PRODUCT_DATA.Result.get
+L001108 |         get ⟦EOL⟧
+// 해설 L1109: 구문 블록 경계입니다 · 소속 get_Result.
+L001109 |         { ⟦EOL⟧
+// 해설 L1110: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseEnum(Product.Get("JUDGEMENT"), EN_PRODUCT_RESULT.Pending) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("JUDGEMENT") / 호출자에게 값 또는 제어를 반환합니다: return ParseEnum(Product.Get("JUDGEMENT"), EN_PRODUCT_RESULT.Pending);
+L001110 |             return ParseEnum(Product.Get("JUDGEMENT"), EN_PRODUCT_RESULT.Pending); ⟦EOL⟧
+// 해설 L1111: 구문 블록 경계입니다 · 소속 get_Result.
+L001111 |         } ⟦EOL⟧
+// 해설 L1112: 구문 블록 경계입니다 · 소속 Result.
+L001112 |     } ⟦EOL⟧
+L001113 |  ⟦EOL⟧
+// 해설 L1114: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CreatedAt
+L001114 |     public DateTimeOffset? CreatedAt ⟦EOL⟧
+// 해설 L1115: 구문 블록 경계입니다 · 소속 CreatedAt.
+L001115 |     { ⟦EOL⟧
+// 해설 L1116: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CreatedAt.get
+L001116 |         get ⟦EOL⟧
+// 해설 L1117: 구문 블록 경계입니다 · 소속 get_CreatedAt.
+L001117 |         { ⟦EOL⟧
+// 해설 L1118: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(Product.Get("CREATED_AT")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("CREATED_AT") / 호출자에게 값 또는 제어를 반환합니다: return ParseDate(Product.Get("CREATED_AT"));
+L001118 |             return ParseDate(Product.Get("CREATED_AT")); ⟦EOL⟧
+// 해설 L1119: 구문 블록 경계입니다 · 소속 get_CreatedAt.
+L001119 |         } ⟦EOL⟧
+// 해설 L1120: 구문 블록 경계입니다 · 소속 CreatedAt.
+L001120 |     } ⟦EOL⟧
+L001121 |  ⟦EOL⟧
+// 해설 L1122: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.StartedAt
+L001122 |     public DateTimeOffset? StartedAt ⟦EOL⟧
+// 해설 L1123: 구문 블록 경계입니다 · 소속 StartedAt.
+L001123 |     { ⟦EOL⟧
+// 해설 L1124: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.StartedAt.get
+L001124 |         get ⟦EOL⟧
+// 해설 L1125: 구문 블록 경계입니다 · 소속 get_StartedAt.
+L001125 |         { ⟦EOL⟧
+// 해설 L1126: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(Product.Get("STARTED_AT")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("STARTED_AT") / 호출자에게 값 또는 제어를 반환합니다: return ParseDate(Product.Get("STARTED_AT"));
+L001126 |             return ParseDate(Product.Get("STARTED_AT")); ⟦EOL⟧
+// 해설 L1127: 구문 블록 경계입니다 · 소속 get_StartedAt.
+L001127 |         } ⟦EOL⟧
+// 해설 L1128: 구문 블록 경계입니다 · 소속 StartedAt.
+L001128 |     } ⟦EOL⟧
+L001129 |  ⟦EOL⟧
+// 해설 L1130: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CompletedAt
+L001130 |     public DateTimeOffset? CompletedAt ⟦EOL⟧
+// 해설 L1131: 구문 블록 경계입니다 · 소속 CompletedAt.
+L001131 |     { ⟦EOL⟧
+// 해설 L1132: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.CompletedAt.get
+L001132 |         get ⟦EOL⟧
+// 해설 L1133: 구문 블록 경계입니다 · 소속 get_CompletedAt.
+L001133 |         { ⟦EOL⟧
+// 해설 L1134: 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDate(Product.Get("COMPLETED_AT")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Product.Get("COMPLETED_AT") / 호출자에게 값 또는 제어를 반환합니다: return ParseDate(Product.Get("COMPLETED_AT"));
+L001134 |             return ParseDate(Product.Get("COMPLETED_AT")); ⟦EOL⟧
+// 해설 L1135: 구문 블록 경계입니다 · 소속 get_CompletedAt.
+L001135 |         } ⟦EOL⟧
+// 해설 L1136: 구문 블록 경계입니다 · 소속 CompletedAt.
+L001136 |     } ⟦EOL⟧
+L001137 |  ⟦EOL⟧
+// 해설 L1138: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.Common.Product.ST_PRODUCT_DATA.Parameters
+L001138 |     public IReadOnlyDictionary<string, string> Parameters ⟦EOL⟧
+// 해설 L1139: 구문 블록 경계입니다 · 소속 Parameters.
+L001139 |     { ⟦EOL⟧
+// 해설 L1140: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.Common.Product.ST_PRODUCT_DATA.Parameters.get
+L001140 |         get ⟦EOL⟧
+// 해설 L1141: 구문 블록 경계입니다 · 소속 get_Parameters.
+L001141 |         { ⟦EOL⟧
+// 해설 L1142: 호출자에게 값 또는 제어를 반환합니다: return Recipe.Parameters;
+L001142 |             return Recipe.Parameters; ⟦EOL⟧
+// 해설 L1143: 구문 블록 경계입니다 · 소속 get_Parameters.
+L001143 |         } ⟦EOL⟧
+// 해설 L1144: 구문 블록 경계입니다 · 소속 Parameters.
+L001144 |     } ⟦EOL⟧
+L001145 |  ⟦EOL⟧
+// 해설 L1146: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT> Drilling.Common.Product.ST_PRODUCT_DATA.Heads
+L001146 |     public IReadOnlyList<ST_PRODUCT_HEAD_RESULT> Heads ⟦EOL⟧
+// 해설 L1147: 구문 블록 경계입니다 · 소속 Heads.
+L001147 |     { ⟦EOL⟧
+// 해설 L1148: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT> Drilling.Common.Product.ST_PRODUCT_DATA.Heads.get
+L001148 |         get ⟦EOL⟧
+// 해설 L1149: 구문 블록 경계입니다 · 소속 get_Heads.
+L001149 |         { ⟦EOL⟧
+// 해설 L1150: 호출자에게 값 또는 제어를 반환합니다: return Runtime.Heads;
+L001150 |             return Runtime.Heads; ⟦EOL⟧
+// 해설 L1151: 구문 블록 경계입니다 · 소속 get_Heads.
+L001151 |         } ⟦EOL⟧
+// 해설 L1152: 구문 블록 경계입니다 · 소속 Heads.
+L001152 |     } ⟦EOL⟧
+L001153 |  ⟦EOL⟧
+// 해설 L1154: 선언·서명/매개변수·접근 조건입니다 · T Drilling.Common.Product.ST_PRODUCT_DATA.ParseEnum<T>(string, T)
+L001154 |     private static T ParseEnum<T>(string value, T defaultValue) ⟦EOL⟧
+// 해설 L1155: 선언·서명/매개변수·접근 조건입니다 · T Drilling.Common.Product.ST_PRODUCT_DATA.ParseEnum<T>(string, T)
+L001155 |         where T : struct, Enum ⟦EOL⟧
+// 해설 L1156: 구문 블록 경계입니다 · 소속 ParseEnum.
+L001156 |     { ⟦EOL⟧
+// 해설 L1157: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.TryParse<T>(value, true, out var parsed) / 조건에 따라 결과식을 선택합니다: Enum.TryParse<T>(value, true, out var parsed) ? parsed : defaultValue / 호출자에게 값 또는 제어를 반환합니다: return Enum.TryParse<T>(value, true, out var parsed) ? parsed : defaultValue;
+L001157 |         return Enum.TryParse<T>(value, true, out var parsed) ? parsed : defaultValue; ⟦EOL⟧
+// 해설 L1158: 구문 블록 경계입니다 · 소속 ParseEnum.
+L001158 |     } ⟦EOL⟧
+L001159 |  ⟦EOL⟧
+// 해설 L1160: 선언·서명/매개변수·접근 조건입니다 · System.DateTimeOffset? Drilling.Common.Product.ST_PRODUCT_DATA.ParseDate(string)
+L001160 |     private static DateTimeOffset? ParseDate(string value) ⟦EOL⟧
+// 해설 L1161: 구문 블록 경계입니다 · 소속 ParseDate.
+L001161 |     { ⟦EOL⟧
+// 해설 L1162: 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.TryParse(value, out var parsed) / 조건에 따라 결과식을 선택합니다: DateTimeOffset.TryParse(value, out var parsed) ? parsed : null / 호출자에게 값 또는 제어를 반환합니다: return DateTimeOffset.TryParse(value, out var parsed) ? parsed : null;
+L001162 |         return DateTimeOffset.TryParse(value, out var parsed) ? parsed : null; ⟦EOL⟧
+// 해설 L1163: 구문 블록 경계입니다 · 소속 ParseDate.
+L001163 |     } ⟦EOL⟧
 // 해설 L1164: 구문 블록 경계입니다.
-L001164 | { ⟦EOL⟧
-// 해설 L1165: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?> Drilling.Common.Product.CProductFileBase.LoadActive(System.Threading.CancellationToken)
-L001165 |     public abstract Task<ST_PRODUCT_DATA?> LoadActive(CancellationToken cancellationToken = default); ⟦EOL⟧
-// 해설 L1166: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.SaveActive(Drilling.Common.Product.ST_PRODUCT_DATA, System.Threading.CancellationToken)
-L001166 |     public abstract Task SaveActive(ST_PRODUCT_DATA product, CancellationToken cancellationToken = default); ⟦EOL⟧
-// 해설 L1167: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.ClearActive(System.Threading.CancellationToken)
-L001167 |     public abstract Task ClearActive(CancellationToken cancellationToken = default); ⟦EOL⟧
-// 해설 L1168: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken)
-L001168 |     public abstract Task AppendHistory(ST_PRODUCT_HISTORY history, CancellationToken cancellationToken = default); ⟦EOL⟧
-// 해설 L1169: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>> Drilling.Common.Product.CProductFileBase.LoadHistory(int, int, System.Threading.CancellationToke
-L001169 |     public abstract Task<IReadOnlyList<ST_PRODUCT_HISTORY>> LoadHistory(int maxRows = 100, int days = 14, CancellationToken cancellationToken = default); ⟦EOL⟧
-// 해설 L1170: 구문 블록 경계입니다.
-L001170 | } ⟦EOL⟧
+L001164 | } ⟦EOL⟧
+L001165 |  ⟦EOL⟧
+// 해설 L1166: 타입의 구조/상속 선언입니다: public sealed record ST_PRODUCT_HISTORY(DateTimeOffset OccurredAt, string GlassId, string ProcessId, string RecipeId, string Action, string State, string Result, string Detail);
+L001166 | public sealed record ST_PRODUCT_HISTORY(DateTimeOffset OccurredAt, string GlassId, string ProcessId, string RecipeId, string Action, string State, string Result, string Detail); ⟦EOL⟧
+// 해설 L1167: 타입의 구조/상속 선언입니다: public abstract class CProductFileBase
+L001167 | public abstract class CProductFileBase ⟦EOL⟧
+// 해설 L1168: 구문 블록 경계입니다.
+L001168 | { ⟦EOL⟧
+// 해설 L1169: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.Common.Product.ST_PRODUCT_DATA?> Drilling.Common.Product.CProductFileBase.LoadActive(System.Threading.CancellationToken)
+L001169 |     public abstract Task<ST_PRODUCT_DATA?> LoadActive(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L1170: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.SaveActive(Drilling.Common.Product.ST_PRODUCT_DATA, System.Threading.CancellationToken)
+L001170 |     public abstract Task SaveActive(ST_PRODUCT_DATA product, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L1171: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.ClearActive(System.Threading.CancellationToken)
+L001171 |     public abstract Task ClearActive(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L1172: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Product.CProductFileBase.AppendHistory(Drilling.Common.Product.ST_PRODUCT_HISTORY, System.Threading.CancellationToken)
+L001172 |     public abstract Task AppendHistory(ST_PRODUCT_HISTORY history, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L1173: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HISTORY>> Drilling.Common.Product.CProductFileBase.LoadHistory(int, int, System.Threading.CancellationToke
+L001173 |     public abstract Task<IReadOnlyList<ST_PRODUCT_HISTORY>> LoadHistory(int maxRows = 100, int days = 14, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L1174: 구문 블록 경계입니다.
+L001174 | } ⟦EOL⟧

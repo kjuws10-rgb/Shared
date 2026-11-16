@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "offline inventory",
+      "passed": true
+    },
+    {
+      "name": "exact file search",
+      "passed": true
+    },
+    {
+      "name": "Korean alias search",
+      "passed": true
+    },
+    {
+      "name": "member-name search",
+      "passed": true
+    },
+    {
+      "name": "binary metadata filter",
+      "passed": true
+    },
+    {
+      "name": "search text escaping",
+      "passed": true
+    },
+    {
+      "name": "file detail navigation",
+      "passed": true
+    },
+    {
+      "name": "file relation SVG rendered",
+      "passed": true
+    },
+    {
+      "name": "detailed contracts",
+      "passed": true
+    },
+    {
+      "name": "detailed chapter navigation count",
+      "passed": true,
+      "detail": 15
+    },
+    {
+      "name": "manual 01-startup-and-composition.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 02-recipe-settings-and-csv.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 03-coordinate-script-and-mof.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 04-product-and-station-lifecycle.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 05-device-interfaces-and-drivers.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 06-threading-snapshots-and-logs.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 07-change-impact-and-offline-reference.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual README.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 01_Review_계획과_좌표계.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 02_Masking_Sampling_IOF.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 03_Vision_패킷과_단위.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 04_ReviewOffset_적용과_롤백.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 05_결과_Revision_Product_연결.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 06_DefaultOffset_ZeroOrder_FirstBeam.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual 07_Align_Distortion_윈도우_복구.md.html",
+      "passed": true
+    },
+    {
+      "name": "source link has offline counterpart",
+      "passed": true
+    },
+    {
+      "name": "offline counterpart opens file detail",
+      "passed": true
+    },
+    {
+      "name": "mobile search",
+      "passed": true
+    },
+    {
+      "name": "mobile viewport fits",
+      "passed": true
+    },
+    {
+      "name": "no script errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "zero network dependency",
+      "passed": true,
+      "detail": 0
+    }
+  ],
+  "networkRequests": 0,
+  "pageErrors": [],
+  "scope": "Headless Edge on file URLs with HTTP/S blocked; no equipment or model execution"
+}

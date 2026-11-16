@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | ec015dca7dc96ce026d9723e727edaebbbdd102e054b58a0b9cf6455ac02f909 |
 | 파일 분류 | code |
 | 원본 크기/행 | 7,039 bytes / 100 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CSelectedReviewShotsDialog.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -26,18 +26,26 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 이벤트 개수 | 1 |
 | Binding 표현 개수 | 6 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
-| Click | OnCloseClicked | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| ItemCount, StringFormat={ |
-| Items[0].IsEmpty |
-| Name |
-| Head |
-| Cell |
-| ShotName |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| SummaryText | L21–21 |
+| ShotGrid | L24–24 |
+| EmptyText | L88–88 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+| Click | OnCloseClicked | L92–92 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding ItemCount, StringFormat={}{0} Shots} | L65–65 |
+| {Binding Items[0].IsEmpty} | L67–67 |
+| {Binding Name} | L74–74 |
+| {Binding Head} | L83–83 |
+| {Binding Cell} | L84–84 |
+| {Binding ShotName} | L85–85 |
 
 ## 원문 전체 주석 해설본
 

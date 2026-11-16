@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | de45e4e36fe1c7eec80467af8808139345203351aebb110509599571249023a9 |
 | 파일 분류 | code |
 | 원본 크기/행 | 29,999 bytes / 342 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CAlignDistortionView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CAlignDistortionView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -26,83 +26,102 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 이벤트 개수 | 0 |
 | Binding 표현 개수 | 72 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| RecipeName |
-| RecipeId |
-| BaseActionCommand |
-| BaseActionCommand |
-| BaseActionCommand |
-| BaseActionCommand |
-| DkSelections |
-| IsSelected |
-| Name |
-| IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
-| LoadCommand |
-| LastLoadTime, StringFormat='Last Load Time : {0 |
-| AlgorithmPreviewHint |
-| SettingToleranceText |
-| BaseActionCommand |
-| BaseActionCommand |
-| BaseActionCommand |
-| Wapage |
-| LastLoadTime, StringFormat='Last Load : {0 |
-| DataContext.BaseActionCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| DataContext.BaseActionCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| DataContext.BaseActionCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| CalculationText |
-| Rows |
-| Detail |
-| Name |
-| VisionText |
-| BaseText |
-| RangeText |
-| CalculatedText |
-| Status |
-| PreviewHeight |
-| PreviewImage |
-| PreviewHeight |
-| AlignKeys |
-| PreviewHeight |
-| EditorLeft |
-| EditorTop |
-| KeyBrush |
-| Name |
-| KeyBrush |
-| BaseX, Mode=OneWay |
-| BaseY, Mode=OneWay |
-| LastLoadX, Mode=OneWay |
-| LastLoadY, Mode=OneWay |
-| BaseMinusLoadX, Mode=OneWay |
-| BaseMinusLoadY, Mode=OneWay |
-| DistortionPairs |
-| PreviewHeight |
-| EditorLeft |
-| EditorTop |
-| KeyBrush |
-| Name |
-| KeyBrush |
-| StageYText |
-| Left.Name, StringFormat='좌 · {0 |
-| KeyBrush |
-| Right.Name, StringFormat='우 · {0 |
-| KeyBrush |
-| Left.BaseX, Mode=OneWay |
-| Right.BaseX, Mode=OneWay |
-| Left.BaseY, Mode=OneWay |
-| Right.BaseY, Mode=OneWay |
-| Left.LastLoadX, Mode=OneWay |
-| Right.LastLoadX, Mode=OneWay |
-| Left.LastLoadY, Mode=OneWay |
-| Right.LastLoadY, Mode=OneWay |
-| Left.BaseMinusLoadX, Mode=OneWay |
-| Right.BaseMinusLoadX, Mode=OneWay |
-| Left.BaseMinusLoadY, Mode=OneWay |
-| Right.BaseMinusLoadY, Mode=OneWay |
-| Summary |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| ActionColumn | L24–24 |
+| ActionRegion | L26–26 |
+| CurrentRecipeBanner | L31–31 |
+| CurrentRecipeName | L36–36 |
+| BaseDataPanel | L47–47 |
+| ActionPanel | L66–66 |
+| DkSelectItems | L72–72 |
+| LoadDataPanel | L99–99 |
+| LoadVisionValues | L109–109 |
+| LastLoadTimeText | L111–111 |
+| OffsetPanel | L120–120 |
+| SettingToleranceText | L125–125 |
+| WapagePanel | L140–140 |
+| GlassPreviewPanel | L185–185 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding RecipeName} | L36–36 |
+| {Binding RecipeId} | L36–36 |
+| {Binding BaseActionCommand} | L55–55 |
+| {Binding BaseActionCommand} | L57–57 |
+| {Binding BaseActionCommand} | L59–59 |
+| {Binding BaseActionCommand} | L61–61 |
+| {Binding DkSelections} | L72–72 |
+| {Binding IsSelected} | L84–84 |
+| {Binding Name} | L91–91 |
+| {Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L94–94 |
+| {Binding LoadCommand} | L109–109 |
+| {Binding LastLoadTime, StringFormat='Last Load Time : {0}'} | L112–112 |
+| {Binding AlgorithmPreviewHint} | L118–118 |
+| {Binding SettingToleranceText} | L125–125 |
+| {Binding BaseActionCommand} | L129–129 |
+| {Binding BaseActionCommand} | L131–131 |
+| {Binding BaseActionCommand} | L133–133 |
+| {Binding Wapage} | L140–140 |
+| {Binding LastLoadTime, StringFormat='Last Load : {0}'} | L146–146 |
+| {Binding DataContext.BaseActionCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L152–152 |
+| {Binding DataContext.BaseActionCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L154–154 |
+| {Binding DataContext.BaseActionCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L156–156 |
+| {Binding CalculationText} | L159–159 |
+| {Binding Rows} | L161–161 |
+| {Binding Detail} | L165–165 |
+| {Binding Name} | L169–169 |
+| {Binding VisionText} | L170–170 |
+| {Binding BaseText} | L171–171 |
+| {Binding RangeText} | L172–172 |
+| {Binding CalculatedText} | L173–173 |
+| {Binding Status} | L176–176 |
+| {Binding PreviewHeight} | L201–201 |
+| {Binding PreviewImage} | L202–202 |
+| {Binding PreviewHeight} | L202–202 |
+| {Binding AlignKeys} | L203–203 |
+| {Binding PreviewHeight} | L203–203 |
+| {Binding EditorLeft} | L209–209 |
+| {Binding EditorTop} | L210–210 |
+| {Binding KeyBrush} | L217–217 |
+| {Binding Name} | L232–232 |
+| {Binding KeyBrush} | L233–233 |
+| {Binding BaseX, Mode=OneWay} | L237–237 |
+| {Binding BaseY, Mode=OneWay} | L241–241 |
+| {Binding LastLoadX, Mode=OneWay} | L245–245 |
+| {Binding LastLoadY, Mode=OneWay} | L249–249 |
+| {Binding BaseMinusLoadX, Mode=OneWay} | L253–253 |
+| {Binding BaseMinusLoadY, Mode=OneWay} | L257–257 |
+| {Binding DistortionPairs} | L263–263 |
+| {Binding PreviewHeight} | L263–263 |
+| {Binding EditorLeft} | L267–267 |
+| {Binding EditorTop} | L268–268 |
+| {Binding KeyBrush} | L273–273 |
+| {Binding Name} | L288–288 |
+| {Binding KeyBrush} | L288–288 |
+| {Binding StageYText} | L289–289 |
+| {Binding Left.Name, StringFormat='좌 · {0}'} | L291–291 |
+| {Binding KeyBrush} | L292–292 |
+| {Binding Right.Name, StringFormat='우 · {0}'} | L293–293 |
+| {Binding KeyBrush} | L294–294 |
+| {Binding Left.BaseX, Mode=OneWay} | L298–298 |
+| {Binding Right.BaseX, Mode=OneWay} | L300–300 |
+| {Binding Left.BaseY, Mode=OneWay} | L304–304 |
+| {Binding Right.BaseY, Mode=OneWay} | L306–306 |
+| {Binding Left.LastLoadX, Mode=OneWay} | L310–310 |
+| {Binding Right.LastLoadX, Mode=OneWay} | L312–312 |
+| {Binding Left.LastLoadY, Mode=OneWay} | L316–316 |
+| {Binding Right.LastLoadY, Mode=OneWay} | L318–318 |
+| {Binding Left.BaseMinusLoadX, Mode=OneWay} | L322–322 |
+| {Binding Right.BaseMinusLoadX, Mode=OneWay} | L324–324 |
+| {Binding Left.BaseMinusLoadY, Mode=OneWay} | L328–328 |
+| {Binding Right.BaseMinusLoadY, Mode=OneWay} | L330–330 |
+| {Binding Summary} | L337–337 |
 
 ## 원문 전체 주석 해설본
 

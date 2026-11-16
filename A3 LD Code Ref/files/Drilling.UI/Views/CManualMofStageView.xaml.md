@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 2574cdc6a4a11ddbd836b57bedb126d2d4c4873e1656108c08378aaa6da5953c |
 | 파일 분류 | code |
 | 원본 크기/행 | 11,567 bytes / 167 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CManualMofStageView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CManualMofStageView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -26,40 +26,49 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 이벤트 개수 | 0 |
 | Binding 표현 개수 | 29 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| IsAtTarget |
-| IsAtTarget |
-| IsAtTarget |
-| IsAtTarget |
-| Message |
-| Text |
-| IsActive |
-| IsActive |
-| Busy |
-| Text |
-| ModeBackground |
-| MotionMode |
-| CurrentPosition.Text |
-| CurrentPosition.Message |
-| TargetPosition |
-| Foreground, ElementName=StagePositionMatchText |
-| PositionComparison |
-| IsAtTarget |
-| IsAtTarget |
-| CurrentSpeed.Text |
-| CurrentSpeed.Message |
-| TargetSpeedSource |
-| TargetSpeed |
-| AlarmCode |
-| Text |
-| WarningCode |
-| Text |
-| MoveCommand |
-| StopCommand |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| StageReadyPositionTile | L104–104 |
+| StagePositionMatchText | L115–115 |
+| StageReadyMoveButton | L159–159 |
+| StageReadyStopButton | L161–161 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding IsAtTarget} | L27–27 |
+| {Binding IsAtTarget} | L32–32 |
+| {Binding IsAtTarget} | L41–41 |
+| {Binding IsAtTarget} | L42–42 |
+| {Binding Message} | L48–48 |
+| {Binding Text} | L52–52 |
+| {Binding IsActive} | L61–61 |
+| {Binding IsActive} | L70–70 |
+| {Binding Busy} | L87–87 |
+| {Binding Text} | L90–90 |
+| {Binding ModeBackground} | L93–93 |
+| {Binding MotionMode} | L94–94 |
+| {Binding CurrentPosition.Text} | L107–107 |
+| {Binding CurrentPosition.Message} | L107–107 |
+| {Binding TargetPosition} | L112–112 |
+| {Binding Foreground, ElementName=StagePositionMatchText} | L112–112 |
+| {Binding PositionComparison} | L115–115 |
+| {Binding IsAtTarget} | L120–120 |
+| {Binding IsAtTarget} | L121–121 |
+| {Binding CurrentSpeed.Text} | L131–131 |
+| {Binding CurrentSpeed.Message} | L131–131 |
+| {Binding TargetSpeedSource} | L133–133 |
+| {Binding TargetSpeed} | L136–136 |
+| {Binding AlarmCode} | L144–144 |
+| {Binding Text} | L147–147 |
+| {Binding WarningCode} | L150–150 |
+| {Binding Text} | L153–153 |
+| {Binding MoveCommand} | L159–159 |
+| {Binding StopCommand} | L161–161 |
 
 ## 원문 전체 주석 해설본
 

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 90ab6c96e79714cd4c03ad1c22f9aab5fa558d70c47f028dca4fc88d67c4dc6f |
 | 파일 분류 | code |
 | 원본 크기/행 | 10,419 bytes / 120 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CAutomationControllerStatusView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CAutomationControllerStatusView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -24,37 +24,55 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 코드 비하인드 후보 | Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs |
 | 이름 있는 요소 | ControllerCard, ControllerNameText, ControllerTaskSummary, ControllerCpuRow, ControllerCpuBar, ControllerDetailText, TaskStatusCard, TaskHeader, TaskTitleText, TaskHeadText, TaskStateText, TaskFileText |
 | 이벤트 개수 | 0 |
-| Binding 표현 개수 | 24 |
+| Binding 표현 개수 | 25 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| IsCompact, RelativeSource={RelativeSource AncestorType=local:CAutomationControllerStatusView |
-| IsCompact, RelativeSource={RelativeSource AncestorType=local:CAutomationControllerStatusView |
-| ControllerName |
-| TaskSummary |
-| CpuUsagePercent |
-| CpuUsageBrush |
-| CpuUsageText |
-| StateBrush |
-| DetailText |
-| Tasks |
-| TaskColumns, RelativeSource={RelativeSource AncestorType=local:CAutomationControllerStatusView |
-| StateBrush |
-| Task |
-| CardTextBrush |
-| Head |
-| CardTextBrush |
-| StateText |
-| CardTextBrush |
-| FileText |
-| CardTextBrush |
-| IsStateHighlighted |
-| StateBrush |
-| IsCompact, RelativeSource={RelativeSource AncestorType=local:CAutomationControllerStatusView |
-| IsCompact, RelativeSource={RelativeSource AncestorType=local:CAutomationControllerStatusView |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| ControllerCard | L32–32 |
+| ControllerNameText | L39–39 |
+| ControllerTaskSummary | L40–40 |
+| ControllerCpuRow | L42–42 |
+| ControllerCpuBar | L47–47 |
+| ControllerDetailText | L50–50 |
+| TaskStatusCard | L59–59 |
+| TaskHeader | L70–70 |
+| TaskTitleText | L75–75 |
+| TaskHeadText | L76–76 |
+| TaskStateText | L79–79 |
+| TaskFileText | L81–81 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=local:CAutomationControllerStatusView}} | L7–7 |
+| {Binding} | L14–14 |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=local:CAutomationControllerStatusView}} | L19–19 |
+| {Binding ControllerName} | L39–39 |
+| {Binding TaskSummary} | L40–40 |
+| {Binding CpuUsagePercent} | L47–47 |
+| {Binding CpuUsageBrush} | L47–47 |
+| {Binding CpuUsageText} | L48–48 |
+| {Binding StateBrush} | L48–48 |
+| {Binding DetailText} | L50–50 |
+| {Binding Tasks} | L51–51 |
+| {Binding TaskColumns, RelativeSource={RelativeSource AncestorType=local:CAutomationControllerStatusView}} | L54–54 |
+| {Binding StateBrush} | L59–59 |
+| {Binding Task} | L75–75 |
+| {Binding CardTextBrush} | L75–75 |
+| {Binding Head} | L76–76 |
+| {Binding CardTextBrush} | L76–76 |
+| {Binding StateText} | L79–79 |
+| {Binding CardTextBrush} | L79–79 |
+| {Binding FileText} | L81–81 |
+| {Binding CardTextBrush} | L81–81 |
+| {Binding IsStateHighlighted} | L85–85 |
+| {Binding StateBrush} | L89–89 |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=local:CAutomationControllerStatusView}} | L92–92 |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=local:CAutomationControllerStatusView}} | L106–106 |
 
 ## 원문 전체 주석 해설본
 

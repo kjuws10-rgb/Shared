@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
-| 원본 SHA256 | fee363ec6068c71f666ad90324e2ca0a6c32ef8790b78347dc6ef606bfeb0571 |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 SHA256 | 0a2a3ccf2862b0207f857502f6c6945a6f36c1ab4260c7f241a90a625448ac19 |
 | 파일 분류 | code |
-| 원본 크기/행 | 27,231 bytes / 246 physical lines |
+| 원본 크기/행 | 27,264 bytes / 246 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -26,79 +26,100 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 이벤트 개수 | 0 |
 | Binding 표현 개수 | 68 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| IsCompact, RelativeSource={RelativeSource AncestorType=UserControl |
-| ActionCommand |
-| IsCompact, RelativeSource={RelativeSource AncestorType=UserControl |
-| IsCompact, RelativeSource={RelativeSource AncestorType=UserControl |
-| EmptyXY |
-| IsCompact, RelativeSource={RelativeSource AncestorType=UserControl |
-| Measured |
-| IsCompact, RelativeSource={RelativeSource AncestorType=UserControl |
-| CompactMeasured |
-| Target |
-| IsCompact, RelativeSource={RelativeSource AncestorType=UserControl |
-| CompactTarget |
-| Recommended |
-| IsCompact, RelativeSource={RelativeSource AncestorType=UserControl |
-| CompactRecommended |
-| Delta |
-| IsCompact, RelativeSource={RelativeSource AncestorType=UserControl |
-| CompactDelta |
-| RecipeName |
-| State |
-| Heads |
-| Name |
-| Background |
-| Foreground |
-| DataContext.SelectHeadCommand, RelativeSource={RelativeSource AncestorType=ItemsControl |
-| HeadNo |
-| Detail |
-| SelectedHeadTitle |
-| MachiningPositionText |
-| MachiningPositionBrush |
-| MachiningPositionDetail |
-| GlassImage |
-| Camera |
-| BeamImage |
-| GeometryText |
-| GeometryText |
-| BeamSummary |
-| PatternCaption |
-| MeasuredCenter |
-| CenterError |
-| ModeBrush |
-| Mode |
-| BoardReference |
-| StageY |
-| ReviewX |
-| ExecutionModes |
-| ExecutionMode, Mode=TwoWay |
-| CanSelect |
-| HeadMeasurementSummary |
-| Heads |
-| SelectedHead, Mode=TwoWay |
-| Detail |
-| Name |
-| State |
-| StateBrush |
-| Current |
-| IsCompact, RelativeSource={RelativeSource AncestorType=UserControl |
-| CompactCurrent |
-| Steps |
-| Background |
-| Order |
-| Foreground |
-| Name |
-| Foreground |
-| State |
-| Foreground |
-| StatusText |
-| StatusText |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| DefaultLayoutRoot | L59–59 |
+| RecipeRow | L60–60 |
+| ProgressRow | L60–60 |
+| DefaultRecipeName | L65–65 |
+| DefaultPreviewPanel | L74–74 |
+| DefaultHeadSelector | L78–78 |
+| DefaultGlassPreview | L100–100 |
+| DefaultBeamPreview | L114–114 |
+| PositionRow | L143–143 |
+| ActionRow | L143–143 |
+| ApplyRow | L143–143 |
+| DefaultActionPanel | L160–160 |
+| DefaultExecutionMode | L167–167 |
+| DefaultResultPanel | L180–180 |
+| ResultTitleRow | L182–182 |
+| DefaultHeadResults | L187–187 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=UserControl}} | L19–19 |
+| {Binding ActionCommand} | L34–34 |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=UserControl}} | L41–41 |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=UserControl}} | L48–48 |
+| {Binding EmptyXY} | L51–51 |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=UserControl}} | L52–52 |
+| {Binding Measured} | L54–54 |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=UserControl}} | L54–54 |
+| {Binding CompactMeasured} | L54–54 |
+| {Binding Target} | L55–55 |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=UserControl}} | L55–55 |
+| {Binding CompactTarget} | L55–55 |
+| {Binding Recommended} | L56–56 |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=UserControl}} | L56–56 |
+| {Binding CompactRecommended} | L56–56 |
+| {Binding Delta} | L57–57 |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=UserControl}} | L57–57 |
+| {Binding CompactDelta} | L57–57 |
+| {Binding RecipeName} | L65–65 |
+| {Binding State} | L67–67 |
+| {Binding Heads} | L78–78 |
+| {Binding Name} | L81–81 |
+| {Binding Background} | L81–81 |
+| {Binding Foreground} | L81–81 |
+| {Binding DataContext.SelectHeadCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}} | L83–83 |
+| {Binding HeadNo} | L83–83 |
+| {Binding Detail} | L83–83 |
+| {Binding SelectedHeadTitle} | L88–88 |
+| {Binding MachiningPositionText} | L89–89 |
+| {Binding MachiningPositionBrush} | L89–89 |
+| {Binding MachiningPositionDetail} | L89–89 |
+| {Binding GlassImage} | L102–102 |
+| {Binding Camera} | L103–103 |
+| {Binding BeamImage} | L114–114 |
+| {Binding GeometryText} | L117–117 |
+| {Binding GeometryText} | L117–117 |
+| {Binding BeamSummary} | L128–128 |
+| {Binding PatternCaption} | L129–129 |
+| {Binding MeasuredCenter} | L133–133 |
+| {Binding CenterError} | L134–134 |
+| {Binding ModeBrush} | L149–149 |
+| {Binding Mode} | L150–150 |
+| {Binding BoardReference} | L154–154 |
+| {Binding StageY} | L155–155 |
+| {Binding ReviewX} | L156–156 |
+| {Binding ExecutionModes} | L167–167 |
+| {Binding ExecutionMode, Mode=TwoWay} | L167–167 |
+| {Binding CanSelect} | L167–167 |
+| {Binding HeadMeasurementSummary} | L185–185 |
+| {Binding Heads} | L187–187 |
+| {Binding SelectedHead, Mode=TwoWay} | L187–187 |
+| {Binding Detail} | L199–199 |
+| {Binding Name} | L204–204 |
+| {Binding State} | L205–205 |
+| {Binding StateBrush} | L205–205 |
+| {Binding Current} | L209–209 |
+| {Binding IsCompact, RelativeSource={RelativeSource AncestorType=UserControl}} | L210–210 |
+| {Binding CompactCurrent} | L210–210 |
+| {Binding Steps} | L231–231 |
+| {Binding Background} | L234–234 |
+| {Binding Order} | L236–236 |
+| {Binding Foreground} | L236–236 |
+| {Binding Name} | L237–237 |
+| {Binding Foreground} | L237–237 |
+| {Binding State} | L238–238 |
+| {Binding Foreground} | L238–238 |
+| {Binding StatusText} | L243–243 |
+| {Binding StatusText} | L243–243 |
 
 ## 원문 전체 주석 해설본
 

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
-| 원본 SHA256 | 186c4435170fe13633b766d7443a742ce7085aecdc7637b322453ce1819b95de |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 SHA256 | fb1b57861febe9a6918c7942e19a1dd01fcfb66756b685a874d611662bc6e5aa |
 | 파일 분류 | code |
-| 원본 크기/행 | 13,060 bytes / 148 physical lines |
+| 원본 크기/행 | 16,554 bytes / 197 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -21,7 +21,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 타입 | 구분 | 원본 범위 | 선언/상속 |
 | --- | --- | --- | --- |
-| CDefaultOffsetView | ClassDeclaration | 11–148 | CDefaultOffsetView: UserControl |
+| CDefaultOffsetView | ClassDeclaration | 11–197 | CDefaultOffsetView: UserControl |
 
 ## 멤버 빠른 목록
 
@@ -35,16 +35,17 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | .ctor | ConstructorDeclaration | L18–50 | Drilling.UI.Views.CDefaultOffsetView.CDefaultOffsetView() |
 | UpdateDisplay | MethodDeclaration | L51–55 | void Drilling.UI.Views.CDefaultOffsetView.UpdateDisplay() |
 | RefreshFeedback | MethodDeclaration | L56–56 | void Drilling.UI.Views.CDefaultOffsetView.RefreshFeedback() |
-| EditConditions | MethodDeclaration | L60–147 | (Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? Drilling.UI.Views.CDefaultOffsetView.EditConditions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS, System.Collections.Generic.IReadOnlyList<int>, int, System.Collections.Generic.IReadOnlyDictionary<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>) |
-| UpdateMachiningMode | LocalFunctionStatement | L83–88 | void UpdateMachiningMode() |
-| AddInputRow | LocalFunctionStatement | L90–96 | void AddInputRow(int, string, Control) |
-| AddFieldRow | LocalFunctionStatement | L110–119 | void AddFieldRow(int, params string[]) |
+| EditConditions | MethodDeclaration | L60–196 | (Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? Drilling.UI.Views.CDefaultOffsetView.EditConditions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS, System.Collections.Generic.IReadOnlyList<int>, int, System.Collections.Generic.IReadOnlyDictionary<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>, double) |
+| UpdateMachiningMode | LocalFunctionStatement | L119–124 | void UpdateMachiningMode() |
+| AddInputRow | LocalFunctionStatement | L126–132 | void AddInputRow(int, string, FrameworkElement) |
+| UpdateCenterPreview | LocalFunctionStatement | L145–151 | void UpdateCenterPreview() |
+| AddFieldRow | LocalFunctionStatement | L158–167 | void AddFieldRow(int, params string[]) |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
 ### FieldDeclaration `IsCompactProperty` · L13–13
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L13-L13)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -76,7 +77,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsCompact` · L14–14
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -91,7 +92,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_IsCompact` · L14–14
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -118,7 +119,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_IsCompact` · L14–14
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -151,7 +152,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_display` · L17–17
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L17-L17)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -182,7 +183,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L18–50
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:18–50](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L18-L50)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:18–50](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L18-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -294,7 +295,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateDisplay` · L51–55
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:51–55](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L51-L55)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:51–55](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L51-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -307,9 +308,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L22-L22) | UpdateDisplay | False |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L24-L24) | UpdateDisplay | False |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L25-L25) | UpdateDisplay | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L22-L22) | UpdateDisplay | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L24-L24) | UpdateDisplay | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L25-L25) | UpdateDisplay | False |
 
 호출하는 대상과 해석 범위:
 
@@ -344,7 +345,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshFeedback` · L56–56
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L56-L56)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -357,14 +358,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L21-L21) | RefreshFeedback | False |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L53-L53) | RefreshFeedback | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L21-L21) | RefreshFeedback | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L53-L53) | RefreshFeedback | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 56 | .RefreshFeedback | resolved | void Drilling.UI.Menu.Menus.CDefaultOffsetPanel.RefreshFeedback() · Drilling.UI/Menu/Menus/CMenuCorrection.cs:4534 |
+| 56 | .RefreshFeedback | resolved | void Drilling.UI.Menu.Menus.CDefaultOffsetPanel.RefreshFeedback() · Drilling.UI/Menu/Menus/CMenuCorrection.cs:4576 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -374,13 +375,13 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `EditConditions` · L60–147
+### MethodDeclaration `EditConditions` · L60–196
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:60–147](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L60-L147)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:60–196](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L60-L196)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
-| 서명 | (Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? Drilling.UI.Views.CDefaultOffsetView.EditConditions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS, System.Collections.Generic.IReadOnlyList<int>, int, System.Collections.Generic.IReadOnlyDictionary<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>) |
+| 서명 | (Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? Drilling.UI.Views.CDefaultOffsetView.EditConditions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS, System.Collections.Generic.IReadOnlyList<int>, int, System.Collections.Generic.IReadOnlyDictionary<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>, double) |
 | 접근/수식자 | Public / public, static |
 | 반환/값 타입 | (Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? |
 | 소속 타입 | NamedType:Drilling.UI.Views.CDefaultOffsetView |
@@ -393,12 +394,13 @@ flowchart TD
 | models | System.Collections.Generic.IReadOnlyList<int> | None | False /  |
 | currentModel | int | None | False /  |
 | geometries | System.Collections.Generic.IReadOnlyDictionary<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY> | None | False /  |
+| designAlignKey3ReviewX | double | None | False /  |
 
 정적 호출자로 확인된 위치:
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3138–3138](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3138-L3138) | Drilling.UI.Views.CDefaultOffsetView.EditConditions | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3190–3191](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3190-L3191) | Drilling.UI.Views.CDefaultOffsetView.EditConditions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -439,83 +441,115 @@ flowchart TD
 | 78 | Grid.SetRow | unresolved | None |
 | 78 | Grid.SetColumn | unresolved | None |
 | 78 | layout.Children.Add | unresolved | None |
-| 80 | new ComboBox | unresolved | None |
-| 80 | new Thickness | unresolved | None |
-| 81 | new TextBox | unresolved | None |
-| 81 | current.CrossSize.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
-| 81 | new Thickness | unresolved | None |
-| 81 | new Thickness | unresolved | None |
-| 82 | new TextBox | unresolved | None |
-| 82 | new Thickness | unresolved | None |
-| 82 | new Thickness | unresolved | None |
-| 89 | UpdateMachiningMode | resolved | void UpdateMachiningMode() · Drilling.UI/Views/CDefaultOffsetView.xaml.cs:83 |
-| 98 | new GridLength | unresolved | None |
-| 99 | AddInputRow | candidate | OverloadResolutionFailure |
-| 100 | AddInputRow | candidate | OverloadResolutionFailure |
-| 101 | AddInputRow | candidate | OverloadResolutionFailure |
-| 102 | layout.RowDefinitions.Add | unresolved | None |
-| 102 | new | unresolved | None |
-| 102 | new GridLength | unresolved | None |
-| 103 | new StackPanel | unresolved | None |
-| 103 | new Thickness | unresolved | None |
-| 104 | reference.Children.Add | unresolved | None |
-| 104 | new TextBlock | unresolved | None |
+| 79 | new TextBox | unresolved | None |
+| 82 | current.AlignKey1ReviewX.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
+| 85 | new Thickness | unresolved | None |
+| 88 | new Thickness | unresolved | None |
+| 90 | new TextBox | unresolved | None |
+| 93 | current.AlignKey3ReviewX.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
+| 94 | new Thickness | unresolved | None |
+| 97 | new Thickness | unresolved | None |
+| 99 | .TryFindResource | unresolved | None |
+| 100 | new Button | unresolved | None |
 | 104 | new Thickness | unresolved | None |
-| 105 | reference.Children.Add | unresolved | None |
-| 105 | new TextBlock | unresolved | None |
 | 105 | new Thickness | unresolved | None |
-| 106 | reference.Children.Add | unresolved | None |
-| 106 | new TextBlock | unresolved | None |
-| 106 | new Thickness | unresolved | None |
-| 107 | reference.Children.Add | unresolved | None |
-| 107 | new TextBlock | unresolved | None |
-| 107 | new Thickness | unresolved | None |
-| 108 | new Grid | unresolved | None |
-| 109 | new GridLength | unresolved | None |
-| 109 | new GridLength | unresolved | None |
-| 109 | new GridLength | unresolved | None |
-| 109 | new GridLength | unresolved | None |
-| 109 | fields.ColumnDefinitions.Add | unresolved | None |
-| 109 | new | unresolved | None |
-| 120 | AddFieldRow | resolved | void AddFieldRow(int, params string[]) · Drilling.UI/Views/CDefaultOffsetView.xaml.cs:110 |
-| 121 | geometries.OrderBy | resolved | System.Linq.IOrderedEnumerable<System.Collections.Generic.KeyValuePair<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>>.OrderBy<System.Collections.Generic.KeyValuePair<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>, int>(System.Func<System.Collections.Generic.KeyValuePair<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>, int>) |
-| 122 | AddFieldRow | candidate | OverloadResolutionFailure |
-| 122 | (item.Value.FieldHalfX * 2).ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
-| 122 | (item.Value.FieldHalfY * 2).ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
-| 122 | item.Value.DoeAngle.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
-| 123 | reference.Children.Add | unresolved | None |
-| 124 | reference.Children.Add | unresolved | None |
-| 124 | new TextBlock | unresolved | None |
-| 124 | new Thickness | unresolved | None |
-| 125 | new ScrollViewer | unresolved | None |
-| 126 | Grid.SetRow | unresolved | None |
-| 126 | Grid.SetColumnSpan | unresolved | None |
-| 126 | layout.Children.Add | unresolved | None |
-| 127 | layout.RowDefinitions.Add | unresolved | None |
-| 127 | new | unresolved | None |
-| 127 | new GridLength | unresolved | None |
-| 128 | new System.Windows.Controls.Primitives.UniformGrid | unresolved | None |
-| 129 | .TryFindResource | unresolved | None |
-| 130 | new Button | unresolved | None |
-| 130 | new Thickness | unresolved | None |
-| 130 | new Button | unresolved | None |
-| 130 | new Thickness | unresolved | None |
-| 131 | buttons.Children.Add | unresolved | None |
-| 131 | buttons.Children.Add | unresolved | None |
-| 131 | Grid.SetRow | unresolved | None |
-| 131 | Grid.SetColumnSpan | unresolved | None |
-| 131 | layout.Children.Add | unresolved | None |
-| 135 | double.TryParse | candidate | OverloadResolutionFailure |
-| 135 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 135 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
-| 136 | models.Contains | resolved | bool System.Collections.Generic.IEnumerable<int>.Contains<int>(int) |
-| 136 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
-| 139 | double.TryParse | candidate | OverloadResolutionFailure |
-| 139 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 139 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
-| 141 | CDefaultOffsetCalibration.ValidateOptions | resolved | void Drilling.Common.Correction.CDefaultOffsetCalibration.ValidateOptions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:80 |
-| 142 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
-| 146 | dialog.ShowDialog | unresolved | None |
+| 109 | new Grid | unresolved | None |
+| 110 | alignKey3Editor.ColumnDefinitions.Add | unresolved | None |
+| 110 | new | unresolved | None |
+| 110 | new GridLength | unresolved | None |
+| 111 | alignKey3Editor.ColumnDefinitions.Add | unresolved | None |
+| 111 | new | unresolved | None |
+| 111 | new GridLength | unresolved | None |
+| 112 | alignKey3Editor.Children.Add | unresolved | None |
+| 113 | Grid.SetColumn | unresolved | None |
+| 113 | alignKey3Editor.Children.Add | unresolved | None |
+| 114 | designAlignKey3ReviewX.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
+| 116 | new ComboBox | unresolved | None |
+| 116 | new Thickness | unresolved | None |
+| 117 | new TextBox | unresolved | None |
+| 117 | current.CrossSize.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
+| 117 | new Thickness | unresolved | None |
+| 117 | new Thickness | unresolved | None |
+| 118 | new TextBox | unresolved | None |
+| 118 | new Thickness | unresolved | None |
+| 118 | new Thickness | unresolved | None |
+| 125 | UpdateMachiningMode | resolved | void UpdateMachiningMode() · Drilling.UI/Views/CDefaultOffsetView.xaml.cs:119 |
+| 134 | new GridLength | unresolved | None |
+| 135 | AddInputRow | candidate | OverloadResolutionFailure |
+| 136 | AddInputRow | candidate | OverloadResolutionFailure |
+| 137 | AddInputRow | candidate | OverloadResolutionFailure |
+| 138 | AddInputRow | candidate | OverloadResolutionFailure |
+| 139 | AddInputRow | candidate | OverloadResolutionFailure |
+| 140 | layout.RowDefinitions.Add | unresolved | None |
+| 140 | new | unresolved | None |
+| 140 | new GridLength | unresolved | None |
+| 141 | new StackPanel | unresolved | None |
+| 141 | new Thickness | unresolved | None |
+| 142 | reference.Children.Add | unresolved | None |
+| 142 | new TextBlock | unresolved | None |
+| 142 | new Thickness | unresolved | None |
+| 143 | new TextBlock | unresolved | None |
+| 143 | new Thickness | unresolved | None |
+| 144 | reference.Children.Add | unresolved | None |
+| 152 | UpdateCenterPreview | resolved | void UpdateCenterPreview() · Drilling.UI/Views/CDefaultOffsetView.xaml.cs:145 |
+| 153 | UpdateCenterPreview | resolved | void UpdateCenterPreview() · Drilling.UI/Views/CDefaultOffsetView.xaml.cs:145 |
+| 154 | reference.Children.Add | unresolved | None |
+| 154 | new TextBlock | unresolved | None |
+| 154 | new Thickness | unresolved | None |
+| 155 | reference.Children.Add | unresolved | None |
+| 155 | new TextBlock | unresolved | None |
+| 155 | new Thickness | unresolved | None |
+| 156 | new Grid | unresolved | None |
+| 157 | new GridLength | unresolved | None |
+| 157 | new GridLength | unresolved | None |
+| 157 | new GridLength | unresolved | None |
+| 157 | new GridLength | unresolved | None |
+| 157 | fields.ColumnDefinitions.Add | unresolved | None |
+| 157 | new | unresolved | None |
+| 168 | AddFieldRow | resolved | void AddFieldRow(int, params string[]) · Drilling.UI/Views/CDefaultOffsetView.xaml.cs:158 |
+| 169 | geometries.OrderBy | resolved | System.Linq.IOrderedEnumerable<System.Collections.Generic.KeyValuePair<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>>.OrderBy<System.Collections.Generic.KeyValuePair<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>, int>(System.Func<System.Collections.Generic.KeyValuePair<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>, int>) |
+| 170 | AddFieldRow | candidate | OverloadResolutionFailure |
+| 170 | (item.Value.FieldHalfX * 2).ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
+| 170 | (item.Value.FieldHalfY * 2).ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
+| 170 | item.Value.DoeAngle.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
+| 171 | reference.Children.Add | unresolved | None |
+| 172 | reference.Children.Add | unresolved | None |
+| 172 | new TextBlock | unresolved | None |
+| 172 | new Thickness | unresolved | None |
+| 173 | new ScrollViewer | unresolved | None |
+| 174 | Grid.SetRow | unresolved | None |
+| 174 | Grid.SetColumnSpan | unresolved | None |
+| 174 | layout.Children.Add | unresolved | None |
+| 175 | layout.RowDefinitions.Add | unresolved | None |
+| 175 | new | unresolved | None |
+| 175 | new GridLength | unresolved | None |
+| 176 | new System.Windows.Controls.Primitives.UniformGrid | unresolved | None |
+| 177 | new Button | unresolved | None |
+| 177 | new Thickness | unresolved | None |
+| 177 | new Button | unresolved | None |
+| 177 | new Thickness | unresolved | None |
+| 178 | buttons.Children.Add | unresolved | None |
+| 178 | buttons.Children.Add | unresolved | None |
+| 178 | Grid.SetRow | unresolved | None |
+| 178 | Grid.SetColumnSpan | unresolved | None |
+| 178 | layout.Children.Add | unresolved | None |
+| 182 | double.TryParse | candidate | OverloadResolutionFailure |
+| 182 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 182 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 183 | double.TryParse | candidate | OverloadResolutionFailure |
+| 183 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 183 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 184 | double.TryParse | candidate | OverloadResolutionFailure |
+| 184 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 184 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 185 | models.Contains | resolved | bool System.Collections.Generic.IEnumerable<int>.Contains<int>(int) |
+| 185 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 188 | double.TryParse | candidate | OverloadResolutionFailure |
+| 188 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 188 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 190 | CDefaultOffsetCalibration.ValidateOptions | resolved | void Drilling.Common.Correction.CDefaultOffsetCalibration.ValidateOptions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:97 |
+| 191 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
+| 195 | dialog.ShowDialog | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -524,16 +558,16 @@ flowchart TD
 | 62 | local-declaration | 지역 변수를 선언합니다: var owner = Application.Current?.MainWindow; |
 | 62 | variable-initializer | 변수의 초기값을 지정합니다: owner = Application.Current?.MainWindow |
 | 63 | assignment | 값을 대상에 대입합니다: Title = "Default CENTER 측정 조건" |
-| 63 | assignment | 값을 대상에 대입합니다: Width = 760 |
-| 63 | assignment | 값을 대상에 대입합니다: Height = 790 |
+| 63 | assignment | 값을 대상에 대입합니다: Width = 820 |
+| 63 | assignment | 값을 대상에 대입합니다: Height = 870 |
 | 63 | assignment | 값을 대상에 대입합니다: MaxHeight = Math.Max(400, SystemParameters.WorkArea.Height - 40) |
 | 63 | assignment | 값을 대상에 대입합니다: ResizeMode = ResizeMode.NoResize |
 | 63 | assignment | 값을 대상에 대입합니다: WindowStartupLocation = WindowStartupLocation.CenterOwner |
 | 63 | assignment | 값을 대상에 대입합니다: Owner = owner |
-| 63 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Window { Title = "Default CENTER 측정 조건", Width = 760, Height = 790, MaxHeight = Math.Max(400, SystemParameters.WorkArea.Height - 40), ResizeMode = ResizeMode.NoResize, WindowStartupLocation = WindowStartupLocation.Ce… |
+| 63 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Window { Title = "Default CENTER 측정 조건", Width = 820, Height = 870, MaxHeight = Math.Max(400, SystemParameters.WorkArea.Height - 40), ResizeMode = ResizeMode.NoResize, WindowStartupLocation = WindowStartupLocation.Ce… |
 | 63 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(400, SystemParameters.WorkArea.Height - 40) |
-| 63 | local-declaration | 지역 변수를 선언합니다: var dialog = new Window { Title = "Default CENTER 측정 조건", Width = 760, Height = 790, MaxHeight = Math.Max(400, SystemParameters.WorkArea.Height - 40), ResizeMode = ResizeMode.NoResize, WindowStartupLocation = WindowStartupLocation |
-| 63 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new Window { Title = "Default CENTER 측정 조건", Width = 760, Height = 790, MaxHeight = Math.Max(400, SystemParameters.WorkArea.Height - 40), ResizeMode = ResizeMode.NoResize, WindowStartupLocation = WindowStartupLocation.Cen |
+| 63 | local-declaration | 지역 변수를 선언합니다: var dialog = new Window { Title = "Default CENTER 측정 조건", Width = 820, Height = 870, MaxHeight = Math.Max(400, SystemParameters.WorkArea.Height - 40), ResizeMode = ResizeMode.NoResize, WindowStartupLocation = WindowStartupLocation |
+| 63 | variable-initializer | 변수의 초기값을 지정합니다: dialog = new Window { Title = "Default CENTER 측정 조건", Width = 820, Height = 870, MaxHeight = Math.Max(400, SystemParameters.WorkArea.Height - 40), ResizeMode = ResizeMode.NoResize, WindowStartupLocation = WindowStartupLocation.Cen |
 | 64 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.SetResourceReference(BackgroundProperty, "GridBackgroundBrush") |
 | 65 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.SetResourceReference(ForegroundProperty, "TextPrimaryBrush") |
 | 66 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(20) |
@@ -598,219 +632,296 @@ flowchart TD
 | 78 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(input, 1) |
 | 78 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumn(input, 1) |
 | 78 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(input) |
-| 79 | local-declaration | 지역 변수를 선언합니다: var machiningModes = new[] { "샷 가공", "십자 가공" }; |
-| 79 | variable-initializer | 변수의 초기값을 지정합니다: machiningModes = new[] { "샷 가공", "십자 가공" } |
-| 80 | assignment | 값을 대상에 대입합니다: Name = "DefaultMachiningMode" |
-| 80 | assignment | 값을 대상에 대입합니다: ItemsSource = machiningModes |
-| 80 | assignment | 값을 대상에 대입합니다: SelectedIndex = (int)current.MachiningMode |
-| 80 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
-| 80 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) |
-| 80 | assignment | 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center |
-| 80 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ComboBox { Name = "DefaultMachiningMode", ItemsSource = machiningModes, SelectedIndex = (int)current.MachiningMode, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center … |
-| 80 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,4,0,4) |
-| 80 | local-declaration | 지역 변수를 선언합니다: var machining = new ComboBox { Name = "DefaultMachiningMode", ItemsSource = machiningModes, SelectedIndex = (int)current.MachiningMode, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.C |
-| 80 | variable-initializer | 변수의 초기값을 지정합니다: machining = new ComboBox { Name = "DefaultMachiningMode", ItemsSource = machiningModes, SelectedIndex = (int)current.MachiningMode, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Cente |
-| 81 | assignment | 값을 대상에 대입합니다: Name = "DefaultCrossSize" |
-| 81 | assignment | 값을 대상에 대입합니다: Text = current.CrossSize.ToString("0.#####", CultureInfo.InvariantCulture) |
-| 81 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) |
-| 81 | assignment | 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center |
-| 81 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
-| 81 | assignment | 값을 대상에 대입합니다: Padding = new Thickness(6,0,6,0) |
-| 81 | assignment | 값을 대상에 대입합니다: IsEnabled = current.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross |
-| 81 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBox { Name = "DefaultCrossSize", Text = current.CrossSize.ToString("0.#####", CultureInfo.InvariantCulture), Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, FontSize = 15, Pa… |
-| 81 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: current.CrossSize.ToString("0.#####", CultureInfo.InvariantCulture) |
-| 81 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,4,0,4) |
-| 81 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(6,0,6,0) |
-| 81 | local-declaration | 지역 변수를 선언합니다: var crossSize = new TextBox { Name = "DefaultCrossSize", Text = current.CrossSize.ToString("0.#####", CultureInfo.InvariantCulture), Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, FontSize =  |
-| 81 | variable-initializer | 변수의 초기값을 지정합니다: crossSize = new TextBox { Name = "DefaultCrossSize", Text = current.CrossSize.ToString("0.#####", CultureInfo.InvariantCulture), Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, FontSize = 15,  |
-| 82 | assignment | 값을 대상에 대입합니다: Name = "DefaultVisionMethod" |
-| 82 | assignment | 값을 대상에 대입합니다: Text = current.VisionDescription |
-| 82 | assignment | 값을 대상에 대입합니다: IsReadOnly = true |
-| 82 | assignment | 값을 대상에 대입합니다: Focusable = false |
-| 82 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
-| 82 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) |
-| 82 | assignment | 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center |
-| 82 | assignment | 값을 대상에 대입합니다: Padding = new Thickness(6,0,6,0) |
-| 82 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBox { Name = "DefaultVisionMethod", Text = current.VisionDescription, IsReadOnly = true, Focusable = false, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, Pad… |
-| 82 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,4,0,4) |
-| 82 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(6,0,6,0) |
-| 82 | local-declaration | 지역 변수를 선언합니다: var vision = new TextBox { Name = "DefaultVisionMethod", Text = current.VisionDescription, IsReadOnly = true, Focusable = false, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center,  |
-| 82 | variable-initializer | 변수의 초기값을 지정합니다: vision = new TextBox { Name = "DefaultVisionMethod", Text = current.VisionDescription, IsReadOnly = true, Focusable = false, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, Padd |
-| 89 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateMachiningMode() |
-| 89 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: machining.SelectionChanged += (_, _) => UpdateMachiningMode() |
-| 98 | assignment | 값을 대상에 대입합니다: layout.ColumnDefinitions[1].Width = new GridLength(230) |
-| 98 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(230) |
-| 99 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddInputRow(2, "가공 방식", machining) |
-| 100 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddInputRow(3, "십자 가로·세로 전체 길이 (mm)", crossSize) |
-| 101 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddInputRow(4, "비전 검사 방식 (자동)", vision) |
-| 102 | assignment | 값을 대상에 대입합니다: Height = new GridLength(1, GridUnitType.Star) |
-| 102 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.RowDefinitions.Add(new() { Height = new GridLength(1, GridUnitType.Star) }) |
-| 102 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(1, GridUnitType.Star) } |
-| 102 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
-| 103 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,14,0,12) |
-| 103 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new StackPanel { Margin = new Thickness(0,14,0,12) } |
-| 103 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,14,0,12) |
-| 103 | local-declaration | 지역 변수를 선언합니다: var reference = new StackPanel { Margin = new Thickness(0,14,0,12) }; |
-| 103 | variable-initializer | 변수의 초기값을 지정합니다: reference = new StackPanel { Margin = new Thickness(0,14,0,12) } |
-| 104 | assignment | 값을 대상에 대입합니다: Text = "자동 계산 · 설정값 (읽기 전용)" |
-| 104 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
-| 104 | assignment | 값을 대상에 대입합니다: FontWeight = FontWeights.Bold |
-| 104 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,0,0,8) |
-| 104 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = "자동 계산 · 설정값 (읽기 전용)", FontSize = 15, FontWeight = FontWeights.Bold, Margin = new Thickness(0,0,0,8) }) |
-| 104 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = "자동 계산 · 설정값 (읽기 전용)", FontSize = 15, FontWeight = FontWeights.Bold, Margin = new Thickness(0,0,0,8) } |
-| 104 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,0,8) |
-| 105 | assignment | 값을 대상에 대입합니다: Text = $"기판 중앙 Review X {current.BoardCenterX:0.000} mm (Recipe-Process-Scan)" |
-| 105 | assignment | 값을 대상에 대입합니다: FontSize = 14 |
-| 105 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,0,0,6) |
-| 105 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = $"기판 중앙 Review X {current.BoardCenterX:0.000} mm (Recipe-Process-Scan)", FontSize = 14, Margin = new Thickness(0,0,0,6) }) |
-| 105 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = $"기판 중앙 Review X {current.BoardCenterX:0.000} mm (Recipe-Process-Scan)", FontSize = 14, Margin = new Thickness(0,0,0,6) } |
-| 105 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,0,6) |
-| 106 | assignment | 값을 대상에 대입합니다: Text = $"Beam간격 및 Beam중심 허용오차 {current.Tolerance:0.000} mm (Recipe-Common-Review)" |
-| 106 | assignment | 값을 대상에 대입합니다: FontSize = 14 |
-| 106 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,0,0,10) |
-| 106 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = $"Beam간격 및 Beam중심 허용오차 {current.Tolerance:0.000} mm (Recipe-Common-Review)", FontSize = 14, Margin = new Thickness(0,0,0,10) }) |
-| 106 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = $"Beam간격 및 Beam중심 허용오차 {current.Tolerance:0.000} mm (Recipe-Common-Review)", FontSize = 14, Margin = new Thickness(0,0,0,10) } |
-| 106 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,0,10) |
-| 107 | assignment | 값을 대상에 대입합니다: Text = "헤드별 설정 (Setting-Common-Scanner)" |
-| 107 | assignment | 값을 대상에 대입합니다: FontSize = 13 |
-| 107 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,0,0,6) |
-| 107 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = "헤드별 설정 (Setting-Common-Scanner)", FontSize = 13, Margin = new Thickness(0,0,0,6) }) |
-| 107 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = "헤드별 설정 (Setting-Common-Scanner)", FontSize = 13, Margin = new Thickness(0,0,0,6) } |
-| 107 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,0,6) |
-| 108 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Grid() |
-| 108 | local-declaration | 지역 변수를 선언합니다: var fields = new Grid(); |
-| 108 | variable-initializer | 변수의 초기값을 지정합니다: fields = new Grid() |
-| 109 | assignment | 값을 대상에 대입합니다: Width = width |
-| 109 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(70) |
-| 109 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
-| 109 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
-| 109 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
-| 109 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.ColumnDefinitions.Add(new() { Width = width }) |
-| 109 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Width = width } |
-| 109 | foreach | 컬렉션 요소를 순회합니다: foreach (var width in new[] { new GridLength(70), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star) }) |
-| 120 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddFieldRow(0, "HEAD", "Scan Field X (mm)", "Scan Field Y (mm)", "DOE 회전 각도 (deg)") |
-| 121 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: geometries.OrderBy(p => p.Key) |
-| 121 | foreach | 컬렉션 요소를 순회합니다: foreach (var item in geometries.OrderBy(p => p.Key)) |
-| 122 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddFieldRow(fields.RowDefinitions.Count, $"H{item.Key:00}", (item.Value.FieldHalfX * 2).ToString("0.###", CultureInfo.InvariantCulture), (item.Value.FieldHalfY * 2).ToString("0.###", CultureInfo.InvariantCulture), item.V… |
-| 122 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (item.Value.FieldHalfX * 2).ToString("0.###", CultureInfo.InvariantCulture) |
-| 122 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (item.Value.FieldHalfY * 2).ToString("0.###", CultureInfo.InvariantCulture) |
-| 122 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Value.DoeAngle.ToString("0.###", CultureInfo.InvariantCulture) |
-| 123 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(fields) |
-| 124 | assignment | 값을 대상에 대입합니다: Text = "십자 길이 10 mm: 가로·세로 각각 중심 기준 −5~+5 mm를 1회 가공합니다.\n십자 가공은 Mark Find Setting Single로 중심을 1회 검사하고, 샷 가공은 Mark Find Single로 DOE 16빔을 검사합니다.\n십자 속도는 Head별 Recipe Jump Speed, 샷 가공은 Shot Count를 사용합니다.\nField는 전체 폭·높이입니다. Y=55 mm이면 |
-| 124 | assignment | 값을 대상에 대입합니다: TextWrapping = TextWrapping.Wrap |
-| 124 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,10,0,0) |
-| 124 | assignment | 값을 대상에 대입합니다: FontSize = 13 |
-| 124 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = "십자 길이 10 mm: 가로·세로 각각 중심 기준 −5~+5 mm를 1회 가공합니다.\n십자 가공은 Mark Find Setting Single로 중심을 1회 검사하고, 샷 가공은 Mark Find Single로 DOE 16빔을 검사합니다.\n십자 속도는 Head별 Recipe Jump Speed, 샷 가공은… |
-| 124 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = "십자 길이 10 mm: 가로·세로 각각 중심 기준 −5~+5 mm를 1회 가공합니다.\n십자 가공은 Mark Find Setting Single로 중심을 1회 검사하고, 샷 가공은 Mark Find Single로 DOE 16빔을 검사합니다.\n십자 속도는 Head별 Recipe Jump Speed, 샷 가공은 Shot Count를 사용합니다.\nFi… |
-| 124 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,10,0,0) |
-| 125 | assignment | 값을 대상에 대입합니다: Content = reference |
-| 125 | assignment | 값을 대상에 대입합니다: VerticalScrollBarVisibility = ScrollBarVisibility.Auto |
-| 125 | assignment | 값을 대상에 대입합니다: HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled |
-| 125 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ScrollViewer { Content = reference, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled } |
-| 125 | local-declaration | 지역 변수를 선언합니다: var referenceScroll = new ScrollViewer { Content = reference, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled }; |
-| 125 | variable-initializer | 변수의 초기값을 지정합니다: referenceScroll = new ScrollViewer { Content = reference, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled } |
-| 126 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(referenceScroll, 5) |
-| 126 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumnSpan(referenceScroll, 2) |
-| 126 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(referenceScroll) |
-| 127 | assignment | 값을 대상에 대입합니다: Height = new GridLength(44) |
-| 127 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.RowDefinitions.Add(new() { Height = new GridLength(44) }) |
-| 127 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(44) } |
-| 127 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(44) |
-| 128 | assignment | 값을 대상에 대입합니다: Columns = 2 |
-| 128 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Windows.Controls.Primitives.UniformGrid { Columns = 2 } |
-| 128 | local-declaration | 지역 변수를 선언합니다: var buttons = new System.Windows.Controls.Primitives.UniformGrid { Columns = 2 }; |
-| 128 | variable-initializer | 변수의 초기값을 지정합니다: buttons = new System.Windows.Controls.Primitives.UniformGrid { Columns = 2 } |
-| 129 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryFindResource("SecondaryButton") |
-| 129 | local-declaration | 지역 변수를 선언합니다: var buttonStyle = Application.Current?.TryFindResource("SecondaryButton") as Style; |
-| 129 | variable-initializer | 변수의 초기값을 지정합니다: buttonStyle = Application.Current?.TryFindResource("SecondaryButton") as Style |
-| 130 | assignment | 값을 대상에 대입합니다: Content = "조건 적용" |
-| 130 | assignment | 값을 대상에 대입합니다: Style = buttonStyle |
-| 130 | assignment | 값을 대상에 대입합니다: Height = double.NaN |
-| 130 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
-| 130 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,0,6,0) |
-| 130 | assignment | 값을 대상에 대입합니다: Content = "취소" |
-| 130 | assignment | 값을 대상에 대입합니다: Style = buttonStyle |
-| 130 | assignment | 값을 대상에 대입합니다: Height = double.NaN |
-| 130 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
-| 130 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(6,0,0,0) |
-| 130 | assignment | 값을 대상에 대입합니다: IsCancel = true |
-| 130 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Button { Content = "조건 적용", Style = buttonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(0,0,6,0) } |
-| 130 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,6,0) |
-| 130 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Button { Content = "취소", Style = buttonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(6,0,0,0), IsCancel = true } |
-| 130 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(6,0,0,0) |
-| 130 | local-declaration | 지역 변수를 선언합니다: var save = new Button { Content = "조건 적용", Style = buttonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(0,0,6,0) }; |
-| 130 | local-declaration | 지역 변수를 선언합니다: var cancel = new Button { Content = "취소", Style = buttonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(6,0,0,0), IsCancel = true }; |
-| 130 | variable-initializer | 변수의 초기값을 지정합니다: save = new Button { Content = "조건 적용", Style = buttonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(0,0,6,0) } |
-| 130 | variable-initializer | 변수의 초기값을 지정합니다: cancel = new Button { Content = "취소", Style = buttonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(6,0,0,0), IsCancel = true } |
-| 131 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: buttons.Children.Add(save) |
-| 131 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: buttons.Children.Add(cancel) |
-| 131 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(buttons, 6) |
-| 131 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumnSpan(buttons, 2) |
-| 131 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(buttons) |
-| 132 | local-declaration | 지역 변수를 선언합니다: (ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? result = null; |
-| 132 | variable-initializer | 변수의 초기값을 지정합니다: result = null |
-| 133 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: save.Click += (_, _) => { if (!double.TryParse(input.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var stageY) &#124;&#124; !double.IsFinite(stageY)) { Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "가공할 Stage Y 위치에 유한한 숫자를 입 |
-| 135 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(input.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var stageY) |
-| 135 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(stageY) |
-| 135 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "가공할 Stage Y 위치에 유한한 숫자를 입력해 주세요.") |
-| 135 | if | 조건에 따라 분기합니다: if (!double.TryParse(input.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var stageY) &#124;&#124; !double.IsFinite(stageY)) |
-| 135 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 136 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: models.Contains(selectedModel) |
-| 136 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "검사 기준 모델을 선택해 주세요.") |
-| 136 | if | 조건에 따라 분기합니다: if (model.SelectedItem is not int selectedModel &#124;&#124; !models.Contains(selectedModel)) |
-| 136 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 137 | local-declaration | 지역 변수를 선언합니다: var shape = (EN_DEFAULT_MACHINING_MODE)machining.SelectedIndex; |
-| 137 | variable-initializer | 변수의 초기값을 지정합니다: shape = (EN_DEFAULT_MACHINING_MODE)machining.SelectedIndex |
-| 138 | local-declaration | 지역 변수를 선언합니다: var size = current.CrossSize; |
-| 138 | variable-initializer | 변수의 초기값을 지정합니다: size = current.CrossSize |
-| 139 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(crossSize.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out size) |
-| 139 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(size) |
-| 139 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "십자 전체 길이에 0보다 큰 유한한 mm 값을 입력해 주세요.") |
-| 139 | if | 조건에 따라 분기합니다: if (shape == EN_DEFAULT_MACHINING_MODE.Cross && (!double.TryParse(crossSize.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out size) &#124;&#124; !double.IsFinite(size) &#124;&#124; size <= 0)) |
-| 139 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 140 | assignment | 값을 대상에 대입합니다: TestStageY = stageY |
-| 140 | assignment | 값을 대상에 대입합니다: MachiningMode = shape |
-| 140 | assignment | 값을 대상에 대입합니다: CrossSize = size |
-| 140 | local-declaration | 지역 변수를 선언합니다: var options = current with { TestStageY = stageY, MachiningMode = shape, CrossSize = size }; |
-| 140 | variable-initializer | 변수의 초기값을 지정합니다: options = current with { TestStageY = stageY, MachiningMode = shape, CrossSize = size } |
-| 141 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CDefaultOffsetCalibration.ValidateOptions(options) |
-| 141 | try | 예외 처리 범위입니다: try |
-| 142 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", error.Message) |
-| 142 | catch | 지정 예외를 처리합니다: catch (InvalidOperationException error) |
-| 142 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 143 | assignment | 값을 대상에 대입합니다: result = (options, selectedModel) |
-| 143 | assignment | 값을 대상에 대입합니다: dialog.DialogResult = true |
-| 145 | assignment | 값을 대상에 대입합니다: dialog.Content = layout |
-| 146 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
-| 146 | conditional-expression | 조건에 따라 결과식을 선택합니다: dialog.ShowDialog() == true ? result : null |
-| 146 | return | 호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true ? result : null; |
+| 79 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBox { Name = "DefaultAlignKey1ReviewX", Text = current.AlignKey1ReviewX.ToString("0.#####", CultureInfo.InvariantCulture), IsReadOnly = true, ToolTip = "Recipe > Process > Scan의 Review Camera Align Key Pos X", Ma… |
+| 79 | local-declaration | 지역 변수를 선언합니다: var alignKey1 = new TextBox { Name = "DefaultAlignKey1ReviewX", Text = current.AlignKey1ReviewX.ToString("0.#####", CultureInfo.InvariantCulture), IsReadOnly = true, ToolTip = "Recipe > Process > Scan의 Review Camera Align Key Pos  |
+| 79 | variable-initializer | 변수의 초기값을 지정합니다: alignKey1 = new TextBox { Name = "DefaultAlignKey1ReviewX", Text = current.AlignKey1ReviewX.ToString("0.#####", CultureInfo.InvariantCulture), IsReadOnly = true, ToolTip = "Recipe > Process > Scan의 Review Camera Align Key Pos X",  |
+| 81 | assignment | 값을 대상에 대입합니다: Name = "DefaultAlignKey1ReviewX" |
+| 82 | assignment | 값을 대상에 대입합니다: Text = current.AlignKey1ReviewX.ToString("0.#####", CultureInfo.InvariantCulture) |
+| 82 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: current.AlignKey1ReviewX.ToString("0.#####", CultureInfo.InvariantCulture) |
+| 83 | assignment | 값을 대상에 대입합니다: IsReadOnly = true |
+| 84 | assignment | 값을 대상에 대입합니다: ToolTip = "Recipe > Process > Scan의 Review Camera Align Key Pos X" |
+| 85 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) |
+| 85 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,4,0,4) |
+| 86 | assignment | 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center |
+| 87 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
+| 88 | assignment | 값을 대상에 대입합니다: Padding = new Thickness(6,0,6,0) |
+| 88 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(6,0,6,0) |
+| 90 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBox { Name = "DefaultAlignKey3ReviewX", Text = current.AlignKey3ReviewX.ToString("0.#####", CultureInfo.InvariantCulture), Margin = new Thickness(0,4,6,4), VerticalContentAlignment = VerticalAlignment.Center, Fon… |
+| 90 | local-declaration | 지역 변수를 선언합니다: var alignKey3 = new TextBox { Name = "DefaultAlignKey3ReviewX", Text = current.AlignKey3ReviewX.ToString("0.#####", CultureInfo.InvariantCulture), Margin = new Thickness(0,4,6,4), VerticalContentAlignment = VerticalAlignment.Cente |
+| 90 | variable-initializer | 변수의 초기값을 지정합니다: alignKey3 = new TextBox { Name = "DefaultAlignKey3ReviewX", Text = current.AlignKey3ReviewX.ToString("0.#####", CultureInfo.InvariantCulture), Margin = new Thickness(0,4,6,4), VerticalContentAlignment = VerticalAlignment.Center, F |
+| 92 | assignment | 값을 대상에 대입합니다: Name = "DefaultAlignKey3ReviewX" |
+| 93 | assignment | 값을 대상에 대입합니다: Text = current.AlignKey3ReviewX.ToString("0.#####", CultureInfo.InvariantCulture) |
+| 93 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: current.AlignKey3ReviewX.ToString("0.#####", CultureInfo.InvariantCulture) |
+| 94 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,4,6,4) |
+| 94 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,4,6,4) |
+| 95 | assignment | 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center |
+| 96 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
+| 97 | assignment | 값을 대상에 대입합니다: Padding = new Thickness(6,0,6,0) |
+| 97 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(6,0,6,0) |
+| 99 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .TryFindResource("SecondaryButton") |
+| 99 | local-declaration | 지역 변수를 선언합니다: var secondaryButtonStyle = Application.Current?.TryFindResource("SecondaryButton") as Style; |
+| 99 | variable-initializer | 변수의 초기값을 지정합니다: secondaryButtonStyle = Application.Current?.TryFindResource("SecondaryButton") as Style |
+| 100 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Button { Content = "설계값 계산", Style = secondaryButtonStyle, Margin = new Thickness(0,4,0,4), Padding = new Thickness(8,0,8,0), FontSize = 13, ToolTip = "AK1 Review X + Glass Size X - (2 × AK Margin X)" } |
+| 100 | local-declaration | 지역 변수를 선언합니다: var calculateAlignKey3 = new Button { Content = "설계값 계산", Style = secondaryButtonStyle, Margin = new Thickness(0,4,0,4), Padding = new Thickness(8,0,8,0), FontSize = 13, ToolTip = "AK1 Review X + Glass Size X - (2 × AK Margin X)"  |
+| 100 | variable-initializer | 변수의 초기값을 지정합니다: calculateAlignKey3 = new Button { Content = "설계값 계산", Style = secondaryButtonStyle, Margin = new Thickness(0,4,0,4), Padding = new Thickness(8,0,8,0), FontSize = 13, ToolTip = "AK1 Review X + Glass Size X - (2 × AK Margin X)" } |
+| 102 | assignment | 값을 대상에 대입합니다: Content = "설계값 계산" |
+| 103 | assignment | 값을 대상에 대입합니다: Style = secondaryButtonStyle |
+| 104 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) |
+| 104 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,4,0,4) |
+| 105 | assignment | 값을 대상에 대입합니다: Padding = new Thickness(8,0,8,0) |
+| 105 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(8,0,8,0) |
+| 106 | assignment | 값을 대상에 대입합니다: FontSize = 13 |
+| 107 | assignment | 값을 대상에 대입합니다: ToolTip = "AK1 Review X + Glass Size X - (2 × AK Margin X)" |
+| 109 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Grid() |
+| 109 | local-declaration | 지역 변수를 선언합니다: var alignKey3Editor = new Grid(); |
+| 109 | variable-initializer | 변수의 초기값을 지정합니다: alignKey3Editor = new Grid() |
+| 110 | assignment | 값을 대상에 대입합니다: Width = new GridLength(1, GridUnitType.Star) |
+| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: alignKey3Editor.ColumnDefinitions.Add(new() { Width = new GridLength(1, GridUnitType.Star) }) |
+| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Width = new GridLength(1, GridUnitType.Star) } |
+| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
+| 111 | assignment | 값을 대상에 대입합니다: Width = new GridLength(104) |
+| 111 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: alignKey3Editor.ColumnDefinitions.Add(new() { Width = new GridLength(104) }) |
+| 111 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Width = new GridLength(104) } |
+| 111 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(104) |
+| 112 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: alignKey3Editor.Children.Add(alignKey3) |
+| 113 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumn(calculateAlignKey3, 1) |
+| 113 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: alignKey3Editor.Children.Add(calculateAlignKey3) |
+| 114 | assignment | 값을 대상에 대입합니다: alignKey3.Text = designAlignKey3ReviewX.ToString("0.#####", CultureInfo.InvariantCulture) |
+| 114 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: designAlignKey3ReviewX.ToString("0.#####", CultureInfo.InvariantCulture) |
+| 114 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: calculateAlignKey3.Click += (_, _) => alignKey3.Text = designAlignKey3ReviewX.ToString("0.#####", CultureInfo.InvariantCulture) |
+| 115 | local-declaration | 지역 변수를 선언합니다: var machiningModes = new[] { "샷 가공", "십자 가공" }; |
+| 115 | variable-initializer | 변수의 초기값을 지정합니다: machiningModes = new[] { "샷 가공", "십자 가공" } |
+| 116 | assignment | 값을 대상에 대입합니다: Name = "DefaultMachiningMode" |
+| 116 | assignment | 값을 대상에 대입합니다: ItemsSource = machiningModes |
+| 116 | assignment | 값을 대상에 대입합니다: SelectedIndex = (int)current.MachiningMode |
+| 116 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
+| 116 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) |
+| 116 | assignment | 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center |
+| 116 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ComboBox { Name = "DefaultMachiningMode", ItemsSource = machiningModes, SelectedIndex = (int)current.MachiningMode, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center … |
+| 116 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,4,0,4) |
+| 116 | local-declaration | 지역 변수를 선언합니다: var machining = new ComboBox { Name = "DefaultMachiningMode", ItemsSource = machiningModes, SelectedIndex = (int)current.MachiningMode, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.C |
+| 116 | variable-initializer | 변수의 초기값을 지정합니다: machining = new ComboBox { Name = "DefaultMachiningMode", ItemsSource = machiningModes, SelectedIndex = (int)current.MachiningMode, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Cente |
+| 117 | assignment | 값을 대상에 대입합니다: Name = "DefaultCrossSize" |
+| 117 | assignment | 값을 대상에 대입합니다: Text = current.CrossSize.ToString("0.#####", CultureInfo.InvariantCulture) |
+| 117 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) |
+| 117 | assignment | 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center |
+| 117 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
+| 117 | assignment | 값을 대상에 대입합니다: Padding = new Thickness(6,0,6,0) |
+| 117 | assignment | 값을 대상에 대입합니다: IsEnabled = current.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross |
+| 117 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBox { Name = "DefaultCrossSize", Text = current.CrossSize.ToString("0.#####", CultureInfo.InvariantCulture), Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, FontSize = 15, Pa… |
+| 117 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: current.CrossSize.ToString("0.#####", CultureInfo.InvariantCulture) |
+| 117 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,4,0,4) |
+| 117 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(6,0,6,0) |
+| 117 | local-declaration | 지역 변수를 선언합니다: var crossSize = new TextBox { Name = "DefaultCrossSize", Text = current.CrossSize.ToString("0.#####", CultureInfo.InvariantCulture), Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, FontSize =  |
+| 117 | variable-initializer | 변수의 초기값을 지정합니다: crossSize = new TextBox { Name = "DefaultCrossSize", Text = current.CrossSize.ToString("0.#####", CultureInfo.InvariantCulture), Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, FontSize = 15,  |
+| 118 | assignment | 값을 대상에 대입합니다: Name = "DefaultVisionMethod" |
+| 118 | assignment | 값을 대상에 대입합니다: Text = current.VisionDescription |
+| 118 | assignment | 값을 대상에 대입합니다: IsReadOnly = true |
+| 118 | assignment | 값을 대상에 대입합니다: Focusable = false |
+| 118 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
+| 118 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,4,0,4) |
+| 118 | assignment | 값을 대상에 대입합니다: VerticalContentAlignment = VerticalAlignment.Center |
+| 118 | assignment | 값을 대상에 대입합니다: Padding = new Thickness(6,0,6,0) |
+| 118 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBox { Name = "DefaultVisionMethod", Text = current.VisionDescription, IsReadOnly = true, Focusable = false, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, Pad… |
+| 118 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,4,0,4) |
+| 118 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(6,0,6,0) |
+| 118 | local-declaration | 지역 변수를 선언합니다: var vision = new TextBox { Name = "DefaultVisionMethod", Text = current.VisionDescription, IsReadOnly = true, Focusable = false, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center,  |
+| 118 | variable-initializer | 변수의 초기값을 지정합니다: vision = new TextBox { Name = "DefaultVisionMethod", Text = current.VisionDescription, IsReadOnly = true, Focusable = false, FontSize = 15, Margin = new Thickness(0,4,0,4), VerticalContentAlignment = VerticalAlignment.Center, Padd |
+| 125 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateMachiningMode() |
+| 125 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: machining.SelectionChanged += (_, _) => UpdateMachiningMode() |
+| 134 | assignment | 값을 대상에 대입합니다: layout.ColumnDefinitions[1].Width = new GridLength(300) |
+| 134 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(300) |
+| 135 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddInputRow(2, "Align Key 1 Review X (mm) · Recipe", alignKey1) |
+| 136 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddInputRow(3, "Align Key 3 Review X (mm)", alignKey3Editor) |
+| 137 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddInputRow(4, "가공 방식", machining) |
+| 138 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddInputRow(5, "십자 가로·세로 전체 길이 (mm)", crossSize) |
+| 139 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddInputRow(6, "비전 검사 방식 (자동)", vision) |
+| 140 | assignment | 값을 대상에 대입합니다: Height = new GridLength(1, GridUnitType.Star) |
+| 140 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.RowDefinitions.Add(new() { Height = new GridLength(1, GridUnitType.Star) }) |
+| 140 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(1, GridUnitType.Star) } |
+| 140 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
+| 141 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,14,0,12) |
+| 141 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new StackPanel { Margin = new Thickness(0,14,0,12) } |
+| 141 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,14,0,12) |
+| 141 | local-declaration | 지역 변수를 선언합니다: var reference = new StackPanel { Margin = new Thickness(0,14,0,12) }; |
+| 141 | variable-initializer | 변수의 초기값을 지정합니다: reference = new StackPanel { Margin = new Thickness(0,14,0,12) } |
+| 142 | assignment | 값을 대상에 대입합니다: Text = "자동 계산 · 설정값 (읽기 전용)" |
+| 142 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
+| 142 | assignment | 값을 대상에 대입합니다: FontWeight = FontWeights.Bold |
+| 142 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,0,0,8) |
+| 142 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = "자동 계산 · 설정값 (읽기 전용)", FontSize = 15, FontWeight = FontWeights.Bold, Margin = new Thickness(0,0,0,8) }) |
+| 142 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = "자동 계산 · 설정값 (읽기 전용)", FontSize = 15, FontWeight = FontWeights.Bold, Margin = new Thickness(0,0,0,8) } |
+| 142 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,0,8) |
+| 143 | assignment | 값을 대상에 대입합니다: FontSize = 14 |
+| 143 | assignment | 값을 대상에 대입합니다: FontWeight = FontWeights.SemiBold |
+| 143 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,0,0,6) |
+| 143 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { FontSize = 14, FontWeight = FontWeights.SemiBold, Margin = new Thickness(0,0,0,6) } |
+| 143 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,0,6) |
+| 143 | local-declaration | 지역 변수를 선언합니다: var centerPreview = new TextBlock { FontSize = 14, FontWeight = FontWeights.SemiBold, Margin = new Thickness(0,0,0,6) }; |
+| 143 | variable-initializer | 변수의 초기값을 지정합니다: centerPreview = new TextBlock { FontSize = 14, FontWeight = FontWeights.SemiBold, Margin = new Thickness(0,0,0,6) } |
+| 144 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(centerPreview) |
+| 152 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCenterPreview() |
+| 152 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: alignKey3.TextChanged += (_, _) => UpdateCenterPreview() |
+| 153 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateCenterPreview() |
+| 154 | assignment | 값을 대상에 대입합니다: Text = $"Beam간격 및 Beam중심 허용오차 {current.Tolerance:0.000} mm (Recipe-Common-Review)" |
+| 154 | assignment | 값을 대상에 대입합니다: FontSize = 14 |
+| 154 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,0,0,10) |
+| 154 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = $"Beam간격 및 Beam중심 허용오차 {current.Tolerance:0.000} mm (Recipe-Common-Review)", FontSize = 14, Margin = new Thickness(0,0,0,10) }) |
+| 154 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = $"Beam간격 및 Beam중심 허용오차 {current.Tolerance:0.000} mm (Recipe-Common-Review)", FontSize = 14, Margin = new Thickness(0,0,0,10) } |
+| 154 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,0,10) |
+| 155 | assignment | 값을 대상에 대입합니다: Text = "헤드별 설정 (Setting-Common-Scanner)" |
+| 155 | assignment | 값을 대상에 대입합니다: FontSize = 13 |
+| 155 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,0,0,6) |
+| 155 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = "헤드별 설정 (Setting-Common-Scanner)", FontSize = 13, Margin = new Thickness(0,0,0,6) }) |
+| 155 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = "헤드별 설정 (Setting-Common-Scanner)", FontSize = 13, Margin = new Thickness(0,0,0,6) } |
+| 155 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,0,6) |
+| 156 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Grid() |
+| 156 | local-declaration | 지역 변수를 선언합니다: var fields = new Grid(); |
+| 156 | variable-initializer | 변수의 초기값을 지정합니다: fields = new Grid() |
+| 157 | assignment | 값을 대상에 대입합니다: Width = width |
+| 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(70) |
+| 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
+| 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
+| 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
+| 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.ColumnDefinitions.Add(new() { Width = width }) |
+| 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Width = width } |
+| 157 | foreach | 컬렉션 요소를 순회합니다: foreach (var width in new[] { new GridLength(70), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star) }) |
+| 168 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddFieldRow(0, "HEAD", "Scan Field X (mm)", "Scan Field Y (mm)", "DOE 회전 각도 (deg)") |
+| 169 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: geometries.OrderBy(p => p.Key) |
+| 169 | foreach | 컬렉션 요소를 순회합니다: foreach (var item in geometries.OrderBy(p => p.Key)) |
+| 170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddFieldRow(fields.RowDefinitions.Count, $"H{item.Key:00}", (item.Value.FieldHalfX * 2).ToString("0.###", CultureInfo.InvariantCulture), (item.Value.FieldHalfY * 2).ToString("0.###", CultureInfo.InvariantCulture), item.V… |
+| 170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (item.Value.FieldHalfX * 2).ToString("0.###", CultureInfo.InvariantCulture) |
+| 170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (item.Value.FieldHalfY * 2).ToString("0.###", CultureInfo.InvariantCulture) |
+| 170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Value.DoeAngle.ToString("0.###", CultureInfo.InvariantCulture) |
+| 171 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(fields) |
+| 172 | assignment | 값을 대상에 대입합니다: Text = $"글래스 중심 Review X는 조건에 적용한 AK1·AK3 Review X 엔코더값의 정확한 중간값입니다. AK3의 설계값은 AK1 + Glass Size X - (2 × AK Margin X)로 계산합니다.\n십자 길이 10 mm: 스캐너는 가로·세로 각각 중심 기준 −5~+5 mm를 그리며, DOE가 같은 십자를 {current.InspectionPointCount}개 형상으로 분기합니다. |
+| 172 | assignment | 값을 대상에 대입합니다: TextWrapping = TextWrapping.Wrap |
+| 172 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,10,0,0) |
+| 172 | assignment | 값을 대상에 대입합니다: FontSize = 13 |
+| 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = $"글래스 중심 Review X는 조건에 적용한 AK1·AK3 Review X 엔코더값의 정확한 중간값입니다. AK3의 설계값은 AK1 + Glass Size X - (2 × AK Margin X)로 계산합니다.\n십자 길이 10 mm: 스캐너는 가로·세로 각각 중심 기준 −5~+5 mm를 그리며, DOE가 같… |
+| 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = $"글래스 중심 Review X는 조건에 적용한 AK1·AK3 Review X 엔코더값의 정확한 중간값입니다. AK3의 설계값은 AK1 + Glass Size X - (2 × AK Margin X)로 계산합니다.\n십자 길이 10 mm: 스캐너는 가로·세로 각각 중심 기준 −5~+5 mm를 그리며, DOE가 같은 십자를 {current.Inspecti… |
+| 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,10,0,0) |
+| 173 | assignment | 값을 대상에 대입합니다: Content = reference |
+| 173 | assignment | 값을 대상에 대입합니다: VerticalScrollBarVisibility = ScrollBarVisibility.Auto |
+| 173 | assignment | 값을 대상에 대입합니다: HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled |
+| 173 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ScrollViewer { Content = reference, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled } |
+| 173 | local-declaration | 지역 변수를 선언합니다: var referenceScroll = new ScrollViewer { Content = reference, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled }; |
+| 173 | variable-initializer | 변수의 초기값을 지정합니다: referenceScroll = new ScrollViewer { Content = reference, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled } |
+| 174 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(referenceScroll, 7) |
+| 174 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumnSpan(referenceScroll, 2) |
+| 174 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(referenceScroll) |
+| 175 | assignment | 값을 대상에 대입합니다: Height = new GridLength(44) |
+| 175 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.RowDefinitions.Add(new() { Height = new GridLength(44) }) |
+| 175 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(44) } |
+| 175 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(44) |
+| 176 | assignment | 값을 대상에 대입합니다: Columns = 2 |
+| 176 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Windows.Controls.Primitives.UniformGrid { Columns = 2 } |
+| 176 | local-declaration | 지역 변수를 선언합니다: var buttons = new System.Windows.Controls.Primitives.UniformGrid { Columns = 2 }; |
+| 176 | variable-initializer | 변수의 초기값을 지정합니다: buttons = new System.Windows.Controls.Primitives.UniformGrid { Columns = 2 } |
+| 177 | assignment | 값을 대상에 대입합니다: Content = "조건 적용" |
+| 177 | assignment | 값을 대상에 대입합니다: Style = secondaryButtonStyle |
+| 177 | assignment | 값을 대상에 대입합니다: Height = double.NaN |
+| 177 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
+| 177 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,0,6,0) |
+| 177 | assignment | 값을 대상에 대입합니다: Content = "취소" |
+| 177 | assignment | 값을 대상에 대입합니다: Style = secondaryButtonStyle |
+| 177 | assignment | 값을 대상에 대입합니다: Height = double.NaN |
+| 177 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
+| 177 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(6,0,0,0) |
+| 177 | assignment | 값을 대상에 대입합니다: IsCancel = true |
+| 177 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Button { Content = "조건 적용", Style = secondaryButtonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(0,0,6,0) } |
+| 177 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,6,0) |
+| 177 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Button { Content = "취소", Style = secondaryButtonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(6,0,0,0), IsCancel = true } |
+| 177 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(6,0,0,0) |
+| 177 | local-declaration | 지역 변수를 선언합니다: var save = new Button { Content = "조건 적용", Style = secondaryButtonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(0,0,6,0) }; |
+| 177 | local-declaration | 지역 변수를 선언합니다: var cancel = new Button { Content = "취소", Style = secondaryButtonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(6,0,0,0), IsCancel = true }; |
+| 177 | variable-initializer | 변수의 초기값을 지정합니다: save = new Button { Content = "조건 적용", Style = secondaryButtonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(0,0,6,0) } |
+| 177 | variable-initializer | 변수의 초기값을 지정합니다: cancel = new Button { Content = "취소", Style = secondaryButtonStyle, Height = double.NaN, FontSize = 15, Margin = new Thickness(6,0,0,0), IsCancel = true } |
+| 178 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: buttons.Children.Add(save) |
+| 178 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: buttons.Children.Add(cancel) |
+| 178 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(buttons, 8) |
+| 178 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumnSpan(buttons, 2) |
+| 178 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(buttons) |
+| 179 | local-declaration | 지역 변수를 선언합니다: (ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? result = null; |
+| 179 | variable-initializer | 변수의 초기값을 지정합니다: result = null |
+| 180 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: save.Click += (_, _) => { if (!double.TryParse(input.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var stageY) &#124;&#124; !double.IsFinite(stageY)) { Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "가공할 Stage Y 위치에 유한한 숫자를 입 |
+| 182 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(input.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var stageY) |
+| 182 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(stageY) |
+| 182 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "가공할 Stage Y 위치에 유한한 숫자를 입력해 주세요.") |
+| 182 | if | 조건에 따라 분기합니다: if (!double.TryParse(input.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var stageY) &#124;&#124; !double.IsFinite(stageY)) |
+| 182 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 183 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(alignKey1.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var ak1) |
+| 183 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(ak1) |
+| 183 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "Align Key 1 Review X 값을 확인해 주세요.") |
+| 183 | if | 조건에 따라 분기합니다: if (!double.TryParse(alignKey1.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var ak1) &#124;&#124; !double.IsFinite(ak1)) |
+| 183 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 184 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(alignKey3.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var ak3) |
+| 184 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(ak3) |
+| 184 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "Align Key 3 Review X에 유한한 숫자를 입력해 주세요.") |
+| 184 | if | 조건에 따라 분기합니다: if (!double.TryParse(alignKey3.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var ak3) &#124;&#124; !double.IsFinite(ak3)) |
+| 184 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 185 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: models.Contains(selectedModel) |
+| 185 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "검사 기준 모델을 선택해 주세요.") |
+| 185 | if | 조건에 따라 분기합니다: if (model.SelectedItem is not int selectedModel &#124;&#124; !models.Contains(selectedModel)) |
+| 185 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 186 | local-declaration | 지역 변수를 선언합니다: var shape = (EN_DEFAULT_MACHINING_MODE)machining.SelectedIndex; |
+| 186 | variable-initializer | 변수의 초기값을 지정합니다: shape = (EN_DEFAULT_MACHINING_MODE)machining.SelectedIndex |
+| 187 | local-declaration | 지역 변수를 선언합니다: var size = current.CrossSize; |
+| 187 | variable-initializer | 변수의 초기값을 지정합니다: size = current.CrossSize |
+| 188 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(crossSize.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out size) |
+| 188 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(size) |
+| 188 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", "십자 전체 길이에 0보다 큰 유한한 mm 값을 입력해 주세요.") |
+| 188 | if | 조건에 따라 분기합니다: if (shape == EN_DEFAULT_MACHINING_MODE.Cross && (!double.TryParse(crossSize.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out size) &#124;&#124; !double.IsFinite(size) &#124;&#124; size <= 0)) |
+| 188 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 189 | assignment | 값을 대상에 대입합니다: AlignKey1ReviewX = ak1 |
+| 189 | assignment | 값을 대상에 대입합니다: AlignKey3ReviewX = ak3 |
+| 189 | assignment | 값을 대상에 대입합니다: TestStageY = stageY |
+| 189 | assignment | 값을 대상에 대입합니다: MachiningMode = shape |
+| 189 | assignment | 값을 대상에 대입합니다: CrossSize = size |
+| 189 | local-declaration | 지역 변수를 선언합니다: var options = current with { AlignKey1ReviewX = ak1, AlignKey3ReviewX = ak3, TestStageY = stageY, MachiningMode = shape, CrossSize = size }; |
+| 189 | variable-initializer | 변수의 초기값을 지정합니다: options = current with { AlignKey1ReviewX = ak1, AlignKey3ReviewX = ak3, TestStageY = stageY, MachiningMode = shape, CrossSize = size } |
+| 190 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CDefaultOffsetCalibration.ValidateOptions(options) |
+| 190 | try | 예외 처리 범위입니다: try |
+| 191 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Popup.CRecipeConfirmDialog.ShowWarning("입력 확인", error.Message) |
+| 191 | catch | 지정 예외를 처리합니다: catch (InvalidOperationException error) |
+| 191 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 192 | assignment | 값을 대상에 대입합니다: result = (options, selectedModel) |
+| 192 | assignment | 값을 대상에 대입합니다: dialog.DialogResult = true |
+| 194 | assignment | 값을 대상에 대입합니다: dialog.Content = layout |
+| 195 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: dialog.ShowDialog() |
+| 195 | conditional-expression | 조건에 따라 결과식을 선택합니다: dialog.ShowDialog() == true ? result : null |
+| 195 | return | 호출자에게 값 또는 제어를 반환합니다: return dialog.ShowDialog() == true ? result : null; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["EditConditions"]
- N0["L109 foreach"]
+ N0["L157 foreach"]
  M -->|포함| N0
- N1["L121 foreach"]
+ N1["L169 foreach"]
  M -->|포함| N1
- N2["L135 if"]
+ N2["L182 if"]
  M -->|포함| N2
- N3["L136 if"]
+ N3["L183 if"]
  M -->|포함| N3
- N4["L139 if"]
+ N4["L184 if"]
  M -->|포함| N4
- N5["L141 try"]
+ N5["L185 if"]
  M -->|포함| N5
- N6["L142 catch"]
- N5 -->|포함| N6
+ N6["L188 if"]
+ M -->|포함| N6
+ N7["L190 try"]
+ M -->|포함| N7
+ N8["L191 catch"]
+ N7 -->|포함| N8
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `UpdateMachiningMode` · L83–88
+### LocalFunctionStatement `UpdateMachiningMode` · L119–124
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:83–88](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L83-L88)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:119–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L119-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -823,27 +934,27 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L89-L89) | UpdateMachiningMode | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L125-L125) | UpdateMachiningMode | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 85 | local-declaration | 지역 변수를 선언합니다: var cross = machining.SelectedIndex == (int)EN_DEFAULT_MACHINING_MODE.Cross; |
-| 85 | variable-initializer | 변수의 초기값을 지정합니다: cross = machining.SelectedIndex == (int)EN_DEFAULT_MACHINING_MODE.Cross |
-| 86 | assignment | 값을 대상에 대입합니다: crossSize.IsEnabled = cross |
-| 87 | assignment | 값을 대상에 대입합니다: vision.Text = cross ? "Mark Find Setting Single" : "Mark Find Single" |
-| 87 | conditional-expression | 조건에 따라 결과식을 선택합니다: cross ? "Mark Find Setting Single" : "Mark Find Single" |
+| 121 | local-declaration | 지역 변수를 선언합니다: var cross = machining.SelectedIndex == (int)EN_DEFAULT_MACHINING_MODE.Cross; |
+| 121 | variable-initializer | 변수의 초기값을 지정합니다: cross = machining.SelectedIndex == (int)EN_DEFAULT_MACHINING_MODE.Cross |
+| 122 | assignment | 값을 대상에 대입합니다: crossSize.IsEnabled = cross |
+| 123 | assignment | 값을 대상에 대입합니다: vision.Text = cross ? "Mark Find Setting Single" : "Mark Find Single" |
+| 123 | conditional-expression | 조건에 따라 결과식을 선택합니다: cross ? "Mark Find Setting Single" : "Mark Find Single" |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `AddInputRow` · L90–96
+### LocalFunctionStatement `AddInputRow` · L126–132
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:90–96](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L90-L96)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:126–132](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L126-L132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
-| 서명 | void AddInputRow(int, string, Control) |
+| 서명 | void AddInputRow(int, string, FrameworkElement) |
 | 접근/수식자 | Private /  |
 | 반환/값 타입 | void |
 | 소속 타입 | NamedType:Drilling.UI.Views.CDefaultOffsetView |
@@ -854,7 +965,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | row | int | None | False /  |
 | label | string | None | False /  |
-| control | Control | None | False /  |
+| control | FrameworkElement | None | False /  |
 
 현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
 
@@ -862,41 +973,81 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 92 | layout.RowDefinitions.Add | unresolved | None |
-| 92 | new | unresolved | None |
-| 92 | new GridLength | unresolved | None |
-| 93 | new TextBlock | unresolved | None |
-| 94 | Grid.SetRow | unresolved | None |
-| 94 | layout.Children.Add | unresolved | None |
-| 95 | Grid.SetRow | unresolved | None |
-| 95 | Grid.SetColumn | unresolved | None |
-| 95 | layout.Children.Add | unresolved | None |
+| 128 | layout.RowDefinitions.Add | unresolved | None |
+| 128 | new | unresolved | None |
+| 128 | new GridLength | unresolved | None |
+| 129 | new TextBlock | unresolved | None |
+| 130 | Grid.SetRow | unresolved | None |
+| 130 | layout.Children.Add | unresolved | None |
+| 131 | Grid.SetRow | unresolved | None |
+| 131 | Grid.SetColumn | unresolved | None |
+| 131 | layout.Children.Add | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 92 | assignment | 값을 대상에 대입합니다: Height = new GridLength(43) |
-| 92 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.RowDefinitions.Add(new() { Height = new GridLength(43) }) |
-| 92 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(43) } |
-| 92 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(43) |
-| 93 | assignment | 값을 대상에 대입합니다: Text = label |
-| 93 | assignment | 값을 대상에 대입합니다: VerticalAlignment = VerticalAlignment.Center |
-| 93 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
-| 93 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = label, VerticalAlignment = VerticalAlignment.Center, FontSize = 15 } |
-| 93 | local-declaration | 지역 변수를 선언합니다: var title = new TextBlock { Text = label, VerticalAlignment = VerticalAlignment.Center, FontSize = 15 }; |
-| 93 | variable-initializer | 변수의 초기값을 지정합니다: title = new TextBlock { Text = label, VerticalAlignment = VerticalAlignment.Center, FontSize = 15 } |
-| 94 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(title, row) |
-| 94 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(title) |
-| 95 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(control, row) |
-| 95 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumn(control, 1) |
-| 95 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(control) |
+| 128 | assignment | 값을 대상에 대입합니다: Height = new GridLength(43) |
+| 128 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.RowDefinitions.Add(new() { Height = new GridLength(43) }) |
+| 128 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(43) } |
+| 128 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(43) |
+| 129 | assignment | 값을 대상에 대입합니다: Text = label |
+| 129 | assignment | 값을 대상에 대입합니다: VerticalAlignment = VerticalAlignment.Center |
+| 129 | assignment | 값을 대상에 대입합니다: FontSize = 15 |
+| 129 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = label, VerticalAlignment = VerticalAlignment.Center, FontSize = 15 } |
+| 129 | local-declaration | 지역 변수를 선언합니다: var title = new TextBlock { Text = label, VerticalAlignment = VerticalAlignment.Center, FontSize = 15 }; |
+| 129 | variable-initializer | 변수의 초기값을 지정합니다: title = new TextBlock { Text = label, VerticalAlignment = VerticalAlignment.Center, FontSize = 15 } |
+| 130 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(title, row) |
+| 130 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(title) |
+| 131 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(control, row) |
+| 131 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumn(control, 1) |
+| 131 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: layout.Children.Add(control) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `AddFieldRow` · L110–119
+### LocalFunctionStatement `UpdateCenterPreview` · L145–151
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:110–119](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L110-L119)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:145–151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L145-L151)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | void UpdateCenterPreview() |
+| 접근/수식자 | Private /  |
+| 반환/값 타입 | void |
+| 소속 타입 | NamedType:Drilling.UI.Views.CDefaultOffsetView |
+
+정적 호출자로 확인된 위치:
+
+| 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
+| --- | --- | --- |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L152-L152) | UpdateCenterPreview | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L153-L153) | UpdateCenterPreview | False |
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 147 | double.TryParse | candidate | OverloadResolutionFailure |
+| 147 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 148 | double.TryParse | candidate | OverloadResolutionFailure |
+| 148 | double.IsFinite | resolved | bool double.IsFinite(double) |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 147 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(alignKey1.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var ak1) |
+| 147 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(ak1) |
+| 147 | assignment | 값을 대상에 대입합니다: centerPreview.Text = double.TryParse(alignKey1.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var ak1) && double.IsFinite(ak1) && double.TryParse(alignKey3.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out v |
+| 147 | conditional-expression | 조건에 따라 결과식을 선택합니다: double.TryParse(alignKey1.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var ak1) && double.IsFinite(ak1) && double.TryParse(alignKey3.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var ak3) && double.IsF |
+| 148 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(alignKey3.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out var ak3) |
+| 148 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(ak3) |
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### LocalFunctionStatement `AddFieldRow` · L158–167
+
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:158–167](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L158-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -916,58 +1067,58 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L120-L120) | AddFieldRow | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L168-L168) | AddFieldRow | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 112 | fields.RowDefinitions.Add | unresolved | None |
-| 112 | new | unresolved | None |
-| 112 | new GridLength | unresolved | None |
-| 115 | new TextBlock | unresolved | None |
-| 116 | new Border | unresolved | None |
-| 116 | new Thickness | unresolved | None |
-| 117 | Grid.SetRow | unresolved | None |
-| 117 | Grid.SetColumn | unresolved | None |
-| 117 | fields.Children.Add | unresolved | None |
+| 160 | fields.RowDefinitions.Add | unresolved | None |
+| 160 | new | unresolved | None |
+| 160 | new GridLength | unresolved | None |
+| 163 | new TextBlock | unresolved | None |
+| 164 | new Border | unresolved | None |
+| 164 | new Thickness | unresolved | None |
+| 165 | Grid.SetRow | unresolved | None |
+| 165 | Grid.SetColumn | unresolved | None |
+| 165 | fields.Children.Add | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 112 | assignment | 값을 대상에 대입합니다: Height = new GridLength(27) |
-| 112 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.RowDefinitions.Add(new() { Height = new GridLength(27) }) |
-| 112 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(27) } |
-| 112 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(27) |
-| 113 | variable-initializer | 변수의 초기값을 지정합니다: col = 0 |
-| 113 | for | 초기화·조건·증감이 있는 반복입니다: for (var col = 0; col < values.Length; col++) |
-| 115 | assignment | 값을 대상에 대입합니다: Text = values[col] |
-| 115 | assignment | 값을 대상에 대입합니다: FontSize = 13 |
-| 115 | assignment | 값을 대상에 대입합니다: FontWeight = row == 0 ? FontWeights.Bold : FontWeights.Normal |
-| 115 | assignment | 값을 대상에 대입합니다: VerticalAlignment = VerticalAlignment.Center |
-| 115 | assignment | 값을 대상에 대입합니다: TextAlignment = TextAlignment.Center |
-| 115 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = values[col], FontSize = 13, FontWeight = row == 0 ? FontWeights.Bold : FontWeights.Normal, VerticalAlignment = VerticalAlignment.Center, TextAlignment = TextAlignment.Center } |
-| 115 | conditional-expression | 조건에 따라 결과식을 선택합니다: row == 0 ? FontWeights.Bold : FontWeights.Normal |
-| 115 | local-declaration | 지역 변수를 선언합니다: var text = new TextBlock { Text = values[col], FontSize = 13, FontWeight = row == 0 ? FontWeights.Bold : FontWeights.Normal, VerticalAlignment = VerticalAlignment.Center, TextAlignment = TextAlignment.Center }; |
-| 115 | variable-initializer | 변수의 초기값을 지정합니다: text = new TextBlock { Text = values[col], FontSize = 13, FontWeight = row == 0 ? FontWeights.Bold : FontWeights.Normal, VerticalAlignment = VerticalAlignment.Center, TextAlignment = TextAlignment.Center } |
-| 116 | assignment | 값을 대상에 대입합니다: BorderBrush = System.Windows.Media.Brushes.LightSlateGray |
-| 116 | assignment | 값을 대상에 대입합니다: BorderThickness = new Thickness(0,0,0,1) |
-| 116 | assignment | 값을 대상에 대입합니다: Child = text |
-| 116 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Border { BorderBrush = System.Windows.Media.Brushes.LightSlateGray, BorderThickness = new Thickness(0,0,0,1), Child = text } |
-| 116 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,0,1) |
-| 116 | local-declaration | 지역 변수를 선언합니다: var cell = new Border { BorderBrush = System.Windows.Media.Brushes.LightSlateGray, BorderThickness = new Thickness(0,0,0,1), Child = text }; |
-| 116 | variable-initializer | 변수의 초기값을 지정합니다: cell = new Border { BorderBrush = System.Windows.Media.Brushes.LightSlateGray, BorderThickness = new Thickness(0,0,0,1), Child = text } |
-| 117 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(cell, row) |
-| 117 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumn(cell, col) |
-| 117 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Children.Add(cell) |
+| 160 | assignment | 값을 대상에 대입합니다: Height = new GridLength(27) |
+| 160 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.RowDefinitions.Add(new() { Height = new GridLength(27) }) |
+| 160 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Height = new GridLength(27) } |
+| 160 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(27) |
+| 161 | variable-initializer | 변수의 초기값을 지정합니다: col = 0 |
+| 161 | for | 초기화·조건·증감이 있는 반복입니다: for (var col = 0; col < values.Length; col++) |
+| 163 | assignment | 값을 대상에 대입합니다: Text = values[col] |
+| 163 | assignment | 값을 대상에 대입합니다: FontSize = 13 |
+| 163 | assignment | 값을 대상에 대입합니다: FontWeight = row == 0 ? FontWeights.Bold : FontWeights.Normal |
+| 163 | assignment | 값을 대상에 대입합니다: VerticalAlignment = VerticalAlignment.Center |
+| 163 | assignment | 값을 대상에 대입합니다: TextAlignment = TextAlignment.Center |
+| 163 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = values[col], FontSize = 13, FontWeight = row == 0 ? FontWeights.Bold : FontWeights.Normal, VerticalAlignment = VerticalAlignment.Center, TextAlignment = TextAlignment.Center } |
+| 163 | conditional-expression | 조건에 따라 결과식을 선택합니다: row == 0 ? FontWeights.Bold : FontWeights.Normal |
+| 163 | local-declaration | 지역 변수를 선언합니다: var text = new TextBlock { Text = values[col], FontSize = 13, FontWeight = row == 0 ? FontWeights.Bold : FontWeights.Normal, VerticalAlignment = VerticalAlignment.Center, TextAlignment = TextAlignment.Center }; |
+| 163 | variable-initializer | 변수의 초기값을 지정합니다: text = new TextBlock { Text = values[col], FontSize = 13, FontWeight = row == 0 ? FontWeights.Bold : FontWeights.Normal, VerticalAlignment = VerticalAlignment.Center, TextAlignment = TextAlignment.Center } |
+| 164 | assignment | 값을 대상에 대입합니다: BorderBrush = System.Windows.Media.Brushes.LightSlateGray |
+| 164 | assignment | 값을 대상에 대입합니다: BorderThickness = new Thickness(0,0,0,1) |
+| 164 | assignment | 값을 대상에 대입합니다: Child = text |
+| 164 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Border { BorderBrush = System.Windows.Media.Brushes.LightSlateGray, BorderThickness = new Thickness(0,0,0,1), Child = text } |
+| 164 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,0,0,1) |
+| 164 | local-declaration | 지역 변수를 선언합니다: var cell = new Border { BorderBrush = System.Windows.Media.Brushes.LightSlateGray, BorderThickness = new Thickness(0,0,0,1), Child = text }; |
+| 164 | variable-initializer | 변수의 초기값을 지정합니다: cell = new Border { BorderBrush = System.Windows.Media.Brushes.LightSlateGray, BorderThickness = new Thickness(0,0,0,1), Child = text } |
+| 165 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetRow(cell, row) |
+| 165 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Grid.SetColumn(cell, col) |
+| 165 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Children.Add(cell) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["AddFieldRow"]
- N0["L113 for"]
+ N0["L161 for"]
  M -->|포함| N0
 ```
 

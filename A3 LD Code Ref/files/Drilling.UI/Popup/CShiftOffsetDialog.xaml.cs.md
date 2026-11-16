@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 0cc7146a473b5b04a7356a87ca2c75cc42977833e705c9dd35f6174bbc0f0e04 |
 | 파일 분류 | code |
 | 원본 크기/행 | 10,118 bytes / 288 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -60,7 +60,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_headRowsProvider` · L11–11
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L11-L11)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -75,7 +75,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_validateApply` · L12–12
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L12-L12)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -90,7 +90,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isLoading` · L13–13
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L13-L13)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -105,7 +105,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L14–36
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:14–36](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L14-L36)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:14–36](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L14-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -127,7 +127,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:1367–1370](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CRootView.cs#L1367-L1370) | new CShiftOffsetDialog | False |
+| [Drilling.UI/CRootView.cs:1368–1371](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1368-L1371) | new CShiftOffsetDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -162,7 +162,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ResultShiftOffsetX` · L38–38
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L38-L38)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -177,7 +177,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_ResultShiftOffsetX` · L38–38
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L38-L38)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -192,7 +192,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_ResultShiftOffsetX` · L38–38
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L38-L38)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -213,7 +213,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ResultShiftOffsetY` · L39–39
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L39-L39)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -228,7 +228,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_ResultShiftOffsetY` · L39–39
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L39-L39)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -243,7 +243,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_ResultShiftOffsetY` · L39–39
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L39-L39)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -264,7 +264,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnShiftInputChanged` · L41–49
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:41–49](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L41-L49)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:41–49](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L41-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -309,7 +309,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshPreview` · L51–65
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:51–65](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L51-L65)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:51–65](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L51-L65)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -322,8 +322,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L32-L32) | RefreshPreview | False |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L48-L48) | RefreshPreview | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L32-L32) | RefreshPreview | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L48-L48) | RefreshPreview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -370,7 +370,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadInputs` · L67–84
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:67–84](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L67-L84)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:67–84](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L67-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -391,8 +391,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L53-L53) | TryReadInputs | False |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L250-L250) | TryReadInputs | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L53-L53) | TryReadInputs | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L250-L250) | TryReadInputs | False |
 
 호출하는 대상과 해석 범위:
 
@@ -432,7 +432,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParseFinite` · L86–89
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:86–89](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L86-L89)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:86–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L86-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -471,7 +471,7 @@ flowchart TD
 
 ### MethodDeclaration `DrawPreview` · L91–148
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:91–148](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L91-L148)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:91–148](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L91-L148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -492,8 +492,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L57-L57) | DrawPreview | False |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L63-L63) | DrawPreview | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L57-L57) | DrawPreview | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L63-L63) | DrawPreview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -627,7 +627,7 @@ flowchart TD
 
 ### MethodDeclaration `AddRect` · L150–163
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:150–163](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L150-L163)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:150–163](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L150-L163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -679,7 +679,7 @@ flowchart TD
 
 ### MethodDeclaration `AddLine` · L165–168
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:165–168](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L165-L168)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:165–168](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L165-L168)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -702,9 +702,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L172-L172) | AddLine | False |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:177–177](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L177-L177) | AddLine | False |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L178-L178) | AddLine | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L172-L172) | AddLine | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:177–177](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L177-L177) | AddLine | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L178-L178) | AddLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -730,7 +730,7 @@ flowchart TD
 
 ### MethodDeclaration `AddArrow` · L170–179
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:170–179](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L170-L179)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:170–179](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L170-L179)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -789,7 +789,7 @@ flowchart TD
 
 ### MethodDeclaration `AddText` · L181–193
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:181–193](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L181-L193)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:181–193](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L181-L193)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -811,7 +811,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L146-L146) | AddText | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L146-L146) | AddText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -841,7 +841,7 @@ flowchart TD
 
 ### MethodDeclaration `NumericTextBoxPreviewTextInput` · L195–203
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:195–203](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L195-L203)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:195–203](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L195-L203)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -889,7 +889,7 @@ flowchart TD
 
 ### MethodDeclaration `NumericTextBoxPasting` · L205–211
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:205–211](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L205-L211)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:205–211](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L205-L211)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -941,7 +941,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateProspectiveValue` · L213–219
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:213–219](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L213-L219)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:213–219](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L213-L219)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -961,7 +961,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L207-L207) | CreateProspectiveValue | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L207-L207) | CreateProspectiveValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -992,7 +992,7 @@ flowchart TD
 
 ### MethodDeclaration `IsValidNumericInput` · L221–246
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:221–246](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L221-L246)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:221–246](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L221-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1011,8 +1011,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L202-L202) | IsValidNumericInput | False |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L207-L207) | IsValidNumericInput | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L202-L202) | IsValidNumericInput | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L207-L207) | IsValidNumericInput | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1059,7 +1059,7 @@ flowchart TD
 
 ### MethodDeclaration `OnApplyClicked` · L248–266
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:248–266](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L248-L266)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:248–266](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L248-L266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1125,7 +1125,7 @@ flowchart TD
 
 ### MethodDeclaration `OnCloseClicked` · L268–271
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:268–271](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L268-L271)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:268–271](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L268-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1153,7 +1153,7 @@ flowchart TD
 
 ### MethodDeclaration `WindowKeyDown` · L273–280
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:273–280](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L273-L280)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:273–280](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L273-L280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1192,7 +1192,7 @@ flowchart TD
 
 ### MethodDeclaration `Format` · L282–285
 
-[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:282–285](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L282-L285)
+[Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:282–285](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L282-L285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1211,12 +1211,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L64-L64) | Format | False |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L64-L64) | Format | False |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L147-L147) | Format | False |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L147-L147) | Format | False |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L263-L263) | Format | False |
-| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L264-L264) | Format | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L64-L64) | Format | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L64-L64) | Format | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L147-L147) | Format | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L147-L147) | Format | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L263-L263) | Format | False |
+| [Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs#L264-L264) | Format | False |
 
 호출하는 대상과 해석 범위:
 

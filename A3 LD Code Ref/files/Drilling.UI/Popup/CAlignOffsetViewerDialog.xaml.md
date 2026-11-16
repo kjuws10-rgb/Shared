@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 1c8c49e33729584a244fc635fcb170dece2268e4fa288f51f27df2e2764df711 |
 | 파일 분류 | code |
 | 원본 크기/행 | 26,222 bytes / 410 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -23,57 +23,65 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- |
 | 코드 비하인드 후보 | Drilling.UI/Popup/CAlignOffsetViewerDialog.xaml.cs |
 | 이름 있는 요소 | ShotMapSurface, OffsetGrid |
-| 이벤트 개수 | 3 |
+| 이벤트 개수 | 4 |
 | Binding 표현 개수 | 40 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
-| KeyDown | OnKeyDown | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| SelectionChanged | OffsetGrid_SelectionChanged | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | OnCloseClicked | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| ViewerTitle |
-| IsSelected |
-| ViewerTitle |
-| RecipeName, StringFormat='CURRENT RECIPE : {0 |
-| SelectedCellTitle |
-| SelectedShotName |
-| Summary |
-| HeadCards |
-| Background |
-| BorderBrush |
-| Name |
-| Foreground |
-| PreviewImage |
-| CellLabels |
-| Width |
-| Height |
-| CellNo |
-| DisplayText |
-| DataContext.SelectCellCommand, RelativeSource={RelativeSource AncestorType=Window |
-| CellNo |
-| SelectedShotName |
-| ShotMapSurfaceWidth |
-| ShotMapSurfaceHeight |
-| ShotMapImage |
-| HasNoSelectedCell |
-| SelectedCellTitle |
-| SelectedShotDetail |
-| OffsetDescription |
-| HasNoSelectedCell |
-| Rows |
-| SelectedRow, Mode=OneWay |
-| HasNoSelectedCell |
-| CoordinateDetail |
-| RelativeSource={RelativeSource AncestorType=DataGridRow |
-| ShotName |
-| Head |
-| DesignOffsetX |
-| DesignOffsetY |
-| ScannerOffsetGx |
-| ScannerOffsetGy |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| ShotMapSurface | L214–214 |
+| OffsetGrid | L305–305 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+| KeyDown | OnKeyDown | L11–11 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| MouseLeftButtonDown | SelectShotFromMap | L219–219 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| SelectionChanged | OffsetGrid_SelectionChanged | L324–324 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | OnCloseClicked | L407–407 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding ViewerTitle} | L4–4 |
+| {Binding IsSelected} | L39–39 |
+| {Binding ViewerTitle} | L66–66 |
+| {Binding RecipeName, StringFormat='CURRENT RECIPE : {0}'} | L67–67 |
+| {Binding SelectedCellTitle} | L73–73 |
+| {Binding SelectedShotName} | L78–78 |
+| {Binding Summary} | L113–113 |
+| {Binding HeadCards} | L121–121 |
+| {Binding Background} | L131–131 |
+| {Binding BorderBrush} | L132–132 |
+| {Binding Name} | L135–135 |
+| {Binding Foreground} | L136–136 |
+| {Binding PreviewImage} | L152–152 |
+| {Binding CellLabels} | L153–153 |
+| {Binding Width} | L158–158 |
+| {Binding Height} | L159–159 |
+| {Binding CellNo} | L160–160 |
+| {Binding DisplayText} | L162–162 |
+| {Binding DataContext.SelectCellCommand, RelativeSource={RelativeSource AncestorType=Window}} | L163–163 |
+| {Binding CellNo} | L164–164 |
+| {Binding SelectedShotName} | L190–190 |
+| {Binding ShotMapSurfaceWidth} | L215–215 |
+| {Binding ShotMapSurfaceHeight} | L216–216 |
+| {Binding ShotMapImage} | L220–220 |
+| {Binding HasNoSelectedCell} | L234–234 |
+| {Binding SelectedCellTitle} | L264–264 |
+| {Binding SelectedShotDetail} | L269–269 |
+| {Binding OffsetDescription} | L276–276 |
+| {Binding HasNoSelectedCell} | L296–296 |
+| {Binding Rows} | L306–306 |
+| {Binding SelectedRow, Mode=OneWay} | L307–307 |
+| {Binding HasNoSelectedCell} | L329–329 |
+| {Binding CoordinateDetail} | L341–341 |
+| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L356–356 |
+| {Binding ShotName} | L366–366 |
+| {Binding Head} | L367–367 |
+| {Binding DesignOffsetX} | L368–368 |
+| {Binding DesignOffsetY} | L369–369 |
+| {Binding ScannerOffsetGx} | L373–373 |
+| {Binding ScannerOffsetGy} | L384–384 |
 
 ## 원문 전체 주석 해설본
 

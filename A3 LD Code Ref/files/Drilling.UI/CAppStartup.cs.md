@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 98e8716b093e6970d73233f8488d538acf7fa02f5d140ab1baebd9e8abdcd9b9 |
 | 파일 분류 | code |
 | 원본 크기/행 | 5,813 bytes / 153 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -41,7 +41,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CreateMainViewModel` · L14–69
 
-[Drilling.UI/CAppStartup.cs:14–69](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L14-L69)
+[Drilling.UI/CAppStartup.cs:14–69](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L14-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -54,7 +54,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CApp.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CApp.xaml.cs#L31-L31) | CAppStartup.CreateMainViewModel | False |
+| [Drilling.UI/CApp.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CApp.xaml.cs#L31-L31) | CAppStartup.CreateMainViewModel | False |
 
 호출하는 대상과 해석 범위:
 
@@ -78,21 +78,21 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 33 | new CConfigStructureFile | resolved | Drilling.File.JHMI.CConfigStructureFile.CConfigStructureFile(string) · Drilling.File/JHMI/CConfigStructureFile.cs:5 |
 | 34 | new CAlarmListFile | resolved | Drilling.File.JHMI.CAlarmListFile.CAlarmListFile(string) · Drilling.File/JHMI/CAlarmListFile.cs:6 |
 | 36 | CUiLogService.Configure | resolved | void Drilling.UI.CUiLogService.Configure(CLogManager) · Drilling.UI/CUiLogService.cs:17 |
-| 36 | manager.Log | resolved | CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:380 |
+| 36 | manager.Log | resolved | CLogManager Drilling.Common.Managers.CManager.Log() · Drilling.Common/Managers/CManager.cs:388 |
 | 37 | WriteManagerStartupStatus | resolved | int Drilling.UI.CAppStartup.WriteManagerStartupStatus(Drilling.Common.Managers.CManager, string, int) · Drilling.UI/CAppStartup.cs:71 |
 | 52 | Task.Run | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.Run(System.Func<System.Threading.Tasks.Task?>) |
 | 53 | new CRootView | resolved | Drilling.UI.CRootView.CRootView(Drilling.Common.Managers.CManager, Drilling.Common.Station.CStationManager, Drilling.Common.Interface.CInterfaceManager, Drilling.Common.Motion.CMotionManager, Drilling.Common.Alarm.CAlarmManager, Drilling.Common.InterLock.CInterLockManager, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CRecipeManager, Drilling.Common.Managers.CSettingManager, Drilling.Common.Product.CProductManager, Drilling.Common.Review.CReviewManager, Drilling.Common.Station.CAutomationScriptFileBase) · Drilling.UI/CRootView.cs:128 |
-| 55 | manager.Station | resolved | Drilling.Common.Station.CStationManager Drilling.Common.Managers.CManager.Station() · Drilling.Common/Managers/CManager.cs:322 |
-| 56 | manager.Interface | resolved | Drilling.Common.Interface.CInterfaceManager Drilling.Common.Managers.CManager.Interface() · Drilling.Common/Managers/CManager.cs:347 |
-| 57 | manager.Motion | resolved | Drilling.Common.Motion.CMotionManager Drilling.Common.Managers.CManager.Motion() · Drilling.Common/Managers/CManager.cs:365 |
-| 58 | manager.Alarm | resolved | Drilling.Common.Alarm.CAlarmManager Drilling.Common.Managers.CManager.Alarm() · Drilling.Common/Managers/CManager.cs:370 |
-| 59 | manager.InterLock | resolved | Drilling.Common.InterLock.CInterLockManager Drilling.Common.Managers.CManager.InterLock() · Drilling.Common/Managers/CManager.cs:375 |
-| 60 | manager.ManualScanFile | resolved | Drilling.Common.Managers.CManualScanFileBase Drilling.Common.Managers.CManager.ManualScanFile() · Drilling.Common/Managers/CManager.cs:395 |
-| 61 | manager.Recipe | resolved | Drilling.Common.Managers.CRecipeManager Drilling.Common.Managers.CManager.Recipe() · Drilling.Common/Managers/CManager.cs:327 |
-| 62 | manager.Setting | resolved | Drilling.Common.Managers.CSettingManager Drilling.Common.Managers.CManager.Setting() · Drilling.Common/Managers/CManager.cs:332 |
-| 63 | manager.Product | resolved | Drilling.Common.Product.CProductManager Drilling.Common.Managers.CManager.Product() · Drilling.Common/Managers/CManager.cs:337 |
-| 64 | manager.Review | resolved | Drilling.Common.Review.CReviewManager Drilling.Common.Managers.CManager.Review() · Drilling.Common/Managers/CManager.cs:342 |
-| 67 | manager.StartBackgroundMonitoring | resolved | void Drilling.Common.Managers.CManager.StartBackgroundMonitoring() · Drilling.Common/Managers/CManager.cs:259 |
+| 55 | manager.Station | resolved | Drilling.Common.Station.CStationManager Drilling.Common.Managers.CManager.Station() · Drilling.Common/Managers/CManager.cs:330 |
+| 56 | manager.Interface | resolved | Drilling.Common.Interface.CInterfaceManager Drilling.Common.Managers.CManager.Interface() · Drilling.Common/Managers/CManager.cs:355 |
+| 57 | manager.Motion | resolved | Drilling.Common.Motion.CMotionManager Drilling.Common.Managers.CManager.Motion() · Drilling.Common/Managers/CManager.cs:373 |
+| 58 | manager.Alarm | resolved | Drilling.Common.Alarm.CAlarmManager Drilling.Common.Managers.CManager.Alarm() · Drilling.Common/Managers/CManager.cs:378 |
+| 59 | manager.InterLock | resolved | Drilling.Common.InterLock.CInterLockManager Drilling.Common.Managers.CManager.InterLock() · Drilling.Common/Managers/CManager.cs:383 |
+| 60 | manager.ManualScanFile | resolved | Drilling.Common.Managers.CManualScanFileBase Drilling.Common.Managers.CManager.ManualScanFile() · Drilling.Common/Managers/CManager.cs:403 |
+| 61 | manager.Recipe | resolved | Drilling.Common.Managers.CRecipeManager Drilling.Common.Managers.CManager.Recipe() · Drilling.Common/Managers/CManager.cs:335 |
+| 62 | manager.Setting | resolved | Drilling.Common.Managers.CSettingManager Drilling.Common.Managers.CManager.Setting() · Drilling.Common/Managers/CManager.cs:340 |
+| 63 | manager.Product | resolved | Drilling.Common.Product.CProductManager Drilling.Common.Managers.CManager.Product() · Drilling.Common/Managers/CManager.cs:345 |
+| 64 | manager.Review | resolved | Drilling.Common.Review.CReviewManager Drilling.Common.Managers.CManager.Review() · Drilling.Common/Managers/CManager.cs:350 |
+| 67 | manager.StartBackgroundMonitoring | resolved | void Drilling.Common.Managers.CManager.StartBackgroundMonitoring() · Drilling.Common/Managers/CManager.cs:267 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -150,7 +150,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `SelectValue` · L38–50
 
-[Drilling.UI/CAppStartup.cs:38–50](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L38-L50)
+[Drilling.UI/CAppStartup.cs:38–50](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L38-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -165,7 +165,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 42 | manager.Initialize | resolved | System.Threading.Tasks.Task Drilling.Common.Managers.CManager.Initialize(System.Threading.CancellationToken) · Drilling.Common/Managers/CManager.cs:204 |
+| 42 | manager.Initialize | resolved | System.Threading.Tasks.Task Drilling.Common.Managers.CManager.Initialize(System.Threading.CancellationToken) · Drilling.Common/Managers/CManager.cs:212 |
 | 43 | WriteManagerStartupStatus | resolved | int Drilling.UI.CAppStartup.WriteManagerStartupStatus(Drilling.Common.Managers.CManager, string, int) · Drilling.UI/CAppStartup.cs:71 |
 | 47 | CProgramOpenLog.Write | unresolved | None |
 | 48 | WriteManagerStartupStatus | resolved | int Drilling.UI.CAppStartup.WriteManagerStartupStatus(Drilling.Common.Managers.CManager, string, int) · Drilling.UI/CAppStartup.cs:71 |
@@ -197,7 +197,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteManagerStartupStatus` · L71–119
 
-[Drilling.UI/CAppStartup.cs:71–119](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L71-L119)
+[Drilling.UI/CAppStartup.cs:71–119](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L71-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -218,15 +218,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CAppStartup.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L37-L37) | WriteManagerStartupStatus | False |
-| [Drilling.UI/CAppStartup.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L43-L43) | WriteManagerStartupStatus | False |
-| [Drilling.UI/CAppStartup.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L48-L48) | WriteManagerStartupStatus | False |
+| [Drilling.UI/CAppStartup.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L37-L37) | WriteManagerStartupStatus | False |
+| [Drilling.UI/CAppStartup.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L43-L43) | WriteManagerStartupStatus | False |
+| [Drilling.UI/CAppStartup.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L48-L48) | WriteManagerStartupStatus | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 73 | manager.ConfigStatus | resolved | Drilling.Common.Managers.ST_CONFIG_LOAD_STATUS Drilling.Common.Managers.CManager.ConfigStatus() · Drilling.Common/Managers/CManager.cs:175 |
+| 73 | manager.ConfigStatus | resolved | Drilling.Common.Managers.ST_CONFIG_LOAD_STATUS Drilling.Common.Managers.CManager.ConfigStatus() · Drilling.Common/Managers/CManager.cs:183 |
 | 84 | status.StartupSteps.Where(ShouldIncludeItem).OrderBy(SelectOrder).ToArray | resolved | Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP[] System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP>.ToArray<Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP>() |
 | 84 | status.StartupSteps.Where(ShouldIncludeItem).OrderBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP>.OrderBy<Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP, int>(System.Func<Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP, int>) |
 | 84 | status.StartupSteps.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP>.Where<Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP>(System.Func<Drilling.Common.Managers.ST_MANAGER_STARTUP_STEP, bool>) |
@@ -302,7 +302,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L74–77
 
-[Drilling.UI/CAppStartup.cs:74–77](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L74-L77)
+[Drilling.UI/CAppStartup.cs:74–77](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L74-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -329,7 +329,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectOrder` · L79–82
 
-[Drilling.UI/CAppStartup.cs:79–82](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L79-L82)
+[Drilling.UI/CAppStartup.cs:79–82](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L79-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -356,7 +356,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectOrder2` · L113–116
 
-[Drilling.UI/CAppStartup.cs:113–116](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L113-L116)
+[Drilling.UI/CAppStartup.cs:113–116](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L113-L116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -383,7 +383,7 @@ flowchart TD
 
 ### MethodDeclaration `GetConfigRoot` · L121–135
 
-[Drilling.UI/CAppStartup.cs:121–135](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L121-L135)
+[Drilling.UI/CAppStartup.cs:121–135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L121-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -396,7 +396,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CAppStartup.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L16-L16) | GetConfigRoot | False |
+| [Drilling.UI/CAppStartup.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L16-L16) | GetConfigRoot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -440,7 +440,7 @@ flowchart TD
 
 ### MethodDeclaration `GetScriptDirectory` · L137–152
 
-[Drilling.UI/CAppStartup.cs:137–152](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L137-L152)
+[Drilling.UI/CAppStartup.cs:137–152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L137-L152)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -460,7 +460,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CAppStartup.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L18-L18) | GetScriptDirectory | False |
+| [Drilling.UI/CAppStartup.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L18-L18) | GetScriptDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -511,7 +511,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L140–143
 
-[Drilling.UI/CAppStartup.cs:140–143](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/CAppStartup.cs#L140-L143)
+[Drilling.UI/CAppStartup.cs:140–143](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L140-L143)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

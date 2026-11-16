@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
-| 원본 SHA256 | 6d86d0deb02d122cc8aec5d59d0f8cd545c61dcaed78729b5bf63bebe855ffa8 |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 SHA256 | 863b88795376e9f8437929d4a2ce99c68bb76d990d0e087d3962b3057c6ffe5a |
 | 파일 분류 | code |
-| 원본 크기/행 | 69,454 bytes / 1,692 physical lines |
+| 원본 크기/행 | 69,515 bytes / 1,693 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -21,7 +21,7 @@
 
 | 타입 | 구분 | 원본 범위 | 선언/상속 |
 | --- | --- | --- | --- |
-| CMelsecMapFile | ClassDeclaration | 7–1691 | CMelsecMapFile: CMelsecMapFileBase |
+| CMelsecMapFile | ClassDeclaration | 7–1692 | CMelsecMapFile: CMelsecMapFileBase |
 
 ## 멤버 빠른 목록
 
@@ -60,15 +60,15 @@
 | CreateHandshakeRows | MethodDeclaration | L428–909 | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateHandshakeRows() |
 | CreateLatestScenarioRows | MethodDeclaration | L913–1635 | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateLatestScenarioRows() |
 | CreateVisionSpecRows | MethodDeclaration | L1638–1646 | System.Collections.Generic.IReadOnlyList<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateVisionSpecRows() |
-| CreateAlignDistortionRows | MethodDeclaration | L1648–1681 | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateAlignDistortionRows() |
+| CreateAlignDistortionRows | MethodDeclaration | L1648–1682 | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateAlignDistortionRows() |
 | Value | LocalFunctionStatement | L1650–1652 | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) |
-| CreateIofPositionRows | MethodDeclaration | L1683–1689 | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateIofPositionRows() |
+| CreateIofPositionRows | MethodDeclaration | L1684–1690 | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateIofPositionRows() |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
 ### FieldDeclaration `TableName` · L10–10
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L10-L10)
+[Drilling.File/JHMI/CMelsecMapFile.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -89,7 +89,7 @@
 
 ### FieldDeclaration `Headers` · L11–11
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L11-L11)
+[Drilling.File/JHMI/CMelsecMapFile.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -110,7 +110,7 @@
 
 ### FieldDeclaration `RequiredHeaderGroups` · L13–27
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:13–27](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L13-L27)
+[Drilling.File/JHMI/CMelsecMapFile.cs:13–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L13-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -131,7 +131,7 @@
 
 ### MethodDeclaration `LoadAll` · L30–63
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:30–63](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L30-L63)
+[Drilling.File/JHMI/CMelsecMapFile.cs:30–63](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L30-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -191,7 +191,7 @@
 
 ### LocalFunctionStatement `SelectValue` · L35–38
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:35–38](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L35-L38)
+[Drilling.File/JHMI/CMelsecMapFile.cs:35–38](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L35-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -226,7 +226,7 @@
 
 ### LocalFunctionStatement `HasId` · L40–43
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:40–43](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L40-L43)
+[Drilling.File/JHMI/CMelsecMapFile.cs:40–43](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L40-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -260,7 +260,7 @@
 
 ### LocalFunctionStatement `SelectGroup` · L45–48
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:45–48](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L45-L48)
+[Drilling.File/JHMI/CMelsecMapFile.cs:45–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L45-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -287,7 +287,7 @@
 
 ### LocalFunctionStatement `SelectDeviceNo` · L50–53
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:50–53](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L50-L53)
+[Drilling.File/JHMI/CMelsecMapFile.cs:50–53](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L50-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -314,7 +314,7 @@
 
 ### LocalFunctionStatement `SelectId` · L55–58
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:55–58](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L55-L58)
+[Drilling.File/JHMI/CMelsecMapFile.cs:55–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L55-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -341,7 +341,7 @@
 
 ### MethodDeclaration `Parse` · L65–100
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:65–100](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L65-L100)
+[Drilling.File/JHMI/CMelsecMapFile.cs:65–100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L65-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -361,7 +361,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L37-L37) | Parse | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L37-L37) | Parse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -474,7 +474,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureFile` · L102–111
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:102–111](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L102-L111)
+[Drilling.File/JHMI/CMelsecMapFile.cs:102–111](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L102-L111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -487,7 +487,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L33-L33) | EnsureFile | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L33-L33) | EnsureFile | False |
 
 호출하는 대상과 해석 범위:
 
@@ -546,7 +546,7 @@ flowchart TD
 
 ### MethodDeclaration `GetMapPath` · L113–116
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:113–116](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L113-L116)
+[Drilling.File/JHMI/CMelsecMapFile.cs:113–116](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L113-L116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -559,9 +559,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L34-L34) | GetMapPath | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L60-L60) | GetMapPath | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L104-L104) | GetMapPath | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L34-L34) | GetMapPath | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L60-L60) | GetMapPath | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L104-L104) | GetMapPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -580,7 +580,7 @@ flowchart TD
 
 ### MethodDeclaration `Validate` · L118–163
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:118–163](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L118-L163)
+[Drilling.File/JHMI/CMelsecMapFile.cs:118–163](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L118-L163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -599,7 +599,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L61-L61) | Validate | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L61-L61) | Validate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -679,7 +679,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsUse` · L121–124
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:121–124](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L121-L124)
+[Drilling.File/JHMI/CMelsecMapFile.cs:121–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L121-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -706,7 +706,7 @@ flowchart TD
 
 ### MethodDeclaration `Row` · L165–199
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:165–199](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L165-L199)
+[Drilling.File/JHMI/CMelsecMapFile.cs:165–199](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L165-L199)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -738,110 +738,110 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L303-L303) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L304-L304) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L321-L321) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:326–340](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L326-L340) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:341–355](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L341-L355) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L356-L356) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L357-L357) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L358-L358) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L359-L359) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:360–374](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L360-L374) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:375–389](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L375-L389) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L390-L390) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L391-L391) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:392–406](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L392-L406) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:407–421](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L407-L421) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L422-L422) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:429–443](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L429-L443) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:444–458](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L444-L458) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:459–473](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L459-L473) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:474–488](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L474-L488) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:489–503](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L489-L503) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:504–518](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L504-L518) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:519–533](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L519-L533) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:534–548](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L534-L548) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:549–563](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L549-L563) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:564–578](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L564-L578) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:579–593](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L579-L593) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:594–608](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L594-L608) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:609–623](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L609-L623) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:624–638](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L624-L638) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:639–653](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L639-L653) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:654–668](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L654-L668) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:669–683](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L669-L683) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:684–698](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L684-L698) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:699–713](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L699-L713) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:714–728](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L714-L728) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:729–743](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L729-L743) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:744–758](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L744-L758) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:759–773](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L759-L773) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:774–788](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L774-L788) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:789–803](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L789-L803) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:804–818](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L804-L818) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:819–833](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L819-L833) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:834–848](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L834-L848) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:849–863](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L849-L863) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:864–878](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L864-L878) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:879–893](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L879-L893) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:894–908](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L894-L908) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:914–929](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L914-L929) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:930–945](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L930-L945) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:946–961](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L946-L961) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:962–977](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L962-L977) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:978–993](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L978-L993) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:994–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L994-L1009) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1010–1025](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1010-L1025) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1026–1041](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1026-L1041) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1042–1057](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1042-L1057) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1058–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1058-L1073) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1074–1089](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1074-L1089) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1090–1105](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1090-L1105) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1106–1121](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1106-L1121) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1122–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1122-L1137) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1138–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1138-L1153) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1154–1169](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1154-L1169) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1170–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1170-L1185) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1186–1201](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1186-L1201) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1202–1217](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1202-L1217) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1219–1234](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1219-L1234) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1235–1250](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1235-L1250) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1251–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1251-L1266) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1267–1282](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1267-L1282) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1283–1298](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1283-L1298) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1299–1314](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1299-L1314) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1315–1330](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1315-L1330) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1331–1346](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1331-L1346) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1347–1362](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1347-L1362) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1363–1378](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1363-L1378) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1379–1394](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1379-L1394) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1395–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1395-L1410) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1411–1426](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1411-L1426) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1427–1442](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1427-L1442) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1443–1458](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1443-L1458) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1459–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1459-L1474) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1475–1490](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1475-L1490) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1491–1506](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1491-L1506) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1507–1522](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1507-L1522) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1523–1538](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1523-L1538) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1539–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1539-L1554) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1555–1570](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1555-L1570) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1571–1586](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1571-L1586) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1587–1602](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1587-L1602) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1603–1618](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1603-L1618) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1619–1634](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1619-L1634) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1639–1639](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1639-L1639) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1640–1640](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1640-L1640) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1641–1641](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1641-L1641) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1642–1642](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1642-L1642) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1643–1643](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1643-L1643) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1644–1644](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1644-L1644) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1645-L1645) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1651–1652](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1651-L1652) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1662–1662](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1662-L1662) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1664–1664](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1664-L1664) | Row | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1686–1688](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1686-L1688) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L303-L303) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L304-L304) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L321-L321) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:326–340](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L326-L340) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:341–355](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L341-L355) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L356-L356) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L357-L357) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L358-L358) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:359–359](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L359-L359) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:360–374](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L360-L374) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:375–389](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L375-L389) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L390-L390) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L391-L391) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:392–406](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L392-L406) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:407–421](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L407-L421) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L422-L422) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:429–443](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L429-L443) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:444–458](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L444-L458) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:459–473](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L459-L473) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:474–488](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L474-L488) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:489–503](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L489-L503) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:504–518](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L504-L518) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:519–533](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L519-L533) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:534–548](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L534-L548) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:549–563](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L549-L563) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:564–578](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L564-L578) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:579–593](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L579-L593) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:594–608](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L594-L608) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:609–623](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L609-L623) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:624–638](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L624-L638) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:639–653](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L639-L653) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:654–668](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L654-L668) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:669–683](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L669-L683) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:684–698](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L684-L698) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:699–713](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L699-L713) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:714–728](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L714-L728) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:729–743](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L729-L743) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:744–758](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L744-L758) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:759–773](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L759-L773) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:774–788](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L774-L788) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:789–803](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L789-L803) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:804–818](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L804-L818) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:819–833](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L819-L833) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:834–848](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L834-L848) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:849–863](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L849-L863) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:864–878](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L864-L878) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:879–893](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L879-L893) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:894–908](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L894-L908) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:914–929](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L914-L929) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:930–945](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L930-L945) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:946–961](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L946-L961) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:962–977](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L962-L977) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:978–993](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L978-L993) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:994–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L994-L1009) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1010–1025](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1010-L1025) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1026–1041](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1026-L1041) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1042–1057](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1042-L1057) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1058–1073](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1058-L1073) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1074–1089](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1074-L1089) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1090–1105](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1090-L1105) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1106–1121](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1106-L1121) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1122–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1122-L1137) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1138–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1138-L1153) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1154–1169](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1154-L1169) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1170–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1170-L1185) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1186–1201](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1186-L1201) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1202–1217](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1202-L1217) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1219–1234](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1219-L1234) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1235–1250](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1235-L1250) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1251–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1251-L1266) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1267–1282](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1267-L1282) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1283–1298](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1283-L1298) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1299–1314](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1299-L1314) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1315–1330](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1315-L1330) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1331–1346](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1331-L1346) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1347–1362](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1347-L1362) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1363–1378](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1363-L1378) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1379–1394](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1379-L1394) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1395–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1395-L1410) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1411–1426](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1411-L1426) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1427–1442](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1427-L1442) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1443–1458](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1443-L1458) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1459–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1459-L1474) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1475–1490](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1475-L1490) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1491–1506](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1491-L1506) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1507–1522](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1507-L1522) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1523–1538](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1523-L1538) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1539–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1539-L1554) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1555–1570](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1555-L1570) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1571–1586](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1571-L1586) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1587–1602](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1587-L1602) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1603–1618](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1603-L1618) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1619–1634](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1619-L1634) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1639–1639](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1639-L1639) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1640–1640](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1640-L1640) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1641–1641](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1641-L1641) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1642–1642](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1642-L1642) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1643–1643](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1643-L1643) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1644–1644](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1644-L1644) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1645-L1645) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1651–1652](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1651-L1652) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1662–1662](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1662-L1662) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1665–1665](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1665-L1665) | Row | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1687–1689](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1687-L1689) | Row | False |
 
 호출하는 대상과 해석 범위:
 
@@ -877,7 +877,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDataType` · L201–212
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:201–212](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L201-L212)
+[Drilling.File/JHMI/CMelsecMapFile.cs:201–212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L201-L212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -897,7 +897,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L91-L91) | ReadDataType | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L91-L91) | ReadDataType | False |
 
 호출하는 대상과 해석 범위:
 
@@ -929,7 +929,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDirection` · L214–222
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:214–222](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L214-L222)
+[Drilling.File/JHMI/CMelsecMapFile.cs:214–222](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L214-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -949,7 +949,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L92-L92) | ReadDirection | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L92-L92) | ReadDirection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -981,7 +981,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAccess` · L224–232
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:224–232](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L224-L232)
+[Drilling.File/JHMI/CMelsecMapFile.cs:224–232](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L224-L232)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1001,7 +1001,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L93-L93) | ReadAccess | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L93-L93) | ReadAccess | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1033,7 +1033,7 @@ flowchart TD
 
 ### MethodDeclaration `RequireText` · L234–237
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:234–237](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L234-L237)
+[Drilling.File/JHMI/CMelsecMapFile.cs:234–237](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L234-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1054,14 +1054,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L70-L70) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L71-L71) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L85-L85) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L87-L87) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L90-L90) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L91-L91) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L92-L92) | RequireText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L93-L93) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L70-L70) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L71-L71) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L85-L85) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L87-L87) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L90-L90) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L91-L91) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L92-L92) | RequireText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L93-L93) | RequireText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1080,7 +1080,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadFirst` · L239–242
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:239–242](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L239-L242)
+[Drilling.File/JHMI/CMelsecMapFile.cs:239–242](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L239-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1100,13 +1100,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L76-L76) | ReadFirst | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L86-L86) | ReadFirst | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L88-L88) | ReadFirst | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L89-L89) | ReadFirst | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L96-L96) | ReadFirst | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L97-L97) | ReadFirst | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L98-L98) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L76-L76) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L86-L86) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L88-L88) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L89-L89) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L96-L96) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L97-L97) | ReadFirst | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L98-L98) | ReadFirst | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1125,7 +1125,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBool` · L244–247
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:244–247](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L244-L247)
+[Drilling.File/JHMI/CMelsecMapFile.cs:244–247](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L244-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1145,7 +1145,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L86-L86) | ReadBool | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L86-L86) | ReadBool | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1164,7 +1164,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L249–252
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:249–252](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L249-L252)
+[Drilling.File/JHMI/CMelsecMapFile.cs:249–252](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L249-L252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1186,9 +1186,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L89-L89) | ReadInt | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L96-L96) | ReadInt | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L97-L97) | ReadInt | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L89-L89) | ReadInt | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:96–96](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L96-L96) | ReadInt | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L97-L97) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1207,7 +1207,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L254–257
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:254–257](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L254-L257)
+[Drilling.File/JHMI/CMelsecMapFile.cs:254–257](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L254-L257)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1229,9 +1229,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L70-L70) | ReadDouble | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L71-L71) | ReadDouble | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L76-L76) | ReadDouble | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L70-L70) | ReadDouble | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L71-L71) | ReadDouble | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L76-L76) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1250,7 +1250,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeId` · L259–262
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:259–262](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L259-L262)
+[Drilling.File/JHMI/CMelsecMapFile.cs:259–262](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L259-L262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1269,7 +1269,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L85-L85) | NormalizeId | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L85-L85) | NormalizeId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1290,7 +1290,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeGroup` · L264–267
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:264–267](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L264-L267)
+[Drilling.File/JHMI/CMelsecMapFile.cs:264–267](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L264-L267)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1309,7 +1309,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L87-L87) | NormalizeGroup | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L87-L87) | NormalizeGroup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1330,7 +1330,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeAddress` · L269–272
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:269–272](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L269-L272)
+[Drilling.File/JHMI/CMelsecMapFile.cs:269–272](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L269-L272)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1349,7 +1349,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L90-L90) | NormalizeAddress | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L90-L90) | NormalizeAddress | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1370,7 +1370,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeText` · L274–277
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:274–277](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L274-L277)
+[Drilling.File/JHMI/CMelsecMapFile.cs:274–277](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L274-L277)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1389,9 +1389,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L203-L203) | NormalizeText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L216-L216) | NormalizeText | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L226-L226) | NormalizeText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L203-L203) | NormalizeText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L216-L216) | NormalizeText | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L226-L226) | NormalizeText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1416,7 +1416,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateUnassignedLegacyRows` · L282–320
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:282–320](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L282-L320)
+[Drilling.File/JHMI/CMelsecMapFile.cs:282–320](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L282-L320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1429,7 +1429,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateUnassignedLegacyRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateUnassignedLegacyRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1519,7 +1519,7 @@ flowchart TD
 
 ### MethodDeclaration `Unassigned` · L321–321
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L321-L321)
+[Drilling.File/JHMI/CMelsecMapFile.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L321-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1546,41 +1546,41 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L283-L283) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L284-L284) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L285-L285) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L286-L286) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L287-L287) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L288-L288) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L289-L289) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L290-L290) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L291-L291) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L292-L292) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L293-L293) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L294-L294) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L295-L295) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L296-L296) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L297-L297) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L298-L298) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:299–299](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L299-L299) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L300-L300) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L301-L301) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L302-L302) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L305-L305) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L306-L306) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L307-L307) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L308-L308) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L309-L309) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L310-L310) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L311-L311) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L312-L312) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L313-L313) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L314-L314) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L315-L315) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L316-L316) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L317-L317) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L318-L318) | Unassigned | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L319-L319) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L283-L283) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L284-L284) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L285-L285) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L286-L286) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L287-L287) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L288-L288) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L289-L289) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L290-L290) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L291-L291) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L292-L292) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L293-L293) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L294-L294) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L295-L295) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L296-L296) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L297-L297) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L298-L298) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:299–299](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L299-L299) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L300-L300) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L301-L301) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L302-L302) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L305-L305) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L306-L306) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L307-L307) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L308-L308) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L309-L309) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L310-L310) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L311-L311) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L312-L312) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L313-L313) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L314-L314) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L315-L315) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L316-L316) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L317-L317) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L318-L318) | Unassigned | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L319-L319) | Unassigned | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1598,7 +1598,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateMotorStatusRows` · L325–423
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:325–423](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L325-L423)
+[Drilling.File/JHMI/CMelsecMapFile.cs:325–423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L325-L423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1611,7 +1611,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateMotorStatusRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateMotorStatusRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1653,7 +1653,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateHandshakeRows` · L428–909
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:428–909](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L428-L909)
+[Drilling.File/JHMI/CMelsecMapFile.cs:428–909](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L428-L909)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1666,7 +1666,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateHandshakeRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateHandshakeRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1746,7 +1746,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateLatestScenarioRows` · L913–1635
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:913–1635](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L913-L1635)
+[Drilling.File/JHMI/CMelsecMapFile.cs:913–1635](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L913-L1635)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1759,7 +1759,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateLatestScenarioRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateLatestScenarioRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1784,7 +1784,7 @@ flowchart TD
 | 1170 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
 | 1186 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
 | 1202 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1218 | CreateIofPositionRows | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateIofPositionRows() · Drilling.File/JHMI/CMelsecMapFile.cs:1683 |
+| 1218 | CreateIofPositionRows | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> Drilling.File.JHMI.CMelsecMapFile.CreateIofPositionRows() · Drilling.File/JHMI/CMelsecMapFile.cs:1684 |
 | 1219 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
 | 1235 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
 | 1251 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
@@ -1867,7 +1867,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateVisionSpecRows` · L1638–1646
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:1638–1646](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1638-L1646)
+[Drilling.File/JHMI/CMelsecMapFile.cs:1638–1646](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1638-L1646)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1880,7 +1880,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateVisionSpecRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateVisionSpecRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1908,9 +1908,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateAlignDistortionRows` · L1648–1681
+### MethodDeclaration `CreateAlignDistortionRows` · L1648–1682
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:1648–1681](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1648-L1681)
+[Drilling.File/JHMI/CMelsecMapFile.cs:1648–1682](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1648-L1682)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1923,7 +1923,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateAlignDistortionRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110) | CreateAlignDistortionRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1933,11 +1933,11 @@ flowchart TD
 | 1656 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
 | 1657 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
 | 1662 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1664 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1671 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
-| 1677 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
+| 1665 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1672 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
 | 1678 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
 | 1679 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
+| 1680 | Value | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Value(string, int, string, string, string) · Drilling.File/JHMI/CMelsecMapFile.cs:1650 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1958,33 +1958,36 @@ flowchart TD
 | 1662 | conditional-expression | 조건에 따라 결과식을 선택합니다: signal == "ABLE" ? "W8056" : "W8058" |
 | 1662 | yield | 열거값/종료를 전달합니다: yield return Row(id, "DISTORTION", id, 0, signal == "ABLE" ? "W8056" : "W8058", "DWORD", "OUT", "RW", "0.0001", "10000", "2", "100", "Spec 0.12; Stage ABLE/COMPLETE OFF 확인 후 우리 신호 OFF"); |
 | 1663 | assignment | 값을 대상에 대입합니다: id = "HANDSHAKE_STG_DISTORTION_" + signal |
-| 1664 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row(id, "DISTORTION", id, 0, "UNASSIGNED", "DWORD", "IN", "R", "0.0001", "10000", "2", "100", "Stage 수신 주소 미정; 확정 주소 입력 후 USE=1", use: false) |
-| 1664 | yield | 열거값/종료를 전달합니다: yield return Row(id, "DISTORTION", id, 0, "UNASSIGNED", "DWORD", "IN", "R", "0.0001", "10000", "2", "100", "Stage 수신 주소 미정; 확정 주소 입력 후 USE=1", use: false); |
-| 1666 | variable-initializer | 변수의 초기값을 지정합니다: position = 0 |
-| 1666 | for | 초기화·조건·증감이 있는 반복입니다: for (var position = 0; position <= 3; position++) |
-| 1667 | conditional-expression | 조건에 따라 결과식을 선택합니다: position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 } |
-| 1667 | foreach | 컬렉션 요소를 순회합니다: foreach (var camera in position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 }) |
-| 1668 | foreach | 컬렉션 요소를 순회합니다: foreach (var axis in new[] { "X", "Y" }) |
-| 1670 | conditional-expression | 조건에 따라 결과식을 선택합니다: position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0) |
-| 1670 | conditional-expression | 조건에 따라 결과식을 선택합니다: camera == 4 ? 4 : 0 |
-| 1670 | local-declaration | 지역 변수를 선언합니다: var address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0); |
-| 1670 | variable-initializer | 변수의 초기값을 지정합니다: address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0) |
-| 1671 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음") |
-| 1671 | conditional-expression | 조건에 따라 결과식을 선택합니다: axis == "Y" ? 2 : 0 |
-| 1671 | yield | 열거값/종료를 전달합니다: yield return Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음"); |
-| 1673 | foreach | 컬렉션 요소를 순회합니다: foreach (var axis in new[] { "X", "Y" }) |
-| 1674 | variable-initializer | 변수의 초기값을 지정합니다: camera = 1 |
-| 1674 | for | 초기화·조건·증감이 있는 반복입니다: for (var camera = 1; camera <= 4; camera++) |
-| 1676 | conditional-expression | 조건에 따라 결과식을 선택합니다: axis == "X" ? 0 : 4 |
-| 1676 | local-declaration | 지역 변수를 선언합니다: var index = (axis == "X" ? 0 : 4) + camera - 1; |
-| 1676 | variable-initializer | 변수의 초기값을 지정합니다: index = (axis == "X" ? 0 : 4) + camera - 1 |
-| 1677 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사") |
-| 1677 | conditional-expression | 조건에 따라 결과식을 선택합니다: axis == "Y" ? 2 : 0 |
-| 1677 | yield | 열거값/종료를 전달합니다: yield return Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사"); |
-| 1678 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서") |
-| 1678 | yield | 열거값/종료를 전달합니다: yield return Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서"); |
-| 1679 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel") |
-| 1679 | yield | 열거값/종료를 전달합니다: yield return Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel"); |
+| 1664 | conditional-expression | 조건에 따라 결과식을 선택합니다: signal == "ABLE" ? "WC0DB" : "WC0DD" |
+| 1664 | local-declaration | 지역 변수를 선언합니다: var address = signal == "ABLE" ? "WC0DB" : "WC0DD"; |
+| 1664 | variable-initializer | 변수의 초기값을 지정합니다: address = signal == "ABLE" ? "WC0DB" : "WC0DD" |
+| 1665 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row(id, "DISTORTION", id, 0, address, "DWORD", "IN", "R", "0.0001", "10000", "2", "100", $"Spec 0.13; IPS_DISTORTION_{signal}; Int32 raw 0/10000; logical 0/1") |
+| 1665 | yield | 열거값/종료를 전달합니다: yield return Row(id, "DISTORTION", id, 0, address, "DWORD", "IN", "R", "0.0001", "10000", "2", "100", $"Spec 0.13; IPS_DISTORTION_{signal}; Int32 raw 0/10000; logical 0/1"); |
+| 1667 | variable-initializer | 변수의 초기값을 지정합니다: position = 0 |
+| 1667 | for | 초기화·조건·증감이 있는 반복입니다: for (var position = 0; position <= 3; position++) |
+| 1668 | conditional-expression | 조건에 따라 결과식을 선택합니다: position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 } |
+| 1668 | foreach | 컬렉션 요소를 순회합니다: foreach (var camera in position == 0 ? new[] { 1, 2, 3, 4 } : new[] { 2, 4 }) |
+| 1669 | foreach | 컬렉션 요소를 순회합니다: foreach (var axis in new[] { "X", "Y" }) |
+| 1671 | conditional-expression | 조건에 따라 결과식을 선택합니다: position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0) |
+| 1671 | conditional-expression | 조건에 따라 결과식을 선택합니다: camera == 4 ? 4 : 0 |
+| 1671 | local-declaration | 지역 변수를 선언합니다: var address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0); |
+| 1671 | variable-initializer | 변수의 초기값을 지정합니다: address = position == 0 ? 0x10100 + (camera - 1) * 4 : 0x10114 + (position - 1) * 12 + (camera == 4 ? 4 : 0) |
+| 1672 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음") |
+| 1672 | conditional-expression | 조건에 따라 결과식을 선택합니다: axis == "Y" ? 2 : 0 |
+| 1672 | yield | 열거값/종료를 전달합니다: yield return Value($"DISTORTION_POS{position}_CAM{camera}{axis}", address + (axis == "Y" ? 2 : 0), "VISION_DISTORTION_DATA", "IN", "AK / DK LastLoad (mm); POS는 Group 고정; 추가 변환 없음"); |
+| 1674 | foreach | 컬렉션 요소를 순회합니다: foreach (var axis in new[] { "X", "Y" }) |
+| 1675 | variable-initializer | 변수의 초기값을 지정합니다: camera = 1 |
+| 1675 | for | 초기화·조건·증감이 있는 반복입니다: for (var camera = 1; camera <= 4; camera++) |
+| 1677 | conditional-expression | 조건에 따라 결과식을 선택합니다: axis == "X" ? 0 : 4 |
+| 1677 | local-declaration | 지역 변수를 선언합니다: var index = (axis == "X" ? 0 : 4) + camera - 1; |
+| 1677 | variable-initializer | 변수의 초기값을 지정합니다: index = (axis == "X" ? 0 : 4) + camera - 1 |
+| 1678 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사") |
+| 1678 | conditional-expression | 조건에 따라 결과식을 선택합니다: axis == "Y" ? 2 : 0 |
+| 1678 | yield | 열거값/종료를 전달합니다: yield return Value($"SVID_FINEALN_CAM{camera}_GLS_RESULT_{axis}", 0x11A30 + (camera - 1) * 12 + (axis == "Y" ? 2 : 0), "WAPAGE", "IN", "Vision 원본; 단위 변환 없이 Wapage로 복사"); |
+| 1679 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서") |
+| 1679 | yield | 열거값/종료를 전달합니다: yield return Value($"PROCESS_WAPAGE_ALIGNBASE_{axis}{camera}", 0x8080 + index * 2, "WAPAGE", description: "CAM1~4 X 다음 CAM1~4 Y 순서"); |
+| 1680 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel") |
+| 1680 | yield | 열거값/종료를 전달합니다: yield return Value($"PROCESS_WAPAGE_ALIGNBASE_RAGNE_{axis}{camera}", 0x80A0 + index * 2, "WAPAGE", description: "허용범위 mm / Align Camera Resolution = pixel"); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
@@ -1995,15 +1998,15 @@ flowchart TD
  M -->|포함| N0
  N1["L1659 foreach"]
  M -->|포함| N1
- N2["L1666 for"]
+ N2["L1667 for"]
  M -->|포함| N2
- N3["L1667 foreach"]
+ N3["L1668 foreach"]
  N2 -->|포함| N3
- N4["L1668 foreach"]
+ N4["L1669 foreach"]
  N3 -->|포함| N4
- N5["L1673 foreach"]
+ N5["L1674 foreach"]
  M -->|포함| N5
- N6["L1674 for"]
+ N6["L1675 for"]
  N5 -->|포함| N6
 ```
 
@@ -2011,7 +2014,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Value` · L1650–1652
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:1650–1652](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1650-L1652)
+[Drilling.File/JHMI/CMelsecMapFile.cs:1650–1652](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1650-L1652)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2034,13 +2037,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1653–1653](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1653-L1653) | Value | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1656–1656](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1656-L1656) | Value | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1657–1657](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1657-L1657) | Value | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1671–1671](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1671-L1671) | Value | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1677–1677](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1677-L1677) | Value | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1678–1678](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1678-L1678) | Value | False |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1679–1679](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1679-L1679) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1653–1653](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1653-L1653) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1656–1656](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1656-L1656) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1657–1657](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1657-L1657) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1672–1672](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1672-L1672) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1678–1678](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1678-L1678) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1679–1679](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1679-L1679) | Value | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1680–1680](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1680-L1680) | Value | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2059,9 +2062,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateIofPositionRows` · L1683–1689
+### MethodDeclaration `CreateIofPositionRows` · L1684–1690
 
-[Drilling.File/JHMI/CMelsecMapFile.cs:1683–1689](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1683-L1689)
+[Drilling.File/JHMI/CMelsecMapFile.cs:1684–1690](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1684-L1690)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2074,35 +2077,35 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CMelsecMapFile.cs:1218–1218](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/JHMI/CMelsecMapFile.cs#L1218-L1218) | CreateIofPositionRows | False |
+| [Drilling.File/JHMI/CMelsecMapFile.cs:1218–1218](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMelsecMapFile.cs#L1218-L1218) | CreateIofPositionRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1686 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
-| 1686 | index.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 1686 | index.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 1687 | (0x8300 + (index - 1) * 2).ToString | resolved | string int.ToString(string?, System.IFormatProvider?) |
+| 1687 | Row | resolved | System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.File.JHMI.CMelsecMapFile.Row(string, string, string, int, string, string, string, string, string, string, string, string, string, bool) · Drilling.File/JHMI/CMelsecMapFile.cs:165 |
+| 1687 | index.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 1687 | index.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 1688 | (0x8300 + (index - 1) * 2).ToString | resolved | string int.ToString(string?, System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1685 | variable-initializer | 변수의 초기값을 지정합니다: index = 1 |
-| 1685 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 1; index <= 500; index++) |
-| 1686 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: index.ToString(CultureInfo.InvariantCulture) |
-| 1686 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: index.ToString(CultureInfo.InvariantCulture) |
-| 1686 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), 0, "W" + (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantC… |
-| 1686 | yield | 열거값/종료를 전달합니다: yield return Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), 0, "W" + (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.Invaria |
-| 1687 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantCulture) |
+| 1686 | variable-initializer | 변수의 초기값을 지정합니다: index = 1 |
+| 1686 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 1; index <= 500; index++) |
+| 1687 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: index.ToString(CultureInfo.InvariantCulture) |
+| 1687 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: index.ToString(CultureInfo.InvariantCulture) |
+| 1687 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), 0, "W" + (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantC… |
+| 1687 | yield | 열거값/종료를 전달합니다: yield return Row("IOF_POS_ARRAY_" + index.ToString(CultureInfo.InvariantCulture), "IF_IOF_DATA", "IOF Position " + index.ToString(CultureInfo.InvariantCulture), 0, "W" + (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.Invaria |
+| 1688 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (0x8300 + (index - 1) * 2).ToString("X", CultureInfo.InvariantCulture) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["CreateIofPositionRows"]
- N0["L1685 for"]
+ N0["L1686 for"]
  M -->|포함| N0
 ```
 

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 4400d0f6c4eb8d59ea35d09db817ce8e7e5e79d1600615c78056f4d8ca11cfa5 |
 | 파일 분류 | code |
 | 원본 크기/행 | 17,518 bytes / 287 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -23,26 +23,43 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- |
 | 코드 비하인드 후보 | Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs |
 | 이름 있는 요소 | ItemBorder, ToggleButton, Shell, SelectedText, PART_Popup, TargetComboBox, SequenceBlocksControl, StatusText, StartButton, StopButton, CloseButton |
-| 이벤트 개수 | 4 |
+| 이벤트 개수 | 5 |
 | Binding 표현 개수 | 8 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
-| SelectionChanged | OnTargetSelectionChanged | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | OnStartClicked | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | OnStopClicked | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | OnCloseClicked | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent |
-| SelectedItem.DisplayName, RelativeSource={RelativeSource AncestorType=ComboBox |
-| ActualWidth, ElementName=ToggleButton |
-| Title |
-| Steps |
-| No |
-| Name |
-| State |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| ItemBorder | L47–47 |
+| ToggleButton | L85–85 |
+| Shell | L91–91 |
+| SelectedText | L97–97 |
+| PART_Popup | L130–130 |
+| TargetComboBox | L192–192 |
+| SequenceBlocksControl | L203–203 |
+| StatusText | L244–244 |
+| StartButton | L261–261 |
+| StopButton | L268–268 |
+| CloseButton | L277–277 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+| Closing | OnWindowClosing | L14–14 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| SelectionChanged | OnTargetSelectionChanged | L195–195 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | OnStartClicked | L267–267 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | OnStopClicked | L276–276 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | OnCloseClicked | L283–283 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}} | L88–88 |
+| {Binding SelectedItem.DisplayName, RelativeSource={RelativeSource AncestorType=ComboBox}} | L101–101 |
+| {Binding ActualWidth, ElementName=ToggleButton} | L138–138 |
+| {Binding Title} | L212–212 |
+| {Binding Steps} | L216–216 |
+| {Binding No} | L226–226 |
+| {Binding Name} | L227–227 |
+| {Binding State} | L229–229 |
 
 ## 원문 전체 주석 해설본
 

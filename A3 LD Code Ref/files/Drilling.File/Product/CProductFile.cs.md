@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 95c7adb3e3b691e4df22deaf53a5cc713ff2a1e77cd066c911935f963b79b965 |
 | 파일 분류 | code |
 | 원본 크기/행 | 22,109 bytes / 512 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -86,7 +86,7 @@
 
 ### FieldDeclaration `DefaultReviewBeamNo` · L8–8
 
-[Drilling.File/Product/CProductFile.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L8-L8)
+[Drilling.File/Product/CProductFile.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -107,7 +107,7 @@
 
 ### FieldDeclaration `ActiveHeaders` · L9–9
 
-[Drilling.File/Product/CProductFile.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L9-L9)
+[Drilling.File/Product/CProductFile.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -128,7 +128,7 @@
 
 ### FieldDeclaration `HistoryHeaders` · L10–10
 
-[Drilling.File/Product/CProductFile.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L10-L10)
+[Drilling.File/Product/CProductFile.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -149,7 +149,7 @@
 
 ### FieldDeclaration `_productRoot` · L11–11
 
-[Drilling.File/Product/CProductFile.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L11-L11)
+[Drilling.File/Product/CProductFile.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -179,7 +179,7 @@
 
 ### MethodDeclaration `LoadActive` · L12–39
 
-[Drilling.File/Product/CProductFile.cs:12–39](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L12-L39)
+[Drilling.File/Product/CProductFile.cs:12–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L12-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -260,7 +260,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L27–30
 
-[Drilling.File/Product/CProductFile.cs:27–30](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L27-L30)
+[Drilling.File/Product/CProductFile.cs:27–30](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L27-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -296,7 +296,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadCompactActive` · L41–107
 
-[Drilling.File/Product/CProductFile.cs:41–107](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L41-L107)
+[Drilling.File/Product/CProductFile.cs:41–107](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L41-L107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -315,7 +315,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L37-L37) | LoadCompactActive | False |
+| [Drilling.File/Product/CProductFile.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L37-L37) | LoadCompactActive | False |
 
 호출하는 대상과 해석 범위:
 
@@ -337,9 +337,9 @@ flowchart TD
 | 89 | CProductManager.ProductFieldNames.ToDictionary | resolved | System.Collections.Generic.Dictionary<string, string> System.Collections.Generic.IEnumerable<string>.ToDictionary<string, string, string>(System.Func<string, string>, System.Func<string, string>, System.Collections.Generic.IEqualityComparer<string>?) |
 | 91 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
 | 92 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 93 | new ST_PRODUCT_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_DATA.ST_PRODUCT_DATA(Drilling.Common.Product.ST_PRODUCT_INFO, Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA, Drilling.Common.Product.ST_PRODUCT_ALIGN_DATA, Drilling.Common.Product.ST_PRODUCT_DISTORTION_DATA, Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA, Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA) · Drilling.Common/Product/CProductManager.cs:1043 |
-| 94 | new ST_PRODUCT_INFO | resolved | Drilling.Common.Product.ST_PRODUCT_INFO.ST_PRODUCT_INFO(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1013 |
-| 95 | new ST_PRODUCT_RECIPE_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA.ST_PRODUCT_RECIPE_DATA(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1030 |
+| 93 | new ST_PRODUCT_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_DATA.ST_PRODUCT_DATA(Drilling.Common.Product.ST_PRODUCT_INFO, Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA, Drilling.Common.Product.ST_PRODUCT_ALIGN_DATA, Drilling.Common.Product.ST_PRODUCT_DISTORTION_DATA, Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA, Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA) · Drilling.Common/Product/CProductManager.cs:1047 |
+| 94 | new ST_PRODUCT_INFO | resolved | Drilling.Common.Product.ST_PRODUCT_INFO.ST_PRODUCT_INFO(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1017 |
+| 95 | new ST_PRODUCT_RECIPE_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RECIPE_DATA.ST_PRODUCT_RECIPE_DATA(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Product/CProductManager.cs:1034 |
 | 96 | new ST_PRODUCT_ALIGN_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_ALIGN_DATA.ST_PRODUCT_ALIGN_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, string, double?, double?, double?) · Drilling.Common/Product/CProductManager.cs:996 |
 | 97 | ParseEnum | resolved | Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE Drilling.File.Product.CProductFile.ParseEnum<Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE>(string, Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE) · Drilling.File/Product/CProductFile.cs:489 |
 | 97 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
@@ -358,7 +358,7 @@ flowchart TD
 | 103 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
 | 103 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:422 |
 | 103 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 105 | new ST_PRODUCT_RUNTIME_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA.ST_PRODUCT_RUNTIME_DATA(System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>) · Drilling.Common/Product/CProductManager.cs:1031 |
+| 105 | new ST_PRODUCT_RUNTIME_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_RUNTIME_DATA.ST_PRODUCT_RUNTIME_DATA(System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_HEAD_RESULT>) · Drilling.Common/Product/CProductManager.cs:1035 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -445,7 +445,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L63–66
 
-[Drilling.File/Product/CProductFile.cs:63–66](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L63-L66)
+[Drilling.File/Product/CProductFile.cs:63–66](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L63-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -479,7 +479,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectName` · L79–82
 
-[Drilling.File/Product/CProductFile.cs:79–82](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L79-L82)
+[Drilling.File/Product/CProductFile.cs:79–82](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L79-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -506,7 +506,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L84–87
 
-[Drilling.File/Product/CProductFile.cs:84–87](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L84-L87)
+[Drilling.File/Product/CProductFile.cs:84–87](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L84-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -540,7 +540,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveActive` · L109–180
 
-[Drilling.File/Product/CProductFile.cs:109–180](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L109-L180)
+[Drilling.File/Product/CProductFile.cs:109–180](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L109-L180)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -565,7 +565,7 @@ flowchart TD
 | 111 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
 | 112 | new List<IReadOnlyDictionary<string, string>> | resolved | System.Collections.Generic.List<System.Collections.Generic.IReadOnlyDictionary<string, string>>.List() |
 | 115 | AddCompactRow | resolved | void Drilling.File.Product.CProductFile.AddCompactRow(System.Collections.Generic.ICollection<System.Collections.Generic.IReadOnlyDictionary<string, string>>, string, string, string) · Drilling.File/Product/CProductFile.cs:383 |
-| 115 | product.Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1015 |
+| 115 | product.Product.Get | resolved | string Drilling.Common.Product.ST_PRODUCT_INFO.Get(string) · Drilling.Common/Product/CProductManager.cs:1019 |
 | 133 | rows.AddRange | resolved | void System.Collections.Generic.List<System.Collections.Generic.IReadOnlyDictionary<string, string>>.AddRange(System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
 | 133 | product.Parameters.Where(ShouldIncludeItem).OrderBy(SelectKey, StringComparer.OrdinalIgnoreCase).Select | resolved | System.Collections.Generic.IEnumerable<System.Collections.Generic.IReadOnlyDictionary<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.Select<System.Collections.Generic.KeyValuePair<string, string>, System.Collections.Generic.IReadOnlyDictionary<string, string>>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, System.Collections.Generic.IReadOnlyDictionary<string, string>>) |
 | 133 | product.Parameters.Where(ShouldIncludeItem).OrderBy | resolved | System.Linq.IOrderedEnumerable<System.Collections.Generic.KeyValuePair<string, string>> System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>.OrderBy<System.Collections.Generic.KeyValuePair<string, string>, string>(System.Func<System.Collections.Generic.KeyValuePair<string, string>, string>, System.Collections.Generic.IComparer<string>?) |
@@ -705,7 +705,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L118–121
 
-[Drilling.File/Product/CProductFile.cs:118–121](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L118-L121)
+[Drilling.File/Product/CProductFile.cs:118–121](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L118-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -739,7 +739,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L123–126
 
-[Drilling.File/Product/CProductFile.cs:123–126](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L123-L126)
+[Drilling.File/Product/CProductFile.cs:123–126](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L123-L126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -766,7 +766,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildRecipeParameterCompactRow` · L128–131
 
-[Drilling.File/Product/CProductFile.cs:128–131](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L128-L131)
+[Drilling.File/Product/CProductFile.cs:128–131](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L128-L131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -800,7 +800,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectCellNo` · L158–161
 
-[Drilling.File/Product/CProductFile.cs:158–161](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L158-L161)
+[Drilling.File/Product/CProductFile.cs:158–161](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L158-L161)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -827,7 +827,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectShotKey` · L163–166
 
-[Drilling.File/Product/CProductFile.cs:163–166](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L163-L166)
+[Drilling.File/Product/CProductFile.cs:163–166](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L163-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -854,7 +854,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteActiveProductAtomically` · L182–202
 
-[Drilling.File/Product/CProductFile.cs:182–202](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L182-L202)
+[Drilling.File/Product/CProductFile.cs:182–202](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L182-L202)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -873,7 +873,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L178-L178) | WriteActiveProductAtomically | False |
+| [Drilling.File/Product/CProductFile.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L178-L178) | WriteActiveProductAtomically | False |
 
 호출하는 대상과 해석 범위:
 
@@ -926,7 +926,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearActive` · L204–209
 
-[Drilling.File/Product/CProductFile.cs:204–209](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L204-L209)
+[Drilling.File/Product/CProductFile.cs:204–209](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L204-L209)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -964,7 +964,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendHistory` · L211–223
 
-[Drilling.File/Product/CProductFile.cs:211–223](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L211-L223)
+[Drilling.File/Product/CProductFile.cs:211–223](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L211-L223)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1023,7 +1023,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadHistory` · L225–256
 
-[Drilling.File/Product/CProductFile.cs:225–256](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L225-L256)
+[Drilling.File/Product/CProductFile.cs:225–256](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L225-L256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1091,7 +1091,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L229–232
 
-[Drilling.File/Product/CProductFile.cs:229–232](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L229-L232)
+[Drilling.File/Product/CProductFile.cs:229–232](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L229-L232)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1125,7 +1125,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectHistoryPath` · L234–237
 
-[Drilling.File/Product/CProductFile.cs:234–237](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L234-L237)
+[Drilling.File/Product/CProductFile.cs:234–237](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L234-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1161,7 +1161,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L239–242
 
-[Drilling.File/Product/CProductFile.cs:239–242](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L239-L242)
+[Drilling.File/Product/CProductFile.cs:239–242](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L239-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1188,7 +1188,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L244–247
 
-[Drilling.File/Product/CProductFile.cs:244–247](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L244-L247)
+[Drilling.File/Product/CProductFile.cs:244–247](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L244-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1215,7 +1215,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectOccurredAt` · L249–252
 
-[Drilling.File/Product/CProductFile.cs:249–252](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L249-L252)
+[Drilling.File/Product/CProductFile.cs:249–252](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L249-L252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1242,7 +1242,7 @@ flowchart TD
 
 ### MethodDeclaration `GetActiveProductPath` · L258–261
 
-[Drilling.File/Product/CProductFile.cs:258–261](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L258-L261)
+[Drilling.File/Product/CProductFile.cs:258–261](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L258-L261)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1255,9 +1255,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L15-L15) | GetActiveProductPath | False |
-| [Drilling.File/Product/CProductFile.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L184-L184) | GetActiveProductPath | False |
-| [Drilling.File/Product/CProductFile.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L207-L207) | GetActiveProductPath | False |
+| [Drilling.File/Product/CProductFile.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L15-L15) | GetActiveProductPath | False |
+| [Drilling.File/Product/CProductFile.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L184-L184) | GetActiveProductPath | False |
+| [Drilling.File/Product/CProductFile.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L207-L207) | GetActiveProductPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1276,7 +1276,7 @@ flowchart TD
 
 ### MethodDeclaration `GetHistoryPath` · L263–266
 
-[Drilling.File/Product/CProductFile.cs:263–266](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L263-L266)
+[Drilling.File/Product/CProductFile.cs:263–266](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L263-L266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1295,8 +1295,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L214-L214) | GetHistoryPath | False |
-| [Drilling.File/Product/CProductFile.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L236-L236) | GetHistoryPath | False |
+| [Drilling.File/Product/CProductFile.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L214-L214) | GetHistoryPath | False |
+| [Drilling.File/Product/CProductFile.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L236-L236) | GetHistoryPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1317,7 +1317,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateReview` · L268–279
 
-[Drilling.File/Product/CProductFile.cs:268–279](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L268-L279)
+[Drilling.File/Product/CProductFile.cs:268–279](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L268-L279)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1336,7 +1336,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L78-L78) | ValidateReview | False |
+| [Drilling.File/Product/CProductFile.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L78-L78) | ValidateReview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1371,7 +1371,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseCompactReview` · L281–338
 
-[Drilling.File/Product/CProductFile.cs:281–338](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L281-L338)
+[Drilling.File/Product/CProductFile.cs:281–338](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L281-L338)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1391,7 +1391,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L77-L77) | ParseCompactReview | False |
+| [Drilling.File/Product/CProductFile.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L77-L77) | ParseCompactReview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1419,7 +1419,7 @@ flowchart TD
 | 318 | ParseNullableDouble | resolved | double? Drilling.File.Product.CProductFile.ParseNullableDouble(string) · Drilling.File/Product/CProductFile.cs:422 |
 | 318 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
 | 319 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
-| 322 | new ST_PRODUCT_REVIEW_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ST_PRODUCT_REVIEW_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, System.DateTimeOffset?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>) · Drilling.Common/Product/CProductManager.cs:999 |
+| 322 | new ST_PRODUCT_REVIEW_DATA | resolved | Drilling.Common.Product.ST_PRODUCT_REVIEW_DATA.ST_PRODUCT_REVIEW_DATA(Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE, System.DateTimeOffset?, System.Collections.Generic.IReadOnlyList<Drilling.Common.Product.ST_PRODUCT_REVIEW_RESULT>) · Drilling.Common/Product/CProductManager.cs:1003 |
 | 323 | ParseEnum | resolved | Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE Drilling.File.Product.CProductFile.ParseEnum<Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE>(string, Drilling.Common.Product.EN_PRODUCT_PROCESS_STATE) · Drilling.File/Product/CProductFile.cs:489 |
 | 323 | ReadAny | resolved | string Drilling.File.Product.CProductFile.ReadAny(System.Collections.Generic.IReadOnlyDictionary<string, string>, params string[]) · Drilling.File/Product/CProductFile.cs:370 |
 | 324 | ParseDate | resolved | System.DateTimeOffset? Drilling.File.Product.CProductFile.ParseDate(string) · Drilling.File/Product/CProductFile.cs:500 |
@@ -1509,7 +1509,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L283–286
 
-[Drilling.File/Product/CProductFile.cs:283–286](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L283-L286)
+[Drilling.File/Product/CProductFile.cs:283–286](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L283-L286)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1543,7 +1543,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectCellNo` · L288–291
 
-[Drilling.File/Product/CProductFile.cs:288–291](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L288-L291)
+[Drilling.File/Product/CProductFile.cs:288–291](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L288-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1570,7 +1570,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectShotKey` · L293–296
 
-[Drilling.File/Product/CProductFile.cs:293–296](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L293-L296)
+[Drilling.File/Product/CProductFile.cs:293–296](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L293-L296)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1597,7 +1597,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadSection` · L340–368
 
-[Drilling.File/Product/CProductFile.cs:340–368](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L340-L368)
+[Drilling.File/Product/CProductFile.cs:340–368](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L340-L368)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1617,12 +1617,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L43-L43) | ReadSection | False |
-| [Drilling.File/Product/CProductFile.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L62-L62) | ReadSection | False |
-| [Drilling.File/Product/CProductFile.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L73-L73) | ReadSection | False |
-| [Drilling.File/Product/CProductFile.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L74-L74) | ReadSection | False |
-| [Drilling.File/Product/CProductFile.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L75-L75) | ReadSection | False |
-| [Drilling.File/Product/CProductFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L76-L76) | ReadSection | False |
+| [Drilling.File/Product/CProductFile.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L43-L43) | ReadSection | False |
+| [Drilling.File/Product/CProductFile.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L62-L62) | ReadSection | False |
+| [Drilling.File/Product/CProductFile.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L73-L73) | ReadSection | False |
+| [Drilling.File/Product/CProductFile.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L74-L74) | ReadSection | False |
+| [Drilling.File/Product/CProductFile.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L75-L75) | ReadSection | False |
+| [Drilling.File/Product/CProductFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L76-L76) | ReadSection | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1647,7 +1647,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesSectionType` · L342–345
 
-[Drilling.File/Product/CProductFile.cs:342–345](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L342-L345)
+[Drilling.File/Product/CProductFile.cs:342–345](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L342-L345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1683,7 +1683,7 @@ flowchart TD
 
 ### LocalFunctionStatement `HasSectionName` · L347–350
 
-[Drilling.File/Product/CProductFile.cs:347–350](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L347-L350)
+[Drilling.File/Product/CProductFile.cs:347–350](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L347-L350)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1719,7 +1719,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectGroupKey` · L352–355
 
-[Drilling.File/Product/CProductFile.cs:352–355](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L352-L355)
+[Drilling.File/Product/CProductFile.cs:352–355](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L352-L355)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1753,7 +1753,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L357–360
 
-[Drilling.File/Product/CProductFile.cs:357–360](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L357-L360)
+[Drilling.File/Product/CProductFile.cs:357–360](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L357-L360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1780,7 +1780,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L362–365
 
-[Drilling.File/Product/CProductFile.cs:362–365](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L362-L365)
+[Drilling.File/Product/CProductFile.cs:362–365](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L362-L365)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1816,7 +1816,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAny` · L370–381
 
-[Drilling.File/Product/CProductFile.cs:370–381](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L370-L381)
+[Drilling.File/Product/CProductFile.cs:370–381](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L370-L381)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1836,36 +1836,36 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L44-L44) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L86-L86) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L91-L91) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L92-L92) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L97-L97) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L98-L98) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L99-L99) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L100-L100) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L101-L101) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L103-L103) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L103-L103) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L103-L103) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L314-L314) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L315-L315) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L316-L316) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L317-L317) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L318-L318) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L319-L319) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L323-L323) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L324-L324) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L327-L327) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L328-L328) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L329-L329) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L330-L330) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L331-L331) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L332-L332) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L333-L333) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L334-L334) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L335-L335) | ReadAny | False |
-| [Drilling.File/Product/CProductFile.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L336-L336) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L44-L44) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L86-L86) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L91-L91) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L92-L92) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L97-L97) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L98-L98) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L99-L99) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L100-L100) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L101-L101) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L103-L103) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L103-L103) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L103-L103) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L314-L314) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L315-L315) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L316-L316) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L317-L317) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L318-L318) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L319-L319) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L323-L323) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L324-L324) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L327-L327) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L328-L328) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L329-L329) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L330-L330) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L331-L331) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L332-L332) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L333-L333) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L334-L334) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L335-L335) | ReadAny | False |
+| [Drilling.File/Product/CProductFile.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L336-L336) | ReadAny | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1898,7 +1898,7 @@ flowchart TD
 
 ### MethodDeclaration `AddCompactRow` · L383–386
 
-[Drilling.File/Product/CProductFile.cs:383–386](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L383-L386)
+[Drilling.File/Product/CProductFile.cs:383–386](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L383-L386)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1920,33 +1920,33 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L115-L115) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L134-L134) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L135-L135) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L136-L136) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L137-L137) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L138-L138) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L139-L139) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L140-L140) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L141-L141) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L142-L142) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L143-L143) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L144-L144) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L145-L145) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L146-L146) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L147-L147) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L148-L148) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L149-L149) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L150-L150) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L151-L151) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L152-L152) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L155-L155) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L170-L170) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L171-L171) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L172-L172) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L173-L173) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L174-L174) | AddCompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L175-L175) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L115-L115) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L134-L134) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L135-L135) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L136-L136) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L137-L137) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L138-L138) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L139-L139) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L140-L140) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L141-L141) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L142-L142) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L143-L143) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L144-L144) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L145-L145) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:146–146](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L146-L146) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L147-L147) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L148-L148) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L149-L149) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L150-L150) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L151-L151) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L152-L152) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L155-L155) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L170-L170) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L171-L171) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L172-L172) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L173-L173) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L174-L174) | AddCompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L175-L175) | AddCompactRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1966,7 +1966,7 @@ flowchart TD
 
 ### MethodDeclaration `CompactRow` · L388–396
 
-[Drilling.File/Product/CProductFile.cs:388–396](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L388-L396)
+[Drilling.File/Product/CProductFile.cs:388–396](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L388-L396)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1987,8 +1987,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L130-L130) | CompactRow | False |
-| [Drilling.File/Product/CProductFile.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L385-L385) | CompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L130-L130) | CompactRow | False |
+| [Drilling.File/Product/CProductFile.cs:385–385](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L385-L385) | CompactRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2010,7 +2010,7 @@ flowchart TD
 
 ### MethodDeclaration `IsCompactProductCoreName` · L398–405
 
-[Drilling.File/Product/CProductFile.cs:398–405](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L398-L405)
+[Drilling.File/Product/CProductFile.cs:398–405](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L398-L405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2029,7 +2029,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L120-L120) | IsCompactProductCoreName | False |
+| [Drilling.File/Product/CProductFile.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L120-L120) | IsCompactProductCoreName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2060,7 +2060,7 @@ flowchart TD
 
 ### MethodDeclaration `DefaultText` · L407–410
 
-[Drilling.File/Product/CProductFile.cs:407–410](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L407-L410)
+[Drilling.File/Product/CProductFile.cs:407–410](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L407-L410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2080,8 +2080,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L98-L98) | DefaultText | False |
-| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L103-L103) | DefaultText | False |
+| [Drilling.File/Product/CProductFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L98-L98) | DefaultText | False |
+| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L103-L103) | DefaultText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2101,7 +2101,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseInt` · L412–415
 
-[Drilling.File/Product/CProductFile.cs:412–415](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L412-L415)
+[Drilling.File/Product/CProductFile.cs:412–415](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L412-L415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2121,12 +2121,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L314-L314) | ParseInt | False |
-| [Drilling.File/Product/CProductFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L315-L315) | ParseInt | False |
-| [Drilling.File/Product/CProductFile.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L316-L316) | ParseInt | False |
-| [Drilling.File/Product/CProductFile.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L331-L331) | ParseInt | False |
-| [Drilling.File/Product/CProductFile.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L335-L335) | ParseInt | False |
-| [Drilling.File/Product/CProductFile.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L336-L336) | ParseInt | False |
+| [Drilling.File/Product/CProductFile.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L314-L314) | ParseInt | False |
+| [Drilling.File/Product/CProductFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L315-L315) | ParseInt | False |
+| [Drilling.File/Product/CProductFile.cs:316–316](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L316-L316) | ParseInt | False |
+| [Drilling.File/Product/CProductFile.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L331-L331) | ParseInt | False |
+| [Drilling.File/Product/CProductFile.cs:335–335](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L335-L335) | ParseInt | False |
+| [Drilling.File/Product/CProductFile.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L336-L336) | ParseInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2146,7 +2146,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseNullableInt` · L417–420
 
-[Drilling.File/Product/CProductFile.cs:417–420](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L417-L420)
+[Drilling.File/Product/CProductFile.cs:417–420](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L417-L420)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2165,7 +2165,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L332-L332) | ParseNullableInt | False |
+| [Drilling.File/Product/CProductFile.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L332-L332) | ParseNullableInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2185,7 +2185,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseNullableDouble` · L422–425
 
-[Drilling.File/Product/CProductFile.cs:422–425](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L422-L425)
+[Drilling.File/Product/CProductFile.cs:422–425](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L422-L425)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2204,12 +2204,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L99-L99) | ParseNullableDouble | False |
-| [Drilling.File/Product/CProductFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L100-L100) | ParseNullableDouble | False |
-| [Drilling.File/Product/CProductFile.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L101-L101) | ParseNullableDouble | False |
-| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L103-L103) | ParseNullableDouble | False |
-| [Drilling.File/Product/CProductFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L317-L317) | ParseNullableDouble | False |
-| [Drilling.File/Product/CProductFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L318-L318) | ParseNullableDouble | False |
+| [Drilling.File/Product/CProductFile.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L99-L99) | ParseNullableDouble | False |
+| [Drilling.File/Product/CProductFile.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L100-L100) | ParseNullableDouble | False |
+| [Drilling.File/Product/CProductFile.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L101-L101) | ParseNullableDouble | False |
+| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L103-L103) | ParseNullableDouble | False |
+| [Drilling.File/Product/CProductFile.cs:317–317](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L317-L317) | ParseNullableDouble | False |
+| [Drilling.File/Product/CProductFile.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L318-L318) | ParseNullableDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2229,7 +2229,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatDouble` · L427–430
 
-[Drilling.File/Product/CProductFile.cs:427–430](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L427-L430)
+[Drilling.File/Product/CProductFile.cs:427–430](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L427-L430)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2248,10 +2248,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L136-L136) | FormatDouble | False |
-| [Drilling.File/Product/CProductFile.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L137-L137) | FormatDouble | False |
-| [Drilling.File/Product/CProductFile.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L138-L138) | FormatDouble | False |
-| [Drilling.File/Product/CProductFile.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L141-L141) | FormatDouble | False |
+| [Drilling.File/Product/CProductFile.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L136-L136) | FormatDouble | False |
+| [Drilling.File/Product/CProductFile.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L137-L137) | FormatDouble | False |
+| [Drilling.File/Product/CProductFile.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L138-L138) | FormatDouble | False |
+| [Drilling.File/Product/CProductFile.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L141-L141) | FormatDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2270,7 +2270,7 @@ flowchart TD
 
 ### MethodDeclaration `ToHistoryRow` · L432–446
 
-[Drilling.File/Product/CProductFile.cs:432–446](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L432-L446)
+[Drilling.File/Product/CProductFile.cs:432–446](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L432-L446)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2289,8 +2289,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L218-L218) | ToHistoryRow | False |
-| [Drilling.File/Product/CProductFile.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L219-L219) | ToHistoryRow | False |
+| [Drilling.File/Product/CProductFile.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L218-L218) | ToHistoryRow | False |
+| [Drilling.File/Product/CProductFile.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L219-L219) | ToHistoryRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2320,7 +2320,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseHistory` · L448–466
 
-[Drilling.File/Product/CProductFile.cs:448–466](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L448-L466)
+[Drilling.File/Product/CProductFile.cs:448–466](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L448-L466)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2343,7 +2343,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | 450 | ParseDate | resolved | System.DateTimeOffset? Drilling.File.Product.CProductFile.ParseDate(string) · Drilling.File/Product/CProductFile.cs:500 |
 | 450 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
-| 456 | new ST_PRODUCT_HISTORY | resolved | Drilling.Common.Product.ST_PRODUCT_HISTORY.ST_PRODUCT_HISTORY(System.DateTimeOffset, string, string, string, string, string, string, string) · Drilling.Common/Product/CProductManager.cs:1162 |
+| 456 | new ST_PRODUCT_HISTORY | resolved | Drilling.Common.Product.ST_PRODUCT_HISTORY.ST_PRODUCT_HISTORY(System.DateTimeOffset, string, string, string, string, string, string, string) · Drilling.Common/Product/CProductManager.cs:1166 |
 | 458 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
 | 459 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
 | 460 | CCsvParser.Get | resolved | string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.File/Parser/CCsvParser.cs:168 |
@@ -2385,7 +2385,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteRowsAtomically` · L468–487
 
-[Drilling.File/Product/CProductFile.cs:468–487](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L468-L487)
+[Drilling.File/Product/CProductFile.cs:468–487](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L468-L487)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2406,7 +2406,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L221-L221) | WriteRowsAtomically | False |
+| [Drilling.File/Product/CProductFile.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L221-L221) | WriteRowsAtomically | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2455,7 +2455,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseEnum` · L489–493
 
-[Drilling.File/Product/CProductFile.cs:489–493](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L489-L493)
+[Drilling.File/Product/CProductFile.cs:489–493](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L489-L493)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2475,9 +2475,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L97-L97) | ParseEnum | False |
-| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L103-L103) | ParseEnum | False |
-| [Drilling.File/Product/CProductFile.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L323-L323) | ParseEnum | False |
+| [Drilling.File/Product/CProductFile.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L97-L97) | ParseEnum | False |
+| [Drilling.File/Product/CProductFile.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L103-L103) | ParseEnum | False |
+| [Drilling.File/Product/CProductFile.cs:323–323](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L323-L323) | ParseEnum | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2497,7 +2497,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatDate` · L495–498
 
-[Drilling.File/Product/CProductFile.cs:495–498](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L495-L498)
+[Drilling.File/Product/CProductFile.cs:495–498](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L495-L498)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2516,8 +2516,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L155-L155) | FormatDate | False |
-| [Drilling.File/Product/CProductFile.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L436-L436) | FormatDate | False |
+| [Drilling.File/Product/CProductFile.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L155-L155) | FormatDate | False |
+| [Drilling.File/Product/CProductFile.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L436-L436) | FormatDate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2536,7 +2536,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseDate` · L500–503
 
-[Drilling.File/Product/CProductFile.cs:500–503](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L500-L503)
+[Drilling.File/Product/CProductFile.cs:500–503](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L500-L503)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2555,8 +2555,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L324-L324) | ParseDate | False |
-| [Drilling.File/Product/CProductFile.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L450-L450) | ParseDate | False |
+| [Drilling.File/Product/CProductFile.cs:324–324](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L324-L324) | ParseDate | False |
+| [Drilling.File/Product/CProductFile.cs:450–450](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L450-L450) | ParseDate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2576,7 +2576,7 @@ flowchart TD
 
 ### MethodDeclaration `DeleteIfExists` · L505–511
 
-[Drilling.File/Product/CProductFile.cs:505–511](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L505-L511)
+[Drilling.File/Product/CProductFile.cs:505–511](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L505-L511)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2595,9 +2595,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Product/CProductFile.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L200-L200) | DeleteIfExists | False |
-| [Drilling.File/Product/CProductFile.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L207-L207) | DeleteIfExists | False |
-| [Drilling.File/Product/CProductFile.cs:485–485](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.File/Product/CProductFile.cs#L485-L485) | DeleteIfExists | False |
+| [Drilling.File/Product/CProductFile.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L200-L200) | DeleteIfExists | False |
+| [Drilling.File/Product/CProductFile.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L207-L207) | DeleteIfExists | False |
+| [Drilling.File/Product/CProductFile.cs:485–485](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/Product/CProductFile.cs#L485-L485) | DeleteIfExists | False |
 
 호출하는 대상과 해석 범위:
 

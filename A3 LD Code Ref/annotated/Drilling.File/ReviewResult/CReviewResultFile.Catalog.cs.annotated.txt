@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs
-Commit: 5aee8e58439c9b455cae7c9593c9be986c3e682e
+Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.File.ReviewResult
@@ -20,8 +20,8 @@ L000007 |  ⟦EOL⟧
 L000008 |     public sealed partial class CReviewResultFile ⟦EOL⟧
 // 해설 L9: 구문 블록 경계입니다.
 L000009 |     { ⟦EOL⟧
-// 해설 L10: 변수의 초기값을 지정합니다: ManualResultTypes = ["ALL_SHOT", "ONE_SHOT", "BEAM_INSPECTION", "ROUGH", "FINE"]
-L000010 |         private static readonly string[] ManualResultTypes = ["ALL_SHOT", "ONE_SHOT", "BEAM_INSPECTION", "ROUGH", "FINE"]; ⟦EOL⟧
+// 해설 L10: 변수의 초기값을 지정합니다: ManualResultTypes = ["ALL_SHOT", "ONE_SHOT", "ONE_LINE", "BEAM_INSPECTION", "ROUGH", "FINE"]
+L000010 |         private static readonly string[] ManualResultTypes = ["ALL_SHOT", "ONE_SHOT", "ONE_LINE", "BEAM_INSPECTION", "ROUGH", "FINE"]; ⟦EOL⟧
 L000011 |  ⟦EOL⟧
 // 해설 L12: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_RESULT_CATALOG_ITEM>> Drilling.File.ReviewResult.CReviewResultFile.ListCorrectionResults(System.Threading.Ca
 L000012 |         public override Task<IReadOnlyList<ST_REVIEW_RESULT_CATALOG_ITEM>> ListCorrectionResults(CancellationToken cancellationToken = default) ⟦EOL⟧

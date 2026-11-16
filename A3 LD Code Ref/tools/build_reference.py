@@ -9,7 +9,7 @@ from pathlib import Path
 from urllib.parse import quote,unquote
 from datetime import datetime, timezone
 
-VERSION = '1.0.0'
+VERSION = '1.1.1'
 REPO = 'https://github.com/kjuws10-rgb/A3Drilling'
 CODE_EXT = {'.cs','.xaml','.ascript','.scan','.csproj','.sln','.config','.xml','.json'}
 TEXT_EXT = CODE_EXT | {'.md','.txt','.gitignore','.gitattributes','.editorconfig','.props','.targets','.csv','.bak'}
@@ -31,14 +31,43 @@ def digest(p):
     with p.open('rb') as f:
         for b in iter(lambda:f.read(1024*1024),b''):h.update(b)
     return h.hexdigest()
+
+PRIVATE_IP = re.compile(r'(?<![\w.])(?:10\.(?:\d{1,3}\.){2}\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3})(?![\w.])')
+SENSITIVE_KEY = re.compile(r'(?i)password|passwd|credential|secret|api.?key|access.?token|client.?secret')
+WPF_EVENTS = set('Click Loaded Unloaded Initialized Closing Closed Activated Deactivated ContentRendered SourceInitialized DataContextChanged IsVisibleChanged IsEnabledChanged SizeChanged LayoutUpdated SelectionChanged SelectedItemChanged TextChanged Checked Unchecked Indeterminate KeyDown KeyUp PreviewKeyDown PreviewKeyUp GotFocus LostFocus GotKeyboardFocus LostKeyboardFocus MouseDown MouseUp MouseMove MouseEnter MouseLeave MouseWheel MouseDoubleClick MouseLeftButtonDown MouseLeftButtonUp MouseRightButtonDown MouseRightButtonUp PreviewMouseDown PreviewMouseUp PreviewMouseMove PreviewMouseWheel PreviewMouseDoubleClick PreviewMouseLeftButtonDown PreviewMouseLeftButtonUp PreviewMouseRightButtonDown PreviewMouseRightButtonUp TouchDown TouchUp TouchMove PreviewTouchDown PreviewTouchUp PreviewTouchMove DragEnter DragLeave DragOver Drop PreviewDragEnter PreviewDragLeave PreviewDragOver PreviewDrop ScrollChanged ValueChanged DropDownOpened DropDownClosed TargetUpdated SourceUpdated RequestBringIntoView ContextMenuOpening ContextMenuClosing ToolTipOpening ToolTipClosing'.split())
+
+def definition_cells(row):
+    # Definition keys/types are useful; site endpoints and authentication values are not.
+    return ['[민감 설정 값 미복제]' if PRIVATE_IP.search(str(value)) or SENSITIVE_KEY.search(str(value)) else str(value) for value in row[:4]]
+
+def xaml_structure(text):
+    # Preserve physical offsets while ignoring commented examples. No XAML object is instantiated.
+    clean=re.sub(r'<!--.*?-->',lambda match:re.sub(r'[^\n]',' ',match[0]),text,flags=re.S)
+    names=[];events=[];bindings=[];classes=[]
+    for tag in re.finditer(r'<(?:"[^"]*"|\'[^\']*\'|[^\'">])*>',clean,re.S):
+        attrs=[]
+        for attr in re.finditer(r'([\w:.]+)\s*=\s*(["\'])(.*?)\2',tag[0],re.S):
+            start=tag.start()+attr.start();end=tag.start()+attr.end()
+            attrs.append({'attribute':attr[1],'value':html.unescape(attr[3]),'startLine':clean.count('\n',0,start)+1,'endLine':clean.count('\n',0,end)+1})
+        for attr in attrs:
+            name=attr['attribute'];value=attr['value'];location={k:attr[k] for k in ['startLine','endLine']}
+            if name in {'x:Name','Name'}:names.append({'name':value,'attribute':name,**location})
+            if name=='x:Class':classes.append({'name':value,**location})
+            if name.split('.')[-1] in WPF_EVENTS and re.fullmatch(r'[A-Za-z_]\w*',value):events.append({'event':name,'handler':value,**location})
+            if re.search(r'\{(?:Binding|MultiBinding|PriorityBinding)\b',value):bindings.append({'attribute':name,'expression':value,**location})
+        if re.match(r'<(?:\w+:)?EventSetter\b',tag[0]):
+            by_name={attr['attribute']:attr for attr in attrs}
+            if 'Event' in by_name and 'Handler' in by_name:
+                handler=by_name['Handler'];events.append({'event':by_name['Event']['value'],'handler':handler['value'],'startLine':handler['startLine'],'endLine':handler['endLine'],'kind':'EventSetter'})
+    return {'namedElements':names,'events':events,'bindings':bindings,'codeBehindClasses':classes,'scope':'Static XAML declarations only. Named elements are candidates for WPF-generated fields; no generated C# fields or runtime event/binding resolution are claimed.'}
 def put(p,s): p.parent.mkdir(parents=True,exist_ok=True);p.write_text(s,encoding='utf-8',newline='\n')
 def normalize_document_whitespace(root):
     # Raw original source lines end in EOL markers, so this never removes original trailing spaces.
     changed=0
     for p in root.rglob('*'):
         if p.is_file() and p.suffix in {'.md','.html','.txt','.svg','.json','.jsonl'}:
-            before=p.read_text(encoding='utf-8');after='\n'.join(line.rstrip(' \t') for line in before.splitlines()).rstrip('\n')+'\n'
-            if before!=after:put(p,after);changed+=1
+            raw=p.read_bytes();before=raw.decode('utf-8');after='\n'.join(line.rstrip(' \t') for line in before.splitlines()).rstrip('\n')+'\n'
+            if raw!=after.encode('utf-8'):put(p,after);changed+=1
     return changed
 def table(headers, rows):
     def cell(x):
@@ -162,7 +191,7 @@ class Builder:
             if any(parent.is_symlink() for parent in p.parents if parent.is_relative_to(self.source)):raise ValueError('linked source parent: '+rel)
         self.cs={f['path'].replace('\\','/'):f for f in self.model['files']};self.members={};self.member_file={};self.type_file={}
         self.calls_by_member=collections.defaultdict(list);self.ops_by_member=collections.defaultdict(list)
-        self.incoming=collections.defaultdict(list);self.file_in=collections.Counter();self.file_out=collections.Counter();self.catalog=[];self.rag=[];self.coverage=[]
+        self.incoming=collections.defaultdict(list);self.file_in=collections.Counter();self.file_out=collections.Counter();self.catalog=[];self.rag=[];self.coverage=[];self.xaml_counts=collections.Counter()
         for path,f in self.cs.items():
             for m in f.get('members',[]):
                 if m['id'] in self.members:raise ValueError('duplicate member ID: '+m['id'])
@@ -251,9 +280,14 @@ class Builder:
             s+='## 구문·바인딩 한계\n\n전체 WPF/벤더 SDK/프로젝트별 빌드 조건을 로드한 정식 빌드가 아닙니다. `resolved`는 이 부분 컴파일에서의 심볼 연결이며 virtual/interface/delegate/이벤트/Reflection/XAML의 실제 런타임 구현을 확정하지 않습니다. `candidate`와 `unresolved`는 후속 확인 대상으로 남깁니다.\n\n'
             put(self.out/'metadata/files'/Path(path+'.json'),J(f)+'\n')
         elif ext=='.xaml':
-            names=re.findall(r'\b(?:x:Name|Name)="([^"]+)"',text);events=re.findall(r'\b(Click|Loaded|Unloaded|SelectionChanged|Checked|Unchecked|TextChanged|MouseDown|MouseMove|MouseUp|KeyDown|PreviewKeyDown)="([^"]+)"',text);bindings=re.findall(r'\{Binding\s+([^}\r\n]+)',text)
+            xaml=xaml_structure(text);names=[item['name'] for item in xaml['namedElements']];events=[(item['event'],item['handler']) for item in xaml['events']];bindings=[item['expression'] for item in xaml['bindings']]
+            self.xaml_counts['files']+=1
+            for category in ['namedElements','events','bindings']:self.xaml_counts[category]+=len(xaml[category])
+            put(self.out/'metadata/xaml'/Path(path+'.json'),J({'sourcePath':path,'sourceCommit':self.commit,'sha256':sha,**xaml})+'\n')
             s+='## 화면 구성과 코드 비하인드 연결\n\n'+table(['항목','추출 값'],[['코드 비하인드 후보',path+'.cs'],['이름 있는 요소',', '.join(names)],['이벤트 개수',len(events)],['Binding 표현 개수',len(bindings)]])
-            s+=table(['이벤트','핸들러 이름','해석'],[[a,b,'코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요'] for a,b in events]);s+=table(['Binding 표현'],[[x] for x in bindings]);self.add_rag(path,sha,1,max(1,len(lines)),Path(path).name,purpose(path)+'\n이벤트: '+str(events)+'\nBinding: '+str(bindings),'xaml_structure')
+            s+='이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.\n\n'
+            s+=table(['요소 이름','원본 범위'],[[item['name'],f'L{item["startLine"]}–{item["endLine"]}'] for item in xaml['namedElements']])
+            s+=table(['이벤트','핸들러 이름','원본 범위','해석'],[[item['event'],item['handler'],f'L{item["startLine"]}–{item["endLine"]}','코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요'] for item in xaml['events']]);s+=table(['Binding 표현','원본 범위'],[[item['expression'],f'L{item["startLine"]}–{item["endLine"]}'] for item in xaml['bindings']]);self.add_rag(path,sha,1,max(1,len(lines)),Path(path).name,purpose(path)+'\n이벤트: '+str(events)+'\nBinding: '+str(bindings),'xaml_structure')
             for start in range(1,len(lines)+1,36):
                 end=min(len(lines),start+35);raw='\n'.join(f'L{i} | {lines[i-1]}'+EOL for i in range(start,end+1));self.add_rag(path,sha,start,end,Path(path).name+' · XAML 원문',raw,'xaml_source')
         elif ext in ['.ascript','.scan']:
@@ -266,10 +300,10 @@ class Builder:
             except csv.Error:rows=[]
             first=rows[0] if rows else []
             known_header=bool(first) and any(v.strip().upper() in {'NAME','TYPE','VALUE','TAB','TIME','TIMESTAMP','DATE','POINT_ID','SHOT_NO','HEAD_NO','CELL_NO','DESIGN_X','ID','KEY','POSITION','ITEM','CATEGORY'} for v in first)
-            header=[v if known_header and re.fullmatch(r'[\w .()/\-]+',v or '') and len(v)<100 else '[데이터 값 미복제/소비 파서로 형식 확인]' for v in first]
+            header=[v if known_header and re.fullmatch(r'[\w .()/\-]+',v or '') and len(v)<100 and not PRIVATE_IP.search(v) else '[데이터 값 미복제/소비 파서로 형식 확인]' for v in first]
             s+='## 저장/설정 스키마 참고\n\n실행 이력·측정 레코드는 문서에 전체 복제하지 않습니다. 행 수와 구조, 소비 코드 연결을 검토하기 위한 참고입니다. 첫 행이 실제 헤더인지는 해당 CSV 파서와 대조해야 합니다.\n\n'+table(['항목','값'],[['레코드 수',len(rows)],['첫 행 필드 개수',len(first)],['첫 행 컬럼 후보',' / '.join(header)]])
             if path.startswith('Config/JHMI_') and rows:
-                s+='정의 항목 목록(인증 관련 값은 포함하지 않음):\n\n'+table(['CSV 행','정의 키/형식'],[[i,' / '.join(str(v) for v in row[:4])] for i,row in enumerate(rows[1:],2) if not any(re.search(r'(?i)password|credential|secret|api.?key',v) for v in row)])
+                s+='정의 항목 목록(인증 관련 값과 사설 IP는 포함하지 않음):\n\n'+table(['CSV 행','정의 키/형식'],[[i,' / '.join(definition_cells(row))] for i,row in enumerate(rows[1:],2) if not any(SENSITIVE_KEY.search(v) for v in row)])
             self.add_rag(path,sha,1,max(1,len(lines)),Path(path).name,purpose(path)+'\nCSV 행수 '+str(len(rows))+' / 컬럼 후보 '+str(header)+'\n실측/이력 값은 미복제. 소비 파서로 확정 필요.','schema_inventory')
         else:
             s+='## 설정/빌드 연결\n\n'+purpose(path)+'\n\n'
@@ -307,6 +341,9 @@ class Builder:
         put(self.out/'FILE_INDEX.md',catalog)
         groups=collections.Counter(x['kind'] for x in self.catalog)
         manifest={'schemaVersion':'a3-code-reference/1','generatorVersion':VERSION,'sourceRepository':REPO+'.git','sourceBranch':'master','sourceCommit':self.commit,'generatedAt':datetime.now(timezone.utc).isoformat(),'coverage':{'trackedFiles':len(self.tracked),'filePages':len(self.catalog),'byKind':dict(groups),'csharpFiles':len(self.cs),'typeCount':sum(x['types'] for x in self.catalog),'memberCount':sum(x['members'] for x in self.catalog),'callSites':sum(x['calls'] for x in self.catalog),'sourceLines':sum(x['lines'] for x in self.catalog),'annotatedFiles':sum(bool(x['annotation']) for x in self.catalog),'ragRecords':len(self.rag)},'semanticScope':self.model.get('analysisScope'),'syntaxSummary':self.model.get('summary'),'originalSourceModified':False,'detailedReview':'Agent-authored and cross-checked static tracing chapters cover selected critical domains; generated per-file/member/line explanations are structural analysis, not human semantic certification','build':'Equipment project not built/executed by documentation generator','operationalRecords':'CSV record bodies omitted; schema and definitions only','binaryPolicy':'names/path/size/SHA only; no code load or decompilation'}
+        manifest['extractorVersion']=self.model.get('generatorVersion')
+        manifest['xamlCoverage']=dict(self.xaml_counts)
+        manifest['memberScope']='Explicit C# source declarations; compiler-synthesized record/primary-constructor members and WPF-generated fields are not counted. Static XAML named elements/events/bindings are recorded separately in metadata/xaml.'
         put(self.out/'manifest.json',json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
         self.export_rag()
         self.export_home(manifest)

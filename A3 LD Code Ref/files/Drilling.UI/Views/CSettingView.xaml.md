@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 5aee8e58439c9b455cae7c9593c9be986c3e682e |
+| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
 | 원본 SHA256 | 7f1dfe45cfa6659a53e3be1e20d7e9d5add0b8006af014942c64dbeba58b4469 |
 | 파일 분류 | code |
 | 원본 크기/행 | 66,599 bytes / 844 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/5aee8e58439c9b455cae7c9593c9be986c3e682e/Drilling.UI/Views/CSettingView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -23,97 +23,125 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- |
 | 코드 비하인드 후보 | Drilling.UI/Views/CSettingView.xaml.cs |
 | 이름 있는 요소 | ButtonChrome, ButtonContent, ItemBorder, ToggleButton, Shell, PART_Popup, SettingEditorPanel, ParameterGrid, InterfaceGrid, HistoryPanel, HistoryExpandButton, ChangeHistoryGrid |
-| 이벤트 개수 | 2 |
+| 이벤트 개수 | 13 |
 | Binding 표현 개수 | 81 |
 
-| 이벤트 | 핸들러 이름 | 해석 |
-| --- | --- | --- |
-| Click | CommitSettingGridEdits | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | ToggleHistory_Click | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
-| Binding 표현 |
-| --- |
-| IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent |
-| SelectionBoxItem, RelativeSource={RelativeSource AncestorType=ComboBox |
-| SelectionBoxItemTemplate, RelativeSource={RelativeSource AncestorType=ComboBox |
-| SelectionBoxItemStringFormat, RelativeSource={RelativeSource AncestorType=ComboBox |
-| ActualWidth, ElementName=ToggleButton |
-| CurrentScreen.IsSettingLayout, Converter={StaticResource BooleanToVisibilityConverter |
-| CurrentScreen.Setting.TabItems |
-| DisplayName |
-| DataContext.CurrentScreen.Setting.SelectTabCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| Name |
-| IsSelected |
-| CurrentScreen.Setting.GroupItems |
-| DataContext.CurrentScreen.Setting.SelectGroupCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| Name |
-| IsSelected |
-| IsSelected |
-| Name |
-| IsSelected |
-| IsSelected, Converter={StaticResource BooleanToVisibilityConverter |
-| CurrentScreen.Setting.SelectedTab, StringFormat={ |
-| CurrentScreen.Setting.SelectedTab |
-| CurrentScreen.Setting.CanOperateSelectedInterface |
-| CurrentScreen.Setting.ConnectInterfaceCommand |
-| CurrentScreen.Setting.IsInterfaceTab, Converter={StaticResource BooleanToVisibilityConverter |
-| CurrentScreen.Setting.CanOperateSelectedInterface |
-| CurrentScreen.Setting.DisconnectInterfaceCommand |
-| CurrentScreen.Setting.IsInterfaceTab, Converter={StaticResource BooleanToVisibilityConverter |
-| CurrentScreen.Setting.SaveCommand |
-| CurrentScreen.Setting.IsInterfaceTab, Converter={StaticResource BooleanToVisibilityConverter |
-| CurrentScreen.Setting.ReloadCommand |
-| CurrentScreen.Setting.HeadFilterItems |
-| CurrentScreen.Setting.IsHeadFilterVisible, Converter={StaticResource BooleanToVisibilityConverter |
-| Name |
-| DataContext.CurrentScreen.Setting.SelectHeadCommand, RelativeSource={RelativeSource AncestorType=UserControl |
-| Name |
-| IsSelected |
-| CurrentScreen.Setting.ParameterRows |
-| CurrentScreen.Setting.IsParameterTab, Converter={StaticResource BooleanToVisibilityConverter |
-| Group |
-| HeadFilter |
-| Parameter |
-| Value |
-| UsesSelectionEditor |
-| ValueOptions |
-| Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
-| UsesSelectionEditor |
-| Value |
-| UsesSelectionEditor |
-| ValueOptions |
-| Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
-| UsesSelectionEditor |
-| Unit |
-| Description |
-| CurrentScreen.Setting.IsInterfaceTab, Converter={StaticResource BooleanToVisibilityConverter |
-| CurrentScreen.Setting.InterfaceRows |
-| CurrentScreen.Setting.SelectedInterfaceRow, Mode=TwoWay |
-| No, Mode=OneWay |
-| TypeOptions |
-| Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
-| DeviceOptions |
-| Device, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
-| Number |
-| NickName |
-| SystemSection |
-| AutoConnectionOptions |
-| AutoConnection, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
-| AutoConnectionOptions |
-| Simul, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged |
-| Arg1 |
-| Arg2 |
-| Arg3 |
-| Arg4 |
-| Arg5 |
-| CurrentScreen.Setting.ChangeHistory |
-| Time |
-| User |
-| Tab |
-| Parameter |
-| Before |
-| After |
-| AfterBrush |
+| 요소 이름 | 원본 범위 |
+| --- | --- |
+| ButtonChrome | L100–100 |
+| ButtonContent | L105–105 |
+| ItemBorder | L151–151 |
+| ToggleButton | L197–197 |
+| Shell | L203–203 |
+| PART_Popup | L254–254 |
+| SettingEditorPanel | L313–313 |
+| ParameterGrid | L604–604 |
+| InterfaceGrid | L717–717 |
+| HistoryPanel | L795–795 |
+| HistoryExpandButton | L812–812 |
+| ChangeHistoryGrid | L817–817 |
+
+| 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
+| --- | --- | --- | --- |
+| PreviewMouseDown | CommitSettingGridEdits | L524–524 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | CommitSettingGridEdits | L525–525 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenParameterValueInput | L625–625 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenParameterValueInput | L667–667 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L775–775 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L776–776 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L777–777 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L780–780 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L781–781 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L782–782 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L783–783 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L784–784 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | ToggleHistory_Click | L813–813 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+
+| Binding 표현 | 원본 범위 |
+| --- | --- |
+| {Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}} | L200–200 |
+| {Binding SelectionBoxItem, RelativeSource={RelativeSource AncestorType=ComboBox}} | L214–214 |
+| {Binding SelectionBoxItemTemplate, RelativeSource={RelativeSource AncestorType=ComboBox}} | L215–215 |
+| {Binding SelectionBoxItemStringFormat, RelativeSource={RelativeSource AncestorType=ComboBox}} | L216–216 |
+| {Binding ActualWidth, ElementName=ToggleButton} | L263–263 |
+| {Binding CurrentScreen.IsSettingLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L291–291 |
+| {Binding CurrentScreen.Setting.TabItems} | L320–320 |
+| {Binding DisplayName} | L328–328 |
+| {Binding DataContext.CurrentScreen.Setting.SelectTabCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L329–329 |
+| {Binding Name} | L330–330 |
+| {Binding IsSelected} | L335–335 |
+| {Binding CurrentScreen.Setting.GroupItems} | L363–363 |
+| {Binding DataContext.CurrentScreen.Setting.SelectGroupCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L366–366 |
+| {Binding Name} | L367–367 |
+| {Binding IsSelected} | L378–378 |
+| {Binding IsSelected} | L396–396 |
+| {Binding Name} | L403–403 |
+| {Binding IsSelected} | L413–413 |
+| {Binding IsSelected, Converter={StaticResource BooleanToVisibilityConverter}} | L429–429 |
+| {Binding CurrentScreen.Setting.SelectedTab, StringFormat={}{0} Parameter} | L455–455 |
+| {Binding CurrentScreen.Setting.SelectedTab} | L457–457 |
+| {Binding CurrentScreen.Setting.CanOperateSelectedInterface} | L472–472 |
+| {Binding CurrentScreen.Setting.ConnectInterfaceCommand} | L473–473 |
+| {Binding CurrentScreen.Setting.IsInterfaceTab, Converter={StaticResource BooleanToVisibilityConverter}} | L474–474 |
+| {Binding CurrentScreen.Setting.CanOperateSelectedInterface} | L498–498 |
+| {Binding CurrentScreen.Setting.DisconnectInterfaceCommand} | L499–499 |
+| {Binding CurrentScreen.Setting.IsInterfaceTab, Converter={StaticResource BooleanToVisibilityConverter}} | L500–500 |
+| {Binding CurrentScreen.Setting.SaveCommand} | L526–526 |
+| {Binding CurrentScreen.Setting.IsInterfaceTab, Converter={StaticResource BooleanToVisibilityConverter}} | L542–542 |
+| {Binding CurrentScreen.Setting.ReloadCommand} | L546–546 |
+| {Binding CurrentScreen.Setting.HeadFilterItems} | L574–574 |
+| {Binding CurrentScreen.Setting.IsHeadFilterVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L575–575 |
+| {Binding Name} | L583–583 |
+| {Binding DataContext.CurrentScreen.Setting.SelectHeadCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L586–586 |
+| {Binding Name} | L587–587 |
+| {Binding IsSelected} | L591–591 |
+| {Binding CurrentScreen.Setting.ParameterRows} | L606–606 |
+| {Binding CurrentScreen.Setting.IsParameterTab, Converter={StaticResource BooleanToVisibilityConverter}} | L612–612 |
+| {Binding Group} | L614–614 |
+| {Binding HeadFilter} | L615–615 |
+| {Binding Parameter} | L616–616 |
+| {Binding Value} | L621–621 |
+| {Binding UsesSelectionEditor} | L630–630 |
+| {Binding ValueOptions} | L637–637 |
+| {Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L638–638 |
+| {Binding UsesSelectionEditor} | L650–650 |
+| {Binding Value} | L663–663 |
+| {Binding UsesSelectionEditor} | L672–672 |
+| {Binding ValueOptions} | L679–679 |
+| {Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L680–680 |
+| {Binding UsesSelectionEditor} | L692–692 |
+| {Binding Unit} | L703–703 |
+| {Binding Description} | L704–704 |
+| {Binding CurrentScreen.Setting.IsInterfaceTab, Converter={StaticResource BooleanToVisibilityConverter}} | L711–711 |
+| {Binding CurrentScreen.Setting.InterfaceRows} | L718–718 |
+| {Binding CurrentScreen.Setting.SelectedInterfaceRow, Mode=TwoWay} | L719–719 |
+| {Binding No, Mode=OneWay} | L768–768 |
+| {Binding TypeOptions} | L772–772 |
+| {Binding Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L772–772 |
+| {Binding DeviceOptions} | L774–774 |
+| {Binding Device, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L774–774 |
+| {Binding Number} | L775–775 |
+| {Binding NickName} | L776–776 |
+| {Binding SystemSection} | L777–777 |
+| {Binding AutoConnectionOptions} | L778–778 |
+| {Binding AutoConnection, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L778–778 |
+| {Binding AutoConnectionOptions} | L779–779 |
+| {Binding Simul, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L779–779 |
+| {Binding Arg1} | L780–780 |
+| {Binding Arg2} | L781–781 |
+| {Binding Arg3} | L782–782 |
+| {Binding Arg4} | L783–783 |
+| {Binding Arg5} | L784–784 |
+| {Binding CurrentScreen.Setting.ChangeHistory} | L818–818 |
+| {Binding Time} | L825–825 |
+| {Binding User} | L826–826 |
+| {Binding Tab} | L827–827 |
+| {Binding Parameter} | L828–828 |
+| {Binding Before} | L829–829 |
+| {Binding After} | L830–830 |
+| {Binding AfterBrush} | L833–833 |
 
 ## 원문 전체 주석 해설본
 

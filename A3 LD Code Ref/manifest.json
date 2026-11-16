@@ -1,28 +1,28 @@
 {
   "schemaVersion": "a3-code-reference/1",
-  "generatorVersion": "1.0.0",
+  "generatorVersion": "1.1.0",
   "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
   "sourceBranch": "master",
-  "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e",
-  "generatedAt": "2026-11-13T05:07:55.765467+00:00",
+  "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "generatedAt": "2026-11-16T06:22:40.171667+00:00",
   "coverage": {
-    "trackedFiles": 571,
-    "filePages": 571,
+    "trackedFiles": 610,
+    "filePages": 610,
     "byKind": {
-      "build_or_reference": 8,
-      "data_schema": 239,
-      "code": 312,
+      "build_or_reference": 9,
+      "data_schema": 262,
+      "code": 327,
       "binary_reference": 12
     },
-    "csharpFiles": 148,
-    "typeCount": 876,
-    "memberCount": 15282,
-    "callSites": 39483,
-    "sourceLines": 1540514,
-    "annotatedFiles": 320,
-    "ragRecords": 27483,
-    "annotatedSourceLines": 514087,
-    "ragUniqueAnnotatedSourceLines": 514087
+    "csharpFiles": 153,
+    "typeCount": 914,
+    "memberCount": 15910,
+    "callSites": 41238,
+    "sourceLines": 1761586,
+    "annotatedFiles": 336,
+    "ragRecords": 31299,
+    "annotatedSourceLines": 663476,
+    "ragUniqueAnnotatedSourceLines": 663476
   },
   "semanticScope": {
     "syntax": "All Git-tracked C# files parsed with Roslyn; inactive conditional-compilation branches are reported separately as disabled text.",
@@ -49,54 +49,54 @@
     "projectBoundaries": "Source declarations are combined into one compilation. Project-reference accessibility and exact target-framework overload selection are not build-verified."
   },
   "syntaxSummary": {
-    "trackedFiles": 571,
-    "csharpFiles": 148,
-    "sourceLines": 113350,
-    "types": 876,
-    "members": 15282,
-    "calls": 39483,
-    "operations": 89146,
+    "trackedFiles": 610,
+    "csharpFiles": 153,
+    "sourceLines": 118569,
+    "types": 914,
+    "members": 15910,
+    "calls": 41238,
+    "operations": 93252,
     "callResolution": {
-      "resolved": 35705,
-      "unresolved": 3201,
-      "candidate": 577
+      "resolved": 36955,
+      "unresolved": 3589,
+      "candidate": 694
     },
     "compilationDiagnostics": {
-      "Error": 3787,
-      "Hidden": 423,
+      "Error": 4168,
+      "Hidden": 432,
       "Warning": 3
     },
     "diagnosticCodes": [
       {
         "code": "CS0246",
-        "count": 1959
+        "count": 2253
       },
       {
         "code": "CS0103",
-        "count": 1393
+        "count": 1449
       },
       {
         "code": "CS8019",
-        "count": 404
+        "count": 413
       },
       {
         "code": "CS1061",
-        "count": 186
+        "count": 204
       },
       {
         "code": "CS0234",
-        "count": 150
+        "count": 160
       },
       {
         "code": "CS0117",
         "count": 60
       },
       {
-        "code": "CS8933",
-        "count": 13
+        "code": "CS1503",
+        "count": 16
       },
       {
-        "code": "CS1503",
+        "code": "CS8933",
         "count": 13
       },
       {
@@ -146,6 +146,14 @@
   "build": "Equipment project not built/executed by documentation generator",
   "operationalRecords": "CSV record bodies omitted; schema and definitions only",
   "binaryPolicy": "names/path/size/SHA only; no code load or decompilation",
+  "extractorVersion": "1.0.3",
+  "xamlCoverage": {
+    "files": 57,
+    "namedElements": 369,
+    "events": 272,
+    "bindings": 2802
+  },
+  "memberScope": "Explicit C# source declarations; compiler-synthesized record/primary-constructor members and WPF-generated fields are not counted. Static XAML named elements/events/bindings are recorded separately in metadata/xaml.",
   "validation": {
     "status": "passed",
     "staticReport": "validation/static-validation.json",
@@ -158,17 +166,26 @@
     "equipmentBuild": "not_run",
     "equipmentExecution": "not_run",
     "modelInferenceAccuracy": "not_tested_in_this_documentation_task",
-    "gitDiffCheck": "passed"
+    "gitDiffCheck": "passed",
+    "sourcePreservationReport": "validation/source-preservation.json"
   },
   "architectureBaseline": {
-    "sharedPath": "20261112_085708_SW아키텍쳐분석/README.md",
-    "sourceCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e"
+    "sharedPath": "20261116_145750_SW아키텍쳐분석/README.md",
+    "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+    "comparisonBaseCommit": "5aee8e58439c9b455cae7c9593c9be986c3e682e"
   },
   "recurringUpdate": {
     "automationId": "a3",
     "timezone": "Asia/Seoul",
-    "schedule": "Daily 09:00; update only when source changed or reference baseline missing/incomplete",
+    "schedule": "Daily09:00; only changed source or incomplete reference",
     "independentReferenceBaseline": true
   },
-  "documentNormalization": "UTF-8/LF, document trailing whitespace and EOF blank lines normalized; original source-line trailing whitespace is preserved before EOL marker and validated by full restoration"
+  "manualSourceReview": {
+    "chapters": 15,
+    "sourceCitationRanges": 478,
+    "rootFinalCitationCorrections": 2,
+    "runtimeCertified": false
+  },
+  "normalizedWithGenerator": "1.1.1",
+  "documentNormalization": "UTF-8/LF with actual byte comparison; source trailing whitespace retained before EOL markers; synthetic regression passed."
 }
