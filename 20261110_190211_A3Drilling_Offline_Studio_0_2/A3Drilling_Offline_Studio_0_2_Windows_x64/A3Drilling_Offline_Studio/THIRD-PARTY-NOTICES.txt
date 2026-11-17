@@ -1,7 +1,0 @@
-A3Drilling Offline Studio 0.2 public tool-only package
-
-The app includes the Microsoft .NET runtime. See Licenses/.
-llama.cpp b11960 CPU runtime: MIT; LLVM OpenMP: Apache-2.0 with LLVM exceptions. See Runtime/licenses/.
-Microsoft Visual C++ v14 x64 prerequisite installer is provided unchanged from the official Microsoft download, with Microsoft signature and SHA256 metadata under Prerequisites/. Its license/setup decisions remain with the installer and user.
-GGUF weights are not included. The tested Qwen2.5-Coder-7B-Instruct-GGUF model is Apache-2.0; its publisher license reference is also retained under Runtime/licenses/.
-Equipment source, user documents, model weights, private context, SDK/feed and QA sessions are not included.
