@@ -1,0 +1,48 @@
+<div>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<ac:structured-macro ac:macro-id="76eb012c-c0fe-5497-8a0c-917a1b5ff040" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
+<p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
+<ac:structured-macro ac:macro-id="6c007a01-19cc-59db-83d7-ce04a680ca60" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
+
+<h2>1. Alarm, Interlock, Stop, Reset의 차이</h2>
+<p><strong>Alarm은 발생한 문제와 조치 정보를 남기는 상태, Interlock은 특정 동작을 허용할지 정하는 조건, Stop은 진행 중 동작을 끝내거나 중단하는 절차, Reset은 정해진 범위의 상태를 초기화하는 절차</strong>다. 화면에서 Alarm이 사라졌다는 사실만으로 축 정지·Laser 차단·기판 안전·신호 재동기화가 확인되지는 않는다.</p>
+<p>본 페이지는 9a43c709의 SW 경계를 설명한다. 실제 안전 회로, Safety PLC, EMS와 배선의 승인 사양을 대신하지 않는다. 현장 안전조치가 필요한 상황은 승인된 장비 절차와 담당자 지시를 먼저 따른다. 문서상 변수값을 바꾸거나 인터락을 무시해 재개하는 절차는 제공하지 않는다.</p>
+<h2>2. 허가는 동작별로 확인한다</h2>
+<p>CInterLockManager는 AutoRun, ManualMove, LaserOn 대상을 나누어 평가한다. 예를 들어 Door·EMS·PM Lock은 여러 동작을 함께 제한하고, Key Switch·Scanner Ready·Vision Ready 등은 AutoRun 대상에 연결된다. 실제 원신호의 극성·사용 여부·최신성은 배포 map과 상대 장치 계약으로 확인해야 한다.</p>
+<table><tbody><tr><th>판단</th><th>현재 코드에서 확인한 경계</th><th>운영 확인</th></tr>
+<tr><td>AutoRun</td><td>대상 I/O 규칙과 Motor Alarm, BET Alarm 등을 조합한다.</td><td>현재 Recipe·Head 구성의 준비 검사와 실제 기판/물류 상태도 함께 확인한다.</td></tr>
+<tr><td>ManualMove</td><td>해당 대상 I/O 규칙과 Motion Alarm을 반영한다.</td><td>축·방향·목표·Limit·현재 위치와 간섭 조건을 확인한다.</td></tr>
+<tr><td>LaserOn</td><td>LaserOn 대상의 규칙을 별도 계산한다.</td><td>물리 광로·Shutter·Laser/Chiller·작업자 승인과 현장 허가를 별도로 확인한다.</td></tr>
+<tr><td>Alarm 수준</td><td>목록의 LIGHT는 Warning, HEAVY는 Critical로 옮긴다.</td><td>실제 배포 Alarm 정의와 정지 소비 경로를 확인한다. 색이나 이름만으로 장비 동작을 추정하지 않는다.</td></tr></tbody></table>
+<p>이 표는 SW Summary를 읽는 기준이다. 값이 없거나 map이 잘못된 상태를 정상 장치 준비로 해석하지 않으며, Driver 연결 성공과 유효한 상태 수신, 해당 동작의 허가를 구분한다.</p>
+<h2>3. 알람 발생 직후 보존할 자료</h2>
+<ol><li>발생 시각과 가능하면 시간대, Alarm ID/Code·Level·Cause·Solution, 최초 발생과 마지막 발생을 기록한다.</li><li>Glass·Recipe·Run·Head/Task·Cell/Shot/Beam, 현재 Step과 대기 신호를 연결한다.</li><li>명령값과 원신호, 최종 허가, 통신 오류·Timeout·취소·NG를 구분해 기록한다.</li><li>Station/Interface/Product/Review·Controller 관련 구간과 결과·Offset 파일명을 보존한다. 변경 전 Recipe와 설정 버전도 남긴다.</li><li>Stop·Reset·재접속·재실행을 했다면 순서와 시각, 반환 결과·실제 완료 근거를 남긴다.</li></ol>
+<p>원인을 찾기 전에 반복 Reset하면 최초 실패와 남은 Handshake의 관계를 잃기 쉽다. 자료 수집은 회사가 허용한 범위로 하고 인증정보를 문서에 넣지 않는다. 상세 자료 묶음은 <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응과 미결사항]]></ac:plain-text-link-body></ac:link>을 사용한다.</p>
+<h2>4. 정지·복구를 설명할 때의 상태표</h2>
+<table><tbody><tr><th>단계</th><th>확인해야 할 증거</th><th>다음 단계로 넘어가는 조건</th></tr>
+<tr><td>요청 중단</td><td>Stop/Cancellation이 어느 Sequence·Stage·Review·Task에 전달됐는지</td><td>요청 송신만 기록하지 않고 상대 응답 또는 Timeout 결과를 확인한다.</td></tr>
+<tr><td>실제 동작 종료</td><td>Controller Task, Stage/Review Busy·정지·위치, 출력/광로의 실제 상태</td><td>작업자와 장비 절차상 안전 상태가 확인된다.</td></tr>
+<tr><td>신호·소유권 정리</td><td>자신이 소유한 Request/Start/Complete의 OFF와 readback, 남은 세션</td><td>늦은 완료를 다음 작업으로 소비할 가능성이 해소된다.</td></tr>
+<tr><td>데이터 정리</td><td>현재 Glass·완료/미완료 가공, 검사 결과, 적용 Offset과 준비 Script</td><td>중복가공·중복보정 없이 재시작할 기준과 기판 처리 방침이 정해진다.</td></tr>
+<tr><td>재준비·재개</td><td>최신 Recipe·보정·I/F map으로 새 준비한 계획과 정상 Ready</td><td>실제 현장 재개 승인과 해당 시험 결과가 남는다.</td></tr></tbody></table>
+<p>이 순서는 복구 검토 기준이다. 현재 코드가 모든 장치에 대한 위 항목을 한 버튼으로 원자적으로 보장한다고 주장하지 않는다. 부분 통신 실패나 프로세스 재시작 때는 각 소비자의 상태를 다시 확인한다.</p>
+<h2>5. Reset으로 바뀌는 범위를 구분한다</h2>
+<table><tbody><tr><th>Reset·원복 종류</th><th>현재 확인한 동작</th><th>함께 해결됐다고 볼 수 없는 것</th></tr>
+<tr><td>Alarm Manager Reset</td><td>Current 알람 사전을 Clear하고 새 snapshot을 알린다.</td><td>문제의 센서 원인 해소, Servo/Home 완료, Laser/Stage 정지와 가공 재개 승인</td></tr>
+<tr><td>0선 ResetAfterStop</td><td>세션·출력 정리 조건을 확인하고 후속 요청 OFF/readback 후 RESET_CANCELLED를 남긴다.</td><td>미완료 후속검사가 완료됐다는 판정. FollowUpCompleted는 false다.</td></tr>
+<tr><td>Review Offset Rollback</td><td>기대한 최신 파일인지 확인하고 최신 활성 snapshot을 보관 이동해 직전 값을 사용한다.</td><td>원측정·EDIT/REINSP 판정·Default·모든 Recipe의 일괄 복원</td></tr>
+<tr><td>Product 시작 복구</td><td>저장된 진행 상태와 이력을 정리하는 경로가 있다.</td><td>물리 장치 원점복귀나 중단한 가공을 임의 지점부터 이어도 되는 판단</td></tr></tbody></table>
+<p>0선 cleanup은 OFF 쓰기와 확인이 실패하면 이전 기판 식별자와 pending 의미를 남기는 구조다. 실패 후 상태를 지우고 다음 기판으로 넘어가는 것으로 설명하지 않는다. 재검사·새 준비가 필요한지 판단할 때는 <ac:link><ri:page ri:content-title="08. A3 LD Align·Review·검사·보정"/><ac:plain-text-link-body><![CDATA[검사·보정의 적용 시점]]></ac:plain-text-link-body></ac:link>도 함께 본다.</p>
+<h2>6. 보호윈도우 교체와 Retry</h2>
+<p>현재 보호윈도우 사용매수는 Recipe의 Current/Maximum 및 Stage가 인계한 TrayCount로 관리한다. 교체 완료를 받았다고 항상 0매로 만드는 정책이 아니다. Stage Count 수신 → Recipe에 인계 매수 저장 → Process Count 보고 → Request OFF 확인 순서가 중요하다.</p>
+<p>PROTECT_WINDOW_RETRY_COUNT는 최초 요청 외의 추가 요청 횟수이며 0~3, 누락 시 0이다. 인계 Count가 Max 이상이면 Request와 Complete가 둘 다 OFF인 것을 확인한 뒤 추가 요청을 한다. 이전 Complete ON을 새 완료로 다시 소비하는 구조가 아니다.</p>
+<p>추가 횟수를 소진해도 인계값이 한계 이상인 경우 현재 코드는 <code>PROTECT_WINDOW_RETRY_EXHAUSTED</code>를 알리고 로그에 LIGHT alarm requested / AUTO continues를 남긴다. 이 사실을 HEAVY 자동 정지나 보호윈도우 품질 합격으로 바꾸어 설명하지 않는다. CManager가 요청한 알람의 실제 배포 정의와 공정 처리는 현장 합의·시험으로 확인해야 한다. Retry 횟수의 일부 상태는 메모리 수명이므로 앱 재시작 전후 총횟수 보장은 별도 검증이다.</p>
+<h2>7. Alarm 이력과 원인 분석 화면의 한계</h2>
+<p>알람 등록은 같은 Code의 현재 항목 중복을 막고, 이력 쓰기는 별도 대기열로 넘긴다. 대기열 용량 1,024건을 넘으면 이력이 저장되지 않았다는 오류를 노출하는 경로가 있다. Current에 알람이 보인다는 사실과 이력 파일 저장 성공을 구분한다.</p>
+<p>AlarmCauseAnalysis는 현장 로그를 읽어 후보를 보여 주는 규칙 기반 조사 보조다. 가까운 시각의 최신 NG_SUMMARY가 선택되더라도 같은 Run/Glass의 원인이라는 상관 보장은 없다. 최대 표시 1,200행은 전체 파일 읽기·메모리 한계가 아니며, 숫자를 정규화한 비교 서명이 같다고 원래 아날로그값이 같은 것도 아니다. 원인 후보를 보고 PLC bit를 바꾸기 전에 해당 작업의 원문과 식별자를 확인한다.</p>
+<h2>8. 재개 판단과 인수인계 완료조건</h2>
+<ul><li>재현 증상, 최초 원인, 수정·설정 변경 범위와 원복 방법이 설명되어야 한다.</li><li>센서 원신호·동작별 허가, 장치 실제 정지, 세션/신호 정리와 데이터 정합이 확인되어야 한다.</li><li>현재 기판을 재가공·검사·배출할지 결정하고 중복 가공과 같은 결과 중복 Apply 가능성을 검토한다.</li><li>대표 정상·Timeout·취소·늦은 응답·재시작 시나리오의 결과를 기록한다. 문서 정적 검사 성공을 이 시험의 통과로 사용하지 않는다.</li><li>현장 승인자·담당 부서·연락 경로는 실제 조직 자료로 확정한다. 현재 자료로 미확인인 이름이나 허가 수치를 만들어 넣지 않는다.</li></ul>
+<p>개별 증상과 필요한 로그는 <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응 페이지]]></ac:plain-text-link-body></ac:link>, 화면의 현재 표시와 준비 상태 차이는 <ac:link><ri:page ri:content-title="11. A3 LD 운전 화면과 Manual·Auto"/><ac:plain-text-link-body><![CDATA[운전 화면 페이지]]></ac:plain-text-link-body></ac:link>에서 확인한다.</p>
+<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/InterLock/CInterLockManager.cs#L12-L68">Drilling.Common/InterLock/CInterLockManager.cs:12–68</a></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Alarm/CAlarmManager.cs#L233-L277">Drilling.Common/Alarm/CAlarmManager.cs:233–277</a></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Managers/CManager.cs#L146-L151">Drilling.Common/Managers/CManager.cs:146–151</a></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Station/CStationProcess.cs#L4680-L4697">Drilling.Common/Station/CStationProcess.cs:4680–4697</a></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Station/CStationProcess.cs#L6494-L6529">Drilling.Common/Station/CStationProcess.cs:6494–6529</a></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td><a href="https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/review/07_Align_Distortion_윈도우_복구.md">11.13.0 코드 해설: 07_Align_Distortion_윈도우_복구.md</a></td><td>dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.</td></tr><tr><td><a href="https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/review/04_ReviewOffset_적용과_롤백.md">11.13.0 코드 해설: 04_ReviewOffset_적용과_롤백.md</a></td><td>dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.</td></tr><tr><td><a href="https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/architecture/08-alarm-cause-analysis.md">11.13.0 알람 원인 분석 코드 해설</a></td><td>dfa5920e 정적 코드 해설 및 미실행 검증 시나리오.</td></tr></tbody></table>
+<p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
+</div>

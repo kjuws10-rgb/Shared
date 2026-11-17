@@ -1,0 +1,292 @@
+{
+  "title": "A3 LD Process SW 개발 · 페이지별 소스",
+  "asOf": "2026-11-17",
+  "sourceCommit": "9a43c7097561d6d50cad4462923e16549e104bd2",
+  "codeReferenceSourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "pageCount": 20,
+  "pages": [
+    {
+      "id": "p00",
+      "title": "Process SW 개발",
+      "parent": null,
+      "file": "pages/00_Process_SW_개발.storage.xhtml.txt",
+      "attachment": "attachments/00_학습과대응경로.png",
+      "bodyTextChars": 2107,
+      "sha256": "8e67a38460f809c3a89887e5ce78b9b90cbe8f68e0e180bcee51ec5b32da58a1",
+      "bytes": 12171,
+      "headings": 6
+    },
+    {
+      "id": "p01",
+      "title": "01. A3 LD 시작하기와 인수인계",
+      "parent": "p00",
+      "file": "pages/01_A3_LD_시작하기와_인수인계.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 2998,
+      "sha256": "3f9ee52f685d24abe9a45b479c086ca483b32ada2fdaaf7bfef5bf7ba30501c0",
+      "bytes": 12383,
+      "headings": 6
+    },
+    {
+      "id": "p02",
+      "title": "02. A3 LD 장비·공정·물류",
+      "parent": "p00",
+      "file": "pages/02_A3_LD_장비·공정·물류.storage.xhtml.txt",
+      "attachment": "attachments/02_장비물류개념.png",
+      "bodyTextChars": 4677,
+      "sha256": "7759567560fc3d8f43a64465173c220baf0c9d4b810fc9a7db17a40d2a80f760",
+      "bytes": 15083,
+      "headings": 9
+    },
+    {
+      "id": "p03",
+      "title": "03. A3 LD SW 구조와 실행 데이터",
+      "parent": "p00",
+      "file": "pages/03_A3_LD_SW_구조와_실행_데이터.storage.xhtml.txt",
+      "attachment": "attachments/03_실행데이터흐름.png",
+      "bodyTextChars": 5553,
+      "sha256": "3cd8eeea174366da6e535f5be9c9b8edee31e81e71e65a267b38ec3398c95c2d",
+      "bytes": 16411,
+      "headings": 10
+    },
+    {
+      "id": "p04",
+      "title": "04. A3 LD 개발환경·코드 탐색·배포",
+      "parent": "p00",
+      "file": "pages/04_A3_LD_개발환경·코드_탐색·배포.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 3613,
+      "sha256": "2835fc220191986480b8a51e2dd7710804be97fa8de2f74c3f2a81af11c8607c",
+      "bytes": 10852,
+      "headings": 7
+    },
+    {
+      "id": "p05",
+      "title": "05. A3 LD PPID·Recipe·OSS·Job Change",
+      "parent": "p00",
+      "file": "pages/05_A3_LD_PPID·Recipe·OSS·Job_Change.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 4439,
+      "sha256": "fa97a2718bc105bf72e80fc3a20b6bc802727ae319c9003835a949d99178fc2f",
+      "bytes": 13079,
+      "headings": 8
+    },
+    {
+      "id": "p06",
+      "title": "06. A3 LD 좌표계·Head 분담·Default",
+      "parent": "p00",
+      "file": "pages/06_A3_LD_좌표계·Head_분담·Default.storage.xhtml.txt",
+      "attachment": "attachments/06_좌표와보정경계.png",
+      "bodyTextChars": 5526,
+      "sha256": "da14d33c8da05e2a5274af4b2c0844a269cc45e88febf87cb125423052a4b925",
+      "bytes": 16397,
+      "headings": 9
+    },
+    {
+      "id": "p07",
+      "title": "07. A3 LD Scanner·MOF·Automation1",
+      "parent": "p00",
+      "file": "pages/07_A3_LD_Scanner·MOF·Automation1.storage.xhtml.txt",
+      "attachment": "attachments/07_실행모드경계.png",
+      "bodyTextChars": 5823,
+      "sha256": "d6aec7a369909e146a3cc1f50e811274461b338f5c5cfd9e04b60b7b7d550a25",
+      "bytes": 17561,
+      "headings": 11
+    },
+    {
+      "id": "p08",
+      "title": "08. A3 LD Align·Review·검사·보정",
+      "parent": "p00",
+      "file": "pages/08_A3_LD_Align·Review·검사·보정.storage.xhtml.txt",
+      "attachment": "attachments/08_측정후보적용경계.png",
+      "bodyTextChars": 4776,
+      "sha256": "436cf8aab9e012a444e185d9bbffc2d8e805bd5d971c3f5b2109da906eac8883",
+      "bytes": 16001,
+      "headings": 7
+    },
+    {
+      "id": "p09",
+      "title": "09. A3 LD 통신과 장비 인터페이스",
+      "parent": "p00",
+      "file": "pages/09_A3_LD_통신과_장비_인터페이스.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 4744,
+      "sha256": "e338f738cc0ed34a1cd8278e43454a89311cdd213d6fbd22d53da07c8124d8bd",
+      "bytes": 13573,
+      "headings": 8
+    },
+    {
+      "id": "p10",
+      "title": "10. A3 LD 광학 Component와 Power",
+      "parent": "p00",
+      "file": "pages/10_A3_LD_광학_Component와_Power.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 4995,
+      "sha256": "14dc828ecb6f6858e74c0cb1c6484703dad1fdc5f7f5bbd597a17a1a822f61fc",
+      "bytes": 13971,
+      "headings": 8
+    },
+    {
+      "id": "p11",
+      "title": "11. A3 LD 운전 화면과 Manual·Auto",
+      "parent": "p00",
+      "file": "pages/11_A3_LD_운전_화면과_Manual·Auto.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 4829,
+      "sha256": "14413689eafcacc04c3a5a8ec9db9fd38a9744cf1620d4528654825840cb4285",
+      "bytes": 15147,
+      "headings": 7
+    },
+    {
+      "id": "p12",
+      "title": "12. A3 LD Alarm·Interlock·정지·복구",
+      "parent": "p00",
+      "file": "pages/12_A3_LD_Alarm·Interlock·정지·복구.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 4301,
+      "sha256": "7c274900eb27b3418503ef5afdce6e3ff5c62869a2b6ba4ffd278996a0bbee90",
+      "bytes": 14688,
+      "headings": 8
+    },
+    {
+      "id": "p13",
+      "title": "13. A3 LD 검증·시험·Acceptance",
+      "parent": "p00",
+      "file": "pages/13_A3_LD_검증·시험·Acceptance.storage.xhtml.txt",
+      "attachment": "attachments/13_검증단계.png",
+      "bodyTextChars": 4220,
+      "sha256": "aaeb33f094a8403847f429d1622de101b576fdd75725c9f8be470355acf80900",
+      "bytes": 13704,
+      "headings": 6
+    },
+    {
+      "id": "p14",
+      "title": "14. A3 LD 요구사항·WBS·개발현황",
+      "parent": "p00",
+      "file": "pages/14_A3_LD_요구사항·WBS·개발현황.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 4597,
+      "sha256": "96f9f331da0290236d066e6c976d872eff26791a54d36efc4ceb62735f55e0ea",
+      "bytes": 14291,
+      "headings": 8
+    },
+    {
+      "id": "p14a",
+      "title": "14-1. A3 LD 고객 요구 51개 · 2026-08 기준",
+      "parent": "p14",
+      "file": "pages/14a_A3_LD_고객_요구_51개_·_2026-08_기준.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 24938,
+      "sha256": "84d83ca5599d445cdd61ef20b61295bf1bf2f4a3da32390596da9ab3999eab5a",
+      "bytes": 46061,
+      "headings": 6
+    },
+    {
+      "id": "p14b",
+      "title": "14-2. A3 LD 협업 WBS 137개 · 2026-08 기준",
+      "parent": "p14",
+      "file": "pages/14b_A3_LD_협업_WBS_137개_·_2026-08_기준.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 21305,
+      "sha256": "ea62a649c877e3ae8c619f86ecd6937480b50fbea780f8e8276e04e759707938",
+      "bytes": 49752,
+      "headings": 7
+    },
+    {
+      "id": "p14c",
+      "title": "14-3. A3 LD 개발일정 36개 · 과거 계획",
+      "parent": "p14",
+      "file": "pages/14c_A3_LD_개발일정_36개_·_과거_계획.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 5491,
+      "sha256": "332b940d159e07e2c4504c81d1d20f78097f3aa99e31030c27ce6106da281992",
+      "bytes": 14527,
+      "headings": 5
+    },
+    {
+      "id": "p15",
+      "title": "15. A3 LD 장애대응과 미결사항",
+      "parent": "p00",
+      "file": "pages/15_A3_LD_장애대응과_미결사항.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 5371,
+      "sha256": "f7acf2182f59905c89101e028064bc7922fc77b7e00bbd66b990440f6f77c57d",
+      "bytes": 17266,
+      "headings": 14
+    },
+    {
+      "id": "p16",
+      "title": "16. A3 LD 자료·산출물·변경관리",
+      "parent": "p00",
+      "file": "pages/16_A3_LD_자료·산출물·변경관리.storage.xhtml.txt",
+      "attachment": null,
+      "bodyTextChars": 3202,
+      "sha256": "8942448fd704ac8251dd35ef2fae8baa506b51ea9481f1fc24fb810a927e3d4b",
+      "bytes": 13331,
+      "headings": 6
+    }
+  ],
+  "attachments": [
+    {
+      "file": "attachments/00_학습과대응경로.png",
+      "sha256": "49564fe483e96936a4f0229a9cdc14af0fe348fa5eee99e49c4c15fd814dbabc"
+    },
+    {
+      "file": "attachments/00_학습과대응경로.svg",
+      "sha256": "e1ea69d1020ad72975f35fbd6e6a6bd0663605e27dd29590a6fb31a2d5be78c2"
+    },
+    {
+      "file": "attachments/02_장비물류개념.png",
+      "sha256": "b2537f9094fdc6c458c010457a20cf1e72525210ff2078e1eb9d46e9c8bf8c22"
+    },
+    {
+      "file": "attachments/02_장비물류개념.svg",
+      "sha256": "a65d3c6b0f59ce8078e8e197bbddf022aa5b455eea9350fd58832738bf9bba78"
+    },
+    {
+      "file": "attachments/03_실행데이터흐름.png",
+      "sha256": "dd5871d07d089b81b715243eaeaf33bdfecf0e1f50da1229aa4bd6858145544f"
+    },
+    {
+      "file": "attachments/03_실행데이터흐름.svg",
+      "sha256": "b951148c62a508f29bbd22a09f62129f219016b53a8392a1d0f1a0d67df2d8e1"
+    },
+    {
+      "file": "attachments/06_좌표와보정경계.png",
+      "sha256": "ba932b96dc8f10b40170531326d3beb5181b1395385c48586c45c62e941baf85"
+    },
+    {
+      "file": "attachments/06_좌표와보정경계.svg",
+      "sha256": "73044123db319c086072c90dccb13ae13eace266dc75a4bc78dfbc0f8f80db97"
+    },
+    {
+      "file": "attachments/07_실행모드경계.png",
+      "sha256": "8568f497baf59a7b0d315c68b2c231deb07fb60134342840787d97e6acc31498"
+    },
+    {
+      "file": "attachments/07_실행모드경계.svg",
+      "sha256": "eecc11070eb4c32fad7e3abce4f6175f3310c581557fc91ebc205a7c3f814c40"
+    },
+    {
+      "file": "attachments/08_측정후보적용경계.png",
+      "sha256": "d76d04be8b982418f4a150dad9e2a9d96e75d07e898151f5771e87d5cb5ed9c7"
+    },
+    {
+      "file": "attachments/08_측정후보적용경계.svg",
+      "sha256": "c5de0c16e37243e6ab2131834c0ba5425e017c38e190d5938a7b956344a25726"
+    },
+    {
+      "file": "attachments/13_검증단계.png",
+      "sha256": "f752b447d4a98c0477e4f1c7a2c70410555163cc406dbce7a567f7ce8f07dc65"
+    },
+    {
+      "file": "attachments/13_검증단계.svg",
+      "sha256": "962c795fb59a99a3081a7323e7f830442d628c93def6877c27f7d8b61a496e94"
+    }
+  ],
+  "limits": [
+    "사내 Confluence 저장·렌더링 미검증",
+    "정식 빌드·장비·광학·고객 검수 미실행",
+    "모든 과거 대화 턴·삭제 첨부·사내 원문을 전수 확보한 것은 아님"
+  ]
+}
