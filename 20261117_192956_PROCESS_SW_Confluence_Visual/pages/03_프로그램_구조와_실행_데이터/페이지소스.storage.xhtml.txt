@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>입력값이 실행 조건이 되고 결과로 저장되는 경계를 이해한다.</strong></p>
+<ac:image ac:width="1200" ac:alt="03. 프로그램 구조와 실행 데이터"><ri:attachment ri:filename="03_핵심흐름.png"/></ac:image>
+<p>화면은 조작과 표시를 맡고 업무 관리 계층은 조건·상태를 관리하며 Station은 준비와 실행 순서를 연결한다. 준비할 때 Recipe에 장비 설정과 최신 보정을 합친 사본을 만들므로 이후 화면 편집값과 이미 준비한 값은 다를 수 있다.</p><h2>핵심 동작</h2><table class="wrapped"><tbody><tr><th>대상</th><th>현재 프로그램에서 하는 일</th></tr><tr><td>입력·저장 조건</td><td>Recipe와 장비 설정, 보정 파일을 관리한다.</td></tr><tr><td>실행 사본</td><td>이번 기판과 Head별 가공 조건을 묶는다.</td></tr><tr><td>장치·상태</td><td>통신·Task·축의 현재 결과를 수집한다.</td></tr><tr><td>결과·이력</td><td>기판 상태와 검사·보정 결과를 각각 저장한다.</td></tr></tbody></table><h2>확인할 것</h2><ul><li>문제의 값은 편집값·저장값·실행값 중 무엇인가?</li><li>준비한 시각과 적용한 보정본을 확인했는가?</li><li>화면·메모리·파일에서 같은 작업의 값을 비교했는가?</li></ul>
+<h2>그림으로 더 보기</h2><ac:image ac:width="1200" ac:alt="시작 객체와 화면·Manager·장치 계층의 연결입니다."><ri:attachment ri:filename="03_객체_연결.png"/></ac:image><p>시작 객체와 화면·Manager·장치 계층의 연결입니다.</p>
+</div>

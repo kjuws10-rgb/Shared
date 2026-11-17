@@ -1,0 +1,591 @@
+{
+  "title": "2) PROCESS SW 개발",
+  "pageCount": 17,
+  "figureCount": 27,
+  "pages": [
+    {
+      "id": "p00",
+      "title": "2) PROCESS SW 개발",
+      "parent": null,
+      "file": "pages/00_PROCESS_SW_개발/페이지소스.storage.xhtml.txt",
+      "folder": "pages/00_PROCESS_SW_개발",
+      "images": [
+        {
+          "file": "00_핵심흐름.png",
+          "svg": "00_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "be7aa6075a6f9b3d3d44b9d62647da5c8c8123f9790409ff0d0e076f6097ab6d"
+        }
+      ],
+      "bodyTextChars": 118,
+      "sha256": "8a9f6205a50aaa189f9afe9f4b600569f8d41cf2c255bbf5d628cebea7e1ba79",
+      "bytes": 4634
+    },
+    {
+      "id": "p01",
+      "title": "01. 프로그램 한눈에 보기",
+      "parent": "p00",
+      "file": "pages/01_프로그램_한눈에_보기/페이지소스.storage.xhtml.txt",
+      "folder": "pages/01_프로그램_한눈에_보기",
+      "images": [
+        {
+          "file": "01_핵심흐름.png",
+          "svg": "01_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "989e1639920fbcf65087bcc5e8d557c306b878ab84bfdff3de3fe9cc6274cb81"
+        },
+        {
+          "file": "01_기준점_구분.png",
+          "svg": "01_기준점_구분.svg",
+          "caption": "기판 기준 · Head 원점 · 제품의 가공점을 구분해 봅니다.",
+          "kind": "adapted_existing_visual",
+          "sha256": "d9b56ece4aaffa37055e48c6e76d57cb68b612119532242cd38cb02e70630d61"
+        }
+      ],
+      "bodyTextChars": 415,
+      "sha256": "aedc48e8ceb142a8006a85423eebca21d855178c2ca0af2a64814df19a797468",
+      "bytes": 1772
+    },
+    {
+      "id": "p02",
+      "title": "02. 장비 역할과 공정 흐름",
+      "parent": "p00",
+      "file": "pages/02_장비_역할과_공정_흐름/페이지소스.storage.xhtml.txt",
+      "folder": "pages/02_장비_역할과_공정_흐름",
+      "images": [
+        {
+          "file": "02_핵심흐름.png",
+          "svg": "02_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "1b0c0b6f76a9e7913a27048eaeb2b5c31f94ee1373152d20c043ed684850e6ae"
+        }
+      ],
+      "bodyTextChars": 422,
+      "sha256": "057267377b94eea43121158ffe14a3a4e9df60d57ee4b2b57e8eea7d29c7aeee",
+      "bytes": 1526
+    },
+    {
+      "id": "p03",
+      "title": "03. 프로그램 구조와 실행 데이터",
+      "parent": "p00",
+      "file": "pages/03_프로그램_구조와_실행_데이터/페이지소스.storage.xhtml.txt",
+      "folder": "pages/03_프로그램_구조와_실행_데이터",
+      "images": [
+        {
+          "file": "03_핵심흐름.png",
+          "svg": "03_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "e738c30d1cb9cb0f08d12bd8349785257cf3882de0b1351e1a00a2ba2a223b9b"
+        },
+        {
+          "file": "03_객체_연결.png",
+          "svg": "03_객체_연결.svg",
+          "caption": "시작 객체와 화면·Manager·장치 계층의 연결입니다.",
+          "kind": "adapted_existing_visual",
+          "sha256": "cefe4ec1b2d9ae9ee95518eedc36dc718ffa3e9f1cd118bb84f1ecfeec9b286f"
+        }
+      ],
+      "bodyTextChars": 432,
+      "sha256": "4b77de3e255f3b787f83a392f0138694bb2e59bcf6baf747954e437fe2b89aea",
+      "bytes": 1809
+    },
+    {
+      "id": "p04",
+      "title": "04. 실행 준비와 설정 관리",
+      "parent": "p00",
+      "file": "pages/04_실행_준비와_설정_관리/페이지소스.storage.xhtml.txt",
+      "folder": "pages/04_실행_준비와_설정_관리",
+      "images": [
+        {
+          "file": "04_핵심흐름.png",
+          "svg": "04_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "a47befd984cbdadb9b5ed4ec9e0f8c9d4f97dc21bfc1e61a510482261ecc8f93"
+        }
+      ],
+      "bodyTextChars": 380,
+      "sha256": "f0811678198e5d1bf61e7cfc81561357624a52bd524036f2833e493456bf3331",
+      "bytes": 1492
+    },
+    {
+      "id": "p05",
+      "title": "05. Recipe·PPID·운전 조건",
+      "parent": "p00",
+      "file": "pages/05_Recipe·PPID·운전_조건/페이지소스.storage.xhtml.txt",
+      "folder": "pages/05_Recipe·PPID·운전_조건",
+      "images": [
+        {
+          "file": "05_핵심흐름.png",
+          "svg": "05_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "c9a1b41f0d3a532a79586176edd320c679818e75875b32e919ca760b210ad0b6"
+        },
+        {
+          "file": "05_저장과_실행값.png",
+          "svg": "05_저장과_실행값.svg",
+          "caption": "정의 · 저장값 · 캐시 · 이번 실행 사본을 나눠 봅니다.",
+          "kind": "adapted_existing_visual",
+          "sha256": "8e1a85dd399b65849ead1287f90f14cb77a1e15468a1a9f81805640653f08e84"
+        }
+      ],
+      "bodyTextChars": 481,
+      "sha256": "93e353429c520232cdf41d45b9ac0cf2f110038d3cce00832d92aceec17f6323",
+      "bytes": 1911
+    },
+    {
+      "id": "p06",
+      "title": "06. 좌표 변환과 Head 분담",
+      "parent": "p00",
+      "file": "pages/06_좌표_변환과_Head_분담/페이지소스.storage.xhtml.txt",
+      "folder": "pages/06_좌표_변환과_Head_분담",
+      "images": [
+        {
+          "file": "06_핵심흐름.png",
+          "svg": "06_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "408f50ed5e2dcc4f15764fc84d35641e2ec5b2c21e5c1200ef90143fb6c20345"
+        },
+        {
+          "file": "06_DOE_배열_중심.png",
+          "svg": "06_DOE_배열_중심.svg",
+          "caption": "4×4 DOE 배열의 예시입니다. 배열의 가상 중심과 원빔의 실제 출사점을 구분합니다.",
+          "kind": "adapted_existing_visual",
+          "sha256": "20a2e52353b8df62a502e6acf4824981618913c630bfe2202b19f910c330a56a"
+        }
+      ],
+      "bodyTextChars": 538,
+      "sha256": "5b2421bc023feea8593a1c17f37341060748358a1415becd1428afc5c0714353",
+      "bytes": 1936
+    },
+    {
+      "id": "p07",
+      "title": "07. Scanner·MOF 실행",
+      "parent": "p00",
+      "file": "pages/07_Scanner·MOF_실행/페이지소스.storage.xhtml.txt",
+      "folder": "pages/07_Scanner·MOF_실행",
+      "images": [
+        {
+          "file": "07_핵심흐름.png",
+          "svg": "07_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "0d254f05fbc0dd8a694036c8b7cf4f5d7da7d373ba8b1e49de3d2c1b711ba25f"
+        },
+        {
+          "file": "07_미리보기와_실행.png",
+          "svg": "07_미리보기와_실행.svg",
+          "caption": "미리보기는 현재 선택값, 실행은 준비한 사본을 사용합니다.",
+          "kind": "adapted_existing_visual",
+          "sha256": "3749c1dc0542f04cbc6f3d99e7b4a716168d5a25789de43b293260736272bdaf"
+        }
+      ],
+      "bodyTextChars": 518,
+      "sha256": "352664fb3ed46e69228d1712e0024a0839aff40901842e4931bcb89efc73d924",
+      "bytes": 1902
+    },
+    {
+      "id": "p08",
+      "title": "08. Align·Review·검사·보정",
+      "parent": "p00",
+      "file": "pages/08_Align·Review·검사·보정/페이지소스.storage.xhtml.txt",
+      "folder": "pages/08_Align·Review·검사·보정",
+      "images": [
+        {
+          "file": "08_핵심흐름.png",
+          "svg": "08_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "dd2c00f3d940ab2241ceef78553854e61a3535003dee9bf9427ca6d9fedd05d4"
+        },
+        {
+          "file": "08_보정_반영시점.png",
+          "svg": "08_보정_반영시점.svg",
+          "caption": "보정을 저장해도 이미 가공한 홀은 움직이지 않습니다.",
+          "kind": "adapted_existing_visual",
+          "sha256": "98ed5c4bb8ee8abaf02eab3f632159640adf66ef37a36592a9b661795aa0a12c"
+        }
+      ],
+      "bodyTextChars": 505,
+      "sha256": "7a5b5f4608f195d320a430ddf21774fd49ec6a37f839131638a69e10c8706ffc",
+      "bytes": 1997
+    },
+    {
+      "id": "p09",
+      "title": "09. 통신과 장비 인터페이스",
+      "parent": "p00",
+      "file": "pages/09_통신과_장비_인터페이스/페이지소스.storage.xhtml.txt",
+      "folder": "pages/09_통신과_장비_인터페이스",
+      "images": [
+        {
+          "file": "09_핵심흐름.png",
+          "svg": "09_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "93dc4a0a2893b777b9355b29624bc22174630b03cbd77b019466644cce233c91"
+        },
+        {
+          "file": "09_장치별_통신경로.png",
+          "svg": "09_장치별_통신경로.svg",
+          "caption": "화면 요청이 장치별 통신을 거쳐 상태로 돌아오는 구조입니다.",
+          "kind": "adapted_existing_visual",
+          "sha256": "04218e098fc586b7d319d10a0466ff6a08b8152f05176ccf97e61a8da75b89c7"
+        }
+      ],
+      "bodyTextChars": 508,
+      "sha256": "48c02fa33861efa39fd1221b23f90cf62a2b198db5fef600833a9cdcf70f1819",
+      "bytes": 2043
+    },
+    {
+      "id": "p10",
+      "title": "10. 광학 장치와 Power 측정",
+      "parent": "p00",
+      "file": "pages/10_광학_장치와_Power_측정/페이지소스.storage.xhtml.txt",
+      "folder": "pages/10_광학_장치와_Power_측정",
+      "images": [
+        {
+          "file": "10_핵심흐름.png",
+          "svg": "10_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "35c7fa7173d7d11914c0b653e184a305b2d6aeb7f0c71cf6588d70f748950803"
+        },
+        {
+          "file": "10_Power_수집구간.png",
+          "svg": "10_Power_수집구간.svg",
+          "caption": "출사 직후 구간과 실제 평균에 사용하는 수집 구간을 구분합니다.",
+          "kind": "adapted_existing_visual",
+          "sha256": "c8a73751a74383de793141b96d8bab6471f836a1bf5de460d460bd1a851e43b4"
+        }
+      ],
+      "bodyTextChars": 632,
+      "sha256": "55f002091639a69d72c2b7cf8a057b9241bd95ef0fbbee7bc740eb31443c8968",
+      "bytes": 2213
+    },
+    {
+      "id": "p11",
+      "title": "11. 운전 화면과 Manual·Auto",
+      "parent": "p00",
+      "file": "pages/11_운전_화면과_Manual·Auto/페이지소스.storage.xhtml.txt",
+      "folder": "pages/11_운전_화면과_Manual·Auto",
+      "images": [
+        {
+          "file": "11_핵심흐름.png",
+          "svg": "11_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "ecaed1a3189c8632f3738fd9f91e1f26a683cafb5c247f59cc5b7fae08120c1f"
+        }
+      ],
+      "bodyTextChars": 529,
+      "sha256": "0f9231d55c12f0be542da5602fa0c96b2aa8d1456f703a1ce3fc0fae09163604",
+      "bytes": 1864
+    },
+    {
+      "id": "p12",
+      "title": "12. Alarm·Interlock·Stop·Reset",
+      "parent": "p00",
+      "file": "pages/12_Alarm·Interlock·Stop·Reset/페이지소스.storage.xhtml.txt",
+      "folder": "pages/12_Alarm·Interlock·Stop·Reset",
+      "images": [
+        {
+          "file": "12_핵심흐름.png",
+          "svg": "12_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "da8b8219e8e5242b3594881a8b63bccc2513f4a3ac263148ed57a9863e95f72c"
+        },
+        {
+          "file": "12_윈도우_교체요청.png",
+          "svg": "12_윈도우_교체요청.svg",
+          "caption": "보호윈도우의 최초 교체 요청과 추가 요청 횟수를 구분합니다.",
+          "kind": "adapted_existing_visual",
+          "sha256": "a835ef165d38444733e6393035aa71e25deeea421e4af727de727f695f40b894"
+        }
+      ],
+      "bodyTextChars": 555,
+      "sha256": "8bf97d5de9888a44db5a16c6f8ee4a2ae3d3393f4ee8385a44664c16f5f81224",
+      "bytes": 2099
+    },
+    {
+      "id": "p13",
+      "title": "13. 개발 시험과 결과 확인",
+      "parent": "p00",
+      "file": "pages/13_개발_시험과_결과_확인/페이지소스.storage.xhtml.txt",
+      "folder": "pages/13_개발_시험과_결과_확인",
+      "images": [
+        {
+          "file": "13_핵심흐름.png",
+          "svg": "13_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "56b9eea59d6f49e5ae7a03376701dc9954caacd81c7875d3832d75aef173a581"
+        }
+      ],
+      "bodyTextChars": 469,
+      "sha256": "fdd7bd89cdd641eb677c76c4988b83bfa0f5e90c347b8ac604759114b1ff1e27",
+      "bytes": 1825
+    },
+    {
+      "id": "p14",
+      "title": "14. 현재 기능과 개발 확인사항",
+      "parent": "p00",
+      "file": "pages/14_현재_기능과_개발_확인사항/페이지소스.storage.xhtml.txt",
+      "folder": "pages/14_현재_기능과_개발_확인사항",
+      "images": [
+        {
+          "file": "14_핵심흐름.png",
+          "svg": "14_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "1f226afe9eb8b5d03699c197d65f6b97ea81b842f0a7b996c1bb2b9ef9bce390"
+        }
+      ],
+      "bodyTextChars": 532,
+      "sha256": "f15dbd6e43bca9da7a541bba8b7851cc51739eed37071948b8517b6fe0a9e5e7",
+      "bytes": 2007
+    },
+    {
+      "id": "p15",
+      "title": "15. 증상별 개발 확인",
+      "parent": "p00",
+      "file": "pages/15_증상별_개발_확인/페이지소스.storage.xhtml.txt",
+      "folder": "pages/15_증상별_개발_확인",
+      "images": [
+        {
+          "file": "15_핵심흐름.png",
+          "svg": "15_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "f60cdfd4ec2658bfcb26ae37ce3003db6785504e50c2c31567ad9af94e355133"
+        },
+        {
+          "file": "15_알람_시간축.png",
+          "svg": "15_알람_시간축.svg",
+          "caption": "선택한 알람 시각에 맞춰 관련 로그와 조사 후보를 비교합니다.",
+          "kind": "adapted_existing_visual",
+          "sha256": "56898ba80c8d716ef58450f909e3e3f350da1b5e580f5420df79333a90a76d03"
+        }
+      ],
+      "bodyTextChars": 570,
+      "sha256": "8235018d489b2d9e872d677427fda75e176642d251a54cb1e92a5b5595e7a56d",
+      "bytes": 2205
+    },
+    {
+      "id": "p16",
+      "title": "16. 데이터 관리와 변경 반영",
+      "parent": "p00",
+      "file": "pages/16_데이터_관리와_변경_반영/페이지소스.storage.xhtml.txt",
+      "folder": "pages/16_데이터_관리와_변경_반영",
+      "images": [
+        {
+          "file": "16_핵심흐름.png",
+          "svg": "16_핵심흐름.svg",
+          "caption": "",
+          "kind": "recomposed_current_program",
+          "sha256": "1d26411407f35d22d64bbd4d5322ad895b7d463edb15a9a1a4336c4a454142c5"
+        }
+      ],
+      "bodyTextChars": 535,
+      "sha256": "1877fb428d3b8161f52a7ad72e96aa760b38f451c812889edf8f161f3027ccb6",
+      "bytes": 1917
+    }
+  ],
+  "figures": [
+    {
+      "page": "p00",
+      "file": "attachments/00_핵심흐름.png",
+      "svg": "attachments/00_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "be7aa6075a6f9b3d3d44b9d62647da5c8c8123f9790409ff0d0e076f6097ab6d"
+    },
+    {
+      "page": "p01",
+      "file": "attachments/01_핵심흐름.png",
+      "svg": "attachments/01_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "989e1639920fbcf65087bcc5e8d557c306b878ab84bfdff3de3fe9cc6274cb81"
+    },
+    {
+      "page": "p02",
+      "file": "attachments/02_핵심흐름.png",
+      "svg": "attachments/02_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "1b0c0b6f76a9e7913a27048eaeb2b5c31f94ee1373152d20c043ed684850e6ae"
+    },
+    {
+      "page": "p03",
+      "file": "attachments/03_핵심흐름.png",
+      "svg": "attachments/03_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "e738c30d1cb9cb0f08d12bd8349785257cf3882de0b1351e1a00a2ba2a223b9b"
+    },
+    {
+      "page": "p04",
+      "file": "attachments/04_핵심흐름.png",
+      "svg": "attachments/04_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "a47befd984cbdadb9b5ed4ec9e0f8c9d4f97dc21bfc1e61a510482261ecc8f93"
+    },
+    {
+      "page": "p05",
+      "file": "attachments/05_핵심흐름.png",
+      "svg": "attachments/05_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "c9a1b41f0d3a532a79586176edd320c679818e75875b32e919ca760b210ad0b6"
+    },
+    {
+      "page": "p06",
+      "file": "attachments/06_핵심흐름.png",
+      "svg": "attachments/06_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "408f50ed5e2dcc4f15764fc84d35641e2ec5b2c21e5c1200ef90143fb6c20345"
+    },
+    {
+      "page": "p07",
+      "file": "attachments/07_핵심흐름.png",
+      "svg": "attachments/07_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "0d254f05fbc0dd8a694036c8b7cf4f5d7da7d373ba8b1e49de3d2c1b711ba25f"
+    },
+    {
+      "page": "p08",
+      "file": "attachments/08_핵심흐름.png",
+      "svg": "attachments/08_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "dd2c00f3d940ab2241ceef78553854e61a3535003dee9bf9427ca6d9fedd05d4"
+    },
+    {
+      "page": "p09",
+      "file": "attachments/09_핵심흐름.png",
+      "svg": "attachments/09_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "93dc4a0a2893b777b9355b29624bc22174630b03cbd77b019466644cce233c91"
+    },
+    {
+      "page": "p10",
+      "file": "attachments/10_핵심흐름.png",
+      "svg": "attachments/10_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "35c7fa7173d7d11914c0b653e184a305b2d6aeb7f0c71cf6588d70f748950803"
+    },
+    {
+      "page": "p11",
+      "file": "attachments/11_핵심흐름.png",
+      "svg": "attachments/11_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "ecaed1a3189c8632f3738fd9f91e1f26a683cafb5c247f59cc5b7fae08120c1f"
+    },
+    {
+      "page": "p12",
+      "file": "attachments/12_핵심흐름.png",
+      "svg": "attachments/12_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "da8b8219e8e5242b3594881a8b63bccc2513f4a3ac263148ed57a9863e95f72c"
+    },
+    {
+      "page": "p13",
+      "file": "attachments/13_핵심흐름.png",
+      "svg": "attachments/13_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "56b9eea59d6f49e5ae7a03376701dc9954caacd81c7875d3832d75aef173a581"
+    },
+    {
+      "page": "p14",
+      "file": "attachments/14_핵심흐름.png",
+      "svg": "attachments/14_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "1f226afe9eb8b5d03699c197d65f6b97ea81b842f0a7b996c1bb2b9ef9bce390"
+    },
+    {
+      "page": "p15",
+      "file": "attachments/15_핵심흐름.png",
+      "svg": "attachments/15_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "f60cdfd4ec2658bfcb26ae37ce3003db6785504e50c2c31567ad9af94e355133"
+    },
+    {
+      "page": "p16",
+      "file": "attachments/16_핵심흐름.png",
+      "svg": "attachments/16_핵심흐름.svg",
+      "kind": "recomposed_current_program",
+      "sha256": "1d26411407f35d22d64bbd4d5322ad895b7d463edb15a9a1a4336c4a454142c5"
+    },
+    {
+      "page": "p01",
+      "file": "attachments/01_기준점_구분.png",
+      "svg": "attachments/01_기준점_구분.svg",
+      "kind": "adapted_existing_visual",
+      "sha256": "d9b56ece4aaffa37055e48c6e76d57cb68b612119532242cd38cb02e70630d61"
+    },
+    {
+      "page": "p03",
+      "file": "attachments/03_객체_연결.png",
+      "svg": "attachments/03_객체_연결.svg",
+      "kind": "adapted_existing_visual",
+      "sha256": "cefe4ec1b2d9ae9ee95518eedc36dc718ffa3e9f1cd118bb84f1ecfeec9b286f"
+    },
+    {
+      "page": "p05",
+      "file": "attachments/05_저장과_실행값.png",
+      "svg": "attachments/05_저장과_실행값.svg",
+      "kind": "adapted_existing_visual",
+      "sha256": "8e1a85dd399b65849ead1287f90f14cb77a1e15468a1a9f81805640653f08e84"
+    },
+    {
+      "page": "p06",
+      "file": "attachments/06_DOE_배열_중심.png",
+      "svg": "attachments/06_DOE_배열_중심.svg",
+      "kind": "adapted_existing_visual",
+      "sha256": "20a2e52353b8df62a502e6acf4824981618913c630bfe2202b19f910c330a56a"
+    },
+    {
+      "page": "p07",
+      "file": "attachments/07_미리보기와_실행.png",
+      "svg": "attachments/07_미리보기와_실행.svg",
+      "kind": "adapted_existing_visual",
+      "sha256": "3749c1dc0542f04cbc6f3d99e7b4a716168d5a25789de43b293260736272bdaf"
+    },
+    {
+      "page": "p08",
+      "file": "attachments/08_보정_반영시점.png",
+      "svg": "attachments/08_보정_반영시점.svg",
+      "kind": "adapted_existing_visual",
+      "sha256": "98ed5c4bb8ee8abaf02eab3f632159640adf66ef37a36592a9b661795aa0a12c"
+    },
+    {
+      "page": "p09",
+      "file": "attachments/09_장치별_통신경로.png",
+      "svg": "attachments/09_장치별_통신경로.svg",
+      "kind": "adapted_existing_visual",
+      "sha256": "04218e098fc586b7d319d10a0466ff6a08b8152f05176ccf97e61a8da75b89c7"
+    },
+    {
+      "page": "p10",
+      "file": "attachments/10_Power_수집구간.png",
+      "svg": "attachments/10_Power_수집구간.svg",
+      "kind": "adapted_existing_visual",
+      "sha256": "c8a73751a74383de793141b96d8bab6471f836a1bf5de460d460bd1a851e43b4"
+    },
+    {
+      "page": "p12",
+      "file": "attachments/12_윈도우_교체요청.png",
+      "svg": "attachments/12_윈도우_교체요청.svg",
+      "kind": "adapted_existing_visual",
+      "sha256": "a835ef165d38444733e6393035aa71e25deeea421e4af727de727f695f40b894"
+    },
+    {
+      "page": "p15",
+      "file": "attachments/15_알람_시간축.png",
+      "svg": "attachments/15_알람_시간축.svg",
+      "kind": "adapted_existing_visual",
+      "sha256": "56898ba80c8d716ef58450f909e3e3f350da1b5e580f5420df79333a90a76d03"
+    }
+  ]
+}

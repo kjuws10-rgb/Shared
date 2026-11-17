@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>각 장치의 역할과 현재 운전 요청이 처리되는 순서를 구분한다.</strong></p>
+<ac:image ac:width="1200" ac:alt="02. 장비 역할과 공정 흐름"><ri:attachment ri:filename="02_핵심흐름.png"/></ac:image>
+<p>Stage는 기판을 옮기고 Scanner와 Laser는 가공하며 Vision은 기준점과 결과를 측정한다. Process는 준비 요청에서 조건·좌표·실행 파일을 만들고 가공 요청에서 준비된 대상을 실행한다. 현재 자동 준비는 Shift X/Y를 0으로 정리하므로 수동 운전의 Shift와 구분한다.</p><h2>핵심 동작</h2><table class="wrapped"><tbody><tr><th>대상</th><th>현재 프로그램에서 하는 일</th></tr><tr><td>Stage</td><td>기판 이동·위치·상태와 운전 요청을 전달한다.</td></tr><tr><td>Scanner·Laser</td><td>준비한 가공점과 조건으로 동작한다.</td></tr><tr><td>Vision</td><td>검사 계획에 맞춰 마크·가공 결과를 측정한다.</td></tr><tr><td>Process</td><td>작업 조건·장치 상태·완료 결과를 연결한다.</td></tr></tbody></table><h2>확인할 것</h2><ul><li>준비 요청인지 가공 실행 요청인지 구분했는가?</li><li>활성 Head와 실제 실행 대상이 같은가?</li><li>이전 작업의 요청·완료 신호가 정리되었는가?</li></ul>
+
+</div>

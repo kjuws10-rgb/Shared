@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>보는 조건, 선택한 조건, 실제 실행에 적용한 조건을 나누어 이해한다.</strong></p>
+<ac:image ac:width="1200" ac:alt="05. Recipe·PPID·운전 조건"><ri:attachment ri:filename="05_핵심흐름.png"/></ac:image>
+<p>Recipe는 가공 조건을 담고 PPID는 상위 요청의 조건을 식별한다. 현재 화면은 보고 있는 Recipe와 선택한 운전 Recipe를 구분하며 선택·저장·실행 적용을 따로 확인한다.</p><h2>핵심 동작</h2><table class="wrapped"><tbody><tr><th>대상</th><th>현재 프로그램에서 하는 일</th></tr><tr><td>보기·선택</td><td>편집 대상과 운전 대상을 구분하고 선택 이력을 남긴다.</td></tr><tr><td>Recipe 저장</td><td>제품·Cell·Head 조건과 변경 내용을 관리한다.</td></tr><tr><td>실행 적용</td><td>준비 시 저장 조건과 설정·보정을 합쳐 이번 기판에 고정한다.</td></tr><tr><td>상위 연결</td><td>PPID 연결과 전체 전환 완료는 선택 기능과 별도 연동 항목이다.</td></tr><tr><td>실적·신호</td><td>측정·누적 매수·요청·완료를 제품 목표값과 분리한다.</td></tr></tbody></table><h2>확인할 것</h2><ul><li>보는 Recipe와 현재 선택 Recipe가 같은가?</li><li>이번 기판에 준비한 조건과 상위 요청이 맞는가?</li><li>실패 지점이 저장·전달·적용·보고 중 어디인가?</li></ul>
+<h2>그림으로 더 보기</h2><ac:image ac:width="1200" ac:alt="정의 · 저장값 · 캐시 · 이번 실행 사본을 나눠 봅니다."><ri:attachment ri:filename="05_저장과_실행값.png"/></ac:image><p>정의 · 저장값 · 캐시 · 이번 실행 사본을 나눠 봅니다.</p>
+</div>

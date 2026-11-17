@@ -1,0 +1,15 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>요청이 어떤 통신 경로를 거쳐 현재 상태와 완료 판정으로 돌아오는지 연결한다.</strong></p>
+<ac:image ac:width="1200" ac:alt="09. 통신과 장비 인터페이스"><ri:attachment ri:filename="09_핵심흐름.png"/></ac:image>
+<p>연결, 요청 수락, 실제 동작 완료를 각각의 상태로 판정한다.</p>
+<h2>개발 데이터와 확인 범위</h2>
+<table class="wrapped"><tbody><tr><th>구분</th><th>개발 데이터</th><th>확인할 경계</th></tr><tr><td>장치 등록</td><td>타입·모듈·번호·연결 옵션</td><td>등록과 실제 Driver 선택 일치</td></tr><tr><td>일반 I/F</td><td>명령·응답·오류</td><td>빈 응답·파싱 실패·Timeout 구분</td></tr><tr><td>Stage</td><td>논리 ID·주소·형식·배율</td><td>쓰기 이후 새 readback과 실제 완료</td></tr><tr><td>Automation1·Motion</td><td>Controller·Task·축·상태</td><td>요청 반환과 Task·축 종료</td></tr><tr><td>Vision</td><td>요청 회차·점 수·결과</td><td>현재 기판·계획과 수신 결과 연결</td></tr></tbody></table>
+<h2>확인할 것</h2>
+<ul><li>장치 타입·번호·단위와 실제로 선택된 통신 경로가 일치하는가?</li><li>마지막 수신 시각·오류를 함께 검사하여 오래된 값을 구분하는가?</li><li>지연·중복·단절 뒤 응답이 이전 작업의 완료로 연결되지 않는가?</li></ul>
+<p>재연결 뒤에는 미완료 요청의 상태를 먼저 확인하고 재전송 여부를 결정한다.</p>
+<h2>그림으로 더 보기</h2><ac:image ac:width="1200" ac:alt="화면 요청이 장치별 통신을 거쳐 상태로 돌아오는 구조입니다."><ri:attachment ri:filename="09_장치별_통신경로.png"/></ac:image><p>화면 요청이 장치별 통신을 거쳐 상태로 돌아오는 구조입니다.</p>
+</div>

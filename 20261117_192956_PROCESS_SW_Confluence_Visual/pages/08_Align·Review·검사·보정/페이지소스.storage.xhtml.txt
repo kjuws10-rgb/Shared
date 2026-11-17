@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>측정과 판정, 보정 후보와 다음 가공 적용을 구분한다.</strong></p>
+<ac:image ac:width="1200" ac:alt="08. Align·Review·검사·보정"><ri:attachment ri:filename="08_핵심흐름.png"/></ac:image>
+<p>검사는 오차를 측정하고 판정하는 일이며 보정은 유효한 결과로 다음 가공에 사용할 값을 만드는 일이다. 일반 AUTO는 결과 저장과 전체 OK를 확인한 뒤 새 Review 보정본을 저장하며 0선 후속검사는 기존 보정을 유지한다.</p><h2>핵심 동작</h2><table class="wrapped"><tbody><tr><th>대상</th><th>현재 프로그램에서 하는 일</th></tr><tr><td>Align·Distortion</td><td>현재 기판의 기준 편차를 계산하고 가공 준비에 연결한다.</td></tr><tr><td>Review</td><td>측정·단위 변환·허용오차 판정과 결과를 저장한다.</td></tr><tr><td>Fine 보정</td><td>같은 Cell·설계 X열의 측정값으로 Y방향 보정량을 계산한다.</td></tr><tr><td>보정 적용</td><td>후보·저장본·다음 준비에서 사용한 값을 구분한다.</td></tr><tr><td>편집·재검사</td><td>수동 수정과 새 측정을 구분하고 같은 결과의 재적용을 확인한다.</td></tr></tbody></table><h2>확인할 것</h2><ul><li>계획한 점과 받은 결과의 식별자·개수가 맞는가?</li><li>찾기 실패·허용오차 NG·미측정·실제 0을 구분했는가?</li><li>현재 보정본과 새 후보, 다음 준비에서 읽은 값이 같은가?</li></ul>
+<h2>그림으로 더 보기</h2><ac:image ac:width="1200" ac:alt="보정을 저장해도 이미 가공한 홀은 움직이지 않습니다."><ri:attachment ri:filename="08_보정_반영시점.png"/></ac:image><p>보정을 저장해도 이미 가공한 홀은 움직이지 않습니다.</p>
+</div>

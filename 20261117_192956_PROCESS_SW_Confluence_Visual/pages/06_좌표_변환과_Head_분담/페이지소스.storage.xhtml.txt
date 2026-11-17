@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>설계점이 어떤 Head의 가공 좌표와 Encoder 대기점으로 바뀌는지 이해한다.</strong></p>
+<ac:image ac:width="1200" ac:alt="06. 좌표 변환과 Head 분담"><ri:attachment ri:filename="06_핵심흐름.png"/></ac:image>
+<p>설계점에서 Head를 정하고 Stage 대기거리와 축 방향 변환을 거쳐 최종 Scanner 좌표를 만든다. 설치 기준·빔 대응·Align·Review 보정은 각 기준을 맞춰 더하며 Encoder 대기값은 별도로 계산한다.</p><h2>핵심 동작</h2><table class="wrapped"><tbody><tr><th>대상</th><th>현재 프로그램에서 하는 일</th></tr><tr><td>Head 배정</td><td>설계 X와 Head 중심·X 범위로 담당 후보를 고른다.</td></tr><tr><td>축·단위</td><td>설계 mm, 영상 Pixel, Scanner 좌표와 Encoder Count를 구분한다.</td></tr><tr><td>보정</td><td>Default·First·Align·Review를 변환해 합산한다.</td></tr><tr><td>Shift</td><td>Y는 Stage 대기거리에도, X는 별도 축 변환에 반영된다.</td></tr><tr><td>Default</td><td>격자 값 1/4와 검사 슬롯 1/16을 구별한다.</td></tr></tbody></table><h2>확인할 것</h2><ul><li>같은 Shot의 각 좌표를 단위와 함께 비교했는가?</li><li>Head 배정과 축 방향·진행 부호가 맞는가?</li><li>화면 미리보기와 이번 실행에 사용한 보정본이 같은가?</li></ul>
+<h2>그림으로 더 보기</h2><ac:image ac:width="1200" ac:alt="4×4 DOE 배열의 예시입니다. 배열의 가상 중심과 원빔의 실제 출사점을 구분합니다."><ri:attachment ri:filename="06_DOE_배열_중심.png"/></ac:image><p>4×4 DOE 배열의 예시입니다. 배열의 가상 중심과 원빔의 실제 출사점을 구분합니다.</p>
+</div>

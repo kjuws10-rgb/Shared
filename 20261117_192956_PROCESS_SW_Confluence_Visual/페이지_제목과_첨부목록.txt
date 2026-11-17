@@ -1,0 +1,91 @@
+페이지 생성과 그림 첨부
+
+상위 제목을 정확히 2) PROCESS SW 개발 로 만드세요.
+01~16은 그 아래에 만드세요.
+각 페이지 폴더의 PNG를 해당 페이지에 먼저 첨부하고 소스를 붙여넣으세요.
+제목과 그림 파일명을 유지하면 내부 링크와 그림이 연결됩니다.
+
+2) PROCESS SW 개발
+  폴더: pages/00_PROCESS_SW_개발
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 00_핵심흐름.png
+
+01. 프로그램 한눈에 보기
+  폴더: pages/01_프로그램_한눈에_보기
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 01_핵심흐름.png, 01_기준점_구분.png
+
+02. 장비 역할과 공정 흐름
+  폴더: pages/02_장비_역할과_공정_흐름
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 02_핵심흐름.png
+
+03. 프로그램 구조와 실행 데이터
+  폴더: pages/03_프로그램_구조와_실행_데이터
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 03_핵심흐름.png, 03_객체_연결.png
+
+04. 실행 준비와 설정 관리
+  폴더: pages/04_실행_준비와_설정_관리
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 04_핵심흐름.png
+
+05. Recipe·PPID·운전 조건
+  폴더: pages/05_Recipe·PPID·운전_조건
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 05_핵심흐름.png, 05_저장과_실행값.png
+
+06. 좌표 변환과 Head 분담
+  폴더: pages/06_좌표_변환과_Head_분담
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 06_핵심흐름.png, 06_DOE_배열_중심.png
+
+07. Scanner·MOF 실행
+  폴더: pages/07_Scanner·MOF_실행
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 07_핵심흐름.png, 07_미리보기와_실행.png
+
+08. Align·Review·검사·보정
+  폴더: pages/08_Align·Review·검사·보정
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 08_핵심흐름.png, 08_보정_반영시점.png
+
+09. 통신과 장비 인터페이스
+  폴더: pages/09_통신과_장비_인터페이스
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 09_핵심흐름.png, 09_장치별_통신경로.png
+
+10. 광학 장치와 Power 측정
+  폴더: pages/10_광학_장치와_Power_측정
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 10_핵심흐름.png, 10_Power_수집구간.png
+
+11. 운전 화면과 Manual·Auto
+  폴더: pages/11_운전_화면과_Manual·Auto
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 11_핵심흐름.png
+
+12. Alarm·Interlock·Stop·Reset
+  폴더: pages/12_Alarm·Interlock·Stop·Reset
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 12_핵심흐름.png, 12_윈도우_교체요청.png
+
+13. 개발 시험과 결과 확인
+  폴더: pages/13_개발_시험과_결과_확인
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 13_핵심흐름.png
+
+14. 현재 기능과 개발 확인사항
+  폴더: pages/14_현재_기능과_개발_확인사항
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 14_핵심흐름.png
+
+15. 증상별 개발 확인
+  폴더: pages/15_증상별_개발_확인
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 15_핵심흐름.png, 15_알람_시간축.png
+
+16. 데이터 관리와 변경 반영
+  폴더: pages/16_데이터_관리와_변경_반영
+  붙여넣기: 페이지소스.storage.xhtml.txt
+  먼저 첨부할 그림: 16_핵심흐름.png

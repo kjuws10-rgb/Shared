@@ -1,0 +1,15 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>설정·Recipe·Calibration·보정·실행 결과의 저장 경계와 변경이 실행에 반영되는 단계를 정한다.</strong></p>
+<ac:image ac:width="1200" ac:alt="16. 데이터 관리와 변경 반영"><ri:attachment ri:filename="16_핵심흐름.png"/></ac:image>
+<p>저장, 재로드, 새 준비, 실행을 단계별로 확인한다. 결과는 원자료를 유지하고 보정 적용본을 별도로 관리한다.</p>
+<h2>개발 데이터와 확인 범위</h2>
+<table class="wrapped"><tbody><tr><th>구분</th><th>개발 데이터</th><th>확인할 경계</th></tr><tr><td>환경설정</td><td>장치 연결·I/F 맵·Head/축 매핑</td><td>사용 경로·타입·배율·읽는 시점</td></tr><tr><td>Recipe</td><td>제품·가공·검사·Power 관련 조건</td><td>저장/재로드·실행 합성 우선순위</td></tr><tr><td>Calibration</td><td>장비별 단위·좌표·변환 기준</td><td>대상 장치·단위·유효 범위</td></tr><tr><td>보정</td><td>종류별 현재 적용본·이력·원복 기준</td><td>Current/Delta/Final·다음 준비 반영</td></tr><tr><td>실행 결과</td><td>Glass/Run·원측정·NG·보고</td><td>작업 귀속·저장 실패·재시작 복원</td></tr></tbody></table>
+<h2>확인할 것</h2>
+<ul><li>변경 전후 자료의 대상·시각·버전과 현재 읽는 경로가 확인되는가?</li><li>저장→재로드→새 준비 후 기대한 실행값·계획으로 반영되는가?</li><li>실패 시 원자료와 직전 적용본을 유지하고 복원 범위를 확인할 수 있는가?</li></ul>
+<p>변경은 대상 자료 확인→복사본 보존→값 검증→저장/재로드→재준비→결과 비교 순서로 확인한다.</p>
+
+</div>
