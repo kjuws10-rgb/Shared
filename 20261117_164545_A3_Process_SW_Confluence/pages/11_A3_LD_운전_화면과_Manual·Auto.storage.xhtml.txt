@@ -1,5 +1,5 @@
 <div>
-<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 코드 기준:</strong> Ver11.17.0 | <strong>UI 프로젝트 Version:</strong> 2026.11.13.0</p>
 <ac:structured-macro ac:macro-id="83e51b72-4326-5ecf-82d8-c83da00ebb2a" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 <ac:structured-macro ac:macro-id="2a1b3f89-71d3-515b-8f49-7e5850138a05" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
@@ -30,7 +30,7 @@
 <h2>5. Review 화면에서 특히 구분할 것</h2>
 <p>생산 코드의 REVIEW DATA에는 결과 Load, 재검사, KEY IN/COPY 편집, RESULT SAVE와 OFFSET APPLY 경로가 있다. COPY는 다른 Shot의 결과 후보를 편집하는 기능이며 대상의 새 촬영도, 현재 보정 snapshot 복사도 아니다. 저장한 EDIT 결과가 적용 후보가 되는지는 RESULT_SOURCE 열이 있는지에 따라 다르므로 <ac:link><ri:page ri:content-title="08. A3 LD Align·Review·검사·보정"/><ac:plain-text-link-body><![CDATA[검사·보정 페이지]]></ac:plain-text-link-body></ac:link>의 형식 경계를 함께 읽는다.</p>
 <p>산포도의 표시 범위는 그리기 설정이다. 기존 지도 초록은 결과 존재를, 산포도 색은 Judge를 표현할 수 있으므로 지도 색과 품질 판정을 같게 해석하지 않는다. 원측정과 작업 편집, MEASURED/INTERPOLATED/EDITED, raw/변환 오차, 미측정과 실제 0을 구분해야 한다.</p>
-<p>Shared의 11월16일 단독 Review 작업공간 HTML은 지도·표·산포도와 측정/보정 조작을 교육·검토하기 위한 별도 산출물이다. 그 HTML의 originalMeasurement 보존, 대표 최종 F 복사, “이동 후 측정 &amp; 보정” 검증 Gate는 해당 HTML의 검증 결과다. 생산 C#에 동일하게 이식·현장 검증된 기능이라는 의미가 아니다.</p>
+<p>11월 16일 교육용 Review 작업공간 HTML은 지도·표·산포도와 측정/보정 조작을 교육·검토하기 위한 별도 산출물이다. 그 HTML의 originalMeasurement 보존, 대표 최종 F 복사, “이동 후 측정 &amp; 보정” 검증 Gate는 해당 HTML의 검증 결과다. 생산 C#에 동일하게 이식·현장 검증된 기능이라는 의미가 아니다.</p>
 <h2>6. 11월17일 추가 UI 코드의 확인 범위</h2>
 <p>원격 master 9a43c709에는 다음 네 파일이 추가되었고, 부모 dfa5920e에서 기존 C#/XAML/csproj의 변경은 없었다. Commit 메시지는 Ver 11.17.0이지만 UI 프로젝트의 Version은 2026.11.13.0으로 남아 있으므로 실제 배포 식별자는 Commit과 바이너리 기준을 함께 확인한다.</p>
 <table><tbody><tr><th>추가 파일</th><th>파일 내부에서 확인한 것</th><th>아직 입증되지 않은 것</th></tr>
@@ -41,7 +41,28 @@
 <p>SDK 형식 프로젝트의 기본 항목에 편입되는 구조와 호출·배포·실행 성공은 별개다. 이번 문서 작성에서는 정식 빌드와 장비 UI 실행을 하지 않았다.</p>
 <h2>7. 인수인계 실습과 완료 기준</h2>
 <ol><li>동일한 가상 Shot을 Main Preview, 준비 계획, Script, Review 결과에서 식별자로 찾아 설명한다.</li><li>가상 Recipe 값을 바꾸고 현재 표시와 이미 준비된 실행 snapshot의 차이를 설명한다.</li><li>측정 NG, 수동 EDIT OK, 미측정, 실제 0의 자료를 구분하고 보정 가능 여부를 설명한다.</li><li>재검사 Revision을 만들기 전후 원본과 변경 행을 비교하고 Offset Apply를 별도 단계로 설명한다.</li><li>증상이 생겼을 때 <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응 페이지]]></ac:plain-text-link-body></ac:link>의 자료 묶음을 만들어 담당 개발자에게 전달한다.</li></ol>
-<p>이 실습표는 학습 확인 기준이며 실제 수행·통과 기록은 아니다. 장비 권한, 담당자 연락 경로, 배포본 위치와 정상 화면 예시는 현장 인수인계 시 해당 장비의 승인 자료로 확정한다.</p>
-<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td>Drilling.UI/Menu/Menus/CMenuMain.cs:49–51<br/><code>Drilling.UI/Menu/Menus/CMenuMain.cs:L49-L51</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.UI/Menu/Menus/CMenuMain.cs:177–413<br/><code>Drilling.UI/Menu/Menus/CMenuMain.cs:L177-L413</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Review/CReviewResultLevelSettings.cs:14–175<br/><code>Drilling.Common/Review/CReviewResultLevelSettings.cs:L14-L175</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.UI/Popup/CColorPickerDialog.xaml.cs:9–88<br/><code>Drilling.UI/Popup/CColorPickerDialog.xaml.cs:L9-L88</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.UI/Views/CReviewShotMapControl.cs:13–170<br/><code>Drilling.UI/Views/CReviewShotMapControl.cs:L13-L170</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.UI/Drilling.UI.csproj:15–26<br/><code>Drilling.UI/Drilling.UI.csproj:L15-L26</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>11.13.0 코드 해설: 05_결과_Revision_Product_연결.md</td><td>dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.</td></tr><tr><td>11월16일 단독 Review 작업공간 HTML</td><td>독립 교육·검토용 HTML, 해당 UI 검증 범위. 생산 WPF 이식·현장 승인 증거 아님.</td></tr></tbody></table>
+<p>이 실습표는 학습 확인 기준이며 실제 수행·통과 기록은 아니다. 장비 권한, 담당자 연락 경로, 배포본 위치와 정상 화면 예시는 현장 인수인계 시 해당 장비의 승인 자료로 확정한다.</p><h2>실제 코드로 읽는 처리 흐름</h2><p>결과 등급 계산과 화면 연결은 서로 다른 구현 단계다. 아래는 등급 계산 함수의 실제 내용으로, 화면에 연결되었거나 설정이 저장된다는 증거로 확대하지 않는다.</p><h3>CReviewResultLevelSettings.cs · ST_REVIEW_RESULT_LEVEL_SETTINGS.Resolve</h3><p><strong>코드 위치명:</strong> <code>CReviewResultLevelSettings.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="90ed5c1e-1e55-58ab-80ad-fac9503c72f7" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CReviewResultLevelSettings.cs · ST_REVIEW_RESULT_LEVEL_SETTINGS.Resolve</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[    public EN_REVIEW_RESULT_LEVEL Resolve(double resultX, double resultY)
+    {
+        var magnitude = Math.Max(Math.Abs(resultX), Math.Abs(resultY));
+        if (!double.IsFinite(magnitude))
+        {
+            return EN_REVIEW_RESULT_LEVEL.Level4;
+        }
+
+        if (magnitude <= Level1Maximum)
+        {
+            return EN_REVIEW_RESULT_LEVEL.Level1;
+        }
+
+        if (magnitude <= Level2Maximum)
+        {
+            return EN_REVIEW_RESULT_LEVEL.Level2;
+        }
+
+        return magnitude <= Level3Maximum
+            ? EN_REVIEW_RESULT_LEVEL.Level3
+            : EN_REVIEW_RESULT_LEVEL.Level4;
+    }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 결과 X/Y와 객체에 담긴 단계별 상한이다. 두 축 절댓값 중 큰 값으로 등급을 정하며 반경 계산이 아니다. 비유한값은 Level4, 상한과 같은 값은 해당 단계에 포함된다. 반환값은 표시용 등급이며 Vision 찾기 성공, 허용오차 OK, 보정 적용 허가를 자동 결정하지 않는다. 이 함수만으로 호출 부재를 증명할 수는 없다. 전체 화면·설정 코드 정적 검색에서 기존 메뉴 호출과 저장 연결을 확인하지 못했다는 검토 결과와 구분해서 읽는다.</p>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 </div>

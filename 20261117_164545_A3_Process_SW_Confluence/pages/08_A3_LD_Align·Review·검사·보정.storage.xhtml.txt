@@ -1,5 +1,5 @@
 <div>
-<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 코드 기준:</strong> Ver11.17.0 | <strong>UI 프로젝트 Version:</strong> 2026.11.13.0</p>
 <ac:structured-macro ac:macro-id="5ad87773-0282-5ccb-83c0-2fbae2d76b12" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 <ac:structured-macro ac:macro-id="45f7faf4-2b71-5cb5-8450-f39b2347368a" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
@@ -43,7 +43,45 @@ OK = Found AND abs(ConvertedX) ≤ ToleranceX AND abs(ConvertedY) ≤ ToleranceY
 <p>UI의 COPY/KEY IN → RESULT SAVE → OFFSET APPLY는 서로 다른 단계다. COPY는 결과 후보를 편집하며 새 EDIT Revision을 만든다. 출처 열이 있는 파일은 MEASURED만 적용하고, 출처가 없는 ONE SHOT/Legacy는 OK/NG 행으로 fallback하는 현재 경계가 있다. 따라서 편집 결과가 항상 보정에 들어가거나 항상 제외된다고 설명하지 않는다.</p>
 <h2>7. 즉시 대응할 때 확인할 제한</h2>
 <ul><li>BASE→부분 EDIT/REINSP→다시 Apply는 같은 측정 계보의 Delta 재누적 위험을 별도로 확인한다. 현재 중복 이력은 날짜와 정규화한 경로에 의존한다.</li><li>결과 CSV의 optional 숫자 파싱은 누락·비정상 입력을 0으로 보이게 할 수 있다. 화면의 0만으로 실제 무오차 측정이라고 판단하지 않는다.</li><li>Offset Rollback은 최신 활성 snapshot 한 단계 원복이다. 결과 Revision, 판정, Default, 모든 Recipe를 함께 되돌리는 기능이 아니다.</li><li>Masking의 점 제외와 Stage의 물리 경로 회피는 별도다. 설계 footprint→Sampling→최종 버퍼→실제 Trigger를 차례로 본다.</li></ul>
-<p>증상별 상세 확인 순서와 미결항목은 <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응과 미결사항]]></ac:plain-text-link-body></ac:link>, 운전 화면 읽기는 <ac:link><ri:page ri:content-title="11. A3 LD 운전 화면과 Manual·Auto"/><ac:plain-text-link-body><![CDATA[운전 화면과 Manual·Auto]]></ac:plain-text-link-body></ac:link>, 중단·Reset은 <ac:link><ri:page ri:content-title="12. A3 LD Alarm·Interlock·정지·복구"/><ac:plain-text-link-body><![CDATA[Alarm·Interlock·정지·복구]]></ac:plain-text-link-body></ac:link>에서 이어서 확인한다.</p>
-<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td>Drilling.Common/Review/CReviewManager.cs:2235–2307<br/><code>Drilling.Common/Review/CReviewManager.cs:L2235-L2307</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Review/CAutoFineReviewCoordinator.cs:95–168<br/><code>Drilling.Common/Review/CAutoFineReviewCoordinator.cs:L95-L168</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Correction/CAlignInterpolation.cs:237–263<br/><code>Drilling.Common/Correction/CAlignInterpolation.cs:L237-L263</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Correction/CDefaultOffsetCalibration.cs:129–173<br/><code>Drilling.Common/Correction/CDefaultOffsetCalibration.cs:L129-L173</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Correction/CDefaultOffsetCalibration.cs:265–283<br/><code>Drilling.Common/Correction/CDefaultOffsetCalibration.cs:L265-L283</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:433–466<br/><code>Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:L433-L466</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.File/ReviewResult/CReviewResultFile.cs:493–521<br/><code>Drilling.File/ReviewResult/CReviewResultFile.cs:L493-L521</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.File/ReviewOffset/CReviewOffsetFile.cs:565–609<br/><code>Drilling.File/ReviewOffset/CReviewOffsetFile.cs:L565-L609</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>11.13.0 코드 해설: 04_ReviewOffset_적용과_롤백.md</td><td>dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.</td></tr><tr><td>11.13.0 코드 해설: 02_Masking_Sampling_IOF.md</td><td>dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.</td></tr></tbody></table>
+<p>증상별 상세 확인 순서와 미결항목은 <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응과 미결사항]]></ac:plain-text-link-body></ac:link>, 운전 화면 읽기는 <ac:link><ri:page ri:content-title="11. A3 LD 운전 화면과 Manual·Auto"/><ac:plain-text-link-body><![CDATA[운전 화면과 Manual·Auto]]></ac:plain-text-link-body></ac:link>, 중단·Reset은 <ac:link><ri:page ri:content-title="12. A3 LD Alarm·Interlock·정지·복구"/><ac:plain-text-link-body><![CDATA[Alarm·Interlock·정지·복구]]></ac:plain-text-link-body></ac:link>에서 이어서 확인한다.</p><h2>실제 코드로 읽는 처리 흐름</h2><p>검사 결과에서 어떤 행을 보정 후보로 사용하는지와 결과 종류 제한을 실제 코드로 확인한다. 아래 함수는 보정 후보를 계산하며 파일 저장과 다음 가공 적용은 별도 단계다.</p><h3>CMenuCorrection.ReviewData.Offset.cs · BuildFineDeltas / MeasuredRows</h3><p><strong>코드 위치명:</strong> <code>CMenuCorrection.ReviewData.Offset.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="834733a0-04ba-5696-82ec-caf275e584cb" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CMenuCorrection.ReviewData.Offset.cs · BuildFineDeltas / MeasuredRows</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[            private static IReadOnlyList<ST_REVIEW_OFFSET_DELTA> BuildFineDeltas(
+                ST_REVIEW_RESULT_FILE_DATA result,
+                IReadOnlyList<ST_REVIEW_PLAN_POINT> allPoints,
+                IReadOnlyDictionary<string, ST_REVIEW_PLAN_POINT> pointLookup)
+            {
+                var measuredRows = MeasuredRows(result.Rows).ToArray();
+                if (measuredRows.Any(row => !row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase)))
+                {
+                    throw new InvalidOperationException("FINE/AUTO 측정 결과에 NG 또는 비정상 상태가 있어 전체 Offset을 적용할 수 없습니다.");
+                }
+
+                var measurements = measuredRows.Select(row =>
+                {
+                    var point = ResolveResultPoint(row, pointLookup);
+                    return point with
+                    {
+                        Use = true,
+                        ErrorX = row.ErrorX,
+                        ErrorY = row.ErrorY,
+                        State = EN_REVIEW_POINT_STATE.Ok,
+                        Judge = "OK"
+                    };
+                }).ToArray();
+                return CReviewManager.CalculateFineOffsets(allPoints, measurements, EN_VISION_FLIP_TYPE.Normal)
+                    .Select(delta => new ST_REVIEW_OFFSET_DELTA(delta.Shot, delta.X, delta.Y))
+                    .ToArray();
+            }
+
+            private static IEnumerable<ST_REVIEW_RESULT_FILE_ROW> MeasuredRows(IReadOnlyList<ST_REVIEW_RESULT_FILE_ROW> rows)
+            {
+                var hasSourceMetadata = rows.Any(row => !string.IsNullOrWhiteSpace(row.ResultSource));
+                return hasSourceMetadata
+                    ? rows.Where(row => row.ResultSource.Equals("MEASURED", StringComparison.OrdinalIgnoreCase))
+                    : rows.Where(row => row.Judge.Equals("OK", StringComparison.OrdinalIgnoreCase) || row.Judge.Equals("NG", StringComparison.OrdinalIgnoreCase));
+            }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 저장한 검사 결과 행, 전체 대상 점과 식별자 조회표다. 출처 정보가 하나라도 있으면 MEASURED 행만 고르고, 출처가 없는 형식은 OK/NG 행을 사용한다. 선택된 행에 NG가 있으면 FINE/AUTO 전체 적용을 거부한다. 출력은 계산된 Delta 후보이며 저장·현장 적용 완료를 뜻하지 않는다. 이 필터는 측정 계보의 중복 소비를 판별하지 않으므로 BASE와 부분 EDIT/재검사 결과를 순서대로 적용할 때의 재누적 문제는 따로 확인한다.</p><h3>CMenuCorrection.ReviewData.Offset.cs · IsOffsetApplicableResultType</h3><p><strong>코드 위치명:</strong> <code>CMenuCorrection.ReviewData.Offset.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="15c467c6-2050-56db-8393-9327dbfc33e8" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CMenuCorrection.ReviewData.Offset.cs · IsOffsetApplicableResultType</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[            private static bool IsOffsetApplicableResultType(string resultType)
+            {
+                return resultType.Trim().ToUpperInvariant() is "ALL_SHOT" or "ONE_SHOT" or "ROUGH" or "FINE" or "AUTO";
+            }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력 문자열을 공백 제거·대문자로 정규화하고 보정 적용을 지원하는 결과 종류인지 반환한다. 목록에 ONE_LINE이 없으므로 단일 줄을 검사·저장할 수 있다는 사실과 그 결과의 Offset Apply 지원을 구분한다. 결과 파일이 존재한다는 이유만으로 종류 검사를 건너뛰지 않는다.</p>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 </div>

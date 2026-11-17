@@ -1,5 +1,5 @@
 <div>
-<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 코드 기준:</strong> Ver11.17.0 | <strong>UI 프로젝트 Version:</strong> 2026.11.13.0</p>
 <ac:structured-macro ac:macro-id="76eb012c-c0fe-5497-8a0c-917a1b5ff040" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 <ac:structured-macro ac:macro-id="6c007a01-19cc-59db-83d7-ce04a680ca60" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
@@ -42,7 +42,36 @@
 <p>AlarmCauseAnalysis는 현장 로그를 읽어 후보를 보여 주는 규칙 기반 조사 보조다. 가까운 시각의 최신 NG_SUMMARY가 선택되더라도 같은 Run/Glass의 원인이라는 상관 보장은 없다. 최대 표시 1,200행은 전체 파일 읽기·메모리 한계가 아니며, 숫자를 정규화한 비교 서명이 같다고 원래 아날로그값이 같은 것도 아니다. 원인 후보를 보고 PLC bit를 바꾸기 전에 해당 작업의 원문과 식별자를 확인한다.</p>
 <h2>8. 재개 판단과 인수인계 완료조건</h2>
 <ul><li>재현 증상, 최초 원인, 수정·설정 변경 범위와 원복 방법이 설명되어야 한다.</li><li>센서 원신호·동작별 허가, 장치 실제 정지, 세션/신호 정리와 데이터 정합이 확인되어야 한다.</li><li>현재 기판을 재가공·검사·배출할지 결정하고 중복 가공과 같은 결과 중복 Apply 가능성을 검토한다.</li><li>대표 정상·Timeout·취소·늦은 응답·재시작 시나리오의 결과를 기록한다. 문서 정적 검사 성공을 이 시험의 통과로 사용하지 않는다.</li><li>현장 승인자·담당 부서·연락 경로는 실제 조직 자료로 확정한다. 현재 자료로 미확인인 이름이나 허가 수치를 만들어 넣지 않는다.</li></ul>
-<p>개별 증상과 필요한 로그는 <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응 페이지]]></ac:plain-text-link-body></ac:link>, 화면의 현재 표시와 준비 상태 차이는 <ac:link><ri:page ri:content-title="11. A3 LD 운전 화면과 Manual·Auto"/><ac:plain-text-link-body><![CDATA[운전 화면 페이지]]></ac:plain-text-link-body></ac:link>에서 확인한다.</p>
-<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td>Drilling.Common/InterLock/CInterLockManager.cs:12–68<br/><code>Drilling.Common/InterLock/CInterLockManager.cs:L12-L68</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Alarm/CAlarmManager.cs:233–277<br/><code>Drilling.Common/Alarm/CAlarmManager.cs:L233-L277</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Managers/CManager.cs:146–151<br/><code>Drilling.Common/Managers/CManager.cs:L146-L151</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Station/CStationProcess.cs:4680–4697<br/><code>Drilling.Common/Station/CStationProcess.cs:L4680-L4697</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Station/CStationProcess.cs:6494–6529<br/><code>Drilling.Common/Station/CStationProcess.cs:L6494-L6529</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>11.13.0 코드 해설: 07_Align_Distortion_윈도우_복구.md</td><td>dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.</td></tr><tr><td>11.13.0 코드 해설: 04_ReviewOffset_적용과_롤백.md</td><td>dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.</td></tr><tr><td>11.13.0 알람 원인 분석 코드 해설</td><td>dfa5920e 정적 코드 해설 및 미실행 검증 시나리오.</td></tr></tbody></table>
+<p>개별 증상과 필요한 로그는 <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응 페이지]]></ac:plain-text-link-body></ac:link>, 화면의 현재 표시와 준비 상태 차이는 <ac:link><ri:page ri:content-title="11. A3 LD 운전 화면과 Manual·Auto"/><ac:plain-text-link-body><![CDATA[운전 화면 페이지]]></ac:plain-text-link-body></ac:link>에서 확인한다.</p><h2>실제 코드로 읽는 처리 흐름</h2><p>Reset이라는 이름이 같아도 초기화하는 대상이 다르다. 알람 목록을 지우는 동작과 미완료 후속 검사를 취소하는 동작을 실제 코드로 나누어 확인한다.</p><h3>CAlarmManager.cs · Reset</h3><p><strong>코드 위치명:</strong> <code>CAlarmManager.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="5bd73ea9-3113-501d-8d34-2b28b301ab3d" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CAlarmManager.cs · Reset</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[        public void Reset()
+        {
+            lock (_currentLock)
+            {
+                if (_curAlarm.Count == 0)
+                    return;
+                _curAlarm.Clear();
+                PublishCurrent(_current.OccurrenceVersion, _current.LogError);
+            }
+
+            NotifyCurrentChanged();
+        }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력 인수는 없으며 현재 알람 사전을 잠금 안에서 비운 뒤 스냅샷과 변경 통지를 갱신한다. 이 함수 본문에는 센서 원인 해소, 축 정지·Home, Laser 차단 또는 가공 재개를 수행하는 명령이 없다. Reset 뒤 목록이 비었다는 사실과 실제 장치가 안전하고 원인이 해소됐다는 판단을 구분한다.</p><h3>CStationProcess.cs · ResetAfterStop</h3><p><strong>코드 위치명:</strong> <code>CStationProcess.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="bc4dc62b-4674-5d65-8f28-de51d05d8ac1" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CStationProcess.cs · ResetAfterStop</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[        public async Task ResetAfterStop(CancellationToken token)
+        {
+            token.ThrowIfCancellationRequested();
+            if (!NeedsFollowUpCleanup)
+                return;
+            if (_stage is not null || _vision is not null || interfaces.StageReviewSequences.IsActive)
+                throw new InvalidOperationException("0선 RESET 전에 Process/Review 세션과 출력 정리를 완료해 주세요.");
+            // Do not claim inspection completion. A failed OFF/readback leaves the old
+            // identity and pending flag intact so RESET can retry without losing evidence.
+            await PublishCycleFollowUp(false, token).ConfigureAwait(false);
+            Volatile.Write(ref _status, Status with
+            {
+                State = "RESET_CANCELLED",
+                Detail = "RESET으로 이전 Glass의 미완료 후속 검사를 취소했습니다. 기존 결과 파일은 보존됩니다.",
+                FollowUpRequested = false,
+                FollowUpCompleted = false
+            });
+        }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 취소 토큰이며 후속 정리가 필요할 때만 동작한다. Process/Review 세션이나 이동 시퀀스가 남아 있으면 예외로 거부한다. 후속 요청 해제를 시도한 뒤 상태를 RESET_CANCELLED로 기록하고 FollowUpCompleted는 false로 유지한다. 따라서 이 Reset을 누락된 검사를 합격·완료 처리하는 절차로 설명하지 않는다. 실제 재개 전에는 원인과 장치 상태, 기판 처리 방침 및 남은 신호를 별도로 확인한다.</p>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 </div>

@@ -1,5 +1,5 @@
 <div>
-<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 코드 기준:</strong> Ver11.17.0 | <strong>UI 프로젝트 Version:</strong> 2026.11.13.0</p>
 <ac:structured-macro ac:macro-id="e5e46de5-2abe-5b5b-8a5f-f0c477b10358" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 <ac:structured-macro ac:macro-id="7b2f8e5a-9615-5dfb-87d2-eb7b17f3cd0e" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
@@ -34,7 +34,45 @@
 <p>센서·ATT 공유 가능 여부를 바꾸면 Head 병렬 실행과 직렬화, 센서 대응, 보고 Simulation 판정까지 영향이 생긴다. Task/축 매핑을 바꾸면 CENTER와 출사 제어, 준비된 Script, Stage 세션의 소유권까지 검토한다. 응답을 빈 문자열이나 이전값으로 대체하는 편의 수정은 성공 판정과 오류 경계를 바꿀 수 있다.</p>
 <h2>8. 인수 검증에 필요한 증거</h2>
 <p>단위·프로토콜은 정상/빈/오류/늦은 응답으로, 준비는 센서 중복·Head 비활성·Task/축 중복·Stage Busy·stale 입력으로, 보정은 증가/감소 기울기·한계·목표 미달·시도 소진으로 검증한다. 중단 시점은 ATT 이동 전후·출사 전후·측정 중·결과 저장 전후로 나누어 출력과 파일 상태를 대조한다.</p>
-<p>실장비 단계에는 측정 센서 교정·파장·장착·출력 안정성·반복성, Head별 결과와 실제 광학 구성, OFF/정리·신호 인계의 증거가 필요하다. 10월의 구현 공백이나 예제 테스트를 11월 완료 상태로 재사용하지 않고 현재 소스와 실행 로그로 항목별 판단한다. 시험 조건과 실제 결과가 없는 경우 완료 상태는 미확인으로 남긴다.</p>
-<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td>현재 PowerMeasure 거래와 실제 장치 세션<br/><code>Drilling.Common/Interface/CPowerMeasureRun.cs</code></td><td>Manual/AUTO 준비·Stage fresh·실장치·저장·출력정리. 실기 검수는 별도</td></tr><tr><td>현재 PowerMeasure 반복 서비스<br/><code>Drilling.Common/Interface/CPowerMeasureService.cs</code></td><td>대상검증·시도·측정·ATT 기울기·Simulation session 분리</td></tr><tr><td>현재 Stage TPM 연계<br/><code>Drilling.Common/Station/CStationProcess.cs:L5751-L5790</code></td><td>TPM Prepare/Measure/Save·Stage Complete·정리</td></tr><tr><td>현재 Talon Driver<br/><code>Drilling.Common/Interface/Serial/CTalonLaser.cs</code></td><td>Serial 송수신·명령/응답 처리</td></tr><tr><td>현재 PowerMeter Driver<br/><code>Drilling.Common/Interface/Serial/CPowerMeter.cs</code></td><td>pw?와 W 파싱·Timeout</td></tr><tr><td>과거 독립 Component 검증 예제<br/><em>확인한 자료의 적용 범위</em></td><td>독립 WPF 예제이며 Main Process 통합·실기 승인 근거와 구분</td></tr></tbody></table>
+<p>실장비 단계에는 측정 센서 교정·파장·장착·출력 안정성·반복성, Head별 결과와 실제 광학 구성, OFF/정리·신호 인계의 증거가 필요하다. 10월의 구현 공백이나 예제 테스트를 11월 완료 상태로 재사용하지 않고 현재 소스와 실행 로그로 항목별 판단한다. 시험 조건과 실제 결과가 없는 경우 완료 상태는 미확인으로 남긴다.</p><h2>실제 코드로 읽는 처리 흐름</h2><p>측정 결과를 보고하는 시점과 Recipe ATT 각도 저장을 허용하는 시점은 다르다. 아래는 실제 측정 종료부와 Save 메서드의 연속 발췌다. 보고 파일이 만들어졌다는 사실만으로 전체 Head 보정 성공 또는 Recipe 저장 완료를 판단하지 않는다.</p><h3>CPowerMeasureRun.Measure 종료부와 Save · 보고·정상판정·저장 Gate</h3><p><strong>코드 위치명:</strong> <code>CPowerMeasureRun.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="4260d0c9-a353-5edd-8b5a-d0b68e10428b" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CPowerMeasureRun.Measure 종료부와 Save · 보고·정상판정·저장 Gate</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[            var started = false;
+            try
+            {
+                var operation = manager.PowerMeasure.Start(targets, _session, this, guard.Token, automatic ? "AUTO TPM" : "MANUAL");
+                started = true;
+                await operation.ConfigureAwait(false);
+            }
+            catch (OperationCanceledException) when (stageError is not null && !token.IsCancellationRequested)
+            {
+                throw stageError;
+            }
+            finally
+            {
+                guard.Cancel(); await Task.WhenAll(watching, refreshing).ConfigureAwait(false);
+                if (started) { _result = manager.PowerMeasure.GetSnapshot(); Report(); }
+            }
+            if (stageError is not null) throw stageError;
+            token.ThrowIfCancellationRequested();
+            var failed = _result!.Heads.Where(h => h.State != "OK").ToArray();
+            if (failed.Length > 0) throw new InvalidOperationException(string.Join("\n", failed.Select(h => $"HEAD {h.Target.HeadNo:00}: {h.State} / {h.Message}")));
+            _measured = true;
+            Log("MEASURED", $"{_result.Heads.Count} Heads OK");
+        }
+        catch (Exception error) { if (error is not OperationCanceledException) Log("FAILED", error.Message); throw; }
+        finally { _gate.Release(); }
+    }
+    public async Task Save(CancellationToken token)
+    {
+        await _gate.WaitAsync(token).ConfigureAwait(false);
+        try
+        {
+            if (_saved) return;
+            if (!_measured || _result is null) throw new InvalidOperationException("정상 완료된 파워 측정 결과가 없습니다.");
+            await manager.Recipe().SavePowerMeasureAngles(recipe.Id, _result.Heads.ToDictionary(h => h.Target.HeadNo, h => h.Angle!.Value), token).ConfigureAwait(false);
+            _saved = true;
+            Log("SAVED", $"Recipe ATT 각도 저장 완료: {recipe.Id}");
+        }
+        finally { _gate.Release(); }
+    }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 측정을 시작한 경우 finally에서 Snapshot을 얻어 Report를 먼저 호출한다. 그 뒤 Stage 오류·취소와 전체 Head 상태를 검사하고 정상일 때만 _measured가 true가 된다. Save는 _measured와 결과 존재를 검사한 뒤 Recipe 각도를 저장한다. 따라서 NG·실패 과정의 보고나 측정 Table 실적도 남을 수 있지만 Recipe 각도 저장 성공과는 구분된다. 이 발췌는 Measure 내부 종료부부터 Save 전체까지이며 별도 실행 예제가 아니다.</p>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 </div>

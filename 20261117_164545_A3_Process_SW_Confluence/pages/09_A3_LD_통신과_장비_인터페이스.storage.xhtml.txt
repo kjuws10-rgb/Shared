@@ -1,12 +1,12 @@
 <div>
-<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 코드 기준:</strong> Ver11.17.0 | <strong>UI 프로젝트 Version:</strong> 2026.11.13.0</p>
 <ac:structured-macro ac:macro-id="dfd58378-57ff-5be6-80a9-5aae2705865d" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 <ac:structured-macro ac:macro-id="d1c5d811-e788-5fd2-8a02-1aed673f2a5b" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
 
 <h2>1. 통신을 이해하는 출발점</h2>
 <p>A3 Process는 Stage, Vision, Automation1과 광학 장치를 같은 목적에 사용하지만 하나의 프로토콜로 묶지 않는다. 설정에 장치를 등록하는 일, 네트워크나 Serial 연결을 여는 일, 명령을 보내는 일, 상대가 수락한 일, 실제 동작이 끝난 일은 서로 다르다. 장애 분석은 “통신 NG”라는 한 문장 대신 모듈·장치번호·명령·실패 단계·마지막 정상시각을 먼저 정하는 데서 시작한다.</p>
-<p>현재 기준은 A3Drilling Commit 9a43c709다. CInterfaceManager, CComm, 주요 Serial Driver와 CInterfaceFile은 dfa5920e CodeRef와 바이트가 동일함을 확인했다. 아래 설명은 실제 소스를 읽은 구조이며 현장의 모든 주소·배율·연결·복구 시험을 완료했다는 뜻은 아니다.</p>
+<p>현재 기준은 A3Drilling Commit 9a43c709다. CInterfaceManager, CComm, 주요 Serial Driver와 CInterfaceFile은 이전 구조 분석의 코드와 바이트가 동일함을 확인했다. 아래 설명은 실제 소스를 읽은 구조이며 현장의 모든 주소·배율·연결·복구 시험을 완료했다는 뜻은 아니다.</p>
 <h2>2. 요청이 실제 통신에 도달하는 경로</h2>
 <p>일반 장치 경로는 화면 또는 Station → 기능별 Manager → CInterfaceManager → CInterfaceDevice → 장치별 Comm → Transport/SDK → 응답·상태 갱신이다. Automation1의 Script 업로드·실행은 CAutomationManager를 통하고, 논리 축 명령은 CMotionManager를 통한다. Stage의 MELSEC는 일반 문자열 명령과 다른 typed read/write 경로다.</p>
 <table><tbody><tr><th>대상</th><th>주요 소유자</th><th>입력과 출력</th><th>완료 판단</th></tr>
@@ -35,7 +35,43 @@
 <ol><li>발생시각, 화면/모드, 활성 기판과 Recipe, 장치번호, 명령·응답·오류를 보존한다. 재시작으로 로그와 상태가 지워지기 전에 증거를 확보한다.</li><li>설정 파일을 잘못 읽었는지, 장치가 미등록인지, fallback Comm인지부터 확인한다.</li><li>연결 오류와 프로토콜 오류를 나눈다. 포트가 열려도 데이터 형식·종단문자·주소·배율이 틀리면 기능은 실패할 수 있다.</li><li>송신 전부터 멈췄는지, 송신 후 ACK를 기다리는지, 실제 완료를 기다리는지, 결과 저장에서 실패했는지 구분한다.</li><li>Snapshot 시각과 readback, 상대 PC의 같은 회차 로그를 대조한다. 캐시 정상값이나 시간 근접만으로 같은 요청이라고 확정하지 않는다.</li><li>승인된 복구 절차에 따라 미완료 출력·Task·기판 상태를 확인한다. 중복 동작 가능성이 남으면 무조건 재전송하지 않는다.</li><li>원인, 조치, 바뀐 설정·소스, 회귀 시험과 재현 여부를 남긴다. 근거가 없으면 원인 미확정으로 관리한다.</li></ol>
 <h2>8. 통합시험과 인수 시 남길 증거</h2>
 <p>정상 한 번 연결되는 시험 외에 미등록·중복 NickName, 잘못된 타입, 늦은/빈/잘린 응답, 순서 변경, 네트워크 단절·재연결, 중복 요청, stale 캐시, Write 이후 readback 지연, 재시작 중 미완료 거래를 평가한다. 기대 출력·실제 출력·시각·원시/공학값·환경·소스 Commit을 기록한다. Simulator 통과와 실 PLC/Vision/광학 장치 시험을 구분한다.</p>
-<p>코드 찾기는 CComm.Create, CInterfaceDevice.ExecuteFunction, CInterfaceManager.ExecuteDeviceFunction, CMelsec, CAutomation1Comm, CSerialComm, CVisionComm부터 시작한다. 고객이 확정할 주소·허용 지연·완료/복구 정책과 실제 시험 증거가 없으면 인수 완료로 올리지 않는다. Recipe 전환의 식별·수신·보고 경계는 <ac:link><ri:page ri:content-title="05. A3 LD PPID·Recipe·OSS·Job Change"/><ac:plain-text-link-body><![CDATA[PPID·OSS·Job Change]]></ac:plain-text-link-body></ac:link>와 함께 검토한다.</p>
-<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td>현재 통신 팩토리<br/><code>Drilling.Common/Interface/CComm.cs</code></td><td>Attribute 등록·매칭·fallback·기본 상태</td></tr><tr><td>현재 Interface 관리자<br/><code>Drilling.Common/Interface/CInterfaceManager.cs</code></td><td>모듈/번호·명령·MELSEC typed 경로·Snapshot</td></tr><tr><td>현재 Serial 공통 Driver<br/><code>Drilling.Common/Interface/Serial/CSerialComm.cs</code></td><td>Serial 옵션·재접속·직렬화</td></tr><tr><td>현재 실행 Interface 파일 경로<br/><code>Drilling.File/JHMI/CInterfaceFile.cs</code></td><td>고정 정의 파일 경로</td></tr><tr><td>CodeRef 장치 경계</td><td>dfa5920e 기준 상세장. 현재 동일 파일은 별도 확인</td></tr><tr><td>CodeRef 동시성과 로그</td><td>Thread·취소·Snapshot·진단 증거의 의미</td></tr></tbody></table>
+<p>코드 찾기는 CComm.Create, CInterfaceDevice.ExecuteFunction, CInterfaceManager.ExecuteDeviceFunction, CMelsec, CAutomation1Comm, CSerialComm, CVisionComm부터 시작한다. 고객이 확정할 주소·허용 지연·완료/복구 정책과 실제 시험 증거가 없으면 인수 완료로 올리지 않는다. Recipe 전환의 식별·수신·보고 경계는 <ac:link><ri:page ri:content-title="05. A3 LD PPID·Recipe·OSS·Job Change"/><ac:plain-text-link-body><![CDATA[PPID·OSS·Job Change]]></ac:plain-text-link-body></ac:link>와 함께 검토한다.</p><h2>실제 코드로 읽는 처리 흐름</h2><p>통신은 장치 타입에 맞는 구현을 고르는 단계와 수신 상태가 아직 유효한지 판단하는 단계가 나뉜다. 아래 실제 코드에서 장치별 Comm 선택과 MELSEC 캐시의 유효시간 처리를 읽을 수 있다. 객체 생성이나 과거 정상값 하나만으로 현재 장치 동작 완료를 판단하지 않는다.</p><h3>CComm.Create · InterfaceType·DeviceName으로 실제 Comm 선택</h3><p><strong>코드 위치명:</strong> <code>CComm.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="74e15f24-7b0d-57ab-8ff1-1d899d098cb1" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CComm.Create · InterfaceType·DeviceName으로 실제 Comm 선택</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[    public static CCommBase Create(ST_INTERFACE_DATA data, ST_INTERFACE_CONNECT_OPTION option)
+    {
+        var interfaceType = CCommTypeAttribute.NormalizeName(data.InterfaceType.ToString());
+        var deviceName = CCommTypeAttribute.NormalizeName(data.Device.ToString());
+        bool ShouldIncludeItem(global::Drilling.Common.Interface.CComm.CCommRegistration item)
+        {
+            return item.IsMatch(interfaceType, deviceName);
+        }
+
+        int SelectSortKey(global::Drilling.Common.Interface.CComm.CCommRegistration item)
+        {
+            return item.DeviceNames.Count;
+        }
+
+        var commType = CommTypes.Where(ShouldIncludeItem).OrderByDescending(SelectSortKey).FirstOrDefault();
+        if (commType is null)
+        {
+            return new CReadyOnlyComm(data, option);
+        }
+
+        return Activator.CreateInstance(commType.CommType, data, option) as CCommBase ?? throw new InvalidOperationException($"Interface communication creation failed: {data.InterfaceType}/{data.Device}");
+    }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 정규화한 InterfaceType·DeviceName에 맞는 등록을 찾고 장치명이 구체적인 등록을 우선한다. 일치하는 구현이 없으면 CReadyOnlyComm을 돌려준다. 통신 객체가 만들어졌다는 사실과 실제 Driver가 준비돼 장치 연결·명령이 성공했다는 사실은 다르다.</p><h3>CMelsec.WithCacheFreshness · 오래된 polling 값을 Stale로 전환</h3><p><strong>코드 위치명:</strong> <code>CMelsec.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="8bc33728-1177-5a16-8fe1-9f84d9c625d3" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CMelsec.WithCacheFreshness · 오래된 polling 값을 Stale로 전환</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[        private ST_MELSEC_CACHED_VALUE WithCacheFreshness(string id, ST_MELSEC_CACHED_VALUE sample, DateTimeOffset now)
+        {
+            if (IsOnDemandValueId(id) && !_pollBlockById.ContainsKey(id))
+                return sample; // Last explicit readback, not live motion/safety feedback.
+            var interval = _pollBlockById.TryGetValue(id, out var block) ? block.IntervalMs : DefaultPollingIntervalMs;
+            if (sample.IsValid && sample.UpdatedAt is { } updated && now - updated > TimeSpan.FromMilliseconds(Math.Max(1000L, (long)interval * 3)))
+                return sample with
+                {
+                    Value = null,
+                    State = EN_MELSEC_CACHE_STATE.Stale,
+                    ErrorMessage = "MELSEC feedback has not been updated within its polling interval."
+                };
+            return sample;
+        }
+
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> polling 대상의 유효 샘플은 마지막 갱신부터 허용 시간이 지나면 값이 null이고 상태가 Stale인 사본으로 바뀐다. 경계는 1000ms와 polling 주기의3배 중 큰 값이다. 다만 polling 맵에 없는 on-demand 값은 마지막 명시적 readback으로 취급해 원본을 반환하는 별도 분기가 있다. 이를 모든 신호가 같은 안전 유효시간을 보장한다고 해석하지 않는다.</p>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 </div>

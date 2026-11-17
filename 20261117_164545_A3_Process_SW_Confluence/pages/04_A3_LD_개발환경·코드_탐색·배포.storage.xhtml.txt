@@ -1,13 +1,13 @@
 <div>
-<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 코드 기준:</strong> Ver11.17.0 | <strong>UI 프로젝트 Version:</strong> 2026.11.13.0</p>
 <ac:structured-macro ac:macro-id="7b35c6b2-5a45-57be-85d4-cb8900d7cc89" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 <ac:structured-macro ac:macro-id="6d1c7742-89f9-580c-8549-65914c31652b" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
 
 
-<h2>1. 어떤 저장소와 버전인가</h2>
-<p>이 문서의 현재 Main SW 기준은 <code>A3Drilling/master</code>의 <code>9a43c7097561d6d50cad4462923e16549e104bd2</code>이다. Git Commit 메시지는 <code>Ver 11.17.0</code>이지만 <code>Drilling.UI.csproj</code>의 Version은 <code>2026.11.13.0</code>이다. 인수인계 기록에는 두 값을 함께 남긴다. 실행파일 속성만으로 Git 변경 전체를 식별하지 않는다.</p>
-<p>기존 Shared Code Ref와 11월 16일 구조 분석의 기준은 <code>dfa5920e</code>이다. 두 Commit을 비교했을 때 이번 11.17 변경은 61경로이며 기존 C#/XAML/프로젝트 파일의 수정은 없고 신규 코드 4개가 추가됐다. 설정과 운영 데이터도 변경됐으므로 장비 적용값이 같다고 확대하지 않는다. 신규 Review 지도·색상 관련 클래스는 <ac:link><ri:page ri:content-title="11. A3 LD 운전 화면과 Manual·Auto"/><ac:plain-text-link-body><![CDATA[운전 화면]]></ac:plain-text-link-body></ac:link>에서 실제 호출 연결 여부를 구분한다.</p>
+<h2>1. 어떤 프로그램과 버전인가</h2>
+<p>이 문서의 현재 Main SW 기준은 <code>Ver11.17.0</code>이다. <code>Drilling.UI.csproj</code>의 Version은 <code>2026.11.13.0</code>이다. 개발 기준과 실행파일의 Version 표기가 다르므로 인수인계 기록에는 두 값을 함께 남긴다. 실행파일 속성만으로 모든 변경을 식별하지 않는다.</p>
+<p>이전 구조 분석 이후 기존 C#/XAML/프로젝트 파일의 수정 없이 신규 코드 4개가 추가됐고 설정·운영 데이터도 변경됐다. 신규 Review 지도·색상 클래스는 <ac:link><ri:page ri:content-title="11. A3 LD 운전 화면과 Manual·Auto"/><ac:plain-text-link-body><![CDATA[운전 화면]]></ac:plain-text-link-body></ac:link>에서 계산 로직과 실제 화면 연결 여부를 구분해 설명한다. 코드 설명이 같아도 장비 적용 설정까지 같다고 확대하지 않는다.</p>
 <table class="wrapped"><tbody><tr><th>자료 계열</th><th>주요 용도</th><th>사용 시 주의</th></tr><tr><td>A3Drilling</td><td>현재 Main SW의 코드·설정·데이터 구조</td><td>현재 질문은 이 기준점에서 먼저 찾는다.</td></tr><tr><td>A3_LD_Process_SW</td><td>8월 좌표 WPF 예제·Automation1/광학 Driver 평가자료</td><td>샘플의 API·Recipe 구조·상수를 현재 Main 사양으로 복사하지 않는다.</td></tr><tr><td>A3_LD_Process_SW_IPS 및 A6 계열</td><td>과거 IPS 구조개선·이식·비교 자료</td><td>같은 A3 이름이나 같은 폴더만으로 현재 Main과 동일 저장소로 보지 않는다.</td></tr><tr><td>기존 설명자료(참고 이력)</td><td>설명 HTML·회의·시뮬레이터·코드 레퍼런스</td><td>이 문서에 통합된 설명의 적용 버전과 실제 코드 연결을 구별한다.</td></tr></tbody></table>
 <h2>2. 개발환경 확인</h2>
 <p>UI는 <code>net8.0-windows</code> WPF, Common과 File은 <code>net8.0</code> 프로젝트다. Windows의 .NET 8 SDK와 WPF 개발 도구를 준비하고, 저장소에 포함된 <code>NuGet.config</code> 및 실제 참조 DLL 경로를 확인한다. Visual Studio에서 작업한다면 .NET 데스크톱 개발 환경과 .NET 8 SDK가 필요하다. 이 문서 작업에서는 정식 설비 빌드를 실행하지 않았다.</p>
@@ -24,12 +24,42 @@ dotnet build ./Drilling.sln -c Debug --no-restore</code></pre>
 <h2>4. Config와 Data 경로를 먼저 찾는 이유</h2>
 <p><code>CAppStartup.GetConfigRoot</code>는 실행파일의 BaseDirectory에서 위로 올라가며 <code>Drilling.sln</code>을 찾으면 그 위치의 <code>Config</code>를 선택한다. 찾지 못하면 현재 작업 디렉터리의 <code>Config</code>를 사용한다. 따라서 개발 실행과 독립 배포 실행은 같은 파일을 읽는지 반드시 시작 로그로 확인한다.</p>
 <p>Script 경로는 Setting의 <code>LocalScriptPath</code>를 읽으며 비어 있으면 <code>Data/Script</code>를 사용한다. 상대 경로는 Config의 부모인 프로젝트 루트에 맞춰 해석한다. 이름이 비슷한 Config 사본을 수정하는 대신 ProgramOpen의 실제 <code>ConfigRoot</code>, 초기화 순서와 로드 건수를 대조한다. 작업 중인 Recipe, 활성 보정, Product 상태와 Log의 실제 경로도 함께 기록한다.</p>
-<h2>5. 코드를 찾는 방법</h2>
-<ol><li>질문을 화면명이 아니라 행위와 데이터로 바꾼다. 예: “Review 오차가 어디서 mm가 되는가”, “Recipe 저장 후 누가 운전값을 만드는가”.</li><li><ac:link><ri:page ri:content-title="03. A3 LD SW 구조와 실행 데이터"/><ac:plain-text-link-body><![CDATA[03. SW 구조]]></ac:plain-text-link-body></ac:link>에서 전체 흐름을 이해하고 <ac:link><ri:page ri:content-title="06. A3 LD 좌표계·Head 분담·Default"/><ac:plain-text-link-body><![CDATA[06. 좌표]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="07. A3 LD Scanner·MOF·Automation1"/><ac:plain-text-link-body><![CDATA[07. 실행]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="08. A3 LD Align·Review·검사·보정"/><ac:plain-text-link-body><![CDATA[08. 검사·보정]]></ac:plain-text-link-body></ac:link> 중 관련 주제를 읽는다. 증상은 <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[15. 장애대응]]></ac:plain-text-link-body></ac:link>에서 확인한다.</li><li>이 페이지들과 함께 적힌 파일·함수명은 적용 소스에서 같은 로직을 찾기 위한 식별자다. 설명할 때 단위, 분기, 취소, 오류 처리와 저장 컬럼을 함께 확인하며 정적 호출 후보만으로 런타임 경로를 확정하지 않는다.</li><li>변경 범위를 UI→Manager→파일/캐시→실행 Snapshot→좌표→Script/통신→Product/Review 결과→복원 순으로 확장한다.</li><li>결론에 Commit, 파일, 함수, 입력·출력, 확인한 범위와 다음 검증을 기록한다.</li></ol>
+<h2>5. 페이지 안에서 코드를 읽는 방법</h2>
+<ol><li>질문을 화면명이 아니라 행위와 데이터로 바꾼다. 예: “Review 오차가 어디서 mm가 되는가”, “Recipe 저장 후 누가 운전값을 만드는가”.</li><li><ac:link><ri:page ri:content-title="03. A3 LD SW 구조와 실행 데이터"/><ac:plain-text-link-body><![CDATA[03. SW 구조]]></ac:plain-text-link-body></ac:link>에서 전체 흐름을 이해하고 <ac:link><ri:page ri:content-title="06. A3 LD 좌표계·Head 분담·Default"/><ac:plain-text-link-body><![CDATA[06. 좌표]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="07. A3 LD Scanner·MOF·Automation1"/><ac:plain-text-link-body><![CDATA[07. 실행]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="08. A3 LD Align·Review·검사·보정"/><ac:plain-text-link-body><![CDATA[08. 검사·보정]]></ac:plain-text-link-body></ac:link> 중 관련 주제를 읽는다. 증상은 <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[15. 장애대응]]></ac:plain-text-link-body></ac:link>에서 확인한다.</li><li>각 주제의 “실제 코드로 읽는 처리 흐름”에서 입력값, 조건 분기, 반환값과 상태 변경을 순서대로 읽는다. 코드 뒤의 설명에서 단위, 취소, 오류 처리, 저장·적용 범위를 확인한다. 발췌 코드는 해당 처리를 이해하는 범위이며 독립 실행용 전체 프로그램은 아니다.</li><li>변경 범위를 UI→Manager→파일/캐시→실행 Snapshot→좌표→Script/통신→Product/Review 결과→복원 순으로 확장한다.</li><li>결론에 Commit, 파일, 함수, 입력·출력, 확인한 범위와 다음 검증을 기록한다.</li></ol>
 <h2>6. 변경·배포·원복의 운영 절차</h2>
 <ol><li>기준 Commit과 깨끗한 작업 상태를 확인하고 작업 브랜치에서 수정한다. 다른 사람의 미완료 변경은 별도 확인 없이 덮어쓰지 않는다.</li><li>문제 재현 조건·예상 동작·영향 파일과 검증 조건을 먼저 적는다. 정상 경로뿐 아니라 NG·취소·재시작·반복 적용을 포함한다.</li><li>코드 리뷰와 개발환경 Build를 통과한 뒤 실행파일·Config 정의·값 파일·Calibration·보정 데이터의 호환을 검토한다.</li><li>시험 환경에 배포하고 실제 ConfigRoot와 참조 DLL 로드를 확인한다. Simulation을 통과한 결과와 실장비 연동 결과를 구분한다.</li><li>현장 적용은 담당자의 변경 승인과 <ac:link><ri:page ri:content-title="13. A3 LD 검증·시험·Acceptance"/><ac:plain-text-link-body><![CDATA[검증 단계]]></ac:plain-text-link-body></ac:link>를 따른다. 실행파일만 바꾸고 Config·보정 Version이 이전 상태인 혼합 배포를 피한다.</li><li>문제가 생기면 실행파일뿐 아니라 호환되는 설정·Recipe·보정본을 함께 원복한다. 실제 가공된 구간과 Product 상태를 확인한 뒤 재개한다.</li></ol>
 <h2>7. Script와 자료의 보호</h2>
-<p>8월 자료의 AES-GCM, Preview 비노출, Debug 제외, 임시 Source 삭제는 각 보호수단의 설계·평가 항목으로 읽는다. 현재 Main 전체에 모두 적용됐다고 단정하지 않는다. 특히 정상 실행을 위해 사용되는 평문, 메모리·로그·백업, 키와 접근권한은 별도 확인 대상이다. 암호화가 해독을 절대 불가능하게 한다거나 Debug 제거가 역공학을 막는다는 표현은 사용하지 않는다. 자세한 출처와 문서 정정 기준은 <ac:link><ri:page ri:content-title="16. A3 LD 자료·산출물·변경관리"/><ac:plain-text-link-body><![CDATA[자료·변경관리]]></ac:plain-text-link-body></ac:link>를 따른다.</p>
-<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td>UI 프로젝트 설정<br/><code>Drilling.UI/Drilling.UI.csproj</code></td><td>.NET8 Windows WPF 및 파일 버전</td></tr><tr><td>Common 프로젝트·벤더 참조<br/><code>Drilling.Common/Drilling.Common.csproj</code></td><td>.NET8 및 SDK 참조 경로</td></tr><tr><td>시작·ConfigRoot·ScriptDirectory<br/><code>Drilling.UI/CAppStartup.cs:L15-L151</code></td><td>실제 초기화와 경로 선택</td></tr><tr><td>변경 영향 검토</td><td>정적 해설·검토 절차</td></tr></tbody></table>
+<p>8월 자료의 AES-GCM, Preview 비노출, Debug 제외, 임시 Source 삭제는 각 보호수단의 설계·평가 항목으로 읽는다. 현재 Main 전체에 모두 적용됐다고 단정하지 않는다. 특히 정상 실행을 위해 사용되는 평문, 메모리·로그·백업, 키와 접근권한은 별도 확인 대상이다. 암호화가 해독을 절대 불가능하게 한다거나 Debug 제거가 역공학을 막는다는 표현은 사용하지 않는다. 자세한 출처와 문서 정정 기준은 <ac:link><ri:page ri:content-title="16. A3 LD 자료·산출물·변경관리"/><ac:plain-text-link-body><![CDATA[자료·변경관리]]></ac:plain-text-link-body></ac:link>를 따른다.</p><h2>실제 코드로 읽는 처리 흐름</h2><p>실제 시작 코드가 Config와 Script 폴더를 어떻게 결정하는지 보여준다. 함수 이름만 보고 다른 자료로 이동할 필요 없이 아래의 조건과 반환값을 읽을 수 있다.</p><h3>Config 폴더 선택</h3><p><strong>코드 위치명:</strong> <code>CAppStartup.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="ddd4b2dc-451f-50ef-86f2-95d25c4b871b" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">Config 폴더 선택</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[    private static string GetConfigRoot()
+    {
+        var directory = new DirectoryInfo(AppContext.BaseDirectory);
+        while (directory is not null)
+        {
+            if (System.IO.File.Exists(Path.Combine(directory.FullName, "Drilling.sln")))
+            {
+                return Path.Combine(directory.FullName, "Config");
+            }
+
+            directory = directory.Parent;
+        }
+
+        return Path.Combine(Environment.CurrentDirectory, "Config");
+    }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 실행파일의 BaseDirectory와 현재 작업 디렉터리다. 실행파일 위치에서 상위 폴더로 올라가며 Drilling.sln을 찾으면 그 폴더의 Config를 반환한다. 찾지 못하면 현재 작업 디렉터리의 Config를 반환한다. 따라서 개발 실행과 배포 실행이 읽는 폴더가 같다고 가정하지 않고 시작 로그의 ConfigRoot와 대조한다.</p><h3>Script 폴더 선택</h3><p><strong>코드 위치명:</strong> <code>CAppStartup.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="12b8582e-882c-55b0-8c21-2d64530521f8" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">Script 폴더 선택</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[    private static string GetScriptDirectory(string configRoot, CSettingFile settingFile)
+    {
+        var projectRoot = Directory.GetParent(configRoot)?.FullName ?? configRoot;
+        bool MatchesItem(global::Drilling.Common.Managers.ST_SYSTEM_PARAMETER parameter)
+        {
+            return parameter.Key.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase) || parameter.Name.Equals("LocalScriptPath", StringComparison.OrdinalIgnoreCase);
+        }
+
+        var scriptPath = settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault(MatchesItem)?.Value;
+        if (string.IsNullOrWhiteSpace(scriptPath))
+        {
+            scriptPath = Path.Combine("Data", "Script");
+        }
+
+        return Path.IsPathRooted(scriptPath) ? Path.GetFullPath(scriptPath) : Path.GetFullPath(Path.Combine(projectRoot, scriptPath));
+    }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> Option 설정의 Key 또는 Name이 LocalScriptPath인 항목을 찾는다. 비어 있으면 Data/Script를 기본값으로 사용한다. 절대 경로는 그대로 정규화하고, 상대 경로는 Config의 부모 폴더를 기준으로 해석한다. Config와 Script를 다른 기준 폴더에 복사하면 실행에 사용하는 파일이 달라질 수 있다.</p>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 </div>

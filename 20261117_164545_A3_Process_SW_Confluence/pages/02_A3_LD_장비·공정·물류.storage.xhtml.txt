@@ -1,5 +1,5 @@
 <div>
-<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 코드 기준:</strong> Ver11.17.0 | <strong>UI 프로젝트 Version:</strong> 2026.11.13.0</p>
 <ac:structured-macro ac:macro-id="6c486bdb-1c98-5477-8e26-c700fca8f93a" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 <ac:structured-macro ac:macro-id="b9360db4-77f8-5da7-802a-81c7b7ba96ce" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
@@ -32,7 +32,96 @@
 <p>Stage 요청의 Glass/Lot 정보는 현재 Product를 사용하거나 SIM/DUMMY 식별자를 생성하는 fallback이 있고, Stage 매핑 합의 후 바꾸라는 TODO가 남아 있다. 따라서 상위 PPID/SubPPID 자동 Job Change가 끝까지 완성되었다고 표현하지 않는다. 선택 레시피와 상위 요청 식별자가 정확히 연결되는 조건은 고객 계약 확인 대상이다.</p>
 <p>기구 배치·실물 방향·Encoder 극성·속도·레이저 조건·광학 품질은 현장 평가 항목이다. 이 페이지 작성 과정에서는 레이저 조사, Stage 이동, 벤더 DLL 로드, Controller Script 실행과 실측 정밀도 시험을 수행하지 않았다.</p>
 <p>다음 읽기: <ac:link><ri:page ri:content-title="03. A3 LD SW 구조와 실행 데이터"/><ac:plain-text-link-body><![CDATA[SW 구조와 실행 데이터]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="06. A3 LD 좌표계·Head 분담·Default"/><ac:plain-text-link-body><![CDATA[좌표계와 Head 분담]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="07. A3 LD Scanner·MOF·Automation1"/><ac:plain-text-link-body><![CDATA[MOF와 Automation1]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="05. A3 LD PPID·Recipe·OSS·Job Change"/><ac:plain-text-link-body><![CDATA[Recipe·PPID]]></ac:plain-text-link-body></ac:link>.</p>
-<h2>코드와 문서 근거</h2><p>AUTO 준비와 DoReady 실행 경계 <code>Drilling.Common/Station/CStationProcess.cs:L3984-L4016</code> — Shift 0 정규화, Build/Upload, MOF zero/Task RUN 분리</p><p>운전 진입점 <code>Drilling.UI/CRootView.cs:L611-L622</code> — AUTO 모드 StageRequests 시작/중지</p><p>MAIN START <code>Drilling.UI/CRootView.cs:L1622-L1648</code> — MANUAL 전용 Semi Auto 준비·시작</p><p>현재 Stage 요청 식별자 <code>Drilling.UI/CRootView.cs:L2894-L2907</code> — 선택 Recipe와 Product 식별자, Stage 매핑 TODO</p><p>2026-08-07 장비·물류 개념 가이드 — 과거 좌표 검증 프로젝트의 목적·구성·Home/Review/Scanner 개념 경로. 현재 장비 승인도면 아님</p>
-<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td>AUTO 준비와 DoReady 실행 경계<br/><code>Drilling.Common/Station/CStationProcess.cs:L3984-L4016</code></td><td>Shift 0 정규화, Build/Upload, MOF zero/Task RUN 분리</td></tr><tr><td>운전 진입점<br/><code>Drilling.UI/CRootView.cs:L611-L622</code></td><td>AUTO 모드 StageRequests 시작/중지</td></tr><tr><td>MAIN START<br/><code>Drilling.UI/CRootView.cs:L1622-L1648</code></td><td>MANUAL 전용 Semi Auto 준비·시작</td></tr><tr><td>현재 Stage 요청 식별자<br/><code>Drilling.UI/CRootView.cs:L2894-L2907</code></td><td>선택 Recipe와 Product 식별자, Stage 매핑 TODO</td></tr><tr><td>2026-08-07 장비·물류 개념 가이드</td><td>과거 좌표 검증 프로젝트의 목적·구성·Home/Review/Scanner 개념 경로. 현재 장비 승인도면 아님</td></tr></tbody></table>
+<h2>실제 코드로 읽는 처리 흐름</h2><p>다음 세 발췌는 사용자 START, AUTO 준비 callback, DoReady 신호 교환을 직접 보여준다. 세 경로의 책임과 완료 시점을 나누어 읽는다. 원본의 연속 행을 발췌한 코드이며 독립 실행용 전체 함수는 아니다.</p><h3>MAIN START의 MANUAL 확인·준비·실행·완료 대기</h3><p><strong>코드 위치명:</strong> <code>CRootView.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="7e1ef818-d01c-5961-8b16-32e4e8dc9a07" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">MAIN START의 MANUAL 확인·준비·실행·완료 대기</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[            if (!IsManualStartEligible())
+            {
+                StatusMessage = "Main START is available in MANUAL mode only.";
+                CRecipeConfirmDialog.ShowWarning("공정 시작 불가", "MAIN START는 MANUAL 모드에서만 사용할 수 있습니다.\nAUTO 모드는 Stage PC 요청을 대기합니다.");
+                return;
+            }
+
+            var cycleCts = new CancellationTokenSource();
+            var cycleCompletion = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
+            _autoCycleCts = cycleCts;
+            _autoCycleCompletion = cycleCompletion;
+            SetAutoCycleState(EN_AUTO_CYCLE_STATE.Preparing);
+            try
+            {
+                await WaitForInitialProcessModelPreparation(cycleCts.Token);
+                await PrepareInitialProcess(applyShiftOffset: true, cancellationToken: cycleCts.Token);
+                if (!IsManualStartEligible())
+                {
+                    StatusMessage = "Main START was canceled because AUTO mode was selected.";
+                    return;
+                }
+                if (!CheckStageMotionOwnership((title, message) => CRecipeConfirmDialog.ShowWarning(title, message), "START"))
+                    return;
+
+                cycleCts.Token.ThrowIfCancellationRequested();
+                SetAutoCycleState(EN_AUTO_CYCLE_STATE.Running);
+                _stationManager.Start(cycleCts.Token);
+                var finalStatus = await WaitForStationCycleFinished(cycleCts.Token);
+                cycleCts.Token.ThrowIfCancellationRequested();
+                if (finalStatus.State == EN_STATION_STATE.Alarm || finalStatus.SequenceState == EN_STATION_SEQUENCE.Error)
+                {
+                    StatusMessage = $"Semi Auto Run failed: {finalStatus.LastMessage}";
+                    if (finalStatus.LastMessage.Contains("Glass 정보를 생성하지 못해", StringComparison.Ordinal))
+                    {
+                        CRecipeConfirmDialog.ShowWarning("공정 시작 불가", finalStatus.LastMessage);
+                    }
+
+                    return;
+                }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 현재 운전 모드와 준비된 공정 조건이다. MANUAL 여부를 확인하고 applyShiftOffset:true로 준비한 뒤 Stage 동작 소유권을 확인하여 Station.Start를 호출한다. 이어 WaitForStationCycleFinished로 최종 상태를 기다리므로 Start 호출 반환만을 공정 완료로 취급하지 않는다. AUTO 모드 선택과 교차한 경우에도 다시 자격을 검사하는 이유를 보여준다.</p><h3>AUTO 준비에서 입력 사본·Shift 정규화와 실행 책임 분리</h3><p><strong>코드 위치명:</strong> <code>CStationProcess.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="946687cf-2e5a-5284-8ddf-b6b834f6aeaa" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">AUTO 준비에서 입력 사본·Shift 정규화와 실행 책임 분리</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[                StageRequests.Start(
+                    async token =>
+                {
+                    // Preserve the preceding glass's frozen identity until its requested
+                    // diagnostic Review is handled. Do not replace ProcessModel first.
+                    EnsureZeroLineFollowUpCompleted();
+                    var data = await request(token).ConfigureAwait(false);
+                    var parameters = new Dictionary<string, string>(data.Parameters, StringComparer.OrdinalIgnoreCase);
+                    // Manual MOF Shift is never applied to AUTO machining.
+                    parameters["SHIFT_OFFSET_X"] = "0.000000";
+                    parameters["SHIFT_OFFSET_Y"] = "0.000000";
+                    PrepareProcess(data.ProcessId, data.RecipeId, data.GlassId, data.LotId, parameters, token, preserveSequenceActions: true);
+                    await StageProcessData().PrepareDoReady(StageProcessSpeed(), token).ConfigureAwait(false);
+                    await CaptureZeroLineCycle(data, token).ConfigureAwait(false);
+                }, 
+                    token => Task.Run(() =>
+                {
+                    var model = GetProcessModel();
+                    BuildAutomationScript(model, token);
+                    UploadAutomationScript(model, token);
+                    token.ThrowIfCancellationRequested();
+                // DoReady uploads only. MOF zero and Task RUN execute after DoReady signal reset,
+                // in Process preparation, once Stage Ready position and Busy OFF are verified.
+                }, token), 
+                    token =>
+                {
+                    var model = GetProcessModel();
+                    var targets = model.HeadPlans.Select(head => new ST_MOF_ZERO_TARGET(head.AutomationNo, head.TaskNo, ReadTextAny(model.Parameters, ReadTextAny(model.Parameters, "GX", CreateHeadKeys(head.HeadNo, "X_AXIS")), CreateHeadKeys(head.HeadNo, "ENCODER_AXIS"))));
+                    var frozen = targets.ToArray();
+                    AddProcessLog("INFO", "MOF_ZERO", $"Auxiliary zero check requested. Targets={string.Join(";", frozen.Select(target => target.ToString()))}");
+                    return _automationManager.ZeroMofFeedbackIfNeeded(frozen, token);
+                }, 
+                    RunStageTasks, 
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 Stage 요청 callback이 반환한 ProcessId·RecipeId·GlassId·LotId와 Parameters다. Parameters 사본의 Shift X/Y를 0으로 정규화하고 PrepareProcess에 넘긴다. 다음 callback은 모델의 Script를 생성·업로드하며, MOF zero와 RunStageTasks는 별도 callback으로 전달된다. 수동 Shift와 AUTO의 차이, DoReady 업로드와 Task 실행의 경계를 코드에서 확인할 수 있다.</p><h3>DoReady의 ABLE·START·준비·업로드·COMPLETE 진행</h3><p><strong>코드 위치명:</strong> <code>CStationProcess.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="4ece27e9-f91c-5965-8e3d-f4f4d6f027a3" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">DoReady의 ABLE·START·준비·업로드·COMPLETE 진행</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[                    _scenario = "DOREADY";
+                    _doReadyOutputsOwned = true;
+                    BeginLogCycle("DOREADY_PROCESS");
+                    LogEvent("ACTIONS_RESET All actions -> WAIT for a new request.");
+                    actions.Reset(); // Reset execution feedback only when accepting a new request.
+                    await WriteConfirmed(PrcAble, 1, token).ConfigureAwait(false);
+                    Set("WAIT_START", "DoReady ABLE acknowledged; waiting for Stage START.");
+                    await WaitSignal(StgStart, 1, token).ConfigureAwait(false);
+                    await WriteConfirmed(PrcStart, 1, token).ConfigureAwait(false);
+                    Set("PREPARE", "Preparing the request recipe and coordinates.");
+                    await Action(CSequenceActionIds.PrepareData, prepare, token).ConfigureAwait(false);
+                    Set("BUILD_UPLOAD", "Building and uploading scripts only; MOF initialization and Task RUN belong to Process preparation.");
+                    await Action(CSequenceActionIds.BuildUploadScript, buildUpload, token).ConfigureAwait(false);
+                    _distortionNeedsDoReady = false;
+                    await WriteConfirmed(PrcComplete, 1, token).ConfigureAwait(false);
+                    Set("WAIT_COMPLETE", "Scripts uploaded; waiting for Stage DoReady COMPLETE.");
+                    await WaitSignal(StgComplete, 1, token).ConfigureAwait(false);
+                    Set("DOREADY_SIGNALS_CLEAR", "Clearing our DoReady signals and waiting for Stage DoReady signals OFF.");
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 새 DoReady 요청과 상대 Stage의 START·COMPLETE 신호다. 실행 피드백을 새 요청 기준으로 초기화하고 ABLE 확인, START 대기, 준비와 Build/Upload를 순서대로 수행한다. 업로드 뒤 자기 COMPLETE를 쓰고 상대 COMPLETE를 기다린 다음 신호 정리 단계로 넘어간다. 이 발췌 뒤에 실제 OFF 정리와 후속 Process 단계가 이어지므로 COMPLETE 문구를 전체 가공 완료로 읽지 않는다.</p>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 </div>
