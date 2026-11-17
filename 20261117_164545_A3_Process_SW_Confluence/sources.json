@@ -1,0 +1,625 @@
+{
+  "asOf": "2026-11-17",
+  "sourceCommit": "9a43c7097561d6d50cad4462923e16549e104bd2",
+  "codeReferenceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "sources": [
+    {
+      "label": "Main 코드 기준",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/commit/9a43c7097561d6d50cad4462923e16549e104bd2",
+      "scope": "2026-11-17 조회한 Ver11.17.0; 실제 설치본은 별도 대조",
+      "page": "p00"
+    },
+    {
+      "label": "기존 전체 코드 레퍼런스",
+      "url": "https://github.com/kjuws10-rgb/Shared/tree/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref",
+      "scope": "dfa5920e 기준의 정적 해설",
+      "page": "p00"
+    },
+    {
+      "label": "사용자 제공 기존 페이지",
+      "url": "https://confluence.ips.co.kr/pages/viewpage.action?pageId=282766126",
+      "scope": "직접 접속 미완료; 이번 대화에 붙여준 2026-08-09 원문 사용",
+      "page": "p00"
+    },
+    {
+      "label": "현재 소스 기준점",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/commit/9a43c7097561d6d50cad4462923e16549e104bd2",
+      "scope": "Git 기준; 현장 적용 버전과 별도 확인",
+      "page": "p01"
+    },
+    {
+      "label": "시작·책임·조립 해설",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/architecture/01-startup-and-composition.md",
+      "scope": "dfa5920e 기준의 정적 해설; 관련 기존 코드 동일 여부 대조",
+      "page": "p01"
+    },
+    {
+      "label": "Product와 Station 해설",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/architecture/04-product-and-station-lifecycle.md",
+      "scope": "파일·상태·실행 수명 경계",
+      "page": "p01"
+    },
+    {
+      "label": "AUTO 준비와 DoReady 실행 경계",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Station/CStationProcess.cs#L3984-L4016",
+      "scope": "Shift 0 정규화, Build/Upload, MOF zero/Task RUN 분리",
+      "page": "p02"
+    },
+    {
+      "label": "운전 진입점",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/CRootView.cs#L611-L622",
+      "scope": "AUTO 모드 StageRequests 시작/중지",
+      "page": "p02"
+    },
+    {
+      "label": "MAIN START",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/CRootView.cs#L1622-L1648",
+      "scope": "MANUAL 전용 Semi Auto 준비·시작",
+      "page": "p02"
+    },
+    {
+      "label": "현재 Stage 요청 식별자",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/CRootView.cs#L2894-L2907",
+      "scope": "선택 Recipe와 Product 식별자, Stage 매핑 TODO",
+      "page": "p02"
+    },
+    {
+      "label": "2026-08-07 장비·물류 개념 가이드",
+      "url": "https://github.com/kjuws10-rgb/A3_LD_Process_SW/blob/d0f8d3fadf958bac8ad78c920bab0dabc4ec4f3f/etc/3.%20PROJECT_MANAGEMENT/A3_LD_PROJECT_MASTER_GUIDE_20260807.md#L7-L91",
+      "scope": "과거 좌표 검증 프로젝트의 목적·구성·Home/Review/Scanner 개념 경로. 현재 장비 승인도면 아님",
+      "page": "p02"
+    },
+    {
+      "label": "시작 객체 조립",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/CAppStartup.cs#L14-L69",
+      "scope": "파일 어댑터·Manager·RootView와 비동기 Initialize",
+      "page": "p03"
+    },
+    {
+      "label": "Manager 소유관계",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Managers/CManager.cs#L93-L142",
+      "scope": "Interface/Setting/Automation/Motion/Product/Review/Recipe/Station 구성",
+      "page": "p03"
+    },
+    {
+      "label": "실행 조건 합성",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Station/CStationProcess.cs#L1527-L1596",
+      "scope": "Recipe 사본·Setting 덮어쓰기·Review Offset과 준비 최신성",
+      "page": "p03"
+    },
+    {
+      "label": "실행 데이터 선언",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Station/CStationManager.cs#L300-L338",
+      "scope": "HeadPlan/ProcessModel/ScriptBuildResult",
+      "page": "p03"
+    },
+    {
+      "label": "Recipe 값 파서",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L889-L923",
+      "scope": "Tab/Name/Value/Extra",
+      "page": "p03"
+    },
+    {
+      "label": "Product와 Station 생명주기 해설",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/architecture/04-product-and-station-lifecycle.md",
+      "scope": "dfa5920e 기존 분석. Product 상태·영속화·복구 경계와 새 NG 정보 저장 공백",
+      "page": "p03"
+    },
+    {
+      "label": "UI 프로젝트 설정",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/Drilling.UI.csproj",
+      "scope": ".NET8 Windows WPF 및 파일 버전",
+      "page": "p04"
+    },
+    {
+      "label": "Common 프로젝트·벤더 참조",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Drilling.Common.csproj",
+      "scope": ".NET8 및 SDK 참조 경로",
+      "page": "p04"
+    },
+    {
+      "label": "시작·ConfigRoot·ScriptDirectory",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/CAppStartup.cs#L15-L151",
+      "scope": "실제 초기화와 경로 선택",
+      "page": "p04"
+    },
+    {
+      "label": "변경 영향 검토",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/architecture/07-change-impact-and-offline-reference.md",
+      "scope": "정적 해설·검토 절차",
+      "page": "p04"
+    },
+    {
+      "label": "현재 Recipe 화면",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/Menu/Menus/CMenuRecipe.cs",
+      "scope": "Select·VIEW/SELECT와 선택 이력, 이전 CodeRef와 파일 동일 확인",
+      "page": "p05"
+    },
+    {
+      "label": "현재 Recipe 관리자",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Managers/CRecipeManager.cs",
+      "scope": "저장·기대조건 확인·PowerMeasure 각도 저장",
+      "page": "p05"
+    },
+    {
+      "label": "OSS Process 검토 2026-11-17",
+      "availability": "local_verified_not_attached",
+      "scope": "기밀 원문을 로컬 대조한 19개 문서 검토. 최종 고객 승인 아님",
+      "page": "p05"
+    },
+    {
+      "label": "JobChange·PPID 추가 검토",
+      "availability": "local_verified_not_attached",
+      "scope": "사용자 확인 2쪽 운영안과 현 OSS·과거59안 비교, 미결 계약",
+      "page": "p05"
+    },
+    {
+      "label": "OSS·JobChange 핵심11개",
+      "availability": "local_verified_not_attached",
+      "scope": "11/17 검토 통합 요약",
+      "page": "p05"
+    },
+    {
+      "label": "설계점·Head·Stage 기준",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L11-L138",
+      "scope": "활성 Head, 설계점, 축 변환과 Stage 대기점",
+      "page": "p06"
+    },
+    {
+      "label": "Offset 합성과 Encoder 대기식",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L139-L188",
+      "scope": "Default/FirstBeam/Align/Review/Shift와 최종 G",
+      "page": "p06"
+    },
+    {
+      "label": "Head X 영역 배정",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L376-L404",
+      "scope": "X 범위 후보",
+      "page": "p06"
+    },
+    {
+      "label": "Head 중심과 Recipe Y 반전",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L450-L490",
+      "scope": "설정·홀짝 fallback, ConvertRecipeYToStageY",
+      "page": "p06"
+    },
+    {
+      "label": "Default AK 조건",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L29-L56",
+      "scope": "AK1 Recipe·AK3 설계 기본값",
+      "page": "p06"
+    },
+    {
+      "label": "Default DOE 슬롯과 Fit",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L130-L174",
+      "scope": "1/4 격자·1빔 Fit의 의미",
+      "page": "p06"
+    },
+    {
+      "label": "Default 중심과 검사 계약",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L265-L285",
+      "scope": "AK X midpoint·Shot/Cross와 검사점 수",
+      "page": "p06"
+    },
+    {
+      "label": "Automation API",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Automation/CAutomationManager.cs#L301-L372",
+      "scope": "Upload/Run/Buffered와 준비파일 소유권",
+      "page": "p07"
+    },
+    {
+      "label": "Automation 일반 실행",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L769-L819",
+      "scope": "Upload, CompileControllerFile, Program.Run",
+      "page": "p07"
+    },
+    {
+      "label": "Automation Buffered 실행",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L866-L903",
+      "scope": "Queue 생성·파일 공급·완료 대기·정리",
+      "page": "p07"
+    },
+    {
+      "label": "Automation 잠금 규칙",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L13-L25",
+      "scope": "명령/상태 lane과 lock 순서",
+      "page": "p07"
+    },
+    {
+      "label": "Script 준비 표시",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.File/Script/CAutomation1ScriptFile.cs#L431-L512",
+      "scope": "회차 GlobalInteger, 중심화·AUX zero·Ready 게시·follow",
+      "page": "p07"
+    },
+    {
+      "label": "Script 생성·업로드·실행 분기",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Station/CStationProcess.cs#L657-L749",
+      "scope": "Manifest 파일 업로드와 일반/Buffered 분기",
+      "page": "p07"
+    },
+    {
+      "label": "회차·Head 실행 식별자",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Station/CStationManager.cs#L300-L338",
+      "scope": "Head/Automation/Task·Script·MofReadyRunId",
+      "page": "p07"
+    },
+    {
+      "label": "Drilling.Common/Review/CReviewManager.cs:2235–2307",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Review/CReviewManager.cs#L2235-L2307",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p08"
+    },
+    {
+      "label": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs:95–168",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L95-L168",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p08"
+    },
+    {
+      "label": "Drilling.Common/Correction/CAlignInterpolation.cs:237–263",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Correction/CAlignInterpolation.cs#L237-L263",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p08"
+    },
+    {
+      "label": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs:129–173",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L129-L173",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p08"
+    },
+    {
+      "label": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs:265–283",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L265-L283",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p08"
+    },
+    {
+      "label": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:433–466",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L433-L466",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p08"
+    },
+    {
+      "label": "Drilling.File/ReviewResult/CReviewResultFile.cs:493–521",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.File/ReviewResult/CReviewResultFile.cs#L493-L521",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p08"
+    },
+    {
+      "label": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs:565–609",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L565-L609",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p08"
+    },
+    {
+      "label": "11.13.0 코드 해설: 04_ReviewOffset_적용과_롤백.md",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/review/04_ReviewOffset_적용과_롤백.md",
+      "scope": "dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.",
+      "page": "p08"
+    },
+    {
+      "label": "11.13.0 코드 해설: 02_Masking_Sampling_IOF.md",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/review/02_Masking_Sampling_IOF.md",
+      "scope": "dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.",
+      "page": "p08"
+    },
+    {
+      "label": "현재 통신 팩토리",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Interface/CComm.cs",
+      "scope": "Attribute 등록·매칭·fallback·기본 상태",
+      "page": "p09"
+    },
+    {
+      "label": "현재 Interface 관리자",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Interface/CInterfaceManager.cs",
+      "scope": "모듈/번호·명령·MELSEC typed 경로·Snapshot",
+      "page": "p09"
+    },
+    {
+      "label": "현재 Serial 공통 Driver",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Interface/Serial/CSerialComm.cs",
+      "scope": "Serial 옵션·재접속·직렬화",
+      "page": "p09"
+    },
+    {
+      "label": "현재 실행 Interface 파일 경로",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.File/JHMI/CInterfaceFile.cs",
+      "scope": "고정 정의 파일 경로",
+      "page": "p09"
+    },
+    {
+      "label": "CodeRef 장치 경계",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/architecture/05-device-interfaces-and-drivers.md",
+      "scope": "dfa5920e 기준 상세장. 현재 동일 파일은 별도 확인",
+      "page": "p09"
+    },
+    {
+      "label": "CodeRef 동시성과 로그",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/architecture/06-threading-snapshots-and-logs.md",
+      "scope": "Thread·취소·Snapshot·진단 증거의 의미",
+      "page": "p09"
+    },
+    {
+      "label": "현재 PowerMeasure 거래와 실제 장치 세션",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Interface/CPowerMeasureRun.cs",
+      "scope": "Manual/AUTO 준비·Stage fresh·실장치·저장·출력정리. 실기 검수는 별도",
+      "page": "p10"
+    },
+    {
+      "label": "현재 PowerMeasure 반복 서비스",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Interface/CPowerMeasureService.cs",
+      "scope": "대상검증·시도·측정·ATT 기울기·Simulation session 분리",
+      "page": "p10"
+    },
+    {
+      "label": "현재 Stage TPM 연계",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Station/CStationProcess.cs#L5751-L5790",
+      "scope": "TPM Prepare/Measure/Save·Stage Complete·정리",
+      "page": "p10"
+    },
+    {
+      "label": "현재 Talon Driver",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Interface/Serial/CTalonLaser.cs",
+      "scope": "Serial 송수신·명령/응답 처리",
+      "page": "p10"
+    },
+    {
+      "label": "현재 PowerMeter Driver",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Interface/Serial/CPowerMeter.cs",
+      "scope": "pw?와 W 파싱·Timeout",
+      "page": "p10"
+    },
+    {
+      "label": "과거 독립 Component 검증 예제",
+      "availability": "local_verified_not_attached",
+      "scope": "독립 WPF 예제이며 Main Process 통합·실기 승인 근거와 구분",
+      "page": "p10"
+    },
+    {
+      "label": "Drilling.UI/Menu/Menus/CMenuMain.cs:49–51",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/Menu/Menus/CMenuMain.cs#L49-L51",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p11"
+    },
+    {
+      "label": "Drilling.UI/Menu/Menus/CMenuMain.cs:177–413",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/Menu/Menus/CMenuMain.cs#L177-L413",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p11"
+    },
+    {
+      "label": "Drilling.Common/Review/CReviewResultLevelSettings.cs:14–175",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L14-L175",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p11"
+    },
+    {
+      "label": "Drilling.UI/Popup/CColorPickerDialog.xaml.cs:9–88",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/Popup/CColorPickerDialog.xaml.cs#L9-L88",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p11"
+    },
+    {
+      "label": "Drilling.UI/Views/CReviewShotMapControl.cs:13–170",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/Views/CReviewShotMapControl.cs#L13-L170",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p11"
+    },
+    {
+      "label": "Drilling.UI/Drilling.UI.csproj:15–26",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/Drilling.UI.csproj#L15-L26",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p11"
+    },
+    {
+      "label": "11.13.0 코드 해설: 05_결과_Revision_Product_연결.md",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/review/05_결과_Revision_Product_연결.md",
+      "scope": "dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.",
+      "page": "p11"
+    },
+    {
+      "label": "11월16일 단독 Review 작업공간 HTML",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/a2700d6ae09f7cfff9f5eabbca68b3ea28058829/20261116_170957_A3_Review_Workspace_Only/A3_Review_Workspace.html",
+      "scope": "독립 교육·검토용 HTML, 해당 UI 검증 범위. 생산 WPF 이식·현장 승인 증거 아님.",
+      "page": "p11"
+    },
+    {
+      "label": "Drilling.Common/InterLock/CInterLockManager.cs:12–68",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/InterLock/CInterLockManager.cs#L12-L68",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p12"
+    },
+    {
+      "label": "Drilling.Common/Alarm/CAlarmManager.cs:233–277",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Alarm/CAlarmManager.cs#L233-L277",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p12"
+    },
+    {
+      "label": "Drilling.Common/Managers/CManager.cs:146–151",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Managers/CManager.cs#L146-L151",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p12"
+    },
+    {
+      "label": "Drilling.Common/Station/CStationProcess.cs:4680–4697",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Station/CStationProcess.cs#L4680-L4697",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p12"
+    },
+    {
+      "label": "Drilling.Common/Station/CStationProcess.cs:6494–6529",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Station/CStationProcess.cs#L6494-L6529",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p12"
+    },
+    {
+      "label": "11.13.0 코드 해설: 07_Align_Distortion_윈도우_복구.md",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/review/07_Align_Distortion_윈도우_복구.md",
+      "scope": "dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.",
+      "page": "p12"
+    },
+    {
+      "label": "11.13.0 코드 해설: 04_ReviewOffset_적용과_롤백.md",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/review/04_ReviewOffset_적용과_롤백.md",
+      "scope": "dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.",
+      "page": "p12"
+    },
+    {
+      "label": "11.13.0 알람 원인 분석 코드 해설",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/architecture/08-alarm-cause-analysis.md",
+      "scope": "dfa5920e 정적 코드 해설 및 미실행 검증 시나리오.",
+      "page": "p12"
+    },
+    {
+      "label": "변경 영향과 검증 경계",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/architecture/07-change-impact-and-offline-reference.md",
+      "scope": "검증 계획과 실제 실행 결과 구별",
+      "page": "p13"
+    },
+    {
+      "label": "동시성·취소·로그",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/architecture/06-threading-snapshots-and-logs.md",
+      "scope": "실행층별 위험과 합성 검증 계획",
+      "page": "p13"
+    },
+    {
+      "label": "소스 기준점",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/commit/9a43c7097561d6d50cad4462923e16549e104bd2",
+      "scope": "현재 정적 코드 기준; 현장 합격 아님",
+      "page": "p13"
+    },
+    {
+      "label": "현재 A3Drilling 기준",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/commit/9a43c7097561d6d50cad4462923e16549e104bd2",
+      "scope": "Git Commit 메시지 Ver11.17.0의 소스 기준. csproj2026.11.13.0·실행파일·배포·인수 결과와 구분",
+      "page": "p14"
+    },
+    {
+      "label": "이번 사용자 제공 원문 · 2026-08-09",
+      "availability": "local_verified_not_attached",
+      "scope": "사용자 원문 요구51·WBS137·일정36. 원문은private보존, 사내현행본·현재완료율 미검증",
+      "page": "p14"
+    },
+    {
+      "label": "Masterplan Process 2026-10-28",
+      "availability": "local_verified_not_attached",
+      "scope": "과거 IPS223b905d 코드 추정145상세, 최신 인수 완료율 아님",
+      "page": "p14"
+    },
+    {
+      "label": "Process 제조 체크시트 R0",
+      "availability": "local_verified_not_attached",
+      "scope": "a116220/11.9.0 기준971항목 작성본, 시험결과 공란",
+      "page": "p14"
+    },
+    {
+      "label": "최신 구조 분석의 검증 우선순위",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/20261116_145750_SW아키텍쳐분석/05_위험도별발견사항.md",
+      "scope": "dfa5920e 기준 정적 발견·후속 검증안, 실기 장애 확정 아님",
+      "page": "p14"
+    },
+    {
+      "label": "이번 사용자 제공 Confluence 원문 · 본문기준2026-08-09",
+      "availability": "local_verified_not_attached",
+      "scope": "현재 세션 사용자 본문의 해당 표 전체 직접 추출. 원문은 private 보존하며 배포ZIP에 포함하지 않는다. 사내 페이지 현행본·현재 구현 상태 미검증",
+      "page": "p14a"
+    },
+    {
+      "label": "이번 사용자 제공 Confluence 원문 · 본문기준2026-08-09",
+      "availability": "local_verified_not_attached",
+      "scope": "현재 세션 사용자 본문의 해당 표 전체 직접 추출. 원문은 private 보존하며 배포ZIP에 포함하지 않는다. 사내 페이지 현행본·현재 구현 상태 미검증",
+      "page": "p14b"
+    },
+    {
+      "label": "이번 사용자 제공 Confluence 원문 · 본문기준2026-08-09",
+      "availability": "local_verified_not_attached",
+      "scope": "현재 세션 사용자 본문의 해당 표 전체 직접 추출. 원문은 private 보존하며 배포ZIP에 포함하지 않는다. 사내 페이지 현행본·현재 구현 상태 미검증",
+      "page": "p14c"
+    },
+    {
+      "label": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs:95–168",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L95-L168",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p15"
+    },
+    {
+      "label": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs:565–609",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L565-L609",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p15"
+    },
+    {
+      "label": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs:129–173",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L129-L173",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p15"
+    },
+    {
+      "label": "Drilling.Common/Correction/CAlignInterpolation.cs:237–263",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Correction/CAlignInterpolation.cs#L237-L263",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p15"
+    },
+    {
+      "label": "Drilling.Common/Station/CStationProcess.cs:4680–4697",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Station/CStationProcess.cs#L4680-L4697",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p15"
+    },
+    {
+      "label": "Drilling.Common/Review/CReviewResultLevelSettings.cs:14–175",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Review/CReviewResultLevelSettings.cs#L14-L175",
+      "scope": "9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.",
+      "page": "p15"
+    },
+    {
+      "label": "11.13.0 코드 해설: 03_Vision_패킷과_단위.md",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/review/03_Vision_패킷과_단위.md",
+      "scope": "dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.",
+      "page": "p15"
+    },
+    {
+      "label": "11.13.0 코드 해설: 02_Masking_Sampling_IOF.md",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/review/02_Masking_Sampling_IOF.md",
+      "scope": "dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.",
+      "page": "p15"
+    },
+    {
+      "label": "11.13.0 코드 해설: 05_결과_Revision_Product_연결.md",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref/manual/review/05_결과_Revision_Product_연결.md",
+      "scope": "dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.",
+      "page": "p15"
+    },
+    {
+      "label": "11.13.0 위험도별 발견사항",
+      "url": "https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/20261116_145750_SW아키텍쳐분석/05_위험도별발견사항.md",
+      "scope": "정적 위험과 계획. 실제 현장 불합격/이번 시험 통과 결과 아님.",
+      "page": "p15"
+    },
+    {
+      "label": "Shared 코드 레퍼런스",
+      "url": "https://github.com/kjuws10-rgb/Shared/tree/5213e988c3d0a9f194ce17329428e387c892e306/A3%20LD%20Code%20Ref",
+      "scope": "dfa5920e 정적 해설·파일 목록·호출관계",
+      "page": "p16"
+    },
+    {
+      "label": "현재 Main 소스",
+      "url": "https://github.com/kjuws10-rgb/A3Drilling/tree/9a43c7097561d6d50cad4462923e16549e104bd2",
+      "scope": "9a43c709 Ver11.17.0",
+      "page": "p16"
+    },
+    {
+      "label": "Confluence Storage Format",
+      "url": "https://confluence.atlassian.com/doc/confluence-storage-format-790796544.html",
+      "scope": "페이지 링크·첨부·XML 형식 참고",
+      "page": "p16"
+    },
+    {
+      "label": "NIST SP800-38D",
+      "url": "https://csrc.nist.gov/pubs/sp/800/38/d/final",
+      "scope": "GCM은 인증 암호화이며 절대 안전을 보장하는 표현의 근거가 아님",
+      "page": "p16"
+    }
+  ]
+}
