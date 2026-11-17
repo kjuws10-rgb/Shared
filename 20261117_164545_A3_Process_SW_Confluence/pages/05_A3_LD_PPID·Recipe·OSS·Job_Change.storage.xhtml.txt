@@ -1,12 +1,12 @@
 <div>
-<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 코드 기준:</strong> Ver11.17.0 | <strong>UI 프로젝트 Version:</strong> 2026.11.13.0</p>
 <ac:structured-macro ac:macro-id="4774ced9-804b-5712-8f51-cd083eef9673" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 <ac:structured-macro ac:macro-id="a0e3f838-3d37-51d3-8441-ad0ab3ef9e7b" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
 
 <h2>1. 이 페이지에서 먼저 이해할 것</h2>
 <p>PPID는 상위 시스템이 지시한 제품·공정 조건을 식별하는 이름이고 Recipe는 Process가 실제 계산하고 저장하는 조건이다. 이름을 선택하는 동작, 파일을 저장하는 동작, Stage가 그 조건을 수신하는 동작, 기판에서 측정·보상하는 동작은 각각의 완료를 따로 확인해야 한다. 화면에 같은 이름이 보이는 것만으로 모든 PC가 같은 조건으로 운전한다고 판단하지 않는다.</p>
-<p>코드 기준은 A3Drilling Commit 9a43c709다. Git Commit 메시지는 Ver11.17.0이며 실제 실행파일·배포 Version은 별도로 대조해야 한다. 아래 Recipe·Interface·Power 관련 기존 파일은 이전 CodeRef 기준 dfa5920e와 바이트가 같음을 확인했다. 2026-11-17 OSS 검토와 JobChange 운영안은 사양 정리·협의의 근거이며 고객의 최종 승인 또는 실장비 합격 기록은 아니다.</p>
+<p>코드 기준은 A3Drilling Commit 9a43c709다. Git Commit 메시지는 Ver11.17.0이며 실제 실행파일·배포 Version은 별도로 대조해야 한다. 아래 Recipe·Interface·Power 관련 기존 파일은 이전 구조 분석의 코드와 바이트가 같음을 확인했다. 2026-11-17 OSS 검토와 JobChange 운영안은 사양 정리·협의의 근거이며 고객의 최종 승인 또는 실장비 합격 기록은 아니다.</p>
 <h2>2. 데이터의 주인과 수명을 나눈다</h2>
 <table><tbody><tr><th>종류</th><th>담는 내용</th><th>관리와 소비</th></tr>
 <tr><td>제품 Recipe</td><td>Cell/Model/Shot 조건, Head별 가공 목표, 제품별 검사·Distortion 계획</td><td>편집 원본과 저장된 조건을 관리하고 해당 기판 실행에 사용할 값을 고정한다.</td></tr>
@@ -39,7 +39,41 @@
 <p>기존 결정에서 Job Change 단독은 파워보정의 사유이며 보호윈도우를 무조건 교체하는 사유가 아니다. 보호윈도우 교체는 가공매수와 다음 기판 ATT 예상의 2OR 조건을 별도로 유지한다. PPID의 허용 매수와 실제 윈도우 누적은 다르므로 Recipe를 바꿨다는 이유로 실적 Count를 0으로 만들지 않는다. PowerOK·측정완료·윈도우 교체완료는 같은 플래그가 아니다. 실제 Power 경로는 <ac:link><ri:page ri:content-title="10. A3 LD 광학 Component와 Power"/><ac:plain-text-link-body><![CDATA[광학 Component와 Power]]></ac:plain-text-link-body></ac:link>를 참조한다.</p>
 <h2>8. 개발자가 찾을 코드와 검증 완료 조건</h2>
 <p>진입점은 CMenuRecipe.Select, CRecipeManager.SaveRecipe·SaveParametersIfUnchanged·SavePowerMeasureAngles다. 파일 어댑터와 Recipe 파라미터 정의를 따라가고 CStationProcess의 준비·실행 시점에 어떤 조건이 캡처되는지 확인한다. 외부 송수신은 <ac:link><ri:page ri:content-title="09. A3 LD 통신과 장비 인터페이스"/><ac:plain-text-link-body><![CDATA[통신과 장비 인터페이스]]></ac:plain-text-link-body></ac:link>에서 typed MELSEC와 장치별 Comm을 구분한다.</p>
-<p>통합 검증에는 서로 다른 A/B PPID, 같은 이름의 다른 개정, 미등록키, 길이 경계, 일부 Word만 새 값인 전송, 전환 중 편집, 중복 요청, 통신 단절·재시작, 이전 Glass 결과, N=0·일부 NG·전부 OFF를 포함한다. 기대 결과·실제 결과·사용 조건·소스 버전·로그를 기록해야 완료로 판정할 수 있다. 이 페이지의 절차는 후속 검증안이며 해당 시험을 실제 실행했다는 뜻은 아니다.</p>
-<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td>현재 Recipe 화면<br/><code>Drilling.UI/Menu/Menus/CMenuRecipe.cs</code></td><td>Select·VIEW/SELECT와 선택 이력, 이전 CodeRef와 파일 동일 확인</td></tr><tr><td>현재 Recipe 관리자<br/><code>Drilling.Common/Managers/CRecipeManager.cs</code></td><td>저장·기대조건 확인·PowerMeasure 각도 저장</td></tr><tr><td>OSS Process 검토 2026-11-17<br/><em>확인한 자료의 적용 범위</em></td><td>기밀 원문을 로컬 대조한 19개 문서 검토. 최종 고객 승인 아님</td></tr><tr><td>JobChange·PPID 추가 검토<br/><em>확인한 자료의 적용 범위</em></td><td>사용자 확인 2쪽 운영안과 현 OSS·과거59안 비교, 미결 계약</td></tr><tr><td>OSS·JobChange 핵심11개<br/><em>확인한 자료의 적용 범위</em></td><td>11/17 검토 통합 요약</td></tr></tbody></table>
+<p>통합 검증에는 서로 다른 A/B PPID, 같은 이름의 다른 개정, 미등록키, 길이 경계, 일부 Word만 새 값인 전송, 전환 중 편집, 중복 요청, 통신 단절·재시작, 이전 Glass 결과, N=0·일부 NG·전부 OFF를 포함한다. 기대 결과·실제 결과·사용 조건·소스 버전·로그를 기록해야 완료로 판정할 수 있다. 이 페이지의 절차는 후속 검증안이며 해당 시험을 실제 실행했다는 뜻은 아니다.</p><h2>실제 코드로 읽는 처리 흐름</h2><p>실행 조건은 Recipe만으로 결정되지 않는다. 아래 실제 구현은 Recipe를 복사해 Option·Motor 설정과 최신 Review Offset을 합치는 과정, 그리고 최신 Recipe의 지정 Head ATT 각도만 갱신하는 과정을 보여준다. 현재 저장 위치와 처리 순서이며 향후 PPID·Setting 분리 설계가 이미 적용됐다는 의미는 아니다.</p><h3>CStationProcess.BuildRuntimeParameters · 실행용 조건 합성</h3><p><strong>코드 위치명:</strong> <code>CStationProcess.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="062c6321-cb25-5382-8083-33deb8933af8" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CStationProcess.BuildRuntimeParameters · 실행용 조건 합성</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[        private IReadOnlyDictionary<string, string> BuildRuntimeParameters(string recipeId, IReadOnlyDictionary<string, string> sourceParameters, CancellationToken cancellationToken)
+        {
+            var parameters = new Dictionary<string, string>(sourceParameters, StringComparer.OrdinalIgnoreCase);
+            var processSettings = new List<ST_SYSTEM_PARAMETER>();
+            processSettings.AddRange(_settingManager.LoadSection(EN_SETTING_TAB.Option, cancellationToken));
+            processSettings.AddRange(_settingManager.LoadSection(EN_SETTING_TAB.Motor, cancellationToken));
+            foreach (var setting in processSettings)
+            {
+                if (string.IsNullOrWhiteSpace(setting.Key))
+                {
+                    continue;
+                }
+
+                parameters[setting.Key] = setting.Value;
+            }
+
+            MergeLatestReviewOffsets(recipeId, parameters, cancellationToken);
+            return parameters;
+        }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> Recipe 원본을 새 Dictionary로 복사하고 Option·Motor 설정의 같은 키를 덮어쓴 다음 최신 Review Offset을 합친다. 따라서 Recipe 화면의 값만으로 최종 실행값을 판단하지 않는다. 이 함수는 조건 합성 코드이며 Host/SubPPID 연결이나 모듈 전체 적용 완료를 보장하는 코드가 아니다.</p><h3>CRecipeManager.SavePowerMeasureAngles · 지정 Head 각도만 최신 Recipe에 반영</h3><p><strong>코드 위치명:</strong> <code>CRecipeManager.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="8e091b35-8bc9-5179-86aa-3e59f5a9500c" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CRecipeManager.SavePowerMeasureAngles · 지정 Head 각도만 최신 Recipe에 반영</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[        // Merge only calibration angles into the latest Recipe under the existing operation gate.
+        public Task SavePowerMeasureAngles(string recipeId, IReadOnlyDictionary<int, double> angles, CancellationToken token = default) => WithRecipeOperation(async () =>
+        {
+            if (angles.Count == 0 || angles.Any(pair => pair.Key is < 1 or > 8 || !double.IsFinite(pair.Value) || pair.Value is < 0 or > 360))
+                throw new ArgumentException("유효한 Head별 ATT 각도가 필요합니다.");
+            var recipe = await recipeFile.Find(recipeId, token).ConfigureAwait(false) ?? throw new InvalidOperationException("측정 대상 Recipe가 없습니다.");
+            var values = recipe.Parameters.ToList();
+            foreach (var (head, angle) in angles)
+            {
+                var key = $"H{head:00}_ATTENUATOR_POSITION";
+                var index = values.FindIndex(p => p.Key.Equals(key, StringComparison.OrdinalIgnoreCase));
+                if (index < 0) throw new InvalidOperationException($"Recipe ATT 항목이 없습니다: {key}");
+                values[index] = values[index] with { Value = angle.ToString("0.####", System.Globalization.CultureInfo.InvariantCulture) };
+            }
+            await SaveRecipeCore(recipe with { Parameters = values }, token).ConfigureAwait(false);
+        }, token);
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 기존 Recipe 작업 Gate 안에서 각도·Head 범위를 확인하고 최신 Recipe를 다시 읽는다. Hxx_ATTENUATOR_POSITION 항목만 갱신해 다른 최신 파라미터를 보존한다. 이 함수 자체가 측정 성공 여부를 판단하지는 않는다. 호출 전 전체 Head 정상 여부와 저장 허용 여부를 판단하는 부분은 Power 실행 코드에서 확인한다.</p>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 </div>

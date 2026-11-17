@@ -1,5 +1,5 @@
 <div>
-<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 코드 기준:</strong> Ver11.17.0 | <strong>UI 프로젝트 Version:</strong> 2026.11.13.0</p>
 <ac:structured-macro ac:macro-id="a68506ef-9721-5561-807a-20555eb4f1c2" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 <ac:structured-macro ac:macro-id="9bd6fd21-608d-5ae1-8976-bc8cab6a174a" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
@@ -37,7 +37,96 @@ Station → 좌표·실행 모델 → Script 파일 → Automation/Interface →
 <table><tbody><tr><th>증상</th><th>확인 순서</th></tr><tr><td>저장했는데 화면이 옛값</td><td>저장 파일 → reload 결과 → Manager cache → UI 변경알림</td></tr><tr><td>화면값과 Script가 다름</td><td>선택 Recipe → Setting 동일 Key → 최신 Offset → 준비시각</td></tr><tr><td>재시작하면 결과 정보가 사라짐</td><td>메모리 필드 → writer 열 → reader 생성 → 복구 경로</td></tr><tr><td>장치가 두 번 시작되거나 정지가 늦음</td><td>실행 owner → worker/CTS → cleanup 완료 → 중복 클릭 gate</td></tr><tr><td>시작창은 떴는데 명령 불가</td><td>비동기 Initialize 결과 → 인터페이스/축 준비 → 인터락</td></tr></tbody></table>
 <p>이 확인표는 소스에서 도출한 조사 순서다. 이번 문서 작성에서는 정상 설비 빌드·앱 시작·재시작 round-trip·벤더 장치 연결을 새로 실행하지 않았다. 소스 인용이 있다는 사실과 운전 시나리오를 통과했다는 사실을 분리하여 상태를 기록한다.</p>
 <p>다음 읽기: <ac:link><ri:page ri:content-title="05. A3 LD PPID·Recipe·OSS·Job Change"/><ac:plain-text-link-body><![CDATA[Recipe·PPID]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="06. A3 LD 좌표계·Head 분담·Default"/><ac:plain-text-link-body><![CDATA[좌표계]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="07. A3 LD Scanner·MOF·Automation1"/><ac:plain-text-link-body><![CDATA[Automation1 실행]]></ac:plain-text-link-body></ac:link>.</p>
-<h2>코드와 문서 근거</h2><p>시작 객체 조립 <code>Drilling.UI/CAppStartup.cs:L14-L69</code> — 파일 어댑터·Manager·RootView와 비동기 Initialize</p><p>Manager 소유관계 <code>Drilling.Common/Managers/CManager.cs:L93-L142</code> — Interface/Setting/Automation/Motion/Product/Review/Recipe/Station 구성</p><p>실행 조건 합성 <code>Drilling.Common/Station/CStationProcess.cs:L1527-L1596</code> — Recipe 사본·Setting 덮어쓰기·Review Offset과 준비 최신성</p><p>실행 데이터 선언 <code>Drilling.Common/Station/CStationManager.cs:L300-L338</code> — HeadPlan/ProcessModel/ScriptBuildResult</p><p>Recipe 값 파서 <code>Drilling.File/JHMI/CJhmiRecipeFile.cs:L889-L923</code> — Tab/Name/Value/Extra</p><p>Product와 Station 생명주기 해설 — dfa5920e 기존 분석. Product 상태·영속화·복구 경계와 새 NG 정보 저장 공백</p>
-<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td>시작 객체 조립<br/><code>Drilling.UI/CAppStartup.cs:L14-L69</code></td><td>파일 어댑터·Manager·RootView와 비동기 Initialize</td></tr><tr><td>Manager 소유관계<br/><code>Drilling.Common/Managers/CManager.cs:L93-L142</code></td><td>Interface/Setting/Automation/Motion/Product/Review/Recipe/Station 구성</td></tr><tr><td>실행 조건 합성<br/><code>Drilling.Common/Station/CStationProcess.cs:L1527-L1596</code></td><td>Recipe 사본·Setting 덮어쓰기·Review Offset과 준비 최신성</td></tr><tr><td>실행 데이터 선언<br/><code>Drilling.Common/Station/CStationManager.cs:L300-L338</code></td><td>HeadPlan/ProcessModel/ScriptBuildResult</td></tr><tr><td>Recipe 값 파서<br/><code>Drilling.File/JHMI/CJhmiRecipeFile.cs:L889-L923</code></td><td>Tab/Name/Value/Extra</td></tr><tr><td>Product와 Station 생명주기 해설</td><td>dfa5920e 기존 분석. Product 상태·영속화·복구 경계와 새 NG 정보 저장 공백</td></tr></tbody></table>
+<h2>실제 코드로 읽는 처리 흐름</h2><p>프로그램 조립과 서비스 소유 관계를 보여주는 실제 코드다. 파일 저장 책임, 장비 초기화의 비동기 경계, RootView와 Station에 전달되는 공유 객체를 차례로 확인한다. 생성된 화면과 장비 준비 완료는 서로 다른 시점일 수 있다.</p><h3>CAppStartup.CreateMainViewModel의 파일 어댑터 생성</h3><p><strong>코드 위치명:</strong> <code>CAppStartup.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="358bd39e-69ec-5396-8dc0-ae26a7a0fb83" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CAppStartup.CreateMainViewModel의 파일 어댑터 생성</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[    public static CRootView CreateMainViewModel()
+    {
+        var configRoot = GetConfigRoot();
+        var settingFile = new CSettingFile(configRoot);
+        var automationScriptFile = new CAutomation1ScriptFile(GetScriptDirectory(configRoot, settingFile));
+        var manager = new CManager(
+            configRoot, 
+            new CJhmiRecipeFile(configRoot), 
+            settingFile, 
+            new CManualScanFile(configRoot), 
+            new CInterfaceFile(configRoot), 
+            new CBETFile(configRoot), 
+            new CMotorFile(configRoot), 
+            new CMelsecMapFile(configRoot), 
+            new CProductFile(configRoot), 
+            new CReviewResultFile(configRoot), 
+            new CReviewOffsetFile(configRoot), 
+            new CLogManager(configRoot), 
+            automationScriptFile, 
+            configStructureFile: new CConfigStructureFile(configRoot), 
+            alarmListFile: new CAlarmListFile(configRoot)
+        );
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 GetConfigRoot로 결정한 구성 기준과 Setting 파일이다. Recipe·Product·ReviewResult·ReviewOffset·Script 등 저장 형식을 담당하는 구체 파일 객체를 만들고 CManager에 주입한다. UI가 파일 형식을 직접 모두 처리하는 구조가 아니며, 새 저장 항목을 추가할 때 File 계층과 Manager 계약을 함께 확인해야 하는 이유를 보여준다.</p><h3>비동기 Initialize와 RootView·감시 구성</h3><p><strong>코드 위치명:</strong> <code>CAppStartup.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="9065d081-ff81-59bb-8616-4d386223a1df" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">비동기 Initialize와 RootView·감시 구성</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[        async global::System.Threading.Tasks.Task SelectValue()
+        {
+            try
+            {
+                await manager.Initialize();
+                WriteManagerStartupStatus(manager, "MANAGER_INITIALIZE_SEQUENCE", lastLoggedStartupOrder);
+            }
+            catch (Exception exception)
+            {
+                CProgramOpenLog.Write("MANAGER_INITIALIZE_FAILED", exception);
+                WriteManagerStartupStatus(manager, "MANAGER_INITIALIZE_SEQUENCE", lastLoggedStartupOrder);
+            }
+        }
+
+        _ = Task.Run(SelectValue);
+        var rootView = new CRootView(
+            manager, 
+            manager.Station(), 
+            manager.Interface(), 
+            manager.Motion(), 
+            manager.Alarm(), 
+            manager.InterLock(), 
+            manager.ManualScanFile(), 
+            manager.Recipe(), 
+            manager.Setting(), 
+            manager.Product(), 
+            manager.Review(), 
+            automationScriptFile
+        );
+        manager.StartBackgroundMonitoring();
+        return rootView;
+    }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 앞에서 생성한 Manager와 Script 어댑터다. Initialize는 Task.Run으로 시작되고 RootView에는 같은 Manager의 Station·Interface·Motion·Recipe·Product·Review가 전달된다. 감시를 시작한 뒤 RootView를 반환하므로 화면 생성과 장치 초기화 완료가 하나의 동기 완료가 아니다. 발췌의 예외 로그는 초기화 실패 기록이며 장치 자동 복구 보장을 의미하지 않는다.</p><h3>CManager 생성자의 Automation·Product·Review·Station 연결</h3><p><strong>코드 위치명:</strong> <code>CManager.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="6800c003-41b5-52cd-8f8d-2fb2752f471a" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CManager 생성자의 Automation·Product·Review·Station 연결</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[        _automationManager = new CAutomationManager(_interfaceManager, _settingManager, GetProjectRoot(), GetScriptDirectory());
+        AddStartupStep("Create Automation Manager", EN_MANAGER_STARTUP_RESULT.Ready, "CAutomationManager created.");
+        var melsecMapData = LoadMelsecMapList();
+        _interfaceManager.Melsec.ReloadMap(melsecMapData);
+        AddStartupStep("Register JHMI_MELSEC_MAP", EN_MANAGER_STARTUP_RESULT.Ready, $"Registered {melsecMapData.Count} MELSEC map row(s).");
+        var motorData = LoadMotorList();
+        IReadOnlyList<ST_IO_DATA> ioData = [];
+        _motionManager = new CMotionManager(_interfaceManager, motorData, ioData, isSimulation: GetMotionSimulationMode(simulationMode));
+        _alarmMotorSnapshots = new(_motionManager.GetAxisStatusAsync);
+        _alarmLaserSnapshots = new(_interfaceManager.ReadLaserStatusAsync);
+        _alarmBetSnapshots = new(_interfaceManager.ReadBetStatusAsync);
+        AddStartupStep("Create Motion Manager", EN_MANAGER_STARTUP_RESULT.Ready, $"CMotionManager created. Axis={motorData.Count}, Simul={_motionManager.IsSimulation}");
+        _productManager = new CProductManager(_productFile, _logManager);
+        AddStartupStep("Create Product Manager", EN_MANAGER_STARTUP_RESULT.Ready, "CProductManager created.");
+        LoadActiveProduct();
+        _reviewManager = new CReviewManager(_reviewResultFile, _interfaceManager, _settingManager, _productManager, _logManager);
+        AddStartupStep("Create Review Manager", EN_MANAGER_STARTUP_RESULT.Ready, "CReviewManager created.");
+        _recipeManager = new CRecipeManager(_recipeFile);
+        _stationManager = new CStationManager(
+            _interfaceManager, 
+            _motionManager, 
+            _interLockManager, 
+            _settingManager, 
+            _automationScriptFile, 
+            _automationManager, 
+            _reviewOffsetFile, 
+            _productManager, 
+            _logManager, 
+            GetScriptDirectory(), 
+            _recipeManager, 
+            _reviewManager,
+            HandleProtectWindowRetryExhausted
+        );
+        AddStartupStep("Create Station Manager", EN_MANAGER_STARTUP_RESULT.Ready, $"Script={GetScriptDirectory()}");
+        _stationManager.StageRequests.Failed += _alarmManager.SetSequenceFailure;
+        _interfaceManager.StageReviewSequences.Failed += _alarmManager.SetSequenceFailure;
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 등록된 Interface·Setting·MELSEC map·Motor 정의와 파일 객체다. Automation/Motion/Product/Review/Recipe Manager를 만들고 그 객체들을 StationManager에 전달하며 실패 이벤트를 알람으로 연결한다. Product와 Review는 같은 기판 정보를 공유하지만 역할이 다르며, 새 메뉴에서 별도 Manager를 만들면 캐시와 실행 소유권이 갈라질 수 있음을 이해하는 근거다.</p>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 </div>

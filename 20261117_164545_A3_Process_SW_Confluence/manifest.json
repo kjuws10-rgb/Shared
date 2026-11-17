@@ -11,10 +11,11 @@
       "parent": null,
       "file": "pages/00_Process_SW_개발.storage.xhtml.txt",
       "attachment": "attachments/00_학습과대응경로.png",
-      "bodyTextChars": 2107,
-      "sha256": "61918680cec126f76b6d625a33acca96a7dcf7196bdc2dfff98d598f2cefb1e6",
-      "bytes": 11948,
-      "headings": 6
+      "bodyTextChars": 2122,
+      "sha256": "df473ff36b9660907b7efbf2f191552dadb3febd6beca264f2ed85b63993a8b7",
+      "bytes": 11425,
+      "headings": 6,
+      "inlineCode": []
     },
     {
       "id": "p01",
@@ -23,9 +24,10 @@
       "file": "pages/01_A3_LD_시작하기와_인수인계.storage.xhtml.txt",
       "attachment": null,
       "bodyTextChars": 2998,
-      "sha256": "16c601fcc806da54d11d06469ca473271f2b17e577bb9d8da54c7503a0c42172",
-      "bytes": 11935,
-      "headings": 6
+      "sha256": "15ac3b18f710390988c149242a0c43489e7b62a46d0557e2d65af4803abf232b",
+      "bytes": 11500,
+      "headings": 6,
+      "inlineCode": []
     },
     {
       "id": "p02",
@@ -33,10 +35,30 @@
       "parent": "p00",
       "file": "pages/02_A3_LD_장비·공정·물류.storage.xhtml.txt",
       "attachment": "attachments/02_장비물류개념.png",
-      "bodyTextChars": 4841,
-      "sha256": "aeab40588604ccd5e1e662d96531508691461ff62c4061c4b770a5587c659d1a",
-      "bytes": 14023,
-      "headings": 9
+      "bodyTextChars": 4374,
+      "sha256": "419ecba1fff6a282c0a20bcbf54670cf80dd24327c2046ee62015170cd5aab0b",
+      "bytes": 21909,
+      "headings": 8,
+      "inlineCode": [
+        {
+          "title": "MAIN START의 MANUAL 확인·준비·실행·완료 대기",
+          "fileName": "CRootView.cs",
+          "lines": 39,
+          "sha256": "9c3edf2ae0124bc8a22fd1bf50019d4b4fd5d0eaec04e881188e1b6b202b63c7"
+        },
+        {
+          "title": "AUTO 준비에서 입력 사본·Shift 정규화와 실행 책임 분리",
+          "fileName": "CStationProcess.cs",
+          "lines": 33,
+          "sha256": "9d62a4bfcb65669482678bfaf5d6c8bb1b472b26ac051c69e84b5af2879902cf"
+        },
+        {
+          "title": "DoReady의 ABLE·START·준비·업로드·COMPLETE 진행",
+          "fileName": "CStationProcess.cs",
+          "lines": 18,
+          "sha256": "a3e0e0f845ccf2d4639c839c850231e273ad1e3b70e6f0018162fb71096ddf3c"
+        }
+      ]
     },
     {
       "id": "p03",
@@ -44,10 +66,30 @@
       "parent": "p00",
       "file": "pages/03_A3_LD_SW_구조와_실행_데이터.storage.xhtml.txt",
       "attachment": "attachments/03_실행데이터흐름.png",
-      "bodyTextChars": 5790,
-      "sha256": "1cf90d41bc08582858dea043448643295f49be8d12ae8f9639c8e71f34ac93ae",
-      "bytes": 15191,
-      "headings": 10
+      "bodyTextChars": 5186,
+      "sha256": "6c9e5132986e33ac67c95ad1afdba90f4214b0f9ec67414b03897df04b5be6da",
+      "bytes": 21123,
+      "headings": 9,
+      "inlineCode": [
+        {
+          "title": "CAppStartup.CreateMainViewModel의 파일 어댑터 생성",
+          "fileName": "CAppStartup.cs",
+          "lines": 22,
+          "sha256": "d6ec0daeecd6c8e94b316cf5565df4d70db4dfc3c05321930a49ac2fbbb50b0d"
+        },
+        {
+          "title": "비동기 Initialize와 RootView·감시 구성",
+          "fileName": "CAppStartup.cs",
+          "lines": 32,
+          "sha256": "0fc1ebbdb4b8481dda83d32c143789889aa6eeea49525f10f70bddbab4db4ba0"
+        },
+        {
+          "title": "CManager 생성자의 Automation·Product·Review·Station 연결",
+          "fileName": "CManager.cs",
+          "lines": 36,
+          "sha256": "5c654336e30c67baf19ccecd0fcb963b1a7f319e785e7018ba1de25067eb13e3"
+        }
+      ]
     },
     {
       "id": "p04",
@@ -55,10 +97,24 @@
       "parent": "p00",
       "file": "pages/04_A3_LD_개발환경·코드_탐색·배포.storage.xhtml.txt",
       "attachment": null,
-      "bodyTextChars": 3694,
-      "sha256": "c522738e9ee22446cf14d7b2d51dabb82ceb57785b4d4158b0bc0ccccdd944b5",
-      "bytes": 11358,
-      "headings": 7
+      "bodyTextChars": 3616,
+      "sha256": "13ddcfdc3e7e797a01096e9951a367db29345cf719ffdeb11ad48031f2b1b684",
+      "bytes": 14095,
+      "headings": 7,
+      "inlineCode": [
+        {
+          "title": "Config 폴더 선택",
+          "fileName": "CAppStartup.cs",
+          "lines": 15,
+          "sha256": "0d39c09c7263a095cf5e2cbfd0edea0bea11d9b5f0f567615c5d1d9bc0e4d056"
+        },
+        {
+          "title": "Script 폴더 선택",
+          "fileName": "CAppStartup.cs",
+          "lines": 16,
+          "sha256": "194208481bc7da1f785d0a7ae9c9f0c469290317bea72b59b4874bb58e7f927e"
+        }
+      ]
     },
     {
       "id": "p05",
@@ -66,10 +122,24 @@
       "parent": "p00",
       "file": "pages/05_A3_LD_PPID·Recipe·OSS·Job_Change.storage.xhtml.txt",
       "attachment": null,
-      "bodyTextChars": 4439,
-      "sha256": "a8c7fd6f075ef52db61540f62931f0ece4e66abd4b7e2cdd34495d491ac5b259",
-      "bytes": 12837,
-      "headings": 8
+      "bodyTextChars": 4429,
+      "sha256": "8e071cf598d5389832a74b514f54a6e4cedf8c474e9689f1ca0e74ad290ea58c",
+      "bytes": 16709,
+      "headings": 8,
+      "inlineCode": [
+        {
+          "title": "CStationProcess.BuildRuntimeParameters · 실행용 조건 합성",
+          "fileName": "CStationProcess.cs",
+          "lines": 19,
+          "sha256": "fbf83e0587f3f67813e63f1a12b759c4cc2040c44b41bbe2baf89bb792848d7e"
+        },
+        {
+          "title": "CRecipeManager.SavePowerMeasureAngles · 지정 Head 각도만 최신 Recipe에 반영",
+          "fileName": "CRecipeManager.cs",
+          "lines": 16,
+          "sha256": "3f5efeed90f759f6232fe34578eb01cc85fb64f405f1e6396cb80e5361a96155"
+        }
+      ]
     },
     {
       "id": "p06",
@@ -77,10 +147,30 @@
       "parent": "p00",
       "file": "pages/06_A3_LD_좌표계·Head_분담·Default.storage.xhtml.txt",
       "attachment": "attachments/06_좌표와보정경계.png",
-      "bodyTextChars": 5973,
-      "sha256": "e85e81bfe082597ffa6031bd13a8b3dbfab6590bd8ba25d14ece036e44376690",
-      "bytes": 15179,
-      "headings": 9
+      "bodyTextChars": 5183,
+      "sha256": "01b0c8ddac3f4babe2b1677e9e58823f98d9fe3144b8601eb59ba9a383c84b96",
+      "bytes": 23194,
+      "headings": 8,
+      "inlineCode": [
+        {
+          "title": "AssignHeadNo의 X 영역 후보 구성",
+          "fileName": "CShotCoordinatePlanBuilder.cs",
+          "lines": 29,
+          "sha256": "d1b0ca02d08fccfcba75be457375109d37e55ceaba881bd08d3fe00e370efb47"
+        },
+        {
+          "title": "Build의 Stage 대기·Offset 합성·최종 Scanner 좌표",
+          "fileName": "CShotCoordinatePlanBuilder.cs",
+          "lines": 37,
+          "sha256": "3ac72be2dda0fc4098d23cb45e30caf9b39e83c59f34a11efe3cae55df3c8b4a"
+        },
+        {
+          "title": "Default 옵션의 AK 중앙과 Shot·Cross 검사 계약",
+          "fileName": "CDefaultOffsetCalibration.cs",
+          "lines": 21,
+          "sha256": "58dc1c44cee2405fb979217ecdcafdd9eec3a9da7bf38c3f198c2eda291dca0e"
+        }
+      ]
     },
     {
       "id": "p07",
@@ -88,10 +178,30 @@
       "parent": "p00",
       "file": "pages/07_A3_LD_Scanner·MOF·Automation1.storage.xhtml.txt",
       "attachment": "attachments/07_실행모드경계.png",
-      "bodyTextChars": 6247,
-      "sha256": "beaf6ae877159a17ecd310737891ed26de2a5884dee7e5344a14d2b5a0dd93e4",
-      "bytes": 16343,
-      "headings": 11
+      "bodyTextChars": 5441,
+      "sha256": "63518206199d8644f19cdbc9fd974f966596b92d030c8564f54f9db359f39748",
+      "bytes": 22796,
+      "headings": 10,
+      "inlineCode": [
+        {
+          "title": "RunControllerScript의 Compile·Idle 확인·Program.Run",
+          "fileName": "CAutomation1Comm.cs",
+          "lines": 22,
+          "sha256": "858122399500b69140e6e04390b22d83ef836f24d937e7f0e7a0dea0e9ca6438"
+        },
+        {
+          "title": "RunBufferedControllerFiles의 Queue 공급·대기·정리",
+          "fileName": "CAutomation1Comm.cs",
+          "lines": 39,
+          "sha256": "9c7553e76afa73c9ad6ca9cc43465909b9554ff9e4fac8b8aa21b07e30a10657"
+        },
+        {
+          "title": "생성 Script의 중심화·AUX 설정·현재 회차 Ready 게시",
+          "fileName": "CAutomation1ScriptFile.cs",
+          "lines": 26,
+          "sha256": "f0020947b33fdf823c5c8cbfd6256d96669a5d594f84e4e430da8263879d3352"
+        }
+      ]
     },
     {
       "id": "p08",
@@ -100,9 +210,23 @@
       "file": "pages/08_A3_LD_Align·Review·검사·보정.storage.xhtml.txt",
       "attachment": "attachments/08_측정후보적용경계.png",
       "bodyTextChars": 4776,
-      "sha256": "aeb3015b4f38889684811033b1798fa9d647db15a74cf569946c96321dfca0ef",
-      "bytes": 14992,
-      "headings": 7
+      "sha256": "ad391b8701713ccf893804668005a533018d80c1e70110d2f292543f00f4883c",
+      "bytes": 17024,
+      "headings": 7,
+      "inlineCode": [
+        {
+          "title": "CMenuCorrection.ReviewData.Offset.cs · BuildFineDeltas / MeasuredRows",
+          "fileName": "CMenuCorrection.ReviewData.Offset.cs",
+          "lines": 35,
+          "sha256": "be6f3305d84c426cfa8e70452a2c1e5c2b5a07b98c3cde1b1b2995cfce041bd2"
+        },
+        {
+          "title": "CMenuCorrection.ReviewData.Offset.cs · IsOffsetApplicableResultType",
+          "fileName": "CMenuCorrection.ReviewData.Offset.cs",
+          "lines": 4,
+          "sha256": "585c0f822c5a0afc53f52664af5ee1b0bca7cf2fe44e304848dbd6763f9e86ba"
+        }
+      ]
     },
     {
       "id": "p09",
@@ -110,10 +234,24 @@
       "parent": "p00",
       "file": "pages/09_A3_LD_통신과_장비_인터페이스.storage.xhtml.txt",
       "attachment": null,
-      "bodyTextChars": 4744,
-      "sha256": "7e08f7fe05b72a57890100fa58df2da5498e4c34e53fbe14c51b6536877d668f",
-      "bytes": 12884,
-      "headings": 8
+      "bodyTextChars": 4740,
+      "sha256": "3ddfca6e5c4d622e739b29848a7a31bbea4248743fe51363873249cda767a634",
+      "bytes": 16269,
+      "headings": 8,
+      "inlineCode": [
+        {
+          "title": "CComm.Create · InterfaceType·DeviceName으로 실제 Comm 선택",
+          "fileName": "CComm.cs",
+          "lines": 22,
+          "sha256": "71c40b06ab5cc13801f8f16c88bfe854f88a1dd158e5a36ec4f541f244ab9037"
+        },
+        {
+          "title": "CMelsec.WithCacheFreshness · 오래된 polling 값을 Stale로 전환",
+          "fileName": "CMelsec.cs",
+          "lines": 15,
+          "sha256": "14065d012f636200e41efbd2ef8a78e2d53adee0c25458e3ca134d7f663957ed"
+        }
+      ]
     },
     {
       "id": "p10",
@@ -122,9 +260,17 @@
       "file": "pages/10_A3_LD_광학_Component와_Power.storage.xhtml.txt",
       "attachment": null,
       "bodyTextChars": 4995,
-      "sha256": "37be8425fbe5dff59712d03040e30b61d8e3a02a098fca7d9f8c5f0a4a32070b",
-      "bytes": 13522,
-      "headings": 8
+      "sha256": "3f29a148939e78187d8554ee371a1458189ad208604cfe04038641b000a03652",
+      "bytes": 15837,
+      "headings": 8,
+      "inlineCode": [
+        {
+          "title": "CPowerMeasureRun.Measure 종료부와 Save · 보고·정상판정·저장 Gate",
+          "fileName": "CPowerMeasureRun.cs",
+          "lines": 39,
+          "sha256": "cab5858a13dbcfa0b576be8d0cae7f90f215ce919d3deb9a19d0ab98ac7ae8a9"
+        }
+      ]
     },
     {
       "id": "p11",
@@ -132,10 +278,18 @@
       "parent": "p00",
       "file": "pages/11_A3_LD_운전_화면과_Manual·Auto.storage.xhtml.txt",
       "attachment": null,
-      "bodyTextChars": 4829,
-      "sha256": "197813049a8e398a510cdbbc1dabd8da59890f98c3f1aaf2385188dd58142e66",
-      "bytes": 14303,
-      "headings": 7
+      "bodyTextChars": 4823,
+      "sha256": "fe9542fc7263b6dd3fa4342b9b66690adc550da53e92348ab4ca2d3bd7b99ce0",
+      "bytes": 14436,
+      "headings": 7,
+      "inlineCode": [
+        {
+          "title": "CReviewResultLevelSettings.cs · ST_REVIEW_RESULT_LEVEL_SETTINGS.Resolve",
+          "fileName": "CReviewResultLevelSettings.cs",
+          "lines": 22,
+          "sha256": "792066b2405ee0ebe8773621d16d4638655e423cb60e5917ad4b105f09b0a979"
+        }
+      ]
     },
     {
       "id": "p12",
@@ -144,9 +298,23 @@
       "file": "pages/12_A3_LD_Alarm·Interlock·정지·복구.storage.xhtml.txt",
       "attachment": null,
       "bodyTextChars": 4301,
-      "sha256": "98d492067cfaf0c5acd222239e8cee9103657ccd0eaf2547c495c7d6f2893d1e",
-      "bytes": 13755,
-      "headings": 8
+      "sha256": "39ab907ea655c9c422777b84fe002f6ac9894db921e7c37e8326be001a1855b9",
+      "bytes": 15479,
+      "headings": 8,
+      "inlineCode": [
+        {
+          "title": "CAlarmManager.cs · Reset",
+          "fileName": "CAlarmManager.cs",
+          "lines": 12,
+          "sha256": "5c0cdfe3917c4e2b15569ca9c1ad8664199c52aec4852c94bd657faac93bbf4f"
+        },
+        {
+          "title": "CStationProcess.cs · ResetAfterStop",
+          "fileName": "CStationProcess.cs",
+          "lines": 18,
+          "sha256": "8d176aad07fb5049c5cc47f0e36f7b2ccae2f953fcaa1b57a976cea6d8bb8d88"
+        }
+      ]
     },
     {
       "id": "p13",
@@ -155,9 +323,17 @@
       "file": "pages/13_A3_LD_검증·시험·Acceptance.storage.xhtml.txt",
       "attachment": "attachments/13_검증단계.png",
       "bodyTextChars": 4220,
-      "sha256": "db4c623d6af6a02024f50d8623f8a303658abd143cd13854126db020c2e522fe",
-      "bytes": 13245,
-      "headings": 6
+      "sha256": "52d6a5c8adeb1e55de12b22e38aaa4634408e9acf192ad37f3d77f8afe37f4ac",
+      "bytes": 15661,
+      "headings": 6,
+      "inlineCode": [
+        {
+          "title": "스레드 Stop의 완료와 Timeout",
+          "fileName": "CtrlThread.cs",
+          "lines": 61,
+          "sha256": "304f17d8b4ac4d0a75c53f8dacd68ae17733861418e069ac8ad66c703e516995"
+        }
+      ]
     },
     {
       "id": "p14",
@@ -166,9 +342,10 @@
       "file": "pages/14_A3_LD_요구사항·WBS·개발현황.storage.xhtml.txt",
       "attachment": null,
       "bodyTextChars": 4597,
-      "sha256": "2df3ca354de892b95e34f9e792400a9b86c52a922a2c687ea99c36aa4f4fba5e",
-      "bytes": 13949,
-      "headings": 8
+      "sha256": "d3eca36592f3820fc9b01190d96a340687b5e0bfa00871814d40a40c1aaa4333",
+      "bytes": 12950,
+      "headings": 8,
+      "inlineCode": []
     },
     {
       "id": "p14a",
@@ -177,9 +354,10 @@
       "file": "pages/14a_A3_LD_고객_요구_51개_·_2026-08_기준.storage.xhtml.txt",
       "attachment": null,
       "bodyTextChars": 24938,
-      "sha256": "acaaaa526ea70829ebcc99adbe579ec6d3c4fb1fd68233c9815931e805d8c152",
-      "bytes": 46037,
-      "headings": 6
+      "sha256": "d6d60ff50c61d6ad55772298ca518abb8416d4508e91c60df8c7914a45aae123",
+      "bytes": 45586,
+      "headings": 6,
+      "inlineCode": []
     },
     {
       "id": "p14b",
@@ -188,9 +366,10 @@
       "file": "pages/14b_A3_LD_협업_WBS_137개_·_2026-08_기준.storage.xhtml.txt",
       "attachment": null,
       "bodyTextChars": 21305,
-      "sha256": "b03931080a6f1ccd9a0e3c7a112926b4a64cd51ad9bb0103ec0a1bdad52fa504",
-      "bytes": 49728,
-      "headings": 7
+      "sha256": "1895513c228583d51d8d5c7207534bcffdf7052c3cfb74374604a3eadecd2fef",
+      "bytes": 49277,
+      "headings": 7,
+      "inlineCode": []
     },
     {
       "id": "p14c",
@@ -199,9 +378,10 @@
       "file": "pages/14c_A3_LD_개발일정_36개_·_과거_계획.storage.xhtml.txt",
       "attachment": null,
       "bodyTextChars": 5491,
-      "sha256": "256cefa3441428b60d87e519341c8a845a56e5e383f92adfc856f3c412391f4d",
-      "bytes": 14503,
-      "headings": 5
+      "sha256": "1fa8ca4571a5ef75e6457299d9caaaf2900b69d42eeb1f887f81be41c36f078e",
+      "bytes": 14052,
+      "headings": 5,
+      "inlineCode": []
     },
     {
       "id": "p15",
@@ -210,9 +390,17 @@
       "file": "pages/15_A3_LD_장애대응과_미결사항.storage.xhtml.txt",
       "attachment": null,
       "bodyTextChars": 5371,
-      "sha256": "0b58506ac76e9ad21da78cf2315cb9d28274f8c2a1e80e59dfed74876d01b3a5",
-      "bytes": 16097,
-      "headings": 14
+      "sha256": "3f072937205b4a6def507bf21cb6fc7b109534323f7a354adacec1080a35493b",
+      "bytes": 16208,
+      "headings": 14,
+      "inlineCode": [
+        {
+          "title": "CReviewResultFile.cs · Optional 숫자 읽기 경계",
+          "fileName": "CReviewResultFile.cs",
+          "lines": 22,
+          "sha256": "31a1fd4992c01345f1b3c63d1e0fef0507069c34bdf52bf63f36de909448e0a8"
+        }
+      ]
     },
     {
       "id": "p16",
@@ -220,10 +408,11 @@
       "parent": "p00",
       "file": "pages/16_A3_LD_자료·산출물·변경관리.storage.xhtml.txt",
       "attachment": null,
-      "bodyTextChars": 3240,
-      "sha256": "345a6b1a4498d1d1481a78cb87357a0a62546dbf3ae66357e9428734f250af85",
-      "bytes": 13208,
-      "headings": 6
+      "bodyTextChars": 3264,
+      "sha256": "04ad99f3c31415e0048004e4f88f32afd3525a9b208fea4c4e55286c96a4f434",
+      "bytes": 12644,
+      "headings": 6,
+      "inlineCode": []
     }
   ],
   "attachments": [

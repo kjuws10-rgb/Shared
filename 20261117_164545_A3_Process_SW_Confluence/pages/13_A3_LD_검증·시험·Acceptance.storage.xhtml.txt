@@ -1,5 +1,5 @@
 <div>
-<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 코드 기준:</strong> Ver11.17.0 | <strong>UI 프로젝트 Version:</strong> 2026.11.13.0</p>
 <ac:structured-macro ac:macro-id="368f9a38-9879-52b8-876e-1031d2794277" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 <ac:structured-macro ac:macro-id="bdad277f-c6e8-523d-8511-76dbea84a7c7" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
@@ -19,7 +19,67 @@
 <h2>5. 시험 결과 기록 양식</h2>
 <table class="wrapped"><tbody><tr><th>필드</th><th>기입 내용</th></tr><tr><td>시험ID·연결 요구</td><td>Txx, AM/MM/RD/IC/SS 기능ID, 관련 WBS와 변경ID</td></tr><tr><td>기준</td><td>장비·Commit·실행파일·SDK·PLC/Vision 계약 버전</td></tr><tr><td>입력</td><td>모드·Recipe/모델·Glass/Run·Cell/Head/DOE·보정 Revision</td></tr><tr><td>기대</td><td>명령·상태전이·좌표/단위·허용오차·실패 시 동작</td></tr><tr><td>관찰</td><td>실제 값·응답·시간·실패 사유, 재현 횟수</td></tr><tr><td>증거</td><td>Script/Hash·송수신·로그·ReviewResult·적용/원복 파일·계측 결과</td></tr><tr><td>판정</td><td>통과/실패/보류/미실행, 결함ID·재시험·승인자·일자</td></tr></tbody></table>
 <h2>6. 개발현황으로 되돌려 반영하기</h2>
-<p>WBS 한 줄의 완료와 고객 요구 전체의 완료를 구별한다. 예를 들어 Recipe 편집 화면이 완료돼도 통합 Job Change의 전송·Read-back·실패 원복이 검증되지 않았다면 해당 고객 요구 전체를 완료로 바꾸지 않는다. <ac:link><ri:page ri:content-title="14. A3 LD 요구사항·WBS·개발현황"/><ac:plain-text-link-body><![CDATA[개발현황]]></ac:plain-text-link-body></ac:link>에는 이번에 확인한 증거만 연결하고, 8월 과거 집계는 별도 부록에서 보존한다.</p>
-<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td>변경 영향과 검증 경계</td><td>검증 계획과 실제 실행 결과 구별</td></tr><tr><td>동시성·취소·로그</td><td>실행층별 위험과 합성 검증 계획</td></tr><tr><td>소스 기준점</td><td>현재 정적 코드 기준; 현장 합격 아님</td></tr></tbody></table>
+<p>WBS 한 줄의 완료와 고객 요구 전체의 완료를 구별한다. 예를 들어 Recipe 편집 화면이 완료돼도 통합 Job Change의 전송·Read-back·실패 원복이 검증되지 않았다면 해당 고객 요구 전체를 완료로 바꾸지 않는다. <ac:link><ri:page ri:content-title="14. A3 LD 요구사항·WBS·개발현황"/><ac:plain-text-link-body><![CDATA[개발현황]]></ac:plain-text-link-body></ac:link>에는 이번에 확인한 증거만 연결하고, 8월 과거 집계는 별도 부록에서 보존한다.</p><h2>실제 코드로 읽는 처리 흐름</h2><p>스레드 정지 시험에서 확인할 실제 구현이다. 이 함수가 기다리는 대상과 실패 시 상태를 구별하면 시험 결과의 범위를 정확히 적을 수 있다.</p><h3>스레드 Stop의 완료와 Timeout</h3><p><strong>코드 위치명:</strong> <code>CtrlThread.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="2dfa607b-234f-55e6-8c6e-1b7188b7ae38" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">스레드 Stop의 완료와 Timeout</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[    public void Stop()
+    {
+        Thread? target;
+        bool isCurrentThread;
+        lock (_sync)
+        {
+            ThrowIfDisposed();
+            _stopRequested = true;
+            _state = EN_CTRL_THREAD_STATE.Stopping;
+            _pauseEvent.Set();
+            _stopEvent.Set();
+            target = _thread;
+            isCurrentThread = target == Thread.CurrentThread;
+        }
+
+        if (target is null)
+        {
+            lock (_sync)
+            {
+                if (_thread is null)
+                {
+                    _state = EN_CTRL_THREAD_STATE.Stopped;
+                }
+            }
+
+            return;
+        }
+
+        if (isCurrentThread)
+        {
+            return;
+        }
+
+        var stopped = target.Join(3000);
+        Exception? stopError = null;
+        lock (_sync)
+        {
+            if (!ReferenceEquals(_thread, target))
+            {
+                return;
+            }
+
+            if (stopped || !target.IsAlive)
+            {
+                _thread = null;
+                _state = EN_CTRL_THREAD_STATE.Stopped;
+            }
+            else
+            {
+                _state = EN_CTRL_THREAD_STATE.Error;
+                stopError = new TimeoutException("Thread stop timeout: " + _threadName);
+                _lastError = stopError;
+                Debug.WriteLine(stopError.ToString());
+            }
+        }
+
+        if (stopError is not null)
+        {
+            throw stopError;
+        }
+    }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 이 함수는 stop 플래그와 대기 이벤트를 설정한 뒤, 다른 스레드에서 호출했다면 대상 스레드의 종료를 최대 3000 ms 기다린다. 종료하지 않으면 Error 상태와 TimeoutException을 남긴다. 대상이 없거나 자기 자신에게 호출된 경우에는 별도 분기로 반환한다. 이 코드에는 Stage·Scanner·Laser의 물리 상태를 확인하는 동작이 없다. 따라서 T18의 스레드 종료 확인과 실제 장치 정지·출력 차단 확인은 각각 기록해야 한다.</p>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 </div>

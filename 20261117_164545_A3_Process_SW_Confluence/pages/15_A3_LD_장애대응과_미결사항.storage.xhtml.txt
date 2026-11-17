@@ -1,5 +1,5 @@
 <div>
-<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 코드 기준:</strong> Ver11.17.0 | <strong>UI 프로젝트 Version:</strong> 2026.11.13.0</p>
 <ac:structured-macro ac:macro-id="2df914e0-26c8-53e6-8cf6-059ad9ec6b07" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 <ac:structured-macro ac:macro-id="54a0cdd0-c81a-5614-88a5-fca2e6deb99c" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
@@ -51,7 +51,28 @@
 <h2>6. 오래된 현황과 미확정 현장값을 관리한다</h2>
 <p>공유된 2026-08-09의 고객 요구 51개, 공동 WBS 137개, 일정 36개는 당시 기준선이다. 이 표의 “구현완료”나 날짜 경과만으로 현재 현장 기능을 완료로 올리지 않는다. 현재 Commit의 정적 코드 확인, Simulation/UI 검증, 정식 Build, 실제 PLC·Stage·Laser·Vision 연동, 고객 Acceptance를 나누어 갱신한다.</p>
 <p>현재 페이지들만으로 확정할 수 없는 항목은 실제 배포 I/F 주소·단위·극성·정상값, Head별 물리 광학 명단, 승인된 보정·정밀도·TACT 기준, Timeout/Retry 생산 정책, 재가공·배출 판단과 담당/승인 연락망이다. 각 항목에는 소유자, 결정일, 적용 버전, 시험 근거를 남겨 미결을 닫는다. 숫자나 담당자를 추정해 채우지 않는다.</p>
-<p>검사 원리는 <ac:link><ri:page ri:content-title="08. A3 LD Align·Review·검사·보정"/><ac:plain-text-link-body><![CDATA[Align·Review·검사·보정]]></ac:plain-text-link-body></ac:link>, 실제 화면 읽기는 <ac:link><ri:page ri:content-title="11. A3 LD 운전 화면과 Manual·Auto"/><ac:plain-text-link-body><![CDATA[운전 화면과 Manual·Auto]]></ac:plain-text-link-body></ac:link>, 정지와 재개 범위는 <ac:link><ri:page ri:content-title="12. A3 LD Alarm·Interlock·정지·복구"/><ac:plain-text-link-body><![CDATA[Alarm·Interlock·정지·복구]]></ac:plain-text-link-body></ac:link>를 함께 사용한다.</p>
-<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td>Drilling.Common/Review/CAutoFineReviewCoordinator.cs:95–168<br/><code>Drilling.Common/Review/CAutoFineReviewCoordinator.cs:L95-L168</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.File/ReviewOffset/CReviewOffsetFile.cs:565–609<br/><code>Drilling.File/ReviewOffset/CReviewOffsetFile.cs:L565-L609</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Correction/CDefaultOffsetCalibration.cs:129–173<br/><code>Drilling.Common/Correction/CDefaultOffsetCalibration.cs:L129-L173</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Correction/CAlignInterpolation.cs:237–263<br/><code>Drilling.Common/Correction/CAlignInterpolation.cs:L237-L263</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Station/CStationProcess.cs:4680–4697<br/><code>Drilling.Common/Station/CStationProcess.cs:L4680-L4697</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>Drilling.Common/Review/CReviewResultLevelSettings.cs:14–175<br/><code>Drilling.Common/Review/CReviewResultLevelSettings.cs:L14-L175</code></td><td>9a43c709 정적 코드 확인. 기존 파일은 dfa5920e 이후 변경 없음. 실장비 실행 결과 아님.</td></tr><tr><td>11.13.0 코드 해설: 03_Vision_패킷과_단위.md</td><td>dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.</td></tr><tr><td>11.13.0 코드 해설: 02_Masking_Sampling_IOF.md</td><td>dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.</td></tr><tr><td>11.13.0 코드 해설: 05_결과_Revision_Product_연결.md</td><td>dfa5920e 기준 해설·후속 시험 계획. 신규 9a43 UI 파일 통합 검증은 포함하지 않음.</td></tr><tr><td>11.13.0 위험도별 발견사항</td><td>정적 위험과 계획. 실제 현장 불합격/이번 시험 통과 결과 아님.</td></tr></tbody></table>
+<p>검사 원리는 <ac:link><ri:page ri:content-title="08. A3 LD Align·Review·검사·보정"/><ac:plain-text-link-body><![CDATA[Align·Review·검사·보정]]></ac:plain-text-link-body></ac:link>, 실제 화면 읽기는 <ac:link><ri:page ri:content-title="11. A3 LD 운전 화면과 Manual·Auto"/><ac:plain-text-link-body><![CDATA[운전 화면과 Manual·Auto]]></ac:plain-text-link-body></ac:link>, 정지와 재개 범위는 <ac:link><ri:page ri:content-title="12. A3 LD Alarm·Interlock·정지·복구"/><ac:plain-text-link-body><![CDATA[Alarm·Interlock·정지·복구]]></ac:plain-text-link-body></ac:link>를 함께 사용한다.</p><h2>실제 코드로 읽는 처리 흐름</h2><p>장애 화면의 숫자 0을 해석할 때는 어느 파서가 값을 만들었는지 확인해야 한다. 이름이 비슷한 두 읽기 함수의 실패 처리가 다르다.</p><h3>CReviewResultFile.cs · Optional 숫자 읽기 경계</h3><p><strong>코드 위치명:</strong> <code>CReviewResultFile.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="c4d33816-8fd1-5197-877d-d62ea59c3e8f" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">CReviewResultFile.cs · Optional 숫자 읽기 경계</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[        private static double ReadOptionalFiniteDouble(IReadOnlyDictionary<string, string> row, params string[] names)
+        {
+            return ReadOptionalNullableFiniteDouble(row, names) ?? 0.0;
+        }
+
+        private static double ReadOptionalDouble(IReadOnlyDictionary<string, string> row, string name)
+        {
+            var text = CCsvParser.Get(row, name);
+            if (string.IsNullOrWhiteSpace(text))
+                return 0.0;
+            if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) || !double.IsFinite(value))
+                throw new InvalidDataException($"Review Result validation failed. {name} must be a finite number.");
+            return value;
+        }
+
+        private static double? ReadOptionalNullableFiniteDouble(IReadOnlyDictionary<string, string> row, params string[] names)
+        {
+            var text = ReadFirstText(row, names);
+            return double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value)
+                ? value
+                : null;
+        }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 한 결과 행과 후보 열 이름이다. ReadOptionalFiniteDouble은 유효값을 얻지 못하면 nullable 결과를 0으로 바꾸는 반면, ReadOptionalDouble은 공란만 0으로 처리하고 비정상 숫자는 예외를 낸다. 실제 결과 행의 ErrorX/Y를 읽는 경로는 앞의 optional finite 함수를 사용한다. 그러므로 0 표시만으로 실제 무오차 측정이라고 판단하지 말고 원문 열 존재·값·판정·측정 출처를 함께 확인한다. 원문이 잘못됐으면 단순 재적용 대신 올바른 결과 형식 또는 새 측정의 근거를 확보한다.</p>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 </div>

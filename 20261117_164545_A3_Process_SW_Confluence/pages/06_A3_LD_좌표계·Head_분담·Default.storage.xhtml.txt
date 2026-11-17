@@ -1,5 +1,5 @@
 <div>
-<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 코드 기준:</strong> Ver11.17.0 | <strong>UI 프로젝트 Version:</strong> 2026.11.13.0</p>
 <ac:structured-macro ac:macro-id="03e9e29e-8939-5966-8e60-dc22ec7a6a5f" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 <ac:structured-macro ac:macro-id="8e146111-fdd4-5d73-841c-fb2f342202b2" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
@@ -45,7 +45,93 @@ InspectionPointCount = DoeBeamGridSize × DoeBeamGridSize</code></pre>
 <table><tbody><tr><th>현상</th><th>먼저 나눌 것</th></tr><tr><td>Head가 달라짐</td><td>Scanner reference X·영역 경계·활성 Head·후보 선택</td></tr><tr><td>Y가 반대임</td><td>Recipe Y 반전·Stage 진행부호·Head flip/swap·AUX 극성</td></tr><tr><td>보정이 두 배처럼 보임</td><td>저장값·이번 기여분·중복 Apply 계보·동일 회차</td></tr><tr><td>Default 값이 예상과 다름</td><td>AK 입력 출처·격자1/4·Default와 FirstBeam 구분</td></tr><tr><td>지도는 맞는데 실가공이 다름</td><td>현재 미리보기와 준비 스냅샷·실제 업로드 파일</td></tr></tbody></table>
 <p>후속 검증은 Head 경계점, 축 transform 조합, Shift X/Y 단독, scale 0/100, Default Shot/Cross×1/4, NG·누락·중복 Beam을 나누어 수행한다. 이번 페이지는 계산기와 기존 분석을 확인한 설명이며 광학 정밀도·Stage 방향·실제 Encoder 교정·보정 합격을 실증하지 않았다.</p>
 <p>함께 읽기: <ac:link><ri:page ri:content-title="03. A3 LD SW 구조와 실행 데이터"/><ac:plain-text-link-body><![CDATA[실행 데이터와 저장 책임]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="07. A3 LD Scanner·MOF·Automation1"/><ac:plain-text-link-body><![CDATA[MOF 실행·준비 신호]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="08. A3 LD Align·Review·검사·보정"/><ac:plain-text-link-body><![CDATA[Review·보정]]></ac:plain-text-link-body></ac:link>.</p>
-<h2>코드와 문서 근거</h2><p>설계점·Head·Stage 기준 <code>Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:L11-L138</code> — 활성 Head, 설계점, 축 변환과 Stage 대기점</p><p>Offset 합성과 Encoder 대기식 <code>Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:L139-L188</code> — Default/FirstBeam/Align/Review/Shift와 최종 G</p><p>Head X 영역 배정 <code>Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:L376-L404</code> — X 범위 후보</p><p>Head 중심과 Recipe Y 반전 <code>Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:L450-L490</code> — 설정·홀짝 fallback, ConvertRecipeYToStageY</p><p>Default AK 조건 <code>Drilling.Common/Correction/CDefaultOffsetCalibration.cs:L29-L56</code> — AK1 Recipe·AK3 설계 기본값</p><p>Default DOE 슬롯과 Fit <code>Drilling.Common/Correction/CDefaultOffsetCalibration.cs:L130-L174</code> — 1/4 격자·1빔 Fit의 의미</p><p>Default 중심과 검사 계약 <code>Drilling.Common/Correction/CDefaultOffsetCalibration.cs:L265-L285</code> — AK X midpoint·Shot/Cross와 검사점 수</p>
-<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td>설계점·Head·Stage 기준<br/><code>Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:L11-L138</code></td><td>활성 Head, 설계점, 축 변환과 Stage 대기점</td></tr><tr><td>Offset 합성과 Encoder 대기식<br/><code>Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:L139-L188</code></td><td>Default/FirstBeam/Align/Review/Shift와 최종 G</td></tr><tr><td>Head X 영역 배정<br/><code>Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:L376-L404</code></td><td>X 범위 후보</td></tr><tr><td>Head 중심과 Recipe Y 반전<br/><code>Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:L450-L490</code></td><td>설정·홀짝 fallback, ConvertRecipeYToStageY</td></tr><tr><td>Default AK 조건<br/><code>Drilling.Common/Correction/CDefaultOffsetCalibration.cs:L29-L56</code></td><td>AK1 Recipe·AK3 설계 기본값</td></tr><tr><td>Default DOE 슬롯과 Fit<br/><code>Drilling.Common/Correction/CDefaultOffsetCalibration.cs:L130-L174</code></td><td>1/4 격자·1빔 Fit의 의미</td></tr><tr><td>Default 중심과 검사 계약<br/><code>Drilling.Common/Correction/CDefaultOffsetCalibration.cs:L265-L285</code></td><td>AK X midpoint·Shot/Cross와 검사점 수</td></tr></tbody></table>
+<h2>실제 코드로 읽는 처리 흐름</h2><p>Head의 X 영역 배정, Stage 대기거리와 Scanner Offset 합성, Default 검사 조건을 실제 코드로 연결한다. 수식의 성분·단위·저장 기준을 먼저 맞춘 뒤 최종 Gx/Gy를 비교한다. 코드의 기본값은 설치 장비의 교정값을 대신하지 않는다.</p><h3>AssignHeadNo의 X 영역 후보 구성</h3><p><strong>코드 위치명:</strong> <code>CShotCoordinatePlanBuilder.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="6a166f0f-c1f0-5061-859a-8274bf1aa673" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">AssignHeadNo의 X 영역 후보 구성</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[        private static int AssignHeadNo(double designX, IReadOnlyList<int> assignmentHeadNos, IReadOnlyDictionary<string, string> parameters, IReadOnlyDictionary<int, int> assignedHeadCounts)
+        {
+            if (assignmentHeadNos.Count <= 0)
+            {
+                return 0;
+            }
+
+            global::Drilling.Common.Recipe.ST_HEAD_ASSIGNMENT_CANDIDATE? SelectItem(int headNo)
+            {
+                var centerX = ReadHeadCenterX(parameters, headNo);
+                var widthX = ReadNullableDouble(parameters, $"H{headNo:00}_SCAN_FIELD_WIDTH_X", $"H{headNo:00}_HEAD_FIELD_WIDTH_X") ?? 110.0;
+                widthX = widthX > 0.0 ? widthX : 110.0;
+                var halfWidth = widthX / 2.0;
+                return designX >= centerX - halfWidth && designX <= centerX + halfWidth ? new ST_HEAD_ASSIGNMENT_CANDIDATE(headNo, Math.Abs(designX - centerX)) : (ST_HEAD_ASSIGNMENT_CANDIDATE? )null;
+            }
+
+            bool IsHasValue(global::Drilling.Common.Recipe.ST_HEAD_ASSIGNMENT_CANDIDATE? candidate)
+            {
+                return candidate.HasValue;
+            }
+
+            global::Drilling.Common.Recipe.ST_HEAD_ASSIGNMENT_CANDIDATE SelectHead(global::Drilling.Common.Recipe.ST_HEAD_ASSIGNMENT_CANDIDATE? candidate)
+            {
+                return candidate!.Value;
+            }
+
+            var candidates = assignmentHeadNos.Select(SelectItem).Where(IsHasValue).Select(SelectHead).ToArray();
+            return candidates.Length == 0 ? 0 : SelectHeadCandidate(candidates, assignedHeadCounts);
+        }
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 Scanner 기준의 X와 배정 가능한 Head 목록·설정·기존 배정 점 수다. 각 Head의 중심과 폭으로 X 범위 안의 후보를 만들고, 후보가 없으면0, 있으면 SelectHeadCandidate의 선택 결과를 반환한다. 폭이 잘못되면110으로 대체하는 코드가 있지만110은 이 함수의 기본값이며 실제 장비 Field 승인치가 아니다. 이 경로는 Y 사각형 포함 여부를 조건으로 삼지 않는다.</p><h3>Build의 Stage 대기·Offset 합성·최종 Scanner 좌표</h3><p><strong>코드 위치명:</strong> <code>CShotCoordinatePlanBuilder.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="ac471211-1c0d-5714-819e-fe9d74fb258d" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">Build의 Stage 대기·Offset 합성·최종 Scanner 좌표</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[                var preparedShot = preparedShots[index];
+                var baseStageWaitDistanceY = ((preparedShot.ShotStageY - scanStartStageY) * stageScanDirectionY) + firstShotDesignDistanceY;
+                var stageWaitDistanceY = baseStageWaitDistanceY - shiftOffsetY;
+                if (stageWaitDistanceY < 0.0 && Math.Abs(stageWaitDistanceY) <= 0.000001)
+                {
+                    stageWaitDistanceY = 0.0;
+                }
+
+                if (baseStageWaitDistanceY < 0.0 && Math.Abs(baseStageWaitDistanceY) <= 0.000001)
+                {
+                    baseStageWaitDistanceY = 0.0;
+                }
+
+                var baseScannerX = ApplyScannerAxis(preparedShot.StageShotX, preparedShot.HeadCenterX, 0.0);
+                // Scanner follow motion compensates the moving stage, so use the opposite stage-basis direction.
+                var baseScannerY = -(stageWaitDistanceY * stageScanDirectionY);
+                var noShiftBaseScannerY = -(baseStageWaitDistanceY * stageScanDirectionY);
+                var scannerBase = preparedShot.ScannerTransform.Apply(baseScannerX, baseScannerY);
+                var noShiftScannerBase = preparedShot.ScannerTransform.Apply(baseScannerX, noShiftBaseScannerY);
+                var headDefaultScannerOffset = preparedShot.ScannerTransform.Apply(preparedShot.HeadDefaultOffsetX, ConvertRecipeYToStageY(preparedShot.HeadDefaultOffsetY));
+                var firstBeamScannerOffset = preparedShot.ScannerTransform.Apply(preparedShot.FirstBeamOffsetX, ConvertRecipeYToStageY(preparedShot.FirstBeamOffsetY));
+                // Align offsets are persisted in design coordinates. Apply the current
+                // stage/head direction here, when building scanner/script coordinates.
+                var alignScannerOffset = CScannerAxisTransform.DesignOffsetToScanner(parameters, preparedShot.HeadNo, preparedShot.DesignShot.AlignOffsetX, preparedShot.DesignShot.AlignOffsetY);
+                var reviewScannerOffset = CReviewOffsetData.ToScanner(parameters, preparedShot.HeadNo, preparedShot.DesignShot.ReviewOffsetX, preparedShot.DesignShot.ReviewOffsetY, preparedShot.DesignShot.ReviewOffsetIsDesign);
+                // Scale the current machining contribution only. Stored design offsets
+                // remain unchanged, so repeated builds never compound the percentage.
+                alignScannerOffset = (alignScannerOffset.X * alignOffsetScale, alignScannerOffset.Y * alignOffsetScale);
+                reviewScannerOffset = (reviewScannerOffset.X * reviewOffsetScale, reviewScannerOffset.Y * reviewOffsetScale);
+                var shiftScannerOffsetXOnly = preparedShot.ScannerTransform.Apply(shiftOffsetX, 0.0);
+                var shiftScannerOffsetX = (scannerBase.X - noShiftScannerBase.X) + shiftScannerOffsetXOnly.X;
+                var shiftScannerOffsetY = (scannerBase.Y - noShiftScannerBase.Y) + shiftScannerOffsetXOnly.Y;
+                var finalScannerOffsetX = preparedShot.DesignShot.RecipeOffsetX + headDefaultScannerOffset.X + firstBeamScannerOffset.X + reviewScannerOffset.X + alignScannerOffset.X;
+                var finalScannerOffsetY = preparedShot.DesignShot.RecipeOffsetY + headDefaultScannerOffset.Y + firstBeamScannerOffset.Y + reviewScannerOffset.Y + alignScannerOffset.Y;
+                var scannerGx = scannerBase.X + finalScannerOffsetX + shiftScannerOffsetXOnly.X;
+                var scannerGy = scannerBase.Y + finalScannerOffsetY + shiftScannerOffsetXOnly.Y;
+                var encoderWaitPosition = stageWaitDistanceY * Math.Abs(preparedShot.EncoderScale) * stageScanDirectionY;
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 준비 Shot, Scan 시작점·진행부호·Shift·Head transform·보정 성분이다. ShiftY를 Stage 대기거리에서 빼고 follow 반대 방향의 Scanner 기본 Y를 만든다. Default/FirstBeam/Align/Review를 각 기준에서 변환하고 Align·Review의 이번 기여분만 scale하여 Recipe Offset과 합친다. 최종 Gx/Gy와 EncoderWait를 함께 계산하므로 Shift를 최종 좌표에 단순 가산하는 설명이 맞지 않는 이유가 드러난다.</p><h3>Default 옵션의 AK 중앙과 Shot·Cross 검사 계약</h3><p><strong>코드 위치명:</strong> <code>CDefaultOffsetCalibration.cs</code> · 본문에서 읽는 실제 구현 발췌</p><ac:structured-macro ac:macro-id="23d43ca5-6682-51f7-81d6-88d706fdd138" ac:name="code" ac:schema-version="1"><ac:parameter ac:name="language">csharp</ac:parameter><ac:parameter ac:name="title">Default 옵션의 AK 중앙과 Shot·Cross 검사 계약</ac:parameter><ac:parameter ac:name="linenumbers">false</ac:parameter><ac:plain-text-body><![CDATA[public sealed record ST_DEFAULT_OFFSET_OPTIONS(double AlignKey1ReviewX, double AlignKey3ReviewX, double TestStageY, double Tolerance)
+{
+    public double BoardCenterX => (AlignKey1ReviewX + AlignKey3ReviewX) / 2;
+    public EN_DEFAULT_MACHINING_MODE MachiningMode { get; init; } = EN_DEFAULT_MACHINING_MODE.Shot;
+    public double CrossSize { get; init; } = 0.1;
+    public int DoeBeamGridSize { get; init; } = 4;
+    public int InspectionPointCount => DoeBeamGridSize * DoeBeamGridSize;
+    // The inspection command is part of the machining contract, not an independent
+    // operator option. Both modes inspect every DOE beam slot; a cross uses the
+    // registered setting mark while a shot uses the normal single-mark command.
+    public EN_ONE_SHOT_METHOD VisionMethod => MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross
+        ? EN_ONE_SHOT_METHOD.MarkFindSettingSingle
+        : EN_ONE_SHOT_METHOD.MarkFindSingle;
+    public string InspectionDescription => MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross
+        ? $"DOE {InspectionPointCount}개 십자 측정"
+        : $"DOE {InspectionPointCount}빔 측정";
+    public string MachiningDescription => MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross
+        ? $"십자 가공 · DOE {DoeBeamGridSize}×{DoeBeamGridSize}, 총 {InspectionPointCount}개 형상 · 전체 길이 {CrossSize.ToString("0.#####", CultureInfo.InvariantCulture)} mm · Head Jump Speed 사용"
+        : $"샷 가공 · DOE {DoeBeamGridSize}×{DoeBeamGridSize}, 총 {InspectionPointCount}빔 · Head Shot Count 사용";
+    public string VisionDescription => VisionMethod == EN_ONE_SHOT_METHOD.MarkFindSettingSingle ? "Mark Find Setting Single" : "Mark Find Single";
+}
+]]></ac:plain-text-body></ac:structured-macro><p><strong>읽는 방법:</strong> 입력은 AK1/AK3 Review X, 시험 Stage Y, 허용오차와 DOE 격자 조건이다. BoardCenterX는 두 입력 X의 평균이고 검사점 수는 격자 한 변의 제곱이다. Shot과 Cross에 따라 VisionMethod와 설명이 달라진다. 평균식 자체가 새 AK 촬영이나2D 회전 피팅을 수행하지 않으며, 원빔과4×4 DOE의 실제 유효점 검증은 측정·Fit 경로에서 별도로 수행한다.</p>
 <p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
 </div>
