@@ -31,10 +31,10 @@ figure{margin:20px 0;border:1px solid var(--line);border-radius:9px;padding:14px
 3656                          var other = (anchors[j].DesignY - origin) / range;
 3657                          basis *= (at - other) / (node - other);
 3658                      }
-3659  
+3659
 3660                  sum += basis * values[i];
 3661              }
-3662  
+3662
 3663              return sum;</code></pre><h3>Distortion에서 행별 X값을 만든 뒤 Y 가중합하는 부분</h3><pre><code>  82              var normalized = (y - Rows[0].Y) / (Rows[^1].Y - Rows[0].Y);
   83              double denominator = 0, numeratorX = 0, numeratorY = 0;
   84              for (var index = 0; index &lt; Rows.Count; index++)
@@ -45,7 +45,7 @@ figure{margin:20px 0;border:1px solid var(--line);border-radius:9px;padding:14px
   89                  numeratorX += term * value.X;
   90                  numeratorY += term * value.Y;
   91              }
-  92  
+  92
   93              return Finite(new ST_ALIGN_CORRECTION(numeratorX / denominator, numeratorY / denominator));</code></pre><p class="note">소스 검토와 수학 검증은 계산과 연결 경로를 확인하는 범위입니다. 현장 장비의 축 부호·실제 인터페이스 값·가공 정밀도 합격을 대신하지 않습니다. 이 문서에서사용한 “세 줄 검사 보정”은 현행 메뉴의 FINE을 기준으로 설명했습니다.</p></div></details><footer>Fine / Distortion 계산 설명 및 소스 검토 · 합성 예제는 교육용입니다. 실제 측정 레코드·장비 통신·외부 자산을 포함하지 않습니다.</footer></main></div><script>(()=>{'use strict';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const chapters=$$('.chapter');
