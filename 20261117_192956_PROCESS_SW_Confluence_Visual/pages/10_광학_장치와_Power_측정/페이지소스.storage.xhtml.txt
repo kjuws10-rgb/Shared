@@ -1,0 +1,15 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>광학 장치 상태, 출력 측정, ATT 보정, Recipe 각도 저장을 하나의 개발 흐름으로 구분한다.</strong></p>
+<ac:image ac:width="1200" ac:alt="10. 광학 장치와 Power 측정"><ri:attachment ri:filename="10_핵심흐름.png"/></ac:image>
+<p>측정 보고·실적은 NG 과정에서도 남을 수 있다. 측정 대상 Head가 모두 OK인 조건은 Recipe ATT 각도 저장에 적용한다.</p>
+<h2>개발 데이터와 확인 범위</h2>
+<table class="wrapped"><tbody><tr><th>구분</th><th>개발 데이터</th><th>확인할 경계</th></tr><tr><td>Laser·ATT·BEX</td><td>출사 상태·위치·광학 조건</td><td>명령 수락·도착·현재 상태를 분리</td></tr><tr><td>PowerMeter</td><td>센서·측정 조건·출력 W</td><td>센서 대응·단위·유효값·Timeout</td></tr><tr><td>Stage·Scanner</td><td>현재 위치·Busy·Task 상태</td><td>새 상태로 준비 확인; 측정 Run은 Stage Y를 이동하지 않음</td></tr><tr><td>보정 계산</td><td>목표 W·측정 W·ATT 각도</td><td>허용오차·한계·최대 시도 처리</td></tr><tr><td>저장·정리</td><td>보고·측정 Table·Recipe 각도</td><td>각 저장 결과와 출력 OFF·세션 해제 확인</td></tr></tbody></table>
+<h2>확인할 것</h2>
+<ul><li>Manual과 AUTO의 대상 Head·센서·Task 매핑 및 실제/모의 실행 구분이 유지되는가?</li><li>NG 보고 생성과 Recipe 각도 저장 성공을 다른 상태로 표시하는가?</li><li>준비 실패·측정 중 취소·저장 실패에서도 출력·신호 정리 결과가 남는가?</li></ul>
+<p>목표 출력 W, 실제 측정 W, ATT 각도는 각각 다른 데이터로 관리한다.</p>
+<h2>그림으로 더 보기</h2><ac:image ac:width="1200" ac:alt="출사 직후 구간과 실제 평균에 사용하는 수집 구간을 구분합니다."><ri:attachment ri:filename="10_Power_수집구간.png"/></ac:image><p>출사 직후 구간과 실제 평균에 사용하는 수집 구간을 구분합니다.</p>
+</div>

@@ -1,0 +1,15 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>동작 허가, 알람 기록, 정지 진행, Reset의 변경 범위를 상태별로 나눈다.</strong></p>
+<ac:image ac:width="1200" ac:alt="12. Alarm·Interlock·Stop·Reset"><ri:attachment ri:filename="12_핵심흐름.png"/></ac:image>
+<p>Alarm Reset의 목록 정리와 장치 정지·신호 정리·재준비는 서로 다른 상태로 확인한다.</p>
+<h2>개발 데이터와 확인 범위</h2>
+<table class="wrapped"><tbody><tr><th>구분</th><th>개발 데이터</th><th>확인할 경계</th></tr><tr><td>Interlock</td><td>AutoRun·ManualMove·LaserOn 허가</td><td>원신호·최신성·차단 사유</td></tr><tr><td>Alarm</td><td>현재 목록·수준·발생 이력</td><td>현재 표시와 이력 저장 결과</td></tr><tr><td>Stop</td><td>요청·취소·종료 응답</td><td>취소 반환과 실제 Task·축·출력 상태</td></tr><tr><td>정리</td><td>Request·Complete·세션 소유권</td><td>OFF 쓰기·readback·늦은 응답</td></tr><tr><td>Reset·재준비</td><td>초기화 범위·남은 데이터</td><td>완료/미완료 작업과 다음 실행 기준</td></tr></tbody></table>
+<h2>확인할 것</h2>
+<ul><li>Stop·Timeout·취소 후 실제 동작 상태와 정리 실패를 별도로 남기는가?</li><li>Reset이 지우는 목록·로컬 상태와 유지할 기판·결과·이력을 구분하는가?</li><li>재시작 뒤 남은 요청이나 늦은 완료가 다음 작업에 연결되지 않는가?</li></ul>
+<p>보호윈도우의 인계 매수·추가 요청 횟수·소진 상태도 별도 데이터로 유지하고 표시한다.</p>
+<h2>그림으로 더 보기</h2><ac:image ac:width="1200" ac:alt="보호윈도우의 최초 교체 요청과 추가 요청 횟수를 구분합니다."><ri:attachment ri:filename="12_윈도우_교체요청.png"/></ac:image><p>보호윈도우의 최초 교체 요청과 추가 요청 횟수를 구분합니다.</p>
+</div>

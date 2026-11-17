@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>창이 열린 상태와 실제 장치 운전 준비가 끝난 상태를 구분한다.</strong></p>
+<ac:image ac:width="1200" ac:alt="04. 실행 준비와 설정 관리"><ri:attachment ri:filename="04_핵심흐름.png"/></ac:image>
+<p>프로그램은 설정 위치를 정하고 조건과 이전 작업을 읽으면서 장치 초기화를 진행한다. 창이 보이더라도 통신·축 준비가 끝난 것은 아니므로 시작 상태와 실제 운전 허가를 확인한다.</p><h2>핵심 동작</h2><table class="wrapped"><tbody><tr><th>대상</th><th>현재 프로그램에서 하는 일</th></tr><tr><td>실행 환경</td><td>Windows의 WPF·.NET 8 환경과 필요한 장치 구성요소를 사용한다.</td></tr><tr><td>설정 위치</td><td>실제 ConfigRoot와 읽은 파일을 시작 상태에서 확인한다.</td></tr><tr><td>초기화</td><td>정의·조건 로드, 장치 연결과 상태 감시를 진행한다.</td></tr><tr><td>운전 준비</td><td>연결 상태와 축·인터락의 허가를 각각 확인한다.</td></tr></tbody></table><h2>확인할 것</h2><ul><li>현재 실행본이 읽는 설정 폴더가 맞는가?</li><li>초기화가 멈춘 단계와 오류가 있는가?</li><li>실행 파일·설정·Recipe·보정본이 함께 맞는가?</li></ul>
+
+</div>

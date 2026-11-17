@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>조건 입력부터 가공·검사·보정까지 한 기판의 흐름을 이해한다.</strong></p>
+<ac:image ac:width="1200" ac:alt="01. 프로그램 한눈에 보기"><ri:attachment ri:filename="01_핵심흐름.png"/></ac:image>
+<p>프로그램은 한 기판의 조건을 선택하고 가공점·실행 파일을 준비한 뒤 장치 동작과 검사 결과를 연결한다. 검사에서 얻은 유효한 오차는 별도 보정본으로 저장하며 다음 가공 준비에서 사용한다.</p><h2>핵심 동작</h2><table class="wrapped"><tbody><tr><th>대상</th><th>현재 프로그램에서 하는 일</th></tr><tr><td>조건</td><td>Recipe와 사용 Cell·Head를 정한다.</td></tr><tr><td>준비</td><td>이번 작업의 조건 사본, 좌표와 실행 파일을 만든다.</td></tr><tr><td>실행</td><td>요청·준비 상태를 확인하고 장치를 동작시킨다.</td></tr><tr><td>검사·보정</td><td>측정과 품질 판정을 저장하고 적용 가능한 보정값을 구분한다.</td></tr></tbody></table><h2>확인할 것</h2><ul><li>현재 Glass와 Recipe가 같은 작업을 가리키는가?</li><li>화면의 값과 실제 준비한 조건이 같은가?</li><li>가공 완료·검사 판정·보정 저장을 따로 확인했는가?</li></ul>
+<h2>그림으로 더 보기</h2><ac:image ac:width="1200" ac:alt="기판 기준 · Head 원점 · 제품의 가공점을 구분해 봅니다."><ri:attachment ri:filename="01_기준점_구분.png"/></ac:image><p>기판 기준 · Head 원점 · 제품의 가공점을 구분해 봅니다.</p>
+</div>

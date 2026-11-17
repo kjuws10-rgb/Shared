@@ -1,0 +1,66 @@
+<div>
+<p><strong>조건 · 좌표 · 장치 실행 · 검사 · 보정이 연결되는 프로그램 구조를 이해합니다.</strong></p>
+<ac:image ac:width="1200" ac:alt="2) PROCESS SW 개발"><ri:attachment ri:filename="00_핵심흐름.png"/></ac:image>
+<h2>기능별 페이지</h2><table class="wrapped"><tbody><tr><th>읽을 주제</th><th>페이지</th></tr><tr><th>처음 이해하기</th><td><ac:link>
+      <ri:page ri:content-title="01. 프로그램 한눈에 보기"/>
+      <ac:plain-text-link-body><![CDATA[01. 프로그램 한눈에 보기]]></ac:plain-text-link-body>
+    </ac:link><br/><ac:link>
+      <ri:page ri:content-title="02. 장비 역할과 공정 흐름"/>
+      <ac:plain-text-link-body><![CDATA[02. 장비 역할과 공정 흐름]]></ac:plain-text-link-body>
+    </ac:link><br/><ac:link>
+      <ri:page ri:content-title="03. 프로그램 구조와 실행 데이터"/>
+      <ac:plain-text-link-body><![CDATA[03. 프로그램 구조와 실행 데이터]]></ac:plain-text-link-body>
+    </ac:link><br/><ac:link>
+      <ri:page ri:content-title="04. 실행 준비와 설정 관리"/>
+      <ac:plain-text-link-body><![CDATA[04. 실행 준비와 설정 관리]]></ac:plain-text-link-body>
+    </ac:link></td></tr><tr><th>가공 조건과 계산</th><td><ac:link>
+      <ri:page ri:content-title="05. Recipe·PPID·운전 조건"/>
+      <ac:plain-text-link-body><![CDATA[05. Recipe·PPID·운전 조건]]></ac:plain-text-link-body>
+    </ac:link><br/><ac:link>
+      <ri:page ri:content-title="06. 좌표 변환과 Head 분담"/>
+      <ac:plain-text-link-body><![CDATA[06. 좌표 변환과 Head 분담]]></ac:plain-text-link-body>
+    </ac:link><br/><ac:link>
+      <ri:page ri:content-title="07. Scanner·MOF 실행"/>
+      <ac:plain-text-link-body><![CDATA[07. Scanner·MOF 실행]]></ac:plain-text-link-body>
+    </ac:link><br/><ac:link>
+      <ri:page ri:content-title="08. Align·Review·검사·보정"/>
+      <ac:plain-text-link-body><![CDATA[08. Align·Review·검사·보정]]></ac:plain-text-link-body>
+    </ac:link></td></tr><tr><th>장치와 운전 상태</th><td><ac:link>
+      <ri:page ri:content-title="09. 통신과 장비 인터페이스"/>
+      <ac:plain-text-link-body><![CDATA[09. 통신과 장비 인터페이스]]></ac:plain-text-link-body>
+    </ac:link><br/><ac:link>
+      <ri:page ri:content-title="10. 광학 장치와 Power 측정"/>
+      <ac:plain-text-link-body><![CDATA[10. 광학 장치와 Power 측정]]></ac:plain-text-link-body>
+    </ac:link><br/><ac:link>
+      <ri:page ri:content-title="11. 운전 화면과 Manual·Auto"/>
+      <ac:plain-text-link-body><![CDATA[11. 운전 화면과 Manual·Auto]]></ac:plain-text-link-body>
+    </ac:link><br/><ac:link>
+      <ri:page ri:content-title="12. Alarm·Interlock·Stop·Reset"/>
+      <ac:plain-text-link-body><![CDATA[12. Alarm·Interlock·Stop·Reset]]></ac:plain-text-link-body>
+    </ac:link></td></tr><tr><th>개발과 변경 확인</th><td><ac:link>
+      <ri:page ri:content-title="13. 개발 시험과 결과 확인"/>
+      <ac:plain-text-link-body><![CDATA[13. 개발 시험과 결과 확인]]></ac:plain-text-link-body>
+    </ac:link><br/><ac:link>
+      <ri:page ri:content-title="14. 현재 기능과 개발 확인사항"/>
+      <ac:plain-text-link-body><![CDATA[14. 현재 기능과 개발 확인사항]]></ac:plain-text-link-body>
+    </ac:link><br/><ac:link>
+      <ri:page ri:content-title="15. 증상별 개발 확인"/>
+      <ac:plain-text-link-body><![CDATA[15. 증상별 개발 확인]]></ac:plain-text-link-body>
+    </ac:link><br/><ac:link>
+      <ri:page ri:content-title="16. 데이터 관리와 변경 반영"/>
+      <ac:plain-text-link-body><![CDATA[16. 데이터 관리와 변경 반영]]></ac:plain-text-link-body>
+    </ac:link></td></tr></tbody></table><h2>한 기판을 따라 읽기</h2><p><ac:link>
+      <ri:page ri:content-title="05. Recipe·PPID·운전 조건"/>
+      <ac:plain-text-link-body><![CDATA[05. Recipe·PPID·운전 조건]]></ac:plain-text-link-body>
+    </ac:link> → <ac:link>
+      <ri:page ri:content-title="06. 좌표 변환과 Head 분담"/>
+      <ac:plain-text-link-body><![CDATA[06. 좌표 변환과 Head 분담]]></ac:plain-text-link-body>
+    </ac:link> → <ac:link>
+      <ri:page ri:content-title="07. Scanner·MOF 실행"/>
+      <ac:plain-text-link-body><![CDATA[07. Scanner·MOF 실행]]></ac:plain-text-link-body>
+    </ac:link> → <ac:link>
+      <ri:page ri:content-title="08. Align·Review·검사·보정"/>
+      <ac:plain-text-link-body><![CDATA[08. Align·Review·검사·보정]]></ac:plain-text-link-body>
+    </ac:link></p>
+
+</div>

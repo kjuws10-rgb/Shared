@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>사전 준비, 실행 요청, 장치 준비와 완료를 구분해 MOF 흐름을 이해한다.</strong></p>
+<ac:image ac:width="1200" ac:alt="07. Scanner·MOF 실행"><ri:attachment ri:filename="07_핵심흐름.png"/></ac:image>
+<p>MOF는 Stage가 이동하는 동안 Scanner가 Encoder 기준을 따라 가공하는 방식이다. 프로그램은 Head별 실행 파일과 대상을 준비하고 일반 실행 또는 Buffered 실행을 진행하며 준비·완료·정리를 각각 확인한다.</p><h2>핵심 동작</h2><table class="wrapped"><tbody><tr><th>대상</th><th>현재 프로그램에서 하는 일</th></tr><tr><td>대상</td><td>Head·Controller·Task·Encoder 입력을 각각 확인한다.</td></tr><tr><td>일반 실행</td><td>전송한 파일을 컴파일한 뒤 Program을 실행한다.</td></tr><tr><td>Buffered 실행</td><td>Controller 파일의 명령을 Queue에 공급한다.</td></tr><tr><td>MOF 준비</td><td>중심화·기준 설정 뒤 이번 실행의 준비 신호를 낸다.</td></tr><tr><td>완료·중지</td><td>Task 결과와 Queue·세션 정리까지 확인한다.</td></tr></tbody></table><h2>확인할 것</h2><ul><li>이번에 준비한 파일과 실제 실행 대상이 같은가?</li><li>실행 요청 반환과 MOF 준비 신호를 구분했는가?</li><li>일부 Head 오류·중지 뒤 남은 Task와 Queue가 정리되었는가?</li></ul>
+<h2>그림으로 더 보기</h2><ac:image ac:width="1200" ac:alt="미리보기는 현재 선택값, 실행은 준비한 사본을 사용합니다."><ri:attachment ri:filename="07_미리보기와_실행.png"/></ac:image><p>미리보기는 현재 선택값, 실행은 준비한 사본을 사용합니다.</p>
+</div>

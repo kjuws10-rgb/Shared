@@ -1,0 +1,15 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>현재 프로그램의 기능 연결을 보고 다음 개발에서 확인할 데이터·상태 경계를 정한다.</strong></p>
+<ac:image ac:width="1200" ac:alt="14. 현재 기능과 개발 확인사항"><ri:attachment ri:filename="14_핵심흐름.png"/></ac:image>
+<p>조건→준비→실행→검사→저장의 연결에서 입력·상태·결과가 일치하는지 확인한다.</p>
+<h2>개발 데이터와 확인 범위</h2>
+<table class="wrapped"><tbody><tr><th>구분</th><th>개발 데이터</th><th>확인할 경계</th></tr><tr><td>Recipe·Job Change</td><td>선택 조건·적용값·기판 귀속</td><td>수신·적용·측정·완료 보고 시점</td></tr><tr><td>좌표·실행 계획</td><td>기준점·단위·Head·Mask·Shot</td><td>설계→준비→Script의 동일 대상</td></tr><tr><td>통신·장치</td><td>주소·배율·요청·현재 상태</td><td>수락·완료·새 readback·정리</td></tr><tr><td>검사·보정</td><td>원결과·NG·편집·적용본</td><td>재검사 계보·중복 적용·원복</td></tr><tr><td>Power·정지</td><td>측정값·각도·출력·세션</td><td>보고·Recipe 저장·정리의 개별 결과</td></tr><tr><td>화면·데이터 유지</td><td>표시값·설정·진행 이력</td><td>호출·갱신·저장·재로드 연결</td></tr></tbody></table>
+<h2>확인할 것</h2>
+<ul><li>기능마다 입력 생산자·소비자·저장 위치·반영 시점이 설명되는가?</li><li>아직 정해지지 않은 계약과 실행 시험이 필요한 항목을 구분했는가?</li><li>변경한 기능의 정상·실패·재시작 사례를 개발 시험에 연결했는가?</li></ul>
+<p>개발 확인은 기능별 실제 결과로 갱신한다. 다음 작업은 데이터·상태·저장 경계를 기준으로 정한다.</p>
+
+</div>
