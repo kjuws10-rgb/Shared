@@ -1,0 +1,64 @@
+{
+  "version": "2026-11-18-r1",
+  "basis": "2026-10-13 CIM Validation Handshake 4slides v2 + current attached OSS/CIM V235",
+  "counts": {
+    "review_items": 15,
+    "sequences": 6,
+    "interface_rows": 40,
+    "validation_rows": 6,
+    "tests": 50,
+    "test_initial_status": "미실행"
+  },
+  "files": [
+    {
+      "name": "01_PPT_Review.md",
+      "bytes": 7039,
+      "sha256": "9d7da65a231431a23e5eac242a42740066f3677b547e2174a15962dc2f914a7f"
+    },
+    {
+      "name": "02_PPID_JobChange_Sequences.md",
+      "bytes": 7267,
+      "sha256": "87c6f2e1151c97fa8c94125e50ef1aca7a10b7e9eabbd8844fa07b3f87e58407"
+    },
+    {
+      "name": "03_ECID_Set_Sequences.md",
+      "bytes": 2910,
+      "sha256": "52c89e2a9c46235fba48d0e923fd14b99505c7b948d53254a2c8fb16a8332422"
+    },
+    {
+      "name": "04_Interface_Specification.md",
+      "bytes": 23031,
+      "sha256": "ecfb442938edc4029dd315c4d0b7807ec4aa10e42608d78f6df97c891d6e6a56"
+    },
+    {
+      "name": "05_Module_Validation.md",
+      "bytes": 3659,
+      "sha256": "376de8f5a9abc9d5076c61eb70f429e76d1542101db8db9a9aa120058bea1b93"
+    },
+    {
+      "name": "06_Evaluation_Checklist.md",
+      "bytes": 28332,
+      "sha256": "31a9978d630c0a7a0802628f9b651d645523e6770fab9a9062e345966d768d8c"
+    },
+    {
+      "name": "07_Decisions_And_Recovery.md",
+      "bytes": 6384,
+      "sha256": "a8f61dd26b9fdd7bbd5645fca235894372d0497e135104061eb0c3d8e0f067a7"
+    },
+    {
+      "name": "A3_CIM_Implementation_Review.html",
+      "bytes": 306881,
+      "sha256": "150f9b40b79c7850b04d586fa40fd9c24b59560600083e772719ff10185a467e"
+    },
+    {
+      "name": "A3LD_AutoJobChange_CIM_OSS_Review_4slides.pptx",
+      "bytes": 53137,
+      "sha256": "e026b1782cb4c9af54f0c27535481b71c9870b3679e1a245c514a6761cefe7f1"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1377,
+      "sha256": "5a0bd2b5c3cbd53e4c64273cc612589dc08a8dc26f22207fb70b9c1d3e5f4135"
+    }
+  ]
+}
