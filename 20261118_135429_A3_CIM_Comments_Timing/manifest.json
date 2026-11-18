@@ -1,0 +1,27 @@
+{
+  "title": "A3 Auto Job Change 협의 코멘트 및 전체 타이밍",
+  "date": "2026-11-18",
+  "slide_count": 4,
+  "added_slides": 1,
+  "comment_items": 11,
+  "native_comment_threads": 25,
+  "scope": "현재 3장 보완본의 코멘트 추가 및 5개 주체 전체 논리 타이밍 1장 추가",
+  "equipment_tests": "not_executed",
+  "files": [
+    {
+      "name": "A3_CIM_Comments_Index.html",
+      "bytes": 19560,
+      "sha256": "1beb940668e37b31acb78067e04760a7aab8f66abeb4b58140b522ae07bb762e"
+    },
+    {
+      "name": "A3LD_AutoJobChange_Comments_Timing_4slides.pptx",
+      "bytes": 449954,
+      "sha256": "7f139695b0da6eefea8b49da9f3e097c55883ea831914252173cf18629626e72"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1259,
+      "sha256": "89154ebc4f0e703c36079c2f484045b53e0289ffcdc2bfe5b52fd9851f71990e"
+    }
+  ]
+}
