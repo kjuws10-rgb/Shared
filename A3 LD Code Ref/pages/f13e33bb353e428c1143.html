@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>dfa5920e6301d9ec4b0eab1452ae59521aafc986</td></tr>
+<tr><td>원본 Commit</td><td>96e22cd027c84bf302b23f2949b98985d7f301bb</td></tr>
 <tr><td>원본 SHA256</td><td>cc146b6aaeadced9e271f13f370eb4d120ece8b9b948570b6e009c83c5dedcb9</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>9,160 bytes / 283 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
@@ -69,7 +69,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L9">FieldDeclaration <code>_controllerOptions</code> · L9–9</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L9-L9">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:9–9</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L9-L9">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:9–9</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION&gt; Drilling.UI.Popup.CControllerResetSequenceDialog._controllerOptions</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -79,7 +79,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L10">FieldDeclaration <code>_targetOptions</code> · L10–10</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L10-L10">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:10–10</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L10-L10">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:10–10</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION&gt; Drilling.UI.Popup.CControllerResetSequenceDialog._targetOptions</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -89,7 +89,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L11">FieldDeclaration <code>_executeSequence</code> · L11–11</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L11-L11">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:11–11</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L11-L11">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:11–11</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Func&lt;Drilling.UI.Popup.CControllerResetSequenceDialog, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION&gt;, System.Func&lt;bool&gt;, System.Threading.CancellationToken, System.Threading.Tasks.Task&gt; Drilling.UI.Popup.CControllerResetSequenceDialog._executeSequence</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -99,7 +99,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L12">FieldDeclaration <code>_sequenceBlocks</code> · L12–12</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L12-L12">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:12–12</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L12-L12">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:12–12</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_BLOCK&gt; Drilling.UI.Popup.CControllerResetSequenceDialog._sequenceBlocks</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -113,7 +113,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L13">FieldDeclaration <code>_runCancellation</code> · L13–13</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L13-L13">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:13–13</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L13-L13">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:13–13</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.CancellationTokenSource? Drilling.UI.Popup.CControllerResetSequenceDialog._runCancellation</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -123,7 +123,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L14">FieldDeclaration <code>_isRunning</code> · L14–14</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L14-L14">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:14–14</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L14-L14">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:14–14</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Popup.CControllerResetSequenceDialog._isRunning</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -133,7 +133,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L15">FieldDeclaration <code>_stopRequested</code> · L15–15</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L15-L15">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:15–15</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L15-L15">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:15–15</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Popup.CControllerResetSequenceDialog._stopRequested</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -143,7 +143,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L16">ConstructorDeclaration <code>.ctor</code> · L16–26</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L16-L26">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:16–26</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L16-L26">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:16–26</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.CControllerResetSequenceDialog.CControllerResetSequenceDialog(System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION&gt;, System.Func&lt;Drilling.UI.Popup.CControllerResetSequenceDialog, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION&gt;, System.Func&lt;bool&gt;, System.Threading.CancellationToken, System.Threading.Tasks.Task&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -157,7 +157,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2159-L2162">Drilling.UI/Menu/Menus/CMenuManual.cs:2159–2162</a></td><td>new CControllerResetSequenceDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2159-L2162">Drilling.UI/Menu/Menus/CMenuManual.cs:2159–2162</a></td><td>new CControllerResetSequenceDialog</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -182,7 +182,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L28">PropertyDeclaration <code>SelectedTarget</code> · L28–28</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L28-L28">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:28–28</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L28-L28">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:28–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION Drilling.UI.Popup.CControllerResetSequenceDialog.SelectedTarget</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -192,7 +192,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L28">GetAccessorDeclaration <code>get_SelectedTarget</code> · L28–28</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L28-L28">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:28–28</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L28-L28">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:28–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION Drilling.UI.Popup.CControllerResetSequenceDialog.SelectedTarget.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -202,7 +202,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L28">SetAccessorDeclaration <code>set_SelectedTarget</code> · L28–28</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L28-L28">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:28–28</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L28-L28">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:28–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CControllerResetSequenceDialog.SelectedTarget.set</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, set</td></tr>
@@ -216,7 +216,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L30">PropertyDeclaration <code>IsStopRequested</code> · L30–36</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L30-L36">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:30–36</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L30-L36">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:30–36</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Popup.CControllerResetSequenceDialog.IsStopRequested</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -226,7 +226,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L32">GetAccessorDeclaration <code>get_IsStopRequested</code> · L32–35</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L32-L35">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:32–35</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L32-L35">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:32–35</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Popup.CControllerResetSequenceDialog.IsStopRequested.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -240,7 +240,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L38">MethodDeclaration <code>CreateTargetOptions</code> · L38–44</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L38-L44">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:38–44</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L38-L44">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:38–44</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION&gt; Drilling.UI.Popup.CControllerResetSequenceDialog.CreateTargetOptions(System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -253,7 +253,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L21-L21">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:21–21</a></td><td>CreateTargetOptions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L21-L21">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:21–21</a></td><td>CreateTargetOptions</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -274,7 +274,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L46">MethodDeclaration <code>OnTargetSelectionChanged</code> · L46–55</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L46-L55">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:46–55</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L46-L55">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:46–55</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CControllerResetSequenceDialog.OnTargetSelectionChanged(object, SelectionChangedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -305,7 +305,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L57">MethodDeclaration <code>RefreshSequenceBlocks</code> · L57–67</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L57-L67">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:57–67</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L57-L67">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:57–67</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CControllerResetSequenceDialog.RefreshSequenceBlocks()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -314,9 +314,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L25-L25">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:25–25</a></td><td>RefreshSequenceBlocks</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L54-L54">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:54–54</a></td><td>RefreshSequenceBlocks</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L173-L173">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:173–173</a></td><td>RefreshSequenceBlocks</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L25-L25">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:25–25</a></td><td>RefreshSequenceBlocks</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L54-L54">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:54–54</a></td><td>RefreshSequenceBlocks</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L173-L173">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:173–173</a></td><td>RefreshSequenceBlocks</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -346,7 +346,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L69">MethodDeclaration <code>CreateSteps</code> · L69–72</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L69-L72">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:69–72</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L69-L72">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:69–72</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP&gt; Drilling.UI.Popup.CControllerResetSequenceDialog.CreateSteps()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -355,7 +355,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L64-L64">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:64–64</a></td><td>CreateSteps</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L64-L64">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:64–64</a></td><td>CreateSteps</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -376,7 +376,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L74">MethodDeclaration <code>GetSelectedControllers</code> · L74–77</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L74-L77">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:74–77</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L74-L77">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:74–77</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_TARGET_OPTION&gt; Drilling.UI.Popup.CControllerResetSequenceDialog.GetSelectedControllers()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -385,8 +385,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L64-L64">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:64–64</a></td><td>GetSelectedControllers</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L182-L182">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:182–182</a></td><td>GetSelectedControllers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L64-L64">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:64–64</a></td><td>GetSelectedControllers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L182-L182">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:182–182</a></td><td>GetSelectedControllers</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -395,7 +395,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L79">MethodDeclaration <code>SetStatusMessage</code> · L79–88</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L79-L88">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:79–88</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L79-L88">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:79–88</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CControllerResetSequenceDialog.SetStatusMessage(string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -408,15 +408,15 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2301-L2301">Drilling.UI/Menu/Menus/CMenuManual.cs:2301–2301</a></td><td>dialog.SetStatusMessage</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2316-L2316">Drilling.UI/Menu/Menus/CMenuManual.cs:2316–2316</a></td><td>dialog.SetStatusMessage</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2322-L2322">Drilling.UI/Menu/Menus/CMenuManual.cs:2322–2322</a></td><td>dialog.SetStatusMessage</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L83-L83">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:83–83</a></td><td>SetStatusMessage</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L180-L180">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:180–180</a></td><td>SetStatusMessage</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L186-L186">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:186–186</a></td><td>SetStatusMessage</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L190-L190">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:190–190</a></td><td>SetStatusMessage</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L220-L220">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:220–220</a></td><td>SetStatusMessage</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L232-L232">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:232–232</a></td><td>SetStatusMessage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2301-L2301">Drilling.UI/Menu/Menus/CMenuManual.cs:2301–2301</a></td><td>dialog.SetStatusMessage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2316-L2316">Drilling.UI/Menu/Menus/CMenuManual.cs:2316–2316</a></td><td>dialog.SetStatusMessage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2322-L2322">Drilling.UI/Menu/Menus/CMenuManual.cs:2322–2322</a></td><td>dialog.SetStatusMessage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L83-L83">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:83–83</a></td><td>SetStatusMessage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L180-L180">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:180–180</a></td><td>SetStatusMessage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L186-L186">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:186–186</a></td><td>SetStatusMessage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L190-L190">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:190–190</a></td><td>SetStatusMessage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L220-L220">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:220–220</a></td><td>SetStatusMessage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L232-L232">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:232–232</a></td><td>SetStatusMessage</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -440,7 +440,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L90">MethodDeclaration <code>SetStepState</code> · L90–114</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L90-L114">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:90–114</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L90-L114">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:90–114</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CControllerResetSequenceDialog.SetStepState(int, int, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -455,11 +455,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2300-L2300">Drilling.UI/Menu/Menus/CMenuManual.cs:2300–2300</a></td><td>dialog.SetStepState</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2317-L2317">Drilling.UI/Menu/Menus/CMenuManual.cs:2317–2317</a></td><td>dialog.SetStepState</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2321-L2321">Drilling.UI/Menu/Menus/CMenuManual.cs:2321–2321</a></td><td>dialog.SetStepState</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2326-L2326">Drilling.UI/Menu/Menus/CMenuManual.cs:2326–2326</a></td><td>dialog.SetStepState</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L94-L94">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:94–94</a></td><td>SetStepState</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2300-L2300">Drilling.UI/Menu/Menus/CMenuManual.cs:2300–2300</a></td><td>dialog.SetStepState</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2317-L2317">Drilling.UI/Menu/Menus/CMenuManual.cs:2317–2317</a></td><td>dialog.SetStepState</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2321-L2321">Drilling.UI/Menu/Menus/CMenuManual.cs:2321–2321</a></td><td>dialog.SetStepState</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2326-L2326">Drilling.UI/Menu/Menus/CMenuManual.cs:2326–2326</a></td><td>dialog.SetStepState</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L94-L94">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:94–94</a></td><td>SetStepState</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -497,7 +497,7 @@
  N3 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L116">MethodDeclaration <code>SkipWaitingSteps</code> · L116–139</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L116-L139">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:116–139</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L116-L139">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:116–139</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CControllerResetSequenceDialog.SkipWaitingSteps(int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -510,10 +510,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2267-L2267">Drilling.UI/Menu/Menus/CMenuManual.cs:2267–2267</a></td><td>dialog.SkipWaitingSteps</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2276-L2276">Drilling.UI/Menu/Menus/CMenuManual.cs:2276–2276</a></td><td>dialog.SkipWaitingSteps</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2284-L2284">Drilling.UI/Menu/Menus/CMenuManual.cs:2284–2284</a></td><td>dialog.SkipWaitingSteps</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L120-L120">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:120–120</a></td><td>SkipWaitingSteps</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2267-L2267">Drilling.UI/Menu/Menus/CMenuManual.cs:2267–2267</a></td><td>dialog.SkipWaitingSteps</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2276-L2276">Drilling.UI/Menu/Menus/CMenuManual.cs:2276–2276</a></td><td>dialog.SkipWaitingSteps</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2284-L2284">Drilling.UI/Menu/Menus/CMenuManual.cs:2284–2284</a></td><td>dialog.SkipWaitingSteps</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L120-L120">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:120–120</a></td><td>SkipWaitingSteps</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -552,7 +552,7 @@
  N3 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L141">MethodDeclaration <code>SkipAllWaitingSteps</code> · L141–159</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L141-L159">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:141–159</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L141-L159">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:141–159</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CControllerResetSequenceDialog.SkipAllWaitingSteps()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -561,12 +561,12 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2260-L2260">Drilling.UI/Menu/Menus/CMenuManual.cs:2260–2260</a></td><td>dialog.SkipAllWaitingSteps</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2268-L2268">Drilling.UI/Menu/Menus/CMenuManual.cs:2268–2268</a></td><td>dialog.SkipAllWaitingSteps</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2277-L2277">Drilling.UI/Menu/Menus/CMenuManual.cs:2277–2277</a></td><td>dialog.SkipAllWaitingSteps</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2285-L2285">Drilling.UI/Menu/Menus/CMenuManual.cs:2285–2285</a></td><td>dialog.SkipAllWaitingSteps</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2293-L2293">Drilling.UI/Menu/Menus/CMenuManual.cs:2293–2293</a></td><td>dialog.SkipAllWaitingSteps</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2327-L2327">Drilling.UI/Menu/Menus/CMenuManual.cs:2327–2327</a></td><td>dialog.SkipAllWaitingSteps</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2260-L2260">Drilling.UI/Menu/Menus/CMenuManual.cs:2260–2260</a></td><td>dialog.SkipAllWaitingSteps</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2268-L2268">Drilling.UI/Menu/Menus/CMenuManual.cs:2268–2268</a></td><td>dialog.SkipAllWaitingSteps</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2277-L2277">Drilling.UI/Menu/Menus/CMenuManual.cs:2277–2277</a></td><td>dialog.SkipAllWaitingSteps</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2285-L2285">Drilling.UI/Menu/Menus/CMenuManual.cs:2285–2285</a></td><td>dialog.SkipAllWaitingSteps</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2293-L2293">Drilling.UI/Menu/Menus/CMenuManual.cs:2293–2293</a></td><td>dialog.SkipAllWaitingSteps</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2327-L2327">Drilling.UI/Menu/Menus/CMenuManual.cs:2327–2327</a></td><td>dialog.SkipAllWaitingSteps</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -599,7 +599,7 @@
  N2 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L161">MethodDeclaration <code>OnStartClicked</code> · L161–164</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L161-L164">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:161–164</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L161-L164">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:161–164</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CControllerResetSequenceDialog.OnStartClicked(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, async</td></tr>
@@ -623,7 +623,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L166">MethodDeclaration <code>OnStopClicked</code> · L166–169</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L166-L169">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:166–169</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L166-L169">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:166–169</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CControllerResetSequenceDialog.OnStopClicked(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -646,7 +646,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L171">MethodDeclaration <code>RunSequence</code> · L171–203</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L171-L203">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:171–203</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L171-L203">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:171–203</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.UI.Popup.CControllerResetSequenceDialog.RunSequence()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, async</td></tr>
@@ -655,7 +655,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L163-L163">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:163–163</a></td><td>RunSequence</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L163-L163">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:163–163</a></td><td>RunSequence</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -711,7 +711,7 @@
  N0 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L205">MethodDeclaration <code>OnCloseClicked</code> · L205–208</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L205-L208">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:205–208</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L205-L208">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:205–208</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CControllerResetSequenceDialog.OnCloseClicked(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -730,7 +730,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L210">MethodDeclaration <code>RequestStop</code> · L210–221</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L210-L221">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:210–221</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L210-L221">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:210–221</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CControllerResetSequenceDialog.RequestStop()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -739,8 +739,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L168-L168">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:168–168</a></td><td>RequestStop</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L231-L231">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:231–231</a></td><td>RequestStop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L168-L168">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:168–168</a></td><td>RequestStop</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L231-L231">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:231–231</a></td><td>RequestStop</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -762,7 +762,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L223">MethodDeclaration <code>OnWindowClosing</code> · L223–233</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L223-L233">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:223–233</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L223-L233">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:223–233</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CControllerResetSequenceDialog.OnWindowClosing(object, System.ComponentModel.CancelEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -795,7 +795,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L239">ConstructorDeclaration <code>.ctor</code> · L239–244</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L239-L244">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:239–244</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L239-L244">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:239–244</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_BLOCK.ST_CONTROLLER_RESET_SEQUENCE_BLOCK(int, string, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -810,7 +810,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L64-L64">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:64–64</a></td><td>new ST_CONTROLLER_RESET_SEQUENCE_BLOCK</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L64-L64">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:64–64</a></td><td>new ST_CONTROLLER_RESET_SEQUENCE_BLOCK</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -820,7 +820,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L246">PropertyDeclaration <code>AutomationNo</code> · L246–246</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L246-L246">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:246–246</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L246-L246">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:246–246</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_BLOCK.AutomationNo</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -830,7 +830,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L246">GetAccessorDeclaration <code>get_AutomationNo</code> · L246–246</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L246-L246">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:246–246</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L246-L246">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:246–246</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_BLOCK.AutomationNo.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -840,7 +840,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L247">PropertyDeclaration <code>Title</code> · L247–247</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L247-L247">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:247–247</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L247-L247">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:247–247</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_BLOCK.Title</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -850,7 +850,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L247">GetAccessorDeclaration <code>get_Title</code> · L247–247</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L247-L247">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:247–247</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L247-L247">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:247–247</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_BLOCK.Title.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -860,7 +860,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L248">PropertyDeclaration <code>Steps</code> · L248–248</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L248-L248">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:248–248</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L248-L248">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:248–248</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP&gt; Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_BLOCK.Steps</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -870,7 +870,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L248">GetAccessorDeclaration <code>get_Steps</code> · L248–248</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L248-L248">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:248–248</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L248-L248">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:248–248</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP&gt; Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_BLOCK.Steps.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -880,7 +880,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L253">FieldDeclaration <code>_state</code> · L253–253</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L253-L253">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:253–253</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L253-L253">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:253–253</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP._state</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -890,7 +890,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L254">ConstructorDeclaration <code>.ctor</code> · L254–259</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L254-L259">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:254–259</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L254-L259">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:254–259</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.ST_CONTROLLER_RESET_SEQUENCE_STEP(int, string, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -905,11 +905,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71</a></td><td>new</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71</a></td><td>new</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71</a></td><td>new</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71</a></td><td>new</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71</a></td><td>new</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71</a></td><td>new</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71</a></td><td>new</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71</a></td><td>new</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71</a></td><td>new</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71</a></td><td>new</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -919,7 +919,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L261">EventFieldDeclaration <code>PropertyChanged</code> · L261–261</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L261-L261">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:261–261</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L261-L261">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:261–261</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.PropertyChanged</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, event</td></tr>
@@ -929,7 +929,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L262">PropertyDeclaration <code>No</code> · L262–262</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L262-L262">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:262–262</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L262-L262">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:262–262</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.No</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -939,7 +939,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L262">GetAccessorDeclaration <code>get_No</code> · L262–262</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L262-L262">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:262–262</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L262-L262">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:262–262</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.No.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -949,7 +949,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L263">PropertyDeclaration <code>Name</code> · L263–263</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L263-L263">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:263–263</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L263-L263">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:263–263</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.Name</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -959,7 +959,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L263">GetAccessorDeclaration <code>get_Name</code> · L263–263</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L263-L263">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:263–263</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L263-L263">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:263–263</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.Name.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -969,7 +969,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L265">PropertyDeclaration <code>State</code> · L265–282</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L265-L282">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:265–282</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L265-L282">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:265–282</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.State</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -979,7 +979,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L267">GetAccessorDeclaration <code>get_State</code> · L267–270</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L267-L270">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:267–270</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L267-L270">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:267–270</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.State.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -993,7 +993,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L272">SetAccessorDeclaration <code>set_State</code> · L272–281</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L272-L281">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:272–281</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L272-L281">Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:272–281</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.ST_CONTROLLER_RESET_SEQUENCE_STEP.State.set</td></tr>
 <tr><td>접근/수식자</td><td>Public / set</td></tr>

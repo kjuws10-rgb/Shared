@@ -1,11 +1,286 @@
 {
-  "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
-  "passed": true,
-  "scope": "Agent source tracing plus Root final source-range corrections; not runtime validation",
-  "manualChapters": 7,
-  "sourceCitationsChecked": 266,
-  "rootSemanticCitationCorrections": 2,
-  "sourceWrites": 0,
-  "equipmentExecution": false,
-  "issues": 12
+  "schema": "review-independent-architecture-crosscheck-v1",
+  "sourceCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+  "baselineCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "status": "no_blocker",
+  "reviewedArtifacts": [
+    {
+      "path": "manual/architecture/01-startup-and-composition.md",
+      "sha256": "a19e862ac7107d5109ce971e374b2f1cb85fb436c189860f9a8a257ff8c483cc",
+      "scope": "latest-update sections plus Review-related inherited boundaries; README and analysis summary/full structured changes/risks"
+    },
+    {
+      "path": "manual/architecture/02-recipe-settings-and-csv.md",
+      "sha256": "b2f320a3c96893fddd763f0109d7b1f960281206726714e79839c31846f92ab2",
+      "scope": "latest-update sections plus Review-related inherited boundaries; README and analysis summary/full structured changes/risks"
+    },
+    {
+      "path": "manual/architecture/03-coordinate-script-and-mof.md",
+      "sha256": "724df147e8f2fceef04e21eab86c6c3cee7923f9b9f8acebdf4a95eb7d362750",
+      "scope": "latest-update sections plus Review-related inherited boundaries; README and analysis summary/full structured changes/risks"
+    },
+    {
+      "path": "manual/architecture/04-product-and-station-lifecycle.md",
+      "sha256": "33ab848735f135da7b726bbccf01e88503ef3d5dbe309e0f15ab8d25df5d05ad",
+      "scope": "latest-update sections plus Review-related inherited boundaries; README and analysis summary/full structured changes/risks"
+    },
+    {
+      "path": "manual/architecture/05-device-interfaces-and-drivers.md",
+      "sha256": "4aa7b98ad0cc6cbd3ea85ac59dc099597e22cd133e8fe35dfe660d888ca5330d",
+      "scope": "latest-update sections plus Review-related inherited boundaries; README and analysis summary/full structured changes/risks"
+    },
+    {
+      "path": "manual/architecture/06-threading-snapshots-and-logs.md",
+      "sha256": "ee697e279b9d65dd8d0a8103568b169a7347990bbc69f2e39cd43efd7a850814",
+      "scope": "latest-update sections plus Review-related inherited boundaries; README and analysis summary/full structured changes/risks"
+    },
+    {
+      "path": "manual/architecture/07-change-impact-and-offline-reference.md",
+      "sha256": "ddc03949742536df5092cd07839e5084a8c2ba8c83401ce923fd0f0bf223e11a",
+      "scope": "latest-update sections plus Review-related inherited boundaries; README and analysis summary/full structured changes/risks"
+    },
+    {
+      "path": "manual/architecture/08-alarm-cause-analysis.md",
+      "sha256": "58fc6ff8061529d78160e6be7c39ef0b5dcfc58ad3fac9433a408e18e0e716a1",
+      "scope": "latest-update sections plus Review-related inherited boundaries; README and analysis summary/full structured changes/risks"
+    },
+    {
+      "path": "manual/architecture/README.md",
+      "sha256": "4df4981ff6479e58142d9ca8ea1101985f97c597178efa78ae249a42cfa97594",
+      "scope": "latest-update sections plus Review-related inherited boundaries; README and analysis summary/full structured changes/risks"
+    },
+    {
+      "path": "analysis-parts/architecture-analysis.json",
+      "sha256": "366115a60a73e820c8de990d4bed9c11bb856a9f484bfb528b20e132f758bd60",
+      "scope": "latest-update sections plus Review-related inherited boundaries; README and analysis summary/full structured changes/risks"
+    },
+    {
+      "path": "analysis-parts/architecture-analysis.md",
+      "sha256": "11a6900e512abbc68ede8fcb35bc1bfcbcf57232b3ba3037b72244aa67e3dbda",
+      "scope": "latest-update sections plus Review-related inherited boundaries; README and analysis summary/full structured changes/risks"
+    }
+  ],
+  "checks": [
+    {
+      "id": "CC1",
+      "topic": "L1~L4 표시/Judge분리",
+      "result": "pass",
+      "matchesReviewManual": true,
+      "reason": "max(absX,absY),상한포함,비유한L4. 기본0.010/0.020/0.030mm 및색4개. 실제Visionfound/toleranceJudge와독립. Live VisionFind제외와파일allError재등급차이는두매뉴얼모두조건부표시위험으로기록.",
+      "evidence": [
+        {
+          "path": "Drilling.Common/Review/CReviewResultLevelSettings.cs",
+          "start": 23,
+          "end": 54,
+          "claim": "Levelresolve",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.Common/Review/CReviewResultLevelSettings.cs",
+          "start": 60,
+          "end": 87,
+          "claim": "keysanddefaults",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+          "start": 4707,
+          "end": 4744,
+          "claim": "VisionFindexcludedlive",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+          "start": 274,
+          "end": 332,
+          "claim": "allloadedrowsresolve;maxcellandshotlevel",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        }
+      ]
+    },
+    {
+      "id": "CC2",
+      "topic": "DOE Default범위와일반Beam유지",
+      "result": "pass",
+      "matchesReviewManual": true,
+      "reason": "DefaultInspectionGridSize는OFF1/ON옵션grid;Capture는OFFpitch0angle0;일반Beam할당builder는DOEflag읽지않고전역split범위검증. 전역grid1허용과ON4x4caption불일치는후속시험으로정확히기술.",
+      "evidence": [
+        {
+          "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+          "start": 29,
+          "end": 63,
+          "claim": "flagparserandscope",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+          "start": 3792,
+          "end": 3814,
+          "claim": "actualcaptureandfit",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.Common/Review/CReviewManager.cs",
+          "start": 1379,
+          "end": 1411,
+          "claim": "normalBeamtargetsnoDOEflag",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.UI/Views/CDefaultOffsetView.xaml.cs",
+          "start": 168,
+          "end": 174,
+          "claim": "ONcaption",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        }
+      ]
+    },
+    {
+      "id": "CC3",
+      "topic": "CSettingFile legacy정의migration",
+      "result": "pass",
+      "matchesReviewManual": true,
+      "reason": "Load는LoadFormItems목록으로만SystemParameter를구성. built-inAppend에Level7개있고CreateScannerFormItems는DIO/Z_USE/Z_AXIS뿐DOE없음. 새값CSV만배포해도구형정의로는DOE키미로드조건성립. 실제배포환경은미검증이므로candidate명명적절.",
+      "evidence": [
+        {
+          "path": "Drilling.File/JHMI/CSettingFile.cs",
+          "start": 20,
+          "end": 50,
+          "claim": "formdrivenload",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.File/JHMI/CSettingFile.cs",
+          "start": 194,
+          "end": 218,
+          "claim": "builtinsappendlevel",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.File/JHMI/CSettingFile.cs",
+          "start": 236,
+          "end": 262,
+          "claim": "level7items",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.File/JHMI/CSettingFile.cs",
+          "start": 280,
+          "end": 316,
+          "claim": "scannernodoeflag",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+          "start": 4461,
+          "end": 4479,
+          "claim": "all8headsread",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        }
+      ]
+    },
+    {
+      "id": "CC4",
+      "topic": "ColorBrush즉시갱신후보",
+      "result": "pass",
+      "matchesReviewManual": true,
+      "reason": "Value setter는ColorBrush이름알림요청;CBindingBase는일반INotifyPropertyChanged가아니고수동Changed이벤트switch. 전체파일에ColorBrushChanged/case없음. WPF재바인딩/CommitGridEdit우회는실행확인안함. 저장실패로단정안한서술적절.",
+      "evidence": [
+        {
+          "path": "Drilling.UI/Menu/Menus/CMenuSetting.cs",
+          "start": 1134,
+          "end": 1153,
+          "claim": "valuesetternotification",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.UI/Menu/Menus/CMenuSetting.cs",
+          "start": 1180,
+          "end": 1204,
+          "claim": "ColorBrushgetter",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.UI/Menu/CBindingBase.cs",
+          "start": 784,
+          "end": 842,
+          "claim": "dispatchswitch",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.UI/Views/CSettingView.xaml.cs",
+          "start": 49,
+          "end": 66,
+          "claim": "pickerapplygridcommit",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        }
+      ]
+    },
+    {
+      "id": "CC5",
+      "topic": "Shift preview직접변환/적용검증",
+      "result": "pass",
+      "matchesReviewManual": true,
+      "reason": "Root표는DesignOffsetToScanner직접호출;기존fullplan은Yshift대기거리clamp영향가능성을명시. popup벡터length24~82는화면px이며mm척도아님. 실제Apply는fullplan/mask/Glass/Head범위검사를유지. 실기속도성능미검증경계정확.",
+      "evidence": [
+        {
+          "path": "Drilling.UI/CRootView.cs",
+          "start": 1420,
+          "end": 1483,
+          "claim": "directrowsandfullapplyvalidation",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs",
+          "start": 103,
+          "end": 127,
+          "claim": "vectorlengthclamp",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+          "start": 121,
+          "end": 155,
+          "claim": "stagewaitclampandscannerfinal",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        },
+        {
+          "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+          "start": 1260,
+          "end": 1265,
+          "claim": "shifttransform",
+          "commit": "96e22cd027c84bf302b23f2949b98985d7f301bb"
+        }
+      ]
+    },
+    {
+      "id": "CC6",
+      "topic": "새변경/기존잔건/미실기경계",
+      "result": "pass",
+      "matchesReviewManual": true,
+      "reason": "architecture는Productcompact/Windowrestart/Alarmresidual을기존으로분리. Review의FineLagrange/RETAINED/Use그룹도기존분리. 문서추출/정적검사와정식설비빌드·Controller·물리정밀도·FPS를구분. 전체합격·Codex동급학습·현장불량재현으로과장하지않음.",
+      "evidence": []
+    }
+  ],
+  "negativeSearch": {
+    "file": "Drilling.UI/Menu/CBindingBase.cs",
+    "wholeFile": true,
+    "patterns": {
+      "ColorBrushChanged": 0,
+      "case \"ColorBrush\"": 0,
+      "INotifyPropertyChanged": 0
+    }
+  },
+  "linkChecks": {
+    "sourceLinks": 254,
+    "internalLinks": 42,
+    "errors": []
+  },
+  "requiredChanges": [],
+  "limitations": [
+    "Every file was read for structure and current change sections; this is not re-review of every inherited source line in all eight domains.",
+    "No WPF reproduction, compiler/equipment build, Controller/SDK/AeroScript execution, vendor load or decompile.",
+    "Risk priorities are static review/test priorities, not observed failure rates."
+  ],
+  "sourceGitStatus": ""
 }

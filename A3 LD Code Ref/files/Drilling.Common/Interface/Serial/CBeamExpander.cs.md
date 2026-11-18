@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 03863c21ee7090c376d28f5692562f60e13eaf9efa617f9f5964a87158246346 |
 | 파일 분류 | code |
 | 원본 크기/행 | 16,548 bytes / 475 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -81,7 +81,7 @@
 
 ### FieldDeclaration `ResponseQuietTimeoutMs` · L16–16
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L16-L16)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -102,7 +102,7 @@
 
 ### FieldDeclaration `ResponsePollIntervalMs` · L17–17
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L17-L17)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -123,7 +123,7 @@
 
 ### FieldDeclaration `MaxResponseLength` · L18–18
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L18-L18)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -144,7 +144,7 @@
 
 ### MethodDeclaration `Build` · L19–33
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:19–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L19-L33)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:19–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L19-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -165,8 +165,8 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1304–1304](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L1304-L1304) | CBeamExpander.Build | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L42-L42) | Build | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1304–1304](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L1304-L1304) | CBeamExpander.Build | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L42-L42) | Build | False |
 
 호출하는 대상과 해석 범위:
 
@@ -207,7 +207,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildLogText` · L35–43
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:35–43](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L35-L43)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:35–43](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L35-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -228,7 +228,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1305–1305](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L1305-L1305) | CBeamExpander.BuildLogText | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1305–1305](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L1305-L1305) | CBeamExpander.BuildLogText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -275,7 +275,7 @@ flowchart TD
 
 ### MethodDeclaration `IsSuccessResponse` · L45–48
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:45–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L45-L48)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:45–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L45-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -294,8 +294,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1349–1349](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L1349-L1349) | CBeamExpander.IsSuccessResponse | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L53-L53) | IsSuccessResponse | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1349–1349](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L1349-L1349) | CBeamExpander.IsSuccessResponse | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L53-L53) | IsSuccessResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -316,7 +316,7 @@ flowchart TD
 
 ### MethodDeclaration `Apply` · L50–129
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:50–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L50-L129)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:50–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L50-L129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -340,8 +340,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1319–1319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L1319-L1319) | CBeamExpander.Apply | False |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1346–1346](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L1346-L1346) | CBeamExpander.Apply | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1319–1319](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L1319-L1319) | CBeamExpander.Apply | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1346–1346](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L1346-L1346) | CBeamExpander.Apply | False |
 
 호출하는 대상과 해석 범위:
 
@@ -439,7 +439,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L131–142
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:131–142](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L131-L142)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:131–142](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L131-L142)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -493,7 +493,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteBeamExpander` · L144–175
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:144–175](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L144-L175)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:144–175](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L144-L175)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -513,7 +513,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L136-L136) | ExecuteBeamExpander | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L136-L136) | ExecuteBeamExpander | False |
 
 호출하는 대상과 해석 범위:
 
@@ -569,7 +569,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L157–160
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:157–160](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L157-L160)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:157–160](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L157-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -597,7 +597,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteBeamExpander` · L177–201
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:177–201](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L177-L201)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:177–201](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L177-L201)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -616,7 +616,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L159-L159) | ExecuteBeamExpander | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L159-L159) | ExecuteBeamExpander | False |
 
 호출하는 대상과 해석 범위:
 
@@ -686,7 +686,7 @@ flowchart TD
 
 ### MethodDeclaration `SendMove` · L203–221
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:203–221](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L203-L221)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:203–221](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L203-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -706,7 +706,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L198-L198) | SendMove | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L198-L198) | SendMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -759,7 +759,7 @@ flowchart TD
 
 ### MethodDeclaration `SendSelecting` · L223–228
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:223–228](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L223-L228)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:223–228](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L223-L228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -778,8 +778,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L183-L183) | SendSelecting | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L188-L188) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L183-L183) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L188-L188) | SendSelecting | False |
 
 호출하는 대상과 해석 범위:
 
@@ -803,7 +803,7 @@ flowchart TD
 
 ### MethodDeclaration `SendPolling` · L230–261
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:230–261](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L230-L261)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:230–261](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L230-L261)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -822,7 +822,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L193-L193) | SendPolling | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L193-L193) | SendPolling | False |
 
 호출하는 대상과 해석 범위:
 
@@ -898,7 +898,7 @@ flowchart TD
 
 ### MethodDeclaration `SendAndWaitAck` · L263–267
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:263–267](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L263-L267)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:263–267](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L263-L267)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -917,9 +917,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L210-L210) | SendAndWaitAck | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L215-L215) | SendAndWaitAck | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L227-L227) | SendAndWaitAck | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L210-L210) | SendAndWaitAck | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L215-L215) | SendAndWaitAck | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L227-L227) | SendAndWaitAck | False |
 
 호출하는 대상과 해석 범위:
 
@@ -940,7 +940,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeAckWriteCommand` · L269–273
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:269–273](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L269-L273)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:269–273](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L269-L273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -959,7 +959,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L265-L265) | NormalizeAckWriteCommand | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L265-L265) | NormalizeAckWriteCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -983,7 +983,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizePollingWriteCommand` · L275–283
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:275–283](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L275-L283)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:275–283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L275-L283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1002,7 +1002,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L245-L245) | NormalizePollingWriteCommand | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L245-L245) | NormalizePollingWriteCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1031,7 +1031,7 @@ flowchart TD
 
 ### MethodDeclaration `IsPollingCommand` · L285–289
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:285–289](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L285-L289)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:285–289](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L285-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1050,7 +1050,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L191-L191) | IsPollingCommand | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L191-L191) | IsPollingCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1071,7 +1071,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizePollingCommand` · L291–305
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:291–305](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L291-L305)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:291–305](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L291-L305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1090,9 +1090,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L232-L232) | NormalizePollingCommand | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L277-L277) | NormalizePollingCommand | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L287-L287) | NormalizePollingCommand | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L232-L232) | NormalizePollingCommand | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L277-L277) | NormalizePollingCommand | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L287-L287) | NormalizePollingCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1134,7 +1134,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDeviceResponse` · L307–342
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:307–342](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L307-L342)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:307–342](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L307-L342)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1147,7 +1147,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L248-L248) | ReadDeviceResponse | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L248-L248) | ReadDeviceResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1210,7 +1210,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitForNextResponseByte` · L344–362
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:344–362](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L344-L362)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:344–362](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L344-L362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1223,7 +1223,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L312-L312) | WaitForNextResponseByte | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L312-L312) | WaitForNextResponseByte | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1262,7 +1262,7 @@ flowchart TD
 
 ### MethodDeclaration `ToMotorStep` · L364–367
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:364–367](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L364-L367)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:364–367](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L364-L367)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1281,14 +1281,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L25-L25) | ToMotorStep | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L26-L26) | ToMotorStep | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L39-L39) | ToMotorStep | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L39-L39) | ToMotorStep | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L40-L40) | ToMotorStep | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L41-L41) | ToMotorStep | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L207-L207) | ToMotorStep | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L208-L208) | ToMotorStep | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L25-L25) | ToMotorStep | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L26-L26) | ToMotorStep | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L39-L39) | ToMotorStep | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L39-L39) | ToMotorStep | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L40-L40) | ToMotorStep | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L41-L41) | ToMotorStep | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:207–207](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L207-L207) | ToMotorStep | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L208-L208) | ToMotorStep | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1309,7 +1309,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateSimulationResponse` · L369–378
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:369–378](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L369-L378)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:369–378](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L369-L378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1331,7 +1331,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L52-L52) | CreateSimulationResponse | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L52-L52) | CreateSimulationResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1366,7 +1366,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadError` · L380–395
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:380–395](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L380-L395)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:380–395](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L380-L395)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1385,7 +1385,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L58-L58) | ReadError | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L58-L58) | ReadError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1423,7 +1423,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTaggedDouble` · L397–402
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:397–402](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L397-L402)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:397–402](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L397-L402)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1444,10 +1444,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L117-L117) | ReadTaggedDouble | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L118-L118) | ReadTaggedDouble | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L123-L123) | ReadTaggedDouble | False |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L124-L124) | ReadTaggedDouble | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L117-L117) | ReadTaggedDouble | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L118-L118) | ReadTaggedDouble | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L123-L123) | ReadTaggedDouble | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L124-L124) | ReadTaggedDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1474,7 +1474,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadBeamPosition` · L404–423
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:404–423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L404-L423)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:404–423](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L404-L423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1494,7 +1494,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CBeamExpander.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L249-L249) | TryReadBeamPosition | False |
+| [Drilling.Common/Interface/Serial/CBeamExpander.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L249-L249) | TryReadBeamPosition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1546,7 +1546,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesChar` · L409–412
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:409–412](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L409-L412)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:409–412](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L409-L412)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1580,7 +1580,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `InitMotor` · L428–428
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L428-L428)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L428-L428)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1595,7 +1595,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MoveManual` · L429–429
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L429-L429)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L429-L429)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1610,7 +1610,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MoveMagnification` · L430–430
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L430-L430)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:430–430](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L430-L430)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1625,7 +1625,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MoveDivergence` · L431–431
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L431-L431)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:431–431](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L431-L431)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1640,7 +1640,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MoveTable` · L432–432
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L432-L432)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:432–432](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L432-L432)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1655,7 +1655,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Stop` · L433–433
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L433-L433)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L433-L433)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1670,7 +1670,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ResetAlarm` · L434–434
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:434–434](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L434-L434)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:434–434](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L434-L434)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1685,7 +1685,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Refresh` · L435–435
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L435-L435)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L435-L435)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1700,7 +1700,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `PollMagnificationPosition` · L436–436
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L436-L436)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L436-L436)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1715,7 +1715,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `PollDivergencePosition` · L437–437
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L437-L437)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L437-L437)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1730,7 +1730,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Ok` · L442–442
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:442–442](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L442-L442)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:442–442](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L442-L442)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1745,7 +1745,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Error` · L443–443
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L443-L443)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L443-L443)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1760,7 +1760,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Timeout` · L444–444
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:444–444](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L444-L444)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:444–444](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L444-L444)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1775,7 +1775,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `InvalidResponse` · L445–445
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:445–445](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L445-L445)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:445–445](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L445-L445)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1790,7 +1790,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `NotSupported` · L446–446
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L446-L446)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L446-L446)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1805,7 +1805,7 @@ flowchart TD
 
 ### FieldDeclaration `DefaultRowBeamSize` · L467–467
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:467–467](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L467-L467)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:467–467](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L467-L467)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1826,7 +1826,7 @@ flowchart TD
 
 ### PropertyDeclaration `SpotSize` · L468–474
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:468–474](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L468-L474)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:468–474](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L468-L474)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1841,7 +1841,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SpotSize` · L470–473
 
-[Drilling.Common/Interface/Serial/CBeamExpander.cs:470–473](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CBeamExpander.cs#L470-L473)
+[Drilling.Common/Interface/Serial/CBeamExpander.cs:470–473](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CBeamExpander.cs#L470-L473)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

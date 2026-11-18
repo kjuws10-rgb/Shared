@@ -19,7 +19,7 @@ git -C D:\A3RefWork\source-readonly status --porcelain
 git -C D:\A3RefWork\source-readonly rev-parse HEAD
 ```
 
-Shared main을 먼저 최신화하고 현재 폴더의 `manual/`을 수동 해설 원본으로 사용합니다. 자동 추출 전에 변경된 코드와 관련 호출자·소비자를 읽고 해당 상세장을 고칩니다. 원본이 변경되지 않았고 문서와 검증도 최신이면 재생성하지 않습니다.
+Shared main을 먼저 최신화하고 현재 폴더의 `manual/`을 수동 해설 원본으로 사용합니다. 자동 추출 전에 변경된 코드와 관련 호출자·소비자를 읽고 해당 상세장을 고칩니다. 원본·수동 입력·출력은 서로 중첩되지 않는 경로를 사용합니다. 출력이 원본의 상위 폴더인 경우도 금지합니다. 생성 출력은 매번 비어 있는 새 staging으로 만들고, 게시 폴더에서 직접 재생성하지 않습니다. 출력 재사용 시 오래된 JSONL 조각이나 삭제된 파일 문서가 남을 수 있습니다. 원본이 변경되지 않았고 문서와 검증도 최신이면 재생성하지 않습니다.
 
 ## 추출 → 생성 → 검증
 
@@ -33,9 +33,9 @@ python tools\build_reference.py --source D:\A3RefWork\source-readonly --model D:
 python tools\validate_reference.py --source D:\A3RefWork\source-readonly --output D:\A3RefWork\staging\A3Ref --report D:\A3RefWork\validation.json
 ```
 
-첫 추출은 코드 전체를 한 문서 분석용 부분 컴파일로 구성합니다. WPF·벤더 SDK·프로젝트별 정식 빌드를 재현하지 않습니다. 따라서 분석 진단 수를 장비 빌드 오류 수로 보고하면 안 됩니다. 로컬 함수는 원본 경로/선언 위치를 ID에 포함해 동명 함수가 섞이지 않게 합니다. 18개 추출기 합성 회귀검사에는 동명 로컬 함수, record·primary constructor·partial·init, enum/operator/indexer 및 다중 필드 초기화 호출·연산 소속 검사가 포함됩니다. Python 합성 회귀 4개는 XAML 이벤트/생성 필드 후보, 민감 셀 미복제, 원문 복원과 생성 출력의 선택 자료 분리, 물리 CRLF→LF 정규화와 EOL 마커 앞 원문 공백 보존을 임시 fixture에서 확인합니다.
+첫 추출은 코드 전체를 한 문서 분석용 부분 컴파일로 구성합니다. WPF·벤더 SDK·프로젝트별 정식 빌드를 재현하지 않습니다. 따라서 분석 진단 수를 장비 빌드 오류 수로 보고하면 안 됩니다. 로컬 함수는 원본 경로/선언 위치를 ID에 포함해 동명 함수가 섞이지 않게 합니다. 18개 추출기 합성 회귀검사에는 동명 로컬 함수, record·primary constructor·partial·init, enum/operator/indexer 및 다중 필드 초기화 호출·연산 소속 검사가 포함됩니다. Python 합성 회귀 9개는 XAML 이벤트/생성 필드 후보, 민감 셀 미복제, 원문 복원과 생성 출력의 선택 자료 분리, 물리 CRLF→LF 정규화와 EOL 마커 앞 원문 공백 보존, 추가 XAML 이벤트 5종, 생성기 목록과 독립된 XML 검증, 코드 비하인드 EventArgs 핸들러 후보, 원본/수동 입력과 출력의 양방향 중첩 차단을 임시 fixture에서 확인합니다.
 
-현재 문서 생성기는 1.1.1, 검증기는 1.1.0, Roslyn 추출기는 1.0.3입니다. manifest의 `generatorVersion`과 `extractorVersion`을 따로 기록합니다. 1.1.1은 문서를 실제 바이트로 비교해 UTF-8/LF로 정규화하며, EOL 마커 앞 원문 공백은 유지합니다. 멤버 수는 명시적인 C# 원문 선언 기준이며 컴파일러가 합성하는 record 속성·primary constructor 멤버와 WPF 생성 필드를 원문 멤버로 주장하지 않습니다. XAML의 이름 있는 요소·이벤트·Binding은 원본 줄 범위를 포함해 `metadata/xaml/`에 별도로 보존합니다. 이 목록은 런타임 바인딩 성공을 증명하지 않습니다.
+현재 문서 생성기는 1.1.2, 검증기는 1.1.1, Roslyn 추출기는 1.0.3입니다. manifest의 `generatorVersion`과 `extractorVersion`을 따로 기록합니다. 1.1.1의 UTF-8/LF 정규화와 EOL 마커 앞 원문 공백 보존을 유지하며, 1.1.2는 PreviewTextInput·LostMouseCapture·Expanded·LoadingRow·AutoGeneratingColumn 이벤트를 추가하고 출력 경로가 원본 또는 수동 입력의 상위/하위/동일 경로가 되지 못하게 합니다. 검증기는 생성기 이벤트 목록을 가져오지 않는 독립 XML 기준과 코드 비하인드 EventArgs 메서드 후보로 이벤트 누락을 교차 확인합니다. 이 후보는 런타임 이벤트 연결 확정이 아닙니다. 멤버 수는 명시적인 C# 원문 선언 기준이며 컴파일러가 합성하는 record 속성·primary constructor 멤버와 WPF 생성 필드를 원문 멤버로 주장하지 않습니다. XAML의 이름 있는 요소·이벤트·Binding은 원본 줄 범위를 포함해 `metadata/xaml/`에 별도로 보존합니다. 이 목록은 런타임 바인딩 성공을 증명하지 않습니다.
 
 ## 검증과 게시
 

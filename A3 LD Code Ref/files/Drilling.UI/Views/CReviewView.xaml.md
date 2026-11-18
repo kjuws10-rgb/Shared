@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
-| 원본 SHA256 | cf25ef28dc0b2c33f9ac69f56757e9c134f1a1da8a5bf647b255c62b7c511a97 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 SHA256 | e523762220e84ac7bb60f8fd50d54721fbcc27d603b9314200297550f128c567 |
 | 파일 분류 | code |
-| 원본 크기/행 | 96,904 bytes / 1,373 physical lines |
+| 원본 크기/행 | 157,060 bytes / 2,134 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CReviewView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -22,216 +22,303 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 항목 | 추출 값 |
 | --- | --- |
 | 코드 비하인드 후보 | Drilling.UI/Views/CReviewView.xaml.cs |
-| 이름 있는 요소 | ButtonChrome, ButtonContent, ItemBorder, ToggleButton, Shell, PART_Popup, ReviewCurrentShotBlink, OpenReviewCorrectionButton, ReviewHeadCards, RunGlassPreviewViewport, RunGlassPreviewHoverTip, RunGlassPreviewHoverTipTranslateTransform, RunGlassPreviewHoverTipText, ReviewBeamSelectionPanel, BeamInspectionRunCommands, BeamInspectionStartButton, BeamInspectionStopButton, BeamInspectionLoadCommands, OneShotActionPanel, OneShotSelectionText, OneShotMethodCombo, OneShotMoveButton, OneShotInspectionButton, OneShotMoveInspectionButton, OneShotStopButton, AllShotRunCommands, AllShotStartButton, AllShotStopButton, ReviewResultsPanel, OneShotResultText, ReviewResultGrid |
-| 이벤트 개수 | 5 |
-| Binding 표현 개수 | 160 |
+| 이름 있는 요소 | ButtonChrome, ButtonContent, ItemBorder, ToggleButton, Shell, PART_Popup, ReviewCurrentShotBlink, OpenReviewCorrectionButton, ShotHeaderOngoingBlink, ReviewHeadCards, RunGlassPreviewViewport, RunGlassPreviewHoverTip, RunGlassPreviewHoverTipTranslateTransform, RunGlassPreviewHoverTipText, SelectedShotStatusBlink, ReviewBeamSelectionPanel, BeamInspectionSelectionPanel, BeamResultOngoingBlink, BeamInspectionRunCommands, BeamInspectionStartButton, BeamInspectionStopButton, BeamInspectionLoadCommands, OneShotActionPanel, OneShotSelectionText, OneShotMethodCombo, OneShotMoveButton, OneShotInspectionButton, OneShotMoveInspectionButton, OneShotStopButton, AllShotRunCommands, AllShotStartButton, AllShotStopButton, ReviewResultsPanel, OneShotResultText, ReviewResultGrid |
+| 이벤트 개수 | 6 |
+| Binding 표현 개수 | 242 |
 
 이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
 | 요소 이름 | 원본 범위 |
 | --- | --- |
-| ButtonChrome | L141–141 |
-| ButtonContent | L146–146 |
-| ItemBorder | L233–233 |
-| ToggleButton | L273–273 |
-| Shell | L279–279 |
-| PART_Popup | L318–318 |
-| ReviewCurrentShotBlink | L379–379 |
-| OpenReviewCorrectionButton | L536–536 |
-| ReviewHeadCards | L649–649 |
-| RunGlassPreviewViewport | L698–698 |
-| RunGlassPreviewHoverTip | L727–727 |
-| RunGlassPreviewHoverTipTranslateTransform | L739–739 |
-| RunGlassPreviewHoverTipText | L741–741 |
-| ReviewBeamSelectionPanel | L979–979 |
-| BeamInspectionRunCommands | L1189–1189 |
-| BeamInspectionStartButton | L1193–1193 |
-| BeamInspectionStopButton | L1196–1196 |
-| BeamInspectionLoadCommands | L1200–1200 |
-| OneShotActionPanel | L1293–1293 |
-| OneShotSelectionText | L1296–1296 |
-| OneShotMethodCombo | L1299–1299 |
-| OneShotMoveButton | L1304–1304 |
-| OneShotInspectionButton | L1306–1306 |
-| OneShotMoveInspectionButton | L1309–1309 |
-| OneShotStopButton | L1311–1311 |
-| AllShotRunCommands | L1318–1318 |
-| AllShotStartButton | L1324–1324 |
-| AllShotStopButton | L1327–1327 |
-| ReviewResultsPanel | L1335–1335 |
-| OneShotResultText | L1348–1348 |
-| ReviewResultGrid | L1352–1352 |
+| ButtonChrome | L162–162 |
+| ButtonContent | L167–167 |
+| ItemBorder | L280–280 |
+| ToggleButton | L320–320 |
+| Shell | L326–326 |
+| PART_Popup | L365–365 |
+| ReviewCurrentShotBlink | L426–426 |
+| OpenReviewCorrectionButton | L659–659 |
+| ShotHeaderOngoingBlink | L778–778 |
+| ReviewHeadCards | L817–817 |
+| RunGlassPreviewViewport | L879–879 |
+| RunGlassPreviewHoverTip | L920–920 |
+| RunGlassPreviewHoverTipTranslateTransform | L932–932 |
+| RunGlassPreviewHoverTipText | L934–934 |
+| SelectedShotStatusBlink | L1177–1177 |
+| ReviewBeamSelectionPanel | L1430–1430 |
+| BeamInspectionSelectionPanel | L1616–1616 |
+| BeamResultOngoingBlink | L1775–1775 |
+| BeamInspectionRunCommands | L1872–1872 |
+| BeamInspectionStartButton | L1876–1876 |
+| BeamInspectionStopButton | L1879–1879 |
+| BeamInspectionLoadCommands | L1883–1883 |
+| OneShotActionPanel | L1976–1976 |
+| OneShotSelectionText | L1979–1979 |
+| OneShotMethodCombo | L1982–1982 |
+| OneShotMoveButton | L1987–1987 |
+| OneShotInspectionButton | L1989–1989 |
+| OneShotMoveInspectionButton | L1992–1992 |
+| OneShotStopButton | L1994–1994 |
+| AllShotRunCommands | L2039–2039 |
+| AllShotStartButton | L2046–2046 |
+| AllShotStopButton | L2049–2049 |
+| ReviewResultsPanel | L2096–2096 |
+| OneShotResultText | L2109–2109 |
+| ReviewResultGrid | L2113–2113 |
 
 | 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
 | --- | --- | --- | --- |
-| IsVisibleChanged | ReviewView_IsVisibleChanged | L9–9 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| SizeChanged | ReviewPreview_SizeChanged | L698–698 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| MouseMove | RunCellPreviewLabel_MouseMove | L713–713 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| MouseLeave | RunCellPreviewLabel_MouseLeave | L714–714 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseLeftButtonDown | CellPreviewLabel_PreviewMouseLeftButtonDown | L715–715 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| IsVisibleChanged | ReviewView_IsVisibleChanged | L10–10 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| SizeChanged | ReviewPreview_SizeChanged | L879–879 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| MouseMove | RunCellPreviewLabel_MouseMove | L906–906 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| MouseLeave | RunCellPreviewLabel_MouseLeave | L907–907 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | CellPreviewLabel_PreviewMouseLeftButtonDown | L908–908 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| AutoGeneratingColumn | ReviewResultDataGrid_AutoGeneratingColumn | L2118–2118 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 
 | Binding 표현 | 원본 범위 |
 | --- | --- |
-| {Binding RelativeSource={RelativeSource Self}, Path=Tag} | L113–113 |
-| {Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay} | L276–276 |
-| {Binding SelectionBoxItem, RelativeSource={RelativeSource AncestorType=ComboBox}} | L290–290 |
-| {Binding SelectionBoxItemTemplate, RelativeSource={RelativeSource AncestorType=ComboBox}} | L291–291 |
-| {Binding SelectionBoxItemStringFormat, RelativeSource={RelativeSource AncestorType=ComboBox}} | L292–292 |
-| {Binding ActualWidth, ElementName=ToggleButton} | L327–327 |
-| {Binding BackgroundBrush} | L347–347 |
-| {Binding BorderBrush} | L348–348 |
-| {Binding IsCurrent} | L376–376 |
-| {Binding IsSelected} | L394–394 |
-| {Binding DataContext.CurrentScreen.Review.IsShotSelectionMode, RelativeSource={RelativeSource AncestorType=UserControl}} | L395–395 |
-| {Binding Use} | L430–430 |
-| {Binding IsExcluded} | L448–448 |
-| {Binding ExclusionReason} | L454–454 |
-| {Binding CurrentScreen.Review.IsRunTab, Converter={StaticResource BooleanToVisibilityConverter}} | L478–478 |
-| {Binding CurrentScreen.Review.Modes} | L503–503 |
-| {Binding SelectCommand} | L511–511 |
-| {Binding Name} | L512–512 |
-| {Binding IsSelected} | L516–516 |
-| {Binding DisplayName} | L525–525 |
-| {Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground} | L526–526 |
-| {Binding CurrentScreen.Review.OpenCorrectionReviewCommand} | L538–538 |
-| {Binding CurrentScreen.Review.TargetItems} | L558–558 |
-| {Binding Name} | L566–566 |
-| {Binding Value} | L571–571 |
-| {Binding Value} | L577–577 |
-| {Binding CurrentScreen.Review.RunWorkspaceTitle} | L604–604 |
-| {Binding CurrentScreen.Review.RunWorkspaceSummary} | L607–607 |
-| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L615–615 |
-| {Binding CurrentScreen.Review.IsInspectionSelectionControlsVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L626–626 |
-| {Binding CurrentScreen.Review.ShowSelectedInspectionShotsCommand} | L633–633 |
-| {Binding CurrentScreen.Review.ClearInspectionShotsCommand} | L641–641 |
-| {Binding CurrentScreen.Review.InspectionHeadRows} | L649–649 |
-| {Binding CurrentScreen.Review.IsReviewHeadCardsVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L651–651 |
-| {Binding Summary} | L660–660 |
-| {Binding HasSelectedShots} | L666–666 |
-| {Binding Name} | L672–672 |
-| {Binding HasSelectedShots} | L678–678 |
-| {Binding CurrentScreen.Review.IsRunGlassPreviewVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L693–693 |
-| {Binding CurrentScreen.Review.RunGlassPreviewImage} | L699–699 |
-| {Binding CurrentScreen.Review.RunCellPreviewLabels} | L703–703 |
-| {Binding Width} | L708–708 |
-| {Binding Height} | L709–709 |
-| {Binding DataContext.CurrentScreen.Review.IsShotSelectionMode, RelativeSource={RelativeSource AncestorType=UserControl}} | L710–710 |
-| {Binding DataContext.CurrentScreen.Review.SelectRunCellCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L711–711 |
-| {Binding CellNo} | L712–712 |
-| {Binding CurrentScreen.Review.RunGlassPreviewInspectionOverlayImage} | L720–720 |
-| {Binding CurrentScreen.Review.Camera} | L726–726 |
-| {Binding CurrentScreen.Review.IsRunCellDetailVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L751–751 |
-| {Binding CurrentScreen.Review.BackToRunGlassPreviewCommand} | L763–763 |
-| {Binding CurrentScreen.Review.IsRunShotMapVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L765–765 |
-| {Binding CurrentScreen.Review.BackToRunShotMapCommand} | L774–774 |
-| {Binding CurrentScreen.Review.IsRunBeamDetailVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L776–776 |
-| {Binding CurrentScreen.Review.RunCellShotMatrixRows} | L785–785 |
-| {Binding CurrentScreen.Review.IsRunShotMapVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L786–786 |
-| {Binding Shots} | L811–811 |
-| {Binding SelectCommand} | L821–821 |
-| {Binding ShotKey} | L822–822 |
-| {Binding ShowBeamPositionsCommand} | L829–829 |
-| {Binding ShotKey} | L830–830 |
-| {Binding ShotName} | L837–837 |
-| {Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}} | L838–838 |
-| {Binding Detail} | L843–843 |
-| {Binding StateBrush} | L852–852 |
-| {Binding IsSelected} | L856–856 |
-| {Binding DataContext.CurrentScreen.Review.IsShotSelectionMode, RelativeSource={RelativeSource AncestorType=UserControl}} | L857–857 |
-| {Binding CurrentScreen.Review.IsRunBeamDetailVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L875–875 |
-| {Binding CurrentScreen.Review.RunBeamRows} | L878–878 |
-| {Binding Beams} | L882–882 |
-| {Binding SelectCommand} | L891–891 |
-| {Binding BeamNo} | L892–892 |
-| {Binding BeamName} | L898–898 |
-| {Binding Detail} | L902–902 |
-| {Binding StateBrush} | L905–905 |
-| {Binding CurrentScreen.Review.IsAllShotReviewMode} | L931–931 |
-| {Binding ActualWidth, ElementName=ReviewBeamSelectionPanel} | L933–933 |
-| {Binding CurrentScreen.Review.IsOneLineReviewMode} | L935–935 |
-| {Binding ActualWidth, ElementName=ReviewBeamSelectionPanel} | L937–937 |
-| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L939–939 |
-| {Binding CurrentScreen.Review.IsOneShotReviewMode} | L942–942 |
-| {Binding ActualWidth, ElementName=ReviewBeamSelectionPanel} | L944–944 |
-| {Binding CurrentScreen.Review.IsAllShotReviewMode} | L957–957 |
-| {Binding CurrentScreen.Review.IsOneLineReviewMode} | L961–961 |
-| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L965–965 |
-| {Binding CurrentScreen.Review.IsOneShotReviewMode} | L969–969 |
-| {Binding CurrentScreen.Review.IsBeamSelectionVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L982–982 |
-| {Binding CurrentScreen.Review.IsRunStageStatusVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L996–996 |
-| {Binding CurrentScreen.Review.Camera.StageY} | L1005–1005 |
-| {Binding CurrentScreen.Review.Camera.ReviewX} | L1010–1010 |
-| {Binding CurrentScreen.Review.Camera.Mode} | L1014–1014 |
-| {Binding CurrentScreen.Review.BeamSelectionSummary} | L1028–1028 |
-| {Binding CurrentScreen.Review.IsInspectionExecutionViewVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L1034–1034 |
-| {Binding CurrentScreen.Review.PreviousInspectionShotCommand} | L1041–1041 |
-| {Binding CurrentScreen.Review.InspectionShotSummary} | L1042–1042 |
-| {Binding CurrentScreen.Review.NextInspectionShotCommand} | L1045–1045 |
-| {Binding CurrentScreen.Review.InspectionProgressText} | L1047–1047 |
-| {Binding CurrentScreen.Review.InspectionProgressText} | L1049–1049 |
-| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L1060–1060 |
-| {Binding ActualWidth, RelativeSource={RelativeSource Self}} | L1061–1061 |
-| {Binding CurrentScreen.Review.RunBeamRows} | L1066–1066 |
-| {Binding CurrentScreen.Review.CanSelectBeam} | L1069–1069 |
-| {Binding Beams} | L1077–1077 |
-| {Binding SelectCommand} | L1087–1087 |
-| {Binding BeamNo} | L1088–1088 |
-| {Binding BackgroundBrush} | L1093–1093 |
-| {Binding BorderBrush} | L1094–1094 |
-| {Binding DataContext.CurrentScreen.Review.IsBeamInspectionMode, RelativeSource={RelativeSource AncestorType=UserControl}} | L1101–1101 |
-| {Binding DataContext.CurrentScreen.Review.IsOneShotReviewMode, RelativeSource={RelativeSource AncestorType=UserControl}} | L1104–1104 |
-| {Binding BeamName} | L1122–1122 |
-| {Binding TextBrush} | L1123–1123 |
-| {Binding DataContext.CurrentScreen.Review.IsBeamInspectionMode, RelativeSource={RelativeSource AncestorType=UserControl}} | L1131–1131 |
-| {Binding DataContext.CurrentScreen.Review.IsOneShotReviewMode, RelativeSource={RelativeSource AncestorType=UserControl}} | L1134–1134 |
-| {Binding DataContext.CurrentScreen.Review.IsOneShotReviewMode, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BooleanToVisibilityConverter}} | L1143–1143 |
-| {Binding TextBrush} | L1144–1144 |
-| {Binding TargetX, Mode=OneWay} | L1145–1145 |
-| {Binding TextBrush} | L1147–1147 |
-| {Binding TargetY, Mode=OneWay} | L1148–1148 |
-| {Binding DataContext.CurrentScreen.Review.IsInspectionExecutionViewVisible, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BooleanToVisibilityConverter}} | L1151–1151 |
-| {Binding InspectionStatus} | L1152–1152 |
-| {Binding TextBrush} | L1152–1152 |
-| {Binding InspectionResultText} | L1154–1154 |
-| {Binding TextBrush} | L1154–1154 |
-| {Binding CurrentScreen.Review.CanSelectBeam} | L1169–1169 |
-| {Binding CurrentScreen.Review.IsInspectionSelectionControlsVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L1170–1170 |
-| {Binding CurrentScreen.Review.SelectAllInspectionBeamsCommand} | L1172–1172 |
-| {Binding CurrentScreen.Review.ClearInspectionBeamsCommand} | L1179–1179 |
-| {Binding CurrentScreen.Review.IsBeamInspectionMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1191–1191 |
-| {Binding CurrentScreen.Review.StartCommand} | L1193–1193 |
-| {Binding CurrentScreen.Review.StopCommand} | L1196–1196 |
-| {Binding CurrentScreen.Review.LoadLastBeamInspectionResultCommand} | L1207–1207 |
-| {Binding CurrentScreen.Review.CanLoadBeamInspectionResult} | L1208–1208 |
-| {Binding CurrentScreen.Review.ClearLoadedBeamInspectionResultCommand} | L1216–1216 |
-| {Binding CurrentScreen.Review.CanClearLoadedBeamInspectionResult} | L1217–1217 |
-| {Binding CurrentScreen.Review.IsAllShotStyleReviewMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1230–1230 |
-| {Binding CurrentScreen.Review.SelectedInspectionMethod} | L1241–1241 |
-| {Binding CurrentScreen.Review.InspectionMethodItems} | L1248–1248 |
-| {Binding CurrentScreen.Review.CanSelectInspectionMethod} | L1249–1249 |
-| {Binding SelectCommand} | L1259–1259 |
-| {Binding Name} | L1260–1260 |
-| {Binding BackgroundBrush} | L1264–1264 |
-| {Binding BorderBrush} | L1265–1265 |
-| {Binding DisplayName} | L1280–1280 |
-| {Binding TextBrush} | L1281–1281 |
-| {Binding CurrentScreen.Review.IsOneShotReviewMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1294–1294 |
-| {Binding CurrentScreen.Review.OneShotSelection} | L1296–1296 |
-| {Binding CurrentScreen.Review.OneShotMethods} | L1299–1299 |
-| {Binding CurrentScreen.Review.SelectedOneShotMethod, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L1300–1300 |
-| {Binding CurrentScreen.Review.CanSelectBeam} | L1301–1301 |
-| {Binding CurrentScreen.Review.OneShotActionCommand} | L1304–1304 |
-| {Binding CurrentScreen.Review.OneShotActionCommand} | L1306–1306 |
-| {Binding CurrentScreen.Review.OneShotActionCommand} | L1309–1309 |
-| {Binding CurrentScreen.Review.StopCommand} | L1311–1311 |
-| {Binding CurrentScreen.Review.CanStopOneShot} | L1312–1312 |
-| {Binding CurrentScreen.Review.IsAllShotStyleReviewMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1322–1322 |
-| {Binding CurrentScreen.Review.StartCommand} | L1324–1324 |
-| {Binding CurrentScreen.Review.StopCommand} | L1327–1327 |
-| {Binding CurrentScreen.Review.IsReviewResultDeferred, Converter={StaticResource BooleanToVisibilityConverter}} | L1347–1347 |
-| {Binding CurrentScreen.Review.OneShotResultText} | L1348–1348 |
-| {Binding CurrentScreen.Review.IsOneShotReviewMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1350–1350 |
-| {Binding CurrentScreen.Review.ResultMatrix} | L1355–1355 |
+| {Binding RelativeSource={RelativeSource Self}, Path=Tag} | L114–114 |
+| {Binding HasSelectedShots} | L222–222 |
+| {Binding IsSelected} | L228–228 |
+| {Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay} | L323–323 |
+| {Binding SelectionBoxItem, RelativeSource={RelativeSource AncestorType=ComboBox}} | L337–337 |
+| {Binding SelectionBoxItemTemplate, RelativeSource={RelativeSource AncestorType=ComboBox}} | L338–338 |
+| {Binding SelectionBoxItemStringFormat, RelativeSource={RelativeSource AncestorType=ComboBox}} | L339–339 |
+| {Binding ActualWidth, ElementName=ToggleButton} | L374–374 |
+| {Binding BackgroundBrush} | L394–394 |
+| {Binding BorderBrush} | L395–395 |
+| {Binding IsCurrent} | L423–423 |
+| {Binding IsSelected} | L441–441 |
+| {Binding DataContext.CurrentScreen.Review.IsShotSelectionMode, RelativeSource={RelativeSource AncestorType=UserControl}} | L442–442 |
+| {Binding Use} | L477–477 |
+| {Binding IsExcluded} | L495–495 |
+| {Binding ExclusionReason} | L501–501 |
+| {Binding CurrentScreen.Review.SelectModeCommand} | L547–547 |
+| {Binding CurrentScreen.Review.IsAllShotReviewMode} | L549–549 |
+| {Binding CurrentScreen.Review.SelectModeCommand} | L552–552 |
+| {Binding CurrentScreen.Review.IsOneShotReviewMode} | L554–554 |
+| {Binding CurrentScreen.Review.SelectModeCommand} | L557–557 |
+| {Binding CurrentScreen.Review.IsOneLineReviewMode} | L559–559 |
+| {Binding CurrentScreen.Review.SelectModeCommand} | L572–572 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L574–574 |
+| {Binding CurrentScreen.Review.IsRunTab, Converter={StaticResource BooleanToVisibilityConverter}} | L579–579 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L587–587 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L599–599 |
+| {Binding CurrentScreen.Review.Modes} | L626–626 |
+| {Binding SelectCommand} | L634–634 |
+| {Binding Name} | L635–635 |
+| {Binding IsSelected} | L639–639 |
+| {Binding DisplayName} | L648–648 |
+| {Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground} | L649–649 |
+| {Binding CurrentScreen.Review.OpenCorrectionReviewCommand} | L661–661 |
+| {Binding CurrentScreen.Review.TargetItems} | L681–681 |
+| {Binding Name} | L689–689 |
+| {Binding Value} | L694–694 |
+| {Binding Value} | L700–700 |
+| {Binding CurrentScreen.Review.RunWorkspaceTitle} | L747–747 |
+| {Binding CurrentScreen.Review.RunGlassPreviewSummary} | L750–750 |
+| {Binding CurrentScreen.Review.IsShotInspectionOngoing} | L776–776 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode, Converter={StaticResource BooleanToVisibilityConverter}} | L806–806 |
+| {Binding CurrentScreen.Review.InspectionHeadRows} | L820–820 |
+| {Binding CurrentScreen.Review.IsReviewHeadCardsVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L822–822 |
+| {Binding Summary} | L831–831 |
+| {Binding HasSelectedShots} | L837–837 |
+| {Binding Name} | L843–843 |
+| {Binding HasSelectedShots} | L849–849 |
+| {Binding CurrentScreen.Review.IsRunGlassPreviewVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L861–861 |
+| {Binding CurrentScreen.Review.IsRunStageStatusVisible} | L873–873 |
+| {Binding CurrentScreen.Review.RunGlassPreviewImage} | L880–880 |
+| {Binding CurrentScreen.Review.RunCellPreviewLabels} | L884–884 |
+| {Binding CanvasCenterX} | L889–889 |
+| {Binding CanvasCenterY} | L890–890 |
+| {Binding RelativeSource={RelativeSource AncestorType=ItemsControl}, Path=ActualWidth} | L891–891 |
+| {Binding RelativeSource={RelativeSource AncestorType=ItemsControl}, Path=ActualHeight} | L892–892 |
+| {Binding DesignWidth} | L893–893 |
+| {Binding DesignHeight} | L894–894 |
+| {Binding Height} | L896–896 |
+| {Binding CellNo} | L901–901 |
+| {Binding Height} | L903–903 |
+| {Binding DataContext.CurrentScreen.Review.SelectRunCellCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L904–904 |
+| {Binding CellNo} | L905–905 |
+| {Binding CurrentScreen.Review.RunGlassPreviewInspectionOverlayImage} | L913–913 |
+| {Binding CurrentScreen.Review.Camera} | L919–919 |
+| {Binding CurrentScreen.Review.IsRunStageStatusVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L951–951 |
+| {Binding CurrentScreen.Review.Camera.StageY} | L962–962 |
+| {Binding CurrentScreen.Review.Camera.StageYSpeed} | L966–966 |
+| {Binding CurrentScreen.Review.Camera.ReviewX} | L970–970 |
+| {Binding CurrentScreen.Review.Camera.ReviewXSpeed} | L974–974 |
+| {Binding CurrentScreen.Review.Camera.Mode} | L977–977 |
+| {Binding CurrentScreen.Review.IsRunCellDetailVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L988–988 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L996–996 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L1008–1008 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L1031–1031 |
+| {Binding CurrentScreen.Review.IsRunShotMapVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L1044–1044 |
+| {Binding CurrentScreen.Review.RunCellShotMatrixRows} | L1046–1046 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L1047–1047 |
+| {Binding CurrentScreen.Review.ReviewLevelLegendItems} | L1069–1069 |
+| {Binding ColorBrush} | L1089–1089 |
+| {Binding Name} | L1092–1092 |
+| {Binding RangeText} | L1097–1097 |
+| {Binding RangeText} | L1098–1098 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L1122–1122 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.Caption} | L1150–1150 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.ShotText} | L1157–1157 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.ShotText} | L1158–1158 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.StatusText} | L1166–1166 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.StatusBrush} | L1167–1167 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.IsInspecting} | L1175–1175 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.PositionXText} | L1226–1226 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.PositionYText} | L1227–1227 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.ResultXText} | L1228–1228 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.StatusBrush} | L1228–1228 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.ResultYText} | L1229–1229 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.StatusBrush} | L1229–1229 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.JudgeText} | L1231–1231 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.StatusBrush} | L1231–1231 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.LevelText} | L1232–1232 |
+| {Binding CurrentScreen.Review.SelectedShotInspection.LevelBrush} | L1232–1232 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1243–1243 |
+| {Binding CurrentScreen.Review.BeamSelectionSummary} | L1255–1255 |
+| {Binding CurrentScreen.Review.ActiveInspectionShotText} | L1261–1261 |
+| {Binding CurrentScreen.Review.ActiveInspectionShotText} | L1267–1267 |
+| {Binding CurrentScreen.Review.RunBeamRows} | L1298–1298 |
+| {Binding Beams} | L1302–1302 |
+| {Binding SelectCommand} | L1306–1306 |
+| {Binding BeamNo} | L1307–1307 |
+| {Binding BackgroundBrush} | L1311–1311 |
+| {Binding IsSelected, Mode=OneWay} | L1332–1332 |
+| {Binding BeamNo} | L1337–1337 |
+| {Binding TextBrush} | L1338–1338 |
+| {Binding TargetX} | L1341–1341 |
+| {Binding TextBrush} | L1342–1342 |
+| {Binding TargetY} | L1345–1345 |
+| {Binding TextBrush} | L1346–1346 |
+| {Binding CurrentScreen.Review.SelectAllInspectionBeamsCommand} | L1362–1362 |
+| {Binding CurrentScreen.Review.ClearInspectionBeamsCommand} | L1366–1366 |
+| {Binding CurrentScreen.Review.InspectionListCommitText} | L1369–1369 |
+| {Binding CurrentScreen.Review.AddInspectionShotCommand} | L1370–1370 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L1394–1394 |
+| {Binding CurrentScreen.Review.IsAllShotReviewMode} | L1408–1408 |
+| {Binding CurrentScreen.Review.IsOneLineReviewMode} | L1412–1412 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L1416–1416 |
+| {Binding CurrentScreen.Review.IsOneShotReviewMode} | L1420–1420 |
+| {Binding CurrentScreen.Review.IsSingleBeamSelectionMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1433–1433 |
+| {Binding CurrentScreen.Review.BeamSelectionSummary} | L1446–1446 |
+| {Binding CurrentScreen.Review.IsInspectionExecutionViewVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L1452–1452 |
+| {Binding CurrentScreen.Review.PreviousInspectionShotCommand} | L1459–1459 |
+| {Binding CurrentScreen.Review.InspectionShotSummary} | L1460–1460 |
+| {Binding CurrentScreen.Review.NextInspectionShotCommand} | L1463–1463 |
+| {Binding CurrentScreen.Review.InspectionProgressText} | L1465–1465 |
+| {Binding CurrentScreen.Review.InspectionProgressText} | L1467–1467 |
+| {Binding CurrentScreen.Review.BeamOptions} | L1473–1473 |
+| {Binding CurrentScreen.Review.SelectedBeam, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L1474–1474 |
+| {Binding CurrentScreen.Review.CanSelectBeam} | L1475–1475 |
+| {Binding CurrentScreen.Review.IsSingleBeamSelectionMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1477–1477 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1483–1483 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode} | L1487–1487 |
+| {Binding ActualWidth, RelativeSource={RelativeSource Self}} | L1488–1488 |
+| {Binding CurrentScreen.Review.RunBeamRows} | L1493–1493 |
+| {Binding CurrentScreen.Review.CanSelectBeam} | L1496–1496 |
+| {Binding Beams} | L1504–1504 |
+| {Binding SelectCommand} | L1514–1514 |
+| {Binding BeamNo} | L1515–1515 |
+| {Binding BackgroundBrush} | L1520–1520 |
+| {Binding BorderBrush} | L1521–1521 |
+| {Binding DataContext.CurrentScreen.Review.IsBeamInspectionMode, RelativeSource={RelativeSource AncestorType=UserControl}} | L1528–1528 |
+| {Binding DataContext.CurrentScreen.Review.IsOneShotReviewMode, RelativeSource={RelativeSource AncestorType=UserControl}} | L1531–1531 |
+| {Binding BeamName} | L1549–1549 |
+| {Binding TextBrush} | L1550–1550 |
+| {Binding DataContext.CurrentScreen.Review.IsBeamInspectionMode, RelativeSource={RelativeSource AncestorType=UserControl}} | L1558–1558 |
+| {Binding DataContext.CurrentScreen.Review.IsOneShotReviewMode, RelativeSource={RelativeSource AncestorType=UserControl}} | L1561–1561 |
+| {Binding DataContext.CurrentScreen.Review.IsOneShotReviewMode, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BooleanToVisibilityConverter}} | L1570–1570 |
+| {Binding TextBrush} | L1571–1571 |
+| {Binding TargetX, Mode=OneWay} | L1572–1572 |
+| {Binding TextBrush} | L1574–1574 |
+| {Binding TargetY, Mode=OneWay} | L1575–1575 |
+| {Binding DataContext.CurrentScreen.Review.IsInspectionExecutionViewVisible, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BooleanToVisibilityConverter}} | L1578–1578 |
+| {Binding InspectionStatus} | L1579–1579 |
+| {Binding TextBrush} | L1579–1579 |
+| {Binding InspectionResultText} | L1581–1581 |
+| {Binding TextBrush} | L1581–1581 |
+| {Binding CurrentScreen.Review.CanSelectBeam} | L1596–1596 |
+| {Binding CurrentScreen.Review.IsInspectionSelectionControlsVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L1597–1597 |
+| {Binding CurrentScreen.Review.SelectAllInspectionBeamsCommand} | L1599–1599 |
+| {Binding CurrentScreen.Review.ClearInspectionBeamsCommand} | L1606–1606 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1618–1618 |
+| {Binding CurrentScreen.Review.BeamInspectionAssignmentSummary} | L1640–1640 |
+| {Binding CurrentScreen.Review.BeamInspectionShotAssignments} | L1649–1649 |
+| {Binding CurrentScreen.Review.SelectedBeamInspectionAssignment, Mode=TwoWay} | L1650–1650 |
+| {Binding IndexText} | L1665–1665 |
+| {Binding CellText} | L1666–1666 |
+| {Binding HeadText} | L1667–1667 |
+| {Binding ShotName} | L1668–1668 |
+| {Binding BeamText} | L1672–1672 |
+| {Binding BeamText} | L1673–1673 |
+| {Binding State} | L1682–1682 |
+| {Binding StateBrush} | L1683–1683 |
+| {Binding CurrentScreen.Review.DeleteInspectionShotCommand} | L1695–1695 |
+| {Binding CurrentScreen.Review.ClearInspectionShotsCommand} | L1702–1702 |
+| {Binding CurrentScreen.Review.InspectionShotSummary} | L1727–1727 |
+| {Binding CurrentScreen.Review.InspectionShotSummary} | L1731–1731 |
+| {Binding CurrentScreen.Review.InspectionProgressText} | L1737–1737 |
+| {Binding CurrentScreen.Review.InspectionProgressText} | L1742–1742 |
+| {Binding CurrentScreen.Review.InspectionBeamResultRows} | L1744–1744 |
+| {Binding Beams} | L1754–1754 |
+| {Binding BackgroundBrush} | L1769–1769 |
+| {Binding BorderBrush} | L1770–1770 |
+| {Binding IsCurrent} | L1773–1773 |
+| {Binding BeamName} | L1797–1797 |
+| {Binding TextBrush} | L1798–1798 |
+| {Binding InspectionStatus} | L1801–1801 |
+| {Binding StateBrush} | L1803–1803 |
+| {Binding InspectionResultText} | L1808–1808 |
+| {Binding TextBrush} | L1809–1809 |
+| {Binding InspectionStatus} | L1821–1821 |
+| {Binding InspectionStatus} | L1836–1836 |
+| {Binding CurrentScreen.Review.IsBeamInspectionMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1874–1874 |
+| {Binding CurrentScreen.Review.StartCommand} | L1876–1876 |
+| {Binding CurrentScreen.Review.StopCommand} | L1879–1879 |
+| {Binding CurrentScreen.Review.LoadLastBeamInspectionResultCommand} | L1890–1890 |
+| {Binding CurrentScreen.Review.CanLoadBeamInspectionResult} | L1891–1891 |
+| {Binding CurrentScreen.Review.ClearLoadedBeamInspectionResultCommand} | L1899–1899 |
+| {Binding CurrentScreen.Review.CanClearLoadedBeamInspectionResult} | L1900–1900 |
+| {Binding CurrentScreen.Review.IsAllShotStyleReviewMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1913–1913 |
+| {Binding CurrentScreen.Review.SelectedInspectionMethod} | L1924–1924 |
+| {Binding CurrentScreen.Review.InspectionMethodItems} | L1931–1931 |
+| {Binding CurrentScreen.Review.CanSelectInspectionMethod} | L1932–1932 |
+| {Binding SelectCommand} | L1942–1942 |
+| {Binding Name} | L1943–1943 |
+| {Binding BackgroundBrush} | L1947–1947 |
+| {Binding BorderBrush} | L1948–1948 |
+| {Binding DisplayName} | L1963–1963 |
+| {Binding TextBrush} | L1964–1964 |
+| {Binding CurrentScreen.Review.IsOneShotReviewMode, Converter={StaticResource BooleanToVisibilityConverter}} | L1977–1977 |
+| {Binding CurrentScreen.Review.OneShotSelection} | L1979–1979 |
+| {Binding CurrentScreen.Review.OneShotMethods} | L1982–1982 |
+| {Binding CurrentScreen.Review.SelectedOneShotMethod, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L1983–1983 |
+| {Binding CurrentScreen.Review.CanSelectBeam} | L1984–1984 |
+| {Binding CurrentScreen.Review.OneShotActionCommand} | L1987–1987 |
+| {Binding CurrentScreen.Review.OneShotActionCommand} | L1989–1989 |
+| {Binding CurrentScreen.Review.OneShotActionCommand} | L1992–1992 |
+| {Binding CurrentScreen.Review.StopCommand} | L1994–1994 |
+| {Binding CurrentScreen.Review.CanStopOneShot} | L1995–1995 |
+| {Binding CurrentScreen.Review.LoadLastRunReviewResultCommand} | L2005–2005 |
+| {Binding CurrentScreen.Review.ClearLoadedRunReviewResultCommand} | L2013–2013 |
+| {Binding CurrentScreen.Review.IsRunReviewResultLoading, Converter={StaticResource BooleanToVisibilityConverter}} | L2021–2021 |
+| {Binding CurrentScreen.Review.RunResultLoadStatus} | L2030–2030 |
+| {Binding CurrentScreen.Review.RunResultLoadStatus} | L2031–2031 |
+| {Binding CurrentScreen.Review.IsAllShotStyleReviewMode, Converter={StaticResource BooleanToVisibilityConverter}} | L2043–2043 |
+| {Binding CurrentScreen.Review.StartCommand} | L2046–2046 |
+| {Binding CurrentScreen.Review.StopCommand} | L2049–2049 |
+| {Binding CurrentScreen.Review.LoadLastRunReviewResultCommand} | L2060–2060 |
+| {Binding CurrentScreen.Review.ClearLoadedRunReviewResultCommand} | L2068–2068 |
+| {Binding CurrentScreen.Review.IsRunReviewResultLoading, Converter={StaticResource BooleanToVisibilityConverter}} | L2076–2076 |
+| {Binding CurrentScreen.Review.RunResultLoadStatus} | L2085–2085 |
+| {Binding CurrentScreen.Review.RunResultLoadStatus} | L2086–2086 |
+| {Binding CurrentScreen.Review.IsReviewResultDeferred, Converter={StaticResource BooleanToVisibilityConverter}} | L2108–2108 |
+| {Binding CurrentScreen.Review.OneShotResultText} | L2109–2109 |
+| {Binding CurrentScreen.Review.IsOneShotReviewMode, Converter={StaticResource BooleanToVisibilityConverter}} | L2111–2111 |
+| {Binding CurrentScreen.Review.ResultMatrix} | L2116–2116 |
 
 ## 원문 전체 주석 해설본
 

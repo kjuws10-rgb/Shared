@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 5a42b4eec6c61eec684511980cd891ee95f6e2ff5431226e9c4604d2ab42ed81 |
 | 파일 분류 | code |
 | 원본 크기/행 | 682 bytes / 18 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CFineCorrectionView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CFineCorrectionView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -34,7 +34,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_feedback` · L10–10
 
-[Drilling.UI/Views/CFineCorrectionView.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CFineCorrectionView.xaml.cs#L10-L10)
+[Drilling.UI/Views/CFineCorrectionView.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CFineCorrectionView.xaml.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -65,7 +65,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L11–17
 
-[Drilling.UI/Views/CFineCorrectionView.xaml.cs:11–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CFineCorrectionView.xaml.cs#L11-L17)
+[Drilling.UI/Views/CFineCorrectionView.xaml.cs:11–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CFineCorrectionView.xaml.cs#L11-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -81,8 +81,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 13 | InitializeComponent | unresolved | None |
-| 14 | .RefreshFeedback | resolved | void Drilling.UI.Menu.Menus.CFineCorrectionPanel.RefreshFeedback() · Drilling.UI/Menu/Menus/CMenuCorrection.cs:6408 |
-| 15 | .RefreshFeedback | resolved | void Drilling.UI.Menu.Menus.CFineCorrectionPanel.RefreshFeedback() · Drilling.UI/Menu/Menus/CMenuCorrection.cs:6408 |
+| 14 | .RefreshFeedback | resolved | void Drilling.UI.Menu.Menus.CFineCorrectionPanel.RefreshFeedback() · Drilling.UI/Menu/Menus/CMenuCorrection.cs:6437 |
+| 15 | .RefreshFeedback | resolved | void Drilling.UI.Menu.Menus.CFineCorrectionPanel.RefreshFeedback() · Drilling.UI/Menu/Menus/CMenuCorrection.cs:6437 |
 | 15 | _feedback.Start | unresolved | None |
 | 16 | _feedback.Stop | unresolved | None |
 

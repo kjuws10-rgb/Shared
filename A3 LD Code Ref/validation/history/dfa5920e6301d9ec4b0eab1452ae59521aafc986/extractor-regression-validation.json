@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "extractorVersion": "1.0.3",
+  "dotnetSyntheticTests": 18,
+  "pythonToolTests": 4,
+  "generatorVersion": "1.1.1",
+  "validatorVersion": "1.1.0",
+  "equipmentCodeTests": 0,
+  "equipmentBuild": "not_run",
+  "scope": "Synthetic extraction/XAML/sanitization/routing tests only",
+  "contentGeneratorVersion": "1.1.0",
+  "normalizedWithGenerator": "1.1.1"
+}

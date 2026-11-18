@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.Common/Correction/CDefaultOffsetCalibration.cs
-Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
+Commit: 96e22cd027c84bf302b23f2949b98985d7f301bb
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
@@ -55,537 +55,613 @@ L000026 |         return number; ⟦EOL⟧
 // 해설 L27: 구문 블록 경계입니다 · 소속 Number.
 L000027 |     } ⟦EOL⟧
 L000028 |  ⟦EOL⟧
-// 해설 L29: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000029 |     // AK1 starts from the taught Recipe position. AK3 defaults to its design ⟦EOL⟧
-// 해설 L30: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000030 |     // position, but the measurement session may replace it with the actual ⟦EOL⟧
-// 해설 L31: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000031 |     // Review-X encoder position. The glass center is always their midpoint. ⟦EOL⟧
-// 해설 L32: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Drilling.Common.Correction.CDefaultOffsetCalibration.Conditions(System.Collections.Generic.IReadOnlyDictionary<string, string>, double?)
-L000032 |     public static ST_DEFAULT_OFFSET_OPTIONS Conditions(IReadOnlyDictionary<string, string> values, double? testStageY = null) ⟦EOL⟧
-// 해설 L33: 구문 블록 경계입니다 · 소속 Conditions.
-L000033 |     { ⟦EOL⟧
-// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X") / 지역 변수를 선언합니다: var alignKey1ReviewX = Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X"); / 변수의 초기값을 지정합니다: alignKey1ReviewX = Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X")
-L000034 |         var alignKey1ReviewX = Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X"); ⟦EOL⟧
-// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: DesignAlignKey3ReviewX(values) / 지역 변수를 선언합니다: var alignKey3ReviewX = DesignAlignKey3ReviewX(values); / 변수의 초기값을 지정합니다: alignKey3ReviewX = DesignAlignKey3ReviewX(values)
-L000035 |         var alignKey3ReviewX = DesignAlignKey3ReviewX(values); ⟦EOL⟧
-// 해설 L36: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "STAGE_START_POS_Y") / 지역 변수를 선언합니다: var stageY = testStageY ?? Number(values, "STAGE_START_POS_Y"); / 변수의 초기값을 지정합니다: stageY = testStageY ?? Number(values, "STAGE_START_POS_Y")
-L000036 |         var stageY = testStageY ?? Number(values, "STAGE_START_POS_Y"); ⟦EOL⟧
-// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Number(values, "REVIEW_TOLERANCE_X"), Number(values, "REVIEW_TOLERANCE_Y")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_TOLERANCE_X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_TOLERANCE_Y") / 지역 변수를 선언합니다: var tolerance = Math.Min(Number(values, "REVIEW_TOLERANCE_X"), Number(values, "REVIEW_TOLERANCE_Y")); / 변수의 초기값을 지정합니다: tolerance = Math.Min(Number(values, "REVIEW_TOLERANCE_X"), Number(values, "REVIEW_TOLERANCE_Y"))
-L000037 |         var tolerance = Math.Min(Number(values, "REVIEW_TOLERANCE_X"), Number(values, "REVIEW_TOLERANCE_Y")); ⟦EOL⟧
-// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(stageY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(tolerance) / 조건에 따라 분기합니다: if (!double.IsFinite(stageY) || !double.IsFinite(tolerance) || tolerance <= 0)
-L000038 |         if (!double.IsFinite(stageY) || !double.IsFinite(tolerance) || tolerance <= 0) ⟦EOL⟧
-// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Recipe의 Review 허용오차와 Stage Y 위치를 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Recipe의 Review 허용오차와 Stage Y 위치를 확인해 주세요.");
-L000039 |             throw new InvalidOperationException("Recipe의 Review 허용오차와 Stage Y 위치를 확인해 주세요."); ⟦EOL⟧
-// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(alignKey1ReviewX, alignKey3ReviewX, stageY, tolerance) { DoeBeamGridSize = BeamGridSize(values) } / 호출자에게 값 또는 제어를 반환합니다: return new(alignKey1ReviewX, alignKey3ReviewX, stageY, tolerance) { DoeBeamGridSize = BeamGridSize(values) };
-L000040 |         return new(alignKey1ReviewX, alignKey3ReviewX, stageY, tolerance) ⟦EOL⟧
-// 해설 L41: 구문 블록 경계입니다 · 소속 Conditions.
-L000041 |         { ⟦EOL⟧
-// 해설 L42: 값을 대상에 대입합니다: DoeBeamGridSize = BeamGridSize(values) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BeamGridSize(values)
-L000042 |             DoeBeamGridSize = BeamGridSize(values) ⟦EOL⟧
-// 해설 L43: 구문 블록 경계입니다 · 소속 Conditions.
-L000043 |         }; ⟦EOL⟧
-// 해설 L44: 구문 블록 경계입니다 · 소속 Conditions.
-L000044 |     } ⟦EOL⟧
-L000045 |  ⟦EOL⟧
-// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.CDefaultOffsetCalibration.DesignAlignKey3ReviewX(System.Collections.Generic.IReadOnlyDictionary<string, string>)
-L000046 |     public static double DesignAlignKey3ReviewX(IReadOnlyDictionary<string, string> values) ⟦EOL⟧
-// 해설 L47: 구문 블록 경계입니다 · 소속 DesignAlignKey3ReviewX.
-L000047 |     { ⟦EOL⟧
-// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X") / 지역 변수를 선언합니다: var alignKey1ReviewX = Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X"); / 변수의 초기값을 지정합니다: alignKey1ReviewX = Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X")
-L000048 |         var alignKey1ReviewX = Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X"); ⟦EOL⟧
-// 해설 L49: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "GLASS_SIZE_X") / 지역 변수를 선언합니다: var glassWidth = Number(values, "GLASS_SIZE_X"); / 변수의 초기값을 지정합니다: glassWidth = Number(values, "GLASS_SIZE_X")
-L000049 |         var glassWidth = Number(values, "GLASS_SIZE_X"); ⟦EOL⟧
-// 해설 L50: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "AK_MARGIN_X") / 지역 변수를 선언합니다: var marginX = Number(values, "AK_MARGIN_X"); / 변수의 초기값을 지정합니다: marginX = Number(values, "AK_MARGIN_X")
-L000050 |         var marginX = Number(values, "AK_MARGIN_X"); ⟦EOL⟧
-// 해설 L51: 지역 변수를 선언합니다: var alignKeySpan = glassWidth - 2 * marginX; / 변수의 초기값을 지정합니다: alignKeySpan = glassWidth - 2 * marginX
-L000051 |         var alignKeySpan = glassWidth - 2 * marginX; ⟦EOL⟧
-// 해설 L52: 지역 변수를 선언합니다: var alignKey3ReviewX = alignKey1ReviewX + alignKeySpan; / 변수의 초기값을 지정합니다: alignKey3ReviewX = alignKey1ReviewX + alignKeySpan
-L000052 |         var alignKey3ReviewX = alignKey1ReviewX + alignKeySpan; ⟦EOL⟧
-// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(alignKey3ReviewX) / 조건에 따라 분기합니다: if (!double.IsFinite(alignKey3ReviewX) || alignKeySpan <= 0)
-L000053 |         if (!double.IsFinite(alignKey3ReviewX) || alignKeySpan <= 0) ⟦EOL⟧
-// 해설 L54: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Glass Size X와 AK Margin X로 AK3 설계 Review X를 계산할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Glass Size X와 AK Margin X로 AK3 설계 Review X를 계산할 수 없습니다.");
-L000054 |             throw new InvalidOperationException("Glass Size X와 AK Margin X로 AK3 설계 Review X를 계산할 수 없습니다."); ⟦EOL⟧
-// 해설 L55: 호출자에게 값 또는 제어를 반환합니다: return alignKey3ReviewX;
-L000055 |         return alignKey3ReviewX; ⟦EOL⟧
-// 해설 L56: 구문 블록 경계입니다 · 소속 DesignAlignKey3ReviewX.
-L000056 |     } ⟦EOL⟧
-L000057 |  ⟦EOL⟧
-// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY Drilling.Common.Correction.CDefaultOffsetCalibration.HeadGeometry(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
-L000058 |     public static ST_DEFAULT_HEAD_GEOMETRY HeadGeometry(IReadOnlyDictionary<string, string> values, int head) ⟦EOL⟧
-// 해설 L59: 구문 블록 경계입니다 · 소속 HeadGeometry.
-L000059 |     { ⟦EOL⟧
-// 해설 L60: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(head)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(head) / 조건에 따라 분기합니다: if (head is < 1 or > 8) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(head));
-L000060 |         if (head is < 1 or > 8) throw new ArgumentOutOfRangeException(nameof(head)); ⟦EOL⟧
-// 해설 L61: 지역 변수를 선언합니다: var prefix = $"H{head:00}_"; / 변수의 초기값을 지정합니다: prefix = $"H{head:00}_"
-L000061 |         var prefix = $"H{head:00}_"; ⟦EOL⟧
-// 해설 L62: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, prefix + "SCAN_FIELD_WIDTH_X") / 지역 변수를 선언합니다: var x = Number(values, prefix + "SCAN_FIELD_WIDTH_X"); / 변수의 초기값을 지정합니다: x = Number(values, prefix + "SCAN_FIELD_WIDTH_X")
-L000062 |         var x = Number(values, prefix + "SCAN_FIELD_WIDTH_X"); ⟦EOL⟧
-// 해설 L63: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, prefix + "SCAN_FIELD_HEIGHT_Y") / 지역 변수를 선언합니다: var y = Number(values, prefix + "SCAN_FIELD_HEIGHT_Y"); / 변수의 초기값을 지정합니다: y = Number(values, prefix + "SCAN_FIELD_HEIGHT_Y")
-L000063 |         var y = Number(values, prefix + "SCAN_FIELD_HEIGHT_Y"); ⟦EOL⟧
-// 해설 L64: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, prefix + "DOE_ROTATION_ANGLE") / 지역 변수를 선언합니다: var angle = Number(values, prefix + "DOE_ROTATION_ANGLE"); / 변수의 초기값을 지정합니다: angle = Number(values, prefix + "DOE_ROTATION_ANGLE")
-L000064 |         var angle = Number(values, prefix + "DOE_ROTATION_ANGLE"); ⟦EOL⟧
-// 해설 L65: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {head:00}의 Setting Scan Field X/Y는 0보다 커야 합니다.") / 조건에 따라 분기합니다: if (x <= 0 || y <= 0) / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {head:00}의 Setting Scan Field X/Y는 0보다 커야 합니다.");
-L000065 |         if (x <= 0 || y <= 0) throw new InvalidOperationException($"HEAD {head:00}의 Setting Scan Field X/Y는 0보다 커야 합니다."); ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Correction.CDefaultOffsetCalibration.DoeExists(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000029 |     public static bool DoeExists(IReadOnlyDictionary<string, string> values, int head) ⟦EOL⟧
+// 해설 L30: 구문 블록 경계입니다 · 소속 DoeExists.
+L000030 |     { ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(head)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(head) / 조건에 따라 분기합니다: if (head is < 1 or > 8) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(head));
+L000031 |         if (head is < 1 or > 8) throw new ArgumentOutOfRangeException(nameof(head)); ⟦EOL⟧
+// 해설 L32: 지역 변수를 선언합니다: var key = $"H{head:00}_DOE_EXIST"; / 변수의 초기값을 지정합니다: key = $"H{head:00}_DOE_EXIST"
+L000032 |         var key = $"H{head:00}_DOE_EXIST"; ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var text) / 조건에 따라 분기합니다: if (!values.TryGetValue(key, out var text))
+L000033 |         if (!values.TryGetValue(key, out var text)) ⟦EOL⟧
+// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Default 측정 설정을 확인해 주세요: {key}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Default 측정 설정을 확인해 주세요: {key}");
+L000034 |             throw new InvalidOperationException($"Default 측정 설정을 확인해 주세요: {key}"); ⟦EOL⟧
+// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim() / 호출자에게 값 또는 제어를 반환합니다: return text.Trim().ToUpperInvariant() switch { "ON" or "1" or "TRUE" => true, "OFF" or "0" or "FALSE" => false, _ => throw new InvalidOperationException($"Default 측정 설정은 ON 또는 OFF여야 합니다: {key}") }; / 값별 결과식을 선택합니다: text.Trim().ToUpperInvariant() switch { "ON" or "1" or "TRUE" => true, "OFF" or "0" or "FALSE" => false, _ => throw new InvalidOperationException($"Default 측정 설정은 ON 또는 OFF여야 합니다: {key}") }
+L000035 |         return text.Trim().ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 DoeExists.
+L000036 |         { ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Correction.CDefaultOffsetCalibration.DoeExists(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000037 |             "ON" or "1" or "TRUE" => true, ⟦EOL⟧
+// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Correction.CDefaultOffsetCalibration.DoeExists(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000038 |             "OFF" or "0" or "FALSE" => false, ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Default 측정 설정은 ON 또는 OFF여야 합니다: {key}") / 예외를 발생/전달합니다: throw new InvalidOperationException($"Default 측정 설정은 ON 또는 OFF여야 합니다: {key}")
+L000039 |             _ => throw new InvalidOperationException($"Default 측정 설정은 ON 또는 OFF여야 합니다: {key}") ⟦EOL⟧
+// 해설 L40: 구문 블록 경계입니다 · 소속 DoeExists.
+L000040 |         }; ⟦EOL⟧
+// 해설 L41: 구문 블록 경계입니다 · 소속 DoeExists.
+L000041 |     } ⟦EOL⟧
+L000042 |  ⟦EOL⟧
+// 해설 L43: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000043 |     // DOE_EXIST changes only Default Offset inspection. Production and every ⟦EOL⟧
+// 해설 L44: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000044 |     // other Review mode continue to use the operator-selected beam number. ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.CDefaultOffsetCalibration.DefaultInspectionGridSize(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS)
+L000045 |     public static int DefaultInspectionGridSize(IReadOnlyDictionary<string, string> values, int head, ST_DEFAULT_OFFSET_OPTIONS options) ⟦EOL⟧
+// 해설 L46: 구문 블록 경계입니다 · 소속 DefaultInspectionGridSize.
+L000046 |     { ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateOptions(options)
+L000047 |         ValidateOptions(options); ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: DoeExists(values, head) / 조건에 따라 결과식을 선택합니다: DoeExists(values, head) ? options.DoeBeamGridSize : 1 / 호출자에게 값 또는 제어를 반환합니다: return DoeExists(values, head) ? options.DoeBeamGridSize : 1;
+L000048 |         return DoeExists(values, head) ? options.DoeBeamGridSize : 1; ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 DefaultInspectionGridSize.
+L000049 |     } ⟦EOL⟧
+L000050 |  ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.CDefaultOffsetCalibration.DefaultInspectionPointCount(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS)
+L000051 |     public static int DefaultInspectionPointCount(IReadOnlyDictionary<string, string> values, int head, ST_DEFAULT_OFFSET_OPTIONS options) ⟦EOL⟧
+// 해설 L52: 구문 블록 경계입니다 · 소속 DefaultInspectionPointCount.
+L000052 |     { ⟦EOL⟧
+// 해설 L53: 함수·델리게이트 또는 객체 생성자를 호출합니다: DefaultInspectionGridSize(values, head, options) / 지역 변수를 선언합니다: var gridSize = DefaultInspectionGridSize(values, head, options); / 변수의 초기값을 지정합니다: gridSize = DefaultInspectionGridSize(values, head, options)
+L000053 |         var gridSize = DefaultInspectionGridSize(values, head, options); ⟦EOL⟧
+// 해설 L54: 호출자에게 값 또는 제어를 반환합니다: return gridSize * gridSize;
+L000054 |         return gridSize * gridSize; ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 DefaultInspectionPointCount.
+L000055 |     } ⟦EOL⟧
+L000056 |  ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Correction.CDefaultOffsetCalibration.DefaultInspectionDescription(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS
+L000057 |     public static string DefaultInspectionDescription(IReadOnlyDictionary<string, string> values, int head, ST_DEFAULT_OFFSET_OPTIONS options) ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 DefaultInspectionDescription.
+L000058 |     { ⟦EOL⟧
+// 해설 L59: 함수·델리게이트 또는 객체 생성자를 호출합니다: DoeExists(values, head) / 조건에 따라 분기합니다: if (DoeExists(values, head)) / 호출자에게 값 또는 제어를 반환합니다: return options.InspectionDescription;
+L000059 |         if (DoeExists(values, head)) return options.InspectionDescription; ⟦EOL⟧
+// 해설 L60: 조건에 따라 결과식을 선택합니다: options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? "DOE OFF · 중앙 십자 1점 측정" : "DOE OFF · 중앙 1점 측정" / 호출자에게 값 또는 제어를 반환합니다: return options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? "DOE OFF · 중앙 십자 1점 측정" : "DOE OFF · 중앙 1점 측정";
+L000060 |         return options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ⟦EOL⟧
+// 해설 L61: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Correction.CDefaultOffsetCalibration.DefaultInspectionDescription(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS
+L000061 |             ? "DOE OFF · 중앙 십자 1점 측정" ⟦EOL⟧
+// 해설 L62: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Correction.CDefaultOffsetCalibration.DefaultInspectionDescription(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS
+L000062 |             : "DOE OFF · 중앙 1점 측정"; ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 DefaultInspectionDescription.
+L000063 |     } ⟦EOL⟧
+L000064 |  ⟦EOL⟧
+// 해설 L65: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000065 |     // AK1 starts from the taught Recipe position. AK3 defaults to its design ⟦EOL⟧
 // 해설 L66: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000066 |         // Setting stores full dimensions, not the distance from the center. ⟦EOL⟧
-// 해설 L67: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(x / 2, y / 2, angle) / 호출자에게 값 또는 제어를 반환합니다: return new(x / 2, y / 2, angle);
-L000067 |         return new(x / 2, y / 2, angle); ⟦EOL⟧
-// 해설 L68: 구문 블록 경계입니다 · 소속 HeadGeometry.
-L000068 |     } ⟦EOL⟧
-L000069 |  ⟦EOL⟧
-// 해설 L70: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_PREVIEW_POINT Drilling.Common.Correction.CDefaultOffsetCalibration.PredictCenter(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, double)
-L000070 |     public static ST_DEFAULT_PREVIEW_POINT PredictCenter(IReadOnlyDictionary<string, string> values, int head, double stageY) ⟦EOL⟧
-// 해설 L71: 구문 블록 경계입니다 · 소속 PredictCenter.
-L000071 |     { ⟦EOL⟧
-// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(head)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(head) / 조건에 따라 분기합니다: if (head is < 1 or > 8) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(head));
-L000072 |         if (head is < 1 or > 8) throw new ArgumentOutOfRangeException(nameof(head)); ⟦EOL⟧
-// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(stageY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(stageY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(stageY) / 조건에 따라 분기합니다: if (!double.IsFinite(stageY)) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(stageY));
-L000073 |         if (!double.IsFinite(stageY)) throw new ArgumentOutOfRangeException(nameof(stageY)); ⟦EOL⟧
-// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "STAGE_START_POS_Y") / 지역 변수를 선언합니다: var start = Number(values, "STAGE_START_POS_Y"); / 변수의 초기값을 지정합니다: start = Number(values, "STAGE_START_POS_Y")
-L000074 |         var start = Number(values, "STAGE_START_POS_Y"); ⟦EOL⟧
-// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisTransform.ReadStageDirection(values) / 지역 변수를 선언합니다: var direction = CScannerAxisTransform.ReadStageDirection(values); / 변수의 초기값을 지정합니다: direction = CScannerAxisTransform.ReadStageDirection(values)
-L000075 |         var direction = CScannerAxisTransform.ReadStageDirection(values); ⟦EOL⟧
-// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.ContainsKey($"H{head:00}_AK_POSITION_Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $"H{head:00}_AK_POSITION_Y") / 조건에 따라 결과식을 선택합니다: values.ContainsKey($"H{head:00}_AK_POSITION_Y") ? Number(values, $"H{head:00}_AK_POSITION_Y") : Number(values, "REVIEW_TO_HEAD1_GAP_Y") + (head % 2 == 0 ? Number(values, "HeadGapY") : 0) / 지역 변수를 선언합니다: var gap = values.ContainsKey($"H{head:00}_AK_POSITION_Y") ? Number(values, $"H{head:00}_AK_POSITION_Y") : Number(values, "REVIEW_TO_HEAD1_GAP_Y") + (head % 2 == 0 ? Num
-L000076 |         var gap = values.ContainsKey($"H{head:00}_AK_POSITION_Y") ? Number(values, $"H{head:00}_AK_POSITION_Y") ⟦EOL⟧
-// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_TO_HEAD1_GAP_Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "HeadGapY") / 조건에 따라 결과식을 선택합니다: head % 2 == 0 ? Number(values, "HeadGapY") : 0
-L000077 |             : Number(values, "REVIEW_TO_HEAD1_GAP_Y") + (head % 2 == 0 ? Number(values, "HeadGapY") : 0); ⟦EOL⟧
-// 해설 L78: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000078 |         // Same AK/camera and Head reference as CENTER measurement. Stage Start ⟦EOL⟧
-// 해설 L79: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000079 |         // defines the reference pose; its delta is projected into glass design mm. ⟦EOL⟧
-// 해설 L80: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000080 |         // Head flips change scanner commands, not the design-coordinate preview. ⟦EOL⟧
-// 해설 L81: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "AK_MARGIN_Y") / 지역 변수를 선언합니다: var yAtStart = (start - direction * gap - Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_Y")) / direction + Number(values, "AK_MARGIN_Y"); / 변수의 초기값을 지정합니다: yAtStart = (start - direction * gap - Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_Y")) / direction + Number(values, "AK_MARGIN_Y")
-L000081 |         var yAtStart = (start - direction * gap - Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_Y")) / direction + Number(values, "AK_MARGIN_Y"); ⟦EOL⟧
-// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "AK_MARGIN_X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "H01_AK_POSITION_X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "HeadGapX") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $"H{head:00}_DEFAULT_OFFSET_X") / 지역 변수를 선언합니다: var x = Number(values, "AK_MARGIN_X") + Number(values, "H01_AK_POSITION_X") + (head - 1) * Number(values, "HeadGapX") + Number(values, $"H{head:00}_DEFAULT_OFFSET_X"); / 변수의 초기값을 지정합니다: x = Number(values, "AK_MARGIN_X") + Number(values, "H01_AK_POSITION_X") + (head - 1)
-L000082 |         var x = Number(values, "AK_MARGIN_X") + Number(values, "H01_AK_POSITION_X") + (head - 1) * Number(values, "HeadGapX") + Number(values, $"H{head:00}_DEFAULT_OFFSET_X"); ⟦EOL⟧
-// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $"H{head:00}_DEFAULT_OFFSET_Y") / 지역 변수를 선언합니다: var y = yAtStart + (stageY - start) / direction + Number(values, $"H{head:00}_DEFAULT_OFFSET_Y"); / 변수의 초기값을 지정합니다: y = yAtStart + (stageY - start) / direction + Number(values, $"H{head:00}_DEFAULT_OFFSET_Y")
-L000083 |         var y = yAtStart + (stageY - start) / direction + Number(values, $"H{head:00}_DEFAULT_OFFSET_Y"); ⟦EOL⟧
-// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "GLASS_SIZE_X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "GLASS_SIZE_Y") / 지역 변수를 선언합니다: var width = Number(values, "GLASS_SIZE_X"); / 지역 변수를 선언합니다: var height = Number(values, "GLASS_SIZE_Y"); / 변수의 초기값을 지정합니다: width = Number(values, "GLASS_SIZE_X") / 변수의 초기값을 지정합니다: height = Number(values, "GLASS_SIZE_Y")
-L000084 |         var width = Number(values, "GLASS_SIZE_X"); var height = Number(values, "GLASS_SIZE_Y"); ⟦EOL⟧
-// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(x) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("예상 가공 위치의 Recipe·Setting 기준값을 확인해 주세요.") / 조건에 따라 분기합니다: if (!double.IsFinite(x) || !double.IsFinite(y) || width <= 0 || height <= 0) / 예외를 발생/전달합니다: throw new InvalidOperationException("예상 가공 위치의 Recipe·Setting 기준값을 확인해 주세요.");
-L000085 |         if (!double.IsFinite(x) || !double.IsFinite(y) || width <= 0 || height <= 0) throw new InvalidOperationException("예상 가공 위치의 Recipe·Setting 기준값을 확인해 주세요."); ⟦EOL⟧
-// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(head, stageY, x, y, x >= 0 && x <= width && y >= 0 && y <= height) / 호출자에게 값 또는 제어를 반환합니다: return new(head, stageY, x, y, x >= 0 && x <= width && y >= 0 && y <= height);
-L000086 |         return new(head, stageY, x, y, x >= 0 && x <= width && y >= 0 && y <= height); ⟦EOL⟧
-// 해설 L87: 구문 블록 경계입니다 · 소속 PredictCenter.
-L000087 |     } ⟦EOL⟧
-L000088 |  ⟦EOL⟧
-// 해설 L89: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000089 |     // x/y are actual absolute GX/GY commands for the CENTER test, after Head ⟦EOL⟧
-// 해설 L90: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000090 |     // conversion. DOE beam spacing is an optical separation, not an axis move. ⟦EOL⟧
-// 해설 L91: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Correction.CDefaultOffsetCalibration.FitsField(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, double, double)
-L000091 |     public static bool FitsField(IReadOnlyDictionary<string, string> values, int head, double x, double y) ⟦EOL⟧
-// 해설 L92: 구문 블록 경계입니다 · 소속 FitsField.
-L000092 |     { ⟦EOL⟧
-// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: HeadGeometry(values, head) / 지역 변수를 선언합니다: var field = HeadGeometry(values, head); / 변수의 초기값을 지정합니다: field = HeadGeometry(values, head)
-L000093 |         var field = HeadGeometry(values, head); ⟦EOL⟧
-// 해설 L94: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(x) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(x) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(y) / 호출자에게 값 또는 제어를 반환합니다: return double.IsFinite(x) && double.IsFinite(y) && Math.Abs(x) <= field.FieldHalfX && Math.Abs(y) <= field.FieldHalfY;
-L000094 |         return double.IsFinite(x) && double.IsFinite(y) && Math.Abs(x) <= field.FieldHalfX && Math.Abs(y) <= field.FieldHalfY; ⟦EOL⟧
-// 해설 L95: 구문 블록 경계입니다 · 소속 FitsField.
-L000095 |     } ⟦EOL⟧
-L000096 |  ⟦EOL⟧
-// 해설 L97: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Correction.CDefaultOffsetCalibration.ValidateOptions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS)
-L000097 |     public static void ValidateOptions(ST_DEFAULT_OFFSET_OPTIONS options) ⟦EOL⟧
-// 해설 L98: 구문 블록 경계입니다 · 소속 ValidateOptions.
-L000098 |     { ⟦EOL⟧
-// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { options.AlignKey1ReviewX, options.AlignKey3ReviewX, options.BoardCenterX, options.TestStageY, options.Tolerance }.Any(v => !double.IsFinite(v)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(v) / 조건에 따라 분기합니다: if (new[] { options.AlignKey1ReviewX, options.AlignKey3ReviewX, options.BoardCenterX, options.TestStageY, options.Tolerance }.Any(v => !double.IsFinite(v)) || options.Tolerance <= 0)
-L000099 |         if (new[] { options.AlignKey1ReviewX, options.AlignKey3ReviewX, options.BoardCenterX, options.TestStageY, options.Tolerance }.Any(v => !double.IsFinite(v)) || options.Tolerance <= 0) ⟦EOL⟧
-// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AK1·AK3 Review X, 가공할 Stage Y 위치와 Recipe Review 허용오차를 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("AK1·AK3 Review X, 가공할 Stage Y 위치와 Recipe Review 허용오차를 확인해 주세요.");
-L000100 |             throw new InvalidOperationException("AK1·AK3 Review X, 가공할 Stage Y 위치와 Recipe Review 허용오차를 확인해 주세요."); ⟦EOL⟧
-// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(options.AlignKey3ReviewX - options.AlignKey1ReviewX) / 조건에 따라 분기합니다: if (Math.Abs(options.AlignKey3ReviewX - options.AlignKey1ReviewX) <= double.Epsilon)
-L000101 |         if (Math.Abs(options.AlignKey3ReviewX - options.AlignKey1ReviewX) <= double.Epsilon) ⟦EOL⟧
-// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AK1과 AK3 Review X 위치는 서로 달라야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("AK1과 AK3 Review X 위치는 서로 달라야 합니다.");
-L000102 |             throw new InvalidOperationException("AK1과 AK3 Review X 위치는 서로 달라야 합니다."); ⟦EOL⟧
-// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.IsDefined(options.MachiningMode) / 조건에 따라 분기합니다: if (!Enum.IsDefined(options.MachiningMode))
-L000103 |         if (!Enum.IsDefined(options.MachiningMode)) ⟦EOL⟧
-// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Default 가공 방식을 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Default 가공 방식을 확인해 주세요.");
-L000104 |             throw new InvalidOperationException("Default 가공 방식을 확인해 주세요."); ⟦EOL⟧
-// 해설 L105: 조건에 따라 분기합니다: if (options.DoeBeamGridSize is not (1 or 4))
-L000105 |         if (options.DoeBeamGridSize is not (1 or 4)) ⟦EOL⟧
-// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Default 측정의 DOE Beam Count는 1 또는 4여야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Default 측정의 DOE Beam Count는 1 또는 4여야 합니다.");
-L000106 |             throw new InvalidOperationException("Default 측정의 DOE Beam Count는 1 또는 4여야 합니다."); ⟦EOL⟧
-// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(options.CrossSize) / 조건에 따라 분기합니다: if (options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross && (!double.IsFinite(options.CrossSize) || options.CrossSize <= 0))
-L000107 |         if (options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross && (!double.IsFinite(options.CrossSize) || options.CrossSize <= 0)) ⟦EOL⟧
-// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("십자 전체 길이는 0보다 큰 유한한 mm 값이어야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("십자 전체 길이는 0보다 큰 유한한 mm 값이어야 합니다.");
-L000108 |             throw new InvalidOperationException("십자 전체 길이는 0보다 큰 유한한 mm 값이어야 합니다."); ⟦EOL⟧
-// 해설 L109: 구문 블록 경계입니다 · 소속 ValidateOptions.
-L000109 |     } ⟦EOL⟧
-L000110 |  ⟦EOL⟧
-// 해설 L111: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000111 |     // Four cross endpoints are stored in design mm and transformed with the Head ⟦EOL⟧
-// 해설 L112: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000112 |     // at script generation. The scanner traces one center cross; the DOE optically ⟦EOL⟧
-// 해설 L113: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000113 |     // duplicates that trace at every beam slot. CrossSize is the full stroke length. ⟦EOL⟧
-// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<(double X, double Y)> Drilling.Common.Correction.CDefaultOffsetCalibration.CenterScannerTargets(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, Dril
-L000114 |     public static IReadOnlyList<(double X, double Y)> CenterScannerTargets(IReadOnlyDictionary<string, string> values, int head, ST_DEFAULT_OFFSET_OPTIONS options) ⟦EOL⟧
-// 해설 L115: 구문 블록 경계입니다 · 소속 CenterScannerTargets.
-L000115 |     { ⟦EOL⟧
-// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateOptions(options)
-L000116 |         ValidateOptions(options); ⟦EOL⟧
-// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $"H{head:00}_DEFAULT_OFFSET_X") / 지역 변수를 선언합니다: var x = Number(values, $"H{head:00}_DEFAULT_OFFSET_X"); / 변수의 초기값을 지정합니다: x = Number(values, $"H{head:00}_DEFAULT_OFFSET_X")
-L000117 |         var x = Number(values, $"H{head:00}_DEFAULT_OFFSET_X"); ⟦EOL⟧
-// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $"H{head:00}_DEFAULT_OFFSET_Y") / 지역 변수를 선언합니다: var y = Number(values, $"H{head:00}_DEFAULT_OFFSET_Y"); / 변수의 초기값을 지정합니다: y = Number(values, $"H{head:00}_DEFAULT_OFFSET_Y")
-L000118 |         var y = Number(values, $"H{head:00}_DEFAULT_OFFSET_Y"); ⟦EOL⟧
-// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisTransform.Read(values, head) / 지역 변수를 선언합니다: var transform = CScannerAxisTransform.Read(values, head); / 변수의 초기값을 지정합니다: transform = CScannerAxisTransform.Read(values, head)
-L000119 |         var transform = CScannerAxisTransform.Read(values, head); ⟦EOL⟧
-// 해설 L120: 지역 변수를 선언합니다: var half = options.CrossSize / 2; / 변수의 초기값을 지정합니다: half = options.CrossSize / 2
-L000120 |         var half = options.CrossSize / 2; ⟦EOL⟧
-// 해설 L121: 조건에 따라 결과식을 선택합니다: options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? [(x - half, y), (x + half, y), (x, y - half), (x, y + half)] : [(x, y)] / 지역 변수를 선언합니다: (double X, double Y)[] design = options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? [(x - half, y), (x + half, y), (x, y - half), (x, y + half)] : [(x, y)]; / 변수의 초기값을 지정합니다: design = options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? [(x - half, y), (x + half, y), (x, y - half), (x, y + half)] : [(x, y)]
-L000121 |         (double X, double Y)[] design = options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ⟦EOL⟧
-// 해설 L122: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<(double X, double Y)> Drilling.Common.Correction.CDefaultOffsetCalibration.CenterScannerTargets(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, Dril
-L000122 |             ? [(x - half, y), (x + half, y), (x, y - half), (x, y + half)] : [(x, y)]; ⟦EOL⟧
-// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: design.Select(p => transform.Apply(p.X, -p.Y)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: design.Select(p => transform.Apply(p.X, -p.Y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: transform.Apply(p.X, -p.Y) / 지역 변수를 선언합니다: var targets = design.Select(p => transform.Apply(p.X, -p.Y)).ToArray(); / 변수의 초기값을 지정합니다: targets = design.Select(p => transform.Apply(p.X, -p.Y)).ToArray()
-L000123 |         var targets = design.Select(p => transform.Apply(p.X, -p.Y)).ToArray(); ⟦EOL⟧
-// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Any(p => !FitsField(values, head, p.X, p.Y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FitsField(values, head, p.X, p.Y) / 조건에 따라 분기합니다: if (targets.Any(p => !FitsField(values, head, p.X, p.Y)))
-L000124 |         if (targets.Any(p => !FitsField(values, head, p.X, p.Y))) ⟦EOL⟧
-// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {head:00} CENTER {options.MachiningMode} 스캐너 목표가 설정된 이동 범위를 초과합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {head:00} CENTER {options.MachiningMode} 스캐너 목표가 설정된 이동 범위를 초과합니다.");
-L000125 |             throw new InvalidOperationException($"HEAD {head:00} CENTER {options.MachiningMode} 스캐너 목표가 설정된 이동 범위를 초과합니다."); ⟦EOL⟧
-// 해설 L126: 호출자에게 값 또는 제어를 반환합니다: return targets;
-L000126 |         return targets; ⟦EOL⟧
-// 해설 L127: 구문 블록 경계입니다 · 소속 CenterScannerTargets.
-L000127 |     } ⟦EOL⟧
-L000128 |  ⟦EOL⟧
-// 해설 L129: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.CDefaultOffsetCalibration.BeamGridSize(System.Collections.Generic.IReadOnlyDictionary<string, string>)
-L000129 |     public static int BeamGridSize(IReadOnlyDictionary<string, string> values) ⟦EOL⟧
-// 해설 L130: 구문 블록 경계입니다 · 소속 BeamGridSize.
-L000130 |     { ⟦EOL⟧
-// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "SPLITED_BEAM_COUNT") / 지역 변수를 선언합니다: var value = Number(values, "SPLITED_BEAM_COUNT"); / 변수의 초기값을 지정합니다: value = Number(values, "SPLITED_BEAM_COUNT")
-L000131 |         var value = Number(values, "SPLITED_BEAM_COUNT"); ⟦EOL⟧
-// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Truncate(value) / 조건에 따라 분기합니다: if (value != Math.Truncate(value) || value is not (1 or 4))
-L000132 |         if (value != Math.Truncate(value) || value is not (1 or 4)) ⟦EOL⟧
-// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Default 측정의 DOE Beam Count는 1 또는 4여야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Default 측정의 DOE Beam Count는 1 또는 4여야 합니다.");
-L000133 |             throw new InvalidOperationException("Default 측정의 DOE Beam Count는 1 또는 4여야 합니다."); ⟦EOL⟧
-// 해설 L134: 호출자에게 값 또는 제어를 반환합니다: return (int)value;
-L000134 |         return (int)value; ⟦EOL⟧
-// 해설 L135: 구문 블록 경계입니다 · 소속 BeamGridSize.
-L000135 |     } ⟦EOL⟧
-L000136 |  ⟦EOL⟧
-// 해설 L137: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.CDefaultOffsetCalibration.Pitch(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
-L000137 |     public static double Pitch(IReadOnlyDictionary<string, string> values, int model) ⟦EOL⟧
-// 해설 L138: 구문 블록 경계입니다 · 소속 Pitch.
-L000138 |     { ⟦EOL⟧
-// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: BeamGridSize(values) / 지역 변수를 선언합니다: var gridSize = BeamGridSize(values); / 변수의 초기값을 지정합니다: gridSize = BeamGridSize(values)
-L000139 |         var gridSize = BeamGridSize(values); ⟦EOL⟧
-// 해설 L140: 조건에 따라 분기합니다: if (gridSize == 1) / 호출자에게 값 또는 제어를 반환합니다: return 0;
-L000140 |         if (gridSize == 1) return 0; ⟦EOL⟧
-// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeModelPixelCountReader.ReadPatternForModel(values, model) / 지역 변수를 선언합니다: var pattern = CRecipeModelPixelCountReader.ReadPatternForModel(values, model); / 변수의 초기값을 지정합니다: pattern = CRecipeModelPixelCountReader.ReadPatternForModel(values, model)
-L000141 |         var pattern = CRecipeModelPixelCountReader.ReadPatternForModel(values, model); ⟦EOL⟧
-// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "PIXEL_SIZE") / 지역 변수를 선언합니다: var pitch = Number(values, "PIXEL_SIZE") * pattern.ProcessPitch / gridSize; / 변수의 초기값을 지정합니다: pitch = Number(values, "PIXEL_SIZE") * pattern.ProcessPitch / gridSize
-L000142 |         var pitch = Number(values, "PIXEL_SIZE") * pattern.ProcessPitch / gridSize; ⟦EOL⟧
-// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(pitch) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("DOE 빔 간격은 0보다 커야 합니다.") / 조건에 따라 분기합니다: if (!double.IsFinite(pitch) || pitch <= 0) / 예외를 발생/전달합니다: throw new InvalidOperationException("DOE 빔 간격은 0보다 커야 합니다.");
-L000143 |         if (!double.IsFinite(pitch) || pitch <= 0) throw new InvalidOperationException("DOE 빔 간격은 0보다 커야 합니다."); ⟦EOL⟧
-// 해설 L144: 호출자에게 값 또는 제어를 반환합니다: return pitch;
-L000144 |         return pitch; ⟦EOL⟧
-// 해설 L145: 구문 블록 경계입니다 · 소속 Pitch.
+L000066 |     // position, but the measurement session may replace it with the actual ⟦EOL⟧
+// 해설 L67: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000067 |     // Review-X encoder position. The glass center is always their midpoint. ⟦EOL⟧
+// 해설 L68: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Drilling.Common.Correction.CDefaultOffsetCalibration.Conditions(System.Collections.Generic.IReadOnlyDictionary<string, string>, double?)
+L000068 |     public static ST_DEFAULT_OFFSET_OPTIONS Conditions(IReadOnlyDictionary<string, string> values, double? testStageY = null) ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 Conditions.
+L000069 |     { ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X") / 지역 변수를 선언합니다: var alignKey1ReviewX = Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X"); / 변수의 초기값을 지정합니다: alignKey1ReviewX = Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X")
+L000070 |         var alignKey1ReviewX = Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X"); ⟦EOL⟧
+// 해설 L71: 함수·델리게이트 또는 객체 생성자를 호출합니다: DesignAlignKey3ReviewX(values) / 지역 변수를 선언합니다: var alignKey3ReviewX = DesignAlignKey3ReviewX(values); / 변수의 초기값을 지정합니다: alignKey3ReviewX = DesignAlignKey3ReviewX(values)
+L000071 |         var alignKey3ReviewX = DesignAlignKey3ReviewX(values); ⟦EOL⟧
+// 해설 L72: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "STAGE_START_POS_Y") / 지역 변수를 선언합니다: var stageY = testStageY ?? Number(values, "STAGE_START_POS_Y"); / 변수의 초기값을 지정합니다: stageY = testStageY ?? Number(values, "STAGE_START_POS_Y")
+L000072 |         var stageY = testStageY ?? Number(values, "STAGE_START_POS_Y"); ⟦EOL⟧
+// 해설 L73: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(Number(values, "REVIEW_TOLERANCE_X"), Number(values, "REVIEW_TOLERANCE_Y")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_TOLERANCE_X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_TOLERANCE_Y") / 지역 변수를 선언합니다: var tolerance = Math.Min(Number(values, "REVIEW_TOLERANCE_X"), Number(values, "REVIEW_TOLERANCE_Y")); / 변수의 초기값을 지정합니다: tolerance = Math.Min(Number(values, "REVIEW_TOLERANCE_X"), Number(values, "REVIEW_TOLERANCE_Y"))
+L000073 |         var tolerance = Math.Min(Number(values, "REVIEW_TOLERANCE_X"), Number(values, "REVIEW_TOLERANCE_Y")); ⟦EOL⟧
+// 해설 L74: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(stageY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(tolerance) / 조건에 따라 분기합니다: if (!double.IsFinite(stageY) || !double.IsFinite(tolerance) || tolerance <= 0)
+L000074 |         if (!double.IsFinite(stageY) || !double.IsFinite(tolerance) || tolerance <= 0) ⟦EOL⟧
+// 해설 L75: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Recipe의 Review 허용오차와 Stage Y 위치를 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Recipe의 Review 허용오차와 Stage Y 위치를 확인해 주세요.");
+L000075 |             throw new InvalidOperationException("Recipe의 Review 허용오차와 Stage Y 위치를 확인해 주세요."); ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(alignKey1ReviewX, alignKey3ReviewX, stageY, tolerance) { DoeBeamGridSize = BeamGridSize(values) } / 호출자에게 값 또는 제어를 반환합니다: return new(alignKey1ReviewX, alignKey3ReviewX, stageY, tolerance) { DoeBeamGridSize = BeamGridSize(values) };
+L000076 |         return new(alignKey1ReviewX, alignKey3ReviewX, stageY, tolerance) ⟦EOL⟧
+// 해설 L77: 구문 블록 경계입니다 · 소속 Conditions.
+L000077 |         { ⟦EOL⟧
+// 해설 L78: 값을 대상에 대입합니다: DoeBeamGridSize = BeamGridSize(values) / 함수·델리게이트 또는 객체 생성자를 호출합니다: BeamGridSize(values)
+L000078 |             DoeBeamGridSize = BeamGridSize(values) ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 Conditions.
+L000079 |         }; ⟦EOL⟧
+// 해설 L80: 구문 블록 경계입니다 · 소속 Conditions.
+L000080 |     } ⟦EOL⟧
+L000081 |  ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.CDefaultOffsetCalibration.DesignAlignKey3ReviewX(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000082 |     public static double DesignAlignKey3ReviewX(IReadOnlyDictionary<string, string> values) ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 DesignAlignKey3ReviewX.
+L000083 |     { ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X") / 지역 변수를 선언합니다: var alignKey1ReviewX = Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X"); / 변수의 초기값을 지정합니다: alignKey1ReviewX = Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X")
+L000084 |         var alignKey1ReviewX = Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_X"); ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "GLASS_SIZE_X") / 지역 변수를 선언합니다: var glassWidth = Number(values, "GLASS_SIZE_X"); / 변수의 초기값을 지정합니다: glassWidth = Number(values, "GLASS_SIZE_X")
+L000085 |         var glassWidth = Number(values, "GLASS_SIZE_X"); ⟦EOL⟧
+// 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "AK_MARGIN_X") / 지역 변수를 선언합니다: var marginX = Number(values, "AK_MARGIN_X"); / 변수의 초기값을 지정합니다: marginX = Number(values, "AK_MARGIN_X")
+L000086 |         var marginX = Number(values, "AK_MARGIN_X"); ⟦EOL⟧
+// 해설 L87: 지역 변수를 선언합니다: var alignKeySpan = glassWidth - 2 * marginX; / 변수의 초기값을 지정합니다: alignKeySpan = glassWidth - 2 * marginX
+L000087 |         var alignKeySpan = glassWidth - 2 * marginX; ⟦EOL⟧
+// 해설 L88: 지역 변수를 선언합니다: var alignKey3ReviewX = alignKey1ReviewX + alignKeySpan; / 변수의 초기값을 지정합니다: alignKey3ReviewX = alignKey1ReviewX + alignKeySpan
+L000088 |         var alignKey3ReviewX = alignKey1ReviewX + alignKeySpan; ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(alignKey3ReviewX) / 조건에 따라 분기합니다: if (!double.IsFinite(alignKey3ReviewX) || alignKeySpan <= 0)
+L000089 |         if (!double.IsFinite(alignKey3ReviewX) || alignKeySpan <= 0) ⟦EOL⟧
+// 해설 L90: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Glass Size X와 AK Margin X로 AK3 설계 Review X를 계산할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Glass Size X와 AK Margin X로 AK3 설계 Review X를 계산할 수 없습니다.");
+L000090 |             throw new InvalidOperationException("Glass Size X와 AK Margin X로 AK3 설계 Review X를 계산할 수 없습니다."); ⟦EOL⟧
+// 해설 L91: 호출자에게 값 또는 제어를 반환합니다: return alignKey3ReviewX;
+L000091 |         return alignKey3ReviewX; ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 DesignAlignKey3ReviewX.
+L000092 |     } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY Drilling.Common.Correction.CDefaultOffsetCalibration.HeadGeometry(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000094 |     public static ST_DEFAULT_HEAD_GEOMETRY HeadGeometry(IReadOnlyDictionary<string, string> values, int head) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 HeadGeometry.
+L000095 |     { ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(head)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(head) / 조건에 따라 분기합니다: if (head is < 1 or > 8) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(head));
+L000096 |         if (head is < 1 or > 8) throw new ArgumentOutOfRangeException(nameof(head)); ⟦EOL⟧
+// 해설 L97: 지역 변수를 선언합니다: var prefix = $"H{head:00}_"; / 변수의 초기값을 지정합니다: prefix = $"H{head:00}_"
+L000097 |         var prefix = $"H{head:00}_"; ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, prefix + "SCAN_FIELD_WIDTH_X") / 지역 변수를 선언합니다: var x = Number(values, prefix + "SCAN_FIELD_WIDTH_X"); / 변수의 초기값을 지정합니다: x = Number(values, prefix + "SCAN_FIELD_WIDTH_X")
+L000098 |         var x = Number(values, prefix + "SCAN_FIELD_WIDTH_X"); ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, prefix + "SCAN_FIELD_HEIGHT_Y") / 지역 변수를 선언합니다: var y = Number(values, prefix + "SCAN_FIELD_HEIGHT_Y"); / 변수의 초기값을 지정합니다: y = Number(values, prefix + "SCAN_FIELD_HEIGHT_Y")
+L000099 |         var y = Number(values, prefix + "SCAN_FIELD_HEIGHT_Y"); ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, prefix + "DOE_ROTATION_ANGLE") / 지역 변수를 선언합니다: var angle = Number(values, prefix + "DOE_ROTATION_ANGLE"); / 변수의 초기값을 지정합니다: angle = Number(values, prefix + "DOE_ROTATION_ANGLE")
+L000100 |         var angle = Number(values, prefix + "DOE_ROTATION_ANGLE"); ⟦EOL⟧
+// 해설 L101: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {head:00}의 Setting Scan Field X/Y는 0보다 커야 합니다.") / 조건에 따라 분기합니다: if (x <= 0 || y <= 0) / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {head:00}의 Setting Scan Field X/Y는 0보다 커야 합니다.");
+L000101 |         if (x <= 0 || y <= 0) throw new InvalidOperationException($"HEAD {head:00}의 Setting Scan Field X/Y는 0보다 커야 합니다."); ⟦EOL⟧
+// 해설 L102: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000102 |         // Setting stores full dimensions, not the distance from the center. ⟦EOL⟧
+// 해설 L103: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(x / 2, y / 2, angle) / 호출자에게 값 또는 제어를 반환합니다: return new(x / 2, y / 2, angle);
+L000103 |         return new(x / 2, y / 2, angle); ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 HeadGeometry.
+L000104 |     } ⟦EOL⟧
+L000105 |  ⟦EOL⟧
+// 해설 L106: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_PREVIEW_POINT Drilling.Common.Correction.CDefaultOffsetCalibration.PredictCenter(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, double)
+L000106 |     public static ST_DEFAULT_PREVIEW_POINT PredictCenter(IReadOnlyDictionary<string, string> values, int head, double stageY) ⟦EOL⟧
+// 해설 L107: 구문 블록 경계입니다 · 소속 PredictCenter.
+L000107 |     { ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(head)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(head) / 조건에 따라 분기합니다: if (head is < 1 or > 8) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(head));
+L000108 |         if (head is < 1 or > 8) throw new ArgumentOutOfRangeException(nameof(head)); ⟦EOL⟧
+// 해설 L109: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(stageY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(stageY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(stageY) / 조건에 따라 분기합니다: if (!double.IsFinite(stageY)) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(stageY));
+L000109 |         if (!double.IsFinite(stageY)) throw new ArgumentOutOfRangeException(nameof(stageY)); ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "STAGE_START_POS_Y") / 지역 변수를 선언합니다: var start = Number(values, "STAGE_START_POS_Y"); / 변수의 초기값을 지정합니다: start = Number(values, "STAGE_START_POS_Y")
+L000110 |         var start = Number(values, "STAGE_START_POS_Y"); ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisTransform.ReadStageDirection(values) / 지역 변수를 선언합니다: var direction = CScannerAxisTransform.ReadStageDirection(values); / 변수의 초기값을 지정합니다: direction = CScannerAxisTransform.ReadStageDirection(values)
+L000111 |         var direction = CScannerAxisTransform.ReadStageDirection(values); ⟦EOL⟧
+// 해설 L112: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.ContainsKey($"H{head:00}_AK_POSITION_Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $"H{head:00}_AK_POSITION_Y") / 조건에 따라 결과식을 선택합니다: values.ContainsKey($"H{head:00}_AK_POSITION_Y") ? Number(values, $"H{head:00}_AK_POSITION_Y") : Number(values, "REVIEW_TO_HEAD1_GAP_Y") + (head % 2 == 0 ? Number(values, "HeadGapY") : 0) / 지역 변수를 선언합니다: var gap = values.ContainsKey($"H{head:00}_AK_POSITION_Y") ? Number(values, $"H{head:00}_AK_POSITION_Y") : Number(values, "REVIEW_TO_HEAD1_GAP_Y") + (head % 2 == 0 ? Num
+L000112 |         var gap = values.ContainsKey($"H{head:00}_AK_POSITION_Y") ? Number(values, $"H{head:00}_AK_POSITION_Y") ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_TO_HEAD1_GAP_Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "HeadGapY") / 조건에 따라 결과식을 선택합니다: head % 2 == 0 ? Number(values, "HeadGapY") : 0
+L000113 |             : Number(values, "REVIEW_TO_HEAD1_GAP_Y") + (head % 2 == 0 ? Number(values, "HeadGapY") : 0); ⟦EOL⟧
+// 해설 L114: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000114 |         // Same AK/camera and Head reference as CENTER measurement. Stage Start ⟦EOL⟧
+// 해설 L115: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000115 |         // defines the reference pose; its delta is projected into glass design mm. ⟦EOL⟧
+// 해설 L116: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000116 |         // Head flips change scanner commands, not the design-coordinate preview. ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "AK_MARGIN_Y") / 지역 변수를 선언합니다: var yAtStart = (start - direction * gap - Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_Y")) / direction + Number(values, "AK_MARGIN_Y"); / 변수의 초기값을 지정합니다: yAtStart = (start - direction * gap - Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_Y")) / direction + Number(values, "AK_MARGIN_Y")
+L000117 |         var yAtStart = (start - direction * gap - Number(values, "REVIEW_CAMERA_ALIGN_KEY_POS_Y")) / direction + Number(values, "AK_MARGIN_Y"); ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "AK_MARGIN_X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "H01_AK_POSITION_X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "HeadGapX") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $"H{head:00}_DEFAULT_OFFSET_X") / 지역 변수를 선언합니다: var x = Number(values, "AK_MARGIN_X") + Number(values, "H01_AK_POSITION_X") + (head - 1) * Number(values, "HeadGapX") + Number(values, $"H{head:00}_DEFAULT_OFFSET_X"); / 변수의 초기값을 지정합니다: x = Number(values, "AK_MARGIN_X") + Number(values, "H01_AK_POSITION_X") + (head - 1)
+L000118 |         var x = Number(values, "AK_MARGIN_X") + Number(values, "H01_AK_POSITION_X") + (head - 1) * Number(values, "HeadGapX") + Number(values, $"H{head:00}_DEFAULT_OFFSET_X"); ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $"H{head:00}_DEFAULT_OFFSET_Y") / 지역 변수를 선언합니다: var y = yAtStart + (stageY - start) / direction + Number(values, $"H{head:00}_DEFAULT_OFFSET_Y"); / 변수의 초기값을 지정합니다: y = yAtStart + (stageY - start) / direction + Number(values, $"H{head:00}_DEFAULT_OFFSET_Y")
+L000119 |         var y = yAtStart + (stageY - start) / direction + Number(values, $"H{head:00}_DEFAULT_OFFSET_Y"); ⟦EOL⟧
+// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "GLASS_SIZE_X") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "GLASS_SIZE_Y") / 지역 변수를 선언합니다: var width = Number(values, "GLASS_SIZE_X"); / 지역 변수를 선언합니다: var height = Number(values, "GLASS_SIZE_Y"); / 변수의 초기값을 지정합니다: width = Number(values, "GLASS_SIZE_X") / 변수의 초기값을 지정합니다: height = Number(values, "GLASS_SIZE_Y")
+L000120 |         var width = Number(values, "GLASS_SIZE_X"); var height = Number(values, "GLASS_SIZE_Y"); ⟦EOL⟧
+// 해설 L121: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(x) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("예상 가공 위치의 Recipe·Setting 기준값을 확인해 주세요.") / 조건에 따라 분기합니다: if (!double.IsFinite(x) || !double.IsFinite(y) || width <= 0 || height <= 0) / 예외를 발생/전달합니다: throw new InvalidOperationException("예상 가공 위치의 Recipe·Setting 기준값을 확인해 주세요.");
+L000121 |         if (!double.IsFinite(x) || !double.IsFinite(y) || width <= 0 || height <= 0) throw new InvalidOperationException("예상 가공 위치의 Recipe·Setting 기준값을 확인해 주세요."); ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(head, stageY, x, y, x >= 0 && x <= width && y >= 0 && y <= height) / 호출자에게 값 또는 제어를 반환합니다: return new(head, stageY, x, y, x >= 0 && x <= width && y >= 0 && y <= height);
+L000122 |         return new(head, stageY, x, y, x >= 0 && x <= width && y >= 0 && y <= height); ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 PredictCenter.
+L000123 |     } ⟦EOL⟧
+L000124 |  ⟦EOL⟧
+// 해설 L125: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000125 |     // x/y are actual absolute GX/GY commands for the CENTER test, after Head ⟦EOL⟧
+// 해설 L126: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000126 |     // conversion. DOE beam spacing is an optical separation, not an axis move. ⟦EOL⟧
+// 해설 L127: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Correction.CDefaultOffsetCalibration.FitsField(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, double, double)
+L000127 |     public static bool FitsField(IReadOnlyDictionary<string, string> values, int head, double x, double y) ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 FitsField.
+L000128 |     { ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: HeadGeometry(values, head) / 지역 변수를 선언합니다: var field = HeadGeometry(values, head); / 변수의 초기값을 지정합니다: field = HeadGeometry(values, head)
+L000129 |         var field = HeadGeometry(values, head); ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(x) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(y) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(x) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(y) / 호출자에게 값 또는 제어를 반환합니다: return double.IsFinite(x) && double.IsFinite(y) && Math.Abs(x) <= field.FieldHalfX && Math.Abs(y) <= field.FieldHalfY;
+L000130 |         return double.IsFinite(x) && double.IsFinite(y) && Math.Abs(x) <= field.FieldHalfX && Math.Abs(y) <= field.FieldHalfY; ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 FitsField.
+L000131 |     } ⟦EOL⟧
+L000132 |  ⟦EOL⟧
+// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Correction.CDefaultOffsetCalibration.ValidateOptions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS)
+L000133 |     public static void ValidateOptions(ST_DEFAULT_OFFSET_OPTIONS options) ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 ValidateOptions.
+L000134 |     { ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { options.AlignKey1ReviewX, options.AlignKey3ReviewX, options.BoardCenterX, options.TestStageY, options.Tolerance }.Any(v => !double.IsFinite(v)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(v) / 조건에 따라 분기합니다: if (new[] { options.AlignKey1ReviewX, options.AlignKey3ReviewX, options.BoardCenterX, options.TestStageY, options.Tolerance }.Any(v => !double.IsFinite(v)) || options.Tolerance <= 0)
+L000135 |         if (new[] { options.AlignKey1ReviewX, options.AlignKey3ReviewX, options.BoardCenterX, options.TestStageY, options.Tolerance }.Any(v => !double.IsFinite(v)) || options.Tolerance <= 0) ⟦EOL⟧
+// 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AK1·AK3 Review X, 가공할 Stage Y 위치와 Recipe Review 허용오차를 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("AK1·AK3 Review X, 가공할 Stage Y 위치와 Recipe Review 허용오차를 확인해 주세요.");
+L000136 |             throw new InvalidOperationException("AK1·AK3 Review X, 가공할 Stage Y 위치와 Recipe Review 허용오차를 확인해 주세요."); ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(options.AlignKey3ReviewX - options.AlignKey1ReviewX) / 조건에 따라 분기합니다: if (Math.Abs(options.AlignKey3ReviewX - options.AlignKey1ReviewX) <= double.Epsilon)
+L000137 |         if (Math.Abs(options.AlignKey3ReviewX - options.AlignKey1ReviewX) <= double.Epsilon) ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("AK1과 AK3 Review X 위치는 서로 달라야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("AK1과 AK3 Review X 위치는 서로 달라야 합니다.");
+L000138 |             throw new InvalidOperationException("AK1과 AK3 Review X 위치는 서로 달라야 합니다."); ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enum.IsDefined(options.MachiningMode) / 조건에 따라 분기합니다: if (!Enum.IsDefined(options.MachiningMode))
+L000139 |         if (!Enum.IsDefined(options.MachiningMode)) ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Default 가공 방식을 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Default 가공 방식을 확인해 주세요.");
+L000140 |             throw new InvalidOperationException("Default 가공 방식을 확인해 주세요."); ⟦EOL⟧
+// 해설 L141: 조건에 따라 분기합니다: if (options.DoeBeamGridSize is not (1 or 4))
+L000141 |         if (options.DoeBeamGridSize is not (1 or 4)) ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Default 측정의 DOE Beam Count는 1 또는 4여야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Default 측정의 DOE Beam Count는 1 또는 4여야 합니다.");
+L000142 |             throw new InvalidOperationException("Default 측정의 DOE Beam Count는 1 또는 4여야 합니다."); ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(options.CrossSize) / 조건에 따라 분기합니다: if (options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross && (!double.IsFinite(options.CrossSize) || options.CrossSize <= 0))
+L000143 |         if (options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross && (!double.IsFinite(options.CrossSize) || options.CrossSize <= 0)) ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("십자 전체 길이는 0보다 큰 유한한 mm 값이어야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("십자 전체 길이는 0보다 큰 유한한 mm 값이어야 합니다.");
+L000144 |             throw new InvalidOperationException("십자 전체 길이는 0보다 큰 유한한 mm 값이어야 합니다."); ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 ValidateOptions.
 L000145 |     } ⟦EOL⟧
 L000146 |  ⟦EOL⟧
-// 해설 L147: 선언·서명/매개변수·접근 조건입니다 · (double X, double Y) Drilling.Common.Correction.CDefaultOffsetCalibration.Slot(int, int, double, double)
-L000147 |     public static (double X, double Y) Slot(int beam, int gridSize, double pitch, double angle) ⟦EOL⟧
-// 해설 L148: 구문 블록 경계입니다 · 소속 Slot.
-L000148 |     { ⟦EOL⟧
-// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(pitch) / 조건에 따라 분기합니다: if (gridSize is not (1 or 4) || beam < 1 || beam > gridSize * gridSize || !double.IsFinite(pitch) || (gridSize == 4 && pitch <= 0) || (gridSize == 1 && pitch != 0) || !double.IsFinite(angle))
-L000149 |         if (gridSize is not (1 or 4) || beam < 1 || beam > gridSize * gridSize || !double.IsFinite(pitch) || ⟦EOL⟧
-// 해설 L150: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(angle)
-L000150 |             (gridSize == 4 && pitch <= 0) || (gridSize == 1 && pitch != 0) || !double.IsFinite(angle)) ⟦EOL⟧
-// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("DOE 빔 슬롯 설정 오류") / 예외를 발생/전달합니다: throw new ArgumentException("DOE 빔 슬롯 설정 오류");
-L000151 |             throw new ArgumentException("DOE 빔 슬롯 설정 오류"); ⟦EOL⟧
-// 해설 L152: 조건에 따라 분기합니다: if (gridSize == 1) / 호출자에게 값 또는 제어를 반환합니다: return (0, 0);
-L000152 |         if (gridSize == 1) return (0, 0); ⟦EOL⟧
-// 해설 L153: 지역 변수를 선언합니다: var center = (gridSize - 1) / 2.0; / 변수의 초기값을 지정합니다: center = (gridSize - 1) / 2.0
-L000153 |         var center = (gridSize - 1) / 2.0; ⟦EOL⟧
-// 해설 L154: 지역 변수를 선언합니다: var x = ((beam - 1) % gridSize - center) * pitch; / 변수의 초기값을 지정합니다: x = ((beam - 1) % gridSize - center) * pitch
-L000154 |         var x = ((beam - 1) % gridSize - center) * pitch; ⟦EOL⟧
-// 해설 L155: 지역 변수를 선언합니다: var y = ((beam - 1) / gridSize - center) * pitch; / 변수의 초기값을 지정합니다: y = ((beam - 1) / gridSize - center) * pitch
-L000155 |         var y = ((beam - 1) / gridSize - center) * pitch; ⟦EOL⟧
-// 해설 L156: 지역 변수를 선언합니다: var radians = angle * Math.PI / 180; / 변수의 초기값을 지정합니다: radians = angle * Math.PI / 180
-L000156 |         var radians = angle * Math.PI / 180; ⟦EOL⟧
-// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians) / 호출자에게 값 또는 제어를 반환합니다: return (x * Math.Cos(radians) - y * Math.Sin(radians), x * Math.Sin(radians) + y * Math.Cos(radians));
-L000157 |         return (x * Math.Cos(radians) - y * Math.Sin(radians), x * Math.Sin(radians) + y * Math.Cos(radians)); ⟦EOL⟧
-// 해설 L158: 구문 블록 경계입니다 · 소속 Slot.
-L000158 |     } ⟦EOL⟧
-L000159 |  ⟦EOL⟧
-// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT Drilling.Common.Correction.CDefaultOffsetCalibration.Fit(System.Collections.Generic.IReadOnlyList<Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK>, int, double
-L000160 |     public static ST_DEFAULT_OFFSET_FIT Fit(IReadOnlyList<ST_DEFAULT_OFFSET_MARK> marks, int gridSize, double pitch, double angle, double residualTolerance) ⟦EOL⟧
-// 해설 L161: 구문 블록 경계입니다 · 소속 Fit.
-L000161 |     { ⟦EOL⟧
-// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(residualTolerance) / 조건에 따라 분기합니다: if (!double.IsFinite(residualTolerance) || residualTolerance <= 0)
-L000162 |         if (!double.IsFinite(residualTolerance) || residualTolerance <= 0) ⟦EOL⟧
-// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("중심 위치·Beam 간격 허용오차를 확인해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException("중심 위치·Beam 간격 허용오차를 확인해 주세요.");
-L000163 |             throw new ArgumentException("중심 위치·Beam 간격 허용오차를 확인해 주세요."); ⟦EOL⟧
-// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("DOE Beam Count는 1 또는 4여야 합니다.") / 조건에 따라 분기합니다: if (gridSize is not (1 or 4)) / 예외를 발생/전달합니다: throw new ArgumentException("DOE Beam Count는 1 또는 4여야 합니다.");
-L000164 |         if (gridSize is not (1 or 4)) throw new ArgumentException("DOE Beam Count는 1 또는 4여야 합니다."); ⟦EOL⟧
-// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(pitch) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(angle) / 조건에 따라 분기합니다: if (!double.IsFinite(pitch) || (gridSize == 4 && pitch <= 0) || (gridSize == 1 && pitch != 0) || !double.IsFinite(angle))
-L000165 |         if (!double.IsFinite(pitch) || (gridSize == 4 && pitch <= 0) || (gridSize == 1 && pitch != 0) || !double.IsFinite(angle)) ⟦EOL⟧
-// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("DOE 빔 간격 또는 회전 각도를 확인해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException("DOE 빔 간격 또는 회전 각도를 확인해 주세요.");
-L000166 |             throw new ArgumentException("DOE 빔 간격 또는 회전 각도를 확인해 주세요."); ⟦EOL⟧
-// 해설 L167: 지역 변수를 선언합니다: var beamCount = gridSize * gridSize; / 변수의 초기값을 지정합니다: beamCount = gridSize * gridSize
-L000167 |         var beamCount = gridSize * gridSize; ⟦EOL⟧
-// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, beamCount)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Select(m => m.Beam).Order() / 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Select(m => m.Beam) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, beamCount) / 조건에 따라 분기합니다: if (marks.Count != beamCount || !marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, beamCount)))
-L000168 |         if (marks.Count != beamCount || !marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, beamCount))) ⟦EOL⟧
-// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"서로 다른 {beamCount}개 DOE 빔이 모두 측정되어야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"서로 다른 {beamCount}개 DOE 빔이 모두 측정되어야 합니다.");
-L000169 |             throw new InvalidOperationException($"서로 다른 {beamCount}개 DOE 빔이 모두 측정되어야 합니다."); ⟦EOL⟧
-// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Any(m => m.Judge != "OK" || new[] { m.X, m.Y, m.RawX, m.RawY, m.CorrectionX, m.CorrectionY, m.EncoderX, m.EncoderY }.Any(v => !double.IsFinite(v))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { m.X, m.Y, m.RawX, m.RawY, m.CorrectionX, m.CorrectionY, m.EncoderX, m.EncoderY }.Any(v => !double.IsFinite(v)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(v) / 조건에 따라 분기합니다: if (marks.Any(m => m.Judge != "OK" || new[] { m.X, m.Y, m.RawX, m.RawY, m.CorrectionX, m.CorrectionY, m.EncoderX, m.EncoderY }.Any(v => !double.IsF
-L000170 |         if (marks.Any(m => m.Judge != "OK" || new[] { m.X, m.Y, m.RawX, m.RawY, m.CorrectionX, m.CorrectionY, m.EncoderX, m.EncoderY }.Any(v => !double.IsFinite(v)))) ⟦EOL⟧
-// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("NG 또는 유효하지 않은 빔 측정값이 있습니다. 해당 Head를 다시 측정해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("NG 또는 유효하지 않은 빔 측정값이 있습니다. 해당 Head를 다시 측정해 주세요.");
-L000171 |             throw new InvalidOperationException("NG 또는 유효하지 않은 빔 측정값이 있습니다. 해당 Head를 다시 측정해 주세요."); ⟦EOL⟧
-// 해설 L172: 조건에 따라 분기합니다: if (gridSize == 1)
-L000172 |         if (gridSize == 1) ⟦EOL⟧
-// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(marks[0].X, marks[0].Y, 0, 0, 0) / 호출자에게 값 또는 제어를 반환합니다: return new(marks[0].X, marks[0].Y, 0, 0, 0);
-L000173 |             return new(marks[0].X, marks[0].Y, 0, 0, 0); ⟦EOL⟧
-// 해설 L174: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000174 |         // The complete symmetric 4x4 grid has orthogonal design columns: the affine ⟦EOL⟧
-// 해설 L175: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000175 |         // least-squares solution is well-conditioned and can be evaluated directly. ⟦EOL⟧
-// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Average(m => m.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Average(m => m.Y) / 지역 변수를 선언합니다: var cx = marks.Average(m => m.X); / 지역 변수를 선언합니다: var cy = marks.Average(m => m.Y); / 변수의 초기값을 지정합니다: cx = marks.Average(m => m.X) / 변수의 초기값을 지정합니다: cy = marks.Average(m => m.Y)
-L000176 |         var cx = marks.Average(m => m.X); var cy = marks.Average(m => m.Y); ⟦EOL⟧
-// 해설 L177: 지역 변수를 선언합니다: var center = (gridSize - 1) / 2.0; / 변수의 초기값을 지정합니다: center = (gridSize - 1) / 2.0
-L000177 |         var center = (gridSize - 1) / 2.0; ⟦EOL⟧
-// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, beamCount).Sum(beam => Math.Pow(((beam - 1) % gridSize - center) * pitch, 2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, beamCount) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow(((beam - 1) % gridSize - center) * pitch, 2) / 지역 변수를 선언합니다: var square = Enumerable.Range(1, beamCount).Sum(beam => Math.Pow(((beam - 1) % gridSize - center) * pitch, 2)); / 변수의 초기값을 지정합니다: square = Enumerable.Range(1, beamCount).Sum(beam => Math.Pow(((beam - 1) % gridSize - center) * pitch, 2))
-L000178 |         var square = Enumerable.Range(1, beamCount).Sum(beam => Math.Pow(((beam - 1) % gridSize - center) * pitch, 2)); ⟦EOL⟧
-// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(square) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("DOE 격자 크기를 확인해 주세요.") / 조건에 따라 분기합니다: if (!double.IsFinite(square) || square <= 0) / 예외를 발생/전달합니다: throw new InvalidOperationException("DOE 격자 크기를 확인해 주세요.");
-L000179 |         if (!double.IsFinite(square) || square <= 0) throw new InvalidOperationException("DOE 격자 크기를 확인해 주세요."); ⟦EOL⟧
-// 해설 L180: 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Sum(m => ((column ? (m.Beam - 1) % gridSize : (m.Beam - 1) / gridSize) - center) * pitch * (x ? m.X - cx : m.Y - cy)) / 조건에 따라 결과식을 선택합니다: column ? (m.Beam - 1) % gridSize : (m.Beam - 1) / gridSize / 조건에 따라 결과식을 선택합니다: x ? m.X - cx : m.Y - cy
-L000180 |         double Coefficient(bool x, bool column) => marks.Sum(m => ((column ? (m.Beam - 1) % gridSize : (m.Beam - 1) / gridSize) - center) * pitch * (x ? m.X - cx : m.Y - cy)) / square; ⟦EOL⟧
-// 해설 L181: 함수·델리게이트 또는 객체 생성자를 호출합니다: Coefficient(true, true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Coefficient(true, false) / 지역 변수를 선언합니다: var a = Coefficient(true, true); / 지역 변수를 선언합니다: var b = Coefficient(true, false); / 변수의 초기값을 지정합니다: a = Coefficient(true, true) / 변수의 초기값을 지정합니다: b = Coefficient(true, false)
-L000181 |         var a = Coefficient(true, true); var b = Coefficient(true, false); ⟦EOL⟧
-// 해설 L182: 함수·델리게이트 또는 객체 생성자를 호출합니다: Coefficient(false, true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Coefficient(false, false) / 지역 변수를 선언합니다: var c = Coefficient(false, true); / 지역 변수를 선언합니다: var d = Coefficient(false, false); / 변수의 초기값을 지정합니다: c = Coefficient(false, true) / 변수의 초기값을 지정합니다: d = Coefficient(false, false)
-L000182 |         var c = Coefficient(false, true); var d = Coefficient(false, false); ⟦EOL⟧
-// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(a * a + c * c) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(b * b + d * d) / 지역 변수를 선언합니다: var px = pitch * Math.Sqrt(a * a + c * c); / 지역 변수를 선언합니다: var py = pitch * Math.Sqrt(b * b + d * d); / 변수의 초기값을 지정합니다: px = pitch * Math.Sqrt(a * a + c * c) / 변수의 초기값을 지정합니다: py = pitch * Math.Sqrt(b * b + d * d)
-L000183 |         var px = pitch * Math.Sqrt(a * a + c * c); var py = pitch * Math.Sqrt(b * b + d * d); ⟦EOL⟧
-// 해설 L184: 지역 변수를 선언합니다: var radians = angle * Math.PI / 180; / 변수의 초기값을 지정합니다: radians = angle * Math.PI / 180
-L000184 |         var radians = angle * Math.PI / 180; ⟦EOL⟧
-// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians) / 지역 변수를 선언합니다: var expected = new[] { Math.Cos(radians), -Math.Sin(radians), Math.Sin(radians), Math.Cos(radians) }; / 변수의 초기값을 지정합니다: expected = new[] { Math.Cos(radians), -Math.Sin(radians), Math.Sin(radians), Math.Cos(radians) }
-L000185 |         var expected = new[] { Math.Cos(radians), -Math.Sin(radians), Math.Sin(radians), Math.Cos(radians) }; ⟦EOL⟧
-// 해설 L186: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000186 |         // Compare the centered fitted grid with the configured DOE grid in mm. ⟦EOL⟧
-// 해설 L187: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000187 |         // Reuse Recipe Review tolerance instead of a separate arbitrary ratio. ⟦EOL⟧
-// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, beamCount).Max(beam => { var u = ((beam - 1) % gridSize - center) * pitch; var v = ((beam - 1) / gridSize - center) * pitch; return Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2)… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, beamCount) / 지역 변수를 선언합니다: var gridError = Enumerable.Range(1, beamCount).Max(beam => { var u = ((beam - 1) % gridSize - center) * pitch; var v = ((beam - 1) / gridSize - center) * pitch; return Math.Sqrt(Math.Pow((a - expected[0]) * u + (b -
-L000188 |         var gridError = Enumerable.Range(1, beamCount).Max(beam => ⟦EOL⟧
-// 해설 L189: 구문 블록 경계입니다 · 소속 Fit.
-L000189 |         { ⟦EOL⟧
-// 해설 L190: 지역 변수를 선언합니다: var u = ((beam - 1) % gridSize - center) * pitch; / 지역 변수를 선언합니다: var v = ((beam - 1) / gridSize - center) * pitch; / 변수의 초기값을 지정합니다: u = ((beam - 1) % gridSize - center) * pitch / 변수의 초기값을 지정합니다: v = ((beam - 1) / gridSize - center) * pitch
-L000190 |             var u = ((beam - 1) % gridSize - center) * pitch; var v = ((beam - 1) / gridSize - center) * pitch; ⟦EOL⟧
-// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) + Math.Pow((c - expected[2]) * u + (d - expected[3]) * v, 2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow((c - expected[2]) * u + (d - expected[3]) * v, 2) / 호출자에게 값 또는 제어를 반환합니다: return Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) + Math.Pow((c - expected[2]) * u + (d - expected[3]) * v, 2));
-L000191 |             return Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) + Math.Pow((c - expected[2]) * u + (d - expected[3]) * v, 2)); ⟦EOL⟧
-// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT Drilling.Common.Correction.CDefaultOffsetCalibration.Fit(System.Collections.Generic.IReadOnlyList<Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK>, int, double
-L000192 |         }); ⟦EOL⟧
-// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(px) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(py) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(gridError) / 조건에 따라 분기합니다: if (!double.IsFinite(px) || !double.IsFinite(py) || !double.IsFinite(gridError) || gridError > residualTolerance)
-L000193 |         if (!double.IsFinite(px) || !double.IsFinite(py) || !double.IsFinite(gridError) || gridError > residualTolerance) ⟦EOL⟧
-// 해설 L194: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("실측 Pitch/방향이 예상 DOE 배열과 다릅니다. 슬롯·DOE 각도·Vision Flip을 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("실측 Pitch/방향이 예상 DOE 배열과 다릅니다. 슬롯·DOE 각도·Vision Flip을 확인해 주세요.");
-L000194 |             throw new InvalidOperationException("실측 Pitch/방향이 예상 DOE 배열과 다릅니다. 슬롯·DOE 각도·Vision Flip을 확인해 주세요."); ⟦EOL⟧
-// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Max(m => { var u = ((m.Beam - 1) % gridSize - center) * pitch; var v = ((m.Beam - 1) / gridSize - center) * pitch; return Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2)); }) / 지역 변수를 선언합니다: var residual = marks.Max(m => { var u = ((m.Beam - 1) % gridSize - center) * pitch; var v = ((m.Beam - 1) / gridSize - center) * pitch; return Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2) / 변수의 초기값을 지정합니다: residual = marks.Max(m => {
-L000195 |         var residual = marks.Max(m => ⟦EOL⟧
-// 해설 L196: 구문 블록 경계입니다 · 소속 Fit.
-L000196 |         { ⟦EOL⟧
-// 해설 L197: 지역 변수를 선언합니다: var u = ((m.Beam - 1) % gridSize - center) * pitch; / 지역 변수를 선언합니다: var v = ((m.Beam - 1) / gridSize - center) * pitch; / 변수의 초기값을 지정합니다: u = ((m.Beam - 1) % gridSize - center) * pitch / 변수의 초기값을 지정합니다: v = ((m.Beam - 1) / gridSize - center) * pitch
-L000197 |             var u = ((m.Beam - 1) % gridSize - center) * pitch; var v = ((m.Beam - 1) / gridSize - center) * pitch; ⟦EOL⟧
-// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow(m.X - cx - a * u - b * v, 2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow(m.Y - cy - c * u - d * v, 2) / 호출자에게 값 또는 제어를 반환합니다: return Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2));
-L000198 |             return Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2)); ⟦EOL⟧
-// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT Drilling.Common.Correction.CDefaultOffsetCalibration.Fit(System.Collections.Generic.IReadOnlyList<Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK>, int, double
-L000199 |         }); ⟦EOL⟧
-// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(residual) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{beamCount}빔 위치 오차 {residual:0.0000} mm가 허용값을 초과했습니다.") / 조건에 따라 분기합니다: if (!double.IsFinite(residual) || residual > residualTolerance) / 예외를 발생/전달합니다: throw new InvalidOperationException($"{beamCount}빔 위치 오차 {residual:0.0000} mm가 허용값을 초과했습니다.");
-L000200 |         if (!double.IsFinite(residual) || residual > residualTolerance) throw new InvalidOperationException($"{beamCount}빔 위치 오차 {residual:0.0000} mm가 허용값을 초과했습니다."); ⟦EOL⟧
-// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(cx, cy, residual, px, py) / 호출자에게 값 또는 제어를 반환합니다: return new(cx, cy, residual, px, py);
-L000201 |         return new(cx, cy, residual, px, py); ⟦EOL⟧
-// 해설 L202: 구문 블록 경계입니다 · 소속 Fit.
-L000202 |     } ⟦EOL⟧
-L000203 |  ⟦EOL⟧
-// 해설 L204: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000204 |     // The global reference never comes from a previously measured Head. H4/H5 ⟦EOL⟧
-// 해설 L205: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000205 |     // straddle the glass center; the configured pitch locates every other Head. ⟦EOL⟧
-// 해설 L206: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000206 |     // Stage Y targets preserve the machine's odd/even Head row separation. ⟦EOL⟧
-// 해설 L207: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT Drilling.Common.Correction.CDefaultOffsetCalibration.WithHeadReference(System.Collections.Generic.IReadOnlyDictionary<string, string>, Drilling.Common.Co
-L000207 |     public static ST_DEFAULT_OFFSET_HEAD_RESULT WithHeadReference(IReadOnlyDictionary<string, string> values, ST_DEFAULT_OFFSET_OPTIONS options, ST_DEFAULT_OFFSET_HEAD_RESULT result) ⟦EOL⟧
-// 해설 L208: 구문 블록 경계입니다 · 소속 WithHeadReference.
-L000208 |     { ⟦EOL⟧
-// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateOptions(options)
-L000209 |         ValidateOptions(options); ⟦EOL⟧
-// 해설 L210: 지역 변수를 선언합니다: var hasCompleteDoeMeasurement = result.Marks.Count is 1 or 16 && result.Marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, result.Marks.Count)); / 변수의 초기값을 지정합니다: hasCompleteDoeMeasurement = result.Marks.Count is 1 or 16 && result.Marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, result.Marks.Count))
-L000210 |         var hasCompleteDoeMeasurement = result.Marks.Count is 1 or 16 && ⟦EOL⟧
-// 해설 L211: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, result.Marks.Count)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Select(m => m.Beam).Order() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Select(m => m.Beam) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, result.Marks.Count)
-L000211 |             result.Marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, result.Marks.Count)); ⟦EOL⟧
-// 해설 L212: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(result.Q) / 조건에 따라 분기합니다: if (result.Head is < 1 or > 8 || !double.IsFinite(result.Q) || !hasCompleteDoeMeasurement || result.Marks.Any(m => !double.IsFinite(m.EncoderX) || !double.IsFinite(m.EncoderY) || !double.IsFinite(m.CorrectionX) || !double.Is…)
-L000212 |         if (result.Head is < 1 or > 8 || !double.IsFinite(result.Q) || !hasCompleteDoeMeasurement || ⟦EOL⟧
-// 해설 L213: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Any(m => !double.IsFinite(m.EncoderX) || !double.IsFinite(m.EncoderY) || !double.IsFinite(m.CorrectionX) || !double.IsFinite(m.CorrectionY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(m.EncoderX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(m.EncoderY)
-L000213 |             result.Marks.Any(m => !double.IsFinite(m.EncoderX) || !double.IsFinite(m.EncoderY) || ⟦EOL⟧
-// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(m.CorrectionX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(m.CorrectionY)
-L000214 |                 !double.IsFinite(m.CorrectionX) || !double.IsFinite(m.CorrectionY))) ⟦EOL⟧
-// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Head 중심 계산에 완전한 DOE 1빔 또는 16빔 측정 좌표가 필요합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Head 중심 계산에 완전한 DOE 1빔 또는 16빔 측정 좌표가 필요합니다.");
-L000215 |             throw new InvalidOperationException("Head 중심 계산에 완전한 DOE 1빔 또는 16빔 측정 좌표가 필요합니다."); ⟦EOL⟧
-// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "HeadGapX") / 지역 변수를 선언합니다: var targetX = options.BoardCenterX + (result.Head - 4.5) * Number(values, "HeadGapX"); / 변수의 초기값을 지정합니다: targetX = options.BoardCenterX + (result.Head - 4.5) * Number(values, "HeadGapX")
-L000216 |         var targetX = options.BoardCenterX + (result.Head - 4.5) * Number(values, "HeadGapX"); ⟦EOL⟧
-// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisTransform.ReadStageDirection(values) / 지역 변수를 선언합니다: var direction = CScannerAxisTransform.ReadStageDirection(values); / 변수의 초기값을 지정합니다: direction = CScannerAxisTransform.ReadStageDirection(values)
-L000217 |         var direction = CScannerAxisTransform.ReadStageDirection(values); ⟦EOL⟧
-// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.ContainsKey($"H{result.Head:00}_AK_POSITION_Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $"H{result.Head:00}_AK_POSITION_Y") / 조건에 따라 결과식을 선택합니다: values.ContainsKey($"H{result.Head:00}_AK_POSITION_Y") ? Number(values, $"H{result.Head:00}_AK_POSITION_Y") : Number(values, "REVIEW_TO_HEAD1_GAP_Y") + (result.Head % 2 == 0 ? Number(values, "HeadGapY") : 0) / 지역 변수를 선언합니다: var gapY = values.ContainsKey($"H{result.Head:00}_AK_POSITION_Y") ? Number(values, $"H{result.Head:00}_AK_POSITION_Y") : Number(value
-L000218 |         var gapY = values.ContainsKey($"H{result.Head:00}_AK_POSITION_Y") ? Number(values, $"H{result.Head:00}_AK_POSITION_Y") ⟦EOL⟧
-// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_TO_HEAD1_GAP_Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "HeadGapY") / 조건에 따라 결과식을 선택합니다: result.Head % 2 == 0 ? Number(values, "HeadGapY") : 0
-L000219 |             : Number(values, "REVIEW_TO_HEAD1_GAP_Y") + (result.Head % 2 == 0 ? Number(values, "HeadGapY") : 0); ⟦EOL⟧
-// 해설 L220: 지역 변수를 선언합니다: var targetY = result.Q - direction * gapY; / 변수의 초기값을 지정합니다: targetY = result.Q - direction * gapY
-L000220 |         var targetY = result.Q - direction * gapY; ⟦EOL⟧
-// 해설 L221: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000221 |         // Vision Flip has already put Target-Hole in design mm. Each encoder ⟦EOL⟧
+// 해설 L147: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000147 |     // Four cross endpoints are stored in design mm and transformed with the Head ⟦EOL⟧
+// 해설 L148: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000148 |     // at script generation. The scanner traces one center cross; the DOE optically ⟦EOL⟧
+// 해설 L149: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000149 |     // duplicates that trace at every beam slot. CrossSize is the full stroke length. ⟦EOL⟧
+// 해설 L150: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<(double X, double Y)> Drilling.Common.Correction.CDefaultOffsetCalibration.CenterScannerTargets(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, Dril
+L000150 |     public static IReadOnlyList<(double X, double Y)> CenterScannerTargets(IReadOnlyDictionary<string, string> values, int head, ST_DEFAULT_OFFSET_OPTIONS options) ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 CenterScannerTargets.
+L000151 |     { ⟦EOL⟧
+// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateOptions(options)
+L000152 |         ValidateOptions(options); ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $"H{head:00}_DEFAULT_OFFSET_X") / 지역 변수를 선언합니다: var x = Number(values, $"H{head:00}_DEFAULT_OFFSET_X"); / 변수의 초기값을 지정합니다: x = Number(values, $"H{head:00}_DEFAULT_OFFSET_X")
+L000153 |         var x = Number(values, $"H{head:00}_DEFAULT_OFFSET_X"); ⟦EOL⟧
+// 해설 L154: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $"H{head:00}_DEFAULT_OFFSET_Y") / 지역 변수를 선언합니다: var y = Number(values, $"H{head:00}_DEFAULT_OFFSET_Y"); / 변수의 초기값을 지정합니다: y = Number(values, $"H{head:00}_DEFAULT_OFFSET_Y")
+L000154 |         var y = Number(values, $"H{head:00}_DEFAULT_OFFSET_Y"); ⟦EOL⟧
+// 해설 L155: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisTransform.Read(values, head) / 지역 변수를 선언합니다: var transform = CScannerAxisTransform.Read(values, head); / 변수의 초기값을 지정합니다: transform = CScannerAxisTransform.Read(values, head)
+L000155 |         var transform = CScannerAxisTransform.Read(values, head); ⟦EOL⟧
+// 해설 L156: 지역 변수를 선언합니다: var half = options.CrossSize / 2; / 변수의 초기값을 지정합니다: half = options.CrossSize / 2
+L000156 |         var half = options.CrossSize / 2; ⟦EOL⟧
+// 해설 L157: 조건에 따라 결과식을 선택합니다: options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? [(x - half, y), (x + half, y), (x, y - half), (x, y + half)] : [(x, y)] / 지역 변수를 선언합니다: (double X, double Y)[] design = options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? [(x - half, y), (x + half, y), (x, y - half), (x, y + half)] : [(x, y)]; / 변수의 초기값을 지정합니다: design = options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? [(x - half, y), (x + half, y), (x, y - half), (x, y + half)] : [(x, y)]
+L000157 |         (double X, double Y)[] design = options.MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ⟦EOL⟧
+// 해설 L158: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<(double X, double Y)> Drilling.Common.Correction.CDefaultOffsetCalibration.CenterScannerTargets(System.Collections.Generic.IReadOnlyDictionary<string, string>, int, Dril
+L000158 |             ? [(x - half, y), (x + half, y), (x, y - half), (x, y + half)] : [(x, y)]; ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: design.Select(p => transform.Apply(p.X, -p.Y)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: design.Select(p => transform.Apply(p.X, -p.Y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: transform.Apply(p.X, -p.Y) / 지역 변수를 선언합니다: var targets = design.Select(p => transform.Apply(p.X, -p.Y)).ToArray(); / 변수의 초기값을 지정합니다: targets = design.Select(p => transform.Apply(p.X, -p.Y)).ToArray()
+L000159 |         var targets = design.Select(p => transform.Apply(p.X, -p.Y)).ToArray(); ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Any(p => !FitsField(values, head, p.X, p.Y)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: FitsField(values, head, p.X, p.Y) / 조건에 따라 분기합니다: if (targets.Any(p => !FitsField(values, head, p.X, p.Y)))
+L000160 |         if (targets.Any(p => !FitsField(values, head, p.X, p.Y))) ⟦EOL⟧
+// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {head:00} CENTER {options.MachiningMode} 스캐너 목표가 설정된 이동 범위를 초과합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {head:00} CENTER {options.MachiningMode} 스캐너 목표가 설정된 이동 범위를 초과합니다.");
+L000161 |             throw new InvalidOperationException($"HEAD {head:00} CENTER {options.MachiningMode} 스캐너 목표가 설정된 이동 범위를 초과합니다."); ⟦EOL⟧
+// 해설 L162: 호출자에게 값 또는 제어를 반환합니다: return targets;
+L000162 |         return targets; ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 CenterScannerTargets.
+L000163 |     } ⟦EOL⟧
+L000164 |  ⟦EOL⟧
+// 해설 L165: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.CDefaultOffsetCalibration.BeamGridSize(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000165 |     public static int BeamGridSize(IReadOnlyDictionary<string, string> values) ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 BeamGridSize.
+L000166 |     { ⟦EOL⟧
+// 해설 L167: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "SPLITED_BEAM_COUNT") / 지역 변수를 선언합니다: var value = Number(values, "SPLITED_BEAM_COUNT"); / 변수의 초기값을 지정합니다: value = Number(values, "SPLITED_BEAM_COUNT")
+L000167 |         var value = Number(values, "SPLITED_BEAM_COUNT"); ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Truncate(value) / 조건에 따라 분기합니다: if (value != Math.Truncate(value) || value is not (1 or 4))
+L000168 |         if (value != Math.Truncate(value) || value is not (1 or 4)) ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Default 측정의 DOE Beam Count는 1 또는 4여야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Default 측정의 DOE Beam Count는 1 또는 4여야 합니다.");
+L000169 |             throw new InvalidOperationException("Default 측정의 DOE Beam Count는 1 또는 4여야 합니다."); ⟦EOL⟧
+// 해설 L170: 호출자에게 값 또는 제어를 반환합니다: return (int)value;
+L000170 |         return (int)value; ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 BeamGridSize.
+L000171 |     } ⟦EOL⟧
+L000172 |  ⟦EOL⟧
+// 해설 L173: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.CDefaultOffsetCalibration.Pitch(System.Collections.Generic.IReadOnlyDictionary<string, string>, int)
+L000173 |     public static double Pitch(IReadOnlyDictionary<string, string> values, int model) ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 Pitch.
+L000174 |     { ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: BeamGridSize(values) / 지역 변수를 선언합니다: var gridSize = BeamGridSize(values); / 변수의 초기값을 지정합니다: gridSize = BeamGridSize(values)
+L000175 |         var gridSize = BeamGridSize(values); ⟦EOL⟧
+// 해설 L176: 조건에 따라 분기합니다: if (gridSize == 1) / 호출자에게 값 또는 제어를 반환합니다: return 0;
+L000176 |         if (gridSize == 1) return 0; ⟦EOL⟧
+// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeModelPixelCountReader.ReadPatternForModel(values, model) / 지역 변수를 선언합니다: var pattern = CRecipeModelPixelCountReader.ReadPatternForModel(values, model); / 변수의 초기값을 지정합니다: pattern = CRecipeModelPixelCountReader.ReadPatternForModel(values, model)
+L000177 |         var pattern = CRecipeModelPixelCountReader.ReadPatternForModel(values, model); ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "PIXEL_SIZE") / 지역 변수를 선언합니다: var pitch = Number(values, "PIXEL_SIZE") * pattern.ProcessPitch / gridSize; / 변수의 초기값을 지정합니다: pitch = Number(values, "PIXEL_SIZE") * pattern.ProcessPitch / gridSize
+L000178 |         var pitch = Number(values, "PIXEL_SIZE") * pattern.ProcessPitch / gridSize; ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(pitch) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("DOE 빔 간격은 0보다 커야 합니다.") / 조건에 따라 분기합니다: if (!double.IsFinite(pitch) || pitch <= 0) / 예외를 발생/전달합니다: throw new InvalidOperationException("DOE 빔 간격은 0보다 커야 합니다.");
+L000179 |         if (!double.IsFinite(pitch) || pitch <= 0) throw new InvalidOperationException("DOE 빔 간격은 0보다 커야 합니다."); ⟦EOL⟧
+// 해설 L180: 호출자에게 값 또는 제어를 반환합니다: return pitch;
+L000180 |         return pitch; ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다 · 소속 Pitch.
+L000181 |     } ⟦EOL⟧
+L000182 |  ⟦EOL⟧
+// 해설 L183: 선언·서명/매개변수·접근 조건입니다 · (double X, double Y) Drilling.Common.Correction.CDefaultOffsetCalibration.Slot(int, int, double, double)
+L000183 |     public static (double X, double Y) Slot(int beam, int gridSize, double pitch, double angle) ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 Slot.
+L000184 |     { ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(pitch) / 조건에 따라 분기합니다: if (gridSize is not (1 or 4) || beam < 1 || beam > gridSize * gridSize || !double.IsFinite(pitch) || (gridSize == 4 && pitch <= 0) || (gridSize == 1 && pitch != 0) || !double.IsFinite(angle))
+L000185 |         if (gridSize is not (1 or 4) || beam < 1 || beam > gridSize * gridSize || !double.IsFinite(pitch) || ⟦EOL⟧
+// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(angle)
+L000186 |             (gridSize == 4 && pitch <= 0) || (gridSize == 1 && pitch != 0) || !double.IsFinite(angle)) ⟦EOL⟧
+// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("DOE 빔 슬롯 설정 오류") / 예외를 발생/전달합니다: throw new ArgumentException("DOE 빔 슬롯 설정 오류");
+L000187 |             throw new ArgumentException("DOE 빔 슬롯 설정 오류"); ⟦EOL⟧
+// 해설 L188: 조건에 따라 분기합니다: if (gridSize == 1) / 호출자에게 값 또는 제어를 반환합니다: return (0, 0);
+L000188 |         if (gridSize == 1) return (0, 0); ⟦EOL⟧
+// 해설 L189: 지역 변수를 선언합니다: var center = (gridSize - 1) / 2.0; / 변수의 초기값을 지정합니다: center = (gridSize - 1) / 2.0
+L000189 |         var center = (gridSize - 1) / 2.0; ⟦EOL⟧
+// 해설 L190: 지역 변수를 선언합니다: var x = ((beam - 1) % gridSize - center) * pitch; / 변수의 초기값을 지정합니다: x = ((beam - 1) % gridSize - center) * pitch
+L000190 |         var x = ((beam - 1) % gridSize - center) * pitch; ⟦EOL⟧
+// 해설 L191: 지역 변수를 선언합니다: var y = ((beam - 1) / gridSize - center) * pitch; / 변수의 초기값을 지정합니다: y = ((beam - 1) / gridSize - center) * pitch
+L000191 |         var y = ((beam - 1) / gridSize - center) * pitch; ⟦EOL⟧
+// 해설 L192: 지역 변수를 선언합니다: var radians = angle * Math.PI / 180; / 변수의 초기값을 지정합니다: radians = angle * Math.PI / 180
+L000192 |         var radians = angle * Math.PI / 180; ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians) / 호출자에게 값 또는 제어를 반환합니다: return (x * Math.Cos(radians) - y * Math.Sin(radians), x * Math.Sin(radians) + y * Math.Cos(radians));
+L000193 |         return (x * Math.Cos(radians) - y * Math.Sin(radians), x * Math.Sin(radians) + y * Math.Cos(radians)); ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 Slot.
+L000194 |     } ⟦EOL⟧
+L000195 |  ⟦EOL⟧
+// 해설 L196: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT Drilling.Common.Correction.CDefaultOffsetCalibration.Fit(System.Collections.Generic.IReadOnlyList<Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK>, int, double
+L000196 |     public static ST_DEFAULT_OFFSET_FIT Fit(IReadOnlyList<ST_DEFAULT_OFFSET_MARK> marks, int gridSize, double pitch, double angle, double residualTolerance) ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 Fit.
+L000197 |     { ⟦EOL⟧
+// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(residualTolerance) / 조건에 따라 분기합니다: if (!double.IsFinite(residualTolerance) || residualTolerance <= 0)
+L000198 |         if (!double.IsFinite(residualTolerance) || residualTolerance <= 0) ⟦EOL⟧
+// 해설 L199: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("중심 위치·Beam 간격 허용오차를 확인해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException("중심 위치·Beam 간격 허용오차를 확인해 주세요.");
+L000199 |             throw new ArgumentException("중심 위치·Beam 간격 허용오차를 확인해 주세요."); ⟦EOL⟧
+// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("DOE Beam Count는 1 또는 4여야 합니다.") / 조건에 따라 분기합니다: if (gridSize is not (1 or 4)) / 예외를 발생/전달합니다: throw new ArgumentException("DOE Beam Count는 1 또는 4여야 합니다.");
+L000200 |         if (gridSize is not (1 or 4)) throw new ArgumentException("DOE Beam Count는 1 또는 4여야 합니다."); ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(pitch) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(angle) / 조건에 따라 분기합니다: if (!double.IsFinite(pitch) || (gridSize == 4 && pitch <= 0) || (gridSize == 1 && pitch != 0) || !double.IsFinite(angle))
+L000201 |         if (!double.IsFinite(pitch) || (gridSize == 4 && pitch <= 0) || (gridSize == 1 && pitch != 0) || !double.IsFinite(angle)) ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentException("DOE 빔 간격 또는 회전 각도를 확인해 주세요.") / 예외를 발생/전달합니다: throw new ArgumentException("DOE 빔 간격 또는 회전 각도를 확인해 주세요.");
+L000202 |             throw new ArgumentException("DOE 빔 간격 또는 회전 각도를 확인해 주세요."); ⟦EOL⟧
+// 해설 L203: 지역 변수를 선언합니다: var beamCount = gridSize * gridSize; / 변수의 초기값을 지정합니다: beamCount = gridSize * gridSize
+L000203 |         var beamCount = gridSize * gridSize; ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, beamCount)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Select(m => m.Beam).Order() / 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Select(m => m.Beam) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, beamCount) / 조건에 따라 분기합니다: if (marks.Count != beamCount || !marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, beamCount)))
+L000204 |         if (marks.Count != beamCount || !marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, beamCount))) ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"서로 다른 {beamCount}개 DOE 빔이 모두 측정되어야 합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"서로 다른 {beamCount}개 DOE 빔이 모두 측정되어야 합니다.");
+L000205 |             throw new InvalidOperationException($"서로 다른 {beamCount}개 DOE 빔이 모두 측정되어야 합니다."); ⟦EOL⟧
+// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Any(m => m.Judge != "OK" || new[] { m.X, m.Y, m.RawX, m.RawY, m.CorrectionX, m.CorrectionY, m.EncoderX, m.EncoderY }.Any(v => !double.IsFinite(v))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { m.X, m.Y, m.RawX, m.RawY, m.CorrectionX, m.CorrectionY, m.EncoderX, m.EncoderY }.Any(v => !double.IsFinite(v)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(v) / 조건에 따라 분기합니다: if (marks.Any(m => m.Judge != "OK" || new[] { m.X, m.Y, m.RawX, m.RawY, m.CorrectionX, m.CorrectionY, m.EncoderX, m.EncoderY }.Any(v => !double.IsF
+L000206 |         if (marks.Any(m => m.Judge != "OK" || new[] { m.X, m.Y, m.RawX, m.RawY, m.CorrectionX, m.CorrectionY, m.EncoderX, m.EncoderY }.Any(v => !double.IsFinite(v)))) ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("NG 또는 유효하지 않은 빔 측정값이 있습니다. 해당 Head를 다시 측정해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("NG 또는 유효하지 않은 빔 측정값이 있습니다. 해당 Head를 다시 측정해 주세요.");
+L000207 |             throw new InvalidOperationException("NG 또는 유효하지 않은 빔 측정값이 있습니다. 해당 Head를 다시 측정해 주세요."); ⟦EOL⟧
+// 해설 L208: 조건에 따라 분기합니다: if (gridSize == 1)
+L000208 |         if (gridSize == 1) ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(marks[0].X, marks[0].Y, 0, 0, 0) / 호출자에게 값 또는 제어를 반환합니다: return new(marks[0].X, marks[0].Y, 0, 0, 0);
+L000209 |             return new(marks[0].X, marks[0].Y, 0, 0, 0); ⟦EOL⟧
+// 해설 L210: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000210 |         // The complete symmetric 4x4 grid has orthogonal design columns: the affine ⟦EOL⟧
+// 해설 L211: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000211 |         // least-squares solution is well-conditioned and can be evaluated directly. ⟦EOL⟧
+// 해설 L212: 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Average(m => m.X) / 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Average(m => m.Y) / 지역 변수를 선언합니다: var cx = marks.Average(m => m.X); / 지역 변수를 선언합니다: var cy = marks.Average(m => m.Y); / 변수의 초기값을 지정합니다: cx = marks.Average(m => m.X) / 변수의 초기값을 지정합니다: cy = marks.Average(m => m.Y)
+L000212 |         var cx = marks.Average(m => m.X); var cy = marks.Average(m => m.Y); ⟦EOL⟧
+// 해설 L213: 지역 변수를 선언합니다: var center = (gridSize - 1) / 2.0; / 변수의 초기값을 지정합니다: center = (gridSize - 1) / 2.0
+L000213 |         var center = (gridSize - 1) / 2.0; ⟦EOL⟧
+// 해설 L214: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, beamCount).Sum(beam => Math.Pow(((beam - 1) % gridSize - center) * pitch, 2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, beamCount) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow(((beam - 1) % gridSize - center) * pitch, 2) / 지역 변수를 선언합니다: var square = Enumerable.Range(1, beamCount).Sum(beam => Math.Pow(((beam - 1) % gridSize - center) * pitch, 2)); / 변수의 초기값을 지정합니다: square = Enumerable.Range(1, beamCount).Sum(beam => Math.Pow(((beam - 1) % gridSize - center) * pitch, 2))
+L000214 |         var square = Enumerable.Range(1, beamCount).Sum(beam => Math.Pow(((beam - 1) % gridSize - center) * pitch, 2)); ⟦EOL⟧
+// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(square) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("DOE 격자 크기를 확인해 주세요.") / 조건에 따라 분기합니다: if (!double.IsFinite(square) || square <= 0) / 예외를 발생/전달합니다: throw new InvalidOperationException("DOE 격자 크기를 확인해 주세요.");
+L000215 |         if (!double.IsFinite(square) || square <= 0) throw new InvalidOperationException("DOE 격자 크기를 확인해 주세요."); ⟦EOL⟧
+// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Sum(m => ((column ? (m.Beam - 1) % gridSize : (m.Beam - 1) / gridSize) - center) * pitch * (x ? m.X - cx : m.Y - cy)) / 조건에 따라 결과식을 선택합니다: column ? (m.Beam - 1) % gridSize : (m.Beam - 1) / gridSize / 조건에 따라 결과식을 선택합니다: x ? m.X - cx : m.Y - cy
+L000216 |         double Coefficient(bool x, bool column) => marks.Sum(m => ((column ? (m.Beam - 1) % gridSize : (m.Beam - 1) / gridSize) - center) * pitch * (x ? m.X - cx : m.Y - cy)) / square; ⟦EOL⟧
+// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: Coefficient(true, true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Coefficient(true, false) / 지역 변수를 선언합니다: var a = Coefficient(true, true); / 지역 변수를 선언합니다: var b = Coefficient(true, false); / 변수의 초기값을 지정합니다: a = Coefficient(true, true) / 변수의 초기값을 지정합니다: b = Coefficient(true, false)
+L000217 |         var a = Coefficient(true, true); var b = Coefficient(true, false); ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: Coefficient(false, true) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Coefficient(false, false) / 지역 변수를 선언합니다: var c = Coefficient(false, true); / 지역 변수를 선언합니다: var d = Coefficient(false, false); / 변수의 초기값을 지정합니다: c = Coefficient(false, true) / 변수의 초기값을 지정합니다: d = Coefficient(false, false)
+L000218 |         var c = Coefficient(false, true); var d = Coefficient(false, false); ⟦EOL⟧
+// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(a * a + c * c) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(b * b + d * d) / 지역 변수를 선언합니다: var px = pitch * Math.Sqrt(a * a + c * c); / 지역 변수를 선언합니다: var py = pitch * Math.Sqrt(b * b + d * d); / 변수의 초기값을 지정합니다: px = pitch * Math.Sqrt(a * a + c * c) / 변수의 초기값을 지정합니다: py = pitch * Math.Sqrt(b * b + d * d)
+L000219 |         var px = pitch * Math.Sqrt(a * a + c * c); var py = pitch * Math.Sqrt(b * b + d * d); ⟦EOL⟧
+// 해설 L220: 지역 변수를 선언합니다: var radians = angle * Math.PI / 180; / 변수의 초기값을 지정합니다: radians = angle * Math.PI / 180
+L000220 |         var radians = angle * Math.PI / 180; ⟦EOL⟧
+// 해설 L221: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(radians) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(radians) / 지역 변수를 선언합니다: var expected = new[] { Math.Cos(radians), -Math.Sin(radians), Math.Sin(radians), Math.Cos(radians) }; / 변수의 초기값을 지정합니다: expected = new[] { Math.Cos(radians), -Math.Sin(radians), Math.Sin(radians), Math.Cos(radians) }
+L000221 |         var expected = new[] { Math.Cos(radians), -Math.Sin(radians), Math.Sin(radians), Math.Cos(radians) }; ⟦EOL⟧
 // 해설 L222: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000222 |         // position plus the received error locates the real mark. A complete, ⟦EOL⟧
+L000222 |         // Compare the centered fitted grid with the configured DOE grid in mm. ⟦EOL⟧
 // 해설 L223: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000223 |         // symmetric DOE grid's mean is its virtual center, independent of scan ⟦EOL⟧
-// 해설 L224: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000224 |         // order and including the actual camera arrival position. ⟦EOL⟧
-// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Average(m => m.EncoderX - m.CorrectionX) / 지역 변수를 선언합니다: var actualX = result.Marks.Average(m => m.EncoderX - m.CorrectionX); / 변수의 초기값을 지정합니다: actualX = result.Marks.Average(m => m.EncoderX - m.CorrectionX)
-L000225 |         var actualX = result.Marks.Average(m => m.EncoderX - m.CorrectionX); ⟦EOL⟧
-// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Average(m => m.EncoderY - direction * m.CorrectionY) / 지역 변수를 선언합니다: var actualY = result.Marks.Average(m => m.EncoderY - direction * m.CorrectionY); / 변수의 초기값을 지정합니다: actualY = result.Marks.Average(m => m.EncoderY - direction * m.CorrectionY)
-L000226 |         var actualY = result.Marks.Average(m => m.EncoderY - direction * m.CorrectionY); ⟦EOL⟧
-// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { targetX, targetY, actualX, actualY }.Any(v => !double.IsFinite(v)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(v) / 조건에 따라 분기합니다: if (new[] { targetX, targetY, actualX, actualY }.Any(v => !double.IsFinite(v)))
-L000227 |         if (new[] { targetX, targetY, actualX, actualY }.Any(v => !double.IsFinite(v))) ⟦EOL⟧
-// 해설 L228: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("글래스 기준 목표 중심 또는 실측 중심 좌표를 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("글래스 기준 목표 중심 또는 실측 중심 좌표를 확인해 주세요.");
-L000228 |             throw new InvalidOperationException("글래스 기준 목표 중심 또는 실측 중심 좌표를 확인해 주세요."); ⟦EOL⟧
-// 해설 L229: 값을 대상에 대입합니다: TargetReviewX = targetX / 값을 대상에 대입합니다: TargetStageY = targetY / 호출자에게 값 또는 제어를 반환합니다: return result with { TargetReviewX = targetX, TargetStageY = targetY, CenterReviewX = actualX, CenterStageY = actualY, CenterErrorX = actualX - targetX, CenterErrorY = (actualY - targetY) / direction };
-L000229 |         return result with { TargetReviewX = targetX, TargetStageY = targetY, ⟦EOL⟧
-// 해설 L230: 값을 대상에 대입합니다: CenterReviewX = actualX / 값을 대상에 대입합니다: CenterStageY = actualY
-L000230 |             CenterReviewX = actualX, CenterStageY = actualY, ⟦EOL⟧
-// 해설 L231: 값을 대상에 대입합니다: CenterErrorX = actualX - targetX / 값을 대상에 대입합니다: CenterErrorY = (actualY - targetY) / direction
-L000231 |             CenterErrorX = actualX - targetX, CenterErrorY = (actualY - targetY) / direction }; ⟦EOL⟧
-// 해설 L232: 구문 블록 경계입니다 · 소속 WithHeadReference.
-L000232 |     } ⟦EOL⟧
-L000233 |  ⟦EOL⟧
-// 해설 L234: 선언·서명/매개변수·접근 조건입니다 · int[] Drilling.Common.Correction.CDefaultOffsetCalibration.ActiveHeads(System.Collections.Generic.IReadOnlyDictionary<string, string>)
-L000234 |     public static int[] ActiveHeads(IReadOnlyDictionary<string, string> values) => ⟦EOL⟧
-// 해설 L235: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Where(h => CScannerAxisConfiguration.IsHeadEnabled(values, h)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Where(h => CScannerAxisConfiguration.IsHeadEnabled(values, h)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.IsHeadEnabled(values, h)
-L000235 |         Enumerable.Range(1, 8).Where(h => CScannerAxisConfiguration.IsHeadEnabled(values, h)).ToArray(); ⟦EOL⟧
-L000236 |  ⟦EOL⟧
-// 해설 L237: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.Common.Correction.CDefaultOffsetCalibration.Recommend(System.Collections.Generic.IReadOnlyDictionary<string, string>, Drilling.Common.Corr
-L000237 |     public static IReadOnlyDictionary<string, string> Recommend(IReadOnlyDictionary<string, string> values, ST_DEFAULT_OFFSET_OPTIONS options, IReadOnlyCollection<ST_DEFAULT_OFFSET_HEAD_RESULT> results, IReadOnlyCollection<int>? targetHeads = null) ⟦EOL⟧
-// 해설 L238: 구문 블록 경계입니다 · 소속 Recommend.
-L000238 |     { ⟦EOL⟧
-// 해설 L239: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateOptions(options)
-L000239 |         ValidateOptions(options); ⟦EOL⟧
-// 해설 L240: 함수·델리게이트 또는 객체 생성자를 호출합니다: ActiveHeads(values).ToHashSet() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ActiveHeads(values) / 지역 변수를 선언합니다: var active = ActiveHeads(values).ToHashSet(); / 변수의 초기값을 지정합니다: active = ActiveHeads(values).ToHashSet()
-L000240 |         var active = ActiveHeads(values).ToHashSet(); ⟦EOL⟧
-// 해설 L241: 함수·델리게이트 또는 객체 생성자를 호출합니다: (targetHeads ?? active).Order().ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: (targetHeads ?? active).Order() / 지역 변수를 선언합니다: var targets = (targetHeads ?? active).Order().ToArray(); / 변수의 초기값을 지정합니다: targets = (targetHeads ?? active).Order().ToArray()
-L000241 |         var targets = (targetHeads ?? active).Order().ToArray(); ⟦EOL⟧
-// 해설 L242: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Distinct().Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Distinct() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Any(h => !active.Contains(h)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: active.Contains(h) / 조건에 따라 분기합니다: if (targets.Length == 0 || targets.Distinct().Count() != targets.Length || targets.Any(h => !active.Contains(h)))
-L000242 |         if (targets.Length == 0 || targets.Distinct().Count() != targets.Length || targets.Any(h => !active.Contains(h))) ⟦EOL⟧
-// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("USE인 가공 대상 Head를 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("USE인 가공 대상 Head를 확인해 주세요.");
-L000243 |             throw new InvalidOperationException("USE인 가공 대상 Head를 확인해 주세요."); ⟦EOL⟧
-// 해설 L244: 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Select(r => r.Head).Order().SequenceEqual(targets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Select(r => r.Head).Order() / 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Select(r => r.Head) / 조건에 따라 분기합니다: if (results.Count != targets.Length || !results.Select(r => r.Head).Order().SequenceEqual(targets))
-L000244 |         if (results.Count != targets.Length || !results.Select(r => r.Head).Order().SequenceEqual(targets)) ⟦EOL⟧
-// 해설 L245: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{targets.Length}개 Head(USE)의 유효한 측정을 모두 완료해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{targets.Length}개 Head(USE)의 유효한 측정을 모두 완료해 주세요.");
-L000245 |             throw new InvalidOperationException($"{targets.Length}개 Head(USE)의 유효한 측정을 모두 완료해 주세요."); ⟦EOL⟧
-// 해설 L246: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var changes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: changes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-L000246 |         var changes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
-// 해설 L247: 컬렉션 요소를 순회합니다: foreach (var r in results)
-L000247 |         foreach (var r in results) ⟦EOL⟧
-// 해설 L248: 구문 블록 경계입니다 · 소속 Recommend.
-L000248 |         { ⟦EOL⟧
-// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: WithHeadReference(values, options, r) / 지역 변수를 선언합니다: var center = WithHeadReference(values, options, r); / 변수의 초기값을 지정합니다: center = WithHeadReference(values, options, r)
-L000249 |             var center = WithHeadReference(values, options, r); ⟦EOL⟧
-// 해설 L250: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000250 |             // Add the needed correction to the currently used Head Default. ⟦EOL⟧
-// 해설 L251: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000251 |             // Head axis flips are applied later by the scanner/script planner. ⟦EOL⟧
-// 해설 L252: 컬렉션 요소를 순회합니다: foreach (var (axis, error) in new[] { ("X", center.CenterErrorX), ("Y", center.CenterErrorY) }) { var key = $"H{r.Head:00}_DEFAULT_OFFSET_{axis}"; var next = Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero
-L000252 |             foreach (var (axis, error) in new[] { ("X", center.CenterErrorX), ("Y", center.CenterErrorY) }) ⟦EOL⟧
-// 해설 L253: 구문 블록 경계입니다 · 소속 Recommend.
-L000253 |             { ⟦EOL⟧
-// 해설 L254: 지역 변수를 선언합니다: var key = $"H{r.Head:00}_DEFAULT_OFFSET_{axis}"; / 변수의 초기값을 지정합니다: key = $"H{r.Head:00}_DEFAULT_OFFSET_{axis}"
-L000254 |                 var key = $"H{r.Head:00}_DEFAULT_OFFSET_{axis}"; ⟦EOL⟧
-// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, key) / 지역 변수를 선언합니다: var next = Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero); / 변수의 초기값을 지정합니다: next = Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero)
-L000255 |                 var next = Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero); ⟦EOL⟧
-// 해설 L256: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(next) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(next) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {r.Head:00} Default {axis}가 레시피 허용범위 ±100 mm를 초과합니다.") / 조건에 따라 분기합니다: if (!double.IsFinite(next) || Math.Abs(next) > 100) / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {r.Head:00} Default {axis}가 레시피 허용범위 ±100 mm를 초과합니다.");
-L000256 |                 if (!double.IsFinite(next) || Math.Abs(next) > 100) throw new InvalidOperationException($"HEAD {r.Head:00} Default {axis}가 레시피 허용범위 ±100 mm를 초과합니다."); ⟦EOL⟧
-// 해설 L257: 값을 대상에 대입합니다: changes[key] = next.ToString("0.00000", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: next.ToString("0.00000", CultureInfo.InvariantCulture)
-L000257 |                 changes[key] = next.ToString("0.00000", CultureInfo.InvariantCulture); ⟦EOL⟧
-// 해설 L258: 구문 블록 경계입니다 · 소속 Recommend.
-L000258 |             } ⟦EOL⟧
-// 해설 L259: 구문 블록 경계입니다 · 소속 Recommend.
-L000259 |         } ⟦EOL⟧
-// 해설 L260: 호출자에게 값 또는 제어를 반환합니다: return changes;
-L000260 |         return changes; ⟦EOL⟧
-// 해설 L261: 구문 블록 경계입니다 · 소속 Recommend.
-L000261 |     } ⟦EOL⟧
-// 해설 L262: 구문 블록 경계입니다.
-L000262 | } ⟦EOL⟧
-L000263 |  ⟦EOL⟧
-// 해설 L264: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE.Shot
-L000264 | public enum EN_DEFAULT_MACHINING_MODE { Shot, Cross } ⟦EOL⟧
-// 해설 L265: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_OFFSET_OPTIONS(double AlignKey1ReviewX, double AlignKey3ReviewX, double TestStageY, double Tolerance)
-L000265 | public sealed record ST_DEFAULT_OFFSET_OPTIONS(double AlignKey1ReviewX, double AlignKey3ReviewX, double TestStageY, double Tolerance) ⟦EOL⟧
-// 해설 L266: 구문 블록 경계입니다.
-L000266 | { ⟦EOL⟧
-// 해설 L267: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.BoardCenterX
-L000267 |     public double BoardCenterX => (AlignKey1ReviewX + AlignKey3ReviewX) / 2; ⟦EOL⟧
-// 해설 L268: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.MachiningMode
-L000268 |     public EN_DEFAULT_MACHINING_MODE MachiningMode { get; init; } = EN_DEFAULT_MACHINING_MODE.Shot; ⟦EOL⟧
-// 해설 L269: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.CrossSize
-L000269 |     public double CrossSize { get; init; } = 0.1; ⟦EOL⟧
-// 해설 L270: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.DoeBeamGridSize
-L000270 |     public int DoeBeamGridSize { get; init; } = 4; ⟦EOL⟧
-// 해설 L271: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.InspectionPointCount
-L000271 |     public int InspectionPointCount => DoeBeamGridSize * DoeBeamGridSize; ⟦EOL⟧
-// 해설 L272: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000272 |     // The inspection command is part of the machining contract, not an independent ⟦EOL⟧
-// 해설 L273: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000273 |     // operator option. Both modes inspect every DOE beam slot; a cross uses the ⟦EOL⟧
-// 해설 L274: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000274 |     // registered setting mark while a shot uses the normal single-mark command. ⟦EOL⟧
-// 해설 L275: 조건에 따라 결과식을 선택합니다: MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? EN_ONE_SHOT_METHOD.MarkFindSettingSingle : EN_ONE_SHOT_METHOD.MarkFindSingle
-L000275 |     public EN_ONE_SHOT_METHOD VisionMethod => MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ⟦EOL⟧
-// 해설 L276: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_ONE_SHOT_METHOD Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.VisionMethod
-L000276 |         ? EN_ONE_SHOT_METHOD.MarkFindSettingSingle ⟦EOL⟧
-// 해설 L277: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_ONE_SHOT_METHOD Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.VisionMethod
-L000277 |         : EN_ONE_SHOT_METHOD.MarkFindSingle; ⟦EOL⟧
-// 해설 L278: 조건에 따라 결과식을 선택합니다: MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? $"DOE {InspectionPointCount}개 십자 측정" : $"DOE {InspectionPointCount}빔 측정"
-L000278 |     public string InspectionDescription => MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ⟦EOL⟧
-// 해설 L279: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.InspectionDescription
-L000279 |         ? $"DOE {InspectionPointCount}개 십자 측정" ⟦EOL⟧
-// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.InspectionDescription
-L000280 |         : $"DOE {InspectionPointCount}빔 측정"; ⟦EOL⟧
-// 해설 L281: 조건에 따라 결과식을 선택합니다: MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? $"십자 가공 · DOE {DoeBeamGridSize}×{DoeBeamGridSize}, 총 {InspectionPointCount}개 형상 · 전체 길이 {CrossSize.ToString("0.#####", CultureInfo.InvariantCulture)} mm · Head Jump Speed 사용" : $"
-L000281 |     public string MachiningDescription => MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ⟦EOL⟧
-// 해설 L282: 함수·델리게이트 또는 객체 생성자를 호출합니다: CrossSize.ToString("0.#####", CultureInfo.InvariantCulture)
-L000282 |         ? $"십자 가공 · DOE {DoeBeamGridSize}×{DoeBeamGridSize}, 총 {InspectionPointCount}개 형상 · 전체 길이 {CrossSize.ToString("0.#####", CultureInfo.InvariantCulture)} mm · Head Jump Speed 사용" ⟦EOL⟧
-// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.MachiningDescription
-L000283 |         : $"샷 가공 · DOE {DoeBeamGridSize}×{DoeBeamGridSize}, 총 {InspectionPointCount}빔 · Head Shot Count 사용"; ⟦EOL⟧
-// 해설 L284: 조건에 따라 결과식을 선택합니다: VisionMethod == EN_ONE_SHOT_METHOD.MarkFindSettingSingle ? "Mark Find Setting Single" : "Mark Find Single"
-L000284 |     public string VisionDescription => VisionMethod == EN_ONE_SHOT_METHOD.MarkFindSettingSingle ? "Mark Find Setting Single" : "Mark Find Single"; ⟦EOL⟧
-// 해설 L285: 구문 블록 경계입니다.
-L000285 | } ⟦EOL⟧
-// 해설 L286: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_HEAD_GEOMETRY(double FieldHalfX, double FieldHalfY, double DoeAngle);
-L000286 | public sealed record ST_DEFAULT_HEAD_GEOMETRY(double FieldHalfX, double FieldHalfY, double DoeAngle); ⟦EOL⟧
-// 해설 L287: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_PREVIEW_POINT(int Head, double StageY, double X, double Y, bool IsOnGlass);
-L000287 | public sealed record ST_DEFAULT_PREVIEW_POINT(int Head, double StageY, double X, double Y, bool IsOnGlass); ⟦EOL⟧
-// 해설 L288: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_OFFSET_MARK(int Beam, double X, double Y, double RawX, double RawY, double CorrectionX, double CorrectionY, double EncoderX, double EncoderY, DateTimeOffset CapturedAt,
-L000288 | public sealed record ST_DEFAULT_OFFSET_MARK(int Beam, double X, double Y, double RawX, double RawY, double CorrectionX, double CorrectionY, double EncoderX, double EncoderY, DateTimeOffset CapturedAt, string Judge); ⟦EOL⟧
-// 해설 L289: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_OFFSET_FIT(double X, double Y, double Residual, double PitchX, double PitchY);
-L000289 | public sealed record ST_DEFAULT_OFFSET_FIT(double X, double Y, double Residual, double PitchX, double PitchY); ⟦EOL⟧
-// 해설 L290: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_OFFSET_HEAD_RESULT(int Head, Guid TestId, double Q, double R, bool AutomationSimulation, bool StageSimulation, bool VisionSimulation, IReadOnlyList<ST_DEFAULT_OFFSET_MA
-L000290 | public sealed record ST_DEFAULT_OFFSET_HEAD_RESULT(int Head, Guid TestId, double Q, double R, bool AutomationSimulation, bool StageSimulation, bool VisionSimulation, IReadOnlyList<ST_DEFAULT_OFFSET_MARK> Marks, ST_DEFAULT_OFFSET_FIT Fit) ⟦EOL⟧
-// 해설 L291: 구문 블록 경계입니다.
-L000291 | { ⟦EOL⟧
-// 해설 L292: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Model
-L000292 |     public int Model { get; init; } = 1; ⟦EOL⟧
-// 해설 L293: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.ReferenceCell
-L000293 |     public int ReferenceCell { get; init; } = 1; ⟦EOL⟧
-// 해설 L294: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY? Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Geometry
-L000294 |     public ST_DEFAULT_HEAD_GEOMETRY? Geometry { get; init; } ⟦EOL⟧
-// 해설 L295: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetReviewX
-L000295 |     public double TargetReviewX { get; init; } = double.NaN; ⟦EOL⟧
-// 해설 L296: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetStageY
-L000296 |     public double TargetStageY { get; init; } = double.NaN; ⟦EOL⟧
-// 해설 L297: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterReviewX
-L000297 |     public double CenterReviewX { get; init; } = double.NaN; ⟦EOL⟧
-// 해설 L298: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterStageY
-L000298 |     public double CenterStageY { get; init; } = double.NaN; ⟦EOL⟧
-// 해설 L299: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorX
-L000299 |     public double CenterErrorX { get; init; } = double.NaN; ⟦EOL⟧
-// 해설 L300: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorY
-L000300 |     public double CenterErrorY { get; init; } = double.NaN; ⟦EOL⟧
-// 해설 L301: 구문 블록 경계입니다.
-L000301 | } ⟦EOL⟧
-// 해설 L302: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_OFFSET_LOG(Guid SessionId, string Recipe, string Action, DateTimeOffset Time, ST_DEFAULT_OFFSET_OPTIONS Options, IReadOnlyCollection<ST_DEFAULT_OFFSET_HEAD_RESULT> Resu
-L000302 | public sealed record ST_DEFAULT_OFFSET_LOG(Guid SessionId, string Recipe, string Action, DateTimeOffset Time, ST_DEFAULT_OFFSET_OPTIONS Options, IReadOnlyCollection<ST_DEFAULT_OFFSET_HEAD_RESULT> Results, IReadOnlyDictionary<string, string> Before, IReadOnlyDictionary<string, string> After); ⟦EOL⟧
+L000223 |         // Reuse Recipe Review tolerance instead of a separate arbitrary ratio. ⟦EOL⟧
+// 해설 L224: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, beamCount).Max(beam => { var u = ((beam - 1) % gridSize - center) * pitch; var v = ((beam - 1) / gridSize - center) * pitch; return Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2)… / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, beamCount) / 지역 변수를 선언합니다: var gridError = Enumerable.Range(1, beamCount).Max(beam => { var u = ((beam - 1) % gridSize - center) * pitch; var v = ((beam - 1) / gridSize - center) * pitch; return Math.Sqrt(Math.Pow((a - expected[0]) * u + (b -
+L000224 |         var gridError = Enumerable.Range(1, beamCount).Max(beam => ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 Fit.
+L000225 |         { ⟦EOL⟧
+// 해설 L226: 지역 변수를 선언합니다: var u = ((beam - 1) % gridSize - center) * pitch; / 지역 변수를 선언합니다: var v = ((beam - 1) / gridSize - center) * pitch; / 변수의 초기값을 지정합니다: u = ((beam - 1) % gridSize - center) * pitch / 변수의 초기값을 지정합니다: v = ((beam - 1) / gridSize - center) * pitch
+L000226 |             var u = ((beam - 1) % gridSize - center) * pitch; var v = ((beam - 1) / gridSize - center) * pitch; ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) + Math.Pow((c - expected[2]) * u + (d - expected[3]) * v, 2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow((c - expected[2]) * u + (d - expected[3]) * v, 2) / 호출자에게 값 또는 제어를 반환합니다: return Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) + Math.Pow((c - expected[2]) * u + (d - expected[3]) * v, 2));
+L000227 |             return Math.Sqrt(Math.Pow((a - expected[0]) * u + (b - expected[1]) * v, 2) + Math.Pow((c - expected[2]) * u + (d - expected[3]) * v, 2)); ⟦EOL⟧
+// 해설 L228: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT Drilling.Common.Correction.CDefaultOffsetCalibration.Fit(System.Collections.Generic.IReadOnlyList<Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK>, int, double
+L000228 |         }); ⟦EOL⟧
+// 해설 L229: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(px) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(py) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(gridError) / 조건에 따라 분기합니다: if (!double.IsFinite(px) || !double.IsFinite(py) || !double.IsFinite(gridError) || gridError > residualTolerance)
+L000229 |         if (!double.IsFinite(px) || !double.IsFinite(py) || !double.IsFinite(gridError) || gridError > residualTolerance) ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("실측 Pitch/방향이 예상 DOE 배열과 다릅니다. 슬롯·DOE 각도·Vision Flip을 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("실측 Pitch/방향이 예상 DOE 배열과 다릅니다. 슬롯·DOE 각도·Vision Flip을 확인해 주세요.");
+L000230 |             throw new InvalidOperationException("실측 Pitch/방향이 예상 DOE 배열과 다릅니다. 슬롯·DOE 각도·Vision Flip을 확인해 주세요."); ⟦EOL⟧
+// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: marks.Max(m => { var u = ((m.Beam - 1) % gridSize - center) * pitch; var v = ((m.Beam - 1) / gridSize - center) * pitch; return Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2)); }) / 지역 변수를 선언합니다: var residual = marks.Max(m => { var u = ((m.Beam - 1) % gridSize - center) * pitch; var v = ((m.Beam - 1) / gridSize - center) * pitch; return Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2) / 변수의 초기값을 지정합니다: residual = marks.Max(m => {
+L000231 |         var residual = marks.Max(m => ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 Fit.
+L000232 |         { ⟦EOL⟧
+// 해설 L233: 지역 변수를 선언합니다: var u = ((m.Beam - 1) % gridSize - center) * pitch; / 지역 변수를 선언합니다: var v = ((m.Beam - 1) / gridSize - center) * pitch; / 변수의 초기값을 지정합니다: u = ((m.Beam - 1) % gridSize - center) * pitch / 변수의 초기값을 지정합니다: v = ((m.Beam - 1) / gridSize - center) * pitch
+L000233 |             var u = ((m.Beam - 1) % gridSize - center) * pitch; var v = ((m.Beam - 1) / gridSize - center) * pitch; ⟦EOL⟧
+// 해설 L234: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow(m.X - cx - a * u - b * v, 2) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Pow(m.Y - cy - c * u - d * v, 2) / 호출자에게 값 또는 제어를 반환합니다: return Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2));
+L000234 |             return Math.Sqrt(Math.Pow(m.X - cx - a * u - b * v, 2) + Math.Pow(m.Y - cy - c * u - d * v, 2)); ⟦EOL⟧
+// 해설 L235: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_OFFSET_FIT Drilling.Common.Correction.CDefaultOffsetCalibration.Fit(System.Collections.Generic.IReadOnlyList<Drilling.Common.Correction.ST_DEFAULT_OFFSET_MARK>, int, double
+L000235 |         }); ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(residual) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{beamCount}빔 위치 오차 {residual:0.0000} mm가 허용값을 초과했습니다.") / 조건에 따라 분기합니다: if (!double.IsFinite(residual) || residual > residualTolerance) / 예외를 발생/전달합니다: throw new InvalidOperationException($"{beamCount}빔 위치 오차 {residual:0.0000} mm가 허용값을 초과했습니다.");
+L000236 |         if (!double.IsFinite(residual) || residual > residualTolerance) throw new InvalidOperationException($"{beamCount}빔 위치 오차 {residual:0.0000} mm가 허용값을 초과했습니다."); ⟦EOL⟧
+// 해설 L237: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(cx, cy, residual, px, py) / 호출자에게 값 또는 제어를 반환합니다: return new(cx, cy, residual, px, py);
+L000237 |         return new(cx, cy, residual, px, py); ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 Fit.
+L000238 |     } ⟦EOL⟧
+L000239 |  ⟦EOL⟧
+// 해설 L240: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000240 |     // The global reference never comes from a previously measured Head. H4/H5 ⟦EOL⟧
+// 해설 L241: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000241 |     // straddle the glass center; the configured pitch locates every other Head. ⟦EOL⟧
+// 해설 L242: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000242 |     // Stage Y targets preserve the machine's odd/even Head row separation. ⟦EOL⟧
+// 해설 L243: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT Drilling.Common.Correction.CDefaultOffsetCalibration.WithHeadReference(System.Collections.Generic.IReadOnlyDictionary<string, string>, Drilling.Common.Co
+L000243 |     public static ST_DEFAULT_OFFSET_HEAD_RESULT WithHeadReference(IReadOnlyDictionary<string, string> values, ST_DEFAULT_OFFSET_OPTIONS options, ST_DEFAULT_OFFSET_HEAD_RESULT result) ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 WithHeadReference.
+L000244 |     { ⟦EOL⟧
+// 해설 L245: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateOptions(options)
+L000245 |         ValidateOptions(options); ⟦EOL⟧
+// 해설 L246: 지역 변수를 선언합니다: var hasCompleteDoeMeasurement = result.Marks.Count is 1 or 16 && result.Marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, result.Marks.Count)); / 변수의 초기값을 지정합니다: hasCompleteDoeMeasurement = result.Marks.Count is 1 or 16 && result.Marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, result.Marks.Count))
+L000246 |         var hasCompleteDoeMeasurement = result.Marks.Count is 1 or 16 && ⟦EOL⟧
+// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, result.Marks.Count)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Select(m => m.Beam).Order() / 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Select(m => m.Beam) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, result.Marks.Count)
+L000247 |             result.Marks.Select(m => m.Beam).Order().SequenceEqual(Enumerable.Range(1, result.Marks.Count)); ⟦EOL⟧
+// 해설 L248: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(result.Q) / 조건에 따라 분기합니다: if (result.Head is < 1 or > 8 || !double.IsFinite(result.Q) || !hasCompleteDoeMeasurement || result.Marks.Any(m => !double.IsFinite(m.EncoderX) || !double.IsFinite(m.EncoderY) || !double.IsFinite(m.CorrectionX) || !double.Is…)
+L000248 |         if (result.Head is < 1 or > 8 || !double.IsFinite(result.Q) || !hasCompleteDoeMeasurement || ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Any(m => !double.IsFinite(m.EncoderX) || !double.IsFinite(m.EncoderY) || !double.IsFinite(m.CorrectionX) || !double.IsFinite(m.CorrectionY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(m.EncoderX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(m.EncoderY)
+L000249 |             result.Marks.Any(m => !double.IsFinite(m.EncoderX) || !double.IsFinite(m.EncoderY) || ⟦EOL⟧
+// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(m.CorrectionX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(m.CorrectionY)
+L000250 |                 !double.IsFinite(m.CorrectionX) || !double.IsFinite(m.CorrectionY))) ⟦EOL⟧
+// 해설 L251: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Head 중심 계산에 중앙 1점 또는 완전한 DOE 16점 측정 좌표가 필요합니다.") / 예외를 발생/전달합니다: throw new InvalidOperationException("Head 중심 계산에 중앙 1점 또는 완전한 DOE 16점 측정 좌표가 필요합니다.");
+L000251 |             throw new InvalidOperationException("Head 중심 계산에 중앙 1점 또는 완전한 DOE 16점 측정 좌표가 필요합니다."); ⟦EOL⟧
+// 해설 L252: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "HeadGapX") / 지역 변수를 선언합니다: var targetX = options.BoardCenterX + (result.Head - 4.5) * Number(values, "HeadGapX"); / 변수의 초기값을 지정합니다: targetX = options.BoardCenterX + (result.Head - 4.5) * Number(values, "HeadGapX")
+L000252 |         var targetX = options.BoardCenterX + (result.Head - 4.5) * Number(values, "HeadGapX"); ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisTransform.ReadStageDirection(values) / 지역 변수를 선언합니다: var direction = CScannerAxisTransform.ReadStageDirection(values); / 변수의 초기값을 지정합니다: direction = CScannerAxisTransform.ReadStageDirection(values)
+L000253 |         var direction = CScannerAxisTransform.ReadStageDirection(values); ⟦EOL⟧
+// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.ContainsKey($"H{result.Head:00}_AK_POSITION_Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, $"H{result.Head:00}_AK_POSITION_Y") / 조건에 따라 결과식을 선택합니다: values.ContainsKey($"H{result.Head:00}_AK_POSITION_Y") ? Number(values, $"H{result.Head:00}_AK_POSITION_Y") : Number(values, "REVIEW_TO_HEAD1_GAP_Y") + (result.Head % 2 == 0 ? Number(values, "HeadGapY") : 0) / 지역 변수를 선언합니다: var gapY = values.ContainsKey($"H{result.Head:00}_AK_POSITION_Y") ? Number(values, $"H{result.Head:00}_AK_POSITION_Y") : Number(value
+L000254 |         var gapY = values.ContainsKey($"H{result.Head:00}_AK_POSITION_Y") ? Number(values, $"H{result.Head:00}_AK_POSITION_Y") ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "REVIEW_TO_HEAD1_GAP_Y") / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, "HeadGapY") / 조건에 따라 결과식을 선택합니다: result.Head % 2 == 0 ? Number(values, "HeadGapY") : 0
+L000255 |             : Number(values, "REVIEW_TO_HEAD1_GAP_Y") + (result.Head % 2 == 0 ? Number(values, "HeadGapY") : 0); ⟦EOL⟧
+// 해설 L256: 지역 변수를 선언합니다: var targetY = result.Q - direction * gapY; / 변수의 초기값을 지정합니다: targetY = result.Q - direction * gapY
+L000256 |         var targetY = result.Q - direction * gapY; ⟦EOL⟧
+// 해설 L257: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000257 |         // Vision Flip has already put Target-Hole in design mm. Each encoder ⟦EOL⟧
+// 해설 L258: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000258 |         // position plus the received error locates the real mark. A complete, ⟦EOL⟧
+// 해설 L259: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000259 |         // symmetric DOE grid's mean is its virtual center, independent of scan ⟦EOL⟧
+// 해설 L260: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000260 |         // order and including the actual camera arrival position. ⟦EOL⟧
+// 해설 L261: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Average(m => m.EncoderX - m.CorrectionX) / 지역 변수를 선언합니다: var actualX = result.Marks.Average(m => m.EncoderX - m.CorrectionX); / 변수의 초기값을 지정합니다: actualX = result.Marks.Average(m => m.EncoderX - m.CorrectionX)
+L000261 |         var actualX = result.Marks.Average(m => m.EncoderX - m.CorrectionX); ⟦EOL⟧
+// 해설 L262: 함수·델리게이트 또는 객체 생성자를 호출합니다: result.Marks.Average(m => m.EncoderY - direction * m.CorrectionY) / 지역 변수를 선언합니다: var actualY = result.Marks.Average(m => m.EncoderY - direction * m.CorrectionY); / 변수의 초기값을 지정합니다: actualY = result.Marks.Average(m => m.EncoderY - direction * m.CorrectionY)
+L000262 |         var actualY = result.Marks.Average(m => m.EncoderY - direction * m.CorrectionY); ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { targetX, targetY, actualX, actualY }.Any(v => !double.IsFinite(v)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(v) / 조건에 따라 분기합니다: if (new[] { targetX, targetY, actualX, actualY }.Any(v => !double.IsFinite(v)))
+L000263 |         if (new[] { targetX, targetY, actualX, actualY }.Any(v => !double.IsFinite(v))) ⟦EOL⟧
+// 해설 L264: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("글래스 기준 목표 중심 또는 실측 중심 좌표를 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("글래스 기준 목표 중심 또는 실측 중심 좌표를 확인해 주세요.");
+L000264 |             throw new InvalidOperationException("글래스 기준 목표 중심 또는 실측 중심 좌표를 확인해 주세요."); ⟦EOL⟧
+// 해설 L265: 값을 대상에 대입합니다: TargetReviewX = targetX / 값을 대상에 대입합니다: TargetStageY = targetY / 호출자에게 값 또는 제어를 반환합니다: return result with { TargetReviewX = targetX, TargetStageY = targetY, CenterReviewX = actualX, CenterStageY = actualY, CenterErrorX = actualX - targetX, CenterErrorY = (actualY - targetY) / direction };
+L000265 |         return result with { TargetReviewX = targetX, TargetStageY = targetY, ⟦EOL⟧
+// 해설 L266: 값을 대상에 대입합니다: CenterReviewX = actualX / 값을 대상에 대입합니다: CenterStageY = actualY
+L000266 |             CenterReviewX = actualX, CenterStageY = actualY, ⟦EOL⟧
+// 해설 L267: 값을 대상에 대입합니다: CenterErrorX = actualX - targetX / 값을 대상에 대입합니다: CenterErrorY = (actualY - targetY) / direction
+L000267 |             CenterErrorX = actualX - targetX, CenterErrorY = (actualY - targetY) / direction }; ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 WithHeadReference.
+L000268 |     } ⟦EOL⟧
+L000269 |  ⟦EOL⟧
+// 해설 L270: 선언·서명/매개변수·접근 조건입니다 · int[] Drilling.Common.Correction.CDefaultOffsetCalibration.ActiveHeads(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000270 |     public static int[] ActiveHeads(IReadOnlyDictionary<string, string> values) => ⟦EOL⟧
+// 해설 L271: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Where(h => CScannerAxisConfiguration.IsHeadEnabled(values, h)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8).Where(h => CScannerAxisConfiguration.IsHeadEnabled(values, h)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.IsHeadEnabled(values, h)
+L000271 |         Enumerable.Range(1, 8).Where(h => CScannerAxisConfiguration.IsHeadEnabled(values, h)).ToArray(); ⟦EOL⟧
+L000272 |  ⟦EOL⟧
+// 해설 L273: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyDictionary<string, string> Drilling.Common.Correction.CDefaultOffsetCalibration.Recommend(System.Collections.Generic.IReadOnlyDictionary<string, string>, Drilling.Common.Corr
+L000273 |     public static IReadOnlyDictionary<string, string> Recommend(IReadOnlyDictionary<string, string> values, ST_DEFAULT_OFFSET_OPTIONS options, IReadOnlyCollection<ST_DEFAULT_OFFSET_HEAD_RESULT> results, IReadOnlyCollection<int>? targetHeads = null) ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 Recommend.
+L000274 |     { ⟦EOL⟧
+// 해설 L275: 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateOptions(options)
+L000275 |         ValidateOptions(options); ⟦EOL⟧
+// 해설 L276: 함수·델리게이트 또는 객체 생성자를 호출합니다: ActiveHeads(values).ToHashSet() / 함수·델리게이트 또는 객체 생성자를 호출합니다: ActiveHeads(values) / 지역 변수를 선언합니다: var active = ActiveHeads(values).ToHashSet(); / 변수의 초기값을 지정합니다: active = ActiveHeads(values).ToHashSet()
+L000276 |         var active = ActiveHeads(values).ToHashSet(); ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: (targetHeads ?? active).Order().ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: (targetHeads ?? active).Order() / 지역 변수를 선언합니다: var targets = (targetHeads ?? active).Order().ToArray(); / 변수의 초기값을 지정합니다: targets = (targetHeads ?? active).Order().ToArray()
+L000277 |         var targets = (targetHeads ?? active).Order().ToArray(); ⟦EOL⟧
+// 해설 L278: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Distinct().Count() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Distinct() / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Any(h => !active.Contains(h)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: active.Contains(h) / 조건에 따라 분기합니다: if (targets.Length == 0 || targets.Distinct().Count() != targets.Length || targets.Any(h => !active.Contains(h)))
+L000278 |         if (targets.Length == 0 || targets.Distinct().Count() != targets.Length || targets.Any(h => !active.Contains(h))) ⟦EOL⟧
+// 해설 L279: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("USE인 가공 대상 Head를 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException("USE인 가공 대상 Head를 확인해 주세요.");
+L000279 |             throw new InvalidOperationException("USE인 가공 대상 Head를 확인해 주세요."); ⟦EOL⟧
+// 해설 L280: 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Select(r => r.Head).Order().SequenceEqual(targets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Select(r => r.Head).Order() / 함수·델리게이트 또는 객체 생성자를 호출합니다: results.Select(r => r.Head) / 조건에 따라 분기합니다: if (results.Count != targets.Length || !results.Select(r => r.Head).Order().SequenceEqual(targets))
+L000280 |         if (results.Count != targets.Length || !results.Select(r => r.Head).Order().SequenceEqual(targets)) ⟦EOL⟧
+// 해설 L281: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{targets.Length}개 Head(USE)의 유효한 측정을 모두 완료해 주세요.") / 예외를 발생/전달합니다: throw new InvalidOperationException($"{targets.Length}개 Head(USE)의 유효한 측정을 모두 완료해 주세요.");
+L000281 |             throw new InvalidOperationException($"{targets.Length}개 Head(USE)의 유효한 측정을 모두 완료해 주세요."); ⟦EOL⟧
+// 해설 L282: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var changes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: changes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+L000282 |         var changes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L283: 컬렉션 요소를 순회합니다: foreach (var r in results)
+L000283 |         foreach (var r in results) ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다 · 소속 Recommend.
+L000284 |         { ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: WithHeadReference(values, options, r) / 지역 변수를 선언합니다: var center = WithHeadReference(values, options, r); / 변수의 초기값을 지정합니다: center = WithHeadReference(values, options, r)
+L000285 |             var center = WithHeadReference(values, options, r); ⟦EOL⟧
+// 해설 L286: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000286 |             // Add the needed correction to the currently used Head Default. ⟦EOL⟧
+// 해설 L287: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000287 |             // Head axis flips are applied later by the scanner/script planner. ⟦EOL⟧
+// 해설 L288: 컬렉션 요소를 순회합니다: foreach (var (axis, error) in new[] { ("X", center.CenterErrorX), ("Y", center.CenterErrorY) }) { var key = $"H{r.Head:00}_DEFAULT_OFFSET_{axis}"; var next = Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero
+L000288 |             foreach (var (axis, error) in new[] { ("X", center.CenterErrorX), ("Y", center.CenterErrorY) }) ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다 · 소속 Recommend.
+L000289 |             { ⟦EOL⟧
+// 해설 L290: 지역 변수를 선언합니다: var key = $"H{r.Head:00}_DEFAULT_OFFSET_{axis}"; / 변수의 초기값을 지정합니다: key = $"H{r.Head:00}_DEFAULT_OFFSET_{axis}"
+L000290 |                 var key = $"H{r.Head:00}_DEFAULT_OFFSET_{axis}"; ⟦EOL⟧
+// 해설 L291: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(values, key) / 지역 변수를 선언합니다: var next = Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero); / 변수의 초기값을 지정합니다: next = Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero)
+L000291 |                 var next = Math.Round(Number(values, key) - error, 5, MidpointRounding.AwayFromZero); ⟦EOL⟧
+// 해설 L292: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(next) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(next) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"HEAD {r.Head:00} Default {axis}가 레시피 허용범위 ±100 mm를 초과합니다.") / 조건에 따라 분기합니다: if (!double.IsFinite(next) || Math.Abs(next) > 100) / 예외를 발생/전달합니다: throw new InvalidOperationException($"HEAD {r.Head:00} Default {axis}가 레시피 허용범위 ±100 mm를 초과합니다.");
+L000292 |                 if (!double.IsFinite(next) || Math.Abs(next) > 100) throw new InvalidOperationException($"HEAD {r.Head:00} Default {axis}가 레시피 허용범위 ±100 mm를 초과합니다."); ⟦EOL⟧
+// 해설 L293: 값을 대상에 대입합니다: changes[key] = next.ToString("0.00000", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: next.ToString("0.00000", CultureInfo.InvariantCulture)
+L000293 |                 changes[key] = next.ToString("0.00000", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 Recommend.
+L000294 |             } ⟦EOL⟧
+// 해설 L295: 구문 블록 경계입니다 · 소속 Recommend.
+L000295 |         } ⟦EOL⟧
+// 해설 L296: 호출자에게 값 또는 제어를 반환합니다: return changes;
+L000296 |         return changes; ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 Recommend.
+L000297 |     } ⟦EOL⟧
+// 해설 L298: 구문 블록 경계입니다.
+L000298 | } ⟦EOL⟧
+L000299 |  ⟦EOL⟧
+// 해설 L300: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE.Shot
+L000300 | public enum EN_DEFAULT_MACHINING_MODE { Shot, Cross } ⟦EOL⟧
+// 해설 L301: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_OFFSET_OPTIONS(double AlignKey1ReviewX, double AlignKey3ReviewX, double TestStageY, double Tolerance)
+L000301 | public sealed record ST_DEFAULT_OFFSET_OPTIONS(double AlignKey1ReviewX, double AlignKey3ReviewX, double TestStageY, double Tolerance) ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다.
+L000302 | { ⟦EOL⟧
+// 해설 L303: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.BoardCenterX
+L000303 |     public double BoardCenterX => (AlignKey1ReviewX + AlignKey3ReviewX) / 2; ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.EN_DEFAULT_MACHINING_MODE Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.MachiningMode
+L000304 |     public EN_DEFAULT_MACHINING_MODE MachiningMode { get; init; } = EN_DEFAULT_MACHINING_MODE.Shot; ⟦EOL⟧
+// 해설 L305: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.CrossSize
+L000305 |     public double CrossSize { get; init; } = 0.1; ⟦EOL⟧
+// 해설 L306: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.DoeBeamGridSize
+L000306 |     public int DoeBeamGridSize { get; init; } = 4; ⟦EOL⟧
+// 해설 L307: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000307 |     // Nominal point count for a Head with DOE. DOE_EXIST=OFF is overridden to ⟦EOL⟧
+// 해설 L308: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000308 |     // one center point by DefaultInspectionGridSize. ⟦EOL⟧
+// 해설 L309: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.InspectionPointCount
+L000309 |     public int InspectionPointCount => DoeBeamGridSize * DoeBeamGridSize; ⟦EOL⟧
+// 해설 L310: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000310 |     // The inspection command is part of the machining contract, not an independent ⟦EOL⟧
+// 해설 L311: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000311 |     // operator option. A DOE Head inspects every optical slot; a no-DOE Head ⟦EOL⟧
+// 해설 L312: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000312 |     // inspects its center once. Cross uses the registered setting mark while Shot ⟦EOL⟧
+// 해설 L313: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000313 |     // uses the normal single-mark command. ⟦EOL⟧
+// 해설 L314: 조건에 따라 결과식을 선택합니다: MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? EN_ONE_SHOT_METHOD.MarkFindSettingSingle : EN_ONE_SHOT_METHOD.MarkFindSingle
+L000314 |     public EN_ONE_SHOT_METHOD VisionMethod => MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ⟦EOL⟧
+// 해설 L315: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_ONE_SHOT_METHOD Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.VisionMethod
+L000315 |         ? EN_ONE_SHOT_METHOD.MarkFindSettingSingle ⟦EOL⟧
+// 해설 L316: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_ONE_SHOT_METHOD Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.VisionMethod
+L000316 |         : EN_ONE_SHOT_METHOD.MarkFindSingle; ⟦EOL⟧
+// 해설 L317: 조건에 따라 결과식을 선택합니다: MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? $"DOE ON {InspectionPointCount}개 십자 / DOE OFF 중앙 십자 1점 측정" : $"DOE ON {InspectionPointCount}빔 / DOE OFF 중앙 1점 측정"
+L000317 |     public string InspectionDescription => MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ⟦EOL⟧
+// 해설 L318: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.InspectionDescription
+L000318 |         ? $"DOE ON {InspectionPointCount}개 십자 / DOE OFF 중앙 십자 1점 측정" ⟦EOL⟧
+// 해설 L319: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.InspectionDescription
+L000319 |         : $"DOE ON {InspectionPointCount}빔 / DOE OFF 중앙 1점 측정"; ⟦EOL⟧
+// 해설 L320: 조건에 따라 결과식을 선택합니다: MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ? $"십자 가공 · DOE ON {DoeBeamGridSize}×{DoeBeamGridSize} / DOE OFF 중앙 1개 형상 · 전체 길이 {CrossSize.ToString("0.#####", CultureInfo.InvariantCulture)} mm · Head Jump Speed 사용" : $"샷 가공 · D
+L000320 |     public string MachiningDescription => MachiningMode == EN_DEFAULT_MACHINING_MODE.Cross ⟦EOL⟧
+// 해설 L321: 함수·델리게이트 또는 객체 생성자를 호출합니다: CrossSize.ToString("0.#####", CultureInfo.InvariantCulture)
+L000321 |         ? $"십자 가공 · DOE ON {DoeBeamGridSize}×{DoeBeamGridSize} / DOE OFF 중앙 1개 형상 · 전체 길이 {CrossSize.ToString("0.#####", CultureInfo.InvariantCulture)} mm · Head Jump Speed 사용" ⟦EOL⟧
+// 해설 L322: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS.MachiningDescription
+L000322 |         : $"샷 가공 · DOE ON {DoeBeamGridSize}×{DoeBeamGridSize} / DOE OFF 중앙 1점 · Head Shot Count 사용"; ⟦EOL⟧
+// 해설 L323: 조건에 따라 결과식을 선택합니다: VisionMethod == EN_ONE_SHOT_METHOD.MarkFindSettingSingle ? "Mark Find Setting Single" : "Mark Find Single"
+L000323 |     public string VisionDescription => VisionMethod == EN_ONE_SHOT_METHOD.MarkFindSettingSingle ? "Mark Find Setting Single" : "Mark Find Single"; ⟦EOL⟧
+// 해설 L324: 구문 블록 경계입니다.
+L000324 | } ⟦EOL⟧
+// 해설 L325: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_HEAD_GEOMETRY(double FieldHalfX, double FieldHalfY, double DoeAngle);
+L000325 | public sealed record ST_DEFAULT_HEAD_GEOMETRY(double FieldHalfX, double FieldHalfY, double DoeAngle); ⟦EOL⟧
+// 해설 L326: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_PREVIEW_POINT(int Head, double StageY, double X, double Y, bool IsOnGlass);
+L000326 | public sealed record ST_DEFAULT_PREVIEW_POINT(int Head, double StageY, double X, double Y, bool IsOnGlass); ⟦EOL⟧
+// 해설 L327: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_OFFSET_MARK(int Beam, double X, double Y, double RawX, double RawY, double CorrectionX, double CorrectionY, double EncoderX, double EncoderY, DateTimeOffset CapturedAt,
+L000327 | public sealed record ST_DEFAULT_OFFSET_MARK(int Beam, double X, double Y, double RawX, double RawY, double CorrectionX, double CorrectionY, double EncoderX, double EncoderY, DateTimeOffset CapturedAt, string Judge); ⟦EOL⟧
+// 해설 L328: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_OFFSET_FIT(double X, double Y, double Residual, double PitchX, double PitchY);
+L000328 | public sealed record ST_DEFAULT_OFFSET_FIT(double X, double Y, double Residual, double PitchX, double PitchY); ⟦EOL⟧
+// 해설 L329: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_OFFSET_HEAD_RESULT(int Head, Guid TestId, double Q, double R, bool AutomationSimulation, bool StageSimulation, bool VisionSimulation, IReadOnlyList<ST_DEFAULT_OFFSET_MA
+L000329 | public sealed record ST_DEFAULT_OFFSET_HEAD_RESULT(int Head, Guid TestId, double Q, double R, bool AutomationSimulation, bool StageSimulation, bool VisionSimulation, IReadOnlyList<ST_DEFAULT_OFFSET_MARK> Marks, ST_DEFAULT_OFFSET_FIT Fit) ⟦EOL⟧
+// 해설 L330: 구문 블록 경계입니다.
+L000330 | { ⟦EOL⟧
+// 해설 L331: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.DoeExists
+L000331 |     public bool DoeExists { get; init; } = true; ⟦EOL⟧
+// 해설 L332: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Model
+L000332 |     public int Model { get; init; } = 1; ⟦EOL⟧
+// 해설 L333: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.ReferenceCell
+L000333 |     public int ReferenceCell { get; init; } = 1; ⟦EOL⟧
+// 해설 L334: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY? Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.Geometry
+L000334 |     public ST_DEFAULT_HEAD_GEOMETRY? Geometry { get; init; } ⟦EOL⟧
+// 해설 L335: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetReviewX
+L000335 |     public double TargetReviewX { get; init; } = double.NaN; ⟦EOL⟧
+// 해설 L336: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.TargetStageY
+L000336 |     public double TargetStageY { get; init; } = double.NaN; ⟦EOL⟧
+// 해설 L337: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterReviewX
+L000337 |     public double CenterReviewX { get; init; } = double.NaN; ⟦EOL⟧
+// 해설 L338: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterStageY
+L000338 |     public double CenterStageY { get; init; } = double.NaN; ⟦EOL⟧
+// 해설 L339: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorX
+L000339 |     public double CenterErrorX { get; init; } = double.NaN; ⟦EOL⟧
+// 해설 L340: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Correction.ST_DEFAULT_OFFSET_HEAD_RESULT.CenterErrorY
+L000340 |     public double CenterErrorY { get; init; } = double.NaN; ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다.
+L000341 | } ⟦EOL⟧
+// 해설 L342: 타입의 구조/상속 선언입니다: public sealed record ST_DEFAULT_OFFSET_LOG(Guid SessionId, string Recipe, string Action, DateTimeOffset Time, ST_DEFAULT_OFFSET_OPTIONS Options, IReadOnlyCollection<ST_DEFAULT_OFFSET_HEAD_RESULT> Resu
+L000342 | public sealed record ST_DEFAULT_OFFSET_LOG(Guid SessionId, string Recipe, string Action, DateTimeOffset Time, ST_DEFAULT_OFFSET_OPTIONS Options, IReadOnlyCollection<ST_DEFAULT_OFFSET_HEAD_RESULT> Results, IReadOnlyDictionary<string, string> Before, IReadOnlyDictionary<string, string> After); ⟦EOL⟧

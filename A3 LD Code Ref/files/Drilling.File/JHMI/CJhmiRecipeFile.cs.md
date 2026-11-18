@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | a95ebf1032bfebd2e92472e5e9a87c4fd9eb19ee42684da6e97e8adbac9fe882 |
 | 파일 분류 | code |
 | 원본 크기/행 | 69,437 bytes / 1,477 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -170,7 +170,7 @@
 
 ### FieldDeclaration `CellScopedTemplateNames` · L19–25
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:19–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L19-L25)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:19–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L19-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -198,7 +198,7 @@
 
 ### FieldDeclaration `FormHeaders` · L26–26
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L26-L26)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -219,7 +219,7 @@
 
 ### FieldDeclaration `_configRoot` · L27–27
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L27-L27)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -240,7 +240,7 @@
 
 ### FieldDeclaration `_recipeDirectory` · L28–28
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L28-L28)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -268,7 +268,7 @@
 
 ### FieldDeclaration `_logManager` · L29–29
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L29-L29)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -296,7 +296,7 @@
 
 ### FieldDeclaration `_fileOperationLock` · L30–30
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L30-L30)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -324,7 +324,7 @@
 
 ### MethodDeclaration `LoadHistory` · L33–33
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L33-L33)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -359,7 +359,7 @@
 
 ### MethodDeclaration `RecordSelection` · L34–50
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:34–50](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L34-L50)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:34–50](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L34-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -420,7 +420,7 @@ flowchart TD
 
 ### LocalFunctionStatement `RecipeName` · L41–46
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:41–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L41-L46)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:41–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L41-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -439,8 +439,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L48-L48) | RecipeName | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L48-L48) | RecipeName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L48-L48) | RecipeName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L48-L48) | RecipeName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -484,7 +484,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadAll` · L52–60
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:52–60](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L52-L60)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:52–60](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L52-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -518,7 +518,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L54–57
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:54–57](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L54-L57)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:54–57](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L54-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -546,7 +546,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadAllCore` · L62–89
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:62–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L62-L89)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:62–89](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L62-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -565,7 +565,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L56-L56) | LoadAllCore | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L56-L56) | LoadAllCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -627,7 +627,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectName` · L83–86
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:83–86](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L83-L86)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:83–86](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L83-L86)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -654,7 +654,7 @@ flowchart TD
 
 ### MethodDeclaration `Find` · L91–99
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:91–99](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L91-L99)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:91–99](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L91-L99)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -689,7 +689,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L93–96
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:93–96](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L93-L96)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:93–96](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L93-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -717,7 +717,7 @@ flowchart TD
 
 ### MethodDeclaration `FindCore` · L101–108
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:101–108](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L101-L108)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:101–108](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L101-L108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -737,7 +737,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L95-L95) | FindCore | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L95-L95) | FindCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -771,7 +771,7 @@ flowchart TD
 
 ### MethodDeclaration `Save` · L110–118
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:110–118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L110-L118)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:110–118](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L110-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -806,7 +806,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SaveCoreCallback` · L112–115
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:112–115](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L112-L115)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:112–115](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L112-L115)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -833,7 +833,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveCore` · L120–242
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:120–242](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L120-L242)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:120–242](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L120-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -855,8 +855,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L114-L114) | SaveCore | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1324–1324](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1324-L1324) | SaveCore | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L114-L114) | SaveCore | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1324–1324](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1324-L1324) | SaveCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1070,7 +1070,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectGroupKey` · L127–130
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:127–130](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L127-L130)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:127–130](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L127-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1104,7 +1104,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L132–135
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:132–135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L132-L135)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:132–135](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L132-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1131,7 +1131,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L137–140
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:137–140](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L137-L140)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:137–140](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L137-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1165,7 +1165,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L143–146
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:143–146](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L143-L146)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:143–146](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L143-L146)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1199,7 +1199,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeRecipe` · L151–154
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:151–154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L151-L154)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:151–154](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L151-L154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1237,7 +1237,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSortKey` · L156–159
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:156–159](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L156-L159)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:156–159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L156-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1271,7 +1271,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectRecipeParameterKey` · L161–164
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:161–164](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L161-L164)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:161–164](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L161-L164)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1298,7 +1298,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeRecipe2` · L178–181
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:178–181](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L178-L181)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:178–181](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L178-L181)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1332,7 +1332,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDisplayOrder` · L183–186
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:183–186](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L183-L186)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:183–186](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L183-L186)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1359,7 +1359,7 @@ flowchart TD
 
 ### MethodDeclaration `Rename` · L244–252
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:244–252](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L244-L252)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:244–252](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L244-L252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1395,7 +1395,7 @@ flowchart TD
 
 ### LocalFunctionStatement `RenameCoreCallback` · L246–249
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:246–249](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L246-L249)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:246–249](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L246-L249)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1422,7 +1422,7 @@ flowchart TD
 
 ### MethodDeclaration `RenameCore` · L254–368
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:254–368](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L254-L368)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:254–368](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L254-L368)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1444,8 +1444,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L248-L248) | RenameCore | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1163-L1163) | RenameCore | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L248-L248) | RenameCore | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1163–1163](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1163-L1163) | RenameCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1631,7 +1631,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectGroupKey` · L272–275
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:272–275](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L272-L275)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:272–275](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L272-L275)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1665,7 +1665,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L277–280
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:277–280](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L277-L280)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:277–280](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L277-L280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1692,7 +1692,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L282–285
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:282–285](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L282-L285)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:282–285](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L282-L285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1726,7 +1726,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L300–303
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:300–303](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L300-L303)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:300–303](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L300-L303)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1760,7 +1760,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDisplayOrder` · L305–308
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:305–308](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L305-L308)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:305–308](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L305-L308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1787,7 +1787,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesTab` · L318–321
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:318–321](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L318-L321)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:318–321](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L318-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1825,7 +1825,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSortKey` · L323–326
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:323–326](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L323-L326)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:323–326](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L323-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1859,7 +1859,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectName` · L328–331
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:328–331](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L328-L331)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:328–331](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L328-L331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1886,7 +1886,7 @@ flowchart TD
 
 ### MethodDeclaration `Delete` · L370–378
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:370–378](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L370-L378)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:370–378](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L370-L378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1921,7 +1921,7 @@ flowchart TD
 
 ### LocalFunctionStatement `DeleteCoreCallback` · L372–375
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:372–375](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L372-L375)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:372–375](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L372-L375)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1948,7 +1948,7 @@ flowchart TD
 
 ### MethodDeclaration `DeleteCore` · L380–414
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:380–414](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L380-L414)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:380–414](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L380-L414)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1969,8 +1969,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L374-L374) | DeleteCore | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1203–1203](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1203-L1203) | DeleteCore | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L374-L374) | DeleteCore | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1203–1203](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1203-L1203) | DeleteCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2028,7 +2028,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectGroupKey` · L386–389
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:386–389](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L386-L389)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:386–389](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L386-L389)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2062,7 +2062,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L391–394
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:391–394](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L391-L394)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:391–394](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L391-L394)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2089,7 +2089,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L396–399
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:396–399](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L396-L399)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:396–399](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L396-L399)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2123,7 +2123,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteFileOperation` · L416–427
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:416–427](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L416-L427)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:416–427](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L416-L427)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2143,11 +2143,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L33-L33) | ExecuteFileOperation | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L59-L59) | ExecuteFileOperation | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L98-L98) | ExecuteFileOperation | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1283–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1283-L1283) | ExecuteFileOperation | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1423–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1423-L1474) | ExecuteFileOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L33-L33) | ExecuteFileOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L59-L59) | ExecuteFileOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L98-L98) | ExecuteFileOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1283–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1283-L1283) | ExecuteFileOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1423–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1423-L1474) | ExecuteFileOperation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2189,7 +2189,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteFileOperation` · L429–440
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:429–440](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L429-L440)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:429–440](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L429-L440)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2209,13 +2209,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:36–49](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L36-L49) | ExecuteFileOperation | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L117-L117) | ExecuteFileOperation | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L251-L251) | ExecuteFileOperation | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L377-L377) | ExecuteFileOperation | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1134–1134](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1134-L1134) | ExecuteFileOperation | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1176–1176](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1176-L1176) | ExecuteFileOperation | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1295-L1295) | ExecuteFileOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:36–49](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L36-L49) | ExecuteFileOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L117-L117) | ExecuteFileOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L251-L251) | ExecuteFileOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:377–377](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L377-L377) | ExecuteFileOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1134–1134](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1134-L1134) | ExecuteFileOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1176–1176](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1176-L1176) | ExecuteFileOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1295-L1295) | ExecuteFileOperation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2256,7 +2256,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadRecipe` · L442–589
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:442–589](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L442-L589)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:442–589](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L442-L589)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2277,8 +2277,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L76-L76) | LoadRecipe | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L107-L107) | LoadRecipe | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L76-L76) | LoadRecipe | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L107-L107) | LoadRecipe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2426,7 +2426,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectGroupKey` · L452–455
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:452–455](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L452-L455)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:452–455](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L452-L455)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2460,7 +2460,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L457–460
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:457–460](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L457-L460)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:457–460](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L457-L460)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2487,7 +2487,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L462–465
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:462–465](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L462-L465)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:462–465](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L462-L465)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2521,7 +2521,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsUse` · L470–473
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:470–473](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L470-L473)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:470–473](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L470-L473)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2548,7 +2548,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectDisplayOrder` · L475–478
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:475–478](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L475-L478)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:475–478](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L475-L478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2575,7 +2575,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildRecipe` · L480–501
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:480–501](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L480-L501)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:480–501](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L480-L501)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2615,7 +2615,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectName` · L504–507
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:504–507](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L504-L507)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:504–507](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L504-L507)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2642,7 +2642,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectFormItemGroupKey` · L509–512
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:509–512](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L509-L512)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:509–512](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L509-L512)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2669,7 +2669,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectRecipe` · L514–517
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:514–517](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L514-L517)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:514–517](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L514-L517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2703,7 +2703,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectParameterKey` · L520–523
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:520–523](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L520-L523)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:520–523](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L520-L523)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2730,7 +2730,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L526–529
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:526–529](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L526-L529)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:526–529](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L526-L529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2766,7 +2766,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSortKey` · L531–534
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:531–534](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L531-L534)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:531–534](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L531-L534)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2800,7 +2800,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectName2` · L536–539
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:536–539](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L536-L539)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:536–539](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L536-L539)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2827,7 +2827,7 @@ flowchart TD
 
 ### MethodDeclaration `IsCellScopedKey` · L591–594
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:591–594](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L591-L594)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:591–594](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L591-L594)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2846,10 +2846,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L145-L145) | IsCellScopedKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L153-L153) | IsCellScopedKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L320-L320) | IsCellScopedKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L528-L528) | IsCellScopedKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L145-L145) | IsCellScopedKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L153-L153) | IsCellScopedKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L320-L320) | IsCellScopedKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L528-L528) | IsCellScopedKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2872,7 +2872,7 @@ flowchart TD
 
 ### MethodDeclaration `IsCellScopedTemplate` · L596–599
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:596–599](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L596-L599)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:596–599](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L596-L599)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2891,8 +2891,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L180-L180) | IsCellScopedTemplate | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L302-L302) | IsCellScopedTemplate | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L180-L180) | IsCellScopedTemplate | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L302-L302) | IsCellScopedTemplate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2913,7 +2913,7 @@ flowchart TD
 
 ### MethodDeclaration `GetActiveCellCount` · L601–613
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:601–613](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L601-L613)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:601–613](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L601-L613)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2932,7 +2932,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L149-L149) | GetActiveCellCount | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:149–149](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L149-L149) | GetActiveCellCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2967,7 +2967,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L603–606
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:603–606](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L603-L606)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:603–606](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L603-L606)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3001,7 +3001,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadPositiveInt` · L615–624
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:615–624](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L615-L624)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:615–624](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L615-L624)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3021,12 +3021,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:628–628](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L628-L628) | ReadPositiveInt | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:629–629](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L629-L629) | ReadPositiveInt | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:630–630](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L630-L630) | ReadPositiveInt | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:634–634](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L634-L634) | ReadPositiveInt | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:635–635](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L635-L635) | ReadPositiveInt | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:642–642](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L642-L642) | ReadPositiveInt | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:628–628](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L628-L628) | ReadPositiveInt | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:629–629](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L629-L629) | ReadPositiveInt | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:630–630](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L630-L630) | ReadPositiveInt | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:634–634](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L634-L634) | ReadPositiveInt | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:635–635](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L635-L635) | ReadPositiveInt | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:642–642](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L642-L642) | ReadPositiveInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3050,7 +3050,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L617–620
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:617–620](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L617-L620)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:617–620](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L617-L620)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3084,7 +3084,7 @@ flowchart TD
 
 ### MethodDeclaration `CalculateActiveShotGroupBoundsByCell` · L626–647
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:626–647](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L626-L647)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:626–647](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L626-L647)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3104,7 +3104,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L150-L150) | CalculateActiveShotGroupBoundsByCell | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L150-L150) | CalculateActiveShotGroupBoundsByCell | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3184,7 +3184,7 @@ flowchart TD
 
 ### MethodDeclaration `IsShotGroupOverrideWithinActivePattern` · L649–663
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:649–663](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L649-L663)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:649–663](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L649-L663)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3204,7 +3204,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L153-L153) | IsShotGroupOverrideWithinActivePattern | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L153-L153) | IsShotGroupOverrideWithinActivePattern | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3248,7 +3248,7 @@ flowchart TD
 
 ### MethodDeclaration `GetActiveCellCount` · L665–672
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:665–672](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L665-L672)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:665–672](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L665-L672)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3268,7 +3268,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L289-L289) | GetActiveCellCount | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L289-L289) | GetActiveCellCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3305,7 +3305,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseActiveCellCount` · L674–682
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:674–682](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L674-L682)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:674–682](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L674-L682)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3326,8 +3326,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:612–612](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L612-L612) | ParseActiveCellCount | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:671–671](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L671-L671) | ParseActiveCellCount | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:612–612](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L612-L612) | ParseActiveCellCount | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:671–671](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L671-L671) | ParseActiveCellCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3359,7 +3359,7 @@ flowchart TD
 
 ### MethodDeclaration `GetActiveCellCountMinimum` · L684–687
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:684–687](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L684-L687)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:684–687](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L684-L687)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3379,8 +3379,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:610–610](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L610-L610) | GetActiveCellCountMinimum | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:669–669](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L669-L669) | GetActiveCellCountMinimum | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:610–610](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L610-L610) | GetActiveCellCountMinimum | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:669–669](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L669-L669) | GetActiveCellCountMinimum | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3402,7 +3402,7 @@ flowchart TD
 
 ### MethodDeclaration `GetActiveCellCountMaximum` · L689–692
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:689–692](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L689-L692)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:689–692](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L689-L692)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3422,8 +3422,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L611-L611) | GetActiveCellCountMaximum | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:670–670](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L670-L670) | GetActiveCellCountMaximum | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L611-L611) | GetActiveCellCountMaximum | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:670–670](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L670-L670) | GetActiveCellCountMaximum | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3443,7 +3443,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellNo` · L694–703
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:694–703](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L694-L703)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:694–703](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L694-L703)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3462,17 +3462,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L153-L153) | GetCellNo | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L158-L158) | GetCellNo | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L320-L320) | GetCellNo | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L325-L325) | GetCellNo | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L337-L337) | GetCellNo | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:533–533](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L533-L533) | GetCellNo | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L547-L547) | GetCellNo | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L555-L555) | GetCellNo | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L593-L593) | GetCellNo | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L651-L651) | GetCellNo | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:743–743](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L743-L743) | GetCellNo | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L153-L153) | GetCellNo | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:158–158](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L158-L158) | GetCellNo | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L320-L320) | GetCellNo | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L325-L325) | GetCellNo | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:337–337](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L337-L337) | GetCellNo | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:533–533](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L533-L533) | GetCellNo | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L547-L547) | GetCellNo | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L555-L555) | GetCellNo | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L593-L593) | GetCellNo | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L651-L651) | GetCellNo | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:743–743](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L743-L743) | GetCellNo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3511,7 +3511,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellParameterName` · L705–709
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:705–709](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L705-L709)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:705–709](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L705-L709)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3530,11 +3530,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L336-L336) | GetCellParameterName | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L544-L544) | GetCellParameterName | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L593-L593) | GetCellParameterName | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L661-L661) | GetCellParameterName | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:744–744](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L744-L744) | GetCellParameterName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L336-L336) | GetCellParameterName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L544-L544) | GetCellParameterName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:593–593](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L593-L593) | GetCellParameterName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L661-L661) | GetCellParameterName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:744–744](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L744-L744) | GetCellParameterName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3556,7 +3556,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellKeySeparatorIndex` · L711–714
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:711–714](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L711-L714)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:711–714](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L711-L714)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3575,8 +3575,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:701–701](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L701-L701) | GetCellKeySeparatorIndex | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:707–707](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L707-L707) | GetCellKeySeparatorIndex | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:701–701](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L701-L701) | GetCellKeySeparatorIndex | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:707–707](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L707-L707) | GetCellKeySeparatorIndex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3595,7 +3595,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeCellScopedParameterName` · L716–719
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:716–719](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L716-L719)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:716–719](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L716-L719)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3614,10 +3614,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L336-L336) | NormalizeCellScopedParameterName | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L544-L544) | NormalizeCellScopedParameterName | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L661-L661) | NormalizeCellScopedParameterName | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:744–744](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L744-L744) | NormalizeCellScopedParameterName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:336–336](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L336-L336) | NormalizeCellScopedParameterName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:544–544](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L544-L544) | NormalizeCellScopedParameterName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L661-L661) | NormalizeCellScopedParameterName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:744–744](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L744-L744) | NormalizeCellScopedParameterName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3637,7 +3637,7 @@ flowchart TD
 
 ### MethodDeclaration `IsCellPlacementParameterName` · L721–724
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:721–724](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L721-L724)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:721–724](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L721-L724)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3656,7 +3656,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:546–546](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L546-L546) | IsCellPlacementParameterName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:546–546](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L546-L546) | IsCellPlacementParameterName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3681,7 +3681,7 @@ flowchart TD
 
 ### MethodDeclaration `ToPersistedCellScopedKey` · L726–729
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:726–729](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L726-L729)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:726–729](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L726-L729)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3700,8 +3700,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L212-L212) | ToPersistedCellScopedKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L338-L338) | ToPersistedCellScopedKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L212-L212) | ToPersistedCellScopedKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L338-L338) | ToPersistedCellScopedKey | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -3713,7 +3713,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellScopedGroup` · L731–739
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:731–739](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L731-L739)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:731–739](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L731-L739)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3732,7 +3732,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:572–572](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L572-L572) | GetCellScopedGroup | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:572–572](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L572-L572) | GetCellScopedGroup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3762,7 +3762,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCellHistoryItemName` · L741–751
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:741–751](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L741-L751)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:741–751](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L741-L751)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3782,7 +3782,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L218-L218) | GetCellHistoryItemName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L218-L218) | GetCellHistoryItemName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3822,7 +3822,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateShotGroupOverrideParameter` · L753–783
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:753–783](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L753-L783)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:753–783](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L753-L783)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3844,7 +3844,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L555-L555) | CreateShotGroupOverrideParameter | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L555-L555) | CreateShotGroupOverrideParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3886,7 +3886,7 @@ flowchart TD
 
 ### MethodDeclaration `TryGetShotGroupOverrideMetadata` · L785–844
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:785–844](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L785-L844)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:785–844](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L785-L844)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3912,10 +3912,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L662-L662) | TryGetShotGroupOverrideMetadata | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L733-L733) | TryGetShotGroupOverrideMetadata | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:745–745](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L745-L745) | TryGetShotGroupOverrideMetadata | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:760–760](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L760-L760) | TryGetShotGroupOverrideMetadata | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L662-L662) | TryGetShotGroupOverrideMetadata | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L733-L733) | TryGetShotGroupOverrideMetadata | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:745–745](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L745-L745) | TryGetShotGroupOverrideMetadata | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:760–760](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L760-L760) | TryGetShotGroupOverrideMetadata | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3998,7 +3998,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L802–805
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:802–805](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L802-L805)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:802–805](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L802-L805)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4032,7 +4032,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadFormItems` · L847–887
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:847–887](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L847-L887)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:847–887](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L847-L887)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4045,10 +4045,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L70-L70) | LoadFormItems | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L104-L104) | LoadFormItems | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L124-L124) | LoadFormItems | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L270-L270) | LoadFormItems | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L70-L70) | LoadFormItems | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L104-L104) | LoadFormItems | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L124-L124) | LoadFormItems | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L270-L270) | LoadFormItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4081,7 +4081,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L849–855
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:849–855](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L849-L855)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:849–855](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L849-L855)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4108,7 +4108,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildRecipe` · L858–879
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:858–879](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L858-L879)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:858–879](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L858-L879)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4201,7 +4201,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L881–884
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:881–884](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L881-L884)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:881–884](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L881-L884)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4237,7 +4237,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadRecipeValues` · L889–913
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:889–913](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L889-L913)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:889–913](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L889-L913)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4257,12 +4257,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L45-L45) | ReadRecipeValues | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L142-L142) | ReadRecipeValues | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L271-L271) | ReadRecipeValues | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L403-L403) | ReadRecipeValues | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L451-L451) | ReadRecipeValues | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1087–1087](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1087-L1087) | ReadRecipeValues | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L45-L45) | ReadRecipeValues | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L142-L142) | ReadRecipeValues | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L271-L271) | ReadRecipeValues | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:403–403](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L403-L403) | ReadRecipeValues | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L451-L451) | ReadRecipeValues | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1087–1087](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1087-L1087) | ReadRecipeValues | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4318,7 +4318,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseRecipeLine` · L915–924
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:915–924](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L915-L924)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:915–924](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L915-L924)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4337,8 +4337,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L905-L905) | ParseRecipeLine | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1436–1436](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1436-L1436) | ParseRecipeLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L905-L905) | ParseRecipeLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1436–1436](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1436-L1436) | ParseRecipeLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4376,7 +4376,7 @@ flowchart TD
 
 ### MethodDeclaration `SplitCsvLine` · L926–959
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:926–959](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L926-L959)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:926–959](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L926-L959)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4395,7 +4395,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:917–917](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L917-L917) | SplitCsvLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:917–917](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L917-L917) | SplitCsvLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4468,7 +4468,7 @@ flowchart TD
 
 ### MethodDeclaration `GetFormPath` · L961–964
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:961–964](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L961-L964)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:961–964](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L961-L964)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4481,8 +4481,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:857–857](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L857-L857) | GetFormPath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:886–886](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L886-L886) | GetFormPath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:857–857](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L857-L857) | GetFormPath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:886–886](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L886-L886) | GetFormPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4501,7 +4501,7 @@ flowchart TD
 
 ### MethodDeclaration `GetRecipePath` · L966–969
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:966–969](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L966-L969)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:966–969](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L966-L969)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4520,20 +4520,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L39-L39) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L43-L43) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L45-L45) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L106-L106) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L125-L125) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L258-L258) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L259-L259) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L383-L383) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1140–1140](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1140-L1140) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1142–1142](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1142-L1142) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1181–1181](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1181-L1181) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1303–1303](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1303-L1303) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1305–1305](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1305-L1305) | GetRecipePath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1425–1425](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1425-L1425) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L39-L39) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L43-L43) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L45-L45) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L106-L106) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L125-L125) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L258-L258) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L259-L259) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L383-L383) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1140–1140](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1140-L1140) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1142–1142](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1142-L1142) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1181–1181](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1181-L1181) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1303–1303](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1303-L1303) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1305–1305](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1305-L1305) | GetRecipePath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1425–1425](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1425-L1425) | GetRecipePath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4554,7 +4554,7 @@ flowchart TD
 
 ### MethodDeclaration `FindFormItem` · L971–1012
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:971–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L971-L1012)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:971–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L971-L1012)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4574,7 +4574,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L148-L148) | FindFormItem | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L148-L148) | FindFormItem | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4630,7 +4630,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L973–976
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:973–976](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L973-L976)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:973–976](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L973-L976)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4666,7 +4666,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem2` · L987–990
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:987–990](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L987-L990)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:987–990](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L987-L990)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4700,7 +4700,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem3` · L1001–1004
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1001–1004](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1001-L1004)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1001–1004](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1001-L1004)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4734,7 +4734,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem4` · L1006–1009
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1006–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1006-L1009)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1006–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1006-L1009)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4768,7 +4768,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDataType` · L1014–1023
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1014–1023](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1014-L1023)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1014–1023](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1014-L1023)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4787,7 +4787,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:866–866](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L866-L866) | ReadDataType | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:866–866](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L866-L866) | ReadDataType | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4818,7 +4818,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadBool` · L1025–1033
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1025–1033](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1025-L1033)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1025–1033](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1025-L1033)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4838,8 +4838,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:868–868](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L868-L868) | ReadBool | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:869–869](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L869-L869) | ReadBool | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:868–868](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L868-L868) | ReadBool | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:869–869](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L869-L869) | ReadBool | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4877,7 +4877,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L1035–1038
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1035–1038](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1035-L1038)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1035–1038](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1035-L1038)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4897,7 +4897,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:876–876](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L876-L876) | ReadInt | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:876–876](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L876-L876) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4917,7 +4917,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L1040–1043
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1040–1043](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1040-L1043)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1040–1043](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1040-L1043)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4937,10 +4937,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:871–871](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L871-L871) | ReadDouble | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:872–872](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L872-L872) | ReadDouble | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:873–873](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L873-L873) | ReadDouble | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:874–874](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L874-L874) | ReadDouble | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:871–871](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L871-L871) | ReadDouble | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:872–872](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L872-L872) | ReadDouble | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:873–873](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L873-L873) | ReadDouble | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:874–874](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L874-L874) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4960,7 +4960,7 @@ flowchart TD
 
 ### MethodDeclaration `GetValue` · L1045–1048
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1045–1048](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1045-L1048)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1045–1048](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1045-L1048)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4982,15 +4982,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L195-L195) | GetValue | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L198-L198) | GetValue | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L215-L215) | GetValue | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L288-L288) | GetValue | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L313-L313) | GetValue | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:404–404](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L404-L404) | GetValue | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:469–469](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L469-L469) | GetValue | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L484-L484) | GetValue | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:667–667](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L667-L667) | GetValue | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L195-L195) | GetValue | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L198-L198) | GetValue | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L215-L215) | GetValue | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L288-L288) | GetValue | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L313-L313) | GetValue | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:404–404](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L404-L404) | GetValue | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:469–469](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L469-L469) | GetValue | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L484-L484) | GetValue | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:667–667](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L667-L667) | GetValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5012,7 +5012,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateKey` · L1050–1053
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1050–1053](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1050-L1053)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1050–1053](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1050-L1053)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5032,22 +5032,22 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L129-L129) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L148-L148) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L174-L174) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L175-L175) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L191-L191) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L205-L205) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L222-L222) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L274-L274) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L292-L292) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L293-L293) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L314-L314) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L339-L339) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L388-L388) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L454-L454) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1047–1047](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1047-L1047) | CreateKey | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1074–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1074-L1074) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L129-L129) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L148-L148) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L174-L174) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L175-L175) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L191-L191) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L205-L205) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L222-L222) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L274-L274) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L292-L292) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L293-L293) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:314–314](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L314-L314) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L339-L339) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:388–388](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L388-L388) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L454-L454) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1047–1047](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1047-L1047) | CreateKey | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1074–1074](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1074-L1074) | CreateKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5072,7 +5072,7 @@ flowchart TD
 
 ### MethodDeclaration `GetOrDefault` · L1055–1058
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1055–1058](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1055-L1058)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1055–1058](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1055-L1058)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5092,8 +5092,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:864–864](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L864-L864) | GetOrDefault | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:865–865](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L865-L865) | GetOrDefault | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:864–864](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L864-L864) | GetOrDefault | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:865–865](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L865-L865) | GetOrDefault | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5113,7 +5113,7 @@ flowchart TD
 
 ### MethodDeclaration `GetRecipeName` · L1060–1063
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1060–1063](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1060-L1063)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1060–1063](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1060-L1063)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5132,8 +5132,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L231-L231) | GetRecipeName | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1361–1361](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1361-L1361) | GetRecipeName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L231-L231) | GetRecipeName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1361–1361](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1361-L1361) | GetRecipeName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5153,7 +5153,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatRecipeLine` · L1065–1068
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1065–1068](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1065-L1068)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1065–1068](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1065-L1068)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5174,15 +5174,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:169–169](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L169-L169) | FormatRecipeLine | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L170-L170) | FormatRecipeLine | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L206-L206) | FormatRecipeLine | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L223-L223) | FormatRecipeLine | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L297-L297) | FormatRecipeLine | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L298-L298) | FormatRecipeLine | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L315-L315) | FormatRecipeLine | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L340-L340) | FormatRecipeLine | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1473–1473](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1473-L1473) | FormatRecipeLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:169–169](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L169-L169) | FormatRecipeLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L170-L170) | FormatRecipeLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L206-L206) | FormatRecipeLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L223-L223) | FormatRecipeLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L297-L297) | FormatRecipeLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L298-L298) | FormatRecipeLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L315-L315) | FormatRecipeLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L340-L340) | FormatRecipeLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1473–1473](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1473-L1473) | FormatRecipeLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5207,7 +5207,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateSavedRecipeFile` · L1070–1101
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1070–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1070-L1101)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1070–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1070-L1101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5228,8 +5228,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L228-L228) | ValidateSavedRecipeFile | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L347-L347) | ValidateSavedRecipeFile | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L228-L228) | ValidateSavedRecipeFile | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L347-L347) | ValidateSavedRecipeFile | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5281,7 +5281,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectGroupKey` · L1072–1075
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1072–1075](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1072-L1075)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1072–1075](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1072-L1075)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5315,7 +5315,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectKey` · L1077–1080
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1077–1080](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1077-L1080)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1077–1080](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1077-L1080)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5342,7 +5342,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L1082–1085
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1082–1085](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1082-L1085)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1082–1085](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1082-L1085)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5376,7 +5376,7 @@ flowchart TD
 
 ### MethodDeclaration `Escape` · L1103–1111
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1103–1111](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1103-L1111)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1103–1111](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1103-L1111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5395,9 +5395,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1067–1067](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1067-L1067) | Escape | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1067–1067](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1067-L1067) | Escape | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1067–1067](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1067-L1067) | Escape | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1067–1067](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1067-L1067) | Escape | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1067–1067](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1067-L1067) | Escape | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1067–1067](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1067-L1067) | Escape | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5435,7 +5435,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSafeFileName` · L1113–1122
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1113–1122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1113-L1122)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1113–1122](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1113-L1122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5454,8 +5454,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:968–968](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L968-L968) | GetSafeFileName | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1414–1414](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1414-L1414) | GetSafeFileName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:968–968](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L968-L968) | GetSafeFileName | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1414–1414](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1414-L1414) | GetSafeFileName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5482,7 +5482,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectItem` · L1116–1119
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1116–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1116-L1119)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1116–1119](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1116-L1119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5517,7 +5517,7 @@ flowchart TD
 
 ### MethodDeclaration `DeleteIfExists` · L1124–1130
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1124–1130](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1124-L1130)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1124–1130](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1124-L1130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5536,7 +5536,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L407-L407) | DeleteIfExists | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L407-L407) | DeleteIfExists | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5566,7 +5566,7 @@ flowchart TD
 
 ### MethodDeclaration `RenameWithCompanions` · L1134–1134
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1134–1134](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1134-L1134)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1134–1134](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1134-L1134)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5604,7 +5604,7 @@ flowchart TD
 
 ### MethodDeclaration `RenameCompanionsCore` · L1135–1174
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1135–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1135-L1174)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1135–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1135-L1174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5626,7 +5626,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1134–1134](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1134-L1134) | RenameCompanionsCore | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1134–1134](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1134-L1134) | RenameCompanionsCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5743,7 +5743,7 @@ flowchart TD
 
 ### MethodDeclaration `DeleteWithCompanions` · L1176–1176
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1176–1176](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1176-L1176)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1176–1176](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1176-L1176)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5780,7 +5780,7 @@ flowchart TD
 
 ### MethodDeclaration `DeleteCompanionsCore` · L1177–1231
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1177–1231](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1177-L1231)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1177–1231](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1177-L1231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5801,7 +5801,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1176–1176](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1176-L1176) | DeleteCompanionsCore | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1176–1176](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1176-L1176) | DeleteCompanionsCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5929,7 +5929,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectCompanions` · L1233–1237
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1233–1237](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1233-L1237)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1233–1237](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1233-L1237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5951,8 +5951,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1147-L1147) | SelectCompanions | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1183–1183](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1183-L1183) | SelectCompanions | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1147–1147](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1147-L1147) | SelectCompanions | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1183–1183](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1183-L1183) | SelectCompanions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5987,7 +5987,7 @@ flowchart TD
 
 ### MethodDeclaration `CompanionPath` · L1239–1245
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1239–1245](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1239-L1245)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1239–1245](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1239-L1245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6007,14 +6007,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1156-L1156) | CompanionPath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1157–1157](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1157-L1157) | CompanionPath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1185–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1185-L1185) | CompanionPath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1195–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1195-L1195) | CompanionPath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1195–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1195-L1195) | CompanionPath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1200–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1200-L1200) | CompanionPath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1212–1212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1212-L1212) | CompanionPath | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1212–1212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1212-L1212) | CompanionPath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1156-L1156) | CompanionPath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1157–1157](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1157-L1157) | CompanionPath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1185–1185](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1185-L1185) | CompanionPath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1195–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1195-L1195) | CompanionPath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1195–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1195-L1195) | CompanionPath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1200–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1200-L1200) | CompanionPath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1212–1212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1212-L1212) | CompanionPath | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1212–1212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1212-L1212) | CompanionPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6054,7 +6054,7 @@ flowchart TD
 
 ### MethodDeclaration `RestoreMissing` · L1247–1261
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1247–1261](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1247-L1261)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1247–1261](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1247-L1261)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6074,8 +6074,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1212–1212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1212-L1212) | RestoreMissing | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1260–1260](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1260-L1260) | RestoreMissing | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1212–1212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1212-L1212) | RestoreMissing | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1260–1260](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1260-L1260) | RestoreMissing | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6136,7 +6136,7 @@ flowchart TD
 
 ### MethodDeclaration `LogCompanionOperation` · L1263–1279
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1263–1279](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1263-L1279)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1263–1279](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1263-L1279)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6155,8 +6155,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1173-L1173) | LogCompanionOperation | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1230–1230](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1230-L1230) | LogCompanionOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1173-L1173) | LogCompanionOperation | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1230–1230](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1230-L1230) | LogCompanionOperation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6195,7 +6195,7 @@ flowchart TD
 
 ### MethodDeclaration `ListCompanionFolders` · L1283–1283
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1283–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1283-L1283)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1283–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1283-L1283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6232,7 +6232,7 @@ flowchart TD
 
 ### MethodDeclaration `ListCompanions` · L1284–1293
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1284–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1284-L1293)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1284–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1284-L1293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6253,11 +6253,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1144–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1144-L1144) | ListCompanions | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1235–1235](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1235-L1235) | ListCompanions | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1283–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1283-L1283) | ListCompanions | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1309–1309](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1309-L1309) | ListCompanions | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1312–1312](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1312-L1312) | ListCompanions | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1144–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1144-L1144) | ListCompanions | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1235–1235](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1235-L1235) | ListCompanions | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1283–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1283-L1283) | ListCompanions | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1309–1309](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1309-L1309) | ListCompanions | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1312–1312](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1312-L1312) | ListCompanions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6311,7 +6311,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateCopy` · L1295–1295
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1295-L1295)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1295-L1295)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6349,7 +6349,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateCopyCore` · L1296–1362
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1296–1362](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1296-L1362)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1296–1362](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1296-L1362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6371,7 +6371,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1295-L1295) | CreateCopyCore | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1295-L1295) | CreateCopyCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6572,7 +6572,7 @@ flowchart TD
 
 ### MethodDeclaration `CopyDirectory` · L1364–1394
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1364–1394](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1364-L1394)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1364–1394](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1364-L1394)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6594,9 +6594,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1195–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1195-L1195) | CopyDirectory | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1330–1334](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1330-L1334) | CopyDirectory | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1388–1392](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1388-L1392) | CopyDirectory | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1195–1195](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1195-L1195) | CopyDirectory | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1330–1334](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1330-L1334) | CopyDirectory | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1388–1392](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1388-L1392) | CopyDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6659,7 +6659,7 @@ flowchart TD
 
 ### MethodDeclaration `RejectLink` · L1396–1400
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1396–1400](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1396-L1400)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1396–1400](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1396-L1400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6678,10 +6678,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1158–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1158-L1158) | RejectLink | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1250–1250](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1250-L1250) | RejectLink | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1371–1371](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1371-L1371) | RejectLink | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1376-L1376) | RejectLink | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1158–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1158-L1158) | RejectLink | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1250–1250](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1250-L1250) | RejectLink | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1371–1371](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1371-L1371) | RejectLink | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1376-L1376) | RejectLink | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6712,7 +6712,7 @@ flowchart TD
 
 ### MethodDeclaration `DeleteOwnedDirectory` · L1402–1410
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1402–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1402-L1410)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1402–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1402-L1410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6732,10 +6732,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1200–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1200-L1200) | DeleteOwnedDirectory | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1226–1226](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1226-L1226) | DeleteOwnedDirectory | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1353–1353](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1353-L1353) | DeleteOwnedDirectory | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1358–1358](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1358-L1358) | DeleteOwnedDirectory | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1200–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1200-L1200) | DeleteOwnedDirectory | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1226–1226](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1226-L1226) | DeleteOwnedDirectory | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1353–1353](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1353-L1353) | DeleteOwnedDirectory | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1358–1358](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1358-L1358) | DeleteOwnedDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6779,7 +6779,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateCopyId` · L1412–1416
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1412–1416](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1412-L1416)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1412–1416](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1412-L1416)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6798,13 +6798,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1137–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1137-L1137) | ValidateCopyId | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1138–1138](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1138-L1138) | ValidateCopyId | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1179–1179](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1179-L1179) | ValidateCopyId | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1286–1286](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1286-L1286) | ValidateCopyId | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1287–1287](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1287-L1287) | ValidateCopyId | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1298–1298](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1298-L1298) | ValidateCopyId | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1299–1299](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1299-L1299) | ValidateCopyId | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1137–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1137-L1137) | ValidateCopyId | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1138–1138](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1138-L1138) | ValidateCopyId | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1179–1179](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1179-L1179) | ValidateCopyId | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1286–1286](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1286-L1286) | ValidateCopyId | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1287–1287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1287-L1287) | ValidateCopyId | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1298–1298](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1298-L1298) | ValidateCopyId | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1299–1299](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1299-L1299) | ValidateCopyId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6841,7 +6841,7 @@ flowchart TD
 
 ### MethodDeclaration `IncrementProtectWindowCount` · L1420–1420
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1420–1420](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1420-L1420)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1420–1420](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1420-L1420)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6877,7 +6877,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetProtectWindowCount` · L1421–1421
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1421–1421](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1421-L1421)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1421–1421](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1421-L1421)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6911,7 +6911,7 @@ flowchart TD
 
 ### MethodDeclaration `SetProtectWindowCount` · L1422–1422
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1422–1422](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1422-L1422)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1422–1422](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1422-L1422)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6932,7 +6932,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1421–1421](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1421-L1421) | SetProtectWindowCount | True |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1421–1421](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1421-L1421) | SetProtectWindowCount | True |
 
 호출하는 대상과 해석 범위:
 
@@ -6957,7 +6957,7 @@ flowchart TD
 
 ### MethodDeclaration `ChangeProtectWindowCount` · L1423–1474
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1423–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1423-L1474)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1423–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1423-L1474)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6978,8 +6978,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1420–1420](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1420-L1420) | ChangeProtectWindowCount | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1422–1422](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1422-L1422) | ChangeProtectWindowCount | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1420–1420](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1420-L1420) | ChangeProtectWindowCount | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1422–1422](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1422-L1422) | ChangeProtectWindowCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7113,7 +7113,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsCount` · L1429–1429
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1429–1429](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1429-L1429)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1429–1429](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1429-L1429)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7132,7 +7132,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1436–1436](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1436-L1436) | IsCount | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1436–1436](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1436-L1436) | IsCount | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7152,7 +7152,7 @@ flowchart TD
 
 ### LocalFunctionStatement `CountLine` · L1473–1473
 
-[Drilling.File/JHMI/CJhmiRecipeFile.cs:1473–1473](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1473-L1473)
+[Drilling.File/JHMI/CJhmiRecipeFile.cs:1473–1473](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1473-L1473)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7165,8 +7165,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1440–1440](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1440-L1440) | CountLine | False |
-| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1446–1446](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1446-L1446) | CountLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1440–1440](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1440-L1440) | CountLine | False |
+| [Drilling.File/JHMI/CJhmiRecipeFile.cs:1446–1446](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1446-L1446) | CountLine | False |
 
 호출하는 대상과 해석 범위:
 

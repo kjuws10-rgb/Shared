@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 98e8716b093e6970d73233f8488d538acf7fa02f5d140ab1baebd9e8abdcd9b9 |
 | 파일 분류 | code |
 | 원본 크기/행 | 5,813 bytes / 153 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -41,7 +41,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CreateMainViewModel` · L14–69
 
-[Drilling.UI/CAppStartup.cs:14–69](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L14-L69)
+[Drilling.UI/CAppStartup.cs:14–69](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L14-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -54,14 +54,14 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CApp.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CApp.xaml.cs#L31-L31) | CAppStartup.CreateMainViewModel | False |
+| [Drilling.UI/CApp.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CApp.xaml.cs#L31-L31) | CAppStartup.CreateMainViewModel | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 16 | GetConfigRoot | resolved | string Drilling.UI.CAppStartup.GetConfigRoot() · Drilling.UI/CAppStartup.cs:121 |
-| 17 | new CSettingFile | resolved | Drilling.File.JHMI.CSettingFile.CSettingFile(string) · Drilling.File/JHMI/CSettingFile.cs:13 |
+| 17 | new CSettingFile | resolved | Drilling.File.JHMI.CSettingFile.CSettingFile(string) · Drilling.File/JHMI/CSettingFile.cs:14 |
 | 18 | new CAutomation1ScriptFile | resolved | Drilling.File.Script.CAutomation1ScriptFile.CAutomation1ScriptFile(string?) · Drilling.File/Script/CAutomation1ScriptFile.cs:27 |
 | 18 | GetScriptDirectory | resolved | string Drilling.UI.CAppStartup.GetScriptDirectory(string, Drilling.File.JHMI.CSettingFile) · Drilling.UI/CAppStartup.cs:137 |
 | 19 | new CManager | resolved | Drilling.Common.Managers.CManager.CManager(string, Drilling.Common.Managers.CRecipeFileBase, Drilling.Common.Managers.CSettingFileBase, Drilling.Common.Managers.CManualScanFileBase, Drilling.Common.Managers.CInterfaceFileBase, Drilling.Common.Interface.CBETFileBase, Drilling.Common.Motion.CMotorFileBase, Drilling.Common.Interface.CMelsecMapFileBase, Drilling.Common.Product.CProductFileBase, Drilling.Common.Review.CReviewResultFileBase, Drilling.Common.Review.CReviewOffsetFileBase, CLogManager, Drilling.Common.Station.CAutomationScriptFileBase, bool?, Drilling.Common.Managers.CConfigStructureFileBase?, Drilling.Common.Alarm.CAlarmListFileBase?) · Drilling.Common/Managers/CManager.cs:52 |
@@ -150,7 +150,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### LocalFunctionStatement `SelectValue` · L38–50
 
-[Drilling.UI/CAppStartup.cs:38–50](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L38-L50)
+[Drilling.UI/CAppStartup.cs:38–50](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L38-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -197,7 +197,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteManagerStartupStatus` · L71–119
 
-[Drilling.UI/CAppStartup.cs:71–119](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L71-L119)
+[Drilling.UI/CAppStartup.cs:71–119](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L71-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -218,9 +218,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CAppStartup.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L37-L37) | WriteManagerStartupStatus | False |
-| [Drilling.UI/CAppStartup.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L43-L43) | WriteManagerStartupStatus | False |
-| [Drilling.UI/CAppStartup.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L48-L48) | WriteManagerStartupStatus | False |
+| [Drilling.UI/CAppStartup.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L37-L37) | WriteManagerStartupStatus | False |
+| [Drilling.UI/CAppStartup.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L43-L43) | WriteManagerStartupStatus | False |
+| [Drilling.UI/CAppStartup.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L48-L48) | WriteManagerStartupStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -302,7 +302,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L74–77
 
-[Drilling.UI/CAppStartup.cs:74–77](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L74-L77)
+[Drilling.UI/CAppStartup.cs:74–77](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L74-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -329,7 +329,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectOrder` · L79–82
 
-[Drilling.UI/CAppStartup.cs:79–82](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L79-L82)
+[Drilling.UI/CAppStartup.cs:79–82](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L79-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -356,7 +356,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectOrder2` · L113–116
 
-[Drilling.UI/CAppStartup.cs:113–116](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L113-L116)
+[Drilling.UI/CAppStartup.cs:113–116](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L113-L116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -383,7 +383,7 @@ flowchart TD
 
 ### MethodDeclaration `GetConfigRoot` · L121–135
 
-[Drilling.UI/CAppStartup.cs:121–135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L121-L135)
+[Drilling.UI/CAppStartup.cs:121–135](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L121-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -396,7 +396,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CAppStartup.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L16-L16) | GetConfigRoot | False |
+| [Drilling.UI/CAppStartup.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L16-L16) | GetConfigRoot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -440,7 +440,7 @@ flowchart TD
 
 ### MethodDeclaration `GetScriptDirectory` · L137–152
 
-[Drilling.UI/CAppStartup.cs:137–152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L137-L152)
+[Drilling.UI/CAppStartup.cs:137–152](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L137-L152)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -460,7 +460,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CAppStartup.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L18-L18) | GetScriptDirectory | False |
+| [Drilling.UI/CAppStartup.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L18-L18) | GetScriptDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -468,7 +468,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | 139 | Directory.GetParent | resolved | System.IO.DirectoryInfo? System.IO.Directory.GetParent(string) |
 | 145 | settingFile.Load(EN_SETTING_TAB.Option).FirstOrDefault | resolved | Drilling.Common.Managers.ST_SYSTEM_PARAMETER? System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>.FirstOrDefault<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>(System.Func<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, bool>) |
-| 145 | settingFile.Load | resolved · 동적 구현 선택 가능 | System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> Drilling.File.JHMI.CSettingFile.Load(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.File/JHMI/CSettingFile.cs:19 |
+| 145 | settingFile.Load | resolved · 동적 구현 선택 가능 | System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> Drilling.File.JHMI.CSettingFile.Load(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.File/JHMI/CSettingFile.cs:20 |
 | 146 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
 | 148 | Path.Combine | resolved | string System.IO.Path.Combine(string, string) |
 | 151 | Path.IsPathRooted | resolved | bool System.IO.Path.IsPathRooted(string?) |
@@ -511,7 +511,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L140–143
 
-[Drilling.UI/CAppStartup.cs:140–143](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CAppStartup.cs#L140-L143)
+[Drilling.UI/CAppStartup.cs:140–143](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CAppStartup.cs#L140-L143)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

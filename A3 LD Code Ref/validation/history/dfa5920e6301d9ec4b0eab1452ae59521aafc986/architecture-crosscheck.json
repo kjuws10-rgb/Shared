@@ -1,0 +1,10 @@
+{
+  "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "passed": true,
+  "scope": "Agent source tracing plus Root integration; not runtime validation",
+  "manualChapters": 8,
+  "sourceCitationsChecked": 212,
+  "sourceWrites": 0,
+  "equipmentExecution": false,
+  "issues": 10
+}

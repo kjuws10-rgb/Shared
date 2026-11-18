@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 570d3fa9657629d320c56f68be2638a7f6bb43a9ed539b22b9c9dd9ddaaf62d9 |
 | 파일 분류 | code |
 | 원본 크기/행 | 8,419 bytes / 260 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -48,7 +48,7 @@
 
 ### FieldDeclaration `_commLock` · L14–14
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L14-L14)
+[Drilling.Common/Motion/ACS/CACSComm.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -76,7 +76,7 @@
 
 ### FieldDeclaration `_api` · L15–15
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L15-L15)
+[Drilling.Common/Motion/ACS/CACSComm.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -91,7 +91,7 @@
 
 ### MethodDeclaration `Connect` · L16–32
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:16–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L16-L32)
+[Drilling.Common/Motion/ACS/CACSComm.cs:16–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L16-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -149,7 +149,7 @@ flowchart TD
 
 ### MethodDeclaration `Disconnect` · L34–46
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:34–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L34-L46)
+[Drilling.Common/Motion/ACS/CACSComm.cs:34–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L34-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -202,7 +202,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L48–80
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:48–80](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L48-L80)
+[Drilling.Common/Motion/ACS/CACSComm.cs:48–80](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L48-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -278,7 +278,7 @@ flowchart TD
 
 ### MethodDeclaration `ConnectLocked` · L82–103
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:82–103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L82-L103)
+[Drilling.Common/Motion/ACS/CACSComm.cs:82–103](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L82-L103)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -291,8 +291,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L21-L21) | ConnectLocked | False |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L55-L55) | ConnectLocked | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L21-L21) | ConnectLocked | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L55-L55) | ConnectLocked | False |
 
 호출하는 대상과 해석 범위:
 
@@ -343,7 +343,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteACSFunction` · L105–119
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:105–119](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L105-L119)
+[Drilling.Common/Motion/ACS/CACSComm.cs:105–119](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L105-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -406,7 +406,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteAxisFunction` · L121–160
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:121–160](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L121-L160)
+[Drilling.Common/Motion/ACS/CACSComm.cs:121–160](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L121-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -426,7 +426,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L116-L116) | ExecuteAxisFunction | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L116-L116) | ExecuteAxisFunction | False |
 
 호출하는 대상과 해석 범위:
 
@@ -512,7 +512,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteIoFunction` · L162–191
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:162–191](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L162-L191)
+[Drilling.Common/Motion/ACS/CACSComm.cs:162–191](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L162-L191)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -532,7 +532,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L117-L117) | ExecuteIoFunction | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L117-L117) | ExecuteIoFunction | False |
 
 호출하는 대상과 해석 범위:
 
@@ -609,7 +609,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteRawACSCommand` · L193–197
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:193–197](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L193-L197)
+[Drilling.Common/Motion/ACS/CACSComm.cs:193–197](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L193-L197)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -629,7 +629,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L118-L118) | ExecuteRawACSCommand | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L118-L118) | ExecuteRawACSCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -648,7 +648,7 @@ flowchart TD
 
 ### MethodDeclaration `IsSimulatorEndpoint` · L199–202
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:199–202](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L199-L202)
+[Drilling.Common/Motion/ACS/CACSComm.cs:199–202](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L199-L202)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -661,7 +661,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L86-L86) | IsSimulatorEndpoint | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L86-L86) | IsSimulatorEndpoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -684,7 +684,7 @@ flowchart TD
 
 ### MethodDeclaration `CloseApi` · L204–223
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:204–223](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L204-L223)
+[Drilling.Common/Motion/ACS/CACSComm.cs:204–223](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L204-L223)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -697,9 +697,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L25-L25) | CloseApi | False |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L39-L39) | CloseApi | False |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L84-L84) | CloseApi | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L25-L25) | CloseApi | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L39-L39) | CloseApi | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L84-L84) | CloseApi | False |
 
 호출하는 대상과 해석 범위:
 
@@ -738,7 +738,7 @@ flowchart TD
 
 ### MethodDeclaration `ToAcsAxis` · L225–233
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:225–233](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L225-L233)
+[Drilling.Common/Motion/ACS/CACSComm.cs:225–233](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L225-L233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -757,7 +757,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L129-L129) | ToAcsAxis | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L129-L129) | ToAcsAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -789,7 +789,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseIoAddress` · L235–244
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:235–244](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L235-L244)
+[Drilling.Common/Motion/ACS/CACSComm.cs:235–244](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L235-L244)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -808,7 +808,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L170-L170) | ParseIoAddress | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L170-L170) | ParseIoAddress | False |
 
 호출하는 대상과 해석 범위:
 
@@ -846,7 +846,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L246–249
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:246–249](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L246-L249)
+[Drilling.Common/Motion/ACS/CACSComm.cs:246–249](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L246-L249)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -866,7 +866,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L128-L128) | ReadInt | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L128-L128) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -889,7 +889,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L251–259
 
-[Drilling.Common/Motion/ACS/CACSComm.cs:251–259](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L251-L259)
+[Drilling.Common/Motion/ACS/CACSComm.cs:251–259](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L251-L259)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -910,8 +910,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L144-L144) | ReadDouble | False |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L147-L147) | ReadDouble | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L144-L144) | ReadDouble | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L147-L147) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 

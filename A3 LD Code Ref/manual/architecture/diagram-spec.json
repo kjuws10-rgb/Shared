@@ -1,69 +1,69 @@
 {
   "schema": "a3-diagram-spec-v1",
-  "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "sourceCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
   "evidenceScope": "static_source_only",
   "runtimeValidated": false,
   "diagrams": [
     {
       "id": "01-startup",
-      "title": "시작·공유 객체·새 메뉴 의존성",
+      "title": "공유 객체는 유지·검사 화면은 통합",
       "nodes": [
         {
           "id": "n0",
-          "label": "CAppStartup · 공유 Manager 조립",
+          "label": "CAppStartup·공유 Manager · 기존 구성·장치 수명 유지",
           "lines": [
-            "CAppStartup",
-            "공유 Manager 조립"
+            "CAppStartup·공유 Manager",
+            "기존 구성·장치 수명 유지"
           ],
           "x": 30,
           "y": 100
         },
         {
           "id": "n1",
-          "label": "RootView · 메뉴·파일서비스 전달",
+          "label": "Correction 탭 0~4 · 선택한 화면만 Build",
           "lines": [
-            "RootView",
-            "메뉴·파일서비스 전달"
+            "Correction 탭 0~4",
+            "선택한 화면만 Build"
           ],
           "x": 430,
           "y": 100
         },
         {
           "id": "n2",
-          "label": "Correction · CMenuReview 소유",
+          "label": "단일 INSPECTION · 모드 명령·공유 Review",
           "lines": [
-            "Correction",
-            "CMenuReview 소유"
+            "단일 INSPECTION",
+            "모드 명령·공유 Review"
           ],
           "x": 830,
           "y": 100
         },
         {
           "id": "n3",
-          "label": "CManager → Station · 보호윈도우 소진 callback",
+          "label": "Simple / Rough / Fine · 선택 탭별 계산·오류 처리",
           "lines": [
-            "CManager → Station",
-            "보호윈도우 소진 callback"
+            "Simple / Rough / Fine",
+            "선택 탭별 계산·오류 처리"
           ],
           "x": 30,
           "y": 315
         },
         {
           "id": "n4",
-          "label": "Monitor · ReviewOffsetFile 입력",
+          "label": "Review Data · 별도 파일 로드·모델 생성",
           "lines": [
-            "Monitor",
-            "ReviewOffsetFile 입력"
+            "Review Data",
+            "별도 파일 로드·모델 생성"
           ],
           "x": 430,
           "y": 315
         },
         {
           "id": "n5",
-          "label": "Alarm · LogDirectory 입력",
+          "label": "CBindingBase Changed · 정규화 속성명별 알림",
           "lines": [
-            "Alarm",
-            "LogDirectory 입력"
+            "CBindingBase Changed",
+            "정규화 속성명별 알림"
           ],
           "x": 830,
           "y": 315
@@ -78,85 +78,85 @@
         {
           "source": "n1",
           "target": "n2",
-          "label": "Review"
+          "label": "검사"
         },
         {
-          "source": "n0",
+          "source": "n1",
           "target": "n3",
-          "label": "콜백"
+          "label": "선택 탭"
         },
         {
           "source": "n1",
           "target": "n4",
-          "label": "Offset"
+          "label": "결과"
         },
         {
-          "source": "n1",
+          "source": "n2",
           "target": "n5",
-          "label": "로그"
+          "label": "상태 표시"
         }
       ]
     },
     {
       "id": "02-recipe",
-      "title": "정의·정책값·런타임 카운터의 저장 경계",
+      "title": "새 Setting의 검증·소비·저장 경계",
       "nodes": [
         {
           "id": "n0",
-          "label": "JHMI_RCP 정의 · Retry 0~3",
+          "label": "JHMI_SETTING·값 CSV · Level 7키·Head DOE 8키",
           "lines": [
-            "JHMI_RCP 정의",
-            "Retry 0~3"
+            "JHMI_SETTING·값 CSV",
+            "Level 7키·Head DOE 8키"
           ],
           "x": 30,
           "y": 100
         },
         {
           "id": "n1",
-          "label": "Recipe·Setting 파일 · 값·메타데이터",
+          "label": "Option 저장 검증 · Manager와 File 이중 검사",
           "lines": [
-            "Recipe·Setting 파일",
-            "값·메타데이터"
+            "Option 저장 검증",
+            "Manager와 File 이중 검사"
           ],
           "x": 430,
           "y": 100
         },
         {
           "id": "n2",
-          "label": "Manager 캐시 · 정규화·검증",
+          "label": "파일 저장 뒤 캐시 · 색상 picker APPLY와 구분",
           "lines": [
-            "Manager 캐시",
-            "정규화·검증"
+            "파일 저장 뒤 캐시",
+            "색상 picker APPLY와 구분"
           ],
           "x": 830,
           "y": 100
         },
         {
           "id": "n3",
-          "label": "실행 합성 사본 · Setting·최신 Offset",
+          "label": "Review Level 1~4 · 오차 maxabs·표시 색상",
           "lines": [
-            "실행 합성 사본",
-            "Setting·최신 Offset"
+            "Review Level 1~4",
+            "오차 maxabs·표시 색상"
           ],
           "x": 30,
           "y": 315
         },
         {
           "id": "n4",
-          "label": "UsageRequest · 정책과 Current 구분",
+          "label": "Head별 DOE_EXIST · Default 검사1점/옵션격자",
           "lines": [
-            "UsageRequest",
-            "정책과 Current 구분"
+            "Head별 DOE_EXIST",
+            "Default 검사1점/옵션격자"
           ],
           "x": 430,
           "y": 315
         },
         {
           "id": "n5",
-          "label": "파일·캐시·MELSEC · 인계매수 일치 확인",
+          "label": "Default 로그 새2열 · DOE 상태·실제 Marks 수",
           "lines": [
-            "파일·캐시·MELSEC",
-            "인계매수 일치 확인"
+            "Default 로그 새2열",
+            "DOE 상태·실제 Marks 수"
           ],
           "x": 830,
           "y": 315
@@ -166,90 +166,90 @@
         {
           "source": "n0",
           "target": "n1",
-          "label": "정의"
+          "label": "입력"
         },
         {
           "source": "n1",
           "target": "n2",
-          "label": "로드"
+          "label": "검증·저장"
         },
         {
           "source": "n2",
           "target": "n3",
-          "label": "사본"
+          "label": "표시"
         },
         {
           "source": "n2",
           "target": "n4",
-          "label": "Retry 정책"
+          "label": "측정 조건"
         },
         {
           "source": "n4",
           "target": "n5",
-          "label": "인계 저장"
+          "label": "기록"
         }
       ]
     },
     {
       "id": "03-coordinate",
-      "title": "같은 계산기·다른 스냅샷과 소비자",
+      "title": "Head별 Default 검사와 일반 실행의 경계",
       "nodes": [
         {
           "id": "n0",
-          "label": "Recipe·Setting·Offset · 입력 시점 확인",
+          "label": "Recipe·Setting 세션 · AK1/AK3·Head DOE",
           "lines": [
-            "Recipe·Setting·Offset",
-            "입력 시점 확인"
+            "Recipe·Setting 세션",
+            "AK1/AK3·Head DOE"
           ],
           "x": 30,
           "y": 100
         },
         {
           "id": "n1",
-          "label": "좌표 계획 · Design·변환·Head",
+          "label": "Head별 검사정책 · ON은 옵션격자·OFF는1점",
           "lines": [
-            "좌표 계획",
-            "Design·변환·Head"
+            "Head별 검사정책",
+            "ON은 옵션격자·OFF는1점"
           ],
           "x": 430,
           "y": 100
         },
         {
           "id": "n2",
-          "label": "Station 준비 스냅샷 · Head별 ProcessModel",
+          "label": "Capture·Fit · 점수·Pitch·Angle 분기",
           "lines": [
-            "Station 준비 스냅샷",
-            "Head별 ProcessModel"
+            "Capture·Fit",
+            "점수·Pitch·Angle 분기"
           ],
           "x": 830,
           "y": 100
         },
         {
           "id": "n3",
-          "label": "Monitor 미리보기 · 현재 선택값·기준",
+          "label": "AK 평균·Head 목표 · 실측중심 오차로 추천",
           "lines": [
-            "Monitor 미리보기",
-            "현재 선택값·기준"
+            "AK 평균·Head 목표",
+            "실측중심 오차로 추천"
           ],
           "x": 30,
           "y": 315
         },
         {
           "id": "n4",
-          "label": "DrawingImage·Shot 표 · 가공점 / 검사점 구분",
+          "label": "Default 로그·검증 · DOE 상태·실제 검사점수",
           "lines": [
-            "DrawingImage·Shot 표",
-            "가공점 / 검사점 구분"
+            "Default 로그·검증",
+            "DOE 상태·실제 검사점수"
           ],
           "x": 430,
           "y": 315
         },
         {
           "id": "n5",
-          "label": "Manifest·Script 실행 · Controller 결과 별도 확인",
+          "label": "일반 가공·다른 Review · 별도 Beam·실행 모델",
           "lines": [
-            "Manifest·Script 실행",
-            "Controller 결과 별도 확인"
+            "일반 가공·다른 Review",
+            "별도 Beam·실행 모델"
           ],
           "x": 830,
           "y": 315
@@ -259,33 +259,33 @@
         {
           "source": "n0",
           "target": "n1",
-          "label": "합성"
+          "label": "Default"
         },
         {
           "source": "n1",
           "target": "n2",
-          "label": "준비"
+          "label": "검사"
         },
         {
-          "source": "n1",
+          "source": "n2",
           "target": "n3",
-          "label": "미리보기"
+          "label": "중심"
         },
         {
           "source": "n3",
           "target": "n4",
-          "label": "표시"
+          "label": "추천·기록"
         },
         {
-          "source": "n2",
+          "source": "n0",
           "target": "n5",
-          "label": "빌드·실행"
+          "label": "별도 소비"
         }
       ]
     },
     {
       "id": "04-product",
-      "title": "보호윈도우 인계·추가 요청·소진",
+      "title": "기존 Product·보호윈도우 정책: 현재도 별도 확인",
       "nodes": [
         {
           "id": "n0",
@@ -383,64 +383,64 @@
     },
     {
       "id": "05-device",
-      "title": "기존 통신 소유자와 새 신호 정책",
+      "title": "검사 입력은 변경·기존 장치 소유자는 유지",
       "nodes": [
         {
           "id": "n0",
-          "label": "Station·UI 요청 · 대상과 번호 구분",
+          "label": "Head별 DOE_EXIST · Default 점수 분기",
           "lines": [
-            "Station·UI 요청",
-            "대상과 번호 구분"
+            "Head별 DOE_EXIST",
+            "Default 점수 분기"
           ],
           "x": 30,
           "y": 100
         },
         {
           "id": "n1",
-          "label": "Interface·Motion · 기존 장치 소유자",
+          "label": "기존 Default Capture · Stage·Vision 세션",
           "lines": [
-            "Interface·Motion",
-            "기존 장치 소유자"
+            "기존 Default Capture",
+            "Stage·Vision 세션"
           ],
           "x": 430,
           "y": 100
         },
         {
           "id": "n2",
-          "label": "Comm·SDK 래퍼 · 벤더 내부는 미확인",
+          "label": "Comm·SDK 래퍼 · 장치 수명·드라이버 유지",
           "lines": [
             "Comm·SDK 래퍼",
-            "벤더 내부는 미확인"
+            "장치 수명·드라이버 유지"
           ],
           "x": 830,
           "y": 100
         },
         {
           "id": "n3",
-          "label": "Stage Distortion 입력 · 활성 DWord·Scale",
+          "label": "Shot별 Beam 할당 · 정규화한 ShotKey·중복 합집합",
           "lines": [
-            "Stage Distortion 입력",
-            "활성 DWord·Scale"
+            "Shot별 Beam 할당",
+            "정규화한 ShotKey·중복 합집합"
           ],
           "x": 30,
           "y": 315
         },
         {
           "id": "n4",
-          "label": "MELSEC 중앙 Snapshot · typed I/O·fresh/readback",
+          "label": "기존 Review 좌표 · 유효 Beam·Head·제외조건",
           "lines": [
-            "MELSEC 중앙 Snapshot",
-            "typed I/O·fresh/readback"
+            "기존 Review 좌표",
+            "유효 Beam·Head·제외조건"
           ],
           "x": 430,
           "y": 315
         },
         {
           "id": "n5",
-          "label": "보호윈도우 추가 요청 · 같은 통신 경로 사용",
+          "label": "일반 가공·다른 Review · DOE로 Beam 자동치환 안함",
           "lines": [
-            "보호윈도우 추가 요청",
-            "같은 통신 경로 사용"
+            "일반 가공·다른 Review",
+            "DOE로 Beam 자동치환 안함"
           ],
           "x": 830,
           "y": 315
@@ -450,90 +450,90 @@
         {
           "source": "n0",
           "target": "n1",
-          "label": "명령"
+          "label": "1점/격자"
         },
         {
           "source": "n1",
           "target": "n2",
-          "label": "전달"
+          "label": "기존 통신"
         },
         {
           "source": "n3",
           "target": "n4",
-          "label": "입력"
+          "label": "대상 생성"
         },
         {
-          "source": "n5",
-          "target": "n4",
-          "label": "쓰기·확인"
+          "source": "n4",
+          "target": "n2",
+          "label": "기존 통신"
         },
         {
-          "source": "n0",
+          "source": "n3",
           "target": "n5",
-          "label": "정책"
+          "label": "계약 확인"
         }
       ]
     },
     {
       "id": "06-thread",
-      "title": "분석 Task·좌표 표시·상태 감시의 경계",
+      "title": "단일 Shot Control·구독·속성 알림",
       "nodes": [
         {
           "id": "n0",
-          "label": "UI 선택·버튼 · 중복 요청·취소",
+          "label": "Rows·Shot 상태 변화 · 전체 객체 목록은 유지",
           "lines": [
-            "UI 선택·버튼",
-            "중복 요청·취소"
+            "Rows·Shot 상태 변화",
+            "전체 객체 목록은 유지"
           ],
           "x": 30,
           "y": 100
         },
         {
           "id": "n1",
-          "label": "Alarm Task.Run · 로그 읽기·규칙 분류",
+          "label": "행 이벤트 구독 교체 · 이전 해제·새 행 구독",
           "lines": [
-            "Alarm Task.Run",
-            "로그 읽기·규칙 분류"
+            "행 이벤트 구독 교체",
+            "이전 해제·새 행 구독"
           ],
           "x": 430,
           "y": 100
         },
         {
           "id": "n2",
-          "label": "Alarm 표시 · 영역당 최대 1200행",
+          "label": "Dispatcher·OnRender · 하나의 Visual에 전체 그림",
           "lines": [
-            "Alarm 표시",
-            "영역당 최대 1200행"
+            "Dispatcher·OnRender",
+            "하나의 Visual에 전체 그림"
           ],
           "x": 830,
           "y": 100
         },
         {
           "id": "n3",
-          "label": "Monitor 새로고침 · Cell 전체 좌표 계산",
+          "label": "Loaded / Unloaded · 400ms blink 시작·정지",
           "lines": [
-            "Monitor 새로고침",
-            "Cell 전체 좌표 계산"
+            "Loaded / Unloaded",
+            "400ms blink 시작·정지"
           ],
           "x": 30,
           "y": 315
         },
         {
           "id": "n4",
-          "label": "Geometry·Drawing Freeze · 표시 객체 수 감소 의도",
+          "label": "Setting Value·색상 · ColorBrush 알림 누락 후보",
           "lines": [
-            "Geometry·Drawing Freeze",
-            "표시 객체 수 감소 의도"
+            "Setting Value·색상",
+            "ColorBrush 알림 누락 후보"
           ],
           "x": 430,
           "y": 315
         },
         {
           "id": "n5",
-          "label": "Station gate·감시 · 파일·readback 대기",
+          "label": "UI 검증·성능 측정 · 캡처 수·지연·구독·복구",
           "lines": [
-            "Station gate·감시",
-            "파일·readback 대기"
+            "UI 검증·성능 측정",
+            "캡처 수·지연·구독·복구"
           ],
           "x": 830,
           "y": 315
@@ -543,90 +543,90 @@
         {
           "source": "n0",
           "target": "n1",
-          "label": "분석"
+          "label": "교체"
         },
         {
           "source": "n1",
           "target": "n2",
-          "label": "결과"
-        },
-        {
-          "source": "n0",
-          "target": "n3",
-          "label": "선택 변경"
+          "label": "무효화"
         },
         {
           "source": "n3",
-          "target": "n4",
-          "label": "그림"
+          "target": "n2",
+          "label": "blink"
         },
         {
-          "source": "n0",
+          "source": "n2",
           "target": "n5",
-          "label": "제어 요청"
+          "label": "실기 확인"
+        },
+        {
+          "source": "n4",
+          "target": "n5",
+          "label": "swatch 확인"
         }
       ]
     },
     {
       "id": "07-change",
-      "title": "변경 생산자에서 저장·검증 경계까지",
+      "title": "이번 변경과 기존 잔건을 구분하는 검토",
       "nodes": [
         {
           "id": "n0",
-          "label": "Git diff·새 Commit · 바뀐 구현과 정의",
+          "label": "dfa5920 → 96e22cd · 두 Commit·11.17.0",
           "lines": [
-            "Git diff·새 Commit",
-            "바뀐 구현과 정의"
+            "dfa5920 → 96e22cd",
+            "두 Commit·11.17.0"
           ],
           "x": 30,
           "y": 100
         },
         {
           "id": "n1",
-          "label": "생산자·호출자·소비자 · UI·파일·PLC 연결",
+          "label": "생산자·호출자·소비자 · DOE·Level·UI·로그",
           "lines": [
             "생산자·호출자·소비자",
-            "UI·파일·PLC 연결"
+            "DOE·Level·UI·로그"
           ],
           "x": 430,
           "y": 100
         },
         {
           "id": "n2",
-          "label": "저장·복구 계약 · 메모리와 CSV 구분",
+          "label": "저장·복구 계약 · 색상 Setting·Default 새열",
           "lines": [
             "저장·복구 계약",
-            "메모리와 CSV 구분"
+            "색상 Setting·Default 새열"
           ],
           "x": 830,
           "y": 100
         },
         {
           "id": "n3",
-          "label": "위험과 검증 시나리오 · 단위·회차·재시작·동시성",
+          "label": "새 위험·검증 시나리오 · 정규화·Head 혼합·UI 수명",
           "lines": [
-            "위험과 검증 시나리오",
-            "단위·회차·재시작·동시성"
+            "새 위험·검증 시나리오",
+            "정규화·Head 혼합·UI 수명"
           ],
           "x": 30,
           "y": 315
         },
         {
           "id": "n4",
-          "label": "줄 인용·상세 매뉴얼 · 현재 Commit에 고정",
+          "label": "기존 잔건 유지 · Product·Retry·알람 분석",
           "lines": [
-            "줄 인용·상세 매뉴얼",
-            "현재 Commit에 고정"
+            "기존 잔건 유지",
+            "Product·Retry·알람 분석"
           ],
           "x": 430,
           "y": 315
         },
         {
           "id": "n5",
-          "label": "Offline 검색·답변 · 정적 확인 / 실행 미확인",
+          "label": "현재 Commit 근거 · 소스 링크·문서·검색자료",
           "lines": [
-            "Offline 검색·답변",
-            "정적 확인 / 실행 미확인"
+            "현재 Commit 근거",
+            "소스 링크·문서·검색자료"
           ],
           "x": 830,
           "y": 315
@@ -641,85 +641,85 @@
         {
           "source": "n1",
           "target": "n2",
-          "label": "계약"
+          "label": "형식"
         },
         {
           "source": "n2",
           "target": "n3",
-          "label": "영향"
+          "label": "검증 계획"
         },
         {
           "source": "n3",
-          "target": "n4",
-          "label": "문서화"
+          "target": "n5",
+          "label": "기록"
         },
         {
           "source": "n4",
           "target": "n5",
-          "label": "활용"
+          "label": "구분"
         }
       ]
     },
     {
       "id": "08-alarm",
-      "title": "알람 한 건의 시각에서 조사 후보까지",
+      "title": "새 오차등급과 기존 알람 분석을 구분",
       "nodes": [
         {
           "id": "n0",
-          "label": "선택 Alarm 이력 · Code·OccurredAt",
+          "label": "선택 Alarm·OccurredAt · 기존 로그 시간창",
           "lines": [
-            "선택 Alarm 이력",
-            "Code·OccurredAt"
+            "선택 Alarm·OccurredAt",
+            "기존 로그 시간창"
           ],
           "x": 30,
           "y": 100
         },
         {
           "id": "n1",
-          "label": "시간창·로컬 로그 · 기본 전 60초 / 후 30초",
+          "label": "로컬 로그4패널 · 기존 파일·정규화 규칙",
           "lines": [
-            "시간창·로컬 로그",
-            "기본 전 60초 / 후 30초"
+            "로컬 로그4패널",
+            "기존 파일·정규화 규칙"
           ],
           "x": 430,
           "y": 100
         },
         {
           "id": "n2",
-          "label": "4개 영역 분류 · 전이·비교·정상폴링 묶음",
+          "label": "후보·NG 요약·시간축 · Run 상관키 등 잔건 유지",
           "lines": [
-            "4개 영역 분류",
-            "전이·비교·정상폴링 묶음"
+            "후보·NG 요약·시간축",
+            "Run 상관키 등 잔건 유지"
           ],
           "x": 830,
           "y": 100
         },
         {
           "id": "n3",
-          "label": "이전 비교구간 탐색 · 최대 8개·무알람·10행",
+          "label": "Review Level 표시 · 현재 오차 크기·색상",
           "lines": [
-            "이전 비교구간 탐색",
-            "최대 8개·무알람·10행"
+            "Review Level 표시",
+            "현재 오차 크기·색상"
           ],
           "x": 30,
           "y": 315
         },
         {
           "id": "n4",
-          "label": "후보 최대 3개·NG 요약 · 규칙 순위·원인 확정 아님",
+          "label": "JUDGE·Vision NG 정보 · 실측 출처·판정 별도",
           "lines": [
-            "후보 최대 3개·NG 요약",
-            "규칙 순위·원인 확정 아님"
+            "JUDGE·Vision NG 정보",
+            "실측 출처·판정 별도"
           ],
           "x": 430,
           "y": 315
         },
         {
           "id": "n5",
-          "label": "근거 시간축·커서 · 가까운 행 선택·최대 7근거",
+          "label": "조사와 표시를 함께 확인 · 낮은 Level이 원인 해소 아님",
           "lines": [
-            "근거 시간축·커서",
-            "가까운 행 선택·최대 7근거"
+            "조사와 표시를 함께 확인",
+            "낮은 Level이 원인 해소 아님"
           ],
           "x": 830,
           "y": 315
@@ -729,32 +729,27 @@
         {
           "source": "n0",
           "target": "n1",
-          "label": "기준"
-        },
-        {
-          "source": "n1",
-          "target": "n2",
           "label": "읽기"
         },
         {
           "source": "n1",
-          "target": "n3",
-          "label": "비교"
+          "target": "n2",
+          "label": "규칙"
         },
         {
           "source": "n2",
-          "target": "n4",
-          "label": "후보"
+          "target": "n5",
+          "label": "근거"
         },
         {
           "source": "n3",
-          "target": "n4",
-          "label": "차이"
+          "target": "n5",
+          "label": "색상"
         },
         {
           "source": "n4",
           "target": "n5",
-          "label": "조사"
+          "label": "판정·출처"
         }
       ]
     }

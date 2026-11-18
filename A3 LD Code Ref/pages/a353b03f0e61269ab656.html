@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Interface/CPowerMeasureRun.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Interface/CPowerMeasureRun.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs">Git 원본</a></p><h1>Drilling.Common/Interface/CPowerMeasureRun.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Interface/CPowerMeasureRun.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Interface/CPowerMeasureRun.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs">Git 원본</a></p><h1>Drilling.Common/Interface/CPowerMeasureRun.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>dfa5920e6301d9ec4b0eab1452ae59521aafc986</td></tr>
+<tr><td>원본 Commit</td><td>96e22cd027c84bf302b23f2949b98985d7f301bb</td></tr>
 <tr><td>원본 SHA256</td><td>e493b1e8caa9a16e8c7edf1939703c9f13b9c0032c7a5a8968bbe7bb231d9cf7</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>28,336 bytes / 418 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>외부 통신과 장치 인터페이스를 연결합니다. 요청 생성·전송·수신·장치 실행을 같은 의미로 합치지 않습니다.</p>
@@ -75,7 +75,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L15">FieldDeclaration <code>_session</code> · L15–15</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L15-L15">Drilling.Common/Interface/CPowerMeasureRun.cs:15–15</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L15-L15">Drilling.Common/Interface/CPowerMeasureRun.cs:15–15</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.CPowerMeasureDeviceSession Drilling.Common.Interface.CPowerMeasureRun._session</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -94,7 +94,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L16">FieldDeclaration <code>_started</code> · L16–16</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L16-L16">Drilling.Common/Interface/CPowerMeasureRun.cs:16–16</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L16-L16">Drilling.Common/Interface/CPowerMeasureRun.cs:16–16</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.DateTimeOffset Drilling.Common.Interface.CPowerMeasureRun._started</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -108,7 +108,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L17">FieldDeclaration <code>_gate</code> · L17–17</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L17-L17">Drilling.Common/Interface/CPowerMeasureRun.cs:17–17</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L17-L17">Drilling.Common/Interface/CPowerMeasureRun.cs:17–17</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.SemaphoreSlim Drilling.Common.Interface.CPowerMeasureRun._gate</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -127,7 +127,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L18">FieldDeclaration <code>_prepared</code> · L18–18</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18">Drilling.Common/Interface/CPowerMeasureRun.cs:18–18</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18">Drilling.Common/Interface/CPowerMeasureRun.cs:18–18</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Interface.CPowerMeasureRun._prepared</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -137,7 +137,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L18">FieldDeclaration <code>_measured</code> · L18–18</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18">Drilling.Common/Interface/CPowerMeasureRun.cs:18–18</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18">Drilling.Common/Interface/CPowerMeasureRun.cs:18–18</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Interface.CPowerMeasureRun._measured</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -147,7 +147,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L18">FieldDeclaration <code>_saved</code> · L18–18</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18">Drilling.Common/Interface/CPowerMeasureRun.cs:18–18</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18">Drilling.Common/Interface/CPowerMeasureRun.cs:18–18</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Interface.CPowerMeasureRun._saved</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -157,7 +157,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L18">FieldDeclaration <code>_reported</code> · L18–18</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18">Drilling.Common/Interface/CPowerMeasureRun.cs:18–18</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18">Drilling.Common/Interface/CPowerMeasureRun.cs:18–18</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Interface.CPowerMeasureRun._reported</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -167,7 +167,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L18">FieldDeclaration <code>_released</code> · L18–18</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18">Drilling.Common/Interface/CPowerMeasureRun.cs:18–18</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L18-L18">Drilling.Common/Interface/CPowerMeasureRun.cs:18–18</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Interface.CPowerMeasureRun._released</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -177,7 +177,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L19">FieldDeclaration <code>_result</code> · L19–19</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L19-L19">Drilling.Common/Interface/CPowerMeasureRun.cs:19–19</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L19-L19">Drilling.Common/Interface/CPowerMeasureRun.cs:19–19</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_SNAPSHOT? Drilling.Common.Interface.CPowerMeasureRun._result</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -187,7 +187,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L20">MethodDeclaration <code>AutoTargets</code> · L20–35</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L20-L35">Drilling.Common/Interface/CPowerMeasureRun.cs:20–35</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L20-L35">Drilling.Common/Interface/CPowerMeasureRun.cs:20–35</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_POWER_MEASURE_TARGET&gt; Drilling.Common.Interface.CPowerMeasureRun.AutoTargets(Drilling.Common.Managers.CSettingManager)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -200,7 +200,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2785-L2785">Drilling.UI/CRootView.cs:2785–2785</a></td><td>CPowerMeasureRun.AutoTargets</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2777-L2777">Drilling.UI/CRootView.cs:2777–2777</a></td><td>CPowerMeasureRun.AutoTargets</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -260,7 +260,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L36">MethodDeclaration <code>Number</code> · L36–41</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L36-L41">Drilling.Common/Interface/CPowerMeasureRun.cs:36–41</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L36-L41">Drilling.Common/Interface/CPowerMeasureRun.cs:36–41</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Interface.CPowerMeasureRun.Number(Drilling.Common.Managers.CSettingManager, string, double)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
@@ -275,11 +275,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L26-L26">Drilling.Common/Interface/CPowerMeasureRun.cs:26–26</a></td><td>Number</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L26-L26">Drilling.Common/Interface/CPowerMeasureRun.cs:26–26</a></td><td>Number</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L29-L29">Drilling.Common/Interface/CPowerMeasureRun.cs:29–29</a></td><td>Number</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L44-L44">Drilling.Common/Interface/CPowerMeasureRun.cs:44–44</a></td><td>Number</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L161-L161">Drilling.Common/Interface/CPowerMeasureRun.cs:161–161</a></td><td>CPowerMeasureRun.Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L26-L26">Drilling.Common/Interface/CPowerMeasureRun.cs:26–26</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L26-L26">Drilling.Common/Interface/CPowerMeasureRun.cs:26–26</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L29-L29">Drilling.Common/Interface/CPowerMeasureRun.cs:29–29</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L44-L44">Drilling.Common/Interface/CPowerMeasureRun.cs:44–44</a></td><td>Number</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L161-L161">Drilling.Common/Interface/CPowerMeasureRun.cs:161–161</a></td><td>CPowerMeasureRun.Number</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -304,7 +304,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L42">MethodDeclaration <code>Integer</code> · L42–46</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L42-L46">Drilling.Common/Interface/CPowerMeasureRun.cs:42–46</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L42-L46">Drilling.Common/Interface/CPowerMeasureRun.cs:42–46</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.CPowerMeasureRun.Integer(Drilling.Common.Managers.CSettingManager, string, int)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
@@ -319,13 +319,13 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L28-L28">Drilling.Common/Interface/CPowerMeasureRun.cs:28–28</a></td><td>Integer</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L28-L28">Drilling.Common/Interface/CPowerMeasureRun.cs:28–28</a></td><td>Integer</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L30-L30">Drilling.Common/Interface/CPowerMeasureRun.cs:30–30</a></td><td>Integer</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L30-L30">Drilling.Common/Interface/CPowerMeasureRun.cs:30–30</a></td><td>Integer</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L30-L30">Drilling.Common/Interface/CPowerMeasureRun.cs:30–30</a></td><td>Integer</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L33-L33">Drilling.Common/Interface/CPowerMeasureRun.cs:33–33</a></td><td>Integer</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L162-L162">Drilling.Common/Interface/CPowerMeasureRun.cs:162–162</a></td><td>CPowerMeasureRun.Integer</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L28-L28">Drilling.Common/Interface/CPowerMeasureRun.cs:28–28</a></td><td>Integer</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L28-L28">Drilling.Common/Interface/CPowerMeasureRun.cs:28–28</a></td><td>Integer</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L30-L30">Drilling.Common/Interface/CPowerMeasureRun.cs:30–30</a></td><td>Integer</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L30-L30">Drilling.Common/Interface/CPowerMeasureRun.cs:30–30</a></td><td>Integer</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L30-L30">Drilling.Common/Interface/CPowerMeasureRun.cs:30–30</a></td><td>Integer</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L33-L33">Drilling.Common/Interface/CPowerMeasureRun.cs:33–33</a></td><td>Integer</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L162-L162">Drilling.Common/Interface/CPowerMeasureRun.cs:162–162</a></td><td>CPowerMeasureRun.Integer</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -346,7 +346,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L47">MethodDeclaration <code>Prepare</code> · L47–59</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L47-L59">Drilling.Common/Interface/CPowerMeasureRun.cs:47–59</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L47-L59">Drilling.Common/Interface/CPowerMeasureRun.cs:47–59</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureRun.Prepare(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -359,8 +359,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L124-L124">Drilling.Common/Interface/CPowerMeasureRun.cs:124–124</a></td><td>Prepare</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2786-L2786">Drilling.UI/CRootView.cs:2786–2786</a></td><td>run.Prepare</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L124-L124">Drilling.Common/Interface/CPowerMeasureRun.cs:124–124</a></td><td>Prepare</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2778-L2778">Drilling.UI/CRootView.cs:2778–2778</a></td><td>run.Prepare</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -406,7 +406,7 @@
  N0 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L60">MethodDeclaration <code>Measure</code> · L60–108</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L60-L108">Drilling.Common/Interface/CPowerMeasureRun.cs:60–108</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L60-L108">Drilling.Common/Interface/CPowerMeasureRun.cs:60–108</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureRun.Measure(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -419,8 +419,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L124-L124">Drilling.Common/Interface/CPowerMeasureRun.cs:124–124</a></td><td>Measure</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2787-L2787">Drilling.UI/CRootView.cs:2787–2787</a></td><td>(run ?? throw new InvalidOperationException(&quot;TPM 준비가 필요합니다.&quot;)).Measure</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L124-L124">Drilling.Common/Interface/CPowerMeasureRun.cs:124–124</a></td><td>Measure</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2779-L2779">Drilling.UI/CRootView.cs:2779–2779</a></td><td>(run ?? throw new InvalidOperationException(&quot;TPM 준비가 필요합니다.&quot;)).Measure</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -582,7 +582,7 @@
  N0 --&gt;|포함| N17</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L109">MethodDeclaration <code>Save</code> · L109–121</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L109-L121">Drilling.Common/Interface/CPowerMeasureRun.cs:109–121</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L109-L121">Drilling.Common/Interface/CPowerMeasureRun.cs:109–121</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureRun.Save(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -595,8 +595,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L124-L124">Drilling.Common/Interface/CPowerMeasureRun.cs:124–124</a></td><td>Save</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2788-L2788">Drilling.UI/CRootView.cs:2788–2788</a></td><td>(run ?? throw new InvalidOperationException(&quot;TPM 측정이 필요합니다.&quot;)).Save</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L124-L124">Drilling.Common/Interface/CPowerMeasureRun.cs:124–124</a></td><td>Save</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2780-L2780">Drilling.UI/CRootView.cs:2780–2780</a></td><td>(run ?? throw new InvalidOperationException(&quot;TPM 측정이 필요합니다.&quot;)).Save</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -644,7 +644,7 @@
  N0 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L122">MethodDeclaration <code>Execute</code> · L122–126</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L122-L126">Drilling.Common/Interface/CPowerMeasureRun.cs:122–126</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L122-L126">Drilling.Common/Interface/CPowerMeasureRun.cs:122–126</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureRun.Execute(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -657,7 +657,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6295-L6295">Drilling.UI/Menu/Menus/CMenuManual.cs:6295–6295</a></td><td>CPowerTableFile.CreateRun(_manager, recipe, targets, automatic: false).Execute</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6295-L6295">Drilling.UI/Menu/Menus/CMenuManual.cs:6295–6295</a></td><td>CPowerTableFile.CreateRun(_manager, recipe, targets, automatic: false).Execute</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -696,7 +696,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L127">MethodDeclaration <code>DisposeAsync</code> · L127–138</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L127-L138">Drilling.Common/Interface/CPowerMeasureRun.cs:127–138</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L127-L138">Drilling.Common/Interface/CPowerMeasureRun.cs:127–138</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.ValueTask Drilling.Common.Interface.CPowerMeasureRun.DisposeAsync()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -705,9 +705,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L125-L125">Drilling.Common/Interface/CPowerMeasureRun.cs:125–125</a></td><td>DisposeAsync</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2783-L2783">Drilling.UI/CRootView.cs:2783–2783</a></td><td>run.DisposeAsync</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2789-L2789">Drilling.UI/CRootView.cs:2789–2789</a></td><td>run.DisposeAsync</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L125-L125">Drilling.Common/Interface/CPowerMeasureRun.cs:125–125</a></td><td>DisposeAsync</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2775-L2775">Drilling.UI/CRootView.cs:2775–2775</a></td><td>run.DisposeAsync</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2781-L2781">Drilling.UI/CRootView.cs:2781–2781</a></td><td>run.DisposeAsync</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -748,7 +748,7 @@
  N0 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L139">MethodDeclaration <code>Report</code> · L139–145</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L139-L145">Drilling.Common/Interface/CPowerMeasureRun.cs:139–145</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L139-L145">Drilling.Common/Interface/CPowerMeasureRun.cs:139–145</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.CPowerMeasureRun.Report()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -757,8 +757,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L97-L97">Drilling.Common/Interface/CPowerMeasureRun.cs:97–97</a></td><td>Report</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L135-L135">Drilling.Common/Interface/CPowerMeasureRun.cs:135–135</a></td><td>Report</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L97-L97">Drilling.Common/Interface/CPowerMeasureRun.cs:97–97</a></td><td>Report</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L135-L135">Drilling.Common/Interface/CPowerMeasureRun.cs:135–135</a></td><td>Report</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -785,7 +785,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L146">MethodDeclaration <code>Log</code> · L146–146</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L146-L146">Drilling.Common/Interface/CPowerMeasureRun.cs:146–146</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L146-L146">Drilling.Common/Interface/CPowerMeasureRun.cs:146–146</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.CPowerMeasureRun.Log(string, string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -799,10 +799,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L56-L56">Drilling.Common/Interface/CPowerMeasureRun.cs:56–56</a></td><td>Log</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L104-L104">Drilling.Common/Interface/CPowerMeasureRun.cs:104–104</a></td><td>Log</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L106-L106">Drilling.Common/Interface/CPowerMeasureRun.cs:106–106</a></td><td>Log</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L118-L118">Drilling.Common/Interface/CPowerMeasureRun.cs:118–118</a></td><td>Log</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L56-L56">Drilling.Common/Interface/CPowerMeasureRun.cs:56–56</a></td><td>Log</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L104-L104">Drilling.Common/Interface/CPowerMeasureRun.cs:104–104</a></td><td>Log</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L106-L106">Drilling.Common/Interface/CPowerMeasureRun.cs:106–106</a></td><td>Log</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L118-L118">Drilling.Common/Interface/CPowerMeasureRun.cs:118–118</a></td><td>Log</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -825,7 +825,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L147">MethodDeclaration <code>FindStart</code> · L147–147</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L147-L147">Drilling.Common/Interface/CPowerMeasureRun.cs:147–147</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L147-L147">Drilling.Common/Interface/CPowerMeasureRun.cs:147–147</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.ST_POWER_MEASURE_START Drilling.Common.Interface.CPowerMeasureRun.FindStart(int, double, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -853,7 +853,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L148">MethodDeclaration <code>SaveMeasurement</code> · L148–148</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L148-L148">Drilling.Common/Interface/CPowerMeasureRun.cs:148–148</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L148-L148">Drilling.Common/Interface/CPowerMeasureRun.cs:148–148</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.CPowerMeasureRun.SaveMeasurement(int, double, double, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -882,7 +882,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L154">FieldDeclaration <code>_routes</code> · L154–154</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L154-L154">Drilling.Common/Interface/CPowerMeasureRun.cs:154–154</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L154-L154">Drilling.Common/Interface/CPowerMeasureRun.cs:154–154</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;int, Drilling.Common.Interface.CPowerMeasureDeviceSession.Route&gt; Drilling.Common.Interface.CPowerMeasureDeviceSession._routes</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -896,7 +896,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L155">FieldDeclaration <code>_attenuators</code> · L155–155</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L155-L155">Drilling.Common/Interface/CPowerMeasureRun.cs:155–155</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L155-L155">Drilling.Common/Interface/CPowerMeasureRun.cs:155–155</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;int, Drilling.Common.Interface.CAttenuatorPositioningService&gt; Drilling.Common.Interface.CPowerMeasureDeviceSession._attenuators</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -910,7 +910,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L156">FieldDeclaration <code>_emissionGate</code> · L156–156</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L156-L156">Drilling.Common/Interface/CPowerMeasureRun.cs:156–156</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L156-L156">Drilling.Common/Interface/CPowerMeasureRun.cs:156–156</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.SemaphoreSlim Drilling.Common.Interface.CPowerMeasureDeviceSession._emissionGate</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -929,7 +929,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L157">FieldDeclaration <code>_emitting</code> · L157–157</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L157-L157">Drilling.Common/Interface/CPowerMeasureRun.cs:157–157</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L157-L157">Drilling.Common/Interface/CPowerMeasureRun.cs:157–157</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Concurrent.ConcurrentDictionary&lt;int, byte&gt; Drilling.Common.Interface.CPowerMeasureDeviceSession._emitting</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -948,7 +948,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L158">FieldDeclaration <code>_flagMayBeOn</code> · L158–158</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L158-L158">Drilling.Common/Interface/CPowerMeasureRun.cs:158–158</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L158-L158">Drilling.Common/Interface/CPowerMeasureRun.cs:158–158</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Interface.CPowerMeasureDeviceSession._flagMayBeOn</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -958,7 +958,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L159">FieldDeclaration <code>_stage</code> · L159–159</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L159-L159">Drilling.Common/Interface/CPowerMeasureRun.cs:159–159</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L159-L159">Drilling.Common/Interface/CPowerMeasureRun.cs:159–159</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Station.CStageReviewSequences.Session? Drilling.Common.Interface.CPowerMeasureDeviceSession._stage</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -968,7 +968,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L160">FieldDeclaration <code>_stageDevice</code> · L160–160</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L160-L160">Drilling.Common/Interface/CPowerMeasureRun.cs:160–160</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L160-L160">Drilling.Common/Interface/CPowerMeasureRun.cs:160–160</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.CPowerMeasureDeviceSession._stageDevice</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -978,7 +978,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L161">PropertyDeclaration <code>StageTolerance</code> · L161–161</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L161-L161">Drilling.Common/Interface/CPowerMeasureRun.cs:161–161</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L161-L161">Drilling.Common/Interface/CPowerMeasureRun.cs:161–161</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Interface.CPowerMeasureDeviceSession.StageTolerance</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -998,7 +998,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L162">PropertyDeclaration <code>TimeoutMs</code> · L162–162</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L162-L162">Drilling.Common/Interface/CPowerMeasureRun.cs:162–162</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L162-L162">Drilling.Common/Interface/CPowerMeasureRun.cs:162–162</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Interface.CPowerMeasureDeviceSession.TimeoutMs</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1020,7 +1020,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L163">PropertyDeclaration <code>Interfaces</code> · L163–163</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L163-L163">Drilling.Common/Interface/CPowerMeasureRun.cs:163–163</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L163-L163">Drilling.Common/Interface/CPowerMeasureRun.cs:163–163</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Interface.CInterfaceManager Drilling.Common.Interface.CPowerMeasureDeviceSession.Interfaces</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1038,7 +1038,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L164">PropertyDeclaration <code>Automation</code> · L164–164</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L164-L164">Drilling.Common/Interface/CPowerMeasureRun.cs:164–164</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L164-L164">Drilling.Common/Interface/CPowerMeasureRun.cs:164–164</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.CAutomationManager Drilling.Common.Interface.CPowerMeasureDeviceSession.Automation</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1056,7 +1056,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L165">FieldDeclaration <code>StageFeedbackIds</code> · L165–165</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L165-L165">Drilling.Common/Interface/CPowerMeasureRun.cs:165–165</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L165-L165">Drilling.Common/Interface/CPowerMeasureRun.cs:165–165</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string[] Drilling.Common.Interface.CPowerMeasureDeviceSession.StageFeedbackIds</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
@@ -1070,7 +1070,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L166">MethodDeclaration <code>Sim</code> · L166–166</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L166-L166">Drilling.Common/Interface/CPowerMeasureRun.cs:166–166</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L166-L166">Drilling.Common/Interface/CPowerMeasureRun.cs:166–166</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Interface.CPowerMeasureDeviceSession.Sim(Drilling.Common.Interface.EN_EQP_MODULE, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1084,9 +1084,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167">Drilling.Common/Interface/CPowerMeasureRun.cs:167–167</a></td><td>Sim</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167">Drilling.Common/Interface/CPowerMeasureRun.cs:167–167</a></td><td>Sim</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L394-L394">Drilling.Common/Interface/CPowerMeasureRun.cs:394–394</a></td><td>Sim</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167">Drilling.Common/Interface/CPowerMeasureRun.cs:167–167</a></td><td>Sim</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167">Drilling.Common/Interface/CPowerMeasureRun.cs:167–167</a></td><td>Sim</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L394-L394">Drilling.Common/Interface/CPowerMeasureRun.cs:394–394</a></td><td>Sim</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1100,7 +1100,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L167">MethodDeclaration <code>IsSimulation</code> · L167–167</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167">Drilling.Common/Interface/CPowerMeasureRun.cs:167–167</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167">Drilling.Common/Interface/CPowerMeasureRun.cs:167–167</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Interface.CPowerMeasureDeviceSession.IsSimulation(int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1113,9 +1113,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L143-L143">Drilling.Common/Interface/CPowerMeasureRun.cs:143–143</a></td><td>_session.IsSimulation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L147-L147">Drilling.Common/Interface/CPowerMeasureRun.cs:147–147</a></td><td>_session.IsSimulation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L148-L148">Drilling.Common/Interface/CPowerMeasureRun.cs:148–148</a></td><td>_session.IsSimulation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L143-L143">Drilling.Common/Interface/CPowerMeasureRun.cs:143–143</a></td><td>_session.IsSimulation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L147-L147">Drilling.Common/Interface/CPowerMeasureRun.cs:147–147</a></td><td>_session.IsSimulation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L148-L148">Drilling.Common/Interface/CPowerMeasureRun.cs:148–148</a></td><td>_session.IsSimulation</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1131,7 +1131,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L168">MethodDeclaration <code>Connected</code> · L168–172</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L168-L172">Drilling.Common/Interface/CPowerMeasureRun.cs:168–172</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L168-L172">Drilling.Common/Interface/CPowerMeasureRun.cs:168–172</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.CPowerMeasureDeviceSession.Connected(Drilling.Common.Interface.EN_EQP_MODULE, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1145,13 +1145,13 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L183-L183">Drilling.Common/Interface/CPowerMeasureRun.cs:183–183</a></td><td>Connected</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L260-L260">Drilling.Common/Interface/CPowerMeasureRun.cs:260–260</a></td><td>Connected</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L260-L260">Drilling.Common/Interface/CPowerMeasureRun.cs:260–260</a></td><td>Connected</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L313-L313">Drilling.Common/Interface/CPowerMeasureRun.cs:313–313</a></td><td>Connected</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L335-L335">Drilling.Common/Interface/CPowerMeasureRun.cs:335–335</a></td><td>Connected</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L353-L353">Drilling.Common/Interface/CPowerMeasureRun.cs:353–353</a></td><td>Connected</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L391-L391">Drilling.Common/Interface/CPowerMeasureRun.cs:391–391</a></td><td>Connected</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L183-L183">Drilling.Common/Interface/CPowerMeasureRun.cs:183–183</a></td><td>Connected</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L260-L260">Drilling.Common/Interface/CPowerMeasureRun.cs:260–260</a></td><td>Connected</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L260-L260">Drilling.Common/Interface/CPowerMeasureRun.cs:260–260</a></td><td>Connected</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L313-L313">Drilling.Common/Interface/CPowerMeasureRun.cs:313–313</a></td><td>Connected</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L335-L335">Drilling.Common/Interface/CPowerMeasureRun.cs:335–335</a></td><td>Connected</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L353-L353">Drilling.Common/Interface/CPowerMeasureRun.cs:353–353</a></td><td>Connected</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L391-L391">Drilling.Common/Interface/CPowerMeasureRun.cs:391–391</a></td><td>Connected</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1176,7 +1176,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L173">MethodDeclaration <code>StageSnapshot</code> · L173–188</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L173-L188">Drilling.Common/Interface/CPowerMeasureRun.cs:173–188</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L173-L188">Drilling.Common/Interface/CPowerMeasureRun.cs:173–188</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>(System.Collections.Generic.IReadOnlyDictionary&lt;string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE&gt; Values, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt; Map) Drilling.Common.Interface.CPowerMeasureDeviceSession.StageSnapshot()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1185,8 +1185,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L208-L208">Drilling.Common/Interface/CPowerMeasureRun.cs:208–208</a></td><td>StageSnapshot</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L221-L221">Drilling.Common/Interface/CPowerMeasureRun.cs:221–221</a></td><td>StageSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L208-L208">Drilling.Common/Interface/CPowerMeasureRun.cs:208–208</a></td><td>StageSnapshot</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L221-L221">Drilling.Common/Interface/CPowerMeasureRun.cs:221–221</a></td><td>StageSnapshot</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1248,7 +1248,7 @@
  N3 --&gt;|포함| N5</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L189">MethodDeclaration <code>StageEvidence</code> · L189–204</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L189-L204">Drilling.Common/Interface/CPowerMeasureRun.cs:189–204</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L189-L204">Drilling.Common/Interface/CPowerMeasureRun.cs:189–204</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Interface.CPowerMeasureDeviceSession.StageEvidence(System.Collections.Generic.IReadOnlyDictionary&lt;string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE&gt;?, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_MELSEC_MAP_DATA&gt;?)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1262,11 +1262,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L212-L212">Drilling.Common/Interface/CPowerMeasureRun.cs:212–212</a></td><td>StageEvidence</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L215-L215">Drilling.Common/Interface/CPowerMeasureRun.cs:215–215</a></td><td>StageEvidence</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L224-L224">Drilling.Common/Interface/CPowerMeasureRun.cs:224–224</a></td><td>StageEvidence</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L234-L234">Drilling.Common/Interface/CPowerMeasureRun.cs:234–234</a></td><td>StageEvidence</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L236-L236">Drilling.Common/Interface/CPowerMeasureRun.cs:236–236</a></td><td>StageEvidence</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L212-L212">Drilling.Common/Interface/CPowerMeasureRun.cs:212–212</a></td><td>StageEvidence</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L215-L215">Drilling.Common/Interface/CPowerMeasureRun.cs:215–215</a></td><td>StageEvidence</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L224-L224">Drilling.Common/Interface/CPowerMeasureRun.cs:224–224</a></td><td>StageEvidence</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L234-L234">Drilling.Common/Interface/CPowerMeasureRun.cs:234–234</a></td><td>StageEvidence</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L236-L236">Drilling.Common/Interface/CPowerMeasureRun.cs:236–236</a></td><td>StageEvidence</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1311,7 +1311,7 @@
  N0 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L206">MethodDeclaration <code>EnsureStageReady</code> · L206–217</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L206-L217">Drilling.Common/Interface/CPowerMeasureRun.cs:206–217</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L206-L217">Drilling.Common/Interface/CPowerMeasureRun.cs:206–217</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Interface.CPowerMeasureDeviceSession.EnsureStageReady()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1320,10 +1320,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L71-L71">Drilling.Common/Interface/CPowerMeasureRun.cs:71–71</a></td><td>_session.EnsureStageReady</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L231-L231">Drilling.Common/Interface/CPowerMeasureRun.cs:231–231</a></td><td>EnsureStageReady</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L361-L361">Drilling.Common/Interface/CPowerMeasureRun.cs:361–361</a></td><td>EnsureStageReady</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L391-L391">Drilling.Common/Interface/CPowerMeasureRun.cs:391–391</a></td><td>EnsureStageReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L71-L71">Drilling.Common/Interface/CPowerMeasureRun.cs:71–71</a></td><td>_session.EnsureStageReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L231-L231">Drilling.Common/Interface/CPowerMeasureRun.cs:231–231</a></td><td>EnsureStageReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L361-L361">Drilling.Common/Interface/CPowerMeasureRun.cs:361–361</a></td><td>EnsureStageReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L391-L391">Drilling.Common/Interface/CPowerMeasureRun.cs:391–391</a></td><td>EnsureStageReady</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1373,7 +1373,7 @@
  N0 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L218">MethodDeclaration <code>CheckStageReady</code> · L218–237</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L218-L237">Drilling.Common/Interface/CPowerMeasureRun.cs:218–237</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L218-L237">Drilling.Common/Interface/CPowerMeasureRun.cs:218–237</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.CheckStageReady(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -1386,12 +1386,12 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L66-L66">Drilling.Common/Interface/CPowerMeasureRun.cs:66–66</a></td><td>_session.CheckStageReady</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L242-L242">Drilling.Common/Interface/CPowerMeasureRun.cs:242–242</a></td><td>CheckStageReady</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L248-L248">Drilling.Common/Interface/CPowerMeasureRun.cs:248–248</a></td><td>CheckStageReady</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L326-L326">Drilling.Common/Interface/CPowerMeasureRun.cs:326–326</a></td><td>CheckStageReady</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L346-L346">Drilling.Common/Interface/CPowerMeasureRun.cs:346–346</a></td><td>CheckStageReady</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L353-L353">Drilling.Common/Interface/CPowerMeasureRun.cs:353–353</a></td><td>CheckStageReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L66-L66">Drilling.Common/Interface/CPowerMeasureRun.cs:66–66</a></td><td>_session.CheckStageReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L242-L242">Drilling.Common/Interface/CPowerMeasureRun.cs:242–242</a></td><td>CheckStageReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L248-L248">Drilling.Common/Interface/CPowerMeasureRun.cs:248–248</a></td><td>CheckStageReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L326-L326">Drilling.Common/Interface/CPowerMeasureRun.cs:326–326</a></td><td>CheckStageReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L346-L346">Drilling.Common/Interface/CPowerMeasureRun.cs:346–346</a></td><td>CheckStageReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L353-L353">Drilling.Common/Interface/CPowerMeasureRun.cs:353–353</a></td><td>CheckStageReady</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1460,7 +1460,7 @@
  N2 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L238">MethodDeclaration <code>MaintainStageFeedback</code> · L238–245</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L238-L245">Drilling.Common/Interface/CPowerMeasureRun.cs:238–245</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L238-L245">Drilling.Common/Interface/CPowerMeasureRun.cs:238–245</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.MaintainStageFeedback(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal, async</td></tr>
@@ -1473,7 +1473,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L79-L79">Drilling.Common/Interface/CPowerMeasureRun.cs:79–79</a></td><td>_session.MaintainStageFeedback</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L79-L79">Drilling.Common/Interface/CPowerMeasureRun.cs:79–79</a></td><td>_session.MaintainStageFeedback</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1499,7 +1499,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L246">MethodDeclaration <code>PrepareAll</code> · L246–308</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L246-L308">Drilling.Common/Interface/CPowerMeasureRun.cs:246–308</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L246-L308">Drilling.Common/Interface/CPowerMeasureRun.cs:246–308</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.PrepareAll(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -1512,7 +1512,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L54-L54">Drilling.Common/Interface/CPowerMeasureRun.cs:54–54</a></td><td>_session.PrepareAll</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L54-L54">Drilling.Common/Interface/CPowerMeasureRun.cs:54–54</a></td><td>_session.PrepareAll</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1784,7 +1784,7 @@
  N10 --&gt;|포함| N14</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L309">MethodDeclaration <code>WaitLaserReady</code> · L309–325</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L309-L325">Drilling.Common/Interface/CPowerMeasureRun.cs:309–325</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L309-L325">Drilling.Common/Interface/CPowerMeasureRun.cs:309–325</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.WaitLaserReady(int, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, async</td></tr>
@@ -1798,8 +1798,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L298-L298">Drilling.Common/Interface/CPowerMeasureRun.cs:298–298</a></td><td>WaitLaserReady</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L355-L355">Drilling.Common/Interface/CPowerMeasureRun.cs:355–355</a></td><td>WaitLaserReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L298-L298">Drilling.Common/Interface/CPowerMeasureRun.cs:298–298</a></td><td>WaitLaserReady</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L355-L355">Drilling.Common/Interface/CPowerMeasureRun.cs:355–355</a></td><td>WaitLaserReady</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1852,7 +1852,7 @@
  N1 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L326">MethodDeclaration <code>Prepare</code> · L326–326</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L326-L326">Drilling.Common/Interface/CPowerMeasureRun.cs:326–326</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L326-L326">Drilling.Common/Interface/CPowerMeasureRun.cs:326–326</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.Prepare(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1875,7 +1875,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L327">MethodDeclaration <code>GetAttenuatorPosition</code> · L327–342</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L327-L342">Drilling.Common/Interface/CPowerMeasureRun.cs:327–342</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L327-L342">Drilling.Common/Interface/CPowerMeasureRun.cs:327–342</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.CPowerMeasureDeviceSession.GetAttenuatorPosition(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -1889,7 +1889,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L297-L297">Drilling.Common/Interface/CPowerMeasureRun.cs:297–297</a></td><td>GetAttenuatorPosition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L297-L297">Drilling.Common/Interface/CPowerMeasureRun.cs:297–297</a></td><td>GetAttenuatorPosition</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1943,7 +1943,7 @@
  N0 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L343">MethodDeclaration <code>MoveAttenuator</code> · L343–350</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L343-L350">Drilling.Common/Interface/CPowerMeasureRun.cs:343–350</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L343-L350">Drilling.Common/Interface/CPowerMeasureRun.cs:343–350</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.MoveAttenuator(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, double, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -2000,7 +2000,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L351">MethodDeclaration <code>BeginMeasurement</code> · L351–369</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L351-L369">Drilling.Common/Interface/CPowerMeasureRun.cs:351–369</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L351-L369">Drilling.Common/Interface/CPowerMeasureRun.cs:351–369</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.BeginMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -2074,7 +2074,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L370">MethodDeclaration <code>EndMeasurement</code> · L370–388</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L370-L388">Drilling.Common/Interface/CPowerMeasureRun.cs:370–388</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L370-L388">Drilling.Common/Interface/CPowerMeasureRun.cs:370–388</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.EndMeasurement(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -2087,8 +2087,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L345-L345">Drilling.Common/Interface/CPowerMeasureRun.cs:345–345</a></td><td>EndMeasurement</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L403-L403">Drilling.Common/Interface/CPowerMeasureRun.cs:403–403</a></td><td>EndMeasurement</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L345-L345">Drilling.Common/Interface/CPowerMeasureRun.cs:345–345</a></td><td>EndMeasurement</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L403-L403">Drilling.Common/Interface/CPowerMeasureRun.cs:403–403</a></td><td>EndMeasurement</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -2149,7 +2149,7 @@
  N2 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L389">MethodDeclaration <code>ReadPower</code> · L389–399</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L389-L399">Drilling.Common/Interface/CPowerMeasureRun.cs:389–399</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L389-L399">Drilling.Common/Interface/CPowerMeasureRun.cs:389–399</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task&lt;double&gt; Drilling.Common.Interface.CPowerMeasureDeviceSession.ReadPower(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -2215,7 +2215,7 @@
  M --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L400">MethodDeclaration <code>Finish</code> · L400–411</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L400-L411">Drilling.Common/Interface/CPowerMeasureRun.cs:400–411</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L400-L411">Drilling.Common/Interface/CPowerMeasureRun.cs:400–411</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Interface.CPowerMeasureDeviceSession.Finish(Drilling.Common.Interface.ST_POWER_MEASURE_TARGET)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -2284,7 +2284,7 @@
  M --&gt;|포함| N5</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L412">MethodDeclaration <code>DisposeAsync</code> · L412–417</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L412-L417">Drilling.Common/Interface/CPowerMeasureRun.cs:412–417</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L412-L417">Drilling.Common/Interface/CPowerMeasureRun.cs:412–417</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.ValueTask Drilling.Common.Interface.CPowerMeasureDeviceSession.DisposeAsync()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, async</td></tr>
@@ -2293,7 +2293,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L133-L133">Drilling.Common/Interface/CPowerMeasureRun.cs:133–133</a></td><td>_session.DisposeAsync</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L133-L133">Drilling.Common/Interface/CPowerMeasureRun.cs:133–133</a></td><td>_session.DisposeAsync</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>

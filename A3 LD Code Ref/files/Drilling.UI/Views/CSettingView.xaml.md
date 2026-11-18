@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
-| 원본 SHA256 | 7f1dfe45cfa6659a53e3be1e20d7e9d5add0b8006af014942c64dbeba58b4469 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 SHA256 | cb1e9d77570c06b60cfd8503078299de4a9ce7ba559a3db9e0e6e475d2c0a60a |
 | 파일 분류 | code |
-| 원본 크기/행 | 66,599 bytes / 844 physical lines |
+| 원본 크기/행 | 72,581 bytes / 902 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSettingView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -23,8 +23,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- |
 | 코드 비하인드 후보 | Drilling.UI/Views/CSettingView.xaml.cs |
 | 이름 있는 요소 | ButtonChrome, ButtonContent, ItemBorder, ToggleButton, Shell, PART_Popup, SettingEditorPanel, ParameterGrid, InterfaceGrid, HistoryPanel, HistoryExpandButton, ChangeHistoryGrid |
-| 이벤트 개수 | 13 |
-| Binding 표현 개수 | 81 |
+| 이벤트 개수 | 15 |
+| Binding 표현 개수 | 89 |
 
 이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
@@ -38,26 +38,28 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | PART_Popup | L254–254 |
 | SettingEditorPanel | L313–313 |
 | ParameterGrid | L604–604 |
-| InterfaceGrid | L717–717 |
-| HistoryPanel | L795–795 |
-| HistoryExpandButton | L812–812 |
-| ChangeHistoryGrid | L817–817 |
+| InterfaceGrid | L775–775 |
+| HistoryPanel | L853–853 |
+| HistoryExpandButton | L870–870 |
+| ChangeHistoryGrid | L875–875 |
 
 | 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
 | --- | --- | --- | --- |
 | PreviewMouseDown | CommitSettingGridEdits | L524–524 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 | Click | CommitSettingGridEdits | L525–525 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseLeftButtonDown | OpenParameterValueInput | L625–625 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseLeftButtonDown | OpenParameterValueInput | L667–667 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L775–775 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L776–776 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L777–777 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L780–780 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L781–781 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L782–782 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L783–783 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L784–784 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | ToggleHistory_Click | L813–813 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenParameterValueInput | L621–621 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenParameterValueInput | L651–651 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenParameterValueInput | L692–692 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenParameterValueInput | L722–722 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L833–833 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L834–834 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L835–835 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L838–838 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L839–839 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L840–840 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L841–841 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenInterfaceValueInput | L842–842 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | ToggleHistory_Click | L871–871 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 
 | Binding 표현 | 원본 범위 |
 | --- | --- |
@@ -102,46 +104,54 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | {Binding Group} | L614–614 |
 | {Binding HeadFilter} | L615–615 |
 | {Binding Parameter} | L616–616 |
-| {Binding Value} | L621–621 |
-| {Binding UsesSelectionEditor} | L630–630 |
-| {Binding ValueOptions} | L637–637 |
-| {Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L638–638 |
-| {Binding UsesSelectionEditor} | L650–650 |
-| {Binding Value} | L663–663 |
-| {Binding UsesSelectionEditor} | L672–672 |
-| {Binding ValueOptions} | L679–679 |
-| {Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L680–680 |
-| {Binding UsesSelectionEditor} | L692–692 |
-| {Binding Unit} | L703–703 |
-| {Binding Description} | L704–704 |
-| {Binding CurrentScreen.Setting.IsInterfaceTab, Converter={StaticResource BooleanToVisibilityConverter}} | L711–711 |
-| {Binding CurrentScreen.Setting.InterfaceRows} | L718–718 |
-| {Binding CurrentScreen.Setting.SelectedInterfaceRow, Mode=TwoWay} | L719–719 |
-| {Binding No, Mode=OneWay} | L768–768 |
-| {Binding TypeOptions} | L772–772 |
-| {Binding Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L772–772 |
-| {Binding DeviceOptions} | L774–774 |
-| {Binding Device, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L774–774 |
-| {Binding Number} | L775–775 |
-| {Binding NickName} | L776–776 |
-| {Binding SystemSection} | L777–777 |
-| {Binding AutoConnectionOptions} | L778–778 |
-| {Binding AutoConnection, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L778–778 |
-| {Binding AutoConnectionOptions} | L779–779 |
-| {Binding Simul, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L779–779 |
-| {Binding Arg1} | L780–780 |
-| {Binding Arg2} | L781–781 |
-| {Binding Arg3} | L782–782 |
-| {Binding Arg4} | L783–783 |
-| {Binding Arg5} | L784–784 |
-| {Binding CurrentScreen.Setting.ChangeHistory} | L818–818 |
-| {Binding Time} | L825–825 |
-| {Binding User} | L826–826 |
-| {Binding Tab} | L827–827 |
-| {Binding Parameter} | L828–828 |
-| {Binding Before} | L829–829 |
-| {Binding After} | L830–830 |
-| {Binding AfterBrush} | L833–833 |
+| {Binding IsColorSetting} | L628–628 |
+| {Binding ColorBrush} | L640–640 |
+| {Binding Value} | L643–643 |
+| {Binding Value} | L647–647 |
+| {Binding UsesSelectionEditor} | L656–656 |
+| {Binding IsColorSetting} | L659–659 |
+| {Binding ValueOptions} | L666–666 |
+| {Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L667–667 |
+| {Binding UsesSelectionEditor} | L679–679 |
+| {Binding IsColorSetting} | L699–699 |
+| {Binding ColorBrush} | L711–711 |
+| {Binding Value} | L714–714 |
+| {Binding Value} | L718–718 |
+| {Binding UsesSelectionEditor} | L727–727 |
+| {Binding IsColorSetting} | L730–730 |
+| {Binding ValueOptions} | L737–737 |
+| {Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L738–738 |
+| {Binding UsesSelectionEditor} | L750–750 |
+| {Binding Unit} | L761–761 |
+| {Binding Description} | L762–762 |
+| {Binding CurrentScreen.Setting.IsInterfaceTab, Converter={StaticResource BooleanToVisibilityConverter}} | L769–769 |
+| {Binding CurrentScreen.Setting.InterfaceRows} | L776–776 |
+| {Binding CurrentScreen.Setting.SelectedInterfaceRow, Mode=TwoWay} | L777–777 |
+| {Binding No, Mode=OneWay} | L826–826 |
+| {Binding TypeOptions} | L830–830 |
+| {Binding Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L830–830 |
+| {Binding DeviceOptions} | L832–832 |
+| {Binding Device, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L832–832 |
+| {Binding Number} | L833–833 |
+| {Binding NickName} | L834–834 |
+| {Binding SystemSection} | L835–835 |
+| {Binding AutoConnectionOptions} | L836–836 |
+| {Binding AutoConnection, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L836–836 |
+| {Binding AutoConnectionOptions} | L837–837 |
+| {Binding Simul, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L837–837 |
+| {Binding Arg1} | L838–838 |
+| {Binding Arg2} | L839–839 |
+| {Binding Arg3} | L840–840 |
+| {Binding Arg4} | L841–841 |
+| {Binding Arg5} | L842–842 |
+| {Binding CurrentScreen.Setting.ChangeHistory} | L876–876 |
+| {Binding Time} | L883–883 |
+| {Binding User} | L884–884 |
+| {Binding Tab} | L885–885 |
+| {Binding Parameter} | L886–886 |
+| {Binding Before} | L887–887 |
+| {Binding After} | L888–888 |
+| {Binding AfterBrush} | L891–891 |
 
 ## 원문 전체 주석 해설본
 

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 3ce1d7a4d3281ddf5c8ddfa08ec963db4290071a52dd74af6c321098d25c2fc5 |
 | 파일 분류 | code |
 | 원본 크기/행 | 14,367 bytes / 214 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CManualMofView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -23,7 +23,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- |
 | 코드 비하인드 후보 | Drilling.UI/Views/CManualMofView.xaml.cs |
 | 이름 있는 요소 | GlassPreviewViewport, GlassPreviewZoomContent, GlassPreviewScaleTransform, GlassPreviewTranslateTransform, GlassPreviewFitCanvas, GlassPreviewDesignCanvas, GlassPreviewHoverTip, GlassPreviewHoverTipTranslateTransform, GlassPreviewHoverTipText |
-| 이벤트 개수 | 6 |
+| 이벤트 개수 | 7 |
 | Binding 표현 개수 | 42 |
 
 이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
@@ -43,6 +43,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
 | --- | --- | --- | --- |
 | IsVisibleChanged | MofView_IsVisibleChanged | L4–4 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| LostMouseCapture | GlassPreview_LostMouseCapture | L52–52 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 | PreviewMouseLeftButtonDown | GlassPreview_PreviewMouseLeftButtonDown | L53–53 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 | PreviewMouseMove | GlassPreview_PreviewMouseMove | L54–54 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 | PreviewMouseLeftButtonUp | GlassPreview_PreviewMouseLeftButtonUp | L55–55 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |

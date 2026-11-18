@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "trackedFiles": 610,
+  "allTrackedByteHashesEqual": true,
+  "headUnchanged": true,
+  "statusBefore": "clean",
+  "statusAfter": "clean",
+  "pushUrl": "DISABLED",
+  "sourceWrites": false,
+  "sourceCommitOrPush": false,
+  "vendorAssemblyLoaded": false,
+  "equipmentOrScriptExecution": false,
+  "hashAlgorithm": "SHA256",
+  "passed": true
+}

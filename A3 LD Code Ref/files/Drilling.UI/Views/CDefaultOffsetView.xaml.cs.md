@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
-| 원본 SHA256 | fb1b57861febe9a6918c7942e19a1dd01fcfb66756b685a874d611662bc6e5aa |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 SHA256 | c9bbf573db3ad2daf7010f437df04fd305f212a3b0960e8ffad05d986239f2a7 |
 | 파일 분류 | code |
-| 원본 크기/행 | 16,554 bytes / 197 physical lines |
+| 원본 크기/행 | 16,774 bytes / 197 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -35,7 +35,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | .ctor | ConstructorDeclaration | L18–50 | Drilling.UI.Views.CDefaultOffsetView.CDefaultOffsetView() |
 | UpdateDisplay | MethodDeclaration | L51–55 | void Drilling.UI.Views.CDefaultOffsetView.UpdateDisplay() |
 | RefreshFeedback | MethodDeclaration | L56–56 | void Drilling.UI.Views.CDefaultOffsetView.RefreshFeedback() |
-| EditConditions | MethodDeclaration | L60–196 | (Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? Drilling.UI.Views.CDefaultOffsetView.EditConditions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS, System.Collections.Generic.IReadOnlyList<int>, int, System.Collections.Generic.IReadOnlyDictionary<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>, double) |
+| EditConditions | MethodDeclaration | L60–196 | (Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? Drilling.UI.Views.CDefaultOffsetView.EditConditions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS, System.Collections.Generic.IReadOnlyList<int>, int, System.Collections.Generic.IReadOnlyDictionary<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>, System.Collections.Generic.IReadOnlyDictionary<int, bool>, double) |
 | UpdateMachiningMode | LocalFunctionStatement | L119–124 | void UpdateMachiningMode() |
 | AddInputRow | LocalFunctionStatement | L126–132 | void AddInputRow(int, string, FrameworkElement) |
 | UpdateCenterPreview | LocalFunctionStatement | L145–151 | void UpdateCenterPreview() |
@@ -45,7 +45,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `IsCompactProperty` · L13–13
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L13-L13)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -77,7 +77,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsCompact` · L14–14
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -92,7 +92,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_IsCompact` · L14–14
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -119,7 +119,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_IsCompact` · L14–14
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -152,7 +152,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_display` · L17–17
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L17-L17)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -183,7 +183,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L18–50
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:18–50](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L18-L50)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:18–50](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L18-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -295,7 +295,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateDisplay` · L51–55
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:51–55](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L51-L55)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:51–55](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L51-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -308,9 +308,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L22-L22) | UpdateDisplay | False |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L24-L24) | UpdateDisplay | False |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L25-L25) | UpdateDisplay | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L22-L22) | UpdateDisplay | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L24-L24) | UpdateDisplay | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L25-L25) | UpdateDisplay | False |
 
 호출하는 대상과 해석 범위:
 
@@ -345,7 +345,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshFeedback` · L56–56
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L56-L56)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -358,14 +358,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L21-L21) | RefreshFeedback | False |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L53-L53) | RefreshFeedback | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L21-L21) | RefreshFeedback | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L53-L53) | RefreshFeedback | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 56 | .RefreshFeedback | resolved | void Drilling.UI.Menu.Menus.CDefaultOffsetPanel.RefreshFeedback() · Drilling.UI/Menu/Menus/CMenuCorrection.cs:4576 |
+| 56 | .RefreshFeedback | resolved | void Drilling.UI.Menu.Menus.CDefaultOffsetPanel.RefreshFeedback() · Drilling.UI/Menu/Menus/CMenuCorrection.cs:4586 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -377,11 +377,11 @@ flowchart TD
 
 ### MethodDeclaration `EditConditions` · L60–196
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:60–196](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L60-L196)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:60–196](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L60-L196)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
-| 서명 | (Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? Drilling.UI.Views.CDefaultOffsetView.EditConditions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS, System.Collections.Generic.IReadOnlyList<int>, int, System.Collections.Generic.IReadOnlyDictionary<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>, double) |
+| 서명 | (Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? Drilling.UI.Views.CDefaultOffsetView.EditConditions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS, System.Collections.Generic.IReadOnlyList<int>, int, System.Collections.Generic.IReadOnlyDictionary<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY>, System.Collections.Generic.IReadOnlyDictionary<int, bool>, double) |
 | 접근/수식자 | Public / public, static |
 | 반환/값 타입 | (Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS Options, int Model)? |
 | 소속 타입 | NamedType:Drilling.UI.Views.CDefaultOffsetView |
@@ -394,13 +394,14 @@ flowchart TD
 | models | System.Collections.Generic.IReadOnlyList<int> | None | False /  |
 | currentModel | int | None | False /  |
 | geometries | System.Collections.Generic.IReadOnlyDictionary<int, Drilling.Common.Correction.ST_DEFAULT_HEAD_GEOMETRY> | None | False /  |
+| doeExists | System.Collections.Generic.IReadOnlyDictionary<int, bool> | None | False /  |
 | designAlignKey3ReviewX | double | None | False /  |
 
 정적 호출자로 확인된 위치:
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3190–3191](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3190-L3191) | Drilling.UI.Views.CDefaultOffsetView.EditConditions | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3194–3195](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3194-L3195) | Drilling.UI.Views.CDefaultOffsetView.EditConditions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -504,6 +505,7 @@ flowchart TD
 | 157 | new GridLength | unresolved | None |
 | 157 | new GridLength | unresolved | None |
 | 157 | new GridLength | unresolved | None |
+| 157 | new GridLength | unresolved | None |
 | 157 | fields.ColumnDefinitions.Add | unresolved | None |
 | 157 | new | unresolved | None |
 | 168 | AddFieldRow | resolved | void AddFieldRow(int, params string[]) · Drilling.UI/Views/CDefaultOffsetView.xaml.cs:158 |
@@ -547,7 +549,7 @@ flowchart TD
 | 188 | double.TryParse | candidate | OverloadResolutionFailure |
 | 188 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 188 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
-| 190 | CDefaultOffsetCalibration.ValidateOptions | resolved | void Drilling.Common.Correction.CDefaultOffsetCalibration.ValidateOptions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:97 |
+| 190 | CDefaultOffsetCalibration.ValidateOptions | resolved | void Drilling.Common.Correction.CDefaultOffsetCalibration.ValidateOptions(Drilling.Common.Correction.ST_DEFAULT_OFFSET_OPTIONS) · Drilling.Common/Correction/CDefaultOffsetCalibration.cs:133 |
 | 191 | Popup.CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
 | 195 | dialog.ShowDialog | unresolved | None |
 
@@ -783,23 +785,25 @@ flowchart TD
 | 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
 | 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
 | 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
+| 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new GridLength(1, GridUnitType.Star) |
 | 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.ColumnDefinitions.Add(new() { Width = width }) |
 | 157 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new() { Width = width } |
-| 157 | foreach | 컬렉션 요소를 순회합니다: foreach (var width in new[] { new GridLength(70), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star) }) |
-| 168 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddFieldRow(0, "HEAD", "Scan Field X (mm)", "Scan Field Y (mm)", "DOE 회전 각도 (deg)") |
+| 157 | foreach | 컬렉션 요소를 순회합니다: foreach (var width in new[] { new GridLength(70), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star), new GridLength(1, GridUnitType.Star) }) |
+| 168 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddFieldRow(0, "HEAD", "Scan Field X (mm)", "Scan Field Y (mm)", "DOE 회전 각도 (deg)", "DOE 장착") |
 | 169 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: geometries.OrderBy(p => p.Key) |
 | 169 | foreach | 컬렉션 요소를 순회합니다: foreach (var item in geometries.OrderBy(p => p.Key)) |
 | 170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AddFieldRow(fields.RowDefinitions.Count, $"H{item.Key:00}", (item.Value.FieldHalfX * 2).ToString("0.###", CultureInfo.InvariantCulture), (item.Value.FieldHalfY * 2).ToString("0.###", CultureInfo.InvariantCulture), item.V… |
 | 170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (item.Value.FieldHalfX * 2).ToString("0.###", CultureInfo.InvariantCulture) |
 | 170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (item.Value.FieldHalfY * 2).ToString("0.###", CultureInfo.InvariantCulture) |
 | 170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Value.DoeAngle.ToString("0.###", CultureInfo.InvariantCulture) |
+| 170 | conditional-expression | 조건에 따라 결과식을 선택합니다: doeExists[item.Key] ? "ON · 4×4" : "OFF · 중앙 1점" |
 | 171 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(fields) |
-| 172 | assignment | 값을 대상에 대입합니다: Text = $"글래스 중심 Review X는 조건에 적용한 AK1·AK3 Review X 엔코더값의 정확한 중간값입니다. AK3의 설계값은 AK1 + Glass Size X - (2 × AK Margin X)로 계산합니다.\n십자 길이 10 mm: 스캐너는 가로·세로 각각 중심 기준 −5~+5 mm를 그리며, DOE가 같은 십자를 {current.InspectionPointCount}개 형상으로 분기합니다. |
+| 172 | assignment | 값을 대상에 대입합니다: Text = $"글래스 중심 Review X는 조건에 적용한 AK1·AK3 Review X 엔코더값의 정확한 중간값입니다. AK3의 설계값은 AK1 + Glass Size X - (2 × AK Margin X)로 계산합니다.\nDOE ON Head는 같은 중앙 형상을 4×4로 분기하여 {current.InspectionPointCount}점을 검사합니다. DOE OFF Head는 Default Offset에서 |
 | 172 | assignment | 값을 대상에 대입합니다: TextWrapping = TextWrapping.Wrap |
 | 172 | assignment | 값을 대상에 대입합니다: Margin = new Thickness(0,10,0,0) |
 | 172 | assignment | 값을 대상에 대입합니다: FontSize = 13 |
-| 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = $"글래스 중심 Review X는 조건에 적용한 AK1·AK3 Review X 엔코더값의 정확한 중간값입니다. AK3의 설계값은 AK1 + Glass Size X - (2 × AK Margin X)로 계산합니다.\n십자 길이 10 mm: 스캐너는 가로·세로 각각 중심 기준 −5~+5 mm를 그리며, DOE가 같… |
-| 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = $"글래스 중심 Review X는 조건에 적용한 AK1·AK3 Review X 엔코더값의 정확한 중간값입니다. AK3의 설계값은 AK1 + Glass Size X - (2 × AK Margin X)로 계산합니다.\n십자 길이 10 mm: 스캐너는 가로·세로 각각 중심 기준 −5~+5 mm를 그리며, DOE가 같은 십자를 {current.Inspecti… |
+| 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: reference.Children.Add(new TextBlock { Text = $"글래스 중심 Review X는 조건에 적용한 AK1·AK3 Review X 엔코더값의 정확한 중간값입니다. AK3의 설계값은 AK1 + Glass Size X - (2 × AK Margin X)로 계산합니다.\nDOE ON Head는 같은 중앙 형상을 4×4로 분기하여 {current.InspectionPo… |
+| 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = $"글래스 중심 Review X는 조건에 적용한 AK1·AK3 Review X 엔코더값의 정확한 중간값입니다. AK3의 설계값은 AK1 + Glass Size X - (2 × AK Margin X)로 계산합니다.\nDOE ON Head는 같은 중앙 형상을 4×4로 분기하여 {current.InspectionPointCount}점을 검사합니다. DOE … |
 | 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0,10,0,0) |
 | 173 | assignment | 값을 대상에 대입합니다: Content = reference |
 | 173 | assignment | 값을 대상에 대입합니다: VerticalScrollBarVisibility = ScrollBarVisibility.Auto |
@@ -921,7 +925,7 @@ flowchart TD
 
 ### LocalFunctionStatement `UpdateMachiningMode` · L119–124
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:119–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L119-L124)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:119–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L119-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -934,7 +938,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L125-L125) | UpdateMachiningMode | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L125-L125) | UpdateMachiningMode | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -950,7 +954,7 @@ flowchart TD
 
 ### LocalFunctionStatement `AddInputRow` · L126–132
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:126–132](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L126-L132)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:126–132](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L126-L132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1007,7 +1011,7 @@ flowchart TD
 
 ### LocalFunctionStatement `UpdateCenterPreview` · L145–151
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:145–151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L145-L151)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:145–151](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L145-L151)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1020,8 +1024,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L152-L152) | UpdateCenterPreview | False |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L153-L153) | UpdateCenterPreview | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L152-L152) | UpdateCenterPreview | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L153-L153) | UpdateCenterPreview | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1047,7 +1051,7 @@ flowchart TD
 
 ### LocalFunctionStatement `AddFieldRow` · L158–167
 
-[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:158–167](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L158-L167)
+[Drilling.UI/Views/CDefaultOffsetView.xaml.cs:158–167](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L158-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1067,7 +1071,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L168-L168) | AddFieldRow | False |
+| [Drilling.UI/Views/CDefaultOffsetView.xaml.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L168-L168) | AddFieldRow | False |
 
 호출하는 대상과 해석 범위:
 

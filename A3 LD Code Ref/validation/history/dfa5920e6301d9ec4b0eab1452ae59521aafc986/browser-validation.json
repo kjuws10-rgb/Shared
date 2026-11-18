@@ -1,0 +1,161 @@
+{
+  "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "passed": true,
+  "checks": [
+    {
+      "name": "all tracked files shown offline",
+      "passed": true,
+      "detail": 610
+    },
+    {
+      "name": "exact source search CReviewManager",
+      "passed": true
+    },
+    {
+      "name": "exact source search Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs",
+      "passed": true
+    },
+    {
+      "name": "exact source search Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs",
+      "passed": true
+    },
+    {
+      "name": "alias/member search 리뷰 좌표",
+      "passed": true
+    },
+    {
+      "name": "alias/member search SaveEditedRevision",
+      "passed": true
+    },
+    {
+      "name": "alias/member search BuildBeamInspectionTargets",
+      "passed": true
+    },
+    {
+      "name": "binary metadata only filter",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "name": "escaped query",
+      "passed": true
+    },
+    {
+      "name": "file navigation",
+      "passed": true
+    },
+    {
+      "name": "relation SVG",
+      "passed": true
+    },
+    {
+      "name": "full contracts",
+      "passed": true
+    },
+    {
+      "name": "all manual chapters included",
+      "passed": true,
+      "detail": {
+        "actual": 16,
+        "expected": 16
+      }
+    },
+    {
+      "name": "manual SVG 01-startup-and-composition.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 02-recipe-settings-and-csv.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 03-coordinate-script-and-mof.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 04-product-and-station-lifecycle.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 05-device-interfaces-and-drivers.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 06-threading-snapshots-and-logs.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 07-change-impact-and-offline-reference.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 08-alarm-cause-analysis.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG README.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 01_Review_계획과_좌표계.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 02_Masking_Sampling_IOF.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 03_Vision_패킷과_단위.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 04_ReviewOffset_적용과_롤백.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 05_결과_Revision_Product_연결.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 06_DefaultOffset_ZeroOrder_FirstBeam.md.html",
+      "passed": true
+    },
+    {
+      "name": "manual SVG 07_Align_Distortion_윈도우_복구.md.html",
+      "passed": true
+    },
+    {
+      "name": "new alarm manual visible",
+      "passed": true
+    },
+    {
+      "name": "offline source counterpart",
+      "passed": true
+    },
+    {
+      "name": "offline counterpart file",
+      "passed": true
+    },
+    {
+      "name": "mobile search",
+      "passed": true
+    },
+    {
+      "name": "mobile viewport",
+      "passed": true
+    },
+    {
+      "name": "no JS errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no external requests",
+      "passed": true,
+      "detail": 0
+    }
+  ],
+  "networkRequests": 0,
+  "pageErrors": [],
+  "scope": "Headless Edge file URLs, offline context and HTTP/S blocked. Documentation UI only; equipment/model code not executed."
+}

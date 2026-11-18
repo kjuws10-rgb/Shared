@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 045680b42136d9b770c33450031297751351d54ddbafad8efd8955080cb13c37 |
 | 파일 분류 | code |
 | 원본 크기/행 | 22,383 bytes / 562 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -93,7 +93,7 @@
 
 ### MethodDeclaration `Build` · L15–42
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:15–42](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L15-L42)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:15–42](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L15-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -113,7 +113,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1068–1068](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L1068-L1068) | CConex_AGP.Build | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1068–1068](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L1068-L1068) | CConex_AGP.Build | False |
 
 호출하는 대상과 해석 범위:
 
@@ -156,7 +156,7 @@ flowchart TD
 
 ### MethodDeclaration `IsSuccessResponse` · L44–47
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:44–47](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L44-L47)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:44–47](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L44-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -175,8 +175,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1128–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L1128-L1128) | CConex_AGP.IsSuccessResponse | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L52-L52) | IsSuccessResponse | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1128–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L1128-L1128) | CConex_AGP.IsSuccessResponse | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L52-L52) | IsSuccessResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -197,7 +197,7 @@ flowchart TD
 
 ### MethodDeclaration `Apply` · L49–159
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:49–159](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L49-L159)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:49–159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L49-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -220,9 +220,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1088–1088](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L1088-L1088) | CConex_AGP.Apply | False |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1126–1126](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L1126-L1126) | CConex_AGP.Apply | False |
-| [Drilling.Common/Interface/CInterfaceManager.cs:1953–1953](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L1953-L1953) | CConex_AGP.Apply | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1088–1088](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L1088-L1088) | CConex_AGP.Apply | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1126–1126](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L1126-L1126) | CConex_AGP.Apply | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:1953–1953](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L1953-L1953) | CConex_AGP.Apply | False |
 
 호출하는 대상과 해석 범위:
 
@@ -340,7 +340,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L161–172
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:161–172](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L161-L172)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:161–172](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L161-L172)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -394,7 +394,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteConex` · L174–205
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:174–205](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L174-L205)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:174–205](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L174-L205)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -414,7 +414,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L166-L166) | ExecuteConex | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L166-L166) | ExecuteConex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -470,7 +470,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L187–190
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:187–190](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L187-L190)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:187–190](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L187-L190)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -498,7 +498,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteConex` · L207–238
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:207–238](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L207-L238)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:207–238](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L207-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -517,7 +517,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:189–189](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L189-L189) | ExecuteConex | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:189–189](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L189-L189) | ExecuteConex | False |
 
 호출하는 대상과 해석 범위:
 
@@ -624,7 +624,7 @@ flowchart TD
 
 ### MethodDeclaration `IsNoValueCommand` · L240–243
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:240–243](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L240-L243)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:240–243](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L240-L243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -643,9 +643,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L227-L227) | IsNoValueCommand | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L228-L228) | IsNoValueCommand | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L229-L229) | IsNoValueCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L227-L227) | IsNoValueCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L228-L228) | IsNoValueCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L229-L229) | IsNoValueCommand | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -657,7 +657,7 @@ flowchart TD
 
 ### MethodDeclaration `IsSingleValueCommand` · L245–248
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:245–248](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L245-L248)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:245–248](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L245-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -676,14 +676,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L225-L225) | IsSingleValueCommand | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L226-L226) | IsSingleValueCommand | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L230-L230) | IsSingleValueCommand | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L231-L231) | IsSingleValueCommand | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L232-L232) | IsSingleValueCommand | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L233-L233) | IsSingleValueCommand | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L234-L234) | IsSingleValueCommand | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L235-L235) | IsSingleValueCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L225-L225) | IsSingleValueCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L226-L226) | IsSingleValueCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L230-L230) | IsSingleValueCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L231-L231) | IsSingleValueCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L232-L232) | IsSingleValueCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L233-L233) | IsSingleValueCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L234-L234) | IsSingleValueCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L235-L235) | IsSingleValueCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -702,7 +702,7 @@ flowchart TD
 
 ### MethodDeclaration `SendSelecting` · L250–280
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:250–280](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L250-L280)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:250–280](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L250-L280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -722,17 +722,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L225-L225) | SendSelecting | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L226-L226) | SendSelecting | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L227-L227) | SendSelecting | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L228-L228) | SendSelecting | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L229-L229) | SendSelecting | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L230-L230) | SendSelecting | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L231-L231) | SendSelecting | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L232-L232) | SendSelecting | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L233-L233) | SendSelecting | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L234-L234) | SendSelecting | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L235-L235) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L225-L225) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L226-L226) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L227-L227) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L228-L228) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L229-L229) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L230-L230) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L231-L231) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L232-L232) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L233-L233) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L234-L234) | SendSelecting | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L235-L235) | SendSelecting | False |
 
 호출하는 대상과 해석 범위:
 
@@ -809,7 +809,7 @@ flowchart TD
 
 ### MethodDeclaration `SendPolling` · L282–304
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:282–304](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L282-L304)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:282–304](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L282-L304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -828,8 +828,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L214-L214) | SendPolling | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L219-L219) | SendPolling | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L214-L214) | SendPolling | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L219-L219) | SendPolling | False |
 
 호출하는 대상과 해석 범위:
 
@@ -913,7 +913,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatDeviceCommand` · L306–310
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:306–310](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L306-L310)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:306–310](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L306-L310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -933,9 +933,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L254-L254) | FormatDeviceCommand | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L263-L263) | FormatDeviceCommand | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L286-L286) | FormatDeviceCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L254-L254) | FormatDeviceCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L263-L263) | FormatDeviceCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L286-L286) | FormatDeviceCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -958,7 +958,7 @@ flowchart TD
 
 ### MethodDeclaration `IsPollingCommand` · L312–315
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:312–315](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L312-L315)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:312–315](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L312-L315)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -977,7 +977,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L217-L217) | IsPollingCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L217-L217) | IsPollingCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1000,7 +1000,7 @@ flowchart TD
 
 ### MethodDeclaration `IsParameterQueryCommand` · L317–320
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:317–320](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L317-L320)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:317–320](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L317-L320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1019,7 +1019,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L214-L214) | IsParameterQueryCommand | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L214-L214) | IsParameterQueryCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1048,7 +1048,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadControllerAddress` · L322–343
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:322–343](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L322-L343)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:322–343](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L322-L343)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1061,7 +1061,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L308-L308) | ReadControllerAddress | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L308-L308) | ReadControllerAddress | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1099,7 +1099,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParseResponse` · L345–366
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:345–366](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L345-L366)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:345–366](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L345-L366)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1172,7 +1172,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateSimulationResponse` · L368–383
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:368–383](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L368-L383)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:368–383](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L368-L383)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1193,7 +1193,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L51-L51) | CreateSimulationResponse | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L51-L51) | CreateSimulationResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1236,7 +1236,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadError` · L385–400
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:385–400](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L385-L400)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:385–400](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L385-L400)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1255,7 +1255,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L57-L57) | ReadError | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L57-L57) | ReadError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1293,7 +1293,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTaggedDouble` · L402–405
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:402–405](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L402-L405)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:402–405](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L402-L405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1314,8 +1314,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L98-L98) | ReadTaggedDouble | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L103-L103) | ReadTaggedDouble | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L98-L98) | ReadTaggedDouble | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L103-L103) | ReadTaggedDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1334,7 +1334,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTaggedNullableDouble` · L407–417
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:407–417](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L407-L417)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:407–417](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L407-L417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1355,12 +1355,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L119-L119) | ReadTaggedNullableDouble | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L127-L127) | ReadTaggedNullableDouble | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L135-L135) | ReadTaggedNullableDouble | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L143-L143) | ReadTaggedNullableDouble | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L151-L151) | ReadTaggedNullableDouble | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:404–404](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L404-L404) | ReadTaggedNullableDouble | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L119-L119) | ReadTaggedNullableDouble | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L127-L127) | ReadTaggedNullableDouble | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L135-L135) | ReadTaggedNullableDouble | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L143-L143) | ReadTaggedNullableDouble | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L151-L151) | ReadTaggedNullableDouble | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:404–404](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L404-L404) | ReadTaggedNullableDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1399,7 +1399,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTaggedInt` · L419–424
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:419–424](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L419-L424)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:419–424](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L419-L424)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1420,7 +1420,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L111-L111) | ReadTaggedInt | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L111-L111) | ReadTaggedInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1447,7 +1447,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCommandParameter` · L426–429
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:426–429](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L426-L429)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:426–429](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L426-L429)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1466,12 +1466,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L31-L31) | FormatCommandParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L33-L33) | FormatCommandParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L35-L35) | FormatCommandParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L37-L37) | FormatCommandParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L39-L39) | FormatCommandParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L433-L433) | FormatCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L31-L31) | FormatCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L33-L33) | FormatCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L35-L35) | FormatCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L37-L37) | FormatCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L39-L39) | FormatCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L433-L433) | FormatCommandParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1492,7 +1492,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeStoredCommandParameter` · L431–434
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:431–434](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L431-L434)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:431–434](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L431-L434)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1511,11 +1511,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L123-L123) | NormalizeStoredCommandParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L131-L131) | NormalizeStoredCommandParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L139-L139) | NormalizeStoredCommandParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L147-L147) | NormalizeStoredCommandParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L155-L155) | NormalizeStoredCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L123-L123) | NormalizeStoredCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L131-L131) | NormalizeStoredCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L139-L139) | NormalizeStoredCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L147-L147) | NormalizeStoredCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L155-L155) | NormalizeStoredCommandParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1536,7 +1536,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatPositionParameter` · L436–439
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:436–439](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L436-L439)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:436–439](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L436-L439)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1555,8 +1555,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L19-L19) | FormatPositionParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L20-L20) | FormatPositionParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L19-L19) | FormatPositionParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L20-L20) | FormatPositionParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1577,7 +1577,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatIntegerCommandParameter` · L441–444
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:441–444](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L441-L444)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:441–444](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L441-L444)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1596,7 +1596,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L29-L29) | FormatIntegerCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L29-L29) | FormatIntegerCommandParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1617,7 +1617,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateFiniteCommandParameter` · L446–454
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:446–454](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L446-L454)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:446–454](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L446-L454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1636,9 +1636,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L428-L428) | ValidateFiniteCommandParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L438-L438) | ValidateFiniteCommandParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:458–458](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L458-L458) | ValidateFiniteCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:428–428](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L428-L428) | ValidateFiniteCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L438-L438) | ValidateFiniteCommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:458–458](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L458-L458) | ValidateFiniteCommandParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1672,7 +1672,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateInt32CommandParameter` · L456–465
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:456–465](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L456-L465)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:456–465](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L456-L465)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1691,8 +1691,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L115-L115) | ValidateInt32CommandParameter | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L443-L443) | ValidateInt32CommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:115–115](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L115-L115) | ValidateInt32CommandParameter | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L443-L443) | ValidateInt32CommandParameter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1730,7 +1730,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadControllerState` · L467–476
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:467–476](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L467-L476)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:467–476](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L467-L476)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1750,7 +1750,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L107-L107) | ReadControllerState | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L107-L107) | ReadControllerState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1787,7 +1787,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeControllerState` · L478–494
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:478–494](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L478-L494)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:478–494](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L478-L494)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1806,7 +1806,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L475-L475) | NormalizeControllerState | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L475-L475) | NormalizeControllerState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1841,7 +1841,7 @@ flowchart TD
 
 ### MethodDeclaration `IsMovingState` · L496–499
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:496–499](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L496-L499)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:496–499](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L496-L499)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1860,7 +1860,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L99-L99) | IsMovingState | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L99-L99) | IsMovingState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1881,7 +1881,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTsError` · L501–504
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:501–504](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L501-L504)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:501–504](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L501-L504)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1900,8 +1900,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L292-L292) | ReadTsError | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L302-L302) | ReadTsError | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L292-L292) | ReadTsError | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L302-L302) | ReadTsError | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1914,7 +1914,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTsState` · L506–509
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:506–509](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L506-L509)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:506–509](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L506-L509)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1933,8 +1933,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L292-L292) | ReadTsState | False |
-| [Drilling.Common/Interface/Serial/CConex_AGP.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L302-L302) | ReadTsState | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L292-L292) | ReadTsState | False |
+| [Drilling.Common/Interface/Serial/CConex_AGP.cs:302–302](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L302-L302) | ReadTsState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1954,7 +1954,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MoveAbs` · L514–514
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L514-L514)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L514-L514)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1969,7 +1969,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `MoveRel` · L515–515
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:515–515](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L515-L515)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:515–515](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L515-L515)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1984,7 +1984,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Home` · L516–516
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:516–516](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L516-L516)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:516–516](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L516-L516)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1999,7 +1999,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Stop` · L517–517
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L517-L517)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L517-L517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2014,7 +2014,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `ResetController` · L518–518
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L518-L518)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L518-L518)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2029,7 +2029,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Refresh` · L519–519
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L519-L519)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L519-L519)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2044,7 +2044,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `PollCurrentPosition` · L520–520
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L520-L520)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L520-L520)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2059,7 +2059,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `PollTargetPosition` · L521–521
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:521–521](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L521-L521)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:521–521](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L521-L521)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2074,7 +2074,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `PollState` · L522–522
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:522–522](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L522-L522)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:522–522](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L522-L522)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2089,7 +2089,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetHomeType` · L523–523
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:523–523](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L523-L523)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:523–523](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L523-L523)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2104,7 +2104,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetHomeType` · L524–524
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L524-L524)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L524-L524)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2119,7 +2119,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetNegativeSoftwareLimit` · L525–525
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L525-L525)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L525-L525)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2134,7 +2134,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetNegativeSoftwareLimit` · L526–526
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L526-L526)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L526-L526)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2149,7 +2149,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetPositiveSoftwareLimit` · L527–527
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:527–527](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L527-L527)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:527–527](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L527-L527)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2164,7 +2164,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetPositiveSoftwareLimit` · L528–528
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L528-L528)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L528-L528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2179,7 +2179,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetIGain` · L529–529
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L529-L529)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L529-L529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2194,7 +2194,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetIGain` · L530–530
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L530-L530)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L530-L530)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2209,7 +2209,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetPGain` · L531–531
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:531–531](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L531-L531)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:531–531](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L531-L531)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2224,7 +2224,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetPGain` · L532–532
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:532–532](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L532-L532)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:532–532](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L532-L532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2239,7 +2239,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `GetInterpolationFactor` · L533–533
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:533–533](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L533-L533)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:533–533](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L533-L533)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2254,7 +2254,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `SetInterpolationFactor` · L534–534
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L534-L534)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L534-L534)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2269,7 +2269,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Ok` · L539–539
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:539–539](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L539-L539)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:539–539](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L539-L539)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2284,7 +2284,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Error` · L540–540
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:540–540](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L540-L540)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:540–540](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L540-L540)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2299,7 +2299,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Timeout` · L541–541
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:541–541](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L541-L541)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:541–541](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L541-L541)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2314,7 +2314,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `InvalidResponse` · L542–542
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L542-L542)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L542-L542)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2329,7 +2329,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `NotSupported` · L543–543
 
-[Drilling.Common/Interface/Serial/CConex_AGP.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CConex_AGP.cs#L543-L543)
+[Drilling.Common/Interface/Serial/CConex_AGP.cs:543–543](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CConex_AGP.cs#L543-L543)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

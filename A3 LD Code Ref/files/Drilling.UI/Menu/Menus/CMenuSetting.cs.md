@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
-| 원본 SHA256 | a51678b7c5fd0856f02ea45167f98426ebb40b48a7bf1f5e8bbe38348239f40c |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 SHA256 | 0e4f1b5b0d411d973a36aef3b0526650d3c6bb3c08dd3e83b90b9802864c1cd4 |
 | 파일 분류 | code |
-| 원본 크기/행 | 55,678 bytes / 1,627 physical lines |
+| 원본 크기/행 | 56,633 bytes / 1,657 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -21,348 +21,351 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 타입 | 구분 | 원본 범위 | 선언/상속 |
 | --- | --- | --- | --- |
-| CMenuSetting | ClassDeclaration | 14–1077 | CMenuSetting: CMenuBase |
-| ST_SETTING_TAB | RecordDeclaration | 1079–1082 | ST_SETTING_TAB |
-| ST_SETTING_GROUP | RecordDeclaration | 1083–1083 | ST_SETTING_GROUP |
-| ST_SETTING_HEAD_FILTER | RecordDeclaration | 1084–1084 | ST_SETTING_HEAD_FILTER |
-| ST_SYSTEM_PARAMETER_ROW | ClassDeclaration | 1085–1288 | ST_SYSTEM_PARAMETER_ROW: CBindingBase |
-| ST_SETTING_HISTORY_ROW | RecordDeclaration | 1290–1303 | ST_SETTING_HISTORY_ROW |
-| ST_SETTING_SUMMARY_ROW | RecordDeclaration | 1305–1320 | ST_SETTING_SUMMARY_ROW |
-| ST_SETTING_INTERFACE_ROW | ClassDeclaration | 1322–1627 | ST_SETTING_INTERFACE_ROW: CBindingBase |
+| CMenuSetting | ClassDeclaration | 15–1081 | CMenuSetting: CMenuBase |
+| ST_SETTING_TAB | RecordDeclaration | 1083–1086 | ST_SETTING_TAB |
+| ST_SETTING_GROUP | RecordDeclaration | 1087–1087 | ST_SETTING_GROUP |
+| ST_SETTING_HEAD_FILTER | RecordDeclaration | 1088–1088 | ST_SETTING_HEAD_FILTER |
+| ST_SYSTEM_PARAMETER_ROW | ClassDeclaration | 1089–1318 | ST_SYSTEM_PARAMETER_ROW: CBindingBase |
+| ST_SETTING_HISTORY_ROW | RecordDeclaration | 1320–1333 | ST_SETTING_HISTORY_ROW |
+| ST_SETTING_SUMMARY_ROW | RecordDeclaration | 1335–1350 | ST_SETTING_SUMMARY_ROW |
+| ST_SETTING_INTERFACE_ROW | ClassDeclaration | 1352–1657 | ST_SETTING_INTERFACE_ROW: CBindingBase |
 
 ## 멤버 빠른 목록
 
 | 이름 | 종류 | 범위 | 서명 |
 | --- | --- | --- | --- |
-| _settingManager | FieldDeclaration | L16–16 | Drilling.Common.Managers.CSettingManager Drilling.UI.Menu.Menus.CMenuSetting._settingManager |
-| _selectedTabProvider | FieldDeclaration | L17–17 | System.Func<string> Drilling.UI.Menu.Menus.CMenuSetting._selectedTabProvider |
-| _selectedTabSetter | FieldDeclaration | L18–18 | System.Action<string> Drilling.UI.Menu.Menus.CMenuSetting._selectedTabSetter |
-| _selectedGroupProvider | FieldDeclaration | L19–19 | System.Func<string> Drilling.UI.Menu.Menus.CMenuSetting._selectedGroupProvider |
-| _selectedGroupSetter | FieldDeclaration | L20–20 | System.Action<string> Drilling.UI.Menu.Menus.CMenuSetting._selectedGroupSetter |
-| _editScreenProvider | FieldDeclaration | L21–21 | System.Func<Drilling.UI.Menu.Menus.CMenuSetting?> Drilling.UI.Menu.Menus.CMenuSetting._editScreenProvider |
-| _setStatusMessage | FieldDeclaration | L22–22 | System.Action<string> Drilling.UI.Menu.Menus.CMenuSetting._setStatusMessage |
-| _showLoadingScreen | FieldDeclaration | L23–23 | System.Action<Drilling.UI.Menu.Menus.EN_MENU, string> Drilling.UI.Menu.Menus.CMenuSetting._showLoadingScreen |
-| _refreshShellStatus | FieldDeclaration | L24–24 | System.Action Drilling.UI.Menu.Menus.CMenuSetting._refreshShellStatus |
-| _refreshCurrentScreen | FieldDeclaration | L25–25 | System.Func<System.Threading.Tasks.Task> Drilling.UI.Menu.Menus.CMenuSetting._refreshCurrentScreen |
-| _selectedInterfaceRow | FieldDeclaration | L26–26 | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? Drilling.UI.Menu.Menus.CMenuSetting._selectedInterfaceRow |
-| _selectedHeadFilter | FieldDeclaration | L27–27 | string Drilling.UI.Menu.Menus.CMenuSetting._selectedHeadFilter |
-| Sections | FieldDeclaration | L28–28 | Drilling.Common.Managers.EN_SETTING_TAB[] Drilling.UI.Menu.Menus.CMenuSetting.Sections |
-| .ctor | ConstructorDeclaration | L29–110 | Drilling.UI.Menu.Menus.CMenuSetting.CMenuSetting(Drilling.Common.Managers.CSettingManager, System.Func<string>, System.Action<string>, System.Func<string>, System.Action<string>, System.Func<Drilling.UI.Menu.Menus.CMenuSetting?>, System.Action<string>, System.Action<Drilling.UI.Menu.Menus.EN_MENU, string>, System.Action, System.Func<System.Threading.Tasks.Task>) |
-| SelectTabCallback | LocalFunctionStatement | L52–55 | void SelectTabCallback(object?) |
-| SelectGroupCallback | LocalFunctionStatement | L58–61 | void SelectGroupCallback(object?) |
-| SelectHeadCallback | LocalFunctionStatement | L64–67 | void SelectHeadCallback(object?) |
-| ConnectInterfaceCallback | LocalFunctionStatement | L70–73 | void ConnectInterfaceCallback(object?) |
-| IsCanOperateSelectedInterface | LocalFunctionStatement | L75–78 | bool IsCanOperateSelectedInterface(object?) |
-| DisconnectInterfaceCallback | LocalFunctionStatement | L81–84 | void DisconnectInterfaceCallback(object?) |
-| IsCanOperateSelectedInterface2 | LocalFunctionStatement | L86–89 | bool IsCanOperateSelectedInterface2(object?) |
-| SaveCallback | LocalFunctionStatement | L92–95 | void SaveCallback(object?) |
-| CancelCallback | LocalFunctionStatement | L98–101 | void CancelCallback(object?) |
-| ReloadCallback | LocalFunctionStatement | L104–107 | void ReloadCallback(object?) |
-| Menu | PropertyDeclaration | L112–118 | Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuSetting.Menu |
-| get_Menu | GetAccessorDeclaration | L114–117 | Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuSetting.Menu.get |
-| Tabs | PropertyDeclaration | L120–120 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION> Drilling.UI.Menu.Menus.CMenuSetting.Tabs |
-| get_Tabs | GetAccessorDeclaration | L120–120 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION> Drilling.UI.Menu.Menus.CMenuSetting.Tabs.get |
-| set_Tabs | SetAccessorDeclaration | L120–120 | void Drilling.UI.Menu.Menus.CMenuSetting.Tabs.set |
-| History | PropertyDeclaration | L121–121 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuSetting.History |
-| get_History | GetAccessorDeclaration | L121–121 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuSetting.History.get |
-| set_History | SetAccessorDeclaration | L121–121 | void Drilling.UI.Menu.Menus.CMenuSetting.History.set |
-| SelectedTab | PropertyDeclaration | L122–122 | string Drilling.UI.Menu.Menus.CMenuSetting.SelectedTab |
-| get_SelectedTab | GetAccessorDeclaration | L122–122 | string Drilling.UI.Menu.Menus.CMenuSetting.SelectedTab.get |
-| set_SelectedTab | SetAccessorDeclaration | L122–122 | void Drilling.UI.Menu.Menus.CMenuSetting.SelectedTab.set |
-| SelectedGroup | PropertyDeclaration | L123–123 | string Drilling.UI.Menu.Menus.CMenuSetting.SelectedGroup |
-| get_SelectedGroup | GetAccessorDeclaration | L123–123 | string Drilling.UI.Menu.Menus.CMenuSetting.SelectedGroup.get |
-| set_SelectedGroup | SetAccessorDeclaration | L123–123 | void Drilling.UI.Menu.Menus.CMenuSetting.SelectedGroup.set |
-| SelectedHeadFilter | PropertyDeclaration | L124–124 | string Drilling.UI.Menu.Menus.CMenuSetting.SelectedHeadFilter |
-| get_SelectedHeadFilter | GetAccessorDeclaration | L124–124 | string Drilling.UI.Menu.Menus.CMenuSetting.SelectedHeadFilter.get |
-| set_SelectedHeadFilter | SetAccessorDeclaration | L124–124 | void Drilling.UI.Menu.Menus.CMenuSetting.SelectedHeadFilter.set |
-| TabItems | PropertyDeclaration | L125–125 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_TAB> Drilling.UI.Menu.Menus.CMenuSetting.TabItems |
-| get_TabItems | GetAccessorDeclaration | L125–125 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_TAB> Drilling.UI.Menu.Menus.CMenuSetting.TabItems.get |
-| set_TabItems | SetAccessorDeclaration | L125–125 | void Drilling.UI.Menu.Menus.CMenuSetting.TabItems.set |
-| GroupItems | PropertyDeclaration | L126–126 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_GROUP> Drilling.UI.Menu.Menus.CMenuSetting.GroupItems |
-| get_GroupItems | GetAccessorDeclaration | L126–126 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_GROUP> Drilling.UI.Menu.Menus.CMenuSetting.GroupItems.get |
-| set_GroupItems | SetAccessorDeclaration | L126–126 | void Drilling.UI.Menu.Menus.CMenuSetting.GroupItems.set |
-| HeadFilterItems | PropertyDeclaration | L127–127 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> Drilling.UI.Menu.Menus.CMenuSetting.HeadFilterItems |
-| get_HeadFilterItems | GetAccessorDeclaration | L127–127 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> Drilling.UI.Menu.Menus.CMenuSetting.HeadFilterItems.get |
-| set_HeadFilterItems | SetAccessorDeclaration | L127–127 | void Drilling.UI.Menu.Menus.CMenuSetting.HeadFilterItems.set |
-| AllParameterRows | PropertyDeclaration | L128–128 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.AllParameterRows |
-| get_AllParameterRows | GetAccessorDeclaration | L128–128 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.AllParameterRows.get |
-| set_AllParameterRows | SetAccessorDeclaration | L128–128 | void Drilling.UI.Menu.Menus.CMenuSetting.AllParameterRows.set |
-| ParameterRows | PropertyDeclaration | L129–129 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.ParameterRows |
-| get_ParameterRows | GetAccessorDeclaration | L129–129 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.ParameterRows.get |
-| set_ParameterRows | SetAccessorDeclaration | L129–129 | void Drilling.UI.Menu.Menus.CMenuSetting.ParameterRows.set |
-| AllInterfaceRows | PropertyDeclaration | L130–130 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.AllInterfaceRows |
-| get_AllInterfaceRows | GetAccessorDeclaration | L130–130 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.AllInterfaceRows.get |
-| set_AllInterfaceRows | SetAccessorDeclaration | L130–130 | void Drilling.UI.Menu.Menus.CMenuSetting.AllInterfaceRows.set |
-| InterfaceRows | PropertyDeclaration | L131–131 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRows |
-| get_InterfaceRows | GetAccessorDeclaration | L131–131 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRows.get |
-| set_InterfaceRows | SetAccessorDeclaration | L131–131 | void Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRows.set |
-| ChangeHistory | PropertyDeclaration | L132–132 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.ChangeHistory |
-| get_ChangeHistory | GetAccessorDeclaration | L132–132 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.ChangeHistory.get |
-| set_ChangeHistory | SetAccessorDeclaration | L132–132 | void Drilling.UI.Menu.Menus.CMenuSetting.ChangeHistory.set |
-| SummaryRows | PropertyDeclaration | L133–133 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.SummaryRows |
-| get_SummaryRows | GetAccessorDeclaration | L133–133 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.SummaryRows.get |
-| set_SummaryRows | SetAccessorDeclaration | L133–133 | void Drilling.UI.Menu.Menus.CMenuSetting.SummaryRows.set |
-| SelectTabCommand | PropertyDeclaration | L134–134 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SelectTabCommand |
-| get_SelectTabCommand | GetAccessorDeclaration | L134–134 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SelectTabCommand.get |
-| SelectGroupCommand | PropertyDeclaration | L135–135 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SelectGroupCommand |
-| get_SelectGroupCommand | GetAccessorDeclaration | L135–135 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SelectGroupCommand.get |
-| SelectHeadCommand | PropertyDeclaration | L136–136 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SelectHeadCommand |
-| get_SelectHeadCommand | GetAccessorDeclaration | L136–136 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SelectHeadCommand.get |
-| ConnectInterfaceCommand | PropertyDeclaration | L137–137 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.ConnectInterfaceCommand |
-| get_ConnectInterfaceCommand | GetAccessorDeclaration | L137–137 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.ConnectInterfaceCommand.get |
-| DisconnectInterfaceCommand | PropertyDeclaration | L138–138 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.DisconnectInterfaceCommand |
-| get_DisconnectInterfaceCommand | GetAccessorDeclaration | L138–138 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.DisconnectInterfaceCommand.get |
-| SaveCommand | PropertyDeclaration | L139–139 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SaveCommand |
-| get_SaveCommand | GetAccessorDeclaration | L139–139 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SaveCommand.get |
-| CancelCommand | PropertyDeclaration | L140–140 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.CancelCommand |
-| get_CancelCommand | GetAccessorDeclaration | L140–140 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.CancelCommand.get |
-| ReloadCommand | PropertyDeclaration | L141–141 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.ReloadCommand |
-| get_ReloadCommand | GetAccessorDeclaration | L141–141 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.ReloadCommand.get |
-| IsInterfaceTab | PropertyDeclaration | L143–149 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsInterfaceTab |
-| get_IsInterfaceTab | GetAccessorDeclaration | L145–148 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsInterfaceTab.get |
-| IsParameterTab | PropertyDeclaration | L151–157 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsParameterTab |
-| get_IsParameterTab | GetAccessorDeclaration | L153–156 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsParameterTab.get |
-| IsHeadFilterVisible | PropertyDeclaration | L159–165 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsHeadFilterVisible |
-| get_IsHeadFilterVisible | GetAccessorDeclaration | L161–164 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsHeadFilterVisible.get |
-| SelectedInterfaceRow | PropertyDeclaration | L167–204 | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? Drilling.UI.Menu.Menus.CMenuSetting.SelectedInterfaceRow |
-| get_SelectedInterfaceRow | GetAccessorDeclaration | L169–172 | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? Drilling.UI.Menu.Menus.CMenuSetting.SelectedInterfaceRow.get |
-| set_SelectedInterfaceRow | SetAccessorDeclaration | L174–203 | void Drilling.UI.Menu.Menus.CMenuSetting.SelectedInterfaceRow.set |
-| CanOperateSelectedInterface | PropertyDeclaration | L206–212 | bool Drilling.UI.Menu.Menus.CMenuSetting.CanOperateSelectedInterface |
-| get_CanOperateSelectedInterface | GetAccessorDeclaration | L208–211 | bool Drilling.UI.Menu.Menus.CMenuSetting.CanOperateSelectedInterface.get |
-| Build | MethodDeclaration | L214–285 | System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuSetting.Build(System.Threading.CancellationToken) |
-| BuildDisplay | LocalFunctionStatement | L217–220 | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM BuildDisplay(Drilling.Common.Managers.ST_SYSTEM_PARAMETER) |
-| ShouldIncludeItem | LocalFunctionStatement | L238–241 | bool ShouldIncludeItem(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
-| MatchesType | LocalFunctionStatement | L249–252 | bool MatchesType(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
-| BuildSetting | LocalFunctionStatement | L256–259 | Drilling.UI.Menu.Menus.ST_SETTING_GROUP BuildSetting(string) |
-| SelectTab | MethodDeclaration | L287–301 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.SelectTab(object?) |
-| SelectGroup | MethodDeclaration | L303–316 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.SelectGroup(object?) |
-| ConnectInterface | MethodDeclaration | L318–358 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.ConnectInterface() |
-| DisconnectInterface | MethodDeclaration | L360–400 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.DisconnectInterface() |
-| Save | MethodDeclaration | L402–462 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.Save() |
-| BuildSystem | LocalFunctionStatement | L436–439 | Drilling.Common.Managers.ST_SYSTEM_PARAMETER BuildSystem(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
-| Cancel | MethodDeclaration | L464–481 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.Cancel() |
-| Reload | MethodDeclaration | L483–500 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.Reload() |
-| TryReloadSelectedTabFromCsv | MethodDeclaration | L502–525 | bool Drilling.UI.Menu.Menus.CMenuSetting.TryReloadSelectedTabFromCsv() |
-| SelectHeadFilter | MethodDeclaration | L527–538 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.SelectHeadFilter(object?) |
-| Apply | MethodDeclaration | L540–572 | void Drilling.UI.Menu.Menus.CMenuSetting.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, string, string, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_TAB>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_GROUP>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW>) |
-| GetEditRows | MethodDeclaration | L574–577 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.GetEditRows(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, Drilling.UI.Menu.Menus.CMenuSetting?, string) |
-| GetEditInterfaceRows | MethodDeclaration | L579–582 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.GetEditInterfaceRows(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, Drilling.UI.Menu.Menus.CMenuSetting?, string) |
-| GetSelectedInterfaceRow | MethodDeclaration | L584–607 | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? Drilling.UI.Menu.Menus.CMenuSetting.GetSelectedInterfaceRow(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW?) |
-| MatchesItem | LocalFunctionStatement | L596–599 | bool MatchesItem(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
-| MatchesItem2 | LocalFunctionStatement | L601–604 | bool MatchesItem2(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
-| IsSameInterfaceKey | MethodDeclaration | L609–612 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsSameInterfaceKey(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
-| OnSelectedInterfaceRowStateChanged | MethodDeclaration | L614–617 | void Drilling.UI.Menu.Menus.CMenuSetting.OnSelectedInterfaceRowStateChanged(object?, System.EventArgs) |
-| RefreshInterfaceCommandState | MethodDeclaration | L619–624 | void Drilling.UI.Menu.Menus.CMenuSetting.RefreshInterfaceCommandState() |
-| BuildTabs | MethodDeclaration | L626–639 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_TAB> Drilling.UI.Menu.Menus.CMenuSetting.BuildTabs(string) |
-| SelectItem | LocalFunctionStatement | L628–631 | string SelectItem(Drilling.Common.Managers.EN_SETTING_TAB) |
-| BuildSetting | LocalFunctionStatement | L633–636 | Drilling.UI.Menu.Menus.ST_SETTING_TAB BuildSetting(string) |
-| BuildParameterRows | MethodDeclaration | L641–667 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildParameterRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>) |
-| ShouldIncludeItem | LocalFunctionStatement | L643–646 | bool ShouldIncludeItem(Drilling.Common.Managers.ST_SYSTEM_PARAMETER) |
-| BuildSystem | LocalFunctionStatement | L648–664 | Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW BuildSystem(Drilling.Common.Managers.ST_SYSTEM_PARAMETER) |
-| BuildGroups | MethodDeclaration | L669–686 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.CMenuSetting.BuildGroups(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>) |
-| SelectGroup | LocalFunctionStatement | L671–674 | string SelectGroup(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
-| ShouldIncludeItem | LocalFunctionStatement | L676–679 | bool ShouldIncludeItem(string) |
-| BuildHeadFilters | MethodDeclaration | L688–722 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> Drilling.UI.Menu.Menus.CMenuSetting.BuildHeadFilters(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>) |
-| HasHead | LocalFunctionStatement | L690–693 | bool HasHead(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
-| ReadHeadNo | LocalFunctionStatement | L695–698 | int ReadHeadNo(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
-| CreateHeadFilter | LocalFunctionStatement | L700–703 | Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER CreateHeadFilter(int) |
-| SortHeadNo | LocalFunctionStatement | L705–708 | int SortHeadNo(int) |
-| ApplyHeadFilter | MethodDeclaration | L724–737 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.ApplyHeadFilter(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, string) |
-| MatchesHead | LocalFunctionStatement | L731–734 | bool MatchesHead(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
-| MarkSelectedHeadFilter | MethodDeclaration | L739–750 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> Drilling.UI.Menu.Menus.CMenuSetting.MarkSelectedHeadFilter(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>, string) |
-| MarkSelected | LocalFunctionStatement | L741–747 | Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER MarkSelected(Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER) |
-| NormalizeHeadFilter | MethodDeclaration | L752–768 | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeHeadFilter(string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>) |
-| BuildInterfaceGroups | MethodDeclaration | L770–787 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.CMenuSetting.BuildInterfaceGroups(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>) |
-| SelectType | LocalFunctionStatement | L772–775 | string SelectType(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
-| ShouldIncludeItem | LocalFunctionStatement | L777–780 | bool ShouldIncludeItem(string) |
-| BuildHistoryItems | MethodDeclaration | L789–797 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuSetting.BuildHistoryItems(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY>) |
-| BuildDisplay | LocalFunctionStatement | L791–794 | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM BuildDisplay(Drilling.Common.Managers.ST_SETTING_HISTORY) |
-| BuildHistoryRows | MethodDeclaration | L799–812 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildHistoryRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY>) |
-| ShouldIncludeItem | LocalFunctionStatement | L801–804 | bool ShouldIncludeItem(Drilling.Common.Managers.ST_SETTING_HISTORY) |
-| BuildSetting | LocalFunctionStatement | L806–809 | Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW BuildSetting(Drilling.Common.Managers.ST_SETTING_HISTORY) |
-| BuildSummaryRows | MethodDeclaration | L814–839 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildSummaryRows(string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY>) |
-| IsIsModified | LocalFunctionStatement | L821–824 | bool IsIsModified(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
-| IsIsModified2 | LocalFunctionStatement | L826–829 | bool IsIsModified2(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
-| MatchesItem | LocalFunctionStatement | L832–835 | bool MatchesItem(Drilling.Common.Managers.ST_SETTING_HISTORY) |
-| BuildInterfaceRows | MethodDeclaration | L841–880 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildInterfaceRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>) |
-| SelectDevice | LocalFunctionStatement | L843–846 | Drilling.Common.Interface.EN_EQP_MODULE SelectDevice(Drilling.Common.Interface.ST_INTERFACE_DATA) |
-| SelectNumber | LocalFunctionStatement | L848–851 | int SelectNumber(Drilling.Common.Interface.ST_INTERFACE_DATA) |
-| SelectNickName | LocalFunctionStatement | L853–856 | string SelectNickName(Drilling.Common.Interface.ST_INTERFACE_DATA) |
-| BuildSetting | LocalFunctionStatement | L858–877 | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW BuildSetting(Drilling.Common.Interface.ST_INTERFACE_DATA, int) |
-| ToInterfaceData | MethodDeclaration | L882–900 | System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.UI.Menu.Menus.CMenuSetting.ToInterfaceData(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>) |
-| BuildInterface | LocalFunctionStatement | L884–897 | Drilling.Common.Interface.ST_INTERFACE_DATA BuildInterface(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
-| ParseInterfaceType | MethodDeclaration | L902–920 | Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.UI.Menu.Menus.CMenuSetting.ParseInterfaceType(string) |
-| ParseDevice | MethodDeclaration | L922–937 | Drilling.Common.Interface.EN_EQP_MODULE Drilling.UI.Menu.Menus.CMenuSetting.ParseDevice(string) |
-| InterfaceTypeText | MethodDeclaration | L939–957 | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE) |
-| DeviceText | MethodDeclaration | L959–974 | string Drilling.UI.Menu.Menus.CMenuSetting.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE) |
-| InterfaceRowLabel | MethodDeclaration | L976–979 | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRowLabel(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
-| RequireText | MethodDeclaration | L981–989 | string Drilling.UI.Menu.Menus.CMenuSetting.RequireText(string, string) |
-| ReadBool | MethodDeclaration | L991–998 | bool Drilling.UI.Menu.Menus.CMenuSetting.ReadBool(string, string, string) |
-| ReadInt | MethodDeclaration | L1000–1008 | int Drilling.UI.Menu.Menus.CMenuSetting.ReadInt(string, string, string) |
-| NormalizeTab | MethodDeclaration | L1010–1019 | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeTab(string) |
-| NormalizeGroup | MethodDeclaration | L1021–1030 | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeGroup(string, System.Collections.Generic.IReadOnlyList<string>) |
-| MatchesItem | LocalFunctionStatement | L1024–1027 | bool MatchesItem(string) |
-| NormalizeSettingText | MethodDeclaration | L1032–1035 | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingText(string, string) |
-| NormalizeUnit | MethodDeclaration | L1037–1040 | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeUnit(string) |
-| NormalizeSettingUnit | MethodDeclaration | L1042–1045 | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingUnit(string) |
-| GetValueState | MethodDeclaration | L1047–1051 | string Drilling.UI.Menu.Menus.CMenuSetting.GetValueState(string) |
-| ToSection | MethodDeclaration | L1053–1063 | Drilling.Common.Managers.EN_SETTING_TAB Drilling.UI.Menu.Menus.CMenuSetting.ToSection(string) |
-| ToTabText | MethodDeclaration | L1065–1071 | string Drilling.UI.Menu.Menus.CMenuSetting.ToTabText(Drilling.Common.Managers.EN_SETTING_TAB) |
-| GetDefaultGroup | MethodDeclaration | L1073–1076 | string Drilling.UI.Menu.Menus.CMenuSetting.GetDefaultGroup() |
-| DisplayName | PropertyDeclaration | L1081–1081 | string Drilling.UI.Menu.Menus.ST_SETTING_TAB.DisplayName |
-| VisionFlipOptions | FieldDeclaration | L1087–1087 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.VisionFlipOptions |
-| SignOptions | FieldDeclaration | L1088–1088 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.SignOptions |
-| NumericBooleanOptions | FieldDeclaration | L1089–1089 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.NumericBooleanOptions |
-| _originalValue | FieldDeclaration | L1090–1090 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW._originalValue |
-| _originalValueState | FieldDeclaration | L1091–1091 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW._originalValueState |
-| _value | FieldDeclaration | L1092–1092 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW._value |
-| _valueState | FieldDeclaration | L1093–1093 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW._valueState |
-| .ctor | ConstructorDeclaration | L1094–1125 | Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ST_SYSTEM_PARAMETER_ROW(string, string, string, string, string, bool, string, string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) |
-| Group | PropertyDeclaration | L1127–1127 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Group |
-| get_Group | GetAccessorDeclaration | L1127–1127 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Group.get |
-| Parameter | PropertyDeclaration | L1128–1128 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Parameter |
-| get_Parameter | GetAccessorDeclaration | L1128–1128 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Parameter.get |
-| Value | PropertyDeclaration | L1130–1149 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Value |
-| get_Value | GetAccessorDeclaration | L1132–1135 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Value.get |
-| set_Value | SetAccessorDeclaration | L1137–1148 | void Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Value.set |
-| Unit | PropertyDeclaration | L1151–1151 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Unit |
-| get_Unit | GetAccessorDeclaration | L1151–1151 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Unit.get |
-| Description | PropertyDeclaration | L1152–1152 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Description |
-| get_Description | GetAccessorDeclaration | L1152–1152 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Description.get |
-| Key | PropertyDeclaration | L1153–1153 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Key |
-| get_Key | GetAccessorDeclaration | L1153–1153 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Key.get |
-| HeadNo | PropertyDeclaration | L1154–1154 | int Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.HeadNo |
-| get_HeadNo | GetAccessorDeclaration | L1154–1154 | int Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.HeadNo.get |
-| HeadFilter | PropertyDeclaration | L1155–1155 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.HeadFilter |
-| get_HeadFilter | GetAccessorDeclaration | L1155–1155 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.HeadFilter.get |
-| DefaultValue | PropertyDeclaration | L1156–1156 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.DefaultValue |
-| get_DefaultValue | GetAccessorDeclaration | L1156–1156 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.DefaultValue.get |
-| DataType | PropertyDeclaration | L1157–1157 | Drilling.Common.Managers.EN_RECIPE_DATA_TYPE Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.DataType |
-| get_DataType | GetAccessorDeclaration | L1157–1157 | Drilling.Common.Managers.EN_RECIPE_DATA_TYPE Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.DataType.get |
-| IsVisionFlipOption | PropertyDeclaration | L1159–1165 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsVisionFlipOption |
-| get_IsVisionFlipOption | GetAccessorDeclaration | L1161–1164 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsVisionFlipOption.get |
-| IsBoolean | PropertyDeclaration | L1167–1173 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsBoolean |
-| get_IsBoolean | GetAccessorDeclaration | L1169–1172 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsBoolean.get |
-| IsSign | PropertyDeclaration | L1175–1181 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsSign |
-| get_IsSign | GetAccessorDeclaration | L1177–1180 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsSign.get |
-| UsesSelectionEditor | PropertyDeclaration | L1183–1189 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.UsesSelectionEditor |
-| get_UsesSelectionEditor | GetAccessorDeclaration | L1185–1188 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.UsesSelectionEditor.get |
-| ValueOptions | PropertyDeclaration | L1191–1197 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueOptions |
-| get_ValueOptions | GetAccessorDeclaration | L1193–1196 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueOptions.get |
-| Min | PropertyDeclaration | L1199–1199 | double Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Min |
-| get_Min | GetAccessorDeclaration | L1199–1199 | double Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Min.get |
-| Max | PropertyDeclaration | L1200–1200 | double Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Max |
-| get_Max | GetAccessorDeclaration | L1200–1200 | double Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Max.get |
-| OriginalValue | PropertyDeclaration | L1202–1208 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.OriginalValue |
-| get_OriginalValue | GetAccessorDeclaration | L1204–1207 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.OriginalValue.get |
-| IsModified | PropertyDeclaration | L1210–1216 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsModified |
-| get_IsModified | GetAccessorDeclaration | L1212–1215 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsModified.get |
-| ModifiedText | PropertyDeclaration | L1218–1224 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ModifiedText |
-| get_ModifiedText | GetAccessorDeclaration | L1220–1223 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ModifiedText.get |
-| ValueState | PropertyDeclaration | L1226–1240 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueState |
-| get_ValueState | GetAccessorDeclaration | L1228–1231 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueState.get |
-| set_ValueState | SetAccessorDeclaration | L1233–1239 | void Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueState.set |
-| ValueBrush | PropertyDeclaration | L1242–1253 | Brush Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueBrush |
-| get_ValueBrush | GetAccessorDeclaration | L1244–1252 | Brush Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueBrush.get |
-| ModifiedBrush | PropertyDeclaration | L1255–1261 | Brush Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ModifiedBrush |
-| get_ModifiedBrush | GetAccessorDeclaration | L1257–1260 | Brush Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ModifiedBrush.get |
-| NormalizeValue | MethodDeclaration | L1263–1266 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.NormalizeValue(string) |
-| NormalizeVisionFlipDisplay | MethodDeclaration | L1268–1271 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.NormalizeVisionFlipDisplay(string) |
-| ParseHeadNo | MethodDeclaration | L1273–1287 | int Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ParseHeadNo(string) |
-| AfterBrush | PropertyDeclaration | L1292–1302 | Brush Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW.AfterBrush |
-| get_AfterBrush | GetAccessorDeclaration | L1294–1301 | Brush Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW.AfterBrush.get |
-| ValueBrush | PropertyDeclaration | L1307–1319 | Brush Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW.ValueBrush |
-| get_ValueBrush | GetAccessorDeclaration | L1309–1318 | Brush Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW.ValueBrush.get |
-| TypeOptions | PropertyDeclaration | L1324–1324 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.TypeOptions |
-| get_TypeOptions | GetAccessorDeclaration | L1324–1324 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.TypeOptions.get |
-| DeviceOptions | PropertyDeclaration | L1325–1325 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.DeviceOptions |
-| get_DeviceOptions | GetAccessorDeclaration | L1325–1325 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.DeviceOptions.get |
-| AutoConnectionOptions | PropertyDeclaration | L1326–1326 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.AutoConnectionOptions |
-| get_AutoConnectionOptions | GetAccessorDeclaration | L1326–1326 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.AutoConnectionOptions.get |
-| _originalType | FieldDeclaration | L1328–1328 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalType |
-| _originalDevice | FieldDeclaration | L1329–1329 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalDevice |
-| _originalNumber | FieldDeclaration | L1330–1330 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalNumber |
-| _originalNickName | FieldDeclaration | L1331–1331 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalNickName |
-| _originalSystemSection | FieldDeclaration | L1332–1332 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalSystemSection |
-| _originalAutoConnection | FieldDeclaration | L1333–1333 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalAutoConnection |
-| _originalSimul | FieldDeclaration | L1334–1334 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalSimul |
-| _originalArg1 | FieldDeclaration | L1335–1335 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalArg1 |
-| _originalArg2 | FieldDeclaration | L1336–1336 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalArg2 |
-| _originalArg3 | FieldDeclaration | L1337–1337 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalArg3 |
-| _originalArg4 | FieldDeclaration | L1338–1338 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalArg4 |
-| _originalArg5 | FieldDeclaration | L1339–1339 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalArg5 |
-| _type | FieldDeclaration | L1340–1340 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._type |
-| _device | FieldDeclaration | L1341–1341 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._device |
-| _number | FieldDeclaration | L1342–1342 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._number |
-| _nickName | FieldDeclaration | L1343–1343 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._nickName |
-| _systemSection | FieldDeclaration | L1344–1344 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._systemSection |
-| _autoConnection | FieldDeclaration | L1345–1345 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._autoConnection |
-| _simul | FieldDeclaration | L1346–1346 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._simul |
-| _arg1 | FieldDeclaration | L1347–1347 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._arg1 |
-| _arg2 | FieldDeclaration | L1348–1348 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._arg2 |
-| _arg3 | FieldDeclaration | L1349–1349 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._arg3 |
-| _arg4 | FieldDeclaration | L1350–1350 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._arg4 |
-| _arg5 | FieldDeclaration | L1351–1351 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._arg5 |
-| .ctor | ConstructorDeclaration | L1352–1395 | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.ST_SETTING_INTERFACE_ROW(string, string, string, string, string, string, string, string, string, string, string, string, string, System.Collections.Generic.IReadOnlyDictionary<string, string>?) |
-| No | PropertyDeclaration | L1397–1397 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.No |
-| get_No | GetAccessorDeclaration | L1397–1397 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.No.get |
-| Extra | PropertyDeclaration | L1398–1398 | System.Collections.Generic.IReadOnlyDictionary<string, string>? Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Extra |
-| get_Extra | GetAccessorDeclaration | L1398–1398 | System.Collections.Generic.IReadOnlyDictionary<string, string>? Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Extra.get |
-| Type | PropertyDeclaration | L1400–1411 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Type |
-| get_Type | GetAccessorDeclaration | L1402–1405 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Type.get |
-| set_Type | SetAccessorDeclaration | L1407–1410 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Type.set |
-| Device | PropertyDeclaration | L1413–1424 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Device |
-| get_Device | GetAccessorDeclaration | L1415–1418 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Device.get |
-| set_Device | SetAccessorDeclaration | L1420–1423 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Device.set |
-| Number | PropertyDeclaration | L1426–1437 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Number |
-| get_Number | GetAccessorDeclaration | L1428–1431 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Number.get |
-| set_Number | SetAccessorDeclaration | L1433–1436 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Number.set |
-| NickName | PropertyDeclaration | L1439–1450 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.NickName |
-| get_NickName | GetAccessorDeclaration | L1441–1444 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.NickName.get |
-| set_NickName | SetAccessorDeclaration | L1446–1449 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.NickName.set |
-| SystemSection | PropertyDeclaration | L1452–1463 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SystemSection |
-| get_SystemSection | GetAccessorDeclaration | L1454–1457 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SystemSection.get |
-| set_SystemSection | SetAccessorDeclaration | L1459–1462 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SystemSection.set |
-| AutoConnection | PropertyDeclaration | L1465–1476 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.AutoConnection |
-| get_AutoConnection | GetAccessorDeclaration | L1467–1470 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.AutoConnection.get |
-| set_AutoConnection | SetAccessorDeclaration | L1472–1475 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.AutoConnection.set |
-| Simul | PropertyDeclaration | L1478–1489 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Simul |
-| get_Simul | GetAccessorDeclaration | L1480–1483 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Simul.get |
-| set_Simul | SetAccessorDeclaration | L1485–1488 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Simul.set |
-| Arg1 | PropertyDeclaration | L1491–1502 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg1 |
-| get_Arg1 | GetAccessorDeclaration | L1493–1496 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg1.get |
-| set_Arg1 | SetAccessorDeclaration | L1498–1501 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg1.set |
-| Arg2 | PropertyDeclaration | L1504–1515 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg2 |
-| get_Arg2 | GetAccessorDeclaration | L1506–1509 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg2.get |
-| set_Arg2 | SetAccessorDeclaration | L1511–1514 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg2.set |
-| Arg3 | PropertyDeclaration | L1517–1528 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg3 |
-| get_Arg3 | GetAccessorDeclaration | L1519–1522 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg3.get |
-| set_Arg3 | SetAccessorDeclaration | L1524–1527 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg3.set |
-| Arg4 | PropertyDeclaration | L1530–1541 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg4 |
-| get_Arg4 | GetAccessorDeclaration | L1532–1535 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg4.get |
-| set_Arg4 | SetAccessorDeclaration | L1537–1540 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg4.set |
-| Arg5 | PropertyDeclaration | L1543–1554 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg5 |
-| get_Arg5 | GetAccessorDeclaration | L1545–1548 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg5.get |
-| set_Arg5 | SetAccessorDeclaration | L1550–1553 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg5.set |
-| IsModified | PropertyDeclaration | L1556–1562 | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsModified |
-| get_IsModified | GetAccessorDeclaration | L1558–1561 | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsModified.get |
-| IsSimulation | PropertyDeclaration | L1564–1574 | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsSimulation |
-| get_IsSimulation | GetAccessorDeclaration | L1566–1573 | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsSimulation.get |
-| ModifiedText | PropertyDeclaration | L1576–1582 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.ModifiedText |
-| get_ModifiedText | GetAccessorDeclaration | L1578–1581 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.ModifiedText.get |
-| ModifiedBrush | PropertyDeclaration | L1584–1590 | Brush Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.ModifiedBrush |
-| get_ModifiedBrush | GetAccessorDeclaration | L1586–1589 | Brush Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.ModifiedBrush.get |
-| SimulBrush | PropertyDeclaration | L1592–1602 | Brush Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SimulBrush |
-| get_SimulBrush | GetAccessorDeclaration | L1594–1601 | Brush Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SimulBrush.get |
-| SetEditable | MethodDeclaration | L1604–1616 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) |
-| IsChanged | MethodDeclaration | L1618–1621 | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) |
-| Normalize | MethodDeclaration | L1623–1626 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Normalize(string) |
+| _settingManager | FieldDeclaration | L17–17 | Drilling.Common.Managers.CSettingManager Drilling.UI.Menu.Menus.CMenuSetting._settingManager |
+| _selectedTabProvider | FieldDeclaration | L18–18 | System.Func<string> Drilling.UI.Menu.Menus.CMenuSetting._selectedTabProvider |
+| _selectedTabSetter | FieldDeclaration | L19–19 | System.Action<string> Drilling.UI.Menu.Menus.CMenuSetting._selectedTabSetter |
+| _selectedGroupProvider | FieldDeclaration | L20–20 | System.Func<string> Drilling.UI.Menu.Menus.CMenuSetting._selectedGroupProvider |
+| _selectedGroupSetter | FieldDeclaration | L21–21 | System.Action<string> Drilling.UI.Menu.Menus.CMenuSetting._selectedGroupSetter |
+| _editScreenProvider | FieldDeclaration | L22–22 | System.Func<Drilling.UI.Menu.Menus.CMenuSetting?> Drilling.UI.Menu.Menus.CMenuSetting._editScreenProvider |
+| _setStatusMessage | FieldDeclaration | L23–23 | System.Action<string> Drilling.UI.Menu.Menus.CMenuSetting._setStatusMessage |
+| _showLoadingScreen | FieldDeclaration | L24–24 | System.Action<Drilling.UI.Menu.Menus.EN_MENU, string> Drilling.UI.Menu.Menus.CMenuSetting._showLoadingScreen |
+| _refreshShellStatus | FieldDeclaration | L25–25 | System.Action Drilling.UI.Menu.Menus.CMenuSetting._refreshShellStatus |
+| _refreshCurrentScreen | FieldDeclaration | L26–26 | System.Func<System.Threading.Tasks.Task> Drilling.UI.Menu.Menus.CMenuSetting._refreshCurrentScreen |
+| _selectedInterfaceRow | FieldDeclaration | L27–27 | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? Drilling.UI.Menu.Menus.CMenuSetting._selectedInterfaceRow |
+| _selectedHeadFilter | FieldDeclaration | L28–28 | string Drilling.UI.Menu.Menus.CMenuSetting._selectedHeadFilter |
+| Sections | FieldDeclaration | L29–29 | Drilling.Common.Managers.EN_SETTING_TAB[] Drilling.UI.Menu.Menus.CMenuSetting.Sections |
+| .ctor | ConstructorDeclaration | L30–111 | Drilling.UI.Menu.Menus.CMenuSetting.CMenuSetting(Drilling.Common.Managers.CSettingManager, System.Func<string>, System.Action<string>, System.Func<string>, System.Action<string>, System.Func<Drilling.UI.Menu.Menus.CMenuSetting?>, System.Action<string>, System.Action<Drilling.UI.Menu.Menus.EN_MENU, string>, System.Action, System.Func<System.Threading.Tasks.Task>) |
+| SelectTabCallback | LocalFunctionStatement | L53–56 | void SelectTabCallback(object?) |
+| SelectGroupCallback | LocalFunctionStatement | L59–62 | void SelectGroupCallback(object?) |
+| SelectHeadCallback | LocalFunctionStatement | L65–68 | void SelectHeadCallback(object?) |
+| ConnectInterfaceCallback | LocalFunctionStatement | L71–74 | void ConnectInterfaceCallback(object?) |
+| IsCanOperateSelectedInterface | LocalFunctionStatement | L76–79 | bool IsCanOperateSelectedInterface(object?) |
+| DisconnectInterfaceCallback | LocalFunctionStatement | L82–85 | void DisconnectInterfaceCallback(object?) |
+| IsCanOperateSelectedInterface2 | LocalFunctionStatement | L87–90 | bool IsCanOperateSelectedInterface2(object?) |
+| SaveCallback | LocalFunctionStatement | L93–96 | void SaveCallback(object?) |
+| CancelCallback | LocalFunctionStatement | L99–102 | void CancelCallback(object?) |
+| ReloadCallback | LocalFunctionStatement | L105–108 | void ReloadCallback(object?) |
+| Menu | PropertyDeclaration | L113–119 | Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuSetting.Menu |
+| get_Menu | GetAccessorDeclaration | L115–118 | Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuSetting.Menu.get |
+| Tabs | PropertyDeclaration | L121–121 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION> Drilling.UI.Menu.Menus.CMenuSetting.Tabs |
+| get_Tabs | GetAccessorDeclaration | L121–121 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION> Drilling.UI.Menu.Menus.CMenuSetting.Tabs.get |
+| set_Tabs | SetAccessorDeclaration | L121–121 | void Drilling.UI.Menu.Menus.CMenuSetting.Tabs.set |
+| History | PropertyDeclaration | L122–122 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuSetting.History |
+| get_History | GetAccessorDeclaration | L122–122 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuSetting.History.get |
+| set_History | SetAccessorDeclaration | L122–122 | void Drilling.UI.Menu.Menus.CMenuSetting.History.set |
+| SelectedTab | PropertyDeclaration | L123–123 | string Drilling.UI.Menu.Menus.CMenuSetting.SelectedTab |
+| get_SelectedTab | GetAccessorDeclaration | L123–123 | string Drilling.UI.Menu.Menus.CMenuSetting.SelectedTab.get |
+| set_SelectedTab | SetAccessorDeclaration | L123–123 | void Drilling.UI.Menu.Menus.CMenuSetting.SelectedTab.set |
+| SelectedGroup | PropertyDeclaration | L124–124 | string Drilling.UI.Menu.Menus.CMenuSetting.SelectedGroup |
+| get_SelectedGroup | GetAccessorDeclaration | L124–124 | string Drilling.UI.Menu.Menus.CMenuSetting.SelectedGroup.get |
+| set_SelectedGroup | SetAccessorDeclaration | L124–124 | void Drilling.UI.Menu.Menus.CMenuSetting.SelectedGroup.set |
+| SelectedHeadFilter | PropertyDeclaration | L125–125 | string Drilling.UI.Menu.Menus.CMenuSetting.SelectedHeadFilter |
+| get_SelectedHeadFilter | GetAccessorDeclaration | L125–125 | string Drilling.UI.Menu.Menus.CMenuSetting.SelectedHeadFilter.get |
+| set_SelectedHeadFilter | SetAccessorDeclaration | L125–125 | void Drilling.UI.Menu.Menus.CMenuSetting.SelectedHeadFilter.set |
+| TabItems | PropertyDeclaration | L126–126 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_TAB> Drilling.UI.Menu.Menus.CMenuSetting.TabItems |
+| get_TabItems | GetAccessorDeclaration | L126–126 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_TAB> Drilling.UI.Menu.Menus.CMenuSetting.TabItems.get |
+| set_TabItems | SetAccessorDeclaration | L126–126 | void Drilling.UI.Menu.Menus.CMenuSetting.TabItems.set |
+| GroupItems | PropertyDeclaration | L127–127 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_GROUP> Drilling.UI.Menu.Menus.CMenuSetting.GroupItems |
+| get_GroupItems | GetAccessorDeclaration | L127–127 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_GROUP> Drilling.UI.Menu.Menus.CMenuSetting.GroupItems.get |
+| set_GroupItems | SetAccessorDeclaration | L127–127 | void Drilling.UI.Menu.Menus.CMenuSetting.GroupItems.set |
+| HeadFilterItems | PropertyDeclaration | L128–128 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> Drilling.UI.Menu.Menus.CMenuSetting.HeadFilterItems |
+| get_HeadFilterItems | GetAccessorDeclaration | L128–128 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> Drilling.UI.Menu.Menus.CMenuSetting.HeadFilterItems.get |
+| set_HeadFilterItems | SetAccessorDeclaration | L128–128 | void Drilling.UI.Menu.Menus.CMenuSetting.HeadFilterItems.set |
+| AllParameterRows | PropertyDeclaration | L129–129 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.AllParameterRows |
+| get_AllParameterRows | GetAccessorDeclaration | L129–129 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.AllParameterRows.get |
+| set_AllParameterRows | SetAccessorDeclaration | L129–129 | void Drilling.UI.Menu.Menus.CMenuSetting.AllParameterRows.set |
+| ParameterRows | PropertyDeclaration | L130–130 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.ParameterRows |
+| get_ParameterRows | GetAccessorDeclaration | L130–130 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.ParameterRows.get |
+| set_ParameterRows | SetAccessorDeclaration | L130–130 | void Drilling.UI.Menu.Menus.CMenuSetting.ParameterRows.set |
+| AllInterfaceRows | PropertyDeclaration | L131–131 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.AllInterfaceRows |
+| get_AllInterfaceRows | GetAccessorDeclaration | L131–131 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.AllInterfaceRows.get |
+| set_AllInterfaceRows | SetAccessorDeclaration | L131–131 | void Drilling.UI.Menu.Menus.CMenuSetting.AllInterfaceRows.set |
+| InterfaceRows | PropertyDeclaration | L132–132 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRows |
+| get_InterfaceRows | GetAccessorDeclaration | L132–132 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRows.get |
+| set_InterfaceRows | SetAccessorDeclaration | L132–132 | void Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRows.set |
+| ChangeHistory | PropertyDeclaration | L133–133 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.ChangeHistory |
+| get_ChangeHistory | GetAccessorDeclaration | L133–133 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.ChangeHistory.get |
+| set_ChangeHistory | SetAccessorDeclaration | L133–133 | void Drilling.UI.Menu.Menus.CMenuSetting.ChangeHistory.set |
+| SummaryRows | PropertyDeclaration | L134–134 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.SummaryRows |
+| get_SummaryRows | GetAccessorDeclaration | L134–134 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.SummaryRows.get |
+| set_SummaryRows | SetAccessorDeclaration | L134–134 | void Drilling.UI.Menu.Menus.CMenuSetting.SummaryRows.set |
+| SelectTabCommand | PropertyDeclaration | L135–135 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SelectTabCommand |
+| get_SelectTabCommand | GetAccessorDeclaration | L135–135 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SelectTabCommand.get |
+| SelectGroupCommand | PropertyDeclaration | L136–136 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SelectGroupCommand |
+| get_SelectGroupCommand | GetAccessorDeclaration | L136–136 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SelectGroupCommand.get |
+| SelectHeadCommand | PropertyDeclaration | L137–137 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SelectHeadCommand |
+| get_SelectHeadCommand | GetAccessorDeclaration | L137–137 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SelectHeadCommand.get |
+| ConnectInterfaceCommand | PropertyDeclaration | L138–138 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.ConnectInterfaceCommand |
+| get_ConnectInterfaceCommand | GetAccessorDeclaration | L138–138 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.ConnectInterfaceCommand.get |
+| DisconnectInterfaceCommand | PropertyDeclaration | L139–139 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.DisconnectInterfaceCommand |
+| get_DisconnectInterfaceCommand | GetAccessorDeclaration | L139–139 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.DisconnectInterfaceCommand.get |
+| SaveCommand | PropertyDeclaration | L140–140 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SaveCommand |
+| get_SaveCommand | GetAccessorDeclaration | L140–140 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.SaveCommand.get |
+| CancelCommand | PropertyDeclaration | L141–141 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.CancelCommand |
+| get_CancelCommand | GetAccessorDeclaration | L141–141 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.CancelCommand.get |
+| ReloadCommand | PropertyDeclaration | L142–142 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.ReloadCommand |
+| get_ReloadCommand | GetAccessorDeclaration | L142–142 | Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuSetting.ReloadCommand.get |
+| IsInterfaceTab | PropertyDeclaration | L144–150 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsInterfaceTab |
+| get_IsInterfaceTab | GetAccessorDeclaration | L146–149 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsInterfaceTab.get |
+| IsParameterTab | PropertyDeclaration | L152–158 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsParameterTab |
+| get_IsParameterTab | GetAccessorDeclaration | L154–157 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsParameterTab.get |
+| IsHeadFilterVisible | PropertyDeclaration | L160–166 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsHeadFilterVisible |
+| get_IsHeadFilterVisible | GetAccessorDeclaration | L162–165 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsHeadFilterVisible.get |
+| SelectedInterfaceRow | PropertyDeclaration | L168–205 | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? Drilling.UI.Menu.Menus.CMenuSetting.SelectedInterfaceRow |
+| get_SelectedInterfaceRow | GetAccessorDeclaration | L170–173 | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? Drilling.UI.Menu.Menus.CMenuSetting.SelectedInterfaceRow.get |
+| set_SelectedInterfaceRow | SetAccessorDeclaration | L175–204 | void Drilling.UI.Menu.Menus.CMenuSetting.SelectedInterfaceRow.set |
+| CanOperateSelectedInterface | PropertyDeclaration | L207–213 | bool Drilling.UI.Menu.Menus.CMenuSetting.CanOperateSelectedInterface |
+| get_CanOperateSelectedInterface | GetAccessorDeclaration | L209–212 | bool Drilling.UI.Menu.Menus.CMenuSetting.CanOperateSelectedInterface.get |
+| Build | MethodDeclaration | L215–286 | System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuSetting.Build(System.Threading.CancellationToken) |
+| BuildDisplay | LocalFunctionStatement | L218–221 | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM BuildDisplay(Drilling.Common.Managers.ST_SYSTEM_PARAMETER) |
+| ShouldIncludeItem | LocalFunctionStatement | L239–242 | bool ShouldIncludeItem(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
+| MatchesType | LocalFunctionStatement | L250–253 | bool MatchesType(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
+| BuildSetting | LocalFunctionStatement | L257–260 | Drilling.UI.Menu.Menus.ST_SETTING_GROUP BuildSetting(string) |
+| SelectTab | MethodDeclaration | L288–302 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.SelectTab(object?) |
+| SelectGroup | MethodDeclaration | L304–317 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.SelectGroup(object?) |
+| ConnectInterface | MethodDeclaration | L319–359 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.ConnectInterface() |
+| DisconnectInterface | MethodDeclaration | L361–401 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.DisconnectInterface() |
+| Save | MethodDeclaration | L403–466 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.Save() |
+| BuildSystem | LocalFunctionStatement | L437–440 | Drilling.Common.Managers.ST_SYSTEM_PARAMETER BuildSystem(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
+| Cancel | MethodDeclaration | L468–485 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.Cancel() |
+| Reload | MethodDeclaration | L487–504 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.Reload() |
+| TryReloadSelectedTabFromCsv | MethodDeclaration | L506–529 | bool Drilling.UI.Menu.Menus.CMenuSetting.TryReloadSelectedTabFromCsv() |
+| SelectHeadFilter | MethodDeclaration | L531–542 | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.SelectHeadFilter(object?) |
+| Apply | MethodDeclaration | L544–576 | void Drilling.UI.Menu.Menus.CMenuSetting.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, string, string, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_TAB>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_GROUP>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW>) |
+| GetEditRows | MethodDeclaration | L578–581 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.GetEditRows(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, Drilling.UI.Menu.Menus.CMenuSetting?, string) |
+| GetEditInterfaceRows | MethodDeclaration | L583–586 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.GetEditInterfaceRows(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, Drilling.UI.Menu.Menus.CMenuSetting?, string) |
+| GetSelectedInterfaceRow | MethodDeclaration | L588–611 | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? Drilling.UI.Menu.Menus.CMenuSetting.GetSelectedInterfaceRow(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW?) |
+| MatchesItem | LocalFunctionStatement | L600–603 | bool MatchesItem(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
+| MatchesItem2 | LocalFunctionStatement | L605–608 | bool MatchesItem2(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
+| IsSameInterfaceKey | MethodDeclaration | L613–616 | bool Drilling.UI.Menu.Menus.CMenuSetting.IsSameInterfaceKey(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
+| OnSelectedInterfaceRowStateChanged | MethodDeclaration | L618–621 | void Drilling.UI.Menu.Menus.CMenuSetting.OnSelectedInterfaceRowStateChanged(object?, System.EventArgs) |
+| RefreshInterfaceCommandState | MethodDeclaration | L623–628 | void Drilling.UI.Menu.Menus.CMenuSetting.RefreshInterfaceCommandState() |
+| BuildTabs | MethodDeclaration | L630–643 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_TAB> Drilling.UI.Menu.Menus.CMenuSetting.BuildTabs(string) |
+| SelectItem | LocalFunctionStatement | L632–635 | string SelectItem(Drilling.Common.Managers.EN_SETTING_TAB) |
+| BuildSetting | LocalFunctionStatement | L637–640 | Drilling.UI.Menu.Menus.ST_SETTING_TAB BuildSetting(string) |
+| BuildParameterRows | MethodDeclaration | L645–671 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildParameterRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>) |
+| ShouldIncludeItem | LocalFunctionStatement | L647–650 | bool ShouldIncludeItem(Drilling.Common.Managers.ST_SYSTEM_PARAMETER) |
+| BuildSystem | LocalFunctionStatement | L652–668 | Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW BuildSystem(Drilling.Common.Managers.ST_SYSTEM_PARAMETER) |
+| BuildGroups | MethodDeclaration | L673–690 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.CMenuSetting.BuildGroups(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>) |
+| SelectGroup | LocalFunctionStatement | L675–678 | string SelectGroup(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
+| ShouldIncludeItem | LocalFunctionStatement | L680–683 | bool ShouldIncludeItem(string) |
+| BuildHeadFilters | MethodDeclaration | L692–726 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> Drilling.UI.Menu.Menus.CMenuSetting.BuildHeadFilters(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>) |
+| HasHead | LocalFunctionStatement | L694–697 | bool HasHead(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
+| ReadHeadNo | LocalFunctionStatement | L699–702 | int ReadHeadNo(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
+| CreateHeadFilter | LocalFunctionStatement | L704–707 | Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER CreateHeadFilter(int) |
+| SortHeadNo | LocalFunctionStatement | L709–712 | int SortHeadNo(int) |
+| ApplyHeadFilter | MethodDeclaration | L728–741 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.ApplyHeadFilter(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, string) |
+| MatchesHead | LocalFunctionStatement | L735–738 | bool MatchesHead(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
+| MarkSelectedHeadFilter | MethodDeclaration | L743–754 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> Drilling.UI.Menu.Menus.CMenuSetting.MarkSelectedHeadFilter(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>, string) |
+| MarkSelected | LocalFunctionStatement | L745–751 | Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER MarkSelected(Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER) |
+| NormalizeHeadFilter | MethodDeclaration | L756–772 | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeHeadFilter(string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>) |
+| BuildInterfaceGroups | MethodDeclaration | L774–791 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.CMenuSetting.BuildInterfaceGroups(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>) |
+| SelectType | LocalFunctionStatement | L776–779 | string SelectType(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
+| ShouldIncludeItem | LocalFunctionStatement | L781–784 | bool ShouldIncludeItem(string) |
+| BuildHistoryItems | MethodDeclaration | L793–801 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuSetting.BuildHistoryItems(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY>) |
+| BuildDisplay | LocalFunctionStatement | L795–798 | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM BuildDisplay(Drilling.Common.Managers.ST_SETTING_HISTORY) |
+| BuildHistoryRows | MethodDeclaration | L803–816 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildHistoryRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY>) |
+| ShouldIncludeItem | LocalFunctionStatement | L805–808 | bool ShouldIncludeItem(Drilling.Common.Managers.ST_SETTING_HISTORY) |
+| BuildSetting | LocalFunctionStatement | L810–813 | Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW BuildSetting(Drilling.Common.Managers.ST_SETTING_HISTORY) |
+| BuildSummaryRows | MethodDeclaration | L818–843 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildSummaryRows(string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY>) |
+| IsIsModified | LocalFunctionStatement | L825–828 | bool IsIsModified(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
+| IsIsModified2 | LocalFunctionStatement | L830–833 | bool IsIsModified2(Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW) |
+| MatchesItem | LocalFunctionStatement | L836–839 | bool MatchesItem(Drilling.Common.Managers.ST_SETTING_HISTORY) |
+| BuildInterfaceRows | MethodDeclaration | L845–884 | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildInterfaceRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>) |
+| SelectDevice | LocalFunctionStatement | L847–850 | Drilling.Common.Interface.EN_EQP_MODULE SelectDevice(Drilling.Common.Interface.ST_INTERFACE_DATA) |
+| SelectNumber | LocalFunctionStatement | L852–855 | int SelectNumber(Drilling.Common.Interface.ST_INTERFACE_DATA) |
+| SelectNickName | LocalFunctionStatement | L857–860 | string SelectNickName(Drilling.Common.Interface.ST_INTERFACE_DATA) |
+| BuildSetting | LocalFunctionStatement | L862–881 | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW BuildSetting(Drilling.Common.Interface.ST_INTERFACE_DATA, int) |
+| ToInterfaceData | MethodDeclaration | L886–904 | System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.UI.Menu.Menus.CMenuSetting.ToInterfaceData(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>) |
+| BuildInterface | LocalFunctionStatement | L888–901 | Drilling.Common.Interface.ST_INTERFACE_DATA BuildInterface(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
+| ParseInterfaceType | MethodDeclaration | L906–924 | Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.UI.Menu.Menus.CMenuSetting.ParseInterfaceType(string) |
+| ParseDevice | MethodDeclaration | L926–941 | Drilling.Common.Interface.EN_EQP_MODULE Drilling.UI.Menu.Menus.CMenuSetting.ParseDevice(string) |
+| InterfaceTypeText | MethodDeclaration | L943–961 | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE) |
+| DeviceText | MethodDeclaration | L963–978 | string Drilling.UI.Menu.Menus.CMenuSetting.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE) |
+| InterfaceRowLabel | MethodDeclaration | L980–983 | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRowLabel(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) |
+| RequireText | MethodDeclaration | L985–993 | string Drilling.UI.Menu.Menus.CMenuSetting.RequireText(string, string) |
+| ReadBool | MethodDeclaration | L995–1002 | bool Drilling.UI.Menu.Menus.CMenuSetting.ReadBool(string, string, string) |
+| ReadInt | MethodDeclaration | L1004–1012 | int Drilling.UI.Menu.Menus.CMenuSetting.ReadInt(string, string, string) |
+| NormalizeTab | MethodDeclaration | L1014–1023 | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeTab(string) |
+| NormalizeGroup | MethodDeclaration | L1025–1034 | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeGroup(string, System.Collections.Generic.IReadOnlyList<string>) |
+| MatchesItem | LocalFunctionStatement | L1028–1031 | bool MatchesItem(string) |
+| NormalizeSettingText | MethodDeclaration | L1036–1039 | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingText(string, string) |
+| NormalizeUnit | MethodDeclaration | L1041–1044 | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeUnit(string) |
+| NormalizeSettingUnit | MethodDeclaration | L1046–1049 | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingUnit(string) |
+| GetValueState | MethodDeclaration | L1051–1055 | string Drilling.UI.Menu.Menus.CMenuSetting.GetValueState(string) |
+| ToSection | MethodDeclaration | L1057–1067 | Drilling.Common.Managers.EN_SETTING_TAB Drilling.UI.Menu.Menus.CMenuSetting.ToSection(string) |
+| ToTabText | MethodDeclaration | L1069–1075 | string Drilling.UI.Menu.Menus.CMenuSetting.ToTabText(Drilling.Common.Managers.EN_SETTING_TAB) |
+| GetDefaultGroup | MethodDeclaration | L1077–1080 | string Drilling.UI.Menu.Menus.CMenuSetting.GetDefaultGroup() |
+| DisplayName | PropertyDeclaration | L1085–1085 | string Drilling.UI.Menu.Menus.ST_SETTING_TAB.DisplayName |
+| VisionFlipOptions | FieldDeclaration | L1091–1091 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.VisionFlipOptions |
+| SignOptions | FieldDeclaration | L1092–1092 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.SignOptions |
+| NumericBooleanOptions | FieldDeclaration | L1093–1093 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.NumericBooleanOptions |
+| _originalValue | FieldDeclaration | L1094–1094 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW._originalValue |
+| _originalValueState | FieldDeclaration | L1095–1095 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW._originalValueState |
+| _value | FieldDeclaration | L1096–1096 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW._value |
+| _valueState | FieldDeclaration | L1097–1097 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW._valueState |
+| .ctor | ConstructorDeclaration | L1098–1129 | Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ST_SYSTEM_PARAMETER_ROW(string, string, string, string, string, bool, string, string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) |
+| Group | PropertyDeclaration | L1131–1131 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Group |
+| get_Group | GetAccessorDeclaration | L1131–1131 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Group.get |
+| Parameter | PropertyDeclaration | L1132–1132 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Parameter |
+| get_Parameter | GetAccessorDeclaration | L1132–1132 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Parameter.get |
+| Value | PropertyDeclaration | L1134–1154 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Value |
+| get_Value | GetAccessorDeclaration | L1136–1139 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Value.get |
+| set_Value | SetAccessorDeclaration | L1141–1153 | void Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Value.set |
+| Unit | PropertyDeclaration | L1156–1156 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Unit |
+| get_Unit | GetAccessorDeclaration | L1156–1156 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Unit.get |
+| Description | PropertyDeclaration | L1157–1157 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Description |
+| get_Description | GetAccessorDeclaration | L1157–1157 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Description.get |
+| Key | PropertyDeclaration | L1158–1158 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Key |
+| get_Key | GetAccessorDeclaration | L1158–1158 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Key.get |
+| HeadNo | PropertyDeclaration | L1159–1159 | int Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.HeadNo |
+| get_HeadNo | GetAccessorDeclaration | L1159–1159 | int Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.HeadNo.get |
+| HeadFilter | PropertyDeclaration | L1160–1160 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.HeadFilter |
+| get_HeadFilter | GetAccessorDeclaration | L1160–1160 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.HeadFilter.get |
+| DefaultValue | PropertyDeclaration | L1161–1161 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.DefaultValue |
+| get_DefaultValue | GetAccessorDeclaration | L1161–1161 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.DefaultValue.get |
+| DataType | PropertyDeclaration | L1162–1162 | Drilling.Common.Managers.EN_RECIPE_DATA_TYPE Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.DataType |
+| get_DataType | GetAccessorDeclaration | L1162–1162 | Drilling.Common.Managers.EN_RECIPE_DATA_TYPE Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.DataType.get |
+| IsVisionFlipOption | PropertyDeclaration | L1164–1170 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsVisionFlipOption |
+| get_IsVisionFlipOption | GetAccessorDeclaration | L1166–1169 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsVisionFlipOption.get |
+| IsBoolean | PropertyDeclaration | L1172–1178 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsBoolean |
+| get_IsBoolean | GetAccessorDeclaration | L1174–1177 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsBoolean.get |
+| IsColorSetting | PropertyDeclaration | L1180–1180 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsColorSetting |
+| ColorBrush | PropertyDeclaration | L1182–1203 | Brush Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ColorBrush |
+| get_ColorBrush | GetAccessorDeclaration | L1184–1202 | Brush Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ColorBrush.get |
+| IsSign | PropertyDeclaration | L1205–1211 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsSign |
+| get_IsSign | GetAccessorDeclaration | L1207–1210 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsSign.get |
+| UsesSelectionEditor | PropertyDeclaration | L1213–1219 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.UsesSelectionEditor |
+| get_UsesSelectionEditor | GetAccessorDeclaration | L1215–1218 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.UsesSelectionEditor.get |
+| ValueOptions | PropertyDeclaration | L1221–1227 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueOptions |
+| get_ValueOptions | GetAccessorDeclaration | L1223–1226 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueOptions.get |
+| Min | PropertyDeclaration | L1229–1229 | double Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Min |
+| get_Min | GetAccessorDeclaration | L1229–1229 | double Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Min.get |
+| Max | PropertyDeclaration | L1230–1230 | double Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Max |
+| get_Max | GetAccessorDeclaration | L1230–1230 | double Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.Max.get |
+| OriginalValue | PropertyDeclaration | L1232–1238 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.OriginalValue |
+| get_OriginalValue | GetAccessorDeclaration | L1234–1237 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.OriginalValue.get |
+| IsModified | PropertyDeclaration | L1240–1246 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsModified |
+| get_IsModified | GetAccessorDeclaration | L1242–1245 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsModified.get |
+| ModifiedText | PropertyDeclaration | L1248–1254 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ModifiedText |
+| get_ModifiedText | GetAccessorDeclaration | L1250–1253 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ModifiedText.get |
+| ValueState | PropertyDeclaration | L1256–1270 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueState |
+| get_ValueState | GetAccessorDeclaration | L1258–1261 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueState.get |
+| set_ValueState | SetAccessorDeclaration | L1263–1269 | void Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueState.set |
+| ValueBrush | PropertyDeclaration | L1272–1283 | Brush Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueBrush |
+| get_ValueBrush | GetAccessorDeclaration | L1274–1282 | Brush Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ValueBrush.get |
+| ModifiedBrush | PropertyDeclaration | L1285–1291 | Brush Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ModifiedBrush |
+| get_ModifiedBrush | GetAccessorDeclaration | L1287–1290 | Brush Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ModifiedBrush.get |
+| NormalizeValue | MethodDeclaration | L1293–1296 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.NormalizeValue(string) |
+| NormalizeVisionFlipDisplay | MethodDeclaration | L1298–1301 | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.NormalizeVisionFlipDisplay(string) |
+| ParseHeadNo | MethodDeclaration | L1303–1317 | int Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ParseHeadNo(string) |
+| AfterBrush | PropertyDeclaration | L1322–1332 | Brush Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW.AfterBrush |
+| get_AfterBrush | GetAccessorDeclaration | L1324–1331 | Brush Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW.AfterBrush.get |
+| ValueBrush | PropertyDeclaration | L1337–1349 | Brush Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW.ValueBrush |
+| get_ValueBrush | GetAccessorDeclaration | L1339–1348 | Brush Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW.ValueBrush.get |
+| TypeOptions | PropertyDeclaration | L1354–1354 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.TypeOptions |
+| get_TypeOptions | GetAccessorDeclaration | L1354–1354 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.TypeOptions.get |
+| DeviceOptions | PropertyDeclaration | L1355–1355 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.DeviceOptions |
+| get_DeviceOptions | GetAccessorDeclaration | L1355–1355 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.DeviceOptions.get |
+| AutoConnectionOptions | PropertyDeclaration | L1356–1356 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.AutoConnectionOptions |
+| get_AutoConnectionOptions | GetAccessorDeclaration | L1356–1356 | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.AutoConnectionOptions.get |
+| _originalType | FieldDeclaration | L1358–1358 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalType |
+| _originalDevice | FieldDeclaration | L1359–1359 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalDevice |
+| _originalNumber | FieldDeclaration | L1360–1360 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalNumber |
+| _originalNickName | FieldDeclaration | L1361–1361 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalNickName |
+| _originalSystemSection | FieldDeclaration | L1362–1362 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalSystemSection |
+| _originalAutoConnection | FieldDeclaration | L1363–1363 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalAutoConnection |
+| _originalSimul | FieldDeclaration | L1364–1364 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalSimul |
+| _originalArg1 | FieldDeclaration | L1365–1365 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalArg1 |
+| _originalArg2 | FieldDeclaration | L1366–1366 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalArg2 |
+| _originalArg3 | FieldDeclaration | L1367–1367 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalArg3 |
+| _originalArg4 | FieldDeclaration | L1368–1368 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalArg4 |
+| _originalArg5 | FieldDeclaration | L1369–1369 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._originalArg5 |
+| _type | FieldDeclaration | L1370–1370 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._type |
+| _device | FieldDeclaration | L1371–1371 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._device |
+| _number | FieldDeclaration | L1372–1372 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._number |
+| _nickName | FieldDeclaration | L1373–1373 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._nickName |
+| _systemSection | FieldDeclaration | L1374–1374 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._systemSection |
+| _autoConnection | FieldDeclaration | L1375–1375 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._autoConnection |
+| _simul | FieldDeclaration | L1376–1376 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._simul |
+| _arg1 | FieldDeclaration | L1377–1377 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._arg1 |
+| _arg2 | FieldDeclaration | L1378–1378 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._arg2 |
+| _arg3 | FieldDeclaration | L1379–1379 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._arg3 |
+| _arg4 | FieldDeclaration | L1380–1380 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._arg4 |
+| _arg5 | FieldDeclaration | L1381–1381 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW._arg5 |
+| .ctor | ConstructorDeclaration | L1382–1425 | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.ST_SETTING_INTERFACE_ROW(string, string, string, string, string, string, string, string, string, string, string, string, string, System.Collections.Generic.IReadOnlyDictionary<string, string>?) |
+| No | PropertyDeclaration | L1427–1427 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.No |
+| get_No | GetAccessorDeclaration | L1427–1427 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.No.get |
+| Extra | PropertyDeclaration | L1428–1428 | System.Collections.Generic.IReadOnlyDictionary<string, string>? Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Extra |
+| get_Extra | GetAccessorDeclaration | L1428–1428 | System.Collections.Generic.IReadOnlyDictionary<string, string>? Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Extra.get |
+| Type | PropertyDeclaration | L1430–1441 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Type |
+| get_Type | GetAccessorDeclaration | L1432–1435 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Type.get |
+| set_Type | SetAccessorDeclaration | L1437–1440 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Type.set |
+| Device | PropertyDeclaration | L1443–1454 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Device |
+| get_Device | GetAccessorDeclaration | L1445–1448 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Device.get |
+| set_Device | SetAccessorDeclaration | L1450–1453 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Device.set |
+| Number | PropertyDeclaration | L1456–1467 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Number |
+| get_Number | GetAccessorDeclaration | L1458–1461 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Number.get |
+| set_Number | SetAccessorDeclaration | L1463–1466 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Number.set |
+| NickName | PropertyDeclaration | L1469–1480 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.NickName |
+| get_NickName | GetAccessorDeclaration | L1471–1474 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.NickName.get |
+| set_NickName | SetAccessorDeclaration | L1476–1479 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.NickName.set |
+| SystemSection | PropertyDeclaration | L1482–1493 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SystemSection |
+| get_SystemSection | GetAccessorDeclaration | L1484–1487 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SystemSection.get |
+| set_SystemSection | SetAccessorDeclaration | L1489–1492 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SystemSection.set |
+| AutoConnection | PropertyDeclaration | L1495–1506 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.AutoConnection |
+| get_AutoConnection | GetAccessorDeclaration | L1497–1500 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.AutoConnection.get |
+| set_AutoConnection | SetAccessorDeclaration | L1502–1505 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.AutoConnection.set |
+| Simul | PropertyDeclaration | L1508–1519 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Simul |
+| get_Simul | GetAccessorDeclaration | L1510–1513 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Simul.get |
+| set_Simul | SetAccessorDeclaration | L1515–1518 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Simul.set |
+| Arg1 | PropertyDeclaration | L1521–1532 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg1 |
+| get_Arg1 | GetAccessorDeclaration | L1523–1526 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg1.get |
+| set_Arg1 | SetAccessorDeclaration | L1528–1531 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg1.set |
+| Arg2 | PropertyDeclaration | L1534–1545 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg2 |
+| get_Arg2 | GetAccessorDeclaration | L1536–1539 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg2.get |
+| set_Arg2 | SetAccessorDeclaration | L1541–1544 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg2.set |
+| Arg3 | PropertyDeclaration | L1547–1558 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg3 |
+| get_Arg3 | GetAccessorDeclaration | L1549–1552 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg3.get |
+| set_Arg3 | SetAccessorDeclaration | L1554–1557 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg3.set |
+| Arg4 | PropertyDeclaration | L1560–1571 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg4 |
+| get_Arg4 | GetAccessorDeclaration | L1562–1565 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg4.get |
+| set_Arg4 | SetAccessorDeclaration | L1567–1570 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg4.set |
+| Arg5 | PropertyDeclaration | L1573–1584 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg5 |
+| get_Arg5 | GetAccessorDeclaration | L1575–1578 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg5.get |
+| set_Arg5 | SetAccessorDeclaration | L1580–1583 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Arg5.set |
+| IsModified | PropertyDeclaration | L1586–1592 | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsModified |
+| get_IsModified | GetAccessorDeclaration | L1588–1591 | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsModified.get |
+| IsSimulation | PropertyDeclaration | L1594–1604 | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsSimulation |
+| get_IsSimulation | GetAccessorDeclaration | L1596–1603 | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsSimulation.get |
+| ModifiedText | PropertyDeclaration | L1606–1612 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.ModifiedText |
+| get_ModifiedText | GetAccessorDeclaration | L1608–1611 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.ModifiedText.get |
+| ModifiedBrush | PropertyDeclaration | L1614–1620 | Brush Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.ModifiedBrush |
+| get_ModifiedBrush | GetAccessorDeclaration | L1616–1619 | Brush Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.ModifiedBrush.get |
+| SimulBrush | PropertyDeclaration | L1622–1632 | Brush Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SimulBrush |
+| get_SimulBrush | GetAccessorDeclaration | L1624–1631 | Brush Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SimulBrush.get |
+| SetEditable | MethodDeclaration | L1634–1646 | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) |
+| IsChanged | MethodDeclaration | L1648–1651 | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) |
+| Normalize | MethodDeclaration | L1653–1656 | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Normalize(string) |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
-### FieldDeclaration `_settingManager` · L16–16
+### FieldDeclaration `_settingManager` · L17–17
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L16-L16)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -375,9 +378,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_selectedTabProvider` · L17–17
+### FieldDeclaration `_selectedTabProvider` · L18–18
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L17-L17)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -390,9 +393,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_selectedTabSetter` · L18–18
+### FieldDeclaration `_selectedTabSetter` · L19–19
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L18-L18)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -405,9 +408,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_selectedGroupProvider` · L19–19
+### FieldDeclaration `_selectedGroupProvider` · L20–20
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L19-L19)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -420,9 +423,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_selectedGroupSetter` · L20–20
+### FieldDeclaration `_selectedGroupSetter` · L21–21
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L20-L20)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -435,9 +438,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_editScreenProvider` · L21–21
+### FieldDeclaration `_editScreenProvider` · L22–22
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L21-L21)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -450,9 +453,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_setStatusMessage` · L22–22
+### FieldDeclaration `_setStatusMessage` · L23–23
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L22-L22)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -465,9 +468,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_showLoadingScreen` · L23–23
+### FieldDeclaration `_showLoadingScreen` · L24–24
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L23-L23)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L24-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -480,9 +483,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_refreshShellStatus` · L24–24
+### FieldDeclaration `_refreshShellStatus` · L25–25
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L24-L24)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -495,9 +498,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_refreshCurrentScreen` · L25–25
+### FieldDeclaration `_refreshCurrentScreen` · L26–26
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L25-L25)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -510,9 +513,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_selectedInterfaceRow` · L26–26
+### FieldDeclaration `_selectedInterfaceRow` · L27–27
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L26-L26)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -525,9 +528,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_selectedHeadFilter` · L27–27
+### FieldDeclaration `_selectedHeadFilter` · L28–28
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L27-L27)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -542,13 +545,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 27 | variable-initializer | 변수의 초기값을 지정합니다: _selectedHeadFilter = "ALL" |
+| 28 | variable-initializer | 변수의 초기값을 지정합니다: _selectedHeadFilter = "ALL" |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `Sections` · L28–28
+### FieldDeclaration `Sections` · L29–29
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L28-L28)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -563,13 +566,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 28 | variable-initializer | 변수의 초기값을 지정합니다: Sections = [EN_SETTING_TAB.Option, EN_SETTING_TAB.Interface, EN_SETTING_TAB.Io, EN_SETTING_TAB.Motor, EN_SETTING_TAB.Alarm] |
+| 29 | variable-initializer | 변수의 초기값을 지정합니다: Sections = [EN_SETTING_TAB.Option, EN_SETTING_TAB.Interface, EN_SETTING_TAB.Io, EN_SETTING_TAB.Motor, EN_SETTING_TAB.Alarm] |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### ConstructorDeclaration `.ctor` · L29–110
+### ConstructorDeclaration `.ctor` · L30–111
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:29–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L29-L110)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:30–111](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L30-L111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -597,57 +600,57 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2226–2237](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2226-L2237) | new CMenuSetting | False |
+| [Drilling.UI/CRootView.cs:2218–2229](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2218-L2229) | new CMenuSetting | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 57 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
-| 63 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
-| 69 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
-| 80 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
-| 91 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
-| 97 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
-| 103 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
-| 109 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
+| 58 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
+| 64 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
+| 70 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
+| 81 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
+| 92 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
+| 98 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
+| 104 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
+| 110 | new CButtonCommand | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 42 | assignment | 값을 대상에 대입합니다: _settingManager = settingManager |
-| 43 | assignment | 값을 대상에 대입합니다: _selectedTabProvider = selectedTabProvider |
-| 44 | assignment | 값을 대상에 대입합니다: _selectedTabSetter = selectedTabSetter |
-| 45 | assignment | 값을 대상에 대입합니다: _selectedGroupProvider = selectedGroupProvider |
-| 46 | assignment | 값을 대상에 대입합니다: _selectedGroupSetter = selectedGroupSetter |
-| 47 | assignment | 값을 대상에 대입합니다: _editScreenProvider = editScreenProvider |
-| 48 | assignment | 값을 대상에 대입합니다: _setStatusMessage = setStatusMessage |
-| 49 | assignment | 값을 대상에 대입합니다: _showLoadingScreen = showLoadingScreen |
-| 50 | assignment | 값을 대상에 대입합니다: _refreshShellStatus = refreshShellStatus |
-| 51 | assignment | 값을 대상에 대입합니다: _refreshCurrentScreen = refreshCurrentScreen |
-| 57 | assignment | 값을 대상에 대입합니다: SelectTabCommand = new CButtonCommand(SelectTabCallback) |
-| 57 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SelectTabCallback) |
-| 63 | assignment | 값을 대상에 대입합니다: SelectGroupCommand = new CButtonCommand(SelectGroupCallback) |
-| 63 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SelectGroupCallback) |
-| 69 | assignment | 값을 대상에 대입합니다: SelectHeadCommand = new CButtonCommand(SelectHeadCallback) |
-| 69 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SelectHeadCallback) |
-| 80 | assignment | 값을 대상에 대입합니다: ConnectInterfaceCommand = new CButtonCommand(ConnectInterfaceCallback, IsCanOperateSelectedInterface) |
-| 80 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(ConnectInterfaceCallback, IsCanOperateSelectedInterface) |
-| 91 | assignment | 값을 대상에 대입합니다: DisconnectInterfaceCommand = new CButtonCommand(DisconnectInterfaceCallback, IsCanOperateSelectedInterface2) |
-| 91 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(DisconnectInterfaceCallback, IsCanOperateSelectedInterface2) |
-| 97 | assignment | 값을 대상에 대입합니다: SaveCommand = new CButtonCommand(SaveCallback) |
-| 97 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SaveCallback) |
-| 103 | assignment | 값을 대상에 대입합니다: CancelCommand = new CButtonCommand(CancelCallback) |
-| 103 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(CancelCallback) |
-| 109 | assignment | 값을 대상에 대입합니다: ReloadCommand = new CButtonCommand(ReloadCallback) |
-| 109 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(ReloadCallback) |
+| 43 | assignment | 값을 대상에 대입합니다: _settingManager = settingManager |
+| 44 | assignment | 값을 대상에 대입합니다: _selectedTabProvider = selectedTabProvider |
+| 45 | assignment | 값을 대상에 대입합니다: _selectedTabSetter = selectedTabSetter |
+| 46 | assignment | 값을 대상에 대입합니다: _selectedGroupProvider = selectedGroupProvider |
+| 47 | assignment | 값을 대상에 대입합니다: _selectedGroupSetter = selectedGroupSetter |
+| 48 | assignment | 값을 대상에 대입합니다: _editScreenProvider = editScreenProvider |
+| 49 | assignment | 값을 대상에 대입합니다: _setStatusMessage = setStatusMessage |
+| 50 | assignment | 값을 대상에 대입합니다: _showLoadingScreen = showLoadingScreen |
+| 51 | assignment | 값을 대상에 대입합니다: _refreshShellStatus = refreshShellStatus |
+| 52 | assignment | 값을 대상에 대입합니다: _refreshCurrentScreen = refreshCurrentScreen |
+| 58 | assignment | 값을 대상에 대입합니다: SelectTabCommand = new CButtonCommand(SelectTabCallback) |
+| 58 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SelectTabCallback) |
+| 64 | assignment | 값을 대상에 대입합니다: SelectGroupCommand = new CButtonCommand(SelectGroupCallback) |
+| 64 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SelectGroupCallback) |
+| 70 | assignment | 값을 대상에 대입합니다: SelectHeadCommand = new CButtonCommand(SelectHeadCallback) |
+| 70 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SelectHeadCallback) |
+| 81 | assignment | 값을 대상에 대입합니다: ConnectInterfaceCommand = new CButtonCommand(ConnectInterfaceCallback, IsCanOperateSelectedInterface) |
+| 81 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(ConnectInterfaceCallback, IsCanOperateSelectedInterface) |
+| 92 | assignment | 값을 대상에 대입합니다: DisconnectInterfaceCommand = new CButtonCommand(DisconnectInterfaceCallback, IsCanOperateSelectedInterface2) |
+| 92 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(DisconnectInterfaceCallback, IsCanOperateSelectedInterface2) |
+| 98 | assignment | 값을 대상에 대입합니다: SaveCommand = new CButtonCommand(SaveCallback) |
+| 98 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SaveCallback) |
+| 104 | assignment | 값을 대상에 대입합니다: CancelCommand = new CButtonCommand(CancelCallback) |
+| 104 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(CancelCallback) |
+| 110 | assignment | 값을 대상에 대입합니다: ReloadCommand = new CButtonCommand(ReloadCallback) |
+| 110 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(ReloadCallback) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectTabCallback` · L52–55
+### LocalFunctionStatement `SelectTabCallback` · L53–56
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:52–55](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L52-L55)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:53–56](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L53-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -668,20 +671,20 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 54 | SelectTab | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.SelectTab(object?) · Drilling.UI/Menu/Menus/CMenuSetting.cs:287 |
+| 55 | SelectTab | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.SelectTab(object?) · Drilling.UI/Menu/Menus/CMenuSetting.cs:288 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 54 | await | 비동기 완료를 기다립니다: await SelectTab(parameter) |
-| 54 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectTab(parameter) |
+| 55 | await | 비동기 완료를 기다립니다: await SelectTab(parameter) |
+| 55 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectTab(parameter) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectGroupCallback` · L58–61
+### LocalFunctionStatement `SelectGroupCallback` · L59–62
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:58–61](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L58-L61)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:59–62](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L59-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -702,20 +705,20 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 60 | SelectGroup | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.SelectGroup(object?) · Drilling.UI/Menu/Menus/CMenuSetting.cs:303 |
+| 61 | SelectGroup | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.SelectGroup(object?) · Drilling.UI/Menu/Menus/CMenuSetting.cs:304 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 60 | await | 비동기 완료를 기다립니다: await SelectGroup(parameter) |
-| 60 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectGroup(parameter) |
+| 61 | await | 비동기 완료를 기다립니다: await SelectGroup(parameter) |
+| 61 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectGroup(parameter) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectHeadCallback` · L64–67
+### LocalFunctionStatement `SelectHeadCallback` · L65–68
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:64–67](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L64-L67)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:65–68](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L65-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -736,20 +739,20 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 66 | SelectHeadFilter | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.SelectHeadFilter(object?) · Drilling.UI/Menu/Menus/CMenuSetting.cs:527 |
+| 67 | SelectHeadFilter | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.SelectHeadFilter(object?) · Drilling.UI/Menu/Menus/CMenuSetting.cs:531 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 66 | await | 비동기 완료를 기다립니다: await SelectHeadFilter(parameter) |
-| 66 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectHeadFilter(parameter) |
+| 67 | await | 비동기 완료를 기다립니다: await SelectHeadFilter(parameter) |
+| 67 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectHeadFilter(parameter) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `ConnectInterfaceCallback` · L70–73
+### LocalFunctionStatement `ConnectInterfaceCallback` · L71–74
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:70–73](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L70-L73)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:71–74](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L71-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -770,20 +773,20 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 72 | ConnectInterface | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.ConnectInterface() · Drilling.UI/Menu/Menus/CMenuSetting.cs:318 |
+| 73 | ConnectInterface | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.ConnectInterface() · Drilling.UI/Menu/Menus/CMenuSetting.cs:319 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 72 | await | 비동기 완료를 기다립니다: await ConnectInterface() |
-| 72 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ConnectInterface() |
+| 73 | await | 비동기 완료를 기다립니다: await ConnectInterface() |
+| 73 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ConnectInterface() |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `IsCanOperateSelectedInterface` · L75–78
+### LocalFunctionStatement `IsCanOperateSelectedInterface` · L76–79
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:75–78](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L75-L78)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:76–79](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L76-L79)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -804,13 +807,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 77 | return | 호출자에게 값 또는 제어를 반환합니다: return CanOperateSelectedInterface; |
+| 78 | return | 호출자에게 값 또는 제어를 반환합니다: return CanOperateSelectedInterface; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `DisconnectInterfaceCallback` · L81–84
+### LocalFunctionStatement `DisconnectInterfaceCallback` · L82–85
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:81–84](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L81-L84)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:82–85](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L82-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -831,20 +834,20 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 83 | DisconnectInterface | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.DisconnectInterface() · Drilling.UI/Menu/Menus/CMenuSetting.cs:360 |
+| 84 | DisconnectInterface | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.DisconnectInterface() · Drilling.UI/Menu/Menus/CMenuSetting.cs:361 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 83 | await | 비동기 완료를 기다립니다: await DisconnectInterface() |
-| 83 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DisconnectInterface() |
+| 84 | await | 비동기 완료를 기다립니다: await DisconnectInterface() |
+| 84 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DisconnectInterface() |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `IsCanOperateSelectedInterface2` · L86–89
+### LocalFunctionStatement `IsCanOperateSelectedInterface2` · L87–90
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:86–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L86-L89)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:87–90](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L87-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -865,13 +868,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 88 | return | 호출자에게 값 또는 제어를 반환합니다: return CanOperateSelectedInterface; |
+| 89 | return | 호출자에게 값 또는 제어를 반환합니다: return CanOperateSelectedInterface; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SaveCallback` · L92–95
+### LocalFunctionStatement `SaveCallback` · L93–96
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:92–95](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L92-L95)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:93–96](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L93-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -892,20 +895,20 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 94 | Save | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.Save() · Drilling.UI/Menu/Menus/CMenuSetting.cs:402 |
+| 95 | Save | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.Save() · Drilling.UI/Menu/Menus/CMenuSetting.cs:403 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 94 | await | 비동기 완료를 기다립니다: await Save() |
-| 94 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Save() |
+| 95 | await | 비동기 완료를 기다립니다: await Save() |
+| 95 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Save() |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `CancelCallback` · L98–101
+### LocalFunctionStatement `CancelCallback` · L99–102
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:98–101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L98-L101)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:99–102](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L99-L102)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -926,20 +929,20 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 100 | Cancel | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.Cancel() · Drilling.UI/Menu/Menus/CMenuSetting.cs:464 |
+| 101 | Cancel | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.Cancel() · Drilling.UI/Menu/Menus/CMenuSetting.cs:468 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 100 | await | 비동기 완료를 기다립니다: await Cancel() |
-| 100 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Cancel() |
+| 101 | await | 비동기 완료를 기다립니다: await Cancel() |
+| 101 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Cancel() |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `ReloadCallback` · L104–107
+### LocalFunctionStatement `ReloadCallback` · L105–108
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:104–107](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L104-L107)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:105–108](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L105-L108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -960,20 +963,20 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 106 | Reload | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.Reload() · Drilling.UI/Menu/Menus/CMenuSetting.cs:483 |
+| 107 | Reload | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuSetting.Reload() · Drilling.UI/Menu/Menus/CMenuSetting.cs:487 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 106 | await | 비동기 완료를 기다립니다: await Reload() |
-| 106 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Reload() |
+| 107 | await | 비동기 완료를 기다립니다: await Reload() |
+| 107 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Reload() |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Menu` · L112–118
+### PropertyDeclaration `Menu` · L113–119
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:112–118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L112-L118)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:113–119](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L113-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -986,9 +989,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Menu` · L114–117
+### GetAccessorDeclaration `get_Menu` · L115–118
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:114–117](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L114-L117)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:115–118](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L115-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1003,13 +1006,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 116 | return | 호출자에게 값 또는 제어를 반환합니다: return EN_MENU.Setting; |
+| 117 | return | 호출자에게 값 또는 제어를 반환합니다: return EN_MENU.Setting; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Tabs` · L120–120
+### PropertyDeclaration `Tabs` · L121–121
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L120-L120)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L121-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1022,9 +1025,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Tabs` · L120–120
+### GetAccessorDeclaration `get_Tabs` · L121–121
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L120-L120)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L121-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1037,9 +1040,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_Tabs` · L120–120
+### SetAccessorDeclaration `set_Tabs` · L121–121
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L120-L120)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L121-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1058,9 +1061,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `History` · L121–121
+### PropertyDeclaration `History` · L122–122
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L121-L121)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L122-L122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1073,9 +1076,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_History` · L121–121
+### GetAccessorDeclaration `get_History` · L122–122
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L121-L121)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L122-L122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1088,9 +1091,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_History` · L121–121
+### SetAccessorDeclaration `set_History` · L122–122
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L121-L121)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L122-L122)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1109,9 +1112,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `SelectedTab` · L122–122
+### PropertyDeclaration `SelectedTab` · L123–123
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L122-L122)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L123-L123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1124,9 +1127,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_SelectedTab` · L122–122
+### GetAccessorDeclaration `get_SelectedTab` · L123–123
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L122-L122)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L123-L123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1139,9 +1142,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_SelectedTab` · L122–122
+### SetAccessorDeclaration `set_SelectedTab` · L123–123
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L122-L122)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L123-L123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1160,9 +1163,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `SelectedGroup` · L123–123
+### PropertyDeclaration `SelectedGroup` · L124–124
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L123-L123)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L124-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1175,9 +1178,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_SelectedGroup` · L123–123
+### GetAccessorDeclaration `get_SelectedGroup` · L124–124
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L123-L123)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L124-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1190,9 +1193,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_SelectedGroup` · L123–123
+### SetAccessorDeclaration `set_SelectedGroup` · L124–124
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L123-L123)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L124-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1211,9 +1214,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `SelectedHeadFilter` · L124–124
+### PropertyDeclaration `SelectedHeadFilter` · L125–125
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L124-L124)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L125-L125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1226,9 +1229,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_SelectedHeadFilter` · L124–124
+### GetAccessorDeclaration `get_SelectedHeadFilter` · L125–125
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L124-L124)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L125-L125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1241,9 +1244,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_SelectedHeadFilter` · L124–124
+### SetAccessorDeclaration `set_SelectedHeadFilter` · L125–125
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L124-L124)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L125-L125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1262,9 +1265,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `TabItems` · L125–125
+### PropertyDeclaration `TabItems` · L126–126
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L125-L125)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L126-L126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1277,9 +1280,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_TabItems` · L125–125
+### GetAccessorDeclaration `get_TabItems` · L126–126
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L125-L125)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L126-L126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1292,9 +1295,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_TabItems` · L125–125
+### SetAccessorDeclaration `set_TabItems` · L126–126
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L125-L125)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L126-L126)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1313,9 +1316,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `GroupItems` · L126–126
+### PropertyDeclaration `GroupItems` · L127–127
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L126-L126)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L127-L127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1328,9 +1331,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_GroupItems` · L126–126
+### GetAccessorDeclaration `get_GroupItems` · L127–127
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L126-L126)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L127-L127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1343,9 +1346,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_GroupItems` · L126–126
+### SetAccessorDeclaration `set_GroupItems` · L127–127
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L126-L126)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L127-L127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1364,9 +1367,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `HeadFilterItems` · L127–127
+### PropertyDeclaration `HeadFilterItems` · L128–128
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L127-L127)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L128-L128)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1379,9 +1382,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_HeadFilterItems` · L127–127
+### GetAccessorDeclaration `get_HeadFilterItems` · L128–128
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L127-L127)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L128-L128)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1394,9 +1397,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_HeadFilterItems` · L127–127
+### SetAccessorDeclaration `set_HeadFilterItems` · L128–128
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L127-L127)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L128-L128)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1415,9 +1418,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `AllParameterRows` · L128–128
+### PropertyDeclaration `AllParameterRows` · L129–129
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L128-L128)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L129-L129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1430,9 +1433,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_AllParameterRows` · L128–128
+### GetAccessorDeclaration `get_AllParameterRows` · L129–129
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L128-L128)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L129-L129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1445,9 +1448,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_AllParameterRows` · L128–128
+### SetAccessorDeclaration `set_AllParameterRows` · L129–129
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L128-L128)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L129-L129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1466,9 +1469,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ParameterRows` · L129–129
+### PropertyDeclaration `ParameterRows` · L130–130
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L129-L129)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L130-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1481,9 +1484,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ParameterRows` · L129–129
+### GetAccessorDeclaration `get_ParameterRows` · L130–130
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L129-L129)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L130-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1496,9 +1499,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_ParameterRows` · L129–129
+### SetAccessorDeclaration `set_ParameterRows` · L130–130
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L129-L129)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L130-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1517,9 +1520,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `AllInterfaceRows` · L130–130
+### PropertyDeclaration `AllInterfaceRows` · L131–131
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L130-L130)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L131-L131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1532,9 +1535,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_AllInterfaceRows` · L130–130
+### GetAccessorDeclaration `get_AllInterfaceRows` · L131–131
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L130-L130)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L131-L131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1547,9 +1550,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_AllInterfaceRows` · L130–130
+### SetAccessorDeclaration `set_AllInterfaceRows` · L131–131
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L130-L130)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L131-L131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1568,9 +1571,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `InterfaceRows` · L131–131
+### PropertyDeclaration `InterfaceRows` · L132–132
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L131-L131)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L132-L132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1583,9 +1586,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_InterfaceRows` · L131–131
+### GetAccessorDeclaration `get_InterfaceRows` · L132–132
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L131-L131)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L132-L132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1598,9 +1601,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_InterfaceRows` · L131–131
+### SetAccessorDeclaration `set_InterfaceRows` · L132–132
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L131-L131)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L132-L132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1619,9 +1622,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ChangeHistory` · L132–132
+### PropertyDeclaration `ChangeHistory` · L133–133
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L132-L132)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L133-L133)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1634,9 +1637,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ChangeHistory` · L132–132
+### GetAccessorDeclaration `get_ChangeHistory` · L133–133
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L132-L132)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L133-L133)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1649,9 +1652,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_ChangeHistory` · L132–132
+### SetAccessorDeclaration `set_ChangeHistory` · L133–133
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L132-L132)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L133-L133)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1670,9 +1673,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `SummaryRows` · L133–133
+### PropertyDeclaration `SummaryRows` · L134–134
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L133-L133)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L134-L134)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1685,9 +1688,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_SummaryRows` · L133–133
+### GetAccessorDeclaration `get_SummaryRows` · L134–134
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L133-L133)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L134-L134)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1700,9 +1703,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_SummaryRows` · L133–133
+### SetAccessorDeclaration `set_SummaryRows` · L134–134
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L133-L133)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L134-L134)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1721,9 +1724,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `SelectTabCommand` · L134–134
+### PropertyDeclaration `SelectTabCommand` · L135–135
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L134-L134)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L135-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1736,9 +1739,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_SelectTabCommand` · L134–134
+### GetAccessorDeclaration `get_SelectTabCommand` · L135–135
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L134-L134)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L135-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1751,9 +1754,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `SelectGroupCommand` · L135–135
+### PropertyDeclaration `SelectGroupCommand` · L136–136
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L135-L135)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L136-L136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1766,9 +1769,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_SelectGroupCommand` · L135–135
+### GetAccessorDeclaration `get_SelectGroupCommand` · L136–136
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L135-L135)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L136-L136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1781,9 +1784,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `SelectHeadCommand` · L136–136
+### PropertyDeclaration `SelectHeadCommand` · L137–137
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L136-L136)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L137-L137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1796,9 +1799,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_SelectHeadCommand` · L136–136
+### GetAccessorDeclaration `get_SelectHeadCommand` · L137–137
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L136-L136)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L137-L137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1811,9 +1814,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ConnectInterfaceCommand` · L137–137
+### PropertyDeclaration `ConnectInterfaceCommand` · L138–138
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L137-L137)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L138-L138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1826,9 +1829,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ConnectInterfaceCommand` · L137–137
+### GetAccessorDeclaration `get_ConnectInterfaceCommand` · L138–138
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L137-L137)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L138-L138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1841,9 +1844,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `DisconnectInterfaceCommand` · L138–138
+### PropertyDeclaration `DisconnectInterfaceCommand` · L139–139
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L138-L138)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L139-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1856,9 +1859,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_DisconnectInterfaceCommand` · L138–138
+### GetAccessorDeclaration `get_DisconnectInterfaceCommand` · L139–139
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L138-L138)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L139-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1871,9 +1874,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `SaveCommand` · L139–139
+### PropertyDeclaration `SaveCommand` · L140–140
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L139-L139)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L140-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1886,9 +1889,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_SaveCommand` · L139–139
+### GetAccessorDeclaration `get_SaveCommand` · L140–140
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L139-L139)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L140-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1901,9 +1904,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `CancelCommand` · L140–140
+### PropertyDeclaration `CancelCommand` · L141–141
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L140-L140)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L141-L141)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1916,9 +1919,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_CancelCommand` · L140–140
+### GetAccessorDeclaration `get_CancelCommand` · L141–141
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L140-L140)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L141-L141)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1931,9 +1934,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ReloadCommand` · L141–141
+### PropertyDeclaration `ReloadCommand` · L142–142
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L141-L141)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L142-L142)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1946,9 +1949,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ReloadCommand` · L141–141
+### GetAccessorDeclaration `get_ReloadCommand` · L142–142
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L141-L141)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L142-L142)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1961,9 +1964,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `IsInterfaceTab` · L143–149
+### PropertyDeclaration `IsInterfaceTab` · L144–150
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:143–149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L143-L149)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:144–150](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L144-L150)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1976,9 +1979,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_IsInterfaceTab` · L145–148
+### GetAccessorDeclaration `get_IsInterfaceTab` · L146–149
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:145–148](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L145-L148)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:146–149](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L146-L149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1993,13 +1996,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 147 | return | 호출자에게 값 또는 제어를 반환합니다: return SelectedTab == "INTERFACE"; |
+| 148 | return | 호출자에게 값 또는 제어를 반환합니다: return SelectedTab == "INTERFACE"; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `IsParameterTab` · L151–157
+### PropertyDeclaration `IsParameterTab` · L152–158
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:151–157](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L151-L157)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:152–158](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L152-L158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2012,9 +2015,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_IsParameterTab` · L153–156
+### GetAccessorDeclaration `get_IsParameterTab` · L154–157
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:153–156](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L153-L156)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:154–157](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L154-L157)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2029,13 +2032,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 155 | return | 호출자에게 값 또는 제어를 반환합니다: return !IsInterfaceTab; |
+| 156 | return | 호출자에게 값 또는 제어를 반환합니다: return !IsInterfaceTab; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `IsHeadFilterVisible` · L159–165
+### PropertyDeclaration `IsHeadFilterVisible` · L160–166
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:159–165](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L159-L165)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:160–166](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L160-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2048,9 +2051,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_IsHeadFilterVisible` · L161–164
+### GetAccessorDeclaration `get_IsHeadFilterVisible` · L162–165
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:161–164](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L161-L164)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:162–165](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L162-L165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2065,13 +2068,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 163 | return | 호출자에게 값 또는 제어를 반환합니다: return IsParameterTab && HeadFilterItems.Count > 0; |
+| 164 | return | 호출자에게 값 또는 제어를 반환합니다: return IsParameterTab && HeadFilterItems.Count > 0; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `SelectedInterfaceRow` · L167–204
+### PropertyDeclaration `SelectedInterfaceRow` · L168–205
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:167–204](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L167-L204)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:168–205](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L168-L205)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2084,9 +2087,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_SelectedInterfaceRow` · L169–172
+### GetAccessorDeclaration `get_SelectedInterfaceRow` · L170–173
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:169–172](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L169-L172)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:170–173](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L170-L173)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2101,13 +2104,13 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 171 | return | 호출자에게 값 또는 제어를 반환합니다: return _selectedInterfaceRow; |
+| 172 | return | 호출자에게 값 또는 제어를 반환합니다: return _selectedInterfaceRow; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_SelectedInterfaceRow` · L174–203
+### SetAccessorDeclaration `set_SelectedInterfaceRow` · L175–204
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:174–203](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L174-L203)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:175–204](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L175-L204)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2128,50 +2131,50 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 183 | SetProperty | resolved | bool Drilling.UI.Menu.CBindingBase.SetProperty<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW?>(ref Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW?, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW?, string?) · Drilling.UI/Menu/CBindingBase.cs:737 |
-| 202 | RefreshInterfaceCommandState | resolved | void Drilling.UI.Menu.Menus.CMenuSetting.RefreshInterfaceCommandState() · Drilling.UI/Menu/Menus/CMenuSetting.cs:619 |
+| 184 | SetProperty | resolved | bool Drilling.UI.Menu.CBindingBase.SetProperty<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW?>(ref Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW?, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW?, string?) · Drilling.UI/Menu/CBindingBase.cs:760 |
+| 203 | RefreshInterfaceCommandState | resolved | void Drilling.UI.Menu.Menus.CMenuSetting.RefreshInterfaceCommandState() · Drilling.UI/Menu/Menus/CMenuSetting.cs:623 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 176 | if | 조건에 따라 분기합니다: if (_selectedInterfaceRow is not null) |
-| 178 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.SimulChanged -= OnSelectedInterfaceRowStateChanged |
-| 179 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.IsSimulationChanged -= OnSelectedInterfaceRowStateChanged |
-| 180 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.IsModifiedChanged -= OnSelectedInterfaceRowStateChanged |
-| 183 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetProperty(ref _selectedInterfaceRow, value) |
-| 183 | if | 조건에 따라 분기합니다: if (!SetProperty(ref _selectedInterfaceRow, value)) |
-| 185 | if | 조건에 따라 분기합니다: if (_selectedInterfaceRow is not null) |
-| 187 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.SimulChanged += OnSelectedInterfaceRowStateChanged |
-| 188 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.IsSimulationChanged += OnSelectedInterfaceRowStateChanged |
-| 189 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.IsModifiedChanged += OnSelectedInterfaceRowStateChanged |
-| 192 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 195 | if | 조건에 따라 분기합니다: if (_selectedInterfaceRow is not null) |
-| 197 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.SimulChanged += OnSelectedInterfaceRowStateChanged |
-| 198 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.IsSimulationChanged += OnSelectedInterfaceRowStateChanged |
-| 199 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.IsModifiedChanged += OnSelectedInterfaceRowStateChanged |
-| 202 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshInterfaceCommandState() |
+| 177 | if | 조건에 따라 분기합니다: if (_selectedInterfaceRow is not null) |
+| 179 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.SimulChanged -= OnSelectedInterfaceRowStateChanged |
+| 180 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.IsSimulationChanged -= OnSelectedInterfaceRowStateChanged |
+| 181 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.IsModifiedChanged -= OnSelectedInterfaceRowStateChanged |
+| 184 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetProperty(ref _selectedInterfaceRow, value) |
+| 184 | if | 조건에 따라 분기합니다: if (!SetProperty(ref _selectedInterfaceRow, value)) |
+| 186 | if | 조건에 따라 분기합니다: if (_selectedInterfaceRow is not null) |
+| 188 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.SimulChanged += OnSelectedInterfaceRowStateChanged |
+| 189 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.IsSimulationChanged += OnSelectedInterfaceRowStateChanged |
+| 190 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.IsModifiedChanged += OnSelectedInterfaceRowStateChanged |
+| 193 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 196 | if | 조건에 따라 분기합니다: if (_selectedInterfaceRow is not null) |
+| 198 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.SimulChanged += OnSelectedInterfaceRowStateChanged |
+| 199 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.IsSimulationChanged += OnSelectedInterfaceRowStateChanged |
+| 200 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: _selectedInterfaceRow.IsModifiedChanged += OnSelectedInterfaceRowStateChanged |
+| 203 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshInterfaceCommandState() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["set_SelectedInterfaceRow"]
- N0["L176 if"]
+ N0["L177 if"]
  M -->|포함| N0
- N1["L183 if"]
+ N1["L184 if"]
  M -->|포함| N1
- N2["L185 if"]
+ N2["L186 if"]
  N1 -->|포함| N2
- N3["L195 if"]
+ N3["L196 if"]
  M -->|포함| N3
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `CanOperateSelectedInterface` · L206–212
+### PropertyDeclaration `CanOperateSelectedInterface` · L207–213
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:206–212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L206-L212)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:207–213](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L207-L213)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2184,9 +2187,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_CanOperateSelectedInterface` · L208–211
+### GetAccessorDeclaration `get_CanOperateSelectedInterface` · L209–212
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:208–211](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L208-L211)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:209–212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L209-L212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2201,13 +2204,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 210 | return | 호출자에게 값 또는 제어를 반환합니다: return IsInterfaceTab && SelectedInterfaceRow is not null && !SelectedInterfaceRow.IsSimulation; |
+| 211 | return | 호출자에게 값 또는 제어를 반환합니다: return IsInterfaceTab && SelectedInterfaceRow is not null && !SelectedInterfaceRow.IsSimulation; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Build` · L214–285
+### MethodDeclaration `Build` · L215–286
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:214–285](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L214-L285)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:215–286](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L215-L286)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2228,154 +2231,154 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 216 | new List<ST_SCREEN_SECTION> | resolved | System.Collections.Generic.List<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION>.List() |
-| 224 | _settingManager.LoadSection | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> Drilling.Common.Managers.CSettingManager.LoadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:26 |
-| 225 | displaySections.Add | resolved | void System.Collections.Generic.List<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION>.Add(Drilling.UI.Menu.Menus.ST_SCREEN_SECTION) |
-| 225 | new ST_SCREEN_SECTION | resolved | Drilling.UI.Menu.Menus.ST_SCREEN_SECTION.ST_SCREEN_SECTION(string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>) · Drilling.UI/Menu/Menus/CMenuBase.cs:410 |
-| 225 | ToTabText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.ToTabText(Drilling.Common.Managers.EN_SETTING_TAB) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1065 |
-| 225 | sectionParameters.Select(BuildDisplay).ToArray | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>.ToArray<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>() |
-| 225 | sectionParameters.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>.Select<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>(System.Func<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>) |
-| 228 | NormalizeTab | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeTab(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1010 |
-| 228 | _selectedTabProvider | resolved · 동적 구현 선택 가능 | string System.Func<string>.Invoke() |
-| 229 | ToSection | resolved | Drilling.Common.Managers.EN_SETTING_TAB Drilling.UI.Menu.Menus.CMenuSetting.ToSection(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1053 |
-| 230 | _settingManager.LoadSection | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> Drilling.Common.Managers.CSettingManager.LoadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:26 |
-| 231 | BuildParameterRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildParameterRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:641 |
-| 232 | BuildInterfaceRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildInterfaceRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:841 |
-| 232 | _settingManager.LoadInterfaceList | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.Common.Managers.CSettingManager.LoadInterfaceList(System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:155 |
-| 233 | _editScreenProvider | resolved · 동적 구현 선택 가능 | Drilling.UI.Menu.Menus.CMenuSetting? System.Func<Drilling.UI.Menu.Menus.CMenuSetting?>.Invoke() |
-| 234 | GetEditRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.GetEditRows(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, Drilling.UI.Menu.Menus.CMenuSetting?, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:574 |
-| 235 | GetEditInterfaceRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.GetEditInterfaceRows(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, Drilling.UI.Menu.Menus.CMenuSetting?, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:579 |
-| 236 | BuildInterfaceGroups | resolved | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.CMenuSetting.BuildInterfaceGroups(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:770 |
-| 236 | BuildGroups | resolved | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.CMenuSetting.BuildGroups(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:669 |
-| 237 | NormalizeGroup | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeGroup(string, System.Collections.Generic.IReadOnlyList<string>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1021 |
-| 237 | _selectedGroupProvider | resolved · 동적 구현 선택 가능 | string System.Func<string>.Invoke() |
-| 243 | allRows.Where(ShouldIncludeItem).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.ToArray<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>() |
-| 243 | allRows.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Where<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, bool>) |
-| 244 | BuildHeadFilters | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> Drilling.UI.Menu.Menus.CMenuSetting.BuildHeadFilters(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:688 |
-| 245 | NormalizeHeadFilter | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeHeadFilter(string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:752 |
-| 246 | MarkSelectedHeadFilter | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> Drilling.UI.Menu.Menus.CMenuSetting.MarkSelectedHeadFilter(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:739 |
-| 248 | ApplyHeadFilter | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.ApplyHeadFilter(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:724 |
-| 254 | allInterfaceRows.Where(MatchesType).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.ToArray<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>() |
-| 254 | allInterfaceRows.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.Where<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, bool>) |
-| 255 | _settingManager.LoadHistory | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY> Drilling.Common.Managers.CSettingManager.LoadHistory(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:150 |
-| 261 | Apply | resolved | void Drilling.UI.Menu.Menus.CMenuSetting.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, string, string, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_TAB>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_GROUP>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:540 |
-| 263 | BuildHistoryItems | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuSetting.BuildHistoryItems(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:789 |
-| 267 | BuildTabs | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_TAB> Drilling.UI.Menu.Menus.CMenuSetting.BuildTabs(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:626 |
-| 268 | groups.Select(BuildSetting).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SETTING_GROUP[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_GROUP>.ToArray<Drilling.UI.Menu.Menus.ST_SETTING_GROUP>() |
-| 268 | groups.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_GROUP> System.Collections.Generic.IEnumerable<string>.Select<string, Drilling.UI.Menu.Menus.ST_SETTING_GROUP>(System.Func<string, Drilling.UI.Menu.Menus.ST_SETTING_GROUP>) |
-| 274 | BuildHistoryRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildHistoryRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:799 |
-| 275 | BuildSummaryRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildSummaryRows(string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:814 |
-| 277 | Task.FromResult | resolved | System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> System.Threading.Tasks.Task.FromResult<Drilling.UI.Menu.Menus.CScreenViewModel>(Drilling.UI.Menu.Menus.CScreenViewModel) |
-| 277 | new CScreenViewModel | resolved | Drilling.UI.Menu.Menus.CScreenViewModel.CScreenViewModel(Drilling.UI.Menu.Menus.EN_MENU, string, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION>, bool, Drilling.UI.Menu.Menus.CMenuMain?, Drilling.UI.Menu.Menus.CMenuManual?, Drilling.UI.Menu.Menus.CMenuRecipe?, Drilling.UI.Menu.Menus.CMenuSetting?, Drilling.UI.Menu.Menus.CMenuAlarm?, Drilling.UI.Menu.Menus.CMenuMonitor?, Drilling.UI.Menu.Menus.CMenuReview?, Drilling.UI.Menu.Menus.CMenuCorrection?, Drilling.UI.Menu.Menus.CMenuPm?) · Drilling.UI/Menu/Menus/CMenuBase.cs:411 |
-| 281 | new | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43 |
-| 281 | new | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43 |
+| 217 | new List<ST_SCREEN_SECTION> | resolved | System.Collections.Generic.List<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION>.List() |
+| 225 | _settingManager.LoadSection | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> Drilling.Common.Managers.CSettingManager.LoadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:26 |
+| 226 | displaySections.Add | resolved | void System.Collections.Generic.List<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION>.Add(Drilling.UI.Menu.Menus.ST_SCREEN_SECTION) |
+| 226 | new ST_SCREEN_SECTION | resolved | Drilling.UI.Menu.Menus.ST_SCREEN_SECTION.ST_SCREEN_SECTION(string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>) · Drilling.UI/Menu/Menus/CMenuBase.cs:410 |
+| 226 | ToTabText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.ToTabText(Drilling.Common.Managers.EN_SETTING_TAB) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1069 |
+| 226 | sectionParameters.Select(BuildDisplay).ToArray | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>.ToArray<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>() |
+| 226 | sectionParameters.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>.Select<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>(System.Func<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>) |
+| 229 | NormalizeTab | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeTab(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1014 |
+| 229 | _selectedTabProvider | resolved · 동적 구현 선택 가능 | string System.Func<string>.Invoke() |
+| 230 | ToSection | resolved | Drilling.Common.Managers.EN_SETTING_TAB Drilling.UI.Menu.Menus.CMenuSetting.ToSection(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1057 |
+| 231 | _settingManager.LoadSection | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> Drilling.Common.Managers.CSettingManager.LoadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:26 |
+| 232 | BuildParameterRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildParameterRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:645 |
+| 233 | BuildInterfaceRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildInterfaceRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:845 |
+| 233 | _settingManager.LoadInterfaceList | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.Common.Managers.CSettingManager.LoadInterfaceList(System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:156 |
+| 234 | _editScreenProvider | resolved · 동적 구현 선택 가능 | Drilling.UI.Menu.Menus.CMenuSetting? System.Func<Drilling.UI.Menu.Menus.CMenuSetting?>.Invoke() |
+| 235 | GetEditRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.GetEditRows(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, Drilling.UI.Menu.Menus.CMenuSetting?, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:578 |
+| 236 | GetEditInterfaceRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> Drilling.UI.Menu.Menus.CMenuSetting.GetEditInterfaceRows(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, Drilling.UI.Menu.Menus.CMenuSetting?, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:583 |
+| 237 | BuildInterfaceGroups | resolved | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.CMenuSetting.BuildInterfaceGroups(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:774 |
+| 237 | BuildGroups | resolved | System.Collections.Generic.IReadOnlyList<string> Drilling.UI.Menu.Menus.CMenuSetting.BuildGroups(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:673 |
+| 238 | NormalizeGroup | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeGroup(string, System.Collections.Generic.IReadOnlyList<string>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1025 |
+| 238 | _selectedGroupProvider | resolved · 동적 구현 선택 가능 | string System.Func<string>.Invoke() |
+| 244 | allRows.Where(ShouldIncludeItem).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.ToArray<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>() |
+| 244 | allRows.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Where<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, bool>) |
+| 245 | BuildHeadFilters | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> Drilling.UI.Menu.Menus.CMenuSetting.BuildHeadFilters(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:692 |
+| 246 | NormalizeHeadFilter | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeHeadFilter(string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:756 |
+| 247 | MarkSelectedHeadFilter | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> Drilling.UI.Menu.Menus.CMenuSetting.MarkSelectedHeadFilter(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:743 |
+| 249 | ApplyHeadFilter | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> Drilling.UI.Menu.Menus.CMenuSetting.ApplyHeadFilter(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:728 |
+| 255 | allInterfaceRows.Where(MatchesType).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.ToArray<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>() |
+| 255 | allInterfaceRows.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.Where<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, bool>) |
+| 256 | _settingManager.LoadHistory | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY> Drilling.Common.Managers.CSettingManager.LoadHistory(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:151 |
+| 262 | Apply | resolved | void Drilling.UI.Menu.Menus.CMenuSetting.Apply(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, string, string, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_TAB>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_GROUP>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:544 |
+| 264 | BuildHistoryItems | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuSetting.BuildHistoryItems(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:793 |
+| 268 | BuildTabs | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_TAB> Drilling.UI.Menu.Menus.CMenuSetting.BuildTabs(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:630 |
+| 269 | groups.Select(BuildSetting).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SETTING_GROUP[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_GROUP>.ToArray<Drilling.UI.Menu.Menus.ST_SETTING_GROUP>() |
+| 269 | groups.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_GROUP> System.Collections.Generic.IEnumerable<string>.Select<string, Drilling.UI.Menu.Menus.ST_SETTING_GROUP>(System.Func<string, Drilling.UI.Menu.Menus.ST_SETTING_GROUP>) |
+| 275 | BuildHistoryRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildHistoryRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:803 |
+| 276 | BuildSummaryRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW> Drilling.UI.Menu.Menus.CMenuSetting.BuildSummaryRows(string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:818 |
+| 278 | Task.FromResult | resolved | System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> System.Threading.Tasks.Task.FromResult<Drilling.UI.Menu.Menus.CScreenViewModel>(Drilling.UI.Menu.Menus.CScreenViewModel) |
+| 278 | new CScreenViewModel | resolved | Drilling.UI.Menu.Menus.CScreenViewModel.CScreenViewModel(Drilling.UI.Menu.Menus.EN_MENU, string, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SCREEN_SECTION>, bool, Drilling.UI.Menu.Menus.CMenuMain?, Drilling.UI.Menu.Menus.CMenuManual?, Drilling.UI.Menu.Menus.CMenuRecipe?, Drilling.UI.Menu.Menus.CMenuSetting?, Drilling.UI.Menu.Menus.CMenuAlarm?, Drilling.UI.Menu.Menus.CMenuMonitor?, Drilling.UI.Menu.Menus.CMenuReview?, Drilling.UI.Menu.Menus.CMenuCorrection?, Drilling.UI.Menu.Menus.CMenuPm?) · Drilling.UI/Menu/Menus/CMenuBase.cs:411 |
+| 282 | new | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43 |
+| 282 | new | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 216 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_SCREEN_SECTION>() |
-| 216 | local-declaration | 지역 변수를 선언합니다: var displaySections = new List<ST_SCREEN_SECTION>(); |
-| 216 | variable-initializer | 변수의 초기값을 지정합니다: displaySections = new List<ST_SCREEN_SECTION>() |
-| 222 | foreach | 컬렉션 요소를 순회합니다: foreach (var section in Sections) |
-| 224 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.LoadSection(section, cancellationToken) |
-| 224 | local-declaration | 지역 변수를 선언합니다: var sectionParameters = _settingManager.LoadSection(section, cancellationToken); |
-| 224 | variable-initializer | 변수의 초기값을 지정합니다: sectionParameters = _settingManager.LoadSection(section, cancellationToken) |
-| 225 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: displaySections.Add(new ST_SCREEN_SECTION(ToTabText(section), sectionParameters.Select(BuildDisplay).ToArray())) |
-| 225 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCREEN_SECTION(ToTabText(section), sectionParameters.Select(BuildDisplay).ToArray()) |
-| 225 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToTabText(section) |
-| 225 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: sectionParameters.Select(BuildDisplay).ToArray() |
-| 225 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: sectionParameters.Select(BuildDisplay) |
-| 228 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeTab(_selectedTabProvider()) |
-| 228 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _selectedTabProvider() |
-| 228 | local-declaration | 지역 변수를 선언합니다: var selectedTab = NormalizeTab(_selectedTabProvider()); |
-| 228 | variable-initializer | 변수의 초기값을 지정합니다: selectedTab = NormalizeTab(_selectedTabProvider()) |
-| 229 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToSection(selectedTab) |
-| 229 | local-declaration | 지역 변수를 선언합니다: var selectedSection = ToSection(selectedTab); |
-| 229 | variable-initializer | 변수의 초기값을 지정합니다: selectedSection = ToSection(selectedTab) |
-| 230 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.LoadSection(selectedSection, cancellationToken) |
-| 230 | conditional-expression | 조건에 따라 결과식을 선택합니다: selectedTab == "INTERFACE" ? [] : _settingManager.LoadSection(selectedSection, cancellationToken) |
-| 230 | local-declaration | 지역 변수를 선언합니다: IReadOnlyList<ST_SYSTEM_PARAMETER> loadedParameters = selectedTab == "INTERFACE" ? [] : _settingManager.LoadSection(selectedSection, cancellationToken); |
-| 230 | variable-initializer | 변수의 초기값을 지정합니다: loadedParameters = selectedTab == "INTERFACE" ? [] : _settingManager.LoadSection(selectedSection, cancellationToken) |
-| 231 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildParameterRows(loadedParameters) |
-| 231 | local-declaration | 지역 변수를 선언합니다: var loadedRows = BuildParameterRows(loadedParameters); |
-| 231 | variable-initializer | 변수의 초기값을 지정합니다: loadedRows = BuildParameterRows(loadedParameters) |
-| 232 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildInterfaceRows(_settingManager.LoadInterfaceList(cancellationToken)) |
-| 232 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.LoadInterfaceList(cancellationToken) |
-| 232 | conditional-expression | 조건에 따라 결과식을 선택합니다: selectedTab == "INTERFACE" ? BuildInterfaceRows(_settingManager.LoadInterfaceList(cancellationToken)) : [] |
-| 232 | local-declaration | 지역 변수를 선언합니다: IReadOnlyList<ST_SETTING_INTERFACE_ROW> loadedInterfaceRows = selectedTab == "INTERFACE" ? BuildInterfaceRows(_settingManager.LoadInterfaceList(cancellationToken)) : []; |
-| 232 | variable-initializer | 변수의 초기값을 지정합니다: loadedInterfaceRows = selectedTab == "INTERFACE" ? BuildInterfaceRows(_settingManager.LoadInterfaceList(cancellationToken)) : [] |
-| 233 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _editScreenProvider() |
-| 233 | local-declaration | 지역 변수를 선언합니다: var editScreen = _editScreenProvider(); |
-| 233 | variable-initializer | 변수의 초기값을 지정합니다: editScreen = _editScreenProvider() |
-| 234 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetEditRows(loadedRows, editScreen, selectedTab) |
-| 234 | local-declaration | 지역 변수를 선언합니다: var allRows = GetEditRows(loadedRows, editScreen, selectedTab); |
-| 234 | variable-initializer | 변수의 초기값을 지정합니다: allRows = GetEditRows(loadedRows, editScreen, selectedTab) |
-| 235 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetEditInterfaceRows(loadedInterfaceRows, editScreen, selectedTab) |
-| 235 | local-declaration | 지역 변수를 선언합니다: var allInterfaceRows = GetEditInterfaceRows(loadedInterfaceRows, editScreen, selectedTab); |
-| 235 | variable-initializer | 변수의 초기값을 지정합니다: allInterfaceRows = GetEditInterfaceRows(loadedInterfaceRows, editScreen, selectedTab) |
-| 236 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildInterfaceGroups(allInterfaceRows) |
-| 236 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildGroups(allRows) |
-| 236 | conditional-expression | 조건에 따라 결과식을 선택합니다: selectedTab == "INTERFACE" ? BuildInterfaceGroups(allInterfaceRows) : BuildGroups(allRows) |
-| 236 | local-declaration | 지역 변수를 선언합니다: var groups = selectedTab == "INTERFACE" ? BuildInterfaceGroups(allInterfaceRows) : BuildGroups(allRows); |
-| 236 | variable-initializer | 변수의 초기값을 지정합니다: groups = selectedTab == "INTERFACE" ? BuildInterfaceGroups(allInterfaceRows) : BuildGroups(allRows) |
-| 237 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeGroup(_selectedGroupProvider(), groups) |
-| 237 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _selectedGroupProvider() |
-| 237 | local-declaration | 지역 변수를 선언합니다: var selectedGroup = NormalizeGroup(_selectedGroupProvider(), groups); |
-| 237 | variable-initializer | 변수의 초기값을 지정합니다: selectedGroup = NormalizeGroup(_selectedGroupProvider(), groups) |
-| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: allRows.Where(ShouldIncludeItem).ToArray() |
-| 243 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: allRows.Where(ShouldIncludeItem) |
-| 243 | conditional-expression | 조건에 따라 결과식을 선택합니다: selectedGroup == "ALL" ? allRows : allRows.Where(ShouldIncludeItem).ToArray() |
-| 243 | local-declaration | 지역 변수를 선언합니다: var groupFilteredRows = selectedGroup == "ALL" ? allRows : allRows.Where(ShouldIncludeItem).ToArray(); |
-| 243 | variable-initializer | 변수의 초기값을 지정합니다: groupFilteredRows = selectedGroup == "ALL" ? allRows : allRows.Where(ShouldIncludeItem).ToArray() |
-| 244 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildHeadFilters(groupFilteredRows) |
-| 244 | local-declaration | 지역 변수를 선언합니다: var availableHeadFilters = BuildHeadFilters(groupFilteredRows); |
-| 244 | variable-initializer | 변수의 초기값을 지정합니다: availableHeadFilters = BuildHeadFilters(groupFilteredRows) |
-| 245 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeHeadFilter(_selectedHeadFilter, availableHeadFilters) |
-| 245 | local-declaration | 지역 변수를 선언합니다: var selectedHeadFilter = NormalizeHeadFilter(_selectedHeadFilter, availableHeadFilters); |
-| 245 | variable-initializer | 변수의 초기값을 지정합니다: selectedHeadFilter = NormalizeHeadFilter(_selectedHeadFilter, availableHeadFilters) |
-| 246 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: MarkSelectedHeadFilter(availableHeadFilters, selectedHeadFilter) |
-| 246 | local-declaration | 지역 변수를 선언합니다: var headFilterItems = MarkSelectedHeadFilter(availableHeadFilters, selectedHeadFilter); |
-| 246 | variable-initializer | 변수의 초기값을 지정합니다: headFilterItems = MarkSelectedHeadFilter(availableHeadFilters, selectedHeadFilter) |
-| 247 | assignment | 값을 대상에 대입합니다: _selectedHeadFilter = selectedHeadFilter |
-| 248 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyHeadFilter(groupFilteredRows, selectedHeadFilter) |
-| 248 | local-declaration | 지역 변수를 선언합니다: var filteredRows = ApplyHeadFilter(groupFilteredRows, selectedHeadFilter); |
-| 248 | variable-initializer | 변수의 초기값을 지정합니다: filteredRows = ApplyHeadFilter(groupFilteredRows, selectedHeadFilter) |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: allInterfaceRows.Where(MatchesType).ToArray() |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: allInterfaceRows.Where(MatchesType) |
-| 254 | conditional-expression | 조건에 따라 결과식을 선택합니다: selectedGroup == "ALL" ? allInterfaceRows : allInterfaceRows.Where(MatchesType).ToArray() |
-| 254 | local-declaration | 지역 변수를 선언합니다: var filteredInterfaceRows = selectedGroup == "ALL" ? allInterfaceRows : allInterfaceRows.Where(MatchesType).ToArray(); |
-| 254 | variable-initializer | 변수의 초기값을 지정합니다: filteredInterfaceRows = selectedGroup == "ALL" ? allInterfaceRows : allInterfaceRows.Where(MatchesType).ToArray() |
-| 255 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.LoadHistory(selectedSection, cancellationToken) |
-| 255 | local-declaration | 지역 변수를 선언합니다: var history = _settingManager.LoadHistory(selectedSection, cancellationToken); |
-| 255 | variable-initializer | 변수의 초기값을 지정합니다: history = _settingManager.LoadHistory(selectedSection, cancellationToken) |
-| 261 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Apply( displaySections, BuildHistoryItems(history), selectedTab, selectedGroup, selectedHeadFilter, BuildTabs(selectedTab), groups.Select(BuildSetting).ToArray(), headFilterItems, allRows, filteredRows, allInterfaceRows,… |
-| 263 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildHistoryItems(history) |
-| 267 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildTabs(selectedTab) |
-| 268 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: groups.Select(BuildSetting).ToArray() |
-| 268 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: groups.Select(BuildSetting) |
-| 274 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildHistoryRows(history) |
-| 275 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildSummaryRows(selectedTab, allRows, allInterfaceRows, history) |
-| 277 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(new CScreenViewModel( EN_MENU.Setting, "SETTING / PARAMETER CONFIG", "Direct grid edit for option, interface, IO and motor parameters.", [new("Source", "CSV"), new("History", "Setting trace log")], displa… |
-| 277 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CScreenViewModel( EN_MENU.Setting, "SETTING / PARAMETER CONFIG", "Direct grid edit for option, interface, IO and motor parameters.", [new("Source", "CSV"), new("History", "Setting trace log")], displaySections, setti… |
-| 277 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(new CScreenViewModel( EN_MENU.Setting, "SETTING / PARAMETER CONFIG", "Direct grid edit for option, interface, IO and motor parameters.", [new("Source", "CSV"), new("History", "Setting trace log")], displaySe |
-| 281 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Source", "CSV") |
-| 281 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new("History", "Setting trace log") |
+| 217 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_SCREEN_SECTION>() |
+| 217 | local-declaration | 지역 변수를 선언합니다: var displaySections = new List<ST_SCREEN_SECTION>(); |
+| 217 | variable-initializer | 변수의 초기값을 지정합니다: displaySections = new List<ST_SCREEN_SECTION>() |
+| 223 | foreach | 컬렉션 요소를 순회합니다: foreach (var section in Sections) |
+| 225 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.LoadSection(section, cancellationToken) |
+| 225 | local-declaration | 지역 변수를 선언합니다: var sectionParameters = _settingManager.LoadSection(section, cancellationToken); |
+| 225 | variable-initializer | 변수의 초기값을 지정합니다: sectionParameters = _settingManager.LoadSection(section, cancellationToken) |
+| 226 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: displaySections.Add(new ST_SCREEN_SECTION(ToTabText(section), sectionParameters.Select(BuildDisplay).ToArray())) |
+| 226 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SCREEN_SECTION(ToTabText(section), sectionParameters.Select(BuildDisplay).ToArray()) |
+| 226 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToTabText(section) |
+| 226 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: sectionParameters.Select(BuildDisplay).ToArray() |
+| 226 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: sectionParameters.Select(BuildDisplay) |
+| 229 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeTab(_selectedTabProvider()) |
+| 229 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _selectedTabProvider() |
+| 229 | local-declaration | 지역 변수를 선언합니다: var selectedTab = NormalizeTab(_selectedTabProvider()); |
+| 229 | variable-initializer | 변수의 초기값을 지정합니다: selectedTab = NormalizeTab(_selectedTabProvider()) |
+| 230 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToSection(selectedTab) |
+| 230 | local-declaration | 지역 변수를 선언합니다: var selectedSection = ToSection(selectedTab); |
+| 230 | variable-initializer | 변수의 초기값을 지정합니다: selectedSection = ToSection(selectedTab) |
+| 231 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.LoadSection(selectedSection, cancellationToken) |
+| 231 | conditional-expression | 조건에 따라 결과식을 선택합니다: selectedTab == "INTERFACE" ? [] : _settingManager.LoadSection(selectedSection, cancellationToken) |
+| 231 | local-declaration | 지역 변수를 선언합니다: IReadOnlyList<ST_SYSTEM_PARAMETER> loadedParameters = selectedTab == "INTERFACE" ? [] : _settingManager.LoadSection(selectedSection, cancellationToken); |
+| 231 | variable-initializer | 변수의 초기값을 지정합니다: loadedParameters = selectedTab == "INTERFACE" ? [] : _settingManager.LoadSection(selectedSection, cancellationToken) |
+| 232 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildParameterRows(loadedParameters) |
+| 232 | local-declaration | 지역 변수를 선언합니다: var loadedRows = BuildParameterRows(loadedParameters); |
+| 232 | variable-initializer | 변수의 초기값을 지정합니다: loadedRows = BuildParameterRows(loadedParameters) |
+| 233 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildInterfaceRows(_settingManager.LoadInterfaceList(cancellationToken)) |
+| 233 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.LoadInterfaceList(cancellationToken) |
+| 233 | conditional-expression | 조건에 따라 결과식을 선택합니다: selectedTab == "INTERFACE" ? BuildInterfaceRows(_settingManager.LoadInterfaceList(cancellationToken)) : [] |
+| 233 | local-declaration | 지역 변수를 선언합니다: IReadOnlyList<ST_SETTING_INTERFACE_ROW> loadedInterfaceRows = selectedTab == "INTERFACE" ? BuildInterfaceRows(_settingManager.LoadInterfaceList(cancellationToken)) : []; |
+| 233 | variable-initializer | 변수의 초기값을 지정합니다: loadedInterfaceRows = selectedTab == "INTERFACE" ? BuildInterfaceRows(_settingManager.LoadInterfaceList(cancellationToken)) : [] |
+| 234 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _editScreenProvider() |
+| 234 | local-declaration | 지역 변수를 선언합니다: var editScreen = _editScreenProvider(); |
+| 234 | variable-initializer | 변수의 초기값을 지정합니다: editScreen = _editScreenProvider() |
+| 235 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetEditRows(loadedRows, editScreen, selectedTab) |
+| 235 | local-declaration | 지역 변수를 선언합니다: var allRows = GetEditRows(loadedRows, editScreen, selectedTab); |
+| 235 | variable-initializer | 변수의 초기값을 지정합니다: allRows = GetEditRows(loadedRows, editScreen, selectedTab) |
+| 236 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetEditInterfaceRows(loadedInterfaceRows, editScreen, selectedTab) |
+| 236 | local-declaration | 지역 변수를 선언합니다: var allInterfaceRows = GetEditInterfaceRows(loadedInterfaceRows, editScreen, selectedTab); |
+| 236 | variable-initializer | 변수의 초기값을 지정합니다: allInterfaceRows = GetEditInterfaceRows(loadedInterfaceRows, editScreen, selectedTab) |
+| 237 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildInterfaceGroups(allInterfaceRows) |
+| 237 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildGroups(allRows) |
+| 237 | conditional-expression | 조건에 따라 결과식을 선택합니다: selectedTab == "INTERFACE" ? BuildInterfaceGroups(allInterfaceRows) : BuildGroups(allRows) |
+| 237 | local-declaration | 지역 변수를 선언합니다: var groups = selectedTab == "INTERFACE" ? BuildInterfaceGroups(allInterfaceRows) : BuildGroups(allRows); |
+| 237 | variable-initializer | 변수의 초기값을 지정합니다: groups = selectedTab == "INTERFACE" ? BuildInterfaceGroups(allInterfaceRows) : BuildGroups(allRows) |
+| 238 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeGroup(_selectedGroupProvider(), groups) |
+| 238 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _selectedGroupProvider() |
+| 238 | local-declaration | 지역 변수를 선언합니다: var selectedGroup = NormalizeGroup(_selectedGroupProvider(), groups); |
+| 238 | variable-initializer | 변수의 초기값을 지정합니다: selectedGroup = NormalizeGroup(_selectedGroupProvider(), groups) |
+| 244 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: allRows.Where(ShouldIncludeItem).ToArray() |
+| 244 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: allRows.Where(ShouldIncludeItem) |
+| 244 | conditional-expression | 조건에 따라 결과식을 선택합니다: selectedGroup == "ALL" ? allRows : allRows.Where(ShouldIncludeItem).ToArray() |
+| 244 | local-declaration | 지역 변수를 선언합니다: var groupFilteredRows = selectedGroup == "ALL" ? allRows : allRows.Where(ShouldIncludeItem).ToArray(); |
+| 244 | variable-initializer | 변수의 초기값을 지정합니다: groupFilteredRows = selectedGroup == "ALL" ? allRows : allRows.Where(ShouldIncludeItem).ToArray() |
+| 245 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildHeadFilters(groupFilteredRows) |
+| 245 | local-declaration | 지역 변수를 선언합니다: var availableHeadFilters = BuildHeadFilters(groupFilteredRows); |
+| 245 | variable-initializer | 변수의 초기값을 지정합니다: availableHeadFilters = BuildHeadFilters(groupFilteredRows) |
+| 246 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeHeadFilter(_selectedHeadFilter, availableHeadFilters) |
+| 246 | local-declaration | 지역 변수를 선언합니다: var selectedHeadFilter = NormalizeHeadFilter(_selectedHeadFilter, availableHeadFilters); |
+| 246 | variable-initializer | 변수의 초기값을 지정합니다: selectedHeadFilter = NormalizeHeadFilter(_selectedHeadFilter, availableHeadFilters) |
+| 247 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: MarkSelectedHeadFilter(availableHeadFilters, selectedHeadFilter) |
+| 247 | local-declaration | 지역 변수를 선언합니다: var headFilterItems = MarkSelectedHeadFilter(availableHeadFilters, selectedHeadFilter); |
+| 247 | variable-initializer | 변수의 초기값을 지정합니다: headFilterItems = MarkSelectedHeadFilter(availableHeadFilters, selectedHeadFilter) |
+| 248 | assignment | 값을 대상에 대입합니다: _selectedHeadFilter = selectedHeadFilter |
+| 249 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyHeadFilter(groupFilteredRows, selectedHeadFilter) |
+| 249 | local-declaration | 지역 변수를 선언합니다: var filteredRows = ApplyHeadFilter(groupFilteredRows, selectedHeadFilter); |
+| 249 | variable-initializer | 변수의 초기값을 지정합니다: filteredRows = ApplyHeadFilter(groupFilteredRows, selectedHeadFilter) |
+| 255 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: allInterfaceRows.Where(MatchesType).ToArray() |
+| 255 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: allInterfaceRows.Where(MatchesType) |
+| 255 | conditional-expression | 조건에 따라 결과식을 선택합니다: selectedGroup == "ALL" ? allInterfaceRows : allInterfaceRows.Where(MatchesType).ToArray() |
+| 255 | local-declaration | 지역 변수를 선언합니다: var filteredInterfaceRows = selectedGroup == "ALL" ? allInterfaceRows : allInterfaceRows.Where(MatchesType).ToArray(); |
+| 255 | variable-initializer | 변수의 초기값을 지정합니다: filteredInterfaceRows = selectedGroup == "ALL" ? allInterfaceRows : allInterfaceRows.Where(MatchesType).ToArray() |
+| 256 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.LoadHistory(selectedSection, cancellationToken) |
+| 256 | local-declaration | 지역 변수를 선언합니다: var history = _settingManager.LoadHistory(selectedSection, cancellationToken); |
+| 256 | variable-initializer | 변수의 초기값을 지정합니다: history = _settingManager.LoadHistory(selectedSection, cancellationToken) |
+| 262 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Apply( displaySections, BuildHistoryItems(history), selectedTab, selectedGroup, selectedHeadFilter, BuildTabs(selectedTab), groups.Select(BuildSetting).ToArray(), headFilterItems, allRows, filteredRows, allInterfaceRows,… |
+| 264 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildHistoryItems(history) |
+| 268 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildTabs(selectedTab) |
+| 269 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: groups.Select(BuildSetting).ToArray() |
+| 269 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: groups.Select(BuildSetting) |
+| 275 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildHistoryRows(history) |
+| 276 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildSummaryRows(selectedTab, allRows, allInterfaceRows, history) |
+| 278 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(new CScreenViewModel( EN_MENU.Setting, "SETTING / PARAMETER CONFIG", "Direct grid edit for option, interface, IO and motor parameters.", [new("Source", "CSV"), new("History", "Setting trace log")], displa… |
+| 278 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CScreenViewModel( EN_MENU.Setting, "SETTING / PARAMETER CONFIG", "Direct grid edit for option, interface, IO and motor parameters.", [new("Source", "CSV"), new("History", "Setting trace log")], displaySections, setti… |
+| 278 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(new CScreenViewModel( EN_MENU.Setting, "SETTING / PARAMETER CONFIG", "Direct grid edit for option, interface, IO and motor parameters.", [new("Source", "CSV"), new("History", "Setting trace log")], displaySe |
+| 282 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Source", "CSV") |
+| 282 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new("History", "Setting trace log") |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["Build"]
- N0["L222 foreach"]
+ N0["L223 foreach"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `BuildDisplay` · L217–220
+### LocalFunctionStatement `BuildDisplay` · L218–221
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:217–220](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L217-L220)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:218–221](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L218-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2396,22 +2399,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 219 | new ST_DISPLAY_ITEM | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43 |
-| 219 | $"{item.Value} {item.Unit}".Trim | resolved | string string.Trim() |
+| 220 | new ST_DISPLAY_ITEM | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43 |
+| 220 | $"{item.Value} {item.Unit}".Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 219 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DISPLAY_ITEM(item.Name, $"{item.Value} {item.Unit}".Trim(), item.Description) |
-| 219 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: $"{item.Value} {item.Unit}".Trim() |
-| 219 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_DISPLAY_ITEM(item.Name, $"{item.Value} {item.Unit}".Trim(), item.Description); |
+| 220 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DISPLAY_ITEM(item.Name, $"{item.Value} {item.Unit}".Trim(), item.Description) |
+| 220 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: $"{item.Value} {item.Unit}".Trim() |
+| 220 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_DISPLAY_ITEM(item.Name, $"{item.Value} {item.Unit}".Trim(), item.Description); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `ShouldIncludeItem` · L238–241
+### LocalFunctionStatement `ShouldIncludeItem` · L239–242
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:238–241](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L238-L241)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:239–242](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L239-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2432,20 +2435,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 240 | row.Group.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 241 | row.Group.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 240 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase) |
-| 240 | return | 호출자에게 값 또는 제어를 반환합니다: return row.Group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase); |
+| 241 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase) |
+| 241 | return | 호출자에게 값 또는 제어를 반환합니다: return row.Group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `MatchesType` · L249–252
+### LocalFunctionStatement `MatchesType` · L250–253
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:249–252](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L249-L252)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:250–253](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L250-L253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2466,20 +2469,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 251 | row.Type.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 252 | row.Type.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 251 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Type.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase) |
-| 251 | return | 호출자에게 값 또는 제어를 반환합니다: return row.Type.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase); |
+| 252 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Type.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase) |
+| 252 | return | 호출자에게 값 또는 제어를 반환합니다: return row.Type.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `BuildSetting` · L256–259
+### LocalFunctionStatement `BuildSetting` · L257–260
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:256–259](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L256-L259)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:257–260](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L257-L260)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2500,22 +2503,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 258 | new ST_SETTING_GROUP | resolved | Drilling.UI.Menu.Menus.ST_SETTING_GROUP.ST_SETTING_GROUP(string, bool) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1083 |
-| 258 | group.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 259 | new ST_SETTING_GROUP | resolved | Drilling.UI.Menu.Menus.ST_SETTING_GROUP.ST_SETTING_GROUP(string, bool) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1087 |
+| 259 | group.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 258 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SETTING_GROUP(group, group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase)) |
-| 258 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase) |
-| 258 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SETTING_GROUP(group, group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase)); |
+| 259 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SETTING_GROUP(group, group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase)) |
+| 259 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase) |
+| 259 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SETTING_GROUP(group, group.Equals(selectedGroup, StringComparison.OrdinalIgnoreCase)); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `SelectTab` · L287–301
+### MethodDeclaration `SelectTab` · L288–302
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:287–301](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L287-L301)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:288–302](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L288-L302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2534,54 +2537,54 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L54-L54) | SelectTab | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L55-L55) | SelectTab | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 289 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 294 | NormalizeTab | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeTab(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1010 |
-| 295 | _selectedTabSetter | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 296 | _selectedGroupSetter | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 296 | GetDefaultGroup | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.GetDefaultGroup() · Drilling.UI/Menu/Menus/CMenuSetting.cs:1073 |
-| 298 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 299 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
-| 300 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 290 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 295 | NormalizeTab | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeTab(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1014 |
+| 296 | _selectedTabSetter | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 297 | _selectedGroupSetter | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 297 | GetDefaultGroup | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.GetDefaultGroup() · Drilling.UI/Menu/Menus/CMenuSetting.cs:1077 |
+| 299 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 300 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
+| 301 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 289 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(tab) |
-| 289 | if | 조건에 따라 분기합니다: if (parameter is not string tab &#124;&#124; string.IsNullOrWhiteSpace(tab)) |
-| 291 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 294 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeTab(tab) |
-| 294 | local-declaration | 지역 변수를 선언합니다: var selectedTab = NormalizeTab(tab); |
-| 294 | variable-initializer | 변수의 초기값을 지정합니다: selectedTab = NormalizeTab(tab) |
-| 295 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _selectedTabSetter(selectedTab) |
-| 296 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _selectedGroupSetter(GetDefaultGroup()) |
-| 296 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetDefaultGroup() |
-| 297 | assignment | 값을 대상에 대입합니다: _selectedHeadFilter = "ALL" |
-| 298 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting tab {selectedTab} selected.") |
-| 299 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
-| 300 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
-| 300 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
+| 290 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(tab) |
+| 290 | if | 조건에 따라 분기합니다: if (parameter is not string tab &#124;&#124; string.IsNullOrWhiteSpace(tab)) |
+| 292 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 295 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeTab(tab) |
+| 295 | local-declaration | 지역 변수를 선언합니다: var selectedTab = NormalizeTab(tab); |
+| 295 | variable-initializer | 변수의 초기값을 지정합니다: selectedTab = NormalizeTab(tab) |
+| 296 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _selectedTabSetter(selectedTab) |
+| 297 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _selectedGroupSetter(GetDefaultGroup()) |
+| 297 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetDefaultGroup() |
+| 298 | assignment | 값을 대상에 대입합니다: _selectedHeadFilter = "ALL" |
+| 299 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting tab {selectedTab} selected.") |
+| 300 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
+| 301 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
+| 301 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["SelectTab"]
- N0["L289 if"]
+ N0["L290 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `SelectGroup` · L303–316
+### MethodDeclaration `SelectGroup` · L304–317
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:303–316](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L303-L316)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:304–317](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L304-L317)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2600,52 +2603,52 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L60-L60) | SelectGroup | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L61-L61) | SelectGroup | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 305 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 310 | group.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 310 | group.Trim | resolved | string string.Trim() |
-| 311 | _selectedGroupSetter | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 313 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 314 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
-| 315 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 306 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 311 | group.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 311 | group.Trim | resolved | string string.Trim() |
+| 312 | _selectedGroupSetter | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 314 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 315 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
+| 316 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 305 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(group) |
-| 305 | if | 조건에 따라 분기합니다: if (parameter is not string group &#124;&#124; string.IsNullOrWhiteSpace(group)) |
-| 307 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 310 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Trim().ToUpperInvariant() |
-| 310 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Trim() |
-| 310 | local-declaration | 지역 변수를 선언합니다: var selectedGroup = group.Trim().ToUpperInvariant(); |
-| 310 | variable-initializer | 변수의 초기값을 지정합니다: selectedGroup = group.Trim().ToUpperInvariant() |
-| 311 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _selectedGroupSetter(selectedGroup) |
-| 312 | assignment | 값을 대상에 대입합니다: _selectedHeadFilter = "ALL" |
-| 313 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting group {SelectedTab} / {selectedGroup} selected.") |
-| 314 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
-| 315 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
-| 315 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
+| 306 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(group) |
+| 306 | if | 조건에 따라 분기합니다: if (parameter is not string group &#124;&#124; string.IsNullOrWhiteSpace(group)) |
+| 308 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 311 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Trim().ToUpperInvariant() |
+| 311 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.Trim() |
+| 311 | local-declaration | 지역 변수를 선언합니다: var selectedGroup = group.Trim().ToUpperInvariant(); |
+| 311 | variable-initializer | 변수의 초기값을 지정합니다: selectedGroup = group.Trim().ToUpperInvariant() |
+| 312 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _selectedGroupSetter(selectedGroup) |
+| 313 | assignment | 값을 대상에 대입합니다: _selectedHeadFilter = "ALL" |
+| 314 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting group {SelectedTab} / {selectedGroup} selected.") |
+| 315 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
+| 316 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
+| 316 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["SelectGroup"]
- N0["L305 if"]
+ N0["L306 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ConnectInterface` · L318–358
+### MethodDeclaration `ConnectInterface` · L319–359
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:318–358](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L318-L358)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:319–359](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L319-L359)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2658,81 +2661,81 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L72-L72) | ConnectInterface | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L73-L73) | ConnectInterface | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 323 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 329 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 329 | InterfaceRowLabel | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRowLabel(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) · Drilling.UI/Menu/Menus/CMenuSetting.cs:976 |
-| 335 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 339 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
-| 346 | _settingManager.ConnectInterface | resolved | System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.ConnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:166 |
-| 347 | ParseDevice | resolved | Drilling.Common.Interface.EN_EQP_MODULE Drilling.UI.Menu.Menus.CMenuSetting.ParseDevice(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:922 |
-| 348 | ReadInt | resolved | int Drilling.UI.Menu.Menus.CMenuSetting.ReadInt(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1000 |
-| 349 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 349 | InterfaceRowLabel | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRowLabel(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) · Drilling.UI/Menu/Menus/CMenuSetting.cs:976 |
-| 353 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 357 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 324 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 330 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 330 | InterfaceRowLabel | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRowLabel(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) · Drilling.UI/Menu/Menus/CMenuSetting.cs:980 |
+| 336 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 340 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
+| 347 | _settingManager.ConnectInterface | resolved | System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.ConnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:167 |
+| 348 | ParseDevice | resolved | Drilling.Common.Interface.EN_EQP_MODULE Drilling.UI.Menu.Menus.CMenuSetting.ParseDevice(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:926 |
+| 349 | ReadInt | resolved | int Drilling.UI.Menu.Menus.CMenuSetting.ReadInt(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1004 |
+| 350 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 350 | InterfaceRowLabel | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRowLabel(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) · Drilling.UI/Menu/Menus/CMenuSetting.cs:980 |
+| 354 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 358 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 320 | local-declaration | 지역 변수를 선언합니다: var row = SelectedInterfaceRow; |
-| 320 | variable-initializer | 변수의 초기값을 지정합니다: row = SelectedInterfaceRow |
-| 321 | if | 조건에 따라 분기합니다: if (row is null) |
-| 323 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage("Select an interface row before connect.") |
-| 324 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 327 | if | 조건에 따라 분기합니다: if (row.IsSimulation) |
-| 329 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"{InterfaceRowLabel(row)} is SIMUL mode. Connect is disabled.") |
-| 329 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceRowLabel(row) |
-| 330 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 333 | if | 조건에 따라 분기합니다: if (row.IsModified) |
-| 335 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage("Save JHMI_INTERFACE.csv before connect.") |
-| 336 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 339 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation("인터페이스 연결", $"{row.NickName} 장비에 연결하시겠습니까?") |
-| 339 | if | 조건에 따라 분기합니다: if (!CRecipeConfirmDialog.ShowConfirmation("인터페이스 연결", $"{row.NickName} 장비에 연결하시겠습니까?")) |
-| 341 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 344 | try | 예외 처리 범위입니다: try |
-| 346 | await | 비동기 완료를 기다립니다: await _settingManager.ConnectInterface( ParseDevice(row.Device), ReadInt(row.Number, row.NickName, "NUMBER")) |
-| 346 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.ConnectInterface( ParseDevice(row.Device), ReadInt(row.Number, row.NickName, "NUMBER")) |
-| 347 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDevice(row.Device) |
-| 348 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(row.Number, row.NickName, "NUMBER") |
-| 349 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"{InterfaceRowLabel(row)} connect command sent.") |
-| 349 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceRowLabel(row) |
-| 351 | catch | 지정 예외를 처리합니다: catch (Exception exception) when (exception is InvalidOperationException or InvalidDataException or KeyNotFoundException or IOException) |
-| 353 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Connect blocked. {exception.Message}") |
-| 354 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 357 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
-| 357 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
+| 321 | local-declaration | 지역 변수를 선언합니다: var row = SelectedInterfaceRow; |
+| 321 | variable-initializer | 변수의 초기값을 지정합니다: row = SelectedInterfaceRow |
+| 322 | if | 조건에 따라 분기합니다: if (row is null) |
+| 324 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage("Select an interface row before connect.") |
+| 325 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 328 | if | 조건에 따라 분기합니다: if (row.IsSimulation) |
+| 330 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"{InterfaceRowLabel(row)} is SIMUL mode. Connect is disabled.") |
+| 330 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceRowLabel(row) |
+| 331 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 334 | if | 조건에 따라 분기합니다: if (row.IsModified) |
+| 336 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage("Save JHMI_INTERFACE.csv before connect.") |
+| 337 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 340 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation("인터페이스 연결", $"{row.NickName} 장비에 연결하시겠습니까?") |
+| 340 | if | 조건에 따라 분기합니다: if (!CRecipeConfirmDialog.ShowConfirmation("인터페이스 연결", $"{row.NickName} 장비에 연결하시겠습니까?")) |
+| 342 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 345 | try | 예외 처리 범위입니다: try |
+| 347 | await | 비동기 완료를 기다립니다: await _settingManager.ConnectInterface( ParseDevice(row.Device), ReadInt(row.Number, row.NickName, "NUMBER")) |
+| 347 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.ConnectInterface( ParseDevice(row.Device), ReadInt(row.Number, row.NickName, "NUMBER")) |
+| 348 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDevice(row.Device) |
+| 349 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(row.Number, row.NickName, "NUMBER") |
+| 350 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"{InterfaceRowLabel(row)} connect command sent.") |
+| 350 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceRowLabel(row) |
+| 352 | catch | 지정 예외를 처리합니다: catch (Exception exception) when (exception is InvalidOperationException or InvalidDataException or KeyNotFoundException or IOException) |
+| 354 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Connect blocked. {exception.Message}") |
+| 355 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 358 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
+| 358 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ConnectInterface"]
- N0["L321 if"]
+ N0["L322 if"]
  M -->|포함| N0
- N1["L327 if"]
+ N1["L328 if"]
  M -->|포함| N1
- N2["L333 if"]
+ N2["L334 if"]
  M -->|포함| N2
- N3["L339 if"]
+ N3["L340 if"]
  M -->|포함| N3
- N4["L344 try"]
+ N4["L345 try"]
  M -->|포함| N4
- N5["L351 catch"]
+ N5["L352 catch"]
  N4 -->|포함| N5
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `DisconnectInterface` · L360–400
+### MethodDeclaration `DisconnectInterface` · L361–401
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:360–400](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L360-L400)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:361–401](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L361-L401)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2745,81 +2748,81 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L83-L83) | DisconnectInterface | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L84-L84) | DisconnectInterface | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 365 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 371 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 371 | InterfaceRowLabel | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRowLabel(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) · Drilling.UI/Menu/Menus/CMenuSetting.cs:976 |
-| 377 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 381 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
-| 388 | _settingManager.DisconnectInterface | resolved | System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.DisconnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:171 |
-| 389 | ParseDevice | resolved | Drilling.Common.Interface.EN_EQP_MODULE Drilling.UI.Menu.Menus.CMenuSetting.ParseDevice(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:922 |
-| 390 | ReadInt | resolved | int Drilling.UI.Menu.Menus.CMenuSetting.ReadInt(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1000 |
-| 391 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 391 | InterfaceRowLabel | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRowLabel(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) · Drilling.UI/Menu/Menus/CMenuSetting.cs:976 |
-| 395 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 399 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 366 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 372 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 372 | InterfaceRowLabel | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRowLabel(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) · Drilling.UI/Menu/Menus/CMenuSetting.cs:980 |
+| 378 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 382 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
+| 389 | _settingManager.DisconnectInterface | resolved | System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.DisconnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:172 |
+| 390 | ParseDevice | resolved | Drilling.Common.Interface.EN_EQP_MODULE Drilling.UI.Menu.Menus.CMenuSetting.ParseDevice(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:926 |
+| 391 | ReadInt | resolved | int Drilling.UI.Menu.Menus.CMenuSetting.ReadInt(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1004 |
+| 392 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 392 | InterfaceRowLabel | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceRowLabel(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) · Drilling.UI/Menu/Menus/CMenuSetting.cs:980 |
+| 396 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 400 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 362 | local-declaration | 지역 변수를 선언합니다: var row = SelectedInterfaceRow; |
-| 362 | variable-initializer | 변수의 초기값을 지정합니다: row = SelectedInterfaceRow |
-| 363 | if | 조건에 따라 분기합니다: if (row is null) |
-| 365 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage("Select an interface row before disconnect.") |
-| 366 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 369 | if | 조건에 따라 분기합니다: if (row.IsSimulation) |
-| 371 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"{InterfaceRowLabel(row)} is SIMUL mode. Disconnect is disabled.") |
-| 371 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceRowLabel(row) |
-| 372 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 375 | if | 조건에 따라 분기합니다: if (row.IsModified) |
-| 377 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage("Save JHMI_INTERFACE.csv before disconnect.") |
-| 378 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 381 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation("인터페이스 연결 해제", $"{row.NickName} 장비의 연결을 해제하시겠습니까?") |
-| 381 | if | 조건에 따라 분기합니다: if (!CRecipeConfirmDialog.ShowConfirmation("인터페이스 연결 해제", $"{row.NickName} 장비의 연결을 해제하시겠습니까?")) |
-| 383 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 386 | try | 예외 처리 범위입니다: try |
-| 388 | await | 비동기 완료를 기다립니다: await _settingManager.DisconnectInterface( ParseDevice(row.Device), ReadInt(row.Number, row.NickName, "NUMBER")) |
-| 388 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.DisconnectInterface( ParseDevice(row.Device), ReadInt(row.Number, row.NickName, "NUMBER")) |
-| 389 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDevice(row.Device) |
-| 390 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(row.Number, row.NickName, "NUMBER") |
-| 391 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"{InterfaceRowLabel(row)} disconnected.") |
-| 391 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceRowLabel(row) |
-| 393 | catch | 지정 예외를 처리합니다: catch (Exception exception) when (exception is InvalidOperationException or InvalidDataException or KeyNotFoundException or IOException) |
-| 395 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Disconnect blocked. {exception.Message}") |
-| 396 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 399 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
-| 399 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
+| 363 | local-declaration | 지역 변수를 선언합니다: var row = SelectedInterfaceRow; |
+| 363 | variable-initializer | 변수의 초기값을 지정합니다: row = SelectedInterfaceRow |
+| 364 | if | 조건에 따라 분기합니다: if (row is null) |
+| 366 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage("Select an interface row before disconnect.") |
+| 367 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 370 | if | 조건에 따라 분기합니다: if (row.IsSimulation) |
+| 372 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"{InterfaceRowLabel(row)} is SIMUL mode. Disconnect is disabled.") |
+| 372 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceRowLabel(row) |
+| 373 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 376 | if | 조건에 따라 분기합니다: if (row.IsModified) |
+| 378 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage("Save JHMI_INTERFACE.csv before disconnect.") |
+| 379 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 382 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation("인터페이스 연결 해제", $"{row.NickName} 장비의 연결을 해제하시겠습니까?") |
+| 382 | if | 조건에 따라 분기합니다: if (!CRecipeConfirmDialog.ShowConfirmation("인터페이스 연결 해제", $"{row.NickName} 장비의 연결을 해제하시겠습니까?")) |
+| 384 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 387 | try | 예외 처리 범위입니다: try |
+| 389 | await | 비동기 완료를 기다립니다: await _settingManager.DisconnectInterface( ParseDevice(row.Device), ReadInt(row.Number, row.NickName, "NUMBER")) |
+| 389 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.DisconnectInterface( ParseDevice(row.Device), ReadInt(row.Number, row.NickName, "NUMBER")) |
+| 390 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDevice(row.Device) |
+| 391 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(row.Number, row.NickName, "NUMBER") |
+| 392 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"{InterfaceRowLabel(row)} disconnected.") |
+| 392 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceRowLabel(row) |
+| 394 | catch | 지정 예외를 처리합니다: catch (Exception exception) when (exception is InvalidOperationException or InvalidDataException or KeyNotFoundException or IOException) |
+| 396 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Disconnect blocked. {exception.Message}") |
+| 397 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 400 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
+| 400 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["DisconnectInterface"]
- N0["L363 if"]
+ N0["L364 if"]
  M -->|포함| N0
- N1["L369 if"]
+ N1["L370 if"]
  M -->|포함| N1
- N2["L375 if"]
+ N2["L376 if"]
  M -->|포함| N2
- N3["L381 if"]
+ N3["L382 if"]
  M -->|포함| N3
- N4["L386 try"]
+ N4["L387 try"]
  M -->|포함| N4
- N5["L393 catch"]
+ N5["L394 catch"]
  N4 -->|포함| N5
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Save` · L402–462
+### MethodDeclaration `Save` · L403–466
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:402–462](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L402-L462)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:403–466](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L403-L466)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2832,112 +2835,114 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L94-L94) | Save | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L95-L95) | Save | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 405 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
-| 414 | _settingManager.SaveInterfaceList | resolved | System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.SaveInterfaceList(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:160 |
-| 414 | ToInterfaceData | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.UI.Menu.Menus.CMenuSetting.ToInterfaceData(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:882 |
-| 418 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 423 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 427 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 428 | _showLoadingScreen | resolved · 동적 구현 선택 가능 | void System.Action<Drilling.UI.Menu.Menus.EN_MENU, string>.Invoke(Drilling.UI.Menu.Menus.EN_MENU, string) |
-| 429 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
-| 430 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
-| 431 | CRecipeConfirmDialog.ShowCompletion | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:81 |
-| 435 | ToSection | resolved | Drilling.Common.Managers.EN_SETTING_TAB Drilling.UI.Menu.Menus.CMenuSetting.ToSection(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1053 |
-| 441 | AllParameterRows.Select(BuildSystem).ToArray | resolved | Drilling.Common.Managers.ST_SYSTEM_PARAMETER[] System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>.ToArray<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>() |
-| 441 | AllParameterRows.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Select<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, Drilling.Common.Managers.ST_SYSTEM_PARAMETER>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, Drilling.Common.Managers.ST_SYSTEM_PARAMETER>) |
-| 444 | _settingManager.SaveSection | resolved | void Drilling.Common.Managers.CSettingManager.SaveSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:122 |
-| 448 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 453 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 406 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
+| 415 | _settingManager.SaveInterfaceList | resolved | System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.SaveInterfaceList(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:161 |
+| 415 | ToInterfaceData | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.UI.Menu.Menus.CMenuSetting.ToInterfaceData(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>) · Drilling.UI/Menu/Menus/CMenuSetting.cs:886 |
+| 419 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 424 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 428 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 429 | _showLoadingScreen | resolved · 동적 구현 선택 가능 | void System.Action<Drilling.UI.Menu.Menus.EN_MENU, string>.Invoke(Drilling.UI.Menu.Menus.EN_MENU, string) |
+| 430 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
+| 431 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 432 | CRecipeConfirmDialog.ShowCompletion | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:81 |
+| 436 | ToSection | resolved | Drilling.Common.Managers.EN_SETTING_TAB Drilling.UI.Menu.Menus.CMenuSetting.ToSection(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1057 |
+| 442 | AllParameterRows.Select(BuildSystem).ToArray | resolved | Drilling.Common.Managers.ST_SYSTEM_PARAMETER[] System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>.ToArray<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>() |
+| 442 | AllParameterRows.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Select<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, Drilling.Common.Managers.ST_SYSTEM_PARAMETER>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, Drilling.Common.Managers.ST_SYSTEM_PARAMETER>) |
+| 445 | _settingManager.SaveSection | resolved | void Drilling.Common.Managers.CSettingManager.SaveSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:122 |
+| 449 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 450 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
 | 457 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 458 | _showLoadingScreen | resolved · 동적 구현 선택 가능 | void System.Action<Drilling.UI.Menu.Menus.EN_MENU, string>.Invoke(Drilling.UI.Menu.Menus.EN_MENU, string) |
-| 459 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
-| 460 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
-| 461 | CRecipeConfirmDialog.ShowCompletion | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:81 |
+| 461 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 462 | _showLoadingScreen | resolved · 동적 구현 선택 가능 | void System.Action<Drilling.UI.Menu.Menus.EN_MENU, string>.Invoke(Drilling.UI.Menu.Menus.EN_MENU, string) |
+| 463 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
+| 464 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 465 | CRecipeConfirmDialog.ShowCompletion | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:81 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 404 | conditional-expression | 조건에 따라 결과식을 선택합니다: SelectedTab == "INTERFACE" ? "인터페이스 설정" : $"{SelectedTab} / {SelectedGroup} 설정" |
-| 404 | local-declaration | 지역 변수를 선언합니다: var target = SelectedTab == "INTERFACE" ? "인터페이스 설정" : $"{SelectedTab} / {SelectedGroup} 설정"; |
-| 404 | variable-initializer | 변수의 초기값을 지정합니다: target = SelectedTab == "INTERFACE" ? "인터페이스 설정" : $"{SelectedTab} / {SelectedGroup} 설정" |
-| 405 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation("설정 저장", $"{target}을 저장하시겠습니까?") |
-| 405 | if | 조건에 따라 분기합니다: if (!CRecipeConfirmDialog.ShowConfirmation("설정 저장", $"{target}을 저장하시겠습니까?")) |
-| 407 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 410 | if | 조건에 따라 분기합니다: if (SelectedTab == "INTERFACE") |
-| 412 | try | 예외 처리 범위입니다: try |
-| 414 | await | 비동기 완료를 기다립니다: await _settingManager.SaveInterfaceList(ToInterfaceData(AllInterfaceRows)) |
-| 414 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.SaveInterfaceList(ToInterfaceData(AllInterfaceRows)) |
-| 414 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToInterfaceData(AllInterfaceRows) |
-| 416 | catch | 지정 예외를 처리합니다: catch (InvalidDataException exception) |
-| 418 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage(exception.Message) |
-| 419 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 421 | catch | 지정 예외를 처리합니다: catch (IOException exception) |
-| 423 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"JHMI_INTERFACE save blocked. {exception.Message}") |
-| 424 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 427 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage("JHMI_INTERFACE.csv saved, verified, and reloaded to InterfaceManager.") |
-| 428 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _showLoadingScreen(EN_MENU.Setting, "SETTING") |
-| 429 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
-| 430 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
-| 430 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
-| 431 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowCompletion("설정 저장 완료", "인터페이스 설정을 저장하였습니다.") |
-| 432 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 435 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToSection(SelectedTab) |
-| 435 | local-declaration | 지역 변수를 선언합니다: var section = ToSection(SelectedTab); |
-| 435 | variable-initializer | 변수의 초기값을 지정합니다: section = ToSection(SelectedTab) |
-| 441 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AllParameterRows.Select(BuildSystem).ToArray() |
-| 441 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AllParameterRows.Select(BuildSystem) |
-| 441 | local-declaration | 지역 변수를 선언합니다: var parameters = AllParameterRows.Select(BuildSystem).ToArray(); |
-| 441 | variable-initializer | 변수의 초기값을 지정합니다: parameters = AllParameterRows.Select(BuildSystem).ToArray() |
-| 442 | try | 예외 처리 범위입니다: try |
-| 444 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.SaveSection(section, parameters) |
-| 446 | catch | 지정 예외를 처리합니다: catch (InvalidDataException exception) |
-| 448 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage(exception.Message) |
-| 449 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 451 | catch | 지정 예외를 처리합니다: catch (IOException exception) |
-| 453 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting save blocked. {exception.Message}") |
-| 454 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 457 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting.csv saved for {SelectedTab} and CSV verified.") |
-| 458 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _showLoadingScreen(EN_MENU.Setting, "SETTING") |
-| 459 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
-| 460 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
-| 460 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
-| 461 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowCompletion("설정 저장 완료", $"{SelectedTab} 설정을 저장하였습니다.") |
+| 405 | conditional-expression | 조건에 따라 결과식을 선택합니다: SelectedTab == "INTERFACE" ? "인터페이스 설정" : $"{SelectedTab} / {SelectedGroup} 설정" |
+| 405 | local-declaration | 지역 변수를 선언합니다: var target = SelectedTab == "INTERFACE" ? "인터페이스 설정" : $"{SelectedTab} / {SelectedGroup} 설정"; |
+| 405 | variable-initializer | 변수의 초기값을 지정합니다: target = SelectedTab == "INTERFACE" ? "인터페이스 설정" : $"{SelectedTab} / {SelectedGroup} 설정" |
+| 406 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation("설정 저장", $"{target}을 저장하시겠습니까?") |
+| 406 | if | 조건에 따라 분기합니다: if (!CRecipeConfirmDialog.ShowConfirmation("설정 저장", $"{target}을 저장하시겠습니까?")) |
+| 408 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 411 | if | 조건에 따라 분기합니다: if (SelectedTab == "INTERFACE") |
+| 413 | try | 예외 처리 범위입니다: try |
+| 415 | await | 비동기 완료를 기다립니다: await _settingManager.SaveInterfaceList(ToInterfaceData(AllInterfaceRows)) |
+| 415 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.SaveInterfaceList(ToInterfaceData(AllInterfaceRows)) |
+| 415 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToInterfaceData(AllInterfaceRows) |
+| 417 | catch | 지정 예외를 처리합니다: catch (InvalidDataException exception) |
+| 419 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage(exception.Message) |
+| 420 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 422 | catch | 지정 예외를 처리합니다: catch (IOException exception) |
+| 424 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"JHMI_INTERFACE save blocked. {exception.Message}") |
+| 425 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 428 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage("JHMI_INTERFACE.csv saved, verified, and reloaded to InterfaceManager.") |
+| 429 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _showLoadingScreen(EN_MENU.Setting, "SETTING") |
+| 430 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
+| 431 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
+| 431 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
+| 432 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowCompletion("설정 저장 완료", "인터페이스 설정을 저장하였습니다.") |
+| 433 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 436 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToSection(SelectedTab) |
+| 436 | local-declaration | 지역 변수를 선언합니다: var section = ToSection(SelectedTab); |
+| 436 | variable-initializer | 변수의 초기값을 지정합니다: section = ToSection(SelectedTab) |
+| 442 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AllParameterRows.Select(BuildSystem).ToArray() |
+| 442 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AllParameterRows.Select(BuildSystem) |
+| 442 | local-declaration | 지역 변수를 선언합니다: var parameters = AllParameterRows.Select(BuildSystem).ToArray(); |
+| 442 | variable-initializer | 변수의 초기값을 지정합니다: parameters = AllParameterRows.Select(BuildSystem).ToArray() |
+| 443 | try | 예외 처리 범위입니다: try |
+| 445 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.SaveSection(section, parameters) |
+| 447 | catch | 지정 예외를 처리합니다: catch (InvalidDataException exception) |
+| 449 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage(exception.Message) |
+| 450 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning( "설정 저장 불가", $"입력값이 올바르지 않아 설정을 저장하지 않았습니다.\n\n{exception.Message}") |
+| 453 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 455 | catch | 지정 예외를 처리합니다: catch (IOException exception) |
+| 457 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting save blocked. {exception.Message}") |
+| 458 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 461 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting.csv saved for {SelectedTab} and CSV verified.") |
+| 462 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _showLoadingScreen(EN_MENU.Setting, "SETTING") |
+| 463 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
+| 464 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
+| 464 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
+| 465 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowCompletion("설정 저장 완료", $"{SelectedTab} 설정을 저장하였습니다.") |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["Save"]
- N0["L405 if"]
+ N0["L406 if"]
  M -->|포함| N0
- N1["L410 if"]
+ N1["L411 if"]
  M -->|포함| N1
- N2["L412 try"]
+ N2["L413 try"]
  N1 -->|포함| N2
- N3["L416 catch"]
+ N3["L417 catch"]
  N2 -->|포함| N3
- N4["L421 catch"]
+ N4["L422 catch"]
  N2 -->|포함| N4
- N5["L442 try"]
+ N5["L443 try"]
  M -->|포함| N5
- N6["L446 catch"]
+ N6["L447 catch"]
  N5 -->|포함| N6
- N7["L451 catch"]
+ N7["L455 catch"]
  N5 -->|포함| N7
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `BuildSystem` · L436–439
+### LocalFunctionStatement `BuildSystem` · L437–440
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:436–439](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L436-L439)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:437–440](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L437-L440)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2958,22 +2963,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 438 | new ST_SYSTEM_PARAMETER | resolved | Drilling.Common.Managers.ST_SYSTEM_PARAMETER.ST_SYSTEM_PARAMETER(Drilling.Common.Managers.EN_SETTING_TAB, string, string, string, string, string, string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double, bool, bool, int, System.Collections.Generic.IReadOnlyDictionary<string, string>?) · Drilling.Common/Managers/CSettingManager.cs:255 |
-| 438 | NormalizeSettingUnit | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingUnit(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1042 |
+| 439 | new ST_SYSTEM_PARAMETER | resolved | Drilling.Common.Managers.ST_SYSTEM_PARAMETER.ST_SYSTEM_PARAMETER(Drilling.Common.Managers.EN_SETTING_TAB, string, string, string, string, string, string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double, bool, bool, int, System.Collections.Generic.IReadOnlyDictionary<string, string>?) · Drilling.Common/Managers/CSettingManager.cs:256 |
+| 439 | NormalizeSettingUnit | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingUnit(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1046 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 438 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SYSTEM_PARAMETER(section, row.Parameter, row.Value, NormalizeSettingUnit(row.Unit), row.Description, row.Group, row.Key, row.DefaultValue, row.DataType, row.Min, row.Max) |
-| 438 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingUnit(row.Unit) |
-| 438 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SYSTEM_PARAMETER(section, row.Parameter, row.Value, NormalizeSettingUnit(row.Unit), row.Description, row.Group, row.Key, row.DefaultValue, row.DataType, row.Min, row.Max); |
+| 439 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SYSTEM_PARAMETER(section, row.Parameter, row.Value, NormalizeSettingUnit(row.Unit), row.Description, row.Group, row.Key, row.DefaultValue, row.DataType, row.Min, row.Max) |
+| 439 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingUnit(row.Unit) |
+| 439 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SYSTEM_PARAMETER(section, row.Parameter, row.Value, NormalizeSettingUnit(row.Unit), row.Description, row.Group, row.Key, row.DefaultValue, row.DataType, row.Min, row.Max); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Cancel` · L464–481
+### MethodDeclaration `Cancel` · L468–485
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:464–481](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L464-L481)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:468–485](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L468-L485)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2986,54 +2991,54 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L100-L100) | Cancel | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L101-L101) | Cancel | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 466 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
-| 471 | _showLoadingScreen | resolved · 동적 구현 선택 가능 | void System.Action<Drilling.UI.Menu.Menus.EN_MENU, string>.Invoke(Drilling.UI.Menu.Menus.EN_MENU, string) |
-| 472 | TryReloadSelectedTabFromCsv | resolved | bool Drilling.UI.Menu.Menus.CMenuSetting.TryReloadSelectedTabFromCsv() · Drilling.UI/Menu/Menus/CMenuSetting.cs:502 |
-| 474 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
-| 478 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 479 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
-| 480 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 470 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
+| 475 | _showLoadingScreen | resolved · 동적 구현 선택 가능 | void System.Action<Drilling.UI.Menu.Menus.EN_MENU, string>.Invoke(Drilling.UI.Menu.Menus.EN_MENU, string) |
+| 476 | TryReloadSelectedTabFromCsv | resolved | bool Drilling.UI.Menu.Menus.CMenuSetting.TryReloadSelectedTabFromCsv() · Drilling.UI/Menu/Menus/CMenuSetting.cs:506 |
+| 478 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 482 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 483 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
+| 484 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 466 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation("인터페이스 변경 취소", "저장하지 않은 인터페이스 변경 내용을 취소하시겠습니까?") |
-| 466 | if | 조건에 따라 분기합니다: if (IsInterfaceTab && !CRecipeConfirmDialog.ShowConfirmation("인터페이스 변경 취소", "저장하지 않은 인터페이스 변경 내용을 취소하시겠습니까?")) |
-| 468 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 471 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _showLoadingScreen(EN_MENU.Setting, "SETTING") |
-| 472 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReloadSelectedTabFromCsv() |
-| 472 | if | 조건에 따라 분기합니다: if (!TryReloadSelectedTabFromCsv()) |
-| 474 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
-| 474 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
-| 475 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 478 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting edits canceled. Reloaded {SelectedTab} / {SelectedGroup} from CSV.") |
-| 479 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
-| 480 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
-| 480 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
+| 470 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation("인터페이스 변경 취소", "저장하지 않은 인터페이스 변경 내용을 취소하시겠습니까?") |
+| 470 | if | 조건에 따라 분기합니다: if (IsInterfaceTab && !CRecipeConfirmDialog.ShowConfirmation("인터페이스 변경 취소", "저장하지 않은 인터페이스 변경 내용을 취소하시겠습니까?")) |
+| 472 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 475 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _showLoadingScreen(EN_MENU.Setting, "SETTING") |
+| 476 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReloadSelectedTabFromCsv() |
+| 476 | if | 조건에 따라 분기합니다: if (!TryReloadSelectedTabFromCsv()) |
+| 478 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
+| 478 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
+| 479 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 482 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting edits canceled. Reloaded {SelectedTab} / {SelectedGroup} from CSV.") |
+| 483 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
+| 484 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
+| 484 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["Cancel"]
- N0["L466 if"]
+ N0["L470 if"]
  M -->|포함| N0
- N1["L472 if"]
+ N1["L476 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Reload` · L483–500
+### MethodDeclaration `Reload` · L487–504
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:483–500](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L483-L500)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:487–504](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L487-L504)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3046,54 +3051,54 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L106-L106) | Reload | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L107-L107) | Reload | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 485 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
-| 490 | _showLoadingScreen | resolved · 동적 구현 선택 가능 | void System.Action<Drilling.UI.Menu.Menus.EN_MENU, string>.Invoke(Drilling.UI.Menu.Menus.EN_MENU, string) |
-| 491 | TryReloadSelectedTabFromCsv | resolved | bool Drilling.UI.Menu.Menus.CMenuSetting.TryReloadSelectedTabFromCsv() · Drilling.UI/Menu/Menus/CMenuSetting.cs:502 |
-| 493 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
-| 497 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 498 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
-| 499 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 489 | CRecipeConfirmDialog.ShowConfirmation | resolved | bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11 |
+| 494 | _showLoadingScreen | resolved · 동적 구현 선택 가능 | void System.Action<Drilling.UI.Menu.Menus.EN_MENU, string>.Invoke(Drilling.UI.Menu.Menus.EN_MENU, string) |
+| 495 | TryReloadSelectedTabFromCsv | resolved | bool Drilling.UI.Menu.Menus.CMenuSetting.TryReloadSelectedTabFromCsv() · Drilling.UI/Menu/Menus/CMenuSetting.cs:506 |
+| 497 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 501 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 502 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
+| 503 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 485 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation("설정 다시 불러오기", "저장하지 않은 변경 내용은 사라집니다. CSV 설정을 다시 불러오시겠습니까?") |
-| 485 | if | 조건에 따라 분기합니다: if (!CRecipeConfirmDialog.ShowConfirmation("설정 다시 불러오기", "저장하지 않은 변경 내용은 사라집니다. CSV 설정을 다시 불러오시겠습니까?")) |
-| 487 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 490 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _showLoadingScreen(EN_MENU.Setting, "SETTING") |
-| 491 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReloadSelectedTabFromCsv() |
-| 491 | if | 조건에 따라 분기합니다: if (!TryReloadSelectedTabFromCsv()) |
-| 493 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
-| 493 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
-| 494 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 497 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting {SelectedTab} / {SelectedGroup} reloaded from CSV.") |
-| 498 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
-| 499 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
-| 499 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
+| 489 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation("설정 다시 불러오기", "저장하지 않은 변경 내용은 사라집니다. CSV 설정을 다시 불러오시겠습니까?") |
+| 489 | if | 조건에 따라 분기합니다: if (!CRecipeConfirmDialog.ShowConfirmation("설정 다시 불러오기", "저장하지 않은 변경 내용은 사라집니다. CSV 설정을 다시 불러오시겠습니까?")) |
+| 491 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 494 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _showLoadingScreen(EN_MENU.Setting, "SETTING") |
+| 495 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReloadSelectedTabFromCsv() |
+| 495 | if | 조건에 따라 분기합니다: if (!TryReloadSelectedTabFromCsv()) |
+| 497 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
+| 497 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
+| 498 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 501 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting {SelectedTab} / {SelectedGroup} reloaded from CSV.") |
+| 502 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
+| 503 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
+| 503 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["Reload"]
- N0["L485 if"]
+ N0["L489 if"]
  M -->|포함| N0
- N1["L491 if"]
+ N1["L495 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `TryReloadSelectedTabFromCsv` · L502–525
+### MethodDeclaration `TryReloadSelectedTabFromCsv` · L506–529
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:502–525](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L502-L525)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:506–529](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L506-L529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3106,59 +3111,59 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:472–472](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L472-L472) | TryReloadSelectedTabFromCsv | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:491–491](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L491-L491) | TryReloadSelectedTabFromCsv | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:476–476](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L476-L476) | TryReloadSelectedTabFromCsv | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L495-L495) | TryReloadSelectedTabFromCsv | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 504 | SelectedTab.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 509 | ToSection | resolved | Drilling.Common.Managers.EN_SETTING_TAB Drilling.UI.Menu.Menus.CMenuSetting.ToSection(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1053 |
-| 512 | _settingManager.ReloadSection | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> Drilling.Common.Managers.CSettingManager.ReloadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:40 |
-| 517 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 522 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 508 | SelectedTab.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 513 | ToSection | resolved | Drilling.Common.Managers.EN_SETTING_TAB Drilling.UI.Menu.Menus.CMenuSetting.ToSection(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1057 |
+| 516 | _settingManager.ReloadSection | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> Drilling.Common.Managers.CSettingManager.ReloadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:40 |
+| 521 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 526 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 504 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectedTab.Equals("INTERFACE", StringComparison.OrdinalIgnoreCase) |
-| 504 | if | 조건에 따라 분기합니다: if (SelectedTab.Equals("INTERFACE", StringComparison.OrdinalIgnoreCase)) |
-| 506 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
-| 509 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToSection(SelectedTab) |
-| 509 | local-declaration | 지역 변수를 선언합니다: var section = ToSection(SelectedTab); |
-| 509 | variable-initializer | 변수의 초기값을 지정합니다: section = ToSection(SelectedTab) |
-| 510 | try | 예외 처리 범위입니다: try |
-| 512 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.ReloadSection(section) |
-| 513 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
-| 515 | catch | 지정 예외를 처리합니다: catch (InvalidDataException exception) |
-| 517 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting reload blocked. {exception.Message}") |
-| 518 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
-| 520 | catch | 지정 예외를 처리합니다: catch (IOException exception) |
-| 522 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting reload blocked. {exception.Message}") |
-| 523 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 508 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SelectedTab.Equals("INTERFACE", StringComparison.OrdinalIgnoreCase) |
+| 508 | if | 조건에 따라 분기합니다: if (SelectedTab.Equals("INTERFACE", StringComparison.OrdinalIgnoreCase)) |
+| 510 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
+| 513 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToSection(SelectedTab) |
+| 513 | local-declaration | 지역 변수를 선언합니다: var section = ToSection(SelectedTab); |
+| 513 | variable-initializer | 변수의 초기값을 지정합니다: section = ToSection(SelectedTab) |
+| 514 | try | 예외 처리 범위입니다: try |
+| 516 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.ReloadSection(section) |
+| 517 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
+| 519 | catch | 지정 예외를 처리합니다: catch (InvalidDataException exception) |
+| 521 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting reload blocked. {exception.Message}") |
+| 522 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 524 | catch | 지정 예외를 처리합니다: catch (IOException exception) |
+| 526 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting reload blocked. {exception.Message}") |
+| 527 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["TryReloadSelectedTabFromCsv"]
- N0["L504 if"]
+ N0["L508 if"]
  M -->|포함| N0
- N1["L510 try"]
+ N1["L514 try"]
  M -->|포함| N1
- N2["L515 catch"]
+ N2["L519 catch"]
  N1 -->|포함| N2
- N3["L520 catch"]
+ N3["L524 catch"]
  N1 -->|포함| N3
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `SelectHeadFilter` · L527–538
+### MethodDeclaration `SelectHeadFilter` · L531–542
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:527–538](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L527-L538)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:531–542](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L531-L542)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3177,48 +3182,48 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L66-L66) | SelectHeadFilter | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L67-L67) | SelectHeadFilter | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 529 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 534 | headFilter.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 534 | headFilter.Trim | resolved | string string.Trim() |
-| 535 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 536 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
-| 537 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 533 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 538 | headFilter.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 538 | headFilter.Trim | resolved | string string.Trim() |
+| 539 | _setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
+| 540 | _refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
+| 541 | _refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 529 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(headFilter) |
-| 529 | if | 조건에 따라 분기합니다: if (parameter is not string headFilter &#124;&#124; string.IsNullOrWhiteSpace(headFilter)) |
-| 531 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 534 | assignment | 값을 대상에 대입합니다: _selectedHeadFilter = headFilter.Trim().ToUpperInvariant() |
-| 534 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: headFilter.Trim().ToUpperInvariant() |
-| 534 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: headFilter.Trim() |
-| 535 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting head filter {SelectedTab} / {SelectedGroup} / {_selectedHeadFilter} selected.") |
-| 536 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
-| 537 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
-| 537 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
+| 533 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(headFilter) |
+| 533 | if | 조건에 따라 분기합니다: if (parameter is not string headFilter &#124;&#124; string.IsNullOrWhiteSpace(headFilter)) |
+| 535 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 538 | assignment | 값을 대상에 대입합니다: _selectedHeadFilter = headFilter.Trim().ToUpperInvariant() |
+| 538 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: headFilter.Trim().ToUpperInvariant() |
+| 538 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: headFilter.Trim() |
+| 539 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _setStatusMessage($"Setting head filter {SelectedTab} / {SelectedGroup} / {_selectedHeadFilter} selected.") |
+| 540 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshShellStatus() |
+| 541 | await | 비동기 완료를 기다립니다: await _refreshCurrentScreen() |
+| 541 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _refreshCurrentScreen() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["SelectHeadFilter"]
- N0["L529 if"]
+ N0["L533 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Apply` · L540–572
+### MethodDeclaration `Apply` · L544–576
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:540–572](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L540-L572)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:544–576](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L544-L576)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3250,40 +3255,40 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:261–276](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L261-L276) | Apply | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:262–277](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L262-L277) | Apply | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 569 | GetSelectedInterfaceRow | resolved | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? Drilling.UI.Menu.Menus.CMenuSetting.GetSelectedInterfaceRow(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW?) · Drilling.UI/Menu/Menus/CMenuSetting.cs:584 |
+| 573 | GetSelectedInterfaceRow | resolved | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? Drilling.UI.Menu.Menus.CMenuSetting.GetSelectedInterfaceRow(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW?) · Drilling.UI/Menu/Menus/CMenuSetting.cs:588 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 557 | assignment | 값을 대상에 대입합니다: Tabs = tabs |
-| 558 | assignment | 값을 대상에 대입합니다: History = history |
-| 559 | assignment | 값을 대상에 대입합니다: SelectedTab = selectedTab |
-| 560 | assignment | 값을 대상에 대입합니다: SelectedGroup = selectedGroup |
-| 561 | assignment | 값을 대상에 대입합니다: SelectedHeadFilter = selectedHeadFilter |
-| 562 | assignment | 값을 대상에 대입합니다: TabItems = tabItems |
-| 563 | assignment | 값을 대상에 대입합니다: GroupItems = groupItems |
-| 564 | assignment | 값을 대상에 대입합니다: HeadFilterItems = headFilterItems |
-| 565 | assignment | 값을 대상에 대입합니다: AllParameterRows = allParameterRows |
-| 566 | assignment | 값을 대상에 대입합니다: ParameterRows = parameterRows |
-| 567 | assignment | 값을 대상에 대입합니다: AllInterfaceRows = allInterfaceRows |
-| 568 | assignment | 값을 대상에 대입합니다: InterfaceRows = interfaceRows |
-| 569 | assignment | 값을 대상에 대입합니다: SelectedInterfaceRow = GetSelectedInterfaceRow(interfaceRows, SelectedInterfaceRow) |
-| 569 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSelectedInterfaceRow(interfaceRows, SelectedInterfaceRow) |
-| 570 | assignment | 값을 대상에 대입합니다: ChangeHistory = changeHistory |
-| 571 | assignment | 값을 대상에 대입합니다: SummaryRows = summaryRows |
+| 561 | assignment | 값을 대상에 대입합니다: Tabs = tabs |
+| 562 | assignment | 값을 대상에 대입합니다: History = history |
+| 563 | assignment | 값을 대상에 대입합니다: SelectedTab = selectedTab |
+| 564 | assignment | 값을 대상에 대입합니다: SelectedGroup = selectedGroup |
+| 565 | assignment | 값을 대상에 대입합니다: SelectedHeadFilter = selectedHeadFilter |
+| 566 | assignment | 값을 대상에 대입합니다: TabItems = tabItems |
+| 567 | assignment | 값을 대상에 대입합니다: GroupItems = groupItems |
+| 568 | assignment | 값을 대상에 대입합니다: HeadFilterItems = headFilterItems |
+| 569 | assignment | 값을 대상에 대입합니다: AllParameterRows = allParameterRows |
+| 570 | assignment | 값을 대상에 대입합니다: ParameterRows = parameterRows |
+| 571 | assignment | 값을 대상에 대입합니다: AllInterfaceRows = allInterfaceRows |
+| 572 | assignment | 값을 대상에 대입합니다: InterfaceRows = interfaceRows |
+| 573 | assignment | 값을 대상에 대입합니다: SelectedInterfaceRow = GetSelectedInterfaceRow(interfaceRows, SelectedInterfaceRow) |
+| 573 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetSelectedInterfaceRow(interfaceRows, SelectedInterfaceRow) |
+| 574 | assignment | 값을 대상에 대입합니다: ChangeHistory = changeHistory |
+| 575 | assignment | 값을 대상에 대입합니다: SummaryRows = summaryRows |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `GetEditRows` · L574–577
+### MethodDeclaration `GetEditRows` · L578–581
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:574–577](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L574-L577)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:578–581](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L578-L581)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3304,27 +3309,27 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L234-L234) | GetEditRows | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L235-L235) | GetEditRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 576 | editScreen.SelectedTab.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 580 | editScreen.SelectedTab.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 576 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: editScreen.SelectedTab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) |
-| 576 | conditional-expression | 조건에 따라 결과식을 선택합니다: editScreen is not null && editScreen.SelectedTab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) && editScreen.AllParameterRows.Count > 0 ? editScreen.AllParameterRows : loadedRows |
-| 576 | return | 호출자에게 값 또는 제어를 반환합니다: return editScreen is not null && editScreen.SelectedTab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) && editScreen.AllParameterRows.Count > 0 ? editScreen.AllParameterRows : loadedRows; |
+| 580 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: editScreen.SelectedTab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) |
+| 580 | conditional-expression | 조건에 따라 결과식을 선택합니다: editScreen is not null && editScreen.SelectedTab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) && editScreen.AllParameterRows.Count > 0 ? editScreen.AllParameterRows : loadedRows |
+| 580 | return | 호출자에게 값 또는 제어를 반환합니다: return editScreen is not null && editScreen.SelectedTab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) && editScreen.AllParameterRows.Count > 0 ? editScreen.AllParameterRows : loadedRows; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `GetEditInterfaceRows` · L579–582
+### MethodDeclaration `GetEditInterfaceRows` · L583–586
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:579–582](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L579-L582)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:583–586](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L583-L586)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3345,27 +3350,27 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L235-L235) | GetEditInterfaceRows | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L236-L236) | GetEditInterfaceRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 581 | editScreen.SelectedTab.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 585 | editScreen.SelectedTab.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 581 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: editScreen.SelectedTab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) |
-| 581 | conditional-expression | 조건에 따라 결과식을 선택합니다: editScreen is not null && editScreen.SelectedTab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) && editScreen.AllInterfaceRows.Count > 0 ? editScreen.AllInterfaceRows : loadedRows |
-| 581 | return | 호출자에게 값 또는 제어를 반환합니다: return editScreen is not null && editScreen.SelectedTab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) && editScreen.AllInterfaceRows.Count > 0 ? editScreen.AllInterfaceRows : loadedRows; |
+| 585 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: editScreen.SelectedTab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) |
+| 585 | conditional-expression | 조건에 따라 결과식을 선택합니다: editScreen is not null && editScreen.SelectedTab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) && editScreen.AllInterfaceRows.Count > 0 ? editScreen.AllInterfaceRows : loadedRows |
+| 585 | return | 호출자에게 값 또는 제어를 반환합니다: return editScreen is not null && editScreen.SelectedTab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) && editScreen.AllInterfaceRows.Count > 0 ? editScreen.AllInterfaceRows : loadedRows; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `GetSelectedInterfaceRow` · L584–607
+### MethodDeclaration `GetSelectedInterfaceRow` · L588–611
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:584–607](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L584-L607)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:588–611](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L588-L611)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3385,43 +3390,43 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L569-L569) | GetSelectedInterfaceRow | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:573–573](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L573-L573) | GetSelectedInterfaceRow | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 606 | rows.FirstOrDefault | resolved | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.FirstOrDefault<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, bool>) |
-| 606 | rows.FirstOrDefault | resolved | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.FirstOrDefault<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, bool>) |
+| 610 | rows.FirstOrDefault | resolved | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.FirstOrDefault<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, bool>) |
+| 610 | rows.FirstOrDefault | resolved | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW? System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.FirstOrDefault<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, bool>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 586 | if | 조건에 따라 분기합니다: if (rows.Count == 0) |
-| 588 | return | 호출자에게 값 또는 제어를 반환합니다: return null; |
-| 591 | if | 조건에 따라 분기합니다: if (current is null) |
-| 593 | return | 호출자에게 값 또는 제어를 반환합니다: return rows[0]; |
-| 606 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.FirstOrDefault(MatchesItem) |
-| 606 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.FirstOrDefault(MatchesItem2) |
-| 606 | return | 호출자에게 값 또는 제어를 반환합니다: return rows.FirstOrDefault(MatchesItem) ?? rows.FirstOrDefault(MatchesItem2) ?? rows[0]; |
+| 590 | if | 조건에 따라 분기합니다: if (rows.Count == 0) |
+| 592 | return | 호출자에게 값 또는 제어를 반환합니다: return null; |
+| 595 | if | 조건에 따라 분기합니다: if (current is null) |
+| 597 | return | 호출자에게 값 또는 제어를 반환합니다: return rows[0]; |
+| 610 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.FirstOrDefault(MatchesItem) |
+| 610 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.FirstOrDefault(MatchesItem2) |
+| 610 | return | 호출자에게 값 또는 제어를 반환합니다: return rows.FirstOrDefault(MatchesItem) ?? rows.FirstOrDefault(MatchesItem2) ?? rows[0]; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["GetSelectedInterfaceRow"]
- N0["L586 if"]
+ N0["L590 if"]
  M -->|포함| N0
- N1["L591 if"]
+ N1["L595 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `MatchesItem` · L596–599
+### LocalFunctionStatement `MatchesItem` · L600–603
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:596–599](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L596-L599)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:600–603](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L600-L603)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3442,20 +3447,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 598 | IsSameInterfaceKey | resolved | bool Drilling.UI.Menu.Menus.CMenuSetting.IsSameInterfaceKey(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) · Drilling.UI/Menu/Menus/CMenuSetting.cs:609 |
+| 602 | IsSameInterfaceKey | resolved | bool Drilling.UI.Menu.Menus.CMenuSetting.IsSameInterfaceKey(Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW) · Drilling.UI/Menu/Menus/CMenuSetting.cs:613 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 598 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSameInterfaceKey(row, current) |
-| 598 | return | 호출자에게 값 또는 제어를 반환합니다: return IsSameInterfaceKey(row, current); |
+| 602 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSameInterfaceKey(row, current) |
+| 602 | return | 호출자에게 값 또는 제어를 반환합니다: return IsSameInterfaceKey(row, current); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `MatchesItem2` · L601–604
+### LocalFunctionStatement `MatchesItem2` · L605–608
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:601–604](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L601-L604)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:605–608](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L605-L608)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3476,20 +3481,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 603 | row.NickName.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 607 | row.NickName.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 603 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.NickName.Equals(current.NickName, StringComparison.OrdinalIgnoreCase) |
-| 603 | return | 호출자에게 값 또는 제어를 반환합니다: return row.NickName.Equals(current.NickName, StringComparison.OrdinalIgnoreCase); |
+| 607 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.NickName.Equals(current.NickName, StringComparison.OrdinalIgnoreCase) |
+| 607 | return | 호출자에게 값 또는 제어를 반환합니다: return row.NickName.Equals(current.NickName, StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `IsSameInterfaceKey` · L609–612
+### MethodDeclaration `IsSameInterfaceKey` · L613–616
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:609–612](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L609-L612)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:613–616](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L613-L616)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3509,36 +3514,36 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:598–598](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L598-L598) | IsSameInterfaceKey | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L602-L602) | IsSameInterfaceKey | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 611 | NormalizeSettingText(left.Device, "").Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 611 | NormalizeSettingText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingText(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1032 |
-| 611 | NormalizeSettingText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingText(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1032 |
-| 611 | left.Number.Trim().Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 611 | left.Number.Trim | resolved | string string.Trim() |
-| 611 | right.Number.Trim | resolved | string string.Trim() |
+| 615 | NormalizeSettingText(left.Device, "").Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 615 | NormalizeSettingText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingText(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1036 |
+| 615 | NormalizeSettingText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingText(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1036 |
+| 615 | left.Number.Trim().Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 615 | left.Number.Trim | resolved | string string.Trim() |
+| 615 | right.Number.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 611 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingText(left.Device, "").Equals(NormalizeSettingText(right.Device, ""), StringComparison.OrdinalIgnoreCase) |
-| 611 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingText(left.Device, "") |
-| 611 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingText(right.Device, "") |
-| 611 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: left.Number.Trim().Equals(right.Number.Trim(), StringComparison.OrdinalIgnoreCase) |
-| 611 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: left.Number.Trim() |
-| 611 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: right.Number.Trim() |
-| 611 | return | 호출자에게 값 또는 제어를 반환합니다: return NormalizeSettingText(left.Device, "").Equals(NormalizeSettingText(right.Device, ""), StringComparison.OrdinalIgnoreCase) && left.Number.Trim().Equals(right.Number.Trim(), StringComparison.OrdinalIgnoreCase); |
+| 615 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingText(left.Device, "").Equals(NormalizeSettingText(right.Device, ""), StringComparison.OrdinalIgnoreCase) |
+| 615 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingText(left.Device, "") |
+| 615 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingText(right.Device, "") |
+| 615 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: left.Number.Trim().Equals(right.Number.Trim(), StringComparison.OrdinalIgnoreCase) |
+| 615 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: left.Number.Trim() |
+| 615 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: right.Number.Trim() |
+| 615 | return | 호출자에게 값 또는 제어를 반환합니다: return NormalizeSettingText(left.Device, "").Equals(NormalizeSettingText(right.Device, ""), StringComparison.OrdinalIgnoreCase) && left.Number.Trim().Equals(right.Number.Trim(), StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `OnSelectedInterfaceRowStateChanged` · L614–617
+### MethodDeclaration `OnSelectedInterfaceRowStateChanged` · L618–621
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:614–617](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L614-L617)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:618–621](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L618-L621)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3560,19 +3565,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 616 | RefreshInterfaceCommandState | resolved | void Drilling.UI.Menu.Menus.CMenuSetting.RefreshInterfaceCommandState() · Drilling.UI/Menu/Menus/CMenuSetting.cs:619 |
+| 620 | RefreshInterfaceCommandState | resolved | void Drilling.UI.Menu.Menus.CMenuSetting.RefreshInterfaceCommandState() · Drilling.UI/Menu/Menus/CMenuSetting.cs:623 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 616 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshInterfaceCommandState() |
+| 620 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshInterfaceCommandState() |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `RefreshInterfaceCommandState` · L619–624
+### MethodDeclaration `RefreshInterfaceCommandState` · L623–628
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:619–624](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L619-L624)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:623–628](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L623-L628)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3585,32 +3590,32 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L202-L202) | RefreshInterfaceCommandState | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:616–616](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L616-L616) | RefreshInterfaceCommandState | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L203-L203) | RefreshInterfaceCommandState | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L620-L620) | RefreshInterfaceCommandState | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 621 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:761 |
-| 621 | nameof | unresolved | None |
-| 622 | ConnectInterfaceCommand.NotifyCanExecuteChanged | resolved | void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24 |
-| 623 | DisconnectInterfaceCommand.NotifyCanExecuteChanged | resolved | void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24 |
+| 625 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:784 |
+| 625 | nameof | unresolved | None |
+| 626 | ConnectInterfaceCommand.NotifyCanExecuteChanged | resolved | void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24 |
+| 627 | DisconnectInterfaceCommand.NotifyCanExecuteChanged | resolved | void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 621 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(CanOperateSelectedInterface)) |
-| 621 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanOperateSelectedInterface) |
-| 622 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ConnectInterfaceCommand.NotifyCanExecuteChanged() |
-| 623 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DisconnectInterfaceCommand.NotifyCanExecuteChanged() |
+| 625 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(CanOperateSelectedInterface)) |
+| 625 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanOperateSelectedInterface) |
+| 626 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ConnectInterfaceCommand.NotifyCanExecuteChanged() |
+| 627 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DisconnectInterfaceCommand.NotifyCanExecuteChanged() |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `BuildTabs` · L626–639
+### MethodDeclaration `BuildTabs` · L630–643
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:626–639](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L626-L639)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:630–643](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L630-L643)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3629,30 +3634,30 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:267–267](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L267-L267) | BuildTabs | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L268-L268) | BuildTabs | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 638 | Sections.Select(SelectItem).Select(BuildSetting).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SETTING_TAB[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_TAB>.ToArray<Drilling.UI.Menu.Menus.ST_SETTING_TAB>() |
-| 638 | Sections.Select(SelectItem).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_TAB> System.Collections.Generic.IEnumerable<string>.Select<string, Drilling.UI.Menu.Menus.ST_SETTING_TAB>(System.Func<string, Drilling.UI.Menu.Menus.ST_SETTING_TAB>) |
-| 638 | Sections.Select | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.EN_SETTING_TAB>.Select<Drilling.Common.Managers.EN_SETTING_TAB, string>(System.Func<Drilling.Common.Managers.EN_SETTING_TAB, string>) |
+| 642 | Sections.Select(SelectItem).Select(BuildSetting).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SETTING_TAB[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_TAB>.ToArray<Drilling.UI.Menu.Menus.ST_SETTING_TAB>() |
+| 642 | Sections.Select(SelectItem).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_TAB> System.Collections.Generic.IEnumerable<string>.Select<string, Drilling.UI.Menu.Menus.ST_SETTING_TAB>(System.Func<string, Drilling.UI.Menu.Menus.ST_SETTING_TAB>) |
+| 642 | Sections.Select | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.EN_SETTING_TAB>.Select<Drilling.Common.Managers.EN_SETTING_TAB, string>(System.Func<Drilling.Common.Managers.EN_SETTING_TAB, string>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 638 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Sections.Select(SelectItem).Select(BuildSetting).ToArray() |
-| 638 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Sections.Select(SelectItem).Select(BuildSetting) |
-| 638 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Sections.Select(SelectItem) |
-| 638 | return | 호출자에게 값 또는 제어를 반환합니다: return Sections.Select(SelectItem).Select(BuildSetting).ToArray(); |
+| 642 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Sections.Select(SelectItem).Select(BuildSetting).ToArray() |
+| 642 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Sections.Select(SelectItem).Select(BuildSetting) |
+| 642 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Sections.Select(SelectItem) |
+| 642 | return | 호출자에게 값 또는 제어를 반환합니다: return Sections.Select(SelectItem).Select(BuildSetting).ToArray(); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectItem` · L628–631
+### LocalFunctionStatement `SelectItem` · L632–635
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:628–631](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L628-L631)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:632–635](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L632-L635)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3673,20 +3678,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 630 | ToTabText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.ToTabText(Drilling.Common.Managers.EN_SETTING_TAB) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1065 |
+| 634 | ToTabText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.ToTabText(Drilling.Common.Managers.EN_SETTING_TAB) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1069 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 630 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToTabText(section) |
-| 630 | return | 호출자에게 값 또는 제어를 반환합니다: return ToTabText(section); |
+| 634 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToTabText(section) |
+| 634 | return | 호출자에게 값 또는 제어를 반환합니다: return ToTabText(section); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `BuildSetting` · L633–636
+### LocalFunctionStatement `BuildSetting` · L637–640
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:633–636](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L633-L636)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:637–640](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L637-L640)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3707,22 +3712,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 635 | new ST_SETTING_TAB | resolved | Drilling.UI.Menu.Menus.ST_SETTING_TAB.ST_SETTING_TAB(string, bool) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1079 |
-| 635 | tab.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 639 | new ST_SETTING_TAB | resolved | Drilling.UI.Menu.Menus.ST_SETTING_TAB.ST_SETTING_TAB(string, bool) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1083 |
+| 639 | tab.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 635 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SETTING_TAB(tab, tab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase)) |
-| 635 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) |
-| 635 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SETTING_TAB(tab, tab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase)); |
+| 639 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SETTING_TAB(tab, tab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase)) |
+| 639 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase) |
+| 639 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SETTING_TAB(tab, tab.Equals(selectedTab, StringComparison.OrdinalIgnoreCase)); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `BuildParameterRows` · L641–667
+### MethodDeclaration `BuildParameterRows` · L645–671
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:641–667](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L641-L667)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:645–671](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L645-L671)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3741,30 +3746,30 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L231-L231) | BuildParameterRows | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L232-L232) | BuildParameterRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 666 | parameters.Where(ShouldIncludeItem).Select(BuildSystem).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.ToArray<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>() |
-| 666 | parameters.Where(ShouldIncludeItem).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>.Select<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>(System.Func<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>) |
-| 666 | parameters.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>.Where<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>(System.Func<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, bool>) |
+| 670 | parameters.Where(ShouldIncludeItem).Select(BuildSystem).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.ToArray<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>() |
+| 670 | parameters.Where(ShouldIncludeItem).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>.Select<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>(System.Func<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>) |
+| 670 | parameters.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>.Where<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>(System.Func<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, bool>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 666 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Where(ShouldIncludeItem).Select(BuildSystem).ToArray() |
-| 666 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Where(ShouldIncludeItem).Select(BuildSystem) |
-| 666 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Where(ShouldIncludeItem) |
-| 666 | return | 호출자에게 값 또는 제어를 반환합니다: return parameters.Where(ShouldIncludeItem).Select(BuildSystem).ToArray(); |
+| 670 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Where(ShouldIncludeItem).Select(BuildSystem).ToArray() |
+| 670 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Where(ShouldIncludeItem).Select(BuildSystem) |
+| 670 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Where(ShouldIncludeItem) |
+| 670 | return | 호출자에게 값 또는 제어를 반환합니다: return parameters.Where(ShouldIncludeItem).Select(BuildSystem).ToArray(); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `ShouldIncludeItem` · L643–646
+### LocalFunctionStatement `ShouldIncludeItem` · L647–650
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:643–646](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L643-L646)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:647–650](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L647-L650)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3785,13 +3790,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 645 | return | 호출자에게 값 또는 제어를 반환합니다: return parameter.Show && parameter.Use; |
+| 649 | return | 호출자에게 값 또는 제어를 반환합니다: return parameter.Show && parameter.Use; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `BuildSystem` · L648–664
+### LocalFunctionStatement `BuildSystem` · L652–668
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:648–664](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L648-L664)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:652–668](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L652-L668)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3812,26 +3817,26 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 650 | new ST_SYSTEM_PARAMETER_ROW | resolved | Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ST_SYSTEM_PARAMETER_ROW(string, string, string, string, string, bool, string, string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1094 |
-| 651 | NormalizeSettingText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingText(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1032 |
-| 654 | NormalizeUnit | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeUnit(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1037 |
-| 657 | GetValueState | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.GetValueState(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1047 |
+| 654 | new ST_SYSTEM_PARAMETER_ROW | resolved | Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ST_SYSTEM_PARAMETER_ROW(string, string, string, string, string, bool, string, string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1098 |
+| 655 | NormalizeSettingText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingText(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1036 |
+| 658 | NormalizeUnit | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeUnit(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1041 |
+| 661 | GetValueState | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.GetValueState(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1051 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 650 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SYSTEM_PARAMETER_ROW( NormalizeSettingText(parameter.Group, "COMMON"), parameter.Name, parameter.Value, NormalizeUnit(parameter.Unit), parameter.Description, false, GetValueState(parameter.Value), parameter.Key, p… |
-| 650 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SYSTEM_PARAMETER_ROW( NormalizeSettingText(parameter.Group, "COMMON"), parameter.Name, parameter.Value, NormalizeUnit(parameter.Unit), parameter.Description, false, GetValueState(parameter.Value), parameter.Key, para |
-| 651 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingText(parameter.Group, "COMMON") |
-| 654 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeUnit(parameter.Unit) |
-| 657 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValueState(parameter.Value) |
+| 654 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SYSTEM_PARAMETER_ROW( NormalizeSettingText(parameter.Group, "COMMON"), parameter.Name, parameter.Value, NormalizeUnit(parameter.Unit), parameter.Description, false, GetValueState(parameter.Value), parameter.Key, p… |
+| 654 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SYSTEM_PARAMETER_ROW( NormalizeSettingText(parameter.Group, "COMMON"), parameter.Name, parameter.Value, NormalizeUnit(parameter.Unit), parameter.Description, false, GetValueState(parameter.Value), parameter.Key, para |
+| 655 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingText(parameter.Group, "COMMON") |
+| 658 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeUnit(parameter.Unit) |
+| 661 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValueState(parameter.Value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `BuildGroups` · L669–686
+### MethodDeclaration `BuildGroups` · L673–690
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:669–686](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L669-L686)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:673–690](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L673-L690)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3850,38 +3855,38 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L236-L236) | BuildGroups | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L237-L237) | BuildGroups | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 681 | rows.Select(SelectGroup).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray | resolved | string[] System.Collections.Generic.IEnumerable<string>.ToArray<string>() |
-| 681 | rows.Select(SelectGroup).Where(ShouldIncludeItem).Distinct | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Distinct<string>(System.Collections.Generic.IEqualityComparer<string>?) |
-| 681 | rows.Select(SelectGroup).Where | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Where<string>(System.Func<string, bool>) |
-| 681 | rows.Select | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Select<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, string>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, string>) |
-| 682 | new[] { "ALL" }.Concat(groups).ToArray | resolved | string[] System.Collections.Generic.IEnumerable<string>.ToArray<string>() |
-| 682 | new[] { "ALL" }.Concat | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Concat<string>(System.Collections.Generic.IEnumerable<string>) |
+| 685 | rows.Select(SelectGroup).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray | resolved | string[] System.Collections.Generic.IEnumerable<string>.ToArray<string>() |
+| 685 | rows.Select(SelectGroup).Where(ShouldIncludeItem).Distinct | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Distinct<string>(System.Collections.Generic.IEqualityComparer<string>?) |
+| 685 | rows.Select(SelectGroup).Where | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Where<string>(System.Func<string, bool>) |
+| 685 | rows.Select | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Select<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, string>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, string>) |
+| 686 | new[] { "ALL" }.Concat(groups).ToArray | resolved | string[] System.Collections.Generic.IEnumerable<string>.ToArray<string>() |
+| 686 | new[] { "ALL" }.Concat | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Concat<string>(System.Collections.Generic.IEnumerable<string>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 681 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectGroup).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() |
-| 681 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectGroup).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase) |
-| 681 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectGroup).Where(ShouldIncludeItem) |
-| 681 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectGroup) |
-| 681 | local-declaration | 지역 변수를 선언합니다: var groups = rows.Select(SelectGroup).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray(); |
-| 681 | variable-initializer | 변수의 초기값을 지정합니다: groups = rows.Select(SelectGroup).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() |
-| 682 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { "ALL" }.Concat(groups).ToArray() |
-| 682 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { "ALL" }.Concat(groups) |
-| 682 | return | 호출자에게 값 또는 제어를 반환합니다: return new[] { "ALL" }.Concat(groups).ToArray(); |
+| 685 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectGroup).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() |
+| 685 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectGroup).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase) |
+| 685 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectGroup).Where(ShouldIncludeItem) |
+| 685 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectGroup) |
+| 685 | local-declaration | 지역 변수를 선언합니다: var groups = rows.Select(SelectGroup).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray(); |
+| 685 | variable-initializer | 변수의 초기값을 지정합니다: groups = rows.Select(SelectGroup).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() |
+| 686 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { "ALL" }.Concat(groups).ToArray() |
+| 686 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { "ALL" }.Concat(groups) |
+| 686 | return | 호출자에게 값 또는 제어를 반환합니다: return new[] { "ALL" }.Concat(groups).ToArray(); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectGroup` · L671–674
+### LocalFunctionStatement `SelectGroup` · L675–678
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:671–674](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L671-L674)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:675–678](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L675-L678)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3902,13 +3907,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 673 | return | 호출자에게 값 또는 제어를 반환합니다: return row.Group; |
+| 677 | return | 호출자에게 값 또는 제어를 반환합니다: return row.Group; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `ShouldIncludeItem` · L676–679
+### LocalFunctionStatement `ShouldIncludeItem` · L680–683
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:676–679](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L676-L679)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:680–683](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L680-L683)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3929,20 +3934,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 678 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 682 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 678 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(group) |
-| 678 | return | 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(group); |
+| 682 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(group) |
+| 682 | return | 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(group); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `BuildHeadFilters` · L688–722
+### MethodDeclaration `BuildHeadFilters` · L692–726
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:688–722](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L688-L722)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:692–726](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L692-L726)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3961,57 +3966,57 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L244-L244) | BuildHeadFilters | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L245-L245) | BuildHeadFilters | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 710 | rows.Where(HasHead).Select(ReadHeadNo).Distinct().OrderBy(SortHeadNo).ToArray | resolved | int[] System.Collections.Generic.IEnumerable<int>.ToArray<int>() |
-| 710 | rows.Where(HasHead).Select(ReadHeadNo).Distinct().OrderBy | resolved | System.Linq.IOrderedEnumerable<int> System.Collections.Generic.IEnumerable<int>.OrderBy<int, int>(System.Func<int, int>) |
-| 710 | rows.Where(HasHead).Select(ReadHeadNo).Distinct | resolved | System.Collections.Generic.IEnumerable<int> System.Collections.Generic.IEnumerable<int>.Distinct<int>() |
-| 710 | rows.Where(HasHead).Select | resolved | System.Collections.Generic.IEnumerable<int> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Select<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, int>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, int>) |
-| 710 | rows.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Where<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, bool>) |
-| 716 | new List<ST_SETTING_HEAD_FILTER> | resolved | System.Collections.Generic.List<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>.List() |
-| 718 | new | resolved | Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER.ST_SETTING_HEAD_FILTER(string, bool) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1084 |
-| 720 | filters.AddRange | resolved | void System.Collections.Generic.List<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>.AddRange(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>) |
-| 720 | headNos.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> System.Collections.Generic.IEnumerable<int>.Select<int, Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>(System.Func<int, Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>) |
+| 714 | rows.Where(HasHead).Select(ReadHeadNo).Distinct().OrderBy(SortHeadNo).ToArray | resolved | int[] System.Collections.Generic.IEnumerable<int>.ToArray<int>() |
+| 714 | rows.Where(HasHead).Select(ReadHeadNo).Distinct().OrderBy | resolved | System.Linq.IOrderedEnumerable<int> System.Collections.Generic.IEnumerable<int>.OrderBy<int, int>(System.Func<int, int>) |
+| 714 | rows.Where(HasHead).Select(ReadHeadNo).Distinct | resolved | System.Collections.Generic.IEnumerable<int> System.Collections.Generic.IEnumerable<int>.Distinct<int>() |
+| 714 | rows.Where(HasHead).Select | resolved | System.Collections.Generic.IEnumerable<int> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Select<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, int>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, int>) |
+| 714 | rows.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Where<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, bool>) |
+| 720 | new List<ST_SETTING_HEAD_FILTER> | resolved | System.Collections.Generic.List<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>.List() |
+| 722 | new | resolved | Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER.ST_SETTING_HEAD_FILTER(string, bool) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1088 |
+| 724 | filters.AddRange | resolved | void System.Collections.Generic.List<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>.AddRange(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>) |
+| 724 | headNos.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> System.Collections.Generic.IEnumerable<int>.Select<int, Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>(System.Func<int, Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 710 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(HasHead).Select(ReadHeadNo).Distinct().OrderBy(SortHeadNo).ToArray() |
-| 710 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(HasHead).Select(ReadHeadNo).Distinct().OrderBy(SortHeadNo) |
-| 710 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(HasHead).Select(ReadHeadNo).Distinct() |
-| 710 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(HasHead).Select(ReadHeadNo) |
-| 710 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(HasHead) |
-| 710 | local-declaration | 지역 변수를 선언합니다: var headNos = rows.Where(HasHead).Select(ReadHeadNo).Distinct().OrderBy(SortHeadNo).ToArray(); |
-| 710 | variable-initializer | 변수의 초기값을 지정합니다: headNos = rows.Where(HasHead).Select(ReadHeadNo).Distinct().OrderBy(SortHeadNo).ToArray() |
-| 711 | if | 조건에 따라 분기합니다: if (headNos.Length == 0) |
-| 713 | return | 호출자에게 값 또는 제어를 반환합니다: return []; |
-| 716 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_SETTING_HEAD_FILTER> { new("ALL", true) } |
-| 716 | local-declaration | 지역 변수를 선언합니다: var filters = new List<ST_SETTING_HEAD_FILTER> { new("ALL", true) }; |
-| 716 | variable-initializer | 변수의 초기값을 지정합니다: filters = new List<ST_SETTING_HEAD_FILTER> { new("ALL", true) } |
-| 718 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new("ALL", true) |
-| 720 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: filters.AddRange(headNos.Select(CreateHeadFilter)) |
-| 720 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: headNos.Select(CreateHeadFilter) |
-| 721 | return | 호출자에게 값 또는 제어를 반환합니다: return filters; |
+| 714 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(HasHead).Select(ReadHeadNo).Distinct().OrderBy(SortHeadNo).ToArray() |
+| 714 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(HasHead).Select(ReadHeadNo).Distinct().OrderBy(SortHeadNo) |
+| 714 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(HasHead).Select(ReadHeadNo).Distinct() |
+| 714 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(HasHead).Select(ReadHeadNo) |
+| 714 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(HasHead) |
+| 714 | local-declaration | 지역 변수를 선언합니다: var headNos = rows.Where(HasHead).Select(ReadHeadNo).Distinct().OrderBy(SortHeadNo).ToArray(); |
+| 714 | variable-initializer | 변수의 초기값을 지정합니다: headNos = rows.Where(HasHead).Select(ReadHeadNo).Distinct().OrderBy(SortHeadNo).ToArray() |
+| 715 | if | 조건에 따라 분기합니다: if (headNos.Length == 0) |
+| 717 | return | 호출자에게 값 또는 제어를 반환합니다: return []; |
+| 720 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_SETTING_HEAD_FILTER> { new("ALL", true) } |
+| 720 | local-declaration | 지역 변수를 선언합니다: var filters = new List<ST_SETTING_HEAD_FILTER> { new("ALL", true) }; |
+| 720 | variable-initializer | 변수의 초기값을 지정합니다: filters = new List<ST_SETTING_HEAD_FILTER> { new("ALL", true) } |
+| 722 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new("ALL", true) |
+| 724 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: filters.AddRange(headNos.Select(CreateHeadFilter)) |
+| 724 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: headNos.Select(CreateHeadFilter) |
+| 725 | return | 호출자에게 값 또는 제어를 반환합니다: return filters; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["BuildHeadFilters"]
- N0["L711 if"]
+ N0["L715 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `HasHead` · L690–693
+### LocalFunctionStatement `HasHead` · L694–697
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:690–693](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L690-L693)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:694–697](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L694-L697)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4032,13 +4037,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 692 | return | 호출자에게 값 또는 제어를 반환합니다: return row.HeadNo > 0; |
+| 696 | return | 호출자에게 값 또는 제어를 반환합니다: return row.HeadNo > 0; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `ReadHeadNo` · L695–698
+### LocalFunctionStatement `ReadHeadNo` · L699–702
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:695–698](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L695-L698)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:699–702](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L699-L702)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4059,13 +4064,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 697 | return | 호출자에게 값 또는 제어를 반환합니다: return row.HeadNo; |
+| 701 | return | 호출자에게 값 또는 제어를 반환합니다: return row.HeadNo; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `CreateHeadFilter` · L700–703
+### LocalFunctionStatement `CreateHeadFilter` · L704–707
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:700–703](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L700-L703)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:704–707](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L704-L707)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4086,20 +4091,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 702 | new ST_SETTING_HEAD_FILTER | resolved | Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER.ST_SETTING_HEAD_FILTER(string, bool) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1084 |
+| 706 | new ST_SETTING_HEAD_FILTER | resolved | Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER.ST_SETTING_HEAD_FILTER(string, bool) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1088 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 702 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SETTING_HEAD_FILTER($"H{headNo:00}", false) |
-| 702 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SETTING_HEAD_FILTER($"H{headNo:00}", false); |
+| 706 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SETTING_HEAD_FILTER($"H{headNo:00}", false) |
+| 706 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SETTING_HEAD_FILTER($"H{headNo:00}", false); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SortHeadNo` · L705–708
+### LocalFunctionStatement `SortHeadNo` · L709–712
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:705–708](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L705-L708)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:709–712](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L709-L712)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4120,13 +4125,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 707 | return | 호출자에게 값 또는 제어를 반환합니다: return headNo; |
+| 711 | return | 호출자에게 값 또는 제어를 반환합니다: return headNo; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ApplyHeadFilter` · L724–737
+### MethodDeclaration `ApplyHeadFilter` · L728–741
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:724–737](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L724-L737)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:728–741](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L728-L741)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4146,41 +4151,41 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L248-L248) | ApplyHeadFilter | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L249-L249) | ApplyHeadFilter | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 726 | selectedHeadFilter.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 736 | rows.Where(MatchesHead).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.ToArray<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>() |
-| 736 | rows.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Where<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, bool>) |
+| 730 | selectedHeadFilter.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 740 | rows.Where(MatchesHead).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.ToArray<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>() |
+| 740 | rows.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Where<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, bool>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 726 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedHeadFilter.Equals("ALL", StringComparison.OrdinalIgnoreCase) |
-| 726 | if | 조건에 따라 분기합니다: if (selectedHeadFilter.Equals("ALL", StringComparison.OrdinalIgnoreCase)) |
-| 728 | return | 호출자에게 값 또는 제어를 반환합니다: return rows; |
-| 736 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesHead).ToArray() |
-| 736 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesHead) |
-| 736 | return | 호출자에게 값 또는 제어를 반환합니다: return rows.Where(MatchesHead).ToArray(); |
+| 730 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedHeadFilter.Equals("ALL", StringComparison.OrdinalIgnoreCase) |
+| 730 | if | 조건에 따라 분기합니다: if (selectedHeadFilter.Equals("ALL", StringComparison.OrdinalIgnoreCase)) |
+| 732 | return | 호출자에게 값 또는 제어를 반환합니다: return rows; |
+| 740 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesHead).ToArray() |
+| 740 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Where(MatchesHead) |
+| 740 | return | 호출자에게 값 또는 제어를 반환합니다: return rows.Where(MatchesHead).ToArray(); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ApplyHeadFilter"]
- N0["L726 if"]
+ N0["L730 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `MatchesHead` · L731–734
+### LocalFunctionStatement `MatchesHead` · L735–738
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:731–734](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L731-L734)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:735–738](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L735-L738)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4201,20 +4206,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 733 | row.HeadFilter.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 737 | row.HeadFilter.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 733 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.HeadFilter.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase) |
-| 733 | return | 호출자에게 값 또는 제어를 반환합니다: return row.HeadFilter.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase); |
+| 737 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.HeadFilter.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase) |
+| 737 | return | 호출자에게 값 또는 제어를 반환합니다: return row.HeadFilter.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `MarkSelectedHeadFilter` · L739–750
+### MethodDeclaration `MarkSelectedHeadFilter` · L743–754
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:739–750](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L739-L750)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:743–754](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L743-L754)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4234,28 +4239,28 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L246-L246) | MarkSelectedHeadFilter | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L247-L247) | MarkSelectedHeadFilter | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 749 | filters.Select(MarkSelected).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>.ToArray<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>() |
-| 749 | filters.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>.Select<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER, Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER, Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>) |
+| 753 | filters.Select(MarkSelected).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>.ToArray<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>() |
+| 753 | filters.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>.Select<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER, Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER, Drilling.UI.Menu.Menus.ST_SETTING_HEAD_FILTER>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 749 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: filters.Select(MarkSelected).ToArray() |
-| 749 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: filters.Select(MarkSelected) |
-| 749 | return | 호출자에게 값 또는 제어를 반환합니다: return filters.Select(MarkSelected).ToArray(); |
+| 753 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: filters.Select(MarkSelected).ToArray() |
+| 753 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: filters.Select(MarkSelected) |
+| 753 | return | 호출자에게 값 또는 제어를 반환합니다: return filters.Select(MarkSelected).ToArray(); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `MarkSelected` · L741–747
+### LocalFunctionStatement `MarkSelected` · L745–751
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:741–747](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L741-L747)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:745–751](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L745-L751)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4276,21 +4281,21 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 745 | item.Name.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 749 | item.Name.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 743 | return | 호출자에게 값 또는 제어를 반환합니다: return item with { IsSelected = item.Name.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase) }; |
-| 745 | assignment | 값을 대상에 대입합니다: IsSelected = item.Name.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase) |
-| 745 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Name.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase) |
+| 747 | return | 호출자에게 값 또는 제어를 반환합니다: return item with { IsSelected = item.Name.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase) }; |
+| 749 | assignment | 값을 대상에 대입합니다: IsSelected = item.Name.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase) |
+| 749 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Name.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `NormalizeHeadFilter` · L752–768
+### MethodDeclaration `NormalizeHeadFilter` · L756–772
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:752–768](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L752-L768)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:756–772](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L756-L772)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4310,44 +4315,44 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L245-L245) | NormalizeHeadFilter | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L246-L246) | NormalizeHeadFilter | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 761 | filter.Name.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 765 | filter.Name.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 754 | if | 조건에 따라 분기합니다: if (filters.Count == 0) |
-| 756 | return | 호출자에게 값 또는 제어를 반환합니다: return "ALL"; |
-| 759 | foreach | 컬렉션 요소를 순회합니다: foreach (var filter in filters) |
-| 761 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: filter.Name.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase) |
-| 761 | if | 조건에 따라 분기합니다: if (filter.Name.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase)) |
-| 763 | return | 호출자에게 값 또는 제어를 반환합니다: return filter.Name; |
-| 767 | return | 호출자에게 값 또는 제어를 반환합니다: return "ALL"; |
+| 758 | if | 조건에 따라 분기합니다: if (filters.Count == 0) |
+| 760 | return | 호출자에게 값 또는 제어를 반환합니다: return "ALL"; |
+| 763 | foreach | 컬렉션 요소를 순회합니다: foreach (var filter in filters) |
+| 765 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: filter.Name.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase) |
+| 765 | if | 조건에 따라 분기합니다: if (filter.Name.Equals(selectedHeadFilter, StringComparison.OrdinalIgnoreCase)) |
+| 767 | return | 호출자에게 값 또는 제어를 반환합니다: return filter.Name; |
+| 771 | return | 호출자에게 값 또는 제어를 반환합니다: return "ALL"; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["NormalizeHeadFilter"]
- N0["L754 if"]
+ N0["L758 if"]
  M -->|포함| N0
- N1["L759 foreach"]
+ N1["L763 foreach"]
  M -->|포함| N1
- N2["L761 if"]
+ N2["L765 if"]
  N1 -->|포함| N2
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `BuildInterfaceGroups` · L770–787
+### MethodDeclaration `BuildInterfaceGroups` · L774–791
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:770–787](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L770-L787)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:774–791](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L774-L791)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4366,38 +4371,38 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L236-L236) | BuildInterfaceGroups | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L237-L237) | BuildInterfaceGroups | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 782 | rows.Select(SelectType).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray | resolved | string[] System.Collections.Generic.IEnumerable<string>.ToArray<string>() |
-| 782 | rows.Select(SelectType).Where(ShouldIncludeItem).Distinct | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Distinct<string>(System.Collections.Generic.IEqualityComparer<string>?) |
-| 782 | rows.Select(SelectType).Where | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Where<string>(System.Func<string, bool>) |
-| 782 | rows.Select | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.Select<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, string>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, string>) |
-| 783 | new[] { "ALL" }.Concat(groups).ToArray | resolved | string[] System.Collections.Generic.IEnumerable<string>.ToArray<string>() |
-| 783 | new[] { "ALL" }.Concat | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Concat<string>(System.Collections.Generic.IEnumerable<string>) |
+| 786 | rows.Select(SelectType).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray | resolved | string[] System.Collections.Generic.IEnumerable<string>.ToArray<string>() |
+| 786 | rows.Select(SelectType).Where(ShouldIncludeItem).Distinct | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Distinct<string>(System.Collections.Generic.IEqualityComparer<string>?) |
+| 786 | rows.Select(SelectType).Where | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Where<string>(System.Func<string, bool>) |
+| 786 | rows.Select | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.Select<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, string>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, string>) |
+| 787 | new[] { "ALL" }.Concat(groups).ToArray | resolved | string[] System.Collections.Generic.IEnumerable<string>.ToArray<string>() |
+| 787 | new[] { "ALL" }.Concat | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Concat<string>(System.Collections.Generic.IEnumerable<string>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 782 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectType).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() |
-| 782 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectType).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase) |
-| 782 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectType).Where(ShouldIncludeItem) |
-| 782 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectType) |
-| 782 | local-declaration | 지역 변수를 선언합니다: var groups = rows.Select(SelectType).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray(); |
-| 782 | variable-initializer | 변수의 초기값을 지정합니다: groups = rows.Select(SelectType).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() |
-| 783 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { "ALL" }.Concat(groups).ToArray() |
-| 783 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { "ALL" }.Concat(groups) |
-| 783 | return | 호출자에게 값 또는 제어를 반환합니다: return new[] { "ALL" }.Concat(groups).ToArray(); |
+| 786 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectType).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() |
+| 786 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectType).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase) |
+| 786 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectType).Where(ShouldIncludeItem) |
+| 786 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(SelectType) |
+| 786 | local-declaration | 지역 변수를 선언합니다: var groups = rows.Select(SelectType).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray(); |
+| 786 | variable-initializer | 변수의 초기값을 지정합니다: groups = rows.Select(SelectType).Where(ShouldIncludeItem).Distinct(StringComparer.OrdinalIgnoreCase).ToArray() |
+| 787 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { "ALL" }.Concat(groups).ToArray() |
+| 787 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new[] { "ALL" }.Concat(groups) |
+| 787 | return | 호출자에게 값 또는 제어를 반환합니다: return new[] { "ALL" }.Concat(groups).ToArray(); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectType` · L772–775
+### LocalFunctionStatement `SelectType` · L776–779
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:772–775](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L772-L775)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:776–779](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L776-L779)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4418,13 +4423,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 774 | return | 호출자에게 값 또는 제어를 반환합니다: return row.Type; |
+| 778 | return | 호출자에게 값 또는 제어를 반환합니다: return row.Type; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `ShouldIncludeItem` · L777–780
+### LocalFunctionStatement `ShouldIncludeItem` · L781–784
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:777–780](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L777-L780)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:781–784](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L781-L784)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4445,20 +4450,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 779 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 783 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 779 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(group) |
-| 779 | return | 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(group); |
+| 783 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(group) |
+| 783 | return | 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(group); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `BuildHistoryItems` · L789–797
+### MethodDeclaration `BuildHistoryItems` · L793–801
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:789–797](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L789-L797)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:793–801](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L793-L801)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4477,28 +4482,28 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L263-L263) | BuildHistoryItems | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L264-L264) | BuildHistoryItems | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 796 | history.Select(BuildDisplay).ToArray | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>.ToArray<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>() |
-| 796 | history.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SETTING_HISTORY>.Select<Drilling.Common.Managers.ST_SETTING_HISTORY, Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>(System.Func<Drilling.Common.Managers.ST_SETTING_HISTORY, Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>) |
+| 800 | history.Select(BuildDisplay).ToArray | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>.ToArray<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>() |
+| 800 | history.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SETTING_HISTORY>.Select<Drilling.Common.Managers.ST_SETTING_HISTORY, Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>(System.Func<Drilling.Common.Managers.ST_SETTING_HISTORY, Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 796 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: history.Select(BuildDisplay).ToArray() |
-| 796 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: history.Select(BuildDisplay) |
-| 796 | return | 호출자에게 값 또는 제어를 반환합니다: return history.Select(BuildDisplay).ToArray(); |
+| 800 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: history.Select(BuildDisplay).ToArray() |
+| 800 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: history.Select(BuildDisplay) |
+| 800 | return | 호출자에게 값 또는 제어를 반환합니다: return history.Select(BuildDisplay).ToArray(); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `BuildDisplay` · L791–794
+### LocalFunctionStatement `BuildDisplay` · L795–798
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:791–794](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L791-L794)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:795–798](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L795-L798)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4519,22 +4524,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 793 | new ST_DISPLAY_ITEM | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43 |
-| 793 | item.ChangedAt.ToString | resolved | string System.DateTimeOffset.ToString(string?) |
+| 797 | new ST_DISPLAY_ITEM | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43 |
+| 797 | item.ChangedAt.ToString | resolved | string System.DateTimeOffset.ToString(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 793 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DISPLAY_ITEM(item.ChangedAt.ToString("HH:mm:ss"), $"{item.Action} / {item.ParameterName}", $"{item.OldValue} -> {item.NewValue}") |
-| 793 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.ChangedAt.ToString("HH:mm:ss") |
-| 793 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_DISPLAY_ITEM(item.ChangedAt.ToString("HH:mm:ss"), $"{item.Action} / {item.ParameterName}", $"{item.OldValue} -> {item.NewValue}"); |
+| 797 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_DISPLAY_ITEM(item.ChangedAt.ToString("HH:mm:ss"), $"{item.Action} / {item.ParameterName}", $"{item.OldValue} -> {item.NewValue}") |
+| 797 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.ChangedAt.ToString("HH:mm:ss") |
+| 797 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_DISPLAY_ITEM(item.ChangedAt.ToString("HH:mm:ss"), $"{item.Action} / {item.ParameterName}", $"{item.OldValue} -> {item.NewValue}"); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `BuildHistoryRows` · L799–812
+### MethodDeclaration `BuildHistoryRows` · L803–816
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:799–812](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L799-L812)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:803–816](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L803-L816)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4553,30 +4558,30 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L274-L274) | BuildHistoryRows | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L275-L275) | BuildHistoryRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 811 | history.Where(ShouldIncludeItem).Select(BuildSetting).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW>.ToArray<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW>() |
-| 811 | history.Where(ShouldIncludeItem).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SETTING_HISTORY>.Select<Drilling.Common.Managers.ST_SETTING_HISTORY, Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW>(System.Func<Drilling.Common.Managers.ST_SETTING_HISTORY, Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW>) |
-| 811 | history.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SETTING_HISTORY> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SETTING_HISTORY>.Where<Drilling.Common.Managers.ST_SETTING_HISTORY>(System.Func<Drilling.Common.Managers.ST_SETTING_HISTORY, bool>) |
+| 815 | history.Where(ShouldIncludeItem).Select(BuildSetting).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW>.ToArray<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW>() |
+| 815 | history.Where(ShouldIncludeItem).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SETTING_HISTORY>.Select<Drilling.Common.Managers.ST_SETTING_HISTORY, Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW>(System.Func<Drilling.Common.Managers.ST_SETTING_HISTORY, Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW>) |
+| 815 | history.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SETTING_HISTORY> System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SETTING_HISTORY>.Where<Drilling.Common.Managers.ST_SETTING_HISTORY>(System.Func<Drilling.Common.Managers.ST_SETTING_HISTORY, bool>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 811 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: history.Where(ShouldIncludeItem).Select(BuildSetting).ToArray() |
-| 811 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: history.Where(ShouldIncludeItem).Select(BuildSetting) |
-| 811 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: history.Where(ShouldIncludeItem) |
-| 811 | return | 호출자에게 값 또는 제어를 반환합니다: return history.Where(ShouldIncludeItem).Select(BuildSetting).ToArray(); |
+| 815 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: history.Where(ShouldIncludeItem).Select(BuildSetting).ToArray() |
+| 815 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: history.Where(ShouldIncludeItem).Select(BuildSetting) |
+| 815 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: history.Where(ShouldIncludeItem) |
+| 815 | return | 호출자에게 값 또는 제어를 반환합니다: return history.Where(ShouldIncludeItem).Select(BuildSetting).ToArray(); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `ShouldIncludeItem` · L801–804
+### LocalFunctionStatement `ShouldIncludeItem` · L805–808
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:801–804](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L801-L804)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:805–808](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L805-L808)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4597,20 +4602,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 803 | item.Action.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 807 | item.Action.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 803 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Action.Equals("SAVE", StringComparison.OrdinalIgnoreCase) |
-| 803 | return | 호출자에게 값 또는 제어를 반환합니다: return !item.Action.Equals("SAVE", StringComparison.OrdinalIgnoreCase); |
+| 807 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Action.Equals("SAVE", StringComparison.OrdinalIgnoreCase) |
+| 807 | return | 호출자에게 값 또는 제어를 반환합니다: return !item.Action.Equals("SAVE", StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `BuildSetting` · L806–809
+### LocalFunctionStatement `BuildSetting` · L810–813
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:806–809](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L806-L809)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:810–813](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L810-L813)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4631,24 +4636,24 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 808 | new ST_SETTING_HISTORY_ROW | resolved | Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW.ST_SETTING_HISTORY_ROW(string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1290 |
-| 808 | item.ChangedAt.ToString | resolved | string System.DateTimeOffset.ToString(string?) |
-| 808 | ToTabText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.ToTabText(Drilling.Common.Managers.EN_SETTING_TAB) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1065 |
+| 812 | new ST_SETTING_HISTORY_ROW | resolved | Drilling.UI.Menu.Menus.ST_SETTING_HISTORY_ROW.ST_SETTING_HISTORY_ROW(string, string, string, string, string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1320 |
+| 812 | item.ChangedAt.ToString | resolved | string System.DateTimeOffset.ToString(string?) |
+| 812 | ToTabText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.ToTabText(Drilling.Common.Managers.EN_SETTING_TAB) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1069 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 808 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SETTING_HISTORY_ROW(item.ChangedAt.ToString("HH:mm:ss"), item.OperatorId, ToTabText(item.Section), item.ParameterName, item.OldValue, item.NewValue, "Warn") |
-| 808 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.ChangedAt.ToString("HH:mm:ss") |
-| 808 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToTabText(item.Section) |
-| 808 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SETTING_HISTORY_ROW(item.ChangedAt.ToString("HH:mm:ss"), item.OperatorId, ToTabText(item.Section), item.ParameterName, item.OldValue, item.NewValue, "Warn"); |
+| 812 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SETTING_HISTORY_ROW(item.ChangedAt.ToString("HH:mm:ss"), item.OperatorId, ToTabText(item.Section), item.ParameterName, item.OldValue, item.NewValue, "Warn") |
+| 812 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.ChangedAt.ToString("HH:mm:ss") |
+| 812 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ToTabText(item.Section) |
+| 812 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SETTING_HISTORY_ROW(item.ChangedAt.ToString("HH:mm:ss"), item.OperatorId, ToTabText(item.Section), item.ParameterName, item.OldValue, item.NewValue, "Warn"); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `BuildSummaryRows` · L814–839
+### MethodDeclaration `BuildSummaryRows` · L818–843
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:814–839](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L814-L839)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:818–843](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L818-L843)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4670,44 +4675,44 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L275-L275) | BuildSummaryRows | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L276-L276) | BuildSummaryRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 831 | interfaceRows.Count | resolved | int System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.Count<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, bool>) |
-| 831 | rows.Count | resolved | int System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Count<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, bool>) |
-| 837 | history.FirstOrDefault | resolved | Drilling.Common.Managers.ST_SETTING_HISTORY? System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SETTING_HISTORY>.FirstOrDefault<Drilling.Common.Managers.ST_SETTING_HISTORY>(System.Func<Drilling.Common.Managers.ST_SETTING_HISTORY, bool>) |
-| 838 | new | resolved | Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW.ST_SETTING_SUMMARY_ROW(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1305 |
-| 838 | modifiedCount.ToString | resolved · 동적 구현 선택 가능 | string int.ToString() |
-| 838 | new | resolved | Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW.ST_SETTING_SUMMARY_ROW(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1305 |
-| 838 | .ToString | resolved | string System.DateTimeOffset.ToString(string?) |
+| 835 | interfaceRows.Count | resolved | int System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.Count<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, bool>) |
+| 835 | rows.Count | resolved | int System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>.Count<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW>(System.Func<Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW, bool>) |
+| 841 | history.FirstOrDefault | resolved | Drilling.Common.Managers.ST_SETTING_HISTORY? System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SETTING_HISTORY>.FirstOrDefault<Drilling.Common.Managers.ST_SETTING_HISTORY>(System.Func<Drilling.Common.Managers.ST_SETTING_HISTORY, bool>) |
+| 842 | new | resolved | Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW.ST_SETTING_SUMMARY_ROW(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1335 |
+| 842 | modifiedCount.ToString | resolved · 동적 구현 선택 가능 | string int.ToString() |
+| 842 | new | resolved | Drilling.UI.Menu.Menus.ST_SETTING_SUMMARY_ROW.ST_SETTING_SUMMARY_ROW(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1335 |
+| 842 | .ToString | resolved | string System.DateTimeOffset.ToString(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 831 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceRows.Count(IsIsModified) |
-| 831 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Count(IsIsModified2) |
-| 831 | conditional-expression | 조건에 따라 결과식을 선택합니다: selectedTab == "INTERFACE" ? interfaceRows.Count(IsIsModified) : rows.Count(IsIsModified2) |
-| 831 | local-declaration | 지역 변수를 선언합니다: var modifiedCount = selectedTab == "INTERFACE" ? interfaceRows.Count(IsIsModified) : rows.Count(IsIsModified2); |
-| 831 | variable-initializer | 변수의 초기값을 지정합니다: modifiedCount = selectedTab == "INTERFACE" ? interfaceRows.Count(IsIsModified) : rows.Count(IsIsModified2) |
-| 837 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: history.FirstOrDefault(MatchesItem) |
-| 837 | local-declaration | 지역 변수를 선언합니다: var lastSavedTime = history.FirstOrDefault(MatchesItem)?.ChangedAt; |
-| 837 | variable-initializer | 변수의 초기값을 지정합니다: lastSavedTime = history.FirstOrDefault(MatchesItem)?.ChangedAt |
-| 838 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Modified Items", modifiedCount.ToString(), modifiedCount > 0 ? "Warn" : "Ok") |
-| 838 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: modifiedCount.ToString() |
-| 838 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Last Saved Time", lastSavedTime?.ToString("yyyy-MM-dd HH:mm:ss") ?? "-") |
-| 838 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("yyyy-MM-dd HH:mm:ss") |
-| 838 | conditional-expression | 조건에 따라 결과식을 선택합니다: modifiedCount > 0 ? "Warn" : "Ok" |
-| 838 | return | 호출자에게 값 또는 제어를 반환합니다: return[new("Modified Items", modifiedCount.ToString(), modifiedCount > 0 ? "Warn" : "Ok"), new("Last Saved Time", lastSavedTime?.ToString("yyyy-MM-dd HH:mm:ss") ?? "-")]; |
+| 835 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceRows.Count(IsIsModified) |
+| 835 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Count(IsIsModified2) |
+| 835 | conditional-expression | 조건에 따라 결과식을 선택합니다: selectedTab == "INTERFACE" ? interfaceRows.Count(IsIsModified) : rows.Count(IsIsModified2) |
+| 835 | local-declaration | 지역 변수를 선언합니다: var modifiedCount = selectedTab == "INTERFACE" ? interfaceRows.Count(IsIsModified) : rows.Count(IsIsModified2); |
+| 835 | variable-initializer | 변수의 초기값을 지정합니다: modifiedCount = selectedTab == "INTERFACE" ? interfaceRows.Count(IsIsModified) : rows.Count(IsIsModified2) |
+| 841 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: history.FirstOrDefault(MatchesItem) |
+| 841 | local-declaration | 지역 변수를 선언합니다: var lastSavedTime = history.FirstOrDefault(MatchesItem)?.ChangedAt; |
+| 841 | variable-initializer | 변수의 초기값을 지정합니다: lastSavedTime = history.FirstOrDefault(MatchesItem)?.ChangedAt |
+| 842 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Modified Items", modifiedCount.ToString(), modifiedCount > 0 ? "Warn" : "Ok") |
+| 842 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: modifiedCount.ToString() |
+| 842 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Last Saved Time", lastSavedTime?.ToString("yyyy-MM-dd HH:mm:ss") ?? "-") |
+| 842 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("yyyy-MM-dd HH:mm:ss") |
+| 842 | conditional-expression | 조건에 따라 결과식을 선택합니다: modifiedCount > 0 ? "Warn" : "Ok" |
+| 842 | return | 호출자에게 값 또는 제어를 반환합니다: return[new("Modified Items", modifiedCount.ToString(), modifiedCount > 0 ? "Warn" : "Ok"), new("Last Saved Time", lastSavedTime?.ToString("yyyy-MM-dd HH:mm:ss") ?? "-")]; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `IsIsModified` · L821–824
+### LocalFunctionStatement `IsIsModified` · L825–828
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:821–824](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L821-L824)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:825–828](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L825-L828)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4728,13 +4733,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 823 | return | 호출자에게 값 또는 제어를 반환합니다: return row.IsModified; |
+| 827 | return | 호출자에게 값 또는 제어를 반환합니다: return row.IsModified; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `IsIsModified2` · L826–829
+### LocalFunctionStatement `IsIsModified2` · L830–833
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:826–829](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L826-L829)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:830–833](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L830-L833)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4755,13 +4760,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 828 | return | 호출자에게 값 또는 제어를 반환합니다: return row.IsModified; |
+| 832 | return | 호출자에게 값 또는 제어를 반환합니다: return row.IsModified; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `MatchesItem` · L832–835
+### LocalFunctionStatement `MatchesItem` · L836–839
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:832–835](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L832-L835)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:836–839](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L836-L839)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4782,20 +4787,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 834 | item.Action.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 838 | item.Action.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 834 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Action.Equals("SAVE", StringComparison.OrdinalIgnoreCase) |
-| 834 | return | 호출자에게 값 또는 제어를 반환합니다: return item.Action.Equals("SAVE", StringComparison.OrdinalIgnoreCase); |
+| 838 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Action.Equals("SAVE", StringComparison.OrdinalIgnoreCase) |
+| 838 | return | 호출자에게 값 또는 제어를 반환합니다: return item.Action.Equals("SAVE", StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `BuildInterfaceRows` · L841–880
+### MethodDeclaration `BuildInterfaceRows` · L845–884
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:841–880](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L841-L880)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:845–884](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L845-L884)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4814,34 +4819,34 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L232-L232) | BuildInterfaceRows | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L233-L233) | BuildInterfaceRows | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 879 | interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(BuildSetting).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.ToArray<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>() |
-| 879 | interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA>.Select<Drilling.Common.Interface.ST_INTERFACE_DATA, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>(System.Func<Drilling.Common.Interface.ST_INTERFACE_DATA, int, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>) |
-| 879 | interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA> System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA>.ThenBy<Drilling.Common.Interface.ST_INTERFACE_DATA, string>(System.Func<Drilling.Common.Interface.ST_INTERFACE_DATA, string>, System.Collections.Generic.IComparer<string>?) |
-| 879 | interfaces.OrderBy(SelectDevice).ThenBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA> System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA>.ThenBy<Drilling.Common.Interface.ST_INTERFACE_DATA, int>(System.Func<Drilling.Common.Interface.ST_INTERFACE_DATA, int>) |
-| 879 | interfaces.OrderBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA> System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA>.OrderBy<Drilling.Common.Interface.ST_INTERFACE_DATA, Drilling.Common.Interface.EN_EQP_MODULE>(System.Func<Drilling.Common.Interface.ST_INTERFACE_DATA, Drilling.Common.Interface.EN_EQP_MODULE>) |
+| 883 | interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(BuildSetting).ToArray | resolved | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW[] System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.ToArray<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>() |
+| 883 | interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW> System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA>.Select<Drilling.Common.Interface.ST_INTERFACE_DATA, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>(System.Func<Drilling.Common.Interface.ST_INTERFACE_DATA, int, Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>) |
+| 883 | interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA> System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA>.ThenBy<Drilling.Common.Interface.ST_INTERFACE_DATA, string>(System.Func<Drilling.Common.Interface.ST_INTERFACE_DATA, string>, System.Collections.Generic.IComparer<string>?) |
+| 883 | interfaces.OrderBy(SelectDevice).ThenBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA> System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA>.ThenBy<Drilling.Common.Interface.ST_INTERFACE_DATA, int>(System.Func<Drilling.Common.Interface.ST_INTERFACE_DATA, int>) |
+| 883 | interfaces.OrderBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA> System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA>.OrderBy<Drilling.Common.Interface.ST_INTERFACE_DATA, Drilling.Common.Interface.EN_EQP_MODULE>(System.Func<Drilling.Common.Interface.ST_INTERFACE_DATA, Drilling.Common.Interface.EN_EQP_MODULE>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 879 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(BuildSetting).ToArray() |
-| 879 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(BuildSetting) |
-| 879 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase) |
-| 879 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber) |
-| 879 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice) |
-| 879 | return | 호출자에게 값 또는 제어를 반환합니다: return interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(BuildSetting).ToArray(); |
+| 883 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(BuildSetting).ToArray() |
+| 883 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(BuildSetting) |
+| 883 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase) |
+| 883 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber) |
+| 883 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaces.OrderBy(SelectDevice) |
+| 883 | return | 호출자에게 값 또는 제어를 반환합니다: return interfaces.OrderBy(SelectDevice).ThenBy(SelectNumber).ThenBy(SelectNickName, StringComparer.OrdinalIgnoreCase).Select(BuildSetting).ToArray(); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectDevice` · L843–846
+### LocalFunctionStatement `SelectDevice` · L847–850
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:843–846](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L843-L846)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:847–850](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L847-L850)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4862,13 +4867,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 845 | return | 호출자에게 값 또는 제어를 반환합니다: return item.Device; |
+| 849 | return | 호출자에게 값 또는 제어를 반환합니다: return item.Device; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectNumber` · L848–851
+### LocalFunctionStatement `SelectNumber` · L852–855
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:848–851](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L848-L851)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:852–855](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L852-L855)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4889,13 +4894,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 850 | return | 호출자에게 값 또는 제어를 반환합니다: return item.Number; |
+| 854 | return | 호출자에게 값 또는 제어를 반환합니다: return item.Number; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `SelectNickName` · L853–856
+### LocalFunctionStatement `SelectNickName` · L857–860
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:853–856](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L853-L856)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:857–860](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L857-L860)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4916,13 +4921,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 855 | return | 호출자에게 값 또는 제어를 반환합니다: return item.NickName; |
+| 859 | return | 호출자에게 값 또는 제어를 반환합니다: return item.NickName; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `BuildSetting` · L858–877
+### LocalFunctionStatement `BuildSetting` · L862–881
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:858–877](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L858-L877)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:862–881](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L862-L881)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4944,40 +4949,40 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 860 | item.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray | resolved | string[] System.Collections.Generic.IEnumerable<string>.ToArray<string>() |
-| 860 | item.Arguments.Concat(Enumerable.Repeat("", 5)).Take | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Take<string>(int) |
-| 860 | item.Arguments.Concat | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Concat<string>(System.Collections.Generic.IEnumerable<string>) |
-| 860 | Enumerable.Repeat | resolved | System.Collections.Generic.IEnumerable<string> System.Linq.Enumerable.Repeat<string>(string, int) |
-| 861 | new ST_SETTING_INTERFACE_ROW | resolved | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.ST_SETTING_INTERFACE_ROW(string, string, string, string, string, string, string, string, string, string, string, string, string, System.Collections.Generic.IReadOnlyDictionary<string, string>?) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1352 |
-| 862 | (index + 1).ToString | resolved | string int.ToString(string?, System.IFormatProvider?) |
-| 863 | InterfaceTypeText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE) · Drilling.UI/Menu/Menus/CMenuSetting.cs:939 |
-| 864 | DeviceText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE) · Drilling.UI/Menu/Menus/CMenuSetting.cs:959 |
-| 865 | item.Number.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 864 | item.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray | resolved | string[] System.Collections.Generic.IEnumerable<string>.ToArray<string>() |
+| 864 | item.Arguments.Concat(Enumerable.Repeat("", 5)).Take | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Take<string>(int) |
+| 864 | item.Arguments.Concat | resolved | System.Collections.Generic.IEnumerable<string> System.Collections.Generic.IEnumerable<string>.Concat<string>(System.Collections.Generic.IEnumerable<string>) |
+| 864 | Enumerable.Repeat | resolved | System.Collections.Generic.IEnumerable<string> System.Linq.Enumerable.Repeat<string>(string, int) |
+| 865 | new ST_SETTING_INTERFACE_ROW | resolved | Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.ST_SETTING_INTERFACE_ROW(string, string, string, string, string, string, string, string, string, string, string, string, string, System.Collections.Generic.IReadOnlyDictionary<string, string>?) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1382 |
+| 866 | (index + 1).ToString | resolved | string int.ToString(string?, System.IFormatProvider?) |
+| 867 | InterfaceTypeText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.InterfaceTypeText(Drilling.Common.Interface.EN_INTERFACE_TYPE) · Drilling.UI/Menu/Menus/CMenuSetting.cs:943 |
+| 868 | DeviceText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.DeviceText(Drilling.Common.Interface.EN_EQP_MODULE) · Drilling.UI/Menu/Menus/CMenuSetting.cs:963 |
+| 869 | item.Number.ToString | resolved | string int.ToString(System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 860 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray() |
-| 860 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5) |
-| 860 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Arguments.Concat(Enumerable.Repeat("", 5)) |
-| 860 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Repeat("", 5) |
-| 860 | local-declaration | 지역 변수를 선언합니다: var arguments = item.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray(); |
-| 860 | variable-initializer | 변수의 초기값을 지정합니다: arguments = item.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray() |
-| 861 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SETTING_INTERFACE_ROW( (index + 1).ToString("D2", CultureInfo.InvariantCulture), InterfaceTypeText(item.InterfaceType), DeviceText(item.Device), item.Number.ToString(CultureInfo.InvariantCulture), item.NickName, i… |
-| 861 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SETTING_INTERFACE_ROW( (index + 1).ToString("D2", CultureInfo.InvariantCulture), InterfaceTypeText(item.InterfaceType), DeviceText(item.Device), item.Number.ToString(CultureInfo.InvariantCulture), item.NickName, item |
-| 862 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (index + 1).ToString("D2", CultureInfo.InvariantCulture) |
-| 863 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceTypeText(item.InterfaceType) |
-| 864 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DeviceText(item.Device) |
-| 865 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Number.ToString(CultureInfo.InvariantCulture) |
-| 868 | conditional-expression | 조건에 따라 결과식을 선택합니다: item.AutoConnection ? "ON" : "OFF" |
-| 869 | conditional-expression | 조건에 따라 결과식을 선택합니다: item.IsSimulation ? "ON" : "OFF" |
+| 864 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray() |
+| 864 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5) |
+| 864 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Arguments.Concat(Enumerable.Repeat("", 5)) |
+| 864 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Repeat("", 5) |
+| 864 | local-declaration | 지역 변수를 선언합니다: var arguments = item.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray(); |
+| 864 | variable-initializer | 변수의 초기값을 지정합니다: arguments = item.Arguments.Concat(Enumerable.Repeat("", 5)).Take(5).ToArray() |
+| 865 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_SETTING_INTERFACE_ROW( (index + 1).ToString("D2", CultureInfo.InvariantCulture), InterfaceTypeText(item.InterfaceType), DeviceText(item.Device), item.Number.ToString(CultureInfo.InvariantCulture), item.NickName, i… |
+| 865 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_SETTING_INTERFACE_ROW( (index + 1).ToString("D2", CultureInfo.InvariantCulture), InterfaceTypeText(item.InterfaceType), DeviceText(item.Device), item.Number.ToString(CultureInfo.InvariantCulture), item.NickName, item |
+| 866 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (index + 1).ToString("D2", CultureInfo.InvariantCulture) |
+| 867 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InterfaceTypeText(item.InterfaceType) |
+| 868 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DeviceText(item.Device) |
+| 869 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Number.ToString(CultureInfo.InvariantCulture) |
+| 872 | conditional-expression | 조건에 따라 결과식을 선택합니다: item.AutoConnection ? "ON" : "OFF" |
+| 873 | conditional-expression | 조건에 따라 결과식을 선택합니다: item.IsSimulation ? "ON" : "OFF" |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ToInterfaceData` · L882–900
+### MethodDeclaration `ToInterfaceData` · L886–904
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:882–900](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L882-L900)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:886–904](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L886-L904)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4996,28 +5001,28 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L414-L414) | ToInterfaceData | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:415–415](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L415-L415) | ToInterfaceData | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 899 | rows.Select(BuildInterface).ToArray | resolved | Drilling.Common.Interface.ST_INTERFACE_DATA[] System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA>.ToArray<Drilling.Common.Interface.ST_INTERFACE_DATA>() |
-| 899 | rows.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.Select<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, Drilling.Common.Interface.ST_INTERFACE_DATA>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, Drilling.Common.Interface.ST_INTERFACE_DATA>) |
+| 903 | rows.Select(BuildInterface).ToArray | resolved | Drilling.Common.Interface.ST_INTERFACE_DATA[] System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA>.ToArray<Drilling.Common.Interface.ST_INTERFACE_DATA>() |
+| 903 | rows.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_INTERFACE_DATA> System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW>.Select<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, Drilling.Common.Interface.ST_INTERFACE_DATA>(System.Func<Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW, Drilling.Common.Interface.ST_INTERFACE_DATA>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 899 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(BuildInterface).ToArray() |
-| 899 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(BuildInterface) |
-| 899 | return | 호출자에게 값 또는 제어를 반환합니다: return rows.Select(BuildInterface).ToArray(); |
+| 903 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(BuildInterface).ToArray() |
+| 903 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Select(BuildInterface) |
+| 903 | return | 호출자에게 값 또는 제어를 반환합니다: return rows.Select(BuildInterface).ToArray(); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `BuildInterface` · L884–897
+### LocalFunctionStatement `BuildInterface` · L888–901
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:884–897](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L884-L897)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:888–901](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L888-L901)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5038,44 +5043,44 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 886 | new ST_INTERFACE_DATA | resolved | Drilling.Common.Interface.ST_INTERFACE_DATA.ST_INTERFACE_DATA(Drilling.Common.Interface.EN_INTERFACE_TYPE, Drilling.Common.Interface.EN_EQP_MODULE, int, string, string, bool, bool, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyDictionary<string, string>?) · Drilling.Common/Interface/CInterfaceManager.cs:2940 |
-| 887 | ParseInterfaceType | resolved | Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.UI.Menu.Menus.CMenuSetting.ParseInterfaceType(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:902 |
-| 888 | ParseDevice | resolved | Drilling.Common.Interface.EN_EQP_MODULE Drilling.UI.Menu.Menus.CMenuSetting.ParseDevice(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:922 |
-| 889 | ReadInt | resolved | int Drilling.UI.Menu.Menus.CMenuSetting.ReadInt(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1000 |
-| 890 | RequireText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.RequireText(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:981 |
-| 891 | RequireText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.RequireText(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:981 |
-| 892 | ReadBool | resolved | bool Drilling.UI.Menu.Menus.CMenuSetting.ReadBool(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:991 |
-| 893 | ReadBool | resolved | bool Drilling.UI.Menu.Menus.CMenuSetting.ReadBool(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:991 |
-| 894 | row.Arg1.Trim | resolved | string string.Trim() |
-| 894 | row.Arg2.Trim | resolved | string string.Trim() |
-| 894 | row.Arg3.Trim | resolved | string string.Trim() |
-| 894 | row.Arg4.Trim | resolved | string string.Trim() |
-| 894 | row.Arg5.Trim | resolved | string string.Trim() |
+| 890 | new ST_INTERFACE_DATA | resolved | Drilling.Common.Interface.ST_INTERFACE_DATA.ST_INTERFACE_DATA(Drilling.Common.Interface.EN_INTERFACE_TYPE, Drilling.Common.Interface.EN_EQP_MODULE, int, string, string, bool, bool, System.Collections.Generic.IReadOnlyList<string>, System.Collections.Generic.IReadOnlyDictionary<string, string>?) · Drilling.Common/Interface/CInterfaceManager.cs:2940 |
+| 891 | ParseInterfaceType | resolved | Drilling.Common.Interface.EN_INTERFACE_TYPE Drilling.UI.Menu.Menus.CMenuSetting.ParseInterfaceType(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:906 |
+| 892 | ParseDevice | resolved | Drilling.Common.Interface.EN_EQP_MODULE Drilling.UI.Menu.Menus.CMenuSetting.ParseDevice(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:926 |
+| 893 | ReadInt | resolved | int Drilling.UI.Menu.Menus.CMenuSetting.ReadInt(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1004 |
+| 894 | RequireText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.RequireText(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:985 |
+| 895 | RequireText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.RequireText(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:985 |
+| 896 | ReadBool | resolved | bool Drilling.UI.Menu.Menus.CMenuSetting.ReadBool(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:995 |
+| 897 | ReadBool | resolved | bool Drilling.UI.Menu.Menus.CMenuSetting.ReadBool(string, string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:995 |
+| 898 | row.Arg1.Trim | resolved | string string.Trim() |
+| 898 | row.Arg2.Trim | resolved | string string.Trim() |
+| 898 | row.Arg3.Trim | resolved | string string.Trim() |
+| 898 | row.Arg4.Trim | resolved | string string.Trim() |
+| 898 | row.Arg5.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 886 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERFACE_DATA( ParseInterfaceType(row.Type), ParseDevice(row.Device), ReadInt(row.Number, row.NickName, "NUMBER"), RequireText(row.NickName, "NICKNAME"), RequireText(row.SystemSection, "SYSTEM_SECTION"), ReadBool… |
-| 886 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_INTERFACE_DATA( ParseInterfaceType(row.Type), ParseDevice(row.Device), ReadInt(row.Number, row.NickName, "NUMBER"), RequireText(row.NickName, "NICKNAME"), RequireText(row.SystemSection, "SYSTEM_SECTION"), ReadBool(ro |
-| 887 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInterfaceType(row.Type) |
-| 888 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDevice(row.Device) |
-| 889 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(row.Number, row.NickName, "NUMBER") |
-| 890 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireText(row.NickName, "NICKNAME") |
-| 891 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireText(row.SystemSection, "SYSTEM_SECTION") |
-| 892 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(row.AutoConnection, row.NickName, "AUTOCONNECTION") |
-| 893 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(row.Simul, row.NickName, "SIMUL") |
-| 894 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Arg1.Trim() |
-| 894 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Arg2.Trim() |
-| 894 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Arg3.Trim() |
-| 894 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Arg4.Trim() |
-| 894 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Arg5.Trim() |
+| 890 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_INTERFACE_DATA( ParseInterfaceType(row.Type), ParseDevice(row.Device), ReadInt(row.Number, row.NickName, "NUMBER"), RequireText(row.NickName, "NICKNAME"), RequireText(row.SystemSection, "SYSTEM_SECTION"), ReadBool… |
+| 890 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_INTERFACE_DATA( ParseInterfaceType(row.Type), ParseDevice(row.Device), ReadInt(row.Number, row.NickName, "NUMBER"), RequireText(row.NickName, "NICKNAME"), RequireText(row.SystemSection, "SYSTEM_SECTION"), ReadBool(ro |
+| 891 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseInterfaceType(row.Type) |
+| 892 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseDevice(row.Device) |
+| 893 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadInt(row.Number, row.NickName, "NUMBER") |
+| 894 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireText(row.NickName, "NICKNAME") |
+| 895 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RequireText(row.SystemSection, "SYSTEM_SECTION") |
+| 896 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(row.AutoConnection, row.NickName, "AUTOCONNECTION") |
+| 897 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadBool(row.Simul, row.NickName, "SIMUL") |
+| 898 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Arg1.Trim() |
+| 898 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Arg2.Trim() |
+| 898 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Arg3.Trim() |
+| 898 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Arg4.Trim() |
+| 898 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Arg5.Trim() |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseInterfaceType` · L902–920
+### MethodDeclaration `ParseInterfaceType` · L906–924
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:902–920](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L902-L920)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:906–924](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L906-L924)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5094,41 +5099,41 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:887–887](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L887-L887) | ParseInterfaceType | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:891–891](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L891-L891) | ParseInterfaceType | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 904 | value.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 904 | value.Trim | resolved | string string.Trim() |
-| 919 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
+| 908 | value.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 908 | value.Trim | resolved | string string.Trim() |
+| 923 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 904 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() |
-| 904 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
-| 904 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant() switch { "OPCUA" => EN_INTERFACE_TYPE.OpcUa, "MODBUS_SERIAL" => EN_INTERFACE_TYPE.ModbusSerial, "MODBUS_TCP" => EN_INTERFACE_TYPE.ModbusTcp, "SERIAL" => EN_INTERFACE_TYPE.Serial, "SOCKET_C" = |
-| 904 | switch-expression | 값별 결과식을 선택합니다: value.Trim().ToUpperInvariant() switch { "OPCUA" => EN_INTERFACE_TYPE.OpcUa, "MODBUS_SERIAL" => EN_INTERFACE_TYPE.ModbusSerial, "MODBUS_TCP" => EN_INTERFACE_TYPE.ModbusTcp, "SERIAL" => EN_INTERFACE_TYPE.Serial, "SOCKET_C" => EN_IN |
-| 919 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE save blocked. Unknown TYPE: {value}") |
-| 919 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE save blocked. Unknown TYPE: {value}") |
+| 908 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() |
+| 908 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
+| 908 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant() switch { "OPCUA" => EN_INTERFACE_TYPE.OpcUa, "MODBUS_SERIAL" => EN_INTERFACE_TYPE.ModbusSerial, "MODBUS_TCP" => EN_INTERFACE_TYPE.ModbusTcp, "SERIAL" => EN_INTERFACE_TYPE.Serial, "SOCKET_C" = |
+| 908 | switch-expression | 값별 결과식을 선택합니다: value.Trim().ToUpperInvariant() switch { "OPCUA" => EN_INTERFACE_TYPE.OpcUa, "MODBUS_SERIAL" => EN_INTERFACE_TYPE.ModbusSerial, "MODBUS_TCP" => EN_INTERFACE_TYPE.ModbusTcp, "SERIAL" => EN_INTERFACE_TYPE.Serial, "SOCKET_C" => EN_IN |
+| 923 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE save blocked. Unknown TYPE: {value}") |
+| 923 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE save blocked. Unknown TYPE: {value}") |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ParseInterfaceType"]
- N0["L904 switch-expression"]
+ N0["L908 switch-expression"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseDevice` · L922–937
+### MethodDeclaration `ParseDevice` · L926–941
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:922–937](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L922-L937)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:926–941](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L926-L941)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5147,43 +5152,43 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L347-L347) | ParseDevice | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:389–389](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L389-L389) | ParseDevice | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:888–888](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L888-L888) | ParseDevice | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L348-L348) | ParseDevice | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L390-L390) | ParseDevice | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:892–892](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L892-L892) | ParseDevice | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 924 | value.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 924 | value.Trim | resolved | string string.Trim() |
-| 936 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
+| 928 | value.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 928 | value.Trim | resolved | string string.Trim() |
+| 940 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 924 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() |
-| 924 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
-| 924 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant() switch { "WONIK_CONTROL" or "WONIK_CTRL" or "CONTROL" => EN_EQP_MODULE.WonikCtrl, "WONIK_VISION" or "VISION" => EN_EQP_MODULE.Vision, "AUTOMATION1" or "AUTOMATION_ONE" or "A1" => EN_EQP_MODUL |
-| 924 | switch-expression | 값별 결과식을 선택합니다: value.Trim().ToUpperInvariant() switch { "WONIK_CONTROL" or "WONIK_CTRL" or "CONTROL" => EN_EQP_MODULE.WonikCtrl, "WONIK_VISION" or "VISION" => EN_EQP_MODULE.Vision, "AUTOMATION1" or "AUTOMATION_ONE" or "A1" => EN_EQP_MODULE.Autom |
-| 936 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE save blocked. Unknown DEVICE: {value}") |
-| 936 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE save blocked. Unknown DEVICE: {value}") |
+| 928 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() |
+| 928 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
+| 928 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant() switch { "WONIK_CONTROL" or "WONIK_CTRL" or "CONTROL" => EN_EQP_MODULE.WonikCtrl, "WONIK_VISION" or "VISION" => EN_EQP_MODULE.Vision, "AUTOMATION1" or "AUTOMATION_ONE" or "A1" => EN_EQP_MODUL |
+| 928 | switch-expression | 값별 결과식을 선택합니다: value.Trim().ToUpperInvariant() switch { "WONIK_CONTROL" or "WONIK_CTRL" or "CONTROL" => EN_EQP_MODULE.WonikCtrl, "WONIK_VISION" or "VISION" => EN_EQP_MODULE.Vision, "AUTOMATION1" or "AUTOMATION_ONE" or "A1" => EN_EQP_MODULE.Autom |
+| 940 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE save blocked. Unknown DEVICE: {value}") |
+| 940 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE save blocked. Unknown DEVICE: {value}") |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ParseDevice"]
- N0["L924 switch-expression"]
+ N0["L928 switch-expression"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `InterfaceTypeText` · L939–957
+### MethodDeclaration `InterfaceTypeText` · L943–961
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:939–957](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L939-L957)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:943–961](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L943-L961)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5202,38 +5207,38 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:863–863](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L863-L863) | InterfaceTypeText | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:867–867](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L867-L867) | InterfaceTypeText | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 956 | type.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 956 | type.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
+| 960 | type.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 960 | type.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 941 | return | 호출자에게 값 또는 제어를 반환합니다: return type switch { EN_INTERFACE_TYPE.SocketClient => "SOCKET_C", EN_INTERFACE_TYPE.SocketServer => "SOCKET_S", EN_INTERFACE_TYPE.SocketClientUdp => "SOCKET_C_UDP", EN_INTERFACE_TYPE.SocketServerUdp => "SOCKET_S_UDP", EN_INTERFAC |
-| 941 | switch-expression | 값별 결과식을 선택합니다: type switch { EN_INTERFACE_TYPE.SocketClient => "SOCKET_C", EN_INTERFACE_TYPE.SocketServer => "SOCKET_S", EN_INTERFACE_TYPE.SocketClientUdp => "SOCKET_C_UDP", EN_INTERFACE_TYPE.SocketServerUdp => "SOCKET_S_UDP", EN_INTERFACE_TYPE. |
-| 956 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: type.ToString().ToUpperInvariant() |
-| 956 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: type.ToString() |
+| 945 | return | 호출자에게 값 또는 제어를 반환합니다: return type switch { EN_INTERFACE_TYPE.SocketClient => "SOCKET_C", EN_INTERFACE_TYPE.SocketServer => "SOCKET_S", EN_INTERFACE_TYPE.SocketClientUdp => "SOCKET_C_UDP", EN_INTERFACE_TYPE.SocketServerUdp => "SOCKET_S_UDP", EN_INTERFAC |
+| 945 | switch-expression | 값별 결과식을 선택합니다: type switch { EN_INTERFACE_TYPE.SocketClient => "SOCKET_C", EN_INTERFACE_TYPE.SocketServer => "SOCKET_S", EN_INTERFACE_TYPE.SocketClientUdp => "SOCKET_C_UDP", EN_INTERFACE_TYPE.SocketServerUdp => "SOCKET_S_UDP", EN_INTERFACE_TYPE. |
+| 960 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: type.ToString().ToUpperInvariant() |
+| 960 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: type.ToString() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["InterfaceTypeText"]
- N0["L941 switch-expression"]
+ N0["L945 switch-expression"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `DeviceText` · L959–974
+### MethodDeclaration `DeviceText` · L963–978
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:959–974](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L959-L974)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:963–978](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L963-L978)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5252,38 +5257,38 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:864–864](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L864-L864) | DeviceText | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:868–868](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L868-L868) | DeviceText | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 973 | module.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 973 | module.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
+| 977 | module.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 977 | module.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 961 | return | 호출자에게 값 또는 제어를 반환합니다: return module switch { EN_EQP_MODULE.WonikCtrl => "WONIK_CONTROL", EN_EQP_MODULE.Vision => "WONIK_VISION", EN_EQP_MODULE.Automation1 => "AUTOMATION1", EN_EQP_MODULE.Motion => "MOTION", EN_EQP_MODULE.TalonLaser => "TALON", EN_EQP_M |
-| 961 | switch-expression | 값별 결과식을 선택합니다: module switch { EN_EQP_MODULE.WonikCtrl => "WONIK_CONTROL", EN_EQP_MODULE.Vision => "WONIK_VISION", EN_EQP_MODULE.Automation1 => "AUTOMATION1", EN_EQP_MODULE.Motion => "MOTION", EN_EQP_MODULE.TalonLaser => "TALON", EN_EQP_MODULE.A |
-| 973 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: module.ToString().ToUpperInvariant() |
-| 973 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: module.ToString() |
+| 965 | return | 호출자에게 값 또는 제어를 반환합니다: return module switch { EN_EQP_MODULE.WonikCtrl => "WONIK_CONTROL", EN_EQP_MODULE.Vision => "WONIK_VISION", EN_EQP_MODULE.Automation1 => "AUTOMATION1", EN_EQP_MODULE.Motion => "MOTION", EN_EQP_MODULE.TalonLaser => "TALON", EN_EQP_M |
+| 965 | switch-expression | 값별 결과식을 선택합니다: module switch { EN_EQP_MODULE.WonikCtrl => "WONIK_CONTROL", EN_EQP_MODULE.Vision => "WONIK_VISION", EN_EQP_MODULE.Automation1 => "AUTOMATION1", EN_EQP_MODULE.Motion => "MOTION", EN_EQP_MODULE.TalonLaser => "TALON", EN_EQP_MODULE.A |
+| 977 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: module.ToString().ToUpperInvariant() |
+| 977 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: module.ToString() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["DeviceText"]
- N0["L961 switch-expression"]
+ N0["L965 switch-expression"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `InterfaceRowLabel` · L976–979
+### MethodDeclaration `InterfaceRowLabel` · L980–983
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:976–979](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L976-L979)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:980–983](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L980-L983)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5302,33 +5307,33 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L329-L329) | InterfaceRowLabel | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:349–349](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L349-L349) | InterfaceRowLabel | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:371–371](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L371-L371) | InterfaceRowLabel | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L391-L391) | InterfaceRowLabel | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L330-L330) | InterfaceRowLabel | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L350-L350) | InterfaceRowLabel | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L372-L372) | InterfaceRowLabel | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:392–392](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L392-L392) | InterfaceRowLabel | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 978 | row.Device.Trim | resolved | string string.Trim() |
-| 978 | row.Number.Trim | resolved | string string.Trim() |
-| 978 | row.NickName.Trim | resolved | string string.Trim() |
+| 982 | row.Device.Trim | resolved | string string.Trim() |
+| 982 | row.Number.Trim | resolved | string string.Trim() |
+| 982 | row.NickName.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 978 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Device.Trim() |
-| 978 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Number.Trim() |
-| 978 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.NickName.Trim() |
-| 978 | return | 호출자에게 값 또는 제어를 반환합니다: return $"{row.Device.Trim()}[{row.Number.Trim()}]/{row.NickName.Trim()}"; |
+| 982 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Device.Trim() |
+| 982 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.Number.Trim() |
+| 982 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: row.NickName.Trim() |
+| 982 | return | 호출자에게 값 또는 제어를 반환합니다: return $"{row.Device.Trim()}[{row.Number.Trim()}]/{row.NickName.Trim()}"; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `RequireText` · L981–989
+### MethodDeclaration `RequireText` · L985–993
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:981–989](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L981-L989)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:985–993](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L985-L993)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5348,42 +5353,42 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:890–890](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L890-L890) | RequireText | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:891–891](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L891-L891) | RequireText | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:894–894](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L894-L894) | RequireText | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:895–895](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L895-L895) | RequireText | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 983 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 985 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
-| 988 | value.Trim | resolved | string string.Trim() |
+| 987 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 989 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
+| 992 | value.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 983 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) |
-| 983 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value)) |
-| 985 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE save blocked. {fieldName} cannot be empty.") |
-| 985 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE save blocked. {fieldName} cannot be empty."); |
-| 988 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
-| 988 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim(); |
+| 987 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) |
+| 987 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(value)) |
+| 989 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE save blocked. {fieldName} cannot be empty.") |
+| 989 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE save blocked. {fieldName} cannot be empty."); |
+| 992 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
+| 992 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim(); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["RequireText"]
- N0["L983 if"]
+ N0["L987 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadBool` · L991–998
+### MethodDeclaration `ReadBool` · L995–1002
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:991–998](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L991-L998)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:995–1002](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L995-L1002)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5404,42 +5409,42 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:892–892](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L892-L892) | ReadBool | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:893–893](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L893-L893) | ReadBool | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:896–896](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L896-L896) | ReadBool | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:897–897](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L897-L897) | ReadBool | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 993 | value.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 993 | value.Trim | resolved | string string.Trim() |
-| 997 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
+| 997 | value.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 997 | value.Trim | resolved | string string.Trim() |
+| 1001 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 993 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() |
-| 993 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
-| 993 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant() switch { "1" or "TRUE" or "ON" or "YES" or "USE" or "SIMUL" or "SIMULATION" or "SIM" => true, "0" or "FALSE" or "OFF" or "NO" or "ONLINE" or "LIVE" or "REAL" => false, _ => throw new InvalidD |
-| 993 | switch-expression | 값별 결과식을 선택합니다: value.Trim().ToUpperInvariant() switch { "1" or "TRUE" or "ON" or "YES" or "USE" or "SIMUL" or "SIMULATION" or "SIM" => true, "0" or "FALSE" or "OFF" or "NO" or "ONLINE" or "LIVE" or "REAL" => false, _ => throw new InvalidDataExce |
-| 997 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE save blocked. {nickName}/{fieldName} must be 1/0 or ON/OFF.") |
-| 997 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE save blocked. {nickName}/{fieldName} must be 1/0 or ON/OFF.") |
+| 997 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() |
+| 997 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
+| 997 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant() switch { "1" or "TRUE" or "ON" or "YES" or "USE" or "SIMUL" or "SIMULATION" or "SIM" => true, "0" or "FALSE" or "OFF" or "NO" or "ONLINE" or "LIVE" or "REAL" => false, _ => throw new InvalidD |
+| 997 | switch-expression | 값별 결과식을 선택합니다: value.Trim().ToUpperInvariant() switch { "1" or "TRUE" or "ON" or "YES" or "USE" or "SIMUL" or "SIMULATION" or "SIM" => true, "0" or "FALSE" or "OFF" or "NO" or "ONLINE" or "LIVE" or "REAL" => false, _ => throw new InvalidDataExce |
+| 1001 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE save blocked. {nickName}/{fieldName} must be 1/0 or ON/OFF.") |
+| 1001 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE save blocked. {nickName}/{fieldName} must be 1/0 or ON/OFF.") |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReadBool"]
- N0["L993 switch-expression"]
+ N0["L997 switch-expression"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadInt` · L1000–1008
+### MethodDeclaration `ReadInt` · L1004–1012
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1000–1008](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1000-L1008)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1004–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1004-L1012)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5460,43 +5465,43 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L348-L348) | ReadInt | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L390-L390) | ReadInt | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:889–889](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L889-L889) | ReadInt | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:349–349](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L349-L349) | ReadInt | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L391-L391) | ReadInt | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:893–893](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L893-L893) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1002 | int.TryParse | resolved | bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int) |
-| 1002 | value.Trim | resolved | string string.Trim() |
-| 1004 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
+| 1006 | int.TryParse | resolved | bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int) |
+| 1006 | value.Trim | resolved | string string.Trim() |
+| 1008 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1002 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value.Trim(), NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) |
-| 1002 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
-| 1002 | if | 조건에 따라 분기합니다: if (!int.TryParse(value.Trim(), NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) &#124;&#124; result < 0) |
-| 1004 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE save blocked. {nickName}/{fieldName} must be a non-negative integer.") |
-| 1004 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE save blocked. {nickName}/{fieldName} must be a non-negative integer."); |
-| 1007 | return | 호출자에게 값 또는 제어를 반환합니다: return result; |
+| 1006 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(value.Trim(), NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) |
+| 1006 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
+| 1006 | if | 조건에 따라 분기합니다: if (!int.TryParse(value.Trim(), NumberStyles.Integer, CultureInfo.InvariantCulture, out var result) &#124;&#124; result < 0) |
+| 1008 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"JHMI_INTERFACE save blocked. {nickName}/{fieldName} must be a non-negative integer.") |
+| 1008 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"JHMI_INTERFACE save blocked. {nickName}/{fieldName} must be a non-negative integer."); |
+| 1011 | return | 호출자에게 값 또는 제어를 반환합니다: return result; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReadInt"]
- N0["L1002 if"]
+ N0["L1006 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `NormalizeTab` · L1010–1019
+### MethodDeclaration `NormalizeTab` · L1014–1023
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1010–1019](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1010-L1019)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1014–1023](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1014-L1023)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5515,43 +5520,43 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L228-L228) | NormalizeTab | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L294-L294) | NormalizeTab | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L229-L229) | NormalizeTab | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L295-L295) | NormalizeTab | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1012 | tab.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 1012 | tab.Trim | resolved | string string.Trim() |
+| 1016 | tab.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 1016 | tab.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1012 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tab.Trim().ToUpperInvariant() |
-| 1012 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tab.Trim() |
-| 1012 | local-declaration | 지역 변수를 선언합니다: var normalized = tab.Trim().ToUpperInvariant(); |
-| 1012 | variable-initializer | 변수의 초기값을 지정합니다: normalized = tab.Trim().ToUpperInvariant() |
-| 1013 | if | 조건에 따라 분기합니다: if (normalized == "POSITION") |
-| 1015 | return | 호출자에게 값 또는 제어를 반환합니다: return "OPTION"; |
-| 1018 | conditional-expression | 조건에 따라 결과식을 선택합니다: normalized is "OPTION" or "INTERFACE" or "IO" or "MOTOR" or "ALARM" ? normalized : "OPTION" |
-| 1018 | return | 호출자에게 값 또는 제어를 반환합니다: return normalized is "OPTION" or "INTERFACE" or "IO" or "MOTOR" or "ALARM" ? normalized : "OPTION"; |
+| 1016 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tab.Trim().ToUpperInvariant() |
+| 1016 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tab.Trim() |
+| 1016 | local-declaration | 지역 변수를 선언합니다: var normalized = tab.Trim().ToUpperInvariant(); |
+| 1016 | variable-initializer | 변수의 초기값을 지정합니다: normalized = tab.Trim().ToUpperInvariant() |
+| 1017 | if | 조건에 따라 분기합니다: if (normalized == "POSITION") |
+| 1019 | return | 호출자에게 값 또는 제어를 반환합니다: return "OPTION"; |
+| 1022 | conditional-expression | 조건에 따라 결과식을 선택합니다: normalized is "OPTION" or "INTERFACE" or "IO" or "MOTOR" or "ALARM" ? normalized : "OPTION" |
+| 1022 | return | 호출자에게 값 또는 제어를 반환합니다: return normalized is "OPTION" or "INTERFACE" or "IO" or "MOTOR" or "ALARM" ? normalized : "OPTION"; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["NormalizeTab"]
- N0["L1013 if"]
+ N0["L1017 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `NormalizeGroup` · L1021–1030
+### MethodDeclaration `NormalizeGroup` · L1025–1034
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1021–1030](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1021-L1030)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1025–1034](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1025-L1034)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5571,31 +5576,31 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L237-L237) | NormalizeGroup | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L238-L238) | NormalizeGroup | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1023 | NormalizeSettingText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingText(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1032 |
-| 1029 | groups.Any | resolved | bool System.Collections.Generic.IEnumerable<string>.Any<string>(System.Func<string, bool>) |
+| 1027 | NormalizeSettingText | resolved | string Drilling.UI.Menu.Menus.CMenuSetting.NormalizeSettingText(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1036 |
+| 1033 | groups.Any | resolved | bool System.Collections.Generic.IEnumerable<string>.Any<string>(System.Func<string, bool>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1023 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingText(group, "ALL") |
-| 1023 | local-declaration | 지역 변수를 선언합니다: var normalized = NormalizeSettingText(group, "ALL"); |
-| 1023 | variable-initializer | 변수의 초기값을 지정합니다: normalized = NormalizeSettingText(group, "ALL") |
-| 1029 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: groups.Any(MatchesItem) |
-| 1029 | conditional-expression | 조건에 따라 결과식을 선택합니다: groups.Any(MatchesItem) ? normalized : "ALL" |
-| 1029 | return | 호출자에게 값 또는 제어를 반환합니다: return groups.Any(MatchesItem) ? normalized : "ALL"; |
+| 1027 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSettingText(group, "ALL") |
+| 1027 | local-declaration | 지역 변수를 선언합니다: var normalized = NormalizeSettingText(group, "ALL"); |
+| 1027 | variable-initializer | 변수의 초기값을 지정합니다: normalized = NormalizeSettingText(group, "ALL") |
+| 1033 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: groups.Any(MatchesItem) |
+| 1033 | conditional-expression | 조건에 따라 결과식을 선택합니다: groups.Any(MatchesItem) ? normalized : "ALL" |
+| 1033 | return | 호출자에게 값 또는 제어를 반환합니다: return groups.Any(MatchesItem) ? normalized : "ALL"; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `MatchesItem` · L1024–1027
+### LocalFunctionStatement `MatchesItem` · L1028–1031
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1024–1027](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1024-L1027)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1028–1031](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1028-L1031)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5616,20 +5621,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1026 | item.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 1030 | item.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1026 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Equals(normalized, StringComparison.OrdinalIgnoreCase) |
-| 1026 | return | 호출자에게 값 또는 제어를 반환합니다: return item.Equals(normalized, StringComparison.OrdinalIgnoreCase); |
+| 1030 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Equals(normalized, StringComparison.OrdinalIgnoreCase) |
+| 1030 | return | 호출자에게 값 또는 제어를 반환합니다: return item.Equals(normalized, StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `NormalizeSettingText` · L1032–1035
+### MethodDeclaration `NormalizeSettingText` · L1036–1039
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1032–1035](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1032-L1035)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1036–1039](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1036-L1039)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5649,34 +5654,34 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L611-L611) | NormalizeSettingText | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L611-L611) | NormalizeSettingText | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L651-L651) | NormalizeSettingText | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1023–1023](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1023-L1023) | NormalizeSettingText | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:615–615](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L615-L615) | NormalizeSettingText | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:615–615](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L615-L615) | NormalizeSettingText | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L655-L655) | NormalizeSettingText | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1027–1027](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1027-L1027) | NormalizeSettingText | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1034 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 1034 | value.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 1034 | value.Trim | resolved | string string.Trim() |
+| 1038 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 1038 | value.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 1038 | value.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1034 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) |
-| 1034 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() |
-| 1034 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
-| 1034 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? defaultValue : value.Trim().ToUpperInvariant() |
-| 1034 | return | 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(value) ? defaultValue : value.Trim().ToUpperInvariant(); |
+| 1038 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(value) |
+| 1038 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() |
+| 1038 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
+| 1038 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(value) ? defaultValue : value.Trim().ToUpperInvariant() |
+| 1038 | return | 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(value) ? defaultValue : value.Trim().ToUpperInvariant(); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `NormalizeUnit` · L1037–1040
+### MethodDeclaration `NormalizeUnit` · L1041–1044
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1037–1040](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1037-L1040)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1041–1044](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1041-L1044)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5695,27 +5700,27 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:654–654](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L654-L654) | NormalizeUnit | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:658–658](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L658-L658) | NormalizeUnit | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1039 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 1043 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1039 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(unit) |
-| 1039 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(unit) ? "-" : unit |
-| 1039 | return | 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(unit) ? "-" : unit; |
+| 1043 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(unit) |
+| 1043 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(unit) ? "-" : unit |
+| 1043 | return | 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(unit) ? "-" : unit; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `NormalizeSettingUnit` · L1042–1045
+### MethodDeclaration `NormalizeSettingUnit` · L1046–1049
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1042–1045](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1042-L1045)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1046–1049](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1046-L1049)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5734,20 +5739,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L438-L438) | NormalizeSettingUnit | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:439–439](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L439-L439) | NormalizeSettingUnit | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1044 | conditional-expression | 조건에 따라 결과식을 선택합니다: unit == "-" ? "" : unit |
-| 1044 | return | 호출자에게 값 또는 제어를 반환합니다: return unit == "-" ? "" : unit; |
+| 1048 | conditional-expression | 조건에 따라 결과식을 선택합니다: unit == "-" ? "" : unit |
+| 1048 | return | 호출자에게 값 또는 제어를 반환합니다: return unit == "-" ? "" : unit; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `GetValueState` · L1047–1051
+### MethodDeclaration `GetValueState` · L1051–1055
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1047–1051](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1047-L1051)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1051–1055](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1051-L1055)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5766,31 +5771,31 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:657–657](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L657-L657) | GetValueState | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L661-L661) | GetValueState | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1049 | value.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 1049 | value.Trim | resolved | string string.Trim() |
+| 1053 | value.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 1053 | value.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1049 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() |
-| 1049 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
-| 1049 | local-declaration | 지역 변수를 선언합니다: var normalized = value.Trim().ToUpperInvariant(); |
-| 1049 | variable-initializer | 변수의 초기값을 지정합니다: normalized = value.Trim().ToUpperInvariant() |
-| 1050 | conditional-expression | 조건에 따라 결과식을 선택합니다: normalized is "ON" or "OFF" or "TRUE" or "FALSE" ? "Accent" : "Normal" |
-| 1050 | return | 호출자에게 값 또는 제어를 반환합니다: return normalized is "ON" or "OFF" or "TRUE" or "FALSE" ? "Accent" : "Normal"; |
+| 1053 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() |
+| 1053 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
+| 1053 | local-declaration | 지역 변수를 선언합니다: var normalized = value.Trim().ToUpperInvariant(); |
+| 1053 | variable-initializer | 변수의 초기값을 지정합니다: normalized = value.Trim().ToUpperInvariant() |
+| 1054 | conditional-expression | 조건에 따라 결과식을 선택합니다: normalized is "ON" or "OFF" or "TRUE" or "FALSE" ? "Accent" : "Normal" |
+| 1054 | return | 호출자에게 값 또는 제어를 반환합니다: return normalized is "ON" or "OFF" or "TRUE" or "FALSE" ? "Accent" : "Normal"; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ToSection` · L1053–1063
+### MethodDeclaration `ToSection` · L1057–1067
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1053–1063](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1053-L1063)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1057–1067](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1057-L1067)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5809,40 +5814,40 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L229-L229) | ToSection | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L435-L435) | ToSection | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L509-L509) | ToSection | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L230-L230) | ToSection | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L436-L436) | ToSection | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L513-L513) | ToSection | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1055 | tab.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 1055 | tab.Trim | resolved | string string.Trim() |
+| 1059 | tab.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 1059 | tab.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1055 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tab.Trim().ToUpperInvariant() |
-| 1055 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tab.Trim() |
-| 1055 | return | 호출자에게 값 또는 제어를 반환합니다: return tab.Trim().ToUpperInvariant() switch { "INTERFACE" => EN_SETTING_TAB.Interface, "IO" => EN_SETTING_TAB.Io, "MOTOR" => EN_SETTING_TAB.Motor, "ALARM" => EN_SETTING_TAB.Alarm, _ => EN_SETTING_TAB.Option }; |
-| 1055 | switch-expression | 값별 결과식을 선택합니다: tab.Trim().ToUpperInvariant() switch { "INTERFACE" => EN_SETTING_TAB.Interface, "IO" => EN_SETTING_TAB.Io, "MOTOR" => EN_SETTING_TAB.Motor, "ALARM" => EN_SETTING_TAB.Alarm, _ => EN_SETTING_TAB.Option } |
+| 1059 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tab.Trim().ToUpperInvariant() |
+| 1059 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tab.Trim() |
+| 1059 | return | 호출자에게 값 또는 제어를 반환합니다: return tab.Trim().ToUpperInvariant() switch { "INTERFACE" => EN_SETTING_TAB.Interface, "IO" => EN_SETTING_TAB.Io, "MOTOR" => EN_SETTING_TAB.Motor, "ALARM" => EN_SETTING_TAB.Alarm, _ => EN_SETTING_TAB.Option }; |
+| 1059 | switch-expression | 값별 결과식을 선택합니다: tab.Trim().ToUpperInvariant() switch { "INTERFACE" => EN_SETTING_TAB.Interface, "IO" => EN_SETTING_TAB.Io, "MOTOR" => EN_SETTING_TAB.Motor, "ALARM" => EN_SETTING_TAB.Alarm, _ => EN_SETTING_TAB.Option } |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ToSection"]
- N0["L1055 switch-expression"]
+ N0["L1059 switch-expression"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ToTabText` · L1065–1071
+### MethodDeclaration `ToTabText` · L1069–1075
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1065–1071](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1065-L1071)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1069–1075](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1069-L1075)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5861,40 +5866,40 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L225-L225) | ToTabText | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:630–630](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L630-L630) | ToTabText | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:808–808](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L808-L808) | ToTabText | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L226-L226) | ToTabText | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:634–634](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L634-L634) | ToTabText | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:812–812](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L812-L812) | ToTabText | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1070 | section.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 1070 | section.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
+| 1074 | section.ToString().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 1074 | section.ToString | resolved · 동적 구현 선택 가능 | string System.Enum.ToString() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1067 | return | 호출자에게 값 또는 제어를 반환합니다: return section switch { EN_SETTING_TAB.Io => "IO", _ => section.ToString().ToUpperInvariant()}; |
-| 1067 | switch-expression | 값별 결과식을 선택합니다: section switch { EN_SETTING_TAB.Io => "IO", _ => section.ToString().ToUpperInvariant()} |
-| 1070 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: section.ToString().ToUpperInvariant() |
-| 1070 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: section.ToString() |
+| 1071 | return | 호출자에게 값 또는 제어를 반환합니다: return section switch { EN_SETTING_TAB.Io => "IO", _ => section.ToString().ToUpperInvariant()}; |
+| 1071 | switch-expression | 값별 결과식을 선택합니다: section switch { EN_SETTING_TAB.Io => "IO", _ => section.ToString().ToUpperInvariant()} |
+| 1074 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: section.ToString().ToUpperInvariant() |
+| 1074 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: section.ToString() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ToTabText"]
- N0["L1067 switch-expression"]
+ N0["L1071 switch-expression"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `GetDefaultGroup` · L1073–1076
+### MethodDeclaration `GetDefaultGroup` · L1077–1080
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1073–1076](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1073-L1076)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1077–1080](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1077-L1080)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5907,19 +5912,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L296-L296) | GetDefaultGroup | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L297-L297) | GetDefaultGroup | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1075 | return | 호출자에게 값 또는 제어를 반환합니다: return "ALL"; |
+| 1079 | return | 호출자에게 값 또는 제어를 반환합니다: return "ALL"; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `DisplayName` · L1081–1081
+### PropertyDeclaration `DisplayName` · L1085–1085
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1081–1081](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1081-L1081)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1085–1085](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1085-L1085)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5934,13 +5939,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1081 | conditional-expression | 조건에 따라 결과식을 선택합니다: Name == "OPTION" ? "COMMON" : Name |
+| 1085 | conditional-expression | 조건에 따라 결과식을 선택합니다: Name == "OPTION" ? "COMMON" : Name |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `VisionFlipOptions` · L1087–1087
+### FieldDeclaration `VisionFlipOptions` · L1091–1091
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1087–1087](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1087-L1087)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1091–1091](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1091-L1091)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5955,13 +5960,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1087 | variable-initializer | 변수의 초기값을 지정합니다: VisionFlipOptions = ["OFF", "ON"] |
+| 1091 | variable-initializer | 변수의 초기값을 지정합니다: VisionFlipOptions = ["OFF", "ON"] |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `SignOptions` · L1088–1088
+### FieldDeclaration `SignOptions` · L1092–1092
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1088–1088](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1088-L1088)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1092–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1092-L1092)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5976,13 +5981,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1088 | variable-initializer | 변수의 초기값을 지정합니다: SignOptions = ["-1", "1"] |
+| 1092 | variable-initializer | 변수의 초기값을 지정합니다: SignOptions = ["-1", "1"] |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `NumericBooleanOptions` · L1089–1089
+### FieldDeclaration `NumericBooleanOptions` · L1093–1093
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1089–1089](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1089-L1089)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1093–1093](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1093-L1093)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5997,13 +6002,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1089 | variable-initializer | 변수의 초기값을 지정합니다: NumericBooleanOptions = ["0", "1"] |
+| 1093 | variable-initializer | 변수의 초기값을 지정합니다: NumericBooleanOptions = ["0", "1"] |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalValue` · L1090–1090
+### FieldDeclaration `_originalValue` · L1094–1094
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1090–1090](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1090-L1090)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1094–1094](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1094-L1094)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6016,9 +6021,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalValueState` · L1091–1091
+### FieldDeclaration `_originalValueState` · L1095–1095
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1091–1091](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1091-L1091)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1095–1095](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1095-L1095)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6031,9 +6036,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_value` · L1092–1092
+### FieldDeclaration `_value` · L1096–1096
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1092–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1092-L1092)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1096–1096](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1096-L1096)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6046,9 +6051,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_valueState` · L1093–1093
+### FieldDeclaration `_valueState` · L1097–1097
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1093–1093](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1093-L1093)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1097–1097](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1097-L1097)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6061,9 +6066,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### ConstructorDeclaration `.ctor` · L1094–1125
+### ConstructorDeclaration `.ctor` · L1098–1129
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1094–1125](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1094-L1125)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1098–1129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1098-L1129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6093,47 +6098,47 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:650–663](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L650-L663) | new ST_SYSTEM_PARAMETER_ROW | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:654–667](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L654-L667) | new ST_SYSTEM_PARAMETER_ROW | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1114 | ParseHeadNo | resolved | int Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ParseHeadNo(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1273 |
-| 1120 | NormalizeVisionFlipDisplay | resolved | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.NormalizeVisionFlipDisplay(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1268 |
+| 1118 | ParseHeadNo | resolved | int Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ParseHeadNo(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1303 |
+| 1124 | NormalizeVisionFlipDisplay | resolved | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.NormalizeVisionFlipDisplay(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1298 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1109 | assignment | 값을 대상에 대입합니다: Group = group |
-| 1110 | assignment | 값을 대상에 대입합니다: Parameter = parameter |
-| 1111 | assignment | 값을 대상에 대입합니다: Unit = unit |
-| 1112 | assignment | 값을 대상에 대입합니다: Description = description |
-| 1113 | assignment | 값을 대상에 대입합니다: Key = key |
-| 1114 | assignment | 값을 대상에 대입합니다: HeadNo = ParseHeadNo(key) |
-| 1114 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseHeadNo(key) |
-| 1115 | assignment | 값을 대상에 대입합니다: HeadFilter = HeadNo > 0 ? $"H{HeadNo:00}" : "" |
-| 1115 | conditional-expression | 조건에 따라 결과식을 선택합니다: HeadNo > 0 ? $"H{HeadNo:00}" : "" |
-| 1116 | assignment | 값을 대상에 대입합니다: DefaultValue = defaultValue |
-| 1117 | assignment | 값을 대상에 대입합니다: DataType = dataType |
-| 1118 | assignment | 값을 대상에 대입합니다: Min = min |
-| 1119 | assignment | 값을 대상에 대입합니다: Max = max |
-| 1120 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeVisionFlipDisplay(value) |
-| 1120 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsVisionFlipOption ? NormalizeVisionFlipDisplay(value) : value |
-| 1120 | local-declaration | 지역 변수를 선언합니다: var displayValue = IsVisionFlipOption ? NormalizeVisionFlipDisplay(value) : value; |
-| 1120 | variable-initializer | 변수의 초기값을 지정합니다: displayValue = IsVisionFlipOption ? NormalizeVisionFlipDisplay(value) : value |
-| 1121 | assignment | 값을 대상에 대입합니다: _value = displayValue |
-| 1122 | assignment | 값을 대상에 대입합니다: _originalValue = displayValue |
-| 1123 | assignment | 값을 대상에 대입합니다: _valueState = isModified ? "Warn" : valueState |
-| 1123 | conditional-expression | 조건에 따라 결과식을 선택합니다: isModified ? "Warn" : valueState |
-| 1124 | assignment | 값을 대상에 대입합니다: _originalValueState = valueState |
+| 1113 | assignment | 값을 대상에 대입합니다: Group = group |
+| 1114 | assignment | 값을 대상에 대입합니다: Parameter = parameter |
+| 1115 | assignment | 값을 대상에 대입합니다: Unit = unit |
+| 1116 | assignment | 값을 대상에 대입합니다: Description = description |
+| 1117 | assignment | 값을 대상에 대입합니다: Key = key |
+| 1118 | assignment | 값을 대상에 대입합니다: HeadNo = ParseHeadNo(key) |
+| 1118 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ParseHeadNo(key) |
+| 1119 | assignment | 값을 대상에 대입합니다: HeadFilter = HeadNo > 0 ? $"H{HeadNo:00}" : "" |
+| 1119 | conditional-expression | 조건에 따라 결과식을 선택합니다: HeadNo > 0 ? $"H{HeadNo:00}" : "" |
+| 1120 | assignment | 값을 대상에 대입합니다: DefaultValue = defaultValue |
+| 1121 | assignment | 값을 대상에 대입합니다: DataType = dataType |
+| 1122 | assignment | 값을 대상에 대입합니다: Min = min |
+| 1123 | assignment | 값을 대상에 대입합니다: Max = max |
+| 1124 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeVisionFlipDisplay(value) |
+| 1124 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsVisionFlipOption ? NormalizeVisionFlipDisplay(value) : value |
+| 1124 | local-declaration | 지역 변수를 선언합니다: var displayValue = IsVisionFlipOption ? NormalizeVisionFlipDisplay(value) : value; |
+| 1124 | variable-initializer | 변수의 초기값을 지정합니다: displayValue = IsVisionFlipOption ? NormalizeVisionFlipDisplay(value) : value |
+| 1125 | assignment | 값을 대상에 대입합니다: _value = displayValue |
+| 1126 | assignment | 값을 대상에 대입합니다: _originalValue = displayValue |
+| 1127 | assignment | 값을 대상에 대입합니다: _valueState = isModified ? "Warn" : valueState |
+| 1127 | conditional-expression | 조건에 따라 결과식을 선택합니다: isModified ? "Warn" : valueState |
+| 1128 | assignment | 값을 대상에 대입합니다: _originalValueState = valueState |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Group` · L1127–1127
+### PropertyDeclaration `Group` · L1131–1131
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1127–1127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1127-L1127)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1131–1131](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1131-L1131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6146,9 +6151,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Group` · L1127–1127
+### GetAccessorDeclaration `get_Group` · L1131–1131
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1127–1127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1127-L1127)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1131–1131](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1131-L1131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6161,9 +6166,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Parameter` · L1128–1128
+### PropertyDeclaration `Parameter` · L1132–1132
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1128–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1128-L1128)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1132–1132](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1132-L1132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6176,9 +6181,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Parameter` · L1128–1128
+### GetAccessorDeclaration `get_Parameter` · L1132–1132
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1128–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1128-L1128)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1132–1132](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1132-L1132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6191,9 +6196,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Value` · L1130–1149
+### PropertyDeclaration `Value` · L1134–1154
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1130–1149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1130-L1149)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1134–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1134-L1154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6206,9 +6211,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Value` · L1132–1135
+### GetAccessorDeclaration `get_Value` · L1136–1139
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1132–1135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1132-L1135)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1136–1139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1136-L1139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6223,13 +6228,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1134 | return | 호출자에게 값 또는 제어를 반환합니다: return _value; |
+| 1138 | return | 호출자에게 값 또는 제어를 반환합니다: return _value; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_Value` · L1137–1148
+### SetAccessorDeclaration `set_Value` · L1141–1153
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1137–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1137-L1148)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1141–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1141-L1153)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6250,44 +6255,48 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1139 | SetProperty | resolved | bool Drilling.UI.Menu.CBindingBase.SetProperty<string>(ref string, string, string?) · Drilling.UI/Menu/CBindingBase.cs:737 |
-| 1145 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:761 |
-| 1145 | nameof | unresolved | None |
-| 1146 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:761 |
-| 1146 | nameof | unresolved | None |
-| 1147 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:761 |
-| 1147 | nameof | unresolved | None |
+| 1143 | SetProperty | resolved | bool Drilling.UI.Menu.CBindingBase.SetProperty<string>(ref string, string, string?) · Drilling.UI/Menu/CBindingBase.cs:760 |
+| 1149 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:784 |
+| 1149 | nameof | unresolved | None |
+| 1150 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:784 |
+| 1150 | nameof | unresolved | None |
+| 1151 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:784 |
+| 1151 | nameof | unresolved | None |
+| 1152 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:784 |
+| 1152 | nameof | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1139 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetProperty(ref _value, value) |
-| 1139 | if | 조건에 따라 분기합니다: if (!SetProperty(ref _value, value)) |
-| 1141 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 1144 | assignment | 값을 대상에 대입합니다: ValueState = IsModified ? "Warn" : _originalValueState |
-| 1144 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsModified ? "Warn" : _originalValueState |
-| 1145 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(IsModified)) |
-| 1145 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsModified) |
-| 1146 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ModifiedText)) |
-| 1146 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ModifiedText) |
-| 1147 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ModifiedBrush)) |
-| 1147 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ModifiedBrush) |
+| 1143 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetProperty(ref _value, value) |
+| 1143 | if | 조건에 따라 분기합니다: if (!SetProperty(ref _value, value)) |
+| 1145 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 1148 | assignment | 값을 대상에 대입합니다: ValueState = IsModified ? "Warn" : _originalValueState |
+| 1148 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsModified ? "Warn" : _originalValueState |
+| 1149 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(IsModified)) |
+| 1149 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsModified) |
+| 1150 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ModifiedText)) |
+| 1150 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ModifiedText) |
+| 1151 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ModifiedBrush)) |
+| 1151 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ModifiedBrush) |
+| 1152 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ColorBrush)) |
+| 1152 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ColorBrush) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["set_Value"]
- N0["L1139 if"]
+ N0["L1143 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Unit` · L1151–1151
+### PropertyDeclaration `Unit` · L1156–1156
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1151-L1151)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1156-L1156)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6300,9 +6309,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Unit` · L1151–1151
+### GetAccessorDeclaration `get_Unit` · L1156–1156
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1151-L1151)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1156-L1156)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6315,9 +6324,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Description` · L1152–1152
+### PropertyDeclaration `Description` · L1157–1157
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1152–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1152-L1152)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1157–1157](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1157-L1157)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6330,9 +6339,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Description` · L1152–1152
+### GetAccessorDeclaration `get_Description` · L1157–1157
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1152–1152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1152-L1152)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1157–1157](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1157-L1157)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6345,9 +6354,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Key` · L1153–1153
+### PropertyDeclaration `Key` · L1158–1158
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1153–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1153-L1153)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1158–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1158-L1158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6360,9 +6369,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Key` · L1153–1153
+### GetAccessorDeclaration `get_Key` · L1158–1158
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1153–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1153-L1153)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1158–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1158-L1158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6375,9 +6384,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `HeadNo` · L1154–1154
+### PropertyDeclaration `HeadNo` · L1159–1159
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1154-L1154)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1159–1159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1159-L1159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6390,9 +6399,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_HeadNo` · L1154–1154
+### GetAccessorDeclaration `get_HeadNo` · L1159–1159
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1154-L1154)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1159–1159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1159-L1159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6405,9 +6414,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `HeadFilter` · L1155–1155
+### PropertyDeclaration `HeadFilter` · L1160–1160
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1155-L1155)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1160-L1160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6420,9 +6429,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_HeadFilter` · L1155–1155
+### GetAccessorDeclaration `get_HeadFilter` · L1160–1160
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1155-L1155)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1160-L1160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6435,9 +6444,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `DefaultValue` · L1156–1156
+### PropertyDeclaration `DefaultValue` · L1161–1161
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1156-L1156)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1161–1161](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1161-L1161)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6450,9 +6459,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_DefaultValue` · L1156–1156
+### GetAccessorDeclaration `get_DefaultValue` · L1161–1161
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1156–1156](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1156-L1156)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1161–1161](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1161-L1161)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6465,9 +6474,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `DataType` · L1157–1157
+### PropertyDeclaration `DataType` · L1162–1162
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1157–1157](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1157-L1157)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1162-L1162)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6480,9 +6489,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_DataType` · L1157–1157
+### GetAccessorDeclaration `get_DataType` · L1162–1162
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1157–1157](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1157-L1157)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1162–1162](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1162-L1162)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6495,9 +6504,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `IsVisionFlipOption` · L1159–1165
+### PropertyDeclaration `IsVisionFlipOption` · L1164–1170
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1159–1165](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1159-L1165)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1164–1170](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1164-L1170)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6510,9 +6519,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_IsVisionFlipOption` · L1161–1164
+### GetAccessorDeclaration `get_IsVisionFlipOption` · L1166–1169
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1161–1164](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1161-L1164)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1166–1169](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1166-L1169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6527,24 +6536,24 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1163 | Key.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 1163 | Key.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 1163 | Key.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 1168 | Key.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 1168 | Key.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 1168 | Key.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1163 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Key.Equals("VisionXFlip", StringComparison.OrdinalIgnoreCase) |
-| 1163 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Key.Equals("VisionYFlip", StringComparison.OrdinalIgnoreCase) |
-| 1163 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Key.Equals("VisionXyFlip", StringComparison.OrdinalIgnoreCase) |
-| 1163 | return | 호출자에게 값 또는 제어를 반환합니다: return Key.Equals("VisionXFlip", StringComparison.OrdinalIgnoreCase) &#124;&#124; Key.Equals("VisionYFlip", StringComparison.OrdinalIgnoreCase) &#124;&#124; Key.Equals("VisionXyFlip", StringComparison.OrdinalIgnoreCase); |
+| 1168 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Key.Equals("VisionXFlip", StringComparison.OrdinalIgnoreCase) |
+| 1168 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Key.Equals("VisionYFlip", StringComparison.OrdinalIgnoreCase) |
+| 1168 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Key.Equals("VisionXyFlip", StringComparison.OrdinalIgnoreCase) |
+| 1168 | return | 호출자에게 값 또는 제어를 반환합니다: return Key.Equals("VisionXFlip", StringComparison.OrdinalIgnoreCase) &#124;&#124; Key.Equals("VisionYFlip", StringComparison.OrdinalIgnoreCase) &#124;&#124; Key.Equals("VisionXyFlip", StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `IsBoolean` · L1167–1173
+### PropertyDeclaration `IsBoolean` · L1172–1178
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1167–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1167-L1173)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1172–1178](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1172-L1178)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6557,9 +6566,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_IsBoolean` · L1169–1172
+### GetAccessorDeclaration `get_IsBoolean` · L1174–1177
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1169–1172](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1169-L1172)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1174–1177](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1174-L1177)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6574,13 +6583,111 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1171 | return | 호출자에게 값 또는 제어를 반환합니다: return DataType == EN_RECIPE_DATA_TYPE.Bool; |
+| 1176 | return | 호출자에게 값 또는 제어를 반환합니다: return DataType == EN_RECIPE_DATA_TYPE.Bool; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `IsSign` · L1175–1181
+### PropertyDeclaration `IsColorSetting` · L1180–1180
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1175–1181](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1175-L1181)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1180–1180](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1180-L1180)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | bool Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.IsColorSetting |
+| 접근/수식자 | Public / public |
+| 반환/값 타입 | bool |
+| 소속 타입 | NamedType:Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 1180 | CReviewResultLevelSettings.IsColorKey | resolved | bool Drilling.Common.Review.CReviewResultLevelSettings.IsColorKey(string?) · Drilling.Common/Review/CReviewResultLevelSettings.cs:89 |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 1180 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewResultLevelSettings.IsColorKey(Key) |
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### PropertyDeclaration `ColorBrush` · L1182–1203
+
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1182–1203](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1182-L1203)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | Brush Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ColorBrush |
+| 접근/수식자 | Public / public |
+| 반환/값 타입 | Brush |
+| 소속 타입 | NamedType:Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### GetAccessorDeclaration `get_ColorBrush` · L1184–1202
+
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1184–1202](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1184-L1202)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | Brush Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.ColorBrush.get |
+| 접근/수식자 | Public / get |
+| 반환/값 타입 | Brush |
+| 소속 타입 | NamedType:Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 1193 | ColorConverter.ConvertFromString | unresolved | None |
+| 1193 | CReviewResultLevelSettings.NormalizeColor | resolved | string Drilling.Common.Review.CReviewResultLevelSettings.NormalizeColor(string) · Drilling.Common/Review/CReviewResultLevelSettings.cs:136 |
+| 1194 | new SolidColorBrush | unresolved | None |
+| 1195 | brush.Freeze | unresolved | None |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 1186 | if | 조건에 따라 분기합니다: if (!IsColorSetting) |
+| 1188 | return | 호출자에게 값 또는 제어를 반환합니다: return Brushes.Transparent; |
+| 1191 | try | 예외 처리 범위입니다: try |
+| 1193 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ColorConverter.ConvertFromString(CReviewResultLevelSettings.NormalizeColor(Value)) |
+| 1193 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewResultLevelSettings.NormalizeColor(Value) |
+| 1193 | local-declaration | 지역 변수를 선언합니다: var color = (Color)ColorConverter.ConvertFromString(CReviewResultLevelSettings.NormalizeColor(Value)); |
+| 1193 | variable-initializer | 변수의 초기값을 지정합니다: color = (Color)ColorConverter.ConvertFromString(CReviewResultLevelSettings.NormalizeColor(Value)) |
+| 1194 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(color) |
+| 1194 | local-declaration | 지역 변수를 선언합니다: var brush = new SolidColorBrush(color); |
+| 1194 | variable-initializer | 변수의 초기값을 지정합니다: brush = new SolidColorBrush(color) |
+| 1195 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze() |
+| 1196 | return | 호출자에게 값 또는 제어를 반환합니다: return brush; |
+| 1198 | catch | 지정 예외를 처리합니다: catch (Exception) |
+| 1200 | return | 호출자에게 값 또는 제어를 반환합니다: return Brushes.Transparent; |
+
+제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
+
+```mermaid
+flowchart TD
+ M["get_ColorBrush"]
+ N0["L1186 if"]
+ M -->|포함| N0
+ N1["L1191 try"]
+ M -->|포함| N1
+ N2["L1198 catch"]
+ N1 -->|포함| N2
+```
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### PropertyDeclaration `IsSign` · L1205–1211
+
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1205–1211](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1205-L1211)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6593,9 +6700,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_IsSign` · L1177–1180
+### GetAccessorDeclaration `get_IsSign` · L1207–1210
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1177–1180](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1177-L1180)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1207–1210](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1207-L1210)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6610,20 +6717,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1179 | Unit.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 1209 | Unit.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1179 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Unit.Equals("sign", StringComparison.OrdinalIgnoreCase) |
-| 1179 | return | 호출자에게 값 또는 제어를 반환합니다: return Unit.Equals("sign", StringComparison.OrdinalIgnoreCase); |
+| 1209 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Unit.Equals("sign", StringComparison.OrdinalIgnoreCase) |
+| 1209 | return | 호출자에게 값 또는 제어를 반환합니다: return Unit.Equals("sign", StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `UsesSelectionEditor` · L1183–1189
+### PropertyDeclaration `UsesSelectionEditor` · L1213–1219
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1183–1189](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1183-L1189)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1213–1219](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1213-L1219)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6636,9 +6743,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_UsesSelectionEditor` · L1185–1188
+### GetAccessorDeclaration `get_UsesSelectionEditor` · L1215–1218
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1185–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1185-L1188)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1215–1218](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1215-L1218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6653,13 +6760,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1187 | return | 호출자에게 값 또는 제어를 반환합니다: return IsVisionFlipOption &#124;&#124; IsBoolean &#124;&#124; IsSign; |
+| 1217 | return | 호출자에게 값 또는 제어를 반환합니다: return IsVisionFlipOption &#124;&#124; IsBoolean &#124;&#124; IsSign; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ValueOptions` · L1191–1197
+### PropertyDeclaration `ValueOptions` · L1221–1227
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1191–1197](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1191-L1197)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1221–1227](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1221-L1227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6672,9 +6779,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ValueOptions` · L1193–1196
+### GetAccessorDeclaration `get_ValueOptions` · L1223–1226
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1193–1196](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1193-L1196)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1223–1226](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1223-L1226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6689,23 +6796,23 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1195 | CRunOptionSettings.IsKey | resolved | bool Drilling.Common.Managers.CRunOptionSettings.IsKey(string) · Drilling.Common/Managers/CSettingManager.cs:196 |
+| 1225 | CRunOptionSettings.IsKey | resolved | bool Drilling.Common.Managers.CRunOptionSettings.IsKey(string) · Drilling.Common/Managers/CSettingManager.cs:197 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1195 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRunOptionSettings.IsKey(Key) |
-| 1195 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsSign ? SignOptions : IsBoolean && CRunOptionSettings.IsKey(Key) ? NumericBooleanOptions : UsesSelectionEditor ? VisionFlipOptions : [] |
-| 1195 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsBoolean && CRunOptionSettings.IsKey(Key) ? NumericBooleanOptions : UsesSelectionEditor ? VisionFlipOptions : [] |
-| 1195 | conditional-expression | 조건에 따라 결과식을 선택합니다: UsesSelectionEditor ? VisionFlipOptions : [] |
-| 1195 | return | 호출자에게 값 또는 제어를 반환합니다: return IsSign ? SignOptions : IsBoolean && CRunOptionSettings.IsKey(Key) ? NumericBooleanOptions : UsesSelectionEditor ? VisionFlipOptions : []; |
+| 1225 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRunOptionSettings.IsKey(Key) |
+| 1225 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsSign ? SignOptions : IsBoolean && CRunOptionSettings.IsKey(Key) ? NumericBooleanOptions : UsesSelectionEditor ? VisionFlipOptions : [] |
+| 1225 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsBoolean && CRunOptionSettings.IsKey(Key) ? NumericBooleanOptions : UsesSelectionEditor ? VisionFlipOptions : [] |
+| 1225 | conditional-expression | 조건에 따라 결과식을 선택합니다: UsesSelectionEditor ? VisionFlipOptions : [] |
+| 1225 | return | 호출자에게 값 또는 제어를 반환합니다: return IsSign ? SignOptions : IsBoolean && CRunOptionSettings.IsKey(Key) ? NumericBooleanOptions : UsesSelectionEditor ? VisionFlipOptions : []; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Min` · L1199–1199
+### PropertyDeclaration `Min` · L1229–1229
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1199–1199](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1199-L1199)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1229–1229](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1229-L1229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6718,9 +6825,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Min` · L1199–1199
+### GetAccessorDeclaration `get_Min` · L1229–1229
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1199–1199](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1199-L1199)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1229–1229](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1229-L1229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6733,9 +6840,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Max` · L1200–1200
+### PropertyDeclaration `Max` · L1230–1230
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1200–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1200-L1200)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1230–1230](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1230-L1230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6748,9 +6855,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Max` · L1200–1200
+### GetAccessorDeclaration `get_Max` · L1230–1230
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1200–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1200-L1200)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1230–1230](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1230-L1230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6763,9 +6870,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `OriginalValue` · L1202–1208
+### PropertyDeclaration `OriginalValue` · L1232–1238
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1202–1208](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1202-L1208)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1232–1238](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1232-L1238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6778,9 +6885,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_OriginalValue` · L1204–1207
+### GetAccessorDeclaration `get_OriginalValue` · L1234–1237
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1204–1207](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1204-L1207)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1234–1237](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1234-L1237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6795,13 +6902,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1206 | return | 호출자에게 값 또는 제어를 반환합니다: return _originalValue; |
+| 1236 | return | 호출자에게 값 또는 제어를 반환합니다: return _originalValue; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `IsModified` · L1210–1216
+### PropertyDeclaration `IsModified` · L1240–1246
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1210–1216](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1210-L1216)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1240–1246](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1240-L1246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6814,9 +6921,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_IsModified` · L1212–1215
+### GetAccessorDeclaration `get_IsModified` · L1242–1245
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1212–1215](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1212-L1215)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1242–1245](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1242-L1245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6831,24 +6938,24 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1214 | NormalizeValue(Value).Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 1214 | NormalizeValue | resolved | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.NormalizeValue(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1263 |
-| 1214 | NormalizeValue | resolved | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.NormalizeValue(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1263 |
+| 1244 | NormalizeValue(Value).Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 1244 | NormalizeValue | resolved | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.NormalizeValue(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1293 |
+| 1244 | NormalizeValue | resolved | string Drilling.UI.Menu.Menus.ST_SYSTEM_PARAMETER_ROW.NormalizeValue(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1293 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1214 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeValue(Value).Equals(NormalizeValue(_originalValue), StringComparison.OrdinalIgnoreCase) |
-| 1214 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeValue(Value) |
-| 1214 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeValue(_originalValue) |
-| 1214 | return | 호출자에게 값 또는 제어를 반환합니다: return !NormalizeValue(Value).Equals(NormalizeValue(_originalValue), StringComparison.OrdinalIgnoreCase); |
+| 1244 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeValue(Value).Equals(NormalizeValue(_originalValue), StringComparison.OrdinalIgnoreCase) |
+| 1244 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeValue(Value) |
+| 1244 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeValue(_originalValue) |
+| 1244 | return | 호출자에게 값 또는 제어를 반환합니다: return !NormalizeValue(Value).Equals(NormalizeValue(_originalValue), StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ModifiedText` · L1218–1224
+### PropertyDeclaration `ModifiedText` · L1248–1254
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1218–1224](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1218-L1224)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1248–1254](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1248-L1254)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6861,9 +6968,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ModifiedText` · L1220–1223
+### GetAccessorDeclaration `get_ModifiedText` · L1250–1253
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1220–1223](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1220-L1223)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1250–1253](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1250-L1253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6878,14 +6985,14 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1222 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsModified ? "Yes" : "No" |
-| 1222 | return | 호출자에게 값 또는 제어를 반환합니다: return IsModified ? "Yes" : "No"; |
+| 1252 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsModified ? "Yes" : "No" |
+| 1252 | return | 호출자에게 값 또는 제어를 반환합니다: return IsModified ? "Yes" : "No"; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ValueState` · L1226–1240
+### PropertyDeclaration `ValueState` · L1256–1270
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1226–1240](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1226-L1240)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1256–1270](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1256-L1270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6898,9 +7005,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ValueState` · L1228–1231
+### GetAccessorDeclaration `get_ValueState` · L1258–1261
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1228–1231](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1228-L1231)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1258–1261](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1258-L1261)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6915,13 +7022,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1230 | return | 호출자에게 값 또는 제어를 반환합니다: return _valueState; |
+| 1260 | return | 호출자에게 값 또는 제어를 반환합니다: return _valueState; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_ValueState` · L1233–1239
+### SetAccessorDeclaration `set_ValueState` · L1263–1269
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1233–1239](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1233-L1239)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1263–1269](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1263-L1269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6942,33 +7049,33 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1235 | SetProperty | resolved | bool Drilling.UI.Menu.CBindingBase.SetProperty<string>(ref string, string, string?) · Drilling.UI/Menu/CBindingBase.cs:737 |
-| 1237 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:761 |
-| 1237 | nameof | unresolved | None |
+| 1265 | SetProperty | resolved | bool Drilling.UI.Menu.CBindingBase.SetProperty<string>(ref string, string, string?) · Drilling.UI/Menu/CBindingBase.cs:760 |
+| 1267 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:784 |
+| 1267 | nameof | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1235 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetProperty(ref _valueState, value) |
-| 1235 | if | 조건에 따라 분기합니다: if (SetProperty(ref _valueState, value)) |
-| 1237 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ValueBrush)) |
-| 1237 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ValueBrush) |
+| 1265 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetProperty(ref _valueState, value) |
+| 1265 | if | 조건에 따라 분기합니다: if (SetProperty(ref _valueState, value)) |
+| 1267 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ValueBrush)) |
+| 1267 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ValueBrush) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["set_ValueState"]
- N0["L1235 if"]
+ N0["L1265 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ValueBrush` · L1242–1253
+### PropertyDeclaration `ValueBrush` · L1272–1283
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1242–1253](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1242-L1253)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1272–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1272-L1283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6981,9 +7088,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ValueBrush` · L1244–1252
+### GetAccessorDeclaration `get_ValueBrush` · L1274–1282
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1244–1252](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1244-L1252)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1274–1282](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1274-L1282)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6998,23 +7105,23 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1246 | return | 호출자에게 값 또는 제어를 반환합니다: return ValueState switch { "Accent" => CStatusBrush.Simul, "Warn" => CStatusBrush.Wait, _ => CStatusBrush.PrimaryText }; |
-| 1246 | switch-expression | 값별 결과식을 선택합니다: ValueState switch { "Accent" => CStatusBrush.Simul, "Warn" => CStatusBrush.Wait, _ => CStatusBrush.PrimaryText } |
+| 1276 | return | 호출자에게 값 또는 제어를 반환합니다: return ValueState switch { "Accent" => CStatusBrush.Simul, "Warn" => CStatusBrush.Wait, _ => CStatusBrush.PrimaryText }; |
+| 1276 | switch-expression | 값별 결과식을 선택합니다: ValueState switch { "Accent" => CStatusBrush.Simul, "Warn" => CStatusBrush.Wait, _ => CStatusBrush.PrimaryText } |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["get_ValueBrush"]
- N0["L1246 switch-expression"]
+ N0["L1276 switch-expression"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ModifiedBrush` · L1255–1261
+### PropertyDeclaration `ModifiedBrush` · L1285–1291
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1255–1261](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1255-L1261)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1285–1291](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1285-L1291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7027,9 +7134,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ModifiedBrush` · L1257–1260
+### GetAccessorDeclaration `get_ModifiedBrush` · L1287–1290
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1257–1260](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1257-L1260)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1287–1290](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1287-L1290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7044,14 +7151,14 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1259 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsModified ? CStatusBrush.Wait : CStatusBrush.PrimaryText |
-| 1259 | return | 호출자에게 값 또는 제어를 반환합니다: return IsModified ? CStatusBrush.Wait : CStatusBrush.PrimaryText; |
+| 1289 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsModified ? CStatusBrush.Wait : CStatusBrush.PrimaryText |
+| 1289 | return | 호출자에게 값 또는 제어를 반환합니다: return IsModified ? CStatusBrush.Wait : CStatusBrush.PrimaryText; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `NormalizeValue` · L1263–1266
+### MethodDeclaration `NormalizeValue` · L1293–1296
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1263–1266](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1263-L1266)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1293–1296](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1293-L1296)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7070,27 +7177,27 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1214–1214](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1214-L1214) | NormalizeValue | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1214–1214](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1214-L1214) | NormalizeValue | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1244–1244](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1244-L1244) | NormalizeValue | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1244–1244](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1244-L1244) | NormalizeValue | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1265 | value.Trim | resolved | string string.Trim() |
+| 1295 | value.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1265 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
-| 1265 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim(); |
+| 1295 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
+| 1295 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim(); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `NormalizeVisionFlipDisplay` · L1268–1271
+### MethodDeclaration `NormalizeVisionFlipDisplay` · L1298–1301
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1268–1271](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1268-L1271)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1298–1301](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1298-L1301)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7109,29 +7216,29 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1120–1120](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1120-L1120) | NormalizeVisionFlipDisplay | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1124–1124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1124-L1124) | NormalizeVisionFlipDisplay | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1270 | value.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 1270 | value.Trim | resolved | string string.Trim() |
+| 1300 | value.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 1300 | value.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1270 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() |
-| 1270 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
-| 1270 | conditional-expression | 조건에 따라 결과식을 선택합니다: value.Trim().ToUpperInvariant()is "ON" or "TRUE" or "1" or "YES" ? "ON" : "OFF" |
-| 1270 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant()is "ON" or "TRUE" or "1" or "YES" ? "ON" : "OFF"; |
+| 1300 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim().ToUpperInvariant() |
+| 1300 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
+| 1300 | conditional-expression | 조건에 따라 결과식을 선택합니다: value.Trim().ToUpperInvariant()is "ON" or "TRUE" or "1" or "YES" ? "ON" : "OFF" |
+| 1300 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim().ToUpperInvariant()is "ON" or "TRUE" or "1" or "YES" ? "ON" : "OFF"; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseHeadNo` · L1273–1287
+### MethodDeclaration `ParseHeadNo` · L1303–1317
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1273–1287](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1273-L1287)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1303–1317](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1303-L1317)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7150,50 +7257,50 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1114–1114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1114-L1114) | ParseHeadNo | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1118–1118](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1118-L1118) | ParseHeadNo | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1275 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 1280 | char.ToUpperInvariant | resolved | char char.ToUpperInvariant(char) |
-| 1280 | char.IsDigit | resolved | bool char.IsDigit(char) |
-| 1280 | char.IsDigit | resolved | bool char.IsDigit(char) |
+| 1305 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 1310 | char.ToUpperInvariant | resolved | char char.ToUpperInvariant(char) |
+| 1310 | char.IsDigit | resolved | bool char.IsDigit(char) |
+| 1310 | char.IsDigit | resolved | bool char.IsDigit(char) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1275 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(key) |
-| 1275 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(key) &#124;&#124; key.Length < 4) |
-| 1277 | return | 호출자에게 값 또는 제어를 반환합니다: return 0; |
-| 1280 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.ToUpperInvariant(key[0]) |
-| 1280 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(key[1]) |
-| 1280 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(key[2]) |
-| 1280 | if | 조건에 따라 분기합니다: if (char.ToUpperInvariant(key[0]) != 'H' &#124;&#124; !char.IsDigit(key[1]) &#124;&#124; !char.IsDigit(key[2]) &#124;&#124; key[3] != '_') |
-| 1282 | return | 호출자에게 값 또는 제어를 반환합니다: return 0; |
-| 1285 | local-declaration | 지역 변수를 선언합니다: var headNo = ((key[1] - '0') * 10) + (key[2] - '0'); |
-| 1285 | variable-initializer | 변수의 초기값을 지정합니다: headNo = ((key[1] - '0') * 10) + (key[2] - '0') |
-| 1286 | conditional-expression | 조건에 따라 결과식을 선택합니다: headNo is >= 1 and <= 99 ? headNo : 0 |
-| 1286 | return | 호출자에게 값 또는 제어를 반환합니다: return headNo is >= 1 and <= 99 ? headNo : 0; |
+| 1305 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(key) |
+| 1305 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(key) &#124;&#124; key.Length < 4) |
+| 1307 | return | 호출자에게 값 또는 제어를 반환합니다: return 0; |
+| 1310 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.ToUpperInvariant(key[0]) |
+| 1310 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(key[1]) |
+| 1310 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(key[2]) |
+| 1310 | if | 조건에 따라 분기합니다: if (char.ToUpperInvariant(key[0]) != 'H' &#124;&#124; !char.IsDigit(key[1]) &#124;&#124; !char.IsDigit(key[2]) &#124;&#124; key[3] != '_') |
+| 1312 | return | 호출자에게 값 또는 제어를 반환합니다: return 0; |
+| 1315 | local-declaration | 지역 변수를 선언합니다: var headNo = ((key[1] - '0') * 10) + (key[2] - '0'); |
+| 1315 | variable-initializer | 변수의 초기값을 지정합니다: headNo = ((key[1] - '0') * 10) + (key[2] - '0') |
+| 1316 | conditional-expression | 조건에 따라 결과식을 선택합니다: headNo is >= 1 and <= 99 ? headNo : 0 |
+| 1316 | return | 호출자에게 값 또는 제어를 반환합니다: return headNo is >= 1 and <= 99 ? headNo : 0; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ParseHeadNo"]
- N0["L1275 if"]
+ N0["L1305 if"]
  M -->|포함| N0
- N1["L1280 if"]
+ N1["L1310 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `AfterBrush` · L1292–1302
+### PropertyDeclaration `AfterBrush` · L1322–1332
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1292–1302](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1292-L1302)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1322–1332](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1322-L1332)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7206,9 +7313,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_AfterBrush` · L1294–1301
+### GetAccessorDeclaration `get_AfterBrush` · L1324–1331
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1294–1301](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1294-L1301)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1324–1331](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1324-L1331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7223,23 +7330,23 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1296 | return | 호출자에게 값 또는 제어를 반환합니다: return AfterState switch { "Accent" => CStatusBrush.Simul, _ => CStatusBrush.Wait }; |
-| 1296 | switch-expression | 값별 결과식을 선택합니다: AfterState switch { "Accent" => CStatusBrush.Simul, _ => CStatusBrush.Wait } |
+| 1326 | return | 호출자에게 값 또는 제어를 반환합니다: return AfterState switch { "Accent" => CStatusBrush.Simul, _ => CStatusBrush.Wait }; |
+| 1326 | switch-expression | 값별 결과식을 선택합니다: AfterState switch { "Accent" => CStatusBrush.Simul, _ => CStatusBrush.Wait } |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["get_AfterBrush"]
- N0["L1296 switch-expression"]
+ N0["L1326 switch-expression"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ValueBrush` · L1307–1319
+### PropertyDeclaration `ValueBrush` · L1337–1349
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1307–1319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1307-L1319)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1337–1349](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1337-L1349)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7252,9 +7359,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ValueBrush` · L1309–1318
+### GetAccessorDeclaration `get_ValueBrush` · L1339–1348
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1309–1318](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1309-L1318)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1339–1348](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1339-L1348)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7269,23 +7376,23 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1311 | return | 호출자에게 값 또는 제어를 반환합니다: return State switch { "Accent" => CStatusBrush.Simul, "Warn" => CStatusBrush.Wait, "Ok" => CStatusBrush.Online, _ => CStatusBrush.PrimaryText }; |
-| 1311 | switch-expression | 값별 결과식을 선택합니다: State switch { "Accent" => CStatusBrush.Simul, "Warn" => CStatusBrush.Wait, "Ok" => CStatusBrush.Online, _ => CStatusBrush.PrimaryText } |
+| 1341 | return | 호출자에게 값 또는 제어를 반환합니다: return State switch { "Accent" => CStatusBrush.Simul, "Warn" => CStatusBrush.Wait, "Ok" => CStatusBrush.Online, _ => CStatusBrush.PrimaryText }; |
+| 1341 | switch-expression | 값별 결과식을 선택합니다: State switch { "Accent" => CStatusBrush.Simul, "Warn" => CStatusBrush.Wait, "Ok" => CStatusBrush.Online, _ => CStatusBrush.PrimaryText } |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["get_ValueBrush"]
- N0["L1311 switch-expression"]
+ N0["L1341 switch-expression"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `TypeOptions` · L1324–1324
+### PropertyDeclaration `TypeOptions` · L1354–1354
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1324–1324](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1324-L1324)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1354–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1354-L1354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7298,9 +7405,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_TypeOptions` · L1324–1324
+### GetAccessorDeclaration `get_TypeOptions` · L1354–1354
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1324–1324](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1324-L1324)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1354–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1354-L1354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7313,9 +7420,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `DeviceOptions` · L1325–1325
+### PropertyDeclaration `DeviceOptions` · L1355–1355
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1325–1325](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1325-L1325)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1355–1355](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1355-L1355)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7328,9 +7435,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_DeviceOptions` · L1325–1325
+### GetAccessorDeclaration `get_DeviceOptions` · L1355–1355
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1325–1325](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1325-L1325)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1355–1355](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1355-L1355)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7343,9 +7450,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `AutoConnectionOptions` · L1326–1326
+### PropertyDeclaration `AutoConnectionOptions` · L1356–1356
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1326–1326](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1326-L1326)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1356–1356](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1356-L1356)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7358,9 +7465,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_AutoConnectionOptions` · L1326–1326
+### GetAccessorDeclaration `get_AutoConnectionOptions` · L1356–1356
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1326–1326](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1326-L1326)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1356–1356](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1356-L1356)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7373,9 +7480,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalType` · L1328–1328
+### FieldDeclaration `_originalType` · L1358–1358
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1328-L1328)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1358–1358](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1358-L1358)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7388,9 +7495,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalDevice` · L1329–1329
+### FieldDeclaration `_originalDevice` · L1359–1359
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1329–1329](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1329-L1329)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1359–1359](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1359-L1359)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7403,9 +7510,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalNumber` · L1330–1330
+### FieldDeclaration `_originalNumber` · L1360–1360
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1330–1330](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1330-L1330)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1360–1360](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1360-L1360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7418,9 +7525,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalNickName` · L1331–1331
+### FieldDeclaration `_originalNickName` · L1361–1361
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1331–1331](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1331-L1331)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1361–1361](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1361-L1361)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7433,9 +7540,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalSystemSection` · L1332–1332
+### FieldDeclaration `_originalSystemSection` · L1362–1362
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1332–1332](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1332-L1332)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1362–1362](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1362-L1362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7448,9 +7555,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalAutoConnection` · L1333–1333
+### FieldDeclaration `_originalAutoConnection` · L1363–1363
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1333–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1333-L1333)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1363–1363](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1363-L1363)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7463,9 +7570,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalSimul` · L1334–1334
+### FieldDeclaration `_originalSimul` · L1364–1364
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1334–1334](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1334-L1334)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1364–1364](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1364-L1364)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7478,9 +7585,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalArg1` · L1335–1335
+### FieldDeclaration `_originalArg1` · L1365–1365
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1335–1335](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1335-L1335)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1365–1365](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1365-L1365)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7493,9 +7600,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalArg2` · L1336–1336
+### FieldDeclaration `_originalArg2` · L1366–1366
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1336–1336](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1336-L1336)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1366–1366](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1366-L1366)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7508,9 +7615,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalArg3` · L1337–1337
+### FieldDeclaration `_originalArg3` · L1367–1367
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1337–1337](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1337-L1337)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1367–1367](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1367-L1367)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7523,9 +7630,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalArg4` · L1338–1338
+### FieldDeclaration `_originalArg4` · L1368–1368
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1338–1338](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1338-L1338)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1368–1368](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1368-L1368)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7538,9 +7645,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_originalArg5` · L1339–1339
+### FieldDeclaration `_originalArg5` · L1369–1369
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1339–1339](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1339-L1339)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1369–1369](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1369-L1369)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7553,9 +7660,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_type` · L1340–1340
+### FieldDeclaration `_type` · L1370–1370
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1340–1340](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1340-L1340)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1370–1370](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1370-L1370)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7568,9 +7675,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_device` · L1341–1341
+### FieldDeclaration `_device` · L1371–1371
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1341–1341](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1341-L1341)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1371–1371](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1371-L1371)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7583,9 +7690,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_number` · L1342–1342
+### FieldDeclaration `_number` · L1372–1372
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1342–1342](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1342-L1342)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1372–1372](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1372-L1372)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7598,9 +7705,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_nickName` · L1343–1343
+### FieldDeclaration `_nickName` · L1373–1373
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1343–1343](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1343-L1343)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1373–1373](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1373-L1373)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7613,9 +7720,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_systemSection` · L1344–1344
+### FieldDeclaration `_systemSection` · L1374–1374
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1344–1344](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1344-L1344)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1374–1374](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1374-L1374)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7628,9 +7735,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_autoConnection` · L1345–1345
+### FieldDeclaration `_autoConnection` · L1375–1375
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1345–1345](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1345-L1345)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1375–1375](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1375-L1375)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7643,9 +7750,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_simul` · L1346–1346
+### FieldDeclaration `_simul` · L1376–1376
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1346–1346](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1346-L1346)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1376-L1376)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7658,9 +7765,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_arg1` · L1347–1347
+### FieldDeclaration `_arg1` · L1377–1377
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1347–1347](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1347-L1347)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1377–1377](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1377-L1377)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7673,9 +7780,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_arg2` · L1348–1348
+### FieldDeclaration `_arg2` · L1378–1378
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1348–1348](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1348-L1348)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1378–1378](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1378-L1378)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7688,9 +7795,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_arg3` · L1349–1349
+### FieldDeclaration `_arg3` · L1379–1379
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1349–1349](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1349-L1349)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1379–1379](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1379-L1379)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7703,9 +7810,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_arg4` · L1350–1350
+### FieldDeclaration `_arg4` · L1380–1380
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1350–1350](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1350-L1350)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1380–1380](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1380-L1380)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7718,9 +7825,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_arg5` · L1351–1351
+### FieldDeclaration `_arg5` · L1381–1381
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1351–1351](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1351-L1351)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1381–1381](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1381-L1381)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7733,9 +7840,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### ConstructorDeclaration `.ctor` · L1352–1395
+### ConstructorDeclaration `.ctor` · L1382–1425
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1352–1395](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1352-L1395)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1382–1425](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1382-L1425)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7767,44 +7874,44 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:861–876](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L861-L876) | new ST_SETTING_INTERFACE_ROW | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:865–880](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L865-L880) | new ST_SETTING_INTERFACE_ROW | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1369 | assignment | 값을 대상에 대입합니다: No = no |
-| 1370 | assignment | 값을 대상에 대입합니다: Extra = extra |
-| 1371 | assignment | 값을 대상에 대입합니다: _type = type |
-| 1372 | assignment | 값을 대상에 대입합니다: _device = device |
-| 1373 | assignment | 값을 대상에 대입합니다: _number = number |
-| 1374 | assignment | 값을 대상에 대입합니다: _nickName = nickName |
-| 1375 | assignment | 값을 대상에 대입합니다: _systemSection = systemSection |
-| 1376 | assignment | 값을 대상에 대입합니다: _autoConnection = autoConnection |
-| 1377 | assignment | 값을 대상에 대입합니다: _simul = simul |
-| 1378 | assignment | 값을 대상에 대입합니다: _arg1 = arg1 |
-| 1379 | assignment | 값을 대상에 대입합니다: _arg2 = arg2 |
-| 1380 | assignment | 값을 대상에 대입합니다: _arg3 = arg3 |
-| 1381 | assignment | 값을 대상에 대입합니다: _arg4 = arg4 |
-| 1382 | assignment | 값을 대상에 대입합니다: _arg5 = arg5 |
-| 1383 | assignment | 값을 대상에 대입합니다: _originalType = type |
-| 1384 | assignment | 값을 대상에 대입합니다: _originalDevice = device |
-| 1385 | assignment | 값을 대상에 대입합니다: _originalNumber = number |
-| 1386 | assignment | 값을 대상에 대입합니다: _originalNickName = nickName |
-| 1387 | assignment | 값을 대상에 대입합니다: _originalSystemSection = systemSection |
-| 1388 | assignment | 값을 대상에 대입합니다: _originalAutoConnection = autoConnection |
-| 1389 | assignment | 값을 대상에 대입합니다: _originalSimul = simul |
-| 1390 | assignment | 값을 대상에 대입합니다: _originalArg1 = arg1 |
-| 1391 | assignment | 값을 대상에 대입합니다: _originalArg2 = arg2 |
-| 1392 | assignment | 값을 대상에 대입합니다: _originalArg3 = arg3 |
-| 1393 | assignment | 값을 대상에 대입합니다: _originalArg4 = arg4 |
-| 1394 | assignment | 값을 대상에 대입합니다: _originalArg5 = arg5 |
+| 1399 | assignment | 값을 대상에 대입합니다: No = no |
+| 1400 | assignment | 값을 대상에 대입합니다: Extra = extra |
+| 1401 | assignment | 값을 대상에 대입합니다: _type = type |
+| 1402 | assignment | 값을 대상에 대입합니다: _device = device |
+| 1403 | assignment | 값을 대상에 대입합니다: _number = number |
+| 1404 | assignment | 값을 대상에 대입합니다: _nickName = nickName |
+| 1405 | assignment | 값을 대상에 대입합니다: _systemSection = systemSection |
+| 1406 | assignment | 값을 대상에 대입합니다: _autoConnection = autoConnection |
+| 1407 | assignment | 값을 대상에 대입합니다: _simul = simul |
+| 1408 | assignment | 값을 대상에 대입합니다: _arg1 = arg1 |
+| 1409 | assignment | 값을 대상에 대입합니다: _arg2 = arg2 |
+| 1410 | assignment | 값을 대상에 대입합니다: _arg3 = arg3 |
+| 1411 | assignment | 값을 대상에 대입합니다: _arg4 = arg4 |
+| 1412 | assignment | 값을 대상에 대입합니다: _arg5 = arg5 |
+| 1413 | assignment | 값을 대상에 대입합니다: _originalType = type |
+| 1414 | assignment | 값을 대상에 대입합니다: _originalDevice = device |
+| 1415 | assignment | 값을 대상에 대입합니다: _originalNumber = number |
+| 1416 | assignment | 값을 대상에 대입합니다: _originalNickName = nickName |
+| 1417 | assignment | 값을 대상에 대입합니다: _originalSystemSection = systemSection |
+| 1418 | assignment | 값을 대상에 대입합니다: _originalAutoConnection = autoConnection |
+| 1419 | assignment | 값을 대상에 대입합니다: _originalSimul = simul |
+| 1420 | assignment | 값을 대상에 대입합니다: _originalArg1 = arg1 |
+| 1421 | assignment | 값을 대상에 대입합니다: _originalArg2 = arg2 |
+| 1422 | assignment | 값을 대상에 대입합니다: _originalArg3 = arg3 |
+| 1423 | assignment | 값을 대상에 대입합니다: _originalArg4 = arg4 |
+| 1424 | assignment | 값을 대상에 대입합니다: _originalArg5 = arg5 |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `No` · L1397–1397
+### PropertyDeclaration `No` · L1427–1427
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1397–1397](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1397-L1397)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1427–1427](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1427-L1427)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7817,9 +7924,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_No` · L1397–1397
+### GetAccessorDeclaration `get_No` · L1427–1427
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1397–1397](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1397-L1397)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1427–1427](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1427-L1427)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7832,9 +7939,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Extra` · L1398–1398
+### PropertyDeclaration `Extra` · L1428–1428
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1398–1398](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1398-L1398)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1428–1428](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1428-L1428)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7847,9 +7954,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Extra` · L1398–1398
+### GetAccessorDeclaration `get_Extra` · L1428–1428
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1398–1398](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1398-L1398)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1428–1428](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1428-L1428)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7862,9 +7969,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Type` · L1400–1411
+### PropertyDeclaration `Type` · L1430–1441
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1400–1411](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1400-L1411)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1430–1441](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1430-L1441)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7877,9 +7984,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Type` · L1402–1405
+### GetAccessorDeclaration `get_Type` · L1432–1435
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1402–1405](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1402-L1405)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1432–1435](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1432-L1435)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7894,13 +8001,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1404 | return | 호출자에게 값 또는 제어를 반환합니다: return _type; |
+| 1434 | return | 호출자에게 값 또는 제어를 반환합니다: return _type; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_Type` · L1407–1410
+### SetAccessorDeclaration `set_Type` · L1437–1440
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1407–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1407-L1410)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1437–1440](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1437-L1440)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7921,19 +8028,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1409 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1604 |
+| 1439 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1634 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1409 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _type, value) |
+| 1439 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _type, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Device` · L1413–1424
+### PropertyDeclaration `Device` · L1443–1454
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1413–1424](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1413-L1424)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1443–1454](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1443-L1454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7946,9 +8053,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Device` · L1415–1418
+### GetAccessorDeclaration `get_Device` · L1445–1448
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1415–1418](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1415-L1418)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1445–1448](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1445-L1448)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7963,13 +8070,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1417 | return | 호출자에게 값 또는 제어를 반환합니다: return _device; |
+| 1447 | return | 호출자에게 값 또는 제어를 반환합니다: return _device; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_Device` · L1420–1423
+### SetAccessorDeclaration `set_Device` · L1450–1453
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1420–1423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1420-L1423)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1450–1453](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1450-L1453)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7990,19 +8097,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1422 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1604 |
+| 1452 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1634 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1422 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _device, value) |
+| 1452 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _device, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Number` · L1426–1437
+### PropertyDeclaration `Number` · L1456–1467
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1426–1437](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1426-L1437)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1456–1467](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1456-L1467)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8015,9 +8122,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Number` · L1428–1431
+### GetAccessorDeclaration `get_Number` · L1458–1461
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1428–1431](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1428-L1431)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1458–1461](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1458-L1461)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8032,13 +8139,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1430 | return | 호출자에게 값 또는 제어를 반환합니다: return _number; |
+| 1460 | return | 호출자에게 값 또는 제어를 반환합니다: return _number; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_Number` · L1433–1436
+### SetAccessorDeclaration `set_Number` · L1463–1466
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1433–1436](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1433-L1436)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1463–1466](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1463-L1466)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8059,19 +8166,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1435 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1604 |
+| 1465 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1634 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1435 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _number, value) |
+| 1465 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _number, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `NickName` · L1439–1450
+### PropertyDeclaration `NickName` · L1469–1480
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1439–1450](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1439-L1450)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1469–1480](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1469-L1480)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8084,9 +8191,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_NickName` · L1441–1444
+### GetAccessorDeclaration `get_NickName` · L1471–1474
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1441–1444](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1441-L1444)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1471–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1471-L1474)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8101,13 +8208,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1443 | return | 호출자에게 값 또는 제어를 반환합니다: return _nickName; |
+| 1473 | return | 호출자에게 값 또는 제어를 반환합니다: return _nickName; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_NickName` · L1446–1449
+### SetAccessorDeclaration `set_NickName` · L1476–1479
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1446–1449](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1446-L1449)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1476–1479](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1476-L1479)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8128,19 +8235,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1448 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1604 |
+| 1478 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1634 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1448 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _nickName, value) |
+| 1478 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _nickName, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `SystemSection` · L1452–1463
+### PropertyDeclaration `SystemSection` · L1482–1493
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1452–1463](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1452-L1463)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1482–1493](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1482-L1493)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8153,9 +8260,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_SystemSection` · L1454–1457
+### GetAccessorDeclaration `get_SystemSection` · L1484–1487
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1454–1457](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1454-L1457)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1484–1487](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1484-L1487)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8170,13 +8277,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1456 | return | 호출자에게 값 또는 제어를 반환합니다: return _systemSection; |
+| 1486 | return | 호출자에게 값 또는 제어를 반환합니다: return _systemSection; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_SystemSection` · L1459–1462
+### SetAccessorDeclaration `set_SystemSection` · L1489–1492
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1459–1462](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1459-L1462)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1489–1492](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1489-L1492)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8197,19 +8304,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1461 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1604 |
+| 1491 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1634 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1461 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _systemSection, value) |
+| 1491 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _systemSection, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `AutoConnection` · L1465–1476
+### PropertyDeclaration `AutoConnection` · L1495–1506
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1465–1476](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1465-L1476)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1495–1506](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1495-L1506)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8222,9 +8329,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_AutoConnection` · L1467–1470
+### GetAccessorDeclaration `get_AutoConnection` · L1497–1500
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1467–1470](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1467-L1470)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1497–1500](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1497-L1500)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8239,13 +8346,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1469 | return | 호출자에게 값 또는 제어를 반환합니다: return _autoConnection; |
+| 1499 | return | 호출자에게 값 또는 제어를 반환합니다: return _autoConnection; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_AutoConnection` · L1472–1475
+### SetAccessorDeclaration `set_AutoConnection` · L1502–1505
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1472–1475](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1472-L1475)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1502–1505](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1502-L1505)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8266,19 +8373,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1474 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1604 |
+| 1504 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1634 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1474 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _autoConnection, value) |
+| 1504 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _autoConnection, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Simul` · L1478–1489
+### PropertyDeclaration `Simul` · L1508–1519
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1478–1489](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1478-L1489)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1508–1519](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1508-L1519)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8291,9 +8398,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Simul` · L1480–1483
+### GetAccessorDeclaration `get_Simul` · L1510–1513
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1480–1483](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1480-L1483)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1510–1513](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1510-L1513)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8308,13 +8415,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1482 | return | 호출자에게 값 또는 제어를 반환합니다: return _simul; |
+| 1512 | return | 호출자에게 값 또는 제어를 반환합니다: return _simul; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_Simul` · L1485–1488
+### SetAccessorDeclaration `set_Simul` · L1515–1518
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1485–1488](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1485-L1488)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1515–1518](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1515-L1518)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8335,19 +8442,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1487 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1604 |
+| 1517 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1634 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1487 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _simul, value) |
+| 1517 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _simul, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Arg1` · L1491–1502
+### PropertyDeclaration `Arg1` · L1521–1532
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1491–1502](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1491-L1502)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1521–1532](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1521-L1532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8360,9 +8467,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Arg1` · L1493–1496
+### GetAccessorDeclaration `get_Arg1` · L1523–1526
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1493–1496](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1493-L1496)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1523–1526](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1523-L1526)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8377,13 +8484,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1495 | return | 호출자에게 값 또는 제어를 반환합니다: return _arg1; |
+| 1525 | return | 호출자에게 값 또는 제어를 반환합니다: return _arg1; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_Arg1` · L1498–1501
+### SetAccessorDeclaration `set_Arg1` · L1528–1531
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1498–1501](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1498-L1501)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1528–1531](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1528-L1531)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8404,19 +8511,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1500 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1604 |
+| 1530 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1634 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1500 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _arg1, value) |
+| 1530 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _arg1, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Arg2` · L1504–1515
+### PropertyDeclaration `Arg2` · L1534–1545
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1504–1515](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1504-L1515)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1534–1545](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1534-L1545)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8429,9 +8536,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Arg2` · L1506–1509
+### GetAccessorDeclaration `get_Arg2` · L1536–1539
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1506–1509](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1506-L1509)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1536–1539](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1536-L1539)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8446,13 +8553,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1508 | return | 호출자에게 값 또는 제어를 반환합니다: return _arg2; |
+| 1538 | return | 호출자에게 값 또는 제어를 반환합니다: return _arg2; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_Arg2` · L1511–1514
+### SetAccessorDeclaration `set_Arg2` · L1541–1544
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1511–1514](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1511-L1514)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1541–1544](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1541-L1544)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8473,19 +8580,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1513 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1604 |
+| 1543 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1634 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1513 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _arg2, value) |
+| 1543 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _arg2, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Arg3` · L1517–1528
+### PropertyDeclaration `Arg3` · L1547–1558
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1517–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1517-L1528)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1547–1558](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1547-L1558)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8498,9 +8605,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Arg3` · L1519–1522
+### GetAccessorDeclaration `get_Arg3` · L1549–1552
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1519–1522](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1519-L1522)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1549–1552](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1549-L1552)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8515,13 +8622,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1521 | return | 호출자에게 값 또는 제어를 반환합니다: return _arg3; |
+| 1551 | return | 호출자에게 값 또는 제어를 반환합니다: return _arg3; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_Arg3` · L1524–1527
+### SetAccessorDeclaration `set_Arg3` · L1554–1557
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1524–1527](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1524-L1527)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1554–1557](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1554-L1557)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8542,19 +8649,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1526 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1604 |
+| 1556 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1634 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1526 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _arg3, value) |
+| 1556 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _arg3, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Arg4` · L1530–1541
+### PropertyDeclaration `Arg4` · L1560–1571
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1530–1541](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1530-L1541)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1571](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1571)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8567,9 +8674,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Arg4` · L1532–1535
+### GetAccessorDeclaration `get_Arg4` · L1562–1565
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1532–1535](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1532-L1535)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1562–1565](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1562-L1565)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8584,13 +8691,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1534 | return | 호출자에게 값 또는 제어를 반환합니다: return _arg4; |
+| 1564 | return | 호출자에게 값 또는 제어를 반환합니다: return _arg4; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_Arg4` · L1537–1540
+### SetAccessorDeclaration `set_Arg4` · L1567–1570
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1537–1540](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1537-L1540)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1567–1570](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1567-L1570)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8611,19 +8718,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1539 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1604 |
+| 1569 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1634 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1539 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _arg4, value) |
+| 1569 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _arg4, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Arg5` · L1543–1554
+### PropertyDeclaration `Arg5` · L1573–1584
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1543–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1543-L1554)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1573–1584](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1573-L1584)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8636,9 +8743,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Arg5` · L1545–1548
+### GetAccessorDeclaration `get_Arg5` · L1575–1578
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1545–1548](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1545-L1548)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1575–1578](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1575-L1578)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8653,13 +8760,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1547 | return | 호출자에게 값 또는 제어를 반환합니다: return _arg5; |
+| 1577 | return | 호출자에게 값 또는 제어를 반환합니다: return _arg5; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### SetAccessorDeclaration `set_Arg5` · L1550–1553
+### SetAccessorDeclaration `set_Arg5` · L1580–1583
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1550–1553](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1550-L1553)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1580–1583](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1580-L1583)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8680,19 +8787,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1552 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1604 |
+| 1582 | SetEditable | resolved | void Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.SetEditable(ref string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1634 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1552 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _arg5, value) |
+| 1582 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetEditable(ref _arg5, value) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `IsModified` · L1556–1562
+### PropertyDeclaration `IsModified` · L1586–1592
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1556–1562](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1556-L1562)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1586–1592](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1586-L1592)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8705,9 +8812,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_IsModified` · L1558–1561
+### GetAccessorDeclaration `get_IsModified` · L1588–1591
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1558–1561](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1558-L1561)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1588–1591](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1588-L1591)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8722,42 +8829,42 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1560 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1618 |
-| 1560 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1618 |
-| 1560 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1618 |
-| 1560 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1618 |
-| 1560 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1618 |
-| 1560 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1618 |
-| 1560 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1618 |
-| 1560 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1618 |
-| 1560 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1618 |
-| 1560 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1618 |
-| 1560 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1618 |
-| 1560 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1618 |
+| 1590 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1648 |
+| 1590 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1648 |
+| 1590 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1648 |
+| 1590 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1648 |
+| 1590 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1648 |
+| 1590 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1648 |
+| 1590 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1648 |
+| 1590 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1648 |
+| 1590 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1648 |
+| 1590 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1648 |
+| 1590 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1648 |
+| 1590 | IsChanged | resolved | bool Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.IsChanged(string, string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1648 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Type, _originalType) |
-| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Device, _originalDevice) |
-| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Number, _originalNumber) |
-| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(NickName, _originalNickName) |
-| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(SystemSection, _originalSystemSection) |
-| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(AutoConnection, _originalAutoConnection) |
-| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Simul, _originalSimul) |
-| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Arg1, _originalArg1) |
-| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Arg2, _originalArg2) |
-| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Arg3, _originalArg3) |
-| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Arg4, _originalArg4) |
-| 1560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Arg5, _originalArg5) |
-| 1560 | return | 호출자에게 값 또는 제어를 반환합니다: return IsChanged(Type, _originalType) &#124;&#124; IsChanged(Device, _originalDevice) &#124;&#124; IsChanged(Number, _originalNumber) &#124;&#124; IsChanged(NickName, _originalNickName) &#124;&#124; IsChanged(SystemSection, _originalSystemSection) &#124;&#124; IsChanged(AutoConne |
+| 1590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Type, _originalType) |
+| 1590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Device, _originalDevice) |
+| 1590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Number, _originalNumber) |
+| 1590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(NickName, _originalNickName) |
+| 1590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(SystemSection, _originalSystemSection) |
+| 1590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(AutoConnection, _originalAutoConnection) |
+| 1590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Simul, _originalSimul) |
+| 1590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Arg1, _originalArg1) |
+| 1590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Arg2, _originalArg2) |
+| 1590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Arg3, _originalArg3) |
+| 1590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Arg4, _originalArg4) |
+| 1590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsChanged(Arg5, _originalArg5) |
+| 1590 | return | 호출자에게 값 또는 제어를 반환합니다: return IsChanged(Type, _originalType) &#124;&#124; IsChanged(Device, _originalDevice) &#124;&#124; IsChanged(Number, _originalNumber) &#124;&#124; IsChanged(NickName, _originalNickName) &#124;&#124; IsChanged(SystemSection, _originalSystemSection) &#124;&#124; IsChanged(AutoConne |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `IsSimulation` · L1564–1574
+### PropertyDeclaration `IsSimulation` · L1594–1604
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1564–1574](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1564-L1574)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1594–1604](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1594-L1604)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8770,9 +8877,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_IsSimulation` · L1566–1573
+### GetAccessorDeclaration `get_IsSimulation` · L1596–1603
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1566–1573](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1566-L1573)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1596–1603](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1596-L1603)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8787,32 +8894,32 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1568 | Simul.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 1568 | Simul.Trim | resolved | string string.Trim() |
+| 1598 | Simul.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 1598 | Simul.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1568 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Simul.Trim().ToUpperInvariant() |
-| 1568 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Simul.Trim() |
-| 1568 | return | 호출자에게 값 또는 제어를 반환합니다: return Simul.Trim().ToUpperInvariant() switch { "0" or "FALSE" or "OFF" or "NO" or "ONLINE" or "LIVE" or "REAL" => false, _ => true }; |
-| 1568 | switch-expression | 값별 결과식을 선택합니다: Simul.Trim().ToUpperInvariant() switch { "0" or "FALSE" or "OFF" or "NO" or "ONLINE" or "LIVE" or "REAL" => false, _ => true } |
+| 1598 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Simul.Trim().ToUpperInvariant() |
+| 1598 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Simul.Trim() |
+| 1598 | return | 호출자에게 값 또는 제어를 반환합니다: return Simul.Trim().ToUpperInvariant() switch { "0" or "FALSE" or "OFF" or "NO" or "ONLINE" or "LIVE" or "REAL" => false, _ => true }; |
+| 1598 | switch-expression | 값별 결과식을 선택합니다: Simul.Trim().ToUpperInvariant() switch { "0" or "FALSE" or "OFF" or "NO" or "ONLINE" or "LIVE" or "REAL" => false, _ => true } |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["get_IsSimulation"]
- N0["L1568 switch-expression"]
+ N0["L1598 switch-expression"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ModifiedText` · L1576–1582
+### PropertyDeclaration `ModifiedText` · L1606–1612
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1576–1582](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1576-L1582)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1606–1612](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1606-L1612)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8825,9 +8932,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ModifiedText` · L1578–1581
+### GetAccessorDeclaration `get_ModifiedText` · L1608–1611
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1578–1581](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1578-L1581)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1608–1611](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1608-L1611)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8842,14 +8949,14 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1580 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsModified ? "Yes" : "No" |
-| 1580 | return | 호출자에게 값 또는 제어를 반환합니다: return IsModified ? "Yes" : "No"; |
+| 1610 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsModified ? "Yes" : "No" |
+| 1610 | return | 호출자에게 값 또는 제어를 반환합니다: return IsModified ? "Yes" : "No"; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `ModifiedBrush` · L1584–1590
+### PropertyDeclaration `ModifiedBrush` · L1614–1620
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1584–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1584-L1590)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1614–1620](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1614-L1620)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8862,9 +8969,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_ModifiedBrush` · L1586–1589
+### GetAccessorDeclaration `get_ModifiedBrush` · L1616–1619
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1586–1589](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1586-L1589)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1616–1619](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1616-L1619)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8879,14 +8986,14 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1588 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsModified ? CStatusBrush.Wait : CStatusBrush.Muted |
-| 1588 | return | 호출자에게 값 또는 제어를 반환합니다: return IsModified ? CStatusBrush.Wait : CStatusBrush.Muted; |
+| 1618 | conditional-expression | 조건에 따라 결과식을 선택합니다: IsModified ? CStatusBrush.Wait : CStatusBrush.Muted |
+| 1618 | return | 호출자에게 값 또는 제어를 반환합니다: return IsModified ? CStatusBrush.Wait : CStatusBrush.Muted; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `SimulBrush` · L1592–1602
+### PropertyDeclaration `SimulBrush` · L1622–1632
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1592–1602](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1592-L1602)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1622–1632](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1622-L1632)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8899,9 +9006,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_SimulBrush` · L1594–1601
+### GetAccessorDeclaration `get_SimulBrush` · L1624–1631
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1594–1601](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1594-L1601)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1624–1631](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1624-L1631)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8916,32 +9023,32 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1596 | Simul.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
-| 1596 | Simul.Trim | resolved | string string.Trim() |
+| 1626 | Simul.Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
+| 1626 | Simul.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1596 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Simul.Trim().ToUpperInvariant() |
-| 1596 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Simul.Trim() |
-| 1596 | return | 호출자에게 값 또는 제어를 반환합니다: return Simul.Trim().ToUpperInvariant() switch { "SIMULATION" or "SIMUL" or "SIM" or "1" => CStatusBrush.Simul, _ => CStatusBrush.Online }; |
-| 1596 | switch-expression | 값별 결과식을 선택합니다: Simul.Trim().ToUpperInvariant() switch { "SIMULATION" or "SIMUL" or "SIM" or "1" => CStatusBrush.Simul, _ => CStatusBrush.Online } |
+| 1626 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Simul.Trim().ToUpperInvariant() |
+| 1626 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Simul.Trim() |
+| 1626 | return | 호출자에게 값 또는 제어를 반환합니다: return Simul.Trim().ToUpperInvariant() switch { "SIMULATION" or "SIMUL" or "SIM" or "1" => CStatusBrush.Simul, _ => CStatusBrush.Online }; |
+| 1626 | switch-expression | 값별 결과식을 선택합니다: Simul.Trim().ToUpperInvariant() switch { "SIMULATION" or "SIMUL" or "SIM" or "1" => CStatusBrush.Simul, _ => CStatusBrush.Online } |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["get_SimulBrush"]
- N0["L1596 switch-expression"]
+ N0["L1626 switch-expression"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `SetEditable` · L1604–1616
+### MethodDeclaration `SetEditable` · L1634–1646
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1604–1616](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1604-L1616)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1634–1646](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1634-L1646)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8961,67 +9068,67 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1409–1409](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1409-L1409) | SetEditable | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1422–1422](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1422-L1422) | SetEditable | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1435–1435](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1435-L1435) | SetEditable | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1448–1448](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1448-L1448) | SetEditable | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1461–1461](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1461-L1461) | SetEditable | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1474–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1474-L1474) | SetEditable | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1487–1487](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1487-L1487) | SetEditable | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1500–1500](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1500-L1500) | SetEditable | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1513–1513](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1513-L1513) | SetEditable | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1526–1526](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1526-L1526) | SetEditable | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1539–1539](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1539-L1539) | SetEditable | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1552–1552](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1552-L1552) | SetEditable | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1439–1439](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1439-L1439) | SetEditable | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1452–1452](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1452-L1452) | SetEditable | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1465–1465](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1465-L1465) | SetEditable | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1478–1478](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1478-L1478) | SetEditable | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1491–1491](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1491-L1491) | SetEditable | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1504–1504](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1504-L1504) | SetEditable | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1517–1517](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1517-L1517) | SetEditable | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1530–1530](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1530-L1530) | SetEditable | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1543–1543](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1543-L1543) | SetEditable | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1556–1556](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1556-L1556) | SetEditable | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1569–1569](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1569-L1569) | SetEditable | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1582–1582](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1582-L1582) | SetEditable | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1606 | SetProperty | resolved | bool Drilling.UI.Menu.CBindingBase.SetProperty<string>(ref string, string, string?) · Drilling.UI/Menu/CBindingBase.cs:737 |
-| 1611 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:761 |
-| 1611 | nameof | unresolved | None |
-| 1612 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:761 |
-| 1612 | nameof | unresolved | None |
-| 1613 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:761 |
-| 1613 | nameof | unresolved | None |
-| 1614 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:761 |
-| 1614 | nameof | unresolved | None |
-| 1615 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:761 |
-| 1615 | nameof | unresolved | None |
+| 1636 | SetProperty | resolved | bool Drilling.UI.Menu.CBindingBase.SetProperty<string>(ref string, string, string?) · Drilling.UI/Menu/CBindingBase.cs:760 |
+| 1641 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:784 |
+| 1641 | nameof | unresolved | None |
+| 1642 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:784 |
+| 1642 | nameof | unresolved | None |
+| 1643 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:784 |
+| 1643 | nameof | unresolved | None |
+| 1644 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:784 |
+| 1644 | nameof | unresolved | None |
+| 1645 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:784 |
+| 1645 | nameof | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1606 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetProperty(ref field, value) |
-| 1606 | if | 조건에 따라 분기합니다: if (!SetProperty(ref field, value)) |
-| 1608 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 1611 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(IsModified)) |
-| 1611 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsModified) |
-| 1612 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ModifiedText)) |
-| 1612 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ModifiedText) |
-| 1613 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ModifiedBrush)) |
-| 1613 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ModifiedBrush) |
-| 1614 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(SimulBrush)) |
-| 1614 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SimulBrush) |
-| 1615 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(IsSimulation)) |
-| 1615 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsSimulation) |
+| 1636 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetProperty(ref field, value) |
+| 1636 | if | 조건에 따라 분기합니다: if (!SetProperty(ref field, value)) |
+| 1638 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 1641 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(IsModified)) |
+| 1641 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsModified) |
+| 1642 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ModifiedText)) |
+| 1642 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ModifiedText) |
+| 1643 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(ModifiedBrush)) |
+| 1643 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ModifiedBrush) |
+| 1644 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(SimulBrush)) |
+| 1644 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SimulBrush) |
+| 1645 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(IsSimulation)) |
+| 1645 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsSimulation) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["SetEditable"]
- N0["L1606 if"]
+ N0["L1636 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `IsChanged` · L1618–1621
+### MethodDeclaration `IsChanged` · L1648–1651
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1618–1621](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1618-L1621)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1648–1651](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1648-L1651)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9041,41 +9148,41 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1560) | IsChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1560) | IsChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1560) | IsChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1560) | IsChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1560) | IsChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1560) | IsChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1560) | IsChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1560) | IsChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1560) | IsChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1560) | IsChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1560) | IsChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1560–1560](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1560-L1560) | IsChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1590–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1590-L1590) | IsChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1590–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1590-L1590) | IsChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1590–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1590-L1590) | IsChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1590–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1590-L1590) | IsChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1590–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1590-L1590) | IsChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1590–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1590-L1590) | IsChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1590–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1590-L1590) | IsChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1590–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1590-L1590) | IsChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1590–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1590-L1590) | IsChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1590–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1590-L1590) | IsChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1590–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1590-L1590) | IsChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1590–1590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1590-L1590) | IsChanged | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1620 | Normalize(current).Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 1620 | Normalize | resolved | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Normalize(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1623 |
-| 1620 | Normalize | resolved | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Normalize(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1623 |
+| 1650 | Normalize(current).Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 1650 | Normalize | resolved | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Normalize(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1653 |
+| 1650 | Normalize | resolved | string Drilling.UI.Menu.Menus.ST_SETTING_INTERFACE_ROW.Normalize(string) · Drilling.UI/Menu/Menus/CMenuSetting.cs:1653 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1620 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(current).Equals(Normalize(original), StringComparison.OrdinalIgnoreCase) |
-| 1620 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(current) |
-| 1620 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(original) |
-| 1620 | return | 호출자에게 값 또는 제어를 반환합니다: return !Normalize(current).Equals(Normalize(original), StringComparison.OrdinalIgnoreCase); |
+| 1650 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(current).Equals(Normalize(original), StringComparison.OrdinalIgnoreCase) |
+| 1650 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(current) |
+| 1650 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Normalize(original) |
+| 1650 | return | 호출자에게 값 또는 제어를 반환합니다: return !Normalize(current).Equals(Normalize(original), StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Normalize` · L1623–1626
+### MethodDeclaration `Normalize` · L1653–1656
 
-[Drilling.UI/Menu/Menus/CMenuSetting.cs:1623–1626](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1623-L1626)
+[Drilling.UI/Menu/Menus/CMenuSetting.cs:1653–1656](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1653-L1656)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9094,21 +9201,21 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1620–1620](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1620-L1620) | Normalize | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1620–1620](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1620-L1620) | Normalize | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1650–1650](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1650-L1650) | Normalize | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:1650–1650](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L1650-L1650) | Normalize | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1625 | value.Trim | resolved | string string.Trim() |
+| 1655 | value.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1625 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
-| 1625 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim(); |
+| 1655 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
+| 1655 | return | 호출자에게 값 또는 제어를 반환합니다: return value.Trim(); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 

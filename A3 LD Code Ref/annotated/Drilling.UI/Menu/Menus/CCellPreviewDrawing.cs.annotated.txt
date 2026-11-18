@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs
-Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
+Commit: 96e22cd027c84bf302b23f2949b98985d7f301bb
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
@@ -307,55 +307,57 @@ L000158 | public sealed record ST_CELL_PREVIEW_LABEL(int CellNo, double CanvasCe
 L000159 | { ⟦EOL⟧
 // 해설 L160: 선언·서명/매개변수·접근 조건입니다 · Rect Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.CellBounds
 L000160 |     public Rect CellBounds { get; init; } = Rect.Empty; ⟦EOL⟧
-// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.DisplayText
-L000161 |     public string DisplayText ⟦EOL⟧
-// 해설 L162: 구문 블록 경계입니다 · 소속 DisplayText.
-L000162 |     { ⟦EOL⟧
-// 해설 L163: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.DisplayText.get
-L000163 |         get ⟦EOL⟧
-// 해설 L164: 구문 블록 경계입니다 · 소속 get_DisplayText.
-L000164 |         { ⟦EOL⟧
-// 해설 L165: 호출자에게 값 또는 제어를 반환합니다: return $"Cell{CellNo}";
-L000165 |             return $"Cell{CellNo}"; ⟦EOL⟧
-// 해설 L166: 구문 블록 경계입니다 · 소속 get_DisplayText.
-L000166 |         } ⟦EOL⟧
-// 해설 L167: 구문 블록 경계입니다 · 소속 DisplayText.
-L000167 |     } ⟦EOL⟧
-L000168 |  ⟦EOL⟧
-// 해설 L169: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.Height
-L000169 |     public double Height ⟦EOL⟧
-// 해설 L170: 구문 블록 경계입니다 · 소속 Height.
-L000170 |     { ⟦EOL⟧
-// 해설 L171: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.Height.get
-L000171 |         get ⟦EOL⟧
-// 해설 L172: 구문 블록 경계입니다 · 소속 get_Height.
-L000172 |         { ⟦EOL⟧
-// 해설 L173: 호출자에게 값 또는 제어를 반환합니다: return 16.0;
-L000173 |             return 16.0; ⟦EOL⟧
-// 해설 L174: 구문 블록 경계입니다 · 소속 get_Height.
-L000174 |         } ⟦EOL⟧
-// 해설 L175: 구문 블록 경계입니다 · 소속 Height.
-L000175 |     } ⟦EOL⟧
-// 해설 L176: 구문 블록 경계입니다.
-L000176 | } ⟦EOL⟧
-L000177 |  ⟦EOL⟧
-// 해설 L178: 타입의 구조/상속 선언입니다: public sealed record ST_DISTORTION_KEY_PREVIEW(int KeyNo, double GlassX, double GlassY)
-L000178 | public sealed record ST_DISTORTION_KEY_PREVIEW(int KeyNo, double GlassX, double GlassY) ⟦EOL⟧
-// 해설 L179: 구문 블록 경계입니다.
-L000179 | { ⟦EOL⟧
-// 해설 L180: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW.DisplayText
-L000180 |     public string DisplayText ⟦EOL⟧
-// 해설 L181: 구문 블록 경계입니다 · 소속 DisplayText.
-L000181 |     { ⟦EOL⟧
-// 해설 L182: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW.DisplayText.get
-L000182 |         get ⟦EOL⟧
-// 해설 L183: 구문 블록 경계입니다 · 소속 get_DisplayText.
-L000183 |         { ⟦EOL⟧
-// 해설 L184: 호출자에게 값 또는 제어를 반환합니다: return $"DK{KeyNo}";
-L000184 |             return $"DK{KeyNo}"; ⟦EOL⟧
-// 해설 L185: 구문 블록 경계입니다 · 소속 get_DisplayText.
-L000185 |         } ⟦EOL⟧
-// 해설 L186: 구문 블록 경계입니다 · 소속 DisplayText.
-L000186 |     } ⟦EOL⟧
-// 해설 L187: 구문 블록 경계입니다.
-L000187 | } ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.HasSelectedShots
+L000161 |     public bool HasSelectedShots { get; init; } ⟦EOL⟧
+// 해설 L162: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.DisplayText
+L000162 |     public string DisplayText ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 DisplayText.
+L000163 |     { ⟦EOL⟧
+// 해설 L164: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.DisplayText.get
+L000164 |         get ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 get_DisplayText.
+L000165 |         { ⟦EOL⟧
+// 해설 L166: 호출자에게 값 또는 제어를 반환합니다: return $"Cell{CellNo}";
+L000166 |             return $"Cell{CellNo}"; ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 get_DisplayText.
+L000167 |         } ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 DisplayText.
+L000168 |     } ⟦EOL⟧
+L000169 |  ⟦EOL⟧
+// 해설 L170: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.Height
+L000170 |     public double Height ⟦EOL⟧
+// 해설 L171: 구문 블록 경계입니다 · 소속 Height.
+L000171 |     { ⟦EOL⟧
+// 해설 L172: 선언·서명/매개변수·접근 조건입니다 · double Drilling.UI.Menu.Menus.ST_CELL_PREVIEW_LABEL.Height.get
+L000172 |         get ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 get_Height.
+L000173 |         { ⟦EOL⟧
+// 해설 L174: 호출자에게 값 또는 제어를 반환합니다: return 16.0;
+L000174 |             return 16.0; ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 get_Height.
+L000175 |         } ⟦EOL⟧
+// 해설 L176: 구문 블록 경계입니다 · 소속 Height.
+L000176 |     } ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다.
+L000177 | } ⟦EOL⟧
+L000178 |  ⟦EOL⟧
+// 해설 L179: 타입의 구조/상속 선언입니다: public sealed record ST_DISTORTION_KEY_PREVIEW(int KeyNo, double GlassX, double GlassY)
+L000179 | public sealed record ST_DISTORTION_KEY_PREVIEW(int KeyNo, double GlassX, double GlassY) ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다.
+L000180 | { ⟦EOL⟧
+// 해설 L181: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW.DisplayText
+L000181 |     public string DisplayText ⟦EOL⟧
+// 해설 L182: 구문 블록 경계입니다 · 소속 DisplayText.
+L000182 |     { ⟦EOL⟧
+// 해설 L183: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.ST_DISTORTION_KEY_PREVIEW.DisplayText.get
+L000183 |         get ⟦EOL⟧
+// 해설 L184: 구문 블록 경계입니다 · 소속 get_DisplayText.
+L000184 |         { ⟦EOL⟧
+// 해설 L185: 호출자에게 값 또는 제어를 반환합니다: return $"DK{KeyNo}";
+L000185 |             return $"DK{KeyNo}"; ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 get_DisplayText.
+L000186 |         } ⟦EOL⟧
+// 해설 L187: 구문 블록 경계입니다 · 소속 DisplayText.
+L000187 |     } ⟦EOL⟧
+// 해설 L188: 구문 블록 경계입니다.
+L000188 | } ⟦EOL⟧

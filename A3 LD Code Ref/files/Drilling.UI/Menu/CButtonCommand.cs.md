@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 0670811aea72aaf0eec286af14a298c5308ded85f4c7677e4953c85f46ecc856 |
 | 파일 분류 | code |
 | 원본 크기/행 | 8,209 bytes / 231 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -57,7 +57,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `NoOp` · L11–11
 
-[Drilling.UI/Menu/CButtonCommand.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L11-L11)
+[Drilling.UI/Menu/CButtonCommand.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -84,7 +84,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_NoOp` · L11–11
 
-[Drilling.UI/Menu/CButtonCommand.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L11-L11)
+[Drilling.UI/Menu/CButtonCommand.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -99,7 +99,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `CanExecuteChanged` · L13–13
 
-[Drilling.UI/Menu/CButtonCommand.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L13-L13)
+[Drilling.UI/Menu/CButtonCommand.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -114,7 +114,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CanExecute` · L14–17
 
-[Drilling.UI/Menu/CButtonCommand.cs:14–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L14-L17)
+[Drilling.UI/Menu/CButtonCommand.cs:14–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L14-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -133,21 +133,23 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/CButtonCommand.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L176-L176) | command.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4960–4960](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4960-L4960) | BaseActionCommand.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6253–6253](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6253-L6253) | ActionCommand.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7778–7778](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7778-L7778) | OffsetActionCommand.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L194-L194) | selectHeadCommand.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L195-L195) | selectHeadCommand.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6221–6221](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6221-L6221) | _selectFocusedHeadCommand.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6223–6223](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6223-L6223) | _selectFocusedHeadCommand.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6239–6239](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6239-L6239) | _selectFocusedHeadCommand.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2126–2126](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2126-L2126) | OpenCorrectionReviewCommand.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2129–2129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2129-L2129) | OpenCorrectionReviewCommand.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2137–2137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2137-L2137) | StartCommand.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2171–2171](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2171-L2171) | StopCommand.CanExecute | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2736–2736](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2736-L2736) | OneShotActionCommand.CanExecute | False |
-| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L16-L16) | panel.SelectCorrectionShotCommand.CanExecute | False |
+| [Drilling.UI/Menu/CButtonCommand.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L176-L176) | command.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4989–4989](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4989-L4989) | BaseActionCommand.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6282–6282](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6282-L6282) | ActionCommand.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7807–7807](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7807-L7807) | OffsetActionCommand.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L194-L194) | selectHeadCommand.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L195-L195) | selectHeadCommand.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6221–6221](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6221-L6221) | _selectFocusedHeadCommand.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6223–6223](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6223-L6223) | _selectFocusedHeadCommand.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6239–6239](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6239-L6239) | _selectFocusedHeadCommand.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2348–2348](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2348-L2348) | OpenCorrectionReviewCommand.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2351–2351](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2351-L2351) | OpenCorrectionReviewCommand.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2362–2362](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2362-L2362) | StartCommand.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2396–2396](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2396-L2396) | StopCommand.CanExecute | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3570–3570](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3570-L3570) | OneShotActionCommand.CanExecute | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewShotMapControl.cs#L160-L160) | shot.SelectCommand.CanExecute | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewShotMapControl.cs#L172-L172) | command.CanExecute | False |
+| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L16-L16) | panel.SelectCorrectionShotCommand.CanExecute | False |
 
 호출하는 대상과 해석 범위:
 
@@ -166,7 +168,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `Execute` · L19–22
 
-[Drilling.UI/Menu/CButtonCommand.cs:19–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L19-L22)
+[Drilling.UI/Menu/CButtonCommand.cs:19–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L19-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -185,15 +187,16 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2179–2179](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2179-L2179) | correctionMenu.SelectTabCommand.Execute | False |
-| [Drilling.UI/Menu/CButtonCommand.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L178-L178) | command.Execute | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L407-L407) | Review.SelectModeCommand.Execute | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3948–3948](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3948-L3948) | Rough.BackToGlassCommand.Execute | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6232–6232](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6232-L6232) | _selectFocusedHeadCommand.Execute | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6249–6249](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6249-L6249) | _selectFocusedHeadCommand.Execute | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6251–6251](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6251-L6251) | _selectFocusedHeadCommand.Execute | False |
-| [Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L144-L144) | monitor.PicoJogStopCommand.Execute | False |
-| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L17-L17) | panel.SelectCorrectionShotCommand.Execute | False |
+| [Drilling.UI/CRootView.cs:2171–2171](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2171-L2171) | correctionMenu.SelectTabCommand.Execute | False |
+| [Drilling.UI/Menu/CButtonCommand.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L178-L178) | command.Execute | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3957–3957](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3957-L3957) | Rough.BackToGlassCommand.Execute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6232–6232](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6232-L6232) | _selectFocusedHeadCommand.Execute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6249–6249](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6249-L6249) | _selectFocusedHeadCommand.Execute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6251–6251](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6251-L6251) | _selectFocusedHeadCommand.Execute | False |
+| [Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L144-L144) | monitor.PicoJogStopCommand.Execute | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewShotMapControl.cs#L163-L163) | shot.SelectCommand.Execute | False |
+| [Drilling.UI/Views/CReviewShotMapControl.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewShotMapControl.cs#L175-L175) | command.Execute | False |
+| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L17-L17) | panel.SelectCorrectionShotCommand.Execute | False |
 
 호출하는 대상과 해석 범위:
 
@@ -211,7 +214,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `NotifyCanExecuteChanged` · L24–27
 
-[Drilling.UI/Menu/CButtonCommand.cs:24–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L24-L27)
+[Drilling.UI/Menu/CButtonCommand.cs:24–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L24-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -224,202 +227,222 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L326-L326) | StartCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/CRootView.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L327-L327) | StopCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/CRootView.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L328-L328) | SelectHeadCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/CRootView.cs:634–634](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L634-L634) | StopCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/CRootView.cs:732–732](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L732-L732) | StartCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/CRootView.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L733-L733) | ToggleOperationModeCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/CRootView.cs:1708–1708](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1708-L1708) | StopCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/CRootView.cs:1858–1858](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1858-L1858) | StartCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/CRootView.cs:1859–1859](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1859-L1859) | StopCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/CRootView.cs:1860–1860](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1860-L1860) | ToggleOperationModeCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/CRootView.cs:1937–1937](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1937-L1937) | StopCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/CRootView.cs:2734–2734](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2734-L2734) | StopCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L86-L86) | LoadCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L214-L214) | StartCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L214-L214) | StopCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L263-L263) | axis.AbsoluteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L263-L263) | axis.RelativeCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L264-L264) | StopCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L301-L301) | CauseAnalysisCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:408–408](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L408-L408) | SearchCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L409-L409) | Last24HoursCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L457-L457) | SearchCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:458–458](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L458-L458) | Last24HoursCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L459-L459) | CauseAnalysisCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1292–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1292-L1292) | LoadDataCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1293–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1293-L1293) | OffsetApplyCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1294–1294](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1294-L1294) | OffsetRollbackCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1295-L1295) | OffsetInitCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1296–1296](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1296-L1296) | OffsetViewCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1323–1323](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1323-L1323) | ToggleResultEditModeCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L603-L603) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:604–604](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L604-L604) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L605-L605) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L606-L606) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L607-L607) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L608-L608) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:609–609](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L609-L609) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:610–610](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L610-L610) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L611-L611) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:612–612](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L612-L612) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:613–613](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L613-L613) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:614–614](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L614-L614) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:615–615](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L615-L615) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:716–716](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L716-L716) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:717–717](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L717-L717) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:718–718](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L718-L718) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:719–719](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L719-L719) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:720–720](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L720-L720) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:721–721](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L721-L721) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:722–722](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L722-L722) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:723–723](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L723-L723) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:724–724](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L724-L724) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:725–725](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L725-L725) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:726–726](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L726-L726) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L727-L727) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L101-L101) | RefreshCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:177–177](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L177-L177) | ToggleResultEditModeCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1474–1474](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1474-L1474) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1529-L1529) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1714–1714](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1714-L1714) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1763–1763](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1763-L1763) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2695–2695](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2695-L2695) | AlignDistortion.BaseActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2945–2945](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2945-L2945) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3027–3027](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3027-L3027) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3060–3060](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3060-L3060) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3138–3138](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3138-L3138) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3341–3341](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3341-L3341) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3912–3912](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3912-L3912) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4038–4038](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4038-L4038) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4067–4067](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4067-L4067) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4127–4127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4127-L4127) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4157–4157](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4157-L4157) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4223–4223](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4223-L4223) | ExecuteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4365–4365](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4365-L4365) | ActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4434–4434](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4434-L4434) | ActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4497–4497](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4497-L4497) | ActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4537–4537](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4537-L4537) | SelectHeadCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4537–4537](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4537-L4537) | ActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4574–4574](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4574-L4574) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4963–4963](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4963-L4963) | BaseActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4971–4971](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4971-L4971) | BaseActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5103–5103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5103-L5103) | BaseActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5245–5245](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5245-L5245) | BaseActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6529–6529](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6529-L6529) | SelectLineCountCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6530–6530](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6530-L6530) | SelectMethodCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6531–6531](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6531-L6531) | ActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7398–7398](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7398-L7398) | owner.OffsetActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7813–7813](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7813-L7813) | SelectCellCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7814–7814](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7814-L7814) | SelectHeadCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7815–7815](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7815-L7815) | SelectScopeCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7816–7816](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7816-L7816) | SelectCorrectionShotCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7817–7817](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7817-L7817) | OffsetActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7922–7922](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7922-L7922) | OffsetActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7927–7927](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7927-L7927) | OffsetActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:8100–8100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L8100-L8100) | OffsetActionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2939–2939](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L2939-L2939) | command.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L196-L196) | SelectManualHeadsCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1001–1001](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1001-L1001) | VisionProtocolSendCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1776–1776](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1776-L1776) | ScannerAxisClearFaultCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1814–1814](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1814-L1814) | ScannerAxisClearFaultCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1845–1845](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1845-L1845) | OpenHomeSpeedSettingsCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1853–1853](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1853-L1853) | OpenHomeSpeedSettingsCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1859–1859](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1859-L1859) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3340–3340](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3340-L3340) | SelectHeadCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3341–3341](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3341-L3341) | SelectManualHeadsCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3381–3381](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3381-L3381) | SelectHeadCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3382–3382](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3382-L3382) | SelectManualHeadsCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4974–4974](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4974-L4974) | PreviousSettingPageCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4975–4975](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4975-L4975) | NextSettingPageCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6310–6310](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6310-L6310) | SelectHeadCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6311–6311](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6311-L6311) | SelectManualHeadsCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6510–6510](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6510-L6510) | VisionProtocolAddMarkCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6511–6511](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6511-L6511) | VisionProtocolRemoveMarkCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6885–6885](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6885-L6885) | RequestCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6985–6985](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6985-L6985) | RequestCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6986–6986](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6986-L6986) | CancelRequestCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7213–7213](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7213-L7213) | RunCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7214–7214](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7214-L7214) | StopCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7384–7384](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7384-L7384) | MoveCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7385–7385](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7385-L7385) | StopCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7942–7942](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7942-L7942) | ReadDioCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7943–7943](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7943-L7943) | DioOnCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7944–7944](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7944-L7944) | DioOffCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8001–8001](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L8001-L8001) | RefreshCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8012–8012](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L8012-L8012) | RefreshCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8063–8063](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L8063-L8063) | RefreshCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8081–8081](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L8081-L8081) | RefreshCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8182–8182](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L8182-L8182) | SetCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8705–8705](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L8705-L8705) | CenterCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8706–8706](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L8706-L8706) | RecipeCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8756–8756](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L8756-L8756) | AbsoluteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8757–8757](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L8757-L8757) | RelativeCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L315-L315) | NavigateShotGroupCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L600-L600) | PreviousCellCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L601-L601) | NextCellCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:723–723](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L723-L723) | PreviousRecipePageCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:724–724](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L724-L724) | NextRecipePageCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:820–820](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L820-L820) | PreviousCellCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:821–821](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L821-L821) | NextCellCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1291–1291](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1291-L1291) | SelectCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1292–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1292-L1292) | SaveCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1293–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1293-L1293) | ModifyCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1294–1294](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1294-L1294) | DeleteCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4671–4671](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4671-L4671) | command.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:410–410](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L410-L410) | StartCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L421-L421) | StartCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:715–715](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L715-L715) | SelectRunCellCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L884-L884) | TogglePointCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:885–885](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L885-L885) | SetSampleShotSelectionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1109–1109](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L1109-L1109) | StartCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:1193–1193](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L1193-L1193) | StartCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2270–2270](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2270-L2270) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2271–2271](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2271-L2271) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2272–2272](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2272-L2272) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2273–2273](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2273-L2273) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2274–2274](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2274-L2274) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2275–2275](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2275-L2275) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2276–2276](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2276-L2276) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2277–2277](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2277-L2277) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2278–2278](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2278-L2278) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2279–2279](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2279-L2279) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2671–2671](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2671-L2671) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3297–3297](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3297-L3297) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3298–3298](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3298-L3298) | StartCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3299–3299](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3299-L3299) | StopCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3300–3300](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3300-L3300) | RetryCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3301–3301](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3301-L3301) | SelectTabCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3302–3302](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3302-L3302) | SelectModeCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3303–3303](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3303-L3303) | OpenCorrectionReviewCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3304–3304](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3304-L3304) | SelectRunBeamCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3305–3305](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3305-L3305) | SelectAllInspectionBeamsCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3306–3306](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3306-L3306) | ClearInspectionBeamsCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3307–3307](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3307-L3307) | ShowSelectedInspectionShotsCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3308–3308](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3308-L3308) | ClearInspectionShotsCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3309–3309](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3309-L3309) | ShowShotBeamPositionsCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3310–3310](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3310-L3310) | SelectRunShotCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3311–3311](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3311-L3311) | PreviousInspectionShotCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3312–3312](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3312-L3312) | NextInspectionShotCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3316–3316](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3316-L3316) | SelectInspectionMethodCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3318–3318](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3318-L3318) | TogglePointCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3319–3319](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3319-L3319) | SetSampleShotSelectionCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:3443–3443](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3443-L3443) | StartCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L622-L622) | ConnectInterfaceCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMenuSetting.cs:623–623](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L623-L623) | DisconnectInterfaceCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L101-L101) | RefreshTreeCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L110-L110) | RefreshTreeCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L64-L64) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L78-L78) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L107-L107) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L65-L65) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L86-L86) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L155-L155) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L202-L202) | .NotifyCanExecuteChanged | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L365-L365) | SetOnCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:366–366](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L366-L366) | SetOffCommand.NotifyCanExecuteChanged | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:367–367](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L367-L367) | SetValueCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/CRootView.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L326-L326) | StartCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/CRootView.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L327-L327) | StopCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/CRootView.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L328-L328) | SelectHeadCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/CRootView.cs:634–634](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L634-L634) | StopCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/CRootView.cs:732–732](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L732-L732) | StartCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/CRootView.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L733-L733) | ToggleOperationModeCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/CRootView.cs:1700–1700](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1700-L1700) | StopCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/CRootView.cs:1850–1850](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1850-L1850) | StartCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/CRootView.cs:1851–1851](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1851-L1851) | StopCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/CRootView.cs:1852–1852](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1852-L1852) | ToggleOperationModeCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/CRootView.cs:1929–1929](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1929-L1929) | StopCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/CRootView.cs:2726–2726](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2726-L2726) | StopCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L86-L86) | LoadCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L214-L214) | StartCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L214-L214) | StopCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L263-L263) | axis.AbsoluteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L263-L263) | axis.RelativeCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerStagePanel.cs#L264-L264) | StopCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:301–301](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L301-L301) | CauseAnalysisCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:408–408](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L408-L408) | SearchCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L409-L409) | Last24HoursCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:457–457](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L457-L457) | SearchCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:458–458](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L458-L458) | Last24HoursCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L459-L459) | CauseAnalysisCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1391–1391](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1391-L1391) | LoadDataCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1392–1392](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1392-L1392) | OffsetApplyCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1393–1393](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1393-L1393) | OffsetRollbackCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1394–1394](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1394-L1394) | OffsetInitCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1395–1395](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1395-L1395) | OffsetViewCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:1426–1426](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L1426-L1426) | ToggleResultEditModeCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L603-L603) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:604–604](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L604-L604) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L605-L605) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:606–606](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L606-L606) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L607-L607) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:608–608](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L608-L608) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:609–609](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L609-L609) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:610–610](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L610-L610) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L611-L611) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:612–612](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L612-L612) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:613–613](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L613-L613) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:614–614](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L614-L614) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:615–615](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L615-L615) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:716–716](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L716-L716) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:717–717](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L717-L717) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:718–718](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L718-L718) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:719–719](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L719-L719) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:720–720](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L720-L720) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:721–721](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L721-L721) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:722–722](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L722-L722) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:723–723](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L723-L723) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:724–724](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L724-L724) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:725–725](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L725-L725) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:726–726](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L726-L726) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L727-L727) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L101-L101) | RefreshCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:177–177](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L177-L177) | ToggleResultEditModeCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1477–1477](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1477-L1477) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1532–1532](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1532-L1532) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1717–1717](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1717-L1717) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:1766–1766](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1766-L1766) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2698–2698](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2698-L2698) | AlignDistortion.BaseActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2948–2948](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2948-L2948) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3030–3030](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3030-L3030) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3063–3063](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3063-L3063) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3141–3141](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3141-L3141) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3345–3345](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3345-L3345) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3921–3921](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3921-L3921) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4047–4047](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4047-L4047) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4076–4076](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4076-L4076) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4136–4136](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4136-L4136) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4166–4166](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4166-L4166) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4232–4232](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4232-L4232) | ExecuteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4374–4374](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4374-L4374) | ActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4443–4443](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4443-L4443) | ActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4507–4507](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4507-L4507) | ActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4547–4547](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4547-L4547) | SelectHeadCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4547–4547](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4547-L4547) | ActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4584–4584](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4584-L4584) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:4992–4992](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4992-L4992) | BaseActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5000–5000](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5000-L5000) | BaseActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5132–5132](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5132-L5132) | BaseActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:5274–5274](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L5274-L5274) | BaseActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6558–6558](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6558-L6558) | SelectLineCountCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6559–6559](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6559-L6559) | SelectMethodCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6560–6560](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6560-L6560) | ActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7427–7427](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7427-L7427) | owner.OffsetActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7842–7842](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7842-L7842) | SelectCellCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7843–7843](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7843-L7843) | SelectHeadCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7844–7844](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7844-L7844) | SelectScopeCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7845–7845](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7845-L7845) | SelectCorrectionShotCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7846–7846](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7846-L7846) | OffsetActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7951–7951](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7951-L7951) | OffsetActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:7956–7956](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L7956-L7956) | OffsetActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:8129–8129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L8129-L8129) | OffsetActionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2939–2939](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L2939-L2939) | command.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L196-L196) | SelectManualHeadsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1001–1001](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1001-L1001) | VisionProtocolSendCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1776–1776](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1776-L1776) | ScannerAxisClearFaultCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1814–1814](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1814-L1814) | ScannerAxisClearFaultCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1845–1845](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1845-L1845) | OpenHomeSpeedSettingsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1853–1853](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1853-L1853) | OpenHomeSpeedSettingsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1859–1859](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1859-L1859) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3340–3340](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3340-L3340) | SelectHeadCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3341–3341](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3341-L3341) | SelectManualHeadsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3381–3381](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3381-L3381) | SelectHeadCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3382–3382](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3382-L3382) | SelectManualHeadsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4974–4974](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4974-L4974) | PreviousSettingPageCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4975–4975](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4975-L4975) | NextSettingPageCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6310–6310](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6310-L6310) | SelectHeadCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6311–6311](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6311-L6311) | SelectManualHeadsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6510–6510](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6510-L6510) | VisionProtocolAddMarkCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6511–6511](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6511-L6511) | VisionProtocolRemoveMarkCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6885–6885](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6885-L6885) | RequestCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6985–6985](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6985-L6985) | RequestCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6986–6986](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6986-L6986) | CancelRequestCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7213–7213](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L7213-L7213) | RunCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7214–7214](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L7214-L7214) | StopCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7384–7384](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L7384-L7384) | MoveCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7385–7385](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L7385-L7385) | StopCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7942–7942](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L7942-L7942) | ReadDioCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7943–7943](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L7943-L7943) | DioOnCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7944–7944](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L7944-L7944) | DioOffCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8001–8001](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L8001-L8001) | RefreshCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8012–8012](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L8012-L8012) | RefreshCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8063–8063](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L8063-L8063) | RefreshCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8081–8081](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L8081-L8081) | RefreshCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8182–8182](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L8182-L8182) | SetCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8705–8705](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L8705-L8705) | CenterCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8706–8706](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L8706-L8706) | RecipeCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8756–8756](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L8756-L8756) | AbsoluteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8757–8757](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L8757-L8757) | RelativeCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:315–315](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L315-L315) | NavigateShotGroupCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L600-L600) | PreviousCellCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L601-L601) | NextCellCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:723–723](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L723-L723) | PreviousRecipePageCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:724–724](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L724-L724) | NextRecipePageCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:820–820](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L820-L820) | PreviousCellCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:821–821](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L821-L821) | NextCellCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1291–1291](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1291-L1291) | SelectCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1292–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1292-L1292) | SaveCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1293–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1293-L1293) | ModifyCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:1294–1294](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1294-L1294) | DeleteCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4671–4671](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4671-L4671) | command.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L484-L484) | StartCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L495-L495) | StartCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:812–812](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L812-L812) | SelectRunCellCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:981–981](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L981-L981) | TogglePointCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:982–982](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L982-L982) | SetSampleShotSelectionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1233–1233](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L1233-L1233) | StartCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:1329–1329](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L1329-L1329) | StartCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2638–2638](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2638-L2638) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2639–2639](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2639-L2639) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2640–2640](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2640-L2640) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2641–2641](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2641-L2641) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2642–2642](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2642-L2642) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2643–2643](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2643-L2643) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2644–2644](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2644-L2644) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2645–2645](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2645-L2645) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2744–2744](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2744-L2744) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2745–2745](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2745-L2745) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2746–2746](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2746-L2746) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2747–2747](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2747-L2747) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2748–2748](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2748-L2748) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2749–2749](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2749-L2749) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2750–2750](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2750-L2750) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2751–2751](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2751-L2751) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2752–2752](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2752-L2752) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2753–2753](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2753-L2753) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2754–2754](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2754-L2754) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2755–2755](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2755-L2755) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2887–2887](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2887-L2887) | StartCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2888–2888](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2888-L2888) | SelectAllInspectionBeamsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2889–2889](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2889-L2889) | ClearInspectionBeamsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2890–2890](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2890-L2890) | AddInspectionShotCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2891–2891](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2891-L2891) | DeleteInspectionShotCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3480–3480](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3480-L3480) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4124–4124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4124-L4124) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4125–4125](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4125-L4125) | StartCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4126–4126](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4126-L4126) | StopCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4127–4127](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4127-L4127) | RetryCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4128–4128](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4128-L4128) | SelectTabCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4129–4129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4129-L4129) | SelectModeCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4130–4130](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4130-L4130) | OpenCorrectionReviewCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4131–4131](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4131-L4131) | SelectRunBeamCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4132–4132](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4132-L4132) | SelectAllInspectionBeamsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4133–4133](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4133-L4133) | ClearInspectionBeamsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4134–4134](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4134-L4134) | AddInspectionShotCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4135–4135](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4135-L4135) | DeleteInspectionShotCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4136–4136](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4136-L4136) | ShowSelectedInspectionShotsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4137–4137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4137-L4137) | ClearInspectionShotsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4138–4138](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4138-L4138) | ShowShotBeamPositionsCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4139–4139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4139-L4139) | SelectRunShotCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4140–4140](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4140-L4140) | SelectRunCellCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4141–4141](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4141-L4141) | PreviousInspectionShotCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4142–4142](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4142-L4142) | NextInspectionShotCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4143–4143](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4143-L4143) | LoadLastRunReviewResultCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4144–4144](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4144-L4144) | ClearLoadedRunReviewResultCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4157–4157](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4157-L4157) | SelectInspectionMethodCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4159–4159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4159-L4159) | TogglePointCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4160–4160](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4160-L4160) | SetSampleShotSelectionCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:4285–4285](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4285-L4285) | StartCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:626–626](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L626-L626) | ConnectInterfaceCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMenuSetting.cs:627–627](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L627-L627) | DisconnectInterfaceCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L101-L101) | RefreshTreeCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs:110–110](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorLogViewerPanel.cs#L110-L110) | RefreshTreeCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L64-L64) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L78-L78) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L107-L107) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L65-L65) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:86–86](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L86-L86) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L155-L155) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L202-L202) | .NotifyCanExecuteChanged | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L365-L365) | SetOnCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:366–366](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L366-L366) | SetOffCommand.NotifyCanExecuteChanged | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:367–367](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L367-L367) | SetValueCommand.NotifyCanExecuteChanged | False |
 
 호출하는 대상과 해석 범위:
 
@@ -437,7 +460,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `DoNothing` · L29–31
 
-[Drilling.UI/Menu/CButtonCommand.cs:29–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L29-L31)
+[Drilling.UI/Menu/CButtonCommand.cs:29–31](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L29-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -458,7 +481,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `RegisteredTargets` · L36–36
 
-[Drilling.UI/Menu/CButtonCommand.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L36-L36)
+[Drilling.UI/Menu/CButtonCommand.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -479,7 +502,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CommandParameterDescriptor` · L37–37
 
-[Drilling.UI/Menu/CButtonCommand.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L37-L37)
+[Drilling.UI/Menu/CButtonCommand.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -507,7 +530,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CommandProperty` · L38–38
 
-[Drilling.UI/Menu/CButtonCommand.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L38-L38)
+[Drilling.UI/Menu/CButtonCommand.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -537,7 +560,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GetCommand` · L39–42
 
-[Drilling.UI/Menu/CButtonCommand.cs:39–42](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L39-L42)
+[Drilling.UI/Menu/CButtonCommand.cs:39–42](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L39-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -571,7 +594,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SetCommand` · L44–47
 
-[Drilling.UI/Menu/CButtonCommand.cs:44–47](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L44-L47)
+[Drilling.UI/Menu/CButtonCommand.cs:44–47](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L44-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -605,7 +628,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnCommandChanged` · L49–73
 
-[Drilling.UI/Menu/CButtonCommand.cs:49–73](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L49-L73)
+[Drilling.UI/Menu/CButtonCommand.cs:49–73](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L49-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -666,7 +689,7 @@ flowchart TD
 
 ### MethodDeclaration `Element_Loaded` · L75–88
 
-[Drilling.UI/Menu/CButtonCommand.cs:75–88](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L75-L88)
+[Drilling.UI/Menu/CButtonCommand.cs:75–88](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L75-L88)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -720,7 +743,7 @@ flowchart TD
 
 ### MethodDeclaration `Element_Unloaded` · L90–96
 
-[Drilling.UI/Menu/CButtonCommand.cs:90–96](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L90-L96)
+[Drilling.UI/Menu/CButtonCommand.cs:90–96](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L90-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -766,7 +789,7 @@ flowchart TD
 
 ### MethodDeclaration `AttachElement` · L98–113
 
-[Drilling.UI/Menu/CButtonCommand.cs:98–113](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L98-L113)
+[Drilling.UI/Menu/CButtonCommand.cs:98–113](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L98-L113)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -821,7 +844,7 @@ flowchart TD
 
 ### MethodDeclaration `DetachElement` · L115–131
 
-[Drilling.UI/Menu/CButtonCommand.cs:115–131](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L115-L131)
+[Drilling.UI/Menu/CButtonCommand.cs:115–131](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L115-L131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -875,7 +898,7 @@ flowchart TD
 
 ### MethodDeclaration `RegisterTarget` · L133–143
 
-[Drilling.UI/Menu/CButtonCommand.cs:133–143](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L133-L143)
+[Drilling.UI/Menu/CButtonCommand.cs:133–143](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L133-L143)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -895,7 +918,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/CButtonCommand.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L100-L100) | RegisterTarget | False |
+| [Drilling.UI/Menu/CButtonCommand.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L100-L100) | RegisterTarget | False |
 
 호출하는 대상과 해석 범위:
 
@@ -929,7 +952,7 @@ flowchart TD
 
 ### MethodDeclaration `UnregisterTarget` · L145–158
 
-[Drilling.UI/Menu/CButtonCommand.cs:145–158](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L145-L158)
+[Drilling.UI/Menu/CButtonCommand.cs:145–158](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L145-L158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -949,7 +972,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/CButtonCommand.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L129-L129) | UnregisterTarget | False |
+| [Drilling.UI/Menu/CButtonCommand.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L129-L129) | UnregisterTarget | False |
 
 호출하는 대상과 해석 범위:
 
@@ -986,7 +1009,7 @@ flowchart TD
 
 ### MethodDeclaration `Element_MouseLeftButtonDown` · L160–180
 
-[Drilling.UI/Menu/CButtonCommand.cs:160–180](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L160-L180)
+[Drilling.UI/Menu/CButtonCommand.cs:160–180](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L160-L180)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1053,7 +1076,7 @@ flowchart TD
 
 ### MethodDeclaration `Button_Click` · L182–195
 
-[Drilling.UI/Menu/CButtonCommand.cs:182–195](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L182-L195)
+[Drilling.UI/Menu/CButtonCommand.cs:182–195](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L182-L195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1109,7 +1132,7 @@ flowchart TD
 
 ### MethodDeclaration `Command_CanExecuteChanged` · L197–208
 
-[Drilling.UI/Menu/CButtonCommand.cs:197–208](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L197-L208)
+[Drilling.UI/Menu/CButtonCommand.cs:197–208](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L197-L208)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1159,7 +1182,7 @@ flowchart TD
 
 ### MethodDeclaration `ButtonCommandParameterChanged` · L210–222
 
-[Drilling.UI/Menu/CButtonCommand.cs:210–222](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L210-L222)
+[Drilling.UI/Menu/CButtonCommand.cs:210–222](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L210-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1211,7 +1234,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateTargetState` · L224–229
 
-[Drilling.UI/Menu/CButtonCommand.cs:224–229](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L224-L229)
+[Drilling.UI/Menu/CButtonCommand.cs:224–229](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L224-L229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1231,7 +1254,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/CButtonCommand.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/CButtonCommand.cs#L206-L206) | UpdateTargetState | False |
+| [Drilling.UI/Menu/CButtonCommand.cs:206–206](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/CButtonCommand.cs#L206-L206) | UpdateTargetState | False |
 
 호출하는 대상과 해석 범위:
 

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 2d5de5f7fdf4d970ab6ff9496dbeadc5f6a6c6f2a5563075b7038a588f2987e0 |
 | 파일 분류 | code |
 | 원본 크기/행 | 1,089 bytes / 23 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -38,7 +38,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_timer` · L9–9
 
-[Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs#L9-L9)
+[Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -69,7 +69,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_panel` · L10–10
 
-[Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs#L10-L10)
+[Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -84,7 +84,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L11–19
 
-[Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs:11–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs#L11-L19)
+[Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs:11–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs#L11-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -103,7 +103,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2352–2352](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L2352-L2352) | new CZeroLineResultsDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2352–2352](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L2352-L2352) | new CZeroLineResultsDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -156,7 +156,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsRefreshing` · L20–20
 
-[Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs#L20-L20)
+[Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -171,7 +171,7 @@ flowchart TD
 
 ### MethodDeclaration `Refresh` · L21–21
 
-[Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs#L21-L21)
+[Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -205,7 +205,7 @@ flowchart TD
 
 ### MethodDeclaration `CloseClicked` · L22–22
 
-[Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs#L22-L22)
+[Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CZeroLineResultsDialog.xaml.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

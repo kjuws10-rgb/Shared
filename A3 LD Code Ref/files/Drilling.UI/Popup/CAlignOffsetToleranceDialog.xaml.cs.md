@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 4ac3b11f95de998c5e16193cfb2ea6e4086d8babac6d32fc94857218cc72c049 |
 | 파일 분류 | code |
 | 원본 크기/행 | 653 bytes / 21 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -36,7 +36,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L9–13
 
-[Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs:9–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs#L9-L13)
+[Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs:9–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs#L9-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -55,7 +55,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2783–2786](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2783-L2786) | new CAlignOffsetToleranceDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:2786–2789](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2786-L2789) | new CAlignOffsetToleranceDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -74,7 +74,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnApplyRemaining` · L15–15
 
-[Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs#L15-L15)
+[Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -102,7 +102,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnCancel` · L16–16
 
-[Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs#L16-L16)
+[Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -130,7 +130,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnKeyDown` · L17–20
 
-[Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs:17–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs#L17-L20)
+[Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs:17–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlignOffsetToleranceDialog.xaml.cs#L17-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

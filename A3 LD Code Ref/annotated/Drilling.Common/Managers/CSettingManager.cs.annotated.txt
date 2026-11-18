@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.Common/Managers/CSettingManager.cs
-Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
+Commit: 96e22cd027c84bf302b23f2949b98985d7f301bb
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Managers
@@ -261,288 +261,290 @@ L000134 |                     var tolerance = parameters.FirstOrDefault(p => p.K
 L000135 |                     if (tolerance is not null && (!double.TryParse(tolerance.Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var toleranceValue) || !double.IsFinite(toleranceValue) || toleranceValue < 0)) ⟦EOL⟧
 // 해설 L136: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Setting-Align Wapage_AlignBase_Tolerance는 0 이상의 유한한 mm 값이어야 합니다.") / 예외를 발생/전달합니다: throw new InvalidDataException("Setting-Align Wapage_AlignBase_Tolerance는 0 이상의 유한한 mm 값이어야 합니다.");
 L000136 |                         throw new InvalidDataException("Setting-Align Wapage_AlignBase_Tolerance는 0 이상의 유한한 mm 값이어야 합니다."); ⟦EOL⟧
-// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRunOptionSettings.Read(parameters) / 지역 변수를 선언합니다: var edited = CRunOptionSettings.Read(parameters); / 변수의 초기값을 지정합니다: edited = CRunOptionSettings.Read(parameters)
-L000137 |                     var edited = CRunOptionSettings.Read(parameters); ⟦EOL⟧
-// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRunOptionSettings.Read(LoadSection(section, cancellationToken)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadSection(section, cancellationToken) / 지역 변수를 선언합니다: var current = CRunOptionSettings.Read(LoadSection(section, cancellationToken)); / 변수의 초기값을 지정합니다: current = CRunOptionSettings.Read(LoadSection(section, cancellationToken))
-L000138 |                     var current = CRunOptionSettings.Read(LoadSection(section, cancellationToken)); ⟦EOL⟧
-// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Melsec.GetCachedValue("HANDSHAKE_PRC_REVIEW_ABLE") / 지역 변수를 선언합니다: var able = interfaceManager?.Melsec.GetCachedValue("HANDSHAKE_PRC_REVIEW_ABLE"); / 변수의 초기값을 지정합니다: able = interfaceManager?.Melsec.GetCachedValue("HANDSHAKE_PRC_REVIEW_ABLE")
-L000139 |                     var able = interfaceManager?.Melsec.GetCachedValue("HANDSHAKE_PRC_REVIEW_ABLE"); ⟦EOL⟧
-// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(able.Value, System.Globalization.CultureInfo.InvariantCulture) / 조건에 따라 분기합니다: if (edited.ReviewOptions != current.ReviewOptions && able?.IsValid == true && Convert.ToDouble(able.Value, System.Globalization.CultureInfo.InvariantCulture) == 1)
-L000140 |                     if (edited.ReviewOptions != current.ReviewOptions && able?.IsValid == true && Convert.ToDouble(able.Value, System.Globalization.CultureInfo.InvariantCulture) == 1) ⟦EOL⟧
-// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Review ABLE ON 상태에서는 리뷰 Run Option을 변경할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidDataException("Review ABLE ON 상태에서는 리뷰 Run Option을 변경할 수 없습니다.");
-L000141 |                         throw new InvalidDataException("Review ABLE ON 상태에서는 리뷰 Run Option을 변경할 수 없습니다."); ⟦EOL⟧
-// 해설 L142: 구문 블록 경계입니다 · 소속 SaveSection.
-L000142 |                 } ⟦EOL⟧
-L000143 |  ⟦EOL⟧
-// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: settingFile.Save(section, parameters, cancellationToken)
-L000144 |                 settingFile.Save(section, parameters, cancellationToken); ⟦EOL⟧
-// 해설 L145: 공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)
-L000145 |                 lock (_cacheLock) ⟦EOL⟧
-// 해설 L146: 값을 대상에 대입합니다: _sectionCache[section] = parameters.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.ToArray()
-L000146 |                     _sectionCache[section] = parameters.ToArray(); ⟦EOL⟧
-// 해설 L147: 구문 블록 경계입니다 · 소속 SaveSection.
-L000147 |             } ⟦EOL⟧
+// 해설 L137: 값을 대상에 대입합니다: _ = CReviewResultLevelSettings.Read(parameters) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewResultLevelSettings.Read(parameters)
+L000137 |                     _ = CReviewResultLevelSettings.Read(parameters); ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRunOptionSettings.Read(parameters) / 지역 변수를 선언합니다: var edited = CRunOptionSettings.Read(parameters); / 변수의 초기값을 지정합니다: edited = CRunOptionSettings.Read(parameters)
+L000138 |                     var edited = CRunOptionSettings.Read(parameters); ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRunOptionSettings.Read(LoadSection(section, cancellationToken)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadSection(section, cancellationToken) / 지역 변수를 선언합니다: var current = CRunOptionSettings.Read(LoadSection(section, cancellationToken)); / 변수의 초기값을 지정합니다: current = CRunOptionSettings.Read(LoadSection(section, cancellationToken))
+L000139 |                     var current = CRunOptionSettings.Read(LoadSection(section, cancellationToken)); ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Melsec.GetCachedValue("HANDSHAKE_PRC_REVIEW_ABLE") / 지역 변수를 선언합니다: var able = interfaceManager?.Melsec.GetCachedValue("HANDSHAKE_PRC_REVIEW_ABLE"); / 변수의 초기값을 지정합니다: able = interfaceManager?.Melsec.GetCachedValue("HANDSHAKE_PRC_REVIEW_ABLE")
+L000140 |                     var able = interfaceManager?.Melsec.GetCachedValue("HANDSHAKE_PRC_REVIEW_ABLE"); ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToDouble(able.Value, System.Globalization.CultureInfo.InvariantCulture) / 조건에 따라 분기합니다: if (edited.ReviewOptions != current.ReviewOptions && able?.IsValid == true && Convert.ToDouble(able.Value, System.Globalization.CultureInfo.InvariantCulture) == 1)
+L000141 |                     if (edited.ReviewOptions != current.ReviewOptions && able?.IsValid == true && Convert.ToDouble(able.Value, System.Globalization.CultureInfo.InvariantCulture) == 1) ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Review ABLE ON 상태에서는 리뷰 Run Option을 변경할 수 없습니다.") / 예외를 발생/전달합니다: throw new InvalidDataException("Review ABLE ON 상태에서는 리뷰 Run Option을 변경할 수 없습니다.");
+L000142 |                         throw new InvalidDataException("Review ABLE ON 상태에서는 리뷰 Run Option을 변경할 수 없습니다."); ⟦EOL⟧
+// 해설 L143: 구문 블록 경계입니다 · 소속 SaveSection.
+L000143 |                 } ⟦EOL⟧
+L000144 |  ⟦EOL⟧
+// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: settingFile.Save(section, parameters, cancellationToken)
+L000145 |                 settingFile.Save(section, parameters, cancellationToken); ⟦EOL⟧
+// 해설 L146: 공유 상태의 임계 구역에 진입합니다: lock (_cacheLock)
+L000146 |                 lock (_cacheLock) ⟦EOL⟧
+// 해설 L147: 값을 대상에 대입합니다: _sectionCache[section] = parameters.ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.ToArray()
+L000147 |                     _sectionCache[section] = parameters.ToArray(); ⟦EOL⟧
 // 해설 L148: 구문 블록 경계입니다 · 소속 SaveSection.
-L000148 |         } ⟦EOL⟧
-L000149 |  ⟦EOL⟧
-// 해설 L150: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY> Drilling.Common.Managers.CSettingManager.LoadHistory(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationT
-L000150 |         public IReadOnlyList<ST_SETTING_HISTORY> LoadHistory(EN_SETTING_TAB section, CancellationToken cancellationToken = default) ⟦EOL⟧
-// 해설 L151: 구문 블록 경계입니다 · 소속 LoadHistory.
-L000151 |         { ⟦EOL⟧
-// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: settingFile.LoadHistory(section, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return settingFile.LoadHistory(section, cancellationToken);
-L000152 |             return settingFile.LoadHistory(section, cancellationToken); ⟦EOL⟧
-// 해설 L153: 구문 블록 경계입니다 · 소속 LoadHistory.
-L000153 |         } ⟦EOL⟧
-L000154 |  ⟦EOL⟧
-// 해설 L155: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.Common.Managers.CSettingManager.LoadInterfaceList(System.Threading.CancellationToken)
-L000155 |         public IReadOnlyList<ST_INTERFACE_DATA> LoadInterfaceList(CancellationToken cancellationToken = default) ⟦EOL⟧
-// 해설 L156: 구문 블록 경계입니다 · 소속 LoadInterfaceList.
-L000156 |         { ⟦EOL⟧
-// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceFile.LoadAll(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return interfaceFile.LoadAll(cancellationToken);
-L000157 |             return interfaceFile.LoadAll(cancellationToken); ⟦EOL⟧
-// 해설 L158: 구문 블록 경계입니다 · 소속 LoadInterfaceList.
-L000158 |         } ⟦EOL⟧
-L000159 |  ⟦EOL⟧
-// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.SaveInterfaceList(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>, System.Threading.CancellationToken)
-L000160 |         public async Task SaveInterfaceList(IReadOnlyList<ST_INTERFACE_DATA> interfaces, CancellationToken cancellationToken = default) ⟦EOL⟧
-// 해설 L161: 구문 블록 경계입니다 · 소속 SaveInterfaceList.
-L000161 |         { ⟦EOL⟧
-// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceFile.SaveAll(interfaces, cancellationToken)
-L000162 |             interfaceFile.SaveAll(interfaces, cancellationToken); ⟦EOL⟧
-// 해설 L163: 비동기 완료를 기다립니다: await interfaceManager.Reload(interfaces, reconnect: false, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Reload(interfaces, reconnect: false, cancellationToken)
-L000163 |             await interfaceManager.Reload(interfaces, reconnect: false, cancellationToken); ⟦EOL⟧
-// 해설 L164: 구문 블록 경계입니다 · 소속 SaveInterfaceList.
-L000164 |         } ⟦EOL⟧
-L000165 |  ⟦EOL⟧
-// 해설 L166: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.ConnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)
-L000166 |         public Task ConnectInterface(EN_EQP_MODULE module, int number, CancellationToken cancellationToken = default) ⟦EOL⟧
-// 해설 L167: 구문 블록 경계입니다 · 소속 ConnectInterface.
-L000167 |         { ⟦EOL⟧
-// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Connect(module, number, cancellationToken: cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return interfaceManager.Connect(module, number, cancellationToken: cancellationToken);
-L000168 |             return interfaceManager.Connect(module, number, cancellationToken: cancellationToken); ⟦EOL⟧
-// 해설 L169: 구문 블록 경계입니다 · 소속 ConnectInterface.
-L000169 |         } ⟦EOL⟧
-L000170 |  ⟦EOL⟧
-// 해설 L171: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.DisconnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)
-L000171 |         public Task DisconnectInterface(EN_EQP_MODULE module, int number, CancellationToken cancellationToken = default) ⟦EOL⟧
-// 해설 L172: 구문 블록 경계입니다 · 소속 DisconnectInterface.
-L000172 |         { ⟦EOL⟧
-// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Disconnect(module, number, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return interfaceManager.Disconnect(module, number, cancellationToken);
-L000173 |             return interfaceManager.Disconnect(module, number, cancellationToken); ⟦EOL⟧
-// 해설 L174: 구문 블록 경계입니다 · 소속 DisconnectInterface.
-L000174 |         } ⟦EOL⟧
-L000175 |  ⟦EOL⟧
-// 해설 L176: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.ReconnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)
-L000176 |         public Task ReconnectInterface(EN_EQP_MODULE module, int number, CancellationToken cancellationToken = default) ⟦EOL⟧
-// 해설 L177: 구문 블록 경계입니다 · 소속 ReconnectInterface.
-L000177 |         { ⟦EOL⟧
-// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Reconnect(module, number, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return interfaceManager.Reconnect(module, number, cancellationToken);
-L000178 |             return interfaceManager.Reconnect(module, number, cancellationToken); ⟦EOL⟧
-// 해설 L179: 구문 블록 경계입니다 · 소속 ReconnectInterface.
-L000179 |         } ⟦EOL⟧
-// 해설 L180: 구문 블록 경계입니다.
-L000180 |     } ⟦EOL⟧
-L000181 |  ⟦EOL⟧
-// 해설 L182: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000182 |     /// <summary>Numeric Setting storage contract; UI labels and execution counts are decoded here.</summary> ⟦EOL⟧
-// 해설 L183: 타입의 구조/상속 선언입니다: public static class CRunOptionSettings
-L000183 |     public static class CRunOptionSettings ⟦EOL⟧
-// 해설 L184: 구문 블록 경계입니다.
-L000184 |     { ⟦EOL⟧
-// 해설 L185: 변수의 초기값을 지정합니다: ZeroDefence = "RUNOPTION_ZERO_DEFENCE_USE"
-L000185 |         public const string ZeroDefence = "RUNOPTION_ZERO_DEFENCE_USE"; ⟦EOL⟧
-// 해설 L186: 변수의 초기값을 지정합니다: CurrentGroup = "RUNOPTION_CURRENT_GROUP"
-L000186 |         public const string CurrentGroup = "RUNOPTION_CURRENT_GROUP"; ⟦EOL⟧
-// 해설 L187: 변수의 초기값을 지정합니다: FollowUp = "RUNOPTION_FOLLOWUP_USE"
-L000187 |         public const string FollowUp = "RUNOPTION_FOLLOWUP_USE"; ⟦EOL⟧
-// 해설 L188: 변수의 초기값을 지정합니다: DistortionGroup0 = "RUNOPTION_DISTORTION_GROUP0_USE"
-L000188 |         public const string DistortionGroup0 = "RUNOPTION_DISTORTION_GROUP0_USE"; ⟦EOL⟧
-// 해설 L189: 변수의 초기값을 지정합니다: DistortionGroup1 = "RUNOPTION_DISTORTION_GROUP1_USE"
-L000189 |         public const string DistortionGroup1 = "RUNOPTION_DISTORTION_GROUP1_USE"; ⟦EOL⟧
-// 해설 L190: 변수의 초기값을 지정합니다: DistortionGroup2 = "RUNOPTION_DISTORTION_GROUP2_USE"
-L000190 |         public const string DistortionGroup2 = "RUNOPTION_DISTORTION_GROUP2_USE"; ⟦EOL⟧
-// 해설 L191: 변수의 초기값을 지정합니다: ReviewMethod = "RUNOPTION_REVIEW_METHOD"
-L000191 |         public const string ReviewMethod = "RUNOPTION_REVIEW_METHOD"; ⟦EOL⟧
-// 해설 L192: 변수의 초기값을 지정합니다: ReviewLine = "RUNOPTION_REVIEW_LINE"
-L000192 |         public const string ReviewLine = "RUNOPTION_REVIEW_LINE"; ⟦EOL⟧
-// 해설 L193: 변수의 초기값을 지정합니다: ImmediateRetry = "RUNOPTION_REVIEW_IMMEDIATE_RETRY"
-L000193 |         public const string ImmediateRetry = "RUNOPTION_REVIEW_IMMEDIATE_RETRY"; ⟦EOL⟧
-// 해설 L194: 변수의 초기값을 지정합니다: RetryCount = "RUNOPTION_REVIEW_RETRY_COUNT"
-L000194 |         public const string RetryCount = "RUNOPTION_REVIEW_RETRY_COUNT"; ⟦EOL⟧
-// 해설 L195: 함수·델리게이트 또는 객체 생성자를 호출합니다: new([ZeroDefence, CurrentGroup, FollowUp, DistortionGroup0, DistortionGroup1, DistortionGroup2, ReviewMethod, ReviewLine, ImmediateRetry, RetryCount], StringComparer.OrdinalIgnoreCase) / 변수의 초기값을 지정합니다: Keys = new([ZeroDefence, CurrentGroup, FollowUp, DistortionGroup0, DistortionGroup1, DistortionGroup2, ReviewMethod, ReviewLine, ImmediateRetry, RetryCount], StringComparer.OrdinalIgnoreCase)
-L000195 |         private static readonly HashSet<string> Keys = new([ZeroDefence, CurrentGroup, FollowUp, DistortionGroup0, DistortionGroup1, DistortionGroup2, ReviewMethod, ReviewLine, ImmediateRetry, RetryCount], StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
-// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: Keys.Contains(key)
-L000196 |         public static bool IsKey(string key) => Keys.Contains(key); ⟦EOL⟧
-// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: Read(settings.LoadSection(EN_SETTING_TAB.Option)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LoadSection(EN_SETTING_TAB.Option)
-L000197 |         public static ST_RUN_OPTION_SETTINGS Read(CSettingManager settings) => Read(settings.LoadSection(EN_SETTING_TAB.Option)); ⟦EOL⟧
-// 해설 L198: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>)
-L000198 |         public static ST_RUN_OPTION_SETTINGS Read(IReadOnlyList<ST_SYSTEM_PARAMETER> parameters) ⟦EOL⟧
-// 해설 L199: 구문 블록 경계입니다 · 소속 Read.
-L000199 |         { ⟦EOL⟧
-// 해설 L200: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Where(p => IsKey(p.Key)).ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Where(p => IsKey(p.Key)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsKey(p.Key) / 지역 변수를 선언합니다: var values = parameters.Where(p => IsKey(p.Key)).ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: values = parameters.Where(p => IsKey(p.Key)).ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase)
-L000200 |             var values = parameters.Where(p => IsKey(p.Key)).ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
-// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: new( Number(ZeroDefence, 0, 0, 1) == 1, Number(CurrentGroup, 1, 1, 4), Number(FollowUp, 0, 0, 1) == 1, Number(ReviewMethod, 1, 0, 1), Number(ReviewLine, 0, 0, 3), Number(ImmediateRetry, 0, 0, 1) == 1, Number(RetryCount, … / 호출자에게 값 또는 제어를 반환합니다: return new( Number(ZeroDefence, 0, 0, 1) == 1, Number(CurrentGroup, 1, 1, 4), Number(FollowUp, 0, 0, 1) == 1, Number(ReviewMethod, 1, 0, 1), Number(ReviewLine, 0, 0, 3), Number(ImmediateRetry, 0, 0, 1) == 1, Number(RetryCount, 1,
-L000201 |             return new( ⟦EOL⟧
-// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(ZeroDefence, 0, 0, 1)
-L000202 |                 Number(ZeroDefence, 0, 0, 1) == 1,  ⟦EOL⟧
-// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(CurrentGroup, 1, 1, 4)
-L000203 |                 Number(CurrentGroup, 1, 1, 4),  ⟦EOL⟧
-// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(FollowUp, 0, 0, 1)
-L000204 |                 Number(FollowUp, 0, 0, 1) == 1,  ⟦EOL⟧
-// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(ReviewMethod, 1, 0, 1)
-L000205 |                 Number(ReviewMethod, 1, 0, 1),  ⟦EOL⟧
-// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(ReviewLine, 0, 0, 3)
-L000206 |                 Number(ReviewLine, 0, 0, 3),  ⟦EOL⟧
-// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(ImmediateRetry, 0, 0, 1)
-L000207 |                 Number(ImmediateRetry, 0, 0, 1) == 1,  ⟦EOL⟧
-// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(RetryCount, 1, 1, 3)
-L000208 |                 Number(RetryCount, 1, 1, 3) ⟦EOL⟧
-// 해설 L209: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>)
-L000209 |             ) ⟦EOL⟧
-// 해설 L210: 구문 블록 경계입니다 · 소속 Read.
-L000210 |             { ⟦EOL⟧
-// 해설 L211: 값을 대상에 대입합니다: DistortionGroupMask = Number(DistortionGroup0, 0, 0, 1) | Number(DistortionGroup1, 0, 0, 1) << 1 | Number(DistortionGroup2, 0, 0, 1) << 2 / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(DistortionGroup0, 0, 0, 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(DistortionGroup1, 0, 0, 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(DistortionGroup2, 0, 0, 1)
-L000211 |                 DistortionGroupMask = Number(DistortionGroup0, 0, 0, 1) | Number(DistortionGroup1, 0, 0, 1) << 1 | Number(DistortionGroup2, 0, 0, 1) << 2 ⟦EOL⟧
-// 해설 L212: 구문 블록 경계입니다 · 소속 Read.
-L000212 |             }; ⟦EOL⟧
-// 해설 L213: 선언·서명/매개변수·접근 조건입니다 · int Number(string, int, int, int)
-L000213 |             int Number(string key, int fallback, int min, int max) ⟦EOL⟧
-// 해설 L214: 구문 블록 경계입니다 · 소속 Number.
-L000214 |             { ⟦EOL⟧
-// 해설 L215: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var text) / 조건에 따라 분기합니다: if (!values.TryGetValue(key, out var text))
-L000215 |                 if (!values.TryGetValue(key, out var text)) ⟦EOL⟧
-// 해설 L216: 호출자에게 값 또는 제어를 반환합니다: return fallback;
-L000216 |                     return fallback; ⟦EOL⟧
-// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) / 조건에 따라 분기합니다: if (int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) && value >= min && value <= max)
-L000217 |                 if (int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) && value >= min && value <= max) ⟦EOL⟧
-// 해설 L218: 호출자에게 값 또는 제어를 반환합니다: return value;
-L000218 |                     return value; ⟦EOL⟧
-// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{key}: {min}~{max} 범위의 정수를 입력해 주세요.") / 예외를 발생/전달합니다: throw new InvalidDataException($"{key}: {min}~{max} 범위의 정수를 입력해 주세요.");
-L000219 |                 throw new InvalidDataException($"{key}: {min}~{max} 범위의 정수를 입력해 주세요."); ⟦EOL⟧
-// 해설 L220: 구문 블록 경계입니다 · 소속 Number.
-L000220 |             } ⟦EOL⟧
-// 해설 L221: 구문 블록 경계입니다 · 소속 Read.
-L000221 |         } ⟦EOL⟧
-L000222 |  ⟦EOL⟧
-// 해설 L223: 값별 결과식을 선택합니다: count switch { 1 => 0, 3 => 1, 5 => 2, 7 => 3, _ => throw new ArgumentOutOfRangeException(nameof(count))}
-L000223 |         public static int EncodeLine(int count) => count switch ⟦EOL⟧
-// 해설 L224: 구문 블록 경계입니다 · 소속 EncodeLine.
-L000224 |         { ⟦EOL⟧
-// 해설 L225: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.CRunOptionSettings.EncodeLine(int)
-L000225 |             1 => 0, ⟦EOL⟧
+L000148 |             } ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 SaveSection.
+L000149 |         } ⟦EOL⟧
+L000150 |  ⟦EOL⟧
+// 해설 L151: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY> Drilling.Common.Managers.CSettingManager.LoadHistory(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationT
+L000151 |         public IReadOnlyList<ST_SETTING_HISTORY> LoadHistory(EN_SETTING_TAB section, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L152: 구문 블록 경계입니다 · 소속 LoadHistory.
+L000152 |         { ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: settingFile.LoadHistory(section, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return settingFile.LoadHistory(section, cancellationToken);
+L000153 |             return settingFile.LoadHistory(section, cancellationToken); ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 LoadHistory.
+L000154 |         } ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.Common.Managers.CSettingManager.LoadInterfaceList(System.Threading.CancellationToken)
+L000156 |         public IReadOnlyList<ST_INTERFACE_DATA> LoadInterfaceList(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 LoadInterfaceList.
+L000157 |         { ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceFile.LoadAll(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return interfaceFile.LoadAll(cancellationToken);
+L000158 |             return interfaceFile.LoadAll(cancellationToken); ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 LoadInterfaceList.
+L000159 |         } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.SaveInterfaceList(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>, System.Threading.CancellationToken)
+L000161 |         public async Task SaveInterfaceList(IReadOnlyList<ST_INTERFACE_DATA> interfaces, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 SaveInterfaceList.
+L000162 |         { ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceFile.SaveAll(interfaces, cancellationToken)
+L000163 |             interfaceFile.SaveAll(interfaces, cancellationToken); ⟦EOL⟧
+// 해설 L164: 비동기 완료를 기다립니다: await interfaceManager.Reload(interfaces, reconnect: false, cancellationToken) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Reload(interfaces, reconnect: false, cancellationToken)
+L000164 |             await interfaceManager.Reload(interfaces, reconnect: false, cancellationToken); ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 SaveInterfaceList.
+L000165 |         } ⟦EOL⟧
+L000166 |  ⟦EOL⟧
+// 해설 L167: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.ConnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)
+L000167 |         public Task ConnectInterface(EN_EQP_MODULE module, int number, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 ConnectInterface.
+L000168 |         { ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Connect(module, number, cancellationToken: cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return interfaceManager.Connect(module, number, cancellationToken: cancellationToken);
+L000169 |             return interfaceManager.Connect(module, number, cancellationToken: cancellationToken); ⟦EOL⟧
+// 해설 L170: 구문 블록 경계입니다 · 소속 ConnectInterface.
+L000170 |         } ⟦EOL⟧
+L000171 |  ⟦EOL⟧
+// 해설 L172: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.DisconnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)
+L000172 |         public Task DisconnectInterface(EN_EQP_MODULE module, int number, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L173: 구문 블록 경계입니다 · 소속 DisconnectInterface.
+L000173 |         { ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Disconnect(module, number, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return interfaceManager.Disconnect(module, number, cancellationToken);
+L000174 |             return interfaceManager.Disconnect(module, number, cancellationToken); ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다 · 소속 DisconnectInterface.
+L000175 |         } ⟦EOL⟧
+L000176 |  ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Managers.CSettingManager.ReconnectInterface(Drilling.Common.Interface.EN_EQP_MODULE, int, System.Threading.CancellationToken)
+L000177 |         public Task ReconnectInterface(EN_EQP_MODULE module, int number, CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L178: 구문 블록 경계입니다 · 소속 ReconnectInterface.
+L000178 |         { ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.Reconnect(module, number, cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return interfaceManager.Reconnect(module, number, cancellationToken);
+L000179 |             return interfaceManager.Reconnect(module, number, cancellationToken); ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 ReconnectInterface.
+L000180 |         } ⟦EOL⟧
+// 해설 L181: 구문 블록 경계입니다.
+L000181 |     } ⟦EOL⟧
+L000182 |  ⟦EOL⟧
+// 해설 L183: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000183 |     /// <summary>Numeric Setting storage contract; UI labels and execution counts are decoded here.</summary> ⟦EOL⟧
+// 해설 L184: 타입의 구조/상속 선언입니다: public static class CRunOptionSettings
+L000184 |     public static class CRunOptionSettings ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다.
+L000185 |     { ⟦EOL⟧
+// 해설 L186: 변수의 초기값을 지정합니다: ZeroDefence = "RUNOPTION_ZERO_DEFENCE_USE"
+L000186 |         public const string ZeroDefence = "RUNOPTION_ZERO_DEFENCE_USE"; ⟦EOL⟧
+// 해설 L187: 변수의 초기값을 지정합니다: CurrentGroup = "RUNOPTION_CURRENT_GROUP"
+L000187 |         public const string CurrentGroup = "RUNOPTION_CURRENT_GROUP"; ⟦EOL⟧
+// 해설 L188: 변수의 초기값을 지정합니다: FollowUp = "RUNOPTION_FOLLOWUP_USE"
+L000188 |         public const string FollowUp = "RUNOPTION_FOLLOWUP_USE"; ⟦EOL⟧
+// 해설 L189: 변수의 초기값을 지정합니다: DistortionGroup0 = "RUNOPTION_DISTORTION_GROUP0_USE"
+L000189 |         public const string DistortionGroup0 = "RUNOPTION_DISTORTION_GROUP0_USE"; ⟦EOL⟧
+// 해설 L190: 변수의 초기값을 지정합니다: DistortionGroup1 = "RUNOPTION_DISTORTION_GROUP1_USE"
+L000190 |         public const string DistortionGroup1 = "RUNOPTION_DISTORTION_GROUP1_USE"; ⟦EOL⟧
+// 해설 L191: 변수의 초기값을 지정합니다: DistortionGroup2 = "RUNOPTION_DISTORTION_GROUP2_USE"
+L000191 |         public const string DistortionGroup2 = "RUNOPTION_DISTORTION_GROUP2_USE"; ⟦EOL⟧
+// 해설 L192: 변수의 초기값을 지정합니다: ReviewMethod = "RUNOPTION_REVIEW_METHOD"
+L000192 |         public const string ReviewMethod = "RUNOPTION_REVIEW_METHOD"; ⟦EOL⟧
+// 해설 L193: 변수의 초기값을 지정합니다: ReviewLine = "RUNOPTION_REVIEW_LINE"
+L000193 |         public const string ReviewLine = "RUNOPTION_REVIEW_LINE"; ⟦EOL⟧
+// 해설 L194: 변수의 초기값을 지정합니다: ImmediateRetry = "RUNOPTION_REVIEW_IMMEDIATE_RETRY"
+L000194 |         public const string ImmediateRetry = "RUNOPTION_REVIEW_IMMEDIATE_RETRY"; ⟦EOL⟧
+// 해설 L195: 변수의 초기값을 지정합니다: RetryCount = "RUNOPTION_REVIEW_RETRY_COUNT"
+L000195 |         public const string RetryCount = "RUNOPTION_REVIEW_RETRY_COUNT"; ⟦EOL⟧
+// 해설 L196: 함수·델리게이트 또는 객체 생성자를 호출합니다: new([ZeroDefence, CurrentGroup, FollowUp, DistortionGroup0, DistortionGroup1, DistortionGroup2, ReviewMethod, ReviewLine, ImmediateRetry, RetryCount], StringComparer.OrdinalIgnoreCase) / 변수의 초기값을 지정합니다: Keys = new([ZeroDefence, CurrentGroup, FollowUp, DistortionGroup0, DistortionGroup1, DistortionGroup2, ReviewMethod, ReviewLine, ImmediateRetry, RetryCount], StringComparer.OrdinalIgnoreCase)
+L000196 |         private static readonly HashSet<string> Keys = new([ZeroDefence, CurrentGroup, FollowUp, DistortionGroup0, DistortionGroup1, DistortionGroup2, ReviewMethod, ReviewLine, ImmediateRetry, RetryCount], StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: Keys.Contains(key)
+L000197 |         public static bool IsKey(string key) => Keys.Contains(key); ⟦EOL⟧
+// 해설 L198: 함수·델리게이트 또는 객체 생성자를 호출합니다: Read(settings.LoadSection(EN_SETTING_TAB.Option)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LoadSection(EN_SETTING_TAB.Option)
+L000198 |         public static ST_RUN_OPTION_SETTINGS Read(CSettingManager settings) => Read(settings.LoadSection(EN_SETTING_TAB.Option)); ⟦EOL⟧
+// 해설 L199: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>)
+L000199 |         public static ST_RUN_OPTION_SETTINGS Read(IReadOnlyList<ST_SYSTEM_PARAMETER> parameters) ⟦EOL⟧
+// 해설 L200: 구문 블록 경계입니다 · 소속 Read.
+L000200 |         { ⟦EOL⟧
+// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Where(p => IsKey(p.Key)).ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: parameters.Where(p => IsKey(p.Key)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsKey(p.Key) / 지역 변수를 선언합니다: var values = parameters.Where(p => IsKey(p.Key)).ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: values = parameters.Where(p => IsKey(p.Key)).ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase)
+L000201 |             var values = parameters.Where(p => IsKey(p.Key)).ToDictionary(p => p.Key, p => p.Value, StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L202: 함수·델리게이트 또는 객체 생성자를 호출합니다: new( Number(ZeroDefence, 0, 0, 1) == 1, Number(CurrentGroup, 1, 1, 4), Number(FollowUp, 0, 0, 1) == 1, Number(ReviewMethod, 1, 0, 1), Number(ReviewLine, 0, 0, 3), Number(ImmediateRetry, 0, 0, 1) == 1, Number(RetryCount, … / 호출자에게 값 또는 제어를 반환합니다: return new( Number(ZeroDefence, 0, 0, 1) == 1, Number(CurrentGroup, 1, 1, 4), Number(FollowUp, 0, 0, 1) == 1, Number(ReviewMethod, 1, 0, 1), Number(ReviewLine, 0, 0, 3), Number(ImmediateRetry, 0, 0, 1) == 1, Number(RetryCount, 1,
+L000202 |             return new( ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(ZeroDefence, 0, 0, 1)
+L000203 |                 Number(ZeroDefence, 0, 0, 1) == 1,  ⟦EOL⟧
+// 해설 L204: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(CurrentGroup, 1, 1, 4)
+L000204 |                 Number(CurrentGroup, 1, 1, 4),  ⟦EOL⟧
+// 해설 L205: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(FollowUp, 0, 0, 1)
+L000205 |                 Number(FollowUp, 0, 0, 1) == 1,  ⟦EOL⟧
+// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(ReviewMethod, 1, 0, 1)
+L000206 |                 Number(ReviewMethod, 1, 0, 1),  ⟦EOL⟧
+// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(ReviewLine, 0, 0, 3)
+L000207 |                 Number(ReviewLine, 0, 0, 3),  ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(ImmediateRetry, 0, 0, 1)
+L000208 |                 Number(ImmediateRetry, 0, 0, 1) == 1,  ⟦EOL⟧
+// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(RetryCount, 1, 1, 3)
+L000209 |                 Number(RetryCount, 1, 1, 3) ⟦EOL⟧
+// 해설 L210: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>)
+L000210 |             ) ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 Read.
+L000211 |             { ⟦EOL⟧
+// 해설 L212: 값을 대상에 대입합니다: DistortionGroupMask = Number(DistortionGroup0, 0, 0, 1) | Number(DistortionGroup1, 0, 0, 1) << 1 | Number(DistortionGroup2, 0, 0, 1) << 2 / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(DistortionGroup0, 0, 0, 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(DistortionGroup1, 0, 0, 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Number(DistortionGroup2, 0, 0, 1)
+L000212 |                 DistortionGroupMask = Number(DistortionGroup0, 0, 0, 1) | Number(DistortionGroup1, 0, 0, 1) << 1 | Number(DistortionGroup2, 0, 0, 1) << 2 ⟦EOL⟧
+// 해설 L213: 구문 블록 경계입니다 · 소속 Read.
+L000213 |             }; ⟦EOL⟧
+// 해설 L214: 선언·서명/매개변수·접근 조건입니다 · int Number(string, int, int, int)
+L000214 |             int Number(string key, int fallback, int min, int max) ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 Number.
+L000215 |             { ⟦EOL⟧
+// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var text) / 조건에 따라 분기합니다: if (!values.TryGetValue(key, out var text))
+L000216 |                 if (!values.TryGetValue(key, out var text)) ⟦EOL⟧
+// 해설 L217: 호출자에게 값 또는 제어를 반환합니다: return fallback;
+L000217 |                     return fallback; ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) / 조건에 따라 분기합니다: if (int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) && value >= min && value <= max)
+L000218 |                 if (int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) && value >= min && value <= max) ⟦EOL⟧
+// 해설 L219: 호출자에게 값 또는 제어를 반환합니다: return value;
+L000219 |                     return value; ⟦EOL⟧
+// 해설 L220: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{key}: {min}~{max} 범위의 정수를 입력해 주세요.") / 예외를 발생/전달합니다: throw new InvalidDataException($"{key}: {min}~{max} 범위의 정수를 입력해 주세요.");
+L000220 |                 throw new InvalidDataException($"{key}: {min}~{max} 범위의 정수를 입력해 주세요."); ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 Number.
+L000221 |             } ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 Read.
+L000222 |         } ⟦EOL⟧
+L000223 |  ⟦EOL⟧
+// 해설 L224: 값별 결과식을 선택합니다: count switch { 1 => 0, 3 => 1, 5 => 2, 7 => 3, _ => throw new ArgumentOutOfRangeException(nameof(count))}
+L000224 |         public static int EncodeLine(int count) => count switch ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 EncodeLine.
+L000225 |         { ⟦EOL⟧
 // 해설 L226: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.CRunOptionSettings.EncodeLine(int)
-L000226 |             3 => 1, ⟦EOL⟧
+L000226 |             1 => 0, ⟦EOL⟧
 // 해설 L227: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.CRunOptionSettings.EncodeLine(int)
-L000227 |             5 => 2, ⟦EOL⟧
+L000227 |             3 => 1, ⟦EOL⟧
 // 해설 L228: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.CRunOptionSettings.EncodeLine(int)
-L000228 |             7 => 3, ⟦EOL⟧
-// 해설 L229: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(count)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(count) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(count))
-L000229 |             _ => throw new ArgumentOutOfRangeException(nameof(count))}; ⟦EOL⟧
-// 해설 L230: 구문 블록 경계입니다.
-L000230 |     } ⟦EOL⟧
-L000231 |  ⟦EOL⟧
-// 해설 L232: 타입의 구조/상속 선언입니다: public sealed record ST_RUN_OPTION_SETTINGS(bool ZeroDefence, int CurrentGroup, bool FollowUp, int ReviewMethod, int ReviewLineIndex, bool ImmediateRetry, int RetryCount)
-L000232 |     public sealed record ST_RUN_OPTION_SETTINGS(bool ZeroDefence, int CurrentGroup, bool FollowUp, int ReviewMethod, int ReviewLineIndex, bool ImmediateRetry, int RetryCount) ⟦EOL⟧
-// 해설 L233: 구문 블록 경계입니다.
-L000233 |     { ⟦EOL⟧
-// 해설 L234: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.DistortionGroupMask
-L000234 |         public int DistortionGroupMask { get; init; } ⟦EOL⟧
-// 해설 L235: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3).Where(index => (DistortionGroupMask & (1 << index)) != 0).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3).Where(index => (DistortionGroupMask & (1 << index)) != 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3)
-L000235 |         public IReadOnlyList<int> DistortionGroups => Enumerable.Range(0, 3).Where(index => (DistortionGroupMask & (1 << index)) != 0).ToArray(); ⟦EOL⟧
-// 해설 L236: 값별 결과식을 선택합니다: ReviewLineIndex switch { 0 => 1, 1 => 3, 2 => 5, 3 => 7, _ => throw new InvalidDataException("Review Line 설정 오류")}
-L000236 |         public int ReviewLineCount => ReviewLineIndex switch ⟦EOL⟧
-// 해설 L237: 구문 블록 경계입니다 · 소속 ReviewLineCount.
-L000237 |         { ⟦EOL⟧
-// 해설 L238: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.ReviewLineCount
-L000238 |             0 => 1, ⟦EOL⟧
+L000228 |             5 => 2, ⟦EOL⟧
+// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.CRunOptionSettings.EncodeLine(int)
+L000229 |             7 => 3, ⟦EOL⟧
+// 해설 L230: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(count)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(count) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(count))
+L000230 |             _ => throw new ArgumentOutOfRangeException(nameof(count))}; ⟦EOL⟧
+// 해설 L231: 구문 블록 경계입니다.
+L000231 |     } ⟦EOL⟧
+L000232 |  ⟦EOL⟧
+// 해설 L233: 타입의 구조/상속 선언입니다: public sealed record ST_RUN_OPTION_SETTINGS(bool ZeroDefence, int CurrentGroup, bool FollowUp, int ReviewMethod, int ReviewLineIndex, bool ImmediateRetry, int RetryCount)
+L000233 |     public sealed record ST_RUN_OPTION_SETTINGS(bool ZeroDefence, int CurrentGroup, bool FollowUp, int ReviewMethod, int ReviewLineIndex, bool ImmediateRetry, int RetryCount) ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다.
+L000234 |     { ⟦EOL⟧
+// 해설 L235: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.DistortionGroupMask
+L000235 |         public int DistortionGroupMask { get; init; } ⟦EOL⟧
+// 해설 L236: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3).Where(index => (DistortionGroupMask & (1 << index)) != 0).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3).Where(index => (DistortionGroupMask & (1 << index)) != 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(0, 3)
+L000236 |         public IReadOnlyList<int> DistortionGroups => Enumerable.Range(0, 3).Where(index => (DistortionGroupMask & (1 << index)) != 0).ToArray(); ⟦EOL⟧
+// 해설 L237: 값별 결과식을 선택합니다: ReviewLineIndex switch { 0 => 1, 1 => 3, 2 => 5, 3 => 7, _ => throw new InvalidDataException("Review Line 설정 오류")}
+L000237 |         public int ReviewLineCount => ReviewLineIndex switch ⟦EOL⟧
+// 해설 L238: 구문 블록 경계입니다 · 소속 ReviewLineCount.
+L000238 |         { ⟦EOL⟧
 // 해설 L239: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.ReviewLineCount
-L000239 |             1 => 3, ⟦EOL⟧
+L000239 |             0 => 1, ⟦EOL⟧
 // 해설 L240: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.ReviewLineCount
-L000240 |             2 => 5, ⟦EOL⟧
+L000240 |             1 => 3, ⟦EOL⟧
 // 해설 L241: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.ReviewLineCount
-L000241 |             3 => 7, ⟦EOL⟧
-// 해설 L242: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Review Line 설정 오류") / 예외를 발생/전달합니다: throw new InvalidDataException("Review Line 설정 오류")
-L000242 |             _ => throw new InvalidDataException("Review Line 설정 오류")}; ⟦EOL⟧
-// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(ReviewLineCount, ReviewMethod == 0 ? EN_FINE_INSPECTION_METHOD.PtoP : EN_FINE_INSPECTION_METHOD.Flying, RetryCount, ImmediateRetry) / 조건에 따라 결과식을 선택합니다: ReviewMethod == 0 ? EN_FINE_INSPECTION_METHOD.PtoP : EN_FINE_INSPECTION_METHOD.Flying
-L000243 |         public ST_AUTO_REVIEW_OPTIONS ReviewOptions => new(ReviewLineCount, ReviewMethod == 0 ? EN_FINE_INSPECTION_METHOD.PtoP : EN_FINE_INSPECTION_METHOD.Flying, RetryCount, ImmediateRetry); ⟦EOL⟧
-// 해설 L244: 구문 블록 경계입니다.
-L000244 |     } ⟦EOL⟧
-L000245 |  ⟦EOL⟧
-// 해설 L246: 타입의 구조/상속 선언입니다: public enum EN_SETTING_TAB
-L000246 |     public enum EN_SETTING_TAB ⟦EOL⟧
-// 해설 L247: 구문 블록 경계입니다.
-L000247 |     { ⟦EOL⟧
-// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SETTING_TAB.Option
-L000248 |         Option, ⟦EOL⟧
-// 해설 L249: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SETTING_TAB.Interface
-L000249 |         Interface, ⟦EOL⟧
-// 해설 L250: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SETTING_TAB.Io
-L000250 |         Io, ⟦EOL⟧
-// 해설 L251: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SETTING_TAB.Motor
-L000251 |         Motor, ⟦EOL⟧
-// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SETTING_TAB.Alarm
-L000252 |         Alarm ⟦EOL⟧
-// 해설 L253: 구문 블록 경계입니다.
-L000253 |     } ⟦EOL⟧
-L000254 |  ⟦EOL⟧
-// 해설 L255: 타입의 구조/상속 선언입니다: public sealed record ST_SYSTEM_PARAMETER(
-L000255 |     public sealed record ST_SYSTEM_PARAMETER( ⟦EOL⟧
-// 해설 L256: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000256 |         EN_SETTING_TAB Section,  ⟦EOL⟧
+L000241 |             2 => 5, ⟦EOL⟧
+// 해설 L242: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS.ReviewLineCount
+L000242 |             3 => 7, ⟦EOL⟧
+// 해설 L243: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException("Review Line 설정 오류") / 예외를 발생/전달합니다: throw new InvalidDataException("Review Line 설정 오류")
+L000243 |             _ => throw new InvalidDataException("Review Line 설정 오류")}; ⟦EOL⟧
+// 해설 L244: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(ReviewLineCount, ReviewMethod == 0 ? EN_FINE_INSPECTION_METHOD.PtoP : EN_FINE_INSPECTION_METHOD.Flying, RetryCount, ImmediateRetry) / 조건에 따라 결과식을 선택합니다: ReviewMethod == 0 ? EN_FINE_INSPECTION_METHOD.PtoP : EN_FINE_INSPECTION_METHOD.Flying
+L000244 |         public ST_AUTO_REVIEW_OPTIONS ReviewOptions => new(ReviewLineCount, ReviewMethod == 0 ? EN_FINE_INSPECTION_METHOD.PtoP : EN_FINE_INSPECTION_METHOD.Flying, RetryCount, ImmediateRetry); ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다.
+L000245 |     } ⟦EOL⟧
+L000246 |  ⟦EOL⟧
+// 해설 L247: 타입의 구조/상속 선언입니다: public enum EN_SETTING_TAB
+L000247 |     public enum EN_SETTING_TAB ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다.
+L000248 |     { ⟦EOL⟧
+// 해설 L249: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SETTING_TAB.Option
+L000249 |         Option, ⟦EOL⟧
+// 해설 L250: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SETTING_TAB.Interface
+L000250 |         Interface, ⟦EOL⟧
+// 해설 L251: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SETTING_TAB.Io
+L000251 |         Io, ⟦EOL⟧
+// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SETTING_TAB.Motor
+L000252 |         Motor, ⟦EOL⟧
+// 해설 L253: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Managers.EN_SETTING_TAB.Alarm
+L000253 |         Alarm ⟦EOL⟧
+// 해설 L254: 구문 블록 경계입니다.
+L000254 |     } ⟦EOL⟧
+L000255 |  ⟦EOL⟧
+// 해설 L256: 타입의 구조/상속 선언입니다: public sealed record ST_SYSTEM_PARAMETER(
+L000256 |     public sealed record ST_SYSTEM_PARAMETER( ⟦EOL⟧
 // 해설 L257: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000257 |         string Name,  ⟦EOL⟧
+L000257 |         EN_SETTING_TAB Section,  ⟦EOL⟧
 // 해설 L258: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000258 |         string Value,  ⟦EOL⟧
+L000258 |         string Name,  ⟦EOL⟧
 // 해설 L259: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000259 |         string Unit,  ⟦EOL⟧
+L000259 |         string Value,  ⟦EOL⟧
 // 해설 L260: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000260 |         string Description,  ⟦EOL⟧
+L000260 |         string Unit,  ⟦EOL⟧
 // 해설 L261: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000261 |         string Group = "",  ⟦EOL⟧
+L000261 |         string Description,  ⟦EOL⟧
 // 해설 L262: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000262 |         string Key = "",  ⟦EOL⟧
+L000262 |         string Group = "",  ⟦EOL⟧
 // 해설 L263: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000263 |         string DefaultValue = "",  ⟦EOL⟧
+L000263 |         string Key = "",  ⟦EOL⟧
 // 해설 L264: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000264 |         EN_RECIPE_DATA_TYPE DataType = EN_RECIPE_DATA_TYPE.String,  ⟦EOL⟧
+L000264 |         string DefaultValue = "",  ⟦EOL⟧
 // 해설 L265: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000265 |         double Min = 0.0,  ⟦EOL⟧
+L000265 |         EN_RECIPE_DATA_TYPE DataType = EN_RECIPE_DATA_TYPE.String,  ⟦EOL⟧
 // 해설 L266: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000266 |         double Max = 0.0,  ⟦EOL⟧
+L000266 |         double Min = 0.0,  ⟦EOL⟧
 // 해설 L267: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000267 |         bool Show = true,  ⟦EOL⟧
+L000267 |         double Max = 0.0,  ⟦EOL⟧
 // 해설 L268: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000268 |         bool Use = true,  ⟦EOL⟧
+L000268 |         bool Show = true,  ⟦EOL⟧
 // 해설 L269: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000269 |         int DisplayOrder = 0,  ⟦EOL⟧
+L000269 |         bool Use = true,  ⟦EOL⟧
 // 해설 L270: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000270 |         IReadOnlyDictionary<string, string>? Extra = null ⟦EOL⟧
+L000270 |         int DisplayOrder = 0,  ⟦EOL⟧
 // 해설 L271: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000271 |     ); ⟦EOL⟧
-// 해설 L272: 타입의 구조/상속 선언입니다: public sealed record ST_SETTING_HISTORY(DateTimeOffset ChangedAt, EN_SETTING_TAB Section, string ParameterName, string OldValue, string NewValue, string OperatorId, string Action);
-L000272 |     public sealed record ST_SETTING_HISTORY(DateTimeOffset ChangedAt, EN_SETTING_TAB Section, string ParameterName, string OldValue, string NewValue, string OperatorId, string Action); ⟦EOL⟧
-// 해설 L273: 타입의 구조/상속 선언입니다: public abstract class CSettingFileBase
-L000273 |     public abstract class CSettingFileBase ⟦EOL⟧
-// 해설 L274: 구문 블록 경계입니다.
-L000274 |     { ⟦EOL⟧
-// 해설 L275: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> Drilling.Common.Managers.CSettingFileBase.Load(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken)
-L000275 |         public abstract IReadOnlyList<ST_SYSTEM_PARAMETER> Load(EN_SETTING_TAB section, CancellationToken cancellationToken = default); ⟦EOL⟧
-// 해설 L276: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CSettingFileBase.Save(Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, System.Threading.Cancellation
-L000276 |         public abstract void Save(EN_SETTING_TAB section, IReadOnlyList<ST_SYSTEM_PARAMETER> parameters, CancellationToken cancellationToken = default); ⟦EOL⟧
-// 해설 L277: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY> Drilling.Common.Managers.CSettingFileBase.LoadHistory(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.Cancellation
-L000277 |         public abstract IReadOnlyList<ST_SETTING_HISTORY> LoadHistory(EN_SETTING_TAB section, CancellationToken cancellationToken = default); ⟦EOL⟧
-// 해설 L278: 구문 블록 경계입니다.
-L000278 |     } ⟦EOL⟧
-L000279 |  ⟦EOL⟧
-// 해설 L280: 타입의 구조/상속 선언입니다: public abstract class CInterfaceFileBase
-L000280 |     public abstract class CInterfaceFileBase ⟦EOL⟧
-// 해설 L281: 구문 블록 경계입니다.
-L000281 |     { ⟦EOL⟧
-// 해설 L282: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.Common.Managers.CInterfaceFileBase.LoadAll(System.Threading.CancellationToken)
-L000282 |         public abstract IReadOnlyList<ST_INTERFACE_DATA> LoadAll(CancellationToken cancellationToken = default); ⟦EOL⟧
-// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CInterfaceFileBase.SaveAll(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>, System.Threading.CancellationToken)
-L000283 |         public abstract void SaveAll(IReadOnlyList<ST_INTERFACE_DATA> interfaces, CancellationToken cancellationToken = default); ⟦EOL⟧
-// 해설 L284: 구문 블록 경계입니다.
-L000284 |     } ⟦EOL⟧
+L000271 |         IReadOnlyDictionary<string, string>? Extra = null ⟦EOL⟧
+// 해설 L272: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000272 |     ); ⟦EOL⟧
+// 해설 L273: 타입의 구조/상속 선언입니다: public sealed record ST_SETTING_HISTORY(DateTimeOffset ChangedAt, EN_SETTING_TAB Section, string ParameterName, string OldValue, string NewValue, string OperatorId, string Action);
+L000273 |     public sealed record ST_SETTING_HISTORY(DateTimeOffset ChangedAt, EN_SETTING_TAB Section, string ParameterName, string OldValue, string NewValue, string OperatorId, string Action); ⟦EOL⟧
+// 해설 L274: 타입의 구조/상속 선언입니다: public abstract class CSettingFileBase
+L000274 |     public abstract class CSettingFileBase ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다.
+L000275 |     { ⟦EOL⟧
+// 해설 L276: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> Drilling.Common.Managers.CSettingFileBase.Load(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken)
+L000276 |         public abstract IReadOnlyList<ST_SYSTEM_PARAMETER> Load(EN_SETTING_TAB section, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L277: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CSettingFileBase.Save(Drilling.Common.Managers.EN_SETTING_TAB, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, System.Threading.Cancellation
+L000277 |         public abstract void Save(EN_SETTING_TAB section, IReadOnlyList<ST_SYSTEM_PARAMETER> parameters, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L278: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SETTING_HISTORY> Drilling.Common.Managers.CSettingFileBase.LoadHistory(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.Cancellation
+L000278 |         public abstract IReadOnlyList<ST_SETTING_HISTORY> LoadHistory(EN_SETTING_TAB section, CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L279: 구문 블록 경계입니다.
+L000279 |     } ⟦EOL⟧
+L000280 |  ⟦EOL⟧
+// 해설 L281: 타입의 구조/상속 선언입니다: public abstract class CInterfaceFileBase
+L000281 |     public abstract class CInterfaceFileBase ⟦EOL⟧
+// 해설 L282: 구문 블록 경계입니다.
+L000282 |     { ⟦EOL⟧
+// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA> Drilling.Common.Managers.CInterfaceFileBase.LoadAll(System.Threading.CancellationToken)
+L000283 |         public abstract IReadOnlyList<ST_INTERFACE_DATA> LoadAll(CancellationToken cancellationToken = default); ⟦EOL⟧
+// 해설 L284: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Managers.CInterfaceFileBase.SaveAll(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_DATA>, System.Threading.CancellationToken)
+L000284 |         public abstract void SaveAll(IReadOnlyList<ST_INTERFACE_DATA> interfaces, CancellationToken cancellationToken = default); ⟦EOL⟧
 // 해설 L285: 구문 블록 경계입니다.
-L000285 | } ⟦EOL⟧
+L000285 |     } ⟦EOL⟧
+// 해설 L286: 구문 블록 경계입니다.
+L000286 | } ⟦EOL⟧

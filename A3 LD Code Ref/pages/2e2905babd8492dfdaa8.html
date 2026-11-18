@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Review/CZeroDefenceRecipePlan.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Review/CZeroDefenceRecipePlan.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs">Git 원본</a></p><h1>Drilling.Common/Review/CZeroDefenceRecipePlan.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Review/CZeroDefenceRecipePlan.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Review/CZeroDefenceRecipePlan.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs">Git 원본</a></p><h1>Drilling.Common/Review/CZeroDefenceRecipePlan.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>dfa5920e6301d9ec4b0eab1452ae59521aafc986</td></tr>
+<tr><td>원본 Commit</td><td>96e22cd027c84bf302b23f2949b98985d7f301bb</td></tr>
 <tr><td>원본 SHA256</td><td>e889827c9bd37e5d560c6da9fba8374bb4813e486403abc91893fb2bbe115afa</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>19,538 bytes / 326 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>리뷰 계획·측정·결과 해석 계층입니다. 물리 이동 좌표와 Vision 식별 패킷, 측정 저장의 역할을 별도로 확인합니다.</p>
@@ -94,7 +94,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L12">FieldDeclaration <code>CountKey</code> · L12–12</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L12-L12">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:12–12</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L12-L12">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:12–12</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.CountKey</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, const</td></tr>
@@ -108,7 +108,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L13">MethodDeclaration <code>Key</code> · L13–13</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L13-L13">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:13–13</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L13-L13">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:13–13</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.Key(int, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -122,24 +122,24 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42</a></td><td>Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L102-L102">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:102–102</a></td><td>Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L103-L103">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:103–103</a></td><td>Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L104-L104">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:104–104</a></td><td>Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6212-L6212">Drilling.Common/Station/CStationProcess.cs:6212–6212</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6212-L6212">Drilling.Common/Station/CStationProcess.cs:6212–6212</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6212-L6212">Drilling.Common/Station/CStationProcess.cs:6212–6212</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4342-L4342">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4342–4342</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4343-L4343">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4343–4343</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4344-L4344">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4344–4344</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4539-L4539">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4539–4539</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42</a></td><td>Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L102-L102">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:102–102</a></td><td>Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L103-L103">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:103–103</a></td><td>Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L104-L104">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:104–104</a></td><td>Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6212-L6212">Drilling.Common/Station/CStationProcess.cs:6212–6212</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6212-L6212">Drilling.Common/Station/CStationProcess.cs:6212–6212</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6212-L6212">Drilling.Common/Station/CStationProcess.cs:6212–6212</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4342-L4342">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4342–4342</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4343-L4343">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4343–4343</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4344-L4344">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4344–4344</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4539-L4539">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4539–4539</a></td><td>CZeroDefenceRecipePlan.Key</td><td>False</td></tr>
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L14">FieldDeclaration <code>_mask</code> · L14–14</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L14-L14">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:14–14</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L14-L14">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:14–14</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Recipe.CRecipeShotMaskingPlan Drilling.Common.Review.CZeroDefenceRecipePlan._mask</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -149,7 +149,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L15">FieldDeclaration <code>_shots</code> · L15–15</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L15-L15">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:15–15</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L15-L15">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:15–15</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;(int Cell, int Shot), Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt; Drilling.Common.Review.CZeroDefenceRecipePlan._shots</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -159,7 +159,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L16">FieldDeclaration <code>_beamPosition</code> · L16–16</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L16-L16">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:16–16</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L16-L16">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:16–16</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Func&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int, Drilling.Common.Review.ST_REVIEW_BEAM_POSITION&gt; Drilling.Common.Review.CZeroDefenceRecipePlan._beamPosition</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -169,7 +169,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L17">ConstructorDeclaration <code>.ctor</code> · L17–35</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L17-L35">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:17–35</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L17-L35">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:17–35</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.CZeroDefenceRecipePlan.CZeroDefenceRecipePlan(Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -183,10 +183,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L269-L269">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:269–269</a></td><td>new CZeroDefenceRecipePlan</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6200-L6200">Drilling.Common/Station/CStationProcess.cs:6200–6200</a></td><td>new CZeroDefenceRecipePlan</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3092-L3092">Drilling.UI/Menu/Menus/CMenuRecipe.cs:3092–3092</a></td><td>new CZeroDefenceRecipePlan</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4328-L4328">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4328–4328</a></td><td>new</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L269-L269">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:269–269</a></td><td>new CZeroDefenceRecipePlan</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6200-L6200">Drilling.Common/Station/CStationProcess.cs:6200–6200</a></td><td>new CZeroDefenceRecipePlan</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3092-L3092">Drilling.UI/Menu/Menus/CMenuRecipe.cs:3092–3092</a></td><td>new CZeroDefenceRecipePlan</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4328-L4328">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4328–4328</a></td><td>new</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -198,7 +198,7 @@
 <tr><td>25</td><td>CShotCoordinatePlanBuilder.Build</td><td>resolved</td><td>Drilling.Common.Recipe.ST_SHOT_COORDINATE_PLAN Drilling.Common.Recipe.CShotCoordinatePlanBuilder.Build(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:11</td></tr>
 <tr><td>26</td><td>Plan.Shots.ToDictionary</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;(int CellNo, int CellShotNo), Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt;.ToDictionary&lt;Drilling.Common.Recipe.ST_HEAD_SHOT_POINT, (int CellNo, int CellShotNo)&gt;(System.Func&lt;Drilling.Common.Recipe.ST_HEAD_SHOT_POINT, (int CellNo, int CellShotNo)&gt;)</td></tr>
 <tr><td>27</td><td>CRecipeShotMaskingPlan.Build</td><td>resolved</td><td>Drilling.Common.Recipe.CRecipeShotMaskingPlan Drilling.Common.Recipe.CRecipeShotMaskingPlan.Build(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:813</td></tr>
-<tr><td>28</td><td>ST_REVIEW_MOTION_PARAMETERS.Read</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_MOTION_PARAMETERS Drilling.Common.Review.ST_REVIEW_MOTION_PARAMETERS.Read(System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;) · Drilling.Common/Review/CReviewManager.cs:4438</td></tr>
+<tr><td>28</td><td>ST_REVIEW_MOTION_PARAMETERS.Read</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_MOTION_PARAMETERS Drilling.Common.Review.ST_REVIEW_MOTION_PARAMETERS.Read(System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;) · Drilling.Common/Review/CReviewManager.cs:4501</td></tr>
 <tr><td>29</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ST_ZERO_DEFENCE_TIMING_PROFILE(double, double, double, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:132</td></tr>
 <tr><td>29</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
 <tr><td>29</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
@@ -252,7 +252,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L37">PropertyDeclaration <code>Recipe</code> · L37–37</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L37-L37">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:37–37</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L37-L37">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:37–37</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION Drilling.Common.Review.CZeroDefenceRecipePlan.Recipe</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -262,7 +262,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L37">GetAccessorDeclaration <code>get_Recipe</code> · L37–37</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L37-L37">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:37–37</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L37-L37">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:37–37</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION Drilling.Common.Review.CZeroDefenceRecipePlan.Recipe.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -272,7 +272,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L38">PropertyDeclaration <code>Parameters</code> · L38–38</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L38-L38">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:38–38</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L38-L38">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:38–38</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.Common.Review.CZeroDefenceRecipePlan.Parameters</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -282,7 +282,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L38">GetAccessorDeclaration <code>get_Parameters</code> · L38–38</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L38-L38">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:38–38</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L38-L38">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:38–38</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.Common.Review.CZeroDefenceRecipePlan.Parameters.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -292,7 +292,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L39">PropertyDeclaration <code>Plan</code> · L39–39</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L39-L39">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:39–39</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L39-L39">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:39–39</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Recipe.ST_SHOT_COORDINATE_PLAN Drilling.Common.Review.CZeroDefenceRecipePlan.Plan</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -302,7 +302,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L39">GetAccessorDeclaration <code>get_Plan</code> · L39–39</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L39-L39">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:39–39</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L39-L39">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:39–39</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Recipe.ST_SHOT_COORDINATE_PLAN Drilling.Common.Review.CZeroDefenceRecipePlan.Plan.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -312,7 +312,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L40">PropertyDeclaration <code>Profile</code> · L40–40</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L40-L40">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:40–40</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L40-L40">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:40–40</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE Drilling.Common.Review.CZeroDefenceRecipePlan.Profile</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -322,7 +322,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L40">GetAccessorDeclaration <code>get_Profile</code> · L40–40</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L40-L40">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:40–40</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L40-L40">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:40–40</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE Drilling.Common.Review.CZeroDefenceRecipePlan.Profile.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -332,7 +332,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L41">PropertyDeclaration <code>Count</code> · L41–41</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L41-L41">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:41–41</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L41-L41">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:41–41</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Review.CZeroDefenceRecipePlan.Count</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -350,7 +350,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L42">PropertyDeclaration <code>HasSelections</code> · L42–42</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.CZeroDefenceRecipePlan.HasSelections</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -376,7 +376,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L44">MethodDeclaration <code>Int</code> · L44–51</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L44-L51">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:44–51</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L44-L51">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:44–51</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Review.CZeroDefenceRecipePlan.Int(string, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -390,14 +390,14 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L41-L41">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:41–41</a></td><td>Int</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42</a></td><td>Int</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L102-L102">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:102–102</a></td><td>Int</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L103-L103">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:103–103</a></td><td>Int</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L104-L104">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:104–104</a></td><td>Int</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4342-L4342">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4342–4342</a></td><td>_plan.Int</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4343-L4343">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4343–4343</a></td><td>_plan.Int</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4344-L4344">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4344–4344</a></td><td>_plan.Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L41-L41">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:41–41</a></td><td>Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42</a></td><td>Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L102-L102">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:102–102</a></td><td>Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L103-L103">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:103–103</a></td><td>Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L104-L104">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:104–104</a></td><td>Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4342-L4342">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4342–4342</a></td><td>_plan.Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4343-L4343">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4343–4343</a></td><td>_plan.Int</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4344-L4344">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4344–4344</a></td><td>_plan.Int</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -425,7 +425,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L53">MethodDeclaration <code>Read</code> · L53–60</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L53-L60">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53–60</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L53-L60">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53–60</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -439,19 +439,19 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L71-L71">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:71–71</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L71-L71">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:71–71</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L72-L72">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:72–72</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L72-L72">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:72–72</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L75-L75">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:75–75</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L75-L75">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:75–75</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L78-L78">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:78–78</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L79-L79">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:79–79</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L82-L82">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:82–82</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L82-L82">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:82–82</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L71-L71">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:71–71</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L71-L71">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:71–71</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L72-L72">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:72–72</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L72-L72">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:72–72</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L75-L75">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:75–75</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L75-L75">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:75–75</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L78-L78">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:78–78</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L79-L79">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:79–79</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L82-L82">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:82–82</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L82-L82">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:82–82</a></td><td>Read</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -481,7 +481,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L62">MethodDeclaration <code>CanProcess</code> · L62–62</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L62-L62">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:62–62</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L62-L62">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:62–62</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.CZeroDefenceRecipePlan.CanProcess(Drilling.Common.Recipe.ST_HEAD_SHOT_POINT)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -494,8 +494,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L68-L68">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:68–68</a></td><td>CanProcess</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4423-L4423">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4423–4423</a></td><td>_plan!.CanProcess</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L68-L68">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:68–68</a></td><td>CanProcess</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4423-L4423">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4423–4423</a></td><td>_plan!.CanProcess</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -507,7 +507,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L63">MethodDeclaration <code>Mask</code> · L63–63</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L63-L63">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:63–63</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L63-L63">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:63–63</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Recipe.ST_RECIPE_SHOT_MASKING_RESULT Drilling.Common.Review.CZeroDefenceRecipePlan.Mask(Drilling.Common.Recipe.ST_HEAD_SHOT_POINT)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -520,8 +520,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4494-L4494">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4494–4494</a></td><td>_plan.Mask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4622-L4622">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4622–4622</a></td><td>_plan.Mask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4494-L4494">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4494–4494</a></td><td>_plan.Mask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4622-L4622">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4622–4622</a></td><td>_plan.Mask</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -533,7 +533,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L64">MethodDeclaration <code>GetPoint</code> · L64–95</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L64-L95">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:64–95</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L64-L95">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:64–95</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_POINT Drilling.Common.Review.CZeroDefenceRecipePlan.GetPoint(int, int, int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -549,11 +549,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L109-L109">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:109–109</a></td><td>GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4349-L4349">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4349–4349</a></td><td>_plan.GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4445-L4445">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4445–4445</a></td><td>_plan.GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4507-L4507">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4507–4507</a></td><td>_plan.GetPoint</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4652-L4652">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4652–4652</a></td><td>_plan.GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L109-L109">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:109–109</a></td><td>GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4349-L4349">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4349–4349</a></td><td>_plan.GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4445-L4445">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4445–4445</a></td><td>_plan.GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4507-L4507">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4507–4507</a></td><td>_plan.GetPoint</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4652-L4652">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4652–4652</a></td><td>_plan.GetPoint</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -562,7 +562,7 @@
 <tr><td>68</td><td>CanProcess</td><td>resolved</td><td>bool Drilling.Common.Review.CZeroDefenceRecipePlan.CanProcess(Drilling.Common.Recipe.ST_HEAD_SHOT_POINT) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:62</td></tr>
 <tr><td>69</td><td>new InvalidOperationException</td><td>resolved</td><td>System.InvalidOperationException.InvalidOperationException(string?)</td></tr>
 <tr><td>70</td><td>_beamPosition</td><td>resolved · 동적 구현 선택 가능</td><td>Drilling.Common.Review.ST_REVIEW_BEAM_POSITION System.Func&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int, Drilling.Common.Review.ST_REVIEW_BEAM_POSITION&gt;.Invoke(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int)</td></tr>
-<tr><td>70</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_PLAN_POINT.ST_REVIEW_PLAN_POINT(int, string, int, int, int, int, int, bool, double, double, double, double, double, double, Drilling.Common.Review.EN_REVIEW_POINT_STATE, string) · Drilling.Common/Review/CReviewManager.cs:3983</td></tr>
+<tr><td>70</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_PLAN_POINT.ST_REVIEW_PLAN_POINT(int, string, int, int, int, int, int, bool, double, double, double, double, double, double, Drilling.Common.Review.EN_REVIEW_POINT_STATE, string) · Drilling.Common/Review/CReviewManager.cs:4046</td></tr>
 <tr><td>71</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
 <tr><td>71</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
 <tr><td>72</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
@@ -582,7 +582,7 @@
 <tr><td>82</td><td>Math.Max</td><td>resolved</td><td>double System.Math.Max(double, double)</td></tr>
 <tr><td>82</td><td>Read</td><td>resolved</td><td>double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53</td></tr>
 <tr><td>83</td><td>new</td><td>resolved</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_POINT.ST_ZERO_DEFENCE_POINT(int, int, int, int, string, string, double, double, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:144</td></tr>
-<tr><td>89</td><td>CReviewShotNameFormatter.ToMatrixName</td><td>resolved</td><td>string Drilling.Common.Review.CReviewShotNameFormatter.ToMatrixName(int, int) · Drilling.Common/Review/CReviewManager.cs:4057</td></tr>
+<tr><td>89</td><td>CReviewShotNameFormatter.ToMatrixName</td><td>resolved</td><td>string Drilling.Common.Review.CReviewShotNameFormatter.ToMatrixName(int, int) · Drilling.Common/Review/CReviewManager.cs:4120</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -653,7 +653,7 @@
  M --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L97">MethodDeclaration <code>ReadSelections</code> · L97–113</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L97-L113">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:97–113</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L97-L113">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:97–113</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt; Drilling.Common.Review.CZeroDefenceRecipePlan.ReadSelections(bool)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -666,9 +666,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L123-L123">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:123–123</a></td><td>ReadSelections</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L276-L276">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:276–276</a></td><td>source.ReadSelections</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6203-L6203">Drilling.Common/Station/CStationProcess.cs:6203–6203</a></td><td>checkedPlan.ReadSelections</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L123-L123">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:123–123</a></td><td>ReadSelections</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L276-L276">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:276–276</a></td><td>source.ReadSelections</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6203-L6203">Drilling.Common/Station/CStationProcess.cs:6203–6203</a></td><td>checkedPlan.ReadSelections</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -722,7 +722,7 @@
  N0 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L115">MethodDeclaration <code>ValidateForSave</code> · L115–129</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L115-L129">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:115–129</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L115-L129">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:115–129</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Review.CZeroDefenceRecipePlan.ValidateForSave()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -731,7 +731,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3092-L3092">Drilling.UI/Menu/Menus/CMenuRecipe.cs:3092–3092</a></td><td>new CZeroDefenceRecipePlan(new(&quot;DRAFT&quot;, &quot;DRAFT&quot;, parameters, []), settings).ValidateForSave</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3092-L3092">Drilling.UI/Menu/Menus/CMenuRecipe.cs:3092–3092</a></td><td>new CZeroDefenceRecipePlan(new(&quot;DRAFT&quot;, &quot;DRAFT&quot;, parameters, []), settings).ValidateForSave</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -764,7 +764,7 @@
  N0 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L136">PropertyDeclaration <code>StageStroke</code> · L136–136</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageStroke</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -774,7 +774,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L136">GetAccessorDeclaration <code>get_StageStroke</code> · L136–136</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageStroke.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -784,7 +784,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L136">InitAccessorDeclaration <code>set_StageStroke</code> · L136–136</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageStroke.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -798,7 +798,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L137">PropertyDeclaration <code>StageAcceleration</code> · L137–137</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageAcceleration</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -808,7 +808,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L137">GetAccessorDeclaration <code>get_StageAcceleration</code> · L137–137</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageAcceleration.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -818,7 +818,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L137">InitAccessorDeclaration <code>set_StageAcceleration</code> · L137–137</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.StageAcceleration.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -832,7 +832,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L138">PropertyDeclaration <code>SettleSeconds</code> · L138–138</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.SettleSeconds</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -842,7 +842,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L138">GetAccessorDeclaration <code>get_SettleSeconds</code> · L138–138</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.SettleSeconds.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -852,7 +852,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L138">InitAccessorDeclaration <code>set_SettleSeconds</code> · L138–138</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.SettleSeconds.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -866,7 +866,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L139">PropertyDeclaration <code>ArrivalMarginSeconds</code> · L139–139</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ArrivalMarginSeconds</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -876,7 +876,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L139">GetAccessorDeclaration <code>get_ArrivalMarginSeconds</code> · L139–139</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ArrivalMarginSeconds.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -886,7 +886,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L139">InitAccessorDeclaration <code>set_ArrivalMarginSeconds</code> · L139–139</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ArrivalMarginSeconds.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -900,7 +900,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L140">PropertyDeclaration <code>FramesPerSecond</code> · L140–140</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.FramesPerSecond</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -910,7 +910,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L140">GetAccessorDeclaration <code>get_FramesPerSecond</code> · L140–140</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.FramesPerSecond.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -920,7 +920,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L140">InitAccessorDeclaration <code>set_FramesPerSecond</code> · L140–140</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.FramesPerSecond.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -934,7 +934,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L141">PropertyDeclaration <code>ExposureSeconds</code> · L141–141</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ExposureSeconds</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -944,7 +944,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L141">GetAccessorDeclaration <code>get_ExposureSeconds</code> · L141–141</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ExposureSeconds.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -954,7 +954,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L141">InitAccessorDeclaration <code>set_ExposureSeconds</code> · L141–141</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ExposureSeconds.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -968,7 +968,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L159">PropertyDeclaration <code>MarginSeconds</code> · L159–159</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L159-L159">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:159–159</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L159-L159">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:159–159</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.Common.Review.ST_ZERO_DEFENCE_TRANSITION.MarginSeconds</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -978,7 +978,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L164">PropertyDeclaration <code>IsValid</code> · L164–164</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L164-L164">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:164–164</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L164-L164">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:164–164</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT.IsValid</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -988,7 +988,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L165">PropertyDeclaration <code>Message</code> · L165–165</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L165-L165">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:165–165</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L165-L165">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:165–165</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT.Message</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1008,7 +1008,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L171">MethodDeclaration <code>Validate</code> · L171–232</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L171-L232">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:171–232</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L171-L232">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:171–232</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_RESULT Drilling.Common.Review.CZeroDefenceTiming.Validate(int, System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;, Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1023,13 +1023,13 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L123-L123">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:123–123</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L277-L277">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:277–277</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6204-L6204">Drilling.Common/Station/CStationProcess.cs:6204–6204</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4376-L4376">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4376–4376</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4468-L4468">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4468–4468</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4561-L4561">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4561–4561</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4577-L4577">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4577–4577</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L123-L123">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:123–123</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L277-L277">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:277–277</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6204-L6204">Drilling.Common/Station/CStationProcess.cs:6204–6204</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4376-L4376">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4376–4376</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4468-L4468">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4468–4468</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4561-L4561">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4561–4561</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4577-L4577">Drilling.UI/Menu/Menus/CMenuRecipe.cs:4577–4577</a></td><td>CZeroDefenceTiming.Validate</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1211,7 +1211,7 @@
  N8 --&gt;|포함| N9</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L180">LocalFunctionStatement <code>Positive</code> · L180–180</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L180-L180">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:180–180</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L180-L180">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:180–180</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Positive(double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / static</td></tr>
@@ -1224,11 +1224,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181</a></td><td>Positive</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1240,7 +1240,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L248">PropertyDeclaration <code>IsNg</code> · L248–248</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L248-L248">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:248–248</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L248-L248">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:248–248</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_POINT_RESULT.IsNg</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1250,7 +1250,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L253">PropertyDeclaration <code>Plan</code> · L253–253</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN? Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.Plan</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1260,7 +1260,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L253">GetAccessorDeclaration <code>get_Plan</code> · L253–253</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN? Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.Plan.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1270,7 +1270,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L253">InitAccessorDeclaration <code>set_Plan</code> · L253–253</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.Plan.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -1284,7 +1284,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L254">PropertyDeclaration <code>ResultSavedAt</code> · L254–254</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.DateTimeOffset? Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.ResultSavedAt</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1294,7 +1294,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L254">GetAccessorDeclaration <code>get_ResultSavedAt</code> · L254–254</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.DateTimeOffset? Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.ResultSavedAt.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1304,7 +1304,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L254">InitAccessorDeclaration <code>set_ResultSavedAt</code> · L254–254</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.ResultSavedAt.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -1318,7 +1318,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L255">PropertyDeclaration <code>FollowUpRequested</code> · L255–255</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpRequested</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1328,7 +1328,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L255">GetAccessorDeclaration <code>get_FollowUpRequested</code> · L255–255</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpRequested.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1338,7 +1338,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L255">InitAccessorDeclaration <code>set_FollowUpRequested</code> · L255–255</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpRequested.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -1352,7 +1352,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L256">PropertyDeclaration <code>FollowUpCompleted</code> · L256–256</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpCompleted</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1362,7 +1362,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L256">GetAccessorDeclaration <code>get_FollowUpCompleted</code> · L256–256</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpCompleted.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1372,7 +1372,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L256">InitAccessorDeclaration <code>set_FollowUpCompleted</code> · L256–256</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.FollowUpCompleted.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -1386,7 +1386,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L257">PropertyDeclaration <code>Judge</code> · L257–257</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L257-L257">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:257–257</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L257-L257">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:257–257</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Review.ST_ZERO_LINE_CYCLE_STATUS.Judge</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1406,7 +1406,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L264">MethodDeclaration <code>Build</code> · L264–324</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L264-L324">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:264–324</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L264-L324">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:264–324</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Review.ST_ZERO_LINE_CYCLE_PLAN? Drilling.Common.Review.CZeroLineCyclePlan.Build(Drilling.Common.Managers.ST_RECIPE_DEFINITION, string, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1421,11 +1421,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4239-L4239">Drilling.Common/Station/CStationProcess.cs:4239–4239</a></td><td>CZeroLineCyclePlan.Build</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L4239-L4239">Drilling.Common/Station/CStationProcess.cs:4239–4239</a></td><td>CZeroLineCyclePlan.Build</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
-<tr><td>266</td><td>CRunOptionSettings.Read</td><td>resolved</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;) · Drilling.Common/Managers/CSettingManager.cs:198</td></tr>
+<tr><td>266</td><td>CRunOptionSettings.Read</td><td>resolved</td><td>Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;) · Drilling.Common/Managers/CSettingManager.cs:199</td></tr>
 <tr><td>269</td><td>new CZeroDefenceRecipePlan</td><td>resolved</td><td>Drilling.Common.Review.CZeroDefenceRecipePlan.CZeroDefenceRecipePlan(Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:17</td></tr>
 <tr><td>270</td><td>CInterLockManager.EvaluateHeadUse(source.Parameters).Any</td><td>resolved</td><td>bool System.Collections.Generic.IEnumerable&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;.Any&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt;(System.Func&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM, bool&gt;)</td></tr>
 <tr><td>270</td><td>CInterLockManager.EvaluateHeadUse</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.InterLock.ST_INTERLOCK_ITEM&gt; Drilling.Common.InterLock.CInterLockManager.EvaluateHeadUse(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;?) · Drilling.Common/InterLock/CInterLockManager.cs:110</td></tr>
@@ -1442,14 +1442,14 @@
 <tr><td>281</td><td>source.Plan.Shots.ToDictionary</td><td>resolved</td><td>System.Collections.Generic.Dictionary&lt;(int CellNo, int CellShotNo), Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Recipe.ST_HEAD_SHOT_POINT&gt;.ToDictionary&lt;Drilling.Common.Recipe.ST_HEAD_SHOT_POINT, (int CellNo, int CellShotNo)&gt;(System.Func&lt;Drilling.Common.Recipe.ST_HEAD_SHOT_POINT, (int CellNo, int CellShotNo)&gt;)</td></tr>
 <tr><td>282</td><td>points.Select((point, index) =&gt; { var shot = shots[(point.CellNo, point.ShotNo)]; return new ST_REVIEW_PLAN_POINT( index + 1, point.ShotKey, point.HeadNo, point.CellNo, point.ShotNo, shot.GroupCountX, shot.GroupCountY, true, shot.DesignX, shot.DesignY, point.ReviewX, point.StageY, 0, 0, EN_REVIEW_POINT_STATE.Ready, &quot;WAIT&quot; ) { BeamNo = point.BeamNo …</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_PLAN_POINT[] System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;.ToArray&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;()</td></tr>
 <tr><td>282</td><td>points.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT&gt;.Select&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;(System.Func&lt;Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, int, Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;)</td></tr>
-<tr><td>285</td><td>new ST_REVIEW_PLAN_POINT</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_PLAN_POINT.ST_REVIEW_PLAN_POINT(int, string, int, int, int, int, int, bool, double, double, double, double, double, double, Drilling.Common.Review.EN_REVIEW_POINT_STATE, string) · Drilling.Common/Review/CReviewManager.cs:3983</td></tr>
-<tr><td>307</td><td>new ST_REVIEW_PLAN</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_PLAN.ST_REVIEW_PLAN(string, int, double, double, Drilling.Common.Review.EN_VISION_FLIP_TYPE, System.DateTimeOffset, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;) · Drilling.Common/Review/CReviewManager.cs:4081</td></tr>
+<tr><td>285</td><td>new ST_REVIEW_PLAN_POINT</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_PLAN_POINT.ST_REVIEW_PLAN_POINT(int, string, int, int, int, int, int, bool, double, double, double, double, double, double, Drilling.Common.Review.EN_REVIEW_POINT_STATE, string) · Drilling.Common/Review/CReviewManager.cs:4046</td></tr>
+<tr><td>307</td><td>new ST_REVIEW_PLAN</td><td>resolved</td><td>Drilling.Common.Review.ST_REVIEW_PLAN.ST_REVIEW_PLAN(string, int, double, double, Drilling.Common.Review.EN_VISION_FLIP_TYPE, System.DateTimeOffset, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;) · Drilling.Common/Review/CReviewManager.cs:4144</td></tr>
 <tr><td>309</td><td>targets.Select(p =&gt; p.CellNo).Distinct().Count</td><td>resolved</td><td>int System.Collections.Generic.IEnumerable&lt;int&gt;.Count&lt;int&gt;()</td></tr>
 <tr><td>309</td><td>targets.Select(p =&gt; p.CellNo).Distinct</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Distinct&lt;int&gt;()</td></tr>
 <tr><td>309</td><td>targets.Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT&gt;.Select&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int&gt;(System.Func&lt;Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int&gt;)</td></tr>
 <tr><td>310</td><td>Tolerance</td><td>resolved</td><td>double Tolerance(string) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:317</td></tr>
 <tr><td>311</td><td>Tolerance</td><td>resolved</td><td>double Tolerance(string) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:317</td></tr>
-<tr><td>312</td><td>CReviewManager.ParseVisionFlipType</td><td>resolved</td><td>Drilling.Common.Review.EN_VISION_FLIP_TYPE Drilling.Common.Review.CReviewManager.ParseVisionFlipType(string?, string?, string?) · Drilling.Common/Review/CReviewManager.cs:3664</td></tr>
+<tr><td>312</td><td>CReviewManager.ParseVisionFlipType</td><td>resolved</td><td>Drilling.Common.Review.EN_VISION_FLIP_TYPE Drilling.Common.Review.CReviewManager.ParseVisionFlipType(string?, string?, string?) · Drilling.Common/Review/CReviewManager.cs:3725</td></tr>
 <tr><td>312</td><td>source.Parameters.GetValueOrDefault</td><td>resolved</td><td>string? System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string)</td></tr>
 <tr><td>312</td><td>source.Parameters.GetValueOrDefault</td><td>resolved</td><td>string? System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string)</td></tr>
 <tr><td>312</td><td>source.Parameters.GetValueOrDefault</td><td>resolved</td><td>string? System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;.GetValueOrDefault&lt;string, string&gt;(string)</td></tr>
@@ -1539,7 +1539,7 @@
  M --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L317">LocalFunctionStatement <code>Tolerance</code> · L317–323</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L317-L323">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:317–323</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L317-L323">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:317–323</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Tolerance(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1552,8 +1552,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L310-L310">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:310–310</a></td><td>Tolerance</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L311-L311">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:311–311</a></td><td>Tolerance</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L310-L310">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:310–310</a></td><td>Tolerance</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L311-L311">Drilling.Common/Review/CZeroDefenceRecipePlan.cs:311–311</a></td><td>Tolerance</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>

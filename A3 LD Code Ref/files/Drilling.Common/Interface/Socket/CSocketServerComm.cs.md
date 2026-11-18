@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | a4fb2aed1e2a9fdcc155d77b0664232b070e40418cbbe896b9e8d03688dc923c |
 | 파일 분류 | code |
 | 원본 크기/행 | 14,569 bytes / 404 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -60,7 +60,7 @@
 
 ### FieldDeclaration `MaxMessageLength` · L10–10
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L10-L10)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -81,7 +81,7 @@
 
 ### FieldDeclaration `_clients` · L11–11
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L11-L11)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -109,7 +109,7 @@
 
 ### FieldDeclaration `_clientTasks` · L12–12
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L12-L12)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -137,7 +137,7 @@
 
 ### FieldDeclaration `_serverLock` · L13–13
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L13-L13)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -165,7 +165,7 @@
 
 ### FieldDeclaration `_listener` · L14–14
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L14-L14)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -180,7 +180,7 @@
 
 ### FieldDeclaration `_serverCts` · L15–15
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L15-L15)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -195,7 +195,7 @@
 
 ### FieldDeclaration `_acceptTask` · L16–16
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L16-L16)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -210,7 +210,7 @@
 
 ### FieldDeclaration `_clientSequence` · L17–17
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L17-L17)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -225,7 +225,7 @@
 
 ### EventFieldDeclaration `MessageReceived` · L18–18
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L18-L18)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -240,7 +240,7 @@
 
 ### MethodDeclaration `Connect` · L19–63
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:19–63](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L19-L63)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:19–63](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L19-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -259,7 +259,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L84-L84) | Connect | True |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L84-L84) | Connect | True |
 
 호출하는 대상과 해석 범위:
 
@@ -339,7 +339,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L43–46
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:43–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L43-L46)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:43–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L43-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -367,7 +367,7 @@ flowchart TD
 
 ### MethodDeclaration `Disconnect` · L65–78
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:65–78](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L65-L78)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:65–78](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L65-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -423,7 +423,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L80–116
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:80–116](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L80-L116)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:80–116](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L80-L116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -507,7 +507,7 @@ flowchart TD
 
 ### MethodDeclaration `AcceptLoop` · L118–170
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:118–170](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L118-L170)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:118–170](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L118-L170)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -527,7 +527,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L45-L45) | AcceptLoop | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L45-L45) | AcceptLoop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -609,7 +609,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L146–149
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:146–149](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L146-L149)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:146–149](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L146-L149)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -637,7 +637,7 @@ flowchart TD
 
 ### LocalFunctionStatement `CleanupClientTaskCallback` · L151–154
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:151–154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L151-L154)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:151–154](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L151-L154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -670,7 +670,7 @@ flowchart TD
 
 ### MethodDeclaration `ReceiveLoop` · L172–222
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:172–222](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L172-L222)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:172–222](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L172-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -691,7 +691,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L148-L148) | ReceiveLoop | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:148–148](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L148-L148) | ReceiveLoop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -794,7 +794,7 @@ flowchart TD
 
 ### MethodDeclaration `CleanupClientTask` · L224–234
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:224–234](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L224-L234)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:224–234](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L224-L234)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -814,7 +814,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L153-L153) | CleanupClientTask | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L153-L153) | CleanupClientTask | False |
 
 호출하는 대상과 해석 범위:
 
@@ -848,7 +848,7 @@ flowchart TD
 
 ### MethodDeclaration `RaiseMessageReceived` · L236–262
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:236–262](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L236-L262)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:236–262](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L236-L262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -869,7 +869,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L200-L200) | RaiseMessageReceived | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L200-L200) | RaiseMessageReceived | False |
 
 호출하는 대상과 해석 범위:
 
@@ -928,7 +928,7 @@ flowchart TD
 
 ### MethodDeclaration `StopServer` · L264–305
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:264–305](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L264-L305)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:264–305](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L264-L305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -941,9 +941,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L31-L31) | StopServer | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L56-L56) | StopServer | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L71-L71) | StopServer | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L31-L31) | StopServer | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L56-L56) | StopServer | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L71-L71) | StopServer | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1020,7 +1020,7 @@ flowchart TD
 
 ### MethodDeclaration `CloseAllClients` · L307–316
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:307–316](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L307-L316)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:307–316](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L307-L316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1033,8 +1033,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L104-L104) | CloseAllClients | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L274-L274) | CloseAllClients | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L104-L104) | CloseAllClients | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L274-L274) | CloseAllClients | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1069,7 +1069,7 @@ flowchart TD
 
 ### MethodDeclaration `IsAllowedRemote` · L318–337
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:318–337](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L318-L337)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:318–337](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L318-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1088,7 +1088,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L126-L126) | IsAllowedRemote | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L126-L126) | IsAllowedRemote | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1144,7 +1144,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveBindAddress` · L339–347
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:339–347](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L339-L347)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:339–347](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L339-L347)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1163,7 +1163,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L38-L38) | ResolveBindAddress | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L38-L38) | ResolveBindAddress | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1203,7 +1203,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadProtocolLine` · L349–374
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:349–374](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L349-L374)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:349–374](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L349-L374)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1223,7 +1223,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L382-L382) | ReadProtocolLine | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L382-L382) | ReadProtocolLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1287,7 +1287,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadProtocolLineWithTimeout` · L376–388
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:376–388](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L376-L388)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:376–388](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L376-L388)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1307,7 +1307,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L188-L188) | ReadProtocolLineWithTimeout | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L188-L188) | ReadProtocolLineWithTimeout | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1355,7 +1355,7 @@ flowchart TD
 
 ### MethodDeclaration `GetRemoteEndPoint` · L390–393
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:390–393](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L390-L393)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:390–393](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L390-L393)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1374,7 +1374,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L174-L174) | GetRemoteEndPoint | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L174-L174) | GetRemoteEndPoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1393,7 +1393,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeReceivedMessage` · L395–398
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:395–398](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L395-L398)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:395–398](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L395-L398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1412,7 +1412,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L194-L194) | NormalizeReceivedMessage | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L194-L194) | NormalizeReceivedMessage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1433,7 +1433,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeProtocolLine` · L400–403
 
-[Drilling.Common/Interface/Socket/CSocketServerComm.cs:400–403](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L400-L403)
+[Drilling.Common/Interface/Socket/CSocketServerComm.cs:400–403](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L400-L403)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1452,8 +1452,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L203-L203) | NormalizeProtocolLine | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L260-L260) | NormalizeProtocolLine | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L203-L203) | NormalizeProtocolLine | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L260-L260) | NormalizeProtocolLine | False |
 
 호출하는 대상과 해석 범위:
 

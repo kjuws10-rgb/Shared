@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs">Git 원본</a></p><h1>Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>dfa5920e6301d9ec4b0eab1452ae59521aafc986</td></tr>
+<tr><td>원본 Commit</td><td>96e22cd027c84bf302b23f2949b98985d7f301bb</td></tr>
 <tr><td>원본 SHA256</td><td>0c8e4dde3d973c0dc0c46013c41c9c0fc259e7c6b28729f41fc622c66ce275df</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>7,829 bytes / 204 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
@@ -51,7 +51,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L6">EnumMemberDeclaration <code>Cancel</code> · L6–6</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L6-L6">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:6–6</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L6-L6">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:6–6</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE.Cancel</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -61,7 +61,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L6">EnumMemberDeclaration <code>AllFromStart</code> · L6–6</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L6-L6">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:6–6</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L6-L6">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:6–6</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE.AllFromStart</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -71,7 +71,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L6">EnumMemberDeclaration <code>InspectionFromStart</code> · L6–6</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L6-L6">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:6–6</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L6-L6">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:6–6</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE.InspectionFromStart</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -81,7 +81,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L10">FieldDeclaration <code>_alternateSelected</code> · L10–10</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L10-L10">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:10–10</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L10-L10">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:10–10</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog._alternateSelected</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -91,7 +91,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L11">MethodDeclaration <code>ShowConfirmation</code> · L11–18</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L11-L18">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11–18</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L11-L18">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:11–18</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowConfirmation(string, string, string, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -107,65 +107,69 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L586-L586">Drilling.UI/CRootView.cs:586–586</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1609-L1609">Drilling.UI/CRootView.cs:1609–1609</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L2618-L2618">Drilling.UI/CRootView.cs:2618–2618</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L459-L464">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:459–464</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L153-L157">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:153–157</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L368-L373">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:368–373</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L108-L108">Drilling.UI/Menu/Menus/CMenuCorrection.cs:108–108</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L196-L199">Drilling.UI/Menu/Menus/CMenuCorrection.cs:196–199</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1302-L1302">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1302–1302</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1310-L1310">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1310–1310</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1320-L1320">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1320–1320</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1389-L1389">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1389–1389</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1568-L1568">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1568–1568</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1580-L1580">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1580–1580</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2637-L2637">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2637–2637</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2654-L2659">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2654–2659</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2703-L2703">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2703–2703</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2714-L2714">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2714–2714</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2725-L2725">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2725–2725</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2781-L2781">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2781–2781</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2939-L2939">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2939–2939</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3051-L3051">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3051–3051</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3905-L3905">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3905–3905</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4054-L4058">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4054–4058</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4153-L4153">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4153–4153</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1780-L1780">Drilling.UI/Menu/Menus/CMenuManual.cs:1780–1780</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2190-L2190">Drilling.UI/Menu/Menus/CMenuManual.cs:2190–2190</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2614-L2614">Drilling.UI/Menu/Menus/CMenuManual.cs:2614–2614</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2723-L2723">Drilling.UI/Menu/Menus/CMenuManual.cs:2723–2723</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3255-L3255">Drilling.UI/Menu/Menus/CMenuManual.cs:3255–3255</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3295-L3295">Drilling.UI/Menu/Menus/CMenuManual.cs:3295–3295</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3355-L3355">Drilling.UI/Menu/Menus/CMenuManual.cs:3355–3355</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3516-L3516">Drilling.UI/Menu/Menus/CMenuManual.cs:3516–3516</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3898-L3898">Drilling.UI/Menu/Menus/CMenuManual.cs:3898–3898</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3943-L3943">Drilling.UI/Menu/Menus/CMenuManual.cs:3943–3943</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3962-L3962">Drilling.UI/Menu/Menus/CMenuManual.cs:3962–3962</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3994-L3994">Drilling.UI/Menu/Menus/CMenuManual.cs:3994–3994</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4063-L4063">Drilling.UI/Menu/Menus/CMenuManual.cs:4063–4063</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4289-L4289">Drilling.UI/Menu/Menus/CMenuManual.cs:4289–4289</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4627-L4627">Drilling.UI/Menu/Menus/CMenuManual.cs:4627–4627</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5040-L5040">Drilling.UI/Menu/Menus/CMenuManual.cs:5040–5040</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5244-L5244">Drilling.UI/Menu/Menus/CMenuManual.cs:5244–5244</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6287-L6287">Drilling.UI/Menu/Menus/CMenuManual.cs:6287–6287</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1295-L1295">Drilling.UI/Menu/Menus/CMenuMonitor.cs:1295–1295</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2941-L2941">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2941–2941</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4441-L4441">Drilling.UI/Menu/Menus/CMenuMonitor.cs:4441–4441</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L735-L735">Drilling.UI/Menu/Menus/CMenuRecipe.cs:735–735</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L761-L761">Drilling.UI/Menu/Menus/CMenuRecipe.cs:761–761</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1033-L1033">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1033–1033</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2128-L2128">Drilling.UI/Menu/Menus/CMenuReview.cs:2128–2128</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2158-L2161">Drilling.UI/Menu/Menus/CMenuReview.cs:2158–2161</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2175-L2175">Drilling.UI/Menu/Menus/CMenuReview.cs:2175–2175</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2398-L2398">Drilling.UI/Menu/Menus/CMenuReview.cs:2398–2398</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2745-L2745">Drilling.UI/Menu/Menus/CMenuReview.cs:2745–2745</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L339-L339">Drilling.UI/Menu/Menus/CMenuSetting.cs:339–339</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L381-L381">Drilling.UI/Menu/Menus/CMenuSetting.cs:381–381</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L405-L405">Drilling.UI/Menu/Menus/CMenuSetting.cs:405–405</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L466-L466">Drilling.UI/Menu/Menus/CMenuSetting.cs:466–466</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L485-L485">Drilling.UI/Menu/Menus/CMenuSetting.cs:485–485</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L586-L586">Drilling.UI/CRootView.cs:586–586</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1601-L1601">Drilling.UI/CRootView.cs:1601–1601</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2610-L2610">Drilling.UI/CRootView.cs:2610–2610</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L459-L464">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:459–464</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L153-L157">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:153–157</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L368-L373">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:368–373</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L108-L108">Drilling.UI/Menu/Menus/CMenuCorrection.cs:108–108</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L196-L199">Drilling.UI/Menu/Menus/CMenuCorrection.cs:196–199</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1305-L1305">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1305–1305</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1313-L1313">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1313–1313</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1323-L1323">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1323–1323</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1392-L1392">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1392–1392</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1571-L1571">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1571–1571</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1583-L1583">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1583–1583</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2640-L2640">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2640–2640</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2657-L2662">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2657–2662</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2706-L2706">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2706–2706</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2717-L2717">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2717–2717</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2728-L2728">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2728–2728</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2784-L2784">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2784–2784</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2942-L2942">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2942–2942</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3054-L3054">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3054–3054</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3914-L3914">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3914–3914</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4063-L4067">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4063–4067</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4162-L4162">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4162–4162</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1780-L1780">Drilling.UI/Menu/Menus/CMenuManual.cs:1780–1780</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2190-L2190">Drilling.UI/Menu/Menus/CMenuManual.cs:2190–2190</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2614-L2614">Drilling.UI/Menu/Menus/CMenuManual.cs:2614–2614</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2723-L2723">Drilling.UI/Menu/Menus/CMenuManual.cs:2723–2723</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3255-L3255">Drilling.UI/Menu/Menus/CMenuManual.cs:3255–3255</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3295-L3295">Drilling.UI/Menu/Menus/CMenuManual.cs:3295–3295</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3355-L3355">Drilling.UI/Menu/Menus/CMenuManual.cs:3355–3355</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3516-L3516">Drilling.UI/Menu/Menus/CMenuManual.cs:3516–3516</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3898-L3898">Drilling.UI/Menu/Menus/CMenuManual.cs:3898–3898</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3943-L3943">Drilling.UI/Menu/Menus/CMenuManual.cs:3943–3943</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3962-L3962">Drilling.UI/Menu/Menus/CMenuManual.cs:3962–3962</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3994-L3994">Drilling.UI/Menu/Menus/CMenuManual.cs:3994–3994</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4063-L4063">Drilling.UI/Menu/Menus/CMenuManual.cs:4063–4063</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4289-L4289">Drilling.UI/Menu/Menus/CMenuManual.cs:4289–4289</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4627-L4627">Drilling.UI/Menu/Menus/CMenuManual.cs:4627–4627</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5040-L5040">Drilling.UI/Menu/Menus/CMenuManual.cs:5040–5040</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5244-L5244">Drilling.UI/Menu/Menus/CMenuManual.cs:5244–5244</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6287-L6287">Drilling.UI/Menu/Menus/CMenuManual.cs:6287–6287</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1295-L1295">Drilling.UI/Menu/Menus/CMenuMonitor.cs:1295–1295</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2941-L2941">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2941–2941</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L4441-L4441">Drilling.UI/Menu/Menus/CMenuMonitor.cs:4441–4441</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L735-L735">Drilling.UI/Menu/Menus/CMenuRecipe.cs:735–735</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L761-L761">Drilling.UI/Menu/Menus/CMenuRecipe.cs:761–761</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1033-L1033">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1033–1033</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2350-L2350">Drilling.UI/Menu/Menus/CMenuReview.cs:2350–2350</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2383-L2386">Drilling.UI/Menu/Menus/CMenuReview.cs:2383–2386</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2400-L2400">Drilling.UI/Menu/Menus/CMenuReview.cs:2400–2400</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2460-L2460">Drilling.UI/Menu/Menus/CMenuReview.cs:2460–2460</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2476-L2476">Drilling.UI/Menu/Menus/CMenuReview.cs:2476–2476</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3147-L3147">Drilling.UI/Menu/Menus/CMenuReview.cs:3147–3147</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3271-L3271">Drilling.UI/Menu/Menus/CMenuReview.cs:3271–3271</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3287-L3287">Drilling.UI/Menu/Menus/CMenuReview.cs:3287–3287</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3579-L3579">Drilling.UI/Menu/Menus/CMenuReview.cs:3579–3579</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L340-L340">Drilling.UI/Menu/Menus/CMenuSetting.cs:340–340</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L382-L382">Drilling.UI/Menu/Menus/CMenuSetting.cs:382–382</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L406-L406">Drilling.UI/Menu/Menus/CMenuSetting.cs:406–406</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L470-L470">Drilling.UI/Menu/Menus/CMenuSetting.cs:470–470</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L489-L489">Drilling.UI/Menu/Menus/CMenuSetting.cs:489–489</a></td><td>CRecipeConfirmDialog.ShowConfirmation</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -183,7 +187,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L20">MethodDeclaration <code>ShowDuplicateOffsetConfirmation</code> · L20–28</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L20-L28">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:20–28</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L20-L28">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:20–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowDuplicateOffsetConfirmation(string, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -213,7 +217,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L30">MethodDeclaration <code>ShowSavedResultLoadConfirmation</code> · L30–38</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L30-L38">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:30–38</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L30-L38">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:30–38</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowSavedResultLoadConfirmation(string, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -227,9 +231,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L497-L499">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:497–499</a></td><td>CRecipeConfirmDialog.ShowSavedResultLoadConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L427-L429">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:427–429</a></td><td>CRecipeConfirmDialog.ShowSavedResultLoadConfirmation</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2831-L2833">Drilling.UI/Menu/Menus/CMenuReview.cs:2831–2833</a></td><td>CRecipeConfirmDialog.ShowSavedResultLoadConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L497-L499">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:497–499</a></td><td>CRecipeConfirmDialog.ShowSavedResultLoadConfirmation</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L427-L429">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:427–429</a></td><td>CRecipeConfirmDialog.ShowSavedResultLoadConfirmation</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -248,7 +251,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L40">MethodDeclaration <code>ShowRecipeFolderCopy</code> · L40–48</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L40-L48">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:40–48</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L40-L48">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:40–48</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderCopy(string, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -278,7 +281,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L51">MethodDeclaration <code>ShowRecipeFolderRename</code> · L51–55</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L51-L55">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:51–55</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L51-L55">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:51–55</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool? Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderRename(string, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -308,7 +311,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L57">MethodDeclaration <code>CreateRecipeFolderRename</code> · L57–68</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L57-L68">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:57–68</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L57-L68">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:57–68</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateRecipeFolderRename(string, string)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
@@ -322,7 +325,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L53-L53">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:53–53</a></td><td>CreateRecipeFolderRename</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L53-L53">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:53–53</a></td><td>CreateRecipeFolderRename</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -354,7 +357,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L70">MethodDeclaration <code>ShowRecipeFolderDelete</code> · L70–70</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L70-L70">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:70–70</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L70-L70">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:70–70</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderDelete(string, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -377,7 +380,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L71">MethodDeclaration <code>ShowRecipeFolderAction</code> · L71–79</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L71-L79">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:71–79</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L71-L79">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:71–79</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.Popup.CRecipeConfirmDialog.ShowRecipeFolderAction(string, string, string, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -393,7 +396,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L70-L70">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:70–70</a></td><td>ShowRecipeFolderAction</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L70-L70">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:70–70</a></td><td>ShowRecipeFolderAction</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -412,7 +415,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L81">MethodDeclaration <code>ShowCompletion</code> · L81–84</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L81-L84">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:81–84</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L81-L84">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:81–84</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowCompletion(string, string, Window?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -427,28 +430,28 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L120-L120">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:120–120</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L194-L194">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:194–194</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1429-L1429">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1429–1429</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1754-L1754">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1754–1754</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2640-L2640">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2640–2640</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2649-L2649">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2649–2649</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2662-L2662">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2662–2662</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2782-L2782">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2782–2782</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3052-L3052">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3052–3052</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3906-L3906">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3906–3906</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4059-L4059">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4059–4059</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4154-L4154">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4154–4154</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2031-L2031">Drilling.UI/Menu/Menus/CMenuManual.cs:2031–2031</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5061-L5061">Drilling.UI/Menu/Menus/CMenuManual.cs:5061–5061</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5169-L5169">Drilling.UI/Menu/Menus/CMenuManual.cs:5169–5169</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L774-L774">Drilling.UI/Menu/Menus/CMenuRecipe.cs:774–774</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1035-L1035">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1035–1035</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1246-L1246">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1246–1246</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2339-L2339">Drilling.UI/Menu/Menus/CMenuReview.cs:2339–2339</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2414-L2414">Drilling.UI/Menu/Menus/CMenuReview.cs:2414–2414</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L431-L431">Drilling.UI/Menu/Menus/CMenuSetting.cs:431–431</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuSetting.cs#L461-L461">Drilling.UI/Menu/Menus/CMenuSetting.cs:461–461</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L120-L120">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:120–120</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L194-L194">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:194–194</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1432-L1432">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1432–1432</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L1757-L1757">Drilling.UI/Menu/Menus/CMenuCorrection.cs:1757–1757</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2643-L2643">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2643–2643</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2652-L2652">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2652–2652</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2665-L2665">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2665–2665</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2785-L2785">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2785–2785</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3055-L3055">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3055–3055</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3915-L3915">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3915–3915</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4068-L4068">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4068–4068</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4163-L4163">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4163–4163</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2031-L2031">Drilling.UI/Menu/Menus/CMenuManual.cs:2031–2031</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5061-L5061">Drilling.UI/Menu/Menus/CMenuManual.cs:5061–5061</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5169-L5169">Drilling.UI/Menu/Menus/CMenuManual.cs:5169–5169</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L774-L774">Drilling.UI/Menu/Menus/CMenuRecipe.cs:774–774</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1035-L1035">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1035–1035</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1246-L1246">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1246–1246</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2825-L2825">Drilling.UI/Menu/Menus/CMenuReview.cs:2825–2825</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3167-L3167">Drilling.UI/Menu/Menus/CMenuReview.cs:3167–3167</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L432-L432">Drilling.UI/Menu/Menus/CMenuSetting.cs:432–432</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L465-L465">Drilling.UI/Menu/Menus/CMenuSetting.cs:465–465</a></td><td>CRecipeConfirmDialog.ShowCompletion</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -460,7 +463,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L86">MethodDeclaration <code>ShowWarning</code> · L86–89</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L86-L89">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86–89</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L86-L89">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86–89</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -475,102 +478,104 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L276-L276">Drilling.UI/CRootView.cs:276–276</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L285-L285">Drilling.UI/CRootView.cs:285–285</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L587-L587">Drilling.UI/CRootView.cs:587–587</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1245-L1245">Drilling.UI/CRootView.cs:1245–1245</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1382-L1382">Drilling.UI/CRootView.cs:1382–1382</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1604-L1604">Drilling.UI/CRootView.cs:1604–1604</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1613-L1613">Drilling.UI/CRootView.cs:1613–1613</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1625-L1625">Drilling.UI/CRootView.cs:1625–1625</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1643-L1643">Drilling.UI/CRootView.cs:1643–1643</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1656-L1656">Drilling.UI/CRootView.cs:1656–1656</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CRootView.cs#L1680-L1680">Drilling.UI/CRootView.cs:1680–1680</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L307-L311">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:307–311</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L326-L326">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:326–326</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L425-L427">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:425–427</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L453-L455">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:453–455</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L488-L488">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:488–488</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L508-L510">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:508–510</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L125-L125">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:125–125</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L199-L199">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:199–199</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L242-L242">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:242–242</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L362-L364">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:362–364</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L409-L411">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:409–411</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L439-L441">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:439–441</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L92-L92">Drilling.UI/Menu/Menus/CMenuCorrection.cs:92–92</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L110-L110">Drilling.UI/Menu/Menus/CMenuCorrection.cs:110–110</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2680-L2680">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2680–2680</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2726-L2726">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2726–2726</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2940-L2940">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2940–2940</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3053-L3053">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3053–3053</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3907-L3907">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3907–3907</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4060-L4060">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4060–4060</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4155-L4155">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4155–4155</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1809-L1809">Drilling.UI/Menu/Menus/CMenuManual.cs:1809–1809</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2042-L2042">Drilling.UI/Menu/Menus/CMenuManual.cs:2042–2042</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2186-L2186">Drilling.UI/Menu/Menus/CMenuManual.cs:2186–2186</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2216-L2216">Drilling.UI/Menu/Menus/CMenuManual.cs:2216–2216</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2575-L2575">Drilling.UI/Menu/Menus/CMenuManual.cs:2575–2575</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2592-L2592">Drilling.UI/Menu/Menus/CMenuManual.cs:2592–2592</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2603-L2603">Drilling.UI/Menu/Menus/CMenuManual.cs:2603–2603</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2678-L2678">Drilling.UI/Menu/Menus/CMenuManual.cs:2678–2678</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2696-L2696">Drilling.UI/Menu/Menus/CMenuManual.cs:2696–2696</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2719-L2719">Drilling.UI/Menu/Menus/CMenuManual.cs:2719–2719</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L2765-L2765">Drilling.UI/Menu/Menus/CMenuManual.cs:2765–2765</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3256-L3256">Drilling.UI/Menu/Menus/CMenuManual.cs:3256–3256</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3296-L3296">Drilling.UI/Menu/Menus/CMenuManual.cs:3296–3296</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3371-L3371">Drilling.UI/Menu/Menus/CMenuManual.cs:3371–3371</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3376-L3376">Drilling.UI/Menu/Menus/CMenuManual.cs:3376–3376</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3396-L3396">Drilling.UI/Menu/Menus/CMenuManual.cs:3396–3396</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3444-L3444">Drilling.UI/Menu/Menus/CMenuManual.cs:3444–3444</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4048-L4048">Drilling.UI/Menu/Menus/CMenuManual.cs:4048–4048</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4059-L4059">Drilling.UI/Menu/Menus/CMenuManual.cs:4059–4059</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4126-L4126">Drilling.UI/Menu/Menus/CMenuManual.cs:4126–4126</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4277-L4277">Drilling.UI/Menu/Menus/CMenuManual.cs:4277–4277</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4313-L4313">Drilling.UI/Menu/Menus/CMenuManual.cs:4313–4313</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4356-L4356">Drilling.UI/Menu/Menus/CMenuManual.cs:4356–4356</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4615-L4615">Drilling.UI/Menu/Menus/CMenuManual.cs:4615–4615</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4650-L4650">Drilling.UI/Menu/Menus/CMenuManual.cs:4650–4650</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4815-L4815">Drilling.UI/Menu/Menus/CMenuManual.cs:4815–4815</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5345-L5345">Drilling.UI/Menu/Menus/CMenuManual.cs:5345–5345</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5399-L5399">Drilling.UI/Menu/Menus/CMenuManual.cs:5399–5399</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L5436-L5436">Drilling.UI/Menu/Menus/CMenuManual.cs:5436–5436</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6286-L6286">Drilling.UI/Menu/Menus/CMenuManual.cs:6286–6286</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1238-L1238">Drilling.UI/Menu/Menus/CMenuMonitor.cs:1238–1238</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2930-L2930">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2930–2930</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L5119-L5119">Drilling.UI/Menu/Menus/CMenuMonitor.cs:5119–5119</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1034-L1034">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1034–1034</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1078-L1078">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1078–1078</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1178-L1178">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1178–1178</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1245-L1245">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1245–1245</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1466-L1466">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1466–1466</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L603-L603">Drilling.UI/Menu/Menus/CMenuReview.cs:603–603</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2331-L2331">Drilling.UI/Menu/Menus/CMenuReview.cs:2331–2331</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2337-L2337">Drilling.UI/Menu/Menus/CMenuReview.cs:2337–2337</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2347-L2347">Drilling.UI/Menu/Menus/CMenuReview.cs:2347–2347</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2463-L2463">Drilling.UI/Menu/Menus/CMenuReview.cs:2463–2463</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2478-L2478">Drilling.UI/Menu/Menus/CMenuReview.cs:2478–2478</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2491-L2491">Drilling.UI/Menu/Menus/CMenuReview.cs:2491–2491</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2526-L2526">Drilling.UI/Menu/Menus/CMenuReview.cs:2526–2526</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2539-L2539">Drilling.UI/Menu/Menus/CMenuReview.cs:2539–2539</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2746-L2746">Drilling.UI/Menu/Menus/CMenuReview.cs:2746–2746</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2840-L2840">Drilling.UI/Menu/Menus/CMenuReview.cs:2840–2840</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2851-L2851">Drilling.UI/Menu/Menus/CMenuReview.cs:2851–2851</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3198-L3198">Drilling.UI/Menu/Menus/CMenuReview.cs:3198–3198</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3392-L3392">Drilling.UI/Menu/Menus/CMenuReview.cs:3392–3392</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L85-L85">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:85–85</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L113-L113">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:113–113</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L135-L135">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:135–135</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L316-L316">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:316–316</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L33-L33">Drilling.UI/Popup/CMofDisableDialog.xaml.cs:33–33</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L33-L33">Drilling.UI/Views/CCorrectionView.xaml.cs:33–33</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L182-L182">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:182–182</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L183-L183">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:183–183</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L184-L184">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:184–184</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L185-L185">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:185–185</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L188-L188">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:188–188</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L191-L191">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:191–191</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L276-L276">Drilling.UI/CRootView.cs:276–276</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L285-L285">Drilling.UI/CRootView.cs:285–285</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L587-L587">Drilling.UI/CRootView.cs:587–587</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1245-L1245">Drilling.UI/CRootView.cs:1245–1245</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1382-L1382">Drilling.UI/CRootView.cs:1382–1382</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1596-L1596">Drilling.UI/CRootView.cs:1596–1596</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1605-L1605">Drilling.UI/CRootView.cs:1605–1605</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1617-L1617">Drilling.UI/CRootView.cs:1617–1617</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1635-L1635">Drilling.UI/CRootView.cs:1635–1635</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1648-L1648">Drilling.UI/CRootView.cs:1648–1648</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L1672-L1672">Drilling.UI/CRootView.cs:1672–1672</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L307-L311">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:307–311</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L326-L326">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:326–326</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L425-L427">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:425–427</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L453-L455">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:453–455</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L488-L488">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:488–488</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L508-L510">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:508–510</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L125-L125">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:125–125</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L199-L199">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:199–199</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L242-L242">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs:242–242</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L362-L364">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:362–364</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L409-L411">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:409–411</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs#L439-L441">Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:439–441</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L92-L92">Drilling.UI/Menu/Menus/CMenuCorrection.cs:92–92</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L110-L110">Drilling.UI/Menu/Menus/CMenuCorrection.cs:110–110</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2683-L2683">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2683–2683</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2729-L2729">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2729–2729</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L2943-L2943">Drilling.UI/Menu/Menus/CMenuCorrection.cs:2943–2943</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3056-L3056">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3056–3056</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3916-L3916">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3916–3916</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4069-L4069">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4069–4069</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4164-L4164">Drilling.UI/Menu/Menus/CMenuCorrection.cs:4164–4164</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1809-L1809">Drilling.UI/Menu/Menus/CMenuManual.cs:1809–1809</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2042-L2042">Drilling.UI/Menu/Menus/CMenuManual.cs:2042–2042</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2186-L2186">Drilling.UI/Menu/Menus/CMenuManual.cs:2186–2186</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2216-L2216">Drilling.UI/Menu/Menus/CMenuManual.cs:2216–2216</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2575-L2575">Drilling.UI/Menu/Menus/CMenuManual.cs:2575–2575</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2592-L2592">Drilling.UI/Menu/Menus/CMenuManual.cs:2592–2592</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2603-L2603">Drilling.UI/Menu/Menus/CMenuManual.cs:2603–2603</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2678-L2678">Drilling.UI/Menu/Menus/CMenuManual.cs:2678–2678</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2696-L2696">Drilling.UI/Menu/Menus/CMenuManual.cs:2696–2696</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2719-L2719">Drilling.UI/Menu/Menus/CMenuManual.cs:2719–2719</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2765-L2765">Drilling.UI/Menu/Menus/CMenuManual.cs:2765–2765</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3256-L3256">Drilling.UI/Menu/Menus/CMenuManual.cs:3256–3256</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3296-L3296">Drilling.UI/Menu/Menus/CMenuManual.cs:3296–3296</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3371-L3371">Drilling.UI/Menu/Menus/CMenuManual.cs:3371–3371</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3376-L3376">Drilling.UI/Menu/Menus/CMenuManual.cs:3376–3376</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3396-L3396">Drilling.UI/Menu/Menus/CMenuManual.cs:3396–3396</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3444-L3444">Drilling.UI/Menu/Menus/CMenuManual.cs:3444–3444</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4048-L4048">Drilling.UI/Menu/Menus/CMenuManual.cs:4048–4048</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4059-L4059">Drilling.UI/Menu/Menus/CMenuManual.cs:4059–4059</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4126-L4126">Drilling.UI/Menu/Menus/CMenuManual.cs:4126–4126</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4277-L4277">Drilling.UI/Menu/Menus/CMenuManual.cs:4277–4277</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4313-L4313">Drilling.UI/Menu/Menus/CMenuManual.cs:4313–4313</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4356-L4356">Drilling.UI/Menu/Menus/CMenuManual.cs:4356–4356</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4615-L4615">Drilling.UI/Menu/Menus/CMenuManual.cs:4615–4615</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4650-L4650">Drilling.UI/Menu/Menus/CMenuManual.cs:4650–4650</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4815-L4815">Drilling.UI/Menu/Menus/CMenuManual.cs:4815–4815</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5345-L5345">Drilling.UI/Menu/Menus/CMenuManual.cs:5345–5345</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5399-L5399">Drilling.UI/Menu/Menus/CMenuManual.cs:5399–5399</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5436-L5436">Drilling.UI/Menu/Menus/CMenuManual.cs:5436–5436</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6286-L6286">Drilling.UI/Menu/Menus/CMenuManual.cs:6286–6286</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1238-L1238">Drilling.UI/Menu/Menus/CMenuMonitor.cs:1238–1238</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2930-L2930">Drilling.UI/Menu/Menus/CMenuMonitor.cs:2930–2930</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L5119-L5119">Drilling.UI/Menu/Menus/CMenuMonitor.cs:5119–5119</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1034-L1034">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1034–1034</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1078-L1078">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1078–1078</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1178-L1178">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1178–1178</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1245-L1245">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1245–1245</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1466-L1466">Drilling.UI/Menu/Menus/CMenuRecipe.cs:1466–1466</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L696-L696">Drilling.UI/Menu/Menus/CMenuReview.cs:696–696</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2430-L2432">Drilling.UI/Menu/Menus/CMenuReview.cs:2430–2432</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2511-L2511">Drilling.UI/Menu/Menus/CMenuReview.cs:2511–2511</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2524-L2524">Drilling.UI/Menu/Menus/CMenuReview.cs:2524–2524</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2817-L2817">Drilling.UI/Menu/Menus/CMenuReview.cs:2817–2817</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2823-L2823">Drilling.UI/Menu/Menus/CMenuReview.cs:2823–2823</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2833-L2833">Drilling.UI/Menu/Menus/CMenuReview.cs:2833–2833</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3217-L3217">Drilling.UI/Menu/Menus/CMenuReview.cs:3217–3217</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3232-L3232">Drilling.UI/Menu/Menus/CMenuReview.cs:3232–3232</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3245-L3245">Drilling.UI/Menu/Menus/CMenuReview.cs:3245–3245</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3315-L3315">Drilling.UI/Menu/Menus/CMenuReview.cs:3315–3315</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3328-L3328">Drilling.UI/Menu/Menus/CMenuReview.cs:3328–3328</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3580-L3580">Drilling.UI/Menu/Menus/CMenuReview.cs:3580–3580</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4027-L4027">Drilling.UI/Menu/Menus/CMenuReview.cs:4027–4027</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4233-L4233">Drilling.UI/Menu/Menus/CMenuReview.cs:4233–4233</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuSetting.cs#L450-L452">Drilling.UI/Menu/Menus/CMenuSetting.cs:450–452</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L85-L85">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:85–85</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L113-L113">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:113–113</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L135-L135">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:135–135</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L316-L316">Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:316–316</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L33-L33">Drilling.UI/Popup/CMofDisableDialog.xaml.cs:33–33</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L33-L33">Drilling.UI/Views/CCorrectionView.xaml.cs:33–33</a></td><td>CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L182-L182">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:182–182</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L183-L183">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:183–183</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L184-L184">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:184–184</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L185-L185">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:185–185</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L188-L188">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:188–188</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CDefaultOffsetView.xaml.cs#L191-L191">Drilling.UI/Views/CDefaultOffsetView.xaml.cs:191–191</a></td><td>Popup.CRecipeConfirmDialog.ShowWarning</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -582,7 +587,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L91">MethodDeclaration <code>ShowReviewResumeChoice</code> · L91–105</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L91-L105">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:91–105</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L91-L105">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:91–105</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE Drilling.UI.Popup.CRecipeConfirmDialog.ShowReviewResumeChoice(string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -595,7 +600,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L3207-L3207">Drilling.UI/Menu/Menus/CMenuReview.cs:3207–3207</a></td><td>CRecipeConfirmDialog.ShowReviewResumeChoice</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4036-L4036">Drilling.UI/Menu/Menus/CMenuReview.cs:4036–4036</a></td><td>CRecipeConfirmDialog.ShowReviewResumeChoice</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -624,7 +629,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L107">MethodDeclaration <code>ShowFineRetryChoice</code> · L107–112</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L107-L112">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:107–112</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L107-L112">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:107–112</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE Drilling.UI.Popup.CRecipeConfirmDialog.ShowFineRetryChoice(string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -655,7 +660,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L114">MethodDeclaration <code>ShowDefaultRestartChoice</code> · L114–119</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L114-L119">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:114–119</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L114-L119">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:114–119</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.EN_DEFAULT_RESTART_CHOICE Drilling.UI.Popup.CRecipeConfirmDialog.ShowDefaultRestartChoice(string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -686,7 +691,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L121">MethodDeclaration <code>CreateDefaultRestartChoice</code> · L121–131</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L121-L131">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:121–131</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L121-L131">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:121–131</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateDefaultRestartChoice(string)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
@@ -699,7 +704,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L116-L116">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:116–116</a></td><td>CreateDefaultRestartChoice</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L116-L116">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:116–116</a></td><td>CreateDefaultRestartChoice</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -731,7 +736,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L133">MethodDeclaration <code>CreateFineRetryChoice</code> · L133–141</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L133-L141">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:133–141</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L133-L141">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:133–141</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.CRecipeConfirmDialog Drilling.UI.Popup.CRecipeConfirmDialog.CreateFineRetryChoice(string)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal, static</td></tr>
@@ -744,7 +749,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L109-L109">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:109–109</a></td><td>CreateFineRetryChoice</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L109-L109">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:109–109</a></td><td>CreateFineRetryChoice</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -769,7 +774,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L143">MethodDeclaration <code>ShowMessage</code> · L143–152</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L143-L152">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:143–152</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L143-L152">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:143–152</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.ShowMessage(string, string, bool, Window?)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -785,8 +790,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L83-L83">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:83–83</a></td><td>ShowMessage</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L88-L88">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:88–88</a></td><td>ShowMessage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L83-L83">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:83–83</a></td><td>ShowMessage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L88-L88">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:88–88</a></td><td>ShowMessage</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -806,7 +811,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L154">ConstructorDeclaration <code>.ctor</code> · L154–169</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L154-L169">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154–169</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L154-L169">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:154–169</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.CRecipeConfirmDialog.CRecipeConfirmDialog(string, string, string, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -822,18 +827,18 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L6059-L6062">Drilling.UI/Menu/Menus/CMenuManual.cs:6059–6062</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3111-L3114">Drilling.UI/Menu/Menus/CMenuRecipe.cs:3111–3114</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L13-L16">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:13–16</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L22-L25">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:22–25</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L32-L35">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:32–35</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L42-L45">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:42–45</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L60-L60">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:60–60</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L73-L76">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:73–76</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L93-L96">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:93–96</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L124-L124">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:124–124</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L136-L136">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:136–136</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L145-L148">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:145–148</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6059-L6062">Drilling.UI/Menu/Menus/CMenuManual.cs:6059–6062</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3111-L3114">Drilling.UI/Menu/Menus/CMenuRecipe.cs:3111–3114</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L13-L16">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:13–16</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L22-L25">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:22–25</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L32-L35">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:32–35</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L42-L45">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:42–45</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L60-L60">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:60–60</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L73-L76">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:73–76</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L93-L96">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:93–96</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L124-L124">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:124–124</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L136-L136">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:136–136</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L145-L148">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:145–148</a></td><td>new CRecipeConfirmDialog</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -864,7 +869,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L171">MethodDeclaration <code>OnKeyDown</code> · L171–179</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L171-L179">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:171–179</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L171-L179">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:171–179</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.OnKeyDown(KeyEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Protected / protected, override</td></tr>
@@ -894,7 +899,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L181">MethodDeclaration <code>OnConfirmClicked</code> · L181–184</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L181-L184">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:181–184</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L181-L184">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:181–184</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.OnConfirmClicked(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -913,7 +918,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L186">MethodDeclaration <code>OnCancelClicked</code> · L186–190</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L186-L190">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:186–190</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L186-L190">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:186–190</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.OnCancelClicked(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -933,7 +938,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L192">MethodDeclaration <code>OnAbortClicked</code> · L192–196</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L192-L196">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:192–196</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L192-L196">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:192–196</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Popup.CRecipeConfirmDialog.OnAbortClicked(object, RoutedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -953,7 +958,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L201">EnumMemberDeclaration <code>Cancel</code> · L201–201</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L201-L201">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:201–201</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L201-L201">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:201–201</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE.Cancel</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -963,7 +968,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L202">EnumMemberDeclaration <code>Resume</code> · L202–202</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L202-L202">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:202–202</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L202-L202">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:202–202</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE.Resume</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>
@@ -973,7 +978,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L203">EnumMemberDeclaration <code>Restart</code> · L203–203</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L203-L203">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:203–203</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs#L203-L203">Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:203–203</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Popup.EN_REVIEW_RESUME_CHOICE.Restart</td></tr>
 <tr><td>접근/수식자</td><td>Public /</td></tr>

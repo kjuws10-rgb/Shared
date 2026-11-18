@@ -1,0 +1,172 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Popup/CColorPickerDialog.xaml.cs
+Commit: 96e22cd027c84bf302b23f2949b98985d7f301bb
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000001 | using System.Windows; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000002 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000003 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000004 | using System.Windows.Media; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Review;
+L000005 | using Drilling.Common.Review; ⟦EOL⟧
+L000006 |  ⟦EOL⟧
+// 해설 L7: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Popup;
+L000007 | namespace Drilling.UI.Popup; ⟦EOL⟧
+L000008 |  ⟦EOL⟧
+// 해설 L9: 타입의 구조/상속 선언입니다: public partial class CColorPickerDialog : Window
+L000009 | public partial class CColorPickerDialog : Window ⟦EOL⟧
+// 해설 L10: 구문 블록 경계입니다.
+L000010 | { ⟦EOL⟧
+// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Popup.CColorPickerDialog.CColorPickerDialog(string, string)
+L000011 |     public CColorPickerDialog(string parameter, string value) ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다 · 소속 .ctor.
+L000012 |     { ⟦EOL⟧
+// 해설 L13: 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent()
+L000013 |         InitializeComponent(); ⟦EOL⟧
+// 해설 L14: 값을 대상에 대입합니다: PromptText.Text = parameter
+L000014 |         PromptText.Text = parameter; ⟦EOL⟧
+// 해설 L15: 값을 대상에 대입합니다: HexTextBox.Text = CReviewResultLevelSettings.NormalizeColor(value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewResultLevelSettings.NormalizeColor(value)
+L000015 |         HexTextBox.Text = CReviewResultLevelSettings.NormalizeColor(value); ⟦EOL⟧
+// 해설 L16: 함수·델리게이트 또는 객체 생성자를 호출합니다: HexTextBox.SelectAll()
+L000016 |         HexTextBox.SelectAll(); ⟦EOL⟧
+// 해설 L17: 함수·델리게이트 또는 객체 생성자를 호출합니다: HexTextBox.Focus()
+L000017 |         HexTextBox.Focus(); ⟦EOL⟧
+// 해설 L18: 구문 블록 경계입니다 · 소속 .ctor.
+L000018 |     } ⟦EOL⟧
+L000019 |  ⟦EOL⟧
+// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CColorPickerDialog.ResultColor
+L000020 |     public string ResultColor { get; private set; } = CReviewResultLevelSettings.DefaultLevel1Color; ⟦EOL⟧
+L000021 |  ⟦EOL⟧
+// 해설 L22: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CColorPickerDialog.PaletteClick(object, RoutedEventArgs)
+L000022 |     private void PaletteClick(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L23: 구문 블록 경계입니다 · 소속 PaletteClick.
+L000023 |     { ⟦EOL⟧
+// 해설 L24: 조건에 따라 분기합니다: if (sender is Button { Tag: string color })
+L000024 |         if (sender is Button { Tag: string color }) ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 PaletteClick.
+L000025 |         { ⟦EOL⟧
+// 해설 L26: 값을 대상에 대입합니다: HexTextBox.Text = color
+L000026 |             HexTextBox.Text = color; ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: HexTextBox.SelectAll()
+L000027 |             HexTextBox.SelectAll(); ⟦EOL⟧
+// 해설 L28: 구문 블록 경계입니다 · 소속 PaletteClick.
+L000028 |         } ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 PaletteClick.
+L000029 |     } ⟦EOL⟧
+L000030 |  ⟦EOL⟧
+// 해설 L31: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CColorPickerDialog.HexTextChanged(object, TextChangedEventArgs)
+L000031 |     private void HexTextChanged(object sender, TextChangedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 HexTextChanged.
+L000032 |     { ⟦EOL⟧
+// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadColor(out var color, out _) / 조건에 따라 분기합니다: if (TryReadColor(out var color, out _))
+L000033 |         if (TryReadColor(out var color, out _)) ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 HexTextChanged.
+L000034 |         { ⟦EOL⟧
+// 해설 L35: 값을 대상에 대입합니다: PreviewBorder.Background = new SolidColorBrush(color) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(color)
+L000035 |             PreviewBorder.Background = new SolidColorBrush(color); ⟦EOL⟧
+// 해설 L36: 값을 대상에 대입합니다: ValidationText.Text = "사용할 색상을 확인한 뒤 APPLY를 누르세요."
+L000036 |             ValidationText.Text = "사용할 색상을 확인한 뒤 APPLY를 누르세요."; ⟦EOL⟧
+// 해설 L37: 값을 대상에 대입합니다: ValidationText.Foreground = FindResource("TextSecondaryBrush") as Brush ?? Brushes.Gray / 함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource("TextSecondaryBrush")
+L000037 |             ValidationText.Foreground = FindResource("TextSecondaryBrush") as Brush ?? Brushes.Gray; ⟦EOL⟧
+// 해설 L38: 호출자에게 값 또는 제어를 반환합니다: return;
+L000038 |             return; ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 HexTextChanged.
+L000039 |         } ⟦EOL⟧
+L000040 |  ⟦EOL⟧
+// 해설 L41: 값을 대상에 대입합니다: PreviewBorder.Background = Brushes.Transparent
+L000041 |         PreviewBorder.Background = Brushes.Transparent; ⟦EOL⟧
+// 해설 L42: 값을 대상에 대입합니다: ValidationText.Text = "#RRGGBB 형식의 색상값을 입력하세요."
+L000042 |         ValidationText.Text = "#RRGGBB 형식의 색상값을 입력하세요."; ⟦EOL⟧
+// 해설 L43: 값을 대상에 대입합니다: ValidationText.Foreground = FindResource("ButtonDangerBrush") as Brush ?? Brushes.Red / 함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource("ButtonDangerBrush")
+L000043 |         ValidationText.Foreground = FindResource("ButtonDangerBrush") as Brush ?? Brushes.Red; ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 HexTextChanged.
+L000044 |     } ⟦EOL⟧
+L000045 |  ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CColorPickerDialog.ApplyClick(object, RoutedEventArgs)
+L000046 |     private void ApplyClick(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 ApplyClick.
+L000047 |     { ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadColor(out _, out var normalized) / 조건에 따라 분기합니다: if (!TryReadColor(out _, out var normalized))
+L000048 |         if (!TryReadColor(out _, out var normalized)) ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 ApplyClick.
+L000049 |         { ⟦EOL⟧
+// 해설 L50: 호출자에게 값 또는 제어를 반환합니다: return;
+L000050 |             return; ⟦EOL⟧
+// 해설 L51: 구문 블록 경계입니다 · 소속 ApplyClick.
+L000051 |         } ⟦EOL⟧
+L000052 |  ⟦EOL⟧
+// 해설 L53: 값을 대상에 대입합니다: ResultColor = normalized
+L000053 |         ResultColor = normalized; ⟦EOL⟧
+// 해설 L54: 값을 대상에 대입합니다: DialogResult = true
+L000054 |         DialogResult = true; ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 ApplyClick.
+L000055 |     } ⟦EOL⟧
+L000056 |  ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CColorPickerDialog.CancelClick(object, RoutedEventArgs)
+L000057 |     private void CancelClick(object sender, RoutedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 CancelClick.
+L000058 |     { ⟦EOL⟧
+// 해설 L59: 값을 대상에 대입합니다: DialogResult = false
+L000059 |         DialogResult = false; ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 CancelClick.
+L000060 |     } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CColorPickerDialog.WindowKeyDown(object, KeyEventArgs)
+L000062 |     private void WindowKeyDown(object sender, KeyEventArgs eventArgs) ⟦EOL⟧
+// 해설 L63: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000063 |     { ⟦EOL⟧
+// 해설 L64: 조건에 따라 분기합니다: if (eventArgs.Key == Key.Escape)
+L000064 |         if (eventArgs.Key == Key.Escape) ⟦EOL⟧
+// 해설 L65: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000065 |         { ⟦EOL⟧
+// 해설 L66: 값을 대상에 대입합니다: DialogResult = false
+L000066 |             DialogResult = false; ⟦EOL⟧
+// 해설 L67: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000067 |         } ⟦EOL⟧
+// 해설 L68: 앞 조건이 거짓인 경로입니다: else / 조건에 따라 분기합니다: if (eventArgs.Key == Key.Enter)
+L000068 |         else if (eventArgs.Key == Key.Enter) ⟦EOL⟧
+// 해설 L69: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000069 |         { ⟦EOL⟧
+// 해설 L70: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyClick(sender, eventArgs)
+L000070 |             ApplyClick(sender, eventArgs); ⟦EOL⟧
+// 해설 L71: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000071 |         } ⟦EOL⟧
+// 해설 L72: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000072 |     } ⟦EOL⟧
+L000073 |  ⟦EOL⟧
+// 해설 L74: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CColorPickerDialog.TryReadColor(out Color, out string)
+L000074 |     private bool TryReadColor(out Color color, out string normalized) ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 TryReadColor.
+L000075 |     { ⟦EOL⟧
+// 해설 L76: 값을 대상에 대입합니다: color = Colors.Transparent
+L000076 |         color = Colors.Transparent; ⟦EOL⟧
+// 해설 L77: 값을 대상에 대입합니다: normalized = ""
+L000077 |         normalized = ""; ⟦EOL⟧
+// 해설 L78: 예외 처리 범위입니다: try
+L000078 |         try ⟦EOL⟧
+// 해설 L79: 구문 블록 경계입니다 · 소속 TryReadColor.
+L000079 |         { ⟦EOL⟧
+// 해설 L80: 값을 대상에 대입합니다: normalized = CReviewResultLevelSettings.NormalizeColor(HexTextBox.Text) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CReviewResultLevelSettings.NormalizeColor(HexTextBox.Text)
+L000080 |             normalized = CReviewResultLevelSettings.NormalizeColor(HexTextBox.Text); ⟦EOL⟧
+// 해설 L81: 값을 대상에 대입합니다: color = (Color)ColorConverter.ConvertFromString(normalized) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ColorConverter.ConvertFromString(normalized)
+L000081 |             color = (Color)ColorConverter.ConvertFromString(normalized); ⟦EOL⟧
+// 해설 L82: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000082 |             return true; ⟦EOL⟧
+// 해설 L83: 구문 블록 경계입니다 · 소속 TryReadColor.
+L000083 |         } ⟦EOL⟧
+// 해설 L84: 지정 예외를 처리합니다: catch (Exception)
+L000084 |         catch (Exception) ⟦EOL⟧
+// 해설 L85: 구문 블록 경계입니다 · 소속 TryReadColor.
+L000085 |         { ⟦EOL⟧
+// 해설 L86: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000086 |             return false; ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 TryReadColor.
+L000087 |         } ⟦EOL⟧
+// 해설 L88: 구문 블록 경계입니다 · 소속 TryReadColor.
+L000088 |     } ⟦EOL⟧
+// 해설 L89: 구문 블록 경계입니다.
+L000089 | } ⟦EOL⟧

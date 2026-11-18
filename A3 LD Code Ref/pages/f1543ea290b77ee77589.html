@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.File/JHMI/CMotorFile.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.File/JHMI/CMotorFile.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs">Git 원본</a></p><h1>Drilling.File/JHMI/CMotorFile.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.File/JHMI/CMotorFile.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.File/JHMI/CMotorFile.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs">Git 원본</a></p><h1>Drilling.File/JHMI/CMotorFile.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>dfa5920e6301d9ec4b0eab1452ae59521aafc986</td></tr>
+<tr><td>원본 Commit</td><td>96e22cd027c84bf302b23f2949b98985d7f301bb</td></tr>
 <tr><td>원본 SHA256</td><td>6c15069ce8ffb94f3ff897f253f0859745cca339e66847a2f046c55fa7a50887</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>11,004 bytes / 283 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>정의·설정·레시피·결과·스크립트의 파일 입출력과 데이터 형식을 담당합니다. 저장 필드를 통신 송신 필드로 단정하지 않습니다.</p>
@@ -41,7 +41,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L13">FieldDeclaration <code>Headers</code> · L13–53</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L13-L53">Drilling.File/JHMI/CMotorFile.cs:13–53</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L13-L53">Drilling.File/JHMI/CMotorFile.cs:13–53</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.File.JHMI.CMotorFile.Headers</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
@@ -55,7 +55,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L54">FieldDeclaration <code>RequiredHeaderGroups</code> · L54–54</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L54-L54">Drilling.File/JHMI/CMotorFile.cs:54–54</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L54-L54">Drilling.File/JHMI/CMotorFile.cs:54–54</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyList&lt;string&gt;&gt; Drilling.File.JHMI.CMotorFile.RequiredHeaderGroups</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
@@ -69,7 +69,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L55">MethodDeclaration <code>LoadAll</code> · L55–83</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L55-L83">Drilling.File/JHMI/CMotorFile.cs:55–83</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L55-L83">Drilling.File/JHMI/CMotorFile.cs:55–83</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Motion.ST_MOTOR_DATA&gt; Drilling.File.JHMI.CMotorFile.LoadAll(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, override</td></tr>
@@ -116,7 +116,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L60">LocalFunctionStatement <code>SelectValue</code> · L60–63</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L60-L63">Drilling.File/JHMI/CMotorFile.cs:60–63</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L60-L63">Drilling.File/JHMI/CMotorFile.cs:60–63</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Motion.ST_MOTOR_DATA SelectValue(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -140,7 +140,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L65">LocalFunctionStatement <code>ShouldIncludeItem</code> · L65–68</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L65-L68">Drilling.File/JHMI/CMotorFile.cs:65–68</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L65-L68">Drilling.File/JHMI/CMotorFile.cs:65–68</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool ShouldIncludeItem(Drilling.Common.Motion.ST_MOTOR_DATA)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -163,7 +163,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L70">LocalFunctionStatement <code>SelectAxis</code> · L70–73</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L70-L73">Drilling.File/JHMI/CMotorFile.cs:70–73</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L70-L73">Drilling.File/JHMI/CMotorFile.cs:70–73</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int SelectAxis(Drilling.Common.Motion.ST_MOTOR_DATA)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -181,7 +181,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L75">LocalFunctionStatement <code>SelectName</code> · L75–78</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L75-L78">Drilling.File/JHMI/CMotorFile.cs:75–78</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L75-L78">Drilling.File/JHMI/CMotorFile.cs:75–78</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectName(Drilling.Common.Motion.ST_MOTOR_DATA)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -199,7 +199,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L85">MethodDeclaration <code>Parse</code> · L85–135</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L85-L135">Drilling.File/JHMI/CMotorFile.cs:85–135</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L85-L135">Drilling.File/JHMI/CMotorFile.cs:85–135</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Motion.ST_MOTOR_DATA Drilling.File.JHMI.CMotorFile.Parse(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -213,7 +213,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L62-L62">Drilling.File/JHMI/CMotorFile.cs:62–62</a></td><td>Parse</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L62-L62">Drilling.File/JHMI/CMotorFile.cs:62–62</a></td><td>Parse</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -380,7 +380,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L137">MethodDeclaration <code>EnsureFile</code> · L137–146</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L137-L146">Drilling.File/JHMI/CMotorFile.cs:137–146</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L137-L146">Drilling.File/JHMI/CMotorFile.cs:137–146</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.File.JHMI.CMotorFile.EnsureFile()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -389,7 +389,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L58-L58">Drilling.File/JHMI/CMotorFile.cs:58–58</a></td><td>EnsureFile</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L58-L58">Drilling.File/JHMI/CMotorFile.cs:58–58</a></td><td>EnsureFile</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -416,7 +416,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L148">MethodDeclaration <code>GetMotorPath</code> · L148–151</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L148-L151">Drilling.File/JHMI/CMotorFile.cs:148–151</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L148-L151">Drilling.File/JHMI/CMotorFile.cs:148–151</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.File.JHMI.CMotorFile.GetMotorPath()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -425,9 +425,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L59-L59">Drilling.File/JHMI/CMotorFile.cs:59–59</a></td><td>GetMotorPath</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L80-L80">Drilling.File/JHMI/CMotorFile.cs:80–80</a></td><td>GetMotorPath</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L139-L139">Drilling.File/JHMI/CMotorFile.cs:139–139</a></td><td>GetMotorPath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L59-L59">Drilling.File/JHMI/CMotorFile.cs:59–59</a></td><td>GetMotorPath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L80-L80">Drilling.File/JHMI/CMotorFile.cs:80–80</a></td><td>GetMotorPath</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L139-L139">Drilling.File/JHMI/CMotorFile.cs:139–139</a></td><td>GetMotorPath</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -440,7 +440,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L153">MethodDeclaration <code>Validate</code> · L153–200</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L153-L200">Drilling.File/JHMI/CMotorFile.cs:153–200</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L153-L200">Drilling.File/JHMI/CMotorFile.cs:153–200</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.File.JHMI.CMotorFile.Validate(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Motion.ST_MOTOR_DATA&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -453,7 +453,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L81-L81">Drilling.File/JHMI/CMotorFile.cs:81–81</a></td><td>Validate</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L81-L81">Drilling.File/JHMI/CMotorFile.cs:81–81</a></td><td>Validate</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -531,7 +531,7 @@
  N0 --&gt;|포함| N7</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L157">LocalFunctionStatement <code>IsUse</code> · L157–160</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L157-L160">Drilling.File/JHMI/CMotorFile.cs:157–160</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L157-L160">Drilling.File/JHMI/CMotorFile.cs:157–160</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool IsUse(Drilling.Common.Motion.ST_MOTOR_DATA)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -549,7 +549,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L202">MethodDeclaration <code>CreateDefaultRows</code> · L202–205</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L202-L205">Drilling.File/JHMI/CMotorFile.cs:202–205</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L202-L205">Drilling.File/JHMI/CMotorFile.cs:202–205</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; Drilling.File.JHMI.CMotorFile.CreateDefaultRows()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -558,7 +558,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L145-L145">Drilling.File/JHMI/CMotorFile.cs:145–145</a></td><td>CreateDefaultRows</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L145-L145">Drilling.File/JHMI/CMotorFile.cs:145–145</a></td><td>CreateDefaultRows</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -566,7 +566,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L207">MethodDeclaration <code>Row</code> · L207–251</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L207-L251">Drilling.File/JHMI/CMotorFile.cs:207–251</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L207-L251">Drilling.File/JHMI/CMotorFile.cs:207–251</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.File.JHMI.CMotorFile.Row(string, int, string, string, double, double, double, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -647,7 +647,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L253">MethodDeclaration <code>ReadFirst</code> · L253–256</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L253-L256">Drilling.File/JHMI/CMotorFile.cs:253–256</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L253-L256">Drilling.File/JHMI/CMotorFile.cs:253–256</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.File.JHMI.CMotorFile.ReadFirst(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, params string[])</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -661,45 +661,45 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L87-L87">Drilling.File/JHMI/CMotorFile.cs:87–87</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L88-L88">Drilling.File/JHMI/CMotorFile.cs:88–88</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L96-L96">Drilling.File/JHMI/CMotorFile.cs:96–96</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L97-L97">Drilling.File/JHMI/CMotorFile.cs:97–97</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L98-L98">Drilling.File/JHMI/CMotorFile.cs:98–98</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L99-L99">Drilling.File/JHMI/CMotorFile.cs:99–99</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L100-L100">Drilling.File/JHMI/CMotorFile.cs:100–100</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L101-L101">Drilling.File/JHMI/CMotorFile.cs:101–101</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L102-L102">Drilling.File/JHMI/CMotorFile.cs:102–102</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L103-L103">Drilling.File/JHMI/CMotorFile.cs:103–103</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L104-L104">Drilling.File/JHMI/CMotorFile.cs:104–104</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L105-L105">Drilling.File/JHMI/CMotorFile.cs:105–105</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L106-L106">Drilling.File/JHMI/CMotorFile.cs:106–106</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L108-L108">Drilling.File/JHMI/CMotorFile.cs:108–108</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L109-L109">Drilling.File/JHMI/CMotorFile.cs:109–109</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L110-L110">Drilling.File/JHMI/CMotorFile.cs:110–110</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L111-L111">Drilling.File/JHMI/CMotorFile.cs:111–111</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L112-L112">Drilling.File/JHMI/CMotorFile.cs:112–112</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L113-L113">Drilling.File/JHMI/CMotorFile.cs:113–113</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L114-L114">Drilling.File/JHMI/CMotorFile.cs:114–114</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L115-L115">Drilling.File/JHMI/CMotorFile.cs:115–115</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L116-L116">Drilling.File/JHMI/CMotorFile.cs:116–116</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L117-L117">Drilling.File/JHMI/CMotorFile.cs:117–117</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L118-L118">Drilling.File/JHMI/CMotorFile.cs:118–118</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L119-L119">Drilling.File/JHMI/CMotorFile.cs:119–119</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L120-L120">Drilling.File/JHMI/CMotorFile.cs:120–120</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L121-L121">Drilling.File/JHMI/CMotorFile.cs:121–121</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L122-L122">Drilling.File/JHMI/CMotorFile.cs:122–122</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L123-L123">Drilling.File/JHMI/CMotorFile.cs:123–123</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L124-L124">Drilling.File/JHMI/CMotorFile.cs:124–124</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L125-L125">Drilling.File/JHMI/CMotorFile.cs:125–125</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L126-L126">Drilling.File/JHMI/CMotorFile.cs:126–126</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L127-L127">Drilling.File/JHMI/CMotorFile.cs:127–127</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L128-L128">Drilling.File/JHMI/CMotorFile.cs:128–128</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L129-L129">Drilling.File/JHMI/CMotorFile.cs:129–129</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L130-L130">Drilling.File/JHMI/CMotorFile.cs:130–130</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L131-L131">Drilling.File/JHMI/CMotorFile.cs:131–131</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L132-L132">Drilling.File/JHMI/CMotorFile.cs:132–132</a></td><td>ReadFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L133-L133">Drilling.File/JHMI/CMotorFile.cs:133–133</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L87-L87">Drilling.File/JHMI/CMotorFile.cs:87–87</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L88-L88">Drilling.File/JHMI/CMotorFile.cs:88–88</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L96-L96">Drilling.File/JHMI/CMotorFile.cs:96–96</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L97-L97">Drilling.File/JHMI/CMotorFile.cs:97–97</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L98-L98">Drilling.File/JHMI/CMotorFile.cs:98–98</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L99-L99">Drilling.File/JHMI/CMotorFile.cs:99–99</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L100-L100">Drilling.File/JHMI/CMotorFile.cs:100–100</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L101-L101">Drilling.File/JHMI/CMotorFile.cs:101–101</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L102-L102">Drilling.File/JHMI/CMotorFile.cs:102–102</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L103-L103">Drilling.File/JHMI/CMotorFile.cs:103–103</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L104-L104">Drilling.File/JHMI/CMotorFile.cs:104–104</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L105-L105">Drilling.File/JHMI/CMotorFile.cs:105–105</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L106-L106">Drilling.File/JHMI/CMotorFile.cs:106–106</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L108-L108">Drilling.File/JHMI/CMotorFile.cs:108–108</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L109-L109">Drilling.File/JHMI/CMotorFile.cs:109–109</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L110-L110">Drilling.File/JHMI/CMotorFile.cs:110–110</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L111-L111">Drilling.File/JHMI/CMotorFile.cs:111–111</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L112-L112">Drilling.File/JHMI/CMotorFile.cs:112–112</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L113-L113">Drilling.File/JHMI/CMotorFile.cs:113–113</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L114-L114">Drilling.File/JHMI/CMotorFile.cs:114–114</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L115-L115">Drilling.File/JHMI/CMotorFile.cs:115–115</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L116-L116">Drilling.File/JHMI/CMotorFile.cs:116–116</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L117-L117">Drilling.File/JHMI/CMotorFile.cs:117–117</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L118-L118">Drilling.File/JHMI/CMotorFile.cs:118–118</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L119-L119">Drilling.File/JHMI/CMotorFile.cs:119–119</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L120-L120">Drilling.File/JHMI/CMotorFile.cs:120–120</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L121-L121">Drilling.File/JHMI/CMotorFile.cs:121–121</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L122-L122">Drilling.File/JHMI/CMotorFile.cs:122–122</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L123-L123">Drilling.File/JHMI/CMotorFile.cs:123–123</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L124-L124">Drilling.File/JHMI/CMotorFile.cs:124–124</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L125-L125">Drilling.File/JHMI/CMotorFile.cs:125–125</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L126-L126">Drilling.File/JHMI/CMotorFile.cs:126–126</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L127-L127">Drilling.File/JHMI/CMotorFile.cs:127–127</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L128-L128">Drilling.File/JHMI/CMotorFile.cs:128–128</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L129-L129">Drilling.File/JHMI/CMotorFile.cs:129–129</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L130-L130">Drilling.File/JHMI/CMotorFile.cs:130–130</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L131-L131">Drilling.File/JHMI/CMotorFile.cs:131–131</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L132-L132">Drilling.File/JHMI/CMotorFile.cs:132–132</a></td><td>ReadFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L133-L133">Drilling.File/JHMI/CMotorFile.cs:133–133</a></td><td>ReadFirst</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -712,7 +712,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L258">MethodDeclaration <code>ReadController</code> · L258–262</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L258-L262">Drilling.File/JHMI/CMotorFile.cs:258–262</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L258-L262">Drilling.File/JHMI/CMotorFile.cs:258–262</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.File.JHMI.CMotorFile.ReadController(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -725,7 +725,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L99-L99">Drilling.File/JHMI/CMotorFile.cs:99–99</a></td><td>ReadController</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L99-L99">Drilling.File/JHMI/CMotorFile.cs:99–99</a></td><td>ReadController</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -743,7 +743,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L264">MethodDeclaration <code>ReadBool</code> · L264–267</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L264-L267">Drilling.File/JHMI/CMotorFile.cs:264–267</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L264-L267">Drilling.File/JHMI/CMotorFile.cs:264–267</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.File.JHMI.CMotorFile.ReadBool(string, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -757,10 +757,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L96-L96">Drilling.File/JHMI/CMotorFile.cs:96–96</a></td><td>ReadBool</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L109-L109">Drilling.File/JHMI/CMotorFile.cs:109–109</a></td><td>ReadBool</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L110-L110">Drilling.File/JHMI/CMotorFile.cs:110–110</a></td><td>ReadBool</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L114-L114">Drilling.File/JHMI/CMotorFile.cs:114–114</a></td><td>ReadBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L96-L96">Drilling.File/JHMI/CMotorFile.cs:96–96</a></td><td>ReadBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L109-L109">Drilling.File/JHMI/CMotorFile.cs:109–109</a></td><td>ReadBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L110-L110">Drilling.File/JHMI/CMotorFile.cs:110–110</a></td><td>ReadBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L114-L114">Drilling.File/JHMI/CMotorFile.cs:114–114</a></td><td>ReadBool</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -773,7 +773,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L269">MethodDeclaration <code>ReadInt</code> · L269–272</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L269-L272">Drilling.File/JHMI/CMotorFile.cs:269–272</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L269-L272">Drilling.File/JHMI/CMotorFile.cs:269–272</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.File.JHMI.CMotorFile.ReadInt(string, int, string, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -789,13 +789,13 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L97-L97">Drilling.File/JHMI/CMotorFile.cs:97–97</a></td><td>ReadInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L98-L98">Drilling.File/JHMI/CMotorFile.cs:98–98</a></td><td>ReadInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L100-L100">Drilling.File/JHMI/CMotorFile.cs:100–100</a></td><td>ReadInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L101-L101">Drilling.File/JHMI/CMotorFile.cs:101–101</a></td><td>ReadInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L102-L102">Drilling.File/JHMI/CMotorFile.cs:102–102</a></td><td>ReadInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L128-L128">Drilling.File/JHMI/CMotorFile.cs:128–128</a></td><td>ReadInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L129-L129">Drilling.File/JHMI/CMotorFile.cs:129–129</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L97-L97">Drilling.File/JHMI/CMotorFile.cs:97–97</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L98-L98">Drilling.File/JHMI/CMotorFile.cs:98–98</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L100-L100">Drilling.File/JHMI/CMotorFile.cs:100–100</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L101-L101">Drilling.File/JHMI/CMotorFile.cs:101–101</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L102-L102">Drilling.File/JHMI/CMotorFile.cs:102–102</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L128-L128">Drilling.File/JHMI/CMotorFile.cs:128–128</a></td><td>ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L129-L129">Drilling.File/JHMI/CMotorFile.cs:129–129</a></td><td>ReadInt</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -808,7 +808,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L274">MethodDeclaration <code>ReadDouble</code> · L274–277</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L274-L277">Drilling.File/JHMI/CMotorFile.cs:274–277</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L274-L277">Drilling.File/JHMI/CMotorFile.cs:274–277</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.File.JHMI.CMotorFile.ReadDouble(string, int, string, double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -824,20 +824,20 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L103-L103">Drilling.File/JHMI/CMotorFile.cs:103–103</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L115-L115">Drilling.File/JHMI/CMotorFile.cs:115–115</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L116-L116">Drilling.File/JHMI/CMotorFile.cs:116–116</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L117-L117">Drilling.File/JHMI/CMotorFile.cs:117–117</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L118-L118">Drilling.File/JHMI/CMotorFile.cs:118–118</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L119-L119">Drilling.File/JHMI/CMotorFile.cs:119–119</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L120-L120">Drilling.File/JHMI/CMotorFile.cs:120–120</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L121-L121">Drilling.File/JHMI/CMotorFile.cs:121–121</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L123-L123">Drilling.File/JHMI/CMotorFile.cs:123–123</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L124-L124">Drilling.File/JHMI/CMotorFile.cs:124–124</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L125-L125">Drilling.File/JHMI/CMotorFile.cs:125–125</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L126-L126">Drilling.File/JHMI/CMotorFile.cs:126–126</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L127-L127">Drilling.File/JHMI/CMotorFile.cs:127–127</a></td><td>ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L132-L132">Drilling.File/JHMI/CMotorFile.cs:132–132</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L103-L103">Drilling.File/JHMI/CMotorFile.cs:103–103</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L115-L115">Drilling.File/JHMI/CMotorFile.cs:115–115</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L116-L116">Drilling.File/JHMI/CMotorFile.cs:116–116</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L117-L117">Drilling.File/JHMI/CMotorFile.cs:117–117</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L118-L118">Drilling.File/JHMI/CMotorFile.cs:118–118</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L119-L119">Drilling.File/JHMI/CMotorFile.cs:119–119</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L120-L120">Drilling.File/JHMI/CMotorFile.cs:120–120</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L121-L121">Drilling.File/JHMI/CMotorFile.cs:121–121</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L123-L123">Drilling.File/JHMI/CMotorFile.cs:123–123</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L124-L124">Drilling.File/JHMI/CMotorFile.cs:124–124</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L125-L125">Drilling.File/JHMI/CMotorFile.cs:125–125</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L126-L126">Drilling.File/JHMI/CMotorFile.cs:126–126</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L127-L127">Drilling.File/JHMI/CMotorFile.cs:127–127</a></td><td>ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L132-L132">Drilling.File/JHMI/CMotorFile.cs:132–132</a></td><td>ReadDouble</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -850,7 +850,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L279">MethodDeclaration <code>Normalize</code> · L279–282</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L279-L282">Drilling.File/JHMI/CMotorFile.cs:279–282</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L279-L282">Drilling.File/JHMI/CMotorFile.cs:279–282</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.File.JHMI.CMotorFile.Normalize(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -863,7 +863,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.File/JHMI/CMotorFile.cs#L260-L260">Drilling.File/JHMI/CMotorFile.cs:260–260</a></td><td>Normalize</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L260-L260">Drilling.File/JHMI/CMotorFile.cs:260–260</a></td><td>Normalize</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>

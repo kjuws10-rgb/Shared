@@ -9,13 +9,13 @@ from pathlib import Path
 from urllib.parse import quote,unquote
 from datetime import datetime, timezone
 
-VERSION = '1.1.1'
+VERSION = '1.1.2'
 REPO = 'https://github.com/kjuws10-rgb/A3Drilling'
 CODE_EXT = {'.cs','.xaml','.ascript','.scan','.csproj','.sln','.config','.xml','.json'}
 TEXT_EXT = CODE_EXT | {'.md','.txt','.gitignore','.gitattributes','.editorconfig','.props','.targets','.csv','.bak'}
 EOL = ' ⟦EOL⟧'
 STRUCTURAL = '구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.'
-CSS = '''body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}'''
+CSS = '''body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}'''
 
 def H(s): return html.escape(str(s), quote=True)
 def J(x): return json.dumps(x, ensure_ascii=False, separators=(',',':'))
@@ -34,7 +34,7 @@ def digest(p):
 
 PRIVATE_IP = re.compile(r'(?<![\w.])(?:10\.(?:\d{1,3}\.){2}\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3})(?![\w.])')
 SENSITIVE_KEY = re.compile(r'(?i)password|passwd|credential|secret|api.?key|access.?token|client.?secret')
-WPF_EVENTS = set('Click Loaded Unloaded Initialized Closing Closed Activated Deactivated ContentRendered SourceInitialized DataContextChanged IsVisibleChanged IsEnabledChanged SizeChanged LayoutUpdated SelectionChanged SelectedItemChanged TextChanged Checked Unchecked Indeterminate KeyDown KeyUp PreviewKeyDown PreviewKeyUp GotFocus LostFocus GotKeyboardFocus LostKeyboardFocus MouseDown MouseUp MouseMove MouseEnter MouseLeave MouseWheel MouseDoubleClick MouseLeftButtonDown MouseLeftButtonUp MouseRightButtonDown MouseRightButtonUp PreviewMouseDown PreviewMouseUp PreviewMouseMove PreviewMouseWheel PreviewMouseDoubleClick PreviewMouseLeftButtonDown PreviewMouseLeftButtonUp PreviewMouseRightButtonDown PreviewMouseRightButtonUp TouchDown TouchUp TouchMove PreviewTouchDown PreviewTouchUp PreviewTouchMove DragEnter DragLeave DragOver Drop PreviewDragEnter PreviewDragLeave PreviewDragOver PreviewDrop ScrollChanged ValueChanged DropDownOpened DropDownClosed TargetUpdated SourceUpdated RequestBringIntoView ContextMenuOpening ContextMenuClosing ToolTipOpening ToolTipClosing'.split())
+WPF_EVENTS = set('Click Loaded Unloaded Initialized Closing Closed Activated Deactivated ContentRendered SourceInitialized DataContextChanged IsVisibleChanged IsEnabledChanged SizeChanged LayoutUpdated SelectionChanged SelectedItemChanged TextChanged Checked Unchecked Indeterminate KeyDown KeyUp PreviewKeyDown PreviewKeyUp GotFocus LostFocus GotKeyboardFocus LostKeyboardFocus MouseDown MouseUp MouseMove MouseEnter MouseLeave MouseWheel MouseDoubleClick MouseLeftButtonDown MouseLeftButtonUp MouseRightButtonDown MouseRightButtonUp PreviewMouseDown PreviewMouseUp PreviewMouseMove PreviewMouseWheel PreviewMouseDoubleClick PreviewMouseLeftButtonDown PreviewMouseLeftButtonUp PreviewMouseRightButtonDown PreviewMouseRightButtonUp TouchDown TouchUp TouchMove PreviewTouchDown PreviewTouchUp PreviewTouchMove DragEnter DragLeave DragOver Drop PreviewDragEnter PreviewDragLeave PreviewDragOver PreviewDrop ScrollChanged ValueChanged DropDownOpened DropDownClosed TargetUpdated SourceUpdated RequestBringIntoView PreviewTextInput LostMouseCapture Expanded LoadingRow AutoGeneratingColumn ContextMenuOpening ContextMenuClosing ToolTipOpening ToolTipClosing'.split())
 
 def definition_cells(row):
     # Definition keys/types are useful; site endpoints and authentication values are not.
@@ -180,8 +180,12 @@ def svg_graph(title,center,left,right,caption):
 
 class Builder:
     def __init__(self,source,out,model,manual):
-        self.source=source.resolve();self.out=out.resolve();self.manual=manual
-        if self.out==self.source or self.source in self.out.parents:raise ValueError('output must be outside source')
+        self.source=source.resolve();self.out=out.resolve();self.manual=manual.resolve()
+        # Recursive output normalization must never traverse either read-only input.
+        if self.out==self.source or self.source in self.out.parents or self.out in self.source.parents:
+            raise ValueError('source and output paths must be disjoint; neither may contain the other')
+        if self.out==self.manual or self.manual in self.out.parents or self.out in self.manual.parents:
+            raise ValueError('manual input and output paths must be disjoint; neither may contain the other')
         self.commit=subprocess.check_output(['git','-C',str(source),'rev-parse','HEAD'],text=True).strip()
         self.tracked=subprocess.check_output(['git','-C',str(source),'ls-files','-z']).decode().split('\0')[:-1]
         self.model=json.loads(model.read_text(encoding='utf-8-sig'));assert self.model['sourceCommit']==self.commit
@@ -383,7 +387,7 @@ class Builder:
 
 일차 검색 자료는 실제 소스·설정·수동 상세 해설입니다. 수십만 줄의 생성 스크립트가 코드 설명 검색을 압도하지 않도록 `A3_LD_Generated_Output_Optional.md`는 선택 자료로 분리했습니다. 실제 생성 명령을 분석할 때만 추가하세요. 자료를 삭제하거나 분량을 생략한 것이 아닙니다.
 
-현재 0.5.1은 일반 코드 질문에서 소스를 먼저 검색하고, 문서라고 명시한 질문은 첨부 자료를 검색합니다. 자료를 추가한 것만으로 모든 코드 질문의 검색 정책이나 모델 가중치가 바뀌지는 않습니다. 이 초안은 Studio 프로그램을 수정하거나 기존 검증 역할지도를 자동 교체하지 않습니다.
+연결할 Offline Studio의 버전에 따라 코드와 첨부 자료의 검색 정책이 다를 수 있으므로, 실제 소스·파일 근거가 답변에 포함되는지 확인합니다. 자료 추가는 검색 지식 갱신이며 모델 가중치 학습과 별개입니다. 이 레퍼런스는 Studio 프로그램이나 기존 검증 역할지도를 자동 교체하지 않습니다.
 
 각 자료에는 source path/Commit/SHA/원본 줄 범위/분석 근거 수준이 있습니다. 답변의 경로와 줄은 실제 작업 파일을 다시 읽어 검증해야 합니다. 코드 변경·새 Commit 뒤에는 갱신된 문서로 교체하고, 옛 자료를 현재 사실처럼 섞지 않습니다. `.jsonl`은 별도 RAG/검색 도구를 위한 구조화 데이터이며 현재 Studio가 직접 지원한다고 주장하지 않습니다.
 

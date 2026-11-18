@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 46241bee261b984aa7c9999db2414c5f0b92c128bfbae34733ac0aceb59b04b4 |
 | 파일 분류 | code |
 | 원본 크기/행 | 11,959 bytes / 316 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -52,7 +52,7 @@
 
 ### MethodDeclaration `BuildAxisDefinitions` · L8–27
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:8–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L8-L27)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:8–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L8-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -72,10 +72,10 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:590–590](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Alarm/CAlarmManager.cs#L590-L590) | CScannerAxisConfiguration.BuildAxisDefinitions | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L261-L261) | CScannerAxisConfiguration.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3619–3619](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3619-L3619) | CScannerAxisConfiguration.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L121-L121) | CScannerAxisConfiguration.BuildAxisDefinitions | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:590–590](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L590-L590) | CScannerAxisConfiguration.BuildAxisDefinitions | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L261-L261) | CScannerAxisConfiguration.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3623–3623](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3623-L3623) | CScannerAxisConfiguration.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:121–121](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L121-L121) | CScannerAxisConfiguration.BuildAxisDefinitions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -136,7 +136,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildAxisDefinitions` · L29–48
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:29–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L29-L48)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:29–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L29-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -156,8 +156,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/InterLock/CInterLockManager.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L129-L129) | CScannerAxisConfiguration.BuildAxisDefinitions | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L124-L124) | CScannerAxisConfiguration.BuildAxisDefinitions | False |
+| [Drilling.Common/InterLock/CInterLockManager.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/InterLock/CInterLockManager.cs#L129-L129) | CScannerAxisConfiguration.BuildAxisDefinitions | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L124-L124) | CScannerAxisConfiguration.BuildAxisDefinitions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -218,7 +218,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendScannerZAxisDefinition` · L50–60
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:50–60](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L50-L60)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:50–60](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L50-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -241,7 +241,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L25-L25) | AppendScannerZAxisDefinition | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L25-L25) | AppendScannerZAxisDefinition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -282,7 +282,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendScannerZAxisDefinition` · L62–72
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:62–72](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L62-L72)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:62–72](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L62-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -305,7 +305,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L46-L46) | AppendScannerZAxisDefinition | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L46-L46) | AppendScannerZAxisDefinition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -346,7 +346,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateUnusedAxisDefinition` · L74–77
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:74–77](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L74-L77)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:74–77](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L74-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -368,8 +368,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L54-L54) | CreateUnusedAxisDefinition | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L66-L66) | CreateUnusedAxisDefinition | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L54-L54) | CreateUnusedAxisDefinition | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L66-L66) | CreateUnusedAxisDefinition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -388,7 +388,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAxisDefinition` · L79–89
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:79–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L79-L89)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:79–89](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L79-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -412,12 +412,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L22-L22) | CreateAxisDefinition | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L23-L23) | CreateAxisDefinition | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L43-L43) | CreateAxisDefinition | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L44-L44) | CreateAxisDefinition | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L59-L59) | CreateAxisDefinition | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L71-L71) | CreateAxisDefinition | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L22-L22) | CreateAxisDefinition | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L23-L23) | CreateAxisDefinition | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L43-L43) | CreateAxisDefinition | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L44-L44) | CreateAxisDefinition | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L59-L59) | CreateAxisDefinition | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L71-L71) | CreateAxisDefinition | False |
 
 호출하는 대상과 해석 범위:
 
@@ -459,7 +459,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateConfiguredAxisName` · L91–109
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:91–109](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L91-L109)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:91–109](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L91-L109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -480,7 +480,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L82-L82) | ValidateConfiguredAxisName | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L82-L82) | ValidateConfiguredAxisName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -524,7 +524,7 @@ flowchart TD
 
 ### MethodDeclaration `IsAllAsciiDigits` · L111–127
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:111–127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L111-L127)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:111–127](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L111-L127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -543,7 +543,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L98-L98) | IsAllAsciiDigits | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L98-L98) | IsAllAsciiDigits | False |
 
 호출하는 대상과 해석 범위:
 
@@ -580,7 +580,7 @@ flowchart TD
 
 ### MethodDeclaration `IsAutomationAxisName` · L129–145
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:129–145](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L129-L145)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:129–145](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L129-L145)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -599,7 +599,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L103-L103) | IsAutomationAxisName | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L103-L103) | IsAutomationAxisName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -640,7 +640,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildEnabledHeadNumbers` · L147–159
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:147–159](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L147-L159)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:147–159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L147-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -660,7 +660,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L127-L127) | CScannerAxisConfiguration.BuildEnabledHeadNumbers | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L127-L127) | CScannerAxisConfiguration.BuildEnabledHeadNumbers | False |
 
 호출하는 대상과 해석 범위:
 
@@ -699,7 +699,7 @@ flowchart TD
 
 ### MethodDeclaration `IsHeadEnabled` · L161–164
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:161–164](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L161-L164)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:161–164](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L161-L164)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -719,10 +719,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L11-L11) | IsHeadEnabled | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L152-L152) | IsHeadEnabled | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L259-L259) | CScannerAxisConfiguration.IsHeadEnabled | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L130-L130) | CScannerAxisConfiguration.IsHeadEnabled | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L11-L11) | IsHeadEnabled | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L152-L152) | IsHeadEnabled | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L259-L259) | CScannerAxisConfiguration.IsHeadEnabled | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L130-L130) | CScannerAxisConfiguration.IsHeadEnabled | False |
 
 호출하는 대상과 해석 범위:
 
@@ -741,7 +741,7 @@ flowchart TD
 
 ### MethodDeclaration `IsHeadEnabled` · L166–169
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:166–169](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L166-L169)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:166–169](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L166-L169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -761,9 +761,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L32-L32) | IsHeadEnabled | False |
-| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L235-L235) | CScannerAxisConfiguration.IsHeadEnabled | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L133-L133) | CScannerAxisConfiguration.IsHeadEnabled | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L32-L32) | IsHeadEnabled | False |
+| [Drilling.Common/Correction/CDefaultOffsetCalibration.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L271-L271) | CScannerAxisConfiguration.IsHeadEnabled | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L133-L133) | CScannerAxisConfiguration.IsHeadEnabled | False |
 
 호출하는 대상과 해석 범위:
 
@@ -782,7 +782,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadSettingText` · L171–192
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:171–192](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L171-L192)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:171–192](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L171-L192)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -804,9 +804,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L17-L17) | ReadHeadSettingText | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L18-L18) | ReadHeadSettingText | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L58-L58) | ReadHeadSettingText | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L17-L17) | ReadHeadSettingText | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L18-L18) | ReadHeadSettingText | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L58-L58) | ReadHeadSettingText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -856,7 +856,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadSettingBool` · L194–222
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:194–222](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L194-L222)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:194–222](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L194-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -878,8 +878,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L52-L52) | ReadHeadSettingBool | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L163-L163) | ReadHeadSettingBool | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L52-L52) | ReadHeadSettingBool | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L163-L163) | ReadHeadSettingBool | False |
 
 호출하는 대상과 해석 범위:
 
@@ -935,7 +935,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadSettingInt` · L224–245
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:224–245](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L224-L245)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:224–245](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L224-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -957,8 +957,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L16-L16) | ReadHeadSettingInt | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L19-L19) | ReadHeadSettingInt | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L16-L16) | ReadHeadSettingInt | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L19-L19) | ReadHeadSettingInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1006,7 +1006,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadSettingText` · L247–260
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:247–260](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L247-L260)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:247–260](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L247-L260)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1028,9 +1028,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L38-L38) | ReadHeadSettingText | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L39-L39) | ReadHeadSettingText | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L70-L70) | ReadHeadSettingText | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L38-L38) | ReadHeadSettingText | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L39-L39) | ReadHeadSettingText | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L70-L70) | ReadHeadSettingText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1071,7 +1071,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadSettingBool` · L262–287
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:262–287](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L262-L287)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:262–287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L262-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1093,8 +1093,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L64-L64) | ReadHeadSettingBool | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L168-L168) | ReadHeadSettingBool | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L64-L64) | ReadHeadSettingBool | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L168-L168) | ReadHeadSettingBool | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1145,7 +1145,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadHeadSettingInt` · L289–302
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:289–302](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L289-L302)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:289–302](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L289-L302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1167,8 +1167,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L37-L37) | ReadHeadSettingInt | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L40-L40) | ReadHeadSettingInt | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L37-L37) | ReadHeadSettingInt | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L40-L40) | ReadHeadSettingInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1207,7 +1207,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeHeadNo` · L304–304
 
-[Drilling.Common/Automation/CScannerAxisConfiguration.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L304-L304)
+[Drilling.Common/Automation/CScannerAxisConfiguration.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L304-L304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1226,8 +1226,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L10-L10) | NormalizeHeadNo | False |
-| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L31-L31) | NormalizeHeadNo | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L10-L10) | NormalizeHeadNo | False |
+| [Drilling.Common/Automation/CScannerAxisConfiguration.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L31-L31) | NormalizeHeadNo | False |
 
 호출하는 대상과 해석 범위:
 

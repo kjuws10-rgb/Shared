@@ -1,13 +1,52 @@
 {
-  "passed": true,
-  "extractorVersion": "1.0.3",
-  "dotnetSyntheticTests": 18,
-  "pythonToolTests": 4,
-  "generatorVersion": "1.1.1",
-  "validatorVersion": "1.1.0",
-  "equipmentCodeTests": 0,
-  "equipmentBuild": "not_run",
-  "scope": "Synthetic extraction/XAML/sanitization/routing tests only",
-  "contentGeneratorVersion": "1.1.0",
-  "normalizedWithGenerator": "1.1.1"
+  "sourceCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+  "extractor": {
+    "schemaVersion": "a3-extractor-independent-selftest/1",
+    "extractorVersion": "1.0.3",
+    "sdk": "10.0.400",
+    "passCount": 18,
+    "passed": true,
+    "assertions": [
+      "PASS two source type declarations",
+      "PASS method and parameter coverage",
+      "PASS property and accessor coverage",
+      "PASS event field coverage",
+      "PASS source method binding",
+      "PASS control flow coverage",
+      "PASS delegate dispatch is not treated as a fixed runtime implementation",
+      "PASS all physical ranges, type and call AST coverage",
+      "PASS same local signature in two containing methods receives distinct source IDs",
+      "PASS local call target IDs match the correct source declarations",
+      "PASS local operation ownership uses the same disambiguated IDs",
+      "PASS modern record, primary constructor, required/init and partial syntax parses",
+      "PASS partial declarations retain distinct source ranges and a shared type identity",
+      "PASS operator, indexer and enum member coverage",
+      "PASS explicit get, init, add and remove accessors are preserved",
+      "PASS multi-variable field initializers retain the correct caller ownership",
+      "PASS each field initializer operation belongs to its own declared variable",
+      "PASS compiler-synthesized record properties and primary constructors are not claimed as explicit source members"
+    ],
+    "scope": "Copied tools/ SymbolExtractor only. Synthetic C# fixture parse and documentation partial compilation, not A3 program build or equipment/SDK execution."
+  },
+  "generator": {
+    "schemaVersion": "a3-generator-regression/1",
+    "testsRun": 9,
+    "passed": true,
+    "failures": 0,
+    "errors": 0,
+    "scope": "Synthetic temporary Git repository only; equipment and vendor binaries not invoked."
+  },
+  "toolVersions": {
+    "generator": "1.1.2",
+    "validator": "1.1.1",
+    "extractor": "1.0.3"
+  },
+  "finalToolFileHashes": {
+    "build_reference.py": "412466c8f2242b2e506cfeff7ff33f91225b2c4c5dfbfcb18eb35fa1ec136266",
+    "validate_reference.py": "a25cc690fa644637b2cf123e2fd87c06d6fada791c28a5375cf5dd79d7680459",
+    "test_reference.py": "2b81dc2812aa637146e1fa5ba73fc402e8d426d4252867a2d216b1af09b0fbdc",
+    "README.md": "bb6e5c12ea88f348e205efb561ee0aed1cb2e2e0df1e7e8bf619a32b8d497359",
+    "UPDATE_POLICY.md": "833d94e12b7ddd0817dbc39fd0ec0dfcf2e2c21de1deee0fe5150acab481c053"
+  },
+  "scope": "Documentation tools only. No equipment solution build or vendor/controller/script execution."
 }

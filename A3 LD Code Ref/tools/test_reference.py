@@ -1,8 +1,9 @@
 """Synthetic regressions for documentation policy and offline output; no equipment input."""
 from pathlib import Path
-import argparse, hashlib, json, subprocess, tempfile, unittest
+import argparse, collections, hashlib, json, subprocess, tempfile, unittest, xml.etree.ElementTree as ET
+from unittest.mock import patch
 from build_reference import Builder, definition_cells, normalize_document_whitespace, xaml_structure
-from validate_reference import validate
+from validate_reference import validate, expected_xaml_events
 
 
 class ReferenceRegression(unittest.TestCase):
@@ -35,6 +36,42 @@ class ReferenceRegression(unittest.TestCase):
         self.assertEqual({item['handler'] for item in model['events']},{'OnClosing','OnDown','OnLeave','OnMove'})
         self.assertEqual(model['bindings'][0]['expression'],"{Binding Path=Label, StringFormat='a > b'}")
         self.assertTrue(all(1<=item['startLine']<=item['endLine']<=len(source.splitlines()) for group in ['namedElements','events','bindings'] for item in model[group]))
+
+    def test_xaml_current_extended_events_are_inventoried(self):
+        source = '<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" PreviewTextInput="OnText" LostMouseCapture="OnCapture" TreeViewItem.Expanded="OnExpand" LoadingRow="OnRow" AutoGeneratingColumn="OnColumn"/>'
+        model=xaml_structure(source)
+        expected={('PreviewTextInput','OnText'),('LostMouseCapture','OnCapture'),('TreeViewItem.Expanded','OnExpand'),('LoadingRow','OnRow'),('AutoGeneratingColumn','OnColumn')}
+        self.assertEqual({(item['event'],item['handler']) for item in model['events']},expected)
+        self.assertEqual(len(model['events']),5)
+
+    def test_xaml_event_validator_is_independent_of_generator_whitelist(self):
+        source = '<Grid PreviewTextInput="OnText" LostMouseCapture="OnCapture" TreeViewItem.Expanded="OnExpand" LoadingRow="OnRow" AutoGeneratingColumn="OnColumn"/>'
+        expected,_=expected_xaml_events(ET.fromstring(source))
+        with patch('build_reference.WPF_EVENTS',set()):
+            actual=collections.Counter((entry['event'],entry['handler']) for entry in xaml_structure(source)['events'])
+        self.assertEqual(sum(expected.values()),5)
+        self.assertNotEqual(expected,actual,'a generator whitelist omission must not pass the independent validator')
+
+    def test_xaml_unknown_handler_candidate_and_non_event_values(self):
+        xml=ET.fromstring('<Grid CustomHandoff="OnCustom" Text="OnCustom" Title="OnCustom"><EventSetter Event="LostKeyboardFocus" Handler="OnCustom"/></Grid>')
+        members=[{'kind':'MethodDeclaration','name':'OnCustom','parameters':[{'type':'object?'},{'type':'System.Windows.RoutedEventArgs'}]}]
+        expected,candidates=expected_xaml_events(xml,members)
+        self.assertEqual(expected,collections.Counter({('CustomHandoff','OnCustom'):1,('LostKeyboardFocus','OnCustom'):1}))
+        self.assertEqual([entry['event'] for entry in candidates],['CustomHandoff'])
+
+    def test_source_and_output_paths_must_be_disjoint(self):
+        with tempfile.TemporaryDirectory(prefix='a3-path-regression-') as tmp:
+            root=Path(tmp);source=root/'source';source.mkdir();manual=root/'manual';manual.mkdir()
+            for output in [source,source/'nested',root]:
+                with self.subTest(output=output),self.assertRaisesRegex(ValueError,'source and output paths must be disjoint'):
+                    Builder(source,output,root/'unused-model.json',manual)
+
+    def test_manual_input_and_output_paths_must_be_disjoint(self):
+        with tempfile.TemporaryDirectory(prefix='a3-manual-path-regression-') as tmp:
+            root=Path(tmp);source=root/'source';source.mkdir();manual=root/'manual';manual.mkdir()
+            for input_path,output in [(manual,manual),(manual,manual/'nested'),(manual/'nested',manual)]:
+                with self.subTest(manual=input_path,output=output),self.assertRaisesRegex(ValueError,'manual input and output paths must be disjoint'):
+                    Builder(source,output,root/'unused-model.json',input_path)
 
     def test_definition_cells_suppress_site_endpoints(self):
         cells=definition_cells(['TYPE','10.20.30.40','api_key=fixture-value','SAFE','ignored'])

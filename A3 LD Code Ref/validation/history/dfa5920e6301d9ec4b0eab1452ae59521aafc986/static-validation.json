@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "a3-reference-validation/1",
+  "validatorVersion": "1.1.0",
+  "sourceCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "passed": true,
+  "counts": {
+    "assertions": 1069243,
+    "annotated_files": 336,
+    "annotated_source_lines": 663476,
+    "schema_only_files": 262,
+    "csharp_files": 153,
+    "types": 914,
+    "members": 15910,
+    "calls": 41238,
+    "xaml_namedElements": 369,
+    "xaml_events": 272,
+    "xaml_bindings": 2802,
+    "xaml_codeBehindClasses": 54,
+    "xaml_files": 57,
+    "symbol_ids": 15910,
+    "rag_source_lines": 714725,
+    "rag_records": 31299,
+    "rag_primary_records": 21025,
+    "rag_optional_records": 10274,
+    "rag_unique_annotated_source_lines": 663476,
+    "local_links": 3795,
+    "svg_files": 641,
+    "unique_source_citations": 27880,
+    "tracked_files": 610,
+    "output_files": 2483,
+    "output_bytes": 487621646
+  },
+  "errors": [],
+  "sourceUnchanged": true,
+  "inheritedSourceEncodingFindings": [
+    {
+      "sourcePath": "Drilling.Common/Station/CStationProcess.cs",
+      "lines": [
+        571
+      ],
+      "replacementCharacters": 9
+    }
+  ],
+  "equipmentBuild": "not run",
+  "equipmentExecution": "not run",
+  "scope": "Static provenance/coverage/navigation validation; not runtime behavior or model accuracy certification"
+}

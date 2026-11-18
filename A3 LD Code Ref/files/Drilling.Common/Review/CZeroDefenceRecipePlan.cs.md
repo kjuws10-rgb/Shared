@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | e889827c9bd37e5d560c6da9fba8374bb4813e486403abc91893fb2bbe115afa |
 | 파일 분류 | code |
 | 원본 크기/행 | 19,538 bytes / 326 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -105,7 +105,7 @@
 
 ### FieldDeclaration `CountKey` · L12–12
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L12-L12)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -126,7 +126,7 @@
 
 ### MethodDeclaration `Key` · L13–13
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L13-L13)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -146,26 +146,26 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42) | Key | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L102-L102) | Key | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L103-L103) | Key | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L104-L104) | Key | False |
-| [Drilling.Common/Station/CStationProcess.cs:6212–6212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6212-L6212) | CZeroDefenceRecipePlan.Key | False |
-| [Drilling.Common/Station/CStationProcess.cs:6212–6212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6212-L6212) | CZeroDefenceRecipePlan.Key | False |
-| [Drilling.Common/Station/CStationProcess.cs:6212–6212](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6212-L6212) | CZeroDefenceRecipePlan.Key | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4342–4342](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4342-L4342) | CZeroDefenceRecipePlan.Key | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4343–4343](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4343-L4343) | CZeroDefenceRecipePlan.Key | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4344–4344](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4344-L4344) | CZeroDefenceRecipePlan.Key | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453) | CZeroDefenceRecipePlan.Key | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453) | CZeroDefenceRecipePlan.Key | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453) | CZeroDefenceRecipePlan.Key | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4539–4539](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4539-L4539) | CZeroDefenceRecipePlan.Key | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42) | Key | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L102-L102) | Key | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L103-L103) | Key | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L104-L104) | Key | False |
+| [Drilling.Common/Station/CStationProcess.cs:6212–6212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6212-L6212) | CZeroDefenceRecipePlan.Key | False |
+| [Drilling.Common/Station/CStationProcess.cs:6212–6212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6212-L6212) | CZeroDefenceRecipePlan.Key | False |
+| [Drilling.Common/Station/CStationProcess.cs:6212–6212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6212-L6212) | CZeroDefenceRecipePlan.Key | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4342–4342](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4342-L4342) | CZeroDefenceRecipePlan.Key | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4343–4343](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4343-L4343) | CZeroDefenceRecipePlan.Key | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4344–4344](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4344-L4344) | CZeroDefenceRecipePlan.Key | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453) | CZeroDefenceRecipePlan.Key | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453) | CZeroDefenceRecipePlan.Key | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4453–4453](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4453-L4453) | CZeroDefenceRecipePlan.Key | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4539–4539](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4539-L4539) | CZeroDefenceRecipePlan.Key | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### FieldDeclaration `_mask` · L14–14
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L14-L14)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -180,7 +180,7 @@
 
 ### FieldDeclaration `_shots` · L15–15
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L15-L15)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -195,7 +195,7 @@
 
 ### FieldDeclaration `_beamPosition` · L16–16
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L16-L16)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -210,7 +210,7 @@
 
 ### ConstructorDeclaration `.ctor` · L17–35
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:17–35](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L17-L35)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:17–35](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L17-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -230,10 +230,10 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L269-L269) | new CZeroDefenceRecipePlan | False |
-| [Drilling.Common/Station/CStationProcess.cs:6200–6200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6200-L6200) | new CZeroDefenceRecipePlan | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3092–3092](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3092-L3092) | new CZeroDefenceRecipePlan | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4328–4328](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4328-L4328) | new | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L269-L269) | new CZeroDefenceRecipePlan | False |
+| [Drilling.Common/Station/CStationProcess.cs:6200–6200](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6200-L6200) | new CZeroDefenceRecipePlan | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3092–3092](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3092-L3092) | new CZeroDefenceRecipePlan | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4328–4328](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4328-L4328) | new | False |
 
 호출하는 대상과 해석 범위:
 
@@ -247,7 +247,7 @@
 | 25 | CShotCoordinatePlanBuilder.Build | resolved | Drilling.Common.Recipe.ST_SHOT_COORDINATE_PLAN Drilling.Common.Recipe.CShotCoordinatePlanBuilder.Build(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:11 |
 | 26 | Plan.Shots.ToDictionary | resolved | System.Collections.Generic.Dictionary<(int CellNo, int CellShotNo), Drilling.Common.Recipe.ST_HEAD_SHOT_POINT> System.Collections.Generic.IEnumerable<Drilling.Common.Recipe.ST_HEAD_SHOT_POINT>.ToDictionary<Drilling.Common.Recipe.ST_HEAD_SHOT_POINT, (int CellNo, int CellShotNo)>(System.Func<Drilling.Common.Recipe.ST_HEAD_SHOT_POINT, (int CellNo, int CellShotNo)>) |
 | 27 | CRecipeShotMaskingPlan.Build | resolved | Drilling.Common.Recipe.CRecipeShotMaskingPlan Drilling.Common.Recipe.CRecipeShotMaskingPlan.Build(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs:813 |
-| 28 | ST_REVIEW_MOTION_PARAMETERS.Read | resolved | Drilling.Common.Review.ST_REVIEW_MOTION_PARAMETERS Drilling.Common.Review.ST_REVIEW_MOTION_PARAMETERS.Read(System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>) · Drilling.Common/Review/CReviewManager.cs:4438 |
+| 28 | ST_REVIEW_MOTION_PARAMETERS.Read | resolved | Drilling.Common.Review.ST_REVIEW_MOTION_PARAMETERS Drilling.Common.Review.ST_REVIEW_MOTION_PARAMETERS.Read(System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>) · Drilling.Common/Review/CReviewManager.cs:4501 |
 | 29 | new | resolved | Drilling.Common.Review.ST_ZERO_DEFENCE_TIMING_PROFILE.ST_ZERO_DEFENCE_TIMING_PROFILE(double, double, double, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:132 |
 | 29 | Read | resolved | double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53 |
 | 29 | Read | resolved | double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53 |
@@ -309,7 +309,7 @@ flowchart TD
 
 ### PropertyDeclaration `Recipe` · L37–37
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L37-L37)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -324,7 +324,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Recipe` · L37–37
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L37-L37)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -339,7 +339,7 @@ flowchart TD
 
 ### PropertyDeclaration `Parameters` · L38–38
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L38-L38)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -354,7 +354,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Parameters` · L38–38
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L38-L38)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -369,7 +369,7 @@ flowchart TD
 
 ### PropertyDeclaration `Plan` · L39–39
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L39-L39)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -384,7 +384,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Plan` · L39–39
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L39-L39)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -399,7 +399,7 @@ flowchart TD
 
 ### PropertyDeclaration `Profile` · L40–40
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L40-L40)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -414,7 +414,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Profile` · L40–40
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L40-L40)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -429,7 +429,7 @@ flowchart TD
 
 ### PropertyDeclaration `Count` · L41–41
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L41-L41)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -456,7 +456,7 @@ flowchart TD
 
 ### PropertyDeclaration `HasSelections` · L42–42
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -491,7 +491,7 @@ flowchart TD
 
 ### MethodDeclaration `Int` · L44–51
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:44–51](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L44-L51)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:44–51](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L44-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -511,14 +511,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L41-L41) | Int | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42) | Int | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L102-L102) | Int | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L103-L103) | Int | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L104-L104) | Int | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4342–4342](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4342-L4342) | _plan.Int | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4343–4343](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4343-L4343) | _plan.Int | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4344–4344](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4344-L4344) | _plan.Int | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L41-L41) | Int | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L42-L42) | Int | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L102-L102) | Int | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L103-L103) | Int | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L104-L104) | Int | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4342–4342](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4342-L4342) | _plan.Int | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4343–4343](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4343-L4343) | _plan.Int | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4344–4344](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4344-L4344) | _plan.Int | False |
 
 호출하는 대상과 해석 범위:
 
@@ -556,7 +556,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L53–60
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53–60](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L53-L60)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53–60](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L53-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -576,19 +576,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L71-L71) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L71-L71) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L72-L72) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L72-L72) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L75-L75) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L75-L75) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L78-L78) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L79-L79) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L82-L82) | Read | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L82-L82) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L29-L29) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L71-L71) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L71-L71) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L72-L72) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L72-L72) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L75-L75) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L75-L75) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L78-L78) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L79-L79) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L82-L82) | Read | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L82-L82) | Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -628,7 +628,7 @@ flowchart TD
 
 ### MethodDeclaration `CanProcess` · L62–62
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L62-L62)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L62-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -647,8 +647,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L68-L68) | CanProcess | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4423–4423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4423-L4423) | _plan!.CanProcess | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L68-L68) | CanProcess | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4423–4423](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4423-L4423) | _plan!.CanProcess | False |
 
 호출하는 대상과 해석 범위:
 
@@ -666,7 +666,7 @@ flowchart TD
 
 ### MethodDeclaration `Mask` · L63–63
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L63-L63)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L63-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -685,8 +685,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4494–4494](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4494-L4494) | _plan.Mask | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4622–4622](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4622-L4622) | _plan.Mask | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4494–4494](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4494-L4494) | _plan.Mask | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4622–4622](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4622-L4622) | _plan.Mask | False |
 
 호출하는 대상과 해석 범위:
 
@@ -704,7 +704,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPoint` · L64–95
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:64–95](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L64-L95)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:64–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L64-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -726,11 +726,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L109-L109) | GetPoint | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4349–4349](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4349-L4349) | _plan.GetPoint | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4445–4445](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4445-L4445) | _plan.GetPoint | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4507–4507](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4507-L4507) | _plan.GetPoint | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4652–4652](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4652-L4652) | _plan.GetPoint | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L109-L109) | GetPoint | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4349–4349](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4349-L4349) | _plan.GetPoint | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4445–4445](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4445-L4445) | _plan.GetPoint | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4507–4507](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4507-L4507) | _plan.GetPoint | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4652–4652](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4652-L4652) | _plan.GetPoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -741,7 +741,7 @@ flowchart TD
 | 68 | CanProcess | resolved | bool Drilling.Common.Review.CZeroDefenceRecipePlan.CanProcess(Drilling.Common.Recipe.ST_HEAD_SHOT_POINT) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:62 |
 | 69 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
 | 70 | _beamPosition | resolved · 동적 구현 선택 가능 | Drilling.Common.Review.ST_REVIEW_BEAM_POSITION System.Func<Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int, Drilling.Common.Review.ST_REVIEW_BEAM_POSITION>.Invoke(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int) |
-| 70 | new | resolved | Drilling.Common.Review.ST_REVIEW_PLAN_POINT.ST_REVIEW_PLAN_POINT(int, string, int, int, int, int, int, bool, double, double, double, double, double, double, Drilling.Common.Review.EN_REVIEW_POINT_STATE, string) · Drilling.Common/Review/CReviewManager.cs:3983 |
+| 70 | new | resolved | Drilling.Common.Review.ST_REVIEW_PLAN_POINT.ST_REVIEW_PLAN_POINT(int, string, int, int, int, int, int, bool, double, double, double, double, double, double, Drilling.Common.Review.EN_REVIEW_POINT_STATE, string) · Drilling.Common/Review/CReviewManager.cs:4046 |
 | 71 | Read | resolved | double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53 |
 | 71 | Read | resolved | double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53 |
 | 72 | Read | resolved | double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53 |
@@ -761,7 +761,7 @@ flowchart TD
 | 82 | Math.Max | resolved | double System.Math.Max(double, double) |
 | 82 | Read | resolved | double Drilling.Common.Review.CZeroDefenceRecipePlan.Read(string, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:53 |
 | 83 | new | resolved | Drilling.Common.Review.ST_ZERO_DEFENCE_POINT.ST_ZERO_DEFENCE_POINT(int, int, int, int, string, string, double, double, double, double) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:144 |
-| 89 | CReviewShotNameFormatter.ToMatrixName | resolved | string Drilling.Common.Review.CReviewShotNameFormatter.ToMatrixName(int, int) · Drilling.Common/Review/CReviewManager.cs:4057 |
+| 89 | CReviewShotNameFormatter.ToMatrixName | resolved | string Drilling.Common.Review.CReviewShotNameFormatter.ToMatrixName(int, int) · Drilling.Common/Review/CReviewManager.cs:4120 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -840,7 +840,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadSelections` · L97–113
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:97–113](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L97-L113)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:97–113](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L97-L113)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -859,9 +859,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L123-L123) | ReadSelections | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L276-L276) | source.ReadSelections | False |
-| [Drilling.Common/Station/CStationProcess.cs:6203–6203](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6203-L6203) | checkedPlan.ReadSelections | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L123-L123) | ReadSelections | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L276-L276) | source.ReadSelections | False |
+| [Drilling.Common/Station/CStationProcess.cs:6203–6203](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6203-L6203) | checkedPlan.ReadSelections | False |
 
 호출하는 대상과 해석 범위:
 
@@ -925,7 +925,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateForSave` · L115–129
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:115–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L115-L129)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:115–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L115-L129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -938,7 +938,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3092–3092](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3092-L3092) | new CZeroDefenceRecipePlan(new("DRAFT", "DRAFT", parameters, []), settings).ValidateForSave | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3092–3092](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3092-L3092) | new CZeroDefenceRecipePlan(new("DRAFT", "DRAFT", parameters, []), settings).ValidateForSave | False |
 
 호출하는 대상과 해석 범위:
 
@@ -981,7 +981,7 @@ flowchart TD
 
 ### PropertyDeclaration `StageStroke` · L136–136
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -996,7 +996,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StageStroke` · L136–136
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1011,7 +1011,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_StageStroke` · L136–136
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L136-L136)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1032,7 +1032,7 @@ flowchart TD
 
 ### PropertyDeclaration `StageAcceleration` · L137–137
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1047,7 +1047,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StageAcceleration` · L137–137
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1062,7 +1062,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_StageAcceleration` · L137–137
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L137-L137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1083,7 +1083,7 @@ flowchart TD
 
 ### PropertyDeclaration `SettleSeconds` · L138–138
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1098,7 +1098,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SettleSeconds` · L138–138
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1113,7 +1113,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_SettleSeconds` · L138–138
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L138-L138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1134,7 +1134,7 @@ flowchart TD
 
 ### PropertyDeclaration `ArrivalMarginSeconds` · L139–139
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1149,7 +1149,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ArrivalMarginSeconds` · L139–139
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1164,7 +1164,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ArrivalMarginSeconds` · L139–139
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L139-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1185,7 +1185,7 @@ flowchart TD
 
 ### PropertyDeclaration `FramesPerSecond` · L140–140
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1200,7 +1200,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FramesPerSecond` · L140–140
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1215,7 +1215,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_FramesPerSecond` · L140–140
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L140-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1236,7 +1236,7 @@ flowchart TD
 
 ### PropertyDeclaration `ExposureSeconds` · L141–141
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1251,7 +1251,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ExposureSeconds` · L141–141
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1266,7 +1266,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ExposureSeconds` · L141–141
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L141-L141)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1287,7 +1287,7 @@ flowchart TD
 
 ### PropertyDeclaration `MarginSeconds` · L159–159
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L159-L159)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L159-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1302,7 +1302,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsValid` · L164–164
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L164-L164)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:164–164](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L164-L164)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1317,7 +1317,7 @@ flowchart TD
 
 ### PropertyDeclaration `Message` · L165–165
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:165–165](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L165-L165)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:165–165](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L165-L165)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1346,7 +1346,7 @@ flowchart TD
 
 ### MethodDeclaration `Validate` · L171–232
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:171–232](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L171-L232)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:171–232](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L171-L232)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1367,13 +1367,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L123-L123) | CZeroDefenceTiming.Validate | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L277-L277) | CZeroDefenceTiming.Validate | False |
-| [Drilling.Common/Station/CStationProcess.cs:6204–6204](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L6204-L6204) | CZeroDefenceTiming.Validate | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4376–4376](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4376-L4376) | CZeroDefenceTiming.Validate | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4468–4468](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4468-L4468) | CZeroDefenceTiming.Validate | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4561–4561](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4561-L4561) | CZeroDefenceTiming.Validate | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4577–4577](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4577-L4577) | CZeroDefenceTiming.Validate | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L123-L123) | CZeroDefenceTiming.Validate | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L277-L277) | CZeroDefenceTiming.Validate | False |
+| [Drilling.Common/Station/CStationProcess.cs:6204–6204](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6204-L6204) | CZeroDefenceTiming.Validate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4376–4376](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4376-L4376) | CZeroDefenceTiming.Validate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4468–4468](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4468-L4468) | CZeroDefenceTiming.Validate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4561–4561](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4561-L4561) | CZeroDefenceTiming.Validate | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:4577–4577](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L4577-L4577) | CZeroDefenceTiming.Validate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1565,7 +1565,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Positive` · L180–180
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L180-L180)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L180-L180)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1584,11 +1584,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181) | Positive | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181) | Positive | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181) | Positive | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181) | Positive | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181) | Positive | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181) | Positive | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181) | Positive | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181) | Positive | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181) | Positive | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L181-L181) | Positive | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1606,7 +1606,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsNg` · L248–248
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L248-L248)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L248-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1621,7 +1621,7 @@ flowchart TD
 
 ### PropertyDeclaration `Plan` · L253–253
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1636,7 +1636,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Plan` · L253–253
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1651,7 +1651,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_Plan` · L253–253
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L253-L253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1672,7 +1672,7 @@ flowchart TD
 
 ### PropertyDeclaration `ResultSavedAt` · L254–254
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1687,7 +1687,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ResultSavedAt` · L254–254
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1702,7 +1702,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_ResultSavedAt` · L254–254
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L254-L254)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1723,7 +1723,7 @@ flowchart TD
 
 ### PropertyDeclaration `FollowUpRequested` · L255–255
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1738,7 +1738,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FollowUpRequested` · L255–255
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1753,7 +1753,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_FollowUpRequested` · L255–255
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L255-L255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1774,7 +1774,7 @@ flowchart TD
 
 ### PropertyDeclaration `FollowUpCompleted` · L256–256
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1789,7 +1789,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FollowUpCompleted` · L256–256
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1804,7 +1804,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_FollowUpCompleted` · L256–256
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:256–256](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L256-L256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1825,7 +1825,7 @@ flowchart TD
 
 ### PropertyDeclaration `Judge` · L257–257
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L257-L257)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L257-L257)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1854,7 +1854,7 @@ flowchart TD
 
 ### MethodDeclaration `Build` · L264–324
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:264–324](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L264-L324)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:264–324](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L264-L324)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1875,13 +1875,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4239–4239](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4239-L4239) | CZeroLineCyclePlan.Build | False |
+| [Drilling.Common/Station/CStationProcess.cs:4239–4239](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L4239-L4239) | CZeroLineCyclePlan.Build | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 266 | CRunOptionSettings.Read | resolved | Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>) · Drilling.Common/Managers/CSettingManager.cs:198 |
+| 266 | CRunOptionSettings.Read | resolved | Drilling.Common.Managers.ST_RUN_OPTION_SETTINGS Drilling.Common.Managers.CRunOptionSettings.Read(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>) · Drilling.Common/Managers/CSettingManager.cs:199 |
 | 269 | new CZeroDefenceRecipePlan | resolved | Drilling.Common.Review.CZeroDefenceRecipePlan.CZeroDefenceRecipePlan(Drilling.Common.Managers.ST_RECIPE_DEFINITION, System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:17 |
 | 270 | CInterLockManager.EvaluateHeadUse(source.Parameters).Any | resolved | bool System.Collections.Generic.IEnumerable<Drilling.Common.InterLock.ST_INTERLOCK_ITEM>.Any<Drilling.Common.InterLock.ST_INTERLOCK_ITEM>(System.Func<Drilling.Common.InterLock.ST_INTERLOCK_ITEM, bool>) |
 | 270 | CInterLockManager.EvaluateHeadUse | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.InterLock.ST_INTERLOCK_ITEM> Drilling.Common.InterLock.CInterLockManager.EvaluateHeadUse(System.Collections.Generic.IReadOnlyDictionary<string, string>?) · Drilling.Common/InterLock/CInterLockManager.cs:110 |
@@ -1898,14 +1898,14 @@ flowchart TD
 | 281 | source.Plan.Shots.ToDictionary | resolved | System.Collections.Generic.Dictionary<(int CellNo, int CellShotNo), Drilling.Common.Recipe.ST_HEAD_SHOT_POINT> System.Collections.Generic.IEnumerable<Drilling.Common.Recipe.ST_HEAD_SHOT_POINT>.ToDictionary<Drilling.Common.Recipe.ST_HEAD_SHOT_POINT, (int CellNo, int CellShotNo)>(System.Func<Drilling.Common.Recipe.ST_HEAD_SHOT_POINT, (int CellNo, int CellShotNo)>) |
 | 282 | points.Select((point, index) => { var shot = shots[(point.CellNo, point.ShotNo)]; return new ST_REVIEW_PLAN_POINT( index + 1, point.ShotKey, point.HeadNo, point.CellNo, point.ShotNo, shot.GroupCountX, shot.GroupCountY, true, shot.DesignX, shot.DesignY, point.ReviewX, point.StageY, 0, 0, EN_REVIEW_POINT_STATE.Ready, "WAIT" ) { BeamNo = point.BeamNo … | resolved | Drilling.Common.Review.ST_REVIEW_PLAN_POINT[] System.Collections.Generic.IEnumerable<Drilling.Common.Review.ST_REVIEW_PLAN_POINT>.ToArray<Drilling.Common.Review.ST_REVIEW_PLAN_POINT>() |
 | 282 | points.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Review.ST_REVIEW_PLAN_POINT> System.Collections.Generic.IEnumerable<Drilling.Common.Review.ST_ZERO_DEFENCE_POINT>.Select<Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, Drilling.Common.Review.ST_REVIEW_PLAN_POINT>(System.Func<Drilling.Common.Review.ST_ZERO_DEFENCE_POINT, int, Drilling.Common.Review.ST_REVIEW_PLAN_POINT>) |
-| 285 | new ST_REVIEW_PLAN_POINT | resolved | Drilling.Common.Review.ST_REVIEW_PLAN_POINT.ST_REVIEW_PLAN_POINT(int, string, int, int, int, int, int, bool, double, double, double, double, double, double, Drilling.Common.Review.EN_REVIEW_POINT_STATE, string) · Drilling.Common/Review/CReviewManager.cs:3983 |
-| 307 | new ST_REVIEW_PLAN | resolved | Drilling.Common.Review.ST_REVIEW_PLAN.ST_REVIEW_PLAN(string, int, double, double, Drilling.Common.Review.EN_VISION_FLIP_TYPE, System.DateTimeOffset, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_PLAN_POINT>) · Drilling.Common/Review/CReviewManager.cs:4081 |
+| 285 | new ST_REVIEW_PLAN_POINT | resolved | Drilling.Common.Review.ST_REVIEW_PLAN_POINT.ST_REVIEW_PLAN_POINT(int, string, int, int, int, int, int, bool, double, double, double, double, double, double, Drilling.Common.Review.EN_REVIEW_POINT_STATE, string) · Drilling.Common/Review/CReviewManager.cs:4046 |
+| 307 | new ST_REVIEW_PLAN | resolved | Drilling.Common.Review.ST_REVIEW_PLAN.ST_REVIEW_PLAN(string, int, double, double, Drilling.Common.Review.EN_VISION_FLIP_TYPE, System.DateTimeOffset, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_PLAN_POINT>) · Drilling.Common/Review/CReviewManager.cs:4144 |
 | 309 | targets.Select(p => p.CellNo).Distinct().Count | resolved | int System.Collections.Generic.IEnumerable<int>.Count<int>() |
 | 309 | targets.Select(p => p.CellNo).Distinct | resolved | System.Collections.Generic.IEnumerable<int> System.Collections.Generic.IEnumerable<int>.Distinct<int>() |
 | 309 | targets.Select | resolved | System.Collections.Generic.IEnumerable<int> System.Collections.Generic.IEnumerable<Drilling.Common.Review.ST_REVIEW_PLAN_POINT>.Select<Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int>(System.Func<Drilling.Common.Review.ST_REVIEW_PLAN_POINT, int>) |
 | 310 | Tolerance | resolved | double Tolerance(string) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:317 |
 | 311 | Tolerance | resolved | double Tolerance(string) · Drilling.Common/Review/CZeroDefenceRecipePlan.cs:317 |
-| 312 | CReviewManager.ParseVisionFlipType | resolved | Drilling.Common.Review.EN_VISION_FLIP_TYPE Drilling.Common.Review.CReviewManager.ParseVisionFlipType(string?, string?, string?) · Drilling.Common/Review/CReviewManager.cs:3664 |
+| 312 | CReviewManager.ParseVisionFlipType | resolved | Drilling.Common.Review.EN_VISION_FLIP_TYPE Drilling.Common.Review.CReviewManager.ParseVisionFlipType(string?, string?, string?) · Drilling.Common/Review/CReviewManager.cs:3725 |
 | 312 | source.Parameters.GetValueOrDefault | resolved | string? System.Collections.Generic.IReadOnlyDictionary<string, string>.GetValueOrDefault<string, string>(string) |
 | 312 | source.Parameters.GetValueOrDefault | resolved | string? System.Collections.Generic.IReadOnlyDictionary<string, string>.GetValueOrDefault<string, string>(string) |
 | 312 | source.Parameters.GetValueOrDefault | resolved | string? System.Collections.Generic.IReadOnlyDictionary<string, string>.GetValueOrDefault<string, string>(string) |
@@ -2003,7 +2003,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Tolerance` · L317–323
 
-[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:317–323](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L317-L323)
+[Drilling.Common/Review/CZeroDefenceRecipePlan.cs:317–323](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L317-L323)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2022,8 +2022,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L310-L310) | Tolerance | False |
-| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L311-L311) | Tolerance | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L310-L310) | Tolerance | False |
+| [Drilling.Common/Review/CZeroDefenceRecipePlan.cs:311–311](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CZeroDefenceRecipePlan.cs#L311-L311) | Tolerance | False |
 
 호출하는 대상과 해석 범위:
 

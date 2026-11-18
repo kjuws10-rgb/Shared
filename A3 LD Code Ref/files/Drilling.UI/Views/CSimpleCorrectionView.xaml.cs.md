@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 629ffaf17c54a3f3da2799dae7fb55b0777a5f289b473105d7146dc062b7da86 |
 | 파일 분류 | code |
 | 원본 크기/행 | 2,910 bytes / 60 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -40,7 +40,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SelectRepresentativeShot` · L13–18
 
-[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:13–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L13-L18)
+[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:13–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L13-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -87,7 +87,7 @@ flowchart TD
 
 ### FieldDeclaration `_feedbackTimer` · L19–19
 
-[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L19-L19)
+[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -118,7 +118,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L20–27
 
-[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:20–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L20-L27)
+[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:20–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L20-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -136,7 +136,7 @@ flowchart TD
 | 22 | InitializeComponent | unresolved | None |
 | 23 | ResizePreview | resolved | void Drilling.UI.Views.CSimpleCorrectionView.ResizePreview() · Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:54 |
 | 23 | UpdateFeedbackTimer | resolved | void Drilling.UI.Views.CSimpleCorrectionView.UpdateFeedbackTimer() · Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:29 |
-| 24 | .RefreshFeedback | resolved | void Drilling.UI.Menu.Menus.CSimpleCorrectionPanel.RefreshFeedback() · Drilling.UI/Menu/Menus/CMenuCorrection.cs:7570 |
+| 24 | .RefreshFeedback | resolved | void Drilling.UI.Menu.Menus.CSimpleCorrectionPanel.RefreshFeedback() · Drilling.UI/Menu/Menus/CMenuCorrection.cs:7599 |
 | 25 | UpdateFeedbackTimer | resolved | void Drilling.UI.Views.CSimpleCorrectionView.UpdateFeedbackTimer() · Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:29 |
 | 26 | _feedbackTimer.Stop | unresolved | None |
 
@@ -159,7 +159,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateFeedbackTimer` · L29–34
 
-[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:29–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L29-L34)
+[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:29–34](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L29-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -172,14 +172,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L23-L23) | UpdateFeedbackTimer | False |
-| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L25-L25) | UpdateFeedbackTimer | False |
+| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L23-L23) | UpdateFeedbackTimer | False |
+| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L25-L25) | UpdateFeedbackTimer | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 32 | panel.RefreshFeedback | resolved | void Drilling.UI.Menu.Menus.CSimpleCorrectionPanel.RefreshFeedback() · Drilling.UI/Menu/Menus/CMenuCorrection.cs:7570 |
+| 32 | panel.RefreshFeedback | resolved | void Drilling.UI.Menu.Menus.CSimpleCorrectionPanel.RefreshFeedback() · Drilling.UI/Menu/Menus/CMenuCorrection.cs:7599 |
 | 32 | _feedbackTimer.Start | unresolved | None |
 | 33 | _feedbackTimer.Stop | unresolved | None |
 
@@ -208,7 +208,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenCorrectionInput` · L36–47
 
-[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:36–47](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L36-L47)
+[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:36–47](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L36-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -282,7 +282,7 @@ flowchart TD
 
 ### MethodDeclaration `PreviewSizeChanged` · L49–49
 
-[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L49-L49)
+[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L49-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -316,7 +316,7 @@ flowchart TD
 
 ### MethodDeclaration `PreviewScrollChanged` · L50–53
 
-[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:50–53](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L50-L53)
+[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:50–53](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L50-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -360,7 +360,7 @@ flowchart TD
 
 ### MethodDeclaration `ResizePreview` · L54–59
 
-[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:54–59](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L54-L59)
+[Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:54–59](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L54-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -373,9 +373,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L23-L23) | ResizePreview | False |
-| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L49-L49) | ResizePreview | False |
-| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L52-L52) | ResizePreview | False |
+| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L23-L23) | ResizePreview | False |
+| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L49-L49) | ResizePreview | False |
+| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L52-L52) | ResizePreview | False |
 
 호출하는 대상과 해석 범위:
 

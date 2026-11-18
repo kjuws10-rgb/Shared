@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs
-Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
+Commit: 96e22cd027c84bf302b23f2949b98985d7f301bb
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
@@ -1156,7 +1156,7 @@ L000625 |                         context.DrawGeometry(CStatusBrush.Frozen(0x90,
 L000626 |                     } ⟦EOL⟧
 // 해설 L627: 함수·델리게이트 또는 객체 생성자를 호출합니다: context.DrawGeometry(null, boundaryPen, boundary)
 L000627 |                     context.DrawGeometry(null, boundaryPen, boundary); ⟦EOL⟧
-// 해설 L628: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPreviewDrawing.CreateCellLabel( cellNo, labelBounds, CanvasWidth, CanvasHeight, filledCellNos is null ? isSelectedCell : hasSelectedShots ) / 지역 변수를 선언합니다: var label = CCellPreviewDrawing.CreateCellLabel( cellNo, labelBounds, CanvasWidth, CanvasHeight, filledCellNos is null ? isSelectedCell : hasSelectedShots ); / 변수의 초기값을 지정합니다: label = CCellPreviewDrawing.CreateCellLabel( cellNo, labelBounds, CanvasWidth, CanvasHeight, filledCellNos is null ? isSelectedCell : hasSelectedShots )
+// 해설 L628: 함수·델리게이트 또는 객체 생성자를 호출합니다: CCellPreviewDrawing.CreateCellLabel( cellNo, labelBounds, CanvasWidth, CanvasHeight, isSelectedCell ) / 지역 변수를 선언합니다: var label = CCellPreviewDrawing.CreateCellLabel( cellNo, labelBounds, CanvasWidth, CanvasHeight, isSelectedCell ); / 변수의 초기값을 지정합니다: label = CCellPreviewDrawing.CreateCellLabel( cellNo, labelBounds, CanvasWidth, CanvasHeight, isSelectedCell )
 L000628 |                     var label = CCellPreviewDrawing.CreateCellLabel( ⟦EOL⟧
 L000629 |  ⟦EOL⟧
 // 해설 L630: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.Build(Drilling.Common.Managers.ST_RECIPE_DEFINITION, int, int, System.Collections.Generic.IReadOnlyList<Drilling.
@@ -1171,16 +1171,16 @@ L000635 |  ⟦EOL⟧
 // 해설 L636: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.Build(Drilling.Common.Managers.ST_RECIPE_DEFINITION, int, int, System.Collections.Generic.IReadOnlyList<Drilling.
 L000636 |                         CanvasHeight, ⟦EOL⟧
 L000637 |  ⟦EOL⟧
-// 해설 L638: 조건에 따라 결과식을 선택합니다: filledCellNos is null ? isSelectedCell : hasSelectedShots
-L000638 |                         filledCellNos is null ? isSelectedCell : hasSelectedShots ⟦EOL⟧
+// 해설 L638: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.Build(Drilling.Common.Managers.ST_RECIPE_DEFINITION, int, int, System.Collections.Generic.IReadOnlyList<Drilling.
+L000638 |                         isSelectedCell ⟦EOL⟧
 // 해설 L639: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_REVIEW_GLASS_PREVIEW Drilling.UI.Menu.Menus.CReviewGlassPreviewBuilder.Build(Drilling.Common.Managers.ST_RECIPE_DEFINITION, int, int, System.Collections.Generic.IReadOnlyList<Drilling.
 L000639 |                     ); ⟦EOL⟧
 // 해설 L640: 조건에 따라 분기합니다: if (label is not null)
 L000640 |                     if (label is not null) ⟦EOL⟧
 // 해설 L641: 구문 블록 경계입니다 · 소속 Build.
 L000641 |                     { ⟦EOL⟧
-// 해설 L642: 함수·델리게이트 또는 객체 생성자를 호출합니다: labels.Add(label)
-L000642 |                         labels.Add(label); ⟦EOL⟧
+// 해설 L642: 값을 대상에 대입합니다: HasSelectedShots = hasSelectedShots / 함수·델리게이트 또는 객체 생성자를 호출합니다: labels.Add(label with { HasSelectedShots = hasSelectedShots })
+L000642 |                         labels.Add(label with { HasSelectedShots = hasSelectedShots }); ⟦EOL⟧
 // 해설 L643: 구문 블록 경계입니다 · 소속 Build.
 L000643 |                     } ⟦EOL⟧
 // 해설 L644: 구문 블록 경계입니다 · 소속 Build.

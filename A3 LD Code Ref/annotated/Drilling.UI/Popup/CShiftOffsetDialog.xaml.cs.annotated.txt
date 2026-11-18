@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs
-Commit: dfa5920e6301d9ec4b0eab1452ae59521aafc986
+Commit: 96e22cd027c84bf302b23f2949b98985d7f301bb
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
@@ -184,364 +184,365 @@ L000094 |         var width = PreviewCanvas.ActualWidth > 0 ? PreviewCanvas.Actu
 L000095 |         var height = PreviewCanvas.ActualHeight > 0 ? PreviewCanvas.ActualHeight : 220.0; ⟦EOL⟧
 // 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource("PanelBorderBrush") / 지역 변수를 선언합니다: var gridBrush = (Brush)FindResource("PanelBorderBrush"); / 변수의 초기값을 지정합니다: gridBrush = (Brush)FindResource("PanelBorderBrush")
 L000096 |         var gridBrush = (Brush)FindResource("PanelBorderBrush"); ⟦EOL⟧
-// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource("ButtonSecondaryBrush") / 지역 변수를 선언합니다: var offFill = (Brush)FindResource("ButtonSecondaryBrush"); / 변수의 초기값을 지정합니다: offFill = (Brush)FindResource("ButtonSecondaryBrush")
-L000097 |         var offFill = (Brush)FindResource("ButtonSecondaryBrush"); ⟦EOL⟧
-// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource("TextSecondaryBrush") / 지역 변수를 선언합니다: var offStroke = (Brush)FindResource("TextSecondaryBrush"); / 변수의 초기값을 지정합니다: offStroke = (Brush)FindResource("TextSecondaryBrush")
-L000098 |         var offStroke = (Brush)FindResource("TextSecondaryBrush"); ⟦EOL⟧
-// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource("StatusReadyBrush") / 지역 변수를 선언합니다: var onStroke = (Brush)FindResource("StatusReadyBrush"); / 변수의 초기값을 지정합니다: onStroke = (Brush)FindResource("StatusReadyBrush")
-L000099 |         var onStroke = (Brush)FindResource("StatusReadyBrush"); ⟦EOL⟧
-// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource("TextSecondaryBrush") / 지역 변수를 선언합니다: var textBrush = (Brush)FindResource("TextSecondaryBrush"); / 변수의 초기값을 지정합니다: textBrush = (Brush)FindResource("TextSecondaryBrush")
-L000100 |         var textBrush = (Brush)FindResource("TextSecondaryBrush"); ⟦EOL⟧
-// 해설 L101: 지역 변수를 선언합니다: var originX = width * 0.27; / 변수의 초기값을 지정합니다: originX = width * 0.27
-L000101 |         var originX = width * 0.27; ⟦EOL⟧
-// 해설 L102: 지역 변수를 선언합니다: var originY = height * 0.62; / 변수의 초기값을 지정합니다: originY = height * 0.62
-L000102 |         var originY = height * 0.62; ⟦EOL⟧
-// 해설 L103: 지역 변수를 선언합니다: const double cellW = 46.0; / 변수의 초기값을 지정합니다: cellW = 46.0
-L000103 |         const double cellW = 46.0; ⟦EOL⟧
-// 해설 L104: 지역 변수를 선언합니다: const double cellH = 30.0; / 변수의 초기값을 지정합니다: cellH = 30.0
-L000104 |         const double cellH = 30.0; ⟦EOL⟧
-// 해설 L105: 지역 변수를 선언합니다: const double gapX = 12.0; / 변수의 초기값을 지정합니다: gapX = 12.0
-L000105 |         const double gapX = 12.0; ⟦EOL⟧
-// 해설 L106: 지역 변수를 선언합니다: const double gapY = 12.0; / 변수의 초기값을 지정합니다: gapY = 12.0
-L000106 |         const double gapY = 12.0; ⟦EOL⟧
-// 해설 L107: 초기화·조건·증감이 있는 반복입니다: for (var row = 0; row < 3; row++) / 변수의 초기값을 지정합니다: row = 0
-L000107 |         for (var row = 0; row < 3; row++) ⟦EOL⟧
-// 해설 L108: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000108 |         { ⟦EOL⟧
-// 해설 L109: 초기화·조건·증감이 있는 반복입니다: for (var col = 0; col < 4; col++) / 변수의 초기값을 지정합니다: col = 0
-L000109 |             for (var col = 0; col < 4; col++) ⟦EOL⟧
-// 해설 L110: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000110 |             { ⟦EOL⟧
-// 해설 L111: 지역 변수를 선언합니다: var x = originX + col * (cellW + gapX); / 변수의 초기값을 지정합니다: x = originX + col * (cellW + gapX)
-L000111 |                 var x = originX + col * (cellW + gapX); ⟦EOL⟧
-// 해설 L112: 지역 변수를 선언합니다: var y = originY - row * (cellH + gapY); / 변수의 초기값을 지정합니다: y = originY - row * (cellH + gapY)
-L000112 |                 var y = originY - row * (cellH + gapY); ⟦EOL⟧
-// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddRect(x, y, cellW, cellH, offFill, offStroke, 1.0)
-L000113 |                 AddRect(x, y, cellW, cellH, offFill, offStroke, 1.0); ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource("TextSecondaryBrush") / 지역 변수를 선언합니다: var beforeBrush = (Brush)FindResource("TextSecondaryBrush"); / 변수의 초기값을 지정합니다: beforeBrush = (Brush)FindResource("TextSecondaryBrush")
+L000097 |         var beforeBrush = (Brush)FindResource("TextSecondaryBrush"); ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource("StatusReadyBrush") / 지역 변수를 선언합니다: var afterBrush = (Brush)FindResource("StatusReadyBrush"); / 변수의 초기값을 지정합니다: afterBrush = (Brush)FindResource("StatusReadyBrush")
+L000098 |         var afterBrush = (Brush)FindResource("StatusReadyBrush"); ⟦EOL⟧
+// 해설 L99: 함수·델리게이트 또는 객체 생성자를 호출합니다: FindResource("TextSecondaryBrush") / 지역 변수를 선언합니다: var textBrush = (Brush)FindResource("TextSecondaryBrush"); / 변수의 초기값을 지정합니다: textBrush = (Brush)FindResource("TextSecondaryBrush")
+L000099 |         var textBrush = (Brush)FindResource("TextSecondaryBrush"); ⟦EOL⟧
+// 해설 L100: 지역 변수를 선언합니다: var originX = width * 0.46; / 변수의 초기값을 지정합니다: originX = width * 0.46
+L000100 |         var originX = width * 0.46; ⟦EOL⟧
+// 해설 L101: 지역 변수를 선언합니다: var originY = height * 0.55; / 변수의 초기값을 지정합니다: originY = height * 0.55
+L000101 |         var originY = height * 0.55; ⟦EOL⟧
+L000102 |  ⟦EOL⟧
+// 해설 L103: 조건에 따라 분기합니다: if (isValid)
+L000103 |         if (isValid) ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 DrawPreview.
+L000104 |         { ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(shiftX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(shiftY) / 지역 변수를 선언합니다: var hasShift = Math.Abs(shiftX) >= 0.000001 || Math.Abs(shiftY) >= 0.000001; / 변수의 초기값을 지정합니다: hasShift = Math.Abs(shiftX) >= 0.000001 || Math.Abs(shiftY) >= 0.000001
+L000105 |             var hasShift = Math.Abs(shiftX) >= 0.000001 || Math.Abs(shiftY) >= 0.000001; ⟦EOL⟧
+// 해설 L106: 지역 변수를 선언합니다: var dx = 0.0; / 변수의 초기값을 지정합니다: dx = 0.0
+L000106 |             var dx = 0.0; ⟦EOL⟧
+// 해설 L107: 지역 변수를 선언합니다: var dy = 0.0; / 변수의 초기값을 지정합니다: dy = 0.0
+L000107 |             var dy = 0.0; ⟦EOL⟧
+// 해설 L108: 조건에 따라 분기합니다: if (hasShift)
+L000108 |             if (hasShift) ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 DrawPreview.
+L000109 |             { ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sqrt((shiftX * shiftX) + (shiftY * shiftY)) / 지역 변수를 선언합니다: var magnitude = Math.Sqrt((shiftX * shiftX) + (shiftY * shiftY)); / 변수의 초기값을 지정합니다: magnitude = Math.Sqrt((shiftX * shiftX) + (shiftY * shiftY))
+L000110 |                 var magnitude = Math.Sqrt((shiftX * shiftX) + (shiftY * shiftY)); ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(magnitude * 45.0, 24.0, 82.0) / 지역 변수를 선언합니다: var displayLength = Math.Clamp(magnitude * 45.0, 24.0, 82.0); / 변수의 초기값을 지정합니다: displayLength = Math.Clamp(magnitude * 45.0, 24.0, 82.0)
+L000111 |                 var displayLength = Math.Clamp(magnitude * 45.0, 24.0, 82.0); ⟦EOL⟧
+// 해설 L112: 값을 대상에 대입합니다: dx = shiftX / magnitude * displayLength
+L000112 |                 dx = shiftX / magnitude * displayLength; ⟦EOL⟧
+// 해설 L113: 값을 대상에 대입합니다: dy = -shiftY / magnitude * displayLength
+L000113 |                 dy = -shiftY / magnitude * displayLength; ⟦EOL⟧
 // 해설 L114: 구문 블록 경계입니다 · 소속 DrawPreview.
 L000114 |             } ⟦EOL⟧
-// 해설 L115: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000115 |         } ⟦EOL⟧
-L000116 |  ⟦EOL⟧
-// 해설 L117: 조건에 따라 분기합니다: if (isValid)
-L000117 |         if (isValid) ⟦EOL⟧
+L000115 |  ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddPoint(originX, originY, 11.0, beforeBrush, Brushes.Transparent, 2.0)
+L000116 |             AddPoint(originX, originY, 11.0, beforeBrush, Brushes.Transparent, 2.0); ⟦EOL⟧
+// 해설 L117: 조건에 따라 분기합니다: if (hasShift)
+L000117 |             if (hasShift) ⟦EOL⟧
 // 해설 L118: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000118 |         { ⟦EOL⟧
-// 해설 L119: 지역 변수를 선언합니다: var vectorScale = 5.5; / 변수의 초기값을 지정합니다: vectorScale = 5.5
-L000119 |             var vectorScale = 5.5; ⟦EOL⟧
-// 해설 L120: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(shiftX * vectorScale, -75.0, 75.0) / 지역 변수를 선언합니다: var dx = Math.Clamp(shiftX * vectorScale, -75.0, 75.0); / 변수의 초기값을 지정합니다: dx = Math.Clamp(shiftX * vectorScale, -75.0, 75.0)
-L000120 |             var dx = Math.Clamp(shiftX * vectorScale, -75.0, 75.0); ⟦EOL⟧
-// 해설 L121: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(-shiftY * vectorScale, -75.0, 75.0) / 지역 변수를 선언합니다: var dy = Math.Clamp(-shiftY * vectorScale, -75.0, 75.0); / 변수의 초기값을 지정합니다: dy = Math.Clamp(-shiftY * vectorScale, -75.0, 75.0)
-L000121 |             var dy = Math.Clamp(-shiftY * vectorScale, -75.0, 75.0); ⟦EOL⟧
-// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(shiftX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(shiftY) / 지역 변수를 선언합니다: var hasShift = Math.Abs(shiftX) >= 0.000001 || Math.Abs(shiftY) >= 0.000001; / 변수의 초기값을 지정합니다: hasShift = Math.Abs(shiftX) >= 0.000001 || Math.Abs(shiftY) >= 0.000001
-L000122 |             var hasShift = Math.Abs(shiftX) >= 0.000001 || Math.Abs(shiftY) >= 0.000001; ⟦EOL⟧
-// 해설 L123: 초기화·조건·증감이 있는 반복입니다: for (var row = 0; row < 3; row++) / 변수의 초기값을 지정합니다: row = 0
-L000123 |             for (var row = 0; row < 3; row++) ⟦EOL⟧
-// 해설 L124: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000124 |             { ⟦EOL⟧
-// 해설 L125: 초기화·조건·증감이 있는 반복입니다: for (var col = 0; col < 4; col++) / 변수의 초기값을 지정합니다: col = 0
-L000125 |                 for (var col = 0; col < 4; col++) ⟦EOL⟧
-// 해설 L126: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000126 |                 { ⟦EOL⟧
-// 해설 L127: 지역 변수를 선언합니다: var x = originX + col * (cellW + gapX) + dx; / 변수의 초기값을 지정합니다: x = originX + col * (cellW + gapX) + dx
-L000127 |                     var x = originX + col * (cellW + gapX) + dx; ⟦EOL⟧
-// 해설 L128: 지역 변수를 선언합니다: var y = originY - row * (cellH + gapY) + dy; / 변수의 초기값을 지정합니다: y = originY - row * (cellH + gapY) + dy
-L000128 |                     var y = originY - row * (cellH + gapY) + dy; ⟦EOL⟧
-// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddRect(x, y, cellW, cellH, Brushes.Transparent, onStroke, 2.0)
-L000129 |                     AddRect(x, y, cellW, cellH, Brushes.Transparent, onStroke, 2.0); ⟦EOL⟧
+L000118 |             { ⟦EOL⟧
+// 해설 L119: 지역 변수를 선언합니다: var afterX = originX + dx; / 변수의 초기값을 지정합니다: afterX = originX + dx
+L000119 |                 var afterX = originX + dx; ⟦EOL⟧
+// 해설 L120: 지역 변수를 선언합니다: var afterY = originY + dy; / 변수의 초기값을 지정합니다: afterY = originY + dy
+L000120 |                 var afterY = originY + dy; ⟦EOL⟧
+// 해설 L121: 조건에 따라 결과식을 선택합니다: dx >= 0.0 ? originX - 66.0 : originX + 16.0 / 지역 변수를 선언합니다: var beforeLabelX = dx >= 0.0 ? originX - 66.0 : originX + 16.0; / 변수의 초기값을 지정합니다: beforeLabelX = dx >= 0.0 ? originX - 66.0 : originX + 16.0
+L000121 |                 var beforeLabelX = dx >= 0.0 ? originX - 66.0 : originX + 16.0; ⟦EOL⟧
+// 해설 L122: 조건에 따라 결과식을 선택합니다: dx >= 0.0 ? afterX + 14.0 : afterX - 62.0 / 지역 변수를 선언합니다: var afterLabelX = dx >= 0.0 ? afterX + 14.0 : afterX - 62.0; / 변수의 초기값을 지정합니다: afterLabelX = dx >= 0.0 ? afterX + 14.0 : afterX - 62.0
+L000122 |                 var afterLabelX = dx >= 0.0 ? afterX + 14.0 : afterX - 62.0; ⟦EOL⟧
+// 해설 L123: 조건에 따라 결과식을 선택합니다: dy >= 0.0 ? originY - 28.0 : originY + 12.0 / 지역 변수를 선언합니다: var beforeLabelY = dy >= 0.0 ? originY - 28.0 : originY + 12.0; / 변수의 초기값을 지정합니다: beforeLabelY = dy >= 0.0 ? originY - 28.0 : originY + 12.0
+L000123 |                 var beforeLabelY = dy >= 0.0 ? originY - 28.0 : originY + 12.0; ⟦EOL⟧
+// 해설 L124: 조건에 따라 결과식을 선택합니다: dy >= 0.0 ? afterY + 12.0 : afterY - 28.0 / 지역 변수를 선언합니다: var afterLabelY = dy >= 0.0 ? afterY + 12.0 : afterY - 28.0; / 변수의 초기값을 지정합니다: afterLabelY = dy >= 0.0 ? afterY + 12.0 : afterY - 28.0
+L000124 |                 var afterLabelY = dy >= 0.0 ? afterY + 12.0 : afterY - 28.0; ⟦EOL⟧
+L000125 |  ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddArrow(originX, originY, afterX, afterY, afterBrush)
+L000126 |                 AddArrow(originX, originY, afterX, afterY, afterBrush); ⟦EOL⟧
+// 해설 L127: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddPoint(afterX, afterY, 12.0, afterBrush, afterBrush, 2.0)
+L000127 |                 AddPoint(afterX, afterY, 12.0, afterBrush, afterBrush, 2.0); ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddText("BEFORE", Math.Clamp(beforeLabelX, 8.0, width - 64.0), Math.Clamp(beforeLabelY, 8.0, height - 32.0), beforeBrush) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(beforeLabelX, 8.0, width - 64.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(beforeLabelY, 8.0, height - 32.0)
+L000128 |                 AddText("BEFORE", Math.Clamp(beforeLabelX, 8.0, width - 64.0), Math.Clamp(beforeLabelY, 8.0, height - 32.0), beforeBrush); ⟦EOL⟧
+// 해설 L129: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddText("AFTER", Math.Clamp(afterLabelX, 8.0, width - 58.0), Math.Clamp(afterLabelY, 8.0, height - 32.0), afterBrush) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(afterLabelX, 8.0, width - 58.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(afterLabelY, 8.0, height - 32.0)
+L000129 |                 AddText("AFTER", Math.Clamp(afterLabelX, 8.0, width - 58.0), Math.Clamp(afterLabelY, 8.0, height - 32.0), afterBrush); ⟦EOL⟧
 // 해설 L130: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000130 |                 } ⟦EOL⟧
-// 해설 L131: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000131 |             } ⟦EOL⟧
-L000132 |  ⟦EOL⟧
-// 해설 L133: 조건에 따라 분기합니다: if (hasShift)
-L000133 |             if (hasShift) ⟦EOL⟧
-// 해설 L134: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000134 |             { ⟦EOL⟧
-// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddArrow(originX + 28.0, originY - 94.0, originX + 28.0 + dx, originY - 94.0 + dy, onStroke)
-L000135 |                 AddArrow(originX + 28.0, originY - 94.0, originX + 28.0 + dx, originY - 94.0 + dy, onStroke); ⟦EOL⟧
+L000130 |             } ⟦EOL⟧
+// 해설 L131: 앞 조건이 거짓인 경로입니다: else
+L000131 |             else ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 DrawPreview.
+L000132 |             { ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddPoint(originX, originY, 6.0, afterBrush, afterBrush, 1.0)
+L000133 |                 AddPoint(originX, originY, 6.0, afterBrush, afterBrush, 1.0); ⟦EOL⟧
+// 해설 L134: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddText("BEFORE", originX - 66.0, originY + 10.0, beforeBrush)
+L000134 |                 AddText("BEFORE", originX - 66.0, originY + 10.0, beforeBrush); ⟦EOL⟧
+// 해설 L135: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddText("AFTER", originX + 14.0, originY - 26.0, afterBrush)
+L000135 |                 AddText("AFTER", originX + 14.0, originY - 26.0, afterBrush); ⟦EOL⟧
 // 해설 L136: 구문 블록 경계입니다 · 소속 DrawPreview.
 L000136 |             } ⟦EOL⟧
-// 해설 L137: 앞 조건이 거짓인 경로입니다: else
-L000137 |             else ⟦EOL⟧
-// 해설 L138: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000138 |             { ⟦EOL⟧
-// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddText("NO SHIFT", originX + 12.0, originY - 106.0, onStroke)
-L000139 |                 AddText("NO SHIFT", originX + 12.0, originY - 106.0, onStroke); ⟦EOL⟧
-// 해설 L140: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000140 |             } ⟦EOL⟧
-// 해설 L141: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000141 |         } ⟦EOL⟧
-L000142 |  ⟦EOL⟧
-// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(24, height - 26, width - 24, height - 26, gridBrush)
-L000143 |         AddLine(24, height - 26, width - 24, height - 26, gridBrush); ⟦EOL⟧
-// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(24, height - 26, 24, 24, gridBrush)
-L000144 |         AddLine(24, height - 26, 24, 24, gridBrush); ⟦EOL⟧
-// 해설 L145: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddText("Design X", width - 78, height - 22, textBrush)
-L000145 |         AddText("Design X", width - 78, height - 22, textBrush); ⟦EOL⟧
-// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddText("Design Y", 8, 28, textBrush)
-L000146 |         AddText("Design Y", 8, 28, textBrush); ⟦EOL⟧
-// 해설 L147: 값을 대상에 대입합니다: PreviewCaptionText.Text = isValid ? $"Glass 기준 이동: X {Format(shiftX)} mm / Y {Format(shiftY)} mm" : "입력값을 확인하세요." / 함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftY) / 조건에 따라 결과식을 선택합니다: isValid ? $"Glass 기준 이동: X {Format(shiftX)} mm / Y {Format(shiftY)} mm" : "입력값을 확인하세요."
-L000147 |         PreviewCaptionText.Text = isValid ? $"Glass 기준 이동: X {Format(shiftX)} mm / Y {Format(shiftY)} mm" : "입력값을 확인하세요."; ⟦EOL⟧
-// 해설 L148: 구문 블록 경계입니다 · 소속 DrawPreview.
-L000148 |     } ⟦EOL⟧
-L000149 |  ⟦EOL⟧
-// 해설 L150: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.AddRect(double, double, double, double, Brush, Brush, double)
-L000150 |     private void AddRect(double x, double y, double width, double height, Brush fill, Brush stroke, double strokeThickness) ⟦EOL⟧
-// 해설 L151: 구문 블록 경계입니다 · 소속 AddRect.
-L000151 |     { ⟦EOL⟧
-// 해설 L152: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rectangle { Width = width, Height = height, Fill = fill, Stroke = stroke, StrokeThickness = strokeThickness } / 지역 변수를 선언합니다: var rect = new Rectangle { Width = width, Height = height, Fill = fill, Stroke = stroke, StrokeThickness = strokeThickness }; / 변수의 초기값을 지정합니다: rect = new Rectangle { Width = width, Height = height, Fill = fill, Stroke = stroke, StrokeThickness = strokeThickness }
-L000152 |         var rect = new Rectangle ⟦EOL⟧
-// 해설 L153: 구문 블록 경계입니다 · 소속 AddRect.
-L000153 |         { ⟦EOL⟧
-// 해설 L154: 값을 대상에 대입합니다: Width = width
-L000154 |             Width = width, ⟦EOL⟧
-// 해설 L155: 값을 대상에 대입합니다: Height = height
-L000155 |             Height = height, ⟦EOL⟧
-// 해설 L156: 값을 대상에 대입합니다: Fill = fill
-L000156 |             Fill = fill, ⟦EOL⟧
-// 해설 L157: 값을 대상에 대입합니다: Stroke = stroke
-L000157 |             Stroke = stroke, ⟦EOL⟧
-// 해설 L158: 값을 대상에 대입합니다: StrokeThickness = strokeThickness
-L000158 |             StrokeThickness = strokeThickness ⟦EOL⟧
-// 해설 L159: 구문 블록 경계입니다 · 소속 AddRect.
-L000159 |         }; ⟦EOL⟧
-// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(rect, x)
-L000160 |         Canvas.SetLeft(rect, x); ⟦EOL⟧
-// 해설 L161: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(rect, y)
-L000161 |         Canvas.SetTop(rect, y); ⟦EOL⟧
-// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: PreviewCanvas.Children.Add(rect)
-L000162 |         PreviewCanvas.Children.Add(rect); ⟦EOL⟧
-// 해설 L163: 구문 블록 경계입니다 · 소속 AddRect.
-L000163 |     } ⟦EOL⟧
-L000164 |  ⟦EOL⟧
-// 해설 L165: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.AddLine(double, double, double, double, Brush)
-L000165 |     private void AddLine(double x1, double y1, double x2, double y2, Brush stroke) ⟦EOL⟧
-// 해설 L166: 구문 블록 경계입니다 · 소속 AddLine.
-L000166 |     { ⟦EOL⟧
-// 해설 L167: 값을 대상에 대입합니다: X1 = x1 / 값을 대상에 대입합니다: Y1 = y1 / 값을 대상에 대입합니다: X2 = x2 / 값을 대상에 대입합니다: Y2 = y2 / 값을 대상에 대입합니다: Stroke = stroke / 값을 대상에 대입합니다: StrokeThickness = 1.0 / 함수·델리게이트 또는 객체 생성자를 호출합니다: PreviewCanvas.Children.Add(new Line { X1 = x1, Y1 = y1, X2 = x2, Y2 = y2, Stroke = stroke, StrokeThickness = 1.0 }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Line { X1 = x1, Y1 = y1, X2 = x2, Y2 = y2, Stroke = stroke, StrokeThickness = 1.0 }
-L000167 |         PreviewCanvas.Children.Add(new Line { X1 = x1, Y1 = y1, X2 = x2, Y2 = y2, Stroke = stroke, StrokeThickness = 1.0 }); ⟦EOL⟧
-// 해설 L168: 구문 블록 경계입니다 · 소속 AddLine.
-L000168 |     } ⟦EOL⟧
-L000169 |  ⟦EOL⟧
-// 해설 L170: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.AddArrow(double, double, double, double, Brush)
-L000170 |     private void AddArrow(double x1, double y1, double x2, double y2, Brush stroke) ⟦EOL⟧
-// 해설 L171: 구문 블록 경계입니다 · 소속 AddArrow.
-L000171 |     { ⟦EOL⟧
-// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(x1, y1, x2, y2, stroke)
-L000172 |         AddLine(x1, y1, x2, y2, stroke); ⟦EOL⟧
-// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Atan2(y2 - y1, x2 - x1) / 지역 변수를 선언합니다: var angle = Math.Atan2(y2 - y1, x2 - x1); / 변수의 초기값을 지정합니다: angle = Math.Atan2(y2 - y1, x2 - x1)
-L000173 |         var angle = Math.Atan2(y2 - y1, x2 - x1); ⟦EOL⟧
-// 해설 L174: 지역 변수를 선언합니다: const double length = 9.0; / 변수의 초기값을 지정합니다: length = 9.0
-L000174 |         const double length = 9.0; ⟦EOL⟧
-// 해설 L175: 지역 변수를 선언합니다: var left = angle + Math.PI * 0.82; / 변수의 초기값을 지정합니다: left = angle + Math.PI * 0.82
-L000175 |         var left = angle + Math.PI * 0.82; ⟦EOL⟧
-// 해설 L176: 지역 변수를 선언합니다: var right = angle - Math.PI * 0.82; / 변수의 초기값을 지정합니다: right = angle - Math.PI * 0.82
-L000176 |         var right = angle - Math.PI * 0.82; ⟦EOL⟧
-// 해설 L177: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(x2, y2, x2 + Math.Cos(left) * length, y2 + Math.Sin(left) * length, stroke) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(left) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(left)
-L000177 |         AddLine(x2, y2, x2 + Math.Cos(left) * length, y2 + Math.Sin(left) * length, stroke); ⟦EOL⟧
-// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(x2, y2, x2 + Math.Cos(right) * length, y2 + Math.Sin(right) * length, stroke) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(right) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(right)
-L000178 |         AddLine(x2, y2, x2 + Math.Cos(right) * length, y2 + Math.Sin(right) * length, stroke); ⟦EOL⟧
-// 해설 L179: 구문 블록 경계입니다 · 소속 AddArrow.
-L000179 |     } ⟦EOL⟧
-L000180 |  ⟦EOL⟧
-// 해설 L181: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.AddText(string, double, double, Brush)
-L000181 |     private void AddText(string text, double x, double y, Brush foreground) ⟦EOL⟧
-// 해설 L182: 구문 블록 경계입니다 · 소속 AddText.
-L000182 |     { ⟦EOL⟧
-// 해설 L183: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = text, Foreground = foreground, FontSize = 12.0, FontWeight = FontWeights.SemiBold } / 지역 변수를 선언합니다: var label = new TextBlock { Text = text, Foreground = foreground, FontSize = 12.0, FontWeight = FontWeights.SemiBold }; / 변수의 초기값을 지정합니다: label = new TextBlock { Text = text, Foreground = foreground, FontSize = 12.0, FontWeight = FontWeights.SemiBold }
-L000183 |         var label = new TextBlock ⟦EOL⟧
-// 해설 L184: 구문 블록 경계입니다 · 소속 AddText.
-L000184 |         { ⟦EOL⟧
-// 해설 L185: 값을 대상에 대입합니다: Text = text
-L000185 |             Text = text, ⟦EOL⟧
-// 해설 L186: 값을 대상에 대입합니다: Foreground = foreground
-L000186 |             Foreground = foreground, ⟦EOL⟧
-// 해설 L187: 값을 대상에 대입합니다: FontSize = 12.0
-L000187 |             FontSize = 12.0, ⟦EOL⟧
-// 해설 L188: 값을 대상에 대입합니다: FontWeight = FontWeights.SemiBold
-L000188 |             FontWeight = FontWeights.SemiBold ⟦EOL⟧
-// 해설 L189: 구문 블록 경계입니다 · 소속 AddText.
-L000189 |         }; ⟦EOL⟧
-// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(label, x)
-L000190 |         Canvas.SetLeft(label, x); ⟦EOL⟧
-// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(label, y)
-L000191 |         Canvas.SetTop(label, y); ⟦EOL⟧
-// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: PreviewCanvas.Children.Add(label)
-L000192 |         PreviewCanvas.Children.Add(label); ⟦EOL⟧
-// 해설 L193: 구문 블록 경계입니다 · 소속 AddText.
-L000193 |     } ⟦EOL⟧
-L000194 |  ⟦EOL⟧
-// 해설 L195: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.NumericTextBoxPreviewTextInput(object, TextCompositionEventArgs)
-L000195 |     private void NumericTextBoxPreviewTextInput(object sender, TextCompositionEventArgs e) ⟦EOL⟧
-// 해설 L196: 구문 블록 경계입니다 · 소속 NumericTextBoxPreviewTextInput.
-L000196 |     { ⟦EOL⟧
-// 해설 L197: 조건에 따라 분기합니다: if (sender is not TextBox textBox)
-L000197 |         if (sender is not TextBox textBox) ⟦EOL⟧
-// 해설 L198: 구문 블록 경계입니다 · 소속 NumericTextBoxPreviewTextInput.
-L000198 |         { ⟦EOL⟧
-// 해설 L199: 호출자에게 값 또는 제어를 반환합니다: return;
-L000199 |             return; ⟦EOL⟧
-// 해설 L200: 구문 블록 경계입니다 · 소속 NumericTextBoxPreviewTextInput.
-L000200 |         } ⟦EOL⟧
-L000201 |  ⟦EOL⟧
-// 해설 L202: 값을 대상에 대입합니다: e.Handled = !IsValidNumericInput(CreateProspectiveValue(textBox, e.Text)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsValidNumericInput(CreateProspectiveValue(textBox, e.Text)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProspectiveValue(textBox, e.Text)
-L000202 |         e.Handled = !IsValidNumericInput(CreateProspectiveValue(textBox, e.Text)); ⟦EOL⟧
-// 해설 L203: 구문 블록 경계입니다 · 소속 NumericTextBoxPreviewTextInput.
-L000203 |     } ⟦EOL⟧
-L000204 |  ⟦EOL⟧
-// 해설 L205: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.NumericTextBoxPasting(object, DataObjectPastingEventArgs)
-L000205 |     private void NumericTextBoxPasting(object sender, DataObjectPastingEventArgs e) ⟦EOL⟧
-// 해설 L206: 구문 블록 경계입니다 · 소속 NumericTextBoxPasting.
-L000206 |     { ⟦EOL⟧
-// 해설 L207: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.DataObject.GetDataPresent(DataFormats.UnicodeText) / 함수·델리게이트 또는 객체 생성자를 호출합니다: e.DataObject.GetData(DataFormats.UnicodeText) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsValidNumericInput(CreateProspectiveValue(textBox, pastedText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProspectiveValue(textBox, pastedText) / 조건에 따라 분기합니다: if (sender is not TextBox textBox || !e.DataObject.GetDataPresent(DataFormats.UnicodeText) || e.DataObject.GetData(DataFormats.UnicodeText)is not string pastedText || !IsValidNumericInput(CreateProspect
-L000207 |         if (sender is not TextBox textBox || !e.DataObject.GetDataPresent(DataFormats.UnicodeText) || e.DataObject.GetData(DataFormats.UnicodeText)is not string pastedText || !IsValidNumericInput(CreateProspectiveValue(textBox, pastedText))) ⟦EOL⟧
-// 해설 L208: 구문 블록 경계입니다 · 소속 NumericTextBoxPasting.
-L000208 |         { ⟦EOL⟧
-// 해설 L209: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.CancelCommand()
-L000209 |             e.CancelCommand(); ⟦EOL⟧
-// 해설 L210: 구문 블록 경계입니다 · 소속 NumericTextBoxPasting.
-L000210 |         } ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 DrawPreview.
+L000137 |         } ⟦EOL⟧
+L000138 |  ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(24, height - 26, width - 24, height - 26, gridBrush)
+L000139 |         AddLine(24, height - 26, width - 24, height - 26, gridBrush); ⟦EOL⟧
+// 해설 L140: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(24, height - 26, 24, 24, gridBrush)
+L000140 |         AddLine(24, height - 26, 24, 24, gridBrush); ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddText("Design X", width - 78, height - 22, textBrush)
+L000141 |         AddText("Design X", width - 78, height - 22, textBrush); ⟦EOL⟧
+// 해설 L142: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddText("Design Y", 8, 28, textBrush)
+L000142 |         AddText("Design Y", 8, 28, textBrush); ⟦EOL⟧
+// 해설 L143: 값을 대상에 대입합니다: PreviewCaptionText.Text = isValid ? $"Glass 기준 이동: X {Format(shiftX)} mm / Y {Format(shiftY)} mm" : "입력값을 확인하세요." / 함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftY) / 조건에 따라 결과식을 선택합니다: isValid ? $"Glass 기준 이동: X {Format(shiftX)} mm / Y {Format(shiftY)} mm" : "입력값을 확인하세요."
+L000143 |         PreviewCaptionText.Text = isValid ? $"Glass 기준 이동: X {Format(shiftX)} mm / Y {Format(shiftY)} mm" : "입력값을 확인하세요."; ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 DrawPreview.
+L000144 |     } ⟦EOL⟧
+L000145 |  ⟦EOL⟧
+// 해설 L146: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.AddPoint(double, double, double, Brush, Brush, double)
+L000146 |     private void AddPoint(double centerX, double centerY, double diameter, Brush fill, Brush stroke, double strokeThickness) ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 AddPoint.
+L000147 |     { ⟦EOL⟧
+// 해설 L148: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Ellipse { Width = diameter, Height = diameter, Fill = fill, Stroke = stroke, StrokeThickness = strokeThickness } / 지역 변수를 선언합니다: var point = new Ellipse { Width = diameter, Height = diameter, Fill = fill, Stroke = stroke, StrokeThickness = strokeThickness }; / 변수의 초기값을 지정합니다: point = new Ellipse { Width = diameter, Height = diameter, Fill = fill, Stroke = stroke, StrokeThickness = strokeThickness }
+L000148 |         var point = new Ellipse ⟦EOL⟧
+// 해설 L149: 구문 블록 경계입니다 · 소속 AddPoint.
+L000149 |         { ⟦EOL⟧
+// 해설 L150: 값을 대상에 대입합니다: Width = diameter
+L000150 |             Width = diameter, ⟦EOL⟧
+// 해설 L151: 값을 대상에 대입합니다: Height = diameter
+L000151 |             Height = diameter, ⟦EOL⟧
+// 해설 L152: 값을 대상에 대입합니다: Fill = fill
+L000152 |             Fill = fill, ⟦EOL⟧
+// 해설 L153: 값을 대상에 대입합니다: Stroke = stroke
+L000153 |             Stroke = stroke, ⟦EOL⟧
+// 해설 L154: 값을 대상에 대입합니다: StrokeThickness = strokeThickness
+L000154 |             StrokeThickness = strokeThickness ⟦EOL⟧
+// 해설 L155: 구문 블록 경계입니다 · 소속 AddPoint.
+L000155 |         }; ⟦EOL⟧
+// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(point, centerX - (diameter / 2.0))
+L000156 |         Canvas.SetLeft(point, centerX - (diameter / 2.0)); ⟦EOL⟧
+// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(point, centerY - (diameter / 2.0))
+L000157 |         Canvas.SetTop(point, centerY - (diameter / 2.0)); ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: PreviewCanvas.Children.Add(point)
+L000158 |         PreviewCanvas.Children.Add(point); ⟦EOL⟧
+// 해설 L159: 구문 블록 경계입니다 · 소속 AddPoint.
+L000159 |     } ⟦EOL⟧
+L000160 |  ⟦EOL⟧
+// 해설 L161: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.AddLine(double, double, double, double, Brush, double)
+L000161 |     private void AddLine(double x1, double y1, double x2, double y2, Brush stroke, double thickness = 1.0) ⟦EOL⟧
+// 해설 L162: 구문 블록 경계입니다 · 소속 AddLine.
+L000162 |     { ⟦EOL⟧
+// 해설 L163: 값을 대상에 대입합니다: X1 = x1 / 값을 대상에 대입합니다: Y1 = y1 / 값을 대상에 대입합니다: X2 = x2 / 값을 대상에 대입합니다: Y2 = y2 / 값을 대상에 대입합니다: Stroke = stroke / 값을 대상에 대입합니다: StrokeThickness = thickness / 함수·델리게이트 또는 객체 생성자를 호출합니다: PreviewCanvas.Children.Add(new Line { X1 = x1, Y1 = y1, X2 = x2, Y2 = y2, Stroke = stroke, StrokeThickness = thickness }) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Line { X1 = x1, Y1 = y1, X2 = x2, Y2 = y2, Stroke = stroke, StrokeThickness = thickness }
+L000163 |         PreviewCanvas.Children.Add(new Line { X1 = x1, Y1 = y1, X2 = x2, Y2 = y2, Stroke = stroke, StrokeThickness = thickness }); ⟦EOL⟧
+// 해설 L164: 구문 블록 경계입니다 · 소속 AddLine.
+L000164 |     } ⟦EOL⟧
+L000165 |  ⟦EOL⟧
+// 해설 L166: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.AddArrow(double, double, double, double, Brush)
+L000166 |     private void AddArrow(double x1, double y1, double x2, double y2, Brush stroke) ⟦EOL⟧
+// 해설 L167: 구문 블록 경계입니다 · 소속 AddArrow.
+L000167 |     { ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Atan2(y2 - y1, x2 - x1) / 지역 변수를 선언합니다: var angle = Math.Atan2(y2 - y1, x2 - x1); / 변수의 초기값을 지정합니다: angle = Math.Atan2(y2 - y1, x2 - x1)
+L000168 |         var angle = Math.Atan2(y2 - y1, x2 - x1); ⟦EOL⟧
+// 해설 L169: 지역 변수를 선언합니다: const double pointRadius = 7.0; / 변수의 초기값을 지정합니다: pointRadius = 7.0
+L000169 |         const double pointRadius = 7.0; ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(angle) / 지역 변수를 선언합니다: var startX = x1 + Math.Cos(angle) * pointRadius; / 변수의 초기값을 지정합니다: startX = x1 + Math.Cos(angle) * pointRadius
+L000170 |         var startX = x1 + Math.Cos(angle) * pointRadius; ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(angle) / 지역 변수를 선언합니다: var startY = y1 + Math.Sin(angle) * pointRadius; / 변수의 초기값을 지정합니다: startY = y1 + Math.Sin(angle) * pointRadius
+L000171 |         var startY = y1 + Math.Sin(angle) * pointRadius; ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(angle) / 지역 변수를 선언합니다: var endX = x2 - Math.Cos(angle) * pointRadius; / 변수의 초기값을 지정합니다: endX = x2 - Math.Cos(angle) * pointRadius
+L000172 |         var endX = x2 - Math.Cos(angle) * pointRadius; ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(angle) / 지역 변수를 선언합니다: var endY = y2 - Math.Sin(angle) * pointRadius; / 변수의 초기값을 지정합니다: endY = y2 - Math.Sin(angle) * pointRadius
+L000173 |         var endY = y2 - Math.Sin(angle) * pointRadius; ⟦EOL⟧
+// 해설 L174: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(startX, startY, endX, endY, stroke, 2.0)
+L000174 |         AddLine(startX, startY, endX, endY, stroke, 2.0); ⟦EOL⟧
+// 해설 L175: 지역 변수를 선언합니다: const double length = 9.0; / 변수의 초기값을 지정합니다: length = 9.0
+L000175 |         const double length = 9.0; ⟦EOL⟧
+// 해설 L176: 지역 변수를 선언합니다: var left = angle + Math.PI * 0.82; / 변수의 초기값을 지정합니다: left = angle + Math.PI * 0.82
+L000176 |         var left = angle + Math.PI * 0.82; ⟦EOL⟧
+// 해설 L177: 지역 변수를 선언합니다: var right = angle - Math.PI * 0.82; / 변수의 초기값을 지정합니다: right = angle - Math.PI * 0.82
+L000177 |         var right = angle - Math.PI * 0.82; ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(endX, endY, endX + Math.Cos(left) * length, endY + Math.Sin(left) * length, stroke, 2.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(left) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(left)
+L000178 |         AddLine(endX, endY, endX + Math.Cos(left) * length, endY + Math.Sin(left) * length, stroke, 2.0); ⟦EOL⟧
+// 해설 L179: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddLine(endX, endY, endX + Math.Cos(right) * length, endY + Math.Sin(right) * length, stroke, 2.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Cos(right) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Sin(right)
+L000179 |         AddLine(endX, endY, endX + Math.Cos(right) * length, endY + Math.Sin(right) * length, stroke, 2.0); ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 AddArrow.
+L000180 |     } ⟦EOL⟧
+L000181 |  ⟦EOL⟧
+// 해설 L182: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.AddText(string, double, double, Brush)
+L000182 |     private void AddText(string text, double x, double y, Brush foreground) ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 AddText.
+L000183 |     { ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Text = text, Foreground = foreground, FontSize = 12.0, FontWeight = FontWeights.SemiBold } / 지역 변수를 선언합니다: var label = new TextBlock { Text = text, Foreground = foreground, FontSize = 12.0, FontWeight = FontWeights.SemiBold }; / 변수의 초기값을 지정합니다: label = new TextBlock { Text = text, Foreground = foreground, FontSize = 12.0, FontWeight = FontWeights.SemiBold }
+L000184 |         var label = new TextBlock ⟦EOL⟧
+// 해설 L185: 구문 블록 경계입니다 · 소속 AddText.
+L000185 |         { ⟦EOL⟧
+// 해설 L186: 값을 대상에 대입합니다: Text = text
+L000186 |             Text = text, ⟦EOL⟧
+// 해설 L187: 값을 대상에 대입합니다: Foreground = foreground
+L000187 |             Foreground = foreground, ⟦EOL⟧
+// 해설 L188: 값을 대상에 대입합니다: FontSize = 12.0
+L000188 |             FontSize = 12.0, ⟦EOL⟧
+// 해설 L189: 값을 대상에 대입합니다: FontWeight = FontWeights.SemiBold
+L000189 |             FontWeight = FontWeights.SemiBold ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 AddText.
+L000190 |         }; ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(label, x)
+L000191 |         Canvas.SetLeft(label, x); ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(label, y)
+L000192 |         Canvas.SetTop(label, y); ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: PreviewCanvas.Children.Add(label)
+L000193 |         PreviewCanvas.Children.Add(label); ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 AddText.
+L000194 |     } ⟦EOL⟧
+L000195 |  ⟦EOL⟧
+// 해설 L196: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.NumericTextBoxPreviewTextInput(object, TextCompositionEventArgs)
+L000196 |     private void NumericTextBoxPreviewTextInput(object sender, TextCompositionEventArgs e) ⟦EOL⟧
+// 해설 L197: 구문 블록 경계입니다 · 소속 NumericTextBoxPreviewTextInput.
+L000197 |     { ⟦EOL⟧
+// 해설 L198: 조건에 따라 분기합니다: if (sender is not TextBox textBox)
+L000198 |         if (sender is not TextBox textBox) ⟦EOL⟧
+// 해설 L199: 구문 블록 경계입니다 · 소속 NumericTextBoxPreviewTextInput.
+L000199 |         { ⟦EOL⟧
+// 해설 L200: 호출자에게 값 또는 제어를 반환합니다: return;
+L000200 |             return; ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 NumericTextBoxPreviewTextInput.
+L000201 |         } ⟦EOL⟧
+L000202 |  ⟦EOL⟧
+// 해설 L203: 값을 대상에 대입합니다: e.Handled = !IsValidNumericInput(CreateProspectiveValue(textBox, e.Text)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsValidNumericInput(CreateProspectiveValue(textBox, e.Text)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProspectiveValue(textBox, e.Text)
+L000203 |         e.Handled = !IsValidNumericInput(CreateProspectiveValue(textBox, e.Text)); ⟦EOL⟧
+// 해설 L204: 구문 블록 경계입니다 · 소속 NumericTextBoxPreviewTextInput.
+L000204 |     } ⟦EOL⟧
+L000205 |  ⟦EOL⟧
+// 해설 L206: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.NumericTextBoxPasting(object, DataObjectPastingEventArgs)
+L000206 |     private void NumericTextBoxPasting(object sender, DataObjectPastingEventArgs e) ⟦EOL⟧
+// 해설 L207: 구문 블록 경계입니다 · 소속 NumericTextBoxPasting.
+L000207 |     { ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.DataObject.GetDataPresent(DataFormats.UnicodeText) / 함수·델리게이트 또는 객체 생성자를 호출합니다: e.DataObject.GetData(DataFormats.UnicodeText) / 함수·델리게이트 또는 객체 생성자를 호출합니다: IsValidNumericInput(CreateProspectiveValue(textBox, pastedText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProspectiveValue(textBox, pastedText) / 조건에 따라 분기합니다: if (sender is not TextBox textBox || !e.DataObject.GetDataPresent(DataFormats.UnicodeText) || e.DataObject.GetData(DataFormats.UnicodeText)is not string pastedText || !IsValidNumericInput(CreateProspect
+L000208 |         if (sender is not TextBox textBox || !e.DataObject.GetDataPresent(DataFormats.UnicodeText) || e.DataObject.GetData(DataFormats.UnicodeText)is not string pastedText || !IsValidNumericInput(CreateProspectiveValue(textBox, pastedText))) ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 NumericTextBoxPasting.
+L000209 |         { ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: e.CancelCommand()
+L000210 |             e.CancelCommand(); ⟦EOL⟧
 // 해설 L211: 구문 블록 경계입니다 · 소속 NumericTextBoxPasting.
-L000211 |     } ⟦EOL⟧
-L000212 |  ⟦EOL⟧
-// 해설 L213: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CShiftOffsetDialog.CreateProspectiveValue(TextBox, string)
-L000213 |     private static string CreateProspectiveValue(TextBox textBox, string input) ⟦EOL⟧
-// 해설 L214: 구문 블록 경계입니다 · 소속 CreateProspectiveValue.
-L000214 |     { ⟦EOL⟧
-// 해설 L215: 지역 변수를 선언합니다: var text = textBox.Text ?? ""; / 변수의 초기값을 지정합니다: text = textBox.Text ?? ""
-L000215 |         var text = textBox.Text ?? ""; ⟦EOL⟧
-// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(textBox.SelectionStart, 0, text.Length) / 지역 변수를 선언합니다: var start = Math.Clamp(textBox.SelectionStart, 0, text.Length); / 변수의 초기값을 지정합니다: start = Math.Clamp(textBox.SelectionStart, 0, text.Length)
-L000216 |         var start = Math.Clamp(textBox.SelectionStart, 0, text.Length); ⟦EOL⟧
-// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(textBox.SelectionLength, 0, text.Length - start) / 지역 변수를 선언합니다: var length = Math.Clamp(textBox.SelectionLength, 0, text.Length - start); / 변수의 초기값을 지정합니다: length = Math.Clamp(textBox.SelectionLength, 0, text.Length - start)
-L000217 |         var length = Math.Clamp(textBox.SelectionLength, 0, text.Length - start); ⟦EOL⟧
-// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Remove(start, length).Insert(start, input) / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Remove(start, length) / 호출자에게 값 또는 제어를 반환합니다: return text.Remove(start, length).Insert(start, input);
-L000218 |         return text.Remove(start, length).Insert(start, input); ⟦EOL⟧
-// 해설 L219: 구문 블록 경계입니다 · 소속 CreateProspectiveValue.
-L000219 |     } ⟦EOL⟧
-L000220 |  ⟦EOL⟧
-// 해설 L221: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CShiftOffsetDialog.IsValidNumericInput(string)
-L000221 |     private static bool IsValidNumericInput(string value) ⟦EOL⟧
-// 해설 L222: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
-L000222 |     { ⟦EOL⟧
-// 해설 L223: 조건에 따라 분기합니다: if (value.Length == 0 || value == "-")
-L000223 |         if (value.Length == 0 || value == "-") ⟦EOL⟧
-// 해설 L224: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
-L000224 |         { ⟦EOL⟧
-// 해설 L225: 호출자에게 값 또는 제어를 반환합니다: return true;
-L000225 |             return true; ⟦EOL⟧
-// 해설 L226: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
-L000226 |         } ⟦EOL⟧
-L000227 |  ⟦EOL⟧
-// 해설 L228: 조건에 따라 결과식을 선택합니다: value[0] == '-' ? value[1..] : value / 지역 변수를 선언합니다: var unsigned = value[0] == '-' ? value[1..] : value; / 변수의 초기값을 지정합니다: unsigned = value[0] == '-' ? value[1..] : value
-L000228 |         var unsigned = value[0] == '-' ? value[1..] : value; ⟦EOL⟧
-// 해설 L229: 지역 변수를 선언합니다: var decimalPointCount = 0; / 변수의 초기값을 지정합니다: decimalPointCount = 0
-L000229 |         var decimalPointCount = 0; ⟦EOL⟧
-// 해설 L230: 컬렉션 요소를 순회합니다: foreach (var character in unsigned)
-L000230 |         foreach (var character in unsigned) ⟦EOL⟧
-// 해설 L231: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
-L000231 |         { ⟦EOL⟧
-// 해설 L232: 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(character) / 조건에 따라 분기합니다: if (char.IsDigit(character))
-L000232 |             if (char.IsDigit(character)) ⟦EOL⟧
-// 해설 L233: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
-L000233 |             { ⟦EOL⟧
-// 해설 L234: 다음 반복으로 진행합니다: continue;
-L000234 |                 continue; ⟦EOL⟧
-// 해설 L235: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
-L000235 |             } ⟦EOL⟧
-L000236 |  ⟦EOL⟧
-// 해설 L237: 조건에 따라 분기합니다: if (character == '.' && ++decimalPointCount == 1)
-L000237 |             if (character == '.' && ++decimalPointCount == 1) ⟦EOL⟧
-// 해설 L238: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
-L000238 |             { ⟦EOL⟧
-// 해설 L239: 다음 반복으로 진행합니다: continue;
-L000239 |                 continue; ⟦EOL⟧
-// 해설 L240: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
-L000240 |             } ⟦EOL⟧
-L000241 |  ⟦EOL⟧
-// 해설 L242: 호출자에게 값 또는 제어를 반환합니다: return false;
-L000242 |             return false; ⟦EOL⟧
-// 해설 L243: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
-L000243 |         } ⟦EOL⟧
-L000244 |  ⟦EOL⟧
-// 해설 L245: 호출자에게 값 또는 제어를 반환합니다: return unsigned.Length > 0;
-L000245 |         return unsigned.Length > 0; ⟦EOL⟧
-// 해설 L246: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
-L000246 |     } ⟦EOL⟧
-L000247 |  ⟦EOL⟧
-// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.OnApplyClicked(object, RoutedEventArgs)
-L000248 |     private void OnApplyClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
-// 해설 L249: 구문 블록 경계입니다 · 소속 OnApplyClicked.
-L000249 |     { ⟦EOL⟧
-// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadInputs(out var shiftX, out var shiftY, out var error) / 조건에 따라 분기합니다: if (!TryReadInputs(out var shiftX, out var shiftY, out var error))
-L000250 |         if (!TryReadInputs(out var shiftX, out var shiftY, out var error)) ⟦EOL⟧
-// 해설 L251: 구문 블록 경계입니다 · 소속 OnApplyClicked.
-L000251 |         { ⟦EOL⟧
-// 해설 L252: 함수·델리게이트 또는 객체 생성자를 호출합니다: MessageBox.Show(this, error, "입력값 오류", MessageBoxButton.OK, MessageBoxImage.Warning)
-L000252 |             MessageBox.Show(this, error, "입력값 오류", MessageBoxButton.OK, MessageBoxImage.Warning); ⟦EOL⟧
-// 해설 L253: 호출자에게 값 또는 제어를 반환합니다: return;
-L000253 |             return; ⟦EOL⟧
-// 해설 L254: 구문 블록 경계입니다 · 소속 OnApplyClicked.
-L000254 |         } ⟦EOL⟧
-L000255 |  ⟦EOL⟧
-// 해설 L256: 함수·델리게이트 또는 객체 생성자를 호출합니다: _validateApply(shiftX, shiftY) / 지역 변수를 선언합니다: var validationMessage = _validateApply(shiftX, shiftY); / 변수의 초기값을 지정합니다: validationMessage = _validateApply(shiftX, shiftY)
-L000256 |         var validationMessage = _validateApply(shiftX, shiftY); ⟦EOL⟧
-// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(validationMessage) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(validationMessage))
-L000257 |         if (!string.IsNullOrWhiteSpace(validationMessage)) ⟦EOL⟧
-// 해설 L258: 구문 블록 경계입니다 · 소속 OnApplyClicked.
-L000258 |         { ⟦EOL⟧
-// 해설 L259: 함수·델리게이트 또는 객체 생성자를 호출합니다: MessageBox.Show(this, validationMessage, "Shift Offset 적용 불가", MessageBoxButton.OK, MessageBoxImage.Warning)
-L000259 |             MessageBox.Show(this, validationMessage, "Shift Offset 적용 불가", MessageBoxButton.OK, MessageBoxImage.Warning); ⟦EOL⟧
-// 해설 L260: 호출자에게 값 또는 제어를 반환합니다: return;
-L000260 |             return; ⟦EOL⟧
-// 해설 L261: 구문 블록 경계입니다 · 소속 OnApplyClicked.
-L000261 |         } ⟦EOL⟧
-L000262 |  ⟦EOL⟧
-// 해설 L263: 값을 대상에 대입합니다: ResultShiftOffsetX = Format(shiftX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftX)
-L000263 |         ResultShiftOffsetX = Format(shiftX); ⟦EOL⟧
-// 해설 L264: 값을 대상에 대입합니다: ResultShiftOffsetY = Format(shiftY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftY)
-L000264 |         ResultShiftOffsetY = Format(shiftY); ⟦EOL⟧
-// 해설 L265: 값을 대상에 대입합니다: DialogResult = true
-L000265 |         DialogResult = true; ⟦EOL⟧
-// 해설 L266: 구문 블록 경계입니다 · 소속 OnApplyClicked.
-L000266 |     } ⟦EOL⟧
-L000267 |  ⟦EOL⟧
-// 해설 L268: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.OnCloseClicked(object, RoutedEventArgs)
-L000268 |     private void OnCloseClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
-// 해설 L269: 구문 블록 경계입니다 · 소속 OnCloseClicked.
-L000269 |     { ⟦EOL⟧
-// 해설 L270: 값을 대상에 대입합니다: DialogResult = false
-L000270 |         DialogResult = false; ⟦EOL⟧
-// 해설 L271: 구문 블록 경계입니다 · 소속 OnCloseClicked.
-L000271 |     } ⟦EOL⟧
-L000272 |  ⟦EOL⟧
-// 해설 L273: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.WindowKeyDown(object, KeyEventArgs)
-L000273 |     private void WindowKeyDown(object sender, KeyEventArgs e) ⟦EOL⟧
-// 해설 L274: 구문 블록 경계입니다 · 소속 WindowKeyDown.
-L000274 |     { ⟦EOL⟧
-// 해설 L275: 조건에 따라 분기합니다: if (e.Key == Key.Escape)
-L000275 |         if (e.Key == Key.Escape) ⟦EOL⟧
-// 해설 L276: 구문 블록 경계입니다 · 소속 WindowKeyDown.
-L000276 |         { ⟦EOL⟧
-// 해설 L277: 값을 대상에 대입합니다: e.Handled = true
-L000277 |             e.Handled = true; ⟦EOL⟧
-// 해설 L278: 값을 대상에 대입합니다: DialogResult = false
-L000278 |             DialogResult = false; ⟦EOL⟧
-// 해설 L279: 구문 블록 경계입니다 · 소속 WindowKeyDown.
-L000279 |         } ⟦EOL⟧
+L000211 |         } ⟦EOL⟧
+// 해설 L212: 구문 블록 경계입니다 · 소속 NumericTextBoxPasting.
+L000212 |     } ⟦EOL⟧
+L000213 |  ⟦EOL⟧
+// 해설 L214: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CShiftOffsetDialog.CreateProspectiveValue(TextBox, string)
+L000214 |     private static string CreateProspectiveValue(TextBox textBox, string input) ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 CreateProspectiveValue.
+L000215 |     { ⟦EOL⟧
+// 해설 L216: 지역 변수를 선언합니다: var text = textBox.Text ?? ""; / 변수의 초기값을 지정합니다: text = textBox.Text ?? ""
+L000216 |         var text = textBox.Text ?? ""; ⟦EOL⟧
+// 해설 L217: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(textBox.SelectionStart, 0, text.Length) / 지역 변수를 선언합니다: var start = Math.Clamp(textBox.SelectionStart, 0, text.Length); / 변수의 초기값을 지정합니다: start = Math.Clamp(textBox.SelectionStart, 0, text.Length)
+L000217 |         var start = Math.Clamp(textBox.SelectionStart, 0, text.Length); ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(textBox.SelectionLength, 0, text.Length - start) / 지역 변수를 선언합니다: var length = Math.Clamp(textBox.SelectionLength, 0, text.Length - start); / 변수의 초기값을 지정합니다: length = Math.Clamp(textBox.SelectionLength, 0, text.Length - start)
+L000218 |         var length = Math.Clamp(textBox.SelectionLength, 0, text.Length - start); ⟦EOL⟧
+// 해설 L219: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Remove(start, length).Insert(start, input) / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Remove(start, length) / 호출자에게 값 또는 제어를 반환합니다: return text.Remove(start, length).Insert(start, input);
+L000219 |         return text.Remove(start, length).Insert(start, input); ⟦EOL⟧
+// 해설 L220: 구문 블록 경계입니다 · 소속 CreateProspectiveValue.
+L000220 |     } ⟦EOL⟧
+L000221 |  ⟦EOL⟧
+// 해설 L222: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Popup.CShiftOffsetDialog.IsValidNumericInput(string)
+L000222 |     private static bool IsValidNumericInput(string value) ⟦EOL⟧
+// 해설 L223: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000223 |     { ⟦EOL⟧
+// 해설 L224: 조건에 따라 분기합니다: if (value.Length == 0 || value == "-")
+L000224 |         if (value.Length == 0 || value == "-") ⟦EOL⟧
+// 해설 L225: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000225 |         { ⟦EOL⟧
+// 해설 L226: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000226 |             return true; ⟦EOL⟧
+// 해설 L227: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000227 |         } ⟦EOL⟧
+L000228 |  ⟦EOL⟧
+// 해설 L229: 조건에 따라 결과식을 선택합니다: value[0] == '-' ? value[1..] : value / 지역 변수를 선언합니다: var unsigned = value[0] == '-' ? value[1..] : value; / 변수의 초기값을 지정합니다: unsigned = value[0] == '-' ? value[1..] : value
+L000229 |         var unsigned = value[0] == '-' ? value[1..] : value; ⟦EOL⟧
+// 해설 L230: 지역 변수를 선언합니다: var decimalPointCount = 0; / 변수의 초기값을 지정합니다: decimalPointCount = 0
+L000230 |         var decimalPointCount = 0; ⟦EOL⟧
+// 해설 L231: 컬렉션 요소를 순회합니다: foreach (var character in unsigned)
+L000231 |         foreach (var character in unsigned) ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000232 |         { ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsDigit(character) / 조건에 따라 분기합니다: if (char.IsDigit(character))
+L000233 |             if (char.IsDigit(character)) ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000234 |             { ⟦EOL⟧
+// 해설 L235: 다음 반복으로 진행합니다: continue;
+L000235 |                 continue; ⟦EOL⟧
+// 해설 L236: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000236 |             } ⟦EOL⟧
+L000237 |  ⟦EOL⟧
+// 해설 L238: 조건에 따라 분기합니다: if (character == '.' && ++decimalPointCount == 1)
+L000238 |             if (character == '.' && ++decimalPointCount == 1) ⟦EOL⟧
+// 해설 L239: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000239 |             { ⟦EOL⟧
+// 해설 L240: 다음 반복으로 진행합니다: continue;
+L000240 |                 continue; ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000241 |             } ⟦EOL⟧
+L000242 |  ⟦EOL⟧
+// 해설 L243: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000243 |             return false; ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000244 |         } ⟦EOL⟧
+L000245 |  ⟦EOL⟧
+// 해설 L246: 호출자에게 값 또는 제어를 반환합니다: return unsigned.Length > 0;
+L000246 |         return unsigned.Length > 0; ⟦EOL⟧
+// 해설 L247: 구문 블록 경계입니다 · 소속 IsValidNumericInput.
+L000247 |     } ⟦EOL⟧
+L000248 |  ⟦EOL⟧
+// 해설 L249: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.OnApplyClicked(object, RoutedEventArgs)
+L000249 |     private void OnApplyClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 OnApplyClicked.
+L000250 |     { ⟦EOL⟧
+// 해설 L251: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadInputs(out var shiftX, out var shiftY, out var error) / 조건에 따라 분기합니다: if (!TryReadInputs(out var shiftX, out var shiftY, out var error))
+L000251 |         if (!TryReadInputs(out var shiftX, out var shiftY, out var error)) ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다 · 소속 OnApplyClicked.
+L000252 |         { ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: MessageBox.Show(this, error, "입력값 오류", MessageBoxButton.OK, MessageBoxImage.Warning)
+L000253 |             MessageBox.Show(this, error, "입력값 오류", MessageBoxButton.OK, MessageBoxImage.Warning); ⟦EOL⟧
+// 해설 L254: 호출자에게 값 또는 제어를 반환합니다: return;
+L000254 |             return; ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 OnApplyClicked.
+L000255 |         } ⟦EOL⟧
+L000256 |  ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: _validateApply(shiftX, shiftY) / 지역 변수를 선언합니다: var validationMessage = _validateApply(shiftX, shiftY); / 변수의 초기값을 지정합니다: validationMessage = _validateApply(shiftX, shiftY)
+L000257 |         var validationMessage = _validateApply(shiftX, shiftY); ⟦EOL⟧
+// 해설 L258: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(validationMessage) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(validationMessage))
+L000258 |         if (!string.IsNullOrWhiteSpace(validationMessage)) ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 OnApplyClicked.
+L000259 |         { ⟦EOL⟧
+// 해설 L260: 함수·델리게이트 또는 객체 생성자를 호출합니다: MessageBox.Show(this, validationMessage, "Shift Offset 적용 불가", MessageBoxButton.OK, MessageBoxImage.Warning)
+L000260 |             MessageBox.Show(this, validationMessage, "Shift Offset 적용 불가", MessageBoxButton.OK, MessageBoxImage.Warning); ⟦EOL⟧
+// 해설 L261: 호출자에게 값 또는 제어를 반환합니다: return;
+L000261 |             return; ⟦EOL⟧
+// 해설 L262: 구문 블록 경계입니다 · 소속 OnApplyClicked.
+L000262 |         } ⟦EOL⟧
+L000263 |  ⟦EOL⟧
+// 해설 L264: 값을 대상에 대입합니다: ResultShiftOffsetX = Format(shiftX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftX)
+L000264 |         ResultShiftOffsetX = Format(shiftX); ⟦EOL⟧
+// 해설 L265: 값을 대상에 대입합니다: ResultShiftOffsetY = Format(shiftY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Format(shiftY)
+L000265 |         ResultShiftOffsetY = Format(shiftY); ⟦EOL⟧
+// 해설 L266: 값을 대상에 대입합니다: DialogResult = true
+L000266 |         DialogResult = true; ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 OnApplyClicked.
+L000267 |     } ⟦EOL⟧
+L000268 |  ⟦EOL⟧
+// 해설 L269: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.OnCloseClicked(object, RoutedEventArgs)
+L000269 |     private void OnCloseClicked(object sender, RoutedEventArgs e) ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 OnCloseClicked.
+L000270 |     { ⟦EOL⟧
+// 해설 L271: 값을 대상에 대입합니다: DialogResult = false
+L000271 |         DialogResult = false; ⟦EOL⟧
+// 해설 L272: 구문 블록 경계입니다 · 소속 OnCloseClicked.
+L000272 |     } ⟦EOL⟧
+L000273 |  ⟦EOL⟧
+// 해설 L274: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Popup.CShiftOffsetDialog.WindowKeyDown(object, KeyEventArgs)
+L000274 |     private void WindowKeyDown(object sender, KeyEventArgs e) ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000275 |     { ⟦EOL⟧
+// 해설 L276: 조건에 따라 분기합니다: if (e.Key == Key.Escape)
+L000276 |         if (e.Key == Key.Escape) ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000277 |         { ⟦EOL⟧
+// 해설 L278: 값을 대상에 대입합니다: e.Handled = true
+L000278 |             e.Handled = true; ⟦EOL⟧
+// 해설 L279: 값을 대상에 대입합니다: DialogResult = false
+L000279 |             DialogResult = false; ⟦EOL⟧
 // 해설 L280: 구문 블록 경계입니다 · 소속 WindowKeyDown.
-L000280 |     } ⟦EOL⟧
-L000281 |  ⟦EOL⟧
-// 해설 L282: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CShiftOffsetDialog.Format(double)
-L000282 |     private static string Format(double value) ⟦EOL⟧
-// 해설 L283: 구문 블록 경계입니다 · 소속 Format.
-L000283 |     { ⟦EOL⟧
-// 해설 L284: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString("0.###", CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return value.ToString("0.###", CultureInfo.InvariantCulture);
-L000284 |         return value.ToString("0.###", CultureInfo.InvariantCulture); ⟦EOL⟧
-// 해설 L285: 구문 블록 경계입니다 · 소속 Format.
-L000285 |     } ⟦EOL⟧
-// 해설 L286: 구문 블록 경계입니다.
-L000286 | } ⟦EOL⟧
-L000287 |  ⟦EOL⟧
-// 해설 L288: 타입의 구조/상속 선언입니다: public sealed record ST_SHIFT_OFFSET_HEAD_ROW(int HeadNo, string HeadName, string ScannerGx, string ScannerGy);
-L000288 | public sealed record ST_SHIFT_OFFSET_HEAD_ROW(int HeadNo, string HeadName, string ScannerGx, string ScannerGy); ⟦EOL⟧
+L000280 |         } ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 WindowKeyDown.
+L000281 |     } ⟦EOL⟧
+L000282 |  ⟦EOL⟧
+// 해설 L283: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Popup.CShiftOffsetDialog.Format(double)
+L000283 |     private static string Format(double value) ⟦EOL⟧
+// 해설 L284: 구문 블록 경계입니다 · 소속 Format.
+L000284 |     { ⟦EOL⟧
+// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString("0.###", CultureInfo.InvariantCulture) / 호출자에게 값 또는 제어를 반환합니다: return value.ToString("0.###", CultureInfo.InvariantCulture);
+L000285 |         return value.ToString("0.###", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L286: 구문 블록 경계입니다 · 소속 Format.
+L000286 |     } ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다.
+L000287 | } ⟦EOL⟧
+L000288 |  ⟦EOL⟧
+// 해설 L289: 타입의 구조/상속 선언입니다: public sealed record ST_SHIFT_OFFSET_HEAD_ROW(int HeadNo, string HeadName, string ScannerGx, string ScannerGy);
+L000289 | public sealed record ST_SHIFT_OFFSET_HEAD_ROW(int HeadNo, string HeadName, string ScannerGx, string ScannerGy); ⟦EOL⟧

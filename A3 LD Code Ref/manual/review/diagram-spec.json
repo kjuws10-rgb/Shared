@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
   "diagrams": [
     {
       "id": "review-01",
-      "title": "Review 계획: 선택·목표·통신·결과를 분리",
+      "title": "Review 계획: 작업표와 좌표·통신 분리",
       "nodes": [
         {
           "id": "recipe",
@@ -26,7 +26,7 @@
         },
         {
           "id": "select",
-          "label": "ALL / ONE / ONE LINE\n같은 Glass Y 줄 선택",
+          "label": "INSPECTION 내부 모드\\nShot별 Beam 작업표",
           "x": 650,
           "y": 115,
           "kind": "step",
@@ -62,7 +62,7 @@
         },
         {
           "id": "save",
-          "label": "RUN_TYPE별 결과 CSV\nONE_LINE 분류 추가",
+          "label": "결과 CSV 저장\\n직접 적용과 구별",
           "x": 350,
           "y": 320,
           "kind": "step",
@@ -71,7 +71,7 @@
         },
         {
           "id": "open",
-          "label": "사용자 동의 후\nREVIEW DATA 정확한 파일 LOAD",
+          "label": "최근 결과 LOAD / CLEAR\\n로드 중 실행 차단",
           "x": 50,
           "y": 320,
           "kind": "step",
@@ -117,11 +117,11 @@
         }
       ],
       "notes": [
-        "ONE LINE은 실행가능한 Glass Y 줄이며 같은 Y의 다른 Cell도 포함할 수 있습니다.",
-        "AUTO는 Beam11·Shift0 정책을 유지합니다. ONE_LINE 결과 OFFSET APPLY는 지원목록에 없습니다."
+        "상위 다섯 탭: INSPECTION / SIMPLE / ROUGH / FINE / REVIEW DATA.",
+        "Shot별 Beam Task 합계로 실행합니다. 일반 Review는 DOE_EXIST와 별개입니다."
       ],
       "chapter": "01_Review_계획과_좌표계.md",
-      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -152,7 +152,7 @@
         },
         {
           "id": "fine",
-          "label": "FINE: Cell별 여러 row\n1·3·5·7줄 Sampling",
+          "label": "FINE 기하학 row Sampling\\n그 뒤 Use로 제외점 제거",
           "x": 650,
           "y": 115,
           "kind": "step",
@@ -248,11 +248,11 @@
         }
       ],
       "notes": [
-        "ONE LINE의 줄 허용차는0.001 mm이며 기준 줄 Y와 비교합니다.",
-        "가려진 점을 빼는 것만으로 Stage 선분·가감속·Trigger window의 물리 회피가 입증되지 않습니다."
+        "마스크로 빈 검사 줄이 되어도 다음 유효 row를 찾는 자동 대체는 확인되지 않습니다.",
+        "점 제외와 실제 Stage 선분 우회는 별도입니다. 유효 anchor 양 끝 밖은 외삽 시험 대상입니다."
       ],
       "chapter": "02_Masking_Sampling_IOF.md",
-      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -261,7 +261,7 @@
     },
     {
       "id": "review-03",
-      "title": "Vision: 수신 성공·찾기·각축 판정·보정 적격",
+      "title": "Vision: 픽셀·mm·판정·등급 분리",
       "nodes": [
         {
           "id": "id",
@@ -319,7 +319,7 @@
         },
         {
           "id": "revision",
-          "label": "REINSP / EDIT 갱신\n코드 빈 값·원인 재분류",
+          "label": "표시 등급 L1~L4\\nmax(abs(X),abs(Y)) mm",
           "x": 350,
           "y": 325,
           "kind": "step",
@@ -328,7 +328,7 @@
         },
         {
           "id": "product",
-          "label": "Active Product compact\n새 metadata 영속성 누락 위험",
+          "label": "Live와 LOAD NG색 정책\\nProduct 저장은 별도",
           "x": 50,
           "y": 325,
           "kind": "warn",
@@ -374,11 +374,11 @@
         }
       ],
       "notes": [
-        "nResult0=찾기 성공입니다. 각축 tolerance와 보정 전체검증까지 통과한 뜻은 아닙니다.",
-        "CSV의 metadata 보존과 Active Product 재시작복구는 서로 다른 저장 경계입니다."
+        "L1~L4는 현재 OPTION 표시색이며 품질 Judge·보정 적격 판정을 바꾸지 않습니다.",
+        "live는 VisionFind NG를 등급에서 빼지만 LOAD는 오차값만으로 등급을 계산합니다."
       ],
       "chapter": "03_Vision_패킷과_단위.md",
-      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -409,7 +409,7 @@
         },
         {
           "id": "delta",
-          "label": "직접 / ROUGH / FINE\nCurrent + Delta = Final",
+          "label": "FINE: 열별 Y Lagrange\\n3점은 구간선형 아닌2차",
           "x": 650,
           "y": 115,
           "kind": "step",
@@ -454,7 +454,7 @@
         },
         {
           "id": "risk",
-          "label": "새 Revision은 새 경로\n남은 MEASURED 재누적 시험",
+          "label": "RETAINED 필터 차이\\nlive와 파일 APPLY 비교",
           "x": 50,
           "y": 325,
           "kind": "warn",
@@ -500,11 +500,11 @@
         }
       ],
       "notes": [
-        "COPY는 결과 X/Y·JUDGE 후보를 복제합니다. 보정 snapshot 적용과 새 실측은 별도입니다.",
-        "보정율0%는 저장 이력 삭제가 아닙니다. 산포도 축/색도 품질판정을 다시 계산하지 않습니다."
+        "Fine 실제 저장은 Lagrange입니다. 별도 선형 projection의 활성 Fine UI 진입은 미확인입니다.",
+        "재개 live와 파일 MEASURED 필터의 anchor 차이는 기존 잔건입니다. 새 diff와 구분합니다."
       ],
       "chapter": "04_ReviewOffset_적용과_롤백.md",
-      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -562,7 +562,7 @@
         },
         {
           "id": "load",
-          "label": "선택하면 새 파일 LOAD\n산포도·표는 Judge 중심",
+          "label": "최근 MANUAL 결과 LOAD\\n현재 Recipe로 위치 재구성",
           "x": 950,
           "y": 325,
           "kind": "step",
@@ -580,7 +580,7 @@
         },
         {
           "id": "audit",
-          "label": "부모 hash·기준 Offset ID\n전용 계보·작업자 기록 없음",
+          "label": "Recipe hash·Glass 일치\\nLOAD provenance 시험",
           "x": 50,
           "y": 325,
           "kind": "warn",
@@ -631,11 +631,11 @@
         }
       ],
       "notes": [
-        "EDIT는 변환열을 우선 수정하며 raw가 함께 있으면 기존 raw를 유지합니다.",
-        "ONE SHOT/Legacy처럼 RESULT_SOURCE 열이 없으면 EDITED 출처가 새로 생기지 않아 적용 정책이 달라집니다."
+        "파일 열람·Revision 생성·Offset 적용·Product 상태는 별개 수명입니다.",
+        "같은 RecipeId의 내용 변경 후 과거 결과를 현재 geometry로 재구성하는 경계를 검증합니다."
       ],
       "chapter": "05_결과_Revision_Product_연결.md",
-      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -675,7 +675,7 @@
         },
         {
           "id": "capture",
-          "label": "전역 DOE grid1 또는4\nShot·십자 모두1/16 Capture",
+          "label": "Head별 DOE_EXIST\\nON: grid / OFF: 중앙1점",
           "x": 950,
           "y": 115,
           "kind": "step",
@@ -758,10 +758,10 @@
       ],
       "notes": [
         "AK3 입력은 자동 새 측정이나 AK4점 글로벌 X/Y 회전 피팅이 아닙니다.",
-        "전역grid1/4 지원은 Head별 DOE3+원빔5 혼합구성·Beam11 자동대응 구현을 뜻하지 않습니다."
+        "혼합 DOE는 Default 검사에서 지원합니다. 일반 Review 자동 Beam 대응은 범위 밖입니다."
       ],
       "chapter": "06_DefaultOffset_ZeroOrder_FirstBeam.md",
-      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -883,11 +883,11 @@
         }
       ],
       "notes": [
-        "교체 인계값은 무조건0으로 초기화하지 않습니다. 최초요청과 추가retry 횟수를 구별합니다.",
-        "경고 이후 AUTO 계속은 현재 software 정책이며 실제 보호성능/운영합격을 뜻하지 않습니다."
+        "Distortion·Window 시퀀스는 이번 diff에서 바뀌지 않았습니다. 기존 계약·후속 시험을 유지합니다.",
+        "Distortion X선형→Y Lagrange와 Fine Cell/X열 Y Lagrange는 입력·저장·소비가 다릅니다."
       ],
       "chapter": "07_Align_Distortion_윈도우_복구.md",
-      "source_commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,

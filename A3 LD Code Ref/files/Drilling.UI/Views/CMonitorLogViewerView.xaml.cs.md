@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | e1096238698282a8761bea6faa05dce66d1728abe81ffbb1573c716730538094 |
 | 파일 분류 | code |
 | 원본 크기/행 | 1,489 bytes / 37 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -40,7 +40,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L9–9
 
-[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L9-L9)
+[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -67,7 +67,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `InitializeIfVisible` · L11–14
 
-[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:11–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L11-L14)
+[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:11–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L11-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -80,9 +80,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L16-L16) | InitializeIfVisible | False |
-| [Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L17-L17) | InitializeIfVisible | False |
-| [Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L18-L18) | InitializeIfVisible | False |
+| [Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L16-L16) | InitializeIfVisible | False |
+| [Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L17-L17) | InitializeIfVisible | False |
+| [Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L18-L18) | InitializeIfVisible | False |
 
 호출하는 대상과 해석 범위:
 
@@ -111,7 +111,7 @@ flowchart TD
 
 ### MethodDeclaration `ViewLoaded` · L16–16
 
-[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L16-L16)
+[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -146,7 +146,7 @@ flowchart TD
 
 ### MethodDeclaration `ViewVisibilityChanged` · L17–17
 
-[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L17-L17)
+[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -181,7 +181,7 @@ flowchart TD
 
 ### MethodDeclaration `ViewDataContextChanged` · L18–18
 
-[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L18-L18)
+[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -216,7 +216,7 @@ flowchart TD
 
 ### MethodDeclaration `FolderExpanded` · L20–24
 
-[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:20–24](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L20-L24)
+[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:20–24](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L20-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -261,7 +261,7 @@ flowchart TD
 
 ### MethodDeclaration `LogSelectionChanged` · L26–29
 
-[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:26–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L26-L29)
+[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:26–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L26-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -306,7 +306,7 @@ flowchart TD
 
 ### MethodDeclaration `LogTextChanged` · L31–36
 
-[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:31–36](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L31-L36)
+[Drilling.UI/Views/CMonitorLogViewerView.xaml.cs:31–36](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorLogViewerView.xaml.cs#L31-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

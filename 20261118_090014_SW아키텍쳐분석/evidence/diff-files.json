@@ -1,0 +1,424 @@
+{
+  "base": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "head": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+  "paths": 83,
+  "added": 15431,
+  "removed": 779,
+  "files": [
+    {
+      "path": "Config/JHMI_SETTING.csv",
+      "added": 15,
+      "removed": 0
+    },
+    {
+      "path": "Config/Setting/Setting.csv",
+      "added": 15,
+      "removed": 0
+    },
+    {
+      "path": "Data/DefaultOffset/test0929/261115_170157_248_MEASURE_HEAD_c89348e3345e43b79e77ac5d0b4b4b24.csv",
+      "added": 17,
+      "removed": 0
+    },
+    {
+      "path": "Data/DefaultOffset/test0929/261115_170211_205_MEASURE_HEAD_45901eeb334b4667a26f2ebf8814fda6.csv",
+      "added": 33,
+      "removed": 0
+    },
+    {
+      "path": "Data/DefaultOffset/test0929/261115_170221_921_MEASURE_HEAD_45626480773944bda59a74bfe57ab7a7.csv",
+      "added": 49,
+      "removed": 0
+    },
+    {
+      "path": "Data/DefaultOffset/test0929/261115_170234_316_MEASURE_HEAD_a386d961dade4138865cf472d1d35574.csv",
+      "added": 65,
+      "removed": 0
+    },
+    {
+      "path": "Data/DefaultOffset/test0929/261115_170246_012_MEASURE_HEAD_90dc730f29104c728f7c9ed1ca890b9f.csv",
+      "added": 81,
+      "removed": 0
+    },
+    {
+      "path": "Data/DefaultOffset/test0929/261115_170258_273_MEASURE_HEAD_4f67731a785b49d9b65e4e367ec45af7.csv",
+      "added": 97,
+      "removed": 0
+    },
+    {
+      "path": "Data/DefaultOffset/test0929/261115_170311_096_MEASURE_HEAD_fd5647ac7a1d402eb332bdab095aea03.csv",
+      "added": 113,
+      "removed": 0
+    },
+    {
+      "path": "Data/DefaultOffset/test0929/261115_170323_701_MEASURE_HEAD_e6bb9909285141d58e6df1e9c2397fdb.csv",
+      "added": 129,
+      "removed": 0
+    },
+    {
+      "path": "Data/DefaultOffset/test0929/261115_170346_882_APPLY_REQUEST_ba8935d85c464550bebe1723e94c9090.csv",
+      "added": 129,
+      "removed": 0
+    },
+    {
+      "path": "Data/DefaultOffset/test0929/261115_170347_751_APPLY_APPLIED_2ec3008b2c1a44c795a152ccb9ab4d87.csv",
+      "added": 129,
+      "removed": 0
+    },
+    {
+      "path": "Data/DefaultOffset/test0929/261116_140917_186_MEASURE_HEAD_345ff61c031b4a1888dec2a2753a5a86.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/DefaultOffset/test0929/261116_141103_396_MEASURE_HEAD_04bfad117a614c4b8c07db17adf42d3f.csv",
+      "added": 18,
+      "removed": 0
+    },
+    {
+      "path": "Data/Product/ActiveProduct.csv",
+      "added": 1230,
+      "removed": 6
+    },
+    {
+      "path": "Data/Product/History/20261115/ProductHistory_20261115.csv",
+      "added": 7,
+      "removed": 0
+    },
+    {
+      "path": "Data/Product/History/20261116/ProductHistory_20261116.csv",
+      "added": 9,
+      "removed": 0
+    },
+    {
+      "path": "Data/Product/History/20261117/ProductHistory_20261117.csv",
+      "added": 7,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Auto/test0929/INTEGRATION_20261116_141455_284_20261116_141607_995.csv",
+      "added": 1221,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Auto/test0929/INTEGRATION_20261116_141455_284_20261116_141800_306.csv",
+      "added": 3571,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ALL_SHOT/INTEGRATION_20261116_141455_284_20261116_141524_726.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/BEAM_INSPECTION/DUMMY_20261109_151140827_20261117_112939_447.csv",
+      "added": 4,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/BEAM_INSPECTION/DUMMY_20261109_151140827_20261117_114727_705.csv",
+      "added": 4,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/BEAM_INSPECTION/DUMMY_20261109_151140827_20261117_120745_279.csv",
+      "added": 4,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/BEAM_INSPECTION/DUMMY_20261109_151140827_20261117_120802_604.csv",
+      "added": 4,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/BEAM_INSPECTION/DUMMY_20261109_151140827_20261117_120822_381.csv",
+      "added": 4,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/BEAM_INSPECTION/DUMMY_20261109_151140827_20261117_121001_319.csv",
+      "added": 4,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/BEAM_INSPECTION/DUMMY_20261109_151140827_20261117_121147_635.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/BEAM_INSPECTION/DUMMY_20261109_151140827_20261117_121203_802.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/BEAM_INSPECTION/INTEGRATION_20261116_141455_284_20261116_141526_188.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/FINE/-_20261116_161939_540.csv",
+      "added": 1221,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/FINE/-_20261116_161957_625.csv",
+      "added": 1221,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/FINE/INTEGRATION_20261116_141455_284_20261116_141527_343.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_LINE/DUMMY_20261109_151140827_20261115_164846_369.csv",
+      "added": 245,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_LINE/DUMMY_20261109_151140827_20261115_165021_134.csv",
+      "added": 200,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_LINE/DUMMY_20261109_151140827_20261116_160922_364.csv",
+      "added": 245,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_LINE/DUMMY_20261109_151140827_20261116_170428_567.csv",
+      "added": 200,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_LINE/DUMMY_20261109_151140827_20261117_100707_036.csv",
+      "added": 200,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_SHOT/DUMMY_20261109_151140827_20261115_164752_838.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_SHOT/DUMMY_20261109_151140827_20261116_132428_715.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_SHOT/DUMMY_20261109_151140827_20261116_132452_013.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_SHOT/DUMMY_20261109_151140827_20261117_100628_738.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_SHOT/DUMMY_20261109_151140827_20261117_100639_251.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_SHOT/INTEGRATION_20261116_141455_284_20261116_141525_391.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ROUGH/INTEGRATION_20261116_141455_284_20261116_141526_824.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/ZeroDefence/test0929/INTEGRATION_20261116_141455_284/20261116_141800_495_FOLLOWUP.csv",
+      "added": 245,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/ZeroDefence/test0929/INTEGRATION_20261116_141455_284/20261116_141800_495_ZERO_DEFENCE.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Script/DefaultOffset/H01_DEFAULTOFFSET_20261115_170136_086.ascript",
+      "added": 32,
+      "removed": 0
+    },
+    {
+      "path": "Data/Script/DefaultOffset/H01_DEFAULTOFFSET_20261116_141011_117.ascript",
+      "added": 32,
+      "removed": 0
+    },
+    {
+      "path": "Data/Script/DefaultOffset/H02_DEFAULTOFFSET_20261115_170126_076.ascript",
+      "added": 32,
+      "removed": 0
+    },
+    {
+      "path": "Data/Script/DefaultOffset/H02_DEFAULTOFFSET_20261116_140744_474.ascript",
+      "added": 32,
+      "removed": 0
+    },
+    {
+      "path": "Data/Script/DefaultOffset/H03_DEFAULTOFFSET_20261115_170116_053.ascript",
+      "added": 32,
+      "removed": 0
+    },
+    {
+      "path": "Data/Script/DefaultOffset/H04_DEFAULTOFFSET_20261115_170105_721.ascript",
+      "added": 32,
+      "removed": 0
+    },
+    {
+      "path": "Data/Script/DefaultOffset/H05_DEFAULTOFFSET_20261115_170111_067.ascript",
+      "added": 32,
+      "removed": 0
+    },
+    {
+      "path": "Data/Script/DefaultOffset/H06_DEFAULTOFFSET_20261115_170120_630.ascript",
+      "added": 32,
+      "removed": 0
+    },
+    {
+      "path": "Data/Script/DefaultOffset/H07_DEFAULTOFFSET_20261115_170130_680.ascript",
+      "added": 32,
+      "removed": 0
+    },
+    {
+      "path": "Data/Script/DefaultOffset/H08_DEFAULTOFFSET_20261115_170141_083.ascript",
+      "added": 32,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+      "added": 47,
+      "removed": 7
+    },
+    {
+      "path": "Drilling.Common/Managers/CSettingManager.cs",
+      "added": 1,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "added": 69,
+      "removed": 6
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewResultLevelSettings.cs",
+      "added": 175,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.File/Correction/CAlignOffsetLogFile.cs",
+      "added": 2,
+      "removed": 2
+    },
+    {
+      "path": "Drilling.File/JHMI/CSettingFile.cs",
+      "added": 35,
+      "removed": 1
+    },
+    {
+      "path": "Drilling.UI/CRootView.cs",
+      "added": 8,
+      "removed": 16
+    },
+    {
+      "path": "Drilling.UI/Drilling.UI.csproj",
+      "added": 1,
+      "removed": 1
+    },
+    {
+      "path": "Drilling.UI/Menu/CBindingBase.cs",
+      "added": 92,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs",
+      "added": 1,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+      "added": 162,
+      "removed": 51
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+      "added": 95,
+      "removed": 66
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+      "added": 1776,
+      "removed": 215
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuSetting.cs",
+      "added": 30,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs",
+      "added": 2,
+      "removed": 2
+    },
+    {
+      "path": "Drilling.UI/Popup/CColorPickerDialog.xaml",
+      "added": 125,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Popup/CColorPickerDialog.xaml.cs",
+      "added": 89,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs",
+      "added": 43,
+      "removed": 42
+    },
+    {
+      "path": "Drilling.UI/Views/CCorrectionView.xaml",
+      "added": 3,
+      "removed": 11
+    },
+    {
+      "path": "Drilling.UI/Views/CCorrectionView.xaml.cs",
+      "added": 1,
+      "removed": 7
+    },
+    {
+      "path": "Drilling.UI/Views/CDefaultOffsetView.xaml.cs",
+      "added": 5,
+      "removed": 5
+    },
+    {
+      "path": "Drilling.UI/Views/CReviewDataView.xaml",
+      "added": 70,
+      "removed": 25
+    },
+    {
+      "path": "Drilling.UI/Views/CReviewShotMapControl.cs",
+      "added": 364,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Views/CReviewView.xaml",
+      "added": 1077,
+      "removed": 316
+    },
+    {
+      "path": "Drilling.UI/Views/CSettingView.xaml",
+      "added": 58,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Views/CSettingView.xaml.cs",
+      "added": 16,
+      "removed": 0
+    }
+  ]
+}

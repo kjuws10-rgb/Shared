@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 5ca1c0079a53dde13cdc4bbc7d920d0d3d82d1f9d6842fadfa64c389ecd93db6 |
 | 파일 분류 | code |
 | 원본 크기/행 | 1,733 bytes / 55 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -46,7 +46,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_axes` · L8–8
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L8-L8)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -61,7 +61,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `SelectedAxes` · L9–9
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L9-L9)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -92,7 +92,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L11–17
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:11–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L11-L17)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:11–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L11-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -112,7 +112,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1986–1989](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1986-L1989) | new CMofDisableDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1986–1989](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1986-L1989) | new CMofDisableDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -139,7 +139,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `SelectAll` · L19–22
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:19–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L19-L22)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:19–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L19-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -177,7 +177,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearAll` · L24–27
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:24–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L24-L27)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:24–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L24-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -215,7 +215,7 @@ flowchart TD
 
 ### MethodDeclaration `Confirm` · L29–37
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:29–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L29-L37)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:29–37](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L29-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -261,7 +261,7 @@ flowchart TD
 
 ### PropertyDeclaration `Name` · L42–42
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L42-L42)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -276,7 +276,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Name` · L42–42
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L42-L42)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -291,7 +291,7 @@ flowchart TD
 
 ### FieldDeclaration `_isSelected` · L43–43
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L43-L43)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L43-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -306,7 +306,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsSelected` · L44–53
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:44–53](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L44-L53)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:44–53](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L44-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -321,7 +321,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsSelected` · L46–46
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L46-L46)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -336,7 +336,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_IsSelected` · L47–52
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:47–52](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L47-L52)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:47–52](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L47-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -385,7 +385,7 @@ flowchart TD
 
 ### EventFieldDeclaration `PropertyChanged` · L54–54
 
-[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L54-L54)
+[Drilling.UI/Popup/CMofDisableDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMofDisableDialog.xaml.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

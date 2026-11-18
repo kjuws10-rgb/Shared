@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 6e793d154d708b514ef2940d287181a6e6a49473e2501e3f8981c0ed9095c46e |
 | 파일 분류 | code |
 | 원본 크기/행 | 6,165 bytes / 155 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -81,7 +81,7 @@
 
 ### FieldDeclaration `CommTypes` · L12–12
 
-[Drilling.Common/Interface/CComm.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L12-L12)
+[Drilling.Common/Interface/CComm.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -109,7 +109,7 @@
 
 ### MethodDeclaration `Create` · L13–34
 
-[Drilling.Common/Interface/CComm.cs:13–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L13-L34)
+[Drilling.Common/Interface/CComm.cs:13–34](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L13-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -129,7 +129,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:2989–2989](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L2989-L2989) | CComm.Create | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:2989–2989](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L2989-L2989) | CComm.Create | False |
 
 호출하는 대상과 해석 범위:
 
@@ -184,7 +184,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L17–20
 
-[Drilling.Common/Interface/CComm.cs:17–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L17-L20)
+[Drilling.Common/Interface/CComm.cs:17–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L17-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -218,7 +218,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectSortKey` · L22–25
 
-[Drilling.Common/Interface/CComm.cs:22–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L22-L25)
+[Drilling.Common/Interface/CComm.cs:22–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L22-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -245,7 +245,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadCommTypes` · L36–54
 
-[Drilling.Common/Interface/CComm.cs:36–54](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L36-L54)
+[Drilling.Common/Interface/CComm.cs:36–54](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L36-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -258,7 +258,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CComm.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L12-L12) | LoadCommTypes | False |
+| [Drilling.Common/Interface/CComm.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L12-L12) | LoadCommTypes | False |
 
 호출하는 대상과 해석 범위:
 
@@ -283,7 +283,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L38–41
 
-[Drilling.Common/Interface/CComm.cs:38–41](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L38-L41)
+[Drilling.Common/Interface/CComm.cs:38–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L38-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -317,7 +317,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildCCommRegistration` · L43–51
 
-[Drilling.Common/Interface/CComm.cs:43–51](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L43-L51)
+[Drilling.Common/Interface/CComm.cs:43–51](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L43-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -353,7 +353,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildCCommRegistration` · L45–48
 
-[Drilling.Common/Interface/CComm.cs:45–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L45-L48)
+[Drilling.Common/Interface/CComm.cs:45–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L45-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -387,7 +387,7 @@ flowchart TD
 
 ### MethodDeclaration `IsMatch` · L58–61
 
-[Drilling.Common/Interface/CComm.cs:58–61](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L58-L61)
+[Drilling.Common/Interface/CComm.cs:58–61](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L58-L61)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -407,7 +407,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CComm.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L19-L19) | item.IsMatch | False |
+| [Drilling.Common/Interface/CComm.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L19-L19) | item.IsMatch | False |
 
 호출하는 대상과 해석 범위:
 
@@ -428,7 +428,7 @@ flowchart TD
 
 ### PropertyDeclaration `InterfaceType` · L68–68
 
-[Drilling.Common/Interface/CComm.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L68-L68)
+[Drilling.Common/Interface/CComm.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L68-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -455,7 +455,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_InterfaceType` · L68–68
 
-[Drilling.Common/Interface/CComm.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L68-L68)
+[Drilling.Common/Interface/CComm.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L68-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -470,7 +470,7 @@ flowchart TD
 
 ### PropertyDeclaration `DeviceNames` · L69–69
 
-[Drilling.Common/Interface/CComm.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L69-L69)
+[Drilling.Common/Interface/CComm.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L69-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -505,7 +505,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DeviceNames` · L69–69
 
-[Drilling.Common/Interface/CComm.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L69-L69)
+[Drilling.Common/Interface/CComm.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L69-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -520,7 +520,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeName` · L71–74
 
-[Drilling.Common/Interface/CComm.cs:71–74](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L71-L74)
+[Drilling.Common/Interface/CComm.cs:71–74](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L71-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -539,9 +539,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CComm.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L15-L15) | CCommTypeAttribute.NormalizeName | False |
-| [Drilling.Common/Interface/CComm.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L16-L16) | CCommTypeAttribute.NormalizeName | False |
-| [Drilling.Common/Interface/CComm.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L68-L68) | NormalizeName | False |
+| [Drilling.Common/Interface/CComm.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L15-L15) | CCommTypeAttribute.NormalizeName | False |
+| [Drilling.Common/Interface/CComm.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L16-L16) | CCommTypeAttribute.NormalizeName | False |
+| [Drilling.Common/Interface/CComm.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L68-L68) | NormalizeName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -568,7 +568,7 @@ flowchart TD
 
 ### FieldDeclaration `Data` · L80–80
 
-[Drilling.Common/Interface/CComm.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L80-L80)
+[Drilling.Common/Interface/CComm.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L80-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -589,7 +589,7 @@ flowchart TD
 
 ### FieldDeclaration `Option` · L81–81
 
-[Drilling.Common/Interface/CComm.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L81-L81)
+[Drilling.Common/Interface/CComm.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L81-L81)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -610,7 +610,7 @@ flowchart TD
 
 ### PropertyDeclaration `ConnectionState` · L82–82
 
-[Drilling.Common/Interface/CComm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L82-L82)
+[Drilling.Common/Interface/CComm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L82-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -625,7 +625,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ConnectionState` · L82–82
 
-[Drilling.Common/Interface/CComm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L82-L82)
+[Drilling.Common/Interface/CComm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L82-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -640,7 +640,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ConnectionState` · L82–82
 
-[Drilling.Common/Interface/CComm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L82-L82)
+[Drilling.Common/Interface/CComm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L82-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -661,7 +661,7 @@ flowchart TD
 
 ### PropertyDeclaration `Endpoint` · L84–90
 
-[Drilling.Common/Interface/CComm.cs:84–90](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L84-L90)
+[Drilling.Common/Interface/CComm.cs:84–90](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L84-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -676,7 +676,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Endpoint` · L86–89
 
-[Drilling.Common/Interface/CComm.cs:86–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L86-L89)
+[Drilling.Common/Interface/CComm.cs:86–89](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L86-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -697,7 +697,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastSent` · L92–92
 
-[Drilling.Common/Interface/CComm.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L92-L92)
+[Drilling.Common/Interface/CComm.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L92-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -712,7 +712,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LastSent` · L92–92
 
-[Drilling.Common/Interface/CComm.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L92-L92)
+[Drilling.Common/Interface/CComm.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L92-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -727,7 +727,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_LastSent` · L92–92
 
-[Drilling.Common/Interface/CComm.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L92-L92)
+[Drilling.Common/Interface/CComm.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L92-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -748,7 +748,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastReceived` · L93–93
 
-[Drilling.Common/Interface/CComm.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L93-L93)
+[Drilling.Common/Interface/CComm.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L93-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -763,7 +763,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LastReceived` · L93–93
 
-[Drilling.Common/Interface/CComm.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L93-L93)
+[Drilling.Common/Interface/CComm.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L93-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -778,7 +778,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_LastReceived` · L93–93
 
-[Drilling.Common/Interface/CComm.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L93-L93)
+[Drilling.Common/Interface/CComm.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L93-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -799,7 +799,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastError` · L94–94
 
-[Drilling.Common/Interface/CComm.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L94-L94)
+[Drilling.Common/Interface/CComm.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L94-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -814,7 +814,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LastError` · L94–94
 
-[Drilling.Common/Interface/CComm.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L94-L94)
+[Drilling.Common/Interface/CComm.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L94-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -829,7 +829,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_LastError` · L94–94
 
-[Drilling.Common/Interface/CComm.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L94-L94)
+[Drilling.Common/Interface/CComm.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L94-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -850,7 +850,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastChangedAt` · L95–95
 
-[Drilling.Common/Interface/CComm.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L95-L95)
+[Drilling.Common/Interface/CComm.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L95-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -865,7 +865,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LastChangedAt` · L95–95
 
-[Drilling.Common/Interface/CComm.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L95-L95)
+[Drilling.Common/Interface/CComm.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L95-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -880,7 +880,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_LastChangedAt` · L95–95
 
-[Drilling.Common/Interface/CComm.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L95-L95)
+[Drilling.Common/Interface/CComm.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L95-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -901,7 +901,7 @@ flowchart TD
 
 ### MethodDeclaration `Connect` · L97–97
 
-[Drilling.Common/Interface/CComm.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L97-L97)
+[Drilling.Common/Interface/CComm.cs:97–97](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L97-L97)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -920,13 +920,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:3111–3111](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L3111-L3111) | _comm.Connect | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:3111–3111](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L3111-L3111) | _comm.Connect | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `ResetAutoReconnectPolicy` · L98–100
 
-[Drilling.Common/Interface/CComm.cs:98–100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L98-L100)
+[Drilling.Common/Interface/CComm.cs:98–100](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L98-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -939,13 +939,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:3116–3116](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L3116-L3116) | _comm.ResetAutoReconnectPolicy | True |
+| [Drilling.Common/Interface/CInterfaceManager.cs:3116–3116](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L3116-L3116) | _comm.ResetAutoReconnectPolicy | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `SuppressAutoReconnect` · L102–104
 
-[Drilling.Common/Interface/CComm.cs:102–104](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L102-L104)
+[Drilling.Common/Interface/CComm.cs:102–104](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L102-L104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -958,13 +958,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:3121–3121](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L3121-L3121) | _comm.SuppressAutoReconnect | True |
+| [Drilling.Common/Interface/CInterfaceManager.cs:3121–3121](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L3121-L3121) | _comm.SuppressAutoReconnect | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `Disconnect` · L106–111
 
-[Drilling.Common/Interface/CComm.cs:106–111](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L106-L111)
+[Drilling.Common/Interface/CComm.cs:106–111](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L106-L111)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -983,8 +983,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:3088–3088](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L3088-L3088) | _comm.Disconnect | True |
-| [Drilling.Common/Interface/CInterfaceManager.cs:3141–3141](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L3141-L3141) | _comm.Disconnect | True |
+| [Drilling.Common/Interface/CInterfaceManager.cs:3088–3088](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L3088-L3088) | _comm.Disconnect | True |
+| [Drilling.Common/Interface/CInterfaceManager.cs:3141–3141](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L3141-L3141) | _comm.Disconnect | True |
 
 호출하는 대상과 해석 범위:
 
@@ -1005,7 +1005,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L113–113
 
-[Drilling.Common/Interface/CComm.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L113-L113)
+[Drilling.Common/Interface/CComm.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L113-L113)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1025,13 +1025,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CInterfaceManager.cs:3161–3161](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CInterfaceManager.cs#L3161-L3161) | _comm.Execute | False |
+| [Drilling.Common/Interface/CInterfaceManager.cs:3161–3161](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CInterfaceManager.cs#L3161-L3161) | _comm.Execute | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `SetState` · L114–118
 
-[Drilling.Common/Interface/CComm.cs:114–118](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L114-L118)
+[Drilling.Common/Interface/CComm.cs:114–118](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L114-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1050,50 +1050,50 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L66-L66) | SetState | False |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L120-L120) | SetState | False |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L134-L134) | SetState | False |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L326-L326) | SetState | False |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L339-L339) | SetState | False |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L611-L611) | SetState | False |
-| [Drilling.Common/Interface/CComm.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L109-L109) | SetState | False |
-| [Drilling.Common/Interface/CComm.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L123-L123) | SetState | False |
-| [Drilling.Common/Interface/CComm.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L129-L129) | SetState | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CPowerMeter.cs#L62-L62) | SetState | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CPowerMeter.cs#L82-L82) | SetState | False |
-| [Drilling.Common/Interface/Serial/CPowerMeter.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CPowerMeter.cs#L104-L104) | SetState | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CSerialComm.cs#L77-L77) | SetState | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CSerialComm.cs#L187-L187) | SetState | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CSerialComm.cs#L196-L196) | SetState | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CSerialComm.cs#L203-L203) | SetState | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CSerialComm.cs#L214-L214) | SetState | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CSerialComm.cs#L295-L295) | SetState | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CTalonLaser.cs#L60-L60) | SetState | False |
-| [Drilling.Common/Interface/Serial/CTalonLaser.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CTalonLaser.cs#L74-L74) | SetState | False |
-| [Drilling.Common/Interface/Socket/CSocketComm.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketComm.cs#L50-L50) | SetState | False |
-| [Drilling.Common/Interface/Socket/CSocketComm.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketComm.cs#L64-L64) | SetState | False |
-| [Drilling.Common/Interface/Socket/CSocketComm.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketComm.cs#L95-L95) | SetState | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L27-L27) | SetState | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L52-L52) | SetState | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L72-L72) | SetState | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L98-L98) | SetState | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L108-L108) | SetState | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L145-L145) | SetState | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L240-L240) | SetState | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L40-L40) | SetState | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L64-L64) | SetState | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L85-L85) | SetState | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L122-L122) | SetState | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L184-L184) | SetState | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L200-L200) | SetState | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L243-L243) | SetState | False |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L40-L40) | SetState | False |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L67-L67) | SetState | False |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L102-L102) | SetState | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsComm.cs#L411-L411) | SetState | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsComm.cs#L427-L427) | SetState | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:487–487](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsComm.cs#L487-L487) | SetState | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsComm.cs#L495-L495) | SetState | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L66-L66) | SetState | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L120-L120) | SetState | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L134-L134) | SetState | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L326-L326) | SetState | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L339-L339) | SetState | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:611–611](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L611-L611) | SetState | False |
+| [Drilling.Common/Interface/CComm.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L109-L109) | SetState | False |
+| [Drilling.Common/Interface/CComm.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L123-L123) | SetState | False |
+| [Drilling.Common/Interface/CComm.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L129-L129) | SetState | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CPowerMeter.cs#L62-L62) | SetState | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CPowerMeter.cs#L82-L82) | SetState | False |
+| [Drilling.Common/Interface/Serial/CPowerMeter.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CPowerMeter.cs#L104-L104) | SetState | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CSerialComm.cs#L77-L77) | SetState | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CSerialComm.cs#L187-L187) | SetState | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CSerialComm.cs#L196-L196) | SetState | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:203–203](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CSerialComm.cs#L203-L203) | SetState | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CSerialComm.cs#L214-L214) | SetState | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:295–295](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CSerialComm.cs#L295-L295) | SetState | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CTalonLaser.cs#L60-L60) | SetState | False |
+| [Drilling.Common/Interface/Serial/CTalonLaser.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CTalonLaser.cs#L74-L74) | SetState | False |
+| [Drilling.Common/Interface/Socket/CSocketComm.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketComm.cs#L50-L50) | SetState | False |
+| [Drilling.Common/Interface/Socket/CSocketComm.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketComm.cs#L64-L64) | SetState | False |
+| [Drilling.Common/Interface/Socket/CSocketComm.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketComm.cs#L95-L95) | SetState | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L27-L27) | SetState | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L52-L52) | SetState | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L72-L72) | SetState | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L98-L98) | SetState | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L108-L108) | SetState | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L145-L145) | SetState | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L240-L240) | SetState | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Vision/CVisionComm.cs#L40-L40) | SetState | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Vision/CVisionComm.cs#L64-L64) | SetState | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Vision/CVisionComm.cs#L85-L85) | SetState | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Vision/CVisionComm.cs#L122-L122) | SetState | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Vision/CVisionComm.cs#L184-L184) | SetState | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Vision/CVisionComm.cs#L200-L200) | SetState | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Vision/CVisionComm.cs#L243-L243) | SetState | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L40-L40) | SetState | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L67-L67) | SetState | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L102-L102) | SetState | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:411–411](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L411-L411) | SetState | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L427-L427) | SetState | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:487–487](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L487-L487) | SetState | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:495–495](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L495-L495) | SetState | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1106,7 +1106,7 @@ flowchart TD
 
 ### MethodDeclaration `SetError` · L120–124
 
-[Drilling.Common/Interface/CComm.cs:120–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L120-L124)
+[Drilling.Common/Interface/CComm.cs:120–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L120-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1125,17 +1125,17 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L46-L46) | SetError | False |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L142-L142) | SetError | False |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L347-L347) | SetError | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CSerialComm.cs#L194-L194) | base.SetError | False |
-| [Drilling.Common/Interface/Socket/CSocketComm.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketComm.cs#L55-L55) | SetError | False |
-| [Drilling.Common/Interface/Socket/CSocketComm.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketComm.cs#L101-L101) | SetError | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L57-L57) | SetError | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L70-L70) | SetError | False |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L26-L26) | SetError | False |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L73-L73) | SetError | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:503–503](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsComm.cs#L503-L503) | SetError | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L46-L46) | SetError | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L142-L142) | SetError | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:347–347](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L347-L347) | SetError | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CSerialComm.cs#L194-L194) | base.SetError | False |
+| [Drilling.Common/Interface/Socket/CSocketComm.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketComm.cs#L55-L55) | SetError | False |
+| [Drilling.Common/Interface/Socket/CSocketComm.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketComm.cs#L101-L101) | SetError | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L57-L57) | SetError | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Vision/CVisionComm.cs#L70-L70) | SetError | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L26-L26) | SetError | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:73–73](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L73-L73) | SetError | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:503–503](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L503-L503) | SetError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1154,7 +1154,7 @@ flowchart TD
 
 ### MethodDeclaration `SetError` · L126–130
 
-[Drilling.Common/Interface/CComm.cs:126–130](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L126-L130)
+[Drilling.Common/Interface/CComm.cs:126–130](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L126-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1173,14 +1173,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CComm.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L143-L143) | SetError | False |
-| [Drilling.Common/Interface/CComm.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L152-L152) | SetError | False |
-| [Drilling.Common/Interface/Serial/CSerialComm.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Serial/CSerialComm.cs#L201-L201) | base.SetError | False |
-| [Drilling.Common/Interface/Socket/CSocketComm.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketComm.cs#L22-L22) | SetError | False |
-| [Drilling.Common/Interface/Socket/CSocketComm.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketComm.cs#L91-L91) | SetError | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L34-L34) | SetError | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L47-L47) | SetError | False |
-| [Drilling.Common/Motion/ACS/CACSComm.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/ACS/CACSComm.cs#L94-L94) | SetError | False |
+| [Drilling.Common/Interface/CComm.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L143-L143) | SetError | False |
+| [Drilling.Common/Interface/CComm.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L152-L152) | SetError | False |
+| [Drilling.Common/Interface/Serial/CSerialComm.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Serial/CSerialComm.cs#L201-L201) | base.SetError | False |
+| [Drilling.Common/Interface/Socket/CSocketComm.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketComm.cs#L22-L22) | SetError | False |
+| [Drilling.Common/Interface/Socket/CSocketComm.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketComm.cs#L91-L91) | SetError | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L34-L34) | SetError | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Vision/CVisionComm.cs#L47-L47) | SetError | False |
+| [Drilling.Common/Motion/ACS/CACSComm.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/ACS/CACSComm.cs#L94-L94) | SetError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1199,7 +1199,7 @@ flowchart TD
 
 ### MethodDeclaration `SetCommandError` · L132–135
 
-[Drilling.Common/Interface/CComm.cs:132–135](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L132-L135)
+[Drilling.Common/Interface/CComm.cs:132–135](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L132-L135)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1218,11 +1218,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L133-L133) | SetCommandError | False |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L338-L338) | SetCommandError | False |
-| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L114-L114) | SetCommandError | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L129-L129) | SetCommandError | False |
-| [Drilling.Common/Interface/Vision/CVisionComm.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/Vision/CVisionComm.cs#L139-L139) | SetCommandError | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L133-L133) | SetCommandError | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:338–338](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L338-L338) | SetCommandError | False |
+| [Drilling.Common/Interface/Socket/CSocketServerComm.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Socket/CSocketServerComm.cs#L114-L114) | SetCommandError | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Vision/CVisionComm.cs#L129-L129) | SetCommandError | False |
+| [Drilling.Common/Interface/Vision/CVisionComm.cs:139–139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Vision/CVisionComm.cs#L139-L139) | SetCommandError | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1234,7 +1234,7 @@ flowchart TD
 
 ### MethodDeclaration `Connect` · L140–145
 
-[Drilling.Common/Interface/CComm.cs:140–145](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L140-L145)
+[Drilling.Common/Interface/CComm.cs:140–145](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L140-L145)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1270,7 +1270,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L147–154
 
-[Drilling.Common/Interface/CComm.cs:147–154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CComm.cs#L147-L154)
+[Drilling.Common/Interface/CComm.cs:147–154](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CComm.cs#L147-L154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

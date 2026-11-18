@@ -3,9 +3,35 @@ from pathlib import Path
 import html
 from urllib.parse import unquote,urlsplit
 import argparse,collections,hashlib,json,re,subprocess,xml.etree.ElementTree as ET
-from build_reference import WPF_EVENTS
 
-VERSION='1.1.0'
+VERSION='1.1.1'
+
+# Independent validation snapshot: do not import the generator event whitelist.
+# A missing new event is also surfaced from code-behind EventArgs method signatures.
+VALIDATION_WPF_EVENTS = frozenset('Activated AutoGeneratingColumn Checked Click Closed Closing ContentRendered ContextMenuClosing ContextMenuOpening DataContextChanged Deactivated DragEnter DragLeave DragOver Drop DropDownClosed DropDownOpened Expanded GotFocus GotKeyboardFocus Indeterminate Initialized IsEnabledChanged IsVisibleChanged KeyDown KeyUp LayoutUpdated Loaded LoadingRow LostFocus LostKeyboardFocus LostMouseCapture MouseDoubleClick MouseDown MouseEnter MouseLeave MouseLeftButtonDown MouseLeftButtonUp MouseMove MouseRightButtonDown MouseRightButtonUp MouseUp MouseWheel PreviewDragEnter PreviewDragLeave PreviewDragOver PreviewDrop PreviewKeyDown PreviewKeyUp PreviewMouseDoubleClick PreviewMouseDown PreviewMouseLeftButtonDown PreviewMouseLeftButtonUp PreviewMouseMove PreviewMouseRightButtonDown PreviewMouseRightButtonUp PreviewMouseUp PreviewMouseWheel PreviewTextInput PreviewTouchDown PreviewTouchMove PreviewTouchUp RequestBringIntoView ScrollChanged SelectedItemChanged SelectionChanged SizeChanged SourceInitialized SourceUpdated TargetUpdated TextChanged ToolTipClosing ToolTipOpening TouchDown TouchMove TouchUp Unchecked Unloaded ValueChanged'.split())
+NON_EVENT_ATTRIBUTES = frozenset('Name Class Title Text Content Header Tag ToolTip Command CommandParameter DataContext TargetType Key Value Property Source Path ElementName Mode StringFormat'.split())
+
+def expected_xaml_events(xml, codebehind_members=()):
+    handler_names=set()
+    for member in codebehind_members:
+        parameters=member.get('parameters',[])
+        if member.get('kind')=='MethodDeclaration' and len(parameters)==2 and re.search(r'EventArgs(?:<.*>)?\??$',str(parameters[1].get('type') or '')):
+            handler_names.add(member.get('name'))
+    expected=collections.Counter();candidates=[]
+    for node in xml.iter():
+        event_setter=node.tag.split('}')[-1]=='EventSetter'
+        for name,value in node.attrib.items():
+            local=name.split('}')[-1];event=local.split('.')[-1]
+            if not re.fullmatch(r'[A-Za-z_]\w*',value) or (event_setter and local in {'Event','Handler'}):continue
+            known=event in VALIDATION_WPF_EVENTS
+            handler_shaped=value in handler_names and event not in NON_EVENT_ATTRIBUTES
+            if known or handler_shaped:
+                expected[(local,value)]+=1
+                if handler_shaped and not known:candidates.append({'event':local,'handler':value,'basis':'matching code-behind EventArgs method; static candidate, not runtime binding proof'})
+        if event_setter and 'Event' in node.attrib and 'Handler' in node.attrib:
+            expected[(node.attrib['Event'],node.attrib['Handler'])]+=1
+    return expected,candidates
+
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def text(p):
@@ -71,12 +97,13 @@ def validate(source,output):
             try:
                 xml=ET.fromstring('\n'.join(lines));expected_names=collections.Counter(value for node in xml.iter() for name,value in node.attrib.items() if name in ['Name','{http://schemas.microsoft.com/winfx/2006/xaml}Name'])
                 check(expected_names==collections.Counter(entry['name'] for entry in data['namedElements']),rel+' XAML named-element coverage mismatch')
-                expected_events=collections.Counter()
-                for node in xml.iter():
-                    for name,value in node.attrib.items():
-                        if name.split('.')[-1] in WPF_EVENTS and re.fullmatch(r'[A-Za-z_]\w*',value):expected_events[(name,value)]+=1
-                    if node.tag.split('}')[-1]=='EventSetter' and 'Event' in node.attrib and 'Handler' in node.attrib:expected_events[(node.attrib['Event'],node.attrib['Handler'])]+=1
-                check(expected_events==collections.Counter((entry['event'],entry['handler']) for entry in data['events']),rel+' XAML event declaration coverage mismatch')
+                behind=output/'metadata/files'/Path(rel+'.cs.json')
+                behind_members=json.loads(behind.read_text(encoding='utf-8')).get('members',[]) if behind.is_file() else []
+                expected_events,candidates=expected_xaml_events(xml,behind_members)
+                check(expected_events==collections.Counter((entry['event'],entry['handler']) for entry in data['events']),rel+' XAML event declaration coverage mismatch (independent XML/handler oracle)')
+                counts['xaml_handler_candidates']+=len(candidates)
+                expected_bindings=collections.Counter(value for node in xml.iter() for value in node.attrib.values() if re.search(r'\{(?:Binding|MultiBinding|PriorityBinding)\b',value))
+                check(expected_bindings==collections.Counter(entry['expression'] for entry in data['bindings']),rel+' XAML Binding expression coverage mismatch')
             except ET.ParseError as e:errors.append(rel+' invalid XAML XML '+str(e))
             for collection in ['namedElements','events','bindings','codeBehindClasses']:
                 for entry in data[collection]:
@@ -97,6 +124,8 @@ def validate(source,output):
     check({str(p.relative_to(output/'metadata/files')).replace('\\','/')[:-5] for p in (output/'metadata/files').rglob('*.cs.json')}==set(cs_paths),'missing/stale C# metadata files')
     check({str(p.relative_to(output/'metadata/xaml')).replace('\\','/')[:-5] for p in (output/'metadata/xaml').rglob('*.xaml.json')}==set(xaml_paths),'missing/stale XAML metadata files')
     for key,count in [('csharpFiles',counts['csharp_files']),('typeCount',counts['types']),('memberCount',counts['members']),('callSites',counts['calls']),('annotatedFiles',counts['annotated_files'])]:check(manifest['coverage'][key]==count,'manifest '+key+' mismatch')
+    for category in ['files','namedElements','events','bindings']:
+        check(manifest.get('xamlCoverage',{}).get(category,0)==counts['xaml_'+category],'manifest XAML '+category+' mismatch')
     index=json.loads((output/'metadata/symbol-index.json').read_text(encoding='utf-8'))
     check({s['id'] for s in index['symbols']}==set(symbol_ids),'symbol index missing/extra IDs')
     counts['symbol_ids']=len(symbol_ids)

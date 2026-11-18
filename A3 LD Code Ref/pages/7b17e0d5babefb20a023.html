@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/CPreviewCoordinateBehavior.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/CPreviewCoordinateBehavior.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs">Git 원본</a></p><h1>Drilling.UI/CPreviewCoordinateBehavior.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/CPreviewCoordinateBehavior.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/CPreviewCoordinateBehavior.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs">Git 원본</a></p><h1>Drilling.UI/CPreviewCoordinateBehavior.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>dfa5920e6301d9ec4b0eab1452ae59521aafc986</td></tr>
+<tr><td>원본 Commit</td><td>96e22cd027c84bf302b23f2949b98985d7f301bb</td></tr>
 <tr><td>원본 SHA256</td><td>766dbce15e8dd64b80d342370294b0a2c29c27a5aa3e538ba51b6814d8b85b13</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>6,336 bytes / 161 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
@@ -52,7 +52,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L8">FieldDeclaration <code>PositionXProperty</code> · L8–8</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L8-L8">Drilling.UI/CPreviewCoordinateBehavior.cs:8–8</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L8-L8">Drilling.UI/CPreviewCoordinateBehavior.cs:8–8</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.PositionXProperty</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
@@ -71,7 +71,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L9">FieldDeclaration <code>PositionYProperty</code> · L9–9</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L9-L9">Drilling.UI/CPreviewCoordinateBehavior.cs:9–9</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L9-L9">Drilling.UI/CPreviewCoordinateBehavior.cs:9–9</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.PositionYProperty</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
@@ -90,7 +90,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L10">FieldDeclaration <code>ContainerWidthProperty</code> · L10–10</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L10-L10">Drilling.UI/CPreviewCoordinateBehavior.cs:10–10</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L10-L10">Drilling.UI/CPreviewCoordinateBehavior.cs:10–10</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.ContainerWidthProperty</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
@@ -109,7 +109,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L11">FieldDeclaration <code>ContainerHeightProperty</code> · L11–11</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L11-L11">Drilling.UI/CPreviewCoordinateBehavior.cs:11–11</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L11-L11">Drilling.UI/CPreviewCoordinateBehavior.cs:11–11</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.ContainerHeightProperty</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
@@ -128,7 +128,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L12">FieldDeclaration <code>DesignWidthProperty</code> · L12–12</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L12-L12">Drilling.UI/CPreviewCoordinateBehavior.cs:12–12</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L12-L12">Drilling.UI/CPreviewCoordinateBehavior.cs:12–12</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.DesignWidthProperty</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
@@ -147,7 +147,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L13">FieldDeclaration <code>DesignHeightProperty</code> · L13–13</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L13-L13">Drilling.UI/CPreviewCoordinateBehavior.cs:13–13</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L13-L13">Drilling.UI/CPreviewCoordinateBehavior.cs:13–13</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.DesignHeightProperty</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
@@ -166,7 +166,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L14">FieldDeclaration <code>ElementWidthProperty</code> · L14–14</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L14-L14">Drilling.UI/CPreviewCoordinateBehavior.cs:14–14</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L14-L14">Drilling.UI/CPreviewCoordinateBehavior.cs:14–14</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.ElementWidthProperty</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
@@ -185,7 +185,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L15">FieldDeclaration <code>ElementHeightProperty</code> · L15–15</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L15-L15">Drilling.UI/CPreviewCoordinateBehavior.cs:15–15</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L15-L15">Drilling.UI/CPreviewCoordinateBehavior.cs:15–15</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.ElementHeightProperty</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
@@ -204,7 +204,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L16">FieldDeclaration <code>UseStretchScaleProperty</code> · L16–16</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L16-L16">Drilling.UI/CPreviewCoordinateBehavior.cs:16–16</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L16-L16">Drilling.UI/CPreviewCoordinateBehavior.cs:16–16</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.UseStretchScaleProperty</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static, readonly</td></tr>
@@ -225,7 +225,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L17">MethodDeclaration <code>GetPositionX</code> · L17–20</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L17-L20">Drilling.UI/CPreviewCoordinateBehavior.cs:17–20</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L17-L20">Drilling.UI/CPreviewCoordinateBehavior.cs:17–20</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetPositionX(DependencyObject)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -248,7 +248,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L22">MethodDeclaration <code>SetPositionX</code> · L22–25</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L22-L25">Drilling.UI/CPreviewCoordinateBehavior.cs:22–25</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L22-L25">Drilling.UI/CPreviewCoordinateBehavior.cs:22–25</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetPositionX(DependencyObject, object?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -271,7 +271,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L27">MethodDeclaration <code>GetPositionY</code> · L27–30</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L27-L30">Drilling.UI/CPreviewCoordinateBehavior.cs:27–30</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L27-L30">Drilling.UI/CPreviewCoordinateBehavior.cs:27–30</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetPositionY(DependencyObject)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -294,7 +294,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L32">MethodDeclaration <code>SetPositionY</code> · L32–35</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L32-L35">Drilling.UI/CPreviewCoordinateBehavior.cs:32–35</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L32-L35">Drilling.UI/CPreviewCoordinateBehavior.cs:32–35</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetPositionY(DependencyObject, object?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -317,7 +317,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L37">MethodDeclaration <code>GetContainerWidth</code> · L37–40</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L37-L40">Drilling.UI/CPreviewCoordinateBehavior.cs:37–40</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L37-L40">Drilling.UI/CPreviewCoordinateBehavior.cs:37–40</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetContainerWidth(DependencyObject)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -340,7 +340,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L42">MethodDeclaration <code>SetContainerWidth</code> · L42–45</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L42-L45">Drilling.UI/CPreviewCoordinateBehavior.cs:42–45</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L42-L45">Drilling.UI/CPreviewCoordinateBehavior.cs:42–45</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetContainerWidth(DependencyObject, object?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -363,7 +363,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L47">MethodDeclaration <code>GetContainerHeight</code> · L47–50</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L47-L50">Drilling.UI/CPreviewCoordinateBehavior.cs:47–50</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L47-L50">Drilling.UI/CPreviewCoordinateBehavior.cs:47–50</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetContainerHeight(DependencyObject)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -386,7 +386,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L52">MethodDeclaration <code>SetContainerHeight</code> · L52–55</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L52-L55">Drilling.UI/CPreviewCoordinateBehavior.cs:52–55</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L52-L55">Drilling.UI/CPreviewCoordinateBehavior.cs:52–55</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetContainerHeight(DependencyObject, object?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -409,7 +409,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L57">MethodDeclaration <code>GetDesignWidth</code> · L57–60</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L57-L60">Drilling.UI/CPreviewCoordinateBehavior.cs:57–60</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L57-L60">Drilling.UI/CPreviewCoordinateBehavior.cs:57–60</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetDesignWidth(DependencyObject)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -432,7 +432,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L62">MethodDeclaration <code>SetDesignWidth</code> · L62–65</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L62-L65">Drilling.UI/CPreviewCoordinateBehavior.cs:62–65</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L62-L65">Drilling.UI/CPreviewCoordinateBehavior.cs:62–65</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetDesignWidth(DependencyObject, object?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -455,7 +455,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L67">MethodDeclaration <code>GetDesignHeight</code> · L67–70</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L67-L70">Drilling.UI/CPreviewCoordinateBehavior.cs:67–70</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L67-L70">Drilling.UI/CPreviewCoordinateBehavior.cs:67–70</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetDesignHeight(DependencyObject)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -478,7 +478,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L72">MethodDeclaration <code>SetDesignHeight</code> · L72–75</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L72-L75">Drilling.UI/CPreviewCoordinateBehavior.cs:72–75</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L72-L75">Drilling.UI/CPreviewCoordinateBehavior.cs:72–75</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetDesignHeight(DependencyObject, object?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -501,7 +501,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L77">MethodDeclaration <code>GetElementWidth</code> · L77–80</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L77-L80">Drilling.UI/CPreviewCoordinateBehavior.cs:77–80</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L77-L80">Drilling.UI/CPreviewCoordinateBehavior.cs:77–80</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetElementWidth(DependencyObject)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -524,7 +524,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L82">MethodDeclaration <code>SetElementWidth</code> · L82–85</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L82-L85">Drilling.UI/CPreviewCoordinateBehavior.cs:82–85</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L82-L85">Drilling.UI/CPreviewCoordinateBehavior.cs:82–85</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetElementWidth(DependencyObject, object?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -547,7 +547,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L87">MethodDeclaration <code>GetElementHeight</code> · L87–90</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L87-L90">Drilling.UI/CPreviewCoordinateBehavior.cs:87–90</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L87-L90">Drilling.UI/CPreviewCoordinateBehavior.cs:87–90</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object? Drilling.UI.CPreviewCoordinateBehavior.GetElementHeight(DependencyObject)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -570,7 +570,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L92">MethodDeclaration <code>SetElementHeight</code> · L92–95</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L92-L95">Drilling.UI/CPreviewCoordinateBehavior.cs:92–95</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L92-L95">Drilling.UI/CPreviewCoordinateBehavior.cs:92–95</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetElementHeight(DependencyObject, object?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -593,7 +593,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L97">MethodDeclaration <code>GetUseStretchScale</code> · L97–100</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L97-L100">Drilling.UI/CPreviewCoordinateBehavior.cs:97–100</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L97-L100">Drilling.UI/CPreviewCoordinateBehavior.cs:97–100</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.GetUseStretchScale(DependencyObject)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -616,7 +616,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L102">MethodDeclaration <code>SetUseStretchScale</code> · L102–105</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L102-L105">Drilling.UI/CPreviewCoordinateBehavior.cs:102–105</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L102-L105">Drilling.UI/CPreviewCoordinateBehavior.cs:102–105</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.SetUseStretchScale(DependencyObject, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -639,7 +639,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L107">MethodDeclaration <code>CreateInputProperty</code> · L107–110</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L107-L110">Drilling.UI/CPreviewCoordinateBehavior.cs:107–110</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L107-L110">Drilling.UI/CPreviewCoordinateBehavior.cs:107–110</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>DependencyProperty Drilling.UI.CPreviewCoordinateBehavior.CreateInputProperty(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -652,14 +652,14 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L8-L8">Drilling.UI/CPreviewCoordinateBehavior.cs:8–8</a></td><td>CreateInputProperty</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L9-L9">Drilling.UI/CPreviewCoordinateBehavior.cs:9–9</a></td><td>CreateInputProperty</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L10-L10">Drilling.UI/CPreviewCoordinateBehavior.cs:10–10</a></td><td>CreateInputProperty</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L11-L11">Drilling.UI/CPreviewCoordinateBehavior.cs:11–11</a></td><td>CreateInputProperty</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L12-L12">Drilling.UI/CPreviewCoordinateBehavior.cs:12–12</a></td><td>CreateInputProperty</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L13-L13">Drilling.UI/CPreviewCoordinateBehavior.cs:13–13</a></td><td>CreateInputProperty</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L14-L14">Drilling.UI/CPreviewCoordinateBehavior.cs:14–14</a></td><td>CreateInputProperty</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L15-L15">Drilling.UI/CPreviewCoordinateBehavior.cs:15–15</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L8-L8">Drilling.UI/CPreviewCoordinateBehavior.cs:8–8</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L9-L9">Drilling.UI/CPreviewCoordinateBehavior.cs:9–9</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L10-L10">Drilling.UI/CPreviewCoordinateBehavior.cs:10–10</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L11-L11">Drilling.UI/CPreviewCoordinateBehavior.cs:11–11</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L12-L12">Drilling.UI/CPreviewCoordinateBehavior.cs:12–12</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L13-L13">Drilling.UI/CPreviewCoordinateBehavior.cs:13–13</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L14-L14">Drilling.UI/CPreviewCoordinateBehavior.cs:14–14</a></td><td>CreateInputProperty</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L15-L15">Drilling.UI/CPreviewCoordinateBehavior.cs:15–15</a></td><td>CreateInputProperty</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -674,7 +674,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L112">MethodDeclaration <code>OnInputChanged</code> · L112–118</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L112-L118">Drilling.UI/CPreviewCoordinateBehavior.cs:112–118</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L112-L118">Drilling.UI/CPreviewCoordinateBehavior.cs:112–118</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.OnInputChanged(DependencyObject, DependencyPropertyChangedEventArgs)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -703,7 +703,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L120">MethodDeclaration <code>UpdateCoordinates</code> · L120–149</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L120-L149">Drilling.UI/CPreviewCoordinateBehavior.cs:120–149</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L120-L149">Drilling.UI/CPreviewCoordinateBehavior.cs:120–149</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.CPreviewCoordinateBehavior.UpdateCoordinates(ContentPresenter)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -716,7 +716,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L116-L116">Drilling.UI/CPreviewCoordinateBehavior.cs:116–116</a></td><td>UpdateCoordinates</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L116-L116">Drilling.UI/CPreviewCoordinateBehavior.cs:116–116</a></td><td>UpdateCoordinates</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -799,7 +799,7 @@
  N1 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L151">MethodDeclaration <code>TryDouble</code> · L151–160</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L151-L160">Drilling.UI/CPreviewCoordinateBehavior.cs:151–160</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L151-L160">Drilling.UI/CPreviewCoordinateBehavior.cs:151–160</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.UI.CPreviewCoordinateBehavior.TryDouble(object?, out double)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -813,14 +813,14 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CPreviewCoordinateBehavior.cs#L122-L122">Drilling.UI/CPreviewCoordinateBehavior.cs:122–122</a></td><td>TryDouble</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>

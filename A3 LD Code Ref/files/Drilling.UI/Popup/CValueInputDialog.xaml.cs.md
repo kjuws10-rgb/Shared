@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 2b05f6cf626e622daefee01b894f4aba1909dbcd11b77da23e4cda5caf502166 |
 | 파일 분류 | code |
 | 원본 크기/행 | 7,609 bytes / 223 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -52,7 +52,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_dataType` · L10–10
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L10-L10)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -67,7 +67,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_min` · L11–11
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L11-L11)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -82,7 +82,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_max` · L12–12
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L12-L12)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -97,7 +97,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L13–29
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:13–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L13-L29)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:13–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L13-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -120,27 +120,27 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:32–33](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L32-L33) | new CValueInputDialog | False |
-| [Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs:24–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs#L24-L25) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:51–53](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L51-L53) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CManualView.xaml.cs:107–110](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CManualView.xaml.cs#L107-L110) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CManualView.xaml.cs:121–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CManualView.xaml.cs#L121-L124) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CManualView.xaml.cs:134–137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CManualView.xaml.cs#L134-L137) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CManualView.xaml.cs:147–150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CManualView.xaml.cs#L147-L150) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:275–278](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L275-L278) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:354–357](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L354-L357) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:373–376](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L373-L376) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:392–395](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L392-L395) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:478–481](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L478-L481) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:506–509](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L506-L509) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:539–542](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L539-L542) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CMonitorView.xaml.cs:563–566](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CMonitorView.xaml.cs#L563-L566) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:158–161](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L158-L161) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:335–338](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CRecipeView.xaml.cs#L335-L338) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:365–368](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CRecipeView.xaml.cs#L365-L368) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CSettingView.xaml.cs:53–56](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml.cs#L53-L56) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CSettingView.xaml.cs:83–86](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSettingView.xaml.cs#L83-L86) | new CValueInputDialog | False |
-| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:42–43](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L42-L43) | new CValueInputDialog | False |
+| [Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs:32–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlignBaseEditDialog.xaml.cs#L32-L33) | new CValueInputDialog | False |
+| [Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs:24–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CManualHomeSpeedDialog.xaml.cs#L24-L25) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CManualPowerStageView.xaml.cs:51–53](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualPowerStageView.xaml.cs#L51-L53) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:107–110](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualView.xaml.cs#L107-L110) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:121–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualView.xaml.cs#L121-L124) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:134–137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualView.xaml.cs#L134-L137) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CManualView.xaml.cs:147–150](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualView.xaml.cs#L147-L150) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:275–278](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorView.xaml.cs#L275-L278) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:354–357](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorView.xaml.cs#L354-L357) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:373–376](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorView.xaml.cs#L373-L376) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:392–395](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorView.xaml.cs#L392-L395) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:478–481](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorView.xaml.cs#L478-L481) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:506–509](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorView.xaml.cs#L506-L509) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:539–542](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorView.xaml.cs#L539-L542) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CMonitorView.xaml.cs:563–566](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMonitorView.xaml.cs#L563-L566) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:158–161](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L158-L161) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:335–338](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L335-L338) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:365–368](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L365-L368) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CSettingView.xaml.cs:69–72](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSettingView.xaml.cs#L69-L72) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CSettingView.xaml.cs:99–102](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSettingView.xaml.cs#L99-L102) | new CValueInputDialog | False |
+| [Drilling.UI/Views/CSimpleCorrectionView.xaml.cs:42–43](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CSimpleCorrectionView.xaml.cs#L42-L43) | new CValueInputDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -178,7 +178,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ResultValue` · L31–37
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:31–37](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L31-L37)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:31–37](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L31-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -193,7 +193,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_ResultValue` · L33–36
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:33–36](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L33-L36)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:33–36](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L33-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -214,7 +214,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `BuildKeys` · L39–58
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:39–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L39-L58)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:39–58](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L39-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -227,7 +227,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CValueInputDialog.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L23-L23) | BuildKeys | False |
+| [Drilling.UI/Popup/CValueInputDialog.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L23-L23) | BuildKeys | False |
 
 호출하는 대상과 해석 범위:
 
@@ -278,7 +278,7 @@ flowchart TD
 
 ### MethodDeclaration `KeyClick` · L60–77
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:60–77](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L60-L77)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:60–77](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L60-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -341,7 +341,7 @@ flowchart TD
 
 ### MethodDeclaration `SpaceClick` · L79–87
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:79–87](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L79-L87)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:79–87](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L79-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -384,7 +384,7 @@ flowchart TD
 
 ### MethodDeclaration `BackClick` · L89–101
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:89–101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L89-L101)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:89–101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L89-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -439,7 +439,7 @@ flowchart TD
 
 ### MethodDeclaration `ClearClick` · L103–106
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:103–106](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L103-L106)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:103–106](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L103-L106)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -473,7 +473,7 @@ flowchart TD
 
 ### MethodDeclaration `ValueTextBoxPreviewTextInput` · L108–113
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:108–113](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L108-L113)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:108–113](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L108-L113)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -521,7 +521,7 @@ flowchart TD
 
 ### MethodDeclaration `ValueTextBoxPasting` · L115–123
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:115–123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L115-L123)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:115–123](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L115-L123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -577,7 +577,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateProspectiveValue` · L125–131
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:125–131](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L125-L131)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:125–131](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L125-L131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -596,7 +596,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CValueInputDialog.xaml.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L119-L119) | CreateProspectiveValue | False |
+| [Drilling.UI/Popup/CValueInputDialog.xaml.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L119-L119) | CreateProspectiveValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -627,7 +627,7 @@ flowchart TD
 
 ### MethodDeclaration `IsValidNumericInput` · L133–154
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:133–154](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L133-L154)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:133–154](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L133-L154)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -646,8 +646,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CValueInputDialog.xaml.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L112-L112) | IsValidNumericInput | False |
-| [Drilling.UI/Popup/CValueInputDialog.xaml.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L119-L119) | IsValidNumericInput | False |
+| [Drilling.UI/Popup/CValueInputDialog.xaml.cs:112–112](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L112-L112) | IsValidNumericInput | False |
+| [Drilling.UI/Popup/CValueInputDialog.xaml.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L119-L119) | IsValidNumericInput | False |
 
 호출하는 대상과 해석 범위:
 
@@ -700,7 +700,7 @@ flowchart TD
 
 ### MethodDeclaration `CancelClick` · L156–159
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:156–159](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L156-L159)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:156–159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L156-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -728,7 +728,7 @@ flowchart TD
 
 ### MethodDeclaration `WindowKeyDown` · L161–173
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:161–173](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L161-L173)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:161–173](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L161-L173)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -781,7 +781,7 @@ flowchart TD
 
 ### MethodDeclaration `OkClick` · L175–186
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:175–186](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L175-L186)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:175–186](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L175-L186)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -834,7 +834,7 @@ flowchart TD
 
 ### MethodDeclaration `Validate` · L188–211
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:188–211](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L188-L211)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:188–211](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L188-L211)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -903,7 +903,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateRange` · L213–222
 
-[Drilling.UI/Popup/CValueInputDialog.xaml.cs:213–222](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L213-L222)
+[Drilling.UI/Popup/CValueInputDialog.xaml.cs:213–222](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L213-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -923,8 +923,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CValueInputDialog.xaml.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L201-L201) | ValidateRange | False |
-| [Drilling.UI/Popup/CValueInputDialog.xaml.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L210-L210) | ValidateRange | False |
+| [Drilling.UI/Popup/CValueInputDialog.xaml.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L201-L201) | ValidateRange | False |
+| [Drilling.UI/Popup/CValueInputDialog.xaml.cs:210–210](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CValueInputDialog.xaml.cs#L210-L210) | ValidateRange | False |
 
 호출하는 대상과 해석 범위:
 

@@ -1,0 +1,681 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.UI/Views/CReviewShotMapControl.cs
+Commit: 96e22cd027c84bf302b23f2949b98985d7f301bb
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Views;
+L000001 | namespace Drilling.UI.Views; ⟦EOL⟧
+L000002 |  ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows;
+L000003 | using System.Windows; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Controls;
+L000004 | using System.Windows.Controls; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Input;
+L000005 | using System.Windows.Input; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Media;
+L000006 | using System.Windows.Media; ⟦EOL⟧
+// 해설 L7: 네임스페이스 또는 자원 사용 선언입니다: using System.Windows.Threading;
+L000007 | using System.Windows.Threading; ⟦EOL⟧
+// 해설 L8: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.UI.Menu.Menus;
+L000008 | using Drilling.UI.Menu.Menus; ⟦EOL⟧
+L000009 |  ⟦EOL⟧
+// 해설 L10: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000010 | /// <summary> ⟦EOL⟧
+// 해설 L11: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000011 | /// Draws the Review Shot matrix as one visual instead of materializing hundreds of buttons. ⟦EOL⟧
+// 해설 L12: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000012 | /// </summary> ⟦EOL⟧
+// 해설 L13: 타입의 구조/상속 선언입니다: public sealed class CReviewShotMapControl : FrameworkElement
+L000013 | public sealed class CReviewShotMapControl : FrameworkElement ⟦EOL⟧
+// 해설 L14: 구문 블록 경계입니다.
+L000014 | { ⟦EOL⟧
+// 해설 L15: 변수의 초기값을 지정합니다: CellSize = 18.0
+L000015 |     private const double CellSize = 18.0; ⟦EOL⟧
+// 해설 L16: 변수의 초기값을 지정합니다: CellMargin = 0.5
+L000016 |     private const double CellMargin = 0.5; ⟦EOL⟧
+// 해설 L17: 변수의 초기값을 지정합니다: CellPitch = CellSize + (CellMargin * 2.0)
+L000017 |     private const double CellPitch = CellSize + (CellMargin * 2.0); ⟦EOL⟧
+L000018 |  ⟦EOL⟧
+// 해설 L19: 함수·델리게이트 또는 객체 생성자를 호출합니다: FrozenBrush(0x25, 0x63, 0xEB) / 변수의 초기값을 지정합니다: BeamSelectionBackground = FrozenBrush(0x25, 0x63, 0xEB)
+L000019 |     private static readonly Brush BeamSelectionBackground = FrozenBrush(0x25, 0x63, 0xEB); ⟦EOL⟧
+// 해설 L20: 함수·델리게이트 또는 객체 생성자를 호출합니다: FrozenBrush(0x1E, 0x3A, 0x8A) / 변수의 초기값을 지정합니다: BeamSelectionBorder = FrozenBrush(0x1E, 0x3A, 0x8A)
+L000020 |     private static readonly Brush BeamSelectionBorder = FrozenBrush(0x1E, 0x3A, 0x8A); ⟦EOL⟧
+// 해설 L21: 함수·델리게이트 또는 객체 생성자를 호출합니다: FrozenBrush(0x35, 0xC7, 0x7A) / 변수의 초기값을 지정합니다: CurrentBackground = FrozenBrush(0x35, 0xC7, 0x7A)
+L000021 |     private static readonly Brush CurrentBackground = FrozenBrush(0x35, 0xC7, 0x7A); ⟦EOL⟧
+// 해설 L22: 함수·델리게이트 또는 객체 생성자를 호출합니다: FrozenBrush(0x13, 0x7A, 0x47) / 변수의 초기값을 지정합니다: CurrentBorder = FrozenBrush(0x13, 0x7A, 0x47)
+L000022 |     private static readonly Brush CurrentBorder = FrozenBrush(0x13, 0x7A, 0x47); ⟦EOL⟧
+// 해설 L23: 함수·델리게이트 또는 객체 생성자를 호출합니다: FrozenBrush(0xEF, 0x44, 0x44) / 변수의 초기값을 지정합니다: MaskingBackground = FrozenBrush(0xEF, 0x44, 0x44)
+L000023 |     private static readonly Brush MaskingBackground = FrozenBrush(0xEF, 0x44, 0x44); ⟦EOL⟧
+// 해설 L24: 함수·델리게이트 또는 객체 생성자를 호출합니다: FrozenBrush(0xB9, 0x1C, 0x1C) / 변수의 초기값을 지정합니다: MaskingBorder = FrozenBrush(0xB9, 0x1C, 0x1C)
+L000024 |     private static readonly Brush MaskingBorder = FrozenBrush(0xB9, 0x1C, 0x1C); ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: FrozenBrush(0xF5, 0x9E, 0x0B) / 변수의 초기값을 지정합니다: ActiveSelectionBorder = FrozenBrush(0xF5, 0x9E, 0x0B)
+L000025 |     private static readonly Brush ActiveSelectionBorder = FrozenBrush(0xF5, 0x9E, 0x0B); ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: FrozenBrush(0xF2, 0xFF, 0xFF, 0xFF) / 변수의 초기값을 지정합니다: SelectionMarkerBackground = FrozenBrush(0xF2, 0xFF, 0xFF, 0xFF)
+L000026 |     private static readonly Brush SelectionMarkerBackground = FrozenBrush(0xF2, 0xFF, 0xFF, 0xFF); ⟦EOL⟧
+// 해설 L27: 함수·델리게이트 또는 객체 생성자를 호출합니다: FrozenBrush(0x92, 0x40, 0x0E) / 변수의 초기값을 지정합니다: SelectionMarkerForeground = FrozenBrush(0x92, 0x40, 0x0E)
+L000027 |     private static readonly Brush SelectionMarkerForeground = FrozenBrush(0x92, 0x40, 0x0E); ⟦EOL⟧
+// 해설 L28: 변수의 초기값을 지정합니다: White = Brushes.White
+L000028 |     private static readonly Brush White = Brushes.White; ⟦EOL⟧
+L000029 |  ⟦EOL⟧
+// 해설 L30: 변수의 초기값을 지정합니다: _pens = []
+L000030 |     private readonly Dictionary<Brush, Dictionary<double, Pen>> _pens = []; ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(400) } / 변수의 초기값을 지정합니다: _blinkTimer = new(DispatcherPriority.Background) { Interval = TimeSpan.FromMilliseconds(400) }
+L000031 |     private readonly DispatcherTimer _blinkTimer = new(DispatcherPriority.Background) ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 _blinkTimer.
+L000032 |     { ⟦EOL⟧
+// 해설 L33: 값을 대상에 대입합니다: Interval = TimeSpan.FromMilliseconds(400) / 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromMilliseconds(400)
+L000033 |         Interval = TimeSpan.FromMilliseconds(400) ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 _blinkTimer.
+L000034 |     }; ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · ToolTip Drilling.UI.Views.CReviewShotMapControl._toolTip
+L000035 |     private readonly ToolTip _toolTip; ⟦EOL⟧
+// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · TextBlock Drilling.UI.Views.CReviewShotMapControl._toolTipTitle
+L000036 |     private readonly TextBlock _toolTipTitle; ⟦EOL⟧
+// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · TextBlock Drilling.UI.Views.CReviewShotMapControl._toolTipDetail
+L000037 |     private readonly TextBlock _toolTipDetail; ⟦EOL⟧
+// 해설 L38: 변수의 초기값을 지정합니다: _blinkVisible = true
+L000038 |     private bool _blinkVisible = true; ⟦EOL⟧
+// 해설 L39: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CReviewShotMapControl._rowsAttached
+L000039 |     private bool _rowsAttached; ⟦EOL⟧
+// 해설 L40: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_REVIEW_RUN_SHOT_ROW? Drilling.UI.Views.CReviewShotMapControl._hoveredShot
+L000040 |     private ST_REVIEW_RUN_SHOT_ROW? _hoveredShot; ⟦EOL⟧
+L000041 |  ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.Register( nameof(Rows), typeof(IReadOnlyList<ST_REVIEW_RUN_SHOT_MATRIX_ROW>), typeof(CReviewShotMapControl), new FrameworkPropertyMetadata( Array.Empty<ST_REVIEW_RUN_SHOT_MATRIX_ROW>(), FrameworkProper… / 변수의 초기값을 지정합니다: RowsProperty = DependencyProperty.Register( nameof(Rows), typeof(IReadOnlyList<ST_REVIEW_RUN_SHOT_MATRIX_ROW>), typeof(CReviewShotMapControl), new FrameworkPropertyMetadata( Array.Empty<ST_REVIEW_RUN_SHOT_MATRIX_ROW>(), FrameworkP
+L000042 |     public static readonly DependencyProperty RowsProperty = DependencyProperty.Register( ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Rows)
+L000043 |         nameof(Rows), ⟦EOL⟧
+// 해설 L44: 선언·서명/매개변수·접근 조건입니다 · DependencyProperty Drilling.UI.Views.CReviewShotMapControl.RowsProperty
+L000044 |         typeof(IReadOnlyList<ST_REVIEW_RUN_SHOT_MATRIX_ROW>), ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · DependencyProperty Drilling.UI.Views.CReviewShotMapControl.RowsProperty
+L000045 |         typeof(CReviewShotMapControl), ⟦EOL⟧
+// 해설 L46: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FrameworkPropertyMetadata( Array.Empty<ST_REVIEW_RUN_SHOT_MATRIX_ROW>(), FrameworkPropertyMetadataOptions.AffectsMeasure | FrameworkPropertyMetadataOptions.AffectsRender, OnRowsChanged)
+L000046 |         new FrameworkPropertyMetadata( ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.Empty<ST_REVIEW_RUN_SHOT_MATRIX_ROW>()
+L000047 |             Array.Empty<ST_REVIEW_RUN_SHOT_MATRIX_ROW>(), ⟦EOL⟧
+// 해설 L48: 선언·서명/매개변수·접근 조건입니다 · DependencyProperty Drilling.UI.Views.CReviewShotMapControl.RowsProperty
+L000048 |             FrameworkPropertyMetadataOptions.AffectsMeasure | FrameworkPropertyMetadataOptions.AffectsRender, ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · DependencyProperty Drilling.UI.Views.CReviewShotMapControl.RowsProperty
+L000049 |             OnRowsChanged)); ⟦EOL⟧
+L000050 |  ⟦EOL⟧
+// 해설 L51: 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.Register( nameof(IsBeamInspectionMode), typeof(bool), typeof(CReviewShotMapControl), new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.AffectsRender)) / 변수의 초기값을 지정합니다: IsBeamInspectionModeProperty = DependencyProperty.Register( nameof(IsBeamInspectionMode), typeof(bool), typeof(CReviewShotMapControl), new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.AffectsRender))
+L000051 |     public static readonly DependencyProperty IsBeamInspectionModeProperty = DependencyProperty.Register( ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsBeamInspectionMode)
+L000052 |         nameof(IsBeamInspectionMode), ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · DependencyProperty Drilling.UI.Views.CReviewShotMapControl.IsBeamInspectionModeProperty
+L000053 |         typeof(bool), ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · DependencyProperty Drilling.UI.Views.CReviewShotMapControl.IsBeamInspectionModeProperty
+L000054 |         typeof(CReviewShotMapControl), ⟦EOL⟧
+// 해설 L55: 함수·델리게이트 또는 객체 생성자를 호출합니다: new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.AffectsRender)
+L000055 |         new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.AffectsRender)); ⟦EOL⟧
+L000056 |  ⟦EOL⟧
+// 해설 L57: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CReviewShotMapControl.CReviewShotMapControl()
+L000057 |     public CReviewShotMapControl() ⟦EOL⟧
+// 해설 L58: 구문 블록 경계입니다 · 소속 .ctor.
+L000058 |     { ⟦EOL⟧
+// 해설 L59: 값을 대상에 대입합니다: Cursor = Cursors.Hand
+L000059 |         Cursor = Cursors.Hand; ⟦EOL⟧
+// 해설 L60: 값을 대상에 대입합니다: Focusable = false
+L000060 |         Focusable = false; ⟦EOL⟧
+// 해설 L61: 값을 대상에 대입합니다: SnapsToDevicePixels = true
+L000061 |         SnapsToDevicePixels = true; ⟦EOL⟧
+L000062 |  ⟦EOL⟧
+// 해설 L63: 값을 대상에 대입합니다: _toolTipTitle = new TextBlock { FontWeight = FontWeights.Bold } / 값을 대상에 대입합니다: FontWeight = FontWeights.Bold / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { FontWeight = FontWeights.Bold }
+L000063 |         _toolTipTitle = new TextBlock { FontWeight = FontWeights.Bold }; ⟦EOL⟧
+// 해설 L64: 값을 대상에 대입합니다: _toolTipDetail = new TextBlock { Margin = new Thickness(0, 2, 0, 0) } / 값을 대상에 대입합니다: Margin = new Thickness(0, 2, 0, 0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new TextBlock { Margin = new Thickness(0, 2, 0, 0) } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Thickness(0, 2, 0, 0)
+L000064 |         _toolTipDetail = new TextBlock { Margin = new Thickness(0, 2, 0, 0) }; ⟦EOL⟧
+// 해설 L65: 값을 대상에 대입합니다: _toolTip = new ToolTip { Content = new StackPanel { Children = { _toolTipTitle, _toolTipDetail } } } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ToolTip { Content = new StackPanel { Children = { _toolTipTitle, _toolTipDetail } } }
+L000065 |         _toolTip = new ToolTip ⟦EOL⟧
+// 해설 L66: 구문 블록 경계입니다 · 소속 .ctor.
+L000066 |         { ⟦EOL⟧
+// 해설 L67: 값을 대상에 대입합니다: Content = new StackPanel { Children = { _toolTipTitle, _toolTipDetail } } / 함수·델리게이트 또는 객체 생성자를 호출합니다: new StackPanel { Children = { _toolTipTitle, _toolTipDetail } }
+L000067 |             Content = new StackPanel ⟦EOL⟧
+// 해설 L68: 구문 블록 경계입니다 · 소속 .ctor.
+L000068 |             { ⟦EOL⟧
+// 해설 L69: 값을 대상에 대입합니다: Children = { _toolTipTitle, _toolTipDetail }
+L000069 |                 Children = ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 .ctor.
+L000070 |                 { ⟦EOL⟧
+// 해설 L71: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CReviewShotMapControl.CReviewShotMapControl()
+L000071 |                     _toolTipTitle, ⟦EOL⟧
+// 해설 L72: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Views.CReviewShotMapControl.CReviewShotMapControl()
+L000072 |                     _toolTipDetail ⟦EOL⟧
+// 해설 L73: 구문 블록 경계입니다 · 소속 .ctor.
+L000073 |                 } ⟦EOL⟧
+// 해설 L74: 구문 블록 경계입니다 · 소속 .ctor.
+L000074 |             } ⟦EOL⟧
+// 해설 L75: 구문 블록 경계입니다 · 소속 .ctor.
+L000075 |         }; ⟦EOL⟧
+// 해설 L76: 값을 대상에 대입합니다: ToolTip = _toolTip
+L000076 |         ToolTip = _toolTip; ⟦EOL⟧
+// 해설 L77: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToolTipService.SetInitialShowDelay(this, 350)
+L000077 |         ToolTipService.SetInitialShowDelay(this, 350); ⟦EOL⟧
+// 해설 L78: 함수·델리게이트 또는 객체 생성자를 호출합니다: ToolTipService.SetShowDuration(this, 15000)
+L000078 |         ToolTipService.SetShowDuration(this, 15000); ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 복합 대입 또는 이벤트 구독/해지 표현입니다: _blinkTimer.Tick += BlinkTimer_Tick
+L000080 |         _blinkTimer.Tick += BlinkTimer_Tick; ⟦EOL⟧
+// 해설 L81: 복합 대입 또는 이벤트 구독/해지 표현입니다: Loaded += (_, _) => { if (!_rowsAttached) { AttachRows(Rows); _rowsAttached = true; } _blinkTimer.Start(); }
+L000081 |         Loaded += (_, _) => ⟦EOL⟧
+// 해설 L82: 구문 블록 경계입니다 · 소속 .ctor.
+L000082 |         { ⟦EOL⟧
+// 해설 L83: 조건에 따라 분기합니다: if (!_rowsAttached)
+L000083 |             if (!_rowsAttached) ⟦EOL⟧
+// 해설 L84: 구문 블록 경계입니다 · 소속 .ctor.
+L000084 |             { ⟦EOL⟧
+// 해설 L85: 함수·델리게이트 또는 객체 생성자를 호출합니다: AttachRows(Rows)
+L000085 |                 AttachRows(Rows); ⟦EOL⟧
+// 해설 L86: 값을 대상에 대입합니다: _rowsAttached = true
+L000086 |                 _rowsAttached = true; ⟦EOL⟧
+// 해설 L87: 구문 블록 경계입니다 · 소속 .ctor.
+L000087 |             } ⟦EOL⟧
+L000088 |  ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: _blinkTimer.Start()
+L000089 |             _blinkTimer.Start(); ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 .ctor.
+L000090 |         }; ⟦EOL⟧
+// 해설 L91: 복합 대입 또는 이벤트 구독/해지 표현입니다: Unloaded += (_, _) => { _blinkTimer.Stop(); if (_rowsAttached) { DetachRows(Rows); _rowsAttached = false; } }
+L000091 |         Unloaded += (_, _) => ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 .ctor.
+L000092 |         { ⟦EOL⟧
+// 해설 L93: 함수·델리게이트 또는 객체 생성자를 호출합니다: _blinkTimer.Stop()
+L000093 |             _blinkTimer.Stop(); ⟦EOL⟧
+// 해설 L94: 조건에 따라 분기합니다: if (_rowsAttached)
+L000094 |             if (_rowsAttached) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 .ctor.
+L000095 |             { ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: DetachRows(Rows)
+L000096 |                 DetachRows(Rows); ⟦EOL⟧
+// 해설 L97: 값을 대상에 대입합니다: _rowsAttached = false
+L000097 |                 _rowsAttached = false; ⟦EOL⟧
+// 해설 L98: 구문 블록 경계입니다 · 소속 .ctor.
+L000098 |             } ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 .ctor.
+L000099 |         }; ⟦EOL⟧
+// 해설 L100: 구문 블록 경계입니다 · 소속 .ctor.
+L000100 |     } ⟦EOL⟧
+L000101 |  ⟦EOL⟧
+// 해설 L102: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_REVIEW_RUN_SHOT_MATRIX_ROW> Drilling.UI.Views.CReviewShotMapControl.Rows
+L000102 |     public IReadOnlyList<ST_REVIEW_RUN_SHOT_MATRIX_ROW> Rows ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 Rows.
+L000103 |     { ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(RowsProperty)
+L000104 |         get => (IReadOnlyList<ST_REVIEW_RUN_SHOT_MATRIX_ROW>)GetValue(RowsProperty); ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetValue(RowsProperty, value)
+L000105 |         set => SetValue(RowsProperty, value); ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 Rows.
+L000106 |     } ⟦EOL⟧
+L000107 |  ⟦EOL⟧
+// 해설 L108: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Views.CReviewShotMapControl.IsBeamInspectionMode
+L000108 |     public bool IsBeamInspectionMode ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 IsBeamInspectionMode.
+L000109 |     { ⟦EOL⟧
+// 해설 L110: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(IsBeamInspectionModeProperty)
+L000110 |         get => (bool)GetValue(IsBeamInspectionModeProperty); ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetValue(IsBeamInspectionModeProperty, value)
+L000111 |         set => SetValue(IsBeamInspectionModeProperty, value); ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 IsBeamInspectionMode.
+L000112 |     } ⟦EOL⟧
+L000113 |  ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · Size Drilling.UI.Views.CReviewShotMapControl.MeasureOverride(Size)
+L000114 |     protected override Size MeasureOverride(Size availableSize) ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 MeasureOverride.
+L000115 |     { ⟦EOL⟧
+// 해설 L116: 지역 변수를 선언합니다: var rowCount = Rows.Count; / 변수의 초기값을 지정합니다: rowCount = Rows.Count
+L000116 |         var rowCount = Rows.Count; ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.Max(row => row.Shots.Count) / 조건에 따라 결과식을 선택합니다: rowCount == 0 ? 0 : Rows.Max(row => row.Shots.Count) / 지역 변수를 선언합니다: var columnCount = rowCount == 0 ? 0 : Rows.Max(row => row.Shots.Count); / 변수의 초기값을 지정합니다: columnCount = rowCount == 0 ? 0 : Rows.Max(row => row.Shots.Count)
+L000117 |         var columnCount = rowCount == 0 ? 0 : Rows.Max(row => row.Shots.Count); ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(columnCount * CellPitch, rowCount * CellPitch) / 호출자에게 값 또는 제어를 반환합니다: return new Size(columnCount * CellPitch, rowCount * CellPitch);
+L000118 |         return new Size(columnCount * CellPitch, rowCount * CellPitch); ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 MeasureOverride.
+L000119 |     } ⟦EOL⟧
+L000120 |  ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.OnRender(DrawingContext)
+L000121 |     protected override void OnRender(DrawingContext drawingContext) ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 OnRender.
+L000122 |     { ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: base.OnRender(drawingContext)
+L000123 |         base.OnRender(drawingContext); ⟦EOL⟧
+L000124 |  ⟦EOL⟧
+// 해설 L125: 초기화·조건·증감이 있는 반복입니다: for (var rowIndex = 0; rowIndex < Rows.Count; rowIndex++) / 변수의 초기값을 지정합니다: rowIndex = 0
+L000125 |         for (var rowIndex = 0; rowIndex < Rows.Count; rowIndex++) ⟦EOL⟧
+// 해설 L126: 구문 블록 경계입니다 · 소속 OnRender.
+L000126 |         { ⟦EOL⟧
+// 해설 L127: 지역 변수를 선언합니다: var shots = Rows[rowIndex].Shots; / 변수의 초기값을 지정합니다: shots = Rows[rowIndex].Shots
+L000127 |             var shots = Rows[rowIndex].Shots; ⟦EOL⟧
+// 해설 L128: 초기화·조건·증감이 있는 반복입니다: for (var columnIndex = 0; columnIndex < shots.Count; columnIndex++) / 변수의 초기값을 지정합니다: columnIndex = 0
+L000128 |             for (var columnIndex = 0; columnIndex < shots.Count; columnIndex++) ⟦EOL⟧
+// 해설 L129: 구문 블록 경계입니다 · 소속 OnRender.
+L000129 |             { ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawShot(drawingContext, shots[columnIndex], rowIndex, columnIndex)
+L000130 |                 DrawShot(drawingContext, shots[columnIndex], rowIndex, columnIndex); ⟦EOL⟧
+// 해설 L131: 구문 블록 경계입니다 · 소속 OnRender.
+L000131 |             } ⟦EOL⟧
+// 해설 L132: 구문 블록 경계입니다 · 소속 OnRender.
+L000132 |         } ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 OnRender.
+L000133 |     } ⟦EOL⟧
+L000134 |  ⟦EOL⟧
+// 해설 L135: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.OnMouseMove(MouseEventArgs)
+L000135 |     protected override void OnMouseMove(MouseEventArgs eventArgs) ⟦EOL⟧
+// 해설 L136: 구문 블록 경계입니다 · 소속 OnMouseMove.
+L000136 |     { ⟦EOL⟧
+// 해설 L137: 함수·델리게이트 또는 객체 생성자를 호출합니다: base.OnMouseMove(eventArgs)
+L000137 |         base.OnMouseMove(eventArgs); ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: HitTestShot(eventArgs.GetPosition(this)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(this) / 지역 변수를 선언합니다: var shot = HitTestShot(eventArgs.GetPosition(this)); / 변수의 초기값을 지정합니다: shot = HitTestShot(eventArgs.GetPosition(this))
+L000138 |         var shot = HitTestShot(eventArgs.GetPosition(this)); ⟦EOL⟧
+// 해설 L139: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_hoveredShot, shot) / 조건에 따라 분기합니다: if (ReferenceEquals(_hoveredShot, shot))
+L000139 |         if (ReferenceEquals(_hoveredShot, shot)) ⟦EOL⟧
+// 해설 L140: 호출자에게 값 또는 제어를 반환합니다: return;
+L000140 |             return; ⟦EOL⟧
+L000141 |  ⟦EOL⟧
+// 해설 L142: 값을 대상에 대입합니다: _hoveredShot = shot
+L000142 |         _hoveredShot = shot; ⟦EOL⟧
+// 해설 L143: 값을 대상에 대입합니다: _toolTipTitle.Text = shot?.ShotName ?? ""
+L000143 |         _toolTipTitle.Text = shot?.ShotName ?? ""; ⟦EOL⟧
+// 해설 L144: 값을 대상에 대입합니다: _toolTipDetail.Text = shot?.Detail ?? ""
+L000144 |         _toolTipDetail.Text = shot?.Detail ?? ""; ⟦EOL⟧
+// 해설 L145: 조건에 따라 분기합니다: if (shot is null)
+L000145 |         if (shot is null) ⟦EOL⟧
+// 해설 L146: 값을 대상에 대입합니다: _toolTip.IsOpen = false
+L000146 |             _toolTip.IsOpen = false; ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 OnMouseMove.
+L000147 |     } ⟦EOL⟧
+L000148 |  ⟦EOL⟧
+// 해설 L149: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.OnMouseLeave(MouseEventArgs)
+L000149 |     protected override void OnMouseLeave(MouseEventArgs eventArgs) ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 OnMouseLeave.
+L000150 |     { ⟦EOL⟧
+// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: base.OnMouseLeave(eventArgs)
+L000151 |         base.OnMouseLeave(eventArgs); ⟦EOL⟧
+// 해설 L152: 값을 대상에 대입합니다: _hoveredShot = null
+L000152 |         _hoveredShot = null; ⟦EOL⟧
+// 해설 L153: 값을 대상에 대입합니다: _toolTip.IsOpen = false
+L000153 |         _toolTip.IsOpen = false; ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 OnMouseLeave.
+L000154 |     } ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.OnMouseLeftButtonDown(MouseButtonEventArgs)
+L000156 |     protected override void OnMouseLeftButtonDown(MouseButtonEventArgs eventArgs) ⟦EOL⟧
+// 해설 L157: 구문 블록 경계입니다 · 소속 OnMouseLeftButtonDown.
+L000157 |     { ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: base.OnMouseLeftButtonDown(eventArgs)
+L000158 |         base.OnMouseLeftButtonDown(eventArgs); ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: HitTestShot(eventArgs.GetPosition(this)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(this) / 지역 변수를 선언합니다: var shot = HitTestShot(eventArgs.GetPosition(this)); / 변수의 초기값을 지정합니다: shot = HitTestShot(eventArgs.GetPosition(this))
+L000159 |         var shot = HitTestShot(eventArgs.GetPosition(this)); ⟦EOL⟧
+// 해설 L160: 함수·델리게이트 또는 객체 생성자를 호출합니다: shot.SelectCommand.CanExecute(shot.ShotKey) / 조건에 따라 분기합니다: if (shot is null || !shot.SelectCommand.CanExecute(shot.ShotKey))
+L000160 |         if (shot is null || !shot.SelectCommand.CanExecute(shot.ShotKey)) ⟦EOL⟧
+// 해설 L161: 호출자에게 값 또는 제어를 반환합니다: return;
+L000161 |             return; ⟦EOL⟧
+L000162 |  ⟦EOL⟧
+// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: shot.SelectCommand.Execute(shot.ShotKey)
+L000163 |         shot.SelectCommand.Execute(shot.ShotKey); ⟦EOL⟧
+// 해설 L164: 값을 대상에 대입합니다: eventArgs.Handled = true
+L000164 |         eventArgs.Handled = true; ⟦EOL⟧
+// 해설 L165: 구문 블록 경계입니다 · 소속 OnMouseLeftButtonDown.
+L000165 |     } ⟦EOL⟧
+L000166 |  ⟦EOL⟧
+// 해설 L167: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.OnMouseRightButtonDown(MouseButtonEventArgs)
+L000167 |     protected override void OnMouseRightButtonDown(MouseButtonEventArgs eventArgs) ⟦EOL⟧
+// 해설 L168: 구문 블록 경계입니다 · 소속 OnMouseRightButtonDown.
+L000168 |     { ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: base.OnMouseRightButtonDown(eventArgs)
+L000169 |         base.OnMouseRightButtonDown(eventArgs); ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: HitTestShot(eventArgs.GetPosition(this)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(this) / 지역 변수를 선언합니다: var shot = HitTestShot(eventArgs.GetPosition(this)); / 변수의 초기값을 지정합니다: shot = HitTestShot(eventArgs.GetPosition(this))
+L000170 |         var shot = HitTestShot(eventArgs.GetPosition(this)); ⟦EOL⟧
+// 해설 L171: 지역 변수를 선언합니다: var command = shot?.ShowBeamPositionsCommand; / 변수의 초기값을 지정합니다: command = shot?.ShowBeamPositionsCommand
+L000171 |         var command = shot?.ShowBeamPositionsCommand; ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.CanExecute(shot.ShotKey) / 조건에 따라 분기합니다: if (shot is null || command is null || !command.CanExecute(shot.ShotKey))
+L000172 |         if (shot is null || command is null || !command.CanExecute(shot.ShotKey)) ⟦EOL⟧
+// 해설 L173: 호출자에게 값 또는 제어를 반환합니다: return;
+L000173 |             return; ⟦EOL⟧
+L000174 |  ⟦EOL⟧
+// 해설 L175: 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Execute(shot.ShotKey)
+L000175 |         command.Execute(shot.ShotKey); ⟦EOL⟧
+// 해설 L176: 값을 대상에 대입합니다: eventArgs.Handled = true
+L000176 |         eventArgs.Handled = true; ⟦EOL⟧
+// 해설 L177: 구문 블록 경계입니다 · 소속 OnMouseRightButtonDown.
+L000177 |     } ⟦EOL⟧
+L000178 |  ⟦EOL⟧
+// 해설 L179: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.OnRowsChanged(DependencyObject, DependencyPropertyChangedEventArgs)
+L000179 |     private static void OnRowsChanged(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs eventArgs) ⟦EOL⟧
+// 해설 L180: 구문 블록 경계입니다 · 소속 OnRowsChanged.
+L000180 |     { ⟦EOL⟧
+// 해설 L181: 지역 변수를 선언합니다: var control = (CReviewShotMapControl)dependencyObject; / 변수의 초기값을 지정합니다: control = (CReviewShotMapControl)dependencyObject
+L000181 |         var control = (CReviewShotMapControl)dependencyObject; ⟦EOL⟧
+// 해설 L182: 조건에 따라 분기합니다: if (control._rowsAttached)
+L000182 |         if (control._rowsAttached) ⟦EOL⟧
+// 해설 L183: 구문 블록 경계입니다 · 소속 OnRowsChanged.
+L000183 |         { ⟦EOL⟧
+// 해설 L184: 함수·델리게이트 또는 객체 생성자를 호출합니다: control.DetachRows(eventArgs.OldValue as IReadOnlyList<ST_REVIEW_RUN_SHOT_MATRIX_ROW>)
+L000184 |             control.DetachRows(eventArgs.OldValue as IReadOnlyList<ST_REVIEW_RUN_SHOT_MATRIX_ROW>); ⟦EOL⟧
+// 해설 L185: 함수·델리게이트 또는 객체 생성자를 호출합니다: control.AttachRows(eventArgs.NewValue as IReadOnlyList<ST_REVIEW_RUN_SHOT_MATRIX_ROW>)
+L000185 |             control.AttachRows(eventArgs.NewValue as IReadOnlyList<ST_REVIEW_RUN_SHOT_MATRIX_ROW>); ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 OnRowsChanged.
+L000186 |         } ⟦EOL⟧
+// 해설 L187: 값을 대상에 대입합니다: control._hoveredShot = null
+L000187 |         control._hoveredShot = null; ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: control.InvalidateMeasure()
+L000188 |         control.InvalidateMeasure(); ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: control.InvalidateVisual()
+L000189 |         control.InvalidateVisual(); ⟦EOL⟧
+// 해설 L190: 구문 블록 경계입니다 · 소속 OnRowsChanged.
+L000190 |     } ⟦EOL⟧
+L000191 |  ⟦EOL⟧
+// 해설 L192: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.AttachRows(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_REVIEW_RUN_SHOT_MATRIX_ROW>?)
+L000192 |     private void AttachRows(IReadOnlyList<ST_REVIEW_RUN_SHOT_MATRIX_ROW>? rows) ⟦EOL⟧
+// 해설 L193: 구문 블록 경계입니다 · 소속 AttachRows.
+L000193 |     { ⟦EOL⟧
+// 해설 L194: 조건에 따라 분기합니다: if (rows is null)
+L000194 |         if (rows is null) ⟦EOL⟧
+// 해설 L195: 호출자에게 값 또는 제어를 반환합니다: return;
+L000195 |             return; ⟦EOL⟧
+L000196 |  ⟦EOL⟧
+// 해설 L197: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.SelectMany(row => row.Shots) / 컬렉션 요소를 순회합니다: foreach (var shot in rows.SelectMany(row => row.Shots))
+L000197 |         foreach (var shot in rows.SelectMany(row => row.Shots)) ⟦EOL⟧
+// 해설 L198: 구문 블록 경계입니다 · 소속 AttachRows.
+L000198 |         { ⟦EOL⟧
+// 해설 L199: 복합 대입 또는 이벤트 구독/해지 표현입니다: shot.BackgroundBrushChanged += Shot_VisualChanged
+L000199 |             shot.BackgroundBrushChanged += Shot_VisualChanged; ⟦EOL⟧
+// 해설 L200: 복합 대입 또는 이벤트 구독/해지 표현입니다: shot.BorderBrushChanged += Shot_VisualChanged
+L000200 |             shot.BorderBrushChanged += Shot_VisualChanged; ⟦EOL⟧
+// 해설 L201: 복합 대입 또는 이벤트 구독/해지 표현입니다: shot.DetailChanged += Shot_VisualChanged
+L000201 |             shot.DetailChanged += Shot_VisualChanged; ⟦EOL⟧
+// 해설 L202: 구문 블록 경계입니다 · 소속 AttachRows.
+L000202 |         } ⟦EOL⟧
+// 해설 L203: 구문 블록 경계입니다 · 소속 AttachRows.
+L000203 |     } ⟦EOL⟧
+L000204 |  ⟦EOL⟧
+// 해설 L205: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.DetachRows(System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_REVIEW_RUN_SHOT_MATRIX_ROW>?)
+L000205 |     private void DetachRows(IReadOnlyList<ST_REVIEW_RUN_SHOT_MATRIX_ROW>? rows) ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 DetachRows.
+L000206 |     { ⟦EOL⟧
+// 해설 L207: 조건에 따라 분기합니다: if (rows is null)
+L000207 |         if (rows is null) ⟦EOL⟧
+// 해설 L208: 호출자에게 값 또는 제어를 반환합니다: return;
+L000208 |             return; ⟦EOL⟧
+L000209 |  ⟦EOL⟧
+// 해설 L210: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.SelectMany(row => row.Shots) / 컬렉션 요소를 순회합니다: foreach (var shot in rows.SelectMany(row => row.Shots))
+L000210 |         foreach (var shot in rows.SelectMany(row => row.Shots)) ⟦EOL⟧
+// 해설 L211: 구문 블록 경계입니다 · 소속 DetachRows.
+L000211 |         { ⟦EOL⟧
+// 해설 L212: 복합 대입 또는 이벤트 구독/해지 표현입니다: shot.BackgroundBrushChanged -= Shot_VisualChanged
+L000212 |             shot.BackgroundBrushChanged -= Shot_VisualChanged; ⟦EOL⟧
+// 해설 L213: 복합 대입 또는 이벤트 구독/해지 표현입니다: shot.BorderBrushChanged -= Shot_VisualChanged
+L000213 |             shot.BorderBrushChanged -= Shot_VisualChanged; ⟦EOL⟧
+// 해설 L214: 복합 대입 또는 이벤트 구독/해지 표현입니다: shot.DetailChanged -= Shot_VisualChanged
+L000214 |             shot.DetailChanged -= Shot_VisualChanged; ⟦EOL⟧
+// 해설 L215: 구문 블록 경계입니다 · 소속 DetachRows.
+L000215 |         } ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 DetachRows.
+L000216 |     } ⟦EOL⟧
+L000217 |  ⟦EOL⟧
+// 해설 L218: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.Shot_VisualChanged(object?, System.EventArgs)
+L000218 |     private void Shot_VisualChanged(object? sender, EventArgs eventArgs) ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 Shot_VisualChanged.
+L000219 |     { ⟦EOL⟧
+// 해설 L220: 함수·델리게이트 또는 객체 생성자를 호출합니다: Dispatcher.CheckAccess() / 조건에 따라 분기합니다: if (Dispatcher.CheckAccess())
+L000220 |         if (Dispatcher.CheckAccess()) ⟦EOL⟧
+// 해설 L221: 구문 블록 경계입니다 · 소속 Shot_VisualChanged.
+L000221 |         { ⟦EOL⟧
+// 해설 L222: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_hoveredShot, sender) / 조건에 따라 분기합니다: if (ReferenceEquals(_hoveredShot, sender) && sender is ST_REVIEW_RUN_SHOT_ROW shot)
+L000222 |             if (ReferenceEquals(_hoveredShot, sender) && sender is ST_REVIEW_RUN_SHOT_ROW shot) ⟦EOL⟧
+// 해설 L223: 값을 대상에 대입합니다: _toolTipDetail.Text = shot.Detail
+L000223 |                 _toolTipDetail.Text = shot.Detail; ⟦EOL⟧
+// 해설 L224: 함수·델리게이트 또는 객체 생성자를 호출합니다: InvalidateVisual()
+L000224 |             InvalidateVisual(); ⟦EOL⟧
+// 해설 L225: 호출자에게 값 또는 제어를 반환합니다: return;
+L000225 |             return; ⟦EOL⟧
+// 해설 L226: 구문 블록 경계입니다 · 소속 Shot_VisualChanged.
+L000226 |         } ⟦EOL⟧
+L000227 |  ⟦EOL⟧
+// 해설 L228: 값을 대상에 대입합니다: _ = Dispatcher.BeginInvoke(DispatcherPriority.Render, InvalidateVisual) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Dispatcher.BeginInvoke(DispatcherPriority.Render, InvalidateVisual)
+L000228 |         _ = Dispatcher.BeginInvoke(DispatcherPriority.Render, InvalidateVisual); ⟦EOL⟧
+// 해설 L229: 구문 블록 경계입니다 · 소속 Shot_VisualChanged.
+L000229 |     } ⟦EOL⟧
+L000230 |  ⟦EOL⟧
+// 해설 L231: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.BlinkTimer_Tick(object?, System.EventArgs)
+L000231 |     private void BlinkTimer_Tick(object? sender, EventArgs eventArgs) ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 BlinkTimer_Tick.
+L000232 |     { ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.SelectMany(row => row.Shots).Any(shot => shot.IsCurrent) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Rows.SelectMany(row => row.Shots) / 조건에 따라 분기합니다: if (!Rows.SelectMany(row => row.Shots).Any(shot => shot.IsCurrent))
+L000233 |         if (!Rows.SelectMany(row => row.Shots).Any(shot => shot.IsCurrent)) ⟦EOL⟧
+// 해설 L234: 구문 블록 경계입니다 · 소속 BlinkTimer_Tick.
+L000234 |         { ⟦EOL⟧
+// 해설 L235: 값을 대상에 대입합니다: _blinkVisible = true
+L000235 |             _blinkVisible = true; ⟦EOL⟧
+// 해설 L236: 호출자에게 값 또는 제어를 반환합니다: return;
+L000236 |             return; ⟦EOL⟧
+// 해설 L237: 구문 블록 경계입니다 · 소속 BlinkTimer_Tick.
+L000237 |         } ⟦EOL⟧
+L000238 |  ⟦EOL⟧
+// 해설 L239: 값을 대상에 대입합니다: _blinkVisible = !_blinkVisible
+L000239 |         _blinkVisible = !_blinkVisible; ⟦EOL⟧
+// 해설 L240: 함수·델리게이트 또는 객체 생성자를 호출합니다: InvalidateVisual()
+L000240 |         InvalidateVisual(); ⟦EOL⟧
+// 해설 L241: 구문 블록 경계입니다 · 소속 BlinkTimer_Tick.
+L000241 |     } ⟦EOL⟧
+L000242 |  ⟦EOL⟧
+// 해설 L243: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.DrawShot(DrawingContext, Drilling.UI.Menu.Menus.ST_REVIEW_RUN_SHOT_ROW, int, int)
+L000243 |     private void DrawShot(DrawingContext drawingContext, ST_REVIEW_RUN_SHOT_ROW shot, int row, int column) ⟦EOL⟧
+// 해설 L244: 구문 블록 경계입니다 · 소속 DrawShot.
+L000244 |     { ⟦EOL⟧
+// 해설 L245: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect( column * CellPitch + CellMargin, row * CellPitch + CellMargin, CellSize, CellSize) / 지역 변수를 선언합니다: var rect = new Rect( column * CellPitch + CellMargin, row * CellPitch + CellMargin, CellSize, CellSize); / 변수의 초기값을 지정합니다: rect = new Rect( column * CellPitch + CellMargin, row * CellPitch + CellMargin, CellSize, CellSize)
+L000245 |         var rect = new Rect( ⟦EOL⟧
+// 해설 L246: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.DrawShot(DrawingContext, Drilling.UI.Menu.Menus.ST_REVIEW_RUN_SHOT_ROW, int, int)
+L000246 |             column * CellPitch + CellMargin, ⟦EOL⟧
+// 해설 L247: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.DrawShot(DrawingContext, Drilling.UI.Menu.Menus.ST_REVIEW_RUN_SHOT_ROW, int, int)
+L000247 |             row * CellPitch + CellMargin, ⟦EOL⟧
+// 해설 L248: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.DrawShot(DrawingContext, Drilling.UI.Menu.Menus.ST_REVIEW_RUN_SHOT_ROW, int, int)
+L000248 |             CellSize, ⟦EOL⟧
+// 해설 L249: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.DrawShot(DrawingContext, Drilling.UI.Menu.Menus.ST_REVIEW_RUN_SHOT_ROW, int, int)
+L000249 |             CellSize); ⟦EOL⟧
+L000250 |  ⟦EOL⟧
+// 해설 L251: 지역 변수를 선언합니다: var background = shot.BackgroundBrush; / 변수의 초기값을 지정합니다: background = shot.BackgroundBrush
+L000251 |         var background = shot.BackgroundBrush; ⟦EOL⟧
+// 해설 L252: 지역 변수를 선언합니다: var border = shot.BorderBrush; / 변수의 초기값을 지정합니다: border = shot.BorderBrush
+L000252 |         var border = shot.BorderBrush; ⟦EOL⟧
+// 해설 L253: 조건에 따라 결과식을 선택합니다: shot.HasResult ? 1.2 : 0.7 / 지역 변수를 선언합니다: var borderThickness = shot.HasResult ? 1.2 : 0.7; / 변수의 초기값을 지정합니다: borderThickness = shot.HasResult ? 1.2 : 0.7
+L000253 |         var borderThickness = shot.HasResult ? 1.2 : 0.7; ⟦EOL⟧
+L000254 |  ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: shot.ExclusionReason.Equals("CHESS", StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var isMasking = shot.IsExcluded && !shot.ExclusionReason.Equals("CHESS", StringComparison.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: isMasking = shot.IsExcluded && !shot.ExclusionReason.Equals("CHESS", StringComparison.OrdinalIgnoreCase)
+L000255 |         var isMasking = shot.IsExcluded && !shot.ExclusionReason.Equals("CHESS", StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L256: 조건에 따라 분기합니다: if (shot.IsExcluded)
+L000256 |         if (shot.IsExcluded) ⟦EOL⟧
+// 해설 L257: 구문 블록 경계입니다 · 소속 DrawShot.
+L000257 |         { ⟦EOL⟧
+// 해설 L258: 값을 대상에 대입합니다: borderThickness = isMasking ? 1.6 : 1.2 / 조건에 따라 결과식을 선택합니다: isMasking ? 1.6 : 1.2
+L000258 |             borderThickness = isMasking ? 1.6 : 1.2; ⟦EOL⟧
+// 해설 L259: 조건에 따라 분기합니다: if (isMasking)
+L000259 |             if (isMasking) ⟦EOL⟧
+// 해설 L260: 구문 블록 경계입니다 · 소속 DrawShot.
+L000260 |             { ⟦EOL⟧
+// 해설 L261: 값을 대상에 대입합니다: background = MaskingBackground
+L000261 |                 background = MaskingBackground; ⟦EOL⟧
+// 해설 L262: 값을 대상에 대입합니다: border = MaskingBorder
+L000262 |                 border = MaskingBorder; ⟦EOL⟧
+// 해설 L263: 구문 블록 경계입니다 · 소속 DrawShot.
+L000263 |             } ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 DrawShot.
+L000264 |         } ⟦EOL⟧
+L000265 |  ⟦EOL⟧
+// 해설 L266: 조건에 따라 분기합니다: if (shot.IsSelected)
+L000266 |         if (shot.IsSelected) ⟦EOL⟧
+// 해설 L267: 구문 블록 경계입니다 · 소속 DrawShot.
+L000267 |         { ⟦EOL⟧
+// 해설 L268: 값을 대상에 대입합니다: borderThickness = 2.0
+L000268 |             borderThickness = 2.0; ⟦EOL⟧
+// 해설 L269: 조건에 따라 분기합니다: if (IsBeamInspectionMode)
+L000269 |             if (IsBeamInspectionMode) ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 DrawShot.
+L000270 |             { ⟦EOL⟧
+// 해설 L271: 값을 대상에 대입합니다: background = BeamSelectionBackground
+L000271 |                 background = BeamSelectionBackground; ⟦EOL⟧
+// 해설 L272: 값을 대상에 대입합니다: border = BeamSelectionBorder
+L000272 |                 border = BeamSelectionBorder; ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 DrawShot.
+L000273 |             } ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 DrawShot.
+L000274 |         } ⟦EOL⟧
+L000275 |  ⟦EOL⟧
+// 해설 L276: 조건에 따라 분기합니다: if (shot.IsActiveSelection)
+L000276 |         if (shot.IsActiveSelection) ⟦EOL⟧
+// 해설 L277: 구문 블록 경계입니다 · 소속 DrawShot.
+L000277 |         { ⟦EOL⟧
+// 해설 L278: 값을 대상에 대입합니다: border = ActiveSelectionBorder
+L000278 |             border = ActiveSelectionBorder; ⟦EOL⟧
+// 해설 L279: 값을 대상에 대입합니다: borderThickness = 3.0
+L000279 |             borderThickness = 3.0; ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 DrawShot.
+L000280 |         } ⟦EOL⟧
+L000281 |  ⟦EOL⟧
+// 해설 L282: 조건에 따라 분기합니다: if (shot.IsCurrent)
+L000282 |         if (shot.IsCurrent) ⟦EOL⟧
+// 해설 L283: 구문 블록 경계입니다 · 소속 DrawShot.
+L000283 |         { ⟦EOL⟧
+// 해설 L284: 값을 대상에 대입합니다: background = CurrentBackground
+L000284 |             background = CurrentBackground; ⟦EOL⟧
+// 해설 L285: 값을 대상에 대입합니다: border = CurrentBorder
+L000285 |             border = CurrentBorder; ⟦EOL⟧
+// 해설 L286: 값을 대상에 대입합니다: borderThickness = 2.0
+L000286 |             borderThickness = 2.0; ⟦EOL⟧
+// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawingContext.PushOpacity(_blinkVisible ? 1.0 : 0.38) / 조건에 따라 결과식을 선택합니다: _blinkVisible ? 1.0 : 0.38
+L000287 |             drawingContext.PushOpacity(_blinkVisible ? 1.0 : 0.38); ⟦EOL⟧
+// 해설 L288: 구문 블록 경계입니다 · 소속 DrawShot.
+L000288 |         } ⟦EOL⟧
+L000289 |  ⟦EOL⟧
+// 해설 L290: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawingContext.DrawRectangle(background, GetPen(border, borderThickness), rect) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPen(border, borderThickness)
+L000290 |         drawingContext.DrawRectangle(background, GetPen(border, borderThickness), rect); ⟦EOL⟧
+L000291 |  ⟦EOL⟧
+// 해설 L292: 조건에 따라 분기합니다: if (isMasking)
+L000292 |         if (isMasking) ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawCross(drawingContext, rect, White, 2.4, 3.0)
+L000293 |             DrawCross(drawingContext, rect, White, 2.4, 3.0); ⟦EOL⟧
+L000294 |  ⟦EOL⟧
+// 해설 L295: 조건에 따라 분기합니다: if (shot.IsActiveSelection || (shot.IsSelected && !IsBeamInspectionMode))
+L000295 |         if (shot.IsActiveSelection || (shot.IsSelected && !IsBeamInspectionMode)) ⟦EOL⟧
+// 해설 L296: 함수·델리게이트 또는 객체 생성자를 호출합니다: DrawSelectionMarker(drawingContext, rect)
+L000296 |             DrawSelectionMarker(drawingContext, rect); ⟦EOL⟧
+L000297 |  ⟦EOL⟧
+// 해설 L298: 조건에 따라 분기합니다: if (shot.IsCurrent)
+L000298 |         if (shot.IsCurrent) ⟦EOL⟧
+// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawingContext.Pop()
+L000299 |             drawingContext.Pop(); ⟦EOL⟧
+// 해설 L300: 구문 블록 경계입니다 · 소속 DrawShot.
+L000300 |     } ⟦EOL⟧
+L000301 |  ⟦EOL⟧
+// 해설 L302: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.DrawSelectionMarker(DrawingContext, Rect)
+L000302 |     private void DrawSelectionMarker(DrawingContext drawingContext, Rect cellRect) ⟦EOL⟧
+// 해설 L303: 구문 블록 경계입니다 · 소속 DrawSelectionMarker.
+L000303 |     { ⟦EOL⟧
+// 해설 L304: 지역 변수를 선언합니다: const double markerSize = 12.0; / 변수의 초기값을 지정합니다: markerSize = 12.0
+L000304 |         const double markerSize = 12.0; ⟦EOL⟧
+// 해설 L305: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Rect( cellRect.Left + ((cellRect.Width - markerSize) / 2.0), cellRect.Top + ((cellRect.Height - markerSize) / 2.0), markerSize, markerSize) / 지역 변수를 선언합니다: var marker = new Rect( cellRect.Left + ((cellRect.Width - markerSize) / 2.0), cellRect.Top + ((cellRect.Height - markerSize) / 2.0), markerSize, markerSize); / 변수의 초기값을 지정합니다: marker = new Rect( cellRect.Left + ((cellRect.Width - markerSize) / 2.0), cellRect.Top + ((cellRect.Height - markerSize) / 2.0), markerSize, markerSize)
+L000305 |         var marker = new Rect( ⟦EOL⟧
+// 해설 L306: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.DrawSelectionMarker(DrawingContext, Rect)
+L000306 |             cellRect.Left + ((cellRect.Width - markerSize) / 2.0), ⟦EOL⟧
+// 해설 L307: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.DrawSelectionMarker(DrawingContext, Rect)
+L000307 |             cellRect.Top + ((cellRect.Height - markerSize) / 2.0), ⟦EOL⟧
+// 해설 L308: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.DrawSelectionMarker(DrawingContext, Rect)
+L000308 |             markerSize, ⟦EOL⟧
+// 해설 L309: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.DrawSelectionMarker(DrawingContext, Rect)
+L000309 |             markerSize); ⟦EOL⟧
+// 해설 L310: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawingContext.DrawRectangle(SelectionMarkerBackground, GetPen(ActiveSelectionBorder, 2.0), marker) / 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPen(ActiveSelectionBorder, 2.0)
+L000310 |         drawingContext.DrawRectangle(SelectionMarkerBackground, GetPen(ActiveSelectionBorder, 2.0), marker); ⟦EOL⟧
+L000311 |  ⟦EOL⟧
+// 해설 L312: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPen(SelectionMarkerForeground, 1.4) / 지역 변수를 선언합니다: var pen = GetPen(SelectionMarkerForeground, 1.4); / 변수의 초기값을 지정합니다: pen = GetPen(SelectionMarkerForeground, 1.4)
+L000312 |         var pen = GetPen(SelectionMarkerForeground, 1.4); ⟦EOL⟧
+// 해설 L313: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawingContext.DrawLine(pen, new Point(marker.Left + 3.0, marker.Top + 4.5), new Point(marker.Left + 5.4, marker.Bottom - 3.0)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(marker.Left + 3.0, marker.Top + 4.5) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(marker.Left + 5.4, marker.Bottom - 3.0)
+L000313 |         drawingContext.DrawLine(pen, new Point(marker.Left + 3.0, marker.Top + 4.5), new Point(marker.Left + 5.4, marker.Bottom - 3.0)); ⟦EOL⟧
+// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawingContext.DrawLine(pen, new Point(marker.Left + 5.4, marker.Bottom - 3.0), new Point(marker.Right - 2.5, marker.Top + 2.5)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(marker.Left + 5.4, marker.Bottom - 3.0) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(marker.Right - 2.5, marker.Top + 2.5)
+L000314 |         drawingContext.DrawLine(pen, new Point(marker.Left + 5.4, marker.Bottom - 3.0), new Point(marker.Right - 2.5, marker.Top + 2.5)); ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 DrawSelectionMarker.
+L000315 |     } ⟦EOL⟧
+L000316 |  ⟦EOL⟧
+// 해설 L317: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Views.CReviewShotMapControl.DrawCross(DrawingContext, Rect, Brush, double, double)
+L000317 |     private void DrawCross(DrawingContext drawingContext, Rect rect, Brush brush, double thickness, double inset) ⟦EOL⟧
+// 해설 L318: 구문 블록 경계입니다 · 소속 DrawCross.
+L000318 |     { ⟦EOL⟧
+// 해설 L319: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetPen(brush, thickness) / 지역 변수를 선언합니다: var pen = GetPen(brush, thickness); / 변수의 초기값을 지정합니다: pen = GetPen(brush, thickness)
+L000319 |         var pen = GetPen(brush, thickness); ⟦EOL⟧
+// 해설 L320: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawingContext.DrawLine(pen, new Point(rect.Left + inset, rect.Top + inset), new Point(rect.Right - inset, rect.Bottom - inset)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(rect.Left + inset, rect.Top + inset) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(rect.Right - inset, rect.Bottom - inset)
+L000320 |         drawingContext.DrawLine(pen, new Point(rect.Left + inset, rect.Top + inset), new Point(rect.Right - inset, rect.Bottom - inset)); ⟦EOL⟧
+// 해설 L321: 함수·델리게이트 또는 객체 생성자를 호출합니다: drawingContext.DrawLine(pen, new Point(rect.Right - inset, rect.Top + inset), new Point(rect.Left + inset, rect.Bottom - inset)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(rect.Right - inset, rect.Top + inset) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Point(rect.Left + inset, rect.Bottom - inset)
+L000321 |         drawingContext.DrawLine(pen, new Point(rect.Right - inset, rect.Top + inset), new Point(rect.Left + inset, rect.Bottom - inset)); ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 DrawCross.
+L000322 |     } ⟦EOL⟧
+L000323 |  ⟦EOL⟧
+// 해설 L324: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_REVIEW_RUN_SHOT_ROW? Drilling.UI.Views.CReviewShotMapControl.HitTestShot(Point)
+L000324 |     private ST_REVIEW_RUN_SHOT_ROW? HitTestShot(Point point) ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 HitTestShot.
+L000325 |     { ⟦EOL⟧
+// 해설 L326: 조건에 따라 분기합니다: if (point.X < 0 || point.Y < 0)
+L000326 |         if (point.X < 0 || point.Y < 0) ⟦EOL⟧
+// 해설 L327: 호출자에게 값 또는 제어를 반환합니다: return null;
+L000327 |             return null; ⟦EOL⟧
+L000328 |  ⟦EOL⟧
+// 해설 L329: 지역 변수를 선언합니다: var rowIndex = (int)(point.Y / CellPitch); / 변수의 초기값을 지정합니다: rowIndex = (int)(point.Y / CellPitch)
+L000329 |         var rowIndex = (int)(point.Y / CellPitch); ⟦EOL⟧
+// 해설 L330: 지역 변수를 선언합니다: var columnIndex = (int)(point.X / CellPitch); / 변수의 초기값을 지정합니다: columnIndex = (int)(point.X / CellPitch)
+L000330 |         var columnIndex = (int)(point.X / CellPitch); ⟦EOL⟧
+// 해설 L331: 조건에 따라 분기합니다: if (rowIndex < 0 || rowIndex >= Rows.Count)
+L000331 |         if (rowIndex < 0 || rowIndex >= Rows.Count) ⟦EOL⟧
+// 해설 L332: 호출자에게 값 또는 제어를 반환합니다: return null;
+L000332 |             return null; ⟦EOL⟧
+L000333 |  ⟦EOL⟧
+// 해설 L334: 지역 변수를 선언합니다: var shots = Rows[rowIndex].Shots; / 변수의 초기값을 지정합니다: shots = Rows[rowIndex].Shots
+L000334 |         var shots = Rows[rowIndex].Shots; ⟦EOL⟧
+// 해설 L335: 조건에 따라 결과식을 선택합니다: columnIndex >= 0 && columnIndex < shots.Count ? shots[columnIndex] : null / 호출자에게 값 또는 제어를 반환합니다: return columnIndex >= 0 && columnIndex < shots.Count ? shots[columnIndex] : null;
+L000335 |         return columnIndex >= 0 && columnIndex < shots.Count ? shots[columnIndex] : null; ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 HitTestShot.
+L000336 |     } ⟦EOL⟧
+L000337 |  ⟦EOL⟧
+// 해설 L338: 선언·서명/매개변수·접근 조건입니다 · Pen Drilling.UI.Views.CReviewShotMapControl.GetPen(Brush, double)
+L000338 |     private Pen GetPen(Brush brush, double thickness) ⟦EOL⟧
+// 해설 L339: 구문 블록 경계입니다 · 소속 GetPen.
+L000339 |     { ⟦EOL⟧
+// 해설 L340: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pens.TryGetValue(brush, out var byThickness) / 조건에 따라 분기합니다: if (!_pens.TryGetValue(brush, out var byThickness))
+L000340 |         if (!_pens.TryGetValue(brush, out var byThickness)) ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다 · 소속 GetPen.
+L000341 |         { ⟦EOL⟧
+// 해설 L342: 값을 대상에 대입합니다: byThickness = []
+L000342 |             byThickness = []; ⟦EOL⟧
+// 해설 L343: 함수·델리게이트 또는 객체 생성자를 호출합니다: _pens.Add(brush, byThickness)
+L000343 |             _pens.Add(brush, byThickness); ⟦EOL⟧
+// 해설 L344: 구문 블록 경계입니다 · 소속 GetPen.
+L000344 |         } ⟦EOL⟧
+L000345 |  ⟦EOL⟧
+// 해설 L346: 함수·델리게이트 또는 객체 생성자를 호출합니다: byThickness.TryGetValue(thickness, out var pen) / 조건에 따라 분기합니다: if (byThickness.TryGetValue(thickness, out var pen))
+L000346 |         if (byThickness.TryGetValue(thickness, out var pen)) ⟦EOL⟧
+// 해설 L347: 호출자에게 값 또는 제어를 반환합니다: return pen;
+L000347 |             return pen; ⟦EOL⟧
+L000348 |  ⟦EOL⟧
+// 해설 L349: 값을 대상에 대입합니다: pen = new Pen(brush, thickness) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new Pen(brush, thickness)
+L000349 |         pen = new Pen(brush, thickness); ⟦EOL⟧
+// 해설 L350: 조건에 따라 분기합니다: if (pen.CanFreeze)
+L000350 |         if (pen.CanFreeze) ⟦EOL⟧
+// 해설 L351: 함수·델리게이트 또는 객체 생성자를 호출합니다: pen.Freeze()
+L000351 |             pen.Freeze(); ⟦EOL⟧
+// 해설 L352: 함수·델리게이트 또는 객체 생성자를 호출합니다: byThickness.Add(thickness, pen)
+L000352 |         byThickness.Add(thickness, pen); ⟦EOL⟧
+// 해설 L353: 호출자에게 값 또는 제어를 반환합니다: return pen;
+L000353 |         return pen; ⟦EOL⟧
+// 해설 L354: 구문 블록 경계입니다 · 소속 GetPen.
+L000354 |     } ⟦EOL⟧
+L000355 |  ⟦EOL⟧
+// 해설 L356: 함수·델리게이트 또는 객체 생성자를 호출합니다: FrozenBrush(0xFF, red, green, blue)
+L000356 |     private static Brush FrozenBrush(byte red, byte green, byte blue) => FrozenBrush(0xFF, red, green, blue); ⟦EOL⟧
+L000357 |  ⟦EOL⟧
+// 해설 L358: 선언·서명/매개변수·접근 조건입니다 · Brush Drilling.UI.Views.CReviewShotMapControl.FrozenBrush(byte, byte, byte, byte)
+L000358 |     private static Brush FrozenBrush(byte alpha, byte red, byte green, byte blue) ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 FrozenBrush.
+L000359 |     { ⟦EOL⟧
+// 해설 L360: 함수·델리게이트 또는 객체 생성자를 호출합니다: new SolidColorBrush(Color.FromArgb(alpha, red, green, blue)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Color.FromArgb(alpha, red, green, blue) / 지역 변수를 선언합니다: var brush = new SolidColorBrush(Color.FromArgb(alpha, red, green, blue)); / 변수의 초기값을 지정합니다: brush = new SolidColorBrush(Color.FromArgb(alpha, red, green, blue))
+L000360 |         var brush = new SolidColorBrush(Color.FromArgb(alpha, red, green, blue)); ⟦EOL⟧
+// 해설 L361: 함수·델리게이트 또는 객체 생성자를 호출합니다: brush.Freeze()
+L000361 |         brush.Freeze(); ⟦EOL⟧
+// 해설 L362: 호출자에게 값 또는 제어를 반환합니다: return brush;
+L000362 |         return brush; ⟦EOL⟧
+// 해설 L363: 구문 블록 경계입니다 · 소속 FrozenBrush.
+L000363 |     } ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다.
+L000364 | } ⟦EOL⟧

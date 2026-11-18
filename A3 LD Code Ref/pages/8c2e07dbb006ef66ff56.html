@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Automation/CScannerAxisConfiguration.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Automation/CScannerAxisConfiguration.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs">Git 원본</a></p><h1>Drilling.Common/Automation/CScannerAxisConfiguration.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Automation/CScannerAxisConfiguration.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Automation/CScannerAxisConfiguration.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs">Git 원본</a></p><h1>Drilling.Common/Automation/CScannerAxisConfiguration.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>dfa5920e6301d9ec4b0eab1452ae59521aafc986</td></tr>
+<tr><td>원본 Commit</td><td>96e22cd027c84bf302b23f2949b98985d7f301bb</td></tr>
 <tr><td>원본 SHA256</td><td>46241bee261b984aa7c9999db2414c5f0b92c128bfbae34733ac0aceb59b04b4</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>11,959 bytes / 316 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>프로그램의 시작·구성·공유 타입 또는 빌드 연결에 사용됩니다. 아래 실제 선언·참조와 원본 근거를 확인합니다.</p>
@@ -41,7 +41,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L8">MethodDeclaration <code>BuildAxisDefinitions</code> · L8–27</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L8-L27">Drilling.Common/Automation/CScannerAxisConfiguration.cs:8–27</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L8-L27">Drilling.Common/Automation/CScannerAxisConfiguration.cs:8–27</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt; Drilling.Common.Automation.CScannerAxisConfiguration.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -55,10 +55,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Alarm/CAlarmManager.cs#L590-L590">Drilling.Common/Alarm/CAlarmManager.cs:590–590</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L261-L261">Drilling.Common/Interface/CPowerMeasureRun.cs:261–261</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3619-L3619">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3619–3619</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L121-L121">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:121–121</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L590-L590">Drilling.Common/Alarm/CAlarmManager.cs:590–590</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L261-L261">Drilling.Common/Interface/CPowerMeasureRun.cs:261–261</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3623-L3623">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3623–3623</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L121-L121">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:121–121</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -109,7 +109,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L29">MethodDeclaration <code>BuildAxisDefinitions</code> · L29–48</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L29-L48">Drilling.Common/Automation/CScannerAxisConfiguration.cs:29–48</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L29-L48">Drilling.Common/Automation/CScannerAxisConfiguration.cs:29–48</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt; Drilling.Common.Automation.CScannerAxisConfiguration.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -123,8 +123,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/InterLock/CInterLockManager.cs#L129-L129">Drilling.Common/InterLock/CInterLockManager.cs:129–129</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L124-L124">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:124–124</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/InterLock/CInterLockManager.cs#L129-L129">Drilling.Common/InterLock/CInterLockManager.cs:129–129</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L124-L124">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:124–124</a></td><td>CScannerAxisConfiguration.BuildAxisDefinitions</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -175,7 +175,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L50">MethodDeclaration <code>AppendScannerZAxisDefinition</code> · L50–60</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L50-L60">Drilling.Common/Automation/CScannerAxisConfiguration.cs:50–60</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L50-L60">Drilling.Common/Automation/CScannerAxisConfiguration.cs:50–60</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CScannerAxisConfiguration.AppendScannerZAxisDefinition(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int, int, int, System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -192,7 +192,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L25-L25">Drilling.Common/Automation/CScannerAxisConfiguration.cs:25–25</a></td><td>AppendScannerZAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L25-L25">Drilling.Common/Automation/CScannerAxisConfiguration.cs:25–25</a></td><td>AppendScannerZAxisDefinition</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -223,7 +223,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L62">MethodDeclaration <code>AppendScannerZAxisDefinition</code> · L62–72</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L62-L72">Drilling.Common/Automation/CScannerAxisConfiguration.cs:62–72</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L62-L72">Drilling.Common/Automation/CScannerAxisConfiguration.cs:62–72</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CScannerAxisConfiguration.AppendScannerZAxisDefinition(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int, int, System.Collections.Generic.List&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -240,7 +240,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L46-L46">Drilling.Common/Automation/CScannerAxisConfiguration.cs:46–46</a></td><td>AppendScannerZAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L46-L46">Drilling.Common/Automation/CScannerAxisConfiguration.cs:46–46</a></td><td>AppendScannerZAxisDefinition</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -271,7 +271,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L74">MethodDeclaration <code>CreateUnusedAxisDefinition</code> · L74–77</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L74-L77">Drilling.Common/Automation/CScannerAxisConfiguration.cs:74–77</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L74-L77">Drilling.Common/Automation/CScannerAxisConfiguration.cs:74–77</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateUnusedAxisDefinition(int, int, string, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -287,8 +287,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L54-L54">Drilling.Common/Automation/CScannerAxisConfiguration.cs:54–54</a></td><td>CreateUnusedAxisDefinition</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L66-L66">Drilling.Common/Automation/CScannerAxisConfiguration.cs:66–66</a></td><td>CreateUnusedAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L54-L54">Drilling.Common/Automation/CScannerAxisConfiguration.cs:54–54</a></td><td>CreateUnusedAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L66-L66">Drilling.Common/Automation/CScannerAxisConfiguration.cs:66–66</a></td><td>CreateUnusedAxisDefinition</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -301,7 +301,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L79">MethodDeclaration <code>CreateAxisDefinition</code> · L79–89</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L79-L89">Drilling.Common/Automation/CScannerAxisConfiguration.cs:79–89</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L79-L89">Drilling.Common/Automation/CScannerAxisConfiguration.cs:79–89</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING Drilling.Common.Automation.CScannerAxisConfiguration.CreateAxisDefinition(int, int, string, string, int, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -319,12 +319,12 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L22-L22">Drilling.Common/Automation/CScannerAxisConfiguration.cs:22–22</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L23-L23">Drilling.Common/Automation/CScannerAxisConfiguration.cs:23–23</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L43-L43">Drilling.Common/Automation/CScannerAxisConfiguration.cs:43–43</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L44-L44">Drilling.Common/Automation/CScannerAxisConfiguration.cs:44–44</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L59-L59">Drilling.Common/Automation/CScannerAxisConfiguration.cs:59–59</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L71-L71">Drilling.Common/Automation/CScannerAxisConfiguration.cs:71–71</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L22-L22">Drilling.Common/Automation/CScannerAxisConfiguration.cs:22–22</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L23-L23">Drilling.Common/Automation/CScannerAxisConfiguration.cs:23–23</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L43-L43">Drilling.Common/Automation/CScannerAxisConfiguration.cs:43–43</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L44-L44">Drilling.Common/Automation/CScannerAxisConfiguration.cs:44–44</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L59-L59">Drilling.Common/Automation/CScannerAxisConfiguration.cs:59–59</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L71-L71">Drilling.Common/Automation/CScannerAxisConfiguration.cs:71–71</a></td><td>CreateAxisDefinition</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -356,7 +356,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L91">MethodDeclaration <code>ValidateConfiguredAxisName</code> · L91–109</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L91-L109">Drilling.Common/Automation/CScannerAxisConfiguration.cs:91–109</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L91-L109">Drilling.Common/Automation/CScannerAxisConfiguration.cs:91–109</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ValidateConfiguredAxisName(int, string, string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -371,7 +371,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L82-L82">Drilling.Common/Automation/CScannerAxisConfiguration.cs:82–82</a></td><td>ValidateConfiguredAxisName</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L82-L82">Drilling.Common/Automation/CScannerAxisConfiguration.cs:82–82</a></td><td>ValidateConfiguredAxisName</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -405,7 +405,7 @@
  M --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L111">MethodDeclaration <code>IsAllAsciiDigits</code> · L111–127</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L111-L127">Drilling.Common/Automation/CScannerAxisConfiguration.cs:111–127</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L111-L127">Drilling.Common/Automation/CScannerAxisConfiguration.cs:111–127</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsAllAsciiDigits(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -418,7 +418,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L98-L98">Drilling.Common/Automation/CScannerAxisConfiguration.cs:98–98</a></td><td>IsAllAsciiDigits</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L98-L98">Drilling.Common/Automation/CScannerAxisConfiguration.cs:98–98</a></td><td>IsAllAsciiDigits</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -445,7 +445,7 @@
  N1 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L129">MethodDeclaration <code>IsAutomationAxisName</code> · L129–145</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L129-L145">Drilling.Common/Automation/CScannerAxisConfiguration.cs:129–145</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L129-L145">Drilling.Common/Automation/CScannerAxisConfiguration.cs:129–145</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsAutomationAxisName(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -458,7 +458,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L103-L103">Drilling.Common/Automation/CScannerAxisConfiguration.cs:103–103</a></td><td>IsAutomationAxisName</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L103-L103">Drilling.Common/Automation/CScannerAxisConfiguration.cs:103–103</a></td><td>IsAutomationAxisName</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -489,7 +489,7 @@
  N1 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L147">MethodDeclaration <code>BuildEnabledHeadNumbers</code> · L147–159</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L147-L159">Drilling.Common/Automation/CScannerAxisConfiguration.cs:147–159</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L147-L159">Drilling.Common/Automation/CScannerAxisConfiguration.cs:147–159</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;int&gt; Drilling.Common.Automation.CScannerAxisConfiguration.BuildEnabledHeadNumbers(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -503,7 +503,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L127-L127">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:127–127</a></td><td>CScannerAxisConfiguration.BuildEnabledHeadNumbers</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L127-L127">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:127–127</a></td><td>CScannerAxisConfiguration.BuildEnabledHeadNumbers</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -532,7 +532,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L161">MethodDeclaration <code>IsHeadEnabled</code> · L161–164</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L161-L164">Drilling.Common/Automation/CScannerAxisConfiguration.cs:161–164</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L161-L164">Drilling.Common/Automation/CScannerAxisConfiguration.cs:161–164</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsHeadEnabled(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -546,10 +546,10 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L11-L11">Drilling.Common/Automation/CScannerAxisConfiguration.cs:11–11</a></td><td>IsHeadEnabled</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L152-L152">Drilling.Common/Automation/CScannerAxisConfiguration.cs:152–152</a></td><td>IsHeadEnabled</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L259-L259">Drilling.Common/Interface/CPowerMeasureRun.cs:259–259</a></td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L130-L130">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:130–130</a></td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L11-L11">Drilling.Common/Automation/CScannerAxisConfiguration.cs:11–11</a></td><td>IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L152-L152">Drilling.Common/Automation/CScannerAxisConfiguration.cs:152–152</a></td><td>IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L259-L259">Drilling.Common/Interface/CPowerMeasureRun.cs:259–259</a></td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L130-L130">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:130–130</a></td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -562,7 +562,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L166">MethodDeclaration <code>IsHeadEnabled</code> · L166–169</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L166-L169">Drilling.Common/Automation/CScannerAxisConfiguration.cs:166–169</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L166-L169">Drilling.Common/Automation/CScannerAxisConfiguration.cs:166–169</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.IsHeadEnabled(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -576,9 +576,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L32-L32">Drilling.Common/Automation/CScannerAxisConfiguration.cs:32–32</a></td><td>IsHeadEnabled</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L235-L235">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:235–235</a></td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L133-L133">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:133–133</a></td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L32-L32">Drilling.Common/Automation/CScannerAxisConfiguration.cs:32–32</a></td><td>IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L271-L271">Drilling.Common/Correction/CDefaultOffsetCalibration.cs:271–271</a></td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L133-L133">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:133–133</a></td><td>CScannerAxisConfiguration.IsHeadEnabled</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -591,7 +591,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L171">MethodDeclaration <code>ReadHeadSettingText</code> · L171–192</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L171-L192">Drilling.Common/Automation/CScannerAxisConfiguration.cs:171–192</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L171-L192">Drilling.Common/Automation/CScannerAxisConfiguration.cs:171–192</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, string, int, params string[])</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -607,9 +607,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L17-L17">Drilling.Common/Automation/CScannerAxisConfiguration.cs:17–17</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L18-L18">Drilling.Common/Automation/CScannerAxisConfiguration.cs:18–18</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L58-L58">Drilling.Common/Automation/CScannerAxisConfiguration.cs:58–58</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L17-L17">Drilling.Common/Automation/CScannerAxisConfiguration.cs:17–17</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L18-L18">Drilling.Common/Automation/CScannerAxisConfiguration.cs:18–18</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L58-L58">Drilling.Common/Automation/CScannerAxisConfiguration.cs:58–58</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -649,7 +649,7 @@
  N1 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L194">MethodDeclaration <code>ReadHeadSettingBool</code> · L194–222</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L194-L222">Drilling.Common/Automation/CScannerAxisConfiguration.cs:194–222</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L194-L222">Drilling.Common/Automation/CScannerAxisConfiguration.cs:194–222</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, bool, int, params string[])</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -665,8 +665,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L52-L52">Drilling.Common/Automation/CScannerAxisConfiguration.cs:52–52</a></td><td>ReadHeadSettingBool</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L163-L163">Drilling.Common/Automation/CScannerAxisConfiguration.cs:163–163</a></td><td>ReadHeadSettingBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L52-L52">Drilling.Common/Automation/CScannerAxisConfiguration.cs:52–52</a></td><td>ReadHeadSettingBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L163-L163">Drilling.Common/Automation/CScannerAxisConfiguration.cs:163–163</a></td><td>ReadHeadSettingBool</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -712,7 +712,7 @@
  N1 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L224">MethodDeclaration <code>ReadHeadSettingInt</code> · L224–245</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L224-L245">Drilling.Common/Automation/CScannerAxisConfiguration.cs:224–245</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L224-L245">Drilling.Common/Automation/CScannerAxisConfiguration.cs:224–245</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingInt(System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_SYSTEM_PARAMETER&gt;, int, int, params string[])</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -728,8 +728,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L16-L16">Drilling.Common/Automation/CScannerAxisConfiguration.cs:16–16</a></td><td>ReadHeadSettingInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L19-L19">Drilling.Common/Automation/CScannerAxisConfiguration.cs:19–19</a></td><td>ReadHeadSettingInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L16-L16">Drilling.Common/Automation/CScannerAxisConfiguration.cs:16–16</a></td><td>ReadHeadSettingInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L19-L19">Drilling.Common/Automation/CScannerAxisConfiguration.cs:19–19</a></td><td>ReadHeadSettingInt</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -767,7 +767,7 @@
  N1 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L247">MethodDeclaration <code>ReadHeadSettingText</code> · L247–260</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L247-L260">Drilling.Common/Automation/CScannerAxisConfiguration.cs:247–260</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L247-L260">Drilling.Common/Automation/CScannerAxisConfiguration.cs:247–260</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingText(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int, params string[])</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -783,9 +783,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L38-L38">Drilling.Common/Automation/CScannerAxisConfiguration.cs:38–38</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L39-L39">Drilling.Common/Automation/CScannerAxisConfiguration.cs:39–39</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L70-L70">Drilling.Common/Automation/CScannerAxisConfiguration.cs:70–70</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L38-L38">Drilling.Common/Automation/CScannerAxisConfiguration.cs:38–38</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L39-L39">Drilling.Common/Automation/CScannerAxisConfiguration.cs:39–39</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L70-L70">Drilling.Common/Automation/CScannerAxisConfiguration.cs:70–70</a></td><td>ReadHeadSettingText</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -816,7 +816,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L262">MethodDeclaration <code>ReadHeadSettingBool</code> · L262–287</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L262-L287">Drilling.Common/Automation/CScannerAxisConfiguration.cs:262–287</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L262-L287">Drilling.Common/Automation/CScannerAxisConfiguration.cs:262–287</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingBool(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, bool, int, params string[])</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -832,8 +832,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L64-L64">Drilling.Common/Automation/CScannerAxisConfiguration.cs:64–64</a></td><td>ReadHeadSettingBool</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L168-L168">Drilling.Common/Automation/CScannerAxisConfiguration.cs:168–168</a></td><td>ReadHeadSettingBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L64-L64">Drilling.Common/Automation/CScannerAxisConfiguration.cs:64–64</a></td><td>ReadHeadSettingBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L168-L168">Drilling.Common/Automation/CScannerAxisConfiguration.cs:168–168</a></td><td>ReadHeadSettingBool</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -874,7 +874,7 @@
  N0 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L289">MethodDeclaration <code>ReadHeadSettingInt</code> · L289–302</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L289-L302">Drilling.Common/Automation/CScannerAxisConfiguration.cs:289–302</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L289-L302">Drilling.Common/Automation/CScannerAxisConfiguration.cs:289–302</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.ReadHeadSettingInt(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, int, int, params string[])</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -890,8 +890,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L37-L37">Drilling.Common/Automation/CScannerAxisConfiguration.cs:37–37</a></td><td>ReadHeadSettingInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L40-L40">Drilling.Common/Automation/CScannerAxisConfiguration.cs:40–40</a></td><td>ReadHeadSettingInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L37-L37">Drilling.Common/Automation/CScannerAxisConfiguration.cs:37–37</a></td><td>ReadHeadSettingInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L40-L40">Drilling.Common/Automation/CScannerAxisConfiguration.cs:40–40</a></td><td>ReadHeadSettingInt</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -920,7 +920,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L304">MethodDeclaration <code>NormalizeHeadNo</code> · L304–304</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L304-L304">Drilling.Common/Automation/CScannerAxisConfiguration.cs:304–304</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L304-L304">Drilling.Common/Automation/CScannerAxisConfiguration.cs:304–304</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Automation.CScannerAxisConfiguration.NormalizeHeadNo(int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -933,8 +933,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L10-L10">Drilling.Common/Automation/CScannerAxisConfiguration.cs:10–10</a></td><td>NormalizeHeadNo</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L31-L31">Drilling.Common/Automation/CScannerAxisConfiguration.cs:31–31</a></td><td>NormalizeHeadNo</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L10-L10">Drilling.Common/Automation/CScannerAxisConfiguration.cs:10–10</a></td><td>NormalizeHeadNo</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CScannerAxisConfiguration.cs#L31-L31">Drilling.Common/Automation/CScannerAxisConfiguration.cs:31–31</a></td><td>NormalizeHeadNo</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>

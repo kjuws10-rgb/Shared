@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Automation/CAutomationStatusSnapshotService.cs</title><style>body{margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs">Git 원본</a></p><h1>Drilling.Common/Automation/CAutomationStatusSnapshotService.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.Common/Automation/CAutomationStatusSnapshotService.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs">Git 원본</a></p><h1>Drilling.Common/Automation/CAutomationStatusSnapshotService.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>dfa5920e6301d9ec4b0eab1452ae59521aafc986</td></tr>
+<tr><td>원본 Commit</td><td>96e22cd027c84bf302b23f2949b98985d7f301bb</td></tr>
 <tr><td>원본 SHA256</td><td>33d676df36e26685063a422be9b62c51da89cfd13d2be9fc489f6dad3dc2cfe2</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>23,929 bytes / 544 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>프로그램의 시작·구성·공유 타입 또는 빌드 연결에 사용됩니다. 아래 실제 선언·참조와 원본 근거를 확인합니다.</p>
@@ -102,7 +102,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L8">FieldDeclaration <code>_automation</code> · L8–8</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L8-L8">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:8–8</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L8-L8">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:8–8</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.CAutomationManager Drilling.Common.Automation.CAutomationStatusSnapshotService._automation</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -112,7 +112,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L9">FieldDeclaration <code>_sync</code> · L9–9</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L9-L9">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:9–9</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L9-L9">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:9–9</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object Drilling.Common.Automation.CAutomationStatusSnapshotService._sync</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -131,7 +131,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L10">FieldDeclaration <code>_entries</code> · L10–10</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L10-L10">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:10–10</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L10-L10">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:10–10</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;string, Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService._entries</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -150,7 +150,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L11">FieldDeclaration <code>_stop</code> · L11–11</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L11-L11">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:11–11</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L11-L11">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:11–11</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.CancellationTokenSource Drilling.Common.Automation.CAutomationStatusSnapshotService._stop</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -169,7 +169,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L12">FieldDeclaration <code>_autoStart</code> · L12–12</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L12-L12">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:12–12</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L12-L12">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:12–12</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.CAutomationStatusSnapshotService._autoStart</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -179,7 +179,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L13">FieldDeclaration <code>_worker</code> · L13–13</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L13-L13">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:13–13</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L13-L13">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:13–13</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task? Drilling.Common.Automation.CAutomationStatusSnapshotService._worker</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -189,7 +189,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L14">FieldDeclaration <code>_disposed</code> · L14–14</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L14-L14">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:14–14</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L14-L14">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:14–14</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.CAutomationStatusSnapshotService._disposed</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -199,7 +199,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L15">FieldDeclaration <code>LeaseMs</code> · L15–15</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L15-L15">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:15–15</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L15-L15">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:15–15</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Automation.CAutomationStatusSnapshotService.LeaseMs</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -213,7 +213,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L16">FieldDeclaration <code>StaleMs</code> · L16–16</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L16-L16">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:16–16</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L16-L16">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:16–16</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Automation.CAutomationStatusSnapshotService.StaleMs</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -227,7 +227,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L17">ConstructorDeclaration <code>.ctor</code> · L17–21</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L17-L21">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:17–21</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L17-L21">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:17–21</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.CAutomationStatusSnapshotService.CAutomationStatusSnapshotService(Drilling.Common.Automation.CAutomationManager, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal</td></tr>
@@ -241,7 +241,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L38-L38">Drilling.Common/Automation/CAutomationManager.cs:38–38</a></td><td>new CAutomationStatusSnapshotService</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L38-L38">Drilling.Common/Automation/CAutomationManager.cs:38–38</a></td><td>new CAutomationStatusSnapshotService</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -250,7 +250,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L23">MethodDeclaration <code>GetAxis</code> · L23–23</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L23-L23">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:23–23</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L23-L23">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:23–23</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.GetAxis(string, int, int, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -266,16 +266,16 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Alarm/CAlarmManager.cs#L597-L597">Drilling.Common/Alarm/CAlarmManager.cs:597–597</a></td><td>automation.StatusSnapshots.GetAxis</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1606-L1606">Drilling.Common/Automation/CAutomationManager.cs:1606–1606</a></td><td>automation.StatusSnapshots.GetAxis</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L27-L27">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:27–27</a></td><td>GetAxis</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L1376-L1376">Drilling.Common/Station/CStationProcess.cs:1376–1376</a></td><td>_automationManager.StatusSnapshots.GetAxis</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L2815-L2815">Drilling.Common/Station/CStationProcess.cs:2815–2815</a></td><td>_owner._automationManager.StatusSnapshots.GetAxis</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3770-L3770">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3770–3770</a></td><td>_defaultManager.automation.StatusSnapshots.GetAxis</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1790-L1790">Drilling.UI/Menu/Menus/CMenuManual.cs:1790–1790</a></td><td>_manager.automation.StatusSnapshots.GetAxis</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L4221-L4221">Drilling.UI/Menu/Menus/CMenuManual.cs:4221–4221</a></td><td>_manager.automation.StatusSnapshots.GetAxis</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L7709-L7709">Drilling.UI/Menu/Menus/CMenuManual.cs:7709–7709</a></td><td>automationManager.StatusSnapshots.GetAxis</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L94-L94">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:94–94</a></td><td>automationManager.StatusSnapshots.GetAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L597-L597">Drilling.Common/Alarm/CAlarmManager.cs:597–597</a></td><td>automation.StatusSnapshots.GetAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1606-L1606">Drilling.Common/Automation/CAutomationManager.cs:1606–1606</a></td><td>automation.StatusSnapshots.GetAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L27-L27">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:27–27</a></td><td>GetAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L1376-L1376">Drilling.Common/Station/CStationProcess.cs:1376–1376</a></td><td>_automationManager.StatusSnapshots.GetAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L2815-L2815">Drilling.Common/Station/CStationProcess.cs:2815–2815</a></td><td>_owner._automationManager.StatusSnapshots.GetAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3775-L3775">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3775–3775</a></td><td>_defaultManager.automation.StatusSnapshots.GetAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1790-L1790">Drilling.UI/Menu/Menus/CMenuManual.cs:1790–1790</a></td><td>_manager.automation.StatusSnapshots.GetAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4221-L4221">Drilling.UI/Menu/Menus/CMenuManual.cs:4221–4221</a></td><td>_manager.automation.StatusSnapshots.GetAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L7709-L7709">Drilling.UI/Menu/Menus/CMenuManual.cs:7709–7709</a></td><td>automationManager.StatusSnapshots.GetAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L94-L94">Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:94–94</a></td><td>automationManager.StatusSnapshots.GetAxis</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -293,7 +293,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L25">MethodDeclaration <code>InvalidateAxis</code> · L25–42</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L25-L42">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:25–42</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L25-L42">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:25–42</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateAxis(string, int, int, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -311,8 +311,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1563-L1563">Drilling.Common/Automation/CAutomationManager.cs:1563–1563</a></td><td>automation.StatusSnapshots.InvalidateAxis</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3761-L3761">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3761–3761</a></td><td>_defaultManager.automation.StatusSnapshots.InvalidateAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1563-L1563">Drilling.Common/Automation/CAutomationManager.cs:1563–1563</a></td><td>automation.StatusSnapshots.InvalidateAxis</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3766-L3766">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3766–3766</a></td><td>_defaultManager.automation.StatusSnapshots.InvalidateAxis</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -348,7 +348,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L44">MethodDeclaration <code>GetTask</code> · L44–44</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L44-L44">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:44–44</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L44-L44">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:44–44</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;string&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.GetTask(int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -362,17 +362,17 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1119-L1119">Drilling.Common/Automation/CAutomationManager.cs:1119–1119</a></td><td>StatusSnapshots.GetTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L363-L363">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:363–363</a></td><td>GetTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L288-L288">Drilling.Common/Interface/CPowerMeasureRun.cs:288–288</a></td><td>Automation.StatusSnapshots.GetTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L2911-L2911">Drilling.Common/Station/CStationProcess.cs:2911–2911</a></td><td>_owner._automationManager.StatusSnapshots.GetTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L3656-L3656">Drilling.Common/Station/CStationProcess.cs:3656–3656</a></td><td>_automationManager.StatusSnapshots.GetTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L3818-L3818">Drilling.Common/Station/CStationProcess.cs:3818–3818</a></td><td>_automationManager.StatusSnapshots.GetTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4106-L4106">Drilling.Common/Station/CStationProcess.cs:4106–4106</a></td><td>_automationManager.StatusSnapshots.GetTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3553-L3553">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3553–3553</a></td><td>manager.automation.StatusSnapshots.GetTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3692-L3692">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3692–3692</a></td><td>manager.automation.StatusSnapshots.GetTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L1338-L1338">Drilling.UI/Menu/Menus/CMenuMain.cs:1338–1338</a></td><td>automationManager.StatusSnapshots.GetTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L3787-L3787">Drilling.UI/Menu/Menus/CMenuManual.cs:3787–3787</a></td><td>_manager.automation.StatusSnapshots.GetTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1119-L1119">Drilling.Common/Automation/CAutomationManager.cs:1119–1119</a></td><td>StatusSnapshots.GetTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L363-L363">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:363–363</a></td><td>GetTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L288-L288">Drilling.Common/Interface/CPowerMeasureRun.cs:288–288</a></td><td>Automation.StatusSnapshots.GetTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L2911-L2911">Drilling.Common/Station/CStationProcess.cs:2911–2911</a></td><td>_owner._automationManager.StatusSnapshots.GetTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L3656-L3656">Drilling.Common/Station/CStationProcess.cs:3656–3656</a></td><td>_automationManager.StatusSnapshots.GetTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L3818-L3818">Drilling.Common/Station/CStationProcess.cs:3818–3818</a></td><td>_automationManager.StatusSnapshots.GetTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L4106-L4106">Drilling.Common/Station/CStationProcess.cs:4106–4106</a></td><td>_automationManager.StatusSnapshots.GetTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3557-L3557">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3557–3557</a></td><td>manager.automation.StatusSnapshots.GetTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3697-L3697">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3697–3697</a></td><td>manager.automation.StatusSnapshots.GetTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L1338-L1338">Drilling.UI/Menu/Menus/CMenuMain.cs:1338–1338</a></td><td>automationManager.StatusSnapshots.GetTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3787-L3787">Drilling.UI/Menu/Menus/CMenuManual.cs:3787–3787</a></td><td>_manager.automation.StatusSnapshots.GetTask</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -390,7 +390,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L45">MethodDeclaration <code>GetProcessorUsage</code> · L45–45</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L45-L45">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:45–45</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L45-L45">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:45–45</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;string&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.GetProcessorUsage(int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -403,8 +403,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L2944-L2944">Drilling.Common/Station/CStationProcess.cs:2944–2944</a></td><td>_owner._automationManager.StatusSnapshots.GetProcessorUsage</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuMain.cs#L1165-L1165">Drilling.UI/Menu/Menus/CMenuMain.cs:1165–1165</a></td><td>automationManager.StatusSnapshots.GetProcessorUsage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L2944-L2944">Drilling.Common/Station/CStationProcess.cs:2944–2944</a></td><td>_owner._automationManager.StatusSnapshots.GetProcessorUsage</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L1165-L1165">Drilling.UI/Menu/Menus/CMenuMain.cs:1165–1165</a></td><td>automationManager.StatusSnapshots.GetProcessorUsage</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -422,7 +422,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L46">MethodDeclaration <code>Get</code> · L46–76</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L46-L76">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:46–76</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L46-L76">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:46–76</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;T&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.Get&lt;T&gt;(string, int, System.Func&lt;System.Threading.CancellationToken, object&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal</td></tr>
@@ -437,11 +437,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L23-L23">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:23–23</a></td><td>Get&lt;ST_AUTOMATION_AXIS_STATUS&gt;</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L44-L44">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:44–44</a></td><td>Get&lt;string&gt;</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L45-L45">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:45–45</a></td><td>Get&lt;string&gt;</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L354-L354">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:354–354</a></td><td>Get&lt;ST_AUXILIARY_FEEDBACK&gt;</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L384-L384">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:384–384</a></td><td>Get&lt;ST_MOF_READINESS&gt;</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L23-L23">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:23–23</a></td><td>Get&lt;ST_AUTOMATION_AXIS_STATUS&gt;</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L44-L44">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:44–44</a></td><td>Get&lt;string&gt;</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L45-L45">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:45–45</a></td><td>Get&lt;string&gt;</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L354-L354">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:354–354</a></td><td>Get&lt;ST_AUXILIARY_FEEDBACK&gt;</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L384-L384">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:384–384</a></td><td>Get&lt;ST_MOF_READINESS&gt;</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -502,7 +502,7 @@
  N0 --&gt;|포함| N5</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L78">MethodDeclaration <code>Collect</code> · L78–92</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L78-L92">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:78–92</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L78-L92">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:78–92</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationStatusSnapshotService.Collect()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, async</td></tr>
@@ -548,7 +548,7 @@
  N0 --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L94">MethodDeclaration <code>CollectOnce</code> · L94–166</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L94-L166">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:94–166</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L94-L166">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:94–166</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationStatusSnapshotService.CollectOnce(System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal</td></tr>
@@ -561,7 +561,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L85-L85">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:85–85</a></td><td>CollectOnce</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L85-L85">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:85–85</a></td><td>CollectOnce</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -696,7 +696,7 @@
  M --&gt;|포함| N13</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L168">MethodDeclaration <code>Dispose</code> · L168–185</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L168-L185">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:168–185</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L168-L185">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:168–185</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CAutomationStatusSnapshotService.Dispose()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -705,7 +705,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Managers/CManager.cs#L285-L285">Drilling.Common/Managers/CManager.cs:285–285</a></td><td>_automationManager.StatusSnapshots.Dispose</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Managers/CManager.cs#L285-L285">Drilling.Common/Managers/CManager.cs:285–285</a></td><td>_automationManager.StatusSnapshots.Dispose</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -745,7 +745,7 @@
  N2 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L189">PropertyDeclaration <code>Controller</code> · L189–189</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L189-L189">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:189–189</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L189-L189">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:189–189</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Controller</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -755,7 +755,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L189">GetAccessorDeclaration <code>get_Controller</code> · L189–189</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L189-L189">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:189–189</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L189-L189">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:189–189</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Controller.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -765,7 +765,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L190">PropertyDeclaration <code>Read</code> · L190–190</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L190-L190">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:190–190</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L190-L190">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:190–190</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Func&lt;System.Threading.CancellationToken, object&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Read</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -775,7 +775,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L190">GetAccessorDeclaration <code>get_Read</code> · L190–190</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L190-L190">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:190–190</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L190-L190">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:190–190</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Func&lt;System.Threading.CancellationToken, object&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Read.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -785,7 +785,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L192">FieldDeclaration <code>LastRequested</code> · L192–192</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L192-L192">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:192–192</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L192-L192">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:192–192</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.LastRequested</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -795,7 +795,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L193">FieldDeclaration <code>CollectedAt</code> · L193–193</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L193-L193">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:193–193</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L193-L193">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:193–193</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.CollectedAt</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -805,7 +805,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L194">FieldDeclaration <code>Value</code> · L194–194</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L194-L194">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:194–194</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L194-L194">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:194–194</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object? Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Value</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -815,7 +815,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L195">FieldDeclaration <code>State</code> · L195–195</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L195-L195">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:195–195</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L195-L195">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:195–195</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.State</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -829,7 +829,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L196">FieldDeclaration <code>Detail</code> · L196–196</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L196-L196">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:196–196</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L196-L196">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:196–196</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Detail</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -843,7 +843,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L197">FieldDeclaration <code>UpdatedAt</code> · L197–197</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L197-L197">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:197–197</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L197-L197">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:197–197</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.DateTimeOffset Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.UpdatedAt</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -853,7 +853,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L198">FieldDeclaration <code>Generation</code> · L198–198</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L198-L198">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:198–198</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L198-L198">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:198–198</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Generation</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -863,7 +863,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L199">FieldDeclaration <code>Version</code> · L199–199</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L199-L199">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:199–199</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L199-L199">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:199–199</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.Version</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -873,7 +873,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L200">FieldDeclaration <code>CollectedTimestamp</code> · L200–200</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L200-L200">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:200–200</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L200-L200">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:200–200</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Automation.CAutomationStatusSnapshotService.Entry.CollectedTimestamp</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -883,7 +883,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L203">FieldDeclaration <code>ConfiguredHomeSpeedRefreshMs</code> · L203–203</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L203-L203">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:203–203</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L203-L203">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:203–203</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedRefreshMs</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -897,7 +897,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L204">FieldDeclaration <code>ConfiguredHomeSpeedStaleMs</code> · L204–204</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L204-L204">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:204–204</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L204-L204">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:204–204</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedStaleMs</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -911,7 +911,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L205">FieldDeclaration <code>_configuredHomeSpeedEntries</code> · L205–205</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L205-L205">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:205–205</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L205-L205">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:205–205</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;int, Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService._configuredHomeSpeedEntries</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, readonly</td></tr>
@@ -925,7 +925,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L207">MethodDeclaration <code>GetConfiguredHomeSpeeds</code> · L207–238</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L207-L238">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:207–238</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L207-L238">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:207–238</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, double&gt;&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.GetConfiguredHomeSpeeds(System.Collections.Generic.IReadOnlyList&lt;string&gt;, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -941,7 +941,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1821-L1821">Drilling.UI/Menu/Menus/CMenuManual.cs:1821–1821</a></td><td>_manager.automation.StatusSnapshots.GetConfiguredHomeSpeeds</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1821-L1821">Drilling.UI/Menu/Menus/CMenuManual.cs:1821–1821</a></td><td>_manager.automation.StatusSnapshots.GetConfiguredHomeSpeeds</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1036,7 +1036,7 @@
  N0 --&gt;|포함| N8</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L241">MethodDeclaration <code>RequestConfiguredHomeSpeedsRefresh</code> · L241–249</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L241-L249">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:241–249</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L241-L249">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:241–249</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CAutomationStatusSnapshotService.RequestConfiguredHomeSpeedsRefresh(int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1051,8 +1051,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1216-L1216">Drilling.Common/Automation/CAutomationManager.cs:1216–1216</a></td><td>StatusSnapshots.RequestConfiguredHomeSpeedsRefresh</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuManual.cs#L1822-L1822">Drilling.UI/Menu/Menus/CMenuManual.cs:1822–1822</a></td><td>_manager.automation.StatusSnapshots.RequestConfiguredHomeSpeedsRefresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1216-L1216">Drilling.Common/Automation/CAutomationManager.cs:1216–1216</a></td><td>StatusSnapshots.RequestConfiguredHomeSpeedsRefresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1822-L1822">Drilling.UI/Menu/Menus/CMenuManual.cs:1822–1822</a></td><td>_manager.automation.StatusSnapshots.RequestConfiguredHomeSpeedsRefresh</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1077,7 +1077,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L252">MethodDeclaration <code>PrepareConfiguredHomeSpeedReads</code> · L252–277</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L252-L277">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:252–277</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L252-L277">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:252–277</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedRead[] Drilling.Common.Automation.CAutomationStatusSnapshotService.PrepareConfiguredHomeSpeedReads(long)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1090,7 +1090,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L104-L104">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:104–104</a></td><td>PrepareConfiguredHomeSpeedReads</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L104-L104">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:104–104</a></td><td>PrepareConfiguredHomeSpeedReads</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1153,7 +1153,7 @@
  N0 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L279">MethodDeclaration <code>CollectConfiguredHomeSpeeds</code> · L279–323</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L279-L323">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:279–323</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L279-L323">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:279–323</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CAutomationStatusSnapshotService.CollectConfiguredHomeSpeeds(Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedRead, System.Threading.CancellationToken)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1167,7 +1167,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L164-L164">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:164–164</a></td><td>CollectConfiguredHomeSpeeds</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L164-L164">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:164–164</a></td><td>CollectConfiguredHomeSpeeds</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1262,7 +1262,7 @@
  N7 --&gt;|포함| N8</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L325">MethodDeclaration <code>ReadOnlyValues</code> · L325–325</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L325-L325">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:325–325</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L325-L325">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:325–325</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, double&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.ReadOnlyValues(System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string, double&gt;&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1275,8 +1275,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L217-L217">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:217–217</a></td><td>ReadOnlyValues</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L297-L297">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:297–297</a></td><td>ReadOnlyValues</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L217-L217">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:217–217</a></td><td>ReadOnlyValues</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L297-L297">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:297–297</a></td><td>ReadOnlyValues</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1288,7 +1288,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L326">MethodDeclaration <code>InvalidateConfiguredHomeSpeedEntry</code> · L326–335</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L326-L335">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:326–335</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L326-L335">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:326–335</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateConfiguredHomeSpeedEntry(Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1301,9 +1301,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L229-L229">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:229–229</a></td><td>InvalidateConfiguredHomeSpeedEntry</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L247-L247">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:247–247</a></td><td>InvalidateConfiguredHomeSpeedEntry</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L268-L268">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:268–268</a></td><td>InvalidateConfiguredHomeSpeedEntry</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L229-L229">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:229–229</a></td><td>InvalidateConfiguredHomeSpeedEntry</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L247-L247">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:247–247</a></td><td>InvalidateConfiguredHomeSpeedEntry</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L268-L268">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:268–268</a></td><td>InvalidateConfiguredHomeSpeedEntry</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -1316,7 +1316,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L339">PropertyDeclaration <code>Controller</code> · L339–339</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L339-L339">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:339–339</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L339-L339">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:339–339</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.Controller</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1326,7 +1326,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L339">GetAccessorDeclaration <code>get_Controller</code> · L339–339</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L339-L339">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:339–339</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L339-L339">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:339–339</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.Controller.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1336,7 +1336,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L340">PropertyDeclaration <code>RequestedAxes</code> · L340–340</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L340-L340">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:340–340</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L340-L340">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:340–340</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;string, long&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.RequestedAxes</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1354,7 +1354,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L340">GetAccessorDeclaration <code>get_RequestedAxes</code> · L340–340</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L340-L340">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:340–340</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L340-L340">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:340–340</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.Dictionary&lt;string, long&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.RequestedAxes.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1364,7 +1364,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L342">FieldDeclaration <code>Value</code> · L342–342</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L342-L342">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:342–342</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L342-L342">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:342–342</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, double&gt;? Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.Value</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1374,7 +1374,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L343">FieldDeclaration <code>State</code> · L343–343</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L343-L343">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:343–343</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L343-L343">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:343–343</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.State</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1388,7 +1388,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L344">FieldDeclaration <code>Detail</code> · L344–344</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L344-L344">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:344–344</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L344-L344">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:344–344</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.Detail</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1402,7 +1402,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L345">FieldDeclaration <code>UpdatedAt</code> · L345–345</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L345-L345">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:345–345</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L345-L345">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:345–345</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.DateTimeOffset Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.UpdatedAt</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1412,7 +1412,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L346">FieldDeclaration <code>CollectedAt</code> · L346–346</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L346-L346">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:346–346</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L346-L346">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:346–346</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.CollectedAt</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1422,7 +1422,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L347">FieldDeclaration <code>LastAttemptAt</code> · L347–347</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L347-L347">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:347–347</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L347-L347">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:347–347</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.LastAttemptAt</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1432,7 +1432,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L348">FieldDeclaration <code>Version</code> · L348–348</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L348-L348">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:348–348</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L348-L348">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:348–348</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.Version</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1442,7 +1442,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L349">FieldDeclaration <code>InFlight</code> · L349–349</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L349-L349">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:349–349</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L349-L349">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:349–349</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.CAutomationStatusSnapshotService.ConfiguredHomeSpeedEntry.InFlight</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1452,7 +1452,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L354">MethodDeclaration <code>GetAuxiliaryFeedback</code> · L354–354</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L354-L354">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:354–354</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L354-L354">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:354–354</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;Drilling.Common.Automation.ST_AUXILIARY_FEEDBACK&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.GetAuxiliaryFeedback(string, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1466,8 +1466,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160">Drilling.Common/Automation/CAutomationManager.cs:1160–1160</a></td><td>StatusSnapshots.GetAuxiliaryFeedback</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L357-L357">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:357–357</a></td><td>GetAuxiliaryFeedback</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160">Drilling.Common/Automation/CAutomationManager.cs:1160–1160</a></td><td>StatusSnapshots.GetAuxiliaryFeedback</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L357-L357">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:357–357</a></td><td>GetAuxiliaryFeedback</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1487,7 +1487,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L355">MethodDeclaration <code>InvalidateAuxiliaryFeedback</code> · L355–359</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L355-L359">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:355–359</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L355-L359">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:355–359</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateAuxiliaryFeedback(string, int)</td></tr>
 <tr><td>접근/수식자</td><td>Internal / internal</td></tr>
@@ -1501,7 +1501,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1157-L1157">Drilling.Common/Automation/CAutomationManager.cs:1157–1157</a></td><td>StatusSnapshots.InvalidateAuxiliaryFeedback</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1157-L1157">Drilling.Common/Automation/CAutomationManager.cs:1157–1157</a></td><td>StatusSnapshots.InvalidateAuxiliaryFeedback</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1517,7 +1517,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L361">MethodDeclaration <code>InvalidateTask</code> · L361–365</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L361-L365">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:361–365</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L361-L365">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:361–365</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateTask(int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1531,12 +1531,12 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1104-L1104">Drilling.Common/Automation/CAutomationManager.cs:1104–1104</a></td><td>StatusSnapshots.InvalidateTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1111-L1111">Drilling.Common/Automation/CAutomationManager.cs:1111–1111</a></td><td>StatusSnapshots.InvalidateTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1290-L1290">Drilling.Common/Automation/CAutomationManager.cs:1290–1290</a></td><td>StatusSnapshots.InvalidateTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1292-L1292">Drilling.Common/Automation/CAutomationManager.cs:1292–1292</a></td><td>StatusSnapshots.InvalidateTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4060-L4060">Drilling.Common/Station/CStationProcess.cs:4060–4060</a></td><td>_automationManager.StatusSnapshots.InvalidateTask</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3684-L3684">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3684–3684</a></td><td>manager.automation.StatusSnapshots.InvalidateTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1104-L1104">Drilling.Common/Automation/CAutomationManager.cs:1104–1104</a></td><td>StatusSnapshots.InvalidateTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1111-L1111">Drilling.Common/Automation/CAutomationManager.cs:1111–1111</a></td><td>StatusSnapshots.InvalidateTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1290-L1290">Drilling.Common/Automation/CAutomationManager.cs:1290–1290</a></td><td>StatusSnapshots.InvalidateTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1292-L1292">Drilling.Common/Automation/CAutomationManager.cs:1292–1292</a></td><td>StatusSnapshots.InvalidateTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L4060-L4060">Drilling.Common/Station/CStationProcess.cs:4060–4060</a></td><td>_automationManager.StatusSnapshots.InvalidateTask</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3689-L3689">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3689–3689</a></td><td>manager.automation.StatusSnapshots.InvalidateTask</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1550,7 +1550,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L367">MethodDeclaration <code>InvalidateEntry</code> · L367–381</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L367-L381">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:367–381</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L367-L381">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:367–381</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateEntry(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
@@ -1563,9 +1563,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L358-L358">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:358–358</a></td><td>InvalidateEntry</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L364-L364">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:364–364</a></td><td>InvalidateEntry</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L388-L388">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:388–388</a></td><td>InvalidateEntry</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L358-L358">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:358–358</a></td><td>InvalidateEntry</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L364-L364">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:364–364</a></td><td>InvalidateEntry</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L388-L388">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:388–388</a></td><td>InvalidateEntry</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1592,7 +1592,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L383">MethodDeclaration <code>AuxiliaryKey</code> · L383–383</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L383-L383">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:383–383</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L383-L383">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:383–383</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.Common.Automation.CAutomationStatusSnapshotService.AuxiliaryKey(string, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1606,8 +1606,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L354-L354">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:354–354</a></td><td>AuxiliaryKey</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L358-L358">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:358–358</a></td><td>AuxiliaryKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L354-L354">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:354–354</a></td><td>AuxiliaryKey</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L358-L358">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:358–358</a></td><td>AuxiliaryKey</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1621,7 +1621,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L384">MethodDeclaration <code>GetMofReadiness</code> · L384–384</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L384-L384">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:384–384</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L384-L384">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:384–384</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;Drilling.Common.Automation.ST_MOF_READINESS&gt; Drilling.Common.Automation.CAutomationStatusSnapshotService.GetMofReadiness(int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1635,8 +1635,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L387-L387">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:387–387</a></td><td>GetMofReadiness</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L4103-L4103">Drilling.Common/Station/CStationProcess.cs:4103–4103</a></td><td>_automationManager.StatusSnapshots.GetMofReadiness</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L387-L387">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:387–387</a></td><td>GetMofReadiness</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L4103-L4103">Drilling.Common/Station/CStationProcess.cs:4103–4103</a></td><td>_automationManager.StatusSnapshots.GetMofReadiness</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1654,7 +1654,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L385">MethodDeclaration <code>InvalidateMofReadiness</code> · L385–389</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L385-L389">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:385–389</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L385-L389">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:385–389</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateMofReadiness(int, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1668,8 +1668,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1251-L1251">Drilling.Common/Automation/CAutomationManager.cs:1251–1251</a></td><td>StatusSnapshots.InvalidateMofReadiness</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1275-L1275">Drilling.Common/Automation/CAutomationManager.cs:1275–1275</a></td><td>StatusSnapshots.InvalidateMofReadiness</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1251-L1251">Drilling.Common/Automation/CAutomationManager.cs:1251–1251</a></td><td>StatusSnapshots.InvalidateMofReadiness</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1275-L1275">Drilling.Common/Automation/CAutomationManager.cs:1275–1275</a></td><td>StatusSnapshots.InvalidateMofReadiness</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1683,7 +1683,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L395">PropertyDeclaration <code>Version</code> · L395–395</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L395-L395">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:395–395</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L395-L395">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:395–395</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;T&gt;.Version</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1693,7 +1693,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L395">GetAccessorDeclaration <code>get_Version</code> · L395–395</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L395-L395">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:395–395</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L395-L395">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:395–395</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;T&gt;.Version.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1703,7 +1703,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L395">InitAccessorDeclaration <code>set_Version</code> · L395–395</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L395-L395">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:395–395</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L395-L395">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:395–395</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;T&gt;.Version.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -1717,7 +1717,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L396">PropertyDeclaration <code>CollectedTimestamp</code> · L396–396</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L396-L396">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:396–396</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L396-L396">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:396–396</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;T&gt;.CollectedTimestamp</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1727,7 +1727,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L396">GetAccessorDeclaration <code>get_CollectedTimestamp</code> · L396–396</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L396-L396">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:396–396</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L396-L396">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:396–396</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>long Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;T&gt;.CollectedTimestamp.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -1737,7 +1737,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L396">InitAccessorDeclaration <code>set_CollectedTimestamp</code> · L396–396</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L396-L396">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:396–396</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L396-L396">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:396–396</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;T&gt;.CollectedTimestamp.init</td></tr>
 <tr><td>접근/수식자</td><td>Public / init</td></tr>
@@ -1751,7 +1751,7 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L399">MethodDeclaration <code>IsFresh</code> · L399–405</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L399-L405">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:399–405</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L399-L405">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:399–405</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT&lt;T&gt;.IsFresh(System.TimeSpan)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -1766,11 +1766,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationManager.cs#L1497-L1497">Drilling.Common/Automation/CAutomationManager.cs:1497–1497</a></td><td>sample.IsFresh</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Interface/CPowerMeasureRun.cs#L289-L289">Drilling.Common/Interface/CPowerMeasureRun.cs:289–289</a></td><td>status.IsFresh</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3554-L3554">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3554–3554</a></td><td>task.IsFresh</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3694-L3694">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3694–3694</a></td><td>status.IsFresh</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3771-L3771">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3771–3771</a></td><td>snapshot.IsFresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1497-L1497">Drilling.Common/Automation/CAutomationManager.cs:1497–1497</a></td><td>sample.IsFresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L289-L289">Drilling.Common/Interface/CPowerMeasureRun.cs:289–289</a></td><td>status.IsFresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3558-L3558">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3558–3558</a></td><td>task.IsFresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3699-L3699">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3699–3699</a></td><td>status.IsFresh</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3776-L3776">Drilling.UI/Menu/Menus/CMenuCorrection.cs:3776–3776</a></td><td>snapshot.IsFresh</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1794,7 +1794,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L432">FieldDeclaration <code>SnapshotLock</code> · L432–432</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L432-L432">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:432–432</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L432-L432">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:432–432</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>object Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.SnapshotLock</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
@@ -1813,7 +1813,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L433">FieldDeclaration <code>_ownerId</code> · L433–433</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L433-L433">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:433–433</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L433-L433">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:433–433</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Guid Drilling.Common.Automation.CScannerStatusLiveSnapshotStore._ownerId</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1827,7 +1827,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L434">FieldDeclaration <code>_snapshot</code> · L434–434</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L434-L434">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:434–434</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L434-L434">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:434–434</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_LIVE_STATUS&gt; Drilling.Common.Automation.CScannerStatusLiveSnapshotStore._snapshot</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1841,7 +1841,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L435">MethodDeclaration <code>Begin</code> · L435–445</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L435-L445">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:435–445</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L435-L445">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:435–445</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Guid Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.Begin()</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1850,7 +1850,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L2571-L2571">Drilling.Common/Station/CStationProcess.cs:2571–2571</a></td><td>CScannerStatusLiveSnapshotStore.Begin</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L2571-L2571">Drilling.Common/Station/CStationProcess.cs:2571–2571</a></td><td>CScannerStatusLiveSnapshotStore.Begin</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1873,7 +1873,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L447">MethodDeclaration <code>Update</code> · L447–458</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L447-L458">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:447–458</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L447-L458">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:447–458</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.Update(System.Guid, System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_LIVE_STATUS&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1887,7 +1887,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L2718-L2718">Drilling.Common/Station/CStationProcess.cs:2718–2718</a></td><td>CScannerStatusLiveSnapshotStore.Update</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L2718-L2718">Drilling.Common/Station/CStationProcess.cs:2718–2718</a></td><td>CScannerStatusLiveSnapshotStore.Update</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -1905,7 +1905,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L460">MethodDeclaration <code>End</code> · L460–472</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L460-L472">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:460–472</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L460-L472">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:460–472</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.End(System.Guid)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1918,7 +1918,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Station/CStationProcess.cs#L2597-L2597">Drilling.Common/Station/CStationProcess.cs:2597–2597</a></td><td>CScannerStatusLiveSnapshotStore.End</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L2597-L2597">Drilling.Common/Station/CStationProcess.cs:2597–2597</a></td><td>CScannerStatusLiveSnapshotStore.End</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -1937,7 +1937,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L474">MethodDeclaration <code>TryGetHeadSnapshot</code> · L474–496</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L474-L496">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:474–496</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L474-L496">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:474–496</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.TryGetHeadSnapshot(int, out System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Automation.ST_SCANNER_AXIS_LIVE_STATUS&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1983,7 +1983,7 @@
  N2 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L498">MethodDeclaration <code>TryGetTaskStatus</code> · L498–519</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L498-L519">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:498–519</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L498-L519">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:498–519</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.TryGetTaskStatus(int, int, out string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -2027,7 +2027,7 @@
  N2 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L521">MethodDeclaration <code>TryGetProcessorUsage</code> · L521–542</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L521-L542">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:521–542</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L521-L542">Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:521–542</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.Common.Automation.CScannerStatusLiveSnapshotStore.TryGetProcessorUsage(int, out string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>

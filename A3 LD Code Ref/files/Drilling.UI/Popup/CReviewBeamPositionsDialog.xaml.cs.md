@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 025172aa31a59f231db8dfa4b13a88f8bc31075b8683c145a8784a2471839c97 |
 | 파일 분류 | code |
 | 원본 크기/행 | 1,261 bytes / 29 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -40,7 +40,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `GridSize` · L9–9
 
-[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L9-L9)
+[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -55,7 +55,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_GridSize` · L9–9
 
-[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L9-L9)
+[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -70,7 +70,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L11–19
 
-[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:11–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L11-L19)
+[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:11–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L11-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -90,7 +90,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2470–2473](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CMenuReview.cs#L2470-L2473) | new CReviewBeamPositionsDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:3224–3227](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L3224-L3227) | new CReviewBeamPositionsDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -99,7 +99,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 13 | Math.Ceiling | resolved | double System.Math.Ceiling(double) |
 | 13 | Math.Sqrt | resolved | double System.Math.Sqrt(double) |
 | 14 | InitializeComponent | unresolved | None |
-| 17 | CReviewShotNameFormatter.ToMatrixName | resolved | string Drilling.Common.Review.CReviewShotNameFormatter.ToMatrixName(int, int) · Drilling.Common/Review/CReviewManager.cs:4057 |
+| 17 | CReviewShotNameFormatter.ToMatrixName | resolved | string Drilling.Common.Review.CReviewShotNameFormatter.ToMatrixName(int, int) · Drilling.Common/Review/CReviewManager.cs:4120 |
 | 18 | positions.Select(position => new ST_REVIEW_BEAM_POSITION_ITEM(position)).ToArray | resolved | Drilling.UI.Popup.ST_REVIEW_BEAM_POSITION_ITEM[] System.Collections.Generic.IEnumerable<Drilling.UI.Popup.ST_REVIEW_BEAM_POSITION_ITEM>.ToArray<Drilling.UI.Popup.ST_REVIEW_BEAM_POSITION_ITEM>() |
 | 18 | positions.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Popup.ST_REVIEW_BEAM_POSITION_ITEM> System.Collections.Generic.IEnumerable<Drilling.Common.Review.ST_REVIEW_BEAM_POSITION>.Select<Drilling.Common.Review.ST_REVIEW_BEAM_POSITION, Drilling.UI.Popup.ST_REVIEW_BEAM_POSITION_ITEM>(System.Func<Drilling.Common.Review.ST_REVIEW_BEAM_POSITION, Drilling.UI.Popup.ST_REVIEW_BEAM_POSITION_ITEM>) |
 | 18 | new ST_REVIEW_BEAM_POSITION_ITEM | resolved | Drilling.UI.Popup.ST_REVIEW_BEAM_POSITION_ITEM.ST_REVIEW_BEAM_POSITION_ITEM(Drilling.Common.Review.ST_REVIEW_BEAM_POSITION) · Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:24 |
@@ -127,7 +127,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnCloseClicked` · L21–21
 
-[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L21-L21)
+[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -161,7 +161,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `BeamNo` · L26–26
 
-[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L26-L26)
+[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -176,7 +176,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `StageYText` · L27–27
 
-[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L27-L27)
+[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -203,7 +203,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ReviewXText` · L28–28
 
-[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L28-L28)
+[Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CReviewBeamPositionsDialog.xaml.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

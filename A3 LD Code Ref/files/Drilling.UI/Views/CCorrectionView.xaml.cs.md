@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
-| 원본 SHA256 | a1a61079de45070cee11939d3e2148a1c42a77017f1f130bf46e6ad394e68f07 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 SHA256 | 0c50f6d0fff8377b209e515e5b47c7dae4a602af84612140cd384d0f05a675e5 |
 | 파일 분류 | code |
-| 원본 크기/행 | 4,911 bytes / 131 physical lines |
+| 원본 크기/행 | 4,659 bytes / 125 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -21,7 +21,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 타입 | 구분 | 원본 범위 | 선언/상속 |
 | --- | --- | --- | --- |
-| CCorrectionView | ClassDeclaration | 8–131 | CCorrectionView: UserControl |
+| CCorrectionView | ClassDeclaration | 8–125 | CCorrectionView: UserControl |
 
 ## 멤버 빠른 목록
 
@@ -30,20 +30,20 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | _lastCorrectionReviewTab | FieldDeclaration | L10–10 | TabItem? Drilling.UI.Views.CCorrectionView._lastCorrectionReviewTab |
 | _restoringCorrectionReviewTab | FieldDeclaration | L11–11 | bool Drilling.UI.Views.CCorrectionView._restoringCorrectionReviewTab |
 | .ctor | ConstructorDeclaration | L13–16 | Drilling.UI.Views.CCorrectionView.CCorrectionView() |
-| CorrectionReviewTabControl_SelectionChanged | MethodDeclaration | L18–44 | void Drilling.UI.Views.CCorrectionView.CorrectionReviewTabControl_SelectionChanged(object, SelectionChangedEventArgs) |
-| RestoreCorrectionReviewTab | MethodDeclaration | L46–54 | void Drilling.UI.Views.CCorrectionView.RestoreCorrectionReviewTab(TabControl) |
-| SelectOutputViewerShotFromMap | MethodDeclaration | L56–66 | void Drilling.UI.Views.CCorrectionView.SelectOutputViewerShotFromMap(object, MouseButtonEventArgs) |
-| OutputOffsetGrid_SelectionChanged | MethodDeclaration | L68–83 | void Drilling.UI.Views.CCorrectionView.OutputOffsetGrid_SelectionChanged(object, SelectionChangedEventArgs) |
-| OutputViewerCellPreviewLabel_MouseMove | MethodDeclaration | L85–96 | void Drilling.UI.Views.CCorrectionView.OutputViewerCellPreviewLabel_MouseMove(object, MouseEventArgs) |
-| OutputViewerCellPreviewLabel_MouseLeave | MethodDeclaration | L98–101 | void Drilling.UI.Views.CCorrectionView.OutputViewerCellPreviewLabel_MouseLeave(object, MouseEventArgs) |
-| PositionOutputViewerPreviewHoverTip | MethodDeclaration | L103–124 | void Drilling.UI.Views.CCorrectionView.PositionOutputViewerPreviewHoverTip(Point) |
-| HideOutputViewerPreviewHoverTip | MethodDeclaration | L126–130 | void Drilling.UI.Views.CCorrectionView.HideOutputViewerPreviewHoverTip() |
+| CorrectionReviewTabControl_SelectionChanged | MethodDeclaration | L18–38 | void Drilling.UI.Views.CCorrectionView.CorrectionReviewTabControl_SelectionChanged(object, SelectionChangedEventArgs) |
+| RestoreCorrectionReviewTab | MethodDeclaration | L40–48 | void Drilling.UI.Views.CCorrectionView.RestoreCorrectionReviewTab(TabControl) |
+| SelectOutputViewerShotFromMap | MethodDeclaration | L50–60 | void Drilling.UI.Views.CCorrectionView.SelectOutputViewerShotFromMap(object, MouseButtonEventArgs) |
+| OutputOffsetGrid_SelectionChanged | MethodDeclaration | L62–77 | void Drilling.UI.Views.CCorrectionView.OutputOffsetGrid_SelectionChanged(object, SelectionChangedEventArgs) |
+| OutputViewerCellPreviewLabel_MouseMove | MethodDeclaration | L79–90 | void Drilling.UI.Views.CCorrectionView.OutputViewerCellPreviewLabel_MouseMove(object, MouseEventArgs) |
+| OutputViewerCellPreviewLabel_MouseLeave | MethodDeclaration | L92–95 | void Drilling.UI.Views.CCorrectionView.OutputViewerCellPreviewLabel_MouseLeave(object, MouseEventArgs) |
+| PositionOutputViewerPreviewHoverTip | MethodDeclaration | L97–118 | void Drilling.UI.Views.CCorrectionView.PositionOutputViewerPreviewHoverTip(Point) |
+| HideOutputViewerPreviewHoverTip | MethodDeclaration | L120–124 | void Drilling.UI.Views.CCorrectionView.HideOutputViewerPreviewHoverTip() |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
 ### FieldDeclaration `_lastCorrectionReviewTab` · L10–10
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L10-L10)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -58,7 +58,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_restoringCorrectionReviewTab` · L11–11
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L11-L11)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -73,7 +73,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L13–16
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:13–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L13-L16)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:13–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L13-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -98,9 +98,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CorrectionReviewTabControl_SelectionChanged` · L18–44
+### MethodDeclaration `CorrectionReviewTabControl_SelectionChanged` · L18–38
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:18–44](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L18-L44)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:18–38](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L18-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -123,10 +123,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 30 | ReferenceEquals | candidate | OverloadResolutionFailure |
-| 32 | RestoreCorrectionReviewTab | resolved | void Drilling.UI.Views.CCorrectionView.RestoreCorrectionReviewTab(TabControl) · Drilling.UI/Views/CCorrectionView.xaml.cs:46 |
+| 32 | RestoreCorrectionReviewTab | resolved | void Drilling.UI.Views.CCorrectionView.RestoreCorrectionReviewTab(TabControl) · Drilling.UI/Views/CCorrectionView.xaml.cs:40 |
 | 33 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
-| 37 | correction.TrySelectReviewInspectionMode | resolved | bool Drilling.UI.Menu.Menus.CMenuCorrection.TrySelectReviewInspectionMode(string) · Drilling.UI/Menu/Menus/CMenuCorrection.cs:402 |
-| 39 | RestoreCorrectionReviewTab | resolved | void Drilling.UI.Views.CCorrectionView.RestoreCorrectionReviewTab(TabControl) · Drilling.UI/Views/CCorrectionView.xaml.cs:46 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -134,7 +132,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- | --- |
 | 20 | if | 조건에 따라 분기합니다: if (_restoringCorrectionReviewTab &#124;&#124; e.OriginalSource != sender &#124;&#124; sender is not TabControl tabs &#124;&#124; tabs.SelectedItem is not TabItem selected) |
 | 21 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 23 | if | 조건에 따라 분기합니다: if (DataContext is not CRootView root &#124;&#124; root.CurrentScreen.Correction is not CMenuCorrection correction) |
+| 23 | if | 조건에 따라 분기합니다: if (DataContext is not CRootView root) |
 | 25 | assignment | 값을 대상에 대입합니다: _lastCorrectionReviewTab = selected |
 | 26 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
 | 29 | local-declaration | 지역 변수를 선언합니다: var review = root.CurrentScreen.Review; |
@@ -144,11 +142,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 32 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RestoreCorrectionReviewTab(tabs) |
 | 33 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("검사 진행 중", "현재 검사를 중지한 후 다른 탭으로 이동해 주세요.") |
 | 34 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 37 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: correction.TrySelectReviewInspectionMode(mode) |
-| 37 | if | 조건에 따라 분기합니다: if (selected.Tag is string mode && !correction.TrySelectReviewInspectionMode(mode)) |
-| 39 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RestoreCorrectionReviewTab(tabs) |
-| 40 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 43 | assignment | 값을 대상에 대입합니다: _lastCorrectionReviewTab = selected |
+| 37 | assignment | 값을 대상에 대입합니다: _lastCorrectionReviewTab = selected |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
@@ -161,15 +155,13 @@ flowchart TD
  M -->|포함| N1
  N2["L30 if"]
  M -->|포함| N2
- N3["L37 if"]
- M -->|포함| N3
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `RestoreCorrectionReviewTab` · L46–54
+### MethodDeclaration `RestoreCorrectionReviewTab` · L40–48
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:46–54](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L46-L54)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:40–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L40-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -188,33 +180,32 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CCorrectionView.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L32-L32) | RestoreCorrectionReviewTab | False |
-| [Drilling.UI/Views/CCorrectionView.xaml.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L39-L39) | RestoreCorrectionReviewTab | False |
+| [Drilling.UI/Views/CCorrectionView.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L32-L32) | RestoreCorrectionReviewTab | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 48 | if | 조건에 따라 분기합니다: if (_lastCorrectionReviewTab is null) |
-| 49 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 51 | assignment | 값을 대상에 대입합니다: _restoringCorrectionReviewTab = true |
-| 52 | assignment | 값을 대상에 대입합니다: tabs.SelectedItem = _lastCorrectionReviewTab |
-| 53 | assignment | 값을 대상에 대입합니다: _restoringCorrectionReviewTab = false |
+| 42 | if | 조건에 따라 분기합니다: if (_lastCorrectionReviewTab is null) |
+| 43 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 45 | assignment | 값을 대상에 대입합니다: _restoringCorrectionReviewTab = true |
+| 46 | assignment | 값을 대상에 대입합니다: tabs.SelectedItem = _lastCorrectionReviewTab |
+| 47 | assignment | 값을 대상에 대입합니다: _restoringCorrectionReviewTab = false |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["RestoreCorrectionReviewTab"]
- N0["L48 if"]
+ N0["L42 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `SelectOutputViewerShotFromMap` · L56–66
+### MethodDeclaration `SelectOutputViewerShotFromMap` · L50–60
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:56–66](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L56-L66)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:50–60](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L50-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -236,35 +227,35 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 63 | e.GetPosition | unresolved | None |
-| 64 | correction.SelectOutputViewerShotAt | candidate | OverloadResolutionFailure |
+| 57 | e.GetPosition | unresolved | None |
+| 58 | correction.SelectOutputViewerShotAt | candidate | OverloadResolutionFailure |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 58 | if | 조건에 따라 분기합니다: if (sender is not FrameworkElement map &#124;&#124; DataContext is not CRootView root &#124;&#124; root.CurrentScreen.Correction is not CMenuCorrection correction) |
-| 60 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 63 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(map) |
-| 63 | local-declaration | 지역 변수를 선언합니다: var point = e.GetPosition(map); |
-| 63 | variable-initializer | 변수의 초기값을 지정합니다: point = e.GetPosition(map) |
-| 64 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: correction.SelectOutputViewerShotAt(point.X, point.Y) |
-| 65 | assignment | 값을 대상에 대입합니다: e.Handled = true |
+| 52 | if | 조건에 따라 분기합니다: if (sender is not FrameworkElement map &#124;&#124; DataContext is not CRootView root &#124;&#124; root.CurrentScreen.Correction is not CMenuCorrection correction) |
+| 54 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 57 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(map) |
+| 57 | local-declaration | 지역 변수를 선언합니다: var point = e.GetPosition(map); |
+| 57 | variable-initializer | 변수의 초기값을 지정합니다: point = e.GetPosition(map) |
+| 58 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: correction.SelectOutputViewerShotAt(point.X, point.Y) |
+| 59 | assignment | 값을 대상에 대입합니다: e.Handled = true |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["SelectOutputViewerShotFromMap"]
- N0["L58 if"]
+ N0["L52 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `OutputOffsetGrid_SelectionChanged` · L68–83
+### MethodDeclaration `OutputOffsetGrid_SelectionChanged` · L62–77
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:68–83](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L68-L83)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:62–77](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L62-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -286,40 +277,40 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 75 | correction.SelectOutputViewerShotByKey | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.SelectOutputViewerShotByKey(string) · Drilling.UI/Menu/Menus/CMenuCorrection.cs:564 |
-| 79 | OutputOffsetGrid.Dispatcher.BeginInvoke | unresolved | None |
-| 80 | OutputOffsetGrid.ScrollIntoView | unresolved | None |
+| 69 | correction.SelectOutputViewerShotByKey | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.SelectOutputViewerShotByKey(string) · Drilling.UI/Menu/Menus/CMenuCorrection.cs:567 |
+| 73 | OutputOffsetGrid.Dispatcher.BeginInvoke | unresolved | None |
+| 74 | OutputOffsetGrid.ScrollIntoView | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 70 | if | 조건에 따라 분기합니다: if (sender is not DataGrid { SelectedItem: ST_CORRECTION_OFFSET_SHOT_ITEM shot } &#124;&#124; DataContext is not CRootView root &#124;&#124; root.CurrentScreen.Correction is not CMenuCorrection correction) |
-| 72 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 75 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: correction.SelectOutputViewerShotByKey(shot.ShotKey) |
-| 76 | local-declaration | 지역 변수를 선언합니다: var selectedShot = correction.OutputOffsets.SelectedShotItem; |
-| 76 | variable-initializer | 변수의 초기값을 지정합니다: selectedShot = correction.OutputOffsets.SelectedShotItem |
-| 77 | if | 조건에 따라 분기합니다: if (selectedShot is not null) |
-| 79 | assignment | 값을 대상에 대입합니다: _ = OutputOffsetGrid.Dispatcher.BeginInvoke( () => OutputOffsetGrid.ScrollIntoView(selectedShot), System.Windows.Threading.DispatcherPriority.Background) |
-| 79 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OutputOffsetGrid.Dispatcher.BeginInvoke( () => OutputOffsetGrid.ScrollIntoView(selectedShot), System.Windows.Threading.DispatcherPriority.Background) |
-| 80 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OutputOffsetGrid.ScrollIntoView(selectedShot) |
+| 64 | if | 조건에 따라 분기합니다: if (sender is not DataGrid { SelectedItem: ST_CORRECTION_OFFSET_SHOT_ITEM shot } &#124;&#124; DataContext is not CRootView root &#124;&#124; root.CurrentScreen.Correction is not CMenuCorrection correction) |
+| 66 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 69 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: correction.SelectOutputViewerShotByKey(shot.ShotKey) |
+| 70 | local-declaration | 지역 변수를 선언합니다: var selectedShot = correction.OutputOffsets.SelectedShotItem; |
+| 70 | variable-initializer | 변수의 초기값을 지정합니다: selectedShot = correction.OutputOffsets.SelectedShotItem |
+| 71 | if | 조건에 따라 분기합니다: if (selectedShot is not null) |
+| 73 | assignment | 값을 대상에 대입합니다: _ = OutputOffsetGrid.Dispatcher.BeginInvoke( () => OutputOffsetGrid.ScrollIntoView(selectedShot), System.Windows.Threading.DispatcherPriority.Background) |
+| 73 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OutputOffsetGrid.Dispatcher.BeginInvoke( () => OutputOffsetGrid.ScrollIntoView(selectedShot), System.Windows.Threading.DispatcherPriority.Background) |
+| 74 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OutputOffsetGrid.ScrollIntoView(selectedShot) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["OutputOffsetGrid_SelectionChanged"]
- N0["L70 if"]
+ N0["L64 if"]
  M -->|포함| N0
- N1["L77 if"]
+ N1["L71 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `OutputViewerCellPreviewLabel_MouseMove` · L85–96
+### MethodDeclaration `OutputViewerCellPreviewLabel_MouseMove` · L79–90
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:85–96](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L85-L96)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:79–90](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L79-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -341,38 +332,38 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 89 | HideOutputViewerPreviewHoverTip | resolved | void Drilling.UI.Views.CCorrectionView.HideOutputViewerPreviewHoverTip() · Drilling.UI/Views/CCorrectionView.xaml.cs:126 |
-| 93 | label.CellNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 95 | PositionOutputViewerPreviewHoverTip | candidate | OverloadResolutionFailure |
-| 95 | e.GetPosition | unresolved | None |
+| 83 | HideOutputViewerPreviewHoverTip | resolved | void Drilling.UI.Views.CCorrectionView.HideOutputViewerPreviewHoverTip() · Drilling.UI/Views/CCorrectionView.xaml.cs:120 |
+| 87 | label.CellNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 89 | PositionOutputViewerPreviewHoverTip | candidate | OverloadResolutionFailure |
+| 89 | e.GetPosition | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 87 | if | 조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label }) |
-| 89 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: HideOutputViewerPreviewHoverTip() |
-| 90 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 93 | assignment | 값을 대상에 대입합니다: OutputViewerPreviewHoverTipText.Text = label.CellNo.ToString(System.Globalization.CultureInfo.InvariantCulture) |
-| 93 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: label.CellNo.ToString(System.Globalization.CultureInfo.InvariantCulture) |
-| 94 | assignment | 값을 대상에 대입합니다: OutputViewerPreviewHoverTip.Visibility = Visibility.Visible |
-| 95 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: PositionOutputViewerPreviewHoverTip(e.GetPosition(OutputViewerPreviewViewport)) |
-| 95 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(OutputViewerPreviewViewport) |
+| 81 | if | 조건에 따라 분기합니다: if (sender is not FrameworkElement { DataContext: ST_CELL_PREVIEW_LABEL label }) |
+| 83 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: HideOutputViewerPreviewHoverTip() |
+| 84 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 87 | assignment | 값을 대상에 대입합니다: OutputViewerPreviewHoverTipText.Text = label.CellNo.ToString(System.Globalization.CultureInfo.InvariantCulture) |
+| 87 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: label.CellNo.ToString(System.Globalization.CultureInfo.InvariantCulture) |
+| 88 | assignment | 값을 대상에 대입합니다: OutputViewerPreviewHoverTip.Visibility = Visibility.Visible |
+| 89 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: PositionOutputViewerPreviewHoverTip(e.GetPosition(OutputViewerPreviewViewport)) |
+| 89 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: e.GetPosition(OutputViewerPreviewViewport) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["OutputViewerCellPreviewLabel_MouseMove"]
- N0["L87 if"]
+ N0["L81 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `OutputViewerCellPreviewLabel_MouseLeave` · L98–101
+### MethodDeclaration `OutputViewerCellPreviewLabel_MouseLeave` · L92–95
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:98–101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L98-L101)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:92–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L92-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -394,19 +385,19 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 100 | HideOutputViewerPreviewHoverTip | resolved | void Drilling.UI.Views.CCorrectionView.HideOutputViewerPreviewHoverTip() · Drilling.UI/Views/CCorrectionView.xaml.cs:126 |
+| 94 | HideOutputViewerPreviewHoverTip | resolved | void Drilling.UI.Views.CCorrectionView.HideOutputViewerPreviewHoverTip() · Drilling.UI/Views/CCorrectionView.xaml.cs:120 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 100 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: HideOutputViewerPreviewHoverTip() |
+| 94 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: HideOutputViewerPreviewHoverTip() |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `PositionOutputViewerPreviewHoverTip` · L103–124
+### MethodDeclaration `PositionOutputViewerPreviewHoverTip` · L97–118
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:103–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L103-L124)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:97–118](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L97-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -427,58 +418,58 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 108 | OutputViewerPreviewHoverTip.Measure | unresolved | None |
-| 108 | new Size | unresolved | None |
-| 114 | Math.Clamp | candidate | OverloadResolutionFailure |
-| 114 | Math.Max | candidate | OverloadResolutionFailure |
-| 119 | Math.Clamp | candidate | OverloadResolutionFailure |
-| 119 | Math.Max | candidate | OverloadResolutionFailure |
+| 102 | OutputViewerPreviewHoverTip.Measure | unresolved | None |
+| 102 | new Size | unresolved | None |
+| 108 | Math.Clamp | candidate | OverloadResolutionFailure |
+| 108 | Math.Max | candidate | OverloadResolutionFailure |
+| 113 | Math.Clamp | candidate | OverloadResolutionFailure |
+| 113 | Math.Max | candidate | OverloadResolutionFailure |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 105 | local-declaration | 지역 변수를 선언합니다: const double margin = 4.0; |
-| 105 | variable-initializer | 변수의 초기값을 지정합니다: margin = 4.0 |
-| 106 | local-declaration | 지역 변수를 선언합니다: const double offsetX = 12.0; |
-| 106 | variable-initializer | 변수의 초기값을 지정합니다: offsetX = 12.0 |
-| 107 | local-declaration | 지역 변수를 선언합니다: const double offsetY = 14.0; |
-| 107 | variable-initializer | 변수의 초기값을 지정합니다: offsetY = 14.0 |
-| 108 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OutputViewerPreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)) |
-| 108 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(double.PositiveInfinity, double.PositiveInfinity) |
-| 109 | local-declaration | 지역 변수를 선언합니다: var tipSize = OutputViewerPreviewHoverTip.DesiredSize; |
-| 109 | variable-initializer | 변수의 초기값을 지정합니다: tipSize = OutputViewerPreviewHoverTip.DesiredSize |
-| 110 | local-declaration | 지역 변수를 선언합니다: var x = pointer.X + offsetX; |
-| 110 | variable-initializer | 변수의 초기값을 지정합니다: x = pointer.X + offsetX |
-| 111 | local-declaration | 지역 변수를 선언합니다: var y = pointer.Y + offsetY; |
-| 111 | variable-initializer | 변수의 초기값을 지정합니다: y = pointer.Y + offsetY |
-| 112 | if | 조건에 따라 분기합니다: if (OutputViewerPreviewViewport.ActualWidth > 0) |
-| 114 | assignment | 값을 대상에 대입합니다: x = Math.Clamp(x, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualWidth - tipSize.Width - margin)) |
-| 114 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(x, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualWidth - tipSize.Width - margin)) |
-| 114 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, OutputViewerPreviewViewport.ActualWidth - tipSize.Width - margin) |
-| 117 | if | 조건에 따라 분기합니다: if (OutputViewerPreviewViewport.ActualHeight > 0) |
-| 119 | assignment | 값을 대상에 대입합니다: y = Math.Clamp(y, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualHeight - tipSize.Height - margin)) |
-| 119 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(y, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualHeight - tipSize.Height - margin)) |
-| 119 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, OutputViewerPreviewViewport.ActualHeight - tipSize.Height - margin) |
-| 122 | assignment | 값을 대상에 대입합니다: OutputViewerPreviewHoverTipTranslateTransform.X = x |
-| 123 | assignment | 값을 대상에 대입합니다: OutputViewerPreviewHoverTipTranslateTransform.Y = y |
+| 99 | local-declaration | 지역 변수를 선언합니다: const double margin = 4.0; |
+| 99 | variable-initializer | 변수의 초기값을 지정합니다: margin = 4.0 |
+| 100 | local-declaration | 지역 변수를 선언합니다: const double offsetX = 12.0; |
+| 100 | variable-initializer | 변수의 초기값을 지정합니다: offsetX = 12.0 |
+| 101 | local-declaration | 지역 변수를 선언합니다: const double offsetY = 14.0; |
+| 101 | variable-initializer | 변수의 초기값을 지정합니다: offsetY = 14.0 |
+| 102 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: OutputViewerPreviewHoverTip.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity)) |
+| 102 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Size(double.PositiveInfinity, double.PositiveInfinity) |
+| 103 | local-declaration | 지역 변수를 선언합니다: var tipSize = OutputViewerPreviewHoverTip.DesiredSize; |
+| 103 | variable-initializer | 변수의 초기값을 지정합니다: tipSize = OutputViewerPreviewHoverTip.DesiredSize |
+| 104 | local-declaration | 지역 변수를 선언합니다: var x = pointer.X + offsetX; |
+| 104 | variable-initializer | 변수의 초기값을 지정합니다: x = pointer.X + offsetX |
+| 105 | local-declaration | 지역 변수를 선언합니다: var y = pointer.Y + offsetY; |
+| 105 | variable-initializer | 변수의 초기값을 지정합니다: y = pointer.Y + offsetY |
+| 106 | if | 조건에 따라 분기합니다: if (OutputViewerPreviewViewport.ActualWidth > 0) |
+| 108 | assignment | 값을 대상에 대입합니다: x = Math.Clamp(x, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualWidth - tipSize.Width - margin)) |
+| 108 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(x, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualWidth - tipSize.Width - margin)) |
+| 108 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, OutputViewerPreviewViewport.ActualWidth - tipSize.Width - margin) |
+| 111 | if | 조건에 따라 분기합니다: if (OutputViewerPreviewViewport.ActualHeight > 0) |
+| 113 | assignment | 값을 대상에 대입합니다: y = Math.Clamp(y, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualHeight - tipSize.Height - margin)) |
+| 113 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Clamp(y, margin, Math.Max(margin, OutputViewerPreviewViewport.ActualHeight - tipSize.Height - margin)) |
+| 113 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(margin, OutputViewerPreviewViewport.ActualHeight - tipSize.Height - margin) |
+| 116 | assignment | 값을 대상에 대입합니다: OutputViewerPreviewHoverTipTranslateTransform.X = x |
+| 117 | assignment | 값을 대상에 대입합니다: OutputViewerPreviewHoverTipTranslateTransform.Y = y |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["PositionOutputViewerPreviewHoverTip"]
- N0["L112 if"]
+ N0["L106 if"]
  M -->|포함| N0
- N1["L117 if"]
+ N1["L111 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `HideOutputViewerPreviewHoverTip` · L126–130
+### MethodDeclaration `HideOutputViewerPreviewHoverTip` · L120–124
 
-[Drilling.UI/Views/CCorrectionView.xaml.cs:126–130](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L126-L130)
+[Drilling.UI/Views/CCorrectionView.xaml.cs:120–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L120-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -491,15 +482,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CCorrectionView.xaml.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L89-L89) | HideOutputViewerPreviewHoverTip | False |
-| [Drilling.UI/Views/CCorrectionView.xaml.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Views/CCorrectionView.xaml.cs#L100-L100) | HideOutputViewerPreviewHoverTip | False |
+| [Drilling.UI/Views/CCorrectionView.xaml.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L83-L83) | HideOutputViewerPreviewHoverTip | False |
+| [Drilling.UI/Views/CCorrectionView.xaml.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml.cs#L94-L94) | HideOutputViewerPreviewHoverTip | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 128 | assignment | 값을 대상에 대입합니다: OutputViewerPreviewHoverTip.Visibility = Visibility.Collapsed |
-| 129 | assignment | 값을 대상에 대입합니다: OutputViewerPreviewHoverTipText.Text = "" |
+| 122 | assignment | 값을 대상에 대입합니다: OutputViewerPreviewHoverTip.Visibility = Visibility.Collapsed |
+| 123 | assignment | 값을 대상에 대입합니다: OutputViewerPreviewHoverTipText.Text = "" |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 

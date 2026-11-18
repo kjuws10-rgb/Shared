@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | fb9a8f1f07a8aa9c53c455b2db44e2dd39ace8b00cc33f5efab5736239555dd9 |
 | 파일 분류 | code |
 | 원본 크기/행 | 65,954 bytes / 1,625 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -222,7 +222,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `MaximumRangeSeconds` · L14–14
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L14-L14)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -243,7 +243,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_reader` · L15–15
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L15-L15)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -258,7 +258,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_alarm` · L16–16
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L16-L16)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -273,7 +273,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_loadCancellation` · L17–17
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L17-L17)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -288,7 +288,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_beforeSeconds` · L18–18
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L18-L18)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -309,7 +309,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_afterSeconds` · L19–19
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L19-L19)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -330,7 +330,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isBusy` · L20–20
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L20-L20)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -345,7 +345,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_status` · L21–21
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L21-L21)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -366,7 +366,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_interval` · L22–22
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L22-L22)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -387,7 +387,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_cursorTime` · L23–23
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L23-L23)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -408,7 +408,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_cursorOccurredAt` · L24–24
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L24-L24)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L24-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -423,7 +423,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_panes` · L25–25
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L25-L25)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -451,7 +451,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_candidates` · L26–26
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L26-L26)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -472,7 +472,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_timeline` · L27–27
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L27-L27)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -493,7 +493,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_failureSummary` · L28–28
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L28-L28)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -508,7 +508,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_loadedResult` · L29–29
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L29-L29)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -523,7 +523,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_showStateChangesOnly` · L30–30
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L30-L30)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -544,7 +544,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_compareWithReference` · L31–31
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L31-L31)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -565,7 +565,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_referenceSummary` · L32–32
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L32-L32)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -586,7 +586,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L34–44
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:34–44](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L34-L44)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:34–44](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L34-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -606,7 +606,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L18-L18) | new | False |
+| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L18-L18) | new | False |
 
 호출하는 대상과 해석 범위:
 
@@ -642,7 +642,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PropertyChanged` · L46–46
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L46-L46)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -657,7 +657,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `AnalysisLoaded` · L47–47
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L47-L47)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -672,7 +672,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `AlarmHeading` · L48–48
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L48-L48)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -687,7 +687,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_AlarmHeading` · L48–48
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L48-L48)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -702,7 +702,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `AlarmCause` · L49–49
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L49-L49)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L49-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -717,7 +717,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_AlarmCause` · L49–49
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L49-L49)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L49-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -732,7 +732,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `AlarmTime` · L50–50
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L50-L50)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L50-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -747,7 +747,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_AlarmTime` · L50–50
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L50-L50)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L50-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -762,7 +762,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `LoadCommand` · L51–51
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L51-L51)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L51-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -777,7 +777,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_LoadCommand` · L51–51
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L51-L51)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L51-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -792,7 +792,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `BeforeSeconds` · L52–62
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:52–62](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L52-L62)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:52–62](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L52-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -807,7 +807,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_BeforeSeconds` · L54–54
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L54-L54)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -822,7 +822,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_BeforeSeconds` · L55–61
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:55–61](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L55-L61)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:55–61](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L55-L61)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -867,7 +867,7 @@ flowchart TD
 
 ### PropertyDeclaration `AfterSeconds` · L64–74
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:64–74](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L64-L74)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:64–74](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L64-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -882,7 +882,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AfterSeconds` · L66–66
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L66-L66)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L66-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -897,7 +897,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_AfterSeconds` · L67–73
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:67–73](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L67-L73)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:67–73](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L67-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -942,7 +942,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsBusy` · L76–88
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:76–88](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L76-L88)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:76–88](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L76-L88)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -957,7 +957,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsBusy` · L78–78
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L78-L78)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L78-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -972,7 +972,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_IsBusy` · L79–87
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:79–87](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L79-L87)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:79–87](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L79-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1023,7 +1023,7 @@ flowchart TD
 
 ### PropertyDeclaration `CanEdit` · L89–89
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L89-L89)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L89-L89)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1038,7 +1038,7 @@ flowchart TD
 
 ### PropertyDeclaration `Status` · L91–101
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:91–101](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L91-L101)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:91–101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L91-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1053,7 +1053,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Status` · L93–93
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L93-L93)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L93-L93)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1068,7 +1068,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Status` · L94–100
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:94–100](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L94-L100)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:94–100](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L94-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1113,7 +1113,7 @@ flowchart TD
 
 ### PropertyDeclaration `Interval` · L103–113
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:103–113](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L103-L113)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:103–113](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L103-L113)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1128,7 +1128,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Interval` · L105–105
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L105-L105)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L105-L105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1143,7 +1143,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Interval` · L106–112
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:106–112](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L106-L112)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:106–112](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L106-L112)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1188,7 +1188,7 @@ flowchart TD
 
 ### PropertyDeclaration `CursorTime` · L115–125
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:115–125](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L115-L125)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:115–125](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L115-L125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1203,7 +1203,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CursorTime` · L117–117
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L117-L117)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L117-L117)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1218,7 +1218,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CursorTime` · L118–124
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:118–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L118-L124)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:118–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L118-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1263,7 +1263,7 @@ flowchart TD
 
 ### PropertyDeclaration `CursorOccurredAt` · L127–127
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L127-L127)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L127-L127)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1278,7 +1278,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShowStateChangesOnly` · L129–140
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:129–140](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L129-L140)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:129–140](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L129-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1293,7 +1293,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShowStateChangesOnly` · L131–131
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L131-L131)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:131–131](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L131-L131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1308,7 +1308,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ShowStateChangesOnly` · L132–139
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:132–139](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L132-L139)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:132–139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L132-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1355,7 +1355,7 @@ flowchart TD
 
 ### PropertyDeclaration `CompareWithReference` · L142–153
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:142–153](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L142-L153)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:142–153](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L142-L153)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1370,7 +1370,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CompareWithReference` · L144–144
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L144-L144)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:144–144](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L144-L144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1385,7 +1385,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CompareWithReference` · L145–152
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:145–152](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L145-L152)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:145–152](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L145-L152)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1432,7 +1432,7 @@ flowchart TD
 
 ### PropertyDeclaration `HasReference` · L155–155
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L155-L155)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:155–155](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L155-L155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1447,7 +1447,7 @@ flowchart TD
 
 ### PropertyDeclaration `ReferenceSummary` · L157–167
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:157–167](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L157-L167)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:157–167](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L157-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1462,7 +1462,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ReferenceSummary` · L159–159
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L159-L159)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L159-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1477,7 +1477,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ReferenceSummary` · L160–166
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:160–166](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L160-L166)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:160–166](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L160-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1522,7 +1522,7 @@ flowchart TD
 
 ### PropertyDeclaration `Panes` · L169–177
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:169–177](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L169-L177)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:169–177](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L169-L177)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1537,7 +1537,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Panes` · L171–171
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L171-L171)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:171–171](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L171-L171)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1552,7 +1552,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Panes` · L172–176
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:172–176](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L172-L176)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:172–176](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L172-L176)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1586,7 +1586,7 @@ flowchart TD
 
 ### PropertyDeclaration `Candidates` · L179–187
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:179–187](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L179-L187)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:179–187](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L179-L187)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1601,7 +1601,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Candidates` · L181–181
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L181-L181)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:181–181](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L181-L181)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1616,7 +1616,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Candidates` · L182–186
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:182–186](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L182-L186)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:182–186](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L182-L186)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1650,7 +1650,7 @@ flowchart TD
 
 ### PropertyDeclaration `Timeline` · L189–197
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:189–197](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L189-L197)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:189–197](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L189-L197)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1665,7 +1665,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Timeline` · L191–191
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L191-L191)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:191–191](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L191-L191)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1680,7 +1680,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Timeline` · L192–196
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:192–196](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L192-L196)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:192–196](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L192-L196)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1714,7 +1714,7 @@ flowchart TD
 
 ### PropertyDeclaration `FailureSummary` · L199–207
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:199–207](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L199-L207)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:199–207](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L199-L207)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1729,7 +1729,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FailureSummary` · L201–201
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L201-L201)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L201-L201)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1744,7 +1744,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_FailureSummary` · L202–206
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:202–206](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L202-L206)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:202–206](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L202-L206)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1778,7 +1778,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadAsync` · L209–264
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:209–264](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L209-L264)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:209–264](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L209-L264)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1791,9 +1791,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L42-L42) | LoadAsync | False |
-| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L30-L30) | _panel.LoadAsync | False |
-| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L47-L47) | _panel.LoadAsync | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L42-L42) | LoadAsync | False |
+| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L30-L30) | _panel.LoadAsync | False |
+| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L47-L47) | _panel.LoadAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1911,7 +1911,7 @@ flowchart TD
 
 ### MethodDeclaration `Dispose` · L266–271
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:266–271](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L266-L271)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:266–271](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L266-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1924,7 +1924,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L36-L36) | _panel.Dispose | False |
+| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L36-L36) | _panel.Dispose | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1945,7 +1945,7 @@ flowchart TD
 
 ### MethodDeclaration `SetCursor` · L273–277
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:273–277](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L273-L277)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:273–277](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L273-L277)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1964,9 +1964,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L43-L43) | SetCursor | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L242-L242) | SetCursor | False |
-| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L94-L94) | _panel.SetCursor | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L43-L43) | SetCursor | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L242-L242) | SetCursor | False |
+| [Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs#L94-L94) | _panel.SetCursor | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1979,7 +1979,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyVisiblePanes` · L279–300
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:279–300](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L279-L300)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:279–300](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L279-L300)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1998,9 +1998,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L138-L138) | ApplyVisiblePanes | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L151-L151) | ApplyVisiblePanes | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L237-L237) | ApplyVisiblePanes | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:138–138](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L138-L138) | ApplyVisiblePanes | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:151–151](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L151-L151) | ApplyVisiblePanes | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L237-L237) | ApplyVisiblePanes | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2057,7 +2057,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateStatus` · L302–314
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:302–314](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L302-L314)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:302–314](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L302-L314)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2070,8 +2070,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L241-L241) | UpdateStatus | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L297-L297) | UpdateStatus | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L241-L241) | UpdateStatus | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L297-L297) | UpdateStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2110,7 +2110,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadSeconds` · L316–320
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:316–320](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L316-L320)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:316–320](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L316-L320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2130,8 +2130,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:213–213](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L213-L213) | TryReadSeconds | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:213–213](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L213-L213) | TryReadSeconds | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:213–213](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L213-L213) | TryReadSeconds | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:213–213](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L213-L213) | TryReadSeconds | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2152,7 +2152,7 @@ flowchart TD
 
 ### MethodDeclaration `Notify` · L322–322
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L322-L322)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L322-L322)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2171,23 +2171,23 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L60-L60) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L72-L72) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L84-L84) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L85-L85) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L99-L99) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L111-L111) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L123-L123) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L137-L137) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L150-L150) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:165–165](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L165-L165) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L175-L175) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L185-L185) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L195-L195) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L205-L205) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L234-L234) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L235-L235) | Notify | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L257-L257) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:60–60](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L60-L60) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L72-L72) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L84-L84) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L85-L85) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L99-L99) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L111-L111) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L123-L123) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L137-L137) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L150-L150) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:165–165](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L165-L165) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L175-L175) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L185-L185) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L195-L195) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L205-L205) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L234-L234) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L235-L235) | Notify | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L257-L257) | Notify | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2207,7 +2207,7 @@ flowchart TD
 
 ### PropertyDeclaration `RankLabel` · L350–350
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L350-L350)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:350–350](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L350-L350)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2222,7 +2222,7 @@ flowchart TD
 
 ### PropertyDeclaration `EvidenceCaption` · L351–351
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L351-L351)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L351-L351)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2237,7 +2237,7 @@ flowchart TD
 
 ### PropertyDeclaration `FullMessage` · L373–373
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L373-L373)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:373–373](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L373-L373)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2252,7 +2252,7 @@ flowchart TD
 
 ### FieldDeclaration `MaximumRowsPerPane` · L396–396
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L396-L396)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:396–396](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L396-L396)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2273,7 +2273,7 @@ flowchart TD
 
 ### FieldDeclaration `MaximumReferenceSearchWindows` · L397–397
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:397–397](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L397-L397)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:397–397](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L397-L397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2294,7 +2294,7 @@ flowchart TD
 
 ### FieldDeclaration `MinimumReferenceRows` · L398–398
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L398-L398)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:398–398](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L398-L398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2315,7 +2315,7 @@ flowchart TD
 
 ### FieldDeclaration `PaneOrder` · L399–399
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L399-L399)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L399-L399)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2336,7 +2336,7 @@ flowchart TD
 
 ### FieldDeclaration `PaneTitles` · L400–406
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:400–406](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L400-L406)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:400–406](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L400-L406)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2368,7 +2368,7 @@ flowchart TD
 
 ### FieldDeclaration `ImportantTerms` · L407–411
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:407–411](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L407-L411)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:407–411](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L407-L411)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2389,7 +2389,7 @@ flowchart TD
 
 ### FieldDeclaration `TransitionTerms` · L412–418
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:412–418](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L412-L418)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:412–418](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L412-L418)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2410,7 +2410,7 @@ flowchart TD
 
 ### FieldDeclaration `DiscreteMelsecIdTerms` · L419–423
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:419–423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L419-L423)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:419–423](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L419-L423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2431,7 +2431,7 @@ flowchart TD
 
 ### FieldDeclaration `ComparisonGuidRegex` · L424–426
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:424–426](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L424-L426)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:424–426](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L424-L426)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2459,7 +2459,7 @@ flowchart TD
 
 ### FieldDeclaration `ComparisonDateTimeRegex` · L427–429
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:427–429](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L427-L429)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:427–429](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L427-L429)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2487,7 +2487,7 @@ flowchart TD
 
 ### FieldDeclaration `ComparisonNumberRegex` · L430–432
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:430–432](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L430-L432)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:430–432](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L430-L432)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2515,7 +2515,7 @@ flowchart TD
 
 ### FieldDeclaration `ComparisonWhitespaceRegex` · L433–435
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:433–435](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L433-L435)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:433–435](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L433-L435)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2543,7 +2543,7 @@ flowchart TD
 
 ### FieldDeclaration `_logRoot` · L436–436
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L436-L436)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:436–436](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L436-L436)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2558,7 +2558,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L438–441
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:438–441](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L438-L441)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:438–441](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L438-L441)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2577,7 +2577,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L36-L36) | new | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L36-L36) | new | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2596,7 +2596,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L443–478
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:443–478](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L443-L478)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:443–478](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L443-L478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2618,7 +2618,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L230-L230) | _reader.Read | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L230-L230) | _reader.Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2738,7 +2738,7 @@ flowchart TD
 
 ### MethodDeclaration `EmptyPanes` · L480–483
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:480–483](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L480-L483)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:480–483](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L480-L483)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2757,8 +2757,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L25-L25) | CAlarmIncidentLogReader.EmptyPanes | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L251-L251) | CAlarmIncidentLogReader.EmptyPanes | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L25-L25) | CAlarmIncidentLogReader.EmptyPanes | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L251-L251) | CAlarmIncidentLogReader.EmptyPanes | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2781,7 +2781,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildPane` · L485–519
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:485–519](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L485-L519)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:485–519](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L485-L519)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2803,8 +2803,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:472–472](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L472-L472) | BuildPane | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:473–473](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L473-L473) | BuildPane | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:472–472](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L472-L472) | BuildPane | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:473–473](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L473-L473) | BuildPane | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2891,7 +2891,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadRange` · L521–543
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:521–543](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L521-L543)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:521–543](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L521-L543)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2913,8 +2913,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L451-L451) | ReadRange | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L561-L561) | ReadRange | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L451-L451) | ReadRange | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L561-L561) | ReadRange | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2973,7 +2973,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadReference` · L545–569
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:545–569](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L545-L569)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:545–569](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L545-L569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2994,7 +2994,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L452-L452) | TryReadReference | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L452-L452) | TryReadReference | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3058,7 +3058,7 @@ flowchart TD
 
 ### MethodDeclaration `HasAlarmInRange` · L571–612
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:571–612](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L571-L612)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:571–612](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L571-L612)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3079,7 +3079,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L559-L559) | HasAlarmInRange | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L559-L559) | HasAlarmInRange | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3179,7 +3179,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildReferenceInfo` · L614–631
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:614–631](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L614-L631)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:614–631](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L614-L631)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3199,7 +3199,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:476–476](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L476-L476) | BuildReferenceInfo | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:476–476](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L476-L476) | BuildReferenceInfo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3233,7 +3233,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildComparisonSignatures` · L633–643
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:633–643](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L633-L643)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:633–643](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L633-L643)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3252,7 +3252,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L455-L455) | BuildComparisonSignatures | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:455–455](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L455-L455) | BuildComparisonSignatures | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3290,7 +3290,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildComparisonSignature` · L645–662
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:645–662](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L645-L662)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:645–662](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L645-L662)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3310,8 +3310,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:462–462](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L462-L462) | BuildComparisonSignature | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:640–640](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L640-L640) | BuildComparisonSignature | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:462–462](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L462-L462) | BuildComparisonSignature | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:640–640](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L640-L640) | BuildComparisonSignature | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3378,7 +3378,7 @@ flowchart TD
 
 ### MethodDeclaration `ClassifyStateChanges` · L664–699
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:664–699](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L664-L699)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:664–699](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L664-L699)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3398,7 +3398,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:468–468](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L468-L468) | ClassifyStateChanges | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:468–468](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L468-L468) | ClassifyStateChanges | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3490,7 +3490,7 @@ flowchart TD
 
 ### MethodDeclaration `IsDiscreteMelsecSignal` · L701–704
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:701–704](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L701-L704)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:701–704](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L701-L704)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3509,8 +3509,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L651-L651) | IsDiscreteMelsecSignal | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:679–679](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L679-L679) | IsDiscreteMelsecSignal | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:651–651](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L651-L651) | IsDiscreteMelsecSignal | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:679–679](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L679-L679) | IsDiscreteMelsecSignal | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3531,7 +3531,7 @@ flowchart TD
 
 ### MethodDeclaration `ContainsTransitionTerm` · L706–709
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:706–709](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L706-L709)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:706–709](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L706-L709)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3550,8 +3550,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:688–688](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L688-L688) | ContainsTransitionTerm | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:693–693](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L693-L693) | ContainsTransitionTerm | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:688–688](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L688-L688) | ContainsTransitionTerm | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:693–693](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L693-L693) | ContainsTransitionTerm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3572,7 +3572,7 @@ flowchart TD
 
 ### MethodDeclaration `CondenseMelsecPollingRows` · L711–761
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:711–761](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L711-L761)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:711–761](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L711-L761)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3591,7 +3591,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:496–496](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L496-L496) | CondenseMelsecPollingRows | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:496–496](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L496-L496) | CondenseMelsecPollingRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3691,7 +3691,7 @@ flowchart TD
 
 ### MethodDeclaration `TryGetNormalMelsecPollingId` · L763–775
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:763–775](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L763-L775)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:763–775](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L763-L775)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3711,9 +3711,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L648-L648) | TryGetNormalMelsecPollingId | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:677–677](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L677-L677) | TryGetNormalMelsecPollingId | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:718–718](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L718-L718) | TryGetNormalMelsecPollingId | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L648-L648) | TryGetNormalMelsecPollingId | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:677–677](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L677-L677) | TryGetNormalMelsecPollingId | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:718–718](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L718-L718) | TryGetNormalMelsecPollingId | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3753,7 +3753,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDelimitedField` · L777–788
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:777–788](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L777-L788)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:777–788](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L777-L788)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3773,12 +3773,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:652–652](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L652-L652) | ReadDelimitedField | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:681–681](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L681-L681) | ReadDelimitedField | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:745–745](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L745-L745) | ReadDelimitedField | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:746–746](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L746-L746) | ReadDelimitedField | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:747–747](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L747-L747) | ReadDelimitedField | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:773–773](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L773-L773) | ReadDelimitedField | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:652–652](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L652-L652) | ReadDelimitedField | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:681–681](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L681-L681) | ReadDelimitedField | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:745–745](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L745-L745) | ReadDelimitedField | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:746–746](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L746-L746) | ReadDelimitedField | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:747–747](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L747-L747) | ReadDelimitedField | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:773–773](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L773-L773) | ReadDelimitedField | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3824,7 +3824,7 @@ flowchart TD
 
 ### MethodDeclaration `EnumerateFiles` · L790–810
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:790–810](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L790-L810)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:790–810](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L790-L810)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3844,7 +3844,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L529-L529) | EnumerateFiles | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L529-L529) | EnumerateFiles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3946,7 +3946,7 @@ flowchart TD
 
 ### MethodDeclaration `EnumerateDayDirectory` · L812–819
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:812–819](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L812-L819)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:812–819](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L812-L819)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3969,9 +3969,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:796–796](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L796-L796) | EnumerateDayDirectory | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:798–798](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L798-L798) | EnumerateDayDirectory | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:801–801](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L801-L801) | EnumerateDayDirectory | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:796–796](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L796-L796) | EnumerateDayDirectory | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:798–798](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L798-L798) | EnumerateDayDirectory | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:801–801](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L801-L801) | EnumerateDayDirectory | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4018,7 +4018,7 @@ flowchart TD
 
 ### MethodDeclaration `EnumerateInterfaceFiles` · L821–836
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:821–836](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L821-L836)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:821–836](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L821-L836)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4038,7 +4038,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:803–803](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L803-L803) | EnumerateInterfaceFiles | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:803–803](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L803-L803) | EnumerateInterfaceFiles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4107,7 +4107,7 @@ flowchart TD
 
 ### MethodDeclaration `EnumerateProgramOpenFiles` · L838–845
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:838–845](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L838-L845)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:838–845](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L838-L845)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4127,7 +4127,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:805–805](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L805-L805) | EnumerateProgramOpenFiles | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:805–805](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L805-L805) | EnumerateProgramOpenFiles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4170,7 +4170,7 @@ flowchart TD
 
 ### MethodDeclaration `IsSupportedLogFile` · L847–850
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:847–850](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L847-L850)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:847–850](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L847-L850)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4206,7 +4206,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadFile` · L852–889
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:852–889](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L852-L889)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:852–889](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L852-L889)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4230,7 +4230,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L535-L535) | ReadFile | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L535-L535) | ReadFile | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4331,7 +4331,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParseAlarmLine` · L891–907
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:891–907](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L891-L907)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:891–907](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L891-L907)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4352,7 +4352,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:866–866](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L866-L866) | TryParseAlarmLine | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:866–866](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L866-L866) | TryParseAlarmLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4416,7 +4416,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadJsonText` · L909–914
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:909–914](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L909-L914)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:909–914](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L909-L914)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4436,11 +4436,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:900–900](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L900-L900) | ReadJsonText | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:901–901](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L901-L901) | ReadJsonText | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:902–902](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L902-L902) | ReadJsonText | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:903–903](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L903-L903) | ReadJsonText | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:904–904](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L904-L904) | ReadJsonText | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:900–900](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L900-L900) | ReadJsonText | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:901–901](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L901-L901) | ReadJsonText | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:902–902](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L902-L902) | ReadJsonText | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:903–903](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L903-L903) | ReadJsonText | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:904–904](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L904-L904) | ReadJsonText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4475,7 +4475,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParsePlainLine` · L916–938
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:916–938](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L916-L938)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:916–938](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L916-L938)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4497,7 +4497,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:867–867](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L867-L867) | TryParsePlainLine | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:867–867](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L867-L867) | TryParsePlainLine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4559,7 +4559,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParsePrefix` · L940–947
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:940–947](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L940-L947)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:940–947](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L940-L947)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4581,8 +4581,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:918–918](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L918-L918) | TryParsePrefix | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:923–923](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L923-L923) | TryParsePrefix | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:918–918](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L918-L918) | TryParsePrefix | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:923–923](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L923-L923) | TryParsePrefix | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4615,7 +4615,7 @@ flowchart TD
 
 ### FieldDeclaration `LegacyVisionLookbackSeconds` · L964–964
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:964–964](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L964-L964)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:964–964](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L964-L964)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4636,7 +4636,7 @@ flowchart TD
 
 ### FieldDeclaration `NgSummaryMarker` · L965–965
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:965–965](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L965-L965)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:965–965](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L965-L965)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4657,7 +4657,7 @@ flowchart TD
 
 ### FieldDeclaration `VisionResultRegex` · L966–968
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:966–968](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L966-L968)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:966–968](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L966-L968)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4685,7 +4685,7 @@ flowchart TD
 
 ### MethodDeclaration `CreatePending` · L970–979
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:970–979](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L970-L979)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:970–979](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L970-L979)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4704,7 +4704,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L41-L41) | CAlarmFailureSummaryAnalyzer.CreatePending | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L41-L41) | CAlarmFailureSummaryAnalyzer.CreatePending | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4725,7 +4725,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateLoadFailure` · L981–990
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:981–990](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L981-L990)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:981–990](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L981-L990)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4745,7 +4745,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L253-L253) | CAlarmFailureSummaryAnalyzer.CreateLoadFailure | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L253-L253) | CAlarmFailureSummaryAnalyzer.CreateLoadFailure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4766,7 +4766,7 @@ flowchart TD
 
 ### MethodDeclaration `Analyze` · L992–1020
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:992–1020](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L992-L1020)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:992–1020](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L992-L1020)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4787,7 +4787,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L475-L475) | CAlarmFailureSummaryAnalyzer.Analyze | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L475-L475) | CAlarmFailureSummaryAnalyzer.Analyze | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4852,7 +4852,7 @@ flowchart TD
 
 ### MethodDeclaration `IsVisionFailureMessage` · L1022–1031
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1022–1031](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1022-L1031)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1022–1031](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1022-L1031)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4871,7 +4871,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1402–1402](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1402-L1402) | CAlarmFailureSummaryAnalyzer.IsVisionFailureMessage | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1402–1402](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1402-L1402) | CAlarmFailureSummaryAnalyzer.IsVisionFailureMessage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -4906,7 +4906,7 @@ flowchart TD
 
 ### MethodDeclaration `TryCreateReviewSummary` · L1033–1108
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1033–1108](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1033-L1108)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1033–1108](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1033-L1108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4927,7 +4927,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:997–997](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L997-L997) | TryCreateReviewSummary | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:997–997](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L997-L997) | TryCreateReviewSummary | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5062,7 +5062,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateReviewSummary` · L1110–1143
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1110–1143](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1110-L1143)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1110–1143](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1110-L1143)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5093,8 +5093,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1055–1067](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1055-L1067) | CreateReviewSummary | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1093–1106](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1093-L1106) | CreateReviewSummary | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1055–1067](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1055-L1067) | CreateReviewSummary | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1093–1106](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1093-L1106) | CreateReviewSummary | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5154,7 +5154,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadLatestVisionBatch` · L1145–1166
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1145–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1145-L1166)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1145–1166](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1145-L1166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5174,7 +5174,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1077–1077](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1077-L1077) | ReadLatestVisionBatch | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1077–1077](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1077-L1077) | ReadLatestVisionBatch | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5236,7 +5236,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParseNgSummary` · L1168–1183
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1168–1183](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1168-L1183)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1168–1183](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1168-L1183)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5256,7 +5256,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1043–1043](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1043-L1043) | TryParseNgSummary | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1043–1043](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1043-L1043) | TryParseNgSummary | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5311,7 +5311,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L1185–1191
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1185–1191](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1185-L1191)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1185–1191](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1185-L1191)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5331,14 +5331,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1045–1045](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1045-L1045) | ReadInt | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1046–1046](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1046-L1046) | ReadInt | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1047–1047](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1047-L1047) | ReadInt | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1048–1048](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1048-L1048) | ReadInt | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1049–1049](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1049-L1049) | ReadInt | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1050–1050](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1050-L1050) | ReadInt | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1051–1051](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1051-L1051) | ReadInt | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1052–1052](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1052-L1052) | ReadInt | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1045–1045](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1045-L1045) | ReadInt | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1046–1046](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1046-L1046) | ReadInt | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1047–1047](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1047-L1047) | ReadInt | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1048–1048](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1048-L1048) | ReadInt | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1049–1049](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1049-L1049) | ReadInt | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1050–1050](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1050-L1050) | ReadInt | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1051–1051](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1051-L1051) | ReadInt | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1052–1052](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1052-L1052) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5360,7 +5360,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadText` · L1193–1196
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1193–1196](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1193-L1196)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1193–1196](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1193-L1196)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5381,8 +5381,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1053–1053](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1053-L1053) | ReadText | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1054–1054](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1054-L1054) | ReadText | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1053–1053](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1053-L1053) | ReadText | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1054–1054](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1054-L1054) | ReadText | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5404,7 +5404,7 @@ flowchart TD
 
 ### MethodDeclaration `IsReviewAlarm` · L1198–1205
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1198–1205](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1198-L1205)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1198–1205](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1198-L1205)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5423,7 +5423,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1071–1071](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1071-L1071) | IsReviewAlarm | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1071–1071](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1071-L1071) | IsReviewAlarm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5450,7 +5450,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateAlarmItems` · L1207–1222
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1207–1222](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1207-L1222)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1207–1222](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1207-L1222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5472,9 +5472,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:978–978](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L978-L978) | CreateAlarmItems | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:989–989](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L989-L989) | CreateAlarmItems | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1019–1019](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1019-L1019) | CreateAlarmItems | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:978–978](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L978-L978) | CreateAlarmItems | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:989–989](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L989-L989) | CreateAlarmItems | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1019–1019](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1019-L1019) | CreateAlarmItems | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5503,7 +5503,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveCategory` · L1224–1237
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1224–1237](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1224-L1237)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1224–1237](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1224-L1237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5522,7 +5522,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1009–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1009-L1009) | ResolveCategory | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1009–1009](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1009-L1009) | ResolveCategory | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -5544,7 +5544,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatLeadTime` · L1239–1243
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1239–1243](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1239-L1243)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1239–1243](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1239-L1243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5564,8 +5564,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1007-L1007) | FormatLeadTime | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1133–1133](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1133-L1133) | FormatLeadTime | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1007–1007](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1007-L1007) | FormatLeadTime | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1133–1133](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1133-L1133) | FormatLeadTime | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5586,7 +5586,7 @@ flowchart TD
 
 ### FieldDeclaration `NgTokenRegex` · L1250–1252
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1250–1252](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1250-L1252)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1250–1252](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1250-L1252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5614,7 +5614,7 @@ flowchart TD
 
 ### FieldDeclaration `FailureTerms` · L1253–1257
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1253–1257](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1253-L1257)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1253–1257](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1253-L1257)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5635,7 +5635,7 @@ flowchart TD
 
 ### FieldDeclaration `CommunicationTerms` · L1258–1262
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1258–1262](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1258-L1262)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1258–1262](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1258-L1262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5656,7 +5656,7 @@ flowchart TD
 
 ### FieldDeclaration `StateChangeTerms` · L1263–1267
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1263–1267](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1263-L1267)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1263–1267](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1263-L1267)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5677,7 +5677,7 @@ flowchart TD
 
 ### FieldDeclaration `InterlockTerms` · L1268–1272
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1268–1272](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1268-L1272)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1268–1272](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1268-L1272)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5698,7 +5698,7 @@ flowchart TD
 
 ### FieldDeclaration `OperatorTerms` · L1273–1273
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1273–1273](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1273-L1273)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1273–1273](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1273-L1273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5719,7 +5719,7 @@ flowchart TD
 
 ### MethodDeclaration `Analyze` · L1275–1316
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1275–1316](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1275-L1316)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1275–1316](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1275-L1316)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5739,7 +5739,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:474–474](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L474-L474) | CAlarmCauseCandidateAnalyzer.Analyze | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:474–474](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L474-L474) | CAlarmCauseCandidateAnalyzer.Analyze | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5820,7 +5820,7 @@ flowchart TD
 
 ### MethodDeclaration `EnumeratePrecedingRows` · L1318–1333
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1318–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1318-L1333)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1318–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1318-L1333)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5840,7 +5840,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1281–1281](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1281-L1281) | EnumeratePrecedingRows | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1281–1281](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1281-L1281) | EnumeratePrecedingRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5885,7 +5885,7 @@ flowchart TD
 
 ### MethodDeclaration `ComparePaneRows` · L1335–1341
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1335–1341](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1335-L1341)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1335–1341](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1335-L1341)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5925,7 +5925,7 @@ flowchart TD
 
 ### MethodDeclaration `AddFirstAbnormalCandidate` · L1343–1360
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1343–1360](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1343-L1360)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1343–1360](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1343-L1360)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5945,7 +5945,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1295-L1295) | AddFirstAbnormalCandidate | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1295–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1295-L1295) | AddFirstAbnormalCandidate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -5982,7 +5982,7 @@ flowchart TD
 
 ### MethodDeclaration `AddLatestCandidate` · L1362–1372
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1362–1372](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1362-L1372)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1362–1372](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1362-L1372)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6007,8 +6007,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1283–1284](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1283-L1284) | AddLatestCandidate | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1285–1286](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1285-L1286) | AddLatestCandidate | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1283–1284](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1283-L1284) | AddLatestCandidate | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1285–1286](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1285-L1286) | AddLatestCandidate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6026,7 +6026,7 @@ flowchart TD
 
 ### MethodDeclaration `AddLatestCandidate` · L1374–1392
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1374–1392](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1374-L1392)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1374–1392](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1374-L1392)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6052,11 +6052,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1287–1288](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1287-L1288) | AddLatestCandidate | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1289–1290](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1289-L1290) | AddLatestCandidate | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1291–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1291-L1292) | AddLatestCandidate | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1293–1294](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1293-L1294) | AddLatestCandidate | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1371–1371](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1371-L1371) | AddLatestCandidate | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1287–1288](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1287-L1288) | AddLatestCandidate | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1289–1290](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1289-L1290) | AddLatestCandidate | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1291–1292](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1291-L1292) | AddLatestCandidate | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1293–1294](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1293-L1294) | AddLatestCandidate | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1371–1371](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1371-L1371) | AddLatestCandidate | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6096,7 +6096,7 @@ flowchart TD
 
 ### MethodDeclaration `IsAbnormal` · L1394–1397
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1394–1397](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1394-L1397)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1394–1397](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1394-L1397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6115,7 +6115,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1349–1349](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1349-L1349) | IsAbnormal | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1349–1349](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1349-L1349) | IsAbnormal | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6138,7 +6138,7 @@ flowchart TD
 
 ### MethodDeclaration `IsDirectFailure` · L1399–1405
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1399–1405](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1399-L1405)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1399–1405](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1399-L1405)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6157,8 +6157,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1396–1396](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1396-L1396) | IsDirectFailure | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1415–1415](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1415-L1415) | IsDirectFailure | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1396–1396](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1396-L1396) | IsDirectFailure | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1415–1415](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1415-L1415) | IsDirectFailure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6183,7 +6183,7 @@ flowchart TD
 
 ### MethodDeclaration `IsInterlockFailure` · L1407–1410
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1407–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1407-L1410)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1407–1410](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1407-L1410)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6202,7 +6202,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1396–1396](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1396-L1396) | IsInterlockFailure | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1396–1396](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1396-L1396) | IsInterlockFailure | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6221,7 +6221,7 @@ flowchart TD
 
 ### MethodDeclaration `IsSequenceFailure` · L1412–1416
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1412–1416](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1412-L1416)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1412–1416](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1412-L1416)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6257,7 +6257,7 @@ flowchart TD
 
 ### MethodDeclaration `IsCommunicationIssue` · L1418–1423
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1418–1423](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1418-L1423)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1418–1423](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1418-L1423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6276,7 +6276,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1396–1396](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1396-L1396) | IsCommunicationIssue | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1396–1396](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1396-L1396) | IsCommunicationIssue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6299,7 +6299,7 @@ flowchart TD
 
 ### MethodDeclaration `IsEquipmentStateChange` · L1425–1431
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1425–1431](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1425-L1431)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1425–1431](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1425-L1431)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6348,7 +6348,7 @@ flowchart TD
 
 ### MethodDeclaration `IsOperatorAction` · L1433–1438
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1433–1438](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1433-L1438)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1433–1438](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1433-L1438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6386,7 +6386,7 @@ flowchart TD
 
 ### MethodDeclaration `ContainsAny` · L1440–1448
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1440–1448](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1440-L1448)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1440–1448](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1440-L1448)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6406,11 +6406,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1403–1403](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1403-L1403) | ContainsAny | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1409–1409](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1409-L1409) | ContainsAny | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1422–1422](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1422-L1422) | ContainsAny | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1429–1429](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1429-L1429) | ContainsAny | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1437–1437](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1437-L1437) | ContainsAny | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1403–1403](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1403-L1403) | ContainsAny | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1409–1409](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1409-L1409) | ContainsAny | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1422–1422](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1422-L1422) | ContainsAny | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1429–1429](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1429-L1429) | ContainsAny | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1437–1437](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1437-L1437) | ContainsAny | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6443,7 +6443,7 @@ flowchart TD
 
 ### MethodDeclaration `IsSameEvidence` · L1450–1455
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1450–1455](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1450-L1455)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1450–1455](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1450-L1455)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6463,7 +6463,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1300-L1300) | IsSameEvidence | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1300–1300](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1300-L1300) | IsSameEvidence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6484,7 +6484,7 @@ flowchart TD
 
 ### MethodDeclaration `AppendLeadTime` · L1457–1463
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1457–1463](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1457-L1463)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1457–1463](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1457-L1463)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6505,7 +6505,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1312–1312](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1312-L1312) | AppendLeadTime | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1312–1312](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1312-L1312) | AppendLeadTime | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6530,7 +6530,7 @@ flowchart TD
 
 ### FieldDeclaration `MaximumEvidenceItems` · L1477–1477
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1477–1477](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1477-L1477)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1477–1477](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1477-L1477)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6551,7 +6551,7 @@ flowchart TD
 
 ### FieldDeclaration `MaximumSummaryLength` · L1478–1478
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1478–1478](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1478-L1478)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1478–1478](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1478-L1478)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6572,7 +6572,7 @@ flowchart TD
 
 ### FieldDeclaration `TimelineTerms` · L1479–1483
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1479–1483](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1479-L1483)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1479–1483](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1479-L1483)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6593,7 +6593,7 @@ flowchart TD
 
 ### MethodDeclaration `Build` · L1485–1535
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1485–1535](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1485-L1535)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1485–1535](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1485-L1535)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6614,7 +6614,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L240-L240) | CAlarmIncidentTimelineBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L240-L240) | CAlarmIncidentTimelineBuilder.Build | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6716,7 +6716,7 @@ flowchart TD
 
 ### MethodDeclaration `AddSeed` · L1537–1546
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1537–1546](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1537-L1546)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1537–1546](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1537-L1546)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6738,8 +6738,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1492–1492](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1492-L1492) | AddSeed | False |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1500–1500](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1500-L1500) | AddSeed | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1492–1492](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1492-L1492) | AddSeed | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1500–1500](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1500-L1500) | AddSeed | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6774,7 +6774,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPriority` · L1548–1559
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1548–1559](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1548-L1559)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1548–1559](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1548-L1559)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6794,7 +6794,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1498–1498](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1498-L1498) | GetPriority | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1498–1498](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1498-L1498) | GetPriority | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6840,7 +6840,7 @@ flowchart TD
 
 ### MethodDeclaration `ContainsTimelineTerm` · L1561–1569
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1561–1569](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1561-L1569)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1561–1569](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1561-L1569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6859,7 +6859,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1552–1552](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1552-L1552) | ContainsTimelineTerm | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1552–1552](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1552-L1552) | ContainsTimelineTerm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6892,7 +6892,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateItem` · L1571–1586
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1571–1586](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1571-L1586)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1571–1586](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1571-L1586)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6913,7 +6913,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1521–1521](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1521-L1521) | CreateItem | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1521–1521](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1521-L1521) | CreateItem | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6940,7 +6940,7 @@ flowchart TD
 
 ### MethodDeclaration `Summarize` · L1588–1621
 
-[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1588–1621](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1588-L1621)
+[Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1588–1621](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1588-L1621)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6960,7 +6960,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1582–1582](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1582-L1582) | Summarize | False |
+| [Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs:1582–1582](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs#L1582-L1582) | Summarize | False |
 
 호출하는 대상과 해석 범위:
 

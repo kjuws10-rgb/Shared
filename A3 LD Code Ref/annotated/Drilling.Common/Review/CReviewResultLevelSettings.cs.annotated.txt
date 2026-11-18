@@ -1,0 +1,332 @@
+A3 LD Code Ref · 문서용 전체 주석 해설본
+원본: Drilling.Common/Review/CReviewResultLevelSettings.cs
+Commit: 96e22cd027c84bf302b23f2949b98985d7f301bb
+각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
+
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000002 | using Drilling.Common.Managers; ⟦EOL⟧
+L000003 |  ⟦EOL⟧
+// 해설 L4: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Review;
+L000004 | namespace Drilling.Common.Review; ⟦EOL⟧
+L000005 |  ⟦EOL⟧
+// 해설 L6: 타입의 구조/상속 선언입니다: public enum EN_REVIEW_RESULT_LEVEL
+L000006 | public enum EN_REVIEW_RESULT_LEVEL ⟦EOL⟧
+// 해설 L7: 구문 블록 경계입니다.
+L000007 | { ⟦EOL⟧
+// 해설 L8: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_RESULT_LEVEL.Level1
+L000008 |     Level1 = 1, ⟦EOL⟧
+// 해설 L9: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_RESULT_LEVEL.Level2
+L000009 |     Level2 = 2, ⟦EOL⟧
+// 해설 L10: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_RESULT_LEVEL.Level3
+L000010 |     Level3 = 3, ⟦EOL⟧
+// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_RESULT_LEVEL.Level4
+L000011 |     Level4 = 4 ⟦EOL⟧
+// 해설 L12: 구문 블록 경계입니다.
+L000012 | } ⟦EOL⟧
+L000013 |  ⟦EOL⟧
+// 해설 L14: 타입의 구조/상속 선언입니다: public sealed record ST_REVIEW_RESULT_LEVEL_SETTINGS(
+L000014 | public sealed record ST_REVIEW_RESULT_LEVEL_SETTINGS( ⟦EOL⟧
+// 해설 L15: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000015 |     double Level1Maximum, ⟦EOL⟧
+// 해설 L16: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000016 |     double Level2Maximum, ⟦EOL⟧
+// 해설 L17: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000017 |     double Level3Maximum, ⟦EOL⟧
+// 해설 L18: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000018 |     string Level1Color, ⟦EOL⟧
+// 해설 L19: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000019 |     string Level2Color, ⟦EOL⟧
+// 해설 L20: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000020 |     string Level3Color, ⟦EOL⟧
+// 해설 L21: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000021 |     string Level4Color) ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다.
+L000022 | { ⟦EOL⟧
+// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_RESULT_LEVEL Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS.Resolve(double, double)
+L000023 |     public EN_REVIEW_RESULT_LEVEL Resolve(double resultX, double resultY) ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 Resolve.
+L000024 |     { ⟦EOL⟧
+// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(Math.Abs(resultX), Math.Abs(resultY)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(resultX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(resultY) / 지역 변수를 선언합니다: var magnitude = Math.Max(Math.Abs(resultX), Math.Abs(resultY)); / 변수의 초기값을 지정합니다: magnitude = Math.Max(Math.Abs(resultX), Math.Abs(resultY))
+L000025 |         var magnitude = Math.Max(Math.Abs(resultX), Math.Abs(resultY)); ⟦EOL⟧
+// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(magnitude) / 조건에 따라 분기합니다: if (!double.IsFinite(magnitude))
+L000026 |         if (!double.IsFinite(magnitude)) ⟦EOL⟧
+// 해설 L27: 구문 블록 경계입니다 · 소속 Resolve.
+L000027 |         { ⟦EOL⟧
+// 해설 L28: 호출자에게 값 또는 제어를 반환합니다: return EN_REVIEW_RESULT_LEVEL.Level4;
+L000028 |             return EN_REVIEW_RESULT_LEVEL.Level4; ⟦EOL⟧
+// 해설 L29: 구문 블록 경계입니다 · 소속 Resolve.
+L000029 |         } ⟦EOL⟧
+L000030 |  ⟦EOL⟧
+// 해설 L31: 조건에 따라 분기합니다: if (magnitude <= Level1Maximum)
+L000031 |         if (magnitude <= Level1Maximum) ⟦EOL⟧
+// 해설 L32: 구문 블록 경계입니다 · 소속 Resolve.
+L000032 |         { ⟦EOL⟧
+// 해설 L33: 호출자에게 값 또는 제어를 반환합니다: return EN_REVIEW_RESULT_LEVEL.Level1;
+L000033 |             return EN_REVIEW_RESULT_LEVEL.Level1; ⟦EOL⟧
+// 해설 L34: 구문 블록 경계입니다 · 소속 Resolve.
+L000034 |         } ⟦EOL⟧
+L000035 |  ⟦EOL⟧
+// 해설 L36: 조건에 따라 분기합니다: if (magnitude <= Level2Maximum)
+L000036 |         if (magnitude <= Level2Maximum) ⟦EOL⟧
+// 해설 L37: 구문 블록 경계입니다 · 소속 Resolve.
+L000037 |         { ⟦EOL⟧
+// 해설 L38: 호출자에게 값 또는 제어를 반환합니다: return EN_REVIEW_RESULT_LEVEL.Level2;
+L000038 |             return EN_REVIEW_RESULT_LEVEL.Level2; ⟦EOL⟧
+// 해설 L39: 구문 블록 경계입니다 · 소속 Resolve.
+L000039 |         } ⟦EOL⟧
+L000040 |  ⟦EOL⟧
+// 해설 L41: 조건에 따라 결과식을 선택합니다: magnitude <= Level3Maximum ? EN_REVIEW_RESULT_LEVEL.Level3 : EN_REVIEW_RESULT_LEVEL.Level4 / 호출자에게 값 또는 제어를 반환합니다: return magnitude <= Level3Maximum ? EN_REVIEW_RESULT_LEVEL.Level3 : EN_REVIEW_RESULT_LEVEL.Level4;
+L000041 |         return magnitude <= Level3Maximum ⟦EOL⟧
+// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_RESULT_LEVEL Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS.Resolve(double, double)
+L000042 |             ? EN_REVIEW_RESULT_LEVEL.Level3 ⟦EOL⟧
+// 해설 L43: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.EN_REVIEW_RESULT_LEVEL Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS.Resolve(double, double)
+L000043 |             : EN_REVIEW_RESULT_LEVEL.Level4; ⟦EOL⟧
+// 해설 L44: 구문 블록 경계입니다 · 소속 Resolve.
+L000044 |     } ⟦EOL⟧
+L000045 |  ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS.ColorFor(Drilling.Common.Review.EN_REVIEW_RESULT_LEVEL)
+L000046 |     public string ColorFor(EN_REVIEW_RESULT_LEVEL level) ⟦EOL⟧
+// 해설 L47: 구문 블록 경계입니다 · 소속 ColorFor.
+L000047 |     { ⟦EOL⟧
+// 해설 L48: 호출자에게 값 또는 제어를 반환합니다: return level switch { EN_REVIEW_RESULT_LEVEL.Level1 => Level1Color, EN_REVIEW_RESULT_LEVEL.Level2 => Level2Color, EN_REVIEW_RESULT_LEVEL.Level3 => Level3Color, _ => Level4Color }; / 값별 결과식을 선택합니다: level switch { EN_REVIEW_RESULT_LEVEL.Level1 => Level1Color, EN_REVIEW_RESULT_LEVEL.Level2 => Level2Color, EN_REVIEW_RESULT_LEVEL.Level3 => Level3Color, _ => Level4Color }
+L000048 |         return level switch ⟦EOL⟧
+// 해설 L49: 구문 블록 경계입니다 · 소속 ColorFor.
+L000049 |         { ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS.ColorFor(Drilling.Common.Review.EN_REVIEW_RESULT_LEVEL)
+L000050 |             EN_REVIEW_RESULT_LEVEL.Level1 => Level1Color, ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS.ColorFor(Drilling.Common.Review.EN_REVIEW_RESULT_LEVEL)
+L000051 |             EN_REVIEW_RESULT_LEVEL.Level2 => Level2Color, ⟦EOL⟧
+// 해설 L52: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS.ColorFor(Drilling.Common.Review.EN_REVIEW_RESULT_LEVEL)
+L000052 |             EN_REVIEW_RESULT_LEVEL.Level3 => Level3Color, ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS.ColorFor(Drilling.Common.Review.EN_REVIEW_RESULT_LEVEL)
+L000053 |             _ => Level4Color ⟦EOL⟧
+// 해설 L54: 구문 블록 경계입니다 · 소속 ColorFor.
+L000054 |         }; ⟦EOL⟧
+// 해설 L55: 구문 블록 경계입니다 · 소속 ColorFor.
+L000055 |     } ⟦EOL⟧
+// 해설 L56: 구문 블록 경계입니다.
+L000056 | } ⟦EOL⟧
+L000057 |  ⟦EOL⟧
+// 해설 L58: 타입의 구조/상속 선언입니다: public static class CReviewResultLevelSettings
+L000058 | public static class CReviewResultLevelSettings ⟦EOL⟧
+// 해설 L59: 구문 블록 경계입니다.
+L000059 | { ⟦EOL⟧
+// 해설 L60: 변수의 초기값을 지정합니다: Level1MaximumKey = "REVIEW_LEVEL1_MAX"
+L000060 |     public const string Level1MaximumKey = "REVIEW_LEVEL1_MAX"; ⟦EOL⟧
+// 해설 L61: 변수의 초기값을 지정합니다: Level2MaximumKey = "REVIEW_LEVEL2_MAX"
+L000061 |     public const string Level2MaximumKey = "REVIEW_LEVEL2_MAX"; ⟦EOL⟧
+// 해설 L62: 변수의 초기값을 지정합니다: Level3MaximumKey = "REVIEW_LEVEL3_MAX"
+L000062 |     public const string Level3MaximumKey = "REVIEW_LEVEL3_MAX"; ⟦EOL⟧
+// 해설 L63: 변수의 초기값을 지정합니다: Level1ColorKey = "REVIEW_LEVEL1_COLOR"
+L000063 |     public const string Level1ColorKey = "REVIEW_LEVEL1_COLOR"; ⟦EOL⟧
+// 해설 L64: 변수의 초기값을 지정합니다: Level2ColorKey = "REVIEW_LEVEL2_COLOR"
+L000064 |     public const string Level2ColorKey = "REVIEW_LEVEL2_COLOR"; ⟦EOL⟧
+// 해설 L65: 변수의 초기값을 지정합니다: Level3ColorKey = "REVIEW_LEVEL3_COLOR"
+L000065 |     public const string Level3ColorKey = "REVIEW_LEVEL3_COLOR"; ⟦EOL⟧
+// 해설 L66: 변수의 초기값을 지정합니다: Level4ColorKey = "REVIEW_LEVEL4_COLOR"
+L000066 |     public const string Level4ColorKey = "REVIEW_LEVEL4_COLOR"; ⟦EOL⟧
+L000067 |  ⟦EOL⟧
+// 해설 L68: 변수의 초기값을 지정합니다: DefaultLevel1Maximum = 0.010
+L000068 |     public const double DefaultLevel1Maximum = 0.010; ⟦EOL⟧
+// 해설 L69: 변수의 초기값을 지정합니다: DefaultLevel2Maximum = 0.020
+L000069 |     public const double DefaultLevel2Maximum = 0.020; ⟦EOL⟧
+// 해설 L70: 변수의 초기값을 지정합니다: DefaultLevel3Maximum = 0.030
+L000070 |     public const double DefaultLevel3Maximum = 0.030; ⟦EOL⟧
+// 해설 L71: 변수의 초기값을 지정합니다: DefaultLevel1Color = "#22C55E"
+L000071 |     public const string DefaultLevel1Color = "#22C55E"; ⟦EOL⟧
+// 해설 L72: 변수의 초기값을 지정합니다: DefaultLevel2Color = "#84CC16"
+L000072 |     public const string DefaultLevel2Color = "#84CC16"; ⟦EOL⟧
+// 해설 L73: 변수의 초기값을 지정합니다: DefaultLevel3Color = "#F59E0B"
+L000073 |     public const string DefaultLevel3Color = "#F59E0B"; ⟦EOL⟧
+// 해설 L74: 변수의 초기값을 지정합니다: DefaultLevel4Color = "#EF4444"
+L000074 |     public const string DefaultLevel4Color = "#EF4444"; ⟦EOL⟧
+L000075 |  ⟦EOL⟧
+// 해설 L76: 함수·델리게이트 또는 객체 생성자를 호출합니다: new( [Level1ColorKey, Level2ColorKey, Level3ColorKey, Level4ColorKey], StringComparer.OrdinalIgnoreCase) / 변수의 초기값을 지정합니다: ColorKeys = new( [Level1ColorKey, Level2ColorKey, Level3ColorKey, Level4ColorKey], StringComparer.OrdinalIgnoreCase)
+L000076 |     private static readonly HashSet<string> ColorKeys = new( ⟦EOL⟧
+// 해설 L77: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.HashSet<string> Drilling.Common.Review.CReviewResultLevelSettings.ColorKeys
+L000077 |         [Level1ColorKey, Level2ColorKey, Level3ColorKey, Level4ColorKey], ⟦EOL⟧
+// 해설 L78: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.HashSet<string> Drilling.Common.Review.CReviewResultLevelSettings.ColorKeys
+L000078 |         StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 함수·델리게이트 또는 객체 생성자를 호출합니다: new( DefaultLevel1Maximum, DefaultLevel2Maximum, DefaultLevel3Maximum, DefaultLevel1Color, DefaultLevel2Color, DefaultLevel3Color, DefaultLevel4Color)
+L000080 |     public static ST_REVIEW_RESULT_LEVEL_SETTINGS Default { get; } = new( ⟦EOL⟧
+// 해설 L81: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Default
+L000081 |         DefaultLevel1Maximum, ⟦EOL⟧
+// 해설 L82: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Default
+L000082 |         DefaultLevel2Maximum, ⟦EOL⟧
+// 해설 L83: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Default
+L000083 |         DefaultLevel3Maximum, ⟦EOL⟧
+// 해설 L84: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Default
+L000084 |         DefaultLevel1Color, ⟦EOL⟧
+// 해설 L85: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Default
+L000085 |         DefaultLevel2Color, ⟦EOL⟧
+// 해설 L86: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Default
+L000086 |         DefaultLevel3Color, ⟦EOL⟧
+// 해설 L87: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Default
+L000087 |         DefaultLevel4Color); ⟦EOL⟧
+L000088 |  ⟦EOL⟧
+// 해설 L89: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Review.CReviewResultLevelSettings.IsColorKey(string?)
+L000089 |     public static bool IsColorKey(string? key) ⟦EOL⟧
+// 해설 L90: 구문 블록 경계입니다 · 소속 IsColorKey.
+L000090 |     { ⟦EOL⟧
+// 해설 L91: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(key) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ColorKeys.Contains(key) / 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(key) && ColorKeys.Contains(key);
+L000091 |         return !string.IsNullOrWhiteSpace(key) && ColorKeys.Contains(key); ⟦EOL⟧
+// 해설 L92: 구문 블록 경계입니다 · 소속 IsColorKey.
+L000092 |     } ⟦EOL⟧
+L000093 |  ⟦EOL⟧
+// 해설 L94: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Read(System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>)
+L000094 |     public static ST_REVIEW_RESULT_LEVEL_SETTINGS Read(IEnumerable<ST_SYSTEM_PARAMETER> parameters) ⟦EOL⟧
+// 해설 L95: 구문 블록 경계입니다 · 소속 Read.
+L000095 |     { ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(parameters)
+L000096 |         ArgumentNullException.ThrowIfNull(parameters); ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+L000097 |         var values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L98: 컬렉션 요소를 순회합니다: foreach (var parameter in parameters)
+L000098 |         foreach (var parameter in parameters) ⟦EOL⟧
+// 해설 L99: 구문 블록 경계입니다 · 소속 Read.
+L000099 |         { ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(parameter.Key) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(parameter.Key))
+L000100 |             if (!string.IsNullOrWhiteSpace(parameter.Key)) ⟦EOL⟧
+// 해설 L101: 구문 블록 경계입니다 · 소속 Read.
+L000101 |             { ⟦EOL⟧
+// 해설 L102: 값을 대상에 대입합니다: values[parameter.Key] = parameter.Value
+L000102 |                 values[parameter.Key] = parameter.Value; ⟦EOL⟧
+// 해설 L103: 구문 블록 경계입니다 · 소속 Read.
+L000103 |             } ⟦EOL⟧
+L000104 |  ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(parameter.Name) / 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(parameter.Name))
+L000105 |             if (!string.IsNullOrWhiteSpace(parameter.Name)) ⟦EOL⟧
+// 해설 L106: 구문 블록 경계입니다 · 소속 Read.
+L000106 |             { ⟦EOL⟧
+// 해설 L107: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryAdd(parameter.Name, parameter.Value)
+L000107 |                 values.TryAdd(parameter.Name, parameter.Value); ⟦EOL⟧
+// 해설 L108: 구문 블록 경계입니다 · 소속 Read.
+L000108 |             } ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 Read.
+L000109 |         } ⟦EOL⟧
+L000110 |  ⟦EOL⟧
+// 해설 L111: 함수·델리게이트 또는 객체 생성자를 호출합니다: Read(values) / 호출자에게 값 또는 제어를 반환합니다: return Read(values);
+L000111 |         return Read(values); ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 Read.
+L000112 |     } ⟦EOL⟧
+L000113 |  ⟦EOL⟧
+// 해설 L114: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Read(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000114 |     public static ST_REVIEW_RESULT_LEVEL_SETTINGS Read(IReadOnlyDictionary<string, string> values) ⟦EOL⟧
+// 해설 L115: 구문 블록 경계입니다 · 소속 Read.
+L000115 |     { ⟦EOL⟧
+// 해설 L116: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(values)
+L000116 |         ArgumentNullException.ThrowIfNull(values); ⟦EOL⟧
+// 해설 L117: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMaximum(values, Level1MaximumKey, DefaultLevel1Maximum) / 지역 변수를 선언합니다: var level1 = ReadMaximum(values, Level1MaximumKey, DefaultLevel1Maximum); / 변수의 초기값을 지정합니다: level1 = ReadMaximum(values, Level1MaximumKey, DefaultLevel1Maximum)
+L000117 |         var level1 = ReadMaximum(values, Level1MaximumKey, DefaultLevel1Maximum); ⟦EOL⟧
+// 해설 L118: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMaximum(values, Level2MaximumKey, DefaultLevel2Maximum) / 지역 변수를 선언합니다: var level2 = ReadMaximum(values, Level2MaximumKey, DefaultLevel2Maximum); / 변수의 초기값을 지정합니다: level2 = ReadMaximum(values, Level2MaximumKey, DefaultLevel2Maximum)
+L000118 |         var level2 = ReadMaximum(values, Level2MaximumKey, DefaultLevel2Maximum); ⟦EOL⟧
+// 해설 L119: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMaximum(values, Level3MaximumKey, DefaultLevel3Maximum) / 지역 변수를 선언합니다: var level3 = ReadMaximum(values, Level3MaximumKey, DefaultLevel3Maximum); / 변수의 초기값을 지정합니다: level3 = ReadMaximum(values, Level3MaximumKey, DefaultLevel3Maximum)
+L000119 |         var level3 = ReadMaximum(values, Level3MaximumKey, DefaultLevel3Maximum); ⟦EOL⟧
+// 해설 L120: 조건에 따라 분기합니다: if (!(level1 < level2 && level2 < level3))
+L000120 |         if (!(level1 < level2 && level2 < level3)) ⟦EOL⟧
+// 해설 L121: 구문 블록 경계입니다 · 소속 Read.
+L000121 |         { ⟦EOL⟧
+// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException( $"Review Level 범위는 Level 1 < Level 2 < Level 3 순서여야 합니다. 현재값: {level1:0.###}, {level2:0.###}, {level3:0.###} mm") / 예외를 발생/전달합니다: throw new InvalidDataException( $"Review Level 범위는 Level 1 < Level 2 < Level 3 순서여야 합니다. 현재값: {level1:0.###}, {level2:0.###}, {level3:0.###} mm");
+L000122 |             throw new InvalidDataException( ⟦EOL⟧
+// 해설 L123: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Read(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000123 |                 $"Review Level 범위는 Level 1 < Level 2 < Level 3 순서여야 합니다. 현재값: {level1:0.###}, {level2:0.###}, {level3:0.###} mm"); ⟦EOL⟧
+// 해설 L124: 구문 블록 경계입니다 · 소속 Read.
+L000124 |         } ⟦EOL⟧
+L000125 |  ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_LEVEL_SETTINGS( level1, level2, level3, ReadColor(values, Level1ColorKey, DefaultLevel1Color), ReadColor(values, Level2ColorKey, DefaultLevel2Color), ReadColor(values, Level3ColorKey, DefaultLevel3Co… / 호출자에게 값 또는 제어를 반환합니다: return new ST_REVIEW_RESULT_LEVEL_SETTINGS( level1, level2, level3, ReadColor(values, Level1ColorKey, DefaultLevel1Color), ReadColor(values, Level2ColorKey, DefaultLevel2Color), ReadColor(values, Level3ColorKey, DefaultLevel3Color
+L000126 |         return new ST_REVIEW_RESULT_LEVEL_SETTINGS( ⟦EOL⟧
+// 해설 L127: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Read(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000127 |             level1, ⟦EOL⟧
+// 해설 L128: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Read(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000128 |             level2, ⟦EOL⟧
+// 해설 L129: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Review.ST_REVIEW_RESULT_LEVEL_SETTINGS Drilling.Common.Review.CReviewResultLevelSettings.Read(System.Collections.Generic.IReadOnlyDictionary<string, string>)
+L000129 |             level3, ⟦EOL⟧
+// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadColor(values, Level1ColorKey, DefaultLevel1Color)
+L000130 |             ReadColor(values, Level1ColorKey, DefaultLevel1Color), ⟦EOL⟧
+// 해설 L131: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadColor(values, Level2ColorKey, DefaultLevel2Color)
+L000131 |             ReadColor(values, Level2ColorKey, DefaultLevel2Color), ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadColor(values, Level3ColorKey, DefaultLevel3Color)
+L000132 |             ReadColor(values, Level3ColorKey, DefaultLevel3Color), ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadColor(values, Level4ColorKey, DefaultLevel4Color)
+L000133 |             ReadColor(values, Level4ColorKey, DefaultLevel4Color)); ⟦EOL⟧
+// 해설 L134: 구문 블록 경계입니다 · 소속 Read.
+L000134 |     } ⟦EOL⟧
+L000135 |  ⟦EOL⟧
+// 해설 L136: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Review.CReviewResultLevelSettings.NormalizeColor(string)
+L000136 |     public static string NormalizeColor(string value) ⟦EOL⟧
+// 해설 L137: 구문 블록 경계입니다 · 소속 NormalizeColor.
+L000137 |     { ⟦EOL⟧
+// 해설 L138: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim() / 지역 변수를 선언합니다: var text = value?.Trim() ?? ""; / 변수의 초기값을 지정합니다: text = value?.Trim() ?? ""
+L000138 |         var text = value?.Trim() ?? ""; ⟦EOL⟧
+// 해설 L139: 조건에 따라 분기합니다: if (text.Length == 6)
+L000139 |         if (text.Length == 6) ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 NormalizeColor.
+L000140 |         { ⟦EOL⟧
+// 해설 L141: 값을 대상에 대입합니다: text = $"#{text}"
+L000141 |             text = $"#{text}"; ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 NormalizeColor.
+L000142 |         } ⟦EOL⟧
+L000143 |  ⟦EOL⟧
+// 해설 L144: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.AsSpan(1).ToString().All(Uri.IsHexDigit) / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.AsSpan(1).ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: text.AsSpan(1) / 조건에 따라 분기합니다: if (text.Length != 7 || text[0] != '#' || !text.AsSpan(1).ToString().All(Uri.IsHexDigit))
+L000144 |         if (text.Length != 7 || text[0] != '#' || !text.AsSpan(1).ToString().All(Uri.IsHexDigit)) ⟦EOL⟧
+// 해설 L145: 구문 블록 경계입니다 · 소속 NormalizeColor.
+L000145 |         { ⟦EOL⟧
+// 해설 L146: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Review Level Color는 #RRGGBB 형식이어야 합니다. 현재값: '{value}'") / 예외를 발생/전달합니다: throw new InvalidDataException($"Review Level Color는 #RRGGBB 형식이어야 합니다. 현재값: '{value}'");
+L000146 |             throw new InvalidDataException($"Review Level Color는 #RRGGBB 형식이어야 합니다. 현재값: '{value}'"); ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 NormalizeColor.
+L000147 |         } ⟦EOL⟧
+L000148 |  ⟦EOL⟧
+// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: text.ToUpperInvariant() / 호출자에게 값 또는 제어를 반환합니다: return text.ToUpperInvariant();
+L000149 |         return text.ToUpperInvariant(); ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 NormalizeColor.
+L000150 |     } ⟦EOL⟧
+L000151 |  ⟦EOL⟧
+// 해설 L152: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Review.CReviewResultLevelSettings.ReadMaximum(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, double)
+L000152 |     private static double ReadMaximum( ⟦EOL⟧
+// 해설 L153: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Review.CReviewResultLevelSettings.ReadMaximum(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, double)
+L000153 |         IReadOnlyDictionary<string, string> values, ⟦EOL⟧
+// 해설 L154: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Review.CReviewResultLevelSettings.ReadMaximum(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, double)
+L000154 |         string key, ⟦EOL⟧
+// 해설 L155: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Review.CReviewResultLevelSettings.ReadMaximum(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, double)
+L000155 |         double fallback) ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 ReadMaximum.
+L000156 |     { ⟦EOL⟧
+// 해설 L157: 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var value) / 함수·델리게이트 또는 객체 생성자를 호출합니다: fallback.ToString("R", CultureInfo.InvariantCulture) / 조건에 따라 결과식을 선택합니다: values.TryGetValue(key, out var value) ? value : fallback.ToString("R", CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var text = values.TryGetValue(key, out var value) ? value : fallback.ToString("R", CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: text = values.TryGetValue(key, out var value) ? value : fallback.ToString("R", CultureInfo.InvariantCulture)
+L000157 |         var text = values.TryGetValue(key, out var value) ? value : fallback.ToString("R", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) / 조건에 따라 분기합니다: if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) || !double.IsFinite(result) || result <= 0.0)
+L000158 |         if (!double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var result) ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(result)
+L000159 |             || !double.IsFinite(result) ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · double Drilling.Common.Review.CReviewResultLevelSettings.ReadMaximum(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, double)
+L000160 |             || result <= 0.0) ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 ReadMaximum.
+L000161 |         { ⟦EOL⟧
+// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"{key}는 0보다 큰 유한한 mm 값이어야 합니다.") / 예외를 발생/전달합니다: throw new InvalidDataException($"{key}는 0보다 큰 유한한 mm 값이어야 합니다.");
+L000162 |             throw new InvalidDataException($"{key}는 0보다 큰 유한한 mm 값이어야 합니다."); ⟦EOL⟧
+// 해설 L163: 구문 블록 경계입니다 · 소속 ReadMaximum.
+L000163 |         } ⟦EOL⟧
+L000164 |  ⟦EOL⟧
+// 해설 L165: 호출자에게 값 또는 제어를 반환합니다: return result;
+L000165 |         return result; ⟦EOL⟧
+// 해설 L166: 구문 블록 경계입니다 · 소속 ReadMaximum.
+L000166 |     } ⟦EOL⟧
+L000167 |  ⟦EOL⟧
+// 해설 L168: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Review.CReviewResultLevelSettings.ReadColor(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, string)
+L000168 |     private static string ReadColor( ⟦EOL⟧
+// 해설 L169: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Review.CReviewResultLevelSettings.ReadColor(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, string)
+L000169 |         IReadOnlyDictionary<string, string> values, ⟦EOL⟧
+// 해설 L170: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Review.CReviewResultLevelSettings.ReadColor(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, string)
+L000170 |         string key, ⟦EOL⟧
+// 해설 L171: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Review.CReviewResultLevelSettings.ReadColor(System.Collections.Generic.IReadOnlyDictionary<string, string>, string, string)
+L000171 |         string fallback) ⟦EOL⟧
+// 해설 L172: 구문 블록 경계입니다 · 소속 ReadColor.
+L000172 |     { ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeColor(values.TryGetValue(key, out var value) ? value : fallback) / 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var value) / 조건에 따라 결과식을 선택합니다: values.TryGetValue(key, out var value) ? value : fallback / 호출자에게 값 또는 제어를 반환합니다: return NormalizeColor(values.TryGetValue(key, out var value) ? value : fallback);
+L000173 |         return NormalizeColor(values.TryGetValue(key, out var value) ? value : fallback); ⟦EOL⟧
+// 해설 L174: 구문 블록 경계입니다 · 소속 ReadColor.
+L000174 |     } ⟦EOL⟧
+// 해설 L175: 구문 블록 경계입니다.
+L000175 | } ⟦EOL⟧

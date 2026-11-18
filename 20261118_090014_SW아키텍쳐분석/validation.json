@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "a3-architecture-report-validation/1",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "sourceCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+  "comparisonBaseCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
+  "passed": true,
+  "counts": {
+    "assertions": 4329,
+    "reportFiles": 12,
+    "sourceLinkOccurrences": 97,
+    "localLinks": 15,
+    "svg": 1,
+    "uniqueSourceLinks": 46,
+    "changedOrNewPaths": 1985
+  },
+  "errors": [],
+  "referenceStaticAssertions": 1082573,
+  "offlineBrowserChecks": {
+    "passed": 19,
+    "total": 19,
+    "externalRequests": 0
+  },
+  "toolSyntheticRegression": {
+    "extractorPassed": 18,
+    "extractorTotal": 18,
+    "pythonPassed": 9,
+    "pythonTotal": 9
+  },
+  "equipmentBuild": "not_run",
+  "equipmentExecution": "not_run",
+  "vendorAssemblyLoaded": false,
+  "modelWeightTraining": "not_run",
+  "sourcePreservation": "all 668 tracked SHA256/HEAD/status unchanged; push DISABLED",
+  "publicationScope": [
+    "A3 LD Code Ref/",
+    "20261118_090014_SW아키텍쳐분석/"
+  ],
+  "gitDiffCheck": "see manifest final publication check; stage verification performed separately"
+}

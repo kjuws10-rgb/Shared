@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | dfa5920e6301d9ec4b0eab1452ae59521aafc986 |
+| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
 | 원본 SHA256 | 12ab7c97f0ebda44599e20f36ca37bf9e24d8c8eaf7c5d6f9cde0d7865b69c5d |
 | 파일 분류 | code |
 | 원본 크기/행 | 5,847 bytes / 125 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -44,7 +44,7 @@
 
 ### FieldDeclaration `MinusEndOfRunMask` · L12–12
 
-[Drilling.Common/Motion/XPS/CXpsMotion.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L12-L12)
+[Drilling.Common/Motion/XPS/CXpsMotion.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -65,7 +65,7 @@
 
 ### FieldDeclaration `PlusEndOfRunMask` · L13–13
 
-[Drilling.Common/Motion/XPS/CXpsMotion.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L13-L13)
+[Drilling.Common/Motion/XPS/CXpsMotion.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -86,7 +86,7 @@
 
 ### PropertyDeclaration `CommandPrefix` · L14–20
 
-[Drilling.Common/Motion/XPS/CXpsMotion.cs:14–20](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L14-L20)
+[Drilling.Common/Motion/XPS/CXpsMotion.cs:14–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L14-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -101,7 +101,7 @@
 
 ### GetAccessorDeclaration `get_CommandPrefix` · L16–19
 
-[Drilling.Common/Motion/XPS/CXpsMotion.cs:16–19](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L16-L19)
+[Drilling.Common/Motion/XPS/CXpsMotion.cs:16–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L16-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -122,7 +122,7 @@
 
 ### MethodDeclaration `BuildAxisCommand` · L22–41
 
-[Drilling.Common/Motion/XPS/CXpsMotion.cs:22–41](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L22-L41)
+[Drilling.Common/Motion/XPS/CXpsMotion.cs:22–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L22-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -201,7 +201,7 @@ flowchart TD
 
 ### MethodDeclaration `GetGroupName` · L43–48
 
-[Drilling.Common/Motion/XPS/CXpsMotion.cs:43–48](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L43-L48)
+[Drilling.Common/Motion/XPS/CXpsMotion.cs:43–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L43-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -220,7 +220,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L40-L40) | GetGroupName | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L40-L40) | GetGroupName | False |
 
 호출하는 대상과 해석 범위:
 
@@ -246,7 +246,7 @@ flowchart TD
 
 ### MethodDeclaration `TryParseAxisStatus` · L50–91
 
-[Drilling.Common/Motion/XPS/CXpsMotion.cs:50–91](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L50-L91)
+[Drilling.Common/Motion/XPS/CXpsMotion.cs:50–91](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L50-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -356,7 +356,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTokenValue` · L93–104
 
-[Drilling.Common/Motion/XPS/CXpsMotion.cs:93–104](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L93-L104)
+[Drilling.Common/Motion/XPS/CXpsMotion.cs:93–104](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L93-L104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -376,9 +376,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L58-L58) | ReadTokenValue | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L108-L108) | ReadTokenValue | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L113-L113) | ReadTokenValue | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L58-L58) | ReadTokenValue | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L108-L108) | ReadTokenValue | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L113-L113) | ReadTokenValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -412,7 +412,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadTokenDouble` · L106–109
 
-[Drilling.Common/Motion/XPS/CXpsMotion.cs:106–109](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L106-L109)
+[Drilling.Common/Motion/XPS/CXpsMotion.cs:106–109](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L106-L109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -433,8 +433,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L64-L64) | TryReadTokenDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L64-L64) | TryReadTokenDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L64-L64) | TryReadTokenDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L64-L64) | TryReadTokenDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -457,7 +457,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadTokenInt` · L111–114
 
-[Drilling.Common/Motion/XPS/CXpsMotion.cs:111–114](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L111-L114)
+[Drilling.Common/Motion/XPS/CXpsMotion.cs:111–114](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L111-L114)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -478,8 +478,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L59-L59) | TryReadTokenInt | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L59-L59) | TryReadTokenInt | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L59-L59) | TryReadTokenInt | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L59-L59) | TryReadTokenInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -500,7 +500,7 @@ flowchart TD
 
 ### MethodDeclaration `ContainsAny` · L116–124
 
-[Drilling.Common/Motion/XPS/CXpsMotion.cs:116–124](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L116-L124)
+[Drilling.Common/Motion/XPS/CXpsMotion.cs:116–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L116-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -520,9 +520,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L69-L69) | ContainsAny | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L70-L70) | ContainsAny | False |
-| [Drilling.Common/Motion/XPS/CXpsMotion.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L71-L71) | ContainsAny | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L69-L69) | ContainsAny | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L70-L70) | ContainsAny | False |
+| [Drilling.Common/Motion/XPS/CXpsMotion.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L71-L71) | ContainsAny | False |
 
 호출하는 대상과 해석 범위:
 
@@ -541,7 +541,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L118–121
 
-[Drilling.Common/Motion/XPS/CXpsMotion.cs:118–121](https://github.com/kjuws10-rgb/A3Drilling/blob/dfa5920e6301d9ec4b0eab1452ae59521aafc986/Drilling.Common/Motion/XPS/CXpsMotion.cs#L118-L121)
+[Drilling.Common/Motion/XPS/CXpsMotion.cs:118–121](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsMotion.cs#L118-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
