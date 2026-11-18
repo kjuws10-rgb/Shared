@@ -1,0 +1,45 @@
+<div>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<ac:structured-macro ac:macro-id="4774ced9-804b-5712-8f51-cd083eef9673" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
+<p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
+<ac:structured-macro ac:macro-id="a0e3f838-3d37-51d3-8441-ad0ab3ef9e7b" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
+
+<h2>1. 이 페이지에서 먼저 이해할 것</h2>
+<p>PPID는 상위 시스템이 지시한 제품·공정 조건을 식별하는 이름이고 Recipe는 Process가 실제 계산하고 저장하는 조건이다. 이름을 선택하는 동작, 파일을 저장하는 동작, Stage가 그 조건을 수신하는 동작, 기판에서 측정·보상하는 동작은 각각의 완료를 따로 확인해야 한다. 화면에 같은 이름이 보이는 것만으로 모든 PC가 같은 조건으로 운전한다고 판단하지 않는다.</p>
+<p>코드 기준은 A3Drilling Commit 9a43c709다. Git Commit 메시지는 Ver11.17.0이며 실제 실행파일·배포 Version은 별도로 대조해야 한다. 아래 Recipe·Interface·Power 관련 기존 파일은 이전 CodeRef 기준 dfa5920e와 바이트가 같음을 확인했다. 2026-11-17 OSS 검토와 JobChange 운영안은 사양 정리·협의의 근거이며 고객의 최종 승인 또는 실장비 합격 기록은 아니다.</p>
+<h2>2. 데이터의 주인과 수명을 나눈다</h2>
+<table><tbody><tr><th>종류</th><th>담는 내용</th><th>관리와 소비</th></tr>
+<tr><td>제품 Recipe</td><td>Cell/Model/Shot 조건, Head별 가공 목표, 제품별 검사·Distortion 계획</td><td>편집 원본과 저장된 조건을 관리하고 해당 기판 실행에 사용할 값을 고정한다.</td></tr>
+<tr><td>Host/SubPPID 연결</td><td>Host 이름, LD71/72별 식별자, 실제 Process·Review Recipe와 개정의 연결</td><td>공식 키·구분자·문자열 길이·편집 책임은 CIM 계약으로 확정해야 한다.</td></tr>
+<tr><td>장비 설정·교정</td><td>장착 Head, 축 방향·한계, 원점, 교정·변환 조건</td><td>제품 변경으로 무조건 덮지 않는다. 현 코드 저장 위치와 향후 분리 설계를 구분한다.</td></tr>
+<tr><td>실측·보정·실적</td><td>Point별 측정값과 판정, 보상값, 보호윈도우 누적, 실행 시각</td><td>Glass/Run/Recipe 조건과 함께 기록한다. 목표값 입력칸으로 되돌려 쓰지 않는다.</td></tr>
+<tr><td>통신 상태</td><td>Request, ACK, Busy, Done, Error, Timeout</td><td>이번 거래의 진행 상태다. 사용자가 편집하는 PPID 본문 파라미터로 혼합하지 않는다.</td></tr>
+</tbody></table>
+<p>Setting의 모든 항목이 ECID이고 실제값의 모든 항목이 SVID인 것은 아니다. 어느 값을 ECID/SVID/파일로 상위 보고하는지는 OSS 계약이 정한다. 기존 Recipe 안의 Default·교정 항목을 공통 Setting으로 옮기는 방안도 실제 이관이 끝나기 전에는 구현된 구조로 설명하지 않는다.</p>
+<h2>3. 현재 Recipe 화면과 앞으로의 전환 계약</h2>
+<p>현재 CMenuRecipe는 VIEW로 보는 파일과 SELECT된 파일을 구분한다. Select는 선택값을 바꾸고 SELECT_RECIPE 설정과 선택 이력을 기록한다. CRecipeManager는 Recipe 저장과 변경 전 조건 확인, 보정 파라미터 저장을 담당한다. 이 경로가 존재하는 것과 Host/SubPPID 연결표·전체 모듈 일괄 전환·고객 최종 완료 보고가 완성된 것은 별개다.</p>
+<p>운영자는 전환 전 현재 운전 Recipe, 편집 중인 Recipe, 다음 적용 대상, 처리 중인 기판을 함께 확인한다. 저장 성공 후 이력 새로고침이 실패하는 경우도 있으므로 오류창 하나만 보고 파일이 저장되지 않았다고 단정해 재저장하지 않는다. 선택·저장·적용·결과 보고는 각각 어떤 근거로 끝났는지 확인한다.</p>
+<ol><li>수신한 Host/SubPPID와 내부 Recipe를 대조한다. 미등록·중복·길이 초과를 정상 전환으로 처리하지 않는다.</li><li>제품 조건과 장착 Head·빔·좌표 범위·파워 조건을 검증한다. 개정과 의존 설정을 이번 요청에 고정하는 방안은 설계 계약으로 관리한다.</li><li>필요한 소비자에게 조건을 준비·전달하고 실제 수신값을 확인한다. 요청 접수 ACK를 실제 적용 완료로 해석하지 않는다.</li><li>해당 기판의 실행 조건을 고정하고 측정·보상·가공 허용을 각각 판단한다.</li><li>정상·실패·부분 적용·보고 대기의 결과를 남긴다. 최종 Host 완료에 포함할 단계는 고객과 합의한다.</li></ol>
+<h2>4. Center Pin과 Distortion의 동작 경계</h2>
+<p>사용자가 확인한 JobChange·CenterPin·Distortion 2쪽 운영안이 이번 검토의 주기준이다. 과거 59개 PPID 추가 PPT를 통째로 현행 사양으로 복원하지 않는다. 운영안에서 Job Change는 조건 준비이며 Center Pin은 PLC 자체 Recipe와 기존 ECID 관리, Glass In·ID 판별·PreAlign 이후 동작으로 제안된다. Distortion은 Component In에서 Stage가 해당 기판의 조건을 받은 뒤 선택점을 방문한다. 두 분기의 선후·완료 연계는 Timing Chart의 합의 대상이다.</p>
+<p>Distortion 조건에는 포인트 목록·점별 사용·목표 X/Y·Step·Direction 정의가 필요하다. Step이 순번인지 간격인지, Direction이 어떤 축·동작의 방향인지는 현재 자료만으로 확정하지 않는다. 좌표 원점·축·단위·배율, 상한과 미사용 영역 처리도 함께 정해야 한다.</p>
+<p>선택한 N점 모두의 정상 결과를 확보하는 조건과 보상모델이 요구하는 최소점 조건은 둘 다 만족해야 한다. 한 점 측정이 가능하다고 회전·Scale·왜곡 모델까지 한 점으로 결정할 수 있는 것은 아니다. N=0, 일부 NG, 미수신, 이전 기판의 늦은 결과를 정상 보상 완료로 합치지 않는다. 구체적인 보정 연결은 <ac:link><ri:page ri:content-title="07. A3 LD Scanner·MOF·Automation1"/><ac:plain-text-link-body><![CDATA[좌표·보정 설명]]></ac:plain-text-link-body></ac:link>에서 이어 본다.</p>
+<h2>5. OSS를 고칠 때 확인할 계약</h2>
+<table><tbody><tr><th>확인 대상</th><th>이번 검토의 확인·미결</th></tr>
+<tr><td>필드와 번호</td><td>첨부 PPID는 LD71/72 각각 903항목이다. 과거 PPT의 논리번호 904~962는 PLC 주소가 아니며 현 OSS의 전역 No.904와 의미가 다르다.</td></tr>
+<tr><td>숫자</td><td>Type, signed, Word 순서, FLOAT 표현, Factor, 반올림, 원시값·공학값의 한계를 항목별로 합의한다. FLOAT와 Factor가 같이 있다는 이유만으로 오류로 단정하지 않는다.</td></tr>
+<tr><td>문자열·버전</td><td>Byte/Word/문자 개수와 인코딩을 확인한다. PPID의 20byte와 Size8 표현, 11.9.0/11.10.0 버전 표현을 의미와 전송형식으로 대조한다.</td></tr>
+<tr><td>Cell/Model/Mask</td><td>Cell·Model 수와 참조, 회전, Mask 개수·좌표를 상호 검증한다. 180→30 Cell 또는 5→2 Model 전환 때 남는 데이터를 초기화할지 무시할지 정한다.</td></tr>
+<tr><td>결과·상태</td><td>Start/End, 정상·NG·미측정·부분가공·중단의 보고 시점, 상태 변환과 MCC/APC/RPC/SEM 책임을 확정한다.</td></tr>
+</tbody></table>
+<p>기존 HEAD별 LASER_POWER와 DOE_Z_POSITION은 재사용 여부를 먼저 확인한다. 이름이 다르다는 이유로 같은 값을 중복 추가하지 않는다. 문서의 공란이나 셀 색만으로 실제 SW 미구현을 판정하지 않는다.</p>
+<h2>6. 전환 오류를 받았을 때의 확인 순서</h2>
+<ol><li>새 전환이나 재시도를 누르기 전에 기판·요청·Host/SubPPID·선택 Recipe와 실제 적용 대상을 기록한다.</li><li>실패가 매핑, 검증, 전송, 수신, 물리 측정, 보상, 보고 중 어느 단계인지 나눈다.</li><li>양측이 보고한 조건·개정·주소·길이와 실제 수신값을 비교한다. 화면의 다음 조건과 운전 중 조건을 혼동하지 않는다.</li><li>늦은 ACK와 이전 기판 결과가 이번 요청에 귀속되지 않았는지 확인한다. 같은 요청 재수신의 중복 실행 정책을 적용한다.</li><li>부분 적용 후에는 실제 기계 상태와 상대 PC 상태를 확인한다. 파일만 되돌리고 모든 물리 상태가 복구됐다고 선언하지 않는다.</li><li>복구·재개·배출 여부를 승인된 장비 절차로 판단하고, 미합의 상태는 담당자와 계약을 확정한 뒤 진행한다.</li></ol>
+<h2>7. Power·보호윈도우와 연결할 때</h2>
+<p>기존 결정에서 Job Change 단독은 파워보정의 사유이며 보호윈도우를 무조건 교체하는 사유가 아니다. 보호윈도우 교체는 가공매수와 다음 기판 ATT 예상의 2OR 조건을 별도로 유지한다. PPID의 허용 매수와 실제 윈도우 누적은 다르므로 Recipe를 바꿨다는 이유로 실적 Count를 0으로 만들지 않는다. PowerOK·측정완료·윈도우 교체완료는 같은 플래그가 아니다. 실제 Power 경로는 <ac:link><ri:page ri:content-title="10. A3 LD 광학 Component와 Power"/><ac:plain-text-link-body><![CDATA[광학 Component와 Power]]></ac:plain-text-link-body></ac:link>를 참조한다.</p>
+<h2>8. 개발자가 찾을 코드와 검증 완료 조건</h2>
+<p>진입점은 CMenuRecipe.Select, CRecipeManager.SaveRecipe·SaveParametersIfUnchanged·SavePowerMeasureAngles다. 파일 어댑터와 Recipe 파라미터 정의를 따라가고 CStationProcess의 준비·실행 시점에 어떤 조건이 캡처되는지 확인한다. 외부 송수신은 <ac:link><ri:page ri:content-title="09. A3 LD 통신과 장비 인터페이스"/><ac:plain-text-link-body><![CDATA[통신과 장비 인터페이스]]></ac:plain-text-link-body></ac:link>에서 typed MELSEC와 장치별 Comm을 구분한다.</p>
+<p>통합 검증에는 서로 다른 A/B PPID, 같은 이름의 다른 개정, 미등록키, 길이 경계, 일부 Word만 새 값인 전송, 전환 중 편집, 중복 요청, 통신 단절·재시작, 이전 Glass 결과, N=0·일부 NG·전부 OFF를 포함한다. 기대 결과·실제 결과·사용 조건·소스 버전·로그를 기록해야 완료로 판정할 수 있다. 이 페이지의 절차는 후속 검증안이며 해당 시험을 실제 실행했다는 뜻은 아니다.</p>
+<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.UI/Menu/Menus/CMenuRecipe.cs">현재 Recipe 화면</a></td><td>Select·VIEW/SELECT와 선택 이력, 이전 CodeRef와 파일 동일 확인</td></tr><tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/9a43c7097561d6d50cad4462923e16549e104bd2/Drilling.Common/Managers/CRecipeManager.cs">현재 Recipe 관리자</a></td><td>저장·기대조건 확인·PowerMeasure 각도 저장</td></tr><tr><td>OSS Process 검토 2026-11-17<br/><em>로컬 원문 확인 · 이 묶음에는 원문 미첨부</em></td><td>기밀 원문을 로컬 대조한 19개 문서 검토. 최종 고객 승인 아님</td></tr><tr><td>JobChange·PPID 추가 검토<br/><em>로컬 원문 확인 · 이 묶음에는 원문 미첨부</em></td><td>사용자 확인 2쪽 운영안과 현 OSS·과거59안 비교, 미결 계약</td></tr><tr><td>OSS·JobChange 핵심11개<br/><em>로컬 원문 확인 · 이 묶음에는 원문 미첨부</em></td><td>11/17 검토 통합 요약</td></tr></tbody></table>
+<p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
+</div>

@@ -1,0 +1,48 @@
+<div>
+<p><strong>작성 기준일:</strong> 2026-11-17 | <strong>Main 소스:</strong> 9a43c709 (Ver11.17.0) | <strong>기존 Code Ref:</strong> dfa5920e</p>
+<ac:structured-macro ac:macro-id="b300fcdf-a57e-5209-851e-30370f3ba9fc" ac:name="info" ac:schema-version="1"><ac:rich-text-body><p>현재 코드에서 확인한 구현, 사용자 요구·운영안, 과거 평가 예제와 현장 미검증 항목을 구분해 읽는다. 실제 적용본·설정·상대 장비 계약은 해당 장비 기준으로 대조한다.</p></ac:rich-text-body></ac:structured-macro>
+<p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
+<ac:structured-macro ac:macro-id="bd8ef91d-235a-597d-8402-9be7a2f238b8" ac:name="toc" ac:schema-version="1"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
+
+<h2>1. 이 페이지의 역할과 현재 기준</h2>
+<p>이 페이지는 고객이 원하는 기능, 누가 수행할 개발 작업, 코드에서 확인한 기능, 실제 시험 결과를 하나의 추적 체계로 연결한다. 요구사항 수, WBS 수, 코드 파일 수, 체크시트 시험 수는 서로 다른 모집단이므로 합산하거나 하나의 완료율로 나누지 않는다. 신규 담당자는 요구ID에서 코드·시험·미결 계약으로 내려가고 장애에서 영향받는 요구ID로 다시 올라갈 수 있어야 한다.</p>
+<p>코드 기준은 A3Drilling master Commit 9a43c709다. Git Commit 메시지는 Ver11.17.0이며 실제 실행파일·배포 Version은 별도로 대조해야 한다. 현재 csproj의 Version은 2026.11.13.0이므로 Commit 메시지와 같은 의미로 쓰지 않는다. 코드 레퍼런스는 dfa5920e 기준으로 제작된 별도 자료이며 그 뒤의 새 코드·설정·데이터와 동일하다고 자동 가정하지 않는다. 이번 담당 범위에서는 Recipe·Interface·Power 관련 주요 기존 파일의 바이트 동일성을 확인했다. 실장비 시험·고객 Acceptance의 현재 완료 여부는 이 자료만으로 확정하지 않는다.</p>
+<h2>2. 과거 숫자가 뜻하는 범위</h2>
+<table><tbody><tr><th>자료</th><th>단위·원문 기준</th><th>사용할 수 있는 내용</th><th>현재 상태로 쓰면 안 되는 내용</th></tr>
+<tr><td>고객 기능요구 51개</td><td>Confluence 로컬 저장본 본문 2026-08-09</td><td>AM/MM/RD/IC/SS 기능ID, 요구·추가조건·당시 연계</td><td>당시 상태를 현재 구현·검수 완료로 복사하는 것</td></tr>
+<tr><td>협업 WBS 137개</td><td>기존1~120+추가추적121~137</td><td>실행 작업과 고객 요구의 추적 출발점</td><td>137개를 단일 협력사 소유권 또는 현재 확정 공수로 보는 것</td></tr>
+<tr><td>개발일정 36개</td><td>2026-08 기준 과거 계획</td><td>단계·선행조건·통합/재시험 계획의 이력</td><td>과거 계획일을 실제 완료일이나 현재 약속일로 쓰는 것</td></tr>
+<tr><td>Process Masterplan 145상세</td><td>2026-10-28, 별도 IPS 저장소223b905d 코드 대조</td><td>그 버전의 항목별 검토 추정치와 잔여 과제</td><td>137WBS 또는 최신 A3Drilling 인수 완료율로 사용하는 것</td></tr>
+<tr><td>제조 체크시트 971항목</td><td>2026-11-10, A3Drilling a116220/11.9.0</td><td>제조 시험 항목과 예상 증거·확인사항</td><td>항목 작성 완료를 실제971개 시험 합격으로 세는 것</td></tr>
+</tbody></table>
+<p>원문 51요구·137WBS·36일정 부록은 이번 사용자가 제공한 2026-08-09 본문을 최상위 기준으로 직접 추출했다. 과거 downloadable 저장본과 핵심5표를 각각 셀 단위로 대조해 차이0개를 확인했지만 전체 XML은 다르고, PROJECT_MANAGEMENT 저장본에는 WBS 명칭·일정·기간 차이도 있다. 따라서 다른 저장본의 날짜나 추가 표를 섞지 않았다. 사내 Confluence 페이지의 현재 상태와 동일함을 검증한 결과는 아니다. 예전 첨부 매크로가 가리키는 파일도 자동 확보됐다고 표현하지 않는다.</p>
+<h2>3. 과거 원문과 현재 추적표의 연결</h2>
+<p><ac:link><ri:page ri:content-title="14-1. A3 LD 고객 요구 51개 · 2026-08 기준"/><ac:plain-text-link-body><![CDATA[고객 요구 51개와 전수 매핑]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="14-2. A3 LD 협업 WBS 137개 · 2026-08 기준"/><ac:plain-text-link-body><![CDATA[협업 WBS 137개]]></ac:plain-text-link-body></ac:link>, <ac:link><ri:page ri:content-title="14-3. A3 LD 개발일정 36개 · 과거 계획"/><ac:plain-text-link-body><![CDATA[개발일정 36개]]></ac:plain-text-link-body></ac:link>에 원문 표를 보존한다. 진행률·상태·날짜와 상위 집계가 충돌하더라도 과거 기록을 현재 기준으로 고치지 않는다. 현재 판단은 별도 표에 근거와 확인일을 추가하고 무엇이 바뀌었는지 연결한다.</p>
+<table><tbody><tr><th>현재 추적에 필요한 칸</th><th>기록 방법</th></tr>
+<tr><td>요구·업무 식별</td><td>고객 기능ID, WBS 번호, 짧은 요구 문장과 담당 영역을 유지한다.</td></tr>
+<tr><td>적용 조건</td><td>장비·Head·광학 구성, 운전 모드, 데이터·프로토콜 버전과 예외를 쓴다.</td></tr>
+<tr><td>코드 근거</td><td>저장소·Commit·파일·함수와 어느 분기까지 확인했는지 기록한다.</td></tr>
+<tr><td>미결 계약</td><td>주소/타입/배율·완료·재시도·품질 기준 중 아직 합의되지 않은 내용을 분리한다.</td></tr>
+<tr><td>시험</td><td>시험ID, 입력·절차·기대 결과, 실제 결과·환경·실행일·로그를 연결한다.</td></tr>
+<tr><td>판정과 승인</td><td>판정 범위와 책임자, 보류 이유, 다음 행동을 남긴다. 코드 검토와 고객 인수를 구분한다.</td></tr>
+</tbody></table>
+<p>한 요구에 여러 WBS가 연결될 수 있고 한 WBS가 여러 요구를 지원할 수 있다. 따라서 단순 연결 행 수를 기능 수나 완료 수로 세지 않는다. 소스가 바뀌면 그 변경이 영향을 주는 요구·시험만 재확인하고 관계없는 과거 합격을 무조건 현재 버전의 합격으로 승계하지 않는다.</p>
+<h2>4. 다섯 요구 영역을 읽는 방법</h2>
+<p>AM은 Auto/Monitoring 16개, MM은 Manual 9개, RD는 Recipe 7개, IC는 검사·보정 11개, SS는 설정·통신 8개로 총51개다. AM에서 Glass·알람·CIM·광학·Sequence·모드·JobChange의 운영 흐름을 보고, RD에서 조건과 저장·적용의 정합성을 본다. MM은 단순 조작 버튼 존재보다 선택 Head·상태·한계·실제 완료가 중요하다. IC는 측정 계획·유효 결과·단위·보정 소비·이력으로 내려가고, SS는 장비·프로토콜·교정·환경 설정으로 연결한다.</p>
+<p>예를 들어 AM-014 자동 Job Change는 Recipe SELECT 버튼 하나로 완료하지 않는다. Host/Sub 매핑, 수신·적용 시점, 기판 귀속, 측정·보상, 실패 복구와 완료 보고를 <ac:link><ri:page ri:content-title="05. A3 LD PPID·Recipe·OSS·Job Change"/><ac:plain-text-link-body><![CDATA[PPID·OSS·Job Change]]></ac:plain-text-link-body></ac:link>에 연결한다. SS-004 파워보정은 Driver 존재와 실제 장치 세션, 측정·ATT 보정, 저장·정리·AUTO TPM 인계까지 <ac:link><ri:page ri:content-title="10. A3 LD 광학 Component와 Power"/><ac:plain-text-link-body><![CDATA[광학 Component와 Power]]></ac:plain-text-link-body></ac:link>에서 추적한다. 이 예시는 현재 완료 판정이 아니라 추적 범위를 설명한다.</p>
+<h2>5. 구현·시험·인수 상태를 판정하는 기준</h2>
+<p>요구 문장이 있으면 “요구 확인”, 계약이 정해졌으면 “사양 합의”, 해당 코드 분기가 있으면 “구현 근거 확인”, 격리 시험을 실행했으면 “시험 결과 확보”, 실제 장치 연계와 고객 기준을 만족했으면 그 범위의 인수 판정을 기록한다. 이 표현들은 관리 기준 제안이며 현재 모든 항목이 이 단계를 밟았다고 뜻하지 않는다. 상태를 붙일 때는 구체적인 증거를 함께 적는다.</p>
+<p>미확인은 실패와 다르다. 시험을 수행하지 않았으면 미실행/미확인이고, 실행해 기대와 달랐으면 실패 결과와 재현조건을 남긴다. 코드에는 있으나 승인 기준이 없으면 사양 미결을 별도로 표시한다. N/A는 적용하지 않는 근거와 승인 범위를 남겨야 하며 빈칸을 N/A로 처리하지 않는다. 안전·인터락·실제 광학 정밀도 합격은 문서 UI 검수와 따로 판정한다.</p>
+<h2>6. 통합시험 묶음과 증거</h2>
+<p>제조 체크시트 R0는 HW/IO189, 기능217, 알람324, SW 인터락66, 외부 연동109, 연동 제한31, AUTO35로971항목을 작성한 자료다. 결과·검사일·서명·Issue 처리결과는 공란이며 초기 진행률0%다. 이 수량은 작성 당시 코드·맵의 커버리지이고 현 최신 버전에서 같은 개수의 시험을 끝냈다는 뜻이 아니다. 개정 전에는 현재 설정과 비교해 추가·삭제·변경된 항목을 먼저 검토한다.</p>
+<ol><li>단위·데이터: 파싱, 좌표계·배율, 경계값·미수신·0·중복, Recipe 저장/재로드를 평가한다.</li><li>통신: 연결·명령·ACK·완료, Timeout·중복·단절·stale 캐시·재기동을 평가한다.</li><li>시퀀스: 준비·가공·Review·0선·TPM·Distortion의 신호 소유권과 정리, 모드별 실행 범위를 평가한다.</li><li>정합성과 복구: Glass/Run/Recipe 귀속, 결과·보정·Product·보고의 저장 경계, 부분 실패와 원복을 평가한다.</li><li>현장 물리 검수: 실제 Stage/광학 구성·센서·정밀도·출력·인터락·정지/재개를 승인 조건에 따라 평가한다.</li></ol>
+<p>각 묶음의 합성·Simulation 결과와 실장치 결과를 구분한다. 문서의 정적 assertion 수, HTML 조작 테스트 수, Roslyn 진단 수를 장비 시험 수·설비 빌드 오류·합격률로 바꾸지 않는다.</p>
+<h2>7. 현재 우선 확인할 미결과 변경</h2>
+<p>11/17 OSS 검토의 핵심은 Host/SubPPID 연결, Distortion 필수 조건·좌표·Step/Direction, Center Pin의 PLC 관리, JobChange 완료 시점, 결과·실적과 동적 I/F 분리, 단위·타입·문자열·Mask/Cell/Model 정합성이다. 이는 문서 누락·협의 항목이며 곧바로 생산 SW 결함 개수로 세지 않는다.</p>
+<p>최신 코드 검토에서는 Review EDIT의 출처와 보정 후보, Revision 계보의 재누적 가능성, Product 재시작 복구의 NG 메타데이터, ONE_LINE 측정과 Offset 적용 범위, 보호윈도우 재시도 소진·복구를 확인할 필요가 있다. 과거 PowerMeasure Simulation만 존재한다는 설명은 현재 DeviceSession·Manual/AUTO 통합 코드와 대조해 정정해야 한다. 현재 코드 존재와 실기 결과가 확인됐는지의 두 질문을 따로 유지한다.</p>
+<h2>8. 주간 변경과 인수인계 운영</h2>
+<ol><li>기준 Commit·장비 설정·사양 개정을 먼저 고정하고 지난 기준과 변경 목록을 확인한다.</li><li>변경을 요구ID와 WBS, 관련 데이터·통신·화면·시퀀스·시험에 연결한다.</li><li>새 근거가 있는 항목만 판정하고 나머지 상태는 유지한다. 담당·일정은 실제 합의된 값만 쓴다.</li><li>열린 계약·실패 Issue·실기 미실행 항목을 다음 행동과 선행조건으로 정리한다.</li><li>인수 시 요구별 구현·시험·현장·승인 근거와 알려진 제한, 재현·복구 방법을 함께 넘긴다.</li></ol>
+<p>이 체계의 완료 조건은 표가 빈칸 없이 채워지는 것이 아니라 다음 담당자가 같은 조건에서 근거를 찾고 판정을 재현할 수 있는 것이다. 확인하지 않은 고객 승인·실제 완료일·장비 결과를 추정으로 채우지 않는다.</p>
+<h2>출처와 적용 범위</h2><table class="wrapped"><tbody><tr><th>근거</th><th>확인 범위</th></tr><tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/commit/9a43c7097561d6d50cad4462923e16549e104bd2">현재 A3Drilling 기준</a></td><td>Git Commit 메시지 Ver11.17.0의 소스 기준. csproj2026.11.13.0·실행파일·배포·인수 결과와 구분</td></tr><tr><td>이번 사용자 제공 원문 · 2026-08-09<br/><em>로컬 원문 확인 · 이 묶음에는 원문 미첨부</em></td><td>사용자 원문 요구51·WBS137·일정36. 원문은private보존, 사내현행본·현재완료율 미검증</td></tr><tr><td>Masterplan Process 2026-10-28<br/><em>로컬 원문 확인 · 이 묶음에는 원문 미첨부</em></td><td>과거 IPS223b905d 코드 추정145상세, 최신 인수 완료율 아님</td></tr><tr><td>Process 제조 체크시트 R0<br/><em>로컬 원문 확인 · 이 묶음에는 원문 미첨부</em></td><td>a116220/11.9.0 기준971항목 작성본, 시험결과 공란</td></tr><tr><td><a href="https://github.com/kjuws10-rgb/Shared/blob/5213e988c3d0a9f194ce17329428e387c892e306/20261116_145750_SW아키텍쳐분석/05_위험도별발견사항.md">최신 구조 분석의 검증 우선순위</a></td><td>dfa5920e 기준 정적 발견·후속 검증안, 실기 장애 확정 아님</td></tr></tbody></table>
+<p><ac:link><ri:page ri:content-title="Process SW 개발"/><ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="01. A3 LD 시작하기와 인수인계"/><ac:plain-text-link-body><![CDATA[학습 순서]]></ac:plain-text-link-body></ac:link> · <ac:link><ri:page ri:content-title="15. A3 LD 장애대응과 미결사항"/><ac:plain-text-link-body><![CDATA[장애대응]]></ac:plain-text-link-body></ac:link></p>
+</div>
