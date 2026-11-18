@@ -1,0 +1,64 @@
+{
+  "version": "2026-11-18-attached-r2",
+  "basis": "attached A3 LD detail flow deck (3 slides) + current attached OSS/CIM V235",
+  "counts": {
+    "review_items": 14,
+    "sequences": 7,
+    "interface_rows": 40,
+    "validation_rows": 6,
+    "tests": 50,
+    "test_initial_status": "미실행"
+  },
+  "files": [
+    {
+      "name": "01_PPT_Review.md",
+      "bytes": 6927,
+      "sha256": "e611c467e4541fadc40aa10999781301e49b1b6450269c867e078b3e8fec9810"
+    },
+    {
+      "name": "02_PPID_JobChange_Sequences.md",
+      "bytes": 12805,
+      "sha256": "e1b0a1dd5e5a47d44dc32f701751a876df3a8b611f7e85c18c93939f1532d235"
+    },
+    {
+      "name": "03_ECID_Set_Sequences.md",
+      "bytes": 2910,
+      "sha256": "ff0d35b4fee40b6347ddc0ac0ae4de70740993f5546c25e2450cd2f012d88709"
+    },
+    {
+      "name": "04_Interface_Specification.md",
+      "bytes": 27103,
+      "sha256": "1353fe6e3c518ff89cc2a17e557220018d0f032562276ccc6028c28bc2f94da4"
+    },
+    {
+      "name": "05_Module_Validation.md",
+      "bytes": 5399,
+      "sha256": "3e4425bc20e358ac6047c81a17e09dd78c21aaee024658ac393513785df1caa4"
+    },
+    {
+      "name": "06_Evaluation_Checklist.md",
+      "bytes": 31756,
+      "sha256": "90b42828e0f62ca9e312f86117fe6a4599974ae5a1988521b254af3c55f85627"
+    },
+    {
+      "name": "07_Decisions_And_Recovery.md",
+      "bytes": 9455,
+      "sha256": "43bdc7811c6808d2ffca6c9e62baa993197fdccfaeae8749a6ea0436ae7855b8"
+    },
+    {
+      "name": "A3_CIM_Implementation_Review.html",
+      "bytes": 343566,
+      "sha256": "4612b8dcb17c4c16bb3415abeffc5dae14f0dc1fcc0daa5923b39625db6a4deb"
+    },
+    {
+      "name": "A3LD_AutoJobChange_Attached_OSS_Review_3slides.pptx",
+      "bytes": 421949,
+      "sha256": "91433b752ca6558cfeb9728ee7691dfdf4cb18e222d995e99e70e5bdc4f49801"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1418,
+      "sha256": "49244057a325e52eb6f3499745f93a9d5d092922b8d5555fa5923318e5d8d029"
+    }
+  ]
+}
