@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>Stop 요청·실제 정지·신호 정리·Reset을 나눈다.</strong></p>
+<p><ac:image ac:width="1200" ac:alt="정지 확인"><ri:attachment ri:filename="12_A.png"/></ac:image></p>
+<p><ac:image ac:width="1200" ac:alt="Reset 범위"><ri:attachment ri:filename="12_B.png"/></ac:image></p>
+
+</div>

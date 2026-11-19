@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>자료의 종류를 나누고 새 실행에 반영되는 때를 확인한다.</strong></p>
+<p><ac:image ac:width="1200" ac:alt="자료 역할"><ri:attachment ri:filename="16_A.png"/></ac:image></p>
+<p><ac:image ac:width="1200" ac:alt="변경 반영"><ri:attachment ri:filename="16_B.png"/></ac:image></p>
+
+</div>

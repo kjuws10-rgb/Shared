@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>측정 보고와 대상 Head 전체 OK의 각도 저장을 나눈다.</strong></p>
+<p><ac:image ac:width="1200" ac:alt="Power 수집"><ri:attachment ri:filename="10_A.png"/></ac:image></p>
+<p><ac:image ac:width="1200" ac:alt="ATT 저장 조건"><ri:attachment ri:filename="10_B.png"/></ac:image></p>
+
+</div>

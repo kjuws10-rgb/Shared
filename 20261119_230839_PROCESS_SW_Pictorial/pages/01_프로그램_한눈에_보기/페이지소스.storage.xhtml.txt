@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>기판·Cell·Shot·Beam의 크기와 가공을 맡는 Head를 구분합니다.</strong></p>
+<p><ac:image ac:width="1200" ac:alt="기판에서 Shot까지"><ri:attachment ri:filename="01_A.png"/></ac:image></p>
+<p><ac:image ac:width="1200" ac:alt="Head와 Beam"><ri:attachment ri:filename="01_B.png"/></ac:image></p>
+
+</div>

@@ -1,0 +1,173 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PROCESS SW 개발 · 그림 안내</title><style>*{box-sizing:border-box}body{margin:0;background:#eef3f8;color:#19354d;font:17px/1.6 "Malgun Gothic",sans-serif}header{background:#163c5f;color:white;padding:18px 28px}header h1{font-size:24px;margin:0}main{display:grid;grid-template-columns:250px minmax(0,1fr);max-width:1650px;margin:auto}nav{padding:18px 12px}nav a{display:block;padding:8px;font-size:14px;text-decoration:none;border-bottom:1px solid #d8e3ec}a{color:#1265a3;overflow-wrap:anywhere}article{background:white;padding:22px 30px;min-width:0}h1{font-size:25px;margin:18px 0 12px}.summary{font-size:20px;font-weight:600;margin:22px 0}.parent{font-size:13px}figure{margin:20px 0}img{width:100%;height:auto;background:white;border:1px solid #e2e9f0;border-radius:12px}.navlinks p{display:flex;justify-content:space-around;background:#f2f7fb;padding:12px;border-radius:7px;font-size:15px;gap:8px;flex-wrap:wrap}.actions{display:flex;gap:10px;flex-wrap:wrap}button,.actions a{font:14px "Malgun Gothic",sans-serif;padding:8px 12px;background:white;border:1px solid #a9bfd0;color:#24587c;border-radius:5px;text-decoration:none;cursor:pointer}select{font:inherit;padding:8px;max-width:100%;width:650px;border:1px solid #b4c7d6;border-radius:5px}.status{font-size:14px;color:#257452;min-height:24px}textarea{width:100%;height:65vh;min-height:350px;padding:12px;font:13px/1.5 Consolas,monospace;border:1px solid #a9bfd0}[hidden]{display:none!important}@media(max-width:850px){main{display:block}nav{display:none}article{padding:16px}header{padding:16px}.summary{font-size:17px}h1{font-size:22px}}@media print{header,nav,.actions,.selector,.status,[data-source]{display:none!important}main{display:block}article{padding:0}figure{break-inside:avoid}}</style></head><body><header><h1>PROCESS SW 개발</h1></header><main><nav><a href="#p00" data-open="p00">2) PROCESS SW 개발</a><a href="#p01" data-open="p01">01. 프로그램 한눈에 보기</a><a href="#p02" data-open="p02">02. 장비 역할과 공정 흐름</a><a href="#p03" data-open="p03">03. 프로그램 구조와 실행 데이터</a><a href="#p04" data-open="p04">04. 실행 준비와 설정 관리</a><a href="#p05" data-open="p05">05. Recipe·PPID·운전 조건</a><a href="#p06" data-open="p06">06. 좌표 변환과 Head 분담</a><a href="#p07" data-open="p07">07. Scanner·MOF 실행</a><a href="#p08" data-open="p08">08. Align·Review·검사·보정</a><a href="#p09" data-open="p09">09. 통신과 장비 인터페이스</a><a href="#p10" data-open="p10">10. 광학 장치와 Power 측정</a><a href="#p11" data-open="p11">11. 운전 화면과 Manual·Auto</a><a href="#p12" data-open="p12">12. Alarm·Interlock·Stop·Reset</a><a href="#p13" data-open="p13">13. 개발 시험과 결과 확인</a><a href="#p14" data-open="p14">14. 현재 기능과 개발 확인사항</a><a href="#p15" data-open="p15">15. 증상별 개발 확인</a><a href="#p16" data-open="p16">16. 데이터 관리와 변경 반영</a><a href="그림_모아보기.html">그림 모아보기</a></nav><article><div class="selector"><select id="pageSelect" aria-label="페이지 선택"><option value="p00">2) PROCESS SW 개발</option><option value="p01">01. 프로그램 한눈에 보기</option><option value="p02">02. 장비 역할과 공정 흐름</option><option value="p03">03. 프로그램 구조와 실행 데이터</option><option value="p04">04. 실행 준비와 설정 관리</option><option value="p05">05. Recipe·PPID·운전 조건</option><option value="p06">06. 좌표 변환과 Head 분담</option><option value="p07">07. Scanner·MOF 실행</option><option value="p08">08. Align·Review·검사·보정</option><option value="p09">09. 통신과 장비 인터페이스</option><option value="p10">10. 광학 장치와 Power 측정</option><option value="p11">11. 운전 화면과 Manual·Auto</option><option value="p12">12. Alarm·Interlock·Stop·Reset</option><option value="p13">13. 개발 시험과 결과 확인</option><option value="p14">14. 현재 기능과 개발 확인사항</option><option value="p15">15. 증상별 개발 확인</option><option value="p16">16. 데이터 관리와 변경 반영</option></select></div><p class="status" id="status" aria-live="polite"></p><section data-panel="p00"><h1>2) PROCESS SW 개발</h1><div class="actions"><a download href="pages/00_PROCESS_SW_%EA%B0%9C%EB%B0%9C/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p00">소스 보기</button><button data-select="p00">소스 전체 선택</button></div><div data-content="p00"><p class="summary">조건·좌표·실행·검사·보정을 그림으로 연결합니다.</p><figure><img src="attachments/00_A.png" alt="한 기판의 흐름" loading="lazy"/></figure><figure><img src="attachments/00_B.png" alt="개발 페이지 지도" loading="lazy"/></figure><div class="navlinks"><p><a href="#p01" data-open="p01">01 단위</a> · <a href="#p02" data-open="p02">02 장비</a> · <a href="#p03" data-open="p03">03 실행값</a> · <a href="#p04" data-open="p04">04 시작</a></p>
+<p><a href="#p05" data-open="p05">05 Recipe</a> · <a href="#p06" data-open="p06">06 좌표</a> · <a href="#p07" data-open="p07">07 MOF</a> · <a href="#p08" data-open="p08">08 보정</a></p>
+<p><a href="#p09" data-open="p09">09 통신</a> · <a href="#p10" data-open="p10">10 Power</a> · <a href="#p11" data-open="p11">11 화면</a> · <a href="#p12" data-open="p12">12 정지</a></p>
+<p><a href="#p13" data-open="p13">13 시험</a> · <a href="#p14" data-open="p14">14 기능</a> · <a href="#p15" data-open="p15">15 증상</a> · <a href="#p16" data-open="p16">16 자료</a></p></div></div><div data-source="p00" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="2) PROCESS SW 개발 소스">&lt;div&gt;
+&lt;p&gt;&lt;strong&gt;조건·좌표·실행·검사·보정을 그림으로 연결합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;한 기판의 흐름&quot;&gt;&lt;ri:attachment ri:filename=&quot;00_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;개발 페이지 지도&quot;&gt;&lt;ri:attachment ri:filename=&quot;00_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;01. 프로그램 한눈에 보기&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[01 단위]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt; · &lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;02. 장비 역할과 공정 흐름&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[02 장비]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt; · &lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;03. 프로그램 구조와 실행 데이터&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[03 실행값]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt; · &lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;04. 실행 준비와 설정 관리&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[04 시작]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;05. Recipe·PPID·운전 조건&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[05 Recipe]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt; · &lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;06. 좌표 변환과 Head 분담&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[06 좌표]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt; · &lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;07. Scanner·MOF 실행&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[07 MOF]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt; · &lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;08. Align·Review·검사·보정&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[08 보정]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;09. 통신과 장비 인터페이스&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[09 통신]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt; · &lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;10. 광학 장치와 Power 측정&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[10 Power]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt; · &lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;11. 운전 화면과 Manual·Auto&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[11 화면]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt; · &lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;12. Alarm·Interlock·Stop·Reset&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[12 정지]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;13. 개발 시험과 결과 확인&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[13 시험]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt; · &lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;14. 현재 기능과 개발 확인사항&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[14 기능]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt; · &lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;15. 증상별 개발 확인&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[15 증상]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt; · &lt;ac:link&gt;&lt;ri:page ri:content-title=&quot;16. 데이터 관리와 변경 반영&quot;/&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[16 자료]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt;&lt;/p&gt;
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p01" hidden><h1>01. 프로그램 한눈에 보기</h1><div class="actions"><a download href="pages/01_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%ED%95%9C%EB%88%88%EC%97%90_%EB%B3%B4%EA%B8%B0/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p01">소스 보기</button><button data-select="p01">소스 전체 선택</button></div><div data-content="p01"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">기판·Cell·Shot·Beam의 크기와 가공을 맡는 Head를 구분합니다.</p><figure><img src="attachments/01_A.png" alt="기판에서 Shot까지" loading="lazy"/></figure><figure><img src="attachments/01_B.png" alt="Head와 Beam" loading="lazy"/></figure></div><div data-source="p01" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="01. 프로그램 한눈에 보기 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;기판·Cell·Shot·Beam의 크기와 가공을 맡는 Head를 구분합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;기판에서 Shot까지&quot;&gt;&lt;ri:attachment ri:filename=&quot;01_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;Head와 Beam&quot;&gt;&lt;ri:attachment ri:filename=&quot;01_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p02" hidden><h1>02. 장비 역할과 공정 흐름</h1><div class="actions"><a download href="pages/02_%EC%9E%A5%EB%B9%84_%EC%97%AD%ED%95%A0%EA%B3%BC_%EA%B3%B5%EC%A0%95_%ED%9D%90%EB%A6%84/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p02">소스 보기</button><button data-select="p02">소스 전체 선택</button></div><div data-content="p02"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">Stage가 기판을 옮기고 가공·측정 장치가 각자의 역할을 수행합니다.</p><figure><img src="attachments/02_A.png" alt="장치의 역할" loading="lazy"/></figure><figure><img src="attachments/02_B.png" alt="준비와 실행" loading="lazy"/></figure></div><div data-source="p02" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="02. 장비 역할과 공정 흐름 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stage가 기판을 옮기고 가공·측정 장치가 각자의 역할을 수행합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;장치의 역할&quot;&gt;&lt;ri:attachment ri:filename=&quot;02_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;준비와 실행&quot;&gt;&lt;ri:attachment ri:filename=&quot;02_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p03" hidden><h1>03. 프로그램 구조와 실행 데이터</h1><div class="actions"><a download href="pages/03_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EA%B5%AC%EC%A1%B0%EC%99%80_%EC%8B%A4%ED%96%89_%EB%8D%B0%EC%9D%B4%ED%84%B0/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p03">소스 보기</button><button data-select="p03">소스 전체 선택</button></div><div data-content="p03"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">이번 실행은 준비할 때 만든 조건 사본을 사용합니다.</p><figure><img src="attachments/03_A.png" alt="프로그램의 계층" loading="lazy"/></figure><figure><img src="attachments/03_B.png" alt="실행값 고정" loading="lazy"/></figure></div><div data-source="p03" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="03. 프로그램 구조와 실행 데이터 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;이번 실행은 준비할 때 만든 조건 사본을 사용합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;프로그램의 계층&quot;&gt;&lt;ri:attachment ri:filename=&quot;03_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;실행값 고정&quot;&gt;&lt;ri:attachment ri:filename=&quot;03_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p04" hidden><h1>04. 실행 준비와 설정 관리</h1><div class="actions"><a download href="pages/04_%EC%8B%A4%ED%96%89_%EC%A4%80%EB%B9%84%EC%99%80_%EC%84%A4%EC%A0%95_%EA%B4%80%EB%A6%AC/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p04">소스 보기</button><button data-select="p04">소스 전체 선택</button></div><div data-content="p04"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">읽은 설정 폴더와 장치 준비 상태를 따로 확인합니다.</p><figure><img src="attachments/04_A.png" alt="설정 경로" loading="lazy"/></figure><figure><img src="attachments/04_B.png" alt="화면과 준비 상태" loading="lazy"/></figure></div><div data-source="p04" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="04. 실행 준비와 설정 관리 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;읽은 설정 폴더와 장치 준비 상태를 따로 확인합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;설정 경로&quot;&gt;&lt;ri:attachment ri:filename=&quot;04_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;화면과 준비 상태&quot;&gt;&lt;ri:attachment ri:filename=&quot;04_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p05" hidden><h1>05. Recipe·PPID·운전 조건</h1><div class="actions"><a download href="pages/05_Recipe%C2%B7PPID%C2%B7%EC%9A%B4%EC%A0%84_%EC%A1%B0%EA%B1%B4/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p05">소스 보기</button><button data-select="p05">소스 전체 선택</button></div><div data-content="p05"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">보고 있는 Recipe·선택 Recipe·준비된 실행값은 다를 수 있습니다.</p><figure><img src="attachments/05_A.png" alt="보는 조건과 실행 조건" loading="lazy"/></figure><figure><img src="attachments/05_B.png" alt="실행 조건 합성" loading="lazy"/></figure></div><div data-source="p05" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="05. Recipe·PPID·운전 조건 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;보고 있는 Recipe·선택 Recipe·준비된 실행값은 다를 수 있습니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;보는 조건과 실행 조건&quot;&gt;&lt;ri:attachment ri:filename=&quot;05_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;실행 조건 합성&quot;&gt;&lt;ri:attachment ri:filename=&quot;05_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p06" hidden><h1>06. 좌표 변환과 Head 분담</h1><div class="actions"><a download href="pages/06_%EC%A2%8C%ED%91%9C_%EB%B3%80%ED%99%98%EA%B3%BC_Head_%EB%B6%84%EB%8B%B4/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p06">소스 보기</button><button data-select="p06">소스 전체 선택</button></div><div data-content="p06"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">가공 위치를 나타내는 좌표와 이동 시점을 정하는 Encoder를 구분합니다.</p><figure><img src="attachments/06_A.png" alt="좌표 표현" loading="lazy"/></figure><figure><img src="attachments/06_B.png" alt="Head와 Encoder" loading="lazy"/></figure></div><div data-source="p06" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="06. 좌표 변환과 Head 분담 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;가공 위치를 나타내는 좌표와 이동 시점을 정하는 Encoder를 구분합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;좌표 표현&quot;&gt;&lt;ri:attachment ri:filename=&quot;06_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;Head와 Encoder&quot;&gt;&lt;ri:attachment ri:filename=&quot;06_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p07" hidden><h1>07. Scanner·MOF 실행</h1><div class="actions"><a download href="pages/07_Scanner%C2%B7MOF_%EC%8B%A4%ED%96%89/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p07">소스 보기</button><button data-select="p07">소스 전체 선택</button></div><div data-content="p07"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">일반·Buffered 실행 경로와 Head·Controller·Task 대상을 구분합니다.</p><figure><img src="attachments/07_A.png" alt="MOF 동기" loading="lazy"/></figure><figure><img src="attachments/07_B.png" alt="실행 방식" loading="lazy"/></figure></div><div data-source="p07" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="07. Scanner·MOF 실행 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;일반·Buffered 실행 경로와 Head·Controller·Task 대상을 구분합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;MOF 동기&quot;&gt;&lt;ri:attachment ri:filename=&quot;07_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;실행 방식&quot;&gt;&lt;ri:attachment ri:filename=&quot;07_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p08" hidden><h1>08. Align·Review·검사·보정</h1><div class="actions"><a download href="pages/08_Align%C2%B7Review%C2%B7%EA%B2%80%EC%82%AC%C2%B7%EB%B3%B4%EC%A0%95/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p08">소스 보기</button><button data-select="p08">소스 전체 선택</button></div><div data-content="p08"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">Align은 현재 기판에, 저장한 Review 보정은 다음 준비에 반영합니다.</p><figure><img src="attachments/08_A.png" alt="검사와 적용" loading="lazy"/></figure><figure><img src="attachments/08_B.png" alt="보정 입력 판정" loading="lazy"/></figure></div><div data-source="p08" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="08. Align·Review·검사·보정 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Align은 현재 기판에, 저장한 Review 보정은 다음 준비에 반영합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;검사와 적용&quot;&gt;&lt;ri:attachment ri:filename=&quot;08_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;보정 입력 판정&quot;&gt;&lt;ri:attachment ri:filename=&quot;08_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p09" hidden><h1>09. 통신과 장비 인터페이스</h1><div class="actions"><a download href="pages/09_%ED%86%B5%EC%8B%A0%EA%B3%BC_%EC%9E%A5%EB%B9%84_%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p09">소스 보기</button><button data-select="p09">소스 전체 선택</button></div><div data-content="p09"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">요청·수락·실제 완료와 응답의 최신성을 구분한다.</p><figure><img src="attachments/09_A.png" alt="요청과 응답" loading="lazy"/></figure><figure><img src="attachments/09_B.png" alt="상태 유효성" loading="lazy"/></figure></div><div data-source="p09" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="09. 통신과 장비 인터페이스 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;요청·수락·실제 완료와 응답의 최신성을 구분한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;요청과 응답&quot;&gt;&lt;ri:attachment ri:filename=&quot;09_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;상태 유효성&quot;&gt;&lt;ri:attachment ri:filename=&quot;09_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p10" hidden><h1>10. 광학 장치와 Power 측정</h1><div class="actions"><a download href="pages/10_%EA%B4%91%ED%95%99_%EC%9E%A5%EC%B9%98%EC%99%80_Power_%EC%B8%A1%EC%A0%95/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p10">소스 보기</button><button data-select="p10">소스 전체 선택</button></div><div data-content="p10"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">측정 보고와 대상 Head 전체 OK의 각도 저장을 나눈다.</p><figure><img src="attachments/10_A.png" alt="Power 수집" loading="lazy"/></figure><figure><img src="attachments/10_B.png" alt="ATT 저장 조건" loading="lazy"/></figure></div><div data-source="p10" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="10. 광학 장치와 Power 측정 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;측정 보고와 대상 Head 전체 OK의 각도 저장을 나눈다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;Power 수집&quot;&gt;&lt;ri:attachment ri:filename=&quot;10_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;ATT 저장 조건&quot;&gt;&lt;ri:attachment ri:filename=&quot;10_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p11" hidden><h1>11. 운전 화면과 Manual·Auto</h1><div class="actions"><a download href="pages/11_%EC%9A%B4%EC%A0%84_%ED%99%94%EB%A9%B4%EA%B3%BC_Manual%C2%B7Auto/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p11">소스 보기</button><button data-select="p11">소스 전체 선택</button></div><div data-content="p11"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">편집값·준비값·장치 실제값·결과값의 시점을 나눈다.</p><figure><img src="attachments/11_A.png" alt="화면과 상태" loading="lazy"/></figure><figure><img src="attachments/11_B.png" alt="표시값의 출처" loading="lazy"/></figure></div><div data-source="p11" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="11. 운전 화면과 Manual·Auto 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;편집값·준비값·장치 실제값·결과값의 시점을 나눈다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;화면과 상태&quot;&gt;&lt;ri:attachment ri:filename=&quot;11_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;표시값의 출처&quot;&gt;&lt;ri:attachment ri:filename=&quot;11_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p12" hidden><h1>12. Alarm·Interlock·Stop·Reset</h1><div class="actions"><a download href="pages/12_Alarm%C2%B7Interlock%C2%B7Stop%C2%B7Reset/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p12">소스 보기</button><button data-select="p12">소스 전체 선택</button></div><div data-content="p12"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">Stop 요청·실제 정지·신호 정리·Reset을 나눈다.</p><figure><img src="attachments/12_A.png" alt="정지 확인" loading="lazy"/></figure><figure><img src="attachments/12_B.png" alt="Reset 범위" loading="lazy"/></figure></div><div data-source="p12" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="12. Alarm·Interlock·Stop·Reset 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stop 요청·실제 정지·신호 정리·Reset을 나눈다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;정지 확인&quot;&gt;&lt;ri:attachment ri:filename=&quot;12_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;Reset 범위&quot;&gt;&lt;ri:attachment ri:filename=&quot;12_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p13" hidden><h1>13. 개발 시험과 결과 확인</h1><div class="actions"><a download href="pages/13_%EA%B0%9C%EB%B0%9C_%EC%8B%9C%ED%97%98%EA%B3%BC_%EA%B2%B0%EA%B3%BC_%ED%99%95%EC%9D%B8/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p13">소스 보기</button><button data-select="p13">소스 전체 선택</button></div><div data-content="p13"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">고정한 입력의 기대값과 실제 관찰값을 비교한다.</p><figure><img src="attachments/13_A.png" alt="시험 데이터" loading="lazy"/></figure><figure><img src="attachments/13_B.png" alt="시험 단계" loading="lazy"/></figure></div><div data-source="p13" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="13. 개발 시험과 결과 확인 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;고정한 입력의 기대값과 실제 관찰값을 비교한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;시험 데이터&quot;&gt;&lt;ri:attachment ri:filename=&quot;13_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;시험 단계&quot;&gt;&lt;ri:attachment ri:filename=&quot;13_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p14" hidden><h1>14. 현재 기능과 개발 확인사항</h1><div class="actions"><a download href="pages/14_%ED%98%84%EC%9E%AC_%EA%B8%B0%EB%8A%A5%EA%B3%BC_%EA%B0%9C%EB%B0%9C_%ED%99%95%EC%9D%B8%EC%82%AC%ED%95%AD/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p14">소스 보기</button><button data-select="p14">소스 전체 선택</button></div><div data-content="p14"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">현재 기능의 입력·준비·실행·검사·저장을 연결한다.</p><figure><img src="attachments/14_A.png" alt="기능 연결" loading="lazy"/></figure><figure><img src="attachments/14_B.png" alt="개발 확인 경로" loading="lazy"/></figure></div><div data-source="p14" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="14. 현재 기능과 개발 확인사항 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;현재 기능의 입력·준비·실행·검사·저장을 연결한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;기능 연결&quot;&gt;&lt;ri:attachment ri:filename=&quot;14_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;개발 확인 경로&quot;&gt;&lt;ri:attachment ri:filename=&quot;14_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p15" hidden><h1>15. 증상별 개발 확인</h1><div class="actions"><a download href="pages/15_%EC%A6%9D%EC%83%81%EB%B3%84_%EA%B0%9C%EB%B0%9C_%ED%99%95%EC%9D%B8/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p15">소스 보기</button><button data-select="p15">소스 전체 선택</button></div><div data-content="p15"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">같은 작업에서 기대와 처음 달라진 단계를 찾는다.</p><figure><img src="attachments/15_A.png" alt="실패 지점" loading="lazy"/></figure><figure><img src="attachments/15_B.png" alt="대상 일치" loading="lazy"/></figure></div><div data-source="p15" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="15. 증상별 개발 확인 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;같은 작업에서 기대와 처음 달라진 단계를 찾는다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;실패 지점&quot;&gt;&lt;ri:attachment ri:filename=&quot;15_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;대상 일치&quot;&gt;&lt;ri:attachment ri:filename=&quot;15_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section><section data-panel="p16" hidden><h1>16. 데이터 관리와 변경 반영</h1><div class="actions"><a download href="pages/16_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EA%B4%80%EB%A6%AC%EC%99%80_%EB%B3%80%EA%B2%BD_%EB%B0%98%EC%98%81/%ED%8E%98%EC%9D%B4%EC%A7%80%EC%86%8C%EC%8A%A4.storage.xhtml.txt">페이지 소스</a><button data-toggle="p16">소스 보기</button><button data-select="p16">소스 전체 선택</button></div><div data-content="p16"><p class="parent"><a href="#p00" data-open="p00">상위: Process SW 개발</a></p><p class="summary">자료의 종류를 나누고 새 실행에 반영되는 때를 확인한다.</p><figure><img src="attachments/16_A.png" alt="자료 역할" loading="lazy"/></figure><figure><img src="attachments/16_B.png" alt="변경 반영" loading="lazy"/></figure></div><div data-source="p16" hidden><p>이 페이지 폴더의 PNG 2개를 먼저 첨부하세요.</p><textarea readonly aria-label="16. 데이터 관리와 변경 반영 소스">&lt;div&gt;
+&lt;p&gt;&lt;ac:link&gt;
+      &lt;ri:page ri:content-title=&quot;2) PROCESS SW 개발&quot;/&gt;
+      &lt;ac:plain-text-link-body&gt;&lt;![CDATA[상위: Process SW 개발]]&gt;&lt;/ac:plain-text-link-body&gt;
+    &lt;/ac:link&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;자료의 종류를 나누고 새 실행에 반영되는 때를 확인한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;자료 역할&quot;&gt;&lt;ri:attachment ri:filename=&quot;16_A.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ac:image ac:width=&quot;1200&quot; ac:alt=&quot;변경 반영&quot;&gt;&lt;ri:attachment ri:filename=&quot;16_B.png&quot;/&gt;&lt;/ac:image&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</textarea></div></section></article></main><script>const pick=(a,id)=>document.querySelector('['+a+'="'+id+'"]');function openPage(id){if(!pick('data-panel',id))id='p00';document.querySelectorAll('[data-panel]').forEach(s=>s.hidden=s.dataset.panel!==id);document.getElementById('pageSelect').value=id;document.getElementById('status').textContent='';history.replaceState(null,'','#'+id);window.scrollTo(0,0)}document.getElementById('pageSelect').addEventListener('change',e=>openPage(e.target.value));document.addEventListener('click',e=>{const a=e.target.closest('[data-open]');if(a){e.preventDefault();openPage(a.dataset.open);return}const b=e.target.closest('[data-toggle]');if(b){const id=b.dataset.toggle,s=pick('data-source',id),v=pick('data-content',id);s.hidden=!s.hidden;v.hidden=!s.hidden;b.textContent=s.hidden?'소스 보기':'본문 보기';return}const c=e.target.closest('[data-select]');if(c){const id=c.dataset.select,s=pick('data-source',id),v=pick('data-content',id),t=s.querySelector('textarea');s.hidden=false;v.hidden=true;pick('data-toggle',id).textContent='본문 보기';t.focus();t.select();document.getElementById('status').textContent='Ctrl+C로 복사하세요.'}});openPage(location.hash.slice(1)||'p00');</script></body></html>
