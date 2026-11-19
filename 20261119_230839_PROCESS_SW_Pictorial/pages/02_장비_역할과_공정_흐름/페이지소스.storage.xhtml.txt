@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>Stage가 기판을 옮기고 가공·측정 장치가 각자의 역할을 수행합니다.</strong></p>
+<p><ac:image ac:width="1200" ac:alt="장치의 역할"><ri:attachment ri:filename="02_A.png"/></ac:image></p>
+<p><ac:image ac:width="1200" ac:alt="준비와 실행"><ri:attachment ri:filename="02_B.png"/></ac:image></p>
+
+</div>

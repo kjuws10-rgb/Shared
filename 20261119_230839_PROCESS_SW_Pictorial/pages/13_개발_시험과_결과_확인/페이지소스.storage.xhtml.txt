@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>고정한 입력의 기대값과 실제 관찰값을 비교한다.</strong></p>
+<p><ac:image ac:width="1200" ac:alt="시험 데이터"><ri:attachment ri:filename="13_A.png"/></ac:image></p>
+<p><ac:image ac:width="1200" ac:alt="시험 단계"><ri:attachment ri:filename="13_B.png"/></ac:image></p>
+
+</div>

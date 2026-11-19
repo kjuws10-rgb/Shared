@@ -1,0 +1,67 @@
+2) PROCESS SW 개발
+pages/00_PROCESS_SW_개발
+첨부: 00_A.png, 00_B.png
+
+01. 프로그램 한눈에 보기
+pages/01_프로그램_한눈에_보기
+첨부: 01_A.png, 01_B.png
+
+02. 장비 역할과 공정 흐름
+pages/02_장비_역할과_공정_흐름
+첨부: 02_A.png, 02_B.png
+
+03. 프로그램 구조와 실행 데이터
+pages/03_프로그램_구조와_실행_데이터
+첨부: 03_A.png, 03_B.png
+
+04. 실행 준비와 설정 관리
+pages/04_실행_준비와_설정_관리
+첨부: 04_A.png, 04_B.png
+
+05. Recipe·PPID·운전 조건
+pages/05_Recipe·PPID·운전_조건
+첨부: 05_A.png, 05_B.png
+
+06. 좌표 변환과 Head 분담
+pages/06_좌표_변환과_Head_분담
+첨부: 06_A.png, 06_B.png
+
+07. Scanner·MOF 실행
+pages/07_Scanner·MOF_실행
+첨부: 07_A.png, 07_B.png
+
+08. Align·Review·검사·보정
+pages/08_Align·Review·검사·보정
+첨부: 08_A.png, 08_B.png
+
+09. 통신과 장비 인터페이스
+pages/09_통신과_장비_인터페이스
+첨부: 09_A.png, 09_B.png
+
+10. 광학 장치와 Power 측정
+pages/10_광학_장치와_Power_측정
+첨부: 10_A.png, 10_B.png
+
+11. 운전 화면과 Manual·Auto
+pages/11_운전_화면과_Manual·Auto
+첨부: 11_A.png, 11_B.png
+
+12. Alarm·Interlock·Stop·Reset
+pages/12_Alarm·Interlock·Stop·Reset
+첨부: 12_A.png, 12_B.png
+
+13. 개발 시험과 결과 확인
+pages/13_개발_시험과_결과_확인
+첨부: 13_A.png, 13_B.png
+
+14. 현재 기능과 개발 확인사항
+pages/14_현재_기능과_개발_확인사항
+첨부: 14_A.png, 14_B.png
+
+15. 증상별 개발 확인
+pages/15_증상별_개발_확인
+첨부: 15_A.png, 15_B.png
+
+16. 데이터 관리와 변경 반영
+pages/16_데이터_관리와_변경_반영
+첨부: 16_A.png, 16_B.png

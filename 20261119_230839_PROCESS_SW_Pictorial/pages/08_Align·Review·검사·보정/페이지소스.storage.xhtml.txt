@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>Align은 현재 기판에, 저장한 Review 보정은 다음 준비에 반영합니다.</strong></p>
+<p><ac:image ac:width="1200" ac:alt="검사와 적용"><ri:attachment ri:filename="08_A.png"/></ac:image></p>
+<p><ac:image ac:width="1200" ac:alt="보정 입력 판정"><ri:attachment ri:filename="08_B.png"/></ac:image></p>
+
+</div>

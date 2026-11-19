@@ -1,0 +1,10 @@
+<div>
+<p><ac:link>
+      <ri:page ri:content-title="2) PROCESS SW 개발"/>
+      <ac:plain-text-link-body><![CDATA[상위: Process SW 개발]]></ac:plain-text-link-body>
+    </ac:link></p>
+<p><strong>읽은 설정 폴더와 장치 준비 상태를 따로 확인합니다.</strong></p>
+<p><ac:image ac:width="1200" ac:alt="설정 경로"><ri:attachment ri:filename="04_A.png"/></ac:image></p>
+<p><ac:image ac:width="1200" ac:alt="화면과 준비 상태"><ri:attachment ri:filename="04_B.png"/></ac:image></p>
+
+</div>
