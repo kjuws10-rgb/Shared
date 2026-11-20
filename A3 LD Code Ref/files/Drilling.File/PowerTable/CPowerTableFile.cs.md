@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | 464dfb6cb7f8623591fba5bcda068159015f1f9181ff3bb02be7c3fd82365646 |
 | 파일 분류 | code |
 | 원본 크기/행 | 15,391 bytes / 246 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -45,7 +45,7 @@
 
 ### FieldDeclaration `_directory` · L13–13
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L13-L13)
+[Drilling.File/PowerTable/CPowerTableFile.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -60,7 +60,7 @@
 
 ### FieldDeclaration `_initialDirectory` · L14–14
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L14-L14)
+[Drilling.File/PowerTable/CPowerTableFile.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -75,7 +75,7 @@
 
 ### FieldDeclaration `MeasurementLocks` · L15–15
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L15-L15)
+[Drilling.File/PowerTable/CPowerTableFile.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -103,7 +103,7 @@
 
 ### ConstructorDeclaration `.ctor` · L19–28
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:19–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L19-L28)
+[Drilling.File/PowerTable/CPowerTableFile.cs:19–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L19-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -129,11 +129,11 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L33-L33) | new CPowerTableFile | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3492–3492](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3492-L3492) | new Drilling.File.PowerTable.CPowerTableFile | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3645–3645](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3645-L3645) | new Drilling.File.PowerTable.CPowerTableFile | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4540–4540](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4540-L4540) | new CPowerTableFile | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6285–6285](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6285-L6285) | new CPowerTableFile | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L33-L33) | new CPowerTableFile | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3602–3602](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3602-L3602) | new Drilling.File.PowerTable.CPowerTableFile | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3755–3755](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3755-L3755) | new Drilling.File.PowerTable.CPowerTableFile | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4548–4548](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4548-L4548) | new CPowerTableFile | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6293–6293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6293-L6293) | new CPowerTableFile | False |
 
 호출하는 대상과 해석 범위:
 
@@ -170,7 +170,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateRun` · L32–33
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:32–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L32-L33)
+[Drilling.File/PowerTable/CPowerTableFile.cs:32–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L32-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -192,8 +192,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2777–2777](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2777-L2777) | Drilling.File.PowerTable.CPowerTableFile.CreateRun | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6295–6295](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6295-L6295) | CPowerTableFile.CreateRun | False |
+| [Drilling.UI/CRootView.cs:3171–3171](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3171-L3171) | Drilling.File.PowerTable.CPowerTableFile.CreateRun | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6303–6303](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6303-L6303) | CPowerTableFile.CreateRun | False |
 
 호출하는 대상과 해석 범위:
 
@@ -215,7 +215,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveReport` · L35–56
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:35–56](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L35-L56)
+[Drilling.File/PowerTable/CPowerTableFile.cs:35–56](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L35-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -235,7 +235,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L33-L33) | SaveReport | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L33-L33) | SaveReport | False |
 
 호출하는 대상과 해석 범위:
 
@@ -348,7 +348,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPath` · L58–63
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:58–63](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L58-L63)
+[Drilling.File/PowerTable/CPowerTableFile.cs:58–63](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L58-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -367,9 +367,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L74-L74) | GetPath | False |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L153-L153) | GetPath | False |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:189–189](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L189-L189) | GetPath | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L74-L74) | GetPath | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L153-L153) | GetPath | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:189–189](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L189-L189) | GetPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -403,7 +403,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveAttenuatorAngle` · L69–137
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:69–137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L69-L137)
+[Drilling.File/PowerTable/CPowerTableFile.cs:69–137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L69-L137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -433,9 +433,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3510–3510](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3510-L3510) | table.ResolveAttenuatorAngle | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3646–3646](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3646-L3646) | table.ResolveAttenuatorAngle | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4544–4544](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4544-L4544) | table.ResolveAttenuatorAngle | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3620–3620](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3620-L3620) | table.ResolveAttenuatorAngle | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3756–3756](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3756-L3756) | table.ResolveAttenuatorAngle | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4552–4552](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4552-L4552) | table.ResolveAttenuatorAngle | False |
 
 호출하는 대상과 해석 범위:
 
@@ -618,7 +618,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadNumber` · L139–145
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:139–145](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L139-L145)
+[Drilling.File/PowerTable/CPowerTableFile.cs:139–145](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L139-L145)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -639,10 +639,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L92-L92) | ReadNumber | False |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L93-L93) | ReadNumber | False |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L232-L232) | ReadNumber | False |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L233-L233) | ReadNumber | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:92–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L92-L92) | ReadNumber | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L93-L93) | ReadNumber | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L232-L232) | ReadNumber | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L233-L233) | ReadNumber | False |
 
 호출하는 대상과 해석 범위:
 
@@ -680,7 +680,7 @@ flowchart TD
 
 ### MethodDeclaration `Format` · L147–147
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L147-L147)
+[Drilling.File/PowerTable/CPowerTableFile.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L147-L147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -699,9 +699,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L106-L106) | Format | False |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L114-L114) | Format | False |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L114-L114) | Format | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L106-L106) | Format | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L114-L114) | Format | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L114-L114) | Format | False |
 
 호출하는 대상과 해석 범위:
 
@@ -719,7 +719,7 @@ flowchart TD
 
 ### MethodDeclaration `FindStart` · L150–184
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:150–184](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L150-L184)
+[Drilling.File/PowerTable/CPowerTableFile.cs:150–184](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L150-L184)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -850,7 +850,7 @@ flowchart TD
 
 ### MethodDeclaration `SaveMeasurement` · L187–222
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:187–222](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L187-L222)
+[Drilling.File/PowerTable/CPowerTableFile.cs:187–222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L187-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -995,7 +995,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadMeasurementPoints` · L224–243
 
-[Drilling.File/PowerTable/CPowerTableFile.cs:224–243](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L224-L243)
+[Drilling.File/PowerTable/CPowerTableFile.cs:224–243](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L224-L243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1015,8 +1015,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L163-L163) | LoadMeasurementPoints | False |
-| [Drilling.File/PowerTable/CPowerTableFile.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L196-L196) | LoadMeasurementPoints | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L163-L163) | LoadMeasurementPoints | False |
+| [Drilling.File/PowerTable/CPowerTableFile.cs:196–196](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L196-L196) | LoadMeasurementPoints | False |
 
 호출하는 대상과 해석 범위:
 

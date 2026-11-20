@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
-| 원본 SHA256 | 198669b5a772ed96adac011aa14691f0a554e86fdf0c2ca345dcf05aecf14651 |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 SHA256 | f9444c37a4690ed735419e1ce74549d11d4bdac1b1b337ae1f51b20dd8783478 |
 | 파일 분류 | code |
-| 원본 크기/행 | 26,606 bytes / 441 physical lines |
+| 원본 크기/행 | 26,705 bytes / 442 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -68,27 +68,27 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | {Binding MelsecSimulatorVisibility} | L275–275 |
 | {Binding OpenMelsecStageSimulationCommand} | L280–280 |
 | {Binding Menus} | L290–290 |
-| {Binding SelectedMenu} | L291–291 |
-| {Binding IsEnabled} | L305–305 |
-| {Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=Background} | L319–319 |
-| {Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=IsSelected} | L325–325 |
-| {Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=IsSelected} | L342–342 |
-| {Binding IconGeometry} | L355–355 |
-| {Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=Foreground} | L356–356 |
-| {Binding Name} | L364–364 |
-| {Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=Foreground} | L367–367 |
-| {Binding CurrentScreen.IsMainLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L379–379 |
-| {Binding CurrentScreen.IsManualLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L380–380 |
-| {Binding CurrentScreen.IsRecipeLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L381–381 |
-| {Binding CurrentScreen.IsSettingLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L382–382 |
-| {Binding CurrentScreen.IsAlarmLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L383–383 |
-| {Binding CurrentScreen.IsMonitorLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L384–384 |
-| {Binding CurrentScreen.IsCorrectionLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L385–385 |
-| {Binding CurrentScreen.IsPmLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L386–386 |
-| {Binding CurrentScreen.IsGenericLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L387–387 |
-| {Binding FooterStatusItems} | L414–414 |
-| {Binding Value} | L424–424 |
-| {Binding AccentBrush} | L425–425 |
+| {Binding NavigationSelectedMenu} | L291–291 |
+| {Binding IsEnabled} | L306–306 |
+| {Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=Background} | L320–320 |
+| {Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=IsSelected} | L326–326 |
+| {Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=IsSelected} | L343–343 |
+| {Binding IconGeometry} | L356–356 |
+| {Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=Foreground} | L357–357 |
+| {Binding Name} | L365–365 |
+| {Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=Foreground} | L368–368 |
+| {Binding CurrentScreen.IsMainLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L380–380 |
+| {Binding CurrentScreen.IsManualLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L381–381 |
+| {Binding CurrentScreen.IsRecipeLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L382–382 |
+| {Binding CurrentScreen.IsSettingLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L383–383 |
+| {Binding CurrentScreen.IsAlarmLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L384–384 |
+| {Binding CurrentScreen.IsMonitorLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L385–385 |
+| {Binding CurrentScreen.IsCorrectionLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L386–386 |
+| {Binding CurrentScreen.IsPmLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L387–387 |
+| {Binding CurrentScreen.IsGenericLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L388–388 |
+| {Binding FooterStatusItems} | L415–415 |
+| {Binding Value} | L425–425 |
+| {Binding AccentBrush} | L426–426 |
 
 ## 원문 전체 주석 해설본
 

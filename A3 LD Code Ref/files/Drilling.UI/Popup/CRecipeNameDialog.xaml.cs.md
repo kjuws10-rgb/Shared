@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | 07e9020cb1b26dcf10c4d0cb82ab83adfe413dc34237bd8668e954e2ed1d025b |
 | 파일 분류 | code |
 | 원본 크기/행 | 2,381 bytes / 79 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -42,7 +42,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_validate` · L8–8
 
-[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L8-L8)
+[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:8–8](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L8-L8)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -57,7 +57,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L9–20
 
-[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:9–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L9-L20)
+[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:9–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L9-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -79,8 +79,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6050–6053](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6050-L6053) | new CRecipeNameDialog | False |
-| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3102–3105](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3102-L3105) | new CRecipeNameDialog | False |
+| [Drilling.UI/CRootView.cs:1288–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1288-L1295) | new CRecipeNameDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6058–6061](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6058-L6061) | new CRecipeNameDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuRecipe.cs:3119–3122](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L3119-L3122) | new CRecipeNameDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -109,7 +110,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `RecipeName` · L22–28
 
-[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:22–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L22-L28)
+[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:22–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L22-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -124,7 +125,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_RecipeName` · L24–27
 
-[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:24–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L24-L27)
+[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:24–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L24-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -152,7 +153,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OpenScreenKeyboard` · L30–41
 
-[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:30–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L30-L41)
+[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:30–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L30-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -205,7 +206,7 @@ flowchart TD
 
 ### MethodDeclaration `OnRecipeNameTextChanged` · L43–46
 
-[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:43–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L43-L46)
+[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:43–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L43-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -239,7 +240,7 @@ flowchart TD
 
 ### MethodDeclaration `OnRecipeNameKeyDown` · L48–60
 
-[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:48–60](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L48-L60)
+[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:48–60](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L48-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -282,7 +283,7 @@ flowchart TD
 
 ### MethodDeclaration `OnOkClicked` · L62–65
 
-[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:62–65](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L62-L65)
+[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:62–65](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L62-L65)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -310,7 +311,7 @@ flowchart TD
 
 ### MethodDeclaration `OnCancelClicked` · L67–70
 
-[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:67–70](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L67-L70)
+[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:67–70](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L67-L70)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -338,7 +339,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateOkState` · L72–78
 
-[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:72–78](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L72-L78)
+[Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:72–78](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L72-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -351,8 +352,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L19-L19) | UpdateOkState | False |
-| [Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L45-L45) | UpdateOkState | False |
+| [Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L19-L19) | UpdateOkState | False |
+| [Drilling.UI/Popup/CRecipeNameDialog.xaml.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml.cs#L45-L45) | UpdateOkState | False |
 
 호출하는 대상과 해석 범위:
 

@@ -1,0 +1,408 @@
+{
+  "sourceCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+  "passed": true,
+  "checks": [
+    {
+      "name": "manual staged source architecture\\01-startup-and-composition.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance architecture\\01-startup-and-composition.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence architecture\\01-startup-and-composition.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 5710,
+        "renderedCharacters": 5710,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source architecture\\02-recipe-settings-and-csv.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance architecture\\02-recipe-settings-and-csv.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence architecture\\02-recipe-settings-and-csv.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 7032,
+        "renderedCharacters": 7032,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source architecture\\03-coordinate-script-and-mof.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance architecture\\03-coordinate-script-and-mof.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence architecture\\03-coordinate-script-and-mof.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 8531,
+        "renderedCharacters": 8531,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source architecture\\04-product-and-station-lifecycle.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance architecture\\04-product-and-station-lifecycle.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence architecture\\04-product-and-station-lifecycle.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 8651,
+        "renderedCharacters": 8651,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source architecture\\05-device-interfaces-and-drivers.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance architecture\\05-device-interfaces-and-drivers.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence architecture\\05-device-interfaces-and-drivers.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 6057,
+        "renderedCharacters": 6057,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source architecture\\06-threading-snapshots-and-logs.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance architecture\\06-threading-snapshots-and-logs.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence architecture\\06-threading-snapshots-and-logs.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 6866,
+        "renderedCharacters": 6866,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source architecture\\07-change-impact-and-offline-reference.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance architecture\\07-change-impact-and-offline-reference.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence architecture\\07-change-impact-and-offline-reference.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 4743,
+        "renderedCharacters": 4743,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source architecture\\08-alarm-cause-analysis.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance architecture\\08-alarm-cause-analysis.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence architecture\\08-alarm-cause-analysis.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 4140,
+        "renderedCharacters": 4140,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source architecture\\README.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance architecture\\README.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence architecture\\README.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 1057,
+        "renderedCharacters": 1057,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source review\\01_Review_계획과_좌표계.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance review\\01_Review_계획과_좌표계.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence review\\01_Review_계획과_좌표계.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 6755,
+        "renderedCharacters": 6755,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source review\\02_Masking_Sampling_IOF.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance review\\02_Masking_Sampling_IOF.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence review\\02_Masking_Sampling_IOF.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 6029,
+        "renderedCharacters": 6029,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source review\\03_Vision_패킷과_단위.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance review\\03_Vision_패킷과_단위.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence review\\03_Vision_패킷과_단위.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 7239,
+        "renderedCharacters": 7239,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source review\\04_ReviewOffset_적용과_롤백.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance review\\04_ReviewOffset_적용과_롤백.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence review\\04_ReviewOffset_적용과_롤백.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 8974,
+        "renderedCharacters": 8974,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source review\\05_결과_Revision_Product_연결.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance review\\05_결과_Revision_Product_연결.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence review\\05_결과_Revision_Product_연결.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 10412,
+        "renderedCharacters": 10412,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source review\\06_DefaultOffset_ZeroOrder_FirstBeam.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance review\\06_DefaultOffset_ZeroOrder_FirstBeam.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence review\\06_DefaultOffset_ZeroOrder_FirstBeam.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 7742,
+        "renderedCharacters": 7742,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual staged source review\\07_Align_Distortion_윈도우_복구.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual combined provenance review\\07_Align_Distortion_윈도우_복구.md",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual visible text character sequence review\\07_Align_Distortion_윈도우_복구.md",
+      "pass": true,
+      "evidence": {
+        "sourceCharacters": 8150,
+        "renderedCharacters": 8150,
+        "scope": "Markup/whitespace-insensitive alphanumeric+Korean visible text; exact Markdown input separately compared."
+      }
+    },
+    {
+      "name": "manual SVG source architecture\\diagrams\\01-startup.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source architecture\\diagrams\\02-recipe.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source architecture\\diagrams\\03-coordinate.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source architecture\\diagrams\\04-product.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source architecture\\diagrams\\05-device.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source architecture\\diagrams\\06-thread.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source architecture\\diagrams\\07-change.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source architecture\\diagrams\\08-alarm.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source review\\diagrams\\review-01.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source review\\diagrams\\review-02.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source review\\diagrams\\review-03.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source review\\diagrams\\review-04.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source review\\diagrams\\review-05.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source review\\diagrams\\review-06.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "manual SVG source review\\diagrams\\review-07.svg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "final nine shard bytes unchanged since independent full audit",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "neutral guide",
+      "pass": true,
+      "evidence": null
+    }
+  ],
+  "errors": [],
+  "finalShardHashes": {
+    "reference-001.jsonl": "dab9b615622d09335690d13c2cec18b23b41fd5ce91b1bcf210fee260f0bc07f",
+    "reference-002.jsonl": "ff0301c7545b7792e21f4ca7f1073dbcb9ca7b6f77ce279ee4e17936df167e3c",
+    "reference-003.jsonl": "3d9e3c806b6d28694cae52247738f4613d4aca98d5c613e4fb0d48f7c5cb42e8",
+    "reference-004.jsonl": "4993ff34aec02ccf3afbd40f286f3061bce91e20ee9e6437f46e840807022f9b",
+    "reference-005.jsonl": "288de732785ff5148d0904a3fa6d7fe698d3d344598f15c4bc70261531b8d9f5",
+    "reference-006.jsonl": "80617c3ea5468c0d25dc0f193ce763dc52c44d87792339fa60ca59d439f51d2d",
+    "reference-007.jsonl": "7bd69076bddee76b009fd41f4afdeec88249d80494cdf9807cc03ebac2182e06",
+    "reference-008.jsonl": "210fecd3523ed1b42959daa1e018b95435cadd56a2a7c4311d9645593bcbd032",
+    "reference-009.jsonl": "1fdbc5e8d6813ff26792ffe0e26ad8926accb106564db67231e0a26bc619fe73"
+  },
+  "scope": "Final manual source/combined Markdown/full visible-text-character provenance and diagrams; exact raw source RAG covered by earlier independent audit and unchanged shard SHA."
+}

@@ -1,13 +1,13 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.File/Parser/CCsvParser.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.File/Parser/CCsvParser.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs">Git 원본</a></p><h1>Drilling.File/Parser/CCsvParser.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.File/Parser/CCsvParser.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.File/Parser/CCsvParser.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs">Git 원본</a></p><h1>Drilling.File/Parser/CCsvParser.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>96e22cd027c84bf302b23f2949b98985d7f301bb</td></tr>
+<tr><td>원본 Commit</td><td>28764c91d521777b8ee068dd7aaf2d3902ce9fe2</td></tr>
 <tr><td>원본 SHA256</td><td>8d9850f57f3552310d7aec82c11c7a08ab13b30c9a0e6daf8ee9e649077fb644</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
 <tr><td>원본 크기/행</td><td>16,362 bytes / 477 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>정의·설정·레시피·결과·스크립트의 파일 입출력과 데이터 형식을 담당합니다. 저장 필드를 통신 송신 필드로 단정하지 않습니다.</p>
@@ -69,7 +69,7 @@
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
 <h3 id="L7">FieldDeclaration <code>Utf8BomLength</code> · L7–7</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L7-L7">Drilling.File/Parser/CCsvParser.cs:7–7</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L7-L7">Drilling.File/Parser/CCsvParser.cs:7–7</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.File.Parser.CCsvParser.Utf8BomLength</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, const</td></tr>
@@ -83,7 +83,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L8">FieldDeclaration <code>CsvWriteEncoding</code> · L8–8</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L8-L8">Drilling.File/Parser/CCsvParser.cs:8–8</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L8-L8">Drilling.File/Parser/CCsvParser.cs:8–8</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Text.Encoding Drilling.File.Parser.CCsvParser.CsvWriteEncoding</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
@@ -102,7 +102,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L9">FieldDeclaration <code>StrictUtf8Encoding</code> · L9–9</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L9-L9">Drilling.File/Parser/CCsvParser.cs:9–9</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L9-L9">Drilling.File/Parser/CCsvParser.cs:9–9</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Text.Encoding Drilling.File.Parser.CCsvParser.StrictUtf8Encoding</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
@@ -121,7 +121,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L10">FieldDeclaration <code>KoreanCsvEncoding</code> · L10–10</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L10-L10">Drilling.File/Parser/CCsvParser.cs:10–10</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L10-L10">Drilling.File/Parser/CCsvParser.cs:10–10</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Lazy&lt;System.Text.Encoding&gt; Drilling.File.Parser.CCsvParser.KoreanCsvEncoding</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static, readonly</td></tr>
@@ -140,7 +140,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L12">MethodDeclaration <code>Read</code> · L12–13</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L12-L13">Drilling.File/Parser/CCsvParser.cs:12–13</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L12-L13">Drilling.File/Parser/CCsvParser.cs:12–13</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; Drilling.File.Parser.CCsvParser.Read(string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -153,26 +153,26 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CAlarmListFile.cs#L18-L18">Drilling.File/JHMI/CAlarmListFile.cs:18–18</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L53-L53">Drilling.File/JHMI/CBETFile.cs:53–53</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L131-L131">Drilling.File/JHMI/CConfigStructureFile.cs:131–131</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L152-L152">Drilling.File/JHMI/CConfigStructureFile.cs:152–152</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L210-L210">Drilling.File/JHMI/CConfigStructureFile.cs:210–210</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CInterfaceFile.cs#L89-L89">Drilling.File/JHMI/CInterfaceFile.cs:89–89</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L886-L886">Drilling.File/JHMI/CJhmiRecipeFile.cs:886–886</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L69-L69">Drilling.File/JHMI/CManualScanFile.cs:69–69</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L225-L225">Drilling.File/JHMI/CManualScanFile.cs:225–225</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L272-L272">Drilling.File/JHMI/CManualScanFile.cs:272–272</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMelsecMapFile.cs#L60-L60">Drilling.File/JHMI/CMelsecMapFile.cs:60–60</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L80-L80">Drilling.File/JHMI/CMotorFile.cs:80–80</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L190-L190">Drilling.File/JHMI/CSettingFile.cs:190–190</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L354-L354">Drilling.File/JHMI/CSettingFile.cs:354–354</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L83-L83">Drilling.File/PowerTable/CPowerTableFile.cs:83–83</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L227-L227">Drilling.File/PowerTable/CPowerTableFile.cs:227–227</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L21-L21">Drilling.File/Product/CProductFile.cs:21–21</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L215-L215">Drilling.File/Product/CProductFile.cs:215–215</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L62-L62">Drilling.File/ReviewResult/CReviewResultFile.cs:62–62</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L220-L220">Drilling.File/ReviewResult/CReviewResultFile.cs:220–220</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CAlarmListFile.cs#L18-L18">Drilling.File/JHMI/CAlarmListFile.cs:18–18</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L53-L53">Drilling.File/JHMI/CBETFile.cs:53–53</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L131-L131">Drilling.File/JHMI/CConfigStructureFile.cs:131–131</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L152-L152">Drilling.File/JHMI/CConfigStructureFile.cs:152–152</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L210-L210">Drilling.File/JHMI/CConfigStructureFile.cs:210–210</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CInterfaceFile.cs#L89-L89">Drilling.File/JHMI/CInterfaceFile.cs:89–89</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L887-L887">Drilling.File/JHMI/CJhmiRecipeFile.cs:887–887</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L69-L69">Drilling.File/JHMI/CManualScanFile.cs:69–69</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L225-L225">Drilling.File/JHMI/CManualScanFile.cs:225–225</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L272-L272">Drilling.File/JHMI/CManualScanFile.cs:272–272</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMelsecMapFile.cs#L60-L60">Drilling.File/JHMI/CMelsecMapFile.cs:60–60</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMotorFile.cs#L80-L80">Drilling.File/JHMI/CMotorFile.cs:80–80</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L192-L192">Drilling.File/JHMI/CSettingFile.cs:192–192</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L364-L364">Drilling.File/JHMI/CSettingFile.cs:364–364</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L83-L83">Drilling.File/PowerTable/CPowerTableFile.cs:83–83</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L227-L227">Drilling.File/PowerTable/CPowerTableFile.cs:227–227</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L21-L21">Drilling.File/Product/CProductFile.cs:21–21</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L215-L215">Drilling.File/Product/CProductFile.cs:215–215</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L62-L62">Drilling.File/ReviewResult/CReviewResultFile.cs:62–62</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L221-L221">Drilling.File/ReviewResult/CReviewResultFile.cs:221–221</a></td><td>CCsvParser.Read</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -184,7 +184,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L15">MethodDeclaration <code>Read</code> · L15–56</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L15-L56">Drilling.File/Parser/CCsvParser.cs:15–56</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L15-L56">Drilling.File/Parser/CCsvParser.cs:15–56</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt; Drilling.File.Parser.CCsvParser.Read(string, System.Collections.Generic.IList&lt;int&gt;?)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -198,9 +198,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L13-L13">Drilling.File/Parser/CCsvParser.cs:13–13</a></td><td>Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L430-L430">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:430–430</a></td><td>CCsvParser.Read</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L646-L646">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:646–646</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L13-L13">Drilling.File/Parser/CCsvParser.cs:13–13</a></td><td>Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L497-L497">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:497–497</a></td><td>CCsvParser.Read</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L714-L714">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:714–714</a></td><td>CCsvParser.Read</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -272,7 +272,7 @@
  N2 --&gt;|포함| N4</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L28">LocalFunctionStatement <code>SelectItem</code> · L28–31</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L28-L31">Drilling.File/Parser/CCsvParser.cs:28–31</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L28-L31">Drilling.File/Parser/CCsvParser.cs:28–31</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectItem(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -295,7 +295,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L58">MethodDeclaration <code>Write</code> · L58–94</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L58-L94">Drilling.File/Parser/CCsvParser.cs:58–94</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L58-L94">Drilling.File/Parser/CCsvParser.cs:58–94</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.File.Parser.CCsvParser.Write(string, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -310,21 +310,21 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Correction/CAlignOffsetLogFile.cs#L21-L21">Drilling.File/Correction/CAlignOffsetLogFile.cs:21–21</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Correction/CAlignOffsetLogFile.cs#L93-L93">Drilling.File/Correction/CAlignOffsetLogFile.cs:93–93</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L76-L76">Drilling.File/JHMI/CBETFile.cs:76–76</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CInterfaceFile.cs#L75-L75">Drilling.File/JHMI/CInterfaceFile.cs:75–75</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L146-L146">Drilling.File/JHMI/CManualScanFile.cs:146–146</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110">Drilling.File/JHMI/CMelsecMapFile.cs:110–110</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L145-L145">Drilling.File/JHMI/CMotorFile.cs:145–145</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L375-L375">Drilling.File/JHMI/CSettingFile.cs:375–375</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L103-L103">Drilling.File/Parser/CCsvParser.cs:103–103</a></td><td>Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L188-L188">Drilling.File/Product/CProductFile.cs:188–188</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L473-L473">Drilling.File/Product/CProductFile.cs:473–473</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L237-L238">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:237–238</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L515-L518">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:515–518</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L136-L136">Drilling.File/ReviewResult/CReviewResultFile.cs:136–136</a></td><td>CCsvParser.Write</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L745-L745">Drilling.File/ReviewResult/CReviewResultFile.cs:745–745</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Correction/CAlignOffsetLogFile.cs#L21-L21">Drilling.File/Correction/CAlignOffsetLogFile.cs:21–21</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Correction/CAlignOffsetLogFile.cs#L93-L93">Drilling.File/Correction/CAlignOffsetLogFile.cs:93–93</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L76-L76">Drilling.File/JHMI/CBETFile.cs:76–76</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CInterfaceFile.cs#L75-L75">Drilling.File/JHMI/CInterfaceFile.cs:75–75</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L146-L146">Drilling.File/JHMI/CManualScanFile.cs:146–146</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMelsecMapFile.cs#L110-L110">Drilling.File/JHMI/CMelsecMapFile.cs:110–110</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMotorFile.cs#L145-L145">Drilling.File/JHMI/CMotorFile.cs:145–145</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L385-L385">Drilling.File/JHMI/CSettingFile.cs:385–385</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L103-L103">Drilling.File/Parser/CCsvParser.cs:103–103</a></td><td>Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L188-L188">Drilling.File/Product/CProductFile.cs:188–188</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L473-L473">Drilling.File/Product/CProductFile.cs:473–473</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L248-L249">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:248–249</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L583-L586">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:583–586</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L136-L136">Drilling.File/ReviewResult/CReviewResultFile.cs:136–136</a></td><td>CCsvParser.Write</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L749-L749">Drilling.File/ReviewResult/CReviewResultFile.cs:749–749</a></td><td>CCsvParser.Write</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -378,7 +378,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L61">LocalFunctionStatement <code>SelectKeys</code> · L61–64</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L61-L64">Drilling.File/Parser/CCsvParser.cs:61–64</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L61-L64">Drilling.File/Parser/CCsvParser.cs:61–64</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IEnumerable&lt;string&gt; SelectKeys(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -396,7 +396,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L66">LocalFunctionStatement <code>ShouldIncludeItem</code> · L66–69</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L66-L69">Drilling.File/Parser/CCsvParser.cs:66–69</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L66-L69">Drilling.File/Parser/CCsvParser.cs:66–69</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool ShouldIncludeItem(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -419,7 +419,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L82">LocalFunctionStatement <code>SelectItem</code> · L82–90</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L82-L90">Drilling.File/Parser/CCsvParser.cs:82–90</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L82-L90">Drilling.File/Parser/CCsvParser.cs:82–90</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectItem(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -444,7 +444,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L84">LocalFunctionStatement <code>SelectItem</code> · L84–87</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L84-L87">Drilling.File/Parser/CCsvParser.cs:84–87</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L84-L87">Drilling.File/Parser/CCsvParser.cs:84–87</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectItem(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -469,7 +469,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L96">MethodDeclaration <code>Append</code> · L96–138</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L96-L138">Drilling.File/Parser/CCsvParser.cs:96–138</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L96-L138">Drilling.File/Parser/CCsvParser.cs:96–138</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.File.Parser.CCsvParser.Append(string, System.Collections.Generic.IReadOnlyList&lt;string&gt;, System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -484,7 +484,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L494-L497">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:494–497</a></td><td>CCsvParser.Append</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L562-L565">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:562–565</a></td><td>CCsvParser.Append</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -561,7 +561,7 @@
  N2 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L140">MethodDeclaration <code>ReadLastByte</code> · L140–145</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L140-L145">Drilling.File/Parser/CCsvParser.cs:140–145</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L140-L145">Drilling.File/Parser/CCsvParser.cs:140–145</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>byte Drilling.File.Parser.CCsvParser.ReadLastByte(System.IO.FileStream)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -574,7 +574,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L124-L124">Drilling.File/Parser/CCsvParser.cs:124–124</a></td><td>ReadLastByte</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L124-L124">Drilling.File/Parser/CCsvParser.cs:124–124</a></td><td>ReadLastByte</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -591,7 +591,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L147">MethodDeclaration <code>ReadLines</code> · L147–155</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L147-L155">Drilling.File/Parser/CCsvParser.cs:147–155</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L147-L155">Drilling.File/Parser/CCsvParser.cs:147–155</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.File.Parser.CCsvParser.ReadLines(string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -604,11 +604,11 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L256-L256">Drilling.File/JHMI/CConfigStructureFile.cs:256–256</a></td><td>CCsvParser.ReadLines</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L897-L897">Drilling.File/JHMI/CJhmiRecipeFile.cs:897–897</a></td><td>CCsvParser.ReadLines</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1428-L1428">Drilling.File/JHMI/CJhmiRecipeFile.cs:1428–1428</a></td><td>CCsvParser.ReadLines</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L22-L22">Drilling.File/Parser/CCsvParser.cs:22–22</a></td><td>ReadLines</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L260-L260">Drilling.File/Parser/CCsvParser.cs:260–260</a></td><td>ReadLines</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L256-L256">Drilling.File/JHMI/CConfigStructureFile.cs:256–256</a></td><td>CCsvParser.ReadLines</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L898-L898">Drilling.File/JHMI/CJhmiRecipeFile.cs:898–898</a></td><td>CCsvParser.ReadLines</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L1431-L1431">Drilling.File/JHMI/CJhmiRecipeFile.cs:1431–1431</a></td><td>CCsvParser.ReadLines</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L22-L22">Drilling.File/Parser/CCsvParser.cs:22–22</a></td><td>ReadLines</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L260-L260">Drilling.File/Parser/CCsvParser.cs:260–260</a></td><td>ReadLines</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -632,7 +632,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L157">MethodDeclaration <code>WriteLines</code> · L157–166</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L157-L166">Drilling.File/Parser/CCsvParser.cs:157–166</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L157-L166">Drilling.File/Parser/CCsvParser.cs:157–166</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.File.Parser.CCsvParser.WriteLines(string, System.Collections.Generic.IEnumerable&lt;string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -646,9 +646,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L227-L227">Drilling.File/JHMI/CJhmiRecipeFile.cs:227–227</a></td><td>CCsvParser.WriteLines</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L346-L346">Drilling.File/JHMI/CJhmiRecipeFile.cs:346–346</a></td><td>CCsvParser.WriteLines</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L93-L93">Drilling.File/Parser/CCsvParser.cs:93–93</a></td><td>WriteLines</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L228-L228">Drilling.File/JHMI/CJhmiRecipeFile.cs:228–228</a></td><td>CCsvParser.WriteLines</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L347-L347">Drilling.File/JHMI/CJhmiRecipeFile.cs:347–347</a></td><td>CCsvParser.WriteLines</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L93-L93">Drilling.File/Parser/CCsvParser.cs:93–93</a></td><td>WriteLines</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -674,7 +674,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L168">MethodDeclaration <code>Get</code> · L168–171</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L168-L171">Drilling.File/Parser/CCsvParser.cs:168–171</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L168-L171">Drilling.File/Parser/CCsvParser.cs:168–171</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.File.Parser.CCsvParser.Get(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -688,113 +688,113 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CAlarmListFile.cs#L21-L21">Drilling.File/JHMI/CAlarmListFile.cs:21–21</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CAlarmListFile.cs#L28-L28">Drilling.File/JHMI/CAlarmListFile.cs:28–28</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CAlarmListFile.cs#L29-L29">Drilling.File/JHMI/CAlarmListFile.cs:29–29</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CAlarmListFile.cs#L29-L29">Drilling.File/JHMI/CAlarmListFile.cs:29–29</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CAlarmListFile.cs#L29-L29">Drilling.File/JHMI/CAlarmListFile.cs:29–29</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L40-L40">Drilling.File/JHMI/CBETFile.cs:40–40</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L45-L45">Drilling.File/JHMI/CBETFile.cs:45–45</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L45-L45">Drilling.File/JHMI/CBETFile.cs:45–45</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L45-L45">Drilling.File/JHMI/CBETFile.cs:45–45</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L45-L45">Drilling.File/JHMI/CBETFile.cs:45–45</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L295-L295">Drilling.File/JHMI/CConfigStructureFile.cs:295–295</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L295-L295">Drilling.File/JHMI/CConfigStructureFile.cs:295–295</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L305-L305">Drilling.File/JHMI/CConfigStructureFile.cs:305–305</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L315-L315">Drilling.File/JHMI/CConfigStructureFile.cs:315–315</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L325-L325">Drilling.File/JHMI/CConfigStructureFile.cs:325–325</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L325-L325">Drilling.File/JHMI/CConfigStructureFile.cs:325–325</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L335-L335">Drilling.File/JHMI/CConfigStructureFile.cs:335–335</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L345-L345">Drilling.File/JHMI/CConfigStructureFile.cs:345–345</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L355-L355">Drilling.File/JHMI/CConfigStructureFile.cs:355–355</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L388-L388">Drilling.File/JHMI/CConfigStructureFile.cs:388–388</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CInterfaceFile.cs#L116-L116">Drilling.File/JHMI/CInterfaceFile.cs:116–116</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L861-L861">Drilling.File/JHMI/CJhmiRecipeFile.cs:861–861</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L862-L862">Drilling.File/JHMI/CJhmiRecipeFile.cs:862–862</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L863-L863">Drilling.File/JHMI/CJhmiRecipeFile.cs:863–863</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L864-L864">Drilling.File/JHMI/CJhmiRecipeFile.cs:864–864</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L864-L864">Drilling.File/JHMI/CJhmiRecipeFile.cs:864–864</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L865-L865">Drilling.File/JHMI/CJhmiRecipeFile.cs:865–865</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L865-L865">Drilling.File/JHMI/CJhmiRecipeFile.cs:865–865</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L866-L866">Drilling.File/JHMI/CJhmiRecipeFile.cs:866–866</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L867-L867">Drilling.File/JHMI/CJhmiRecipeFile.cs:867–867</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L868-L868">Drilling.File/JHMI/CJhmiRecipeFile.cs:868–868</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L869-L869">Drilling.File/JHMI/CJhmiRecipeFile.cs:869–869</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L870-L870">Drilling.File/JHMI/CJhmiRecipeFile.cs:870–870</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L871-L871">Drilling.File/JHMI/CJhmiRecipeFile.cs:871–871</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L872-L872">Drilling.File/JHMI/CJhmiRecipeFile.cs:872–872</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L873-L873">Drilling.File/JHMI/CJhmiRecipeFile.cs:873–873</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L874-L874">Drilling.File/JHMI/CJhmiRecipeFile.cs:874–874</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L875-L875">Drilling.File/JHMI/CJhmiRecipeFile.cs:875–875</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L876-L876">Drilling.File/JHMI/CJhmiRecipeFile.cs:876–876</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L56-L56">Drilling.File/JHMI/CManualScanFile.cs:56–56</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L61-L61">Drilling.File/JHMI/CManualScanFile.cs:61–61</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L66-L66">Drilling.File/JHMI/CManualScanFile.cs:66–66</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L202-L202">Drilling.File/JHMI/CManualScanFile.cs:202–202</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L204-L204">Drilling.File/JHMI/CManualScanFile.cs:204–204</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L207-L207">Drilling.File/JHMI/CManualScanFile.cs:207–207</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L208-L208">Drilling.File/JHMI/CManualScanFile.cs:208–208</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L210-L210">Drilling.File/JHMI/CManualScanFile.cs:210–210</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L211-L211">Drilling.File/JHMI/CManualScanFile.cs:211–211</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L212-L212">Drilling.File/JHMI/CManualScanFile.cs:212–212</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L213-L213">Drilling.File/JHMI/CManualScanFile.cs:213–213</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L214-L214">Drilling.File/JHMI/CManualScanFile.cs:214–214</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L215-L215">Drilling.File/JHMI/CManualScanFile.cs:215–215</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L216-L216">Drilling.File/JHMI/CManualScanFile.cs:216–216</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L259-L259">Drilling.File/JHMI/CManualScanFile.cs:259–259</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L264-L264">Drilling.File/JHMI/CManualScanFile.cs:264–264</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CManualScanFile.cs#L269-L269">Drilling.File/JHMI/CManualScanFile.cs:269–269</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L153-L153">Drilling.File/JHMI/CSettingFile.cs:153–153</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L154-L154">Drilling.File/JHMI/CSettingFile.cs:154–154</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L155-L155">Drilling.File/JHMI/CSettingFile.cs:155–155</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L156-L156">Drilling.File/JHMI/CSettingFile.cs:156–156</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L172-L172">Drilling.File/JHMI/CSettingFile.cs:172–172</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L173-L173">Drilling.File/JHMI/CSettingFile.cs:173–173</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L174-L174">Drilling.File/JHMI/CSettingFile.cs:174–174</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L175-L175">Drilling.File/JHMI/CSettingFile.cs:175–175</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L176-L176">Drilling.File/JHMI/CSettingFile.cs:176–176</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L177-L177">Drilling.File/JHMI/CSettingFile.cs:177–177</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L178-L178">Drilling.File/JHMI/CSettingFile.cs:178–178</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L179-L179">Drilling.File/JHMI/CSettingFile.cs:179–179</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L336-L336">Drilling.File/JHMI/CSettingFile.cs:336–336</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L336-L336">Drilling.File/JHMI/CSettingFile.cs:336–336</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L341-L341">Drilling.File/JHMI/CSettingFile.cs:341–341</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L341-L341">Drilling.File/JHMI/CSettingFile.cs:341–341</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L351-L351">Drilling.File/JHMI/CSettingFile.cs:351–351</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L86-L86">Drilling.File/Parser/CCsvParser.cs:86–86</a></td><td>Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L114-L114">Drilling.File/Parser/CCsvParser.cs:114–114</a></td><td>Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L177-L177">Drilling.File/Parser/CCsvParser.cs:177–177</a></td><td>Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L141-L141">Drilling.File/PowerTable/CPowerTableFile.cs:141–141</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L29-L29">Drilling.File/Product/CProductFile.cs:29–29</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L344-L344">Drilling.File/Product/CProductFile.cs:344–344</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L349-L349">Drilling.File/Product/CProductFile.cs:349–349</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L354-L354">Drilling.File/Product/CProductFile.cs:354–354</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L364-L364">Drilling.File/Product/CProductFile.cs:364–364</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L450-L450">Drilling.File/Product/CProductFile.cs:450–450</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L458-L458">Drilling.File/Product/CProductFile.cs:458–458</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L459-L459">Drilling.File/Product/CProductFile.cs:459–459</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L460-L460">Drilling.File/Product/CProductFile.cs:460–460</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L461-L461">Drilling.File/Product/CProductFile.cs:461–461</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L462-L462">Drilling.File/Product/CProductFile.cs:462–462</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L463-L463">Drilling.File/Product/CProductFile.cs:463–463</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Product/CProductFile.cs#L464-L464">Drilling.File/Product/CProductFile.cs:464–464</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L680-L680">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:680–680</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L689-L689">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:689–689</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L691-L691">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:691–691</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L694-L694">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:694–694</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L91-L91">Drilling.File/ReviewResult/CReviewResultFile.cs:91–91</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L92-L92">Drilling.File/ReviewResult/CReviewResultFile.cs:92–92</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L95-L95">Drilling.File/ReviewResult/CReviewResultFile.cs:95–95</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L96-L96">Drilling.File/ReviewResult/CReviewResultFile.cs:96–96</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L98-L98">Drilling.File/ReviewResult/CReviewResultFile.cs:98–98</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L457-L457">Drilling.File/ReviewResult/CReviewResultFile.cs:457–457</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L493-L493">Drilling.File/ReviewResult/CReviewResultFile.cs:493–493</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L518-L518">Drilling.File/ReviewResult/CReviewResultFile.cs:518–518</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L520-L520">Drilling.File/ReviewResult/CReviewResultFile.cs:520–520</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L629-L629">Drilling.File/ReviewResult/CReviewResultFile.cs:629–629</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L636-L636">Drilling.File/ReviewResult/CReviewResultFile.cs:636–636</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L678-L678">Drilling.File/ReviewResult/CReviewResultFile.cs:678–678</a></td><td>CCsvParser.Get</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L708-L708">Drilling.File/ReviewResult/CReviewResultFile.cs:708–708</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CAlarmListFile.cs#L21-L21">Drilling.File/JHMI/CAlarmListFile.cs:21–21</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CAlarmListFile.cs#L28-L28">Drilling.File/JHMI/CAlarmListFile.cs:28–28</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CAlarmListFile.cs#L29-L29">Drilling.File/JHMI/CAlarmListFile.cs:29–29</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CAlarmListFile.cs#L29-L29">Drilling.File/JHMI/CAlarmListFile.cs:29–29</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CAlarmListFile.cs#L29-L29">Drilling.File/JHMI/CAlarmListFile.cs:29–29</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L40-L40">Drilling.File/JHMI/CBETFile.cs:40–40</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L45-L45">Drilling.File/JHMI/CBETFile.cs:45–45</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L45-L45">Drilling.File/JHMI/CBETFile.cs:45–45</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L45-L45">Drilling.File/JHMI/CBETFile.cs:45–45</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L45-L45">Drilling.File/JHMI/CBETFile.cs:45–45</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L295-L295">Drilling.File/JHMI/CConfigStructureFile.cs:295–295</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L295-L295">Drilling.File/JHMI/CConfigStructureFile.cs:295–295</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L305-L305">Drilling.File/JHMI/CConfigStructureFile.cs:305–305</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L315-L315">Drilling.File/JHMI/CConfigStructureFile.cs:315–315</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L325-L325">Drilling.File/JHMI/CConfigStructureFile.cs:325–325</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L325-L325">Drilling.File/JHMI/CConfigStructureFile.cs:325–325</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L335-L335">Drilling.File/JHMI/CConfigStructureFile.cs:335–335</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L345-L345">Drilling.File/JHMI/CConfigStructureFile.cs:345–345</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L355-L355">Drilling.File/JHMI/CConfigStructureFile.cs:355–355</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L388-L388">Drilling.File/JHMI/CConfigStructureFile.cs:388–388</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CInterfaceFile.cs#L116-L116">Drilling.File/JHMI/CInterfaceFile.cs:116–116</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L862-L862">Drilling.File/JHMI/CJhmiRecipeFile.cs:862–862</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L863-L863">Drilling.File/JHMI/CJhmiRecipeFile.cs:863–863</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L864-L864">Drilling.File/JHMI/CJhmiRecipeFile.cs:864–864</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L865-L865">Drilling.File/JHMI/CJhmiRecipeFile.cs:865–865</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L865-L865">Drilling.File/JHMI/CJhmiRecipeFile.cs:865–865</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L866-L866">Drilling.File/JHMI/CJhmiRecipeFile.cs:866–866</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L866-L866">Drilling.File/JHMI/CJhmiRecipeFile.cs:866–866</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L867-L867">Drilling.File/JHMI/CJhmiRecipeFile.cs:867–867</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L868-L868">Drilling.File/JHMI/CJhmiRecipeFile.cs:868–868</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L869-L869">Drilling.File/JHMI/CJhmiRecipeFile.cs:869–869</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L870-L870">Drilling.File/JHMI/CJhmiRecipeFile.cs:870–870</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L871-L871">Drilling.File/JHMI/CJhmiRecipeFile.cs:871–871</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L872-L872">Drilling.File/JHMI/CJhmiRecipeFile.cs:872–872</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L873-L873">Drilling.File/JHMI/CJhmiRecipeFile.cs:873–873</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L874-L874">Drilling.File/JHMI/CJhmiRecipeFile.cs:874–874</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L875-L875">Drilling.File/JHMI/CJhmiRecipeFile.cs:875–875</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L876-L876">Drilling.File/JHMI/CJhmiRecipeFile.cs:876–876</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L877-L877">Drilling.File/JHMI/CJhmiRecipeFile.cs:877–877</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L56-L56">Drilling.File/JHMI/CManualScanFile.cs:56–56</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L61-L61">Drilling.File/JHMI/CManualScanFile.cs:61–61</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L66-L66">Drilling.File/JHMI/CManualScanFile.cs:66–66</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L202-L202">Drilling.File/JHMI/CManualScanFile.cs:202–202</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L204-L204">Drilling.File/JHMI/CManualScanFile.cs:204–204</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L207-L207">Drilling.File/JHMI/CManualScanFile.cs:207–207</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L208-L208">Drilling.File/JHMI/CManualScanFile.cs:208–208</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L210-L210">Drilling.File/JHMI/CManualScanFile.cs:210–210</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L211-L211">Drilling.File/JHMI/CManualScanFile.cs:211–211</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L212-L212">Drilling.File/JHMI/CManualScanFile.cs:212–212</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L213-L213">Drilling.File/JHMI/CManualScanFile.cs:213–213</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L214-L214">Drilling.File/JHMI/CManualScanFile.cs:214–214</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L215-L215">Drilling.File/JHMI/CManualScanFile.cs:215–215</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L216-L216">Drilling.File/JHMI/CManualScanFile.cs:216–216</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L259-L259">Drilling.File/JHMI/CManualScanFile.cs:259–259</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L264-L264">Drilling.File/JHMI/CManualScanFile.cs:264–264</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CManualScanFile.cs#L269-L269">Drilling.File/JHMI/CManualScanFile.cs:269–269</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L155-L155">Drilling.File/JHMI/CSettingFile.cs:155–155</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L156-L156">Drilling.File/JHMI/CSettingFile.cs:156–156</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L157-L157">Drilling.File/JHMI/CSettingFile.cs:157–157</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L158-L158">Drilling.File/JHMI/CSettingFile.cs:158–158</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L174-L174">Drilling.File/JHMI/CSettingFile.cs:174–174</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L175-L175">Drilling.File/JHMI/CSettingFile.cs:175–175</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L176-L176">Drilling.File/JHMI/CSettingFile.cs:176–176</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L177-L177">Drilling.File/JHMI/CSettingFile.cs:177–177</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L178-L178">Drilling.File/JHMI/CSettingFile.cs:178–178</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L179-L179">Drilling.File/JHMI/CSettingFile.cs:179–179</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L180-L180">Drilling.File/JHMI/CSettingFile.cs:180–180</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L181-L181">Drilling.File/JHMI/CSettingFile.cs:181–181</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L346-L346">Drilling.File/JHMI/CSettingFile.cs:346–346</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L346-L346">Drilling.File/JHMI/CSettingFile.cs:346–346</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L351-L351">Drilling.File/JHMI/CSettingFile.cs:351–351</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L351-L351">Drilling.File/JHMI/CSettingFile.cs:351–351</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L361-L361">Drilling.File/JHMI/CSettingFile.cs:361–361</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L86-L86">Drilling.File/Parser/CCsvParser.cs:86–86</a></td><td>Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L114-L114">Drilling.File/Parser/CCsvParser.cs:114–114</a></td><td>Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L177-L177">Drilling.File/Parser/CCsvParser.cs:177–177</a></td><td>Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L141-L141">Drilling.File/PowerTable/CPowerTableFile.cs:141–141</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L29-L29">Drilling.File/Product/CProductFile.cs:29–29</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L344-L344">Drilling.File/Product/CProductFile.cs:344–344</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L349-L349">Drilling.File/Product/CProductFile.cs:349–349</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L354-L354">Drilling.File/Product/CProductFile.cs:354–354</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L364-L364">Drilling.File/Product/CProductFile.cs:364–364</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L450-L450">Drilling.File/Product/CProductFile.cs:450–450</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L458-L458">Drilling.File/Product/CProductFile.cs:458–458</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L459-L459">Drilling.File/Product/CProductFile.cs:459–459</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L460-L460">Drilling.File/Product/CProductFile.cs:460–460</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L461-L461">Drilling.File/Product/CProductFile.cs:461–461</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L462-L462">Drilling.File/Product/CProductFile.cs:462–462</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L463-L463">Drilling.File/Product/CProductFile.cs:463–463</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L464-L464">Drilling.File/Product/CProductFile.cs:464–464</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L748-L748">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:748–748</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L757-L757">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:757–757</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L759-L759">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:759–759</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L762-L762">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:762–762</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L91-L91">Drilling.File/ReviewResult/CReviewResultFile.cs:91–91</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L92-L92">Drilling.File/ReviewResult/CReviewResultFile.cs:92–92</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L95-L95">Drilling.File/ReviewResult/CReviewResultFile.cs:95–95</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L96-L96">Drilling.File/ReviewResult/CReviewResultFile.cs:96–96</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L98-L98">Drilling.File/ReviewResult/CReviewResultFile.cs:98–98</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L460-L460">Drilling.File/ReviewResult/CReviewResultFile.cs:460–460</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L496-L496">Drilling.File/ReviewResult/CReviewResultFile.cs:496–496</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L521-L521">Drilling.File/ReviewResult/CReviewResultFile.cs:521–521</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L523-L523">Drilling.File/ReviewResult/CReviewResultFile.cs:523–523</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L632-L632">Drilling.File/ReviewResult/CReviewResultFile.cs:632–632</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L639-L639">Drilling.File/ReviewResult/CReviewResultFile.cs:639–639</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L681-L681">Drilling.File/ReviewResult/CReviewResultFile.cs:681–681</a></td><td>CCsvParser.Get</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L711-L711">Drilling.File/ReviewResult/CReviewResultFile.cs:711–711</a></td><td>CCsvParser.Get</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -808,7 +808,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L173">MethodDeclaration <code>GetFirst</code> · L173–185</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L173-L185">Drilling.File/Parser/CCsvParser.cs:173–185</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L173-L185">Drilling.File/Parser/CCsvParser.cs:173–185</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.File.Parser.CCsvParser.GetFirst(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, params string[])</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -822,9 +822,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMelsecMapFile.cs#L241-L241">Drilling.File/JHMI/CMelsecMapFile.cs:241–241</a></td><td>CCsvParser.GetFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L255-L255">Drilling.File/JHMI/CMotorFile.cs:255–255</a></td><td>CCsvParser.GetFirst</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L189-L189">Drilling.File/Parser/CCsvParser.cs:189–189</a></td><td>GetFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMelsecMapFile.cs#L241-L241">Drilling.File/JHMI/CMelsecMapFile.cs:241–241</a></td><td>CCsvParser.GetFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMotorFile.cs#L255-L255">Drilling.File/JHMI/CMotorFile.cs:255–255</a></td><td>CCsvParser.GetFirst</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L189-L189">Drilling.File/Parser/CCsvParser.cs:189–189</a></td><td>GetFirst</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -853,7 +853,7 @@
  N0 --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L187">MethodDeclaration <code>RequireText</code> · L187–196</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L187-L196">Drilling.File/Parser/CCsvParser.cs:187–196</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L187-L196">Drilling.File/Parser/CCsvParser.cs:187–196</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.File.Parser.CCsvParser.RequireText(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, string, int, params string[])</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -869,16 +869,16 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CAlarmListFile.cs#L22-L22">Drilling.File/JHMI/CAlarmListFile.cs:22–22</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CAlarmListFile.cs#L23-L23">Drilling.File/JHMI/CAlarmListFile.cs:23–23</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CInterfaceFile.cs#L421-L421">Drilling.File/JHMI/CInterfaceFile.cs:421–421</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMelsecMapFile.cs#L236-L236">Drilling.File/JHMI/CMelsecMapFile.cs:236–236</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L437-L441">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:437–441</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L442-L446">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:442–446</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L454-L458">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:454–458</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L684-L688">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:684–688</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L485-L485">Drilling.File/ReviewResult/CReviewResultFile.cs:485–485</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L491-L491">Drilling.File/ReviewResult/CReviewResultFile.cs:491–491</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CAlarmListFile.cs#L22-L22">Drilling.File/JHMI/CAlarmListFile.cs:22–22</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CAlarmListFile.cs#L23-L23">Drilling.File/JHMI/CAlarmListFile.cs:23–23</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CInterfaceFile.cs#L421-L421">Drilling.File/JHMI/CInterfaceFile.cs:421–421</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMelsecMapFile.cs#L236-L236">Drilling.File/JHMI/CMelsecMapFile.cs:236–236</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L504-L508">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:504–508</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L509-L513">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:509–513</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L521-L525">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:521–525</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L752-L756">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:752–756</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L488-L488">Drilling.File/ReviewResult/CReviewResultFile.cs:488–488</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L494-L494">Drilling.File/ReviewResult/CReviewResultFile.cs:494–494</a></td><td>CCsvParser.RequireText</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -904,7 +904,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L198">MethodDeclaration <code>ReadInt</code> · L198–206</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L198-L206">Drilling.File/Parser/CCsvParser.cs:198–206</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L198-L206">Drilling.File/Parser/CCsvParser.cs:198–206</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.File.Parser.CCsvParser.ReadInt(string, string, int, string, int)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -921,8 +921,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMelsecMapFile.cs#L251-L251">Drilling.File/JHMI/CMelsecMapFile.cs:251–251</a></td><td>CCsvParser.ReadInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L271-L271">Drilling.File/JHMI/CMotorFile.cs:271–271</a></td><td>CCsvParser.ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMelsecMapFile.cs#L251-L251">Drilling.File/JHMI/CMelsecMapFile.cs:251–251</a></td><td>CCsvParser.ReadInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMotorFile.cs#L271-L271">Drilling.File/JHMI/CMotorFile.cs:271–271</a></td><td>CCsvParser.ReadInt</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -948,7 +948,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L208">MethodDeclaration <code>ReadRequiredInt</code> · L208–217</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L208-L217">Drilling.File/Parser/CCsvParser.cs:208–217</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L208-L217">Drilling.File/Parser/CCsvParser.cs:208–217</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>int Drilling.File.Parser.CCsvParser.ReadRequiredInt(string, string, int, string, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -965,9 +965,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CAlarmListFile.cs#L21-L21">Drilling.File/JHMI/CAlarmListFile.cs:21–21</a></td><td>CCsvParser.ReadRequiredInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CInterfaceFile.cs#L431-L431">Drilling.File/JHMI/CInterfaceFile.cs:431–431</a></td><td>CCsvParser.ReadRequiredInt</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L679-L683">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:679–683</a></td><td>CCsvParser.ReadRequiredInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CAlarmListFile.cs#L21-L21">Drilling.File/JHMI/CAlarmListFile.cs:21–21</a></td><td>CCsvParser.ReadRequiredInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CInterfaceFile.cs#L431-L431">Drilling.File/JHMI/CInterfaceFile.cs:431–431</a></td><td>CCsvParser.ReadRequiredInt</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L747-L751">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:747–751</a></td><td>CCsvParser.ReadRequiredInt</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -992,7 +992,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L219">MethodDeclaration <code>ReadDouble</code> · L219–227</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L219-L227">Drilling.File/Parser/CCsvParser.cs:219–227</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L219-L227">Drilling.File/Parser/CCsvParser.cs:219–227</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>double Drilling.File.Parser.CCsvParser.ReadDouble(string, string, int, string, double)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1009,8 +1009,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMelsecMapFile.cs#L256-L256">Drilling.File/JHMI/CMelsecMapFile.cs:256–256</a></td><td>CCsvParser.ReadDouble</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L276-L276">Drilling.File/JHMI/CMotorFile.cs:276–276</a></td><td>CCsvParser.ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMelsecMapFile.cs#L256-L256">Drilling.File/JHMI/CMelsecMapFile.cs:256–256</a></td><td>CCsvParser.ReadDouble</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMotorFile.cs#L276-L276">Drilling.File/JHMI/CMotorFile.cs:276–276</a></td><td>CCsvParser.ReadDouble</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1036,7 +1036,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L229">MethodDeclaration <code>ReadBool</code> · L229–242</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L229-L242">Drilling.File/Parser/CCsvParser.cs:229–242</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L229-L242">Drilling.File/Parser/CCsvParser.cs:229–242</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.File.Parser.CCsvParser.ReadBool(string, bool)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1050,8 +1050,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMelsecMapFile.cs#L246-L246">Drilling.File/JHMI/CMelsecMapFile.cs:246–246</a></td><td>CCsvParser.ReadBool</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L266-L266">Drilling.File/JHMI/CMotorFile.cs:266–266</a></td><td>CCsvParser.ReadBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMelsecMapFile.cs#L246-L246">Drilling.File/JHMI/CMelsecMapFile.cs:246–246</a></td><td>CCsvParser.ReadBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMotorFile.cs#L266-L266">Drilling.File/JHMI/CMotorFile.cs:266–266</a></td><td>CCsvParser.ReadBool</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1076,7 +1076,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L244">MethodDeclaration <code>ReadRequiredBool</code> · L244–251</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L244-L251">Drilling.File/Parser/CCsvParser.cs:244–251</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L244-L251">Drilling.File/Parser/CCsvParser.cs:244–251</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.File.Parser.CCsvParser.ReadRequiredBool(string, string, int, string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1092,7 +1092,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CInterfaceFile.cs#L426-L426">Drilling.File/JHMI/CInterfaceFile.cs:426–426</a></td><td>CCsvParser.ReadRequiredBool</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CInterfaceFile.cs#L426-L426">Drilling.File/JHMI/CInterfaceFile.cs:426–426</a></td><td>CCsvParser.ReadRequiredBool</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1114,7 +1114,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L253">MethodDeclaration <code>ReadHeaders</code> · L253–278</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L253-L278">Drilling.File/Parser/CCsvParser.cs:253–278</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L253-L278">Drilling.File/Parser/CCsvParser.cs:253–278</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;string&gt; Drilling.File.Parser.CCsvParser.ReadHeaders(string)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1127,8 +1127,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L287-L287">Drilling.File/Parser/CCsvParser.cs:287–287</a></td><td>ReadHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewResult/CReviewResultFile.cs#L208-L208">Drilling.File/ReviewResult/CReviewResultFile.cs:208–208</a></td><td>CCsvParser.ReadHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L287-L287">Drilling.File/Parser/CCsvParser.cs:287–287</a></td><td>ReadHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L209-L209">Drilling.File/ReviewResult/CReviewResultFile.cs:209–209</a></td><td>CCsvParser.ReadHeaders</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1172,7 +1172,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L261">LocalFunctionStatement <code>SelectItem</code> · L261–264</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L261-L264">Drilling.File/Parser/CCsvParser.cs:261–264</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L261-L264">Drilling.File/Parser/CCsvParser.cs:261–264</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectItem(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1195,7 +1195,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L266">LocalFunctionStatement <code>ShouldIncludeItem</code> · L266–269</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L266-L269">Drilling.File/Parser/CCsvParser.cs:266–269</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L266-L269">Drilling.File/Parser/CCsvParser.cs:266–269</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool ShouldIncludeItem(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1218,7 +1218,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L280">MethodDeclaration <code>ValidateRequiredHeaders</code> · L280–329</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L280-L329">Drilling.File/Parser/CCsvParser.cs:280–329</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L280-L329">Drilling.File/Parser/CCsvParser.cs:280–329</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.File.Parser.CCsvParser.ValidateRequiredHeaders(string, string, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.IEnumerable&lt;string&gt;&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1233,20 +1233,20 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CAlarmListFile.cs#L14-L14">Drilling.File/JHMI/CAlarmListFile.cs:14–14</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L130-L130">Drilling.File/JHMI/CConfigStructureFile.cs:130–130</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L151-L151">Drilling.File/JHMI/CConfigStructureFile.cs:151–151</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CConfigStructureFile.cs#L209-L209">Drilling.File/JHMI/CConfigStructureFile.cs:209–209</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CInterfaceFile.cs#L83-L83">Drilling.File/JHMI/CInterfaceFile.cs:83–83</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L857-L857">Drilling.File/JHMI/CJhmiRecipeFile.cs:857–857</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMelsecMapFile.cs#L34-L34">Drilling.File/JHMI/CMelsecMapFile.cs:34–34</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CMotorFile.cs#L59-L59">Drilling.File/JHMI/CMotorFile.cs:59–59</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L150-L150">Drilling.File/JHMI/CSettingFile.cs:150–150</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L331-L331">Drilling.File/JHMI/CSettingFile.cs:331–331</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L82-L82">Drilling.File/PowerTable/CPowerTableFile.cs:82–82</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/PowerTable/CPowerTableFile.cs#L226-L226">Drilling.File/PowerTable/CPowerTableFile.cs:226–226</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L425-L428">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:425–428</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L640-L643">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:640–643</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CAlarmListFile.cs#L14-L14">Drilling.File/JHMI/CAlarmListFile.cs:14–14</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L130-L130">Drilling.File/JHMI/CConfigStructureFile.cs:130–130</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L151-L151">Drilling.File/JHMI/CConfigStructureFile.cs:151–151</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CConfigStructureFile.cs#L209-L209">Drilling.File/JHMI/CConfigStructureFile.cs:209–209</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CInterfaceFile.cs#L83-L83">Drilling.File/JHMI/CInterfaceFile.cs:83–83</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L858-L858">Drilling.File/JHMI/CJhmiRecipeFile.cs:858–858</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMelsecMapFile.cs#L34-L34">Drilling.File/JHMI/CMelsecMapFile.cs:34–34</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CMotorFile.cs#L59-L59">Drilling.File/JHMI/CMotorFile.cs:59–59</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L152-L152">Drilling.File/JHMI/CSettingFile.cs:152–152</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L341-L341">Drilling.File/JHMI/CSettingFile.cs:341–341</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L82-L82">Drilling.File/PowerTable/CPowerTableFile.cs:82–82</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/PowerTable/CPowerTableFile.cs#L226-L226">Drilling.File/PowerTable/CPowerTableFile.cs:226–226</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L492-L495">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:492–495</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L708-L711">Drilling.File/ReviewOffset/CReviewOffsetFile.cs:708–711</a></td><td>CCsvParser.ValidateRequiredHeaders</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1303,7 +1303,7 @@
  M --&gt;|포함| N2</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L294">LocalFunctionStatement <code>ShouldIncludeItem</code> · L294–297</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L294-L297">Drilling.File/Parser/CCsvParser.cs:294–297</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L294-L297">Drilling.File/Parser/CCsvParser.cs:294–297</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool ShouldIncludeItem(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1326,7 +1326,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L299">LocalFunctionStatement <code>SelectItem</code> · L299–302</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L299-L302">Drilling.File/Parser/CCsvParser.cs:299–302</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L299-L302">Drilling.File/Parser/CCsvParser.cs:299–302</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectItem(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1349,7 +1349,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L304">LocalFunctionStatement <code>SelectValue</code> · L304–307</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L304-L307">Drilling.File/Parser/CCsvParser.cs:304–307</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L304-L307">Drilling.File/Parser/CCsvParser.cs:304–307</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string[] SelectValue(System.Collections.Generic.IEnumerable&lt;string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1376,7 +1376,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L309">LocalFunctionStatement <code>MatchesItem</code> · L309–312</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L309-L312">Drilling.File/Parser/CCsvParser.cs:309–312</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L309-L312">Drilling.File/Parser/CCsvParser.cs:309–312</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool MatchesItem(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1401,7 +1401,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L314">LocalFunctionStatement <code>MatchesLength</code> · L314–317</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L314-L317">Drilling.File/Parser/CCsvParser.cs:314–317</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L314-L317">Drilling.File/Parser/CCsvParser.cs:314–317</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool MatchesLength(string[])</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1424,7 +1424,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L319">LocalFunctionStatement <code>SelectString</code> · L319–322</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L319-L322">Drilling.File/Parser/CCsvParser.cs:319–322</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L319-L322">Drilling.File/Parser/CCsvParser.cs:319–322</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectString(string[])</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1447,7 +1447,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L331">MethodDeclaration <code>GetExtra</code> · L331–350</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L331-L350">Drilling.File/Parser/CCsvParser.cs:331–350</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L331-L350">Drilling.File/Parser/CCsvParser.cs:331–350</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt; Drilling.File.Parser.CCsvParser.GetExtra(System.Collections.Generic.IReadOnlyDictionary&lt;string, string&gt;, System.Collections.Generic.IEnumerable&lt;string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, static</td></tr>
@@ -1461,9 +1461,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CInterfaceFile.cs#L103-L103">Drilling.File/JHMI/CInterfaceFile.cs:103–103</a></td><td>CCsvParser.GetExtra</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CJhmiRecipeFile.cs#L877-L877">Drilling.File/JHMI/CJhmiRecipeFile.cs:877–877</a></td><td>CCsvParser.GetExtra</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CSettingFile.cs#L181-L181">Drilling.File/JHMI/CSettingFile.cs:181–181</a></td><td>CCsvParser.GetExtra</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CInterfaceFile.cs#L103-L103">Drilling.File/JHMI/CInterfaceFile.cs:103–103</a></td><td>CCsvParser.GetExtra</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CJhmiRecipeFile.cs#L878-L878">Drilling.File/JHMI/CJhmiRecipeFile.cs:878–878</a></td><td>CCsvParser.GetExtra</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L183-L183">Drilling.File/JHMI/CSettingFile.cs:183–183</a></td><td>CCsvParser.GetExtra</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1482,7 +1482,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L334">LocalFunctionStatement <code>ShouldIncludeItem</code> · L334–337</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L334-L337">Drilling.File/Parser/CCsvParser.cs:334–337</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L334-L337">Drilling.File/Parser/CCsvParser.cs:334–337</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool ShouldIncludeItem(System.Collections.Generic.KeyValuePair&lt;string, string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1505,7 +1505,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L339">LocalFunctionStatement <code>SelectKey</code> · L339–342</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L339-L342">Drilling.File/Parser/CCsvParser.cs:339–342</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L339-L342">Drilling.File/Parser/CCsvParser.cs:339–342</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectKey(System.Collections.Generic.KeyValuePair&lt;string, string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1523,7 +1523,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L344">LocalFunctionStatement <code>SelectValue</code> · L344–347</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L344-L347">Drilling.File/Parser/CCsvParser.cs:344–347</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L344-L347">Drilling.File/Parser/CCsvParser.cs:344–347</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectValue(System.Collections.Generic.KeyValuePair&lt;string, string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1541,7 +1541,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L352">MethodDeclaration <code>ParseLine</code> · L352–390</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L352-L390">Drilling.File/Parser/CCsvParser.cs:352–390</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L352-L390">Drilling.File/Parser/CCsvParser.cs:352–390</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.List&lt;string&gt; Drilling.File.Parser.CCsvParser.ParseLine(string, string, int)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1556,9 +1556,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L33-L33">Drilling.File/Parser/CCsvParser.cs:33–33</a></td><td>ParseLine</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L44-L44">Drilling.File/Parser/CCsvParser.cs:44–44</a></td><td>ParseLine</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L271-L271">Drilling.File/Parser/CCsvParser.cs:271–271</a></td><td>ParseLine</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L33-L33">Drilling.File/Parser/CCsvParser.cs:33–33</a></td><td>ParseLine</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L44-L44">Drilling.File/Parser/CCsvParser.cs:44–44</a></td><td>ParseLine</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L271-L271">Drilling.File/Parser/CCsvParser.cs:271–271</a></td><td>ParseLine</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1629,7 +1629,7 @@
  M --&gt;|포함| N7</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L392">MethodDeclaration <code>ValidateHeaders</code> · L392–415</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L392-L415">Drilling.File/Parser/CCsvParser.cs:392–415</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L392-L415">Drilling.File/Parser/CCsvParser.cs:392–415</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.File.Parser.CCsvParser.ValidateHeaders(string, System.Collections.Generic.IReadOnlyList&lt;string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1643,8 +1643,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L34-L34">Drilling.File/Parser/CCsvParser.cs:34–34</a></td><td>ValidateHeaders</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L274-L274">Drilling.File/Parser/CCsvParser.cs:274–274</a></td><td>ValidateHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L34-L34">Drilling.File/Parser/CCsvParser.cs:34–34</a></td><td>ValidateHeaders</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L274-L274">Drilling.File/Parser/CCsvParser.cs:274–274</a></td><td>ValidateHeaders</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1699,7 +1699,7 @@
  M --&gt;|포함| N1</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L400">LocalFunctionStatement <code>ShouldIncludeItem</code> · L400–403</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L400-L403">Drilling.File/Parser/CCsvParser.cs:400–403</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L400-L403">Drilling.File/Parser/CCsvParser.cs:400–403</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool ShouldIncludeItem(System.Linq.IGrouping&lt;string, string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1722,7 +1722,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L405">LocalFunctionStatement <code>SelectItem</code> · L405–408</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L405-L408">Drilling.File/Parser/CCsvParser.cs:405–408</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L405-L408">Drilling.File/Parser/CCsvParser.cs:405–408</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string SelectItem(System.Linq.IGrouping&lt;string, string&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private /</td></tr>
@@ -1745,7 +1745,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L417">MethodDeclaration <code>Escape</code> · L417–425</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L417-L425">Drilling.File/Parser/CCsvParser.cs:417–425</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L417-L425">Drilling.File/Parser/CCsvParser.cs:417–425</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.File.Parser.CCsvParser.Escape(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1758,8 +1758,8 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L86-L86">Drilling.File/Parser/CCsvParser.cs:86–86</a></td><td>Escape</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L114-L114">Drilling.File/Parser/CCsvParser.cs:114–114</a></td><td>Escape</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L86-L86">Drilling.File/Parser/CCsvParser.cs:86–86</a></td><td>Escape</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L114-L114">Drilling.File/Parser/CCsvParser.cs:114–114</a></td><td>Escape</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1787,7 +1787,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L427">MethodDeclaration <code>NormalizeHeader</code> · L427–430</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L427-L430">Drilling.File/Parser/CCsvParser.cs:427–430</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L427-L430">Drilling.File/Parser/CCsvParser.cs:427–430</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.File.Parser.CCsvParser.NormalizeHeader(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1800,9 +1800,9 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L236-L236">Drilling.File/Parser/CCsvParser.cs:236–236</a></td><td>NormalizeHeader</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L246-L246">Drilling.File/Parser/CCsvParser.cs:246–246</a></td><td>NormalizeHeader</td><td>False</td></tr>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L311-L311">Drilling.File/Parser/CCsvParser.cs:311–311</a></td><td>NormalizeHeader</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L236-L236">Drilling.File/Parser/CCsvParser.cs:236–236</a></td><td>NormalizeHeader</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L246-L246">Drilling.File/Parser/CCsvParser.cs:246–246</a></td><td>NormalizeHeader</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L311-L311">Drilling.File/Parser/CCsvParser.cs:311–311</a></td><td>NormalizeHeader</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1817,7 +1817,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L432">MethodDeclaration <code>ReadCsvText</code> · L432–453</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L432-L453">Drilling.File/Parser/CCsvParser.cs:432–453</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L432-L453">Drilling.File/Parser/CCsvParser.cs:432–453</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.File.Parser.CCsvParser.ReadCsvText(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1830,7 +1830,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L154-L154">Drilling.File/Parser/CCsvParser.cs:154–154</a></td><td>ReadCsvText</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L154-L154">Drilling.File/Parser/CCsvParser.cs:154–154</a></td><td>ReadCsvText</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1871,7 +1871,7 @@
  N2 --&gt;|포함| N3</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L455">MethodDeclaration <code>HasUtf8Bom</code> · L455–458</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L455-L458">Drilling.File/Parser/CCsvParser.cs:455–458</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L455-L458">Drilling.File/Parser/CCsvParser.cs:455–458</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>bool Drilling.File.Parser.CCsvParser.HasUtf8Bom(System.Collections.Generic.IReadOnlyList&lt;byte&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1884,7 +1884,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L440-L440">Drilling.File/Parser/CCsvParser.cs:440–440</a></td><td>HasUtf8Bom</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L440-L440">Drilling.File/Parser/CCsvParser.cs:440–440</a></td><td>HasUtf8Bom</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
@@ -1892,7 +1892,7 @@
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L460">MethodDeclaration <code>SplitLines</code> · L460–470</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L460-L470">Drilling.File/Parser/CCsvParser.cs:460–470</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L460-L470">Drilling.File/Parser/CCsvParser.cs:460–470</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string[] Drilling.File.Parser.CCsvParser.SplitLines(string)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>
@@ -1905,7 +1905,7 @@
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L154-L154">Drilling.File/Parser/CCsvParser.cs:154–154</a></td><td>SplitLines</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L154-L154">Drilling.File/Parser/CCsvParser.cs:154–154</a></td><td>SplitLines</td><td>False</td></tr>
 </tbody></table>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
@@ -1936,7 +1936,7 @@
  M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h3 id="L472">MethodDeclaration <code>GetKoreanCsvEncoding</code> · L472–476</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Parser/CCsvParser.cs#L472-L476">Drilling.File/Parser/CCsvParser.cs:472–476</a></p>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Parser/CCsvParser.cs#L472-L476">Drilling.File/Parser/CCsvParser.cs:472–476</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Text.Encoding Drilling.File.Parser.CCsvParser.GetKoreanCsvEncoding()</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, static</td></tr>

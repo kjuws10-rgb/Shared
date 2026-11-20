@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | 8db838e7549d1716f5bbad238645b5f0cd2f9c61436bda42d6e122f0cfb55872 |
 | 파일 분류 | code |
 | 원본 크기/행 | 2,945,115 bytes / 41,899 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/Sdk/Aerotech.Automation1.DotNet.xml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Automation1/Sdk/Aerotech.Automation1.DotNet.xml) |
 
 ## 파일의 역할과 읽는 순서
 

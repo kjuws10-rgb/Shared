@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+  "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
   "diagrams": [
     {
       "id": "review-01",
@@ -8,7 +8,7 @@
       "nodes": [
         {
           "id": "recipe",
-          "label": "Recipe·Setting\nShift와 Beam 조건",
+          "label": "Recipe + Setting Margin\n0 이상 유한 mm 검증",
           "x": 50,
           "y": 115,
           "kind": "step",
@@ -26,7 +26,7 @@
         },
         {
           "id": "select",
-          "label": "INSPECTION 내부 모드\\nShot별 Beam 작업표",
+          "label": "INSPECTION 내부 모드\nRUN / RESULT 분리",
           "x": 650,
           "y": 115,
           "kind": "step",
@@ -71,7 +71,7 @@
         },
         {
           "id": "open",
-          "label": "최근 결과 LOAD / CLEAR\\n로드 중 실행 차단",
+          "label": "RESULT 자동 LOAD\n현재 Recipe로 재구성",
           "x": 50,
           "y": 320,
           "kind": "step",
@@ -117,11 +117,11 @@
         }
       ],
       "notes": [
-        "상위 다섯 탭: INSPECTION / SIMPLE / ROUGH / FINE / REVIEW DATA.",
-        "Shot별 Beam Task 합계로 실행합니다. 일반 Review는 DOE_EXIST와 별개입니다."
+        "AK Margin은 Setting, 카메라 AK 축 위치는 Recipe에서 읽습니다. 두 기준을 구별합니다.",
+        "기존 파일 LOAD에는 당시 Setting/Recipe hash 일치 검증이 별도로 필요합니다."
       ],
       "chapter": "01_Review_계획과_좌표계.md",
-      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -161,7 +161,7 @@
         },
         {
           "id": "one",
-          "label": "ONE LINE: 기준 Shot\n전체 Glass Y 줄",
+          "label": "ONE LINE: Glass Y 줄\nDIRECT_LINE 보정 지원",
           "x": 650,
           "y": 325,
           "kind": "step",
@@ -248,11 +248,11 @@
         }
       ],
       "notes": [
-        "마스크로 빈 검사 줄이 되어도 다음 유효 row를 찾는 자동 대체는 확인되지 않습니다.",
-        "점 제외와 실제 Stage 선분 우회는 별도입니다. 유효 anchor 양 끝 밖은 외삽 시험 대상입니다."
+        "Fine의 마스킹된 행 자동 대체와 이동 선분 우회는 이번 변경에 추가되지 않았습니다.",
+        "점/순서/실제 촬영 Count와 요청 LINE_COUNT를 함께 확인합니다."
       ],
       "chapter": "02_Masking_Sampling_IOF.md",
-      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -310,7 +310,7 @@
         },
         {
           "id": "save",
-          "label": "VisionResultCode·NgReason\nCSV·실행 요약에 보관",
+          "label": "결과 CSV F6 mm\n픽셀 환산과 별개",
           "x": 650,
           "y": 325,
           "kind": "step",
@@ -374,11 +374,11 @@
         }
       ],
       "notes": [
-        "L1~L4는 현재 OPTION 표시색이며 품질 Judge·보정 적격 판정을 바꾸지 않습니다.",
-        "live는 VisionFind NG를 등급에서 빼지만 LOAD는 오차값만으로 등급을 계산합니다."
+        "Vision 패킷·Flip·Tolerance·Level과 CSV/최종 Offset 반올림은 각기 다릅니다.",
+        "Number의 F3 추가 반올림은 제거됐으나 COPY F3와 최종 Offset 0.001mm는 유지됩니다."
       ],
       "chapter": "03_Vision_패킷과_단위.md",
-      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -391,7 +391,7 @@
       "nodes": [
         {
           "id": "result",
-          "label": "BASE / REINSP / EDIT\nMEASURED 출처 확인",
+          "label": "BASE / REINSP / EDIT\n출처와 판정을 함께 확인",
           "x": 50,
           "y": 115,
           "kind": "step",
@@ -400,7 +400,7 @@
         },
         {
           "id": "filter",
-          "label": "형식별 적용 후보\n출처 없으면 Judge fallback",
+          "label": "MEASURED / RETAINED\nEDITED 후보 포함",
           "x": 350,
           "y": 115,
           "kind": "step",
@@ -418,7 +418,7 @@
         },
         {
           "id": "snapshot",
-          "label": "새 DESIGN Offset snapshot\nsource 경로 적용 이력",
+          "label": "새 DESIGN Offset\n전일자 경로 중복 이력",
           "x": 950,
           "y": 115,
           "kind": "step",
@@ -454,7 +454,7 @@
         },
         {
           "id": "risk",
-          "label": "RETAINED 필터 차이\\nlive와 파일 APPLY 비교",
+          "label": "경로·Revision 계보\n외부 cache 변경은 별도",
           "x": 50,
           "y": 325,
           "kind": "warn",
@@ -500,11 +500,11 @@
         }
       ],
       "notes": [
-        "Fine 실제 저장은 Lagrange입니다. 별도 선형 projection의 활성 Fine UI 진입은 미확인입니다.",
-        "재개 live와 파일 MEASURED 필터의 anchor 차이는 기존 잔건입니다. 새 diff와 구분합니다."
+        "RETAINED 포함으로 재개 live/파일 anchor 차이는 개선됐습니다. EDITED도 보정 후보입니다.",
+        "익일 동일경로는 차단합니다. 다른 경로·새 Revision의 내용 계보까지 묶지는 않습니다."
       ],
       "chapter": "04_ReviewOffset_적용과_롤백.md",
-      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -544,7 +544,7 @@
         },
         {
           "id": "edit",
-          "label": "KEY IN / COPY 후보\nX/Y·JUDGE 독립 선택",
+          "label": "COPY X / Y / JUDGE / ALL\nORG값을 편집 후보로",
           "x": 350,
           "y": 325,
           "kind": "step",
@@ -562,7 +562,7 @@
         },
         {
           "id": "load",
-          "label": "최근 MANUAL 결과 LOAD\\n현재 Recipe로 위치 재구성",
+          "label": "INSPECTION RESULT\n선택 모드 결과 자동 LOAD",
           "x": 950,
           "y": 325,
           "kind": "step",
@@ -571,7 +571,7 @@
         },
         {
           "id": "offset",
-          "label": "별도 OFFSET APPLY\n형식·출처에 따라 소비",
+          "label": "별도 OFFSET APPLY\nBEAM INSP는 금지",
           "x": 950,
           "y": 115,
           "kind": "step",
@@ -631,11 +631,11 @@
         }
       ],
       "notes": [
-        "파일 열람·Revision 생성·Offset 적용·Product 상태는 별개 수명입니다.",
-        "같은 RecipeId의 내용 변경 후 과거 결과를 현재 geometry로 재구성하는 경계를 검증합니다."
+        "COPY ALL만 X/Y와 판정을 함께 복제합니다. 원대표의 Vision 상세 NG metadata 복사는 아닙니다.",
+        "결과 편집·새 Revision·보정 snapshot·Product 상태는 별도 수명입니다."
       ],
       "chapter": "05_결과_Revision_Product_연결.md",
-      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -757,11 +757,11 @@
         }
       ],
       "notes": [
-        "AK3 입력은 자동 새 측정이나 AK4점 글로벌 X/Y 회전 피팅이 아닙니다.",
-        "혼합 DOE는 Default 검사에서 지원합니다. 일반 Review 자동 Beam 대응은 범위 밖입니다."
+        "H4/H5 중앙±55, 나머지110mm는 HeadGapX=110 조건에서 유지됩니다.",
+        "원빔은 DOE 없는 zero order 실제 출사1점입니다. 최초검색·θ보정은 새로 추가되지 않았습니다."
       ],
       "chapter": "06_DefaultOffset_ZeroOrder_FirstBeam.md",
-      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,
@@ -774,7 +774,7 @@
       "nodes": [
         {
           "id": "distortion",
-          "label": "Distortion: 조건 동결\nAK·DK mm 수신",
+          "label": "Distortion 조건 동결\nSetting Margin + AK/DK mm",
           "x": 50,
           "y": 115,
           "kind": "step",
@@ -883,11 +883,11 @@
         }
       ],
       "notes": [
-        "Distortion·Window 시퀀스는 이번 diff에서 바뀌지 않았습니다. 기존 계약·후속 시험을 유지합니다.",
-        "Distortion X선형→Y Lagrange와 Fine Cell/X열 Y Lagrange는 입력·저장·소비가 다릅니다."
+        "Distortion snapshot은 Setting Margin을 동결합니다. 다음 가공 기준 변경을 별도 확인합니다.",
+        "AUTO Fine의 Shift0과 보호윈도우 retry 정책은 유지됩니다."
       ],
       "chapter": "07_Align_Distortion_윈도우_복구.md",
-      "source_commit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+      "source_commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
       "evidence_level": "static_source_only",
       "canvas": {
         "width": 1260,

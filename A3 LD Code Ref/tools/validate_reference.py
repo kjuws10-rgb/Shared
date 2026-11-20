@@ -4,11 +4,11 @@ import html
 from urllib.parse import unquote,urlsplit
 import argparse,collections,hashlib,json,re,subprocess,xml.etree.ElementTree as ET
 
-VERSION='1.1.1'
+VERSION='1.1.3'
 
 # Independent validation snapshot: do not import the generator event whitelist.
 # A missing new event is also surfaced from code-behind EventArgs method signatures.
-VALIDATION_WPF_EVENTS = frozenset('Activated AutoGeneratingColumn Checked Click Closed Closing ContentRendered ContextMenuClosing ContextMenuOpening DataContextChanged Deactivated DragEnter DragLeave DragOver Drop DropDownClosed DropDownOpened Expanded GotFocus GotKeyboardFocus Indeterminate Initialized IsEnabledChanged IsVisibleChanged KeyDown KeyUp LayoutUpdated Loaded LoadingRow LostFocus LostKeyboardFocus LostMouseCapture MouseDoubleClick MouseDown MouseEnter MouseLeave MouseLeftButtonDown MouseLeftButtonUp MouseMove MouseRightButtonDown MouseRightButtonUp MouseUp MouseWheel PreviewDragEnter PreviewDragLeave PreviewDragOver PreviewDrop PreviewKeyDown PreviewKeyUp PreviewMouseDoubleClick PreviewMouseDown PreviewMouseLeftButtonDown PreviewMouseLeftButtonUp PreviewMouseMove PreviewMouseRightButtonDown PreviewMouseRightButtonUp PreviewMouseUp PreviewMouseWheel PreviewTextInput PreviewTouchDown PreviewTouchMove PreviewTouchUp RequestBringIntoView ScrollChanged SelectedItemChanged SelectionChanged SizeChanged SourceInitialized SourceUpdated TargetUpdated TextChanged ToolTipClosing ToolTipOpening TouchDown TouchMove TouchUp Unchecked Unloaded ValueChanged'.split())
+VALIDATION_WPF_EVENTS = frozenset('Activated AutoGeneratingColumn Checked Click Closed Closing ContentRendered ContextMenuClosing ContextMenuOpening DataContextChanged Deactivated DragEnter DragLeave DragOver Drop DropDownClosed DropDownOpened Expanded GotFocus GotKeyboardFocus Indeterminate Initialized IsEnabledChanged IsVisibleChanged KeyDown KeyUp LayoutUpdated Loaded LoadingRow LostFocus LostKeyboardFocus LostMouseCapture MouseDoubleClick MouseDown MouseEnter MouseLeave MouseLeftButtonDown MouseLeftButtonUp MouseMove MouseRightButtonDown MouseRightButtonUp MouseUp MouseWheel PasswordChanged PreviewDragEnter PreviewDragLeave PreviewDragOver PreviewDrop PreviewKeyDown PreviewKeyUp PreviewMouseDoubleClick PreviewMouseDown PreviewMouseLeftButtonDown PreviewMouseLeftButtonUp PreviewMouseMove PreviewMouseRightButtonDown PreviewMouseRightButtonUp PreviewMouseUp PreviewMouseWheel PreviewTextInput PreviewTouchDown PreviewTouchMove PreviewTouchUp RequestBringIntoView ScrollChanged SelectedItemChanged SelectionChanged SizeChanged SourceInitialized SourceUpdated TargetUpdated TextChanged ToolTipClosing ToolTipOpening TouchDown TouchMove TouchUp Unchecked Unloaded ValueChanged'.split())
 NON_EVENT_ATTRIBUTES = frozenset('Name Class Title Text Content Header Tag ToolTip Command CommandParameter DataContext TargetType Key Value Property Source Path ElementName Mode StringFormat'.split())
 
 def expected_xaml_events(xml, codebehind_members=()):
@@ -171,10 +171,10 @@ def validate(source,output):
             # Links written inside source/code fences are evidence text, not documentation navigation.
             clean=[];fence=None
             for l in s.splitlines():
-                match=re.match(r'^(`{3,})',l)
+                match=re.match(r'^ {0,3}(`{3,}|~{3,})(.*)$',l)
                 if match:
                     if fence is None:fence=match[1]
-                    elif len(match[1])>=len(fence):fence=None
+                    elif match[1][0]==fence[0] and len(match[1])>=len(fence) and not match[2].strip():fence=None
                     continue
                 if fence is None:clean.append(l)
             check(fence is None,str(p.relative_to(output))+' unclosed code fence')

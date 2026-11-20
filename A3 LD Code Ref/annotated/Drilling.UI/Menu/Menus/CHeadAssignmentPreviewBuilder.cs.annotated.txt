@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs
-Commit: 96e22cd027c84bf302b23f2949b98985d7f301bb
+Commit: 28764c91d521777b8ee068dd7aaf2d3902ce9fe2
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
@@ -164,10 +164,10 @@ L000084 |         var frame = CreateGlassFrame(parameters); ⟦EOL⟧
 L000085 |         var glassWidth = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X"); ⟦EOL⟧
 // 해설 L86: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y") / 지역 변수를 선언합니다: var glassHeight = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y"); / 변수의 초기값을 지정합니다: glassHeight = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y")
 L000086 |         var glassHeight = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_Y"); ⟦EOL⟧
-// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X") / 지역 변수를 선언합니다: var akMarginX = ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X"); / 변수의 초기값을 지정합니다: akMarginX = ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X")
-L000087 |         var akMarginX = ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X"); ⟦EOL⟧
-// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 45.0, "AK_MARGIN_Y") / 지역 변수를 선언합니다: var akMarginY = ReadDoubleAny(parameters, 45.0, "AK_MARGIN_Y"); / 변수의 초기값을 지정합니다: akMarginY = ReadDoubleAny(parameters, 45.0, "AK_MARGIN_Y")
-L000088 |         var akMarginY = ReadDoubleAny(parameters, 45.0, "AK_MARGIN_Y"); ⟦EOL⟧
+// 해설 L87: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, double.NaN, "AK_MARGIN_X") / 지역 변수를 선언합니다: var akMarginX = ReadDoubleAny(parameters, double.NaN, "AK_MARGIN_X"); / 변수의 초기값을 지정합니다: akMarginX = ReadDoubleAny(parameters, double.NaN, "AK_MARGIN_X")
+L000087 |         var akMarginX = ReadDoubleAny(parameters, double.NaN, "AK_MARGIN_X"); ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, double.NaN, "AK_MARGIN_Y") / 지역 변수를 선언합니다: var akMarginY = ReadDoubleAny(parameters, double.NaN, "AK_MARGIN_Y"); / 변수의 초기값을 지정합니다: akMarginY = ReadDoubleAny(parameters, double.NaN, "AK_MARGIN_Y")
+L000088 |         var akMarginY = ReadDoubleAny(parameters, double.NaN, "AK_MARGIN_Y"); ⟦EOL⟧
 // 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassWidth) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(glassHeight) / 조건에 따라 분기합니다: if (!double.IsFinite(glassWidth) || !double.IsFinite(glassHeight) || glassWidth <= 0.0 || glassHeight <= 0.0)
 L000089 |         if (!double.IsFinite(glassWidth) || !double.IsFinite(glassHeight) || glassWidth <= 0.0 || glassHeight <= 0.0) ⟦EOL⟧
 // 해설 L90: 구문 블록 경계입니다 · 소속 BuildRecipePreview.
@@ -806,8 +806,8 @@ L000427 |         const int headCount = 8; ⟦EOL⟧
 L000428 |         var frame = CreateGlassFrame(parameters); ⟦EOL⟧
 // 해설 L429: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X") / 지역 변수를 선언합니다: var glassWidth = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X"); / 변수의 초기값을 지정합니다: glassWidth = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X")
 L000429 |         var glassWidth = ReadDoubleAny(parameters, 0.0, "GLASS_SIZE_X"); ⟦EOL⟧
-// 해설 L430: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X") / 지역 변수를 선언합니다: var akMarginX = ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X"); / 변수의 초기값을 지정합니다: akMarginX = ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X")
-L000430 |         var akMarginX = ReadDoubleAny(parameters, 55.0, "AK_MARGIN_X"); ⟦EOL⟧
+// 해설 L430: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDoubleAny(parameters, double.NaN, "AK_MARGIN_X") / 지역 변수를 선언합니다: var akMarginX = ReadDoubleAny(parameters, double.NaN, "AK_MARGIN_X"); / 변수의 초기값을 지정합니다: akMarginX = ReadDoubleAny(parameters, double.NaN, "AK_MARGIN_X")
+L000430 |         var akMarginX = ReadDoubleAny(parameters, double.NaN, "AK_MARGIN_X"); ⟦EOL⟧
 // 해설 L431: 함수·델리게이트 또는 객체 생성자를 호출합니다: BuildEnabledHeadNumbers(parameters, headCount) / 지역 변수를 선언합니다: var activeHeadNos = BuildEnabledHeadNumbers(parameters, headCount); / 변수의 초기값을 지정합니다: activeHeadNos = BuildEnabledHeadNumbers(parameters, headCount)
 L000431 |         var activeHeadNos = BuildEnabledHeadNumbers(parameters, headCount); ⟦EOL⟧
 // 해설 L432: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_HEAD_ASSIGNMENT_AREA>(activeHeadNos.Count) / 지역 변수를 선언합니다: var areas = new List<ST_HEAD_ASSIGNMENT_AREA>(activeHeadNos.Count); / 변수의 초기값을 지정합니다: areas = new List<ST_HEAD_ASSIGNMENT_AREA>(activeHeadNos.Count)

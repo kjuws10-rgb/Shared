@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | b44f86162fa4efb0ad73a858a5d29f19cc0776602e15b77f12a7b6e4aa4d3268 |
 | 파일 분류 | code |
 | 원본 크기/행 | 4,228 bytes / 108 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -48,7 +48,7 @@
 
 ### FieldDeclaration `Headers` · L13–13
 
-[Drilling.File/JHMI/CBETFile.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L13-L13)
+[Drilling.File/JHMI/CBETFile.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -69,7 +69,7 @@
 
 ### MethodDeclaration `Load` · L14–19
 
-[Drilling.File/JHMI/CBETFile.cs:14–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L14-L19)
+[Drilling.File/JHMI/CBETFile.cs:14–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L14-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -111,7 +111,7 @@
 
 ### MethodDeclaration `Save` · L21–26
 
-[Drilling.File/JHMI/CBETFile.cs:21–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L21-L26)
+[Drilling.File/JHMI/CBETFile.cs:21–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L21-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -150,7 +150,7 @@
 
 ### MethodDeclaration `EnsureFiles` · L28–34
 
-[Drilling.File/JHMI/CBETFile.cs:28–34](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L28-L34)
+[Drilling.File/JHMI/CBETFile.cs:28–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L28-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -163,7 +163,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CBETFile.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L17-L17) | EnsureFiles | False |
+| [Drilling.File/JHMI/CBETFile.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L17-L17) | EnsureFiles | False |
 
 호출하는 대상과 해석 범위:
 
@@ -199,7 +199,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadTable` · L36–54
 
-[Drilling.File/JHMI/CBETFile.cs:36–54](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L36-L54)
+[Drilling.File/JHMI/CBETFile.cs:36–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L36-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -218,7 +218,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CBETFile.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L18-L18) | ReadTable | False |
+| [Drilling.File/JHMI/CBETFile.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L18-L18) | ReadTable | False |
 
 호출하는 대상과 해석 범위:
 
@@ -245,7 +245,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L38–41
 
-[Drilling.File/JHMI/CBETFile.cs:38–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L38-L41)
+[Drilling.File/JHMI/CBETFile.cs:38–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L38-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -281,7 +281,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildBet` · L43–46
 
-[Drilling.File/JHMI/CBETFile.cs:43–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L43-L46)
+[Drilling.File/JHMI/CBETFile.cs:43–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L43-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -330,7 +330,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectIndex` · L48–51
 
-[Drilling.File/JHMI/CBETFile.cs:48–51](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L48-L51)
+[Drilling.File/JHMI/CBETFile.cs:48–51](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L48-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -357,7 +357,7 @@ flowchart TD
 
 ### MethodDeclaration `WriteTable` · L56–77
 
-[Drilling.File/JHMI/CBETFile.cs:56–77](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L56-L77)
+[Drilling.File/JHMI/CBETFile.cs:56–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L56-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -377,8 +377,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CBETFile.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L24-L24) | WriteTable | False |
-| [Drilling.File/JHMI/CBETFile.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L32-L32) | WriteTable | False |
+| [Drilling.File/JHMI/CBETFile.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L24-L24) | WriteTable | False |
+| [Drilling.File/JHMI/CBETFile.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L32-L32) | WriteTable | False |
 
 호출하는 대상과 해석 범위:
 
@@ -402,7 +402,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectIndex` · L58–61
 
-[Drilling.File/JHMI/CBETFile.cs:58–61](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L58-L61)
+[Drilling.File/JHMI/CBETFile.cs:58–61](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L58-L61)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -429,7 +429,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildBetTableRow` · L63–73
 
-[Drilling.File/JHMI/CBETFile.cs:63–73](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L63-L73)
+[Drilling.File/JHMI/CBETFile.cs:63–73](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L63-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -476,7 +476,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateDefaultTable` · L79–82
 
-[Drilling.File/JHMI/CBETFile.cs:79–82](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L79-L82)
+[Drilling.File/JHMI/CBETFile.cs:79–82](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L79-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -489,7 +489,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CBETFile.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L32-L32) | CreateDefaultTable | False |
+| [Drilling.File/JHMI/CBETFile.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L32-L32) | CreateDefaultTable | False |
 
 호출하는 대상과 해석 범위:
 
@@ -516,7 +516,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadMotorStep` · L84–92
 
-[Drilling.File/JHMI/CBETFile.cs:84–92](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L84-L92)
+[Drilling.File/JHMI/CBETFile.cs:84–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L84-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -535,8 +535,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CBETFile.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L45-L45) | ReadMotorStep | False |
-| [Drilling.File/JHMI/CBETFile.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L45-L45) | ReadMotorStep | False |
+| [Drilling.File/JHMI/CBETFile.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L45-L45) | ReadMotorStep | False |
+| [Drilling.File/JHMI/CBETFile.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L45-L45) | ReadMotorStep | False |
 
 호출하는 대상과 해석 범위:
 
@@ -570,7 +570,7 @@ flowchart TD
 
 ### MethodDeclaration `GetFormPath` · L94–97
 
-[Drilling.File/JHMI/CBETFile.cs:94–97](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L94-L97)
+[Drilling.File/JHMI/CBETFile.cs:94–97](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L94-L97)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -583,10 +583,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CBETFile.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L18-L18) | GetFormPath | False |
-| [Drilling.File/JHMI/CBETFile.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L24-L24) | GetFormPath | False |
-| [Drilling.File/JHMI/CBETFile.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L30-L30) | GetFormPath | False |
-| [Drilling.File/JHMI/CBETFile.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L32-L32) | GetFormPath | False |
+| [Drilling.File/JHMI/CBETFile.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L18-L18) | GetFormPath | False |
+| [Drilling.File/JHMI/CBETFile.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L24-L24) | GetFormPath | False |
+| [Drilling.File/JHMI/CBETFile.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L30-L30) | GetFormPath | False |
+| [Drilling.File/JHMI/CBETFile.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L32-L32) | GetFormPath | False |
 
 호출하는 대상과 해석 범위:
 
@@ -605,7 +605,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadInt` · L99–102
 
-[Drilling.File/JHMI/CBETFile.cs:99–102](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L99-L102)
+[Drilling.File/JHMI/CBETFile.cs:99–102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L99-L102)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -625,7 +625,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/JHMI/CBETFile.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L45-L45) | ReadInt | False |
+| [Drilling.File/JHMI/CBETFile.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L45-L45) | ReadInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -645,7 +645,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L104–107
 
-[Drilling.File/JHMI/CBETFile.cs:104–107](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/JHMI/CBETFile.cs#L104-L107)
+[Drilling.File/JHMI/CBETFile.cs:104–107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CBETFile.cs#L104-L107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

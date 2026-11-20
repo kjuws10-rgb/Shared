@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
-| 원본 SHA256 | 078cdb5110b41429bfa891ea3d01e39801f9263b6c0671e448bb891ab30dfc31 |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 SHA256 | 5c7cfe44322a363450d005c89c67859d143e0a6fd8aa944d64b932529ef1df72 |
 | 파일 분류 | code |
-| 원본 크기/행 | 92,121 bytes / 1,779 physical lines |
+| 원본 크기/행 | 93,455 bytes / 1,794 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -35,9 +35,9 @@
 | CAutomationPositioningService | ClassDeclaration | 1535–1640 | CAutomationPositioningService |
 | CConfiguredHomeSpeedValues | ClassDeclaration | 1643–1656 | CConfiguredHomeSpeedValues: ReadOnlyDictionary<string, double> |
 | CGalvoTemperature | ClassDeclaration | 1658–1670 | CGalvoTemperature |
-| CManualMotionSession | ClassDeclaration | 1673–1754 | CManualMotionSession |
-| ST_MOF_READINESS | RecordDeclaration | 1756–1756 | ST_MOF_READINESS |
-| CMofReadiness | ClassDeclaration | 1758–1778 | CMofReadiness |
+| CManualMotionSession | ClassDeclaration | 1673–1769 | CManualMotionSession |
+| ST_MOF_READINESS | RecordDeclaration | 1771–1771 | ST_MOF_READINESS |
+| CMofReadiness | ClassDeclaration | 1773–1793 | CMofReadiness |
 
 ## 멤버 빠른 목록
 
@@ -94,74 +94,74 @@
 | ReadAxisStatusByName | MethodDeclaration | L271–284 | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.ReadAxisStatusByName(string, int, int, System.Threading.CancellationToken) |
 | ReadAxisStatusByNameNoLog | MethodDeclaration | L286–299 | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.ReadAxisStatusByNameNoLog(string, int, int, bool, System.Threading.CancellationToken) |
 | RunLocalScript | MethodDeclaration | L301–313 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunLocalScript(string, string, int, int, System.Threading.CancellationToken) |
-| UploadScript | MethodDeclaration | L315–321 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.UploadScript(string, string, int, System.Threading.CancellationToken) |
-| RunScript | MethodDeclaration | L323–334 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunScript(string, int, int, System.Threading.CancellationToken) |
-| RunScriptIfIdle | MethodDeclaration | L336–344 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunScriptIfIdle(string, int, int, System.Threading.CancellationToken) |
-| RunBufferedScript | MethodDeclaration | L346–358 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunBufferedScript(string, string, int, int, int, int, int, System.Threading.CancellationToken) |
-| RunBufferedScripts | MethodDeclaration | L360–367 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunBufferedScripts(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>, int, int, int, int, System.Threading.CancellationToken) |
-| RunStagePreparedBufferedScripts | MethodDeclaration | L372–372 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunStagePreparedBufferedScripts(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>, int, int, int, int, System.Threading.CancellationToken) |
-| RunBufferedScriptsCore | MethodDeclaration | L373–487 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunBufferedScriptsCore(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>, int, int, int, int, bool, bool, System.Threading.CancellationToken) |
-| CreateBufferedRunControllerFileName | MethodDeclaration | L489–493 | string Drilling.Common.Automation.CAutomationManager.CreateBufferedRunControllerFileName(Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM, string, System.Threading.CancellationToken) |
-| CreateTaskScopedScriptFileName | MethodDeclaration | L495–504 | string Drilling.Common.Automation.CAutomationManager.CreateTaskScopedScriptFileName(int, string) |
-| StopTask | MethodDeclaration | L506–521 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.StopTask(int, int, System.Threading.CancellationToken) |
-| ReadTaskStatus | MethodDeclaration | L523–532 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadTaskStatus(int, int, System.Threading.CancellationToken) |
-| ReadTaskLineStatus | MethodDeclaration | L534–543 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadTaskLineStatus(int, int, System.Threading.CancellationToken) |
-| ReleaseEncoderScaleFactor | MethodDeclaration | L545–552 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReleaseEncoderScaleFactor(string, int, int, System.Threading.CancellationToken) |
-| SetGalvoLaserOutput | MethodDeclaration | L554–562 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.SetGalvoLaserOutput(string, bool, int, int, System.Threading.CancellationToken) |
-| ConfigurePowerMeasurement | MethodDeclaration | L565–583 | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.ConfigurePowerMeasurement(string, double, int, int, System.Threading.CancellationToken) |
-| ValidateTaskIndex | MethodDeclaration | L585–591 | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) |
-| CreateSimulationTaskStatus | MethodDeclaration | L593–596 | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) |
-| ExecuteAxis | MethodDeclaration | L598–634 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) |
-| ReadAxis | MethodDeclaration | L636–640 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxis(string, int, int, System.Threading.CancellationToken) |
-| ReadAxisByName | MethodDeclaration | L642–645 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, System.Threading.CancellationToken) |
-| ReadAxisByName | MethodDeclaration | L647–650 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, bool, System.Threading.CancellationToken) |
-| ReadAxisByName | MethodDeclaration | L652–658 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, bool, System.Threading.CancellationToken, bool) |
-| ValidateAxisNameOnly | MethodDeclaration | L660–667 | void Drilling.Common.Automation.CAutomationManager.ValidateAxisNameOnly(string) |
-| ValidateAnalogInputNo | MethodDeclaration | L669–675 | void Drilling.Common.Automation.CAutomationManager.ValidateAnalogInputNo(int) |
-| ValidateBufferedRunScriptFile | MethodDeclaration | L677–700 | void Drilling.Common.Automation.CAutomationManager.ValidateBufferedRunScriptFile(string) |
-| GetAeroScriptToken | MethodDeclaration | L702–706 | string Drilling.Common.Automation.CAutomationManager.GetAeroScriptToken(string) |
-| IsBufferedGlobalIntegerAssignment | MethodDeclaration | L709–719 | bool Drilling.Common.Automation.CAutomationManager.IsBufferedGlobalIntegerAssignment(string) |
-| IsBufferedRunBlockedToken | MethodDeclaration | L721–724 | bool Drilling.Common.Automation.CAutomationManager.IsBufferedRunBlockedToken(string) |
-| EnsureAutomationResponseSucceeded | MethodDeclaration | L726–734 | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) |
-| IsAutomationSuccessResponse | MethodDeclaration | L736–750 | bool Drilling.Common.Automation.CAutomationManager.IsAutomationSuccessResponse(string) |
-| FormatAutomationResponse | MethodDeclaration | L752–761 | string Drilling.Common.Automation.CAutomationManager.FormatAutomationResponse(string) |
-| FormatAutomationErrorResponse | MethodDeclaration | L763–777 | string Drilling.Common.Automation.CAutomationManager.FormatAutomationErrorResponse(string) |
-| ResolveAutomationAxis | MethodDeclaration | L779–783 | string Drilling.Common.Automation.CAutomationManager.ResolveAutomationAxis(string) |
-| ResolveAeroScriptAxis | MethodDeclaration | L785–795 | string Drilling.Common.Automation.CAutomationManager.ResolveAeroScriptAxis(string) |
-| IsAeroScriptAxisIdentifier | MethodDeclaration | L797–815 | bool Drilling.Common.Automation.CAutomationManager.IsAeroScriptAxisIdentifier(string) |
-| MatchesItem | LocalFunctionStatement | L809–812 | bool MatchesItem(char) |
-| IsAxisNameOnlyIdentifier | MethodDeclaration | L817–838 | bool Drilling.Common.Automation.CAutomationManager.IsAxisNameOnlyIdentifier(string) |
-| CreateSimulationAxisStatus | MethodDeclaration | L840–867 | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisStatus(int, string) |
-| CreateSimulationAxisKey | MethodDeclaration | L869–872 | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) |
-| ParseAxisStatus | MethodDeclaration | L874–927 | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.ParseAxisStatus(int, string, string) |
-| ReadMotionStatusFlag | MethodDeclaration | L929–939 | bool? Drilling.Common.Automation.CAutomationManager.ReadMotionStatusFlag(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) |
-| ReadGalvoTemperatureCelsius | MethodDeclaration | L941–944 | double Drilling.Common.Automation.CAutomationManager.ReadGalvoTemperatureCelsius(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
-| CreateErrorAxisStatus | MethodDeclaration | L946–949 | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateErrorAxisStatus(int, string, string, string) |
-| TryGetAxisNo | MethodDeclaration | L951–960 | int? Drilling.Common.Automation.CAutomationManager.TryGetAxisNo(string) |
-| GetValue | MethodDeclaration | L962–965 | string Drilling.Common.Automation.CAutomationManager.GetValue(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) |
-| ReadDouble | MethodDeclaration | L967–970 | double Drilling.Common.Automation.CAutomationManager.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) |
-| IsDriveAble | MethodDeclaration | L972–980 | bool Drilling.Common.Automation.CAutomationManager.IsDriveAble(string) |
-| IsHomeDone | MethodDeclaration | L982–991 | bool Drilling.Common.Automation.CAutomationManager.IsHomeDone(string) |
-| TryReadStatusWord | MethodDeclaration | L993–1014 | bool Drilling.Common.Automation.CAutomationManager.TryReadStatusWord(string, out long) |
-| IsFaultActive | MethodDeclaration | L1016–1020 | bool Drilling.Common.Automation.CAutomationManager.IsFaultActive(string) |
-| ResolveLocalScriptPath | MethodDeclaration | L1022–1039 | string Drilling.Common.Automation.CAutomationManager.ResolveLocalScriptPath(string, System.Threading.CancellationToken) |
-| GetLocalScriptDirectory | MethodDeclaration | L1041–1045 | string Drilling.Common.Automation.CAutomationManager.GetLocalScriptDirectory(System.Threading.CancellationToken) |
-| ResolveLocalDirectory | MethodDeclaration | L1047–1051 | string Drilling.Common.Automation.CAutomationManager.ResolveLocalDirectory(string, string) |
-| CreateControllerFileName | MethodDeclaration | L1053–1065 | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) |
-| GetControllerScriptDirectory | MethodDeclaration | L1067–1077 | string Drilling.Common.Automation.CAutomationManager.GetControllerScriptDirectory(System.Threading.CancellationToken) |
-| CombineControllerPath | MethodDeclaration | L1079–1089 | string Drilling.Common.Automation.CAutomationManager.CombineControllerPath(string, string) |
-| Format | MethodDeclaration | L1091–1094 | string Drilling.Common.Automation.CAutomationManager.Format(double) |
-| RunStagePreparedScript | MethodDeclaration | L1098–1105 | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.RunStagePreparedScript(string, int, int, System.Threading.CancellationToken) |
-| StopStagePreparedTask | MethodDeclaration | L1107–1132 | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.StopStagePreparedTask(int, int, System.Threading.CancellationToken) |
+| UploadScript | MethodDeclaration | L315–322 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.UploadScript(string, string, int, System.Threading.CancellationToken) |
+| RunScript | MethodDeclaration | L324–335 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunScript(string, int, int, System.Threading.CancellationToken) |
+| RunScriptIfIdle | MethodDeclaration | L337–345 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunScriptIfIdle(string, int, int, System.Threading.CancellationToken) |
+| RunBufferedScript | MethodDeclaration | L347–359 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunBufferedScript(string, string, int, int, int, int, int, System.Threading.CancellationToken) |
+| RunBufferedScripts | MethodDeclaration | L361–368 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunBufferedScripts(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>, int, int, int, int, System.Threading.CancellationToken) |
+| RunStagePreparedBufferedScripts | MethodDeclaration | L370–370 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunStagePreparedBufferedScripts(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>, int, int, int, int, System.Threading.CancellationToken) |
+| RunBufferedScriptsCore | MethodDeclaration | L371–485 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunBufferedScriptsCore(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>, int, int, int, int, bool, bool, System.Threading.CancellationToken) |
+| CreateBufferedRunControllerFileName | MethodDeclaration | L487–491 | string Drilling.Common.Automation.CAutomationManager.CreateBufferedRunControllerFileName(Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM, string, System.Threading.CancellationToken) |
+| CreateTaskScopedScriptFileName | MethodDeclaration | L493–502 | string Drilling.Common.Automation.CAutomationManager.CreateTaskScopedScriptFileName(int, string) |
+| StopTask | MethodDeclaration | L504–519 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.StopTask(int, int, System.Threading.CancellationToken) |
+| ReadTaskStatus | MethodDeclaration | L521–530 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadTaskStatus(int, int, System.Threading.CancellationToken) |
+| ReadTaskLineStatus | MethodDeclaration | L532–541 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadTaskLineStatus(int, int, System.Threading.CancellationToken) |
+| ReleaseEncoderScaleFactor | MethodDeclaration | L543–550 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReleaseEncoderScaleFactor(string, int, int, System.Threading.CancellationToken) |
+| SetGalvoLaserOutput | MethodDeclaration | L552–560 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.SetGalvoLaserOutput(string, bool, int, int, System.Threading.CancellationToken) |
+| ConfigurePowerMeasurement | MethodDeclaration | L563–581 | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.ConfigurePowerMeasurement(string, double, int, int, System.Threading.CancellationToken) |
+| ValidateTaskIndex | MethodDeclaration | L583–589 | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) |
+| CreateSimulationTaskStatus | MethodDeclaration | L591–594 | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) |
+| ExecuteAxis | MethodDeclaration | L596–632 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) |
+| ReadAxis | MethodDeclaration | L634–638 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxis(string, int, int, System.Threading.CancellationToken) |
+| ReadAxisByName | MethodDeclaration | L640–643 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, System.Threading.CancellationToken) |
+| ReadAxisByName | MethodDeclaration | L645–648 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, bool, System.Threading.CancellationToken) |
+| ReadAxisByName | MethodDeclaration | L650–656 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, bool, System.Threading.CancellationToken, bool) |
+| ValidateAxisNameOnly | MethodDeclaration | L658–665 | void Drilling.Common.Automation.CAutomationManager.ValidateAxisNameOnly(string) |
+| ValidateAnalogInputNo | MethodDeclaration | L667–673 | void Drilling.Common.Automation.CAutomationManager.ValidateAnalogInputNo(int) |
+| ValidateBufferedRunScriptFile | MethodDeclaration | L675–698 | void Drilling.Common.Automation.CAutomationManager.ValidateBufferedRunScriptFile(string) |
+| GetAeroScriptToken | MethodDeclaration | L700–704 | string Drilling.Common.Automation.CAutomationManager.GetAeroScriptToken(string) |
+| IsBufferedGlobalIntegerAssignment | MethodDeclaration | L707–717 | bool Drilling.Common.Automation.CAutomationManager.IsBufferedGlobalIntegerAssignment(string) |
+| IsBufferedRunBlockedToken | MethodDeclaration | L719–722 | bool Drilling.Common.Automation.CAutomationManager.IsBufferedRunBlockedToken(string) |
+| EnsureAutomationResponseSucceeded | MethodDeclaration | L724–732 | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) |
+| IsAutomationSuccessResponse | MethodDeclaration | L734–748 | bool Drilling.Common.Automation.CAutomationManager.IsAutomationSuccessResponse(string) |
+| FormatAutomationResponse | MethodDeclaration | L750–759 | string Drilling.Common.Automation.CAutomationManager.FormatAutomationResponse(string) |
+| FormatAutomationErrorResponse | MethodDeclaration | L761–775 | string Drilling.Common.Automation.CAutomationManager.FormatAutomationErrorResponse(string) |
+| ResolveAutomationAxis | MethodDeclaration | L777–781 | string Drilling.Common.Automation.CAutomationManager.ResolveAutomationAxis(string) |
+| ResolveAeroScriptAxis | MethodDeclaration | L783–793 | string Drilling.Common.Automation.CAutomationManager.ResolveAeroScriptAxis(string) |
+| IsAeroScriptAxisIdentifier | MethodDeclaration | L795–813 | bool Drilling.Common.Automation.CAutomationManager.IsAeroScriptAxisIdentifier(string) |
+| MatchesItem | LocalFunctionStatement | L807–810 | bool MatchesItem(char) |
+| IsAxisNameOnlyIdentifier | MethodDeclaration | L815–836 | bool Drilling.Common.Automation.CAutomationManager.IsAxisNameOnlyIdentifier(string) |
+| CreateSimulationAxisStatus | MethodDeclaration | L838–865 | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisStatus(int, string) |
+| CreateSimulationAxisKey | MethodDeclaration | L867–870 | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) |
+| ParseAxisStatus | MethodDeclaration | L872–925 | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.ParseAxisStatus(int, string, string) |
+| ReadMotionStatusFlag | MethodDeclaration | L927–937 | bool? Drilling.Common.Automation.CAutomationManager.ReadMotionStatusFlag(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) |
+| ReadGalvoTemperatureCelsius | MethodDeclaration | L939–942 | double Drilling.Common.Automation.CAutomationManager.ReadGalvoTemperatureCelsius(System.Collections.Generic.IReadOnlyDictionary<string, string>) |
+| CreateErrorAxisStatus | MethodDeclaration | L944–947 | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateErrorAxisStatus(int, string, string, string) |
+| TryGetAxisNo | MethodDeclaration | L949–958 | int? Drilling.Common.Automation.CAutomationManager.TryGetAxisNo(string) |
+| GetValue | MethodDeclaration | L960–963 | string Drilling.Common.Automation.CAutomationManager.GetValue(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) |
+| ReadDouble | MethodDeclaration | L965–968 | double Drilling.Common.Automation.CAutomationManager.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) |
+| IsDriveAble | MethodDeclaration | L970–978 | bool Drilling.Common.Automation.CAutomationManager.IsDriveAble(string) |
+| IsHomeDone | MethodDeclaration | L980–989 | bool Drilling.Common.Automation.CAutomationManager.IsHomeDone(string) |
+| TryReadStatusWord | MethodDeclaration | L991–1012 | bool Drilling.Common.Automation.CAutomationManager.TryReadStatusWord(string, out long) |
+| IsFaultActive | MethodDeclaration | L1014–1018 | bool Drilling.Common.Automation.CAutomationManager.IsFaultActive(string) |
+| ResolveLocalScriptPath | MethodDeclaration | L1020–1037 | string Drilling.Common.Automation.CAutomationManager.ResolveLocalScriptPath(string, System.Threading.CancellationToken) |
+| GetLocalScriptDirectory | MethodDeclaration | L1039–1043 | string Drilling.Common.Automation.CAutomationManager.GetLocalScriptDirectory(System.Threading.CancellationToken) |
+| ResolveLocalDirectory | MethodDeclaration | L1045–1049 | string Drilling.Common.Automation.CAutomationManager.ResolveLocalDirectory(string, string) |
+| CreateControllerFileName | MethodDeclaration | L1051–1063 | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) |
+| GetControllerScriptDirectory | MethodDeclaration | L1065–1075 | string Drilling.Common.Automation.CAutomationManager.GetControllerScriptDirectory(System.Threading.CancellationToken) |
+| CombineControllerPath | MethodDeclaration | L1077–1087 | string Drilling.Common.Automation.CAutomationManager.CombineControllerPath(string, string) |
+| Format | MethodDeclaration | L1089–1092 | string Drilling.Common.Automation.CAutomationManager.Format(double) |
+| RunStagePreparedScript | MethodDeclaration | L1096–1104 | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.RunStagePreparedScript(string, int, int, System.Threading.CancellationToken) |
+| StopStagePreparedTask | MethodDeclaration | L1106–1132 | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.StopStagePreparedTask(int, int, System.Threading.CancellationToken) |
 | ReadAuxiliaryFeedback | MethodDeclaration | L1134–1144 | System.Threading.Tasks.Task<Drilling.Common.Automation.ST_AUXILIARY_FEEDBACK> Drilling.Common.Automation.CAutomationManager.ReadAuxiliaryFeedback(string, int, System.Threading.CancellationToken) |
 | SetAuxiliaryFeedbackZero | MethodDeclaration | L1146–1158 | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.SetAuxiliaryFeedbackZero(string, int, int, System.Threading.CancellationToken) |
 | ZeroMofFeedbackIfNeeded | MethodDeclaration | L1160–1160 | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.ZeroMofFeedbackIfNeeded(System.Collections.Generic.IEnumerable<Drilling.Common.Automation.ST_MOF_ZERO_TARGET>, System.Threading.CancellationToken) |
 | ReadConfiguredHomeSpeeds | MethodDeclaration | L1164–1188 | System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyDictionary<string, double>> Drilling.Common.Automation.CAutomationManager.ReadConfiguredHomeSpeeds(System.Collections.Generic.IReadOnlyList<string>, int, System.Threading.CancellationToken) |
 | SetConfiguredHomeSpeed | MethodDeclaration | L1191–1218 | System.Threading.Tasks.Task<double> Drilling.Common.Automation.CAutomationManager.SetConfiguredHomeSpeed(string, double, int, System.Threading.CancellationToken) |
 | ValidateConfiguredHomeAxis | MethodDeclaration | L1220–1231 | string Drilling.Common.Automation.CAutomationManager.ValidateConfiguredHomeAxis(string) |
-| PrepareMofReadiness | MethodDeclaration | L1235–1252 | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.PrepareMofReadiness(int, int, long, System.Threading.CancellationToken) |
-| ReadMofReadiness | MethodDeclaration | L1254–1265 | System.Threading.Tasks.Task<Drilling.Common.Automation.ST_MOF_READINESS> Drilling.Common.Automation.CAutomationManager.ReadMofReadiness(int, int, System.Threading.CancellationToken) |
-| PublishSimulatedMofReadiness | MethodDeclaration | L1267–1276 | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.PublishSimulatedMofReadiness(int, int, Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask) |
+| PrepareMofReadiness | MethodDeclaration | L1235–1251 | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.PrepareMofReadiness(int, int, long, System.Threading.CancellationToken) |
+| ReadMofReadiness | MethodDeclaration | L1253–1264 | System.Threading.Tasks.Task<Drilling.Common.Automation.ST_MOF_READINESS> Drilling.Common.Automation.CAutomationManager.ReadMofReadiness(int, int, System.Threading.CancellationToken) |
+| PublishSimulatedMofReadiness | MethodDeclaration | L1266–1276 | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.PublishSimulatedMofReadiness(int, int, Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask) |
 | _value | FieldDeclaration | L1280–1280 | long Drilling.Common.Automation.CAutomationManager.CSimulatedMofReadiness._value |
 | Value | PropertyDeclaration | L1281–1281 | long Drilling.Common.Automation.CAutomationManager.CSimulatedMofReadiness.Value |
 | Publish | MethodDeclaration | L1283–1283 | void Drilling.Common.Automation.CAutomationManager.CSimulatedMofReadiness.Publish() |
@@ -207,21 +207,24 @@
 | _gate | FieldDeclaration | L1675–1675 | System.Threading.SemaphoreSlim Drilling.Common.Automation.CManualMotionSession._gate |
 | _generation | FieldDeclaration | L1676–1676 | long Drilling.Common.Automation.CManualMotionSession._generation |
 | _stopJog | FieldDeclaration | L1677–1677 | System.Func<System.Threading.Tasks.Task>? Drilling.Common.Automation.CManualMotionSession._stopJog |
-| Generation | PropertyDeclaration | L1678–1678 | long Drilling.Common.Automation.CManualMotionSession.Generation |
-| Invalidate | MethodDeclaration | L1680–1680 | void Drilling.Common.Automation.CManualMotionSession.Invalidate() |
-| Execute | MethodDeclaration | L1681–1698 | System.Threading.Tasks.Task Drilling.Common.Automation.CManualMotionSession.Execute(long, System.Func<System.Threading.Tasks.Task>, System.Func<System.Threading.Tasks.Task>?) |
-| StopJog | MethodDeclaration | L1700–1715 | System.Threading.Tasks.Task Drilling.Common.Automation.CManualMotionSession.StopJog() |
-| StopAll | MethodDeclaration | L1717–1753 | System.Threading.Tasks.Task Drilling.Common.Automation.CManualMotionSession.StopAll(System.Func<System.Threading.Tasks.Task>) |
-| _lastRunId | FieldDeclaration | L1761–1761 | long Drilling.Common.Automation.CMofReadiness._lastRunId |
-| CreateRunId | MethodDeclaration | L1762–1762 | long Drilling.Common.Automation.CMofReadiness.CreateRunId() |
-| VariableIndex | MethodDeclaration | L1763–1768 | int Drilling.Common.Automation.CMofReadiness.VariableIndex(int) |
-| VariableIndex | MethodDeclaration | L1770–1777 | int Drilling.Common.Automation.CMofReadiness.VariableIndex(int, int) |
+| _activeOperations | FieldDeclaration | L1678–1678 | int Drilling.Common.Automation.CManualMotionSession._activeOperations |
+| _jogActive | FieldDeclaration | L1679–1679 | int Drilling.Common.Automation.CManualMotionSession._jogActive |
+| Generation | PropertyDeclaration | L1680–1680 | long Drilling.Common.Automation.CManualMotionSession.Generation |
+| IsActive | PropertyDeclaration | L1681–1681 | bool Drilling.Common.Automation.CManualMotionSession.IsActive |
+| Invalidate | MethodDeclaration | L1683–1683 | void Drilling.Common.Automation.CManualMotionSession.Invalidate() |
+| Execute | MethodDeclaration | L1684–1711 | System.Threading.Tasks.Task Drilling.Common.Automation.CManualMotionSession.Execute(long, System.Func<System.Threading.Tasks.Task>, System.Func<System.Threading.Tasks.Task>?) |
+| StopJog | MethodDeclaration | L1713–1729 | System.Threading.Tasks.Task Drilling.Common.Automation.CManualMotionSession.StopJog() |
+| StopAll | MethodDeclaration | L1731–1768 | System.Threading.Tasks.Task Drilling.Common.Automation.CManualMotionSession.StopAll(System.Func<System.Threading.Tasks.Task>) |
+| _lastRunId | FieldDeclaration | L1776–1776 | long Drilling.Common.Automation.CMofReadiness._lastRunId |
+| CreateRunId | MethodDeclaration | L1777–1777 | long Drilling.Common.Automation.CMofReadiness.CreateRunId() |
+| VariableIndex | MethodDeclaration | L1778–1783 | int Drilling.Common.Automation.CMofReadiness.VariableIndex(int) |
+| VariableIndex | MethodDeclaration | L1785–1792 | int Drilling.Common.Automation.CMofReadiness.VariableIndex(int, int) |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
 ### FieldDeclaration `_simulationConfiguredHomeSpeeds` · L15–15
 
-[Drilling.Common/Automation/CAutomationManager.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L15-L15)
+[Drilling.Common/Automation/CAutomationManager.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -249,7 +252,7 @@
 
 ### FieldDeclaration `LocalScriptPathKey` · L16–16
 
-[Drilling.Common/Automation/CAutomationManager.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L16-L16)
+[Drilling.Common/Automation/CAutomationManager.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -270,7 +273,7 @@
 
 ### FieldDeclaration `AutomationScriptPathKey` · L17–17
 
-[Drilling.Common/Automation/CAutomationManager.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L17-L17)
+[Drilling.Common/Automation/CAutomationManager.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -291,7 +294,7 @@
 
 ### FieldDeclaration `Automation1DriveStatusEnabledMask` · L18–18
 
-[Drilling.Common/Automation/CAutomationManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L18-L18)
+[Drilling.Common/Automation/CAutomationManager.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -312,7 +315,7 @@
 
 ### FieldDeclaration `Automation1AxisStatusHomedMask` · L19–19
 
-[Drilling.Common/Automation/CAutomationManager.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L19-L19)
+[Drilling.Common/Automation/CAutomationManager.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -333,7 +336,7 @@
 
 ### FieldDeclaration `AxisNoMap` · L20–24
 
-[Drilling.Common/Automation/CAutomationManager.cs:20–24](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L20-L24)
+[Drilling.Common/Automation/CAutomationManager.cs:20–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L20-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -363,7 +366,7 @@
 
 ### FieldDeclaration `_interfaceManager` · L25–25
 
-[Drilling.Common/Automation/CAutomationManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L25-L25)
+[Drilling.Common/Automation/CAutomationManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -378,7 +381,7 @@
 
 ### FieldDeclaration `_settingManager` · L26–26
 
-[Drilling.Common/Automation/CAutomationManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L26-L26)
+[Drilling.Common/Automation/CAutomationManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -393,7 +396,7 @@
 
 ### FieldDeclaration `_projectRoot` · L27–27
 
-[Drilling.Common/Automation/CAutomationManager.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L27-L27)
+[Drilling.Common/Automation/CAutomationManager.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -408,7 +411,7 @@
 
 ### FieldDeclaration `_defaultLocalScriptDirectory` · L28–28
 
-[Drilling.Common/Automation/CAutomationManager.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L28-L28)
+[Drilling.Common/Automation/CAutomationManager.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -423,7 +426,7 @@
 
 ### FieldDeclaration `_simulationAxisAbleStates` · L29–29
 
-[Drilling.Common/Automation/CAutomationManager.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L29-L29)
+[Drilling.Common/Automation/CAutomationManager.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -451,7 +454,7 @@
 
 ### FieldDeclaration `_simulationAxisPositions` · L30–30
 
-[Drilling.Common/Automation/CAutomationManager.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L30-L30)
+[Drilling.Common/Automation/CAutomationManager.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -479,7 +482,7 @@
 
 ### FieldDeclaration `_simulatedMofReadiness` · L31–31
 
-[Drilling.Common/Automation/CAutomationManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L31-L31)
+[Drilling.Common/Automation/CAutomationManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -507,7 +510,7 @@
 
 ### FieldDeclaration `_stageSimulationTasks` · L32–32
 
-[Drilling.Common/Automation/CAutomationManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L32-L32)
+[Drilling.Common/Automation/CAutomationManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -535,7 +538,7 @@
 
 ### ConstructorDeclaration `.ctor` · L35–42
 
-[Drilling.Common/Automation/CAutomationManager.cs:35–42](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L35-L42)
+[Drilling.Common/Automation/CAutomationManager.cs:35–42](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L35-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -557,7 +560,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Managers/CManager.cs#L107-L107) | new CAutomationManager | False |
+| [Drilling.Common/Managers/CManager.cs:107–107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L107-L107) | new CAutomationManager | False |
 
 호출하는 대상과 해석 범위:
 
@@ -588,7 +591,7 @@
 
 ### PropertyDeclaration `StatusSnapshots` · L46–46
 
-[Drilling.Common/Automation/CAutomationManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L46-L46)
+[Drilling.Common/Automation/CAutomationManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -603,7 +606,7 @@
 
 ### GetAccessorDeclaration `get_StatusSnapshots` · L46–46
 
-[Drilling.Common/Automation/CAutomationManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L46-L46)
+[Drilling.Common/Automation/CAutomationManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -618,7 +621,7 @@
 
 ### MethodDeclaration `Connect` · L48–51
 
-[Drilling.Common/Automation/CAutomationManager.cs:48–51](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L48-L51)
+[Drilling.Common/Automation/CAutomationManager.cs:48–51](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L48-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -653,7 +656,7 @@
 
 ### MethodDeclaration `Disconnect` · L53–56
 
-[Drilling.Common/Automation/CAutomationManager.cs:53–56](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L53-L56)
+[Drilling.Common/Automation/CAutomationManager.cs:53–56](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L53-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -688,7 +691,7 @@
 
 ### MethodDeclaration `IsConnect` · L58–61
 
-[Drilling.Common/Automation/CAutomationManager.cs:58–61](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L58-L61)
+[Drilling.Common/Automation/CAutomationManager.cs:58–61](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L58-L61)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -707,36 +710,36 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L594-L594) | automation.IsConnect | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1602–1602](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1602-L1602) | automation.IsConnect | False |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L128-L128) | _automation.IsConnect | False |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L287-L287) | _automation.IsConnect | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L265-L265) | Automation.IsConnect | False |
-| [Drilling.Common/Station/CStationProcess.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L1376-L1376) | _automationManager.IsConnect | False |
-| [Drilling.Common/Station/CStationProcess.cs:2789–2789](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L2789-L2789) | _owner._automationManager.IsConnect | False |
-| [Drilling.Common/Station/CStationProcess.cs:2905–2905](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L2905-L2905) | _owner._automationManager.IsConnect | False |
-| [Drilling.Common/Station/CStationProcess.cs:2938–2938](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L2938-L2938) | _owner._automationManager.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3556–3556](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3556-L3556) | manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L1160-L1160) | automationManager.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1333–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L1333-L1333) | automationManager.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1788–1788](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1788-L1788) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1880–1880](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1880-L1880) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1979–1979](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1979-L1979) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2179–2179](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2179-L2179) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2337–2337](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2337-L2337) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2358–2358](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2358-L2358) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2568–2568](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2568-L2568) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2712–2712](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2712-L2712) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3464–3464](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3464-L3464) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4052–4052](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4052-L4052) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4209–4209](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4209-L4209) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4388–4388](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4388-L4388) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4671–4671](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4671-L4671) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4879–4879](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4879-L4879) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5291–5291](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5291-L5291) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5393–5393](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5393-L5393) | _manager.automation.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7704–7704](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L7704-L7704) | automationManager.IsConnect | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L89-L89) | automationManager.IsConnect | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L596-L596) | automation.IsConnect | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1602–1602](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1602-L1602) | automation.IsConnect | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L128-L128) | _automation.IsConnect | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L287-L287) | _automation.IsConnect | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CPowerMeasureRun.cs#L265-L265) | Automation.IsConnect | False |
+| [Drilling.Common/Station/CStationProcess.cs:1377–1377](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1377-L1377) | _automationManager.IsConnect | False |
+| [Drilling.Common/Station/CStationProcess.cs:2793–2793](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2793-L2793) | _owner._automationManager.IsConnect | False |
+| [Drilling.Common/Station/CStationProcess.cs:2909–2909](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2909-L2909) | _owner._automationManager.IsConnect | False |
+| [Drilling.Common/Station/CStationProcess.cs:2942–2942](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2942-L2942) | _owner._automationManager.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3666–3666](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3666-L3666) | manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L1160-L1160) | automationManager.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1333–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L1333-L1333) | automationManager.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1796–1796](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1796-L1796) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1888–1888](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1888-L1888) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1987–1987](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1987-L1987) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2187–2187](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2187-L2187) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2345–2345](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2345-L2345) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2366–2366](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2366-L2366) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2576–2576](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2576-L2576) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2720–2720](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2720-L2720) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3472–3472](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3472-L3472) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4060–4060](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4060-L4060) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4217–4217](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4217-L4217) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4396–4396](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4396-L4396) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4679–4679](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4679-L4679) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4887–4887](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4887-L4887) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5299–5299](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L5299-L5299) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5401–5401](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L5401-L5401) | _manager.automation.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7712–7712](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L7712-L7712) | automationManager.IsConnect | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L89-L89) | automationManager.IsConnect | False |
 
 호출하는 대상과 해석 범위:
 
@@ -755,7 +758,7 @@
 
 ### MethodDeclaration `IsSimul` · L63–66
 
-[Drilling.Common/Automation/CAutomationManager.cs:63–66](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L63-L66)
+[Drilling.Common/Automation/CAutomationManager.cs:63–66](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L63-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -774,73 +777,73 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:594–594](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L594-L594) | automation.IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L89-L89) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L257-L257) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L277-L277) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L292-L292) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L307-L307) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L328-L328) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L341-L341) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:454–454](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L454-L454) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:509–509](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L509-L509) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L526-L526) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:537–537](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L537-L537) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:602–602](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L602-L602) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:609–609](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L609-L609) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1102–1102](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1102-L1102) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1137–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1137-L1137) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1151-L1151) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1172–1172](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1172-L1172) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1200–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1200-L1200) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1241–1241](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1241-L1241) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1258–1258](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1258-L1258) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1309–1309](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1309-L1309) | IsSimul | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1602–1602](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1602-L1602) | automation.IsSimul | False |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L128-L128) | _automation.IsSimul | False |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L287-L287) | _automation.IsSimul | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167) | Automation.IsSimul | False |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L265-L265) | Automation.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:1376–1376](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L1376-L1376) | _automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:2789–2789](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L2789-L2789) | _owner._automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:2901–2901](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L2901-L2901) | _owner._automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:2934–2934](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L2934-L2934) | _owner._automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:3833–3833](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L3833-L3833) | _automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:3839–3839](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L3839-L3839) | _automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:3878–3878](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L3878-L3878) | _automationManager.IsSimul | False |
-| [Drilling.Common/Station/CStationProcess.cs:3881–3881](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L3881-L3881) | _automationManager.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3556–3556](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3556-L3556) | manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3560–3560](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3560-L3560) | manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3675–3675](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3675-L3675) | manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3681–3681](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3681-L3681) | manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3711–3711](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3711-L3711) | manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1128–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L1128-L1128) | automationManager.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L1155-L1155) | automationManager.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1333–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L1333-L1333) | automationManager.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:1342–1342](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L1342-L1342) | automationManager.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1788–1788](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1788-L1788) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1880–1880](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1880-L1880) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1978–1978](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1978-L1978) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2179–2179](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2179-L2179) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2337–2337](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2337-L2337) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2349–2349](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2349-L2349) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2568–2568](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2568-L2568) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2651–2651](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2651-L2651) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2712–2712](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2712-L2712) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3464–3464](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3464-L3464) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3780–3780](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3780-L3780) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4052–4052](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4052-L4052) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4101–4101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4101-L4101) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4209–4209](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4209-L4209) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4388–4388](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4388-L4388) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4508–4508](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4508-L4508) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4671–4671](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4671-L4671) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4879–4879](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4879-L4879) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5291–5291](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5291-L5291) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5315–5315](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5315-L5315) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5393–5393](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5393-L5393) | _manager.automation.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7704–7704](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L7704-L7704) | automationManager.IsSimul | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L89-L89) | automationManager.IsSimul | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:596–596](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L596-L596) | automation.IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L89-L89) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L257-L257) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L277-L277) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L292-L292) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L307-L307) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:329–329](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L329-L329) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L342-L342) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:452–452](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L452-L452) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L507-L507) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L524-L524) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L535-L535) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:600–600](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L600-L600) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L607-L607) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1101–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1101-L1101) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1137–1137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1137-L1137) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1151–1151](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1151-L1151) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1172–1172](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1172-L1172) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1200–1200](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1200-L1200) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1241–1241](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1241-L1241) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1257–1257](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1257-L1257) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1309–1309](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1309-L1309) | IsSimul | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1602–1602](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1602-L1602) | automation.IsSimul | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L128-L128) | _automation.IsSimul | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L287-L287) | _automation.IsSimul | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CPowerMeasureRun.cs#L167-L167) | Automation.IsSimul | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CPowerMeasureRun.cs#L265-L265) | Automation.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:1377–1377](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1377-L1377) | _automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:2793–2793](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2793-L2793) | _owner._automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:2905–2905](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2905-L2905) | _owner._automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:2938–2938](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L2938-L2938) | _owner._automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:3838–3838](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3838-L3838) | _automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:3844–3844](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3844-L3844) | _automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:3883–3883](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3883-L3883) | _automationManager.IsSimul | False |
+| [Drilling.Common/Station/CStationProcess.cs:3886–3886](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3886-L3886) | _automationManager.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3666–3666](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3666-L3666) | manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3670–3670](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3670-L3670) | manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3785–3785](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3785-L3785) | manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3791–3791](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3791-L3791) | manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3821–3821](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3821-L3821) | manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1128–1128](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L1128-L1128) | automationManager.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1155–1155](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L1155-L1155) | automationManager.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1333–1333](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L1333-L1333) | automationManager.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:1342–1342](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L1342-L1342) | automationManager.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1796–1796](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1796-L1796) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1888–1888](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1888-L1888) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1986–1986](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1986-L1986) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2187–2187](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2187-L2187) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2345–2345](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2345-L2345) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2357–2357](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2357-L2357) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2576–2576](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2576-L2576) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2659–2659](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2659-L2659) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2720–2720](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2720-L2720) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3472–3472](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3472-L3472) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3788–3788](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3788-L3788) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4060–4060](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4060-L4060) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4109–4109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4109-L4109) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4217–4217](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4217-L4217) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4396–4396](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4396-L4396) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4516–4516](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4516-L4516) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4679–4679](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4679-L4679) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4887–4887](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4887-L4887) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5299–5299](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L5299-L5299) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5323–5323](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L5323-L5323) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5401–5401](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L5401-L5401) | _manager.automation.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7712–7712](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L7712-L7712) | automationManager.IsSimul | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L89-L89) | automationManager.IsSimul | False |
 
 호출하는 대상과 해석 범위:
 
@@ -859,7 +862,7 @@
 
 ### MethodDeclaration `ReadStatus` · L68–71
 
-[Drilling.Common/Automation/CAutomationManager.cs:68–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L68-L71)
+[Drilling.Common/Automation/CAutomationManager.cs:68–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L68-L71)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -879,7 +882,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2360–2360](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2360-L2360) | _manager.automation.ReadStatus | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2368–2368](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2368-L2368) | _manager.automation.ReadStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -898,7 +901,7 @@
 
 ### MethodDeclaration `ReadControllerAxes` · L73–80
 
-[Drilling.Common/Automation/CAutomationManager.cs:73–80](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L73-L80)
+[Drilling.Common/Automation/CAutomationManager.cs:73–80](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L73-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -918,8 +921,8 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1982–1982](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1982-L1982) | _manager.automation.ReadControllerAxes | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1996–1996](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1996-L1996) | _manager.automation.ReadControllerAxes | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1990–1990](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1990-L1990) | _manager.automation.ReadControllerAxes | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2004–2004](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2004-L2004) | _manager.automation.ReadControllerAxes | False |
 
 호출하는 대상과 해석 범위:
 
@@ -966,7 +969,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadProcessorUsage` · L82–85
 
-[Drilling.Common/Automation/CAutomationManager.cs:82–85](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L82-L85)
+[Drilling.Common/Automation/CAutomationManager.cs:82–85](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L82-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -986,7 +989,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L45-L45) | _automation.ReadProcessorUsage | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L45-L45) | _automation.ReadProcessorUsage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1005,7 +1008,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetController` · L87–95
 
-[Drilling.Common/Automation/CAutomationManager.cs:87–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L87-L95)
+[Drilling.Common/Automation/CAutomationManager.cs:87–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L87-L95)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1025,8 +1028,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2201–2201](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2201-L2201) | _manager.automation.ResetController | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2342–2342](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2342-L2342) | _manager.automation.ResetController | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2209–2209](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2209-L2209) | _manager.automation.ResetController | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2350–2350](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2350-L2350) | _manager.automation.ResetController | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1062,7 +1065,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadIo` · L97–101
 
-[Drilling.Common/Automation/CAutomationManager.cs:97–101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L97-L101)
+[Drilling.Common/Automation/CAutomationManager.cs:97–101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L97-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1083,9 +1086,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1742–1742](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1742-L1742) | _manager.automation.ReadIo | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2464–2464](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2464-L2464) | _manager.automation.ReadIo | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2857–2857](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2857-L2857) | _manager.automation.ReadIo | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1750–1750](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1750-L1750) | _manager.automation.ReadIo | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2472–2472](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2472-L2472) | _manager.automation.ReadIo | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2865–2865](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2865-L2865) | _manager.automation.ReadIo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1108,7 +1111,7 @@ flowchart TD
 
 ### MethodDeclaration `SetIo` · L103–107
 
-[Drilling.Common/Automation/CAutomationManager.cs:103–107](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L103-L107)
+[Drilling.Common/Automation/CAutomationManager.cs:103–107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L103-L107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1130,9 +1133,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1742–1742](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1742-L1742) | _manager.automation.SetIo | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2456–2456](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2456-L2456) | _manager.automation.SetIo | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2921–2921](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2921-L2921) | _manager.automation.SetIo | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1750–1750](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1750-L1750) | _manager.automation.SetIo | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2464–2464](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2464-L2464) | _manager.automation.SetIo | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2929–2929](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2929-L2929) | _manager.automation.SetIo | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1156,7 +1159,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateIoAddress` · L109–163
 
-[Drilling.Common/Automation/CAutomationManager.cs:109–163](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L109-L163)
+[Drilling.Common/Automation/CAutomationManager.cs:109–163](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L109-L163)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1176,8 +1179,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L99-L99) | ValidateIoAddress | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L105-L105) | ValidateIoAddress | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:99–99](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L99-L99) | ValidateIoAddress | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L105-L105) | ValidateIoAddress | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1292,7 +1295,7 @@ flowchart TD
 
 ### LocalFunctionStatement `MatchesItem` · L113–116
 
-[Drilling.Common/Automation/CAutomationManager.cs:113–116](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L113-L116)
+[Drilling.Common/Automation/CAutomationManager.cs:113–116](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L113-L116)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1328,7 +1331,7 @@ flowchart TD
 
 ### MethodDeclaration `TrimIoAxisPrefix` · L165–173
 
-[Drilling.Common/Automation/CAutomationManager.cs:165–173](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L165-L173)
+[Drilling.Common/Automation/CAutomationManager.cs:165–173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L165-L173)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1347,7 +1350,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L130-L130) | TrimIoAxisPrefix | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L130-L130) | TrimIoAxisPrefix | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1380,7 +1383,7 @@ flowchart TD
 
 ### MethodDeclaration `IsUnsignedInteger` · L175–178
 
-[Drilling.Common/Automation/CAutomationManager.cs:175–178](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L175-L178)
+[Drilling.Common/Automation/CAutomationManager.cs:175–178](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L175-L178)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1399,8 +1402,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L157-L157) | IsUnsignedInteger | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L157-L157) | IsUnsignedInteger | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L157-L157) | IsUnsignedInteger | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:157–157](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L157-L157) | IsUnsignedInteger | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1419,7 +1422,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteRaw` · L180–184
 
-[Drilling.Common/Automation/CAutomationManager.cs:180–184](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L180-L184)
+[Drilling.Common/Automation/CAutomationManager.cs:180–184](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L180-L184)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1441,31 +1444,31 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L70-L70) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L75-L75) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L84-L84) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L94-L94) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L100-L100) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L106-L106) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L312-L312) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L320-L320) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L333-L333) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L343-L343) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:484–484](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L484-L484) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L520-L520) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:531–531](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L531-L531) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:542–542](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L542-L542) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L549-L549) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:559–559](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L559-L559) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:580–580](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L580-L580) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:633–633](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L633-L633) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:657–657](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L657-L657) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1139–1139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1139-L1139) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1153–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1153-L1153) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1174–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1174-L1174) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1207–1207](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1207-L1207) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1247–1247](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1247-L1247) | ExecuteRaw | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1260–1260](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1260-L1260) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:70–70](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L70-L70) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L75-L75) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L84-L84) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L94-L94) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L100-L100) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L106-L106) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L312-L312) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L321-L321) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:334–334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L334-L334) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:344–344](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L344-L344) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L482-L482) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L518-L518) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L529-L529) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:540–540](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L540-L540) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L547-L547) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L557-L557) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:578–578](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L578-L578) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:631–631](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L631-L631) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L655-L655) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1139–1139](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1139-L1139) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1153–1153](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1153-L1153) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1174–1174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1174-L1174) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1207–1207](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1207-L1207) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1246–1246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1246-L1246) | ExecuteRaw | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1259–1259](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1259-L1259) | ExecuteRaw | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1489,7 +1492,7 @@ flowchart TD
 
 ### MethodDeclaration `Move` · L186–189
 
-[Drilling.Common/Automation/CAutomationManager.cs:186–189](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L186-L189)
+[Drilling.Common/Automation/CAutomationManager.cs:186–189](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L186-L189)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1514,9 +1517,9 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 188 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
-| 188 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1091 |
-| 188 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1091 |
+| 188 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
+| 188 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1089 |
+| 188 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1089 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1531,7 +1534,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveRel` · L191–194
 
-[Drilling.Common/Automation/CAutomationManager.cs:191–194](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L191-L194)
+[Drilling.Common/Automation/CAutomationManager.cs:191–194](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L191-L194)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1556,9 +1559,9 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 193 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
-| 193 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1091 |
-| 193 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1091 |
+| 193 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
+| 193 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1089 |
+| 193 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1089 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1573,7 +1576,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L196–199
 
-[Drilling.Common/Automation/CAutomationManager.cs:196–199](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L196-L199)
+[Drilling.Common/Automation/CAutomationManager.cs:196–199](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L196-L199)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1596,7 +1599,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 198 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
+| 198 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1609,7 +1612,7 @@ flowchart TD
 
 ### MethodDeclaration `ManualMove` · L201–206
 
-[Drilling.Common/Automation/CAutomationManager.cs:201–206](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L201-L206)
+[Drilling.Common/Automation/CAutomationManager.cs:201–206](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L201-L206)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1633,9 +1636,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1562–1562](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1562-L1562) | automation.ManualMove | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3530–3530](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3530-L3530) | _manager.automation.ManualMove | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3536–3536](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3536-L3536) | _manager.automation.ManualMove | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1562–1562](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1562-L1562) | automation.ManualMove | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3538–3538](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3538-L3538) | _manager.automation.ManualMove | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3544–3544](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3544-L3544) | _manager.automation.ManualMove | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1645,9 +1648,9 @@ flowchart TD
 | 203 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 204 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?, string?) |
 | 204 | nameof | unresolved | None |
-| 205 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
-| 205 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1091 |
-| 205 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1091 |
+| 205 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
+| 205 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1089 |
+| 205 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1089 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1678,7 +1681,7 @@ flowchart TD
 
 ### MethodDeclaration `JogStart` · L208–213
 
-[Drilling.Common/Automation/CAutomationManager.cs:208–213](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L208-L213)
+[Drilling.Common/Automation/CAutomationManager.cs:208–213](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L208-L213)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1699,7 +1702,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3569–3569](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3569-L3569) | _manager.automation.JogStart | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3577–3577](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3577-L3577) | _manager.automation.JogStart | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1708,8 +1711,8 @@ flowchart TD
 | 210 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 211 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?) |
 | 211 | nameof | unresolved | None |
-| 212 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
-| 212 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1091 |
+| 212 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
+| 212 | Format | resolved | string Drilling.Common.Automation.CAutomationManager.Format(double) · Drilling.Common/Automation/CAutomationManager.cs:1089 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1737,7 +1740,7 @@ flowchart TD
 
 ### MethodDeclaration `JogStop` · L215–215
 
-[Drilling.Common/Automation/CAutomationManager.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L215-L215)
+[Drilling.Common/Automation/CAutomationManager.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L215-L215)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1757,13 +1760,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3570–3570](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3570-L3570) | _manager.automation.JogStop | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3578–3578](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3578-L3578) | _manager.automation.JogStop | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 215 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
+| 215 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1775,7 +1778,7 @@ flowchart TD
 
 ### MethodDeclaration `AbortMotion` · L216–216
 
-[Drilling.Common/Automation/CAutomationManager.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L216-L216)
+[Drilling.Common/Automation/CAutomationManager.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L216-L216)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1796,16 +1799,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1584–1584](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1584-L1584) | automation.AbortMotion | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3615–3615](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3615-L3615) | _manager.automation.AbortMotion | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3724–3724](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3724-L3724) | _manager.automation.AbortMotion | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6363–6363](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6363-L6363) | _manager.automation.AbortMotion | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1584–1584](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1584-L1584) | automation.AbortMotion | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3623–3623](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3623-L3623) | _manager.automation.AbortMotion | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3732–3732](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3732-L3732) | _manager.automation.AbortMotion | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6371–6371](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6371-L6371) | _manager.automation.AbortMotion | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 216 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
+| 216 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1817,7 +1820,7 @@ flowchart TD
 
 ### MethodDeclaration `ServoOn` · L217–220
 
-[Drilling.Common/Automation/CAutomationManager.cs:217–220](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L217-L220)
+[Drilling.Common/Automation/CAutomationManager.cs:217–220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L217-L220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1838,14 +1841,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2380–2380](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2380-L2380) | _manager.automation.ServoOn | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2740–2740](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2740-L2740) | _manager.automation.ServoOn | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2388–2388](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2388-L2388) | _manager.automation.ServoOn | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2748–2748](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2748-L2748) | _manager.automation.ServoOn | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 219 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
+| 219 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1858,7 +1861,7 @@ flowchart TD
 
 ### MethodDeclaration `ServoOff` · L222–225
 
-[Drilling.Common/Automation/CAutomationManager.cs:222–225](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L222-L225)
+[Drilling.Common/Automation/CAutomationManager.cs:222–225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L222-L225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1879,13 +1882,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2744–2744](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2744-L2744) | _manager.automation.ServoOff | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2752–2752](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2752-L2752) | _manager.automation.ServoOff | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 224 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
+| 224 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1898,7 +1901,7 @@ flowchart TD
 
 ### MethodDeclaration `Home` · L227–230
 
-[Drilling.Common/Automation/CAutomationManager.cs:227–230](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L227-L230)
+[Drilling.Common/Automation/CAutomationManager.cs:227–230](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L227-L230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1921,7 +1924,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 229 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
+| 229 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1934,7 +1937,7 @@ flowchart TD
 
 ### MethodDeclaration `HomeAsync` · L232–235
 
-[Drilling.Common/Automation/CAutomationManager.cs:232–235](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L232-L235)
+[Drilling.Common/Automation/CAutomationManager.cs:232–235](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L232-L235)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1955,14 +1958,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2396–2396](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2396-L2396) | _manager.automation.HomeAsync | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2736–2736](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2736-L2736) | _manager.automation.HomeAsync | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2404–2404](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2404-L2404) | _manager.automation.HomeAsync | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2744–2744](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2744-L2744) | _manager.automation.HomeAsync | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 234 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
+| 234 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1975,7 +1978,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetAlarm` · L237–240
 
-[Drilling.Common/Automation/CAutomationManager.cs:237–240](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L237-L240)
+[Drilling.Common/Automation/CAutomationManager.cs:237–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L237-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1996,13 +1999,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1802–1802](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1802-L1802) | _manager.automation.ResetAlarm | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1810–1810](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1810-L1810) | _manager.automation.ResetAlarm | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 239 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
+| 239 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2015,7 +2018,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxis` · L242–245
 
-[Drilling.Common/Automation/CAutomationManager.cs:242–245](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L242-L245)
+[Drilling.Common/Automation/CAutomationManager.cs:242–245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L242-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2038,7 +2041,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 244 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
+| 244 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2051,7 +2054,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisStatus` · L247–250
 
-[Drilling.Common/Automation/CAutomationManager.cs:247–250](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L247-L250)
+[Drilling.Common/Automation/CAutomationManager.cs:247–250](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L247-L250)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2087,7 +2090,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisStatus` · L252–264
 
-[Drilling.Common/Automation/CAutomationManager.cs:252–264](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L252-L264)
+[Drilling.Common/Automation/CAutomationManager.cs:252–264](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L252-L264)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2109,21 +2112,21 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L249-L249) | ReadAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L249-L249) | ReadAxisStatus | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 254 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 255 | ValidateAnalogInputNo | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAnalogInputNo(int) · Drilling.Common/Automation/CAutomationManager.cs:669 |
+| 255 | ValidateAnalogInputNo | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAnalogInputNo(int) · Drilling.Common/Automation/CAutomationManager.cs:667 |
 | 256 | axisName.Trim | resolved | string string.Trim() |
 | 257 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 259 | CreateSimulationAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisStatus(int, string) · Drilling.Common/Automation/CAutomationManager.cs:840 |
+| 259 | CreateSimulationAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisStatus(int, string) · Drilling.Common/Automation/CAutomationManager.cs:838 |
 | 262 | ReadAxis(normalizedAxis, number, analogInputNo, cancellationToken).GetAwaiter().GetResult | resolved | string System.Runtime.CompilerServices.TaskAwaiter<string>.GetResult() |
 | 262 | ReadAxis(normalizedAxis, number, analogInputNo, cancellationToken).GetAwaiter | resolved | System.Runtime.CompilerServices.TaskAwaiter<string> System.Threading.Tasks.Task<string>.GetAwaiter() |
-| 262 | ReadAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxis(string, int, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:636 |
-| 263 | ParseAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.ParseAxisStatus(int, string, string) · Drilling.Common/Automation/CAutomationManager.cs:874 |
+| 262 | ReadAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxis(string, int, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:634 |
+| 263 | ParseAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.ParseAxisStatus(int, string, string) · Drilling.Common/Automation/CAutomationManager.cs:872 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2159,7 +2162,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisStatusByName` · L266–269
 
-[Drilling.Common/Automation/CAutomationManager.cs:266–269](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L266-L269)
+[Drilling.Common/Automation/CAutomationManager.cs:266–269](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L266-L269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2195,7 +2198,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisStatusByName` · L271–284
 
-[Drilling.Common/Automation/CAutomationManager.cs:271–284](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L271-L284)
+[Drilling.Common/Automation/CAutomationManager.cs:271–284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L271-L284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2217,22 +2220,22 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L268-L268) | ReadAxisStatusByName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L268-L268) | ReadAxisStatusByName | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 273 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 274 | ValidateAnalogInputNo | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAnalogInputNo(int) · Drilling.Common/Automation/CAutomationManager.cs:669 |
+| 274 | ValidateAnalogInputNo | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAnalogInputNo(int) · Drilling.Common/Automation/CAutomationManager.cs:667 |
 | 275 | axisName.Trim | resolved | string string.Trim() |
-| 276 | ValidateAxisNameOnly | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAxisNameOnly(string) · Drilling.Common/Automation/CAutomationManager.cs:660 |
+| 276 | ValidateAxisNameOnly | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAxisNameOnly(string) · Drilling.Common/Automation/CAutomationManager.cs:658 |
 | 277 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 279 | CreateSimulationAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisStatus(int, string) · Drilling.Common/Automation/CAutomationManager.cs:840 |
+| 279 | CreateSimulationAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisStatus(int, string) · Drilling.Common/Automation/CAutomationManager.cs:838 |
 | 282 | ReadAxisByName(normalizedAxis, number, analogInputNo, cancellationToken).GetAwaiter().GetResult | resolved | string System.Runtime.CompilerServices.TaskAwaiter<string>.GetResult() |
 | 282 | ReadAxisByName(normalizedAxis, number, analogInputNo, cancellationToken).GetAwaiter | resolved | System.Runtime.CompilerServices.TaskAwaiter<string> System.Threading.Tasks.Task<string>.GetAwaiter() |
-| 282 | ReadAxisByName | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:642 |
-| 283 | ParseAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.ParseAxisStatus(int, string, string) · Drilling.Common/Automation/CAutomationManager.cs:874 |
+| 282 | ReadAxisByName | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:640 |
+| 283 | ParseAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.ParseAxisStatus(int, string, string) · Drilling.Common/Automation/CAutomationManager.cs:872 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2269,7 +2272,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAxisStatusByNameNoLog` · L286–299
 
-[Drilling.Common/Automation/CAutomationManager.cs:286–299](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L286-L299)
+[Drilling.Common/Automation/CAutomationManager.cs:286–299](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L286-L299)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2292,23 +2295,23 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L23-L23) | _automation.ReadAxisStatusByNameNoLog | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2444–2444](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2444-L2444) | _manager.automation.ReadAxisStatusByNameNoLog | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L23-L23) | _automation.ReadAxisStatusByNameNoLog | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2452–2452](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2452-L2452) | _manager.automation.ReadAxisStatusByNameNoLog | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 288 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 289 | ValidateAnalogInputNo | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAnalogInputNo(int) · Drilling.Common/Automation/CAutomationManager.cs:669 |
+| 289 | ValidateAnalogInputNo | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAnalogInputNo(int) · Drilling.Common/Automation/CAutomationManager.cs:667 |
 | 290 | axisName.Trim | resolved | string string.Trim() |
-| 291 | ValidateAxisNameOnly | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAxisNameOnly(string) · Drilling.Common/Automation/CAutomationManager.cs:660 |
+| 291 | ValidateAxisNameOnly | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAxisNameOnly(string) · Drilling.Common/Automation/CAutomationManager.cs:658 |
 | 292 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 294 | CreateSimulationAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisStatus(int, string) · Drilling.Common/Automation/CAutomationManager.cs:840 |
+| 294 | CreateSimulationAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisStatus(int, string) · Drilling.Common/Automation/CAutomationManager.cs:838 |
 | 297 | ReadAxisByName(normalizedAxis, number, analogInputNo, readExtendedStatus, cancellationToken, suppressLog: true).GetAwaiter().GetResult | resolved | string System.Runtime.CompilerServices.TaskAwaiter<string>.GetResult() |
 | 297 | ReadAxisByName(normalizedAxis, number, analogInputNo, readExtendedStatus, cancellationToken, suppressLog: true).GetAwaiter | resolved | System.Runtime.CompilerServices.TaskAwaiter<string> System.Threading.Tasks.Task<string>.GetAwaiter() |
-| 297 | ReadAxisByName | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, bool, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:652 |
-| 298 | ParseAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.ParseAxisStatus(int, string, string) · Drilling.Common/Automation/CAutomationManager.cs:874 |
+| 297 | ReadAxisByName | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, bool, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:650 |
+| 298 | ParseAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.ParseAxisStatus(int, string, string) · Drilling.Common/Automation/CAutomationManager.cs:872 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2345,7 +2348,7 @@ flowchart TD
 
 ### MethodDeclaration `RunLocalScript` · L301–313
 
-[Drilling.Common/Automation/CAutomationManager.cs:301–313](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L301-L313)
+[Drilling.Common/Automation/CAutomationManager.cs:301–313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L301-L313)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2371,13 +2374,13 @@ flowchart TD
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 303 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 304 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:585 |
-| 305 | ResolveLocalScriptPath | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveLocalScriptPath(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1022 |
+| 304 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:583 |
+| 305 | ResolveLocalScriptPath | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveLocalScriptPath(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1020 |
 | 306 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 306 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1053 |
-| 306 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1053 |
+| 306 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1051 |
+| 306 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1051 |
 | 307 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 309 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:593 |
+| 309 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:591 |
 | 312 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -2414,9 +2417,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `UploadScript` · L315–321
+### MethodDeclaration `UploadScript` · L315–322
 
-[Drilling.Common/Automation/CAutomationManager.cs:315–321](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L315-L321)
+[Drilling.Common/Automation/CAutomationManager.cs:315–322](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L315-L322)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2438,26 +2441,26 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:446–446](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L446-L446) | UploadScript | True |
-| [Drilling.Common/Station/CStationProcess.cs:684–684](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L684-L684) | _automationManager.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3674–3674](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3674-L3674) | manager.automation.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2013–2013](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2013-L2013) | _manager.automation.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2636–2636](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2636-L2636) | _manager.automation.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3681–3681](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3681-L3681) | _manager.automation.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4091–4091](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4091-L4091) | _manager.automation.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4482–4482](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4482-L4482) | _manager.automation.UploadScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5304–5304](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5304-L5304) | _manager.automation.UploadScript | True |
+| [Drilling.Common/Automation/CAutomationManager.cs:444–444](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L444-L444) | UploadScript | True |
+| [Drilling.Common/Station/CStationProcess.cs:685–685](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L685-L685) | _automationManager.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3784–3784](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3784-L3784) | manager.automation.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2021–2021](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2021-L2021) | _manager.automation.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2644–2644](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2644-L2644) | _manager.automation.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3689–3689](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3689-L3689) | _manager.automation.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4099–4099](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4099-L4099) | _manager.automation.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4490–4490](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4490-L4490) | _manager.automation.UploadScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5312–5312](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L5312-L5312) | _manager.automation.UploadScript | True |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 317 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 318 | ResolveLocalScriptPath | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveLocalScriptPath(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1022 |
+| 318 | ResolveLocalScriptPath | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveLocalScriptPath(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1020 |
 | 319 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 319 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1053 |
-| 319 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1053 |
-| 320 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 319 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1051 |
+| 319 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1051 |
+| 321 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2473,15 +2476,15 @@ flowchart TD
 | 319 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(scriptFileName) ? CreateControllerFileName(localScriptPath, cancellationToken) : CreateControllerFileName(scriptFileName, cancellationToken) |
 | 319 | local-declaration | 지역 변수를 선언합니다: var controllerFileName = string.IsNullOrWhiteSpace(scriptFileName) ? CreateControllerFileName(localScriptPath, cancellationToken) : CreateControllerFileName(scriptFileName, cancellationToken); |
 | 319 | variable-initializer | 변수의 초기값을 지정합니다: controllerFileName = string.IsNullOrWhiteSpace(scriptFileName) ? CreateControllerFileName(localScriptPath, cancellationToken) : CreateControllerFileName(scriptFileName, cancellationToken) |
-| 320 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:SCRIPT&#124;UPLOAD&#124;{resolvedLocalScriptPath}&#124;{controllerFileName}", number, cancellationToken) |
-| 320 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:SCRIPT&#124;UPLOAD&#124;{resolvedLocalScriptPath}&#124;{controllerFileName}", number, cancellationToken) |
-| 320 | return | 호출자에게 값 또는 제어를 반환합니다: return await ExecuteRaw($"AUTOMATION1:SCRIPT&#124;UPLOAD&#124;{resolvedLocalScriptPath}&#124;{controllerFileName}", number, cancellationToken); |
+| 321 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:SCRIPT&#124;UPLOAD&#124;{resolvedLocalScriptPath}&#124;{controllerFileName}", number, cancellationToken) |
+| 321 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:SCRIPT&#124;UPLOAD&#124;{resolvedLocalScriptPath}&#124;{controllerFileName}", number, cancellationToken) |
+| 321 | return | 호출자에게 값 또는 제어를 반환합니다: return await ExecuteRaw($"AUTOMATION1:SCRIPT&#124;UPLOAD&#124;{resolvedLocalScriptPath}&#124;{controllerFileName}", number, cancellationToken); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `RunScript` · L323–334
+### MethodDeclaration `RunScript` · L324–335
 
-[Drilling.Common/Automation/CAutomationManager.cs:323–334](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L323-L334)
+[Drilling.Common/Automation/CAutomationManager.cs:324–335](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L324-L335)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2503,55 +2506,55 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:727–727](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L727-L727) | _automationManager.RunScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2638–2638](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2638-L2638) | _manager.automation.RunScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3696–3696](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3696-L3696) | _manager.automation.RunScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4093–4093](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4093-L4093) | _manager.automation.RunScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4498–4498](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4498-L4498) | _manager.automation.RunScript | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5307–5307](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5307-L5307) | _manager.automation.RunScript | True |
+| [Drilling.Common/Station/CStationProcess.cs:728–728](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L728-L728) | _automationManager.RunScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2646–2646](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2646-L2646) | _manager.automation.RunScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3704–3704](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3704-L3704) | _manager.automation.RunScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4101–4101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4101-L4101) | _manager.automation.RunScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4506–4506](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4506-L4506) | _manager.automation.RunScript | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5315–5315](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L5315-L5315) | _manager.automation.RunScript | True |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 325 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 326 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:585 |
-| 327 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1053 |
-| 328 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 330 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:593 |
-| 333 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 326 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
+| 327 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:583 |
+| 328 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1051 |
+| 329 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
+| 331 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:591 |
+| 334 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 325 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(scriptFileName) |
-| 326 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
-| 327 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateControllerFileName(scriptFileName, cancellationToken) |
-| 327 | local-declaration | 지역 변수를 선언합니다: var controllerFileName = CreateControllerFileName(scriptFileName, cancellationToken); |
-| 327 | variable-initializer | 변수의 초기값을 지정합니다: controllerFileName = CreateControllerFileName(scriptFileName, cancellationToken) |
-| 328 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
-| 328 | if | 조건에 따라 분기합니다: if (IsSimul(number)) |
-| 330 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationTaskStatus(taskIndex, "Idle", controllerFileName) |
-| 330 | return | 호출자에게 값 또는 제어를 반환합니다: return CreateSimulationTaskStatus(taskIndex, "Idle", controllerFileName); |
-| 333 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:SCRIPT&#124;RUN&#124;{taskIndex}&#124;{controllerFileName}", number, cancellationToken) |
-| 333 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:SCRIPT&#124;RUN&#124;{taskIndex}&#124;{controllerFileName}", number, cancellationToken) |
-| 333 | return | 호출자에게 값 또는 제어를 반환합니다: return await ExecuteRaw($"AUTOMATION1:SCRIPT&#124;RUN&#124;{taskIndex}&#124;{controllerFileName}", number, cancellationToken); |
+| 326 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(scriptFileName) |
+| 327 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
+| 328 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateControllerFileName(scriptFileName, cancellationToken) |
+| 328 | local-declaration | 지역 변수를 선언합니다: var controllerFileName = CreateControllerFileName(scriptFileName, cancellationToken); |
+| 328 | variable-initializer | 변수의 초기값을 지정합니다: controllerFileName = CreateControllerFileName(scriptFileName, cancellationToken) |
+| 329 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
+| 329 | if | 조건에 따라 분기합니다: if (IsSimul(number)) |
+| 331 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationTaskStatus(taskIndex, "Idle", controllerFileName) |
+| 331 | return | 호출자에게 값 또는 제어를 반환합니다: return CreateSimulationTaskStatus(taskIndex, "Idle", controllerFileName); |
+| 334 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:SCRIPT&#124;RUN&#124;{taskIndex}&#124;{controllerFileName}", number, cancellationToken) |
+| 334 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:SCRIPT&#124;RUN&#124;{taskIndex}&#124;{controllerFileName}", number, cancellationToken) |
+| 334 | return | 호출자에게 값 또는 제어를 반환합니다: return await ExecuteRaw($"AUTOMATION1:SCRIPT&#124;RUN&#124;{taskIndex}&#124;{controllerFileName}", number, cancellationToken); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["RunScript"]
- N0["L328 if"]
+ N0["L329 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `RunScriptIfIdle` · L336–344
+### MethodDeclaration `RunScriptIfIdle` · L337–345
 
-[Drilling.Common/Automation/CAutomationManager.cs:336–344](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L336-L344)
+[Drilling.Common/Automation/CAutomationManager.cs:337–345](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L337-L345)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2573,52 +2576,52 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1100–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1100-L1100) | RunScriptIfIdle | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3687–3687](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3687-L3687) | manager.automation.RunScriptIfIdle | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2015–2015](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2015-L2015) | _manager.automation.RunScriptIfIdle | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1099–1099](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1099-L1099) | RunScriptIfIdle | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3797–3797](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3797-L3797) | manager.automation.RunScriptIfIdle | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2023–2023](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2023-L2023) | _manager.automation.RunScriptIfIdle | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 338 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 339 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:585 |
-| 340 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1053 |
-| 341 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 342 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:593 |
-| 343 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 339 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
+| 340 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:583 |
+| 341 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1051 |
+| 342 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
+| 343 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:591 |
+| 344 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 338 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(scriptFileName) |
-| 339 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
-| 340 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateControllerFileName(scriptFileName, cancellationToken) |
-| 340 | local-declaration | 지역 변수를 선언합니다: var controllerFileName = CreateControllerFileName(scriptFileName, cancellationToken); |
-| 340 | variable-initializer | 변수의 초기값을 지정합니다: controllerFileName = CreateControllerFileName(scriptFileName, cancellationToken) |
-| 341 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
-| 341 | if | 조건에 따라 분기합니다: if (IsSimul(number)) |
-| 342 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationTaskStatus(taskIndex, "Idle", controllerFileName) |
-| 342 | return | 호출자에게 값 또는 제어를 반환합니다: return CreateSimulationTaskStatus(taskIndex, "Idle", controllerFileName); |
-| 343 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:SCRIPT&#124;RUN_IF_IDLE&#124;{taskIndex}&#124;{controllerFileName}", number, cancellationToken) |
-| 343 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:SCRIPT&#124;RUN_IF_IDLE&#124;{taskIndex}&#124;{controllerFileName}", number, cancellationToken) |
-| 343 | return | 호출자에게 값 또는 제어를 반환합니다: return await ExecuteRaw($"AUTOMATION1:SCRIPT&#124;RUN_IF_IDLE&#124;{taskIndex}&#124;{controllerFileName}", number, cancellationToken); |
+| 339 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(scriptFileName) |
+| 340 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
+| 341 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateControllerFileName(scriptFileName, cancellationToken) |
+| 341 | local-declaration | 지역 변수를 선언합니다: var controllerFileName = CreateControllerFileName(scriptFileName, cancellationToken); |
+| 341 | variable-initializer | 변수의 초기값을 지정합니다: controllerFileName = CreateControllerFileName(scriptFileName, cancellationToken) |
+| 342 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
+| 342 | if | 조건에 따라 분기합니다: if (IsSimul(number)) |
+| 343 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationTaskStatus(taskIndex, "Idle", controllerFileName) |
+| 343 | return | 호출자에게 값 또는 제어를 반환합니다: return CreateSimulationTaskStatus(taskIndex, "Idle", controllerFileName); |
+| 344 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:SCRIPT&#124;RUN_IF_IDLE&#124;{taskIndex}&#124;{controllerFileName}", number, cancellationToken) |
+| 344 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:SCRIPT&#124;RUN_IF_IDLE&#124;{taskIndex}&#124;{controllerFileName}", number, cancellationToken) |
+| 344 | return | 호출자에게 값 또는 제어를 반환합니다: return await ExecuteRaw($"AUTOMATION1:SCRIPT&#124;RUN_IF_IDLE&#124;{taskIndex}&#124;{controllerFileName}", number, cancellationToken); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["RunScriptIfIdle"]
- N0["L341 if"]
+ N0["L342 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `RunBufferedScript` · L346–358
+### MethodDeclaration `RunBufferedScript` · L347–359
 
-[Drilling.Common/Automation/CAutomationManager.cs:346–358](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L346-L358)
+[Drilling.Common/Automation/CAutomationManager.cs:347–359](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L347-L359)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2646,23 +2649,23 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 357 | RunBufferedScripts | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunBufferedScripts(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>, int, int, int, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:360 |
-| 357 | new ST_BUFFERED_SCRIPT_RUN_ITEM | resolved | Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM.ST_BUFFERED_SCRIPT_RUN_ITEM(string, string, int) · Drilling.Common/Automation/CAutomationManager.cs:1506 |
+| 358 | RunBufferedScripts | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunBufferedScripts(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>, int, int, int, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:361 |
+| 358 | new ST_BUFFERED_SCRIPT_RUN_ITEM | resolved | Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM.ST_BUFFERED_SCRIPT_RUN_ITEM(string, string, int) · Drilling.Common/Automation/CAutomationManager.cs:1506 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 357 | await | 비동기 완료를 기다립니다: await RunBufferedScripts([new ST_BUFFERED_SCRIPT_RUN_ITEM(localScriptPath, scriptFileName, taskIndex)], number, queueSize, linesPerCommand, timeoutMs, cancellationToken) |
-| 357 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RunBufferedScripts([new ST_BUFFERED_SCRIPT_RUN_ITEM(localScriptPath, scriptFileName, taskIndex)], number, queueSize, linesPerCommand, timeoutMs, cancellationToken) |
-| 357 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_BUFFERED_SCRIPT_RUN_ITEM(localScriptPath, scriptFileName, taskIndex) |
-| 357 | return | 호출자에게 값 또는 제어를 반환합니다: return await RunBufferedScripts([new ST_BUFFERED_SCRIPT_RUN_ITEM(localScriptPath, scriptFileName, taskIndex)], number, queueSize, linesPerCommand, timeoutMs, cancellationToken); |
+| 358 | await | 비동기 완료를 기다립니다: await RunBufferedScripts([new ST_BUFFERED_SCRIPT_RUN_ITEM(localScriptPath, scriptFileName, taskIndex)], number, queueSize, linesPerCommand, timeoutMs, cancellationToken) |
+| 358 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RunBufferedScripts([new ST_BUFFERED_SCRIPT_RUN_ITEM(localScriptPath, scriptFileName, taskIndex)], number, queueSize, linesPerCommand, timeoutMs, cancellationToken) |
+| 358 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_BUFFERED_SCRIPT_RUN_ITEM(localScriptPath, scriptFileName, taskIndex) |
+| 358 | return | 호출자에게 값 또는 제어를 반환합니다: return await RunBufferedScripts([new ST_BUFFERED_SCRIPT_RUN_ITEM(localScriptPath, scriptFileName, taskIndex)], number, queueSize, linesPerCommand, timeoutMs, cancellationToken); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `RunBufferedScripts` · L360–367
+### MethodDeclaration `RunBufferedScripts` · L361–368
 
-[Drilling.Common/Automation/CAutomationManager.cs:360–367](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L360-L367)
+[Drilling.Common/Automation/CAutomationManager.cs:361–368](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L361-L368)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2686,29 +2689,29 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:357–357](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L357-L357) | RunBufferedScripts | False |
-| [Drilling.Common/Station/CStationProcess.cs:1101–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L1101-L1101) | _automationManager.RunBufferedScripts | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L358-L358) | RunBufferedScripts | False |
+| [Drilling.Common/Station/CStationProcess.cs:1102–1102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1102-L1102) | _automationManager.RunBufferedScripts | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 367 | RunBufferedScriptsCore(scripts, number, queueSize, linesPerCommand, timeoutMs, upload: true, stageSession: false, cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
-| 367 | RunBufferedScriptsCore | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunBufferedScriptsCore(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>, int, int, int, int, bool, bool, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:373 |
+| 368 | RunBufferedScriptsCore(scripts, number, queueSize, linesPerCommand, timeoutMs, upload: true, stageSession: false, cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
+| 368 | RunBufferedScriptsCore | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunBufferedScriptsCore(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>, int, int, int, int, bool, bool, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:371 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 367 | await | 비동기 완료를 기다립니다: await RunBufferedScriptsCore(scripts, number, queueSize, linesPerCommand, timeoutMs, upload: true, stageSession: false, cancellationToken).ConfigureAwait(false) |
-| 367 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RunBufferedScriptsCore(scripts, number, queueSize, linesPerCommand, timeoutMs, upload: true, stageSession: false, cancellationToken).ConfigureAwait(false) |
-| 367 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RunBufferedScriptsCore(scripts, number, queueSize, linesPerCommand, timeoutMs, upload: true, stageSession: false, cancellationToken) |
+| 368 | await | 비동기 완료를 기다립니다: await RunBufferedScriptsCore(scripts, number, queueSize, linesPerCommand, timeoutMs, upload: true, stageSession: false, cancellationToken).ConfigureAwait(false) |
+| 368 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RunBufferedScriptsCore(scripts, number, queueSize, linesPerCommand, timeoutMs, upload: true, stageSession: false, cancellationToken).ConfigureAwait(false) |
+| 368 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RunBufferedScriptsCore(scripts, number, queueSize, linesPerCommand, timeoutMs, upload: true, stageSession: false, cancellationToken) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `RunStagePreparedBufferedScripts` · L372–372
+### MethodDeclaration `RunStagePreparedBufferedScripts` · L370–370
 
-[Drilling.Common/Automation/CAutomationManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L372-L372)
+[Drilling.Common/Automation/CAutomationManager.cs:370–370](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L370-L370)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2732,25 +2735,25 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4087–4087](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L4087-L4087) | _automationManager.RunStagePreparedBufferedScripts | True |
+| [Drilling.Common/Station/CStationProcess.cs:4142–4142](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4142-L4142) | _automationManager.RunStagePreparedBufferedScripts | True |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 372 | RunBufferedScriptsCore | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunBufferedScriptsCore(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>, int, int, int, int, bool, bool, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:373 |
+| 370 | RunBufferedScriptsCore | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunBufferedScriptsCore(System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>, int, int, int, int, bool, bool, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:371 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 372 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RunBufferedScriptsCore(scripts, number, queueSize, linesPerCommand, timeoutMs, upload: false, stageSession: true, cancellationToken) |
+| 370 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RunBufferedScriptsCore(scripts, number, queueSize, linesPerCommand, timeoutMs, upload: false, stageSession: true, cancellationToken) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `RunBufferedScriptsCore` · L373–487
+### MethodDeclaration `RunBufferedScriptsCore` · L371–485
 
-[Drilling.Common/Automation/CAutomationManager.cs:373–487](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L373-L487)
+[Drilling.Common/Automation/CAutomationManager.cs:371–485](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L371-L485)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2776,216 +2779,216 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:367–367](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L367-L367) | RunBufferedScriptsCore | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:372–372](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L372-L372) | RunBufferedScriptsCore | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L368-L368) | RunBufferedScriptsCore | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:370–370](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L370-L370) | RunBufferedScriptsCore | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 384 | scripts.ToArray | resolved | Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM[] System.Collections.Generic.IEnumerable<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>.ToArray<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>() |
-| 391 | new HashSet<int> | resolved | System.Collections.Generic.HashSet<int>.HashSet() |
-| 394 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 395 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:585 |
-| 396 | taskIndexes.Add | resolved | bool System.Collections.Generic.HashSet<int>.Add(int) |
-| 397 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
+| 382 | scripts.ToArray | resolved | Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM[] System.Collections.Generic.IEnumerable<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>.ToArray<Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM>() |
+| 389 | new HashSet<int> | resolved | System.Collections.Generic.HashSet<int>.HashSet() |
+| 392 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 393 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:583 |
+| 394 | taskIndexes.Add | resolved | bool System.Collections.Generic.HashSet<int>.Add(int) |
+| 395 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
+| 398 | Math.Max | resolved | int System.Math.Max(int, int) |
+| 399 | Math.Max | resolved | int System.Math.Max(int, int) |
 | 400 | Math.Max | resolved | int System.Math.Max(int, int) |
-| 401 | Math.Max | resolved | int System.Math.Max(int, int) |
-| 402 | Math.Max | resolved | int System.Math.Max(int, int) |
-| 403 | new List<string> | resolved | System.Collections.Generic.List<string>.List() |
-| 407 | commandQueueSize.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 408 | commandLinesPerCommand.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 409 | commandTimeoutMs.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 411 | new HashSet<string> | resolved | System.Collections.Generic.HashSet<string>.HashSet(System.Collections.Generic.IEqualityComparer<string>?) |
-| 412 | new List<(int TaskIndex, string ControllerFile, string? LocalPath)> | resolved | System.Collections.Generic.List<(int TaskIndex, string ControllerFile, string? LocalPath)>.List() |
-| 415 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 420 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 421 | ResolveLocalScriptPath | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveLocalScriptPath(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1022 |
-| 422 | ValidateBufferedRunScriptFile | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateBufferedRunScriptFile(string) · Drilling.Common/Automation/CAutomationManager.cs:677 |
-| 423 | CreateBufferedRunControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateBufferedRunControllerFileName(Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM, string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:489 |
-| 428 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 429 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1053 |
-| 432 | controllerFileNames.Add | resolved | bool System.Collections.Generic.HashSet<string>.Add(string) |
-| 434 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
-| 437 | requests.Add | resolved | void System.Collections.Generic.List<(int TaskIndex, string ControllerFile, string? LocalPath)>.Add((int TaskIndex, string ControllerFile, string? LocalPath)) |
-| 443 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 446 | UploadScript | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.UploadScript(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:315 |
-| 447 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:726 |
-| 450 | fields.Add | resolved | void System.Collections.Generic.List<string>.Add(string) |
-| 450 | request.TaskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 451 | fields.Add | resolved | void System.Collections.Generic.List<string>.Add(string) |
-| 454 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 456 | new List<CStageSimulatedTask> | resolved | System.Collections.Generic.List<Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask>.List() |
-| 460 | sessions.Add | resolved | void System.Collections.Generic.List<Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask>.Add(Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask) |
-| 460 | RegisterStageSimulationTask | resolved | Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask Drilling.Common.Automation.CAutomationManager.RegisterStageSimulationTask(int, int, string, bool) · Drilling.Common/Automation/CAutomationManager.cs:1288 |
-| 462 | CancellationTokenSource.CreateLinkedTokenSource | resolved | System.Threading.CancellationTokenSource System.Threading.CancellationTokenSource.CreateLinkedTokenSource(System.Threading.CancellationToken) |
-| 464 | limit.CancelAfter | resolved | void System.Threading.CancellationTokenSource.CancelAfter(int) |
-| 467 | Task.WhenAll(sessions.Select(session => session.Completion)).WaitAsync(limit.Token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool) |
-| 467 | Task.WhenAll(sessions.Select(session => session.Completion)).WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.WaitAsync(System.Threading.CancellationToken) |
-| 467 | Task.WhenAll | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.WhenAll(System.Collections.Generic.IEnumerable<System.Threading.Tasks.Task>) |
-| 467 | sessions.Select | resolved | System.Collections.Generic.IEnumerable<System.Threading.Tasks.Task> System.Collections.Generic.IEnumerable<Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask>.Select<Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask, System.Threading.Tasks.Task>(System.Func<Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask, System.Threading.Tasks.Task>) |
-| 471 | new TimeoutException | resolved | System.TimeoutException.TimeoutException(string?) |
-| 477 | session.Stop | resolved | void Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask.Stop() · Drilling.Common/Automation/CAutomationManager.cs:1384 |
-| 484 | ExecuteRaw(string.Join("&#124;", fields), number, cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
-| 484 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
-| 484 | string.Join | resolved | string string.Join(string?, System.Collections.Generic.IEnumerable<string?>) |
-| 485 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:726 |
+| 401 | new List<string> | resolved | System.Collections.Generic.List<string>.List() |
+| 405 | commandQueueSize.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 406 | commandLinesPerCommand.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 407 | commandTimeoutMs.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 409 | new HashSet<string> | resolved | System.Collections.Generic.HashSet<string>.HashSet(System.Collections.Generic.IEqualityComparer<string>?) |
+| 410 | new List<(int TaskIndex, string ControllerFile, string? LocalPath)> | resolved | System.Collections.Generic.List<(int TaskIndex, string ControllerFile, string? LocalPath)>.List() |
+| 413 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 418 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
+| 419 | ResolveLocalScriptPath | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveLocalScriptPath(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1020 |
+| 420 | ValidateBufferedRunScriptFile | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateBufferedRunScriptFile(string) · Drilling.Common/Automation/CAutomationManager.cs:675 |
+| 421 | CreateBufferedRunControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateBufferedRunControllerFileName(Drilling.Common.Automation.ST_BUFFERED_SCRIPT_RUN_ITEM, string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:487 |
+| 426 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
+| 427 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1051 |
+| 430 | controllerFileNames.Add | resolved | bool System.Collections.Generic.HashSet<string>.Add(string) |
+| 432 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
+| 435 | requests.Add | resolved | void System.Collections.Generic.List<(int TaskIndex, string ControllerFile, string? LocalPath)>.Add((int TaskIndex, string ControllerFile, string? LocalPath)) |
+| 441 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 444 | UploadScript | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.UploadScript(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:315 |
+| 445 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:724 |
+| 448 | fields.Add | resolved | void System.Collections.Generic.List<string>.Add(string) |
+| 448 | request.TaskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 449 | fields.Add | resolved | void System.Collections.Generic.List<string>.Add(string) |
+| 452 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
+| 454 | new List<CStageSimulatedTask> | resolved | System.Collections.Generic.List<Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask>.List() |
+| 458 | sessions.Add | resolved | void System.Collections.Generic.List<Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask>.Add(Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask) |
+| 458 | RegisterStageSimulationTask | resolved | Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask Drilling.Common.Automation.CAutomationManager.RegisterStageSimulationTask(int, int, string, bool) · Drilling.Common/Automation/CAutomationManager.cs:1288 |
+| 460 | CancellationTokenSource.CreateLinkedTokenSource | resolved | System.Threading.CancellationTokenSource System.Threading.CancellationTokenSource.CreateLinkedTokenSource(System.Threading.CancellationToken) |
+| 462 | limit.CancelAfter | resolved | void System.Threading.CancellationTokenSource.CancelAfter(int) |
+| 465 | Task.WhenAll(sessions.Select(session => session.Completion)).WaitAsync(limit.Token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool) |
+| 465 | Task.WhenAll(sessions.Select(session => session.Completion)).WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.WaitAsync(System.Threading.CancellationToken) |
+| 465 | Task.WhenAll | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.WhenAll(System.Collections.Generic.IEnumerable<System.Threading.Tasks.Task>) |
+| 465 | sessions.Select | resolved | System.Collections.Generic.IEnumerable<System.Threading.Tasks.Task> System.Collections.Generic.IEnumerable<Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask>.Select<Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask, System.Threading.Tasks.Task>(System.Func<Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask, System.Threading.Tasks.Task>) |
+| 469 | new TimeoutException | resolved | System.TimeoutException.TimeoutException(string?) |
+| 475 | session.Stop | resolved | void Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask.Stop() · Drilling.Common/Automation/CAutomationManager.cs:1384 |
+| 482 | ExecuteRaw(string.Join("&#124;", fields), number, cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
+| 482 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 482 | string.Join | resolved | string string.Join(string?, System.Collections.Generic.IEnumerable<string?>) |
+| 483 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:724 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 384 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: scripts.ToArray() |
-| 384 | local-declaration | 지역 변수를 선언합니다: var runItems = scripts.ToArray(); |
-| 384 | variable-initializer | 변수의 초기값을 지정합니다: runItems = scripts.ToArray() |
-| 385 | if | 조건에 따라 분기합니다: if (runItems.Length == 0) |
-| 387 | return | 호출자에게 값 또는 제어를 반환합니다: return "OK:SCRIPT:BUFFERED_RUN:EMPTY"; |
-| 391 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<int>() |
-| 391 | local-declaration | 지역 변수를 선언합니다: var taskIndexes = new HashSet<int>(); |
-| 391 | variable-initializer | 변수의 초기값을 지정합니다: taskIndexes = new HashSet<int>() |
-| 392 | foreach | 컬렉션 요소를 순회합니다: foreach (var script in runItems) |
-| 394 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
-| 395 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(script.TaskIndex) |
-| 396 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndexes.Add(script.TaskIndex) |
-| 396 | if | 조건에 따라 분기합니다: if (!taskIndexes.Add(script.TaskIndex)) |
-| 397 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Automation1 buffered run group has duplicated task: {script.TaskIndex}") |
-| 397 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException($"Automation1 buffered run group has duplicated task: {script.TaskIndex}"); |
-| 400 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, queueSize) |
-| 400 | local-declaration | 지역 변수를 선언합니다: var commandQueueSize = Math.Max(1, queueSize); |
-| 400 | variable-initializer | 변수의 초기값을 지정합니다: commandQueueSize = Math.Max(1, queueSize) |
-| 401 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(2, linesPerCommand) |
-| 401 | local-declaration | 지역 변수를 선언합니다: var commandLinesPerCommand = Math.Max(2, linesPerCommand); |
-| 401 | variable-initializer | 변수의 초기값을 지정합니다: commandLinesPerCommand = Math.Max(2, linesPerCommand) |
-| 402 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0, timeoutMs) |
-| 402 | local-declaration | 지역 변수를 선언합니다: var commandTimeoutMs = Math.Max(0, timeoutMs); |
-| 402 | variable-initializer | 변수의 초기값을 지정합니다: commandTimeoutMs = Math.Max(0, timeoutMs) |
-| 403 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string> { "AUTOMATION1:SCRIPT", "BUFFERED_RUN_GROUP", commandQueueSize.ToString(CultureInfo.InvariantCulture), commandLinesPerCommand.ToString(CultureInfo.InvariantCulture), commandTimeoutMs.ToString(CultureInfo… |
-| 403 | local-declaration | 지역 변수를 선언합니다: var fields = new List<string> { "AUTOMATION1:SCRIPT", "BUFFERED_RUN_GROUP", commandQueueSize.ToString(CultureInfo.InvariantCulture), commandLinesPerCommand.ToString(CultureInfo.InvariantCulture), commandTimeoutMs.ToString(CultureI |
-| 403 | variable-initializer | 변수의 초기값을 지정합니다: fields = new List<string> { "AUTOMATION1:SCRIPT", "BUFFERED_RUN_GROUP", commandQueueSize.ToString(CultureInfo.InvariantCulture), commandLinesPerCommand.ToString(CultureInfo.InvariantCulture), commandTimeoutMs.ToString(CultureInfo. |
-| 407 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: commandQueueSize.ToString(CultureInfo.InvariantCulture) |
-| 408 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: commandLinesPerCommand.ToString(CultureInfo.InvariantCulture) |
-| 409 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: commandTimeoutMs.ToString(CultureInfo.InvariantCulture) |
-| 411 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<string>(StringComparer.OrdinalIgnoreCase) |
-| 411 | local-declaration | 지역 변수를 선언합니다: var controllerFileNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase); |
-| 411 | variable-initializer | 변수의 초기값을 지정합니다: controllerFileNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase) |
-| 412 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<(int TaskIndex, string ControllerFile, string? LocalPath)>() |
-| 412 | local-declaration | 지역 변수를 선언합니다: var requests = new List<(int TaskIndex, string ControllerFile, string? LocalPath)>(); |
-| 412 | variable-initializer | 변수의 초기값을 지정합니다: requests = new List<(int TaskIndex, string ControllerFile, string? LocalPath)>() |
-| 413 | foreach | 컬렉션 요소를 순회합니다: foreach (var script in runItems) |
-| 415 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
-| 416 | local-declaration | 지역 변수를 선언합니다: string? resolvedLocalScriptPath = null; |
-| 416 | variable-initializer | 변수의 초기값을 지정합니다: resolvedLocalScriptPath = null |
-| 417 | local-declaration | 지역 변수를 선언합니다: string controllerFileName; |
-| 418 | if | 조건에 따라 분기합니다: if (upload) |
-| 420 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(script.LocalScriptPath) |
-| 421 | assignment | 값을 대상에 대입합니다: resolvedLocalScriptPath = ResolveLocalScriptPath(script.LocalScriptPath, cancellationToken) |
-| 421 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveLocalScriptPath(script.LocalScriptPath, cancellationToken) |
-| 422 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateBufferedRunScriptFile(resolvedLocalScriptPath) |
-| 423 | assignment | 값을 대상에 대입합니다: controllerFileName = CreateBufferedRunControllerFileName(script, resolvedLocalScriptPath, cancellationToken) |
-| 423 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBufferedRunControllerFileName(script, resolvedLocalScriptPath, cancellationToken) |
-| 425 | else | 앞 조건이 거짓인 경로입니다: else |
-| 428 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(script.ScriptFileName) |
-| 429 | assignment | 값을 대상에 대입합니다: controllerFileName = CreateControllerFileName(script.ScriptFileName, cancellationToken) |
-| 429 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateControllerFileName(script.ScriptFileName, cancellationToken) |
-| 432 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: controllerFileNames.Add(controllerFileName) |
-| 432 | if | 조건에 따라 분기합니다: if (!controllerFileNames.Add(controllerFileName)) |
-| 434 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Automation1 buffered run controller file is duplicated: {controllerFileName}") |
-| 434 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException($"Automation1 buffered run controller file is duplicated: {controllerFileName}"); |
-| 437 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: requests.Add((script.TaskIndex, controllerFileName, resolvedLocalScriptPath)) |
-| 441 | foreach | 컬렉션 요소를 순회합니다: foreach (var request in requests) |
-| 443 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
-| 444 | if | 조건에 따라 분기합니다: if (upload) |
-| 446 | await | 비동기 완료를 기다립니다: await UploadScript(request.LocalPath!, request.ControllerFile, number, cancellationToken) |
-| 446 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: UploadScript(request.LocalPath!, request.ControllerFile, number, cancellationToken) |
-| 446 | local-declaration | 지역 변수를 선언합니다: var uploadResponse = await UploadScript(request.LocalPath!, request.ControllerFile, number, cancellationToken); |
-| 446 | variable-initializer | 변수의 초기값을 지정합니다: uploadResponse = await UploadScript(request.LocalPath!, request.ControllerFile, number, cancellationToken) |
-| 447 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(uploadResponse, $"Buffered script upload failed. ControllerFile={request.ControllerFile}") |
-| 450 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Add(request.TaskIndex.ToString(CultureInfo.InvariantCulture)) |
-| 450 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: request.TaskIndex.ToString(CultureInfo.InvariantCulture) |
-| 451 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Add(request.ControllerFile) |
-| 454 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
-| 454 | if | 조건에 따라 분기합니다: if (stageSession && IsSimul(number)) |
-| 456 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<CStageSimulatedTask>() |
-| 456 | local-declaration | 지역 변수를 선언합니다: var sessions = new List<CStageSimulatedTask>(); |
-| 456 | variable-initializer | 변수의 초기값을 지정합니다: sessions = new List<CStageSimulatedTask>() |
-| 457 | try | 예외 처리 범위입니다: try |
-| 459 | foreach | 컬렉션 요소를 순회합니다: foreach (var request in requests) |
-| 460 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: sessions.Add(RegisterStageSimulationTask(number, request.TaskIndex, request.ControllerFile, buffered: true)) |
-| 460 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterStageSimulationTask(number, request.TaskIndex, request.ControllerFile, buffered: true) |
-| 462 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(cancellationToken) |
-| 462 | using-declaration | 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); |
-| 462 | variable-initializer | 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken) |
-| 463 | if | 조건에 따라 분기합니다: if (commandTimeoutMs > 0) |
-| 464 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(commandTimeoutMs) |
-| 465 | try | 예외 처리 범위입니다: try |
-| 467 | await | 비동기 완료를 기다립니다: await Task.WhenAll(sessions.Select(session => session.Completion)).WaitAsync(limit.Token).ConfigureAwait(false) |
-| 467 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(sessions.Select(session => session.Completion)).WaitAsync(limit.Token).ConfigureAwait(false) |
-| 467 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(sessions.Select(session => session.Completion)).WaitAsync(limit.Token) |
-| 467 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(sessions.Select(session => session.Completion)) |
-| 467 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: sessions.Select(session => session.Completion) |
-| 469 | catch | 지정 예외를 처리합니다: catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested && limit.IsCancellationRequested) |
-| 471 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException($"Automation1 buffered run timeout: {commandTimeoutMs} ms.") |
-| 471 | throw | 예외를 발생/전달합니다: throw new TimeoutException($"Automation1 buffered run timeout: {commandTimeoutMs} ms."); |
-| 474 | catch | 지정 예외를 처리합니다: catch  |
-| 476 | foreach | 컬렉션 요소를 순회합니다: foreach (var session in sessions) |
-| 477 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Stop() |
-| 478 | throw | 예외를 발생/전달합니다: throw; |
-| 481 | return | 호출자에게 값 또는 제어를 반환합니다: return "OK:SCRIPT:BUFFERED_RUN:SIMULATION"; |
-| 484 | await | 비동기 완료를 기다립니다: await ExecuteRaw(string.Join("&#124;", fields), number, cancellationToken).ConfigureAwait(false) |
-| 484 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw(string.Join("&#124;", fields), number, cancellationToken).ConfigureAwait(false) |
-| 484 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw(string.Join("&#124;", fields), number, cancellationToken) |
-| 484 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join("&#124;", fields) |
-| 484 | local-declaration | 지역 변수를 선언합니다: var response = await ExecuteRaw(string.Join("&#124;", fields), number, cancellationToken).ConfigureAwait(false); |
-| 484 | variable-initializer | 변수의 초기값을 지정합니다: response = await ExecuteRaw(string.Join("&#124;", fields), number, cancellationToken).ConfigureAwait(false) |
-| 485 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(response, "Buffered script run failed.") |
-| 486 | return | 호출자에게 값 또는 제어를 반환합니다: return response; |
+| 382 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: scripts.ToArray() |
+| 382 | local-declaration | 지역 변수를 선언합니다: var runItems = scripts.ToArray(); |
+| 382 | variable-initializer | 변수의 초기값을 지정합니다: runItems = scripts.ToArray() |
+| 383 | if | 조건에 따라 분기합니다: if (runItems.Length == 0) |
+| 385 | return | 호출자에게 값 또는 제어를 반환합니다: return "OK:SCRIPT:BUFFERED_RUN:EMPTY"; |
+| 389 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<int>() |
+| 389 | local-declaration | 지역 변수를 선언합니다: var taskIndexes = new HashSet<int>(); |
+| 389 | variable-initializer | 변수의 초기값을 지정합니다: taskIndexes = new HashSet<int>() |
+| 390 | foreach | 컬렉션 요소를 순회합니다: foreach (var script in runItems) |
+| 392 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
+| 393 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(script.TaskIndex) |
+| 394 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndexes.Add(script.TaskIndex) |
+| 394 | if | 조건에 따라 분기합니다: if (!taskIndexes.Add(script.TaskIndex)) |
+| 395 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Automation1 buffered run group has duplicated task: {script.TaskIndex}") |
+| 395 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException($"Automation1 buffered run group has duplicated task: {script.TaskIndex}"); |
+| 398 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1, queueSize) |
+| 398 | local-declaration | 지역 변수를 선언합니다: var commandQueueSize = Math.Max(1, queueSize); |
+| 398 | variable-initializer | 변수의 초기값을 지정합니다: commandQueueSize = Math.Max(1, queueSize) |
+| 399 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(2, linesPerCommand) |
+| 399 | local-declaration | 지역 변수를 선언합니다: var commandLinesPerCommand = Math.Max(2, linesPerCommand); |
+| 399 | variable-initializer | 변수의 초기값을 지정합니다: commandLinesPerCommand = Math.Max(2, linesPerCommand) |
+| 400 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(0, timeoutMs) |
+| 400 | local-declaration | 지역 변수를 선언합니다: var commandTimeoutMs = Math.Max(0, timeoutMs); |
+| 400 | variable-initializer | 변수의 초기값을 지정합니다: commandTimeoutMs = Math.Max(0, timeoutMs) |
+| 401 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string> { "AUTOMATION1:SCRIPT", "BUFFERED_RUN_GROUP", commandQueueSize.ToString(CultureInfo.InvariantCulture), commandLinesPerCommand.ToString(CultureInfo.InvariantCulture), commandTimeoutMs.ToString(CultureInfo… |
+| 401 | local-declaration | 지역 변수를 선언합니다: var fields = new List<string> { "AUTOMATION1:SCRIPT", "BUFFERED_RUN_GROUP", commandQueueSize.ToString(CultureInfo.InvariantCulture), commandLinesPerCommand.ToString(CultureInfo.InvariantCulture), commandTimeoutMs.ToString(CultureI |
+| 401 | variable-initializer | 변수의 초기값을 지정합니다: fields = new List<string> { "AUTOMATION1:SCRIPT", "BUFFERED_RUN_GROUP", commandQueueSize.ToString(CultureInfo.InvariantCulture), commandLinesPerCommand.ToString(CultureInfo.InvariantCulture), commandTimeoutMs.ToString(CultureInfo. |
+| 405 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: commandQueueSize.ToString(CultureInfo.InvariantCulture) |
+| 406 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: commandLinesPerCommand.ToString(CultureInfo.InvariantCulture) |
+| 407 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: commandTimeoutMs.ToString(CultureInfo.InvariantCulture) |
+| 409 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new HashSet<string>(StringComparer.OrdinalIgnoreCase) |
+| 409 | local-declaration | 지역 변수를 선언합니다: var controllerFileNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase); |
+| 409 | variable-initializer | 변수의 초기값을 지정합니다: controllerFileNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase) |
+| 410 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<(int TaskIndex, string ControllerFile, string? LocalPath)>() |
+| 410 | local-declaration | 지역 변수를 선언합니다: var requests = new List<(int TaskIndex, string ControllerFile, string? LocalPath)>(); |
+| 410 | variable-initializer | 변수의 초기값을 지정합니다: requests = new List<(int TaskIndex, string ControllerFile, string? LocalPath)>() |
+| 411 | foreach | 컬렉션 요소를 순회합니다: foreach (var script in runItems) |
+| 413 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
+| 414 | local-declaration | 지역 변수를 선언합니다: string? resolvedLocalScriptPath = null; |
+| 414 | variable-initializer | 변수의 초기값을 지정합니다: resolvedLocalScriptPath = null |
+| 415 | local-declaration | 지역 변수를 선언합니다: string controllerFileName; |
+| 416 | if | 조건에 따라 분기합니다: if (upload) |
+| 418 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(script.LocalScriptPath) |
+| 419 | assignment | 값을 대상에 대입합니다: resolvedLocalScriptPath = ResolveLocalScriptPath(script.LocalScriptPath, cancellationToken) |
+| 419 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveLocalScriptPath(script.LocalScriptPath, cancellationToken) |
+| 420 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateBufferedRunScriptFile(resolvedLocalScriptPath) |
+| 421 | assignment | 값을 대상에 대입합니다: controllerFileName = CreateBufferedRunControllerFileName(script, resolvedLocalScriptPath, cancellationToken) |
+| 421 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateBufferedRunControllerFileName(script, resolvedLocalScriptPath, cancellationToken) |
+| 423 | else | 앞 조건이 거짓인 경로입니다: else |
+| 426 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(script.ScriptFileName) |
+| 427 | assignment | 값을 대상에 대입합니다: controllerFileName = CreateControllerFileName(script.ScriptFileName, cancellationToken) |
+| 427 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateControllerFileName(script.ScriptFileName, cancellationToken) |
+| 430 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: controllerFileNames.Add(controllerFileName) |
+| 430 | if | 조건에 따라 분기합니다: if (!controllerFileNames.Add(controllerFileName)) |
+| 432 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Automation1 buffered run controller file is duplicated: {controllerFileName}") |
+| 432 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException($"Automation1 buffered run controller file is duplicated: {controllerFileName}"); |
+| 435 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: requests.Add((script.TaskIndex, controllerFileName, resolvedLocalScriptPath)) |
+| 439 | foreach | 컬렉션 요소를 순회합니다: foreach (var request in requests) |
+| 441 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
+| 442 | if | 조건에 따라 분기합니다: if (upload) |
+| 444 | await | 비동기 완료를 기다립니다: await UploadScript(request.LocalPath!, request.ControllerFile, number, cancellationToken) |
+| 444 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: UploadScript(request.LocalPath!, request.ControllerFile, number, cancellationToken) |
+| 444 | local-declaration | 지역 변수를 선언합니다: var uploadResponse = await UploadScript(request.LocalPath!, request.ControllerFile, number, cancellationToken); |
+| 444 | variable-initializer | 변수의 초기값을 지정합니다: uploadResponse = await UploadScript(request.LocalPath!, request.ControllerFile, number, cancellationToken) |
+| 445 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(uploadResponse, $"Buffered script upload failed. ControllerFile={request.ControllerFile}") |
+| 448 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Add(request.TaskIndex.ToString(CultureInfo.InvariantCulture)) |
+| 448 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: request.TaskIndex.ToString(CultureInfo.InvariantCulture) |
+| 449 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields.Add(request.ControllerFile) |
+| 452 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
+| 452 | if | 조건에 따라 분기합니다: if (stageSession && IsSimul(number)) |
+| 454 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<CStageSimulatedTask>() |
+| 454 | local-declaration | 지역 변수를 선언합니다: var sessions = new List<CStageSimulatedTask>(); |
+| 454 | variable-initializer | 변수의 초기값을 지정합니다: sessions = new List<CStageSimulatedTask>() |
+| 455 | try | 예외 처리 범위입니다: try |
+| 457 | foreach | 컬렉션 요소를 순회합니다: foreach (var request in requests) |
+| 458 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: sessions.Add(RegisterStageSimulationTask(number, request.TaskIndex, request.ControllerFile, buffered: true)) |
+| 458 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterStageSimulationTask(number, request.TaskIndex, request.ControllerFile, buffered: true) |
+| 460 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CancellationTokenSource.CreateLinkedTokenSource(cancellationToken) |
+| 460 | using-declaration | 정리할 자원을 선언합니다: using var limit = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken); |
+| 460 | variable-initializer | 변수의 초기값을 지정합니다: limit = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken) |
+| 461 | if | 조건에 따라 분기합니다: if (commandTimeoutMs > 0) |
+| 462 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: limit.CancelAfter(commandTimeoutMs) |
+| 463 | try | 예외 처리 범위입니다: try |
+| 465 | await | 비동기 완료를 기다립니다: await Task.WhenAll(sessions.Select(session => session.Completion)).WaitAsync(limit.Token).ConfigureAwait(false) |
+| 465 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(sessions.Select(session => session.Completion)).WaitAsync(limit.Token).ConfigureAwait(false) |
+| 465 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(sessions.Select(session => session.Completion)).WaitAsync(limit.Token) |
+| 465 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.WhenAll(sessions.Select(session => session.Completion)) |
+| 465 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: sessions.Select(session => session.Completion) |
+| 467 | catch | 지정 예외를 처리합니다: catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested && limit.IsCancellationRequested) |
+| 469 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new TimeoutException($"Automation1 buffered run timeout: {commandTimeoutMs} ms.") |
+| 469 | throw | 예외를 발생/전달합니다: throw new TimeoutException($"Automation1 buffered run timeout: {commandTimeoutMs} ms."); |
+| 472 | catch | 지정 예외를 처리합니다: catch  |
+| 474 | foreach | 컬렉션 요소를 순회합니다: foreach (var session in sessions) |
+| 475 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Stop() |
+| 476 | throw | 예외를 발생/전달합니다: throw; |
+| 479 | return | 호출자에게 값 또는 제어를 반환합니다: return "OK:SCRIPT:BUFFERED_RUN:SIMULATION"; |
+| 482 | await | 비동기 완료를 기다립니다: await ExecuteRaw(string.Join("&#124;", fields), number, cancellationToken).ConfigureAwait(false) |
+| 482 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw(string.Join("&#124;", fields), number, cancellationToken).ConfigureAwait(false) |
+| 482 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw(string.Join("&#124;", fields), number, cancellationToken) |
+| 482 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join("&#124;", fields) |
+| 482 | local-declaration | 지역 변수를 선언합니다: var response = await ExecuteRaw(string.Join("&#124;", fields), number, cancellationToken).ConfigureAwait(false); |
+| 482 | variable-initializer | 변수의 초기값을 지정합니다: response = await ExecuteRaw(string.Join("&#124;", fields), number, cancellationToken).ConfigureAwait(false) |
+| 483 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(response, "Buffered script run failed.") |
+| 484 | return | 호출자에게 값 또는 제어를 반환합니다: return response; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["RunBufferedScriptsCore"]
- N0["L385 if"]
+ N0["L383 if"]
  M -->|포함| N0
- N1["L392 foreach"]
+ N1["L390 foreach"]
  M -->|포함| N1
- N2["L396 if"]
+ N2["L394 if"]
  N1 -->|포함| N2
- N3["L413 foreach"]
+ N3["L411 foreach"]
  M -->|포함| N3
- N4["L418 if"]
+ N4["L416 if"]
  N3 -->|포함| N4
- N5["L425 else"]
+ N5["L423 else"]
  N4 -->|포함| N5
- N6["L432 if"]
+ N6["L430 if"]
  N3 -->|포함| N6
- N7["L441 foreach"]
+ N7["L439 foreach"]
  M -->|포함| N7
- N8["L444 if"]
+ N8["L442 if"]
  N7 -->|포함| N8
- N9["L454 if"]
+ N9["L452 if"]
  M -->|포함| N9
- N10["L457 try"]
+ N10["L455 try"]
  N9 -->|포함| N10
- N11["L459 foreach"]
+ N11["L457 foreach"]
  N10 -->|포함| N11
- N12["L463 if"]
+ N12["L461 if"]
  N10 -->|포함| N12
- N13["L465 try"]
+ N13["L463 try"]
  N10 -->|포함| N13
- N14["L469 catch"]
+ N14["L467 catch"]
  N13 -->|포함| N14
- N15["L474 catch"]
+ N15["L472 catch"]
  N10 -->|포함| N15
- N16["L476 foreach"]
+ N16["L474 foreach"]
  N15 -->|포함| N16
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateBufferedRunControllerFileName` · L489–493
+### MethodDeclaration `CreateBufferedRunControllerFileName` · L487–491
 
-[Drilling.Common/Automation/CAutomationManager.cs:489–493](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L489-L493)
+[Drilling.Common/Automation/CAutomationManager.cs:487–491](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L487-L491)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3006,33 +3009,33 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L423-L423) | CreateBufferedRunControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L421-L421) | CreateBufferedRunControllerFileName | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 491 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 491 | CreateTaskScopedScriptFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateTaskScopedScriptFileName(int, string) · Drilling.Common/Automation/CAutomationManager.cs:495 |
-| 492 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1053 |
+| 489 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 489 | CreateTaskScopedScriptFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateTaskScopedScriptFileName(int, string) · Drilling.Common/Automation/CAutomationManager.cs:493 |
+| 490 | CreateControllerFileName | resolved | string Drilling.Common.Automation.CAutomationManager.CreateControllerFileName(string, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1051 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 491 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(script.ScriptFileName) |
-| 491 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateTaskScopedScriptFileName(script.TaskIndex, resolvedLocalScriptPath) |
-| 491 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(script.ScriptFileName) ? CreateTaskScopedScriptFileName(script.TaskIndex, resolvedLocalScriptPath) : script.ScriptFileName |
-| 491 | local-declaration | 지역 변수를 선언합니다: var fileName = string.IsNullOrWhiteSpace(script.ScriptFileName) ? CreateTaskScopedScriptFileName(script.TaskIndex, resolvedLocalScriptPath) : script.ScriptFileName; |
-| 491 | variable-initializer | 변수의 초기값을 지정합니다: fileName = string.IsNullOrWhiteSpace(script.ScriptFileName) ? CreateTaskScopedScriptFileName(script.TaskIndex, resolvedLocalScriptPath) : script.ScriptFileName |
-| 492 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateControllerFileName(fileName, cancellationToken) |
-| 492 | return | 호출자에게 값 또는 제어를 반환합니다: return CreateControllerFileName(fileName, cancellationToken); |
+| 489 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(script.ScriptFileName) |
+| 489 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateTaskScopedScriptFileName(script.TaskIndex, resolvedLocalScriptPath) |
+| 489 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(script.ScriptFileName) ? CreateTaskScopedScriptFileName(script.TaskIndex, resolvedLocalScriptPath) : script.ScriptFileName |
+| 489 | local-declaration | 지역 변수를 선언합니다: var fileName = string.IsNullOrWhiteSpace(script.ScriptFileName) ? CreateTaskScopedScriptFileName(script.TaskIndex, resolvedLocalScriptPath) : script.ScriptFileName; |
+| 489 | variable-initializer | 변수의 초기값을 지정합니다: fileName = string.IsNullOrWhiteSpace(script.ScriptFileName) ? CreateTaskScopedScriptFileName(script.TaskIndex, resolvedLocalScriptPath) : script.ScriptFileName |
+| 490 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateControllerFileName(fileName, cancellationToken) |
+| 490 | return | 호출자에게 값 또는 제어를 반환합니다: return CreateControllerFileName(fileName, cancellationToken); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateTaskScopedScriptFileName` · L495–504
+### MethodDeclaration `CreateTaskScopedScriptFileName` · L493–502
 
-[Drilling.Common/Automation/CAutomationManager.cs:495–504](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L495-L504)
+[Drilling.Common/Automation/CAutomationManager.cs:493–502](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L493-L502)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3052,43 +3055,43 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:491–491](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L491-L491) | CreateTaskScopedScriptFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L489-L489) | CreateTaskScopedScriptFileName | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 497 | Path.GetFileName | resolved | string? System.IO.Path.GetFileName(string?) |
-| 498 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 503 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 495 | Path.GetFileName | resolved | string? System.IO.Path.GetFileName(string?) |
+| 496 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 501 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 497 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(localScriptPath) |
-| 497 | local-declaration | 지역 변수를 선언합니다: var fileName = Path.GetFileName(localScriptPath); |
-| 497 | variable-initializer | 변수의 초기값을 지정합니다: fileName = Path.GetFileName(localScriptPath) |
-| 498 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(fileName) |
-| 498 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(fileName)) |
-| 500 | assignment | 값을 대상에 대입합니다: fileName = "PROCESS.ascript" |
-| 503 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
-| 503 | return | 호출자에게 값 또는 제어를 반환합니다: return $"T{taskIndex.ToString(CultureInfo.InvariantCulture)}_{fileName}"; |
+| 495 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(localScriptPath) |
+| 495 | local-declaration | 지역 변수를 선언합니다: var fileName = Path.GetFileName(localScriptPath); |
+| 495 | variable-initializer | 변수의 초기값을 지정합니다: fileName = Path.GetFileName(localScriptPath) |
+| 496 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(fileName) |
+| 496 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(fileName)) |
+| 498 | assignment | 값을 대상에 대입합니다: fileName = "PROCESS.ascript" |
+| 501 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
+| 501 | return | 호출자에게 값 또는 제어를 반환합니다: return $"T{taskIndex.ToString(CultureInfo.InvariantCulture)}_{fileName}"; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["CreateTaskScopedScriptFileName"]
- N0["L498 if"]
+ N0["L496 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StopTask` · L506–521
+### MethodDeclaration `StopTask` · L504–519
 
-[Drilling.Common/Automation/CAutomationManager.cs:506–521](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L506-L521)
+[Drilling.Common/Automation/CAutomationManager.cs:504–519](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L504-L519)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3109,63 +3112,63 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1109–1109](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1109-L1109) | StopTask | True |
-| [Drilling.Common/Station/CStationProcess.cs:952–952](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L952-L952) | _automationManager.StopTask | True |
-| [Drilling.Common/Station/CStationProcess.cs:1123–1123](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L1123-L1123) | _automationManager.StopTask | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3819–3819](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3819-L3819) | _manager.automation.StopTask | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4561–4561](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4561-L4561) | _manager.automation.StopTask | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4899–4899](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4899-L4899) | _manager.automation.StopTask | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5405–5405](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5405-L5405) | _manager.automation.StopTask | True |
+| [Drilling.Common/Automation/CAutomationManager.cs:1109–1109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1109-L1109) | StopTask | True |
+| [Drilling.Common/Station/CStationProcess.cs:953–953](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L953-L953) | _automationManager.StopTask | True |
+| [Drilling.Common/Station/CStationProcess.cs:1124–1124](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1124-L1124) | _automationManager.StopTask | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3827–3827](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3827-L3827) | _manager.automation.StopTask | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4569–4569](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4569-L4569) | _manager.automation.StopTask | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4907–4907](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4907-L4907) | _manager.automation.StopTask | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5413–5413](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L5413-L5413) | _manager.automation.StopTask | True |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 508 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:585 |
-| 509 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 511 | _stageSimulationTasks.TryGetValue | resolved | bool System.Collections.Concurrent.ConcurrentDictionary<(int Controller, int Task), Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask>.TryGetValue((int Controller, int Task), out Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask) |
-| 513 | session.Stop | resolved | void Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask.Stop() · Drilling.Common/Automation/CAutomationManager.cs:1384 |
-| 514 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
-| 514 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:593 |
-| 517 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
-| 517 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:593 |
-| 520 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 506 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:583 |
+| 507 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
+| 509 | _stageSimulationTasks.TryGetValue | resolved | bool System.Collections.Concurrent.ConcurrentDictionary<(int Controller, int Task), Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask>.TryGetValue((int Controller, int Task), out Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask) |
+| 511 | session.Stop | resolved | void Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask.Stop() · Drilling.Common/Automation/CAutomationManager.cs:1384 |
+| 512 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
+| 512 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:591 |
+| 515 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
+| 515 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:591 |
+| 518 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 508 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
-| 509 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
-| 509 | if | 조건에 따라 분기합니다: if (IsSimul(number)) |
-| 511 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _stageSimulationTasks.TryGetValue((number, taskIndex), out var session) |
-| 511 | if | 조건에 따라 분기합니다: if (_stageSimulationTasks.TryGetValue((number, taskIndex), out var session)) |
-| 513 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Stop() |
-| 514 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(CreateSimulationTaskStatus(taskIndex, session.State, session.File)) |
-| 514 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationTaskStatus(taskIndex, session.State, session.File) |
-| 514 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(CreateSimulationTaskStatus(taskIndex, session.State, session.File)); |
-| 517 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(CreateSimulationTaskStatus(taskIndex, "Idle")) |
-| 517 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationTaskStatus(taskIndex, "Idle") |
-| 517 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(CreateSimulationTaskStatus(taskIndex, "Idle")); |
-| 520 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:SCRIPT&#124;STOP&#124;{taskIndex}", number, cancellationToken) |
-| 520 | return | 호출자에게 값 또는 제어를 반환합니다: return ExecuteRaw($"AUTOMATION1:SCRIPT&#124;STOP&#124;{taskIndex}", number, cancellationToken); |
+| 506 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
+| 507 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
+| 507 | if | 조건에 따라 분기합니다: if (IsSimul(number)) |
+| 509 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _stageSimulationTasks.TryGetValue((number, taskIndex), out var session) |
+| 509 | if | 조건에 따라 분기합니다: if (_stageSimulationTasks.TryGetValue((number, taskIndex), out var session)) |
+| 511 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: session.Stop() |
+| 512 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(CreateSimulationTaskStatus(taskIndex, session.State, session.File)) |
+| 512 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationTaskStatus(taskIndex, session.State, session.File) |
+| 512 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(CreateSimulationTaskStatus(taskIndex, session.State, session.File)); |
+| 515 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(CreateSimulationTaskStatus(taskIndex, "Idle")) |
+| 515 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationTaskStatus(taskIndex, "Idle") |
+| 515 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(CreateSimulationTaskStatus(taskIndex, "Idle")); |
+| 518 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:SCRIPT&#124;STOP&#124;{taskIndex}", number, cancellationToken) |
+| 518 | return | 호출자에게 값 또는 제어를 반환합니다: return ExecuteRaw($"AUTOMATION1:SCRIPT&#124;STOP&#124;{taskIndex}", number, cancellationToken); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["StopTask"]
- N0["L509 if"]
+ N0["L507 if"]
  M -->|포함| N0
- N1["L511 if"]
+ N1["L509 if"]
  N0 -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadTaskStatus` · L523–532
+### MethodDeclaration `ReadTaskStatus` · L521–530
 
-[Drilling.Common/Automation/CAutomationManager.cs:523–532](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L523-L532)
+[Drilling.Common/Automation/CAutomationManager.cs:521–530](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L521-L530)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3186,56 +3189,56 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L44-L44) | _automation.ReadTaskStatus | True |
-| [Drilling.Common/Station/CStationProcess.cs:897–897](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L897-L897) | _automationManager.ReadTaskStatus | True |
-| [Drilling.Common/Station/CStationProcess.cs:986–986](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L986-L986) | _automationManager.ReadTaskStatus | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2000–2000](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2000-L2000) | _manager.automation.ReadTaskStatus | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3771–3771](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3771-L3771) | _manager.automation.ReadTaskStatus | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4466–4466](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4466-L4466) | _manager.automation.ReadTaskStatus | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:5504–5504](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L5504-L5504) | _manager.automation.ReadTaskStatus | True |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L44-L44) | _automation.ReadTaskStatus | True |
+| [Drilling.Common/Station/CStationProcess.cs:898–898](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L898-L898) | _automationManager.ReadTaskStatus | True |
+| [Drilling.Common/Station/CStationProcess.cs:987–987](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L987-L987) | _automationManager.ReadTaskStatus | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2008–2008](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2008-L2008) | _manager.automation.ReadTaskStatus | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3779–3779](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3779-L3779) | _manager.automation.ReadTaskStatus | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4474–4474](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4474-L4474) | _manager.automation.ReadTaskStatus | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:5512–5512](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L5512-L5512) | _manager.automation.ReadTaskStatus | True |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 525 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:585 |
-| 526 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 528 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
-| 528 | _stageSimulationTasks.TryGetValue | resolved | bool System.Collections.Concurrent.ConcurrentDictionary<(int Controller, int Task), Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask>.TryGetValue((int Controller, int Task), out Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask) |
-| 528 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:593 |
-| 528 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:593 |
-| 531 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 523 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:583 |
+| 524 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
+| 526 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
+| 526 | _stageSimulationTasks.TryGetValue | resolved | bool System.Collections.Concurrent.ConcurrentDictionary<(int Controller, int Task), Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask>.TryGetValue((int Controller, int Task), out Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask) |
+| 526 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:591 |
+| 526 | CreateSimulationTaskStatus | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationTaskStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:591 |
+| 529 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 525 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
-| 526 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
-| 526 | if | 조건에 따라 분기합니다: if (IsSimul(number)) |
-| 528 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(_stageSimulationTasks.TryGetValue((number, taskIndex), out var session) ? CreateSimulationTaskStatus(taskIndex, session.State, session.File) : CreateSimulationTaskStatus(taskIndex, "Idle")) |
-| 528 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _stageSimulationTasks.TryGetValue((number, taskIndex), out var session) |
-| 528 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationTaskStatus(taskIndex, session.State, session.File) |
-| 528 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationTaskStatus(taskIndex, "Idle") |
-| 528 | conditional-expression | 조건에 따라 결과식을 선택합니다: _stageSimulationTasks.TryGetValue((number, taskIndex), out var session) ? CreateSimulationTaskStatus(taskIndex, session.State, session.File) : CreateSimulationTaskStatus(taskIndex, "Idle") |
-| 528 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(_stageSimulationTasks.TryGetValue((number, taskIndex), out var session) ? CreateSimulationTaskStatus(taskIndex, session.State, session.File) : CreateSimulationTaskStatus(taskIndex, "Idle")); |
-| 531 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:SCRIPT&#124;STATUS&#124;{taskIndex}", number, cancellationToken, suppressLog: true) |
-| 531 | return | 호출자에게 값 또는 제어를 반환합니다: return ExecuteRaw($"AUTOMATION1:SCRIPT&#124;STATUS&#124;{taskIndex}", number, cancellationToken, suppressLog: true); |
+| 523 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
+| 524 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
+| 524 | if | 조건에 따라 분기합니다: if (IsSimul(number)) |
+| 526 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(_stageSimulationTasks.TryGetValue((number, taskIndex), out var session) ? CreateSimulationTaskStatus(taskIndex, session.State, session.File) : CreateSimulationTaskStatus(taskIndex, "Idle")) |
+| 526 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _stageSimulationTasks.TryGetValue((number, taskIndex), out var session) |
+| 526 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationTaskStatus(taskIndex, session.State, session.File) |
+| 526 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationTaskStatus(taskIndex, "Idle") |
+| 526 | conditional-expression | 조건에 따라 결과식을 선택합니다: _stageSimulationTasks.TryGetValue((number, taskIndex), out var session) ? CreateSimulationTaskStatus(taskIndex, session.State, session.File) : CreateSimulationTaskStatus(taskIndex, "Idle") |
+| 526 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(_stageSimulationTasks.TryGetValue((number, taskIndex), out var session) ? CreateSimulationTaskStatus(taskIndex, session.State, session.File) : CreateSimulationTaskStatus(taskIndex, "Idle")); |
+| 529 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:SCRIPT&#124;STATUS&#124;{taskIndex}", number, cancellationToken, suppressLog: true) |
+| 529 | return | 호출자에게 값 또는 제어를 반환합니다: return ExecuteRaw($"AUTOMATION1:SCRIPT&#124;STATUS&#124;{taskIndex}", number, cancellationToken, suppressLog: true); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReadTaskStatus"]
- N0["L526 if"]
+ N0["L524 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadTaskLineStatus` · L534–543
+### MethodDeclaration `ReadTaskLineStatus` · L532–541
 
-[Drilling.Common/Automation/CAutomationManager.cs:534–543](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L534-L543)
+[Drilling.Common/Automation/CAutomationManager.cs:532–541](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L532-L541)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3256,47 +3259,47 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:1037–1037](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L1037-L1037) | _automationManager.ReadTaskLineStatus | True |
+| [Drilling.Common/Station/CStationProcess.cs:1038–1038](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L1038-L1038) | _automationManager.ReadTaskLineStatus | True |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 536 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:585 |
-| 537 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 539 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
-| 539 | string.Join | resolved | string string.Join(string?, params System.ReadOnlySpan<string?>) |
-| 539 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 542 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 534 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:583 |
+| 535 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
+| 537 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
+| 537 | string.Join | resolved | string string.Join(string?, params System.ReadOnlySpan<string?>) |
+| 537 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 540 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 536 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
-| 537 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
-| 537 | if | 조건에 따라 분기합니다: if (IsSimul(number)) |
-| 539 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(string.Join(":", "OK", "TASK_LINE", taskIndex.ToString(CultureInfo.InvariantCulture), "0")) |
-| 539 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(":", "OK", "TASK_LINE", taskIndex.ToString(CultureInfo.InvariantCulture), "0") |
-| 539 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
-| 539 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(string.Join(":", "OK", "TASK_LINE", taskIndex.ToString(CultureInfo.InvariantCulture), "0")); |
-| 542 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:TASK&#124;LINE_STATUS&#124;{taskIndex}", number, cancellationToken, suppressLog: true) |
-| 542 | return | 호출자에게 값 또는 제어를 반환합니다: return ExecuteRaw($"AUTOMATION1:TASK&#124;LINE_STATUS&#124;{taskIndex}", number, cancellationToken, suppressLog: true); |
+| 534 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
+| 535 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
+| 535 | if | 조건에 따라 분기합니다: if (IsSimul(number)) |
+| 537 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(string.Join(":", "OK", "TASK_LINE", taskIndex.ToString(CultureInfo.InvariantCulture), "0")) |
+| 537 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(":", "OK", "TASK_LINE", taskIndex.ToString(CultureInfo.InvariantCulture), "0") |
+| 537 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
+| 537 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(string.Join(":", "OK", "TASK_LINE", taskIndex.ToString(CultureInfo.InvariantCulture), "0")); |
+| 540 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:TASK&#124;LINE_STATUS&#124;{taskIndex}", number, cancellationToken, suppressLog: true) |
+| 540 | return | 호출자에게 값 또는 제어를 반환합니다: return ExecuteRaw($"AUTOMATION1:TASK&#124;LINE_STATUS&#124;{taskIndex}", number, cancellationToken, suppressLog: true); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReadTaskLineStatus"]
- N0["L537 if"]
+ N0["L535 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReleaseEncoderScaleFactor` · L545–552
+### MethodDeclaration `ReleaseEncoderScaleFactor` · L543–550
 
-[Drilling.Common/Automation/CAutomationManager.cs:545–552](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L545-L552)
+[Drilling.Common/Automation/CAutomationManager.cs:543–550](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L543-L550)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3320,35 +3323,35 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 547 | ResolveAeroScriptAxis | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveAeroScriptAxis(string) · Drilling.Common/Automation/CAutomationManager.cs:785 |
-| 548 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:585 |
-| 549 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
-| 549 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 550 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:726 |
-| 550 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 545 | ResolveAeroScriptAxis | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveAeroScriptAxis(string) · Drilling.Common/Automation/CAutomationManager.cs:783 |
+| 546 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:583 |
+| 547 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 547 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 548 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:724 |
+| 548 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 547 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveAeroScriptAxis(galvoAxis) |
-| 547 | local-declaration | 지역 변수를 선언합니다: var axis = ResolveAeroScriptAxis(galvoAxis); |
-| 547 | variable-initializer | 변수의 초기값을 지정합니다: axis = ResolveAeroScriptAxis(galvoAxis) |
-| 548 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
-| 549 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoEncoderScaleFactorSet({axis}, 0)", number, cancellationToken) |
-| 549 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoEncoderScaleFactorSet({axis}, 0)", number, cancellationToken) |
-| 549 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
-| 549 | local-declaration | 지역 변수를 선언합니다: var response = await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoEncoderScaleFactorSet({axis}, 0)", number, cancellationToken); |
-| 549 | variable-initializer | 변수의 초기값을 지정합니다: response = await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoEncoderScaleFactorSet({axis}, 0)", number, cancellationToken) |
-| 550 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(response, $"Automation1 encoder scale release failed. Axis={axis}, Task={taskIndex.ToString(CultureInfo.InvariantCulture)}.") |
-| 550 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
-| 551 | return | 호출자에게 값 또는 제어를 반환합니다: return response; |
+| 545 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveAeroScriptAxis(galvoAxis) |
+| 545 | local-declaration | 지역 변수를 선언합니다: var axis = ResolveAeroScriptAxis(galvoAxis); |
+| 545 | variable-initializer | 변수의 초기값을 지정합니다: axis = ResolveAeroScriptAxis(galvoAxis) |
+| 546 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
+| 547 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoEncoderScaleFactorSet({axis}, 0)", number, cancellationToken) |
+| 547 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoEncoderScaleFactorSet({axis}, 0)", number, cancellationToken) |
+| 547 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
+| 547 | local-declaration | 지역 변수를 선언합니다: var response = await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoEncoderScaleFactorSet({axis}, 0)", number, cancellationToken); |
+| 547 | variable-initializer | 변수의 초기값을 지정합니다: response = await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoEncoderScaleFactorSet({axis}, 0)", number, cancellationToken) |
+| 548 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(response, $"Automation1 encoder scale release failed. Axis={axis}, Task={taskIndex.ToString(CultureInfo.InvariantCulture)}.") |
+| 548 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
+| 549 | return | 호출자에게 값 또는 제어를 반환합니다: return response; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `SetGalvoLaserOutput` · L554–562
+### MethodDeclaration `SetGalvoLaserOutput` · L552–560
 
-[Drilling.Common/Automation/CAutomationManager.cs:554–562](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L554-L562)
+[Drilling.Common/Automation/CAutomationManager.cs:552–560](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L552-L560)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3371,51 +3374,51 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:572–572](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L572-L572) | SetGalvoLaserOutput | True |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L364-L364) | Automation.SetGalvoLaserOutput | True |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:376–376](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L376-L376) | Automation.SetGalvoLaserOutput | True |
-| [Drilling.Common/Station/CStationProcess.cs:4170–4170](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L4170-L4170) | _automationManager.SetGalvoLaserOutput | True |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3719–3719](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3719-L3719) | manager.automation.SetGalvoLaserOutput | True |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3765–3765](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3765-L3765) | _defaultManager!.automation.SetGalvoLaserOutput | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4576–4576](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4576-L4576) | _manager.automation.SetGalvoLaserOutput | True |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:4918–4918](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L4918-L4918) | _manager.automation.SetGalvoLaserOutput | True |
+| [Drilling.Common/Automation/CAutomationManager.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L570-L570) | SetGalvoLaserOutput | True |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CPowerMeasureRun.cs#L364-L364) | Automation.SetGalvoLaserOutput | True |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:376–376](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CPowerMeasureRun.cs#L376-L376) | Automation.SetGalvoLaserOutput | True |
+| [Drilling.Common/Station/CStationProcess.cs:4225–4225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4225-L4225) | _automationManager.SetGalvoLaserOutput | True |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3829–3829](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3829-L3829) | manager.automation.SetGalvoLaserOutput | True |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3875–3875](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3875-L3875) | _defaultManager!.automation.SetGalvoLaserOutput | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4584–4584](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4584-L4584) | _manager.automation.SetGalvoLaserOutput | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:4926–4926](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L4926-L4926) | _manager.automation.SetGalvoLaserOutput | True |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 556 | ResolveAeroScriptAxis | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveAeroScriptAxis(string) · Drilling.Common/Automation/CAutomationManager.cs:785 |
-| 557 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:585 |
-| 559 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
-| 559 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 560 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:726 |
-| 560 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 554 | ResolveAeroScriptAxis | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveAeroScriptAxis(string) · Drilling.Common/Automation/CAutomationManager.cs:783 |
+| 555 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:583 |
+| 557 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 557 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 558 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:724 |
+| 558 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 556 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveAeroScriptAxis(galvoAxis) |
-| 556 | local-declaration | 지역 변수를 선언합니다: var axis = ResolveAeroScriptAxis(galvoAxis); |
-| 556 | variable-initializer | 변수의 초기값을 지정합니다: axis = ResolveAeroScriptAxis(galvoAxis) |
-| 557 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
-| 558 | conditional-expression | 조건에 따라 결과식을 선택합니다: isOn ? "On" : "Off" |
-| 558 | local-declaration | 지역 변수를 선언합니다: var output = isOn ? "On" : "Off"; |
-| 558 | variable-initializer | 변수의 초기값을 지정합니다: output = isOn ? "On" : "Off" |
-| 559 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoLaserOutput({axis}, GalvoLaser.{output})", number, cancellationToken) |
-| 559 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoLaserOutput({axis}, GalvoLaser.{output})", number, cancellationToken) |
-| 559 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
-| 559 | local-declaration | 지역 변수를 선언합니다: var response = await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoLaserOutput({axis}, GalvoLaser.{output})", number, cancellationToken); |
-| 559 | variable-initializer | 변수의 초기값을 지정합니다: response = await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoLaserOutput({axis}, GalvoLaser.{output})", number, cancellationToken) |
-| 560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(response, $"Automation1 laser output command failed. Axis={axis}, Output={output}, Task={taskIndex.ToString(CultureInfo.InvariantCulture)}.") |
-| 560 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
-| 561 | return | 호출자에게 값 또는 제어를 반환합니다: return response; |
+| 554 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveAeroScriptAxis(galvoAxis) |
+| 554 | local-declaration | 지역 변수를 선언합니다: var axis = ResolveAeroScriptAxis(galvoAxis); |
+| 554 | variable-initializer | 변수의 초기값을 지정합니다: axis = ResolveAeroScriptAxis(galvoAxis) |
+| 555 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
+| 556 | conditional-expression | 조건에 따라 결과식을 선택합니다: isOn ? "On" : "Off" |
+| 556 | local-declaration | 지역 변수를 선언합니다: var output = isOn ? "On" : "Off"; |
+| 556 | variable-initializer | 변수의 초기값을 지정합니다: output = isOn ? "On" : "Off" |
+| 557 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoLaserOutput({axis}, GalvoLaser.{output})", number, cancellationToken) |
+| 557 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoLaserOutput({axis}, GalvoLaser.{output})", number, cancellationToken) |
+| 557 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
+| 557 | local-declaration | 지역 변수를 선언합니다: var response = await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoLaserOutput({axis}, GalvoLaser.{output})", number, cancellationToken); |
+| 557 | variable-initializer | 변수의 초기값을 지정합니다: response = await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex.ToString(CultureInfo.InvariantCulture)}&#124;GalvoLaserOutput({axis}, GalvoLaser.{output})", number, cancellationToken) |
+| 558 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(response, $"Automation1 laser output command failed. Axis={axis}, Output={output}, Task={taskIndex.ToString(CultureInfo.InvariantCulture)}.") |
+| 558 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
+| 559 | return | 호출자에게 값 또는 제어를 반환합니다: return response; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ConfigurePowerMeasurement` · L565–583
+### MethodDeclaration `ConfigurePowerMeasurement` · L563–581
 
-[Drilling.Common/Automation/CAutomationManager.cs:565–583](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L565-L583)
+[Drilling.Common/Automation/CAutomationManager.cs:563–581](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L563-L581)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3444,67 +3447,67 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L303-L303) | Automation.ConfigurePowerMeasurement | True |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:303–303](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CPowerMeasureRun.cs#L303-L303) | Automation.ConfigurePowerMeasurement | True |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 567 | ResolveAeroScriptAxis | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveAeroScriptAxis(string) · Drilling.Common/Automation/CAutomationManager.cs:785 |
-| 568 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:585 |
-| 569 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 570 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?) |
-| 570 | nameof | unresolved | None |
-| 571 | (1000.0 / frequencyKhz).ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
-| 572 | SetGalvoLaserOutput(axis, false, taskIndex, number, token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
-| 572 | SetGalvoLaserOutput | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.SetGalvoLaserOutput(string, bool, int, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:554 |
-| 580 | ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex}&#124;{command}", number, token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
-| 580 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
-| 581 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:726 |
+| 565 | ResolveAeroScriptAxis | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveAeroScriptAxis(string) · Drilling.Common/Automation/CAutomationManager.cs:783 |
+| 566 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:583 |
+| 567 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 568 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?) |
+| 568 | nameof | unresolved | None |
+| 569 | (1000.0 / frequencyKhz).ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
+| 570 | SetGalvoLaserOutput(axis, false, taskIndex, number, token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
+| 570 | SetGalvoLaserOutput | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.SetGalvoLaserOutput(string, bool, int, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:552 |
+| 578 | ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex}&#124;{command}", number, token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
+| 578 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 579 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:724 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 567 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveAeroScriptAxis(galvoAxis) |
-| 567 | local-declaration | 지역 변수를 선언합니다: var axis = ResolveAeroScriptAxis(galvoAxis); |
-| 567 | variable-initializer | 변수의 초기값을 지정합니다: axis = ResolveAeroScriptAxis(galvoAxis) |
-| 568 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
-| 569 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(frequencyKhz) |
-| 569 | if | 조건에 따라 분기합니다: if (!double.IsFinite(frequencyKhz) &#124;&#124; frequencyKhz <= 0) |
-| 570 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(frequencyKhz)) |
-| 570 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(frequencyKhz) |
-| 570 | throw | 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(frequencyKhz)); |
-| 571 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (1000.0 / frequencyKhz).ToString("R", CultureInfo.InvariantCulture) |
-| 571 | local-declaration | 지역 변수를 선언합니다: var period = (1000.0 / frequencyKhz).ToString("R", CultureInfo.InvariantCulture); |
-| 571 | variable-initializer | 변수의 초기값을 지정합니다: period = (1000.0 / frequencyKhz).ToString("R", CultureInfo.InvariantCulture) |
-| 572 | await | 비동기 완료를 기다립니다: await SetGalvoLaserOutput(axis, false, taskIndex, number, token).ConfigureAwait(false) |
-| 572 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetGalvoLaserOutput(axis, false, taskIndex, number, token).ConfigureAwait(false) |
-| 572 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetGalvoLaserOutput(axis, false, taskIndex, number, token) |
-| 573 | foreach | 컬렉션 요소를 순회합니다: foreach (var command in new[] { "SetupTaskDistanceUnits(DistanceUnits.Primary)", "SetupTaskTimeUnits(TimeUnits.Seconds)", "VelocityBlendingOff()", "SetupTaskWaitMode(WaitMode.Auto)", "SetupTaskTargetMode(TargetMode.Absolute)", $"G |
-| 580 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex}&#124;{command}", number, token).ConfigureAwait(false) |
-| 580 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex}&#124;{command}", number, token).ConfigureAwait(false) |
-| 580 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex}&#124;{command}", number, token) |
-| 580 | local-declaration | 지역 변수를 선언합니다: var response = await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex}&#124;{command}", number, token).ConfigureAwait(false); |
-| 580 | variable-initializer | 변수의 초기값을 지정합니다: response = await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex}&#124;{command}", number, token).ConfigureAwait(false) |
-| 581 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(response, $"PowerMeasure configuration failed: {command}") |
+| 565 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveAeroScriptAxis(galvoAxis) |
+| 565 | local-declaration | 지역 변수를 선언합니다: var axis = ResolveAeroScriptAxis(galvoAxis); |
+| 565 | variable-initializer | 변수의 초기값을 지정합니다: axis = ResolveAeroScriptAxis(galvoAxis) |
+| 566 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateTaskIndex(taskIndex) |
+| 567 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(frequencyKhz) |
+| 567 | if | 조건에 따라 분기합니다: if (!double.IsFinite(frequencyKhz) &#124;&#124; frequencyKhz <= 0) |
+| 568 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(frequencyKhz)) |
+| 568 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(frequencyKhz) |
+| 568 | throw | 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(frequencyKhz)); |
+| 569 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: (1000.0 / frequencyKhz).ToString("R", CultureInfo.InvariantCulture) |
+| 569 | local-declaration | 지역 변수를 선언합니다: var period = (1000.0 / frequencyKhz).ToString("R", CultureInfo.InvariantCulture); |
+| 569 | variable-initializer | 변수의 초기값을 지정합니다: period = (1000.0 / frequencyKhz).ToString("R", CultureInfo.InvariantCulture) |
+| 570 | await | 비동기 완료를 기다립니다: await SetGalvoLaserOutput(axis, false, taskIndex, number, token).ConfigureAwait(false) |
+| 570 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetGalvoLaserOutput(axis, false, taskIndex, number, token).ConfigureAwait(false) |
+| 570 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetGalvoLaserOutput(axis, false, taskIndex, number, token) |
+| 571 | foreach | 컬렉션 요소를 순회합니다: foreach (var command in new[] { "SetupTaskDistanceUnits(DistanceUnits.Primary)", "SetupTaskTimeUnits(TimeUnits.Seconds)", "VelocityBlendingOff()", "SetupTaskWaitMode(WaitMode.Auto)", "SetupTaskTargetMode(TargetMode.Absolute)", $"G |
+| 578 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex}&#124;{command}", number, token).ConfigureAwait(false) |
+| 578 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex}&#124;{command}", number, token).ConfigureAwait(false) |
+| 578 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex}&#124;{command}", number, token) |
+| 578 | local-declaration | 지역 변수를 선언합니다: var response = await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex}&#124;{command}", number, token).ConfigureAwait(false); |
+| 578 | variable-initializer | 변수의 초기값을 지정합니다: response = await ExecuteRaw($"AUTOMATION1:COMMAND&#124;{taskIndex}&#124;{command}", number, token).ConfigureAwait(false) |
+| 579 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(response, $"PowerMeasure configuration failed: {command}") |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ConfigurePowerMeasurement"]
- N0["L569 if"]
+ N0["L567 if"]
  M -->|포함| N0
- N1["L573 foreach"]
+ N1["L571 foreach"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ValidateTaskIndex` · L585–591
+### MethodDeclaration `ValidateTaskIndex` · L583–589
 
-[Drilling.Common/Automation/CAutomationManager.cs:585–591](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L585-L591)
+[Drilling.Common/Automation/CAutomationManager.cs:583–589](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L583-L589)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3523,48 +3526,48 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L304-L304) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L326-L326) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:339–339](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L339-L339) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:395–395](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L395-L395) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:508–508](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L508-L508) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:525–525](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L525-L525) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:536–536](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L536-L536) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L548-L548) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L557-L557) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L568-L568) | ValidateTaskIndex | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1238–1238](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1238-L1238) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L304-L304) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L327-L327) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L340-L340) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:393–393](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L393-L393) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L506-L506) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:523–523](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L523-L523) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L534-L534) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:546–546](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L546-L546) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L555-L555) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L566-L566) | ValidateTaskIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1238–1238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1238-L1238) | ValidateTaskIndex | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 589 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?, object?, string?) |
-| 589 | nameof | unresolved | None |
+| 587 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?, object?, string?) |
+| 587 | nameof | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 587 | if | 조건에 따라 분기합니다: if (taskIndex < 1) |
-| 589 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(taskIndex), taskIndex, "Automation1 task index must be 1 or greater.") |
-| 589 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(taskIndex) |
-| 589 | throw | 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(taskIndex), taskIndex, "Automation1 task index must be 1 or greater."); |
+| 585 | if | 조건에 따라 분기합니다: if (taskIndex < 1) |
+| 587 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(taskIndex), taskIndex, "Automation1 task index must be 1 or greater.") |
+| 587 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(taskIndex) |
+| 587 | throw | 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(taskIndex), taskIndex, "Automation1 task index must be 1 or greater."); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ValidateTaskIndex"]
- N0["L587 if"]
+ N0["L585 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateSimulationTaskStatus` · L593–596
+### MethodDeclaration `CreateSimulationTaskStatus` · L591–594
 
-[Drilling.Common/Automation/CAutomationManager.cs:593–596](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L593-L596)
+[Drilling.Common/Automation/CAutomationManager.cs:591–594](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L591-L594)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3586,34 +3589,34 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L309-L309) | CreateSimulationTaskStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L330-L330) | CreateSimulationTaskStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:342–342](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L342-L342) | CreateSimulationTaskStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L514-L514) | CreateSimulationTaskStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:517–517](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L517-L517) | CreateSimulationTaskStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L528-L528) | CreateSimulationTaskStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L528-L528) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L309-L309) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L331-L331) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:343–343](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L343-L343) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:512–512](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L512-L512) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:515–515](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L515-L515) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L526-L526) | CreateSimulationTaskStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:526–526](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L526-L526) | CreateSimulationTaskStatus | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 595 | string.Join | resolved | string string.Join(string?, params System.ReadOnlySpan<string?>) |
-| 595 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 593 | string.Join | resolved | string string.Join(string?, params System.ReadOnlySpan<string?>) |
+| 593 | taskIndex.ToString | resolved | string int.ToString(System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 595 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(":", "OK", "TASK", taskIndex.ToString(CultureInfo.InvariantCulture), state, sourceFile, errorMessage) |
-| 595 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
-| 595 | return | 호출자에게 값 또는 제어를 반환합니다: return string.Join(":", "OK", "TASK", taskIndex.ToString(CultureInfo.InvariantCulture), state, sourceFile, errorMessage); |
+| 593 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(":", "OK", "TASK", taskIndex.ToString(CultureInfo.InvariantCulture), state, sourceFile, errorMessage) |
+| 593 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: taskIndex.ToString(CultureInfo.InvariantCulture) |
+| 593 | return | 호출자에게 값 또는 제어를 반환합니다: return string.Join(":", "OK", "TASK", taskIndex.ToString(CultureInfo.InvariantCulture), state, sourceFile, errorMessage); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ExecuteAxis` · L598–634
+### MethodDeclaration `ExecuteAxis` · L596–632
 
-[Drilling.Common/Automation/CAutomationManager.cs:598–634](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L598-L634)
+[Drilling.Common/Automation/CAutomationManager.cs:596–632](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L596-L632)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3635,116 +3638,116 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L188-L188) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L193-L193) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L198-L198) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L205-L205) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L212-L212) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L215-L215) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L216-L216) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L219-L219) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L224-L224) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L229-L229) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L234-L234) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L239-L239) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L244-L244) | ExecuteAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:639–639](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L639-L639) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L188-L188) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L193-L193) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:198–198](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L198-L198) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L205-L205) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L212-L212) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:215–215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L215-L215) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L216-L216) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L219-L219) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L224-L224) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L229-L229) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L234-L234) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L239-L239) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L244-L244) | ExecuteAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:637–637](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L637-L637) | ExecuteAxis | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 600 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 601 | ResolveAutomationAxis | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveAutomationAxis(string) · Drilling.Common/Automation/CAutomationManager.cs:779 |
-| 602 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 604 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 605 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:869 |
-| 606 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
-| 609 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 611 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 612 | command.Split | resolved | string[] string.Split(char, System.StringSplitOptions) |
-| 616 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
-| 616 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 617 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
-| 618 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:869 |
-| 619 | _simulationAxisPositions.AddOrUpdate | resolved | double System.Collections.Concurrent.ConcurrentDictionary<string, double>.AddOrUpdate(string, double, System.Func<string, double, double>) |
-| 620 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
-| 625 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:869 |
-| 626 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
-| 630 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
-| 633 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 598 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
+| 599 | ResolveAutomationAxis | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveAutomationAxis(string) · Drilling.Common/Automation/CAutomationManager.cs:777 |
+| 600 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
+| 602 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 603 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:867 |
+| 604 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
+| 607 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
+| 609 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 610 | command.Split | resolved | string[] string.Split(char, System.StringSplitOptions) |
+| 614 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
+| 614 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 615 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
+| 616 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:867 |
+| 617 | _simulationAxisPositions.AddOrUpdate | resolved | double System.Collections.Concurrent.ConcurrentDictionary<string, double>.AddOrUpdate(string, double, System.Func<string, double, double>) |
+| 618 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
+| 623 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:867 |
+| 624 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
+| 628 | Task.FromResult | resolved | System.Threading.Tasks.Task<string> System.Threading.Tasks.Task.FromResult<string>(string) |
+| 631 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 600 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(axisName) |
-| 601 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveAutomationAxis(axisName) |
-| 601 | local-declaration | 지역 변수를 선언합니다: var automationAxis = ResolveAutomationAxis(axisName); |
-| 601 | variable-initializer | 변수의 초기값을 지정합니다: automationAxis = ResolveAutomationAxis(axisName) |
-| 602 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
-| 602 | if | 조건에 따라 분기합니다: if (IsSimul(number) && command is "SERVO_ON" or "SERVO_OFF") |
-| 604 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
-| 605 | assignment | 값을 대상에 대입합니다: _simulationAxisAbleStates[CreateSimulationAxisKey(number, automationAxis)] = command == "SERVO_ON" |
-| 605 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationAxisKey(number, automationAxis) |
-| 606 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult($"OK:AXIS:{automationAxis}:{command}") |
-| 606 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult($"OK:AXIS:{automationAxis}:{command}"); |
-| 609 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
-| 609 | if | 조건에 따라 분기합니다: if (IsSimul(number)) |
-| 611 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
-| 612 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Split(':') |
-| 612 | local-declaration | 지역 변수를 선언합니다: var parts = command.Split(':'); |
-| 612 | variable-initializer | 변수의 초기값을 지정합니다: parts = command.Split(':') |
-| 613 | local-declaration | 지역 변수를 선언합니다: var operation = parts[0]; |
-| 613 | variable-initializer | 변수의 초기값을 지정합니다: operation = parts[0] |
-| 614 | if | 조건에 따라 분기합니다: if (operation is "MANUAL_ABS" or "MANUAL_REL" or "MOVE_ABS" or "MOVE_REL") |
-| 616 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var value) |
-| 616 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) |
-| 616 | if | 조건에 따라 분기합니다: if (parts.Length < 2 &#124;&#124; !double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var value) &#124;&#124; !double.IsFinite(value)) |
-| 617 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Simulated axis target is invalid.") |
-| 617 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException("Simulated axis target is invalid."); |
-| 618 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationAxisKey(number, automationAxis) |
-| 618 | local-declaration | 지역 변수를 선언합니다: var key = CreateSimulationAxisKey(number, automationAxis); |
-| 618 | variable-initializer | 변수의 초기값을 지정합니다: key = CreateSimulationAxisKey(number, automationAxis) |
-| 619 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulationAxisPositions.AddOrUpdate(key, value, (_, previous) => operation is "MANUAL_REL" or "MOVE_REL" ? previous + value : value) |
-| 619 | conditional-expression | 조건에 따라 결과식을 선택합니다: operation is "MANUAL_REL" or "MOVE_REL" ? previous + value : value |
-| 620 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult($"OK:AXIS:{automationAxis}:{operation}") |
-| 620 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult($"OK:AXIS:{automationAxis}:{operation}"); |
-| 623 | if | 조건에 따라 분기합니다: if (operation is "HOME" or "HOME_ASYNC") |
-| 625 | assignment | 값을 대상에 대입합니다: _simulationAxisPositions[CreateSimulationAxisKey(number, automationAxis)] = 0 |
-| 625 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationAxisKey(number, automationAxis) |
-| 626 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult($"OK:AXIS:{automationAxis}:{operation}") |
-| 626 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult($"OK:AXIS:{automationAxis}:{operation}"); |
-| 629 | if | 조건에 따라 분기합니다: if (operation is "STOP" or "ABORT_MOTION" or "JOG_STOP") |
-| 630 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult($"OK:AXIS:{automationAxis}:{operation}") |
-| 630 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult($"OK:AXIS:{automationAxis}:{operation}"); |
-| 633 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:AXIS:{automationAxis}:{command}", number, cancellationToken) |
-| 633 | return | 호출자에게 값 또는 제어를 반환합니다: return ExecuteRaw($"AUTOMATION1:AXIS:{automationAxis}:{command}", number, cancellationToken); |
+| 598 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(axisName) |
+| 599 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveAutomationAxis(axisName) |
+| 599 | local-declaration | 지역 변수를 선언합니다: var automationAxis = ResolveAutomationAxis(axisName); |
+| 599 | variable-initializer | 변수의 초기값을 지정합니다: automationAxis = ResolveAutomationAxis(axisName) |
+| 600 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
+| 600 | if | 조건에 따라 분기합니다: if (IsSimul(number) && command is "SERVO_ON" or "SERVO_OFF") |
+| 602 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
+| 603 | assignment | 값을 대상에 대입합니다: _simulationAxisAbleStates[CreateSimulationAxisKey(number, automationAxis)] = command == "SERVO_ON" |
+| 603 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationAxisKey(number, automationAxis) |
+| 604 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult($"OK:AXIS:{automationAxis}:{command}") |
+| 604 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult($"OK:AXIS:{automationAxis}:{command}"); |
+| 607 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(number) |
+| 607 | if | 조건에 따라 분기합니다: if (IsSimul(number)) |
+| 609 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested() |
+| 610 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: command.Split(':') |
+| 610 | local-declaration | 지역 변수를 선언합니다: var parts = command.Split(':'); |
+| 610 | variable-initializer | 변수의 초기값을 지정합니다: parts = command.Split(':') |
+| 611 | local-declaration | 지역 변수를 선언합니다: var operation = parts[0]; |
+| 611 | variable-initializer | 변수의 초기값을 지정합니다: operation = parts[0] |
+| 612 | if | 조건에 따라 분기합니다: if (operation is "MANUAL_ABS" or "MANUAL_REL" or "MOVE_ABS" or "MOVE_REL") |
+| 614 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var value) |
+| 614 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value) |
+| 614 | if | 조건에 따라 분기합니다: if (parts.Length < 2 &#124;&#124; !double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var value) &#124;&#124; !double.IsFinite(value)) |
+| 615 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Simulated axis target is invalid.") |
+| 615 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException("Simulated axis target is invalid."); |
+| 616 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationAxisKey(number, automationAxis) |
+| 616 | local-declaration | 지역 변수를 선언합니다: var key = CreateSimulationAxisKey(number, automationAxis); |
+| 616 | variable-initializer | 변수의 초기값을 지정합니다: key = CreateSimulationAxisKey(number, automationAxis) |
+| 617 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulationAxisPositions.AddOrUpdate(key, value, (_, previous) => operation is "MANUAL_REL" or "MOVE_REL" ? previous + value : value) |
+| 617 | conditional-expression | 조건에 따라 결과식을 선택합니다: operation is "MANUAL_REL" or "MOVE_REL" ? previous + value : value |
+| 618 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult($"OK:AXIS:{automationAxis}:{operation}") |
+| 618 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult($"OK:AXIS:{automationAxis}:{operation}"); |
+| 621 | if | 조건에 따라 분기합니다: if (operation is "HOME" or "HOME_ASYNC") |
+| 623 | assignment | 값을 대상에 대입합니다: _simulationAxisPositions[CreateSimulationAxisKey(number, automationAxis)] = 0 |
+| 623 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationAxisKey(number, automationAxis) |
+| 624 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult($"OK:AXIS:{automationAxis}:{operation}") |
+| 624 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult($"OK:AXIS:{automationAxis}:{operation}"); |
+| 627 | if | 조건에 따라 분기합니다: if (operation is "STOP" or "ABORT_MOTION" or "JOG_STOP") |
+| 628 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult($"OK:AXIS:{automationAxis}:{operation}") |
+| 628 | return | 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult($"OK:AXIS:{automationAxis}:{operation}"); |
+| 631 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:AXIS:{automationAxis}:{command}", number, cancellationToken) |
+| 631 | return | 호출자에게 값 또는 제어를 반환합니다: return ExecuteRaw($"AUTOMATION1:AXIS:{automationAxis}:{command}", number, cancellationToken); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ExecuteAxis"]
- N0["L602 if"]
+ N0["L600 if"]
  M -->|포함| N0
- N1["L609 if"]
+ N1["L607 if"]
  M -->|포함| N1
- N2["L614 if"]
+ N2["L612 if"]
  N1 -->|포함| N2
- N3["L616 if"]
+ N3["L614 if"]
  N2 -->|포함| N3
- N4["L623 if"]
+ N4["L621 if"]
  N1 -->|포함| N4
- N5["L629 if"]
+ N5["L627 if"]
  N1 -->|포함| N5
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadAxis` · L636–640
+### MethodDeclaration `ReadAxis` · L634–638
 
-[Drilling.Common/Automation/CAutomationManager.cs:636–640](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L636-L640)
+[Drilling.Common/Automation/CAutomationManager.cs:634–638](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L634-L638)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3766,30 +3769,30 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L262-L262) | ReadAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L262-L262) | ReadAxis | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 638 | ValidateAnalogInputNo | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAnalogInputNo(int) · Drilling.Common/Automation/CAutomationManager.cs:669 |
-| 639 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:598 |
-| 639 | analogInputNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 636 | ValidateAnalogInputNo | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAnalogInputNo(int) · Drilling.Common/Automation/CAutomationManager.cs:667 |
+| 637 | ExecuteAxis | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteAxis(string, string, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:596 |
+| 637 | analogInputNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 638 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateAnalogInputNo(analogInputNo) |
-| 639 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteAxis(axisName, $"READ:{analogInputNo.ToString(CultureInfo.InvariantCulture)}", number, cancellationToken) |
-| 639 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: analogInputNo.ToString(CultureInfo.InvariantCulture) |
-| 639 | return | 호출자에게 값 또는 제어를 반환합니다: return ExecuteAxis(axisName, $"READ:{analogInputNo.ToString(CultureInfo.InvariantCulture)}", number, cancellationToken); |
+| 636 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateAnalogInputNo(analogInputNo) |
+| 637 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteAxis(axisName, $"READ:{analogInputNo.ToString(CultureInfo.InvariantCulture)}", number, cancellationToken) |
+| 637 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: analogInputNo.ToString(CultureInfo.InvariantCulture) |
+| 637 | return | 호출자에게 값 또는 제어를 반환합니다: return ExecuteAxis(axisName, $"READ:{analogInputNo.ToString(CultureInfo.InvariantCulture)}", number, cancellationToken); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadAxisByName` · L642–645
+### MethodDeclaration `ReadAxisByName` · L640–643
 
-[Drilling.Common/Automation/CAutomationManager.cs:642–645](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L642-L645)
+[Drilling.Common/Automation/CAutomationManager.cs:640–643](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L640-L643)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3811,26 +3814,26 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:282–282](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L282-L282) | ReadAxisByName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:282–282](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L282-L282) | ReadAxisByName | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 644 | ReadAxisByName | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, bool, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:647 |
+| 642 | ReadAxisByName | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, bool, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:645 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 644 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAxisByName(axisName, number, analogInputNo, true, cancellationToken) |
-| 644 | return | 호출자에게 값 또는 제어를 반환합니다: return ReadAxisByName(axisName, number, analogInputNo, true, cancellationToken); |
+| 642 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAxisByName(axisName, number, analogInputNo, true, cancellationToken) |
+| 642 | return | 호출자에게 값 또는 제어를 반환합니다: return ReadAxisByName(axisName, number, analogInputNo, true, cancellationToken); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadAxisByName` · L647–650
+### MethodDeclaration `ReadAxisByName` · L645–648
 
-[Drilling.Common/Automation/CAutomationManager.cs:647–650](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L647-L650)
+[Drilling.Common/Automation/CAutomationManager.cs:645–648](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L645-L648)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3853,26 +3856,26 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L644-L644) | ReadAxisByName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:642–642](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L642-L642) | ReadAxisByName | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 649 | ReadAxisByName | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, bool, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:652 |
+| 647 | ReadAxisByName | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ReadAxisByName(string, int, int, bool, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:650 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 649 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAxisByName(axisName, number, analogInputNo, readExtendedStatus, cancellationToken, suppressLog: false) |
-| 649 | return | 호출자에게 값 또는 제어를 반환합니다: return ReadAxisByName(axisName, number, analogInputNo, readExtendedStatus, cancellationToken, suppressLog: false); |
+| 647 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadAxisByName(axisName, number, analogInputNo, readExtendedStatus, cancellationToken, suppressLog: false) |
+| 647 | return | 호출자에게 값 또는 제어를 반환합니다: return ReadAxisByName(axisName, number, analogInputNo, readExtendedStatus, cancellationToken, suppressLog: false); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadAxisByName` · L652–658
+### MethodDeclaration `ReadAxisByName` · L650–656
 
-[Drilling.Common/Automation/CAutomationManager.cs:652–658](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L652-L658)
+[Drilling.Common/Automation/CAutomationManager.cs:650–656](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L650-L656)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3896,38 +3899,38 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L297-L297) | ReadAxisByName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L649-L649) | ReadAxisByName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:297–297](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L297-L297) | ReadAxisByName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L647-L647) | ReadAxisByName | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 654 | ValidateAnalogInputNo | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAnalogInputNo(int) · Drilling.Common/Automation/CAutomationManager.cs:669 |
-| 655 | ValidateAxisNameOnly | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAxisNameOnly(string) · Drilling.Common/Automation/CAutomationManager.cs:660 |
-| 657 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
-| 657 | axisName.Trim | resolved | string string.Trim() |
-| 657 | analogInputNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 652 | ValidateAnalogInputNo | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAnalogInputNo(int) · Drilling.Common/Automation/CAutomationManager.cs:667 |
+| 653 | ValidateAxisNameOnly | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAxisNameOnly(string) · Drilling.Common/Automation/CAutomationManager.cs:658 |
+| 655 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 655 | axisName.Trim | resolved | string string.Trim() |
+| 655 | analogInputNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 654 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateAnalogInputNo(analogInputNo) |
-| 655 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateAxisNameOnly(axisName) |
-| 656 | conditional-expression | 조건에 따라 결과식을 선택합니다: readExtendedStatus ? "FULL" : "BASIC" |
-| 656 | local-declaration | 지역 변수를 선언합니다: var statusMode = readExtendedStatus ? "FULL" : "BASIC"; |
-| 656 | variable-initializer | 변수의 초기값을 지정합니다: statusMode = readExtendedStatus ? "FULL" : "BASIC" |
-| 657 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:AXIS:{axisName.Trim()}:READ:{analogInputNo.ToString(CultureInfo.InvariantCulture)}:{statusMode}", number, cancellationToken, suppressLog) |
-| 657 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisName.Trim() |
-| 657 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: analogInputNo.ToString(CultureInfo.InvariantCulture) |
-| 657 | return | 호출자에게 값 또는 제어를 반환합니다: return ExecuteRaw($"AUTOMATION1:AXIS:{axisName.Trim()}:READ:{analogInputNo.ToString(CultureInfo.InvariantCulture)}:{statusMode}", number, cancellationToken, suppressLog); |
+| 652 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateAnalogInputNo(analogInputNo) |
+| 653 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ValidateAxisNameOnly(axisName) |
+| 654 | conditional-expression | 조건에 따라 결과식을 선택합니다: readExtendedStatus ? "FULL" : "BASIC" |
+| 654 | local-declaration | 지역 변수를 선언합니다: var statusMode = readExtendedStatus ? "FULL" : "BASIC"; |
+| 654 | variable-initializer | 변수의 초기값을 지정합니다: statusMode = readExtendedStatus ? "FULL" : "BASIC" |
+| 655 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:AXIS:{axisName.Trim()}:READ:{analogInputNo.ToString(CultureInfo.InvariantCulture)}:{statusMode}", number, cancellationToken, suppressLog) |
+| 655 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisName.Trim() |
+| 655 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: analogInputNo.ToString(CultureInfo.InvariantCulture) |
+| 655 | return | 호출자에게 값 또는 제어를 반환합니다: return ExecuteRaw($"AUTOMATION1:AXIS:{axisName.Trim()}:READ:{analogInputNo.ToString(CultureInfo.InvariantCulture)}:{statusMode}", number, cancellationToken, suppressLog); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ValidateAxisNameOnly` · L660–667
+### MethodDeclaration `ValidateAxisNameOnly` · L658–665
 
-[Drilling.Common/Automation/CAutomationManager.cs:660–667](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L660-L667)
+[Drilling.Common/Automation/CAutomationManager.cs:658–665](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L658-L665)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3946,46 +3949,46 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L276-L276) | ValidateAxisNameOnly | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L291-L291) | ValidateAxisNameOnly | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:655–655](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L655-L655) | ValidateAxisNameOnly | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1136–1136](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1136-L1136) | ValidateAxisNameOnly | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1148–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1148-L1148) | ValidateAxisNameOnly | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L276-L276) | ValidateAxisNameOnly | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L291-L291) | ValidateAxisNameOnly | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:653–653](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L653-L653) | ValidateAxisNameOnly | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1136–1136](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1136-L1136) | ValidateAxisNameOnly | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1148–1148](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1148-L1148) | ValidateAxisNameOnly | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 662 | axisName.Trim | resolved | string string.Trim() |
-| 663 | IsAxisNameOnlyIdentifier | resolved | bool Drilling.Common.Automation.CAutomationManager.IsAxisNameOnlyIdentifier(string) · Drilling.Common/Automation/CAutomationManager.cs:817 |
-| 665 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
+| 660 | axisName.Trim | resolved | string string.Trim() |
+| 661 | IsAxisNameOnlyIdentifier | resolved | bool Drilling.Common.Automation.CAutomationManager.IsAxisNameOnlyIdentifier(string) · Drilling.Common/Automation/CAutomationManager.cs:815 |
+| 663 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 662 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisName.Trim() |
-| 662 | local-declaration | 지역 변수를 선언합니다: var normalized = axisName.Trim(); |
-| 662 | variable-initializer | 변수의 초기값을 지정합니다: normalized = axisName.Trim() |
-| 663 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsAxisNameOnlyIdentifier(normalized) |
-| 663 | if | 조건에 따라 분기합니다: if (!IsAxisNameOnlyIdentifier(normalized)) |
-| 665 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Automation1 axis must be configured by axis name, not axis number: {axisName}") |
-| 665 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException($"Automation1 axis must be configured by axis name, not axis number: {axisName}"); |
+| 660 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisName.Trim() |
+| 660 | local-declaration | 지역 변수를 선언합니다: var normalized = axisName.Trim(); |
+| 660 | variable-initializer | 변수의 초기값을 지정합니다: normalized = axisName.Trim() |
+| 661 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsAxisNameOnlyIdentifier(normalized) |
+| 661 | if | 조건에 따라 분기합니다: if (!IsAxisNameOnlyIdentifier(normalized)) |
+| 663 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Automation1 axis must be configured by axis name, not axis number: {axisName}") |
+| 663 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException($"Automation1 axis must be configured by axis name, not axis number: {axisName}"); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ValidateAxisNameOnly"]
- N0["L663 if"]
+ N0["L661 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ValidateAnalogInputNo` · L669–675
+### MethodDeclaration `ValidateAnalogInputNo` · L667–673
 
-[Drilling.Common/Automation/CAutomationManager.cs:669–675](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L669-L675)
+[Drilling.Common/Automation/CAutomationManager.cs:667–673](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L667-L673)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4004,42 +4007,42 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L255-L255) | ValidateAnalogInputNo | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L274-L274) | ValidateAnalogInputNo | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L289-L289) | ValidateAnalogInputNo | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:638–638](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L638-L638) | ValidateAnalogInputNo | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:654–654](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L654-L654) | ValidateAnalogInputNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L255-L255) | ValidateAnalogInputNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L274-L274) | ValidateAnalogInputNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L289-L289) | ValidateAnalogInputNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:636–636](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L636-L636) | ValidateAnalogInputNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:652–652](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L652-L652) | ValidateAnalogInputNo | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 673 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?, object?, string?) |
-| 673 | nameof | unresolved | None |
+| 671 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?, object?, string?) |
+| 671 | nameof | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 671 | if | 조건에 따라 분기합니다: if (analogInputNo < 0 &#124;&#124; analogInputNo > 3) |
-| 673 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(analogInputNo), analogInputNo, "Automation1 analog input number must be between 0 and 3.") |
-| 673 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(analogInputNo) |
-| 673 | throw | 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(analogInputNo), analogInputNo, "Automation1 analog input number must be between 0 and 3."); |
+| 669 | if | 조건에 따라 분기합니다: if (analogInputNo < 0 &#124;&#124; analogInputNo > 3) |
+| 671 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(analogInputNo), analogInputNo, "Automation1 analog input number must be between 0 and 3.") |
+| 671 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(analogInputNo) |
+| 671 | throw | 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(analogInputNo), analogInputNo, "Automation1 analog input number must be between 0 and 3."); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ValidateAnalogInputNo"]
- N0["L671 if"]
+ N0["L669 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ValidateBufferedRunScriptFile` · L677–700
+### MethodDeclaration `ValidateBufferedRunScriptFile` · L675–698
 
-[Drilling.Common/Automation/CAutomationManager.cs:677–700](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L677-L700)
+[Drilling.Common/Automation/CAutomationManager.cs:675–698](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L675-L698)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4058,75 +4061,75 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:422–422](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L422-L422) | ValidateBufferedRunScriptFile | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L420-L420) | ValidateBufferedRunScriptFile | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 679 | File.Exists | unresolved | None |
-| 681 | new FileNotFoundException | resolved | System.IO.FileNotFoundException.FileNotFoundException(string?, string?) |
-| 685 | File.ReadLines | unresolved | None |
-| 688 | rawLine.Trim | unresolved | None |
-| 689 | string.IsNullOrWhiteSpace | candidate | OverloadResolutionFailure |
-| 689 | line.StartsWith | unresolved | None |
-| 694 | GetAeroScriptToken | candidate | OverloadResolutionFailure |
-| 695 | IsBufferedRunBlockedToken | resolved | bool Drilling.Common.Automation.CAutomationManager.IsBufferedRunBlockedToken(string) · Drilling.Common/Automation/CAutomationManager.cs:721 |
-| 695 | token.StartsWith | resolved | bool string.StartsWith(char) |
-| 695 | IsBufferedGlobalIntegerAssignment | candidate | OverloadResolutionFailure |
-| 697 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
-| 697 | Path.GetFileName | resolved | string? System.IO.Path.GetFileName(string?) |
+| 677 | File.Exists | unresolved | None |
+| 679 | new FileNotFoundException | resolved | System.IO.FileNotFoundException.FileNotFoundException(string?, string?) |
+| 683 | File.ReadLines | unresolved | None |
+| 686 | rawLine.Trim | unresolved | None |
+| 687 | string.IsNullOrWhiteSpace | candidate | OverloadResolutionFailure |
+| 687 | line.StartsWith | unresolved | None |
+| 692 | GetAeroScriptToken | candidate | OverloadResolutionFailure |
+| 693 | IsBufferedRunBlockedToken | resolved | bool Drilling.Common.Automation.CAutomationManager.IsBufferedRunBlockedToken(string) · Drilling.Common/Automation/CAutomationManager.cs:719 |
+| 693 | token.StartsWith | resolved | bool string.StartsWith(char) |
+| 693 | IsBufferedGlobalIntegerAssignment | candidate | OverloadResolutionFailure |
+| 695 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
+| 695 | Path.GetFileName | resolved | string? System.IO.Path.GetFileName(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 679 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: File.Exists(localScriptPath) |
-| 679 | if | 조건에 따라 분기합니다: if (!File.Exists(localScriptPath)) |
-| 681 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new FileNotFoundException("Buffered run script file was not found.", localScriptPath) |
-| 681 | throw | 예외를 발생/전달합니다: throw new FileNotFoundException("Buffered run script file was not found.", localScriptPath); |
-| 684 | local-declaration | 지역 변수를 선언합니다: var lineNo = 0; |
-| 684 | variable-initializer | 변수의 초기값을 지정합니다: lineNo = 0 |
-| 685 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: File.ReadLines(localScriptPath) |
-| 685 | foreach | 컬렉션 요소를 순회합니다: foreach (var rawLine in File.ReadLines(localScriptPath)) |
-| 688 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rawLine.Trim() |
-| 688 | local-declaration | 지역 변수를 선언합니다: var line = rawLine.Trim(); |
-| 688 | variable-initializer | 변수의 초기값을 지정합니다: line = rawLine.Trim() |
-| 689 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(line) |
-| 689 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: line.StartsWith("//", StringComparison.Ordinal) |
-| 689 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(line) &#124;&#124; line.StartsWith("//", StringComparison.Ordinal)) |
-| 691 | continue | 다음 반복으로 진행합니다: continue; |
-| 694 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetAeroScriptToken(line) |
-| 694 | local-declaration | 지역 변수를 선언합니다: var token = GetAeroScriptToken(line); |
-| 694 | variable-initializer | 변수의 초기값을 지정합니다: token = GetAeroScriptToken(line) |
-| 695 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsBufferedRunBlockedToken(token) |
-| 695 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.StartsWith('$') |
-| 695 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsBufferedGlobalIntegerAssignment(line) |
-| 695 | if | 조건에 따라 분기합니다: if (IsBufferedRunBlockedToken(token) &#124;&#124; (token.StartsWith('$') && !IsBufferedGlobalIntegerAssignment(line))) |
-| 697 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Buffered run script validation failed. {Path.GetFileName(localScriptPath)} line {lineNo} cannot be queued: {line}") |
-| 697 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(localScriptPath) |
-| 697 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"Buffered run script validation failed. {Path.GetFileName(localScriptPath)} line {lineNo} cannot be queued: {line}"); |
+| 677 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: File.Exists(localScriptPath) |
+| 677 | if | 조건에 따라 분기합니다: if (!File.Exists(localScriptPath)) |
+| 679 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new FileNotFoundException("Buffered run script file was not found.", localScriptPath) |
+| 679 | throw | 예외를 발생/전달합니다: throw new FileNotFoundException("Buffered run script file was not found.", localScriptPath); |
+| 682 | local-declaration | 지역 변수를 선언합니다: var lineNo = 0; |
+| 682 | variable-initializer | 변수의 초기값을 지정합니다: lineNo = 0 |
+| 683 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: File.ReadLines(localScriptPath) |
+| 683 | foreach | 컬렉션 요소를 순회합니다: foreach (var rawLine in File.ReadLines(localScriptPath)) |
+| 686 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: rawLine.Trim() |
+| 686 | local-declaration | 지역 변수를 선언합니다: var line = rawLine.Trim(); |
+| 686 | variable-initializer | 변수의 초기값을 지정합니다: line = rawLine.Trim() |
+| 687 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(line) |
+| 687 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: line.StartsWith("//", StringComparison.Ordinal) |
+| 687 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(line) &#124;&#124; line.StartsWith("//", StringComparison.Ordinal)) |
+| 689 | continue | 다음 반복으로 진행합니다: continue; |
+| 692 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetAeroScriptToken(line) |
+| 692 | local-declaration | 지역 변수를 선언합니다: var token = GetAeroScriptToken(line); |
+| 692 | variable-initializer | 변수의 초기값을 지정합니다: token = GetAeroScriptToken(line) |
+| 693 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsBufferedRunBlockedToken(token) |
+| 693 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.StartsWith('$') |
+| 693 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsBufferedGlobalIntegerAssignment(line) |
+| 693 | if | 조건에 따라 분기합니다: if (IsBufferedRunBlockedToken(token) &#124;&#124; (token.StartsWith('$') && !IsBufferedGlobalIntegerAssignment(line))) |
+| 695 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Buffered run script validation failed. {Path.GetFileName(localScriptPath)} line {lineNo} cannot be queued: {line}") |
+| 695 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(localScriptPath) |
+| 695 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"Buffered run script validation failed. {Path.GetFileName(localScriptPath)} line {lineNo} cannot be queued: {line}"); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ValidateBufferedRunScriptFile"]
- N0["L679 if"]
+ N0["L677 if"]
  M -->|포함| N0
- N1["L685 foreach"]
+ N1["L683 foreach"]
  M -->|포함| N1
- N2["L689 if"]
+ N2["L687 if"]
  N1 -->|포함| N2
- N3["L695 if"]
+ N3["L693 if"]
  N1 -->|포함| N3
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `GetAeroScriptToken` · L702–706
+### MethodDeclaration `GetAeroScriptToken` · L700–704
 
-[Drilling.Common/Automation/CAutomationManager.cs:702–706](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L702-L706)
+[Drilling.Common/Automation/CAutomationManager.cs:700–704](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L700-L704)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4147,23 +4150,23 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 704 | line.IndexOfAny | resolved | int string.IndexOfAny(char[]) |
+| 702 | line.IndexOfAny | resolved | int string.IndexOfAny(char[]) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 704 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: line.IndexOfAny(['(', ' ', '\t']) |
-| 704 | local-declaration | 지역 변수를 선언합니다: var endIndex = line.IndexOfAny(['(', ' ', '\t']); |
-| 704 | variable-initializer | 변수의 초기값을 지정합니다: endIndex = line.IndexOfAny(['(', ' ', '\t']) |
-| 705 | conditional-expression | 조건에 따라 결과식을 선택합니다: endIndex <= 0 ? line : line[..endIndex] |
-| 705 | return | 호출자에게 값 또는 제어를 반환합니다: return endIndex <= 0 ? line : line[..endIndex]; |
+| 702 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: line.IndexOfAny(['(', ' ', '\t']) |
+| 702 | local-declaration | 지역 변수를 선언합니다: var endIndex = line.IndexOfAny(['(', ' ', '\t']); |
+| 702 | variable-initializer | 변수의 초기값을 지정합니다: endIndex = line.IndexOfAny(['(', ' ', '\t']) |
+| 703 | conditional-expression | 조건에 따라 결과식을 선택합니다: endIndex <= 0 ? line : line[..endIndex] |
+| 703 | return | 호출자에게 값 또는 제어를 반환합니다: return endIndex <= 0 ? line : line[..endIndex]; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `IsBufferedGlobalIntegerAssignment` · L709–719
+### MethodDeclaration `IsBufferedGlobalIntegerAssignment` · L707–717
 
-[Drilling.Common/Automation/CAutomationManager.cs:709–719](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L709-L719)
+[Drilling.Common/Automation/CAutomationManager.cs:707–717](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L707-L717)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4184,57 +4187,57 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 712 | line.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
-| 714 | line.IndexOf | resolved | int string.IndexOf(char, int) |
-| 715 | int.TryParse | resolved | bool int.TryParse(System.ReadOnlySpan<char>, System.Globalization.NumberStyles, System.IFormatProvider?, out int) |
-| 715 | line.AsSpan | resolved | System.ReadOnlySpan<char> string?.AsSpan(int, int) |
-| 717 | line[(close + 1)..].Trim | resolved | string string.Trim() |
-| 718 | assignment.StartsWith | resolved | bool string.StartsWith(char) |
-| 718 | long.TryParse | resolved | bool long.TryParse(System.ReadOnlySpan<char>, System.Globalization.NumberStyles, System.IFormatProvider?, out long) |
-| 718 | assignment.AsSpan(1).Trim | resolved | System.ReadOnlySpan<char> System.ReadOnlySpan<char>.Trim() |
-| 718 | assignment.AsSpan | resolved | System.ReadOnlySpan<char> string?.AsSpan(int) |
+| 710 | line.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
+| 712 | line.IndexOf | resolved | int string.IndexOf(char, int) |
+| 713 | int.TryParse | resolved | bool int.TryParse(System.ReadOnlySpan<char>, System.Globalization.NumberStyles, System.IFormatProvider?, out int) |
+| 713 | line.AsSpan | resolved | System.ReadOnlySpan<char> string?.AsSpan(int, int) |
+| 715 | line[(close + 1)..].Trim | resolved | string string.Trim() |
+| 716 | assignment.StartsWith | resolved | bool string.StartsWith(char) |
+| 716 | long.TryParse | resolved | bool long.TryParse(System.ReadOnlySpan<char>, System.Globalization.NumberStyles, System.IFormatProvider?, out long) |
+| 716 | assignment.AsSpan(1).Trim | resolved | System.ReadOnlySpan<char> System.ReadOnlySpan<char>.Trim() |
+| 716 | assignment.AsSpan | resolved | System.ReadOnlySpan<char> string?.AsSpan(int) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 711 | local-declaration | 지역 변수를 선언합니다: const string prefix = "$iglobal["; |
-| 711 | variable-initializer | 변수의 초기값을 지정합니다: prefix = "$iglobal[" |
-| 712 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: line.StartsWith(prefix, StringComparison.Ordinal) |
-| 712 | if | 조건에 따라 분기합니다: if (!line.StartsWith(prefix, StringComparison.Ordinal)) |
-| 713 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
-| 714 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: line.IndexOf(']', prefix.Length) |
-| 714 | local-declaration | 지역 변수를 선언합니다: var close = line.IndexOf(']', prefix.Length); |
-| 714 | variable-initializer | 변수의 초기값을 지정합니다: close = line.IndexOf(']', prefix.Length) |
-| 715 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(line.AsSpan(prefix.Length, close - prefix.Length), NumberStyles.None, CultureInfo.InvariantCulture, out var index) |
-| 715 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: line.AsSpan(prefix.Length, close - prefix.Length) |
-| 715 | if | 조건에 따라 분기합니다: if (close < 0 &#124;&#124; !int.TryParse(line.AsSpan(prefix.Length, close - prefix.Length), NumberStyles.None, CultureInfo.InvariantCulture, out var index) &#124;&#124; index < 0) |
-| 716 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
-| 717 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: line[(close + 1)..].Trim() |
-| 717 | local-declaration | 지역 변수를 선언합니다: var assignment = line[(close + 1)..].Trim(); |
-| 717 | variable-initializer | 변수의 초기값을 지정합니다: assignment = line[(close + 1)..].Trim() |
-| 718 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: assignment.StartsWith('=') |
-| 718 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: long.TryParse(assignment.AsSpan(1).Trim(), NumberStyles.None, CultureInfo.InvariantCulture, out var value) |
-| 718 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: assignment.AsSpan(1).Trim() |
-| 718 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: assignment.AsSpan(1) |
-| 718 | return | 호출자에게 값 또는 제어를 반환합니다: return assignment.StartsWith('=') && long.TryParse(assignment.AsSpan(1).Trim(), NumberStyles.None, CultureInfo.InvariantCulture, out var value) && value >= 0; |
+| 709 | local-declaration | 지역 변수를 선언합니다: const string prefix = "$iglobal["; |
+| 709 | variable-initializer | 변수의 초기값을 지정합니다: prefix = "$iglobal[" |
+| 710 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: line.StartsWith(prefix, StringComparison.Ordinal) |
+| 710 | if | 조건에 따라 분기합니다: if (!line.StartsWith(prefix, StringComparison.Ordinal)) |
+| 711 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 712 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: line.IndexOf(']', prefix.Length) |
+| 712 | local-declaration | 지역 변수를 선언합니다: var close = line.IndexOf(']', prefix.Length); |
+| 712 | variable-initializer | 변수의 초기값을 지정합니다: close = line.IndexOf(']', prefix.Length) |
+| 713 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(line.AsSpan(prefix.Length, close - prefix.Length), NumberStyles.None, CultureInfo.InvariantCulture, out var index) |
+| 713 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: line.AsSpan(prefix.Length, close - prefix.Length) |
+| 713 | if | 조건에 따라 분기합니다: if (close < 0 &#124;&#124; !int.TryParse(line.AsSpan(prefix.Length, close - prefix.Length), NumberStyles.None, CultureInfo.InvariantCulture, out var index) &#124;&#124; index < 0) |
+| 714 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 715 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: line[(close + 1)..].Trim() |
+| 715 | local-declaration | 지역 변수를 선언합니다: var assignment = line[(close + 1)..].Trim(); |
+| 715 | variable-initializer | 변수의 초기값을 지정합니다: assignment = line[(close + 1)..].Trim() |
+| 716 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: assignment.StartsWith('=') |
+| 716 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: long.TryParse(assignment.AsSpan(1).Trim(), NumberStyles.None, CultureInfo.InvariantCulture, out var value) |
+| 716 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: assignment.AsSpan(1).Trim() |
+| 716 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: assignment.AsSpan(1) |
+| 716 | return | 호출자에게 값 또는 제어를 반환합니다: return assignment.StartsWith('=') && long.TryParse(assignment.AsSpan(1).Trim(), NumberStyles.None, CultureInfo.InvariantCulture, out var value) && value >= 0; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["IsBufferedGlobalIntegerAssignment"]
- N0["L712 if"]
+ N0["L710 if"]
  M -->|포함| N0
- N1["L715 if"]
+ N1["L713 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `IsBufferedRunBlockedToken` · L721–724
+### MethodDeclaration `IsBufferedRunBlockedToken` · L719–722
 
-[Drilling.Common/Automation/CAutomationManager.cs:721–724](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L721-L724)
+[Drilling.Common/Automation/CAutomationManager.cs:719–722](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L719-L722)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4253,62 +4256,62 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:695–695](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L695-L695) | IsBufferedRunBlockedToken | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:693–693](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L693-L693) | IsBufferedRunBlockedToken | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 723 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 721 | token.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("program", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("end", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("var", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("global", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("if", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("else", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("elseif", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("endif", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("while", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("endwhile", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("for", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("endfor", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("repeat", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("endrepeat", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("function", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("endfunction", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("return", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("break", StringComparison.OrdinalIgnoreCase) |
-| 723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("continue", StringComparison.OrdinalIgnoreCase) |
-| 723 | return | 호출자에게 값 또는 제어를 반환합니다: return token.Equals("program", StringComparison.OrdinalIgnoreCase) &#124;&#124; token.Equals("end", StringComparison.OrdinalIgnoreCase) &#124;&#124; token.Equals("var", StringComparison.OrdinalIgnoreCase) &#124;&#124; token.Equals("global", StringComparison.Or |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("program", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("end", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("var", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("global", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("if", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("else", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("elseif", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("endif", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("while", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("endwhile", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("for", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("endfor", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("repeat", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("endrepeat", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("function", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("endfunction", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("return", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("break", StringComparison.OrdinalIgnoreCase) |
+| 721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.Equals("continue", StringComparison.OrdinalIgnoreCase) |
+| 721 | return | 호출자에게 값 또는 제어를 반환합니다: return token.Equals("program", StringComparison.OrdinalIgnoreCase) &#124;&#124; token.Equals("end", StringComparison.OrdinalIgnoreCase) &#124;&#124; token.Equals("var", StringComparison.OrdinalIgnoreCase) &#124;&#124; token.Equals("global", StringComparison.Or |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `EnsureAutomationResponseSucceeded` · L726–734
+### MethodDeclaration `EnsureAutomationResponseSucceeded` · L724–732
 
-[Drilling.Common/Automation/CAutomationManager.cs:726–734](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L726-L734)
+[Drilling.Common/Automation/CAutomationManager.cs:724–732](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L724-L732)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4328,49 +4331,49 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:447–447](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L447-L447) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:485–485](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L485-L485) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:550–550](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L550-L550) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L560-L560) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:581–581](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L581-L581) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1101–1101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1101-L1101) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1110–1110](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1110-L1110) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1154-L1154) | EnsureAutomationResponseSucceeded | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1248–1248](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1248-L1248) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:445–445](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L445-L445) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L483-L483) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:548–548](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L548-L548) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:558–558](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L558-L558) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:579–579](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L579-L579) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1100–1100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1100-L1100) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1110–1110](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1110-L1110) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1154–1154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1154-L1154) | EnsureAutomationResponseSucceeded | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1247–1247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1247-L1247) | EnsureAutomationResponseSucceeded | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 728 | IsAutomationSuccessResponse | resolved | bool Drilling.Common.Automation.CAutomationManager.IsAutomationSuccessResponse(string) · Drilling.Common/Automation/CAutomationManager.cs:736 |
-| 733 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
-| 733 | FormatAutomationResponse | resolved | string Drilling.Common.Automation.CAutomationManager.FormatAutomationResponse(string) · Drilling.Common/Automation/CAutomationManager.cs:752 |
+| 726 | IsAutomationSuccessResponse | resolved | bool Drilling.Common.Automation.CAutomationManager.IsAutomationSuccessResponse(string) · Drilling.Common/Automation/CAutomationManager.cs:734 |
+| 731 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
+| 731 | FormatAutomationResponse | resolved | string Drilling.Common.Automation.CAutomationManager.FormatAutomationResponse(string) · Drilling.Common/Automation/CAutomationManager.cs:750 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 728 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsAutomationSuccessResponse(response) |
-| 728 | if | 조건에 따라 분기합니다: if (IsAutomationSuccessResponse(response)) |
-| 730 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 733 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{message} Response={FormatAutomationResponse(response)}") |
-| 733 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatAutomationResponse(response) |
-| 733 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException($"{message} Response={FormatAutomationResponse(response)}"); |
+| 726 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsAutomationSuccessResponse(response) |
+| 726 | if | 조건에 따라 분기합니다: if (IsAutomationSuccessResponse(response)) |
+| 728 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 731 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"{message} Response={FormatAutomationResponse(response)}") |
+| 731 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatAutomationResponse(response) |
+| 731 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException($"{message} Response={FormatAutomationResponse(response)}"); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["EnsureAutomationResponseSucceeded"]
- N0["L728 if"]
+ N0["L726 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `IsAutomationSuccessResponse` · L736–750
+### MethodDeclaration `IsAutomationSuccessResponse` · L734–748
 
-[Drilling.Common/Automation/CAutomationManager.cs:736–750](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L736-L750)
+[Drilling.Common/Automation/CAutomationManager.cs:734–748](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L734-L748)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4389,53 +4392,53 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:728–728](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L728-L728) | IsAutomationSuccessResponse | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:726–726](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L726-L726) | IsAutomationSuccessResponse | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 738 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 743 | response.Trim | resolved | string string.Trim() |
-| 744 | trimmed.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
-| 744 | trimmed.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
-| 749 | trimmed.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
-| 749 | trimmed.EndsWith | resolved | bool string.EndsWith(string, System.StringComparison) |
+| 736 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 741 | response.Trim | resolved | string string.Trim() |
+| 742 | trimmed.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
+| 742 | trimmed.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
+| 747 | trimmed.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
+| 747 | trimmed.EndsWith | resolved | bool string.EndsWith(string, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 738 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) |
-| 738 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(response)) |
-| 740 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
-| 743 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() |
-| 743 | local-declaration | 지역 변수를 선언합니다: var trimmed = response.Trim(); |
-| 743 | variable-initializer | 변수의 초기값을 지정합니다: trimmed = response.Trim() |
-| 744 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: trimmed.StartsWith("OK", StringComparison.OrdinalIgnoreCase) |
-| 744 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: trimmed.StartsWith("ACK", StringComparison.OrdinalIgnoreCase) |
-| 744 | if | 조건에 따라 분기합니다: if (trimmed.StartsWith("OK", StringComparison.OrdinalIgnoreCase) &#124;&#124; trimmed.StartsWith("ACK", StringComparison.OrdinalIgnoreCase)) |
-| 746 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
-| 749 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: trimmed.StartsWith("SIM:", StringComparison.OrdinalIgnoreCase) |
-| 749 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: trimmed.EndsWith(":OK", StringComparison.OrdinalIgnoreCase) |
-| 749 | return | 호출자에게 값 또는 제어를 반환합니다: return trimmed.StartsWith("SIM:", StringComparison.OrdinalIgnoreCase) && trimmed.EndsWith(":OK", StringComparison.OrdinalIgnoreCase); |
+| 736 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) |
+| 736 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(response)) |
+| 738 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 741 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() |
+| 741 | local-declaration | 지역 변수를 선언합니다: var trimmed = response.Trim(); |
+| 741 | variable-initializer | 변수의 초기값을 지정합니다: trimmed = response.Trim() |
+| 742 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: trimmed.StartsWith("OK", StringComparison.OrdinalIgnoreCase) |
+| 742 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: trimmed.StartsWith("ACK", StringComparison.OrdinalIgnoreCase) |
+| 742 | if | 조건에 따라 분기합니다: if (trimmed.StartsWith("OK", StringComparison.OrdinalIgnoreCase) &#124;&#124; trimmed.StartsWith("ACK", StringComparison.OrdinalIgnoreCase)) |
+| 744 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
+| 747 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: trimmed.StartsWith("SIM:", StringComparison.OrdinalIgnoreCase) |
+| 747 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: trimmed.EndsWith(":OK", StringComparison.OrdinalIgnoreCase) |
+| 747 | return | 호출자에게 값 또는 제어를 반환합니다: return trimmed.StartsWith("SIM:", StringComparison.OrdinalIgnoreCase) && trimmed.EndsWith(":OK", StringComparison.OrdinalIgnoreCase); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["IsAutomationSuccessResponse"]
- N0["L738 if"]
+ N0["L736 if"]
  M -->|포함| N0
- N1["L744 if"]
+ N1["L742 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `FormatAutomationResponse` · L752–761
+### MethodDeclaration `FormatAutomationResponse` · L750–759
 
-[Drilling.Common/Automation/CAutomationManager.cs:752–761](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L752-L761)
+[Drilling.Common/Automation/CAutomationManager.cs:750–759](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L750-L759)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4454,46 +4457,46 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:733–733](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L733-L733) | FormatAutomationResponse | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:731–731](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L731-L731) | FormatAutomationResponse | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 754 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 759 | FormatAutomationErrorResponse | resolved | string Drilling.Common.Automation.CAutomationManager.FormatAutomationErrorResponse(string) · Drilling.Common/Automation/CAutomationManager.cs:763 |
-| 760 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 760 | response.Trim | resolved | string string.Trim() |
+| 752 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 757 | FormatAutomationErrorResponse | resolved | string Drilling.Common.Automation.CAutomationManager.FormatAutomationErrorResponse(string) · Drilling.Common/Automation/CAutomationManager.cs:761 |
+| 758 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 758 | response.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 754 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) |
-| 754 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(response)) |
-| 756 | return | 호출자에게 값 또는 제어를 반환합니다: return "<empty>"; |
-| 759 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatAutomationErrorResponse(response) |
-| 759 | local-declaration | 지역 변수를 선언합니다: var automationError = FormatAutomationErrorResponse(response); |
-| 759 | variable-initializer | 변수의 초기값을 지정합니다: automationError = FormatAutomationErrorResponse(response) |
-| 760 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(automationError) |
-| 760 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() |
-| 760 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(automationError) ? response.Trim() : automationError |
-| 760 | return | 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(automationError) ? response.Trim() : automationError; |
+| 752 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) |
+| 752 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(response)) |
+| 754 | return | 호출자에게 값 또는 제어를 반환합니다: return "<empty>"; |
+| 757 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatAutomationErrorResponse(response) |
+| 757 | local-declaration | 지역 변수를 선언합니다: var automationError = FormatAutomationErrorResponse(response); |
+| 757 | variable-initializer | 변수의 초기값을 지정합니다: automationError = FormatAutomationErrorResponse(response) |
+| 758 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(automationError) |
+| 758 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() |
+| 758 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(automationError) ? response.Trim() : automationError |
+| 758 | return | 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrWhiteSpace(automationError) ? response.Trim() : automationError; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["FormatAutomationResponse"]
- N0["L754 if"]
+ N0["L752 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `FormatAutomationErrorResponse` · L763–777
+### MethodDeclaration `FormatAutomationErrorResponse` · L761–775
 
-[Drilling.Common/Automation/CAutomationManager.cs:763–777](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L763-L777)
+[Drilling.Common/Automation/CAutomationManager.cs:761–775](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L761-L775)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4512,52 +4515,52 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:759–759](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L759-L759) | FormatAutomationErrorResponse | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:881–881](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L881-L881) | FormatAutomationErrorResponse | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:757–757](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L757-L757) | FormatAutomationErrorResponse | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:879–879](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L879-L879) | FormatAutomationErrorResponse | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 765 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 770 | response.Trim().Split | resolved | string[] string.Split(char, int, System.StringSplitOptions) |
-| 770 | response.Trim | resolved | string string.Trim() |
-| 771 | fields[0].Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 771 | fields[1].Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 763 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 768 | response.Trim().Split | resolved | string[] string.Split(char, int, System.StringSplitOptions) |
+| 768 | response.Trim | resolved | string string.Trim() |
+| 769 | fields[0].Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 769 | fields[1].Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 765 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) |
-| 765 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(response)) |
-| 767 | return | 호출자에게 값 또는 제어를 반환합니다: return ""; |
-| 770 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim().Split(':', 4, StringSplitOptions.TrimEntries) |
-| 770 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() |
-| 770 | local-declaration | 지역 변수를 선언합니다: var fields = response.Trim().Split(':', 4, StringSplitOptions.TrimEntries); |
-| 770 | variable-initializer | 변수의 초기값을 지정합니다: fields = response.Trim().Split(':', 4, StringSplitOptions.TrimEntries) |
-| 771 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields[0].Equals("ERROR", StringComparison.OrdinalIgnoreCase) |
-| 771 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields[1].Equals("AUTOMATION1", StringComparison.OrdinalIgnoreCase) |
-| 771 | if | 조건에 따라 분기합니다: if (fields.Length >= 4 && fields[0].Equals("ERROR", StringComparison.OrdinalIgnoreCase) && fields[1].Equals("AUTOMATION1", StringComparison.OrdinalIgnoreCase)) |
-| 773 | return | 호출자에게 값 또는 제어를 반환합니다: return $"{fields[2]}: {fields[3]}"; |
-| 776 | return | 호출자에게 값 또는 제어를 반환합니다: return ""; |
+| 763 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) |
+| 763 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(response)) |
+| 765 | return | 호출자에게 값 또는 제어를 반환합니다: return ""; |
+| 768 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim().Split(':', 4, StringSplitOptions.TrimEntries) |
+| 768 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Trim() |
+| 768 | local-declaration | 지역 변수를 선언합니다: var fields = response.Trim().Split(':', 4, StringSplitOptions.TrimEntries); |
+| 768 | variable-initializer | 변수의 초기값을 지정합니다: fields = response.Trim().Split(':', 4, StringSplitOptions.TrimEntries) |
+| 769 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields[0].Equals("ERROR", StringComparison.OrdinalIgnoreCase) |
+| 769 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fields[1].Equals("AUTOMATION1", StringComparison.OrdinalIgnoreCase) |
+| 769 | if | 조건에 따라 분기합니다: if (fields.Length >= 4 && fields[0].Equals("ERROR", StringComparison.OrdinalIgnoreCase) && fields[1].Equals("AUTOMATION1", StringComparison.OrdinalIgnoreCase)) |
+| 771 | return | 호출자에게 값 또는 제어를 반환합니다: return $"{fields[2]}: {fields[3]}"; |
+| 774 | return | 호출자에게 값 또는 제어를 반환합니다: return ""; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["FormatAutomationErrorResponse"]
- N0["L765 if"]
+ N0["L763 if"]
  M -->|포함| N0
- N1["L771 if"]
+ N1["L769 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ResolveAutomationAxis` · L779–783
+### MethodDeclaration `ResolveAutomationAxis` · L777–781
 
-[Drilling.Common/Automation/CAutomationManager.cs:779–783](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L779-L783)
+[Drilling.Common/Automation/CAutomationManager.cs:777–781](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L777-L781)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4576,35 +4579,35 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:601–601](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L601-L601) | ResolveAutomationAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:842–842](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L842-L842) | ResolveAutomationAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:843–843](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L843-L843) | ResolveAutomationAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:599–599](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L599-L599) | ResolveAutomationAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L840-L840) | ResolveAutomationAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:841–841](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L841-L841) | ResolveAutomationAxis | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 781 | axisName.Trim | resolved | string string.Trim() |
-| 782 | AxisNoMap.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, int>.TryGetValue(string, out int) |
-| 782 | axisNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 779 | axisName.Trim | resolved | string string.Trim() |
+| 780 | AxisNoMap.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, int>.TryGetValue(string, out int) |
+| 780 | axisNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 781 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisName.Trim() |
-| 781 | local-declaration | 지역 변수를 선언합니다: var normalized = axisName.Trim(); |
-| 781 | variable-initializer | 변수의 초기값을 지정합니다: normalized = axisName.Trim() |
-| 782 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AxisNoMap.TryGetValue(normalized, out var axisNo) |
-| 782 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisNo.ToString(CultureInfo.InvariantCulture) |
-| 782 | conditional-expression | 조건에 따라 결과식을 선택합니다: AxisNoMap.TryGetValue(normalized, out var axisNo) ? axisNo.ToString(CultureInfo.InvariantCulture) : normalized |
-| 782 | return | 호출자에게 값 또는 제어를 반환합니다: return AxisNoMap.TryGetValue(normalized, out var axisNo) ? axisNo.ToString(CultureInfo.InvariantCulture) : normalized; |
+| 779 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisName.Trim() |
+| 779 | local-declaration | 지역 변수를 선언합니다: var normalized = axisName.Trim(); |
+| 779 | variable-initializer | 변수의 초기값을 지정합니다: normalized = axisName.Trim() |
+| 780 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AxisNoMap.TryGetValue(normalized, out var axisNo) |
+| 780 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisNo.ToString(CultureInfo.InvariantCulture) |
+| 780 | conditional-expression | 조건에 따라 결과식을 선택합니다: AxisNoMap.TryGetValue(normalized, out var axisNo) ? axisNo.ToString(CultureInfo.InvariantCulture) : normalized |
+| 780 | return | 호출자에게 값 또는 제어를 반환합니다: return AxisNoMap.TryGetValue(normalized, out var axisNo) ? axisNo.ToString(CultureInfo.InvariantCulture) : normalized; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ResolveAeroScriptAxis` · L785–795
+### MethodDeclaration `ResolveAeroScriptAxis` · L783–793
 
-[Drilling.Common/Automation/CAutomationManager.cs:785–795](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L785-L795)
+[Drilling.Common/Automation/CAutomationManager.cs:783–793](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L783-L793)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4623,52 +4626,52 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L547-L547) | ResolveAeroScriptAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L556-L556) | ResolveAeroScriptAxis | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L567-L567) | ResolveAeroScriptAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:545–545](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L545-L545) | ResolveAeroScriptAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:554–554](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L554-L554) | ResolveAeroScriptAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:565–565](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L565-L565) | ResolveAeroScriptAxis | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 787 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 788 | axisName.Trim | resolved | string string.Trim() |
-| 789 | IsAeroScriptAxisIdentifier | resolved | bool Drilling.Common.Automation.CAutomationManager.IsAeroScriptAxisIdentifier(string) · Drilling.Common/Automation/CAutomationManager.cs:797 |
-| 791 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
-| 794 | AxisNoMap.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, int>.TryGetValue(string, out int) |
-| 794 | axisNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 785 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
+| 786 | axisName.Trim | resolved | string string.Trim() |
+| 787 | IsAeroScriptAxisIdentifier | resolved | bool Drilling.Common.Automation.CAutomationManager.IsAeroScriptAxisIdentifier(string) · Drilling.Common/Automation/CAutomationManager.cs:795 |
+| 789 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
+| 792 | AxisNoMap.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, int>.TryGetValue(string, out int) |
+| 792 | axisNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 787 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(axisName) |
-| 788 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisName.Trim() |
-| 788 | local-declaration | 지역 변수를 선언합니다: var normalized = axisName.Trim(); |
-| 788 | variable-initializer | 변수의 초기값을 지정합니다: normalized = axisName.Trim() |
-| 789 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsAeroScriptAxisIdentifier(normalized) |
-| 789 | if | 조건에 따라 분기합니다: if (!IsAeroScriptAxisIdentifier(normalized)) |
-| 791 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Automation1 axis name must be a numeric axis number or start with a letter and use letters, numbers, and underscores only: {axisName}") |
-| 791 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException($"Automation1 axis name must be a numeric axis number or start with a letter and use letters, numbers, and underscores only: {axisName}"); |
-| 794 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AxisNoMap.TryGetValue(normalized, out var axisNo) |
-| 794 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisNo.ToString(CultureInfo.InvariantCulture) |
-| 794 | conditional-expression | 조건에 따라 결과식을 선택합니다: AxisNoMap.TryGetValue(normalized, out var axisNo) ? axisNo.ToString(CultureInfo.InvariantCulture) : normalized |
-| 794 | return | 호출자에게 값 또는 제어를 반환합니다: return AxisNoMap.TryGetValue(normalized, out var axisNo) ? axisNo.ToString(CultureInfo.InvariantCulture) : normalized; |
+| 785 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(axisName) |
+| 786 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisName.Trim() |
+| 786 | local-declaration | 지역 변수를 선언합니다: var normalized = axisName.Trim(); |
+| 786 | variable-initializer | 변수의 초기값을 지정합니다: normalized = axisName.Trim() |
+| 787 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsAeroScriptAxisIdentifier(normalized) |
+| 787 | if | 조건에 따라 분기합니다: if (!IsAeroScriptAxisIdentifier(normalized)) |
+| 789 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"Automation1 axis name must be a numeric axis number or start with a letter and use letters, numbers, and underscores only: {axisName}") |
+| 789 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException($"Automation1 axis name must be a numeric axis number or start with a letter and use letters, numbers, and underscores only: {axisName}"); |
+| 792 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AxisNoMap.TryGetValue(normalized, out var axisNo) |
+| 792 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisNo.ToString(CultureInfo.InvariantCulture) |
+| 792 | conditional-expression | 조건에 따라 결과식을 선택합니다: AxisNoMap.TryGetValue(normalized, out var axisNo) ? axisNo.ToString(CultureInfo.InvariantCulture) : normalized |
+| 792 | return | 호출자에게 값 또는 제어를 반환합니다: return AxisNoMap.TryGetValue(normalized, out var axisNo) ? axisNo.ToString(CultureInfo.InvariantCulture) : normalized; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ResolveAeroScriptAxis"]
- N0["L789 if"]
+ N0["L787 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `IsAeroScriptAxisIdentifier` · L797–815
+### MethodDeclaration `IsAeroScriptAxisIdentifier` · L795–813
 
-[Drilling.Common/Automation/CAutomationManager.cs:797–815](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L797-L815)
+[Drilling.Common/Automation/CAutomationManager.cs:795–813](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L795-L813)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4687,46 +4690,46 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:789–789](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L789-L789) | IsAeroScriptAxisIdentifier | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1224–1224](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1224-L1224) | IsAeroScriptAxisIdentifier | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:787–787](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L787-L787) | IsAeroScriptAxisIdentifier | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1224–1224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1224-L1224) | IsAeroScriptAxisIdentifier | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 804 | value.All | resolved | bool System.Collections.Generic.IEnumerable<char>.All<char>(System.Func<char, bool>) |
-| 814 | char.IsAsciiLetter | resolved | bool char.IsAsciiLetter(char) |
-| 814 | value.All | resolved | bool System.Collections.Generic.IEnumerable<char>.All<char>(System.Func<char, bool>) |
+| 802 | value.All | resolved | bool System.Collections.Generic.IEnumerable<char>.All<char>(System.Func<char, bool>) |
+| 812 | char.IsAsciiLetter | resolved | bool char.IsAsciiLetter(char) |
+| 812 | value.All | resolved | bool System.Collections.Generic.IEnumerable<char>.All<char>(System.Func<char, bool>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 799 | if | 조건에 따라 분기합니다: if (value.Length == 0) |
-| 801 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
-| 804 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.All(char.IsAsciiDigit) |
-| 804 | if | 조건에 따라 분기합니다: if (value.All(char.IsAsciiDigit)) |
-| 806 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
-| 814 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiLetter(value[0]) |
-| 814 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.All(MatchesItem) |
-| 814 | return | 호출자에게 값 또는 제어를 반환합니다: return char.IsAsciiLetter(value[0]) && value.All(MatchesItem); |
+| 797 | if | 조건에 따라 분기합니다: if (value.Length == 0) |
+| 799 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 802 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.All(char.IsAsciiDigit) |
+| 802 | if | 조건에 따라 분기합니다: if (value.All(char.IsAsciiDigit)) |
+| 804 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
+| 812 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiLetter(value[0]) |
+| 812 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.All(MatchesItem) |
+| 812 | return | 호출자에게 값 또는 제어를 반환합니다: return char.IsAsciiLetter(value[0]) && value.All(MatchesItem); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["IsAeroScriptAxisIdentifier"]
- N0["L799 if"]
+ N0["L797 if"]
  M -->|포함| N0
- N1["L804 if"]
+ N1["L802 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### LocalFunctionStatement `MatchesItem` · L809–812
+### LocalFunctionStatement `MatchesItem` · L807–810
 
-[Drilling.Common/Automation/CAutomationManager.cs:809–812](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L809-L812)
+[Drilling.Common/Automation/CAutomationManager.cs:807–810](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L807-L810)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4747,22 +4750,22 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 811 | char.IsAsciiLetter | resolved | bool char.IsAsciiLetter(char) |
-| 811 | char.IsAsciiDigit | resolved | bool char.IsAsciiDigit(char) |
+| 809 | char.IsAsciiLetter | resolved | bool char.IsAsciiLetter(char) |
+| 809 | char.IsAsciiDigit | resolved | bool char.IsAsciiDigit(char) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 811 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiLetter(character) |
-| 811 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiDigit(character) |
-| 811 | return | 호출자에게 값 또는 제어를 반환합니다: return char.IsAsciiLetter(character) &#124;&#124; char.IsAsciiDigit(character) &#124;&#124; character == '_'; |
+| 809 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiLetter(character) |
+| 809 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiDigit(character) |
+| 809 | return | 호출자에게 값 또는 제어를 반환합니다: return char.IsAsciiLetter(character) &#124;&#124; char.IsAsciiDigit(character) &#124;&#124; character == '_'; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `IsAxisNameOnlyIdentifier` · L817–838
+### MethodDeclaration `IsAxisNameOnlyIdentifier` · L815–836
 
-[Drilling.Common/Automation/CAutomationManager.cs:817–838](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L817-L838)
+[Drilling.Common/Automation/CAutomationManager.cs:815–836](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L815-L836)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4781,54 +4784,54 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L663-L663) | IsAxisNameOnlyIdentifier | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L661-L661) | IsAxisNameOnlyIdentifier | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 819 | char.IsAsciiDigit | resolved | bool char.IsAsciiDigit(char) |
-| 824 | char.IsAsciiLetter | resolved | bool char.IsAsciiLetter(char) |
-| 831 | char.IsAsciiLetter | resolved | bool char.IsAsciiLetter(char) |
-| 831 | char.IsAsciiDigit | resolved | bool char.IsAsciiDigit(char) |
+| 817 | char.IsAsciiDigit | resolved | bool char.IsAsciiDigit(char) |
+| 822 | char.IsAsciiLetter | resolved | bool char.IsAsciiLetter(char) |
+| 829 | char.IsAsciiLetter | resolved | bool char.IsAsciiLetter(char) |
+| 829 | char.IsAsciiDigit | resolved | bool char.IsAsciiDigit(char) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 819 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiDigit(value[0]) |
-| 819 | if | 조건에 따라 분기합니다: if (value.Length == 0 &#124;&#124; char.IsAsciiDigit(value[0])) |
-| 821 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
-| 824 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiLetter(value[0]) |
-| 824 | if | 조건에 따라 분기합니다: if (!char.IsAsciiLetter(value[0])) |
-| 826 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
-| 829 | foreach | 컬렉션 요소를 순회합니다: foreach (var character in value) |
-| 831 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiLetter(character) |
-| 831 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiDigit(character) |
-| 831 | if | 조건에 따라 분기합니다: if (!char.IsAsciiLetter(character) && !char.IsAsciiDigit(character) && character != '_') |
-| 833 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
-| 837 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
+| 817 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiDigit(value[0]) |
+| 817 | if | 조건에 따라 분기합니다: if (value.Length == 0 &#124;&#124; char.IsAsciiDigit(value[0])) |
+| 819 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 822 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiLetter(value[0]) |
+| 822 | if | 조건에 따라 분기합니다: if (!char.IsAsciiLetter(value[0])) |
+| 824 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 827 | foreach | 컬렉션 요소를 순회합니다: foreach (var character in value) |
+| 829 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiLetter(character) |
+| 829 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: char.IsAsciiDigit(character) |
+| 829 | if | 조건에 따라 분기합니다: if (!char.IsAsciiLetter(character) && !char.IsAsciiDigit(character) && character != '_') |
+| 831 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 835 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["IsAxisNameOnlyIdentifier"]
- N0["L819 if"]
+ N0["L817 if"]
  M -->|포함| N0
- N1["L824 if"]
+ N1["L822 if"]
  M -->|포함| N1
- N2["L829 foreach"]
+ N2["L827 foreach"]
  M -->|포함| N2
- N3["L831 if"]
+ N3["L829 if"]
  N2 -->|포함| N3
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateSimulationAxisStatus` · L840–867
+### MethodDeclaration `CreateSimulationAxisStatus` · L838–865
 
-[Drilling.Common/Automation/CAutomationManager.cs:840–867](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L840-L867)
+[Drilling.Common/Automation/CAutomationManager.cs:838–865](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L838-L865)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4848,49 +4851,49 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L259-L259) | CreateSimulationAxisStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L279-L279) | CreateSimulationAxisStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L294-L294) | CreateSimulationAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L259-L259) | CreateSimulationAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L279-L279) | CreateSimulationAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L294-L294) | CreateSimulationAxisStatus | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 842 | _simulationAxisAbleStates.GetOrAdd | resolved | bool System.Collections.Concurrent.ConcurrentDictionary<string, bool>.GetOrAdd(string, bool) |
-| 842 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:869 |
-| 842 | ResolveAutomationAxis | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveAutomationAxis(string) · Drilling.Common/Automation/CAutomationManager.cs:779 |
-| 843 | _simulationAxisPositions.GetValueOrDefault | resolved | double System.Collections.Generic.IReadOnlyDictionary<string, double>.GetValueOrDefault<string, double>(string) |
-| 843 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:869 |
-| 843 | ResolveAutomationAxis | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveAutomationAxis(string) · Drilling.Common/Automation/CAutomationManager.cs:779 |
-| 844 | new ST_AUTOMATION_AXIS_STATUS | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS.ST_AUTOMATION_AXIS_STATUS(int, string, int?, double, double, double, double, double, double, bool, bool, bool, string, string, string, string, System.DateTimeOffset) · Drilling.Common/Automation/CAutomationManager.cs:1508 |
-| 847 | TryGetAxisNo | resolved | int? Drilling.Common.Automation.CAutomationManager.TryGetAxisNo(string) · Drilling.Common/Automation/CAutomationManager.cs:951 |
+| 840 | _simulationAxisAbleStates.GetOrAdd | resolved | bool System.Collections.Concurrent.ConcurrentDictionary<string, bool>.GetOrAdd(string, bool) |
+| 840 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:867 |
+| 840 | ResolveAutomationAxis | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveAutomationAxis(string) · Drilling.Common/Automation/CAutomationManager.cs:777 |
+| 841 | _simulationAxisPositions.GetValueOrDefault | resolved | double System.Collections.Generic.IReadOnlyDictionary<string, double>.GetValueOrDefault<string, double>(string) |
+| 841 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:867 |
+| 841 | ResolveAutomationAxis | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveAutomationAxis(string) · Drilling.Common/Automation/CAutomationManager.cs:777 |
+| 842 | new ST_AUTOMATION_AXIS_STATUS | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS.ST_AUTOMATION_AXIS_STATUS(int, string, int?, double, double, double, double, double, double, bool, bool, bool, string, string, string, string, System.DateTimeOffset) · Drilling.Common/Automation/CAutomationManager.cs:1508 |
+| 845 | TryGetAxisNo | resolved | int? Drilling.Common.Automation.CAutomationManager.TryGetAxisNo(string) · Drilling.Common/Automation/CAutomationManager.cs:949 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 842 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulationAxisAbleStates.GetOrAdd(CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName)), true) |
-| 842 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName)) |
-| 842 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveAutomationAxis(axisName) |
-| 842 | local-declaration | 지역 변수를 선언합니다: var able = _simulationAxisAbleStates.GetOrAdd(CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName)), true); |
-| 842 | variable-initializer | 변수의 초기값을 지정합니다: able = _simulationAxisAbleStates.GetOrAdd(CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName)), true) |
-| 843 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulationAxisPositions.GetValueOrDefault(CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName))) |
-| 843 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName)) |
-| 843 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveAutomationAxis(axisName) |
-| 843 | local-declaration | 지역 변수를 선언합니다: var position = _simulationAxisPositions.GetValueOrDefault(CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName))); |
-| 843 | variable-initializer | 변수의 초기값을 지정합니다: position = _simulationAxisPositions.GetValueOrDefault(CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName))) |
-| 844 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_AUTOMATION_AXIS_STATUS( automationNo, axisName, TryGetAxisNo(axisName), position, position, 0.0, 0.0, 0.0, 20.0, able, true, false, able ? "Enabled" : "Disabled", "Homed", "0", $"SIM:AUTOMATION1:AXIS:{axisName}:RE… |
-| 844 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_AUTOMATION_AXIS_STATUS( automationNo, axisName, TryGetAxisNo(axisName), position, position, 0.0, 0.0, 0.0, 20.0, able, true, false, able ? "Enabled" : "Disabled", "Homed", "0", $"SIM:AUTOMATION1:AXIS:{axisName}:READ: |
-| 847 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryGetAxisNo(axisName) |
-| 857 | conditional-expression | 조건에 따라 결과식을 선택합니다: able ? "Enabled" : "Disabled" |
-| 864 | assignment | 값을 대상에 대입합니다: IsInPosition = true |
-| 865 | assignment | 값을 대상에 대입합니다: IsMotionDone = true |
+| 840 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulationAxisAbleStates.GetOrAdd(CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName)), true) |
+| 840 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName)) |
+| 840 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveAutomationAxis(axisName) |
+| 840 | local-declaration | 지역 변수를 선언합니다: var able = _simulationAxisAbleStates.GetOrAdd(CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName)), true); |
+| 840 | variable-initializer | 변수의 초기값을 지정합니다: able = _simulationAxisAbleStates.GetOrAdd(CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName)), true) |
+| 841 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulationAxisPositions.GetValueOrDefault(CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName))) |
+| 841 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName)) |
+| 841 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveAutomationAxis(axisName) |
+| 841 | local-declaration | 지역 변수를 선언합니다: var position = _simulationAxisPositions.GetValueOrDefault(CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName))); |
+| 841 | variable-initializer | 변수의 초기값을 지정합니다: position = _simulationAxisPositions.GetValueOrDefault(CreateSimulationAxisKey(automationNo, ResolveAutomationAxis(axisName))) |
+| 842 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_AUTOMATION_AXIS_STATUS( automationNo, axisName, TryGetAxisNo(axisName), position, position, 0.0, 0.0, 0.0, 20.0, able, true, false, able ? "Enabled" : "Disabled", "Homed", "0", $"SIM:AUTOMATION1:AXIS:{axisName}:RE… |
+| 842 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_AUTOMATION_AXIS_STATUS( automationNo, axisName, TryGetAxisNo(axisName), position, position, 0.0, 0.0, 0.0, 20.0, able, true, false, able ? "Enabled" : "Disabled", "Homed", "0", $"SIM:AUTOMATION1:AXIS:{axisName}:READ: |
+| 845 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryGetAxisNo(axisName) |
+| 855 | conditional-expression | 조건에 따라 결과식을 선택합니다: able ? "Enabled" : "Disabled" |
+| 862 | assignment | 값을 대상에 대입합니다: IsInPosition = true |
+| 863 | assignment | 값을 대상에 대입합니다: IsMotionDone = true |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateSimulationAxisKey` · L869–872
+### MethodDeclaration `CreateSimulationAxisKey` · L867–870
 
-[Drilling.Common/Automation/CAutomationManager.cs:869–872](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L869-L872)
+[Drilling.Common/Automation/CAutomationManager.cs:867–870](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L867-L870)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4910,34 +4913,34 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L605-L605) | CreateSimulationAxisKey | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:618–618](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L618-L618) | CreateSimulationAxisKey | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:625–625](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L625-L625) | CreateSimulationAxisKey | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:842–842](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L842-L842) | CreateSimulationAxisKey | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:843–843](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L843-L843) | CreateSimulationAxisKey | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1173-L1173) | CreateSimulationAxisKey | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1202–1202](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1202-L1202) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:603–603](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L603-L603) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:616–616](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L616-L616) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:623–623](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L623-L623) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:840–840](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L840-L840) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:841–841](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L841-L841) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1173-L1173) | CreateSimulationAxisKey | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1202–1202](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1202-L1202) | CreateSimulationAxisKey | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 871 | automationNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
-| 871 | axisName.Trim | resolved | string string.Trim() |
+| 869 | automationNo.ToString | resolved | string int.ToString(System.IFormatProvider?) |
+| 869 | axisName.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 871 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: automationNo.ToString(CultureInfo.InvariantCulture) |
-| 871 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisName.Trim() |
-| 871 | return | 호출자에게 값 또는 제어를 반환합니다: return $"{automationNo.ToString(CultureInfo.InvariantCulture)}:{axisName.Trim()}"; |
+| 869 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: automationNo.ToString(CultureInfo.InvariantCulture) |
+| 869 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisName.Trim() |
+| 869 | return | 호출자에게 값 또는 제어를 반환합니다: return $"{automationNo.ToString(CultureInfo.InvariantCulture)}:{axisName.Trim()}"; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ParseAxisStatus` · L874–927
+### MethodDeclaration `ParseAxisStatus` · L872–925
 
-[Drilling.Common/Automation/CAutomationManager.cs:874–927](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L874-L927)
+[Drilling.Common/Automation/CAutomationManager.cs:872–925](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L872-L925)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4958,138 +4961,138 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L263-L263) | ParseAxisStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L283-L283) | ParseAxisStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L298-L298) | ParseAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L263-L263) | ParseAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L283-L283) | ParseAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:298–298](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L298-L298) | ParseAxisStatus | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 876 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 878 | CreateErrorAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateErrorAxisStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:946 |
-| 881 | FormatAutomationErrorResponse | resolved | string Drilling.Common.Automation.CAutomationManager.FormatAutomationErrorResponse(string) · Drilling.Common/Automation/CAutomationManager.cs:763 |
-| 882 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 884 | CreateErrorAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateErrorAxisStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:946 |
-| 887 | response.Split | resolved | string[] string.Split(char, System.StringSplitOptions) |
-| 888 | tokens[0].Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 888 | tokens[1].Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 890 | CreateErrorAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateErrorAxisStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:946 |
-| 893 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 894 | new Dictionary<string, string> | resolved | System.Collections.Generic.Dictionary<string, string>.Dictionary(System.Collections.Generic.IEqualityComparer<string>?) |
-| 900 | GetValue | resolved | string Drilling.Common.Automation.CAutomationManager.GetValue(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:962 |
-| 901 | GetValue | resolved | string Drilling.Common.Automation.CAutomationManager.GetValue(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:962 |
-| 902 | GetValue | resolved | string Drilling.Common.Automation.CAutomationManager.GetValue(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:962 |
-| 903 | values.TryGetValue | resolved | bool System.Collections.Generic.Dictionary<string, string>.TryGetValue(string, out string) |
-| 903 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
-| 903 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 903 | values.TryGetValue | resolved | bool System.Collections.Generic.Dictionary<string, string>.TryGetValue(string, out string) |
-| 903 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
-| 903 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 904 | new ST_AUTOMATION_AXIS_STATUS | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS.ST_AUTOMATION_AXIS_STATUS(int, string, int?, double, double, double, double, double, double, bool, bool, bool, string, string, string, string, System.DateTimeOffset) · Drilling.Common/Automation/CAutomationManager.cs:1508 |
-| 907 | TryGetAxisNo | resolved | int? Drilling.Common.Automation.CAutomationManager.TryGetAxisNo(string) · Drilling.Common/Automation/CAutomationManager.cs:951 |
-| 908 | ReadDouble | resolved | double Drilling.Common.Automation.CAutomationManager.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:967 |
-| 909 | ReadDouble | resolved | double Drilling.Common.Automation.CAutomationManager.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:967 |
-| 910 | ReadDouble | resolved | double Drilling.Common.Automation.CAutomationManager.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:967 |
-| 911 | ReadDouble | resolved | double Drilling.Common.Automation.CAutomationManager.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:967 |
-| 912 | ReadDouble | resolved | double Drilling.Common.Automation.CAutomationManager.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:967 |
-| 913 | ReadGalvoTemperatureCelsius | resolved | double Drilling.Common.Automation.CAutomationManager.ReadGalvoTemperatureCelsius(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Automation/CAutomationManager.cs:941 |
-| 914 | IsDriveAble | resolved | bool Drilling.Common.Automation.CAutomationManager.IsDriveAble(string) · Drilling.Common/Automation/CAutomationManager.cs:972 |
-| 915 | IsHomeDone | resolved | bool Drilling.Common.Automation.CAutomationManager.IsHomeDone(string) · Drilling.Common/Automation/CAutomationManager.cs:982 |
-| 916 | IsFaultActive | resolved | bool Drilling.Common.Automation.CAutomationManager.IsFaultActive(string) · Drilling.Common/Automation/CAutomationManager.cs:1016 |
-| 924 | ReadMotionStatusFlag | resolved | bool? Drilling.Common.Automation.CAutomationManager.ReadMotionStatusFlag(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:929 |
-| 925 | ReadMotionStatusFlag | resolved | bool? Drilling.Common.Automation.CAutomationManager.ReadMotionStatusFlag(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:929 |
+| 874 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 876 | CreateErrorAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateErrorAxisStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:944 |
+| 879 | FormatAutomationErrorResponse | resolved | string Drilling.Common.Automation.CAutomationManager.FormatAutomationErrorResponse(string) · Drilling.Common/Automation/CAutomationManager.cs:761 |
+| 880 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 882 | CreateErrorAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateErrorAxisStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:944 |
+| 885 | response.Split | resolved | string[] string.Split(char, System.StringSplitOptions) |
+| 886 | tokens[0].Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 886 | tokens[1].Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 888 | CreateErrorAxisStatus | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS Drilling.Common.Automation.CAutomationManager.CreateErrorAxisStatus(int, string, string, string) · Drilling.Common/Automation/CAutomationManager.cs:944 |
+| 891 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 892 | new Dictionary<string, string> | resolved | System.Collections.Generic.Dictionary<string, string>.Dictionary(System.Collections.Generic.IEqualityComparer<string>?) |
+| 898 | GetValue | resolved | string Drilling.Common.Automation.CAutomationManager.GetValue(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:960 |
+| 899 | GetValue | resolved | string Drilling.Common.Automation.CAutomationManager.GetValue(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:960 |
+| 900 | GetValue | resolved | string Drilling.Common.Automation.CAutomationManager.GetValue(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:960 |
+| 901 | values.TryGetValue | resolved | bool System.Collections.Generic.Dictionary<string, string>.TryGetValue(string, out string) |
+| 901 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
+| 901 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 901 | values.TryGetValue | resolved | bool System.Collections.Generic.Dictionary<string, string>.TryGetValue(string, out string) |
+| 901 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
+| 901 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 902 | new ST_AUTOMATION_AXIS_STATUS | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS.ST_AUTOMATION_AXIS_STATUS(int, string, int?, double, double, double, double, double, double, bool, bool, bool, string, string, string, string, System.DateTimeOffset) · Drilling.Common/Automation/CAutomationManager.cs:1508 |
+| 905 | TryGetAxisNo | resolved | int? Drilling.Common.Automation.CAutomationManager.TryGetAxisNo(string) · Drilling.Common/Automation/CAutomationManager.cs:949 |
+| 906 | ReadDouble | resolved | double Drilling.Common.Automation.CAutomationManager.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:965 |
+| 907 | ReadDouble | resolved | double Drilling.Common.Automation.CAutomationManager.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:965 |
+| 908 | ReadDouble | resolved | double Drilling.Common.Automation.CAutomationManager.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:965 |
+| 909 | ReadDouble | resolved | double Drilling.Common.Automation.CAutomationManager.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:965 |
+| 910 | ReadDouble | resolved | double Drilling.Common.Automation.CAutomationManager.ReadDouble(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:965 |
+| 911 | ReadGalvoTemperatureCelsius | resolved | double Drilling.Common.Automation.CAutomationManager.ReadGalvoTemperatureCelsius(System.Collections.Generic.IReadOnlyDictionary<string, string>) · Drilling.Common/Automation/CAutomationManager.cs:939 |
+| 912 | IsDriveAble | resolved | bool Drilling.Common.Automation.CAutomationManager.IsDriveAble(string) · Drilling.Common/Automation/CAutomationManager.cs:970 |
+| 913 | IsHomeDone | resolved | bool Drilling.Common.Automation.CAutomationManager.IsHomeDone(string) · Drilling.Common/Automation/CAutomationManager.cs:980 |
+| 914 | IsFaultActive | resolved | bool Drilling.Common.Automation.CAutomationManager.IsFaultActive(string) · Drilling.Common/Automation/CAutomationManager.cs:1014 |
+| 922 | ReadMotionStatusFlag | resolved | bool? Drilling.Common.Automation.CAutomationManager.ReadMotionStatusFlag(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:927 |
+| 923 | ReadMotionStatusFlag | resolved | bool? Drilling.Common.Automation.CAutomationManager.ReadMotionStatusFlag(System.Collections.Generic.IReadOnlyDictionary<string, string>, string) · Drilling.Common/Automation/CAutomationManager.cs:927 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 876 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) |
-| 876 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(response)) |
-| 878 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorAxisStatus(automationNo, requestedAxis, "No Response", response) |
-| 878 | return | 호출자에게 값 또는 제어를 반환합니다: return CreateErrorAxisStatus(automationNo, requestedAxis, "No Response", response); |
-| 881 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatAutomationErrorResponse(response) |
-| 881 | local-declaration | 지역 변수를 선언합니다: var automationError = FormatAutomationErrorResponse(response); |
-| 881 | variable-initializer | 변수의 초기값을 지정합니다: automationError = FormatAutomationErrorResponse(response) |
-| 882 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(automationError) |
-| 882 | if | 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(automationError)) |
-| 884 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorAxisStatus(automationNo, requestedAxis, automationError, response) |
-| 884 | return | 호출자에게 값 또는 제어를 반환합니다: return CreateErrorAxisStatus(automationNo, requestedAxis, automationError, response); |
-| 887 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Split(':', StringSplitOptions.TrimEntries &#124; StringSplitOptions.None) |
-| 887 | local-declaration | 지역 변수를 선언합니다: var tokens = response.Split(':', StringSplitOptions.TrimEntries &#124; StringSplitOptions.None); |
-| 887 | variable-initializer | 변수의 초기값을 지정합니다: tokens = response.Split(':', StringSplitOptions.TrimEntries &#124; StringSplitOptions.None) |
-| 888 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[0].Equals("OK", StringComparison.OrdinalIgnoreCase) |
-| 888 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[1].Equals("AXIS", StringComparison.OrdinalIgnoreCase) |
-| 888 | if | 조건에 따라 분기합니다: if (tokens.Length < 3 &#124;&#124; !tokens[0].Equals("OK", StringComparison.OrdinalIgnoreCase) &#124;&#124; !tokens[1].Equals("AXIS", StringComparison.OrdinalIgnoreCase)) |
-| 890 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorAxisStatus(automationNo, requestedAxis, "Invalid Response", response) |
-| 890 | return | 호출자에게 값 또는 제어를 반환합니다: return CreateErrorAxisStatus(automationNo, requestedAxis, "Invalid Response", response); |
-| 893 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(tokens[2]) |
-| 893 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(tokens[2]) ? requestedAxis : tokens[2] |
-| 893 | local-declaration | 지역 변수를 선언합니다: var axisName = string.IsNullOrWhiteSpace(tokens[2]) ? requestedAxis : tokens[2]; |
-| 893 | variable-initializer | 변수의 초기값을 지정합니다: axisName = string.IsNullOrWhiteSpace(tokens[2]) ? requestedAxis : tokens[2] |
-| 894 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) |
-| 894 | local-declaration | 지역 변수를 선언합니다: var values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); |
-| 894 | variable-initializer | 변수의 초기값을 지정합니다: values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) |
-| 895 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: index += 2 |
-| 895 | variable-initializer | 변수의 초기값을 지정합니다: index = 3 |
-| 895 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 3; index + 1 < tokens.Length; index += 2) |
-| 897 | assignment | 값을 대상에 대입합니다: values[tokens[index]] = tokens[index + 1] |
-| 900 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(values, "DRIVE") |
-| 900 | local-declaration | 지역 변수를 선언합니다: var driveStatus = GetValue(values, "DRIVE"); |
-| 900 | variable-initializer | 변수의 초기값을 지정합니다: driveStatus = GetValue(values, "DRIVE") |
-| 901 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(values, "FAULT") |
-| 901 | local-declaration | 지역 변수를 선언합니다: var fault = GetValue(values, "FAULT"); |
-| 901 | variable-initializer | 변수의 초기값을 지정합니다: fault = GetValue(values, "FAULT") |
-| 902 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(values, "HOME") |
-| 902 | local-declaration | 지역 변수를 선언합니다: var homeState = GetValue(values, "HOME"); |
-| 902 | variable-initializer | 변수의 초기값을 지정합니다: homeState = GetValue(values, "HOME") |
-| 903 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue("FPOS", out var feedbackText) |
-| 903 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(feedbackText, NumberStyles.Float, CultureInfo.InvariantCulture, out var feedback) |
-| 903 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(feedback) |
-| 903 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue("CPOS", out var commandText) |
-| 903 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(commandText, NumberStyles.Float, CultureInfo.InvariantCulture, out var command) |
-| 903 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(command) |
-| 903 | local-declaration | 지역 변수를 선언합니다: var hasMotionPositions = values.TryGetValue("FPOS", out var feedbackText) && double.TryParse(feedbackText, NumberStyles.Float, CultureInfo.InvariantCulture, out var feedback) && double.IsFinite(feedback) && values.TryGetValue("CPO |
-| 903 | variable-initializer | 변수의 초기값을 지정합니다: hasMotionPositions = values.TryGetValue("FPOS", out var feedbackText) && double.TryParse(feedbackText, NumberStyles.Float, CultureInfo.InvariantCulture, out var feedback) && double.IsFinite(feedback) && values.TryGetValue("CPOS",  |
-| 904 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_AUTOMATION_AXIS_STATUS( automationNo, axisName, TryGetAxisNo(axisName), ReadDouble(values, "FPOS"), ReadDouble(values, "CPOS"), ReadDouble(values, "AUX"), ReadDouble(values, "CURRENT"), ReadDouble(values, "LASER_R… |
-| 904 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_AUTOMATION_AXIS_STATUS( automationNo, axisName, TryGetAxisNo(axisName), ReadDouble(values, "FPOS"), ReadDouble(values, "CPOS"), ReadDouble(values, "AUX"), ReadDouble(values, "CURRENT"), ReadDouble(values, "LASER_RAW" |
-| 907 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryGetAxisNo(axisName) |
-| 908 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, "FPOS") |
-| 909 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, "CPOS") |
-| 910 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, "AUX") |
-| 911 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, "CURRENT") |
-| 912 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, "LASER_RAW") |
-| 913 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadGalvoTemperatureCelsius(values) |
-| 914 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsDriveAble(driveStatus) |
-| 915 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsHomeDone(homeState) |
-| 916 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsFaultActive(fault) |
-| 924 | assignment | 값을 대상에 대입합니다: IsInPosition = hasMotionPositions ? ReadMotionStatusFlag(values, "IN_POSITION") : null |
-| 924 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMotionStatusFlag(values, "IN_POSITION") |
-| 924 | conditional-expression | 조건에 따라 결과식을 선택합니다: hasMotionPositions ? ReadMotionStatusFlag(values, "IN_POSITION") : null |
-| 925 | assignment | 값을 대상에 대입합니다: IsMotionDone = hasMotionPositions ? ReadMotionStatusFlag(values, "MOTION_DONE") : null |
-| 925 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMotionStatusFlag(values, "MOTION_DONE") |
-| 925 | conditional-expression | 조건에 따라 결과식을 선택합니다: hasMotionPositions ? ReadMotionStatusFlag(values, "MOTION_DONE") : null |
+| 874 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(response) |
+| 874 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(response)) |
+| 876 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorAxisStatus(automationNo, requestedAxis, "No Response", response) |
+| 876 | return | 호출자에게 값 또는 제어를 반환합니다: return CreateErrorAxisStatus(automationNo, requestedAxis, "No Response", response); |
+| 879 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatAutomationErrorResponse(response) |
+| 879 | local-declaration | 지역 변수를 선언합니다: var automationError = FormatAutomationErrorResponse(response); |
+| 879 | variable-initializer | 변수의 초기값을 지정합니다: automationError = FormatAutomationErrorResponse(response) |
+| 880 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(automationError) |
+| 880 | if | 조건에 따라 분기합니다: if (!string.IsNullOrWhiteSpace(automationError)) |
+| 882 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorAxisStatus(automationNo, requestedAxis, automationError, response) |
+| 882 | return | 호출자에게 값 또는 제어를 반환합니다: return CreateErrorAxisStatus(automationNo, requestedAxis, automationError, response); |
+| 885 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Split(':', StringSplitOptions.TrimEntries &#124; StringSplitOptions.None) |
+| 885 | local-declaration | 지역 변수를 선언합니다: var tokens = response.Split(':', StringSplitOptions.TrimEntries &#124; StringSplitOptions.None); |
+| 885 | variable-initializer | 변수의 초기값을 지정합니다: tokens = response.Split(':', StringSplitOptions.TrimEntries &#124; StringSplitOptions.None) |
+| 886 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[0].Equals("OK", StringComparison.OrdinalIgnoreCase) |
+| 886 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: tokens[1].Equals("AXIS", StringComparison.OrdinalIgnoreCase) |
+| 886 | if | 조건에 따라 분기합니다: if (tokens.Length < 3 &#124;&#124; !tokens[0].Equals("OK", StringComparison.OrdinalIgnoreCase) &#124;&#124; !tokens[1].Equals("AXIS", StringComparison.OrdinalIgnoreCase)) |
+| 888 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateErrorAxisStatus(automationNo, requestedAxis, "Invalid Response", response) |
+| 888 | return | 호출자에게 값 또는 제어를 반환합니다: return CreateErrorAxisStatus(automationNo, requestedAxis, "Invalid Response", response); |
+| 891 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(tokens[2]) |
+| 891 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(tokens[2]) ? requestedAxis : tokens[2] |
+| 891 | local-declaration | 지역 변수를 선언합니다: var axisName = string.IsNullOrWhiteSpace(tokens[2]) ? requestedAxis : tokens[2]; |
+| 891 | variable-initializer | 변수의 초기값을 지정합니다: axisName = string.IsNullOrWhiteSpace(tokens[2]) ? requestedAxis : tokens[2] |
+| 892 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) |
+| 892 | local-declaration | 지역 변수를 선언합니다: var values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase); |
+| 892 | variable-initializer | 변수의 초기값을 지정합니다: values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) |
+| 893 | compound-assignment-or-event-subscription | 복합 대입 또는 이벤트 구독/해지 표현입니다: index += 2 |
+| 893 | variable-initializer | 변수의 초기값을 지정합니다: index = 3 |
+| 893 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 3; index + 1 < tokens.Length; index += 2) |
+| 895 | assignment | 값을 대상에 대입합니다: values[tokens[index]] = tokens[index + 1] |
+| 898 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(values, "DRIVE") |
+| 898 | local-declaration | 지역 변수를 선언합니다: var driveStatus = GetValue(values, "DRIVE"); |
+| 898 | variable-initializer | 변수의 초기값을 지정합니다: driveStatus = GetValue(values, "DRIVE") |
+| 899 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(values, "FAULT") |
+| 899 | local-declaration | 지역 변수를 선언합니다: var fault = GetValue(values, "FAULT"); |
+| 899 | variable-initializer | 변수의 초기값을 지정합니다: fault = GetValue(values, "FAULT") |
+| 900 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(values, "HOME") |
+| 900 | local-declaration | 지역 변수를 선언합니다: var homeState = GetValue(values, "HOME"); |
+| 900 | variable-initializer | 변수의 초기값을 지정합니다: homeState = GetValue(values, "HOME") |
+| 901 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue("FPOS", out var feedbackText) |
+| 901 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(feedbackText, NumberStyles.Float, CultureInfo.InvariantCulture, out var feedback) |
+| 901 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(feedback) |
+| 901 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue("CPOS", out var commandText) |
+| 901 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(commandText, NumberStyles.Float, CultureInfo.InvariantCulture, out var command) |
+| 901 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(command) |
+| 901 | local-declaration | 지역 변수를 선언합니다: var hasMotionPositions = values.TryGetValue("FPOS", out var feedbackText) && double.TryParse(feedbackText, NumberStyles.Float, CultureInfo.InvariantCulture, out var feedback) && double.IsFinite(feedback) && values.TryGetValue("CPO |
+| 901 | variable-initializer | 변수의 초기값을 지정합니다: hasMotionPositions = values.TryGetValue("FPOS", out var feedbackText) && double.TryParse(feedbackText, NumberStyles.Float, CultureInfo.InvariantCulture, out var feedback) && double.IsFinite(feedback) && values.TryGetValue("CPOS",  |
+| 902 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_AUTOMATION_AXIS_STATUS( automationNo, axisName, TryGetAxisNo(axisName), ReadDouble(values, "FPOS"), ReadDouble(values, "CPOS"), ReadDouble(values, "AUX"), ReadDouble(values, "CURRENT"), ReadDouble(values, "LASER_R… |
+| 902 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_AUTOMATION_AXIS_STATUS( automationNo, axisName, TryGetAxisNo(axisName), ReadDouble(values, "FPOS"), ReadDouble(values, "CPOS"), ReadDouble(values, "AUX"), ReadDouble(values, "CURRENT"), ReadDouble(values, "LASER_RAW" |
+| 905 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryGetAxisNo(axisName) |
+| 906 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, "FPOS") |
+| 907 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, "CPOS") |
+| 908 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, "AUX") |
+| 909 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, "CURRENT") |
+| 910 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadDouble(values, "LASER_RAW") |
+| 911 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadGalvoTemperatureCelsius(values) |
+| 912 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsDriveAble(driveStatus) |
+| 913 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsHomeDone(homeState) |
+| 914 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsFaultActive(fault) |
+| 922 | assignment | 값을 대상에 대입합니다: IsInPosition = hasMotionPositions ? ReadMotionStatusFlag(values, "IN_POSITION") : null |
+| 922 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMotionStatusFlag(values, "IN_POSITION") |
+| 922 | conditional-expression | 조건에 따라 결과식을 선택합니다: hasMotionPositions ? ReadMotionStatusFlag(values, "IN_POSITION") : null |
+| 923 | assignment | 값을 대상에 대입합니다: IsMotionDone = hasMotionPositions ? ReadMotionStatusFlag(values, "MOTION_DONE") : null |
+| 923 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadMotionStatusFlag(values, "MOTION_DONE") |
+| 923 | conditional-expression | 조건에 따라 결과식을 선택합니다: hasMotionPositions ? ReadMotionStatusFlag(values, "MOTION_DONE") : null |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ParseAxisStatus"]
- N0["L876 if"]
+ N0["L874 if"]
  M -->|포함| N0
- N1["L882 if"]
+ N1["L880 if"]
  M -->|포함| N1
- N2["L888 if"]
+ N2["L886 if"]
  M -->|포함| N2
- N3["L895 for"]
+ N3["L893 for"]
  M -->|포함| N3
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadMotionStatusFlag` · L929–939
+### MethodDeclaration `ReadMotionStatusFlag` · L927–937
 
-[Drilling.Common/Automation/CAutomationManager.cs:929–939](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L929-L939)
+[Drilling.Common/Automation/CAutomationManager.cs:927–937](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L927-L937)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5109,43 +5112,43 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:924–924](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L924-L924) | ReadMotionStatusFlag | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:925–925](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L925-L925) | ReadMotionStatusFlag | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:922–922](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L922-L922) | ReadMotionStatusFlag | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:923–923](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L923-L923) | ReadMotionStatusFlag | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 931 | values.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, string>.TryGetValue(string, out string) |
-| 933 | text.Trim | resolved | string string.Trim() |
+| 929 | values.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, string>.TryGetValue(string, out string) |
+| 931 | text.Trim | resolved | string string.Trim() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 931 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var text) |
-| 931 | if | 조건에 따라 분기합니다: if (!values.TryGetValue(key, out var text)) |
-| 932 | return | 호출자에게 값 또는 제어를 반환합니다: return null; |
-| 933 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim() |
-| 933 | return | 호출자에게 값 또는 제어를 반환합니다: return text.Trim() switch { "1" => true, "0" => false, _ => null }; |
-| 933 | switch-expression | 값별 결과식을 선택합니다: text.Trim() switch { "1" => true, "0" => false, _ => null } |
+| 929 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var text) |
+| 929 | if | 조건에 따라 분기합니다: if (!values.TryGetValue(key, out var text)) |
+| 930 | return | 호출자에게 값 또는 제어를 반환합니다: return null; |
+| 931 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: text.Trim() |
+| 931 | return | 호출자에게 값 또는 제어를 반환합니다: return text.Trim() switch { "1" => true, "0" => false, _ => null }; |
+| 931 | switch-expression | 값별 결과식을 선택합니다: text.Trim() switch { "1" => true, "0" => false, _ => null } |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReadMotionStatusFlag"]
- N0["L931 if"]
+ N0["L929 if"]
  M -->|포함| N0
- N1["L933 switch-expression"]
+ N1["L931 switch-expression"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadGalvoTemperatureCelsius` · L941–944
+### MethodDeclaration `ReadGalvoTemperatureCelsius` · L939–942
 
-[Drilling.Common/Automation/CAutomationManager.cs:941–944](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L941-L944)
+[Drilling.Common/Automation/CAutomationManager.cs:939–942](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L939-L942)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5164,31 +5167,31 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L913-L913) | ReadGalvoTemperatureCelsius | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:911–911](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L911-L911) | ReadGalvoTemperatureCelsius | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 943 | values.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, string>.TryGetValue(string, out string) |
-| 943 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
-| 943 | CGalvoTemperature.FromAnalogInput | resolved | double Drilling.Common.Automation.CGalvoTemperature.FromAnalogInput(double) · Drilling.Common/Automation/CAutomationManager.cs:1660 |
+| 941 | values.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, string>.TryGetValue(string, out string) |
+| 941 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
+| 941 | CGalvoTemperature.FromAnalogInput | resolved | double Drilling.Common.Automation.CGalvoTemperature.FromAnalogInput(double) · Drilling.Common/Automation/CAutomationManager.cs:1660 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 943 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue("MOTOR_TEMP", out var text) |
-| 943 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) |
-| 943 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CGalvoTemperature.FromAnalogInput(value) |
-| 943 | conditional-expression | 조건에 따라 결과식을 선택합니다: values.TryGetValue("MOTOR_TEMP", out var text) && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) ? CGalvoTemperature.FromAnalogInput(value) : double.NaN |
-| 943 | return | 호출자에게 값 또는 제어를 반환합니다: return values.TryGetValue("MOTOR_TEMP", out var text) && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) ? CGalvoTemperature.FromAnalogInput(value) : double.NaN; |
+| 941 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue("MOTOR_TEMP", out var text) |
+| 941 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) |
+| 941 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CGalvoTemperature.FromAnalogInput(value) |
+| 941 | conditional-expression | 조건에 따라 결과식을 선택합니다: values.TryGetValue("MOTOR_TEMP", out var text) && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) ? CGalvoTemperature.FromAnalogInput(value) : double.NaN |
+| 941 | return | 호출자에게 값 또는 제어를 반환합니다: return values.TryGetValue("MOTOR_TEMP", out var text) && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) ? CGalvoTemperature.FromAnalogInput(value) : double.NaN; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateErrorAxisStatus` · L946–949
+### MethodDeclaration `CreateErrorAxisStatus` · L944–947
 
-[Drilling.Common/Automation/CAutomationManager.cs:946–949](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L946-L949)
+[Drilling.Common/Automation/CAutomationManager.cs:944–947](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L944-L947)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5210,30 +5213,30 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:878–878](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L878-L878) | CreateErrorAxisStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:884–884](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L884-L884) | CreateErrorAxisStatus | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:890–890](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L890-L890) | CreateErrorAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:876–876](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L876-L876) | CreateErrorAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:882–882](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L882-L882) | CreateErrorAxisStatus | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:888–888](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L888-L888) | CreateErrorAxisStatus | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 948 | new ST_AUTOMATION_AXIS_STATUS | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS.ST_AUTOMATION_AXIS_STATUS(int, string, int?, double, double, double, double, double, double, bool, bool, bool, string, string, string, string, System.DateTimeOffset) · Drilling.Common/Automation/CAutomationManager.cs:1508 |
-| 948 | TryGetAxisNo | resolved | int? Drilling.Common.Automation.CAutomationManager.TryGetAxisNo(string) · Drilling.Common/Automation/CAutomationManager.cs:951 |
+| 946 | new ST_AUTOMATION_AXIS_STATUS | resolved | Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS.ST_AUTOMATION_AXIS_STATUS(int, string, int?, double, double, double, double, double, double, bool, bool, bool, string, string, string, string, System.DateTimeOffset) · Drilling.Common/Automation/CAutomationManager.cs:1508 |
+| 946 | TryGetAxisNo | resolved | int? Drilling.Common.Automation.CAutomationManager.TryGetAxisNo(string) · Drilling.Common/Automation/CAutomationManager.cs:949 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 948 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_AUTOMATION_AXIS_STATUS(automationNo, axisName, TryGetAxisNo(axisName), 0.0, 0.0, 0.0, 0.0, 0.0, double.NaN, false, false, true, "", "", fault, response, DateTimeOffset.Now) |
-| 948 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryGetAxisNo(axisName) |
-| 948 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_AUTOMATION_AXIS_STATUS(automationNo, axisName, TryGetAxisNo(axisName), 0.0, 0.0, 0.0, 0.0, 0.0, double.NaN, false, false, true, "", "", fault, response, DateTimeOffset.Now); |
+| 946 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_AUTOMATION_AXIS_STATUS(automationNo, axisName, TryGetAxisNo(axisName), 0.0, 0.0, 0.0, 0.0, 0.0, double.NaN, false, false, true, "", "", fault, response, DateTimeOffset.Now) |
+| 946 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryGetAxisNo(axisName) |
+| 946 | return | 호출자에게 값 또는 제어를 반환합니다: return new ST_AUTOMATION_AXIS_STATUS(automationNo, axisName, TryGetAxisNo(axisName), 0.0, 0.0, 0.0, 0.0, 0.0, double.NaN, false, false, true, "", "", fault, response, DateTimeOffset.Now); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `TryGetAxisNo` · L951–960
+### MethodDeclaration `TryGetAxisNo` · L949–958
 
-[Drilling.Common/Automation/CAutomationManager.cs:951–960](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L951-L960)
+[Drilling.Common/Automation/CAutomationManager.cs:949–958](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L949-L958)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5252,46 +5255,46 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:847–847](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L847-L847) | TryGetAxisNo | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:907–907](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L907-L907) | TryGetAxisNo | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:948–948](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L948-L948) | TryGetAxisNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:845–845](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L845-L845) | TryGetAxisNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:905–905](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L905-L905) | TryGetAxisNo | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:946–946](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L946-L946) | TryGetAxisNo | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 953 | axisName.Trim | resolved | string string.Trim() |
-| 954 | int.TryParse | resolved | bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int) |
-| 959 | AxisNoMap.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, int>.TryGetValue(string, out int) |
+| 951 | axisName.Trim | resolved | string string.Trim() |
+| 952 | int.TryParse | resolved | bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int) |
+| 957 | AxisNoMap.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, int>.TryGetValue(string, out int) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 953 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisName.Trim() |
-| 953 | local-declaration | 지역 변수를 선언합니다: var normalized = axisName.Trim(); |
-| 953 | variable-initializer | 변수의 초기값을 지정합니다: normalized = axisName.Trim() |
-| 954 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out var axisNo) |
-| 954 | if | 조건에 따라 분기합니다: if (int.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out var axisNo)) |
-| 956 | return | 호출자에게 값 또는 제어를 반환합니다: return axisNo; |
-| 959 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AxisNoMap.TryGetValue(normalized, out axisNo) |
-| 959 | conditional-expression | 조건에 따라 결과식을 선택합니다: AxisNoMap.TryGetValue(normalized, out axisNo) ? axisNo : null |
-| 959 | return | 호출자에게 값 또는 제어를 반환합니다: return AxisNoMap.TryGetValue(normalized, out axisNo) ? axisNo : null; |
+| 951 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: axisName.Trim() |
+| 951 | local-declaration | 지역 변수를 선언합니다: var normalized = axisName.Trim(); |
+| 951 | variable-initializer | 변수의 초기값을 지정합니다: normalized = axisName.Trim() |
+| 952 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out var axisNo) |
+| 952 | if | 조건에 따라 분기합니다: if (int.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out var axisNo)) |
+| 954 | return | 호출자에게 값 또는 제어를 반환합니다: return axisNo; |
+| 957 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: AxisNoMap.TryGetValue(normalized, out axisNo) |
+| 957 | conditional-expression | 조건에 따라 결과식을 선택합니다: AxisNoMap.TryGetValue(normalized, out axisNo) ? axisNo : null |
+| 957 | return | 호출자에게 값 또는 제어를 반환합니다: return AxisNoMap.TryGetValue(normalized, out axisNo) ? axisNo : null; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["TryGetAxisNo"]
- N0["L954 if"]
+ N0["L952 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `GetValue` · L962–965
+### MethodDeclaration `GetValue` · L960–963
 
-[Drilling.Common/Automation/CAutomationManager.cs:962–965](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L962-L965)
+[Drilling.Common/Automation/CAutomationManager.cs:960–963](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L960-L963)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5311,29 +5314,29 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:900–900](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L900-L900) | GetValue | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:901–901](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L901-L901) | GetValue | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:902–902](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L902-L902) | GetValue | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:898–898](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L898-L898) | GetValue | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:899–899](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L899-L899) | GetValue | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:900–900](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L900-L900) | GetValue | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 964 | values.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, string>.TryGetValue(string, out string) |
+| 962 | values.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, string>.TryGetValue(string, out string) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 964 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var value) |
-| 964 | conditional-expression | 조건에 따라 결과식을 선택합니다: values.TryGetValue(key, out var value) ? value : "" |
-| 964 | return | 호출자에게 값 또는 제어를 반환합니다: return values.TryGetValue(key, out var value) ? value : ""; |
+| 962 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var value) |
+| 962 | conditional-expression | 조건에 따라 결과식을 선택합니다: values.TryGetValue(key, out var value) ? value : "" |
+| 962 | return | 호출자에게 값 또는 제어를 반환합니다: return values.TryGetValue(key, out var value) ? value : ""; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadDouble` · L967–970
+### MethodDeclaration `ReadDouble` · L965–968
 
-[Drilling.Common/Automation/CAutomationManager.cs:967–970](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L967-L970)
+[Drilling.Common/Automation/CAutomationManager.cs:965–968](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L965-L968)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5353,33 +5356,33 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:908–908](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L908-L908) | ReadDouble | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:909–909](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L909-L909) | ReadDouble | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:910–910](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L910-L910) | ReadDouble | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:911–911](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L911-L911) | ReadDouble | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:912–912](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L912-L912) | ReadDouble | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:906–906](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L906-L906) | ReadDouble | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:907–907](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L907-L907) | ReadDouble | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:908–908](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L908-L908) | ReadDouble | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:909–909](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L909-L909) | ReadDouble | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:910–910](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L910-L910) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 969 | values.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, string>.TryGetValue(string, out string) |
-| 969 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
+| 967 | values.TryGetValue | resolved · 동적 구현 선택 가능 | bool System.Collections.Generic.IReadOnlyDictionary<string, string>.TryGetValue(string, out string) |
+| 967 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 969 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var value) |
-| 969 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) |
-| 969 | conditional-expression | 조건에 따라 결과식을 선택합니다: values.TryGetValue(key, out var value) && double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : 0.0 |
-| 969 | return | 호출자에게 값 또는 제어를 반환합니다: return values.TryGetValue(key, out var value) && double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : 0.0; |
+| 967 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: values.TryGetValue(key, out var value) |
+| 967 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) |
+| 967 | conditional-expression | 조건에 따라 결과식을 선택합니다: values.TryGetValue(key, out var value) && double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : 0.0 |
+| 967 | return | 호출자에게 값 또는 제어를 반환합니다: return values.TryGetValue(key, out var value) && double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed) ? parsed : 0.0; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `IsDriveAble` · L972–980
+### MethodDeclaration `IsDriveAble` · L970–978
 
-[Drilling.Common/Automation/CAutomationManager.cs:972–980](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L972-L980)
+[Drilling.Common/Automation/CAutomationManager.cs:970–978](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L970-L978)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5398,41 +5401,41 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:914–914](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L914-L914) | IsDriveAble | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:912–912](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L912-L912) | IsDriveAble | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 974 | TryReadStatusWord | resolved | bool Drilling.Common.Automation.CAutomationManager.TryReadStatusWord(string, out long) · Drilling.Common/Automation/CAutomationManager.cs:993 |
-| 979 | driveStatus.Contains | resolved | bool string.Contains(string, System.StringComparison) |
-| 979 | driveStatus.Contains | resolved | bool string.Contains(string, System.StringComparison) |
+| 972 | TryReadStatusWord | resolved | bool Drilling.Common.Automation.CAutomationManager.TryReadStatusWord(string, out long) · Drilling.Common/Automation/CAutomationManager.cs:991 |
+| 977 | driveStatus.Contains | resolved | bool string.Contains(string, System.StringComparison) |
+| 977 | driveStatus.Contains | resolved | bool string.Contains(string, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 974 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadStatusWord(driveStatus, out var statusWord) |
-| 974 | if | 조건에 따라 분기합니다: if (TryReadStatusWord(driveStatus, out var statusWord)) |
-| 976 | return | 호출자에게 값 또는 제어를 반환합니다: return (statusWord & Automation1DriveStatusEnabledMask) == Automation1DriveStatusEnabledMask; |
-| 979 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: driveStatus.Contains("Enabled", StringComparison.OrdinalIgnoreCase) |
-| 979 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: driveStatus.Contains("ServoControl", StringComparison.OrdinalIgnoreCase) |
-| 979 | return | 호출자에게 값 또는 제어를 반환합니다: return driveStatus.Contains("Enabled", StringComparison.OrdinalIgnoreCase) &#124;&#124; driveStatus.Contains("ServoControl", StringComparison.OrdinalIgnoreCase); |
+| 972 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadStatusWord(driveStatus, out var statusWord) |
+| 972 | if | 조건에 따라 분기합니다: if (TryReadStatusWord(driveStatus, out var statusWord)) |
+| 974 | return | 호출자에게 값 또는 제어를 반환합니다: return (statusWord & Automation1DriveStatusEnabledMask) == Automation1DriveStatusEnabledMask; |
+| 977 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: driveStatus.Contains("Enabled", StringComparison.OrdinalIgnoreCase) |
+| 977 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: driveStatus.Contains("ServoControl", StringComparison.OrdinalIgnoreCase) |
+| 977 | return | 호출자에게 값 또는 제어를 반환합니다: return driveStatus.Contains("Enabled", StringComparison.OrdinalIgnoreCase) &#124;&#124; driveStatus.Contains("ServoControl", StringComparison.OrdinalIgnoreCase); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["IsDriveAble"]
- N0["L974 if"]
+ N0["L972 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `IsHomeDone` · L982–991
+### MethodDeclaration `IsHomeDone` · L980–989
 
-[Drilling.Common/Automation/CAutomationManager.cs:982–991](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L982-L991)
+[Drilling.Common/Automation/CAutomationManager.cs:980–989](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L980-L989)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5451,51 +5454,51 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:915–915](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L915-L915) | IsHomeDone | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:913–913](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L913-L913) | IsHomeDone | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 984 | homeState.Trim | resolved | string string.Trim() |
-| 985 | TryReadStatusWord | resolved | bool Drilling.Common.Automation.CAutomationManager.TryReadStatusWord(string, out long) · Drilling.Common/Automation/CAutomationManager.cs:993 |
-| 990 | normalized.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 990 | normalized.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 990 | normalized.Contains | resolved | bool string.Contains(string, System.StringComparison) |
-| 990 | normalized.Contains | resolved | bool string.Contains(string, System.StringComparison) |
-| 990 | normalized.Contains | resolved | bool string.Contains(string, System.StringComparison) |
+| 982 | homeState.Trim | resolved | string string.Trim() |
+| 983 | TryReadStatusWord | resolved | bool Drilling.Common.Automation.CAutomationManager.TryReadStatusWord(string, out long) · Drilling.Common/Automation/CAutomationManager.cs:991 |
+| 988 | normalized.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 988 | normalized.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 988 | normalized.Contains | resolved | bool string.Contains(string, System.StringComparison) |
+| 988 | normalized.Contains | resolved | bool string.Contains(string, System.StringComparison) |
+| 988 | normalized.Contains | resolved | bool string.Contains(string, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 984 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: homeState.Trim() |
-| 984 | local-declaration | 지역 변수를 선언합니다: var normalized = homeState.Trim(); |
-| 984 | variable-initializer | 변수의 초기값을 지정합니다: normalized = homeState.Trim() |
-| 985 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadStatusWord(normalized, out var statusWord) |
-| 985 | if | 조건에 따라 분기합니다: if (TryReadStatusWord(normalized, out var statusWord)) |
-| 987 | return | 호출자에게 값 또는 제어를 반환합니다: return (statusWord & Automation1AxisStatusHomedMask) == Automation1AxisStatusHomedMask; |
-| 990 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("1", StringComparison.OrdinalIgnoreCase) |
-| 990 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("TRUE", StringComparison.OrdinalIgnoreCase) |
-| 990 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Contains("Homed", StringComparison.OrdinalIgnoreCase) |
-| 990 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Contains("Done", StringComparison.OrdinalIgnoreCase) |
-| 990 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Contains("Complete", StringComparison.OrdinalIgnoreCase) |
-| 990 | return | 호출자에게 값 또는 제어를 반환합니다: return normalized.Equals("1", StringComparison.OrdinalIgnoreCase) &#124;&#124; normalized.Equals("TRUE", StringComparison.OrdinalIgnoreCase) &#124;&#124; normalized.Contains("Homed", StringComparison.OrdinalIgnoreCase) &#124;&#124; normalized.Contains("Done",  |
+| 982 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: homeState.Trim() |
+| 982 | local-declaration | 지역 변수를 선언합니다: var normalized = homeState.Trim(); |
+| 982 | variable-initializer | 변수의 초기값을 지정합니다: normalized = homeState.Trim() |
+| 983 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TryReadStatusWord(normalized, out var statusWord) |
+| 983 | if | 조건에 따라 분기합니다: if (TryReadStatusWord(normalized, out var statusWord)) |
+| 985 | return | 호출자에게 값 또는 제어를 반환합니다: return (statusWord & Automation1AxisStatusHomedMask) == Automation1AxisStatusHomedMask; |
+| 988 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("1", StringComparison.OrdinalIgnoreCase) |
+| 988 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("TRUE", StringComparison.OrdinalIgnoreCase) |
+| 988 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Contains("Homed", StringComparison.OrdinalIgnoreCase) |
+| 988 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Contains("Done", StringComparison.OrdinalIgnoreCase) |
+| 988 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Contains("Complete", StringComparison.OrdinalIgnoreCase) |
+| 988 | return | 호출자에게 값 또는 제어를 반환합니다: return normalized.Equals("1", StringComparison.OrdinalIgnoreCase) &#124;&#124; normalized.Equals("TRUE", StringComparison.OrdinalIgnoreCase) &#124;&#124; normalized.Contains("Homed", StringComparison.OrdinalIgnoreCase) &#124;&#124; normalized.Contains("Done",  |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["IsHomeDone"]
- N0["L985 if"]
+ N0["L983 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `TryReadStatusWord` · L993–1014
+### MethodDeclaration `TryReadStatusWord` · L991–1012
 
-[Drilling.Common/Automation/CAutomationManager.cs:993–1014](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L993-L1014)
+[Drilling.Common/Automation/CAutomationManager.cs:991–1012](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L991-L1012)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5515,64 +5518,64 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:974–974](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L974-L974) | TryReadStatusWord | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:985–985](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L985-L985) | TryReadStatusWord | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:972–972](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L972-L972) | TryReadStatusWord | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:983–983](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L983-L983) | TryReadStatusWord | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 995 | value.Trim | resolved | string string.Trim() |
-| 996 | long.TryParse | resolved | bool long.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out long) |
-| 1001 | normalized.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
-| 1001 | long.TryParse | resolved | bool long.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out long) |
-| 1006 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
-| 1006 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 1008 | Convert.ToInt64 | resolved | long System.Convert.ToInt64(double) |
-| 1009 | Math.Abs | resolved | double System.Math.Abs(double) |
+| 993 | value.Trim | resolved | string string.Trim() |
+| 994 | long.TryParse | resolved | bool long.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out long) |
+| 999 | normalized.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
+| 999 | long.TryParse | resolved | bool long.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out long) |
+| 1004 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
+| 1004 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 1006 | Convert.ToInt64 | resolved | long System.Convert.ToInt64(double) |
+| 1007 | Math.Abs | resolved | double System.Math.Abs(double) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 995 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
-| 995 | local-declaration | 지역 변수를 선언합니다: var normalized = value.Trim(); |
-| 995 | variable-initializer | 변수의 초기값을 지정합니다: normalized = value.Trim() |
-| 996 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: long.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out statusWord) |
-| 996 | if | 조건에 따라 분기합니다: if (long.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out statusWord)) |
-| 998 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
-| 1001 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.StartsWith("0x", StringComparison.OrdinalIgnoreCase) |
-| 1001 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: long.TryParse(normalized[2..], NumberStyles.HexNumber, CultureInfo.InvariantCulture, out statusWord) |
-| 1001 | if | 조건에 따라 분기합니다: if (normalized.StartsWith("0x", StringComparison.OrdinalIgnoreCase) && long.TryParse(normalized[2..], NumberStyles.HexNumber, CultureInfo.InvariantCulture, out statusWord)) |
-| 1003 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
-| 1006 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleValue) |
-| 1006 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(doubleValue) |
-| 1006 | if | 조건에 따라 분기합니다: if (double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleValue) && double.IsFinite(doubleValue)) |
-| 1008 | assignment | 값을 대상에 대입합니다: statusWord = Convert.ToInt64(doubleValue) |
-| 1008 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToInt64(doubleValue) |
-| 1009 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(doubleValue - statusWord) |
-| 1009 | return | 호출자에게 값 또는 제어를 반환합니다: return Math.Abs(doubleValue - statusWord) <= 0.000001; |
-| 1012 | assignment | 값을 대상에 대입합니다: statusWord = 0 |
-| 1013 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 993 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.Trim() |
+| 993 | local-declaration | 지역 변수를 선언합니다: var normalized = value.Trim(); |
+| 993 | variable-initializer | 변수의 초기값을 지정합니다: normalized = value.Trim() |
+| 994 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: long.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out statusWord) |
+| 994 | if | 조건에 따라 분기합니다: if (long.TryParse(normalized, NumberStyles.Integer, CultureInfo.InvariantCulture, out statusWord)) |
+| 996 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
+| 999 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.StartsWith("0x", StringComparison.OrdinalIgnoreCase) |
+| 999 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: long.TryParse(normalized[2..], NumberStyles.HexNumber, CultureInfo.InvariantCulture, out statusWord) |
+| 999 | if | 조건에 따라 분기합니다: if (normalized.StartsWith("0x", StringComparison.OrdinalIgnoreCase) && long.TryParse(normalized[2..], NumberStyles.HexNumber, CultureInfo.InvariantCulture, out statusWord)) |
+| 1001 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
+| 1004 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleValue) |
+| 1004 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(doubleValue) |
+| 1004 | if | 조건에 따라 분기합니다: if (double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var doubleValue) && double.IsFinite(doubleValue)) |
+| 1006 | assignment | 값을 대상에 대입합니다: statusWord = Convert.ToInt64(doubleValue) |
+| 1006 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Convert.ToInt64(doubleValue) |
+| 1007 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(doubleValue - statusWord) |
+| 1007 | return | 호출자에게 값 또는 제어를 반환합니다: return Math.Abs(doubleValue - statusWord) <= 0.000001; |
+| 1010 | assignment | 값을 대상에 대입합니다: statusWord = 0 |
+| 1011 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["TryReadStatusWord"]
- N0["L996 if"]
+ N0["L994 if"]
  M -->|포함| N0
- N1["L1001 if"]
+ N1["L999 if"]
  M -->|포함| N1
- N2["L1006 if"]
+ N2["L1004 if"]
  M -->|포함| N2
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `IsFaultActive` · L1016–1020
+### MethodDeclaration `IsFaultActive` · L1014–1018
 
-[Drilling.Common/Automation/CAutomationManager.cs:1016–1020](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1016-L1020)
+[Drilling.Common/Automation/CAutomationManager.cs:1014–1018](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1014-L1018)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5591,34 +5594,34 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:916–916](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L916-L916) | IsFaultActive | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:914–914](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L914-L914) | IsFaultActive | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1018 | fault.Trim | resolved | string string.Trim() |
-| 1019 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 1019 | normalized.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 1019 | normalized.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 1016 | fault.Trim | resolved | string string.Trim() |
+| 1017 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 1017 | normalized.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 1017 | normalized.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1018 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fault.Trim() |
-| 1018 | local-declaration | 지역 변수를 선언합니다: var normalized = fault.Trim(); |
-| 1018 | variable-initializer | 변수의 초기값을 지정합니다: normalized = fault.Trim() |
-| 1019 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(normalized) |
-| 1019 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("0", StringComparison.OrdinalIgnoreCase) |
-| 1019 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("None", StringComparison.OrdinalIgnoreCase) |
-| 1019 | return | 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(normalized) && !normalized.Equals("0", StringComparison.OrdinalIgnoreCase) && !normalized.Equals("None", StringComparison.OrdinalIgnoreCase); |
+| 1016 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fault.Trim() |
+| 1016 | local-declaration | 지역 변수를 선언합니다: var normalized = fault.Trim(); |
+| 1016 | variable-initializer | 변수의 초기값을 지정합니다: normalized = fault.Trim() |
+| 1017 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(normalized) |
+| 1017 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("0", StringComparison.OrdinalIgnoreCase) |
+| 1017 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.Equals("None", StringComparison.OrdinalIgnoreCase) |
+| 1017 | return | 호출자에게 값 또는 제어를 반환합니다: return !string.IsNullOrWhiteSpace(normalized) && !normalized.Equals("0", StringComparison.OrdinalIgnoreCase) && !normalized.Equals("None", StringComparison.OrdinalIgnoreCase); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ResolveLocalScriptPath` · L1022–1039
+### MethodDeclaration `ResolveLocalScriptPath` · L1020–1037
 
-[Drilling.Common/Automation/CAutomationManager.cs:1022–1039](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1022-L1039)
+[Drilling.Common/Automation/CAutomationManager.cs:1020–1037](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1020-L1037)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5638,69 +5641,69 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L305-L305) | ResolveLocalScriptPath | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L318-L318) | ResolveLocalScriptPath | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:421–421](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L421-L421) | ResolveLocalScriptPath | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L305-L305) | ResolveLocalScriptPath | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:318–318](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L318-L318) | ResolveLocalScriptPath | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:419–419](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L419-L419) | ResolveLocalScriptPath | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1024 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 1025 | fileNameOrPath.Trim | resolved | string string.Trim() |
-| 1026 | Path.IsPathRooted | resolved | bool System.IO.Path.IsPathRooted(string?) |
-| 1028 | Path.GetFullPath | resolved | string System.IO.Path.GetFullPath(string) |
-| 1031 | Path.GetFileName | resolved | string? System.IO.Path.GetFileName(string?) |
-| 1032 | trimmed.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 1034 | GetLocalScriptDirectory | resolved | string Drilling.Common.Automation.CAutomationManager.GetLocalScriptDirectory(System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1041 |
-| 1035 | Path.GetFullPath | resolved | string System.IO.Path.GetFullPath(string) |
-| 1035 | Path.Combine | resolved | string System.IO.Path.Combine(string, string) |
-| 1038 | Path.GetFullPath | resolved | string System.IO.Path.GetFullPath(string) |
-| 1038 | Path.Combine | resolved | string System.IO.Path.Combine(string, string) |
+| 1022 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
+| 1023 | fileNameOrPath.Trim | resolved | string string.Trim() |
+| 1024 | Path.IsPathRooted | resolved | bool System.IO.Path.IsPathRooted(string?) |
+| 1026 | Path.GetFullPath | resolved | string System.IO.Path.GetFullPath(string) |
+| 1029 | Path.GetFileName | resolved | string? System.IO.Path.GetFileName(string?) |
+| 1030 | trimmed.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 1032 | GetLocalScriptDirectory | resolved | string Drilling.Common.Automation.CAutomationManager.GetLocalScriptDirectory(System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1039 |
+| 1033 | Path.GetFullPath | resolved | string System.IO.Path.GetFullPath(string) |
+| 1033 | Path.Combine | resolved | string System.IO.Path.Combine(string, string) |
+| 1036 | Path.GetFullPath | resolved | string System.IO.Path.GetFullPath(string) |
+| 1036 | Path.Combine | resolved | string System.IO.Path.Combine(string, string) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1024 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(fileNameOrPath) |
-| 1025 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fileNameOrPath.Trim() |
-| 1025 | local-declaration | 지역 변수를 선언합니다: var trimmed = fileNameOrPath.Trim(); |
-| 1025 | variable-initializer | 변수의 초기값을 지정합니다: trimmed = fileNameOrPath.Trim() |
-| 1026 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.IsPathRooted(trimmed) |
-| 1026 | if | 조건에 따라 분기합니다: if (Path.IsPathRooted(trimmed)) |
-| 1028 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(trimmed) |
-| 1028 | return | 호출자에게 값 또는 제어를 반환합니다: return Path.GetFullPath(trimmed); |
-| 1031 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(trimmed) |
-| 1031 | local-declaration | 지역 변수를 선언합니다: var fileNameOnly = Path.GetFileName(trimmed); |
-| 1031 | variable-initializer | 변수의 초기값을 지정합니다: fileNameOnly = Path.GetFileName(trimmed) |
-| 1032 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: trimmed.Equals(fileNameOnly, StringComparison.OrdinalIgnoreCase) |
-| 1032 | if | 조건에 따라 분기합니다: if (trimmed.Equals(fileNameOnly, StringComparison.OrdinalIgnoreCase)) |
-| 1034 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetLocalScriptDirectory(cancellationToken) |
-| 1034 | local-declaration | 지역 변수를 선언합니다: var scriptDirectory = GetLocalScriptDirectory(cancellationToken); |
-| 1034 | variable-initializer | 변수의 초기값을 지정합니다: scriptDirectory = GetLocalScriptDirectory(cancellationToken) |
-| 1035 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(Path.Combine(scriptDirectory, trimmed)) |
-| 1035 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(scriptDirectory, trimmed) |
-| 1035 | return | 호출자에게 값 또는 제어를 반환합니다: return Path.GetFullPath(Path.Combine(scriptDirectory, trimmed)); |
-| 1038 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(Path.Combine(_projectRoot, trimmed)) |
-| 1038 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_projectRoot, trimmed) |
-| 1038 | return | 호출자에게 값 또는 제어를 반환합니다: return Path.GetFullPath(Path.Combine(_projectRoot, trimmed)); |
+| 1022 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(fileNameOrPath) |
+| 1023 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fileNameOrPath.Trim() |
+| 1023 | local-declaration | 지역 변수를 선언합니다: var trimmed = fileNameOrPath.Trim(); |
+| 1023 | variable-initializer | 변수의 초기값을 지정합니다: trimmed = fileNameOrPath.Trim() |
+| 1024 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.IsPathRooted(trimmed) |
+| 1024 | if | 조건에 따라 분기합니다: if (Path.IsPathRooted(trimmed)) |
+| 1026 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(trimmed) |
+| 1026 | return | 호출자에게 값 또는 제어를 반환합니다: return Path.GetFullPath(trimmed); |
+| 1029 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(trimmed) |
+| 1029 | local-declaration | 지역 변수를 선언합니다: var fileNameOnly = Path.GetFileName(trimmed); |
+| 1029 | variable-initializer | 변수의 초기값을 지정합니다: fileNameOnly = Path.GetFileName(trimmed) |
+| 1030 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: trimmed.Equals(fileNameOnly, StringComparison.OrdinalIgnoreCase) |
+| 1030 | if | 조건에 따라 분기합니다: if (trimmed.Equals(fileNameOnly, StringComparison.OrdinalIgnoreCase)) |
+| 1032 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetLocalScriptDirectory(cancellationToken) |
+| 1032 | local-declaration | 지역 변수를 선언합니다: var scriptDirectory = GetLocalScriptDirectory(cancellationToken); |
+| 1032 | variable-initializer | 변수의 초기값을 지정합니다: scriptDirectory = GetLocalScriptDirectory(cancellationToken) |
+| 1033 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(Path.Combine(scriptDirectory, trimmed)) |
+| 1033 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(scriptDirectory, trimmed) |
+| 1033 | return | 호출자에게 값 또는 제어를 반환합니다: return Path.GetFullPath(Path.Combine(scriptDirectory, trimmed)); |
+| 1036 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(Path.Combine(_projectRoot, trimmed)) |
+| 1036 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_projectRoot, trimmed) |
+| 1036 | return | 호출자에게 값 또는 제어를 반환합니다: return Path.GetFullPath(Path.Combine(_projectRoot, trimmed)); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ResolveLocalScriptPath"]
- N0["L1026 if"]
+ N0["L1024 if"]
  M -->|포함| N0
- N1["L1032 if"]
+ N1["L1030 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `GetLocalScriptDirectory` · L1041–1045
+### MethodDeclaration `GetLocalScriptDirectory` · L1039–1043
 
-[Drilling.Common/Automation/CAutomationManager.cs:1041–1045](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1041-L1045)
+[Drilling.Common/Automation/CAutomationManager.cs:1039–1043](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1039-L1043)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5719,31 +5722,31 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1034–1034](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1034-L1034) | GetLocalScriptDirectory | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1032–1032](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1032-L1032) | GetLocalScriptDirectory | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1043 | _settingManager.GetValue | resolved | string Drilling.Common.Managers.CSettingManager.GetValue(Drilling.Common.Managers.EN_SETTING_TAB, string, string, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:59 |
-| 1044 | ResolveLocalDirectory | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveLocalDirectory(string, string) · Drilling.Common/Automation/CAutomationManager.cs:1047 |
+| 1041 | _settingManager.GetValue | resolved | string Drilling.Common.Managers.CSettingManager.GetValue(Drilling.Common.Managers.EN_SETTING_TAB, string, string, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:60 |
+| 1042 | ResolveLocalDirectory | resolved | string Drilling.Common.Automation.CAutomationManager.ResolveLocalDirectory(string, string) · Drilling.Common/Automation/CAutomationManager.cs:1045 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1043 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.GetValue(EN_SETTING_TAB.Option, LocalScriptPathKey, "", cancellationToken) |
-| 1043 | conditional-expression | 조건에 따라 결과식을 선택합니다: _settingManager is null ? "" : _settingManager.GetValue(EN_SETTING_TAB.Option, LocalScriptPathKey, "", cancellationToken) |
-| 1043 | local-declaration | 지역 변수를 선언합니다: var settingValue = _settingManager is null ? "" : _settingManager.GetValue(EN_SETTING_TAB.Option, LocalScriptPathKey, "", cancellationToken); |
-| 1043 | variable-initializer | 변수의 초기값을 지정합니다: settingValue = _settingManager is null ? "" : _settingManager.GetValue(EN_SETTING_TAB.Option, LocalScriptPathKey, "", cancellationToken) |
-| 1044 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveLocalDirectory(settingValue, _defaultLocalScriptDirectory) |
-| 1044 | return | 호출자에게 값 또는 제어를 반환합니다: return ResolveLocalDirectory(settingValue, _defaultLocalScriptDirectory); |
+| 1041 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.GetValue(EN_SETTING_TAB.Option, LocalScriptPathKey, "", cancellationToken) |
+| 1041 | conditional-expression | 조건에 따라 결과식을 선택합니다: _settingManager is null ? "" : _settingManager.GetValue(EN_SETTING_TAB.Option, LocalScriptPathKey, "", cancellationToken) |
+| 1041 | local-declaration | 지역 변수를 선언합니다: var settingValue = _settingManager is null ? "" : _settingManager.GetValue(EN_SETTING_TAB.Option, LocalScriptPathKey, "", cancellationToken); |
+| 1041 | variable-initializer | 변수의 초기값을 지정합니다: settingValue = _settingManager is null ? "" : _settingManager.GetValue(EN_SETTING_TAB.Option, LocalScriptPathKey, "", cancellationToken) |
+| 1042 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveLocalDirectory(settingValue, _defaultLocalScriptDirectory) |
+| 1042 | return | 호출자에게 값 또는 제어를 반환합니다: return ResolveLocalDirectory(settingValue, _defaultLocalScriptDirectory); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ResolveLocalDirectory` · L1047–1051
+### MethodDeclaration `ResolveLocalDirectory` · L1045–1049
 
-[Drilling.Common/Automation/CAutomationManager.cs:1047–1051](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1047-L1051)
+[Drilling.Common/Automation/CAutomationManager.cs:1045–1049](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1045-L1049)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5763,40 +5766,40 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1044–1044](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1044-L1044) | ResolveLocalDirectory | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1042–1042](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1042-L1042) | ResolveLocalDirectory | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1049 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 1049 | settingValue.Trim | resolved | string string.Trim() |
-| 1050 | Path.IsPathRooted | resolved | bool System.IO.Path.IsPathRooted(string?) |
-| 1050 | Path.GetFullPath | resolved | string System.IO.Path.GetFullPath(string) |
-| 1050 | Path.GetFullPath | resolved | string System.IO.Path.GetFullPath(string) |
-| 1050 | Path.Combine | resolved | string System.IO.Path.Combine(string, string) |
+| 1047 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 1047 | settingValue.Trim | resolved | string string.Trim() |
+| 1048 | Path.IsPathRooted | resolved | bool System.IO.Path.IsPathRooted(string?) |
+| 1048 | Path.GetFullPath | resolved | string System.IO.Path.GetFullPath(string) |
+| 1048 | Path.GetFullPath | resolved | string System.IO.Path.GetFullPath(string) |
+| 1048 | Path.Combine | resolved | string System.IO.Path.Combine(string, string) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1049 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(settingValue) |
-| 1049 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: settingValue.Trim() |
-| 1049 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(settingValue) ? defaultDirectory : settingValue.Trim() |
-| 1049 | local-declaration | 지역 변수를 선언합니다: var value = string.IsNullOrWhiteSpace(settingValue) ? defaultDirectory : settingValue.Trim(); |
-| 1049 | variable-initializer | 변수의 초기값을 지정합니다: value = string.IsNullOrWhiteSpace(settingValue) ? defaultDirectory : settingValue.Trim() |
-| 1050 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.IsPathRooted(value) |
-| 1050 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(value) |
-| 1050 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(Path.Combine(_projectRoot, value)) |
-| 1050 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_projectRoot, value) |
-| 1050 | conditional-expression | 조건에 따라 결과식을 선택합니다: Path.IsPathRooted(value) ? Path.GetFullPath(value) : Path.GetFullPath(Path.Combine(_projectRoot, value)) |
-| 1050 | return | 호출자에게 값 또는 제어를 반환합니다: return Path.IsPathRooted(value) ? Path.GetFullPath(value) : Path.GetFullPath(Path.Combine(_projectRoot, value)); |
+| 1047 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(settingValue) |
+| 1047 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: settingValue.Trim() |
+| 1047 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(settingValue) ? defaultDirectory : settingValue.Trim() |
+| 1047 | local-declaration | 지역 변수를 선언합니다: var value = string.IsNullOrWhiteSpace(settingValue) ? defaultDirectory : settingValue.Trim(); |
+| 1047 | variable-initializer | 변수의 초기값을 지정합니다: value = string.IsNullOrWhiteSpace(settingValue) ? defaultDirectory : settingValue.Trim() |
+| 1048 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.IsPathRooted(value) |
+| 1048 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(value) |
+| 1048 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFullPath(Path.Combine(_projectRoot, value)) |
+| 1048 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.Combine(_projectRoot, value) |
+| 1048 | conditional-expression | 조건에 따라 결과식을 선택합니다: Path.IsPathRooted(value) ? Path.GetFullPath(value) : Path.GetFullPath(Path.Combine(_projectRoot, value)) |
+| 1048 | return | 호출자에게 값 또는 제어를 반환합니다: return Path.IsPathRooted(value) ? Path.GetFullPath(value) : Path.GetFullPath(Path.Combine(_projectRoot, value)); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateControllerFileName` · L1053–1065
+### MethodDeclaration `CreateControllerFileName` · L1051–1063
 
-[Drilling.Common/Automation/CAutomationManager.cs:1053–1065](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1053-L1065)
+[Drilling.Common/Automation/CAutomationManager.cs:1051–1063](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1051-L1063)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5816,62 +5819,62 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L306-L306) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L306-L306) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L319-L319) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L319-L319) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:327–327](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L327-L327) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:340–340](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L340-L340) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:429–429](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L429-L429) | CreateControllerFileName | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:492–492](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L492-L492) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L306-L306) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L306-L306) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L319-L319) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L319-L319) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L328-L328) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L341-L341) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L427-L427) | CreateControllerFileName | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:490–490](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L490-L490) | CreateControllerFileName | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1055 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
-| 1056 | fileNameOrPath.Trim().Replace | resolved | string string.Replace(char, char) |
-| 1056 | fileNameOrPath.Trim | resolved | string string.Trim() |
-| 1057 | trimmed.StartsWith | resolved | bool string.StartsWith(char) |
-| 1062 | GetControllerScriptDirectory | resolved | string Drilling.Common.Automation.CAutomationManager.GetControllerScriptDirectory(System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1067 |
-| 1063 | Path.GetFileName | resolved | string? System.IO.Path.GetFileName(string?) |
-| 1064 | CombineControllerPath | resolved | string Drilling.Common.Automation.CAutomationManager.CombineControllerPath(string, string) · Drilling.Common/Automation/CAutomationManager.cs:1079 |
+| 1053 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
+| 1054 | fileNameOrPath.Trim().Replace | resolved | string string.Replace(char, char) |
+| 1054 | fileNameOrPath.Trim | resolved | string string.Trim() |
+| 1055 | trimmed.StartsWith | resolved | bool string.StartsWith(char) |
+| 1060 | GetControllerScriptDirectory | resolved | string Drilling.Common.Automation.CAutomationManager.GetControllerScriptDirectory(System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:1065 |
+| 1061 | Path.GetFileName | resolved | string? System.IO.Path.GetFileName(string?) |
+| 1062 | CombineControllerPath | resolved | string Drilling.Common.Automation.CAutomationManager.CombineControllerPath(string, string) · Drilling.Common/Automation/CAutomationManager.cs:1077 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1055 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(fileNameOrPath) |
-| 1056 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fileNameOrPath.Trim().Replace('\\', '/') |
-| 1056 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fileNameOrPath.Trim() |
-| 1056 | local-declaration | 지역 변수를 선언합니다: var trimmed = fileNameOrPath.Trim().Replace('\\', '/'); |
-| 1056 | variable-initializer | 변수의 초기값을 지정합니다: trimmed = fileNameOrPath.Trim().Replace('\\', '/') |
-| 1057 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: trimmed.StartsWith('/') |
-| 1057 | if | 조건에 따라 분기합니다: if (trimmed.StartsWith('/')) |
-| 1059 | return | 호출자에게 값 또는 제어를 반환합니다: return trimmed; |
-| 1062 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetControllerScriptDirectory(cancellationToken) |
-| 1062 | local-declaration | 지역 변수를 선언합니다: var controllerDirectory = GetControllerScriptDirectory(cancellationToken); |
-| 1062 | variable-initializer | 변수의 초기값을 지정합니다: controllerDirectory = GetControllerScriptDirectory(cancellationToken) |
-| 1063 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(trimmed) |
-| 1063 | local-declaration | 지역 변수를 선언합니다: var fileName = Path.GetFileName(trimmed); |
-| 1063 | variable-initializer | 변수의 초기값을 지정합니다: fileName = Path.GetFileName(trimmed) |
-| 1064 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CombineControllerPath(controllerDirectory, fileName) |
-| 1064 | return | 호출자에게 값 또는 제어를 반환합니다: return CombineControllerPath(controllerDirectory, fileName); |
+| 1053 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentException.ThrowIfNullOrWhiteSpace(fileNameOrPath) |
+| 1054 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fileNameOrPath.Trim().Replace('\\', '/') |
+| 1054 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: fileNameOrPath.Trim() |
+| 1054 | local-declaration | 지역 변수를 선언합니다: var trimmed = fileNameOrPath.Trim().Replace('\\', '/'); |
+| 1054 | variable-initializer | 변수의 초기값을 지정합니다: trimmed = fileNameOrPath.Trim().Replace('\\', '/') |
+| 1055 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: trimmed.StartsWith('/') |
+| 1055 | if | 조건에 따라 분기합니다: if (trimmed.StartsWith('/')) |
+| 1057 | return | 호출자에게 값 또는 제어를 반환합니다: return trimmed; |
+| 1060 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetControllerScriptDirectory(cancellationToken) |
+| 1060 | local-declaration | 지역 변수를 선언합니다: var controllerDirectory = GetControllerScriptDirectory(cancellationToken); |
+| 1060 | variable-initializer | 변수의 초기값을 지정합니다: controllerDirectory = GetControllerScriptDirectory(cancellationToken) |
+| 1061 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(trimmed) |
+| 1061 | local-declaration | 지역 변수를 선언합니다: var fileName = Path.GetFileName(trimmed); |
+| 1061 | variable-initializer | 변수의 초기값을 지정합니다: fileName = Path.GetFileName(trimmed) |
+| 1062 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CombineControllerPath(controllerDirectory, fileName) |
+| 1062 | return | 호출자에게 값 또는 제어를 반환합니다: return CombineControllerPath(controllerDirectory, fileName); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["CreateControllerFileName"]
- N0["L1057 if"]
+ N0["L1055 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `GetControllerScriptDirectory` · L1067–1077
+### MethodDeclaration `GetControllerScriptDirectory` · L1065–1075
 
-[Drilling.Common/Automation/CAutomationManager.cs:1067–1077](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1067-L1077)
+[Drilling.Common/Automation/CAutomationManager.cs:1065–1075](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1065-L1075)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5890,51 +5893,51 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1062–1062](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1062-L1062) | GetControllerScriptDirectory | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1060–1060](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1060-L1060) | GetControllerScriptDirectory | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1069 | _settingManager.GetValue | resolved | string Drilling.Common.Managers.CSettingManager.GetValue(Drilling.Common.Managers.EN_SETTING_TAB, string, string, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:59 |
-| 1070 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 1075 | settingValue.Trim().Replace | resolved | string string.Replace(char, char) |
-| 1075 | settingValue.Trim | resolved | string string.Trim() |
-| 1076 | normalized.StartsWith | resolved | bool string.StartsWith(char) |
+| 1067 | _settingManager.GetValue | resolved | string Drilling.Common.Managers.CSettingManager.GetValue(Drilling.Common.Managers.EN_SETTING_TAB, string, string, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:60 |
+| 1068 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 1073 | settingValue.Trim().Replace | resolved | string string.Replace(char, char) |
+| 1073 | settingValue.Trim | resolved | string string.Trim() |
+| 1074 | normalized.StartsWith | resolved | bool string.StartsWith(char) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1069 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.GetValue(EN_SETTING_TAB.Option, AutomationScriptPathKey, "/", cancellationToken) |
-| 1069 | conditional-expression | 조건에 따라 결과식을 선택합니다: _settingManager is null ? "" : _settingManager.GetValue(EN_SETTING_TAB.Option, AutomationScriptPathKey, "/", cancellationToken) |
-| 1069 | local-declaration | 지역 변수를 선언합니다: var settingValue = _settingManager is null ? "" : _settingManager.GetValue(EN_SETTING_TAB.Option, AutomationScriptPathKey, "/", cancellationToken); |
-| 1069 | variable-initializer | 변수의 초기값을 지정합니다: settingValue = _settingManager is null ? "" : _settingManager.GetValue(EN_SETTING_TAB.Option, AutomationScriptPathKey, "/", cancellationToken) |
-| 1070 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(settingValue) |
-| 1070 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(settingValue)) |
-| 1072 | return | 호출자에게 값 또는 제어를 반환합니다: return "/"; |
-| 1075 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: settingValue.Trim().Replace('\\', '/') |
-| 1075 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: settingValue.Trim() |
-| 1075 | local-declaration | 지역 변수를 선언합니다: var normalized = settingValue.Trim().Replace('\\', '/'); |
-| 1075 | variable-initializer | 변수의 초기값을 지정합니다: normalized = settingValue.Trim().Replace('\\', '/') |
-| 1076 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.StartsWith('/') |
-| 1076 | conditional-expression | 조건에 따라 결과식을 선택합니다: normalized.StartsWith('/') ? normalized : "/" + normalized |
-| 1076 | return | 호출자에게 값 또는 제어를 반환합니다: return normalized.StartsWith('/') ? normalized : "/" + normalized; |
+| 1067 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _settingManager.GetValue(EN_SETTING_TAB.Option, AutomationScriptPathKey, "/", cancellationToken) |
+| 1067 | conditional-expression | 조건에 따라 결과식을 선택합니다: _settingManager is null ? "" : _settingManager.GetValue(EN_SETTING_TAB.Option, AutomationScriptPathKey, "/", cancellationToken) |
+| 1067 | local-declaration | 지역 변수를 선언합니다: var settingValue = _settingManager is null ? "" : _settingManager.GetValue(EN_SETTING_TAB.Option, AutomationScriptPathKey, "/", cancellationToken); |
+| 1067 | variable-initializer | 변수의 초기값을 지정합니다: settingValue = _settingManager is null ? "" : _settingManager.GetValue(EN_SETTING_TAB.Option, AutomationScriptPathKey, "/", cancellationToken) |
+| 1068 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(settingValue) |
+| 1068 | if | 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(settingValue)) |
+| 1070 | return | 호출자에게 값 또는 제어를 반환합니다: return "/"; |
+| 1073 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: settingValue.Trim().Replace('\\', '/') |
+| 1073 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: settingValue.Trim() |
+| 1073 | local-declaration | 지역 변수를 선언합니다: var normalized = settingValue.Trim().Replace('\\', '/'); |
+| 1073 | variable-initializer | 변수의 초기값을 지정합니다: normalized = settingValue.Trim().Replace('\\', '/') |
+| 1074 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalized.StartsWith('/') |
+| 1074 | conditional-expression | 조건에 따라 결과식을 선택합니다: normalized.StartsWith('/') ? normalized : "/" + normalized |
+| 1074 | return | 호출자에게 값 또는 제어를 반환합니다: return normalized.StartsWith('/') ? normalized : "/" + normalized; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["GetControllerScriptDirectory"]
- N0["L1070 if"]
+ N0["L1068 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CombineControllerPath` · L1079–1089
+### MethodDeclaration `CombineControllerPath` · L1077–1087
 
-[Drilling.Common/Automation/CAutomationManager.cs:1079–1089](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1079-L1089)
+[Drilling.Common/Automation/CAutomationManager.cs:1077–1087](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1077-L1087)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -5954,50 +5957,50 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1064–1064](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1064-L1064) | CombineControllerPath | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1062–1062](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1062-L1062) | CombineControllerPath | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1081 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 1081 | directory.Trim().Replace | resolved | string string.Replace(char, char) |
-| 1081 | directory.Trim | resolved | string string.Trim() |
-| 1082 | normalizedDirectory.StartsWith | resolved | bool string.StartsWith(char) |
-| 1087 | normalizedDirectory.TrimEnd | resolved | string string.TrimEnd(char) |
+| 1079 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 1079 | directory.Trim().Replace | resolved | string string.Replace(char, char) |
+| 1079 | directory.Trim | resolved | string string.Trim() |
+| 1080 | normalizedDirectory.StartsWith | resolved | bool string.StartsWith(char) |
+| 1085 | normalizedDirectory.TrimEnd | resolved | string string.TrimEnd(char) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1081 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(directory) |
-| 1081 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: directory.Trim().Replace('\\', '/') |
-| 1081 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: directory.Trim() |
-| 1081 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(directory) ? "/" : directory.Trim().Replace('\\', '/') |
-| 1081 | local-declaration | 지역 변수를 선언합니다: var normalizedDirectory = string.IsNullOrWhiteSpace(directory) ? "/" : directory.Trim().Replace('\\', '/'); |
-| 1081 | variable-initializer | 변수의 초기값을 지정합니다: normalizedDirectory = string.IsNullOrWhiteSpace(directory) ? "/" : directory.Trim().Replace('\\', '/') |
-| 1082 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalizedDirectory.StartsWith('/') |
-| 1082 | if | 조건에 따라 분기합니다: if (!normalizedDirectory.StartsWith('/')) |
-| 1084 | assignment | 값을 대상에 대입합니다: normalizedDirectory = "/" + normalizedDirectory |
-| 1087 | assignment | 값을 대상에 대입합니다: normalizedDirectory = normalizedDirectory.TrimEnd('/') |
-| 1087 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalizedDirectory.TrimEnd('/') |
-| 1088 | conditional-expression | 조건에 따라 결과식을 선택합니다: normalizedDirectory.Length == 0 ? "/" + fileName : $"{normalizedDirectory}/{fileName}" |
-| 1088 | return | 호출자에게 값 또는 제어를 반환합니다: return normalizedDirectory.Length == 0 ? "/" + fileName : $"{normalizedDirectory}/{fileName}"; |
+| 1079 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(directory) |
+| 1079 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: directory.Trim().Replace('\\', '/') |
+| 1079 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: directory.Trim() |
+| 1079 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(directory) ? "/" : directory.Trim().Replace('\\', '/') |
+| 1079 | local-declaration | 지역 변수를 선언합니다: var normalizedDirectory = string.IsNullOrWhiteSpace(directory) ? "/" : directory.Trim().Replace('\\', '/'); |
+| 1079 | variable-initializer | 변수의 초기값을 지정합니다: normalizedDirectory = string.IsNullOrWhiteSpace(directory) ? "/" : directory.Trim().Replace('\\', '/') |
+| 1080 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalizedDirectory.StartsWith('/') |
+| 1080 | if | 조건에 따라 분기합니다: if (!normalizedDirectory.StartsWith('/')) |
+| 1082 | assignment | 값을 대상에 대입합니다: normalizedDirectory = "/" + normalizedDirectory |
+| 1085 | assignment | 값을 대상에 대입합니다: normalizedDirectory = normalizedDirectory.TrimEnd('/') |
+| 1085 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: normalizedDirectory.TrimEnd('/') |
+| 1086 | conditional-expression | 조건에 따라 결과식을 선택합니다: normalizedDirectory.Length == 0 ? "/" + fileName : $"{normalizedDirectory}/{fileName}" |
+| 1086 | return | 호출자에게 값 또는 제어를 반환합니다: return normalizedDirectory.Length == 0 ? "/" + fileName : $"{normalizedDirectory}/{fileName}"; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["CombineControllerPath"]
- N0["L1082 if"]
+ N0["L1080 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Format` · L1091–1094
+### MethodDeclaration `Format` · L1089–1092
 
-[Drilling.Common/Automation/CAutomationManager.cs:1091–1094](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1091-L1094)
+[Drilling.Common/Automation/CAutomationManager.cs:1089–1092](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1089-L1092)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6016,32 +6019,32 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L188-L188) | Format | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L188-L188) | Format | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L193-L193) | Format | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L193-L193) | Format | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L205-L205) | Format | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L205-L205) | Format | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L212-L212) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L188-L188) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:188–188](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L188-L188) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L193-L193) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L193-L193) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L205-L205) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:205–205](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L205-L205) | Format | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L212-L212) | Format | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1093 | value.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
+| 1091 | value.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1093 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString("0.######", CultureInfo.InvariantCulture) |
-| 1093 | return | 호출자에게 값 또는 제어를 반환합니다: return value.ToString("0.######", CultureInfo.InvariantCulture); |
+| 1091 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: value.ToString("0.######", CultureInfo.InvariantCulture) |
+| 1091 | return | 호출자에게 값 또는 제어를 반환합니다: return value.ToString("0.######", CultureInfo.InvariantCulture); |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `RunStagePreparedScript` · L1098–1105
+### MethodDeclaration `RunStagePreparedScript` · L1096–1104
 
-[Drilling.Common/Automation/CAutomationManager.cs:1098–1105](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1098-L1105)
+[Drilling.Common/Automation/CAutomationManager.cs:1096–1104](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1096-L1104)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6063,49 +6066,49 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4064–4064](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L4064-L4064) | _automationManager.RunStagePreparedScript | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3683–3683](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3683-L3683) | manager.automation.RunStagePreparedScript | False |
+| [Drilling.Common/Station/CStationProcess.cs:4119–4119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4119-L4119) | _automationManager.RunStagePreparedScript | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3793–3793](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3793-L3793) | manager.automation.RunStagePreparedScript | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1100 | RunScriptIfIdle(file, task, controller, token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
-| 1100 | RunScriptIfIdle | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunScriptIfIdle(string, int, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:336 |
-| 1101 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:726 |
-| 1102 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 1103 | RegisterStageSimulationTask | resolved | Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask Drilling.Common.Automation.CAutomationManager.RegisterStageSimulationTask(int, int, string, bool) · Drilling.Common/Automation/CAutomationManager.cs:1288 |
-| 1104 | StatusSnapshots.InvalidateTask | resolved | void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateTask(int, int) · Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:361 |
+| 1099 | RunScriptIfIdle(file, task, controller, token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
+| 1099 | RunScriptIfIdle | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.RunScriptIfIdle(string, int, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:337 |
+| 1100 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:724 |
+| 1101 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
+| 1102 | RegisterStageSimulationTask | resolved | Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask Drilling.Common.Automation.CAutomationManager.RegisterStageSimulationTask(int, int, string, bool) · Drilling.Common/Automation/CAutomationManager.cs:1288 |
+| 1103 | StatusSnapshots.InvalidateTask | resolved | void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateTask(int, int) · Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:361 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1100 | await | 비동기 완료를 기다립니다: await RunScriptIfIdle(file, task, controller, token).ConfigureAwait(false) |
-| 1100 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RunScriptIfIdle(file, task, controller, token).ConfigureAwait(false) |
-| 1100 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RunScriptIfIdle(file, task, controller, token) |
-| 1100 | local-declaration | 지역 변수를 선언합니다: var response = await RunScriptIfIdle(file, task, controller, token).ConfigureAwait(false); |
-| 1100 | variable-initializer | 변수의 초기값을 지정합니다: response = await RunScriptIfIdle(file, task, controller, token).ConfigureAwait(false) |
-| 1101 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(response, $"Stage script RUN failed: {file}.") |
-| 1102 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(controller) |
-| 1102 | if | 조건에 따라 분기합니다: if (IsSimul(controller)) |
-| 1103 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterStageSimulationTask(controller, task, file, buffered: false) |
-| 1104 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: StatusSnapshots.InvalidateTask(task, controller) |
+| 1099 | await | 비동기 완료를 기다립니다: await RunScriptIfIdle(file, task, controller, token).ConfigureAwait(false) |
+| 1099 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RunScriptIfIdle(file, task, controller, token).ConfigureAwait(false) |
+| 1099 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RunScriptIfIdle(file, task, controller, token) |
+| 1099 | local-declaration | 지역 변수를 선언합니다: var response = await RunScriptIfIdle(file, task, controller, token).ConfigureAwait(false); |
+| 1099 | variable-initializer | 변수의 초기값을 지정합니다: response = await RunScriptIfIdle(file, task, controller, token).ConfigureAwait(false) |
+| 1100 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(response, $"Stage script RUN failed: {file}.") |
+| 1101 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(controller) |
+| 1101 | if | 조건에 따라 분기합니다: if (IsSimul(controller)) |
+| 1102 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RegisterStageSimulationTask(controller, task, file, buffered: false) |
+| 1103 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: StatusSnapshots.InvalidateTask(task, controller) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["RunStagePreparedScript"]
- N0["L1102 if"]
+ N0["L1101 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StopStagePreparedTask` · L1107–1132
+### MethodDeclaration `StopStagePreparedTask` · L1106–1132
 
-[Drilling.Common/Automation/CAutomationManager.cs:1107–1132](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1107-L1132)
+[Drilling.Common/Automation/CAutomationManager.cs:1106–1132](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1106-L1132)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6126,16 +6129,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4165–4165](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L4165-L4165) | _automationManager.StopStagePreparedTask | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3722–3722](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3722-L3722) | manager.automation.StopStagePreparedTask | False |
+| [Drilling.Common/Station/CStationProcess.cs:4220–4220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4220-L4220) | _automationManager.StopStagePreparedTask | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3832–3832](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3832-L3832) | manager.automation.StopStagePreparedTask | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 1109 | StopTask(task, controller, token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
-| 1109 | StopTask | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.StopTask(int, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:506 |
-| 1110 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:726 |
+| 1109 | StopTask | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.StopTask(int, int, System.Threading.CancellationToken) · Drilling.Common/Automation/CAutomationManager.cs:504 |
+| 1110 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:724 |
 | 1111 | StatusSnapshots.InvalidateTask | resolved | void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateTask(int, int) · Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:361 |
 | 1112 | CancellationTokenSource.CreateLinkedTokenSource | resolved | System.Threading.CancellationTokenSource System.Threading.CancellationTokenSource.CreateLinkedTokenSource(System.Threading.CancellationToken) |
 | 1113 | limit.CancelAfter | resolved | void System.Threading.CancellationTokenSource.CancelAfter(System.TimeSpan) |
@@ -6209,7 +6212,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadAuxiliaryFeedback` · L1134–1144
 
-[Drilling.Common/Automation/CAutomationManager.cs:1134–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1134-L1144)
+[Drilling.Common/Automation/CAutomationManager.cs:1134–1144](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1134-L1144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6230,13 +6233,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L354-L354) | _automation.ReadAuxiliaryFeedback | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L354-L354) | _automation.ReadAuxiliaryFeedback | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1136 | ValidateAxisNameOnly | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAxisNameOnly(string) · Drilling.Common/Automation/CAutomationManager.cs:660 |
+| 1136 | ValidateAxisNameOnly | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAxisNameOnly(string) · Drilling.Common/Automation/CAutomationManager.cs:658 |
 | 1137 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
 | 1138 | new | resolved | Drilling.Common.Automation.ST_AUXILIARY_FEEDBACK.ST_AUXILIARY_FEEDBACK(double) · Drilling.Common/Automation/CAutomationManager.cs:1441 |
 | 1139 | ExecuteRaw($"AUTOMATION1:FEEDBACK&#124;READ_AUX&#124;{axis}", controller, token, suppressLog: true).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
@@ -6287,7 +6290,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAuxiliaryFeedbackZero` · L1146–1158
 
-[Drilling.Common/Automation/CAutomationManager.cs:1146–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1146-L1158)
+[Drilling.Common/Automation/CAutomationManager.cs:1146–1158](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1146-L1158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6309,19 +6312,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160) | SetAuxiliaryFeedbackZero | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160) | SetAuxiliaryFeedbackZero | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1148 | ValidateAxisNameOnly | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAxisNameOnly(string) · Drilling.Common/Automation/CAutomationManager.cs:660 |
+| 1148 | ValidateAxisNameOnly | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateAxisNameOnly(string) · Drilling.Common/Automation/CAutomationManager.cs:658 |
 | 1150 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?) |
 | 1150 | nameof | unresolved | None |
 | 1151 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
 | 1153 | ExecuteRaw($"AUTOMATION1:FEEDBACK&#124;ZERO_AUX&#124;{axis}&#124;{task}", controller, token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
 | 1153 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
-| 1154 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:726 |
+| 1154 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:724 |
 | 1157 | StatusSnapshots.InvalidateAuxiliaryFeedback | resolved | void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateAuxiliaryFeedback(string, int) · Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:355 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -6358,7 +6361,7 @@ flowchart TD
 
 ### MethodDeclaration `ZeroMofFeedbackIfNeeded` · L1160–1160
 
-[Drilling.Common/Automation/CAutomationManager.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160)
+[Drilling.Common/Automation/CAutomationManager.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6378,8 +6381,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3545–3545](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L3545-L3545) | _automationManager.ZeroMofFeedbackIfNeeded | False |
-| [Drilling.Common/Station/CStationProcess.cs:4014–4014](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L4014-L4014) | _automationManager.ZeroMofFeedbackIfNeeded | False |
+| [Drilling.Common/Station/CStationProcess.cs:3550–3550](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3550-L3550) | _automationManager.ZeroMofFeedbackIfNeeded | False |
+| [Drilling.Common/Station/CStationProcess.cs:4069–4069](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4069-L4069) | _automationManager.ZeroMofFeedbackIfNeeded | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6403,7 +6406,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadConfiguredHomeSpeeds` · L1164–1188
 
-[Drilling.Common/Automation/CAutomationManager.cs:1164–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1164-L1188)
+[Drilling.Common/Automation/CAutomationManager.cs:1164–1188](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1164-L1188)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6430,7 +6433,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L293-L293) | _automation.ReadConfiguredHomeSpeeds | True |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L293-L293) | _automation.ReadConfiguredHomeSpeeds | True |
 
 호출하는 대상과 해석 범위:
 
@@ -6447,7 +6450,7 @@ flowchart TD
 | 1173 | new CConfiguredHomeSpeedValues | resolved | Drilling.Common.Automation.CConfiguredHomeSpeedValues.CConfiguredHomeSpeedValues(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, double>>, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>>?) · Drilling.Common/Automation/CAutomationManager.cs:1647 |
 | 1173 | axes.ToDictionary | resolved | System.Collections.Generic.Dictionary<string, double> System.Collections.Generic.IEnumerable<string>.ToDictionary<string, string, double>(System.Func<string, string>, System.Func<string, double>, System.Collections.Generic.IEqualityComparer<string>?) |
 | 1173 | _simulationConfiguredHomeSpeeds.GetOrAdd | resolved | double System.Collections.Concurrent.ConcurrentDictionary<string, double>.GetOrAdd(string, double) |
-| 1173 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:869 |
+| 1173 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:867 |
 | 1173 | axes.ToDictionary | resolved | System.Collections.Generic.Dictionary<string, string> System.Collections.Generic.IEnumerable<string>.ToDictionary<string, string, string>(System.Func<string, string>, System.Func<string, string>, System.Collections.Generic.IEqualityComparer<string>?) |
 | 1174 | ExecuteRaw($"AUTOMATION1:CONFIG:HOME_SPEEDS:{string.Join(',', axes)}", number, cancellationToken, suppressLog: true).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
 | 1174 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
@@ -6554,7 +6557,7 @@ flowchart TD
 
 ### MethodDeclaration `SetConfiguredHomeSpeed` · L1191–1218
 
-[Drilling.Common/Automation/CAutomationManager.cs:1191–1218](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1191-L1218)
+[Drilling.Common/Automation/CAutomationManager.cs:1191–1218](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1191-L1218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6582,7 +6585,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1882–1882](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1882-L1882) | _manager.automation.SetConfiguredHomeSpeed | True |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1890–1890](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1890-L1890) | _manager.automation.SetConfiguredHomeSpeed | True |
 
 호출하는 대상과 해석 범위:
 
@@ -6595,7 +6598,7 @@ flowchart TD
 | 1196 | nameof | unresolved | None |
 | 1197 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
 | 1200 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 1202 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:869 |
+| 1202 | CreateSimulationAxisKey | resolved | string Drilling.Common.Automation.CAutomationManager.CreateSimulationAxisKey(int, string) · Drilling.Common/Automation/CAutomationManager.cs:867 |
 | 1207 | ExecuteRaw($"AUTOMATION1:CONFIG:HOME_SPEED:{axis}:{speed.ToString("R", CultureInfo.InvariantCulture)}", number, cancellationToken).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
 | 1207 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
 | 1207 | speed.ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
@@ -6666,7 +6669,7 @@ flowchart TD
 
 ### MethodDeclaration `ValidateConfiguredHomeAxis` · L1220–1231
 
-[Drilling.Common/Automation/CAutomationManager.cs:1220–1231](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1220-L1231)
+[Drilling.Common/Automation/CAutomationManager.cs:1220–1231](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1220-L1231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6685,7 +6688,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1193–1193](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1193-L1193) | ValidateConfiguredHomeAxis | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1193–1193](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1193-L1193) | ValidateConfiguredHomeAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6693,7 +6696,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | 1222 | ArgumentException.ThrowIfNullOrWhiteSpace | resolved | void System.ArgumentException.ThrowIfNullOrWhiteSpace(string?, string?) |
 | 1223 | axisName.Trim | resolved | string string.Trim() |
-| 1224 | IsAeroScriptAxisIdentifier | resolved | bool Drilling.Common.Automation.CAutomationManager.IsAeroScriptAxisIdentifier(string) · Drilling.Common/Automation/CAutomationManager.cs:797 |
+| 1224 | IsAeroScriptAxisIdentifier | resolved | bool Drilling.Common.Automation.CAutomationManager.IsAeroScriptAxisIdentifier(string) · Drilling.Common/Automation/CAutomationManager.cs:795 |
 | 1225 | new ArgumentException | resolved | System.ArgumentException.ArgumentException(string?, string?) |
 | 1225 | nameof | unresolved | None |
 | 1226 | axis.All | resolved | bool System.Collections.Generic.IEnumerable<char>.All<char>(System.Func<char, bool>) |
@@ -6741,9 +6744,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `PrepareMofReadiness` · L1235–1252
+### MethodDeclaration `PrepareMofReadiness` · L1235–1251
 
-[Drilling.Common/Automation/CAutomationManager.cs:1235–1252](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1235-L1252)
+[Drilling.Common/Automation/CAutomationManager.cs:1235–1251](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1235-L1251)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6765,22 +6768,22 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:4051–4051](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L4051-L4051) | _automationManager.PrepareMofReadiness | True |
+| [Drilling.Common/Station/CStationProcess.cs:4106–4106](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4106-L4106) | _automationManager.PrepareMofReadiness | True |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 1237 | token.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 1238 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:585 |
+| 1238 | ValidateTaskIndex | resolved | void Drilling.Common.Automation.CAutomationManager.ValidateTaskIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:583 |
 | 1240 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?) |
 | 1240 | nameof | unresolved | None |
 | 1241 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
 | 1242 | new | resolved | Drilling.Common.Automation.CAutomationManager.CSimulatedMofReadiness.CSimulatedMofReadiness(long) · Drilling.Common/Automation/CAutomationManager.cs:1278 |
-| 1247 | ExecuteRaw($"AUTOMATION1:VARIABLE&#124;SET_MOF_READINESS&#124;{task}&#124;0", controller, token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
-| 1247 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
-| 1248 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:726 |
-| 1251 | StatusSnapshots.InvalidateMofReadiness | resolved | void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateMofReadiness(int, int) · Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:385 |
+| 1246 | ExecuteRaw($"AUTOMATION1:VARIABLE&#124;SET_MOF_READINESS&#124;{task}&#124;0", controller, token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
+| 1246 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 1247 | EnsureAutomationResponseSucceeded | resolved | void Drilling.Common.Automation.CAutomationManager.EnsureAutomationResponseSucceeded(string, string) · Drilling.Common/Automation/CAutomationManager.cs:724 |
+| 1250 | StatusSnapshots.InvalidateMofReadiness | resolved | void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateMofReadiness(int, int) · Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:385 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -6797,13 +6800,13 @@ flowchart TD
 | 1242 | assignment | 값을 대상에 대입합니다: _simulatedMofReadiness[(controller, task)] = new(runId) |
 | 1242 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(runId) |
 | 1243 | else | 앞 조건이 거짓인 경로입니다: else |
-| 1247 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:VARIABLE&#124;SET_MOF_READINESS&#124;{task}&#124;0", controller, token).ConfigureAwait(false) |
-| 1247 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:VARIABLE&#124;SET_MOF_READINESS&#124;{task}&#124;0", controller, token).ConfigureAwait(false) |
-| 1247 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:VARIABLE&#124;SET_MOF_READINESS&#124;{task}&#124;0", controller, token) |
-| 1247 | local-declaration | 지역 변수를 선언합니다: var response = await ExecuteRaw($"AUTOMATION1:VARIABLE&#124;SET_MOF_READINESS&#124;{task}&#124;0", controller, token).ConfigureAwait(false); |
-| 1247 | variable-initializer | 변수의 초기값을 지정합니다: response = await ExecuteRaw($"AUTOMATION1:VARIABLE&#124;SET_MOF_READINESS&#124;{task}&#124;0", controller, token).ConfigureAwait(false) |
-| 1248 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(response, $"MOF readiness reset failed: A{controller}/T{task}.") |
-| 1251 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: StatusSnapshots.InvalidateMofReadiness(task, controller) |
+| 1246 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:VARIABLE&#124;SET_MOF_READINESS&#124;{task}&#124;0", controller, token).ConfigureAwait(false) |
+| 1246 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:VARIABLE&#124;SET_MOF_READINESS&#124;{task}&#124;0", controller, token).ConfigureAwait(false) |
+| 1246 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:VARIABLE&#124;SET_MOF_READINESS&#124;{task}&#124;0", controller, token) |
+| 1246 | local-declaration | 지역 변수를 선언합니다: var response = await ExecuteRaw($"AUTOMATION1:VARIABLE&#124;SET_MOF_READINESS&#124;{task}&#124;0", controller, token).ConfigureAwait(false); |
+| 1246 | variable-initializer | 변수의 초기값을 지정합니다: response = await ExecuteRaw($"AUTOMATION1:VARIABLE&#124;SET_MOF_READINESS&#124;{task}&#124;0", controller, token).ConfigureAwait(false) |
+| 1247 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureAutomationResponseSucceeded(response, $"MOF readiness reset failed: A{controller}/T{task}.") |
+| 1250 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: StatusSnapshots.InvalidateMofReadiness(task, controller) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
@@ -6820,9 +6823,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadMofReadiness` · L1254–1265
+### MethodDeclaration `ReadMofReadiness` · L1253–1264
 
-[Drilling.Common/Automation/CAutomationManager.cs:1254–1265](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1254-L1265)
+[Drilling.Common/Automation/CAutomationManager.cs:1253–1264](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1253-L1264)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6843,71 +6846,71 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L384-L384) | _automation.ReadMofReadiness | True |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L384-L384) | _automation.ReadMofReadiness | True |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1256 | token.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 1257 | CMofReadiness.VariableIndex | resolved | int Drilling.Common.Automation.CMofReadiness.VariableIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:1763 |
-| 1258 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 1259 | new | resolved | Drilling.Common.Automation.ST_MOF_READINESS.ST_MOF_READINESS(long) · Drilling.Common/Automation/CAutomationManager.cs:1756 |
-| 1259 | _simulatedMofReadiness.TryGetValue | resolved | bool System.Collections.Concurrent.ConcurrentDictionary<(int Controller, int Task), Drilling.Common.Automation.CAutomationManager.CSimulatedMofReadiness>.TryGetValue((int Controller, int Task), out Drilling.Common.Automation.CAutomationManager.CSimulatedMofReadiness) |
-| 1260 | ExecuteRaw($"AUTOMATION1:VARIABLE&#124;GET_MOF_READINESS&#124;{task}", controller, token, suppressLog: true).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
-| 1260 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
-| 1261 | response.Split | resolved | string[] string.Split(char, System.StringSplitOptions) |
-| 1262 | int.TryParse | resolved | bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int) |
-| 1262 | long.TryParse | resolved | bool long.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out long) |
-| 1263 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
-| 1264 | new | resolved | Drilling.Common.Automation.ST_MOF_READINESS.ST_MOF_READINESS(long) · Drilling.Common/Automation/CAutomationManager.cs:1756 |
+| 1255 | token.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 1256 | CMofReadiness.VariableIndex | resolved | int Drilling.Common.Automation.CMofReadiness.VariableIndex(int) · Drilling.Common/Automation/CAutomationManager.cs:1778 |
+| 1257 | IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
+| 1258 | new | resolved | Drilling.Common.Automation.ST_MOF_READINESS.ST_MOF_READINESS(long) · Drilling.Common/Automation/CAutomationManager.cs:1771 |
+| 1258 | _simulatedMofReadiness.TryGetValue | resolved | bool System.Collections.Concurrent.ConcurrentDictionary<(int Controller, int Task), Drilling.Common.Automation.CAutomationManager.CSimulatedMofReadiness>.TryGetValue((int Controller, int Task), out Drilling.Common.Automation.CAutomationManager.CSimulatedMofReadiness) |
+| 1259 | ExecuteRaw($"AUTOMATION1:VARIABLE&#124;GET_MOF_READINESS&#124;{task}", controller, token, suppressLog: true).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable<string> System.Threading.Tasks.Task<string>.ConfigureAwait(bool) |
+| 1259 | ExecuteRaw | resolved | System.Threading.Tasks.Task<string> Drilling.Common.Automation.CAutomationManager.ExecuteRaw(string, int, System.Threading.CancellationToken, bool) · Drilling.Common/Automation/CAutomationManager.cs:180 |
+| 1260 | response.Split | resolved | string[] string.Split(char, System.StringSplitOptions) |
+| 1261 | int.TryParse | resolved | bool int.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out int) |
+| 1261 | long.TryParse | resolved | bool long.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out long) |
+| 1262 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
+| 1263 | new | resolved | Drilling.Common.Automation.ST_MOF_READINESS.ST_MOF_READINESS(long) · Drilling.Common/Automation/CAutomationManager.cs:1771 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1256 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested() |
-| 1257 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CMofReadiness.VariableIndex(task) |
-| 1257 | local-declaration | 지역 변수를 선언합니다: var index = CMofReadiness.VariableIndex(task); |
-| 1257 | variable-initializer | 변수의 초기값을 지정합니다: index = CMofReadiness.VariableIndex(task) |
-| 1258 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(controller) |
-| 1258 | if | 조건에 따라 분기합니다: if (IsSimul(controller)) |
-| 1259 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_simulatedMofReadiness.TryGetValue((controller, task), out var ready) ? ready.Value : 0) |
-| 1259 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulatedMofReadiness.TryGetValue((controller, task), out var ready) |
-| 1259 | conditional-expression | 조건에 따라 결과식을 선택합니다: _simulatedMofReadiness.TryGetValue((controller, task), out var ready) ? ready.Value : 0 |
-| 1259 | return | 호출자에게 값 또는 제어를 반환합니다: return new(_simulatedMofReadiness.TryGetValue((controller, task), out var ready) ? ready.Value : 0); |
-| 1260 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:VARIABLE&#124;GET_MOF_READINESS&#124;{task}", controller, token, suppressLog: true).ConfigureAwait(false) |
-| 1260 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:VARIABLE&#124;GET_MOF_READINESS&#124;{task}", controller, token, suppressLog: true).ConfigureAwait(false) |
-| 1260 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:VARIABLE&#124;GET_MOF_READINESS&#124;{task}", controller, token, suppressLog: true) |
-| 1260 | local-declaration | 지역 변수를 선언합니다: var response = await ExecuteRaw($"AUTOMATION1:VARIABLE&#124;GET_MOF_READINESS&#124;{task}", controller, token, suppressLog: true).ConfigureAwait(false); |
-| 1260 | variable-initializer | 변수의 초기값을 지정합니다: response = await ExecuteRaw($"AUTOMATION1:VARIABLE&#124;GET_MOF_READINESS&#124;{task}", controller, token, suppressLog: true).ConfigureAwait(false) |
-| 1261 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Split(':') |
-| 1261 | local-declaration | 지역 변수를 선언합니다: var fields = response.Split(':'); |
-| 1261 | variable-initializer | 변수의 초기값을 지정합니다: fields = response.Split(':') |
-| 1262 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(fields[2], NumberStyles.Integer, CultureInfo.InvariantCulture, out var receivedIndex) |
-| 1262 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: long.TryParse(fields[3], NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) |
-| 1262 | if | 조건에 따라 분기합니다: if (fields.Length != 4 &#124;&#124; fields[0] != "OK" &#124;&#124; fields[1] != "GLOBAL_INTEGER" &#124;&#124; !int.TryParse(fields[2], NumberStyles.Integer, CultureInfo.InvariantCulture, out var receivedIndex) &#124;&#124; receivedIndex != index &#124;&#124; !long.TryParse(…) |
-| 1263 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"MOF readiness read failed: A{controller}/T{task}. {response}") |
-| 1263 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException($"MOF readiness read failed: A{controller}/T{task}. {response}"); |
-| 1264 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(value) |
-| 1264 | return | 호출자에게 값 또는 제어를 반환합니다: return new(value); |
+| 1255 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested() |
+| 1256 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CMofReadiness.VariableIndex(task) |
+| 1256 | local-declaration | 지역 변수를 선언합니다: var index = CMofReadiness.VariableIndex(task); |
+| 1256 | variable-initializer | 변수의 초기값을 지정합니다: index = CMofReadiness.VariableIndex(task) |
+| 1257 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: IsSimul(controller) |
+| 1257 | if | 조건에 따라 분기합니다: if (IsSimul(controller)) |
+| 1258 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_simulatedMofReadiness.TryGetValue((controller, task), out var ready) ? ready.Value : 0) |
+| 1258 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _simulatedMofReadiness.TryGetValue((controller, task), out var ready) |
+| 1258 | conditional-expression | 조건에 따라 결과식을 선택합니다: _simulatedMofReadiness.TryGetValue((controller, task), out var ready) ? ready.Value : 0 |
+| 1258 | return | 호출자에게 값 또는 제어를 반환합니다: return new(_simulatedMofReadiness.TryGetValue((controller, task), out var ready) ? ready.Value : 0); |
+| 1259 | await | 비동기 완료를 기다립니다: await ExecuteRaw($"AUTOMATION1:VARIABLE&#124;GET_MOF_READINESS&#124;{task}", controller, token, suppressLog: true).ConfigureAwait(false) |
+| 1259 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:VARIABLE&#124;GET_MOF_READINESS&#124;{task}", controller, token, suppressLog: true).ConfigureAwait(false) |
+| 1259 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ExecuteRaw($"AUTOMATION1:VARIABLE&#124;GET_MOF_READINESS&#124;{task}", controller, token, suppressLog: true) |
+| 1259 | local-declaration | 지역 변수를 선언합니다: var response = await ExecuteRaw($"AUTOMATION1:VARIABLE&#124;GET_MOF_READINESS&#124;{task}", controller, token, suppressLog: true).ConfigureAwait(false); |
+| 1259 | variable-initializer | 변수의 초기값을 지정합니다: response = await ExecuteRaw($"AUTOMATION1:VARIABLE&#124;GET_MOF_READINESS&#124;{task}", controller, token, suppressLog: true).ConfigureAwait(false) |
+| 1260 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: response.Split(':') |
+| 1260 | local-declaration | 지역 변수를 선언합니다: var fields = response.Split(':'); |
+| 1260 | variable-initializer | 변수의 초기값을 지정합니다: fields = response.Split(':') |
+| 1261 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: int.TryParse(fields[2], NumberStyles.Integer, CultureInfo.InvariantCulture, out var receivedIndex) |
+| 1261 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: long.TryParse(fields[3], NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) |
+| 1261 | if | 조건에 따라 분기합니다: if (fields.Length != 4 &#124;&#124; fields[0] != "OK" &#124;&#124; fields[1] != "GLOBAL_INTEGER" &#124;&#124; !int.TryParse(fields[2], NumberStyles.Integer, CultureInfo.InvariantCulture, out var receivedIndex) &#124;&#124; receivedIndex != index &#124;&#124; !long.TryParse(…) |
+| 1262 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"MOF readiness read failed: A{controller}/T{task}. {response}") |
+| 1262 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException($"MOF readiness read failed: A{controller}/T{task}. {response}"); |
+| 1263 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(value) |
+| 1263 | return | 호출자에게 값 또는 제어를 반환합니다: return new(value); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReadMofReadiness"]
- N0["L1258 if"]
+ N0["L1257 if"]
  M -->|포함| N0
- N1["L1262 if"]
+ N1["L1261 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `PublishSimulatedMofReadiness` · L1267–1276
+### MethodDeclaration `PublishSimulatedMofReadiness` · L1266–1276
 
-[Drilling.Common/Automation/CAutomationManager.cs:1267–1276](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1267-L1276)
+[Drilling.Common/Automation/CAutomationManager.cs:1266–1276](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1266-L1276)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6928,7 +6931,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1293–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1293-L1293) | PublishSimulatedMofReadiness | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1293–1293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1293-L1293) | PublishSimulatedMofReadiness | False |
 
 호출하는 대상과 해석 범위:
 
@@ -6978,7 +6981,7 @@ flowchart TD
 
 ### FieldDeclaration `_value` · L1280–1280
 
-[Drilling.Common/Automation/CAutomationManager.cs:1280–1280](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1280-L1280)
+[Drilling.Common/Automation/CAutomationManager.cs:1280–1280](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1280-L1280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -6993,7 +6996,7 @@ flowchart TD
 
 ### PropertyDeclaration `Value` · L1281–1281
 
-[Drilling.Common/Automation/CAutomationManager.cs:1281–1281](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1281-L1281)
+[Drilling.Common/Automation/CAutomationManager.cs:1281–1281](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1281-L1281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7020,7 +7023,7 @@ flowchart TD
 
 ### MethodDeclaration `Publish` · L1283–1283
 
-[Drilling.Common/Automation/CAutomationManager.cs:1283–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1283-L1283)
+[Drilling.Common/Automation/CAutomationManager.cs:1283–1283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1283-L1283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7033,7 +7036,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1274–1274](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1274-L1274) | ready.Publish | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1274–1274](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1274-L1274) | ready.Publish | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7051,7 +7054,7 @@ flowchart TD
 
 ### MethodDeclaration `RegisterStageSimulationTask` · L1288–1295
 
-[Drilling.Common/Automation/CAutomationManager.cs:1288–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1288-L1295)
+[Drilling.Common/Automation/CAutomationManager.cs:1288–1295](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1288-L1295)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7073,8 +7076,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:460–460](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L460-L460) | RegisterStageSimulationTask | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1103–1103](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1103-L1103) | RegisterStageSimulationTask | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:458–458](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L458-L458) | RegisterStageSimulationTask | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1102–1102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1102-L1102) | RegisterStageSimulationTask | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7085,7 +7088,7 @@ flowchart TD
 | 1291 | _stageSimulationTasks.AddOrUpdate | resolved | Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask System.Collections.Concurrent.ConcurrentDictionary<(int Controller, int Task), Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask>.AddOrUpdate((int Controller, int Task), Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask, System.Func<(int Controller, int Task), Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask, Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask>) |
 | 1291 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
 | 1292 | StatusSnapshots.InvalidateTask | resolved | void Drilling.Common.Automation.CAutomationStatusSnapshotService.InvalidateTask(int, int) · Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:361 |
-| 1293 | PublishSimulatedMofReadiness | resolved | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.PublishSimulatedMofReadiness(int, int, Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask) · Drilling.Common/Automation/CAutomationManager.cs:1267 |
+| 1293 | PublishSimulatedMofReadiness | resolved | System.Threading.Tasks.Task Drilling.Common.Automation.CAutomationManager.PublishSimulatedMofReadiness(int, int, Drilling.Common.Automation.CAutomationManager.CStageSimulatedTask) · Drilling.Common/Automation/CAutomationManager.cs:1266 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -7108,7 +7111,7 @@ flowchart TD
 
 ### MethodDeclaration `StartStageMachiningSimulation` · L1298–1319
 
-[Drilling.Common/Automation/CAutomationManager.cs:1298–1319](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1298-L1319)
+[Drilling.Common/Automation/CAutomationManager.cs:1298–1319](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1298-L1319)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7134,8 +7137,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3805–3805](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L3805-L3805) | _automationManager.StartStageMachiningSimulation | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3684–3684](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3684-L3684) | manager.automation.StartStageMachiningSimulation | False |
+| [Drilling.Common/Station/CStationProcess.cs:3810–3810](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3810-L3810) | _automationManager.StartStageMachiningSimulation | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:3794–3794](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3794-L3794) | manager.automation.StartStageMachiningSimulation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7190,7 +7193,7 @@ flowchart TD
 
 ### FieldDeclaration `_sync` · L1323–1323
 
-[Drilling.Common/Automation/CAutomationManager.cs:1323–1323](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1323-L1323)
+[Drilling.Common/Automation/CAutomationManager.cs:1323–1323](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1323-L1323)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7218,7 +7221,7 @@ flowchart TD
 
 ### FieldDeclaration `_completion` · L1324–1324
 
-[Drilling.Common/Automation/CAutomationManager.cs:1324–1324](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1324-L1324)
+[Drilling.Common/Automation/CAutomationManager.cs:1324–1324](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1324-L1324)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7246,7 +7249,7 @@ flowchart TD
 
 ### FieldDeclaration `_stop` · L1325–1325
 
-[Drilling.Common/Automation/CAutomationManager.cs:1325–1325](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1325-L1325)
+[Drilling.Common/Automation/CAutomationManager.cs:1325–1325](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1325-L1325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7274,7 +7277,7 @@ flowchart TD
 
 ### FieldDeclaration `_state` · L1326–1326
 
-[Drilling.Common/Automation/CAutomationManager.cs:1326–1326](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1326-L1326)
+[Drilling.Common/Automation/CAutomationManager.cs:1326–1326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1326-L1326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7296,7 +7299,7 @@ flowchart TD
 
 ### FieldDeclaration `_started` · L1327–1327
 
-[Drilling.Common/Automation/CAutomationManager.cs:1327–1327](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1327-L1327)
+[Drilling.Common/Automation/CAutomationManager.cs:1327–1327](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1327-L1327)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7311,7 +7314,7 @@ flowchart TD
 
 ### PropertyDeclaration `File` · L1328–1328
 
-[Drilling.Common/Automation/CAutomationManager.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1328-L1328)
+[Drilling.Common/Automation/CAutomationManager.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1328-L1328)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7326,7 +7329,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_File` · L1328–1328
 
-[Drilling.Common/Automation/CAutomationManager.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1328-L1328)
+[Drilling.Common/Automation/CAutomationManager.cs:1328–1328](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1328-L1328)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7341,7 +7344,7 @@ flowchart TD
 
 ### PropertyDeclaration `State` · L1330–1337
 
-[Drilling.Common/Automation/CAutomationManager.cs:1330–1337](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1330-L1337)
+[Drilling.Common/Automation/CAutomationManager.cs:1330–1337](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1330-L1337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7356,7 +7359,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_State` · L1332–1336
 
-[Drilling.Common/Automation/CAutomationManager.cs:1332–1336](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1332-L1336)
+[Drilling.Common/Automation/CAutomationManager.cs:1332–1336](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1332-L1336)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7387,7 +7390,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsActive` · L1339–1339
 
-[Drilling.Common/Automation/CAutomationManager.cs:1339–1339](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1339-L1339)
+[Drilling.Common/Automation/CAutomationManager.cs:1339–1339](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1339-L1339)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7402,7 +7405,7 @@ flowchart TD
 
 ### PropertyDeclaration `Completion` · L1340–1340
 
-[Drilling.Common/Automation/CAutomationManager.cs:1340–1340](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1340-L1340)
+[Drilling.Common/Automation/CAutomationManager.cs:1340–1340](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1340-L1340)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7417,7 +7420,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L1342–1354
 
-[Drilling.Common/Automation/CAutomationManager.cs:1342–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1342-L1354)
+[Drilling.Common/Automation/CAutomationManager.cs:1342–1354](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1342-L1354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7437,7 +7440,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1317–1317](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1317-L1317) | session.Start | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1317–1317](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1317-L1317) | session.Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7479,7 +7482,7 @@ flowchart TD
 
 ### MethodDeclaration `CompleteAfter` · L1356–1382
 
-[Drilling.Common/Automation/CAutomationManager.cs:1356–1382](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1356-L1382)
+[Drilling.Common/Automation/CAutomationManager.cs:1356–1382](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1356-L1382)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7499,7 +7502,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1353–1353](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1353-L1353) | CompleteAfter | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1353–1353](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1353-L1353) | CompleteAfter | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7562,7 +7565,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L1384–1398
 
-[Drilling.Common/Automation/CAutomationManager.cs:1384–1398](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1384-L1398)
+[Drilling.Common/Automation/CAutomationManager.cs:1384–1398](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1384-L1398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7575,9 +7578,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:477–477](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L477-L477) | session.Stop | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L513-L513) | session.Stop | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1375–1375](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1375-L1375) | Stop | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:475–475](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L475-L475) | session.Stop | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:511–511](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L511-L511) | session.Stop | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1375–1375](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1375-L1375) | Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7619,7 +7622,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseMask` · L1405–1413
 
-[Drilling.Common/Automation/CAutomationManager.cs:1405–1413](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1405-L1413)
+[Drilling.Common/Automation/CAutomationManager.cs:1405–1413](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1405-L1413)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7638,8 +7641,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1791–1791](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1791-L1791) | CAutomationAxisFault.ParseMask | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:7737–7737](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L7737-L7737) | CAutomationAxisFault.ParseMask | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1799–1799](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1799-L1799) | CAutomationAxisFault.ParseMask | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:7745–7745](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L7745-L7745) | CAutomationAxisFault.ParseMask | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7685,7 +7688,7 @@ flowchart TD
 
 ### MethodDeclaration `RequiresReset` · L1415–1415
 
-[Drilling.Common/Automation/CAutomationManager.cs:1415–1415](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1415-L1415)
+[Drilling.Common/Automation/CAutomationManager.cs:1415–1415](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1415-L1415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7704,15 +7707,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1435–1435](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1435-L1435) | RequiresReset | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1794–1794](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1794-L1794) | CAutomationAxisFault.RequiresReset | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8348–8348](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L8348-L8348) | CAutomationAxisFault.RequiresReset | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1435–1435](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1435-L1435) | RequiresReset | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1802–1802](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1802-L1802) | CAutomationAxisFault.RequiresReset | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8356–8356](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L8356-L8356) | CAutomationAxisFault.RequiresReset | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `HasLimitFault` · L1416–1416
 
-[Drilling.Common/Automation/CAutomationManager.cs:1416–1416](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1416-L1416)
+[Drilling.Common/Automation/CAutomationManager.cs:1416–1416](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1416-L1416)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7731,13 +7734,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:1779–1779](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L1779-L1779) | CAutomationAxisFault.HasLimitFault | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:1787–1787](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L1787-L1787) | CAutomationAxisFault.HasLimitFault | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
 ### MethodDeclaration `Describe` · L1417–1438
 
-[Drilling.Common/Automation/CAutomationManager.cs:1417–1438](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1417-L1438)
+[Drilling.Common/Automation/CAutomationManager.cs:1417–1438](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1417-L1438)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7756,7 +7759,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:8346–8346](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L8346-L8346) | CAutomationAxisFault.Describe | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:8354–8354](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L8354-L8354) | CAutomationAxisFault.Describe | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7826,7 +7829,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L1446–1489
 
-[Drilling.Common/Automation/CAutomationManager.cs:1446–1489](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1446-L1489)
+[Drilling.Common/Automation/CAutomationManager.cs:1446–1489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1446-L1489)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7846,7 +7849,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160) | new CMofZeroOperation(target => StatusSnapshots.GetAuxiliaryFeedback(target.Axis, target.Controller), (target, ct) => SetAuxiliaryFeedbackZero(target.Axis, target.Task, target.Controller, ct)).Execute | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1160–1160](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1160-L1160) | new CMofZeroOperation(target => StatusSnapshots.GetAuxiliaryFeedback(target.Axis, target.Controller), (target, ct) => SetAuxiliaryFeedbackZero(target.Axis, target.Task, target.Controller, ct)).Execute | False |
 
 호출하는 대상과 해석 범위:
 
@@ -7957,7 +7960,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitForValue` · L1491–1503
 
-[Drilling.Common/Automation/CAutomationManager.cs:1491–1503](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1491-L1503)
+[Drilling.Common/Automation/CAutomationManager.cs:1491–1503](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1491-L1503)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -7978,8 +7981,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1466–1466](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1466-L1466) | WaitForValue | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1478–1478](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1478-L1478) | WaitForValue | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1466–1466](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1466-L1466) | WaitForValue | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1478–1478](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1478-L1478) | WaitForValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8032,7 +8035,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsInPosition` · L1528–1528
 
-[Drilling.Common/Automation/CAutomationManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1528-L1528)
+[Drilling.Common/Automation/CAutomationManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1528-L1528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8047,7 +8050,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsInPosition` · L1528–1528
 
-[Drilling.Common/Automation/CAutomationManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1528-L1528)
+[Drilling.Common/Automation/CAutomationManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1528-L1528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8062,7 +8065,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_IsInPosition` · L1528–1528
 
-[Drilling.Common/Automation/CAutomationManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1528-L1528)
+[Drilling.Common/Automation/CAutomationManager.cs:1528–1528](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1528-L1528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8083,7 +8086,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsMotionDone` · L1529–1529
 
-[Drilling.Common/Automation/CAutomationManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1529-L1529)
+[Drilling.Common/Automation/CAutomationManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1529-L1529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8098,7 +8101,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsMotionDone` · L1529–1529
 
-[Drilling.Common/Automation/CAutomationManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1529-L1529)
+[Drilling.Common/Automation/CAutomationManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1529-L1529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8113,7 +8116,7 @@ flowchart TD
 
 ### InitAccessorDeclaration `set_IsMotionDone` · L1529–1529
 
-[Drilling.Common/Automation/CAutomationManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1529-L1529)
+[Drilling.Common/Automation/CAutomationManager.cs:1529–1529](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1529-L1529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8134,7 +8137,7 @@ flowchart TD
 
 ### MethodDeclaration `MoveAndWait` · L1537–1598
 
-[Drilling.Common/Automation/CAutomationManager.cs:1537–1598](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1537-L1598)
+[Drilling.Common/Automation/CAutomationManager.cs:1537–1598](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1537-L1598)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8154,8 +8157,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/CPowerMeasureRun.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/CPowerMeasureRun.cs#L304-L304) | new CAutomationPositioningService(Automation).MoveAndWait | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2305–2305](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2305-L2305) | new CAutomationPositioningService(_manager.automation).MoveAndWait | False |
+| [Drilling.Common/Interface/CPowerMeasureRun.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CPowerMeasureRun.cs#L304-L304) | new CAutomationPositioningService(Automation).MoveAndWait | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2313–2313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2313-L2313) | new CAutomationPositioningService(_manager.automation).MoveAndWait | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8330,7 +8333,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureConnected` · L1600–1604
 
-[Drilling.Common/Automation/CAutomationManager.cs:1600–1604](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1600-L1604)
+[Drilling.Common/Automation/CAutomationManager.cs:1600–1604](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1600-L1604)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8349,9 +8352,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1544–1544](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1544-L1544) | EnsureConnected | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1558–1558](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1558-L1558) | EnsureConnected | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1609–1609](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1609-L1609) | EnsureConnected | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1544–1544](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1544-L1544) | EnsureConnected | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1558–1558](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1558-L1558) | EnsureConnected | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1609–1609](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1609-L1609) | EnsureConnected | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8384,7 +8387,7 @@ flowchart TD
 
 ### MethodDeclaration `Read` · L1606–1606
 
-[Drilling.Common/Automation/CAutomationManager.cs:1606–1606](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1606-L1606)
+[Drilling.Common/Automation/CAutomationManager.cs:1606–1606](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1606-L1606)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8403,9 +8406,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1545–1545](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1545-L1545) | Read | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1569–1569](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1569-L1569) | Read | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1610–1610](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1610-L1610) | Read | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1545–1545](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1545-L1545) | Read | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1569–1569](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1569-L1569) | Read | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1610–1610](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1610-L1610) | Read | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8423,7 +8426,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadReady` · L1607–1618
 
-[Drilling.Common/Automation/CAutomationManager.cs:1607–1618](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1607-L1618)
+[Drilling.Common/Automation/CAutomationManager.cs:1607–1618](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1607-L1618)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8443,8 +8446,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1554–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1554-L1554) | ReadReady | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1572–1572](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1572-L1572) | ReadReady | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1554–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1554-L1554) | ReadReady | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1572–1572](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1572-L1572) | ReadReady | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8489,7 +8492,7 @@ flowchart TD
 
 ### MethodDeclaration `WaitUntil` · L1620–1633
 
-[Drilling.Common/Automation/CAutomationManager.cs:1620–1633](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1620-L1633)
+[Drilling.Common/Automation/CAutomationManager.cs:1620–1633](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1620-L1633)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8510,8 +8513,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1554–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1554-L1554) | WaitUntil | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1567–1574](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1567-L1574) | WaitUntil | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1554–1554](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1554-L1554) | WaitUntil | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1567–1574](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1567-L1574) | WaitUntil | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8570,7 +8573,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureResponse` · L1635–1639
 
-[Drilling.Common/Automation/CAutomationManager.cs:1635–1639](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1635-L1639)
+[Drilling.Common/Automation/CAutomationManager.cs:1635–1639](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1635-L1639)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8590,8 +8593,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1562–1562](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1562-L1562) | EnsureResponse | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1584–1584](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1584-L1584) | EnsureResponse | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1562–1562](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1562-L1562) | EnsureResponse | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1584–1584](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1584-L1584) | EnsureResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8624,7 +8627,7 @@ flowchart TD
 
 ### PropertyDeclaration `Units` · L1645–1645
 
-[Drilling.Common/Automation/CAutomationManager.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1645-L1645)
+[Drilling.Common/Automation/CAutomationManager.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1645-L1645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8639,7 +8642,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Units` · L1645–1645
 
-[Drilling.Common/Automation/CAutomationManager.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1645-L1645)
+[Drilling.Common/Automation/CAutomationManager.cs:1645–1645](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1645-L1645)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8654,7 +8657,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L1647–1655
 
-[Drilling.Common/Automation/CAutomationManager.cs:1647–1655](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1647-L1655)
+[Drilling.Common/Automation/CAutomationManager.cs:1647–1655](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1647-L1655)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8674,10 +8677,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1171–1171](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1171-L1171) | new CConfiguredHomeSpeedValues | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1173-L1173) | new CConfiguredHomeSpeedValues | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1184–1184](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1184-L1184) | new CConfiguredHomeSpeedValues | False |
-| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L325-L325) | new CConfiguredHomeSpeedValues | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1171–1171](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1171-L1171) | new CConfiguredHomeSpeedValues | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1173–1173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1173-L1173) | new CConfiguredHomeSpeedValues | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1184–1184](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1184-L1184) | new CConfiguredHomeSpeedValues | False |
+| [Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationStatusSnapshotService.cs#L325-L325) | new CConfiguredHomeSpeedValues | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8725,7 +8728,7 @@ flowchart TD
 
 ### MethodDeclaration `FromAnalogInput` · L1660–1664
 
-[Drilling.Common/Automation/CAutomationManager.cs:1660–1664](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1660-L1664)
+[Drilling.Common/Automation/CAutomationManager.cs:1660–1664](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1660-L1664)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8744,7 +8747,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:943–943](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L943-L943) | CGalvoTemperature.FromAnalogInput | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:941–941](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L941-L941) | CGalvoTemperature.FromAnalogInput | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8764,7 +8767,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatCelsius` · L1666–1669
 
-[Drilling.Common/Automation/CAutomationManager.cs:1666–1669](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1666-L1669)
+[Drilling.Common/Automation/CAutomationManager.cs:1666–1669](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1666-L1669)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8783,8 +8786,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:3043–3043](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L3043-L3043) | CGalvoTemperature.FormatCelsius | False |
-| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L224-L224) | CGalvoTemperature.FormatCelsius | False |
+| [Drilling.Common/Station/CStationProcess.cs:3047–3047](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3047-L3047) | CGalvoTemperature.FormatCelsius | False |
+| [Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CScannerStatusSnapshotReader.cs#L224-L224) | CGalvoTemperature.FormatCelsius | False |
 
 호출하는 대상과 해석 범위:
 
@@ -8806,7 +8809,7 @@ flowchart TD
 
 ### FieldDeclaration `_gate` · L1675–1675
 
-[Drilling.Common/Automation/CAutomationManager.cs:1675–1675](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1675-L1675)
+[Drilling.Common/Automation/CAutomationManager.cs:1675–1675](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1675-L1675)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8834,7 +8837,7 @@ flowchart TD
 
 ### FieldDeclaration `_generation` · L1676–1676
 
-[Drilling.Common/Automation/CAutomationManager.cs:1676–1676](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1676-L1676)
+[Drilling.Common/Automation/CAutomationManager.cs:1676–1676](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1676-L1676)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8849,7 +8852,7 @@ flowchart TD
 
 ### FieldDeclaration `_stopJog` · L1677–1677
 
-[Drilling.Common/Automation/CAutomationManager.cs:1677–1677](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1677-L1677)
+[Drilling.Common/Automation/CAutomationManager.cs:1677–1677](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1677-L1677)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8862,9 +8865,39 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Generation` · L1678–1678
+### FieldDeclaration `_activeOperations` · L1678–1678
 
-[Drilling.Common/Automation/CAutomationManager.cs:1678–1678](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1678-L1678)
+[Drilling.Common/Automation/CAutomationManager.cs:1678–1678](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1678-L1678)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | int Drilling.Common.Automation.CManualMotionSession._activeOperations |
+| 접근/수식자 | Private / private |
+| 반환/값 타입 | int |
+| 소속 타입 | NamedType:Drilling.Common.Automation.CManualMotionSession |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### FieldDeclaration `_jogActive` · L1679–1679
+
+[Drilling.Common/Automation/CAutomationManager.cs:1679–1679](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1679-L1679)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | int Drilling.Common.Automation.CManualMotionSession._jogActive |
+| 접근/수식자 | Private / private |
+| 반환/값 타입 | int |
+| 소속 타입 | NamedType:Drilling.Common.Automation.CManualMotionSession |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### PropertyDeclaration `Generation` · L1680–1680
+
+[Drilling.Common/Automation/CAutomationManager.cs:1680–1680](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1680-L1680)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8879,19 +8912,48 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1678 | Interlocked.Read | resolved | long System.Threading.Interlocked.Read(ref readonly long) |
+| 1680 | Interlocked.Read | resolved | long System.Threading.Interlocked.Read(ref readonly long) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1678 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Read(ref _generation) |
+| 1680 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Read(ref _generation) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Invalidate` · L1680–1680
+### PropertyDeclaration `IsActive` · L1681–1681
 
-[Drilling.Common/Automation/CAutomationManager.cs:1680–1680](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1680-L1680)
+[Drilling.Common/Automation/CAutomationManager.cs:1681–1681](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1681-L1681)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | bool Drilling.Common.Automation.CManualMotionSession.IsActive |
+| 접근/수식자 | Public / public |
+| 반환/값 타입 | bool |
+| 소속 타입 | NamedType:Drilling.Common.Automation.CManualMotionSession |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 1681 | Volatile.Read | resolved | int System.Threading.Volatile.Read(ref readonly int) |
+| 1681 | Volatile.Read | resolved | int System.Threading.Volatile.Read(ref readonly int) |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 1681 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _activeOperations) |
+| 1681 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _jogActive) |
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### MethodDeclaration `Invalidate` · L1683–1683
+
+[Drilling.Common/Automation/CAutomationManager.cs:1683–1683](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1683-L1683)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8904,27 +8966,27 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1702–1702](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1702-L1702) | Invalidate | False |
-| [Drilling.Common/Automation/CAutomationManager.cs:1719–1719](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1719-L1719) | Invalidate | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3417–3417](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3417-L3417) | MotionSession.Invalidate | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1715–1715](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1715-L1715) | Invalidate | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1733–1733](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1733-L1733) | Invalidate | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3425–3425](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3425-L3425) | MotionSession.Invalidate | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1680 | Interlocked.Increment | resolved | long System.Threading.Interlocked.Increment(ref long) |
+| 1683 | Interlocked.Increment | resolved | long System.Threading.Interlocked.Increment(ref long) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1680 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Increment(ref _generation) |
+| 1683 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Increment(ref _generation) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Execute` · L1681–1698
+### MethodDeclaration `Execute` · L1684–1711
 
-[Drilling.Common/Automation/CAutomationManager.cs:1681–1698](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1681-L1698)
+[Drilling.Common/Automation/CAutomationManager.cs:1684–1711](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1684-L1711)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -8945,57 +9007,72 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3525–3540](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3525-L3540) | MotionSession.Execute | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3564–3570](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3564-L3570) | MotionSession.Execute | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3676–3699](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3676-L3699) | MotionSession.Execute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3533–3548](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3533-L3548) | MotionSession.Execute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3572–3578](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3572-L3578) | MotionSession.Execute | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3684–3707](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3684-L3707) | MotionSession.Execute | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1683 | _gate.WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync() |
-| 1689 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
-| 1692 | action | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
-| 1696 | _gate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
+| 1686 | Interlocked.Increment | resolved | int System.Threading.Interlocked.Increment(ref int) |
+| 1689 | _gate.WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync() |
+| 1695 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
+| 1699 | Volatile.Write | resolved | void System.Threading.Volatile.Write(ref int, int) |
+| 1700 | action | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 1704 | _gate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
+| 1709 | Interlocked.Decrement | resolved | int System.Threading.Interlocked.Decrement(ref int) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1683 | await | 비동기 완료를 기다립니다: await _gate.WaitAsync() |
-| 1683 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync() |
-| 1684 | try | 예외 처리 범위입니다: try |
-| 1686 | if | 조건에 따라 분기합니다: if (generation != Generation) |
-| 1687 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 1688 | if | 조건에 따라 분기합니다: if (_stopJog is not null) |
-| 1689 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("JOG를 먼저 정지해 주세요.") |
-| 1689 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException("JOG를 먼저 정지해 주세요."); |
-| 1691 | assignment | 값을 대상에 대입합니다: _stopJog = stopJog |
-| 1692 | await | 비동기 완료를 기다립니다: await action() |
-| 1692 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: action() |
-| 1694 | finally | 종료 정리 구간입니다: finally |
-| 1696 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.Release() |
+| 1686 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Increment(ref _activeOperations) |
+| 1687 | try | 예외 처리 범위입니다: try |
+| 1689 | await | 비동기 완료를 기다립니다: await _gate.WaitAsync() |
+| 1689 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync() |
+| 1690 | try | 예외 처리 범위입니다: try |
+| 1692 | if | 조건에 따라 분기합니다: if (generation != Generation) |
+| 1693 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 1694 | if | 조건에 따라 분기합니다: if (_stopJog is not null) |
+| 1695 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("JOG를 먼저 정지해 주세요.") |
+| 1695 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException("JOG를 먼저 정지해 주세요."); |
+| 1697 | assignment | 값을 대상에 대입합니다: _stopJog = stopJog |
+| 1698 | if | 조건에 따라 분기합니다: if (stopJog is not null) |
+| 1699 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _jogActive, 1) |
+| 1700 | await | 비동기 완료를 기다립니다: await action() |
+| 1700 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: action() |
+| 1702 | finally | 종료 정리 구간입니다: finally |
+| 1704 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.Release() |
+| 1707 | finally | 종료 정리 구간입니다: finally |
+| 1709 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Decrement(ref _activeOperations) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["Execute"]
- N0["L1684 try"]
+ N0["L1687 try"]
  M -->|포함| N0
- N1["L1686 if"]
+ N1["L1690 try"]
  N0 -->|포함| N1
- N2["L1688 if"]
- N0 -->|포함| N2
- N3["L1694 finally"]
- N0 -->|포함| N3
+ N2["L1692 if"]
+ N1 -->|포함| N2
+ N3["L1694 if"]
+ N1 -->|포함| N3
+ N4["L1698 if"]
+ N1 -->|포함| N4
+ N5["L1702 finally"]
+ N1 -->|포함| N5
+ N6["L1707 finally"]
+ N0 -->|포함| N6
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StopJog` · L1700–1715
+### MethodDeclaration `StopJog` · L1713–1729
 
-[Drilling.Common/Automation/CAutomationManager.cs:1700–1715](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1700-L1715)
+[Drilling.Common/Automation/CAutomationManager.cs:1713–1729](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1713-L1729)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9008,51 +9085,53 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3424–3424](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3424-L3424) | MotionSession.StopJog | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3432–3432](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3432-L3432) | MotionSession.StopJog | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1702 | Invalidate | resolved | void Drilling.Common.Automation.CManualMotionSession.Invalidate() · Drilling.Common/Automation/CAutomationManager.cs:1680 |
-| 1703 | _gate.WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync() |
-| 1708 | _stopJog | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
-| 1713 | _gate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
+| 1715 | Invalidate | resolved | void Drilling.Common.Automation.CManualMotionSession.Invalidate() · Drilling.Common/Automation/CAutomationManager.cs:1683 |
+| 1716 | _gate.WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync() |
+| 1721 | _stopJog | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 1723 | Volatile.Write | resolved | void System.Threading.Volatile.Write(ref int, int) |
+| 1727 | _gate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1702 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalidate() |
-| 1703 | await | 비동기 완료를 기다립니다: await _gate.WaitAsync() |
-| 1703 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync() |
-| 1704 | try | 예외 처리 범위입니다: try |
-| 1706 | if | 조건에 따라 분기합니다: if (_stopJog is null) |
-| 1707 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 1708 | await | 비동기 완료를 기다립니다: await _stopJog() |
-| 1708 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopJog() |
-| 1709 | assignment | 값을 대상에 대입합니다: _stopJog = null |
-| 1711 | finally | 종료 정리 구간입니다: finally |
-| 1713 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.Release() |
+| 1715 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalidate() |
+| 1716 | await | 비동기 완료를 기다립니다: await _gate.WaitAsync() |
+| 1716 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync() |
+| 1717 | try | 예외 처리 범위입니다: try |
+| 1719 | if | 조건에 따라 분기합니다: if (_stopJog is null) |
+| 1720 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 1721 | await | 비동기 완료를 기다립니다: await _stopJog() |
+| 1721 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopJog() |
+| 1722 | assignment | 값을 대상에 대입합니다: _stopJog = null |
+| 1723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _jogActive, 0) |
+| 1725 | finally | 종료 정리 구간입니다: finally |
+| 1727 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.Release() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["StopJog"]
- N0["L1704 try"]
+ N0["L1717 try"]
  M -->|포함| N0
- N1["L1706 if"]
+ N1["L1719 if"]
  N0 -->|포함| N1
- N2["L1711 finally"]
+ N2["L1725 finally"]
  N0 -->|포함| N2
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StopAll` · L1717–1753
+### MethodDeclaration `StopAll` · L1731–1768
 
-[Drilling.Common/Automation/CAutomationManager.cs:1717–1753](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1717-L1753)
+[Drilling.Common/Automation/CAutomationManager.cs:1731–1768](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1731-L1768)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9071,80 +9150,82 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3585–3627](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3585-L3627) | MotionSession.StopAll | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6348–6373](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6348-L6373) | _motionSession.StopAll | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3593–3635](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3593-L3635) | MotionSession.StopAll | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6356–6381](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6356-L6381) | _motionSession.StopAll | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1719 | Invalidate | resolved | void Drilling.Common.Automation.CManualMotionSession.Invalidate() · Drilling.Common/Automation/CAutomationManager.cs:1680 |
-| 1720 | _gate.WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync() |
-| 1723 | new List<Exception> | resolved | System.Collections.Generic.List<System.Exception>.List() |
-| 1728 | _stopJog | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
-| 1734 | errors.Add | resolved | void System.Collections.Generic.List<System.Exception>.Add(System.Exception) |
-| 1739 | stopAll | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
-| 1743 | errors.Add | resolved | void System.Collections.Generic.List<System.Exception>.Add(System.Exception) |
-| 1747 | new AggregateException | resolved | System.AggregateException.AggregateException(System.Collections.Generic.IEnumerable<System.Exception>) |
-| 1751 | _gate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
+| 1733 | Invalidate | resolved | void Drilling.Common.Automation.CManualMotionSession.Invalidate() · Drilling.Common/Automation/CAutomationManager.cs:1683 |
+| 1734 | _gate.WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.SemaphoreSlim.WaitAsync() |
+| 1737 | new List<Exception> | resolved | System.Collections.Generic.List<System.Exception>.List() |
+| 1742 | _stopJog | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 1744 | Volatile.Write | resolved | void System.Threading.Volatile.Write(ref int, int) |
+| 1749 | errors.Add | resolved | void System.Collections.Generic.List<System.Exception>.Add(System.Exception) |
+| 1754 | stopAll | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
+| 1758 | errors.Add | resolved | void System.Collections.Generic.List<System.Exception>.Add(System.Exception) |
+| 1762 | new AggregateException | resolved | System.AggregateException.AggregateException(System.Collections.Generic.IEnumerable<System.Exception>) |
+| 1766 | _gate.Release | resolved | int System.Threading.SemaphoreSlim.Release() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1719 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalidate() |
-| 1720 | await | 비동기 완료를 기다립니다: await _gate.WaitAsync() |
-| 1720 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync() |
-| 1721 | try | 예외 처리 범위입니다: try |
-| 1723 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<Exception>() |
-| 1723 | local-declaration | 지역 변수를 선언합니다: var errors = new List<Exception>(); |
-| 1723 | variable-initializer | 변수의 초기값을 지정합니다: errors = new List<Exception>() |
-| 1724 | try | 예외 처리 범위입니다: try |
-| 1726 | if | 조건에 따라 분기합니다: if (_stopJog is not null) |
-| 1728 | await | 비동기 완료를 기다립니다: await _stopJog() |
-| 1728 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopJog() |
-| 1729 | assignment | 값을 대상에 대입합니다: _stopJog = null |
-| 1732 | catch | 지정 예외를 처리합니다: catch (Exception exception) |
-| 1734 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add(exception) |
-| 1737 | try | 예외 처리 범위입니다: try |
-| 1739 | await | 비동기 완료를 기다립니다: await stopAll() |
-| 1739 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: stopAll() |
-| 1741 | catch | 지정 예외를 처리합니다: catch (Exception exception) |
-| 1743 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add(exception) |
-| 1746 | if | 조건에 따라 분기합니다: if (errors.Count > 0) |
-| 1747 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new AggregateException(errors) |
-| 1747 | throw | 예외를 발생/전달합니다: throw new AggregateException(errors); |
-| 1749 | finally | 종료 정리 구간입니다: finally |
-| 1751 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.Release() |
+| 1733 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Invalidate() |
+| 1734 | await | 비동기 완료를 기다립니다: await _gate.WaitAsync() |
+| 1734 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.WaitAsync() |
+| 1735 | try | 예외 처리 범위입니다: try |
+| 1737 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<Exception>() |
+| 1737 | local-declaration | 지역 변수를 선언합니다: var errors = new List<Exception>(); |
+| 1737 | variable-initializer | 변수의 초기값을 지정합니다: errors = new List<Exception>() |
+| 1738 | try | 예외 처리 범위입니다: try |
+| 1740 | if | 조건에 따라 분기합니다: if (_stopJog is not null) |
+| 1742 | await | 비동기 완료를 기다립니다: await _stopJog() |
+| 1742 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _stopJog() |
+| 1743 | assignment | 값을 대상에 대입합니다: _stopJog = null |
+| 1744 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _jogActive, 0) |
+| 1747 | catch | 지정 예외를 처리합니다: catch (Exception exception) |
+| 1749 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add(exception) |
+| 1752 | try | 예외 처리 범위입니다: try |
+| 1754 | await | 비동기 완료를 기다립니다: await stopAll() |
+| 1754 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: stopAll() |
+| 1756 | catch | 지정 예외를 처리합니다: catch (Exception exception) |
+| 1758 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add(exception) |
+| 1761 | if | 조건에 따라 분기합니다: if (errors.Count > 0) |
+| 1762 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new AggregateException(errors) |
+| 1762 | throw | 예외를 발생/전달합니다: throw new AggregateException(errors); |
+| 1764 | finally | 종료 정리 구간입니다: finally |
+| 1766 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _gate.Release() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["StopAll"]
- N0["L1721 try"]
+ N0["L1735 try"]
  M -->|포함| N0
- N1["L1724 try"]
+ N1["L1738 try"]
  N0 -->|포함| N1
- N2["L1726 if"]
+ N2["L1740 if"]
  N1 -->|포함| N2
- N3["L1732 catch"]
+ N3["L1747 catch"]
  N1 -->|포함| N3
- N4["L1737 try"]
+ N4["L1752 try"]
  N0 -->|포함| N4
- N5["L1741 catch"]
+ N5["L1756 catch"]
  N4 -->|포함| N5
- N6["L1746 if"]
+ N6["L1761 if"]
  N0 -->|포함| N6
- N7["L1749 finally"]
+ N7["L1764 finally"]
  N0 -->|포함| N7
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_lastRunId` · L1761–1761
+### FieldDeclaration `_lastRunId` · L1776–1776
 
-[Drilling.Common/Automation/CAutomationManager.cs:1761–1761](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1761-L1761)
+[Drilling.Common/Automation/CAutomationManager.cs:1776–1776](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1776-L1776)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9159,20 +9240,20 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1761 | DateTimeOffset.UtcNow.ToUnixTimeMilliseconds | resolved | long System.DateTimeOffset.ToUnixTimeMilliseconds() |
+| 1776 | DateTimeOffset.UtcNow.ToUnixTimeMilliseconds | resolved | long System.DateTimeOffset.ToUnixTimeMilliseconds() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1761 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() |
-| 1761 | variable-initializer | 변수의 초기값을 지정합니다: _lastRunId = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() * 1000 |
+| 1776 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() |
+| 1776 | variable-initializer | 변수의 초기값을 지정합니다: _lastRunId = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() * 1000 |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CreateRunId` · L1762–1762
+### MethodDeclaration `CreateRunId` · L1777–1777
 
-[Drilling.Common/Automation/CAutomationManager.cs:1762–1762](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1762-L1762)
+[Drilling.Common/Automation/CAutomationManager.cs:1777–1777](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1777-L1777)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9185,25 +9266,25 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Script/CAutomation1ScriptFile.cs#L55-L55) | CMofReadiness.CreateRunId | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L56-L56) | CMofReadiness.CreateRunId | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1762 | Interlocked.Increment | resolved | long System.Threading.Interlocked.Increment(ref long) |
+| 1777 | Interlocked.Increment | resolved | long System.Threading.Interlocked.Increment(ref long) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1762 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Increment(ref _lastRunId) |
+| 1777 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Increment(ref _lastRunId) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `VariableIndex` · L1763–1768
+### MethodDeclaration `VariableIndex` · L1778–1783
 
-[Drilling.Common/Automation/CAutomationManager.cs:1763–1768](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1763-L1768)
+[Drilling.Common/Automation/CAutomationManager.cs:1778–1783](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1778-L1783)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9222,40 +9303,40 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Automation/CAutomationManager.cs:1257–1257](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1257-L1257) | CMofReadiness.VariableIndex | False |
-| [Drilling.File/Script/CAutomation1ScriptFile.cs:437–437](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.File/Script/CAutomation1ScriptFile.cs#L437-L437) | CMofReadiness.VariableIndex | False |
+| [Drilling.Common/Automation/CAutomationManager.cs:1256–1256](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1256-L1256) | CMofReadiness.VariableIndex | False |
+| [Drilling.File/Script/CAutomation1ScriptFile.cs:439–439](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Script/CAutomation1ScriptFile.cs#L439-L439) | CMofReadiness.VariableIndex | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1766 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?) |
-| 1766 | nameof | unresolved | None |
+| 1781 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?) |
+| 1781 | nameof | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1765 | if | 조건에 따라 분기합니다: if (task < 1) |
-| 1766 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(task)) |
-| 1766 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(task) |
-| 1766 | throw | 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(task)); |
-| 1767 | return | 호출자에게 값 또는 제어를 반환합니다: return task - 1; |
+| 1780 | if | 조건에 따라 분기합니다: if (task < 1) |
+| 1781 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(task)) |
+| 1781 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(task) |
+| 1781 | throw | 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(task)); |
+| 1782 | return | 호출자에게 값 또는 제어를 반환합니다: return task - 1; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["VariableIndex"]
- N0["L1765 if"]
+ N0["L1780 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `VariableIndex` · L1770–1777
+### MethodDeclaration `VariableIndex` · L1785–1792
 
-[Drilling.Common/Automation/CAutomationManager.cs:1770–1777](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Automation/CAutomationManager.cs#L1770-L1777)
+[Drilling.Common/Automation/CAutomationManager.cs:1785–1792](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1785-L1792)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -9275,37 +9356,37 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:1905–1905](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L1905-L1905) | CMofReadiness.VariableIndex | False |
+| [Drilling.Common/Interface/Automation1/CAutomation1Comm.cs:1905–1905](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Automation1/CAutomation1Comm.cs#L1905-L1905) | CMofReadiness.VariableIndex | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 1773 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
-| 1775 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?, object?, string?) |
-| 1775 | nameof | unresolved | None |
+| 1788 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
+| 1790 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?, object?, string?) |
+| 1790 | nameof | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 1772 | if | 조건에 따라 분기합니다: if (controllerTaskCount < 1) |
-| 1773 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Automation1 controller has no available Tasks.") |
-| 1773 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException("Automation1 controller has no available Tasks."); |
-| 1774 | if | 조건에 따라 분기합니다: if (task < 1 &#124;&#124; task > controllerTaskCount) |
-| 1775 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(task), task, $"Automation1 Task index is out of range. Range=1~{controllerTaskCount}") |
-| 1775 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(task) |
-| 1775 | throw | 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(task), task, $"Automation1 Task index is out of range. Range=1~{controllerTaskCount}"); |
-| 1776 | return | 호출자에게 값 또는 제어를 반환합니다: return task - 1; |
+| 1787 | if | 조건에 따라 분기합니다: if (controllerTaskCount < 1) |
+| 1788 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException("Automation1 controller has no available Tasks.") |
+| 1788 | throw | 예외를 발생/전달합니다: throw new InvalidOperationException("Automation1 controller has no available Tasks."); |
+| 1789 | if | 조건에 따라 분기합니다: if (task < 1 &#124;&#124; task > controllerTaskCount) |
+| 1790 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(task), task, $"Automation1 Task index is out of range. Range=1~{controllerTaskCount}") |
+| 1790 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(task) |
+| 1790 | throw | 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(task), task, $"Automation1 Task index is out of range. Range=1~{controllerTaskCount}"); |
+| 1791 | return | 호출자에게 값 또는 제어를 반환합니다: return task - 1; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["VariableIndex"]
- N0["L1772 if"]
+ N0["L1787 if"]
  M -->|포함| N0
- N1["L1774 if"]
+ N1["L1789 if"]
  M -->|포함| N1
 ```
 

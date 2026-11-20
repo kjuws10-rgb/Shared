@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "a3-architecture-validation/1",
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "baselineCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+  "status": "passed",
+  "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+  "sourceBranch": "master",
+  "referenceCoverage": {
+    "trackedFiles": 699,
+    "filePages": 699,
+    "byKind": {
+      "build_or_reference": 10,
+      "data_schema": 335,
+      "code": 342,
+      "binary_reference": 12
+    },
+    "csharpFiles": 157,
+    "typeCount": 931,
+    "memberCount": 16360,
+    "callSites": 42608,
+    "sourceLines": 1932665,
+    "annotatedFiles": 352,
+    "ragRecords": 32001
+  },
+  "staticReference": {
+    "passed": true,
+    "assertions": 1090367,
+    "validatorVersion": "1.1.3"
+  },
+  "independentStatic": {
+    "passed": true,
+    "assertions": 888671
+  },
+  "report": {
+    "schemaVersion": "a3-architecture-report-validation/1",
+    "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+    "baselineCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+    "passed": true,
+    "counts": {
+      "assertions": 388,
+      "files": 12,
+      "localLinks": 20,
+      "uniqueSourceCitations": 78
+    },
+    "errors": [],
+    "equipmentBuild": "not_run",
+    "equipmentExecution": "not_run",
+    "scope": "New architecture report only; UTF8/JSON/SVG/fences/local navigation/private path exclusion and fixed-Commit source file/line verification."
+  },
+  "offlineBrowser": {
+    "passed": true,
+    "initialSnapshotChecks": 56,
+    "targetedHtmlRepairChecks": 14,
+    "note": "The targeted14 follow the single manual HTML repair; no manual/RAG source changes."
+  },
+  "manualDerived": {
+    "passed": true,
+    "checks": 116
+  },
+  "toolRegression": {
+    "dotnetSelfTest": 18,
+    "pythonTests": 11,
+    "passed": true
+  },
+  "pureCodeRegression": {
+    "margin": 34,
+    "marginShots": 20740,
+    "marginCells": 45,
+    "review": 23,
+    "passed": true,
+    "scope": "Copied pure source and file writer contracts in separate consoles, not WPF/equipment simulation."
+  },
+  "sourcePreservation": {
+    "trackedFiles": 699,
+    "shaHeadStatusUnchanged": true,
+    "pushUrl": "DISABLED"
+  },
+  "equipmentBuild": "not_run",
+  "equipmentExecution": "not_run",
+  "vendorBinariesLoaded": false,
+  "equipmentScriptsExecuted": false,
+  "modelWeightTraining": "not_run",
+  "modelInferenceAccuracy": "not_tested",
+  "gitDiffCheck": "passed",
+  "privateWorkspacePublished": false,
+  "operationalCsvRecordsPublished": false,
+  "credentialValuesPublished": false,
+  "sourceLinksPinnedToLatestCommit": true,
+  "details": "../A3%20LD%20Code%20Ref/validation/README.md",
+  "passed": true
+}

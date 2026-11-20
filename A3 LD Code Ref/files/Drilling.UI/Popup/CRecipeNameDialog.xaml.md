@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
-| 원본 SHA256 | 643888260da87f4873c1efbb7fb78a727f3cbf933acc2e2df71eca6d439e3aca |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 SHA256 | a79490cb778bdda195db4367f6c3941e6a4a140c580ad0795292885dba1c44c0 |
 | 파일 분류 | code |
-| 원본 크기/행 | 5,354 bytes / 117 physical lines |
+| 원본 크기/행 | 5,398 bytes / 118 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CRecipeNameDialog.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CRecipeNameDialog.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -32,17 +32,17 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- |
 | TitleText | L56–56 |
 | MessageText | L62–62 |
-| RecipeNameTextBox | L68–68 |
-| ErrorText | L84–84 |
-| OkButton | L98–98 |
+| RecipeNameTextBox | L69–69 |
+| ErrorText | L85–85 |
+| OkButton | L99–99 |
 
 | 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
 | --- | --- | --- | --- |
-| PreviewMouseLeftButtonDown | OpenScreenKeyboard | L80–80 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| TextChanged | OnRecipeNameTextChanged | L81–81 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| KeyDown | OnRecipeNameKeyDown | L82–82 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | OnOkClicked | L104–104 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | OnCancelClicked | L111–111 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenScreenKeyboard | L81–81 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| TextChanged | OnRecipeNameTextChanged | L82–82 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| KeyDown | OnRecipeNameKeyDown | L83–83 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | OnOkClicked | L105–105 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | OnCancelClicked | L112–112 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 
 | Binding 표현 | 원본 범위 |
 | --- | --- |

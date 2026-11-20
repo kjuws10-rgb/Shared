@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | 0d6e2a5a06d85d5eb080923fa2ce8f837d2ecdf3da6f45ae7c489026fcbef15f |
 | 파일 분류 | code |
 | 원본 크기/행 | 18,362 bytes / 486 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -101,7 +101,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `HeadCount` · L11–11
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L11-L11)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -122,7 +122,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `LoopInterval` · L12–12
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L12-L12)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -150,7 +150,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ActiveInterval` · L13–13
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L13-L13)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -178,7 +178,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `ActivePowerMeterMeasureInterval` · L14–14
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L14-L14)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -206,7 +206,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `SlowSafetyInterval` · L15–15
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L15-L15)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -234,7 +234,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `CommunicationInterval` · L16–16
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L16-L16)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -262,7 +262,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_contextLock` · L17–17
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L17-L17)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -290,7 +290,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_snapshotLock` · L18–18
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L18-L18)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -318,7 +318,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isActive` · L19–19
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L19-L19)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -333,7 +333,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_motorPollLock` · L20–20
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L20-L20)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -361,7 +361,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_context` · L21–21
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L21-L21)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -382,7 +382,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_snapshot` · L22–22
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L22-L22)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -403,7 +403,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastCommunicationPoll` · L23–23
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L23-L23)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -424,7 +424,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastSuccessfulMotorPollTimestamp` · L24–24
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L24-L24)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L24-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -439,7 +439,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastLaserPoll` · L25–25
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L25-L25)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -460,7 +460,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastAttenuatorPoll` · L26–26
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L26-L26)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -481,7 +481,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastBetPoll` · L27–27
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L27-L27)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -502,7 +502,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastPowerMeterPoll` · L28–28
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L28-L28)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -523,7 +523,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastPicoMotorPoll` · L29–29
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L29-L29)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -544,7 +544,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_communicationPollRunning` · L30–30
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L30-L30)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -559,7 +559,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_activeDevicePollRunning` · L31–31
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L31-L31)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -574,7 +574,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `Start` · L32–35
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:32–35](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L32-L35)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:32–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L32-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -587,8 +587,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:748–748](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L748-L748) | _statusPollingService.Start | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:916–916](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L916-L916) | _statusPollingService.Start | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:748–748](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L748-L748) | _statusPollingService.Start | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:916–916](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L916-L916) | _statusPollingService.Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -606,7 +606,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `UpdateContext` · L37–44
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:37–44](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L37-L44)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:37–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L37-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -629,7 +629,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:1120–1120](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1120-L1120) | _statusPollingService.UpdateContext | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:1120–1120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1120-L1120) | _statusPollingService.UpdateContext | False |
 
 호출하는 대상과 해석 범위:
 
@@ -670,7 +670,7 @@ flowchart TD
 
 ### MethodDeclaration `SetActive` · L46–52
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:46–52](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L46-L52)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:46–52](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L46-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -689,8 +689,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:722–722](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L722-L722) | _statusPollingService.SetActive | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:2628–2628](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2628-L2628) | _statusPollingService.SetActive | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:722–722](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L722-L722) | _statusPollingService.SetActive | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:2628–2628](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L2628-L2628) | _statusPollingService.SetActive | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -712,7 +712,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSnapshot` · L54–60
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:54–60](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L54-L60)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:54–60](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L54-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -725,11 +725,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:749–749](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L749-L749) | _statusPollingService.GetSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:917–917](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L917-L917) | _statusPollingService.GetSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3072–3072](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3072-L3072) | _statusPollingService.GetSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:5752–5752](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L5752-L5752) | _statusPollingService.GetSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L413-L413) | GetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:749–749](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L749-L749) | _statusPollingService.GetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:917–917](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L917-L917) | _statusPollingService.GetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3072–3072](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3072-L3072) | _statusPollingService.GetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:5752–5752](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L5752-L5752) | _statusPollingService.GetSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L413-L413) | GetSnapshot | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -751,7 +751,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshMelsecNow` · L62–62
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L62-L62)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L62-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -764,7 +764,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3071–3071](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3071-L3071) | _statusPollingService.RefreshMelsecNow | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:3071–3071](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L3071-L3071) | _statusPollingService.RefreshMelsecNow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -784,7 +784,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshMotorNow` · L64–67
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:64–67](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L64-L67)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:64–67](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L64-L67)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -803,7 +803,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:1319–1319](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1319-L1319) | _statusPollingService.RefreshMotorNow | False |
+| [Drilling.UI/Menu/Menus/CMenuMonitor.cs:1319–1319](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMonitor.cs#L1319-L1319) | _statusPollingService.RefreshMotorNow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -821,7 +821,7 @@ flowchart TD
 
 ### MethodDeclaration `Run` · L69–72
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:69–72](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L69-L72)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:69–72](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L69-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -848,7 +848,7 @@ flowchart TD
 
 ### MethodDeclaration `PollDue` · L74–137
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:74–137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L74-L137)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:74–137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L74-L137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -867,7 +867,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L71-L71) | PollDue | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L71-L71) | PollDue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -955,7 +955,7 @@ flowchart TD
 
 ### LocalFunctionStatement `PollLaserCallback` · L83–86
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:83–86](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L83-L86)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:83–86](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L83-L86)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -988,7 +988,7 @@ flowchart TD
 
 ### LocalFunctionStatement `PollAttenuatorCallback` · L88–91
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:88–91](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L88-L91)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:88–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L88-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1021,7 +1021,7 @@ flowchart TD
 
 ### LocalFunctionStatement `PollBetCallback` · L93–96
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:93–96](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L93-L96)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:93–96](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L93-L96)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1054,7 +1054,7 @@ flowchart TD
 
 ### LocalFunctionStatement `PollMelsecCallback` · L98–101
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:98–101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L98-L101)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:98–101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L98-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1087,7 +1087,7 @@ flowchart TD
 
 ### MethodDeclaration `TryPoll` · L139–148
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:139–148](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L139-L148)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:139–148](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L139-L148)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1107,7 +1107,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L382-L382) | TryPoll | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:382–382](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L382-L382) | TryPoll | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1138,7 +1138,7 @@ flowchart TD
 
 ### MethodDeclaration `PollCommunication` · L150–162
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:150–162](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L150-L162)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:150–162](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L150-L162)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1175,7 +1175,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L153–159
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:153–159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L153-L159)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:153–159](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L153-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1203,7 +1203,7 @@ flowchart TD
 
 ### MethodDeclaration `PollMotorWhenDue` · L164–167
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:164–167](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L164-L167)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:164–167](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L164-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1236,7 +1236,7 @@ flowchart TD
 
 ### MethodDeclaration `PollMotorSerialized` · L169–186
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:169–186](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L169-L186)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:169–186](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L169-L186)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1256,8 +1256,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L66-L66) | PollMotorSerialized | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L166-L166) | PollMotorSerialized | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L66-L66) | PollMotorSerialized | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L166-L166) | PollMotorSerialized | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1303,7 +1303,7 @@ flowchart TD
 
 ### MethodDeclaration `PollMotorCore` · L188–203
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:188–203](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L188-L203)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:188–203](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L188-L203)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1322,7 +1322,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:179–179](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L179-L179) | PollMotorCore | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:179–179](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L179-L179) | PollMotorCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1344,7 +1344,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L191–200
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:191–200](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L191-L200)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:191–200](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L191-L200)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1373,7 +1373,7 @@ flowchart TD
 
 ### MethodDeclaration `PollLaser` · L205–222
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:205–222](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L205-L222)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:205–222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L205-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1393,7 +1393,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L85-L85) | PollLaser | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L85-L85) | PollLaser | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1419,7 +1419,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L209–219
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:209–219](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L209-L219)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:209–219](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L209-L219)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1449,7 +1449,7 @@ flowchart TD
 
 ### MethodDeclaration `PollAttenuator` · L224–239
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:224–239](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L224-L239)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:224–239](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L224-L239)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1469,7 +1469,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L90-L90) | PollAttenuator | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L90-L90) | PollAttenuator | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1491,7 +1491,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L227–236
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:227–236](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L227-L236)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:227–236](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L227-L236)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1520,7 +1520,7 @@ flowchart TD
 
 ### MethodDeclaration `PollBet` · L241–256
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:241–256](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L241-L256)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:241–256](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L241-L256)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1540,7 +1540,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L95-L95) | PollBet | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L95-L95) | PollBet | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1562,7 +1562,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L244–253
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:244–253](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L244-L253)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:244–253](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L244-L253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1591,7 +1591,7 @@ flowchart TD
 
 ### MethodDeclaration `PollPowerMeter` · L258–273
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:258–273](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L258-L273)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:258–273](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L258-L273)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1628,7 +1628,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L261–270
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:261–270](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L261-L270)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:261–270](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L261-L270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1657,7 +1657,7 @@ flowchart TD
 
 ### MethodDeclaration `PollPicoMotor` · L275–287
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:275–287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L275-L287)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:275–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L275-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1694,7 +1694,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L278–284
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:278–284](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L278-L284)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:278–284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L278-L284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1722,7 +1722,7 @@ flowchart TD
 
 ### MethodDeclaration `PollMelsec` · L289–321
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:289–321](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L289-L321)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:289–321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L289-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1742,14 +1742,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L62-L62) | PollMelsec | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L100-L100) | PollMelsec | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L62-L62) | PollMelsec | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L100-L100) | PollMelsec | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 291 | interfaceManager.Melsec.GetCachedSnapshot | resolved | System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE> Drilling.Common.Interface.CMelsec.GetCachedSnapshot(out System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>) · Drilling.Common/Interface/Melsec/CMelsec.cs:2538 |
+| 291 | interfaceManager.Melsec.GetCachedSnapshot | resolved | System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE> Drilling.Common.Interface.CMelsec.GetCachedSnapshot(out System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>) · Drilling.Common/Interface/Melsec/CMelsec.cs:2539 |
 | 292 | new Dictionary<string, ST_MONITOR_MELSEC_VALUE> | resolved | System.Collections.Generic.Dictionary<string, Drilling.UI.Menu.Menus.ST_MONITOR_MELSEC_VALUE>.Dictionary(System.Collections.Generic.IEqualityComparer<string>?) |
 | 293 | CreateMelsecPollingRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA> Drilling.UI.Menu.Menus.CMonitorStatusPollingService.CreateMelsecPollingRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>, string) · Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:323 |
 | 295 | cancellationToken.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
@@ -1823,7 +1823,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateMelsecPollingRows` · L323–346
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:323–346](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L323-L346)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:323–346](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L323-L346)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1843,7 +1843,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L293-L293) | CreateMelsecPollingRows | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L293-L293) | CreateMelsecPollingRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1901,7 +1901,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatMelsecValue` · L348–359
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:348–359](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L348-L359)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:348–359](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L348-L359)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1921,7 +1921,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L308-L308) | FormatMelsecValue | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L308-L308) | FormatMelsecValue | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1961,7 +1961,7 @@ flowchart TD
 
 ### MethodDeclaration `GetContext` · L361–367
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:361–367](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L361-L367)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:361–367](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L361-L367)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1974,8 +1974,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L62-L62) | GetContext | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L81-L81) | GetContext | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L62-L62) | GetContext | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L81-L81) | GetContext | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1997,7 +1997,7 @@ flowchart TD
 
 ### MethodDeclaration `SchedulePoll` · L369–396
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:369–396](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L369-L396)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:369–396](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L369-L396)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2017,13 +2017,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L105-L105) | SchedulePoll | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L111-L111) | SchedulePoll | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L114-L114) | SchedulePoll | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L117-L117) | SchedulePoll | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L120-L120) | SchedulePoll | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L126-L126) | SchedulePoll | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L129-L129) | SchedulePoll | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L105-L105) | SchedulePoll | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L111-L111) | SchedulePoll | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L114-L114) | SchedulePoll | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L117-L117) | SchedulePoll | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L120-L120) | SchedulePoll | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:126–126](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L126-L126) | SchedulePoll | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:129–129](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L129-L129) | SchedulePoll | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2076,7 +2076,7 @@ flowchart TD
 
 ### MethodDeclaration `IsActive` · L398–404
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:398–404](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L398-L404)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:398–404](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L398-L404)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2089,7 +2089,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L76-L76) | IsActive | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L76-L76) | IsActive | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2111,7 +2111,7 @@ flowchart TD
 
 ### MethodDeclaration `GetMotorInterval` · L406–409
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:406–409](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L406-L409)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:406–409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L406-L409)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2124,7 +2124,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L174-L174) | GetMotorInterval | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:174–174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L174-L174) | GetMotorInterval | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2137,7 +2137,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPowerMeterInterval` · L411–415
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:411–415](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L411-L415)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:411–415](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L411-L415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2150,7 +2150,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L122-L122) | GetPowerMeterInterval | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L122-L122) | GetPowerMeterInterval | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2172,7 +2172,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateSnapshot` · L417–423
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:417–423](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L417-L423)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:417–423](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L417-L423)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2191,14 +2191,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L161-L161) | UpdateSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L202-L202) | UpdateSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L221-L221) | UpdateSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L238-L238) | UpdateSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L255-L255) | UpdateSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L272-L272) | UpdateSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L286-L286) | UpdateSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L320-L320) | UpdateSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:161–161](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L161-L161) | UpdateSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L202-L202) | UpdateSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L221-L221) | UpdateSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L238-L238) | UpdateSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L255-L255) | UpdateSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:272–272](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L272-L272) | UpdateSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L286-L286) | UpdateSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L320-L320) | UpdateSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2227,7 +2227,7 @@ flowchart TD
 
 ### MethodDeclaration `IsDue` · L425–434
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:425–434](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L425-L434)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:425–434](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L425-L434)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2248,13 +2248,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L103-L103) | IsDue | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L113-L113) | IsDue | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L116-L116) | IsDue | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L119-L119) | IsDue | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L122-L122) | IsDue | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L125-L125) | IsDue | False |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L133-L133) | IsDue | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:103–103](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L103-L103) | IsDue | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:113–113](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L113-L113) | IsDue | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:116–116](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L116-L116) | IsDue | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L119-L119) | IsDue | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:122–122](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L122-L122) | IsDue | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L125-L125) | IsDue | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L133-L133) | IsDue | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2278,7 +2278,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeTab` · L436–449
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:436–449](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L436-L449)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:436–449](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L436-L449)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2297,7 +2297,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L39-L39) | NormalizeTab | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L39-L39) | NormalizeTab | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2333,7 +2333,7 @@ flowchart TD
 
 ### MethodDeclaration `NormalizeMelsecGroup` · L451–454
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:451–454](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L451-L454)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:451–454](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L451-L454)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2352,7 +2352,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L39-L39) | NormalizeMelsecGroup | False |
+| [Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L39-L39) | NormalizeMelsecGroup | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2376,7 +2376,7 @@ flowchart TD
 
 ### PropertyDeclaration `Default` · L459–459
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L459-L459)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L459-L459)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2403,7 +2403,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Default` · L459–459
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L459-L459)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:459–459](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L459-L459)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2418,7 +2418,7 @@ flowchart TD
 
 ### PropertyDeclaration `Empty` · L470–483
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:470–483](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L470-L483)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:470–483](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L470-L483)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2455,7 +2455,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Empty` · L470–470
 
-[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L470-L470)
+[Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs#L470-L470)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

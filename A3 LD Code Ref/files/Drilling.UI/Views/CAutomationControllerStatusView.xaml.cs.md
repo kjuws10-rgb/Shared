@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | 396a81dad5902e8a497f64839e93903191ef5624b4a3cb63bd7c067ea644a8f0 |
 | 파일 분류 | code |
 | 원본 크기/행 | 999 bytes / 24 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -41,7 +41,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `IsCompactProperty` · L8–9
 
-[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:8–9](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L8-L9)
+[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:8–9](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L8-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -73,7 +73,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsCompact` · L10–14
 
-[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:10–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L10-L14)
+[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:10–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L10-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -88,7 +88,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_IsCompact` · L12–12
 
-[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L12-L12)
+[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -115,7 +115,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_IsCompact` · L13–13
 
-[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L13-L13)
+[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -148,7 +148,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `TaskColumnsProperty` · L15–17
 
-[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:15–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L15-L17)
+[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:15–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L15-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -180,7 +180,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `TaskColumns` · L18–22
 
-[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:18–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L18-L22)
+[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:18–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L18-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -195,7 +195,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_TaskColumns` · L20–20
 
-[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L20-L20)
+[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -222,7 +222,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_TaskColumns` · L21–21
 
-[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L21-L21)
+[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -255,7 +255,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L23–23
 
-[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L23-L23)
+[Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAutomationControllerStatusView.xaml.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

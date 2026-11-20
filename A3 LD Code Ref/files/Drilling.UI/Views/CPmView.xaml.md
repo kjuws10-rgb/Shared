@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
-| 원본 SHA256 | 7b824bdd849447c9fbcb842791bef4332a0eabdcb003b655ebf10d39f10bf546 |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 SHA256 | b7f5b808e06c03a319f3cb68003227d75d450a7342dc56af28bcd0a826db8183 |
 | 파일 분류 | code |
-| 원본 크기/행 | 16,554 bytes / 287 physical lines |
+| 원본 크기/행 | 28,296 bytes / 463 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPmView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPmView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -22,25 +22,46 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 항목 | 추출 값 |
 | --- | --- |
 | 코드 비하인드 후보 | Drilling.UI/Views/CPmView.xaml.cs |
-| 이름 있는 요소 | PmPasswordBox |
-| 이벤트 개수 | 2 |
-| Binding 표현 개수 | 2 |
+| 이름 있는 요소 | PmLockBlinkStoryboard, PmPasswordBox, PmPasswordVisibleTextBox, PmPasswordVisibilitySlash |
+| 이벤트 개수 | 6 |
+| Binding 표현 개수 | 16 |
 
 이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
 | 요소 이름 | 원본 범위 |
 | --- | --- |
-| PmPasswordBox | L204–204 |
+| PmLockBlinkStoryboard | L249–249 |
+| PmPasswordBox | L351–351 |
+| PmPasswordVisibleTextBox | L361–361 |
+| PmPasswordVisibilitySlash | L393–393 |
 
 | 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
 | --- | --- | --- | --- |
-| PreviewMouseLeftButtonDown | OpenPmPasswordKeyboard | L214–214 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| Click | ClearPmPassword | L249–249 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PasswordChanged | PmPasswordChanged | L359–359 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenPmPasswordKeyboard | L360–360 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| PreviewMouseLeftButtonDown | OpenPmPasswordKeyboard | L370–370 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | TogglePmPasswordVisibility | L379–379 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | UnlockPm | L419–419 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| Click | ClearPmPassword | L423–423 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 
 | Binding 표현 | 원본 범위 |
 | --- | --- |
-| {Binding CurrentScreen.IsPmLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L32–32 |
-| {Binding CurrentScreen.Pm.StartTime} | L274–274 |
+| {Binding CurrentScreen.IsPmLayout, Converter={StaticResource BooleanToVisibilityConverter}} | L35–35 |
+| {Binding CurrentScreen.Pm.PartLifeRows} | L82–82 |
+| {Binding Head} | L103–103 |
+| {Binding CrystalUse} | L115–115 |
+| {Binding CrystalLimit} | L134–134 |
+| {Binding CurrentScreen.Pm.ProtectWindowItems} | L162–162 |
+| {Binding Name} | L183–183 |
+| {Binding Value} | L194–194 |
+| {Binding Detail} | L198–198 |
+| {Binding CurrentScreen.Pm.IsLocked} | L247–247 |
+| {Binding CurrentScreen.Pm.StartTime} | L310–310 |
+| {Binding CurrentScreen.Pm.HistoryRows} | L446–446 |
+| {Binding LockTime} | L454–454 |
+| {Binding UnlockTime} | L455–455 |
+| {Binding Duration} | L456–456 |
+| {Binding Reason} | L457–457 |
 
 ## 원문 전체 주석 해설본
 

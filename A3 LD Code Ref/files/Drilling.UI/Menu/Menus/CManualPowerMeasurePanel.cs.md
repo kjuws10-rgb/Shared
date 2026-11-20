@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | 7d6454fd95114d882d16a1e517b791bf2abb8cc8f7d0469db433271f4127246b |
 | 파일 분류 | code |
 | 원본 크기/행 | 19,471 bytes / 334 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -172,7 +172,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_service` · L13–13
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L13-L13)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -187,7 +187,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_getPowerMeters` · L14–14
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L14-L14)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -202,7 +202,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_runMeasurement` · L15–15
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L15-L15)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -217,7 +217,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_runCancellation` · L16–16
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L16-L16)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -232,7 +232,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_warn` · L17–17
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L17-L17)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -247,7 +247,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_confirm` · L18–18
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L18-L18)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -262,7 +262,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_rows` · L19–19
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L19-L19)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -283,7 +283,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedHead` · L20–20
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L20-L20)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -298,7 +298,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_busy` · L21–21
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L21-L21)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -313,7 +313,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_stopping` · L22–22
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L22-L22)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -328,7 +328,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isGraphView` · L23–23
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L23-L23)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -343,7 +343,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_mode` · L24–24
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L24-L24)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L24-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -364,7 +364,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `PropertyChanged` · L25–25
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L25-L25)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -379,7 +379,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `RunningChanged` · L26–26
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L26-L26)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -394,7 +394,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Heads` · L27–27
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L27-L27)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -409,7 +409,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Heads` · L27–27
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L27-L27)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -424,7 +424,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_Heads` · L27–27
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L27-L27)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -445,7 +445,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Modes` · L28–28
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L28-L28)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -460,7 +460,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Modes` · L28–28
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L28-L28)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -475,7 +475,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Mode` · L29–29
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -490,7 +490,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Mode` · L29–29
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -505,7 +505,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_Mode` · L29–29
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -545,7 +545,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `ToleranceText` · L30–32
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:30–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L30-L32)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:30–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L30-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -585,7 +585,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsRunning` · L33–33
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L33-L33)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -600,7 +600,7 @@ flowchart TD
 
 ### PropertyDeclaration `StartAllowed` · L34–34
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L34-L34)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -615,7 +615,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StartAllowed` · L34–34
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L34-L34)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -630,7 +630,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_StartAllowed` · L34–34
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L34-L34)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -651,7 +651,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsReadOnly` · L35–35
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L35-L35)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -666,7 +666,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsReadOnly` · L35–35
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L35-L35)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -681,7 +681,7 @@ flowchart TD
 
 ### PropertyDeclaration `CanEdit` · L36–36
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L36-L36)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -696,7 +696,7 @@ flowchart TD
 
 ### PropertyDeclaration `RunControlsVisibility` · L37–37
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L37-L37)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:37–37](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L37-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -717,7 +717,7 @@ flowchart TD
 
 ### PropertyDeclaration `AutoSettingsVisibility` · L38–38
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L38-L38)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -738,7 +738,7 @@ flowchart TD
 
 ### PropertyDeclaration `HasHeads` · L39–39
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L39-L39)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -753,7 +753,7 @@ flowchart TD
 
 ### PropertyDeclaration `GraphViewVisibility` · L40–40
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L40-L40)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -774,7 +774,7 @@ flowchart TD
 
 ### PropertyDeclaration `GridViewVisibility` · L41–41
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L41-L41)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -795,7 +795,7 @@ flowchart TD
 
 ### PropertyDeclaration `ViewToggleText` · L42–42
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L42-L42)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:42–42](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L42-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -816,7 +816,7 @@ flowchart TD
 
 ### PropertyDeclaration `GraphColumns` · L43–43
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L43-L43)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:43–43](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L43-L43)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -838,7 +838,7 @@ flowchart TD
 
 ### PropertyDeclaration `Summary` · L44–44
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L44-L44)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -853,7 +853,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Summary` · L44–44
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L44-L44)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -868,7 +868,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Summary` · L44–44
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L44-L44)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L44-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -889,7 +889,7 @@ flowchart TD
 
 ### PropertyDeclaration `QueueText` · L45–45
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L45-L45)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -904,7 +904,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_QueueText` · L45–45
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L45-L45)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -919,7 +919,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_QueueText` · L45–45
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L45-L45)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -940,7 +940,7 @@ flowchart TD
 
 ### PropertyDeclaration `StageText` · L46–46
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L46-L46)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -955,7 +955,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StageText` · L46–46
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L46-L46)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -970,7 +970,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_StageText` · L46–46
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L46-L46)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -991,7 +991,7 @@ flowchart TD
 
 ### PropertyDeclaration `Graph` · L47–47
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L47-L47)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1006,7 +1006,7 @@ flowchart TD
 
 ### PropertyDeclaration `GraphPoints` · L48–48
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L48-L48)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1021,7 +1021,7 @@ flowchart TD
 
 ### PropertyDeclaration `DetailTitle` · L49–49
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L49-L49)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L49-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1042,7 +1042,7 @@ flowchart TD
 
 ### PropertyDeclaration `Samples` · L50–50
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L50-L50)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L50-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1057,7 +1057,7 @@ flowchart TD
 
 ### PropertyDeclaration `DetailMessage` · L51–52
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:51–52](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L51-L52)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:51–52](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L51-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1078,7 +1078,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedHead` · L53–64
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:53–64](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L53-L64)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:53–64](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L53-L64)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1093,7 +1093,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedHead` · L55–55
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L55-L55)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L55-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1108,7 +1108,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SelectedHead` · L56–63
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:56–63](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L56-L63)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:56–63](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L56-L63)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1161,7 +1161,7 @@ flowchart TD
 
 ### PropertyDeclaration `StartCommand` · L65–65
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L65-L65)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L65-L65)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1176,7 +1176,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StartCommand` · L65–65
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L65-L65)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L65-L65)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1191,7 +1191,7 @@ flowchart TD
 
 ### PropertyDeclaration `StopCommand` · L66–66
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L66-L66)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L66-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1206,7 +1206,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StopCommand` · L66–66
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L66-L66)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L66-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1221,7 +1221,7 @@ flowchart TD
 
 ### PropertyDeclaration `ToggleViewCommand` · L67–67
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L67-L67)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L67-L67)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1236,7 +1236,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ToggleViewCommand` · L67–67
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L67-L67)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:67–67](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L67-L67)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1251,7 +1251,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectGraphHeadCommand` · L68–68
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L68-L68)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L68-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1266,7 +1266,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectGraphHeadCommand` · L68–68
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L68-L68)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:68–68](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L68-L68)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1281,7 +1281,7 @@ flowchart TD
 
 ### PropertyDeclaration `StageMotion` · L69–69
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L69-L69)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L69-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1296,7 +1296,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_StageMotion` · L69–69
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L69-L69)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L69-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1311,7 +1311,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L71–101
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:71–101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L71-L101)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:71–101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L71-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1340,8 +1340,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2303–2305](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L2303-L2305) | new CManualPowerMeasurePanel | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6282–6297](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6282-L6297) | new | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2303–2305](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L2303-L2305) | new CManualPowerMeasurePanel | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6290–6305](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6290-L6305) | new | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1410,7 +1410,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateHeads` · L103–125
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:103–125](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L103-L125)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:103–125](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L103-L125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1429,10 +1429,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2306–2306](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L2306-L2306) | panel.UpdateHeads | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6208–6208](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6208-L6208) | PowerMeasurePanel.UpdateHeads | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6313–6313](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6313-L6313) | _powerMeasurePanel.UpdateHeads | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6318–6318](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6318-L6318) | .UpdateHeads | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2306–2306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L2306-L2306) | panel.UpdateHeads | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6216–6216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6216-L6216) | PowerMeasurePanel.UpdateHeads | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6321–6321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6321-L6321) | _powerMeasurePanel.UpdateHeads | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6326–6326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6326-L6326) | .UpdateHeads | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1518,7 +1518,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPowerMeterOptions` · L127–131
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:127–131](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L127-L131)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:127–131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L127-L131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1531,8 +1531,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L106-L106) | GetPowerMeterOptions | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L163-L163) | GetPowerMeterOptions | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:106–106](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L106-L106) | GetPowerMeterOptions | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L163-L163) | GetPowerMeterOptions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1565,7 +1565,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplySnapshot` · L133–155
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:133–155](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L133-L155)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:133–155](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L133-L155)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1578,14 +1578,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29) | ApplySnapshot | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L105-L105) | ApplySnapshot | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L123-L123) | ApplySnapshot | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L187-L187) | ApplySnapshot | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L194-L194) | ApplySnapshot | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L200-L200) | ApplySnapshot | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L202-L202) | ApplySnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2313–2313](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L2313-L2313) | panel.ApplySnapshot | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29) | ApplySnapshot | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:105–105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L105-L105) | ApplySnapshot | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:123–123](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L123-L123) | ApplySnapshot | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L187-L187) | ApplySnapshot | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L194-L194) | ApplySnapshot | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L200-L200) | ApplySnapshot | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L202-L202) | ApplySnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2313–2313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L2313-L2313) | panel.ApplySnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1678,7 +1678,7 @@ flowchart TD
 
 ### MethodDeclaration `Start` · L157–195
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:157–195](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L157-L195)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:157–195](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L157-L195)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1691,7 +1691,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L90-L90) | Start | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L90-L90) | Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1836,7 +1836,7 @@ flowchart TD
 
 ### MethodDeclaration `Stop` · L197–203
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:197–203](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L197-L203)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:197–203](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L197-L203)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1849,7 +1849,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L91-L91) | Stop | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L91-L91) | Stop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1897,7 +1897,7 @@ flowchart TD
 
 ### MethodDeclaration `ParsePower` · L205–206
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:205–206](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L205-L206)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:205–206](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L205-L206)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1916,7 +1916,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L173-L173) | ParsePower | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L173-L173) | ParsePower | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1940,7 +1940,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseInt` · L207–208
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:207–208](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L207-L208)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:207–208](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L207-L208)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1962,9 +1962,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L175-L175) | ParseInt | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L176-L176) | ParseInt | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L176-L176) | ParseInt | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:175–175](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L175-L175) | ParseInt | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L176-L176) | ParseInt | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L176-L176) | ParseInt | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1986,7 +1986,7 @@ flowchart TD
 
 ### MethodDeclaration `SetBusy` · L209–213
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:209–213](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L209-L213)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:209–213](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L209-L213)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2005,8 +2005,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L184-L184) | SetBusy | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L194-L194) | SetBusy | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:184–184](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L184-L184) | SetBusy | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:194–194](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L194-L194) | SetBusy | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2037,7 +2037,7 @@ flowchart TD
 
 ### MethodDeclaration `NotifyCommands` · L214–214
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L214-L214)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L214-L214)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2050,10 +2050,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L124-L124) | NotifyCommands | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L200-L200) | NotifyCommands | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L202-L202) | NotifyCommands | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L212-L212) | NotifyCommands | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L124-L124) | NotifyCommands | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L200-L200) | NotifyCommands | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:202–202](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L202-L202) | NotifyCommands | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L212-L212) | NotifyCommands | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2073,7 +2073,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshDetail` · L215–218
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:215–218](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L215-L218)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:215–218](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L215-L218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2086,8 +2086,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L62-L62) | RefreshDetail | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L154-L154) | RefreshDetail | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L62-L62) | RefreshDetail | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L154-L154) | RefreshDetail | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2125,7 +2125,7 @@ flowchart TD
 
 ### MethodDeclaration `Notify` · L219–219
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L219-L219)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L219-L219)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2144,19 +2144,19 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L62-L62) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L95-L95) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L95-L95) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L95-L95) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L120-L120) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L120-L120) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L120-L120) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L153-L153) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L212-L212) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L212-L212) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L217-L217) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L29-L29) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:62–62](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L62-L62) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L95-L95) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L95-L95) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:95–95](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L95-L95) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L120-L120) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L120-L120) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L120-L120) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:153–153](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L153-L153) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L212-L212) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:212–212](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L212-L212) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L217-L217) | Notify | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2176,7 +2176,7 @@ flowchart TD
 
 ### FieldDeclaration `_target` · L224–224
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2197,7 +2197,7 @@ flowchart TD
 
 ### FieldDeclaration `_settleTime` · L224–224
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2218,7 +2218,7 @@ flowchart TD
 
 ### FieldDeclaration `_measureCount` · L224–224
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2239,7 +2239,7 @@ flowchart TD
 
 ### FieldDeclaration `_measureInterval` · L224–224
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L224-L224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2260,7 +2260,7 @@ flowchart TD
 
 ### FieldDeclaration `_selectedPowerMeter` · L225–225
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L225-L225)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L225-L225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2275,7 +2275,7 @@ flowchart TD
 
 ### FieldDeclaration `_metersInitialized` · L226–226
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L226-L226)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L226-L226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2290,7 +2290,7 @@ flowchart TD
 
 ### FieldDeclaration `_updatingPowerMeters` · L227–227
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L227-L227)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L227-L227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2305,7 +2305,7 @@ flowchart TD
 
 ### FieldDeclaration `_isGraphSelected` · L228–228
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L228-L228)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L228-L228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2320,7 +2320,7 @@ flowchart TD
 
 ### EventFieldDeclaration `PropertyChanged` · L229–229
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L229-L229)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:229–229](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L229-L229)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2335,7 +2335,7 @@ flowchart TD
 
 ### EventFieldDeclaration `InputChanged` · L230–230
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L230-L230)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L230-L230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2350,7 +2350,7 @@ flowchart TD
 
 ### PropertyDeclaration `HeadNo` · L231–231
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L231-L231)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L231-L231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2365,7 +2365,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HeadNo` · L231–231
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L231-L231)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L231-L231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2380,7 +2380,7 @@ flowchart TD
 
 ### PropertyDeclaration `HeadName` · L232–232
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L232-L232)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L232-L232)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2395,7 +2395,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsGraphSelected` · L233–233
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L233-L233)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:233–233](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L233-L233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2410,7 +2410,7 @@ flowchart TD
 
 ### PropertyDeclaration `Graph` · L234–234
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L234-L234)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L234-L234)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2425,7 +2425,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Graph` · L234–234
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L234-L234)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L234-L234)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2440,7 +2440,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Graph` · L234–234
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L234-L234)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L234-L234)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2461,7 +2461,7 @@ flowchart TD
 
 ### MethodDeclaration `SetGraphSelected` · L235–239
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:235–239](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L235-L239)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:235–239](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L235-L239)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2480,8 +2480,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L59-L59) | .SetGraphSelected | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L61-L61) | .SetGraphSelected | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L59-L59) | .SetGraphSelected | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:61–61](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L61-L61) | .SetGraphSelected | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2513,7 +2513,7 @@ flowchart TD
 
 ### PropertyDeclaration `PowerMeters` · L240–240
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L240-L240)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L240-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2528,7 +2528,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_PowerMeters` · L240–240
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L240-L240)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L240-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2543,7 +2543,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_PowerMeters` · L240–240
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L240-L240)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L240-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2564,7 +2564,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedPowerMeter` · L241–245
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:241–245](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L241-L245)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:241–245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L241-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2579,7 +2579,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedPowerMeter` · L243–243
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L243-L243)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L243-L243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2594,7 +2594,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SelectedPowerMeter` · L244–244
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L244-L244)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L244-L244)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2641,7 +2641,7 @@ flowchart TD
 
 ### PropertyDeclaration `Target` · L246–246
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2656,7 +2656,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Target` · L246–246
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2671,7 +2671,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Target` · L246–246
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2704,7 +2704,7 @@ flowchart TD
 
 ### PropertyDeclaration `SettleTime` · L247–247
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2719,7 +2719,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SettleTime` · L247–247
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2734,7 +2734,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SettleTime` · L247–247
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2767,7 +2767,7 @@ flowchart TD
 
 ### PropertyDeclaration `MeasureCount` · L248–248
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2782,7 +2782,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_MeasureCount` · L248–248
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2797,7 +2797,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_MeasureCount` · L248–248
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2830,7 +2830,7 @@ flowchart TD
 
 ### PropertyDeclaration `MeasureInterval` · L249–249
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2845,7 +2845,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_MeasureInterval` · L249–249
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2860,7 +2860,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_MeasureInterval` · L249–249
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2893,7 +2893,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdatePowerMeters` · L250–265
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:250–265](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L250-L265)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:250–265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L250-L265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2912,7 +2912,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L114-L114) | row.UpdatePowerMeters | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:114–114](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L114-L114) | row.UpdatePowerMeters | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2964,7 +2964,7 @@ flowchart TD
 
 ### MethodDeclaration `ApplyTarget` · L266–274
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:266–274](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L266-L274)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:266–274](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L266-L274)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2983,7 +2983,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L141-L141) | row.ApplyTarget | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:141–141](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L141-L141) | row.ApplyTarget | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3037,7 +3037,7 @@ flowchart TD
 
 ### MethodDeclaration `Matches` · L275–280
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:275–280](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L275-L280)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:275–280](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L275-L280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3057,7 +3057,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L142-L142) | row.Matches | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:142–142](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L142-L142) | row.Matches | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3081,7 +3081,7 @@ flowchart TD
 
 ### MethodDeclaration `SetInput` · L281–285
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:281–285](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L281-L285)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:281–285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L281-L285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3102,10 +3102,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246) | SetInput | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247) | SetInput | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248) | SetInput | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249) | SetInput | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L246-L246) | SetInput | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L247-L247) | SetInput | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L248-L248) | SetInput | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L249-L249) | SetInput | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3139,7 +3139,7 @@ flowchart TD
 
 ### MethodDeclaration `Notify` · L286–286
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L286-L286)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L286-L286)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3158,13 +3158,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L238-L238) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L244-L244) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L260-L260) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L262-L262) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L273-L273) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L284-L284) | Notify | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L313-L313) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L238-L238) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L244-L244) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L260-L260) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L262-L262) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L273-L273) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L284-L284) | Notify | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L313-L313) | Notify | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3184,7 +3184,7 @@ flowchart TD
 
 ### PropertyDeclaration `Snapshot` · L287–287
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L287-L287)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L287-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3199,7 +3199,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Snapshot` · L287–287
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L287-L287)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L287-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3214,7 +3214,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Snapshot` · L287–287
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L287-L287)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L287-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3235,7 +3235,7 @@ flowchart TD
 
 ### PropertyDeclaration `Measured` · L288–288
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L288-L288)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L288-L288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3262,7 +3262,7 @@ flowchart TD
 
 ### PropertyDeclaration `Error` · L289–289
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L289-L289)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L289-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3290,7 +3290,7 @@ flowchart TD
 
 ### PropertyDeclaration `Angle` · L290–290
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L290-L290)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L290-L290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3317,7 +3317,7 @@ flowchart TD
 
 ### PropertyDeclaration `Tolerance` · L291–291
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L291-L291)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L291-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3345,7 +3345,7 @@ flowchart TD
 
 ### PropertyDeclaration `AttemptProgress` · L292–292
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L292-L292)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L292-L292)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3366,7 +3366,7 @@ flowchart TD
 
 ### PropertyDeclaration `GraphSummary` · L293–293
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L293-L293)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:293–293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L293-L293)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3387,7 +3387,7 @@ flowchart TD
 
 ### PropertyDeclaration `State` · L294–294
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L294-L294)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L294-L294)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3402,7 +3402,7 @@ flowchart TD
 
 ### PropertyDeclaration `StateBackground` · L295–300
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:295–300](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L295-L300)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:295–300](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L295-L300)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3432,7 +3432,7 @@ flowchart TD
 
 ### MethodDeclaration `Apply` · L301–307
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:301–307](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L301-L307)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:301–307](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L301-L307)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3451,7 +3451,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L143-L143) | row.Apply | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L143-L143) | row.Apply | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3508,7 +3508,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshGraph` · L308–314
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:308–314](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L308-L314)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:308–314](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L308-L314)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3521,8 +3521,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L284-L284) | RefreshGraph | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L305-L305) | RefreshGraph | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L284-L284) | RefreshGraph | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L305-L305) | RefreshGraph | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3552,7 +3552,7 @@ flowchart TD
 
 ### PropertyDeclaration `Empty` · L319–319
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L319-L319)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L319-L319)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3579,7 +3579,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Empty` · L319–319
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L319-L319)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L319-L319)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3594,7 +3594,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastPointVisibility` · L320–320
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L320-L320)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:320–320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L320-L320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3615,7 +3615,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastPointLeft` · L321–321
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L321-L321)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:321–321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L321-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3636,7 +3636,7 @@ flowchart TD
 
 ### PropertyDeclaration `LastPointTop` · L322–322
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L322-L322)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:322–322](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L322-L322)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3657,7 +3657,7 @@ flowchart TD
 
 ### MethodDeclaration `Create` · L323–331
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:323–331](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L323-L331)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:323–331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L323-L331)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3677,8 +3677,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L312-L312) | CPowerMeasureGraph.Create | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L319-L319) | Create | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:312–312](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L312-L312) | CPowerMeasureGraph.Create | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:319–319](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L319-L319) | Create | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3725,7 +3725,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Y` · L326–326
 
-[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L326-L326)
+[Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:326–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L326-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3744,8 +3744,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L328-L328) | Y | False |
-| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L330-L330) | Y | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:328–328](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L328-L328) | Y | False |
+| [Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs:330–330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CManualPowerMeasurePanel.cs#L330-L330) | Y | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 

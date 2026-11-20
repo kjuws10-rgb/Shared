@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.Common/Alarm/CAlarmManager.cs
-Commit: 96e22cd027c84bf302b23f2949b98985d7f301bb
+Commit: 28764c91d521777b8ee068dd7aaf2d3902ce9fe2
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.Common.Alarm
@@ -476,827 +476,831 @@ L000245 |         private bool SetAlarm(ST_ALARM_DEFINITION definition) => AddCu
 L000246 |         private bool AddCurrent(ST_ALARM_DATA alarm) ⟦EOL⟧
 // 해설 L247: 구문 블록 경계입니다 · 소속 AddCurrent.
 L000247 |         { ⟦EOL⟧
-// 해설 L248: 공유 상태의 임계 구역에 진입합니다: lock (_currentLock)
-L000248 |             lock (_currentLock) ⟦EOL⟧
-// 해설 L249: 구문 블록 경계입니다 · 소속 AddCurrent.
-L000249 |             { ⟦EOL⟧
-// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.TryAdd(alarm.Code, alarm) / 조건에 따라 분기합니다: if (!_curAlarm.TryAdd(alarm.Code, alarm))
-L000250 |                 if (!_curAlarm.TryAdd(alarm.Code, alarm)) ⟦EOL⟧
-// 해설 L251: 호출자에게 값 또는 제어를 반환합니다: return false;
-L000251 |                     return false; ⟦EOL⟧
-// 해설 L252: 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion + 1, _current.LogError)
-L000252 |                 PublishCurrent(_current.OccurrenceVersion + 1, _current.LogError); ⟦EOL⟧
-// 해설 L253: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000253 |                 // Only enqueue memory here, in occurrence order. The dedicated worker owns all Append I/O. ⟦EOL⟧
-// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: QueueHistory(alarm) / 조건에 따라 분기합니다: if (!QueueHistory(alarm))
-L000254 |                 if (!QueueHistory(alarm)) ⟦EOL⟧
-// 해설 L255: 구문 블록 경계입니다 · 소속 AddCurrent.
-L000255 |                 { ⟦EOL⟧
-// 해설 L256: 지역 변수를 선언합니다: var error = $"알람 {alarm.Code} 로그 저장 대기열 포화: {HistoryQueueCapacity}건. 해당 이력은 저장되지 않았습니다."; / 변수의 초기값을 지정합니다: error = $"알람 {alarm.Code} 로그 저장 대기열 포화: {HistoryQueueCapacity}건. 해당 이력은 저장되지 않았습니다."
-L000256 |                     var error = $"알람 {alarm.Code} 로그 저장 대기열 포화: {HistoryQueueCapacity}건. 해당 이력은 저장되지 않았습니다."; ⟦EOL⟧
-// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyError, error)
-L000257 |                     Volatile.Write(ref _historyError, error); ⟦EOL⟧
-// 해설 L258: 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion, error)
-L000258 |                     PublishCurrent(_current.OccurrenceVersion, error); ⟦EOL⟧
-// 해설 L259: 구문 블록 경계입니다 · 소속 AddCurrent.
-L000259 |                 } ⟦EOL⟧
+// 해설 L248: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000248 |             // @알람 [알람] 중복억제 - 같은 Code의 활성 알람은 한 번만 등록해 팝업과 이력의 중복 발생을 막는다. ⟦EOL⟧
+// 해설 L249: 공유 상태의 임계 구역에 진입합니다: lock (_currentLock)
+L000249 |             lock (_currentLock) ⟦EOL⟧
+// 해설 L250: 구문 블록 경계입니다 · 소속 AddCurrent.
+L000250 |             { ⟦EOL⟧
+// 해설 L251: 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.TryAdd(alarm.Code, alarm) / 조건에 따라 분기합니다: if (!_curAlarm.TryAdd(alarm.Code, alarm))
+L000251 |                 if (!_curAlarm.TryAdd(alarm.Code, alarm)) ⟦EOL⟧
+// 해설 L252: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000252 |                     return false; ⟦EOL⟧
+// 해설 L253: 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion + 1, _current.LogError)
+L000253 |                 PublishCurrent(_current.OccurrenceVersion + 1, _current.LogError); ⟦EOL⟧
+// 해설 L254: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000254 |                 // @파일 [알람] 이력비동기 - 발생 순서만 메모리 Queue에 넣고 실제 Append I/O는 전용 Worker가 직렬 처리한다. ⟦EOL⟧
+// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: QueueHistory(alarm) / 조건에 따라 분기합니다: if (!QueueHistory(alarm))
+L000255 |                 if (!QueueHistory(alarm)) ⟦EOL⟧
+// 해설 L256: 구문 블록 경계입니다 · 소속 AddCurrent.
+L000256 |                 { ⟦EOL⟧
+// 해설 L257: 지역 변수를 선언합니다: var error = $"알람 {alarm.Code} 로그 저장 대기열 포화: {HistoryQueueCapacity}건. 해당 이력은 저장되지 않았습니다."; / 변수의 초기값을 지정합니다: error = $"알람 {alarm.Code} 로그 저장 대기열 포화: {HistoryQueueCapacity}건. 해당 이력은 저장되지 않았습니다."
+L000257 |                     var error = $"알람 {alarm.Code} 로그 저장 대기열 포화: {HistoryQueueCapacity}건. 해당 이력은 저장되지 않았습니다."; ⟦EOL⟧
+// 해설 L258: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyError, error)
+L000258 |                     Volatile.Write(ref _historyError, error); ⟦EOL⟧
+// 해설 L259: 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion, error)
+L000259 |                     PublishCurrent(_current.OccurrenceVersion, error); ⟦EOL⟧
 // 해설 L260: 구문 블록 경계입니다 · 소속 AddCurrent.
-L000260 |             } ⟦EOL⟧
-L000261 |  ⟦EOL⟧
-// 해설 L262: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCurrentChanged()
-L000262 |             NotifyCurrentChanged(); ⟦EOL⟧
-// 해설 L263: 호출자에게 값 또는 제어를 반환합니다: return true;
-L000263 |             return true; ⟦EOL⟧
-// 해설 L264: 구문 블록 경계입니다 · 소속 AddCurrent.
-L000264 |         } ⟦EOL⟧
-L000265 |  ⟦EOL⟧
-// 해설 L266: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.Reset()
-L000266 |         public void Reset() ⟦EOL⟧
-// 해설 L267: 구문 블록 경계입니다 · 소속 Reset.
-L000267 |         { ⟦EOL⟧
-// 해설 L268: 공유 상태의 임계 구역에 진입합니다: lock (_currentLock)
-L000268 |             lock (_currentLock) ⟦EOL⟧
-// 해설 L269: 구문 블록 경계입니다 · 소속 Reset.
-L000269 |             { ⟦EOL⟧
-// 해설 L270: 조건에 따라 분기합니다: if (_curAlarm.Count == 0)
-L000270 |                 if (_curAlarm.Count == 0) ⟦EOL⟧
-// 해설 L271: 호출자에게 값 또는 제어를 반환합니다: return;
-L000271 |                     return; ⟦EOL⟧
-// 해설 L272: 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Clear()
-L000272 |                 _curAlarm.Clear(); ⟦EOL⟧
-// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion, _current.LogError)
-L000273 |                 PublishCurrent(_current.OccurrenceVersion, _current.LogError); ⟦EOL⟧
-// 해설 L274: 구문 블록 경계입니다 · 소속 Reset.
-L000274 |             } ⟦EOL⟧
-L000275 |  ⟦EOL⟧
-// 해설 L276: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCurrentChanged()
-L000276 |             NotifyCurrentChanged(); ⟦EOL⟧
-// 해설 L277: 구문 블록 경계입니다 · 소속 Reset.
-L000277 |         } ⟦EOL⟧
-L000278 |  ⟦EOL⟧
-// 해설 L279: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.NotifyCurrentChanged()
-L000279 |         private void NotifyCurrentChanged() ⟦EOL⟧
-// 해설 L280: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
-L000280 |         { ⟦EOL⟧
-// 해설 L281: 지역 변수를 선언합니다: var handlers = CurrentChanged; / 변수의 초기값을 지정합니다: handlers = CurrentChanged
-L000281 |             var handlers = CurrentChanged; ⟦EOL⟧
-// 해설 L282: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() / 지역 변수를 선언합니다: var errors = new List<string>(); / 변수의 초기값을 지정합니다: errors = new List<string>()
-L000282 |             var errors = new List<string>(); ⟦EOL⟧
-// 해설 L283: 조건에 따라 분기합니다: if (handlers is not null)
-L000283 |             if (handlers is not null) ⟦EOL⟧
-// 해설 L284: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
-L000284 |             { ⟦EOL⟧
-// 해설 L285: 함수·델리게이트 또는 객체 생성자를 호출합니다: handlers.GetInvocationList() / 컬렉션 요소를 순회합니다: foreach (Action handler in handlers.GetInvocationList())
-L000285 |                 foreach (Action handler in handlers.GetInvocationList()) ⟦EOL⟧
-// 해설 L286: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
-L000286 |                 { ⟦EOL⟧
-// 해설 L287: 예외 처리 범위입니다: try
-L000287 |                     try ⟦EOL⟧
-// 해설 L288: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
-L000288 |                     { ⟦EOL⟧
-// 해설 L289: 함수·델리게이트 또는 객체 생성자를 호출합니다: handler()
-L000289 |                         handler(); ⟦EOL⟧
-// 해설 L290: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
-L000290 |                     } ⟦EOL⟧
-// 해설 L291: 지정 예외를 처리합니다: catch (Exception exception)
-L000291 |                     catch (Exception exception) ⟦EOL⟧
-// 해설 L292: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
-L000292 |                     { ⟦EOL⟧
-// 해설 L293: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000293 |                         // Subscribers dispatch to their own UI context. A failed observer must not ⟦EOL⟧
+L000260 |                 } ⟦EOL⟧
+// 해설 L261: 구문 블록 경계입니다 · 소속 AddCurrent.
+L000261 |             } ⟦EOL⟧
+L000262 |  ⟦EOL⟧
+// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCurrentChanged()
+L000263 |             NotifyCurrentChanged(); ⟦EOL⟧
+// 해설 L264: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000264 |             return true; ⟦EOL⟧
+// 해설 L265: 구문 블록 경계입니다 · 소속 AddCurrent.
+L000265 |         } ⟦EOL⟧
+L000266 |  ⟦EOL⟧
+// 해설 L267: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.Reset()
+L000267 |         public void Reset() ⟦EOL⟧
+// 해설 L268: 구문 블록 경계입니다 · 소속 Reset.
+L000268 |         { ⟦EOL⟧
+// 해설 L269: 공유 상태의 임계 구역에 진입합니다: lock (_currentLock)
+L000269 |             lock (_currentLock) ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 Reset.
+L000270 |             { ⟦EOL⟧
+// 해설 L271: 조건에 따라 분기합니다: if (_curAlarm.Count == 0)
+L000271 |                 if (_curAlarm.Count == 0) ⟦EOL⟧
+// 해설 L272: 호출자에게 값 또는 제어를 반환합니다: return;
+L000272 |                     return; ⟦EOL⟧
+// 해설 L273: 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Clear()
+L000273 |                 _curAlarm.Clear(); ⟦EOL⟧
+// 해설 L274: 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion, _current.LogError)
+L000274 |                 PublishCurrent(_current.OccurrenceVersion, _current.LogError); ⟦EOL⟧
+// 해설 L275: 구문 블록 경계입니다 · 소속 Reset.
+L000275 |             } ⟦EOL⟧
+L000276 |  ⟦EOL⟧
+// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCurrentChanged()
+L000277 |             NotifyCurrentChanged(); ⟦EOL⟧
+// 해설 L278: 구문 블록 경계입니다 · 소속 Reset.
+L000278 |         } ⟦EOL⟧
+L000279 |  ⟦EOL⟧
+// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.NotifyCurrentChanged()
+L000280 |         private void NotifyCurrentChanged() ⟦EOL⟧
+// 해설 L281: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
+L000281 |         { ⟦EOL⟧
+// 해설 L282: 지역 변수를 선언합니다: var handlers = CurrentChanged; / 변수의 초기값을 지정합니다: handlers = CurrentChanged
+L000282 |             var handlers = CurrentChanged; ⟦EOL⟧
+// 해설 L283: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() / 지역 변수를 선언합니다: var errors = new List<string>(); / 변수의 초기값을 지정합니다: errors = new List<string>()
+L000283 |             var errors = new List<string>(); ⟦EOL⟧
+// 해설 L284: 조건에 따라 분기합니다: if (handlers is not null)
+L000284 |             if (handlers is not null) ⟦EOL⟧
+// 해설 L285: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
+L000285 |             { ⟦EOL⟧
+// 해설 L286: 함수·델리게이트 또는 객체 생성자를 호출합니다: handlers.GetInvocationList() / 컬렉션 요소를 순회합니다: foreach (Action handler in handlers.GetInvocationList())
+L000286 |                 foreach (Action handler in handlers.GetInvocationList()) ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
+L000287 |                 { ⟦EOL⟧
+// 해설 L288: 예외 처리 범위입니다: try
+L000288 |                     try ⟦EOL⟧
+// 해설 L289: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
+L000289 |                     { ⟦EOL⟧
+// 해설 L290: 함수·델리게이트 또는 객체 생성자를 호출합니다: handler()
+L000290 |                         handler(); ⟦EOL⟧
+// 해설 L291: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
+L000291 |                     } ⟦EOL⟧
+// 해설 L292: 지정 예외를 처리합니다: catch (Exception exception)
+L000292 |                     catch (Exception exception) ⟦EOL⟧
+// 해설 L293: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
+L000293 |                     { ⟦EOL⟧
 // 해설 L294: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000294 |                         // change SetAlarm/Reset's result or prevent the other observers from running. ⟦EOL⟧
-// 해설 L295: 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add($"{handler.Method.Name}: {exception.Message}")
-L000295 |                         errors.Add($"{handler.Method.Name}: {exception.Message}"); ⟦EOL⟧
-// 해설 L296: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
-L000296 |                     } ⟦EOL⟧
+L000294 |                         // Subscribers dispatch to their own UI context. A failed observer must not ⟦EOL⟧
+// 해설 L295: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000295 |                         // change SetAlarm/Reset's result or prevent the other observers from running. ⟦EOL⟧
+// 해설 L296: 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add($"{handler.Method.Name}: {exception.Message}")
+L000296 |                         errors.Add($"{handler.Method.Name}: {exception.Message}"); ⟦EOL⟧
 // 해설 L297: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
-L000297 |                 } ⟦EOL⟧
+L000297 |                     } ⟦EOL⟧
 // 해설 L298: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
-L000298 |             } ⟦EOL⟧
-L000299 |  ⟦EOL⟧
-// 해설 L300: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _notificationError, string.Join(Environment.NewLine, errors)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(Environment.NewLine, errors)
-L000300 |             Volatile.Write(ref _notificationError, string.Join(Environment.NewLine, errors)); ⟦EOL⟧
-// 해설 L301: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
-L000301 |         } ⟦EOL⟧
-L000302 |  ⟦EOL⟧
-// 해설 L303: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string)
-L000303 |         private void PublishCurrent(long occurrenceVersion, string error) ⟦EOL⟧
-// 해설 L304: 구문 블록 경계입니다 · 소속 PublishCurrent.
-L000304 |         { ⟦EOL⟧
-// 해설 L305: 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(_curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity).Th
-L000305 |             var rows = Array.AsReadOnly(_curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray()); ⟦EOL⟧
-// 해설 L306: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _current, new(_current.Revision + 1, occurrenceVersion, rows, error)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_current.Revision + 1, occurrenceVersion, rows, error)
-L000306 |             Volatile.Write(ref _current, new(_current.Revision + 1, occurrenceVersion, rows, error)); ⟦EOL⟧
-// 해설 L307: 구문 블록 경계입니다 · 소속 PublishCurrent.
-L000307 |         } ⟦EOL⟧
-L000308 |  ⟦EOL⟧
-// 해설 L309: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Read(from, through, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new([], "알람 로그 저장소가 연결되지 않았습니다.")
-L000309 |         public ST_ALARM_HISTORY_RESULT ReadHistory(DateTime from, DateTime through, CancellationToken token = default) => _history?.Read(from, through, token) ?? new([], "알람 로그 저장소가 연결되지 않았습니다."); ⟦EOL⟧
-// 해설 L310: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CAlarmManager.HistoryStorageError
-L000310 |         public string HistoryStorageError ⟦EOL⟧
-// 해설 L311: 구문 블록 경계입니다 · 소속 HistoryStorageError.
-L000311 |         { ⟦EOL⟧
-// 해설 L312: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CAlarmManager.HistoryStorageError.get
-L000312 |             get ⟦EOL⟧
-// 해설 L313: 구문 블록 경계입니다 · 소속 get_HistoryStorageError.
-L000313 |             { ⟦EOL⟧
-// 해설 L314: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _historyError) / 지역 변수를 선언합니다: var error = Volatile.Read(ref _historyError); / 변수의 초기값을 지정합니다: error = Volatile.Read(ref _historyError)
-L000314 |                 var error = Volatile.Read(ref _historyError); ⟦EOL⟧
-// 해설 L315: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _historyWriteStartedAt) / 지역 변수를 선언합니다: var startedAt = Volatile.Read(ref _historyWriteStartedAt); / 변수의 초기값을 지정합니다: startedAt = Volatile.Read(ref _historyWriteStartedAt)
-L000315 |                 var startedAt = Volatile.Read(ref _historyWriteStartedAt); ⟦EOL⟧
-// 해설 L316: 조건에 따라 분기합니다: if (startedAt > 0 && Environment.TickCount64 - startedAt >= 5000)
-L000316 |                 if (startedAt > 0 && Environment.TickCount64 - startedAt >= 5000) ⟦EOL⟧
-// 해설 L317: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(error) / 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(error) ? "알람 이력 저장이 5초 이상 지연되고 있습니다." : error + Environment.NewLine + "알람 이력 저장이 5초 이상 지연되고 있습니다." / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrEmpty(error) ? "알람 이력 저장이 5초 이상 지연되고 있습니다." : error + Environment.NewLine + "알람 이력 저장이 5초 이상 지연되고 있습니다.";
-L000317 |                     return string.IsNullOrEmpty(error) ? "알람 이력 저장이 5초 이상 지연되고 있습니다." : error + Environment.NewLine + "알람 이력 저장이 5초 이상 지연되고 있습니다."; ⟦EOL⟧
-// 해설 L318: 호출자에게 값 또는 제어를 반환합니다: return error;
-L000318 |                 return error; ⟦EOL⟧
-// 해설 L319: 구문 블록 경계입니다 · 소속 get_HistoryStorageError.
-L000319 |             } ⟦EOL⟧
-// 해설 L320: 구문 블록 경계입니다 · 소속 HistoryStorageError.
-L000320 |         } ⟦EOL⟧
-L000321 |  ⟦EOL⟧
-// 해설 L322: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000322 |         // Called under _currentLock, after publishing the occurrence. No external I/O or waiting here. ⟦EOL⟧
-// 해설 L323: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Alarm.CAlarmManager.QueueHistory(Drilling.Common.Alarm.ST_ALARM_DATA)
-L000323 |         private bool QueueHistory(ST_ALARM_DATA alarm) ⟦EOL⟧
-// 해설 L324: 구문 블록 경계입니다 · 소속 QueueHistory.
-L000324 |         { ⟦EOL⟧
-// 해설 L325: 조건에 따라 분기합니다: if (_history is null)
-L000325 |             if (_history is null) ⟦EOL⟧
-// 해설 L326: 호출자에게 값 또는 제어를 반환합니다: return true;
-L000326 |                 return true; ⟦EOL⟧
-// 해설 L327: 공유 상태의 임계 구역에 진입합니다: lock (_historyQueueLock)
-L000327 |             lock (_historyQueueLock) ⟦EOL⟧
-// 해설 L328: 구문 블록 경계입니다 · 소속 QueueHistory.
-L000328 |             { ⟦EOL⟧
-// 해설 L329: 조건에 따라 분기합니다: if (_historyQueue.Count >= HistoryQueueCapacity)
-L000329 |                 if (_historyQueue.Count >= HistoryQueueCapacity) ⟦EOL⟧
-// 해설 L330: 호출자에게 값 또는 제어를 반환합니다: return false;
-L000330 |                     return false; ⟦EOL⟧
-// 해설 L331: 함수·델리게이트 또는 객체 생성자를 호출합니다: _historyQueue.Enqueue(alarm)
-L000331 |                 _historyQueue.Enqueue(alarm); ⟦EOL⟧
-// 해설 L332: 값을 대상에 대입합니다: _historyTask ??= Task.Run(WriteQueuedHistory) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(WriteQueuedHistory)
-L000332 |                 _historyTask ??= Task.Run(WriteQueuedHistory); ⟦EOL⟧
-// 해설 L333: 호출자에게 값 또는 제어를 반환합니다: return true;
-L000333 |                 return true; ⟦EOL⟧
-// 해설 L334: 구문 블록 경계입니다 · 소속 QueueHistory.
-L000334 |             } ⟦EOL⟧
-// 해설 L335: 구문 블록 경계입니다 · 소속 QueueHistory.
-L000335 |         } ⟦EOL⟧
-L000336 |  ⟦EOL⟧
-// 해설 L337: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.WriteQueuedHistory()
-L000337 |         private void WriteQueuedHistory() ⟦EOL⟧
-// 해설 L338: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000338 |         { ⟦EOL⟧
-// 해설 L339: 조건을 먼저 확인하며 반복합니다: while (true)
-L000339 |             while (true) ⟦EOL⟧
+L000298 |                 } ⟦EOL⟧
+// 해설 L299: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
+L000299 |             } ⟦EOL⟧
+L000300 |  ⟦EOL⟧
+// 해설 L301: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _notificationError, string.Join(Environment.NewLine, errors)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(Environment.NewLine, errors)
+L000301 |             Volatile.Write(ref _notificationError, string.Join(Environment.NewLine, errors)); ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 NotifyCurrentChanged.
+L000302 |         } ⟦EOL⟧
+L000303 |  ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string)
+L000304 |         private void PublishCurrent(long occurrenceVersion, string error) ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 PublishCurrent.
+L000305 |         { ⟦EOL⟧
+// 해설 L306: 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(_curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity).Th
+L000306 |             var rows = Array.AsReadOnly(_curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray()); ⟦EOL⟧
+// 해설 L307: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _current, new(_current.Revision + 1, occurrenceVersion, rows, error)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_current.Revision + 1, occurrenceVersion, rows, error)
+L000307 |             Volatile.Write(ref _current, new(_current.Revision + 1, occurrenceVersion, rows, error)); ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 PublishCurrent.
+L000308 |         } ⟦EOL⟧
+L000309 |  ⟦EOL⟧
+// 해설 L310: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Read(from, through, token) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new([], "알람 로그 저장소가 연결되지 않았습니다.")
+L000310 |         public ST_ALARM_HISTORY_RESULT ReadHistory(DateTime from, DateTime through, CancellationToken token = default) => _history?.Read(from, through, token) ?? new([], "알람 로그 저장소가 연결되지 않았습니다."); ⟦EOL⟧
+// 해설 L311: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CAlarmManager.HistoryStorageError
+L000311 |         public string HistoryStorageError ⟦EOL⟧
+// 해설 L312: 구문 블록 경계입니다 · 소속 HistoryStorageError.
+L000312 |         { ⟦EOL⟧
+// 해설 L313: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CAlarmManager.HistoryStorageError.get
+L000313 |             get ⟦EOL⟧
+// 해설 L314: 구문 블록 경계입니다 · 소속 get_HistoryStorageError.
+L000314 |             { ⟦EOL⟧
+// 해설 L315: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _historyError) / 지역 변수를 선언합니다: var error = Volatile.Read(ref _historyError); / 변수의 초기값을 지정합니다: error = Volatile.Read(ref _historyError)
+L000315 |                 var error = Volatile.Read(ref _historyError); ⟦EOL⟧
+// 해설 L316: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _historyWriteStartedAt) / 지역 변수를 선언합니다: var startedAt = Volatile.Read(ref _historyWriteStartedAt); / 변수의 초기값을 지정합니다: startedAt = Volatile.Read(ref _historyWriteStartedAt)
+L000316 |                 var startedAt = Volatile.Read(ref _historyWriteStartedAt); ⟦EOL⟧
+// 해설 L317: 조건에 따라 분기합니다: if (startedAt > 0 && Environment.TickCount64 - startedAt >= 5000)
+L000317 |                 if (startedAt > 0 && Environment.TickCount64 - startedAt >= 5000) ⟦EOL⟧
+// 해설 L318: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(error) / 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(error) ? "알람 이력 저장이 5초 이상 지연되고 있습니다." : error + Environment.NewLine + "알람 이력 저장이 5초 이상 지연되고 있습니다." / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrEmpty(error) ? "알람 이력 저장이 5초 이상 지연되고 있습니다." : error + Environment.NewLine + "알람 이력 저장이 5초 이상 지연되고 있습니다.";
+L000318 |                     return string.IsNullOrEmpty(error) ? "알람 이력 저장이 5초 이상 지연되고 있습니다." : error + Environment.NewLine + "알람 이력 저장이 5초 이상 지연되고 있습니다."; ⟦EOL⟧
+// 해설 L319: 호출자에게 값 또는 제어를 반환합니다: return error;
+L000319 |                 return error; ⟦EOL⟧
+// 해설 L320: 구문 블록 경계입니다 · 소속 get_HistoryStorageError.
+L000320 |             } ⟦EOL⟧
+// 해설 L321: 구문 블록 경계입니다 · 소속 HistoryStorageError.
+L000321 |         } ⟦EOL⟧
+L000322 |  ⟦EOL⟧
+// 해설 L323: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000323 |         // Called under _currentLock, after publishing the occurrence. No external I/O or waiting here. ⟦EOL⟧
+// 해설 L324: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.Common.Alarm.CAlarmManager.QueueHistory(Drilling.Common.Alarm.ST_ALARM_DATA)
+L000324 |         private bool QueueHistory(ST_ALARM_DATA alarm) ⟦EOL⟧
+// 해설 L325: 구문 블록 경계입니다 · 소속 QueueHistory.
+L000325 |         { ⟦EOL⟧
+// 해설 L326: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000326 |             // @성능 [알람] 상태분리 - 알람 상태 Lock 안에서는 외부 파일 I/O나 대기를 수행하지 않는다. ⟦EOL⟧
+// 해설 L327: 조건에 따라 분기합니다: if (_history is null)
+L000327 |             if (_history is null) ⟦EOL⟧
+// 해설 L328: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000328 |                 return true; ⟦EOL⟧
+// 해설 L329: 공유 상태의 임계 구역에 진입합니다: lock (_historyQueueLock)
+L000329 |             lock (_historyQueueLock) ⟦EOL⟧
+// 해설 L330: 구문 블록 경계입니다 · 소속 QueueHistory.
+L000330 |             { ⟦EOL⟧
+// 해설 L331: 조건에 따라 분기합니다: if (_historyQueue.Count >= HistoryQueueCapacity)
+L000331 |                 if (_historyQueue.Count >= HistoryQueueCapacity) ⟦EOL⟧
+// 해설 L332: 호출자에게 값 또는 제어를 반환합니다: return false;
+L000332 |                     return false; ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: _historyQueue.Enqueue(alarm)
+L000333 |                 _historyQueue.Enqueue(alarm); ⟦EOL⟧
+// 해설 L334: 값을 대상에 대입합니다: _historyTask ??= Task.Run(WriteQueuedHistory) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(WriteQueuedHistory)
+L000334 |                 _historyTask ??= Task.Run(WriteQueuedHistory); ⟦EOL⟧
+// 해설 L335: 호출자에게 값 또는 제어를 반환합니다: return true;
+L000335 |                 return true; ⟦EOL⟧
+// 해설 L336: 구문 블록 경계입니다 · 소속 QueueHistory.
+L000336 |             } ⟦EOL⟧
+// 해설 L337: 구문 블록 경계입니다 · 소속 QueueHistory.
+L000337 |         } ⟦EOL⟧
+L000338 |  ⟦EOL⟧
+// 해설 L339: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.WriteQueuedHistory()
+L000339 |         private void WriteQueuedHistory() ⟦EOL⟧
 // 해설 L340: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000340 |             { ⟦EOL⟧
-// 해설 L341: 지역 변수를 선언합니다: ST_ALARM_DATA alarm;
-L000341 |                 ST_ALARM_DATA alarm; ⟦EOL⟧
-// 해설 L342: 공유 상태의 임계 구역에 진입합니다: lock (_historyQueueLock)
-L000342 |                 lock (_historyQueueLock) ⟦EOL⟧
-// 해설 L343: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000343 |                 { ⟦EOL⟧
-// 해설 L344: 함수·델리게이트 또는 객체 생성자를 호출합니다: _historyQueue.TryDequeue(out alarm!) / 조건에 따라 분기합니다: if (!_historyQueue.TryDequeue(out alarm!))
-L000344 |                     if (!_historyQueue.TryDequeue(out alarm!)) ⟦EOL⟧
+L000340 |         { ⟦EOL⟧
+// 해설 L341: 조건을 먼저 확인하며 반복합니다: while (true)
+L000341 |             while (true) ⟦EOL⟧
+// 해설 L342: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
+L000342 |             { ⟦EOL⟧
+// 해설 L343: 지역 변수를 선언합니다: ST_ALARM_DATA alarm;
+L000343 |                 ST_ALARM_DATA alarm; ⟦EOL⟧
+// 해설 L344: 공유 상태의 임계 구역에 진입합니다: lock (_historyQueueLock)
+L000344 |                 lock (_historyQueueLock) ⟦EOL⟧
 // 해설 L345: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000345 |                     { ⟦EOL⟧
-// 해설 L346: 값을 대상에 대입합니다: _historyTask = null
-L000346 |                         _historyTask = null; ⟦EOL⟧
-// 해설 L347: 호출자에게 값 또는 제어를 반환합니다: return;
-L000347 |                         return; ⟦EOL⟧
-// 해설 L348: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000348 |                     } ⟦EOL⟧
-// 해설 L349: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000349 |                 } ⟦EOL⟧
-L000350 |  ⟦EOL⟧
-// 해설 L351: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyWriteStartedAt, Environment.TickCount64)
-L000351 |                 Volatile.Write(ref _historyWriteStartedAt, Environment.TickCount64); ⟦EOL⟧
-// 해설 L352: 예외 처리 범위입니다: try
-L000352 |                 try ⟦EOL⟧
-// 해설 L353: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000353 |                 { ⟦EOL⟧
-// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: _history!.Append(alarm)
-L000354 |                     _history!.Append(alarm); ⟦EOL⟧
+L000345 |                 { ⟦EOL⟧
+// 해설 L346: 함수·델리게이트 또는 객체 생성자를 호출합니다: _historyQueue.TryDequeue(out alarm!) / 조건에 따라 분기합니다: if (!_historyQueue.TryDequeue(out alarm!))
+L000346 |                     if (!_historyQueue.TryDequeue(out alarm!)) ⟦EOL⟧
+// 해설 L347: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
+L000347 |                     { ⟦EOL⟧
+// 해설 L348: 값을 대상에 대입합니다: _historyTask = null
+L000348 |                         _historyTask = null; ⟦EOL⟧
+// 해설 L349: 호출자에게 값 또는 제어를 반환합니다: return;
+L000349 |                         return; ⟦EOL⟧
+// 해설 L350: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
+L000350 |                     } ⟦EOL⟧
+// 해설 L351: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
+L000351 |                 } ⟦EOL⟧
+L000352 |  ⟦EOL⟧
+// 해설 L353: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyWriteStartedAt, Environment.TickCount64)
+L000353 |                 Volatile.Write(ref _historyWriteStartedAt, Environment.TickCount64); ⟦EOL⟧
+// 해설 L354: 예외 처리 범위입니다: try
+L000354 |                 try ⟦EOL⟧
 // 해설 L355: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000355 |                 } ⟦EOL⟧
-// 해설 L356: 지정 예외를 처리합니다: catch (Exception exception)
-L000356 |                 catch (Exception exception) ⟦EOL⟧
+L000355 |                 { ⟦EOL⟧
+// 해설 L356: 함수·델리게이트 또는 객체 생성자를 호출합니다: _history!.Append(alarm)
+L000356 |                     _history!.Append(alarm); ⟦EOL⟧
 // 해설 L357: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000357 |                 { ⟦EOL⟧
-// 해설 L358: 지역 변수를 선언합니다: var error = $"알람 {alarm.Code} 로그 저장 실패: {exception.Message}"; / 변수의 초기값을 지정합니다: error = $"알람 {alarm.Code} 로그 저장 실패: {exception.Message}"
-L000358 |                     var error = $"알람 {alarm.Code} 로그 저장 실패: {exception.Message}"; ⟦EOL⟧
-// 해설 L359: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyError, error)
-L000359 |                     Volatile.Write(ref _historyError, error); ⟦EOL⟧
-// 해설 L360: 공유 상태의 임계 구역에 진입합니다: lock (_currentLock)
-L000360 |                     lock (_currentLock) ⟦EOL⟧
-// 해설 L361: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000361 |                     { ⟦EOL⟧
-// 해설 L362: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000362 |                         // A later RESET/new alarm must survive a delayed failure from an older write. ⟦EOL⟧
-// 해설 L363: 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion, error)
-L000363 |                         PublishCurrent(_current.OccurrenceVersion, error); ⟦EOL⟧
-// 해설 L364: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000364 |                     } ⟦EOL⟧
-L000365 |  ⟦EOL⟧
-// 해설 L366: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCurrentChanged()
-L000366 |                     NotifyCurrentChanged(); ⟦EOL⟧
-// 해설 L367: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000367 |                 } ⟦EOL⟧
-// 해설 L368: 종료 정리 구간입니다: finally
-L000368 |                 finally ⟦EOL⟧
+L000357 |                 } ⟦EOL⟧
+// 해설 L358: 지정 예외를 처리합니다: catch (Exception exception)
+L000358 |                 catch (Exception exception) ⟦EOL⟧
+// 해설 L359: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
+L000359 |                 { ⟦EOL⟧
+// 해설 L360: 지역 변수를 선언합니다: var error = $"알람 {alarm.Code} 로그 저장 실패: {exception.Message}"; / 변수의 초기값을 지정합니다: error = $"알람 {alarm.Code} 로그 저장 실패: {exception.Message}"
+L000360 |                     var error = $"알람 {alarm.Code} 로그 저장 실패: {exception.Message}"; ⟦EOL⟧
+// 해설 L361: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyError, error)
+L000361 |                     Volatile.Write(ref _historyError, error); ⟦EOL⟧
+// 해설 L362: 공유 상태의 임계 구역에 진입합니다: lock (_currentLock)
+L000362 |                     lock (_currentLock) ⟦EOL⟧
+// 해설 L363: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
+L000363 |                     { ⟦EOL⟧
+// 해설 L364: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000364 |                         // A later RESET/new alarm must survive a delayed failure from an older write. ⟦EOL⟧
+// 해설 L365: 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion, error)
+L000365 |                         PublishCurrent(_current.OccurrenceVersion, error); ⟦EOL⟧
+// 해설 L366: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
+L000366 |                     } ⟦EOL⟧
+L000367 |  ⟦EOL⟧
+// 해설 L368: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCurrentChanged()
+L000368 |                     NotifyCurrentChanged(); ⟦EOL⟧
 // 해설 L369: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000369 |                 { ⟦EOL⟧
-// 해설 L370: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyWriteStartedAt, 0)
-L000370 |                     Volatile.Write(ref _historyWriteStartedAt, 0); ⟦EOL⟧
+L000369 |                 } ⟦EOL⟧
+// 해설 L370: 종료 정리 구간입니다: finally
+L000370 |                 finally ⟦EOL⟧
 // 해설 L371: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000371 |                 } ⟦EOL⟧
-// 해설 L372: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000372 |             // Single attempt only: no retries, persistence journal, or replay after restart. ⟦EOL⟧
+L000371 |                 { ⟦EOL⟧
+// 해설 L372: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyWriteStartedAt, 0)
+L000372 |                     Volatile.Write(ref _historyWriteStartedAt, 0); ⟦EOL⟧
 // 해설 L373: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000373 |             } ⟦EOL⟧
-// 해설 L374: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
-L000374 |         } ⟦EOL⟧
-L000375 |  ⟦EOL⟧
-// 해설 L376: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000376 |         /// <summary>현재 저장 대기열의 처리를 비동기로 기다립니다. 일반 감시 처리에서는 호출하지 않습니다.</summary> ⟦EOL⟧
-// 해설 L377: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.FlushHistoryAsync(System.Threading.CancellationToken)
-L000377 |         public Task FlushHistoryAsync(CancellationToken cancellationToken = default) ⟦EOL⟧
-// 해설 L378: 구문 블록 경계입니다 · 소속 FlushHistoryAsync.
-L000378 |         { ⟦EOL⟧
-// 해설 L379: 지역 변수를 선언합니다: Task pending;
-L000379 |             Task pending; ⟦EOL⟧
-// 해설 L380: 공유 상태의 임계 구역에 진입합니다: lock (_historyQueueLock)
-L000380 |             lock (_historyQueueLock) ⟦EOL⟧
-// 해설 L381: 값을 대상에 대입합니다: pending = _historyTask ?? Task.CompletedTask
-L000381 |                 pending = _historyTask ?? Task.CompletedTask; ⟦EOL⟧
-// 해설 L382: 함수·델리게이트 또는 객체 생성자를 호출합니다: pending.WaitAsync(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return pending.WaitAsync(cancellationToken);
-L000382 |             return pending.WaitAsync(cancellationToken); ⟦EOL⟧
-// 해설 L383: 구문 블록 경계입니다 · 소속 FlushHistoryAsync.
-L000383 |         } ⟦EOL⟧
-L000384 |  ⟦EOL⟧
-// 해설 L385: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
-L000385 | #endregion ⟦EOL⟧
-// 해설 L386: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #region Monitoring
-L000386 | #region Monitoring ⟦EOL⟧
-// 해설 L387: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CAlarmManager.MonitoringError
-L000387 |         public string MonitoringError ⟦EOL⟧
-// 해설 L388: 구문 블록 경계입니다 · 소속 MonitoringError.
-L000388 |         { ⟦EOL⟧
-// 해설 L389: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CAlarmManager.MonitoringError.get
-L000389 |             get ⟦EOL⟧
-// 해설 L390: 구문 블록 경계입니다 · 소속 get_MonitoringError.
-L000390 |             { ⟦EOL⟧
-// 해설 L391: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _monitoringError) / 지역 변수를 선언합니다: var checks = Volatile.Read(ref _monitoringError); / 변수의 초기값을 지정합니다: checks = Volatile.Read(ref _monitoringError)
-L000391 |                 var checks = Volatile.Read(ref _monitoringError); ⟦EOL⟧
-// 해설 L392: 지역 변수를 선언합니다: var history = HistoryStorageError; / 변수의 초기값을 지정합니다: history = HistoryStorageError
-L000392 |                 var history = HistoryStorageError; ⟦EOL⟧
-// 해설 L393: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(history) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(checks) / 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(history) ? checks : string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history / 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrEmpty(history) ? checks : string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history;
-L000393 |                 return string.IsNullOrEmpty(history) ? checks : string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history; ⟦EOL⟧
-// 해설 L394: 구문 블록 경계입니다 · 소속 get_MonitoringError.
-L000394 |             } ⟦EOL⟧
-// 해설 L395: 구문 블록 경계입니다 · 소속 MonitoringError.
-L000395 |         } ⟦EOL⟧
-L000396 |  ⟦EOL⟧
-// 해설 L397: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000397 |         /// <summary>단일 백그라운드 작업자에서 알람 조건을 감시합니다.</summary> ⟦EOL⟧
-// 해설 L398: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000398 |         /// <remarks> ⟦EOL⟧
+L000373 |                 } ⟦EOL⟧
+// 해설 L374: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000374 |             // Single attempt only: no retries, persistence journal, or replay after restart. ⟦EOL⟧
+// 해설 L375: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
+L000375 |             } ⟦EOL⟧
+// 해설 L376: 구문 블록 경계입니다 · 소속 WriteQueuedHistory.
+L000376 |         } ⟦EOL⟧
+L000377 |  ⟦EOL⟧
+// 해설 L378: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000378 |         /// <summary>현재 저장 대기열의 처리를 비동기로 기다립니다. 일반 감시 처리에서는 호출하지 않습니다.</summary> ⟦EOL⟧
+// 해설 L379: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.FlushHistoryAsync(System.Threading.CancellationToken)
+L000379 |         public Task FlushHistoryAsync(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L380: 구문 블록 경계입니다 · 소속 FlushHistoryAsync.
+L000380 |         { ⟦EOL⟧
+// 해설 L381: 지역 변수를 선언합니다: Task pending;
+L000381 |             Task pending; ⟦EOL⟧
+// 해설 L382: 공유 상태의 임계 구역에 진입합니다: lock (_historyQueueLock)
+L000382 |             lock (_historyQueueLock) ⟦EOL⟧
+// 해설 L383: 값을 대상에 대입합니다: pending = _historyTask ?? Task.CompletedTask
+L000383 |                 pending = _historyTask ?? Task.CompletedTask; ⟦EOL⟧
+// 해설 L384: 함수·델리게이트 또는 객체 생성자를 호출합니다: pending.WaitAsync(cancellationToken) / 호출자에게 값 또는 제어를 반환합니다: return pending.WaitAsync(cancellationToken);
+L000384 |             return pending.WaitAsync(cancellationToken); ⟦EOL⟧
+// 해설 L385: 구문 블록 경계입니다 · 소속 FlushHistoryAsync.
+L000385 |         } ⟦EOL⟧
+L000386 |  ⟦EOL⟧
+// 해설 L387: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
+L000387 | #endregion ⟦EOL⟧
+// 해설 L388: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #region Monitoring
+L000388 | #region Monitoring ⟦EOL⟧
+// 해설 L389: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CAlarmManager.MonitoringError
+L000389 |         public string MonitoringError ⟦EOL⟧
+// 해설 L390: 구문 블록 경계입니다 · 소속 MonitoringError.
+L000390 |         { ⟦EOL⟧
+// 해설 L391: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CAlarmManager.MonitoringError.get
+L000391 |             get ⟦EOL⟧
+// 해설 L392: 구문 블록 경계입니다 · 소속 get_MonitoringError.
+L000392 |             { ⟦EOL⟧
+// 해설 L393: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _monitoringError) / 지역 변수를 선언합니다: var checks = Volatile.Read(ref _monitoringError); / 변수의 초기값을 지정합니다: checks = Volatile.Read(ref _monitoringError)
+L000393 |                 var checks = Volatile.Read(ref _monitoringError); ⟦EOL⟧
+// 해설 L394: 지역 변수를 선언합니다: var history = HistoryStorageError; / 변수의 초기값을 지정합니다: history = HistoryStorageError
+L000394 |                 var history = HistoryStorageError; ⟦EOL⟧
+// 해설 L395: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(history) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(checks) / 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(history) ? checks : string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history / 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history / 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrEmpty(history) ? checks : string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history;
+L000395 |                 return string.IsNullOrEmpty(history) ? checks : string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history; ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 get_MonitoringError.
+L000396 |             } ⟦EOL⟧
+// 해설 L397: 구문 블록 경계입니다 · 소속 MonitoringError.
+L000397 |         } ⟦EOL⟧
+L000398 |  ⟦EOL⟧
 // 해설 L399: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000399 |         /// reportError는 감시 작업자 스레드에서 동기적으로 호출되며 동일 오류는 반복 보고하지 않습니다. ⟦EOL⟧
+L000399 |         /// <summary>단일 백그라운드 작업자에서 알람 조건을 감시합니다.</summary> ⟦EOL⟧
 // 해설 L400: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000400 |         /// CurrentChanged와 마찬가지로 UI를 갱신하는 콜백은 Dispatcher/BeginInvoke 또는 ⟦EOL⟧
+L000400 |         /// <remarks> ⟦EOL⟧
 // 해설 L401: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000401 |         /// SynchronizationContext.Post로 UI 스레드에 전달해야 합니다. 로그 전용 콜백은 저장소의 스레드 안전성을 보장해야 합니다. ⟦EOL⟧
+L000401 |         /// reportError는 감시 작업자 스레드에서 동기적으로 호출되며 동일 오류는 반복 보고하지 않습니다. ⟦EOL⟧
 // 해설 L402: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000402 |         /// readDeviceSnapshot은 메모리에 공개된 스냅샷만 반환해야 하며 장치 통신을 수행하면 안 됩니다. ⟦EOL⟧
+L000402 |         /// CurrentChanged와 마찬가지로 UI를 갱신하는 콜백은 Dispatcher/BeginInvoke 또는 ⟦EOL⟧
 // 해설 L403: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000403 |         /// </remarks> ⟦EOL⟧
-// 해설 L404: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling
-L000404 |         public void StartMonitoring( ⟦EOL⟧
-// 해설 L405: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling
-L000405 |             CSettingManager settings,  ⟦EOL⟧
+L000403 |         /// SynchronizationContext.Post로 UI 스레드에 전달해야 합니다. 로그 전용 콜백은 저장소의 스레드 안전성을 보장해야 합니다. ⟦EOL⟧
+// 해설 L404: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000404 |         /// readDeviceSnapshot은 메모리에 공개된 스냅샷만 반환해야 하며 장치 통신을 수행하면 안 됩니다. ⟦EOL⟧
+// 해설 L405: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000405 |         /// </remarks> ⟦EOL⟧
 // 해설 L406: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling
-L000406 |             CAutomationManager automation,  ⟦EOL⟧
+L000406 |         public void StartMonitoring( ⟦EOL⟧
 // 해설 L407: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling
-L000407 |             Func<ST_DEVICE_STATUS> readDeviceSnapshot,  ⟦EOL⟧
+L000407 |             CSettingManager settings,  ⟦EOL⟧
 // 해설 L408: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling
-L000408 |             CInterLockManager interLocks,  ⟦EOL⟧
+L000408 |             CAutomationManager automation,  ⟦EOL⟧
 // 해설 L409: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling
-L000409 |             Action<Exception>? reportError = null ⟦EOL⟧
+L000409 |             Func<ST_DEVICE_STATUS> readDeviceSnapshot,  ⟦EOL⟧
 // 해설 L410: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling
-L000410 |         ) ⟦EOL⟧
-// 해설 L411: 구문 블록 경계입니다 · 소속 StartMonitoring.
-L000411 |         { ⟦EOL⟧
-// 해설 L412: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDefinitionsRequested()
-L000412 |             EnsureDefinitionsRequested(); ⟦EOL⟧
-// 해설 L413: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(readDeviceSnapshot)
-L000413 |             ArgumentNullException.ThrowIfNull(readDeviceSnapshot); ⟦EOL⟧
-// 해설 L414: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CScannerTemperatureAlarmMonitor(this, settings, automation) / 지역 변수를 선언합니다: var temperatures = new CScannerTemperatureAlarmMonitor(this, settings, automation); / 변수의 초기값을 지정합니다: temperatures = new CScannerTemperatureAlarmMonitor(this, settings, automation)
-L000414 |             var temperatures = new CScannerTemperatureAlarmMonitor(this, settings, automation); ⟦EOL⟧
-// 해설 L415: 함수·델리게이트 또는 객체 생성자를 호출합니다: StartMonitoring([token => { token.ThrowIfCancellationRequested(); temperatures.Check(); }, token => { token.ThrowIfCancellationRequested(); var status = readDeviceSnapshot(); Build(status, interLocks.Evaluate(status)); i…
-L000415 |             StartMonitoring([token => ⟦EOL⟧
-// 해설 L416: 구문 블록 경계입니다 · 소속 StartMonitoring.
-L000416 |             { ⟦EOL⟧
-// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
-L000417 |                 token.ThrowIfCancellationRequested(); ⟦EOL⟧
-// 해설 L418: 함수·델리게이트 또는 객체 생성자를 호출합니다: temperatures.Check()
-L000418 |                 temperatures.Check(); ⟦EOL⟧
-// 해설 L419: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling
-L000419 |             }, token => ⟦EOL⟧
-// 해설 L420: 구문 블록 경계입니다 · 소속 StartMonitoring.
-L000420 |             { ⟦EOL⟧
-// 해설 L421: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
-L000421 |                 token.ThrowIfCancellationRequested(); ⟦EOL⟧
-// 해설 L422: 함수·델리게이트 또는 객체 생성자를 호출합니다: readDeviceSnapshot() / 지역 변수를 선언합니다: var status = readDeviceSnapshot(); / 변수의 초기값을 지정합니다: status = readDeviceSnapshot()
-L000422 |                 var status = readDeviceSnapshot(); ⟦EOL⟧
-// 해설 L423: 함수·델리게이트 또는 객체 생성자를 호출합니다: Build(status, interLocks.Evaluate(status)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interLocks.Evaluate(status)
-L000423 |                 Build(status, interLocks.Evaluate(status)); ⟦EOL⟧
-// 해설 L424: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(status.SnapshotError) / 조건에 따라 분기합니다: if (!string.IsNullOrEmpty(status.SnapshotError))
-L000424 |                 if (!string.IsNullOrEmpty(status.SnapshotError)) ⟦EOL⟧
-// 해설 L425: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException(status.SnapshotError) / 예외를 발생/전달합니다: throw new IOException(status.SnapshotError);
-L000425 |                     throw new IOException(status.SnapshotError); ⟦EOL⟧
-// 해설 L426: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(1)
-L000426 |             }], reportError, TimeSpan.FromSeconds(1)); ⟦EOL⟧
-// 해설 L427: 구문 블록 경계입니다 · 소속 StartMonitoring.
-L000427 |         } ⟦EOL⟧
-L000428 |  ⟦EOL⟧
-// 해설 L429: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000429 |         // A single worker executes the checks in order; slow checks never overlap the next cycle. ⟦EOL⟧
-// 해설 L430: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(System.Action<System.Threading.CancellationToken>[], System.Action<System.Exception>?, System.TimeSpan)
-L000430 |         internal void StartMonitoring(Action<CancellationToken>[] checks, Action<Exception>? reportError, TimeSpan interval) ⟦EOL⟧
-// 해설 L431: 구문 블록 경계입니다 · 소속 StartMonitoring.
-L000431 |         { ⟦EOL⟧
-// 해설 L432: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(checks)
-L000432 |             ArgumentNullException.ThrowIfNull(checks); ⟦EOL⟧
-// 해설 L433: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDefinitionsRequested()
-L000433 |             EnsureDefinitionsRequested(); ⟦EOL⟧
-// 해설 L434: 조건에 따라 분기합니다: if (interval <= TimeSpan.Zero)
-L000434 |             if (interval <= TimeSpan.Zero) ⟦EOL⟧
-// 해설 L435: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(interval)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(interval) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(interval));
-L000435 |                 throw new ArgumentOutOfRangeException(nameof(interval)); ⟦EOL⟧
-// 해설 L436: 함수·델리게이트 또는 객체 생성자를 호출합니다: checks.ToArray() / 지역 변수를 선언합니다: var registeredChecks = checks.ToArray(); / 변수의 초기값을 지정합니다: registeredChecks = checks.ToArray()
-L000436 |             var registeredChecks = checks.ToArray(); ⟦EOL⟧
-// 해설 L437: 공유 상태의 임계 구역에 진입합니다: lock (_monitoringLock)
-L000437 |             lock (_monitoringLock) ⟦EOL⟧
-// 해설 L438: 구문 블록 경계입니다 · 소속 StartMonitoring.
-L000438 |             { ⟦EOL⟧
-// 해설 L439: 조건에 따라 분기합니다: if (_monitoringTask is not null)
-L000439 |                 if (_monitoringTask is not null) ⟦EOL⟧
-// 해설 L440: 호출자에게 값 또는 제어를 반환합니다: return;
-L000440 |                     return; ⟦EOL⟧
-// 해설 L441: 값을 대상에 대입합니다: _monitoringStop = new CancellationTokenSource() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource()
-L000441 |                 _monitoringStop = new CancellationTokenSource(); ⟦EOL⟧
-// 해설 L442: 지역 변수를 선언합니다: var token = _monitoringStop.Token; / 변수의 초기값을 지정합니다: token = _monitoringStop.Token
-L000442 |                 var token = _monitoringStop.Token; ⟦EOL⟧
-// 해설 L443: 값을 대상에 대입합니다: _monitoringTask = Task.Run(() => Monitor(registeredChecks, reportError, interval, token)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => Monitor(registeredChecks, reportError, interval, token)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Monitor(registeredChecks, reportError, interval, token)
-L000443 |                 _monitoringTask = Task.Run(() => Monitor(registeredChecks, reportError, interval, token)); ⟦EOL⟧
-// 해설 L444: 구문 블록 경계입니다 · 소속 StartMonitoring.
-L000444 |             } ⟦EOL⟧
-// 해설 L445: 구문 블록 경계입니다 · 소속 StartMonitoring.
-L000445 |         } ⟦EOL⟧
-L000446 |  ⟦EOL⟧
-// 해설 L447: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.StopMonitoringAsync()
-L000447 |         public async Task StopMonitoringAsync() ⟦EOL⟧
-// 해설 L448: 구문 블록 경계입니다 · 소속 StopMonitoringAsync.
-L000448 |         { ⟦EOL⟧
-// 해설 L449: 지역 변수를 선언합니다: Task task;
-L000449 |             Task task; ⟦EOL⟧
-// 해설 L450: 지역 변수를 선언합니다: CancellationTokenSource stop;
-L000450 |             CancellationTokenSource stop; ⟦EOL⟧
-// 해설 L451: 공유 상태의 임계 구역에 진입합니다: lock (_monitoringLock)
-L000451 |             lock (_monitoringLock) ⟦EOL⟧
-// 해설 L452: 구문 블록 경계입니다 · 소속 StopMonitoringAsync.
-L000452 |             { ⟦EOL⟧
-// 해설 L453: 조건에 따라 분기합니다: if (_monitoringTask is null || _monitoringStop is null)
-L000453 |                 if (_monitoringTask is null || _monitoringStop is null) ⟦EOL⟧
-// 해설 L454: 호출자에게 값 또는 제어를 반환합니다: return;
-L000454 |                     return; ⟦EOL⟧
-// 해설 L455: 값을 대상에 대입합니다: task = _monitoringTask
-L000455 |                 task = _monitoringTask; ⟦EOL⟧
-// 해설 L456: 값을 대상에 대입합니다: stop = _monitoringStop
-L000456 |                 stop = _monitoringStop; ⟦EOL⟧
-// 해설 L457: 함수·델리게이트 또는 객체 생성자를 호출합니다: stop.Cancel()
-L000457 |                 stop.Cancel(); ⟦EOL⟧
-// 해설 L458: 구문 블록 경계입니다 · 소속 StopMonitoringAsync.
-L000458 |             } ⟦EOL⟧
-L000459 |  ⟦EOL⟧
-// 해설 L460: 비동기 완료를 기다립니다: await task.ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: task.ConfigureAwait(false)
-L000460 |             await task.ConfigureAwait(false); ⟦EOL⟧
-// 해설 L461: 공유 상태의 임계 구역에 진입합니다: lock (_monitoringLock)
-L000461 |             lock (_monitoringLock) ⟦EOL⟧
-// 해설 L462: 구문 블록 경계입니다 · 소속 StopMonitoringAsync.
-L000462 |             { ⟦EOL⟧
-// 해설 L463: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_monitoringTask, task) / 조건에 따라 분기합니다: if (!ReferenceEquals(_monitoringTask, task))
-L000463 |                 if (!ReferenceEquals(_monitoringTask, task)) ⟦EOL⟧
-// 해설 L464: 호출자에게 값 또는 제어를 반환합니다: return;
-L000464 |                     return; ⟦EOL⟧
-// 해설 L465: 값을 대상에 대입합니다: _monitoringTask = null
-L000465 |                 _monitoringTask = null; ⟦EOL⟧
-// 해설 L466: 값을 대상에 대입합니다: _monitoringStop = null
-L000466 |                 _monitoringStop = null; ⟦EOL⟧
-// 해설 L467: 함수·델리게이트 또는 객체 생성자를 호출합니다: stop.Dispose()
-L000467 |                 stop.Dispose(); ⟦EOL⟧
-// 해설 L468: 구문 블록 경계입니다 · 소속 StopMonitoringAsync.
-L000468 |             } ⟦EOL⟧
-// 해설 L469: 구문 블록 경계입니다 · 소속 StopMonitoringAsync.
-L000469 |         } ⟦EOL⟧
-L000470 |  ⟦EOL⟧
-// 해설 L471: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.Monitor(System.Action<System.Threading.CancellationToken>[], System.Action<System.Exception>?, System.TimeSpan, System.Threading.CancellationToken
-L000471 |         private async Task Monitor(Action<CancellationToken>[] checks, Action<Exception>? reportError, TimeSpan interval, CancellationToken token) ⟦EOL⟧
-// 해설 L472: 구문 블록 경계입니다 · 소속 Monitor.
-L000472 |         { ⟦EOL⟧
-// 해설 L473: 함수·델리게이트 또는 객체 생성자를 호출합니다: new PeriodicTimer(interval) / 정리할 자원을 선언합니다: using var timer = new PeriodicTimer(interval); / 변수의 초기값을 지정합니다: timer = new PeriodicTimer(interval)
-L000473 |             using var timer = new PeriodicTimer(interval); ⟦EOL⟧
-// 해설 L474: 지역 변수를 선언합니다: var previousErrors = new string[checks.Length]; / 변수의 초기값을 지정합니다: previousErrors = new string[checks.Length]
-L000474 |             var previousErrors = new string[checks.Length]; ⟦EOL⟧
-// 해설 L475: 지역 변수를 선언합니다: var previousDefinitionError = ""; / 변수의 초기값을 지정합니다: previousDefinitionError = ""
-L000475 |             var previousDefinitionError = ""; ⟦EOL⟧
-// 해설 L476: 예외 처리 범위입니다: try
-L000476 |             try ⟦EOL⟧
-// 해설 L477: 구문 블록 경계입니다 · 소속 Monitor.
-L000477 |             { ⟦EOL⟧
-// 해설 L478: 본문 실행 후 반복 조건을 확인합니다: do ... while (await timer.WaitForNextTickAsync(token).ConfigureAwait(false))
-L000478 |                 do ⟦EOL⟧
+L000410 |             CInterLockManager interLocks,  ⟦EOL⟧
+// 해설 L411: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling
+L000411 |             Action<Exception>? reportError = null ⟦EOL⟧
+// 해설 L412: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling
+L000412 |         ) ⟦EOL⟧
+// 해설 L413: 구문 블록 경계입니다 · 소속 StartMonitoring.
+L000413 |         { ⟦EOL⟧
+// 해설 L414: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDefinitionsRequested()
+L000414 |             EnsureDefinitionsRequested(); ⟦EOL⟧
+// 해설 L415: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(readDeviceSnapshot)
+L000415 |             ArgumentNullException.ThrowIfNull(readDeviceSnapshot); ⟦EOL⟧
+// 해설 L416: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CScannerTemperatureAlarmMonitor(this, settings, automation) / 지역 변수를 선언합니다: var temperatures = new CScannerTemperatureAlarmMonitor(this, settings, automation); / 변수의 초기값을 지정합니다: temperatures = new CScannerTemperatureAlarmMonitor(this, settings, automation)
+L000416 |             var temperatures = new CScannerTemperatureAlarmMonitor(this, settings, automation); ⟦EOL⟧
+// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: StartMonitoring([token => { token.ThrowIfCancellationRequested(); temperatures.Check(); }, token => { token.ThrowIfCancellationRequested(); var status = readDeviceSnapshot(); Build(status, interLocks.Evaluate(status)); i…
+L000417 |             StartMonitoring([token => ⟦EOL⟧
+// 해설 L418: 구문 블록 경계입니다 · 소속 StartMonitoring.
+L000418 |             { ⟦EOL⟧
+// 해설 L419: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000419 |                 token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L420: 함수·델리게이트 또는 객체 생성자를 호출합니다: temperatures.Check()
+L000420 |                 temperatures.Check(); ⟦EOL⟧
+// 해설 L421: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling
+L000421 |             }, token => ⟦EOL⟧
+// 해설 L422: 구문 블록 경계입니다 · 소속 StartMonitoring.
+L000422 |             { ⟦EOL⟧
+// 해설 L423: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000423 |                 token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L424: 함수·델리게이트 또는 객체 생성자를 호출합니다: readDeviceSnapshot() / 지역 변수를 선언합니다: var status = readDeviceSnapshot(); / 변수의 초기값을 지정합니다: status = readDeviceSnapshot()
+L000424 |                 var status = readDeviceSnapshot(); ⟦EOL⟧
+// 해설 L425: 함수·델리게이트 또는 객체 생성자를 호출합니다: Build(status, interLocks.Evaluate(status)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interLocks.Evaluate(status)
+L000425 |                 Build(status, interLocks.Evaluate(status)); ⟦EOL⟧
+// 해설 L426: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(status.SnapshotError) / 조건에 따라 분기합니다: if (!string.IsNullOrEmpty(status.SnapshotError))
+L000426 |                 if (!string.IsNullOrEmpty(status.SnapshotError)) ⟦EOL⟧
+// 해설 L427: 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException(status.SnapshotError) / 예외를 발생/전달합니다: throw new IOException(status.SnapshotError);
+L000427 |                     throw new IOException(status.SnapshotError); ⟦EOL⟧
+// 해설 L428: 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(1)
+L000428 |             }], reportError, TimeSpan.FromSeconds(1)); ⟦EOL⟧
+// 해설 L429: 구문 블록 경계입니다 · 소속 StartMonitoring.
+L000429 |         } ⟦EOL⟧
+L000430 |  ⟦EOL⟧
+// 해설 L431: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000431 |         // A single worker executes the checks in order; slow checks never overlap the next cycle. ⟦EOL⟧
+// 해설 L432: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(System.Action<System.Threading.CancellationToken>[], System.Action<System.Exception>?, System.TimeSpan)
+L000432 |         internal void StartMonitoring(Action<CancellationToken>[] checks, Action<Exception>? reportError, TimeSpan interval) ⟦EOL⟧
+// 해설 L433: 구문 블록 경계입니다 · 소속 StartMonitoring.
+L000433 |         { ⟦EOL⟧
+// 해설 L434: 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(checks)
+L000434 |             ArgumentNullException.ThrowIfNull(checks); ⟦EOL⟧
+// 해설 L435: 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDefinitionsRequested()
+L000435 |             EnsureDefinitionsRequested(); ⟦EOL⟧
+// 해설 L436: 조건에 따라 분기합니다: if (interval <= TimeSpan.Zero)
+L000436 |             if (interval <= TimeSpan.Zero) ⟦EOL⟧
+// 해설 L437: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(interval)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(interval) / 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(interval));
+L000437 |                 throw new ArgumentOutOfRangeException(nameof(interval)); ⟦EOL⟧
+// 해설 L438: 함수·델리게이트 또는 객체 생성자를 호출합니다: checks.ToArray() / 지역 변수를 선언합니다: var registeredChecks = checks.ToArray(); / 변수의 초기값을 지정합니다: registeredChecks = checks.ToArray()
+L000438 |             var registeredChecks = checks.ToArray(); ⟦EOL⟧
+// 해설 L439: 공유 상태의 임계 구역에 진입합니다: lock (_monitoringLock)
+L000439 |             lock (_monitoringLock) ⟦EOL⟧
+// 해설 L440: 구문 블록 경계입니다 · 소속 StartMonitoring.
+L000440 |             { ⟦EOL⟧
+// 해설 L441: 조건에 따라 분기합니다: if (_monitoringTask is not null)
+L000441 |                 if (_monitoringTask is not null) ⟦EOL⟧
+// 해설 L442: 호출자에게 값 또는 제어를 반환합니다: return;
+L000442 |                     return; ⟦EOL⟧
+// 해설 L443: 값을 대상에 대입합니다: _monitoringStop = new CancellationTokenSource() / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource()
+L000443 |                 _monitoringStop = new CancellationTokenSource(); ⟦EOL⟧
+// 해설 L444: 지역 변수를 선언합니다: var token = _monitoringStop.Token; / 변수의 초기값을 지정합니다: token = _monitoringStop.Token
+L000444 |                 var token = _monitoringStop.Token; ⟦EOL⟧
+// 해설 L445: 값을 대상에 대입합니다: _monitoringTask = Task.Run(() => Monitor(registeredChecks, reportError, interval, token)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => Monitor(registeredChecks, reportError, interval, token)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Monitor(registeredChecks, reportError, interval, token)
+L000445 |                 _monitoringTask = Task.Run(() => Monitor(registeredChecks, reportError, interval, token)); ⟦EOL⟧
+// 해설 L446: 구문 블록 경계입니다 · 소속 StartMonitoring.
+L000446 |             } ⟦EOL⟧
+// 해설 L447: 구문 블록 경계입니다 · 소속 StartMonitoring.
+L000447 |         } ⟦EOL⟧
+L000448 |  ⟦EOL⟧
+// 해설 L449: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.StopMonitoringAsync()
+L000449 |         public async Task StopMonitoringAsync() ⟦EOL⟧
+// 해설 L450: 구문 블록 경계입니다 · 소속 StopMonitoringAsync.
+L000450 |         { ⟦EOL⟧
+// 해설 L451: 지역 변수를 선언합니다: Task task;
+L000451 |             Task task; ⟦EOL⟧
+// 해설 L452: 지역 변수를 선언합니다: CancellationTokenSource stop;
+L000452 |             CancellationTokenSource stop; ⟦EOL⟧
+// 해설 L453: 공유 상태의 임계 구역에 진입합니다: lock (_monitoringLock)
+L000453 |             lock (_monitoringLock) ⟦EOL⟧
+// 해설 L454: 구문 블록 경계입니다 · 소속 StopMonitoringAsync.
+L000454 |             { ⟦EOL⟧
+// 해설 L455: 조건에 따라 분기합니다: if (_monitoringTask is null || _monitoringStop is null)
+L000455 |                 if (_monitoringTask is null || _monitoringStop is null) ⟦EOL⟧
+// 해설 L456: 호출자에게 값 또는 제어를 반환합니다: return;
+L000456 |                     return; ⟦EOL⟧
+// 해설 L457: 값을 대상에 대입합니다: task = _monitoringTask
+L000457 |                 task = _monitoringTask; ⟦EOL⟧
+// 해설 L458: 값을 대상에 대입합니다: stop = _monitoringStop
+L000458 |                 stop = _monitoringStop; ⟦EOL⟧
+// 해설 L459: 함수·델리게이트 또는 객체 생성자를 호출합니다: stop.Cancel()
+L000459 |                 stop.Cancel(); ⟦EOL⟧
+// 해설 L460: 구문 블록 경계입니다 · 소속 StopMonitoringAsync.
+L000460 |             } ⟦EOL⟧
+L000461 |  ⟦EOL⟧
+// 해설 L462: 비동기 완료를 기다립니다: await task.ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: task.ConfigureAwait(false)
+L000462 |             await task.ConfigureAwait(false); ⟦EOL⟧
+// 해설 L463: 공유 상태의 임계 구역에 진입합니다: lock (_monitoringLock)
+L000463 |             lock (_monitoringLock) ⟦EOL⟧
+// 해설 L464: 구문 블록 경계입니다 · 소속 StopMonitoringAsync.
+L000464 |             { ⟦EOL⟧
+// 해설 L465: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_monitoringTask, task) / 조건에 따라 분기합니다: if (!ReferenceEquals(_monitoringTask, task))
+L000465 |                 if (!ReferenceEquals(_monitoringTask, task)) ⟦EOL⟧
+// 해설 L466: 호출자에게 값 또는 제어를 반환합니다: return;
+L000466 |                     return; ⟦EOL⟧
+// 해설 L467: 값을 대상에 대입합니다: _monitoringTask = null
+L000467 |                 _monitoringTask = null; ⟦EOL⟧
+// 해설 L468: 값을 대상에 대입합니다: _monitoringStop = null
+L000468 |                 _monitoringStop = null; ⟦EOL⟧
+// 해설 L469: 함수·델리게이트 또는 객체 생성자를 호출합니다: stop.Dispose()
+L000469 |                 stop.Dispose(); ⟦EOL⟧
+// 해설 L470: 구문 블록 경계입니다 · 소속 StopMonitoringAsync.
+L000470 |             } ⟦EOL⟧
+// 해설 L471: 구문 블록 경계입니다 · 소속 StopMonitoringAsync.
+L000471 |         } ⟦EOL⟧
+L000472 |  ⟦EOL⟧
+// 해설 L473: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.Monitor(System.Action<System.Threading.CancellationToken>[], System.Action<System.Exception>?, System.TimeSpan, System.Threading.CancellationToken
+L000473 |         private async Task Monitor(Action<CancellationToken>[] checks, Action<Exception>? reportError, TimeSpan interval, CancellationToken token) ⟦EOL⟧
+// 해설 L474: 구문 블록 경계입니다 · 소속 Monitor.
+L000474 |         { ⟦EOL⟧
+// 해설 L475: 함수·델리게이트 또는 객체 생성자를 호출합니다: new PeriodicTimer(interval) / 정리할 자원을 선언합니다: using var timer = new PeriodicTimer(interval); / 변수의 초기값을 지정합니다: timer = new PeriodicTimer(interval)
+L000475 |             using var timer = new PeriodicTimer(interval); ⟦EOL⟧
+// 해설 L476: 지역 변수를 선언합니다: var previousErrors = new string[checks.Length]; / 변수의 초기값을 지정합니다: previousErrors = new string[checks.Length]
+L000476 |             var previousErrors = new string[checks.Length]; ⟦EOL⟧
+// 해설 L477: 지역 변수를 선언합니다: var previousDefinitionError = ""; / 변수의 초기값을 지정합니다: previousDefinitionError = ""
+L000477 |             var previousDefinitionError = ""; ⟦EOL⟧
+// 해설 L478: 예외 처리 범위입니다: try
+L000478 |             try ⟦EOL⟧
 // 해설 L479: 구문 블록 경계입니다 · 소속 Monitor.
-L000479 |                 { ⟦EOL⟧
-// 해설 L480: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() / 지역 변수를 선언합니다: var errors = new List<string>(); / 변수의 초기값을 지정합니다: errors = new List<string>()
-L000480 |                     var errors = new List<string>(); ⟦EOL⟧
-// 해설 L481: 함수·델리게이트 또는 객체 생성자를 호출합니다: RetryDefinitionInitialization() / 지역 변수를 선언합니다: var definitionError = RetryDefinitionInitialization(); / 변수의 초기값을 지정합니다: definitionError = RetryDefinitionInitialization()
-L000481 |                     var definitionError = RetryDefinitionInitialization(); ⟦EOL⟧
-// 해설 L482: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(definitionError) / 조건에 따라 분기합니다: if (!string.IsNullOrEmpty(definitionError))
-L000482 |                     if (!string.IsNullOrEmpty(definitionError)) ⟦EOL⟧
-// 해설 L483: 구문 블록 경계입니다 · 소속 Monitor.
-L000483 |                     { ⟦EOL⟧
-// 해설 L484: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _monitoringError, $"Alarm definitions: {definitionError}")
-L000484 |                         Volatile.Write(ref _monitoringError, $"Alarm definitions: {definitionError}"); ⟦EOL⟧
-// 해설 L485: 조건에 따라 분기합니다: if (previousDefinitionError != definitionError)
-L000485 |                         if (previousDefinitionError != definitionError) ⟦EOL⟧
-// 해설 L486: 구문 블록 경계입니다 · 소속 Monitor.
-L000486 |                         { ⟦EOL⟧
-// 해설 L487: 값을 대상에 대입합니다: previousDefinitionError = definitionError
-L000487 |                             previousDefinitionError = definitionError; ⟦EOL⟧
-// 해설 L488: 예외 처리 범위입니다: try
-L000488 |                             try ⟦EOL⟧
-// 해설 L489: 구문 블록 경계입니다 · 소속 Monitor.
-L000489 |                             { ⟦EOL⟧
-// 해설 L490: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(new InvalidOperationException($"알람 정의 초기화 대기: {definitionError}")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"알람 정의 초기화 대기: {definitionError}")
-L000490 |                                 reportError?.Invoke(new InvalidOperationException($"알람 정의 초기화 대기: {definitionError}")); ⟦EOL⟧
+L000479 |             { ⟦EOL⟧
+// 해설 L480: 본문 실행 후 반복 조건을 확인합니다: do ... while (await timer.WaitForNextTickAsync(token).ConfigureAwait(false))
+L000480 |                 do ⟦EOL⟧
+// 해설 L481: 구문 블록 경계입니다 · 소속 Monitor.
+L000481 |                 { ⟦EOL⟧
+// 해설 L482: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() / 지역 변수를 선언합니다: var errors = new List<string>(); / 변수의 초기값을 지정합니다: errors = new List<string>()
+L000482 |                     var errors = new List<string>(); ⟦EOL⟧
+// 해설 L483: 함수·델리게이트 또는 객체 생성자를 호출합니다: RetryDefinitionInitialization() / 지역 변수를 선언합니다: var definitionError = RetryDefinitionInitialization(); / 변수의 초기값을 지정합니다: definitionError = RetryDefinitionInitialization()
+L000483 |                     var definitionError = RetryDefinitionInitialization(); ⟦EOL⟧
+// 해설 L484: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(definitionError) / 조건에 따라 분기합니다: if (!string.IsNullOrEmpty(definitionError))
+L000484 |                     if (!string.IsNullOrEmpty(definitionError)) ⟦EOL⟧
+// 해설 L485: 구문 블록 경계입니다 · 소속 Monitor.
+L000485 |                     { ⟦EOL⟧
+// 해설 L486: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _monitoringError, $"Alarm definitions: {definitionError}")
+L000486 |                         Volatile.Write(ref _monitoringError, $"Alarm definitions: {definitionError}"); ⟦EOL⟧
+// 해설 L487: 조건에 따라 분기합니다: if (previousDefinitionError != definitionError)
+L000487 |                         if (previousDefinitionError != definitionError) ⟦EOL⟧
+// 해설 L488: 구문 블록 경계입니다 · 소속 Monitor.
+L000488 |                         { ⟦EOL⟧
+// 해설 L489: 값을 대상에 대입합니다: previousDefinitionError = definitionError
+L000489 |                             previousDefinitionError = definitionError; ⟦EOL⟧
+// 해설 L490: 예외 처리 범위입니다: try
+L000490 |                             try ⟦EOL⟧
 // 해설 L491: 구문 블록 경계입니다 · 소속 Monitor.
-L000491 |                             } ⟦EOL⟧
-// 해설 L492: 지정 예외를 처리합니다: catch (Exception reportException)
-L000492 |                             catch (Exception reportException) ⟦EOL⟧
+L000491 |                             { ⟦EOL⟧
+// 해설 L492: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(new InvalidOperationException($"알람 정의 초기화 대기: {definitionError}")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"알람 정의 초기화 대기: {definitionError}")
+L000492 |                                 reportError?.Invoke(new InvalidOperationException($"알람 정의 초기화 대기: {definitionError}")); ⟦EOL⟧
 // 해설 L493: 구문 블록 경계입니다 · 소속 Monitor.
-L000493 |                             { ⟦EOL⟧
-// 해설 L494: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Debug.WriteLine(reportException)
-L000494 |                                 System.Diagnostics.Debug.WriteLine(reportException); ⟦EOL⟧
+L000493 |                             } ⟦EOL⟧
+// 해설 L494: 지정 예외를 처리합니다: catch (Exception reportException)
+L000494 |                             catch (Exception reportException) ⟦EOL⟧
 // 해설 L495: 구문 블록 경계입니다 · 소속 Monitor.
-L000495 |                             } ⟦EOL⟧
-// 해설 L496: 구문 블록 경계입니다 · 소속 Monitor.
-L000496 |                         } ⟦EOL⟧
-L000497 |  ⟦EOL⟧
-// 해설 L498: 다음 반복으로 진행합니다: continue;
-L000498 |                         continue; // No SetAlarm/Build/device snapshot checks until catalog recovery succeeds. ⟦EOL⟧
-// 해설 L499: 구문 블록 경계입니다 · 소속 Monitor.
-L000499 |                     } ⟦EOL⟧
-L000500 |  ⟦EOL⟧
-// 해설 L501: 값을 대상에 대입합니다: previousDefinitionError = ""
-L000501 |                     previousDefinitionError = ""; ⟦EOL⟧
-// 해설 L502: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < checks.Length; index++) / 변수의 초기값을 지정합니다: index = 0
-L000502 |                     for (var index = 0; index < checks.Length; index++) ⟦EOL⟧
-// 해설 L503: 구문 블록 경계입니다 · 소속 Monitor.
-L000503 |                     { ⟦EOL⟧
-// 해설 L504: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
-L000504 |                         token.ThrowIfCancellationRequested(); ⟦EOL⟧
-// 해설 L505: 예외 처리 범위입니다: try
-L000505 |                         try ⟦EOL⟧
-// 해설 L506: 구문 블록 경계입니다 · 소속 Monitor.
-L000506 |                         { ⟦EOL⟧
-// 해설 L507: 함수·델리게이트 또는 객체 생성자를 호출합니다: checks[index](token)
-L000507 |                             checks[index](token); ⟦EOL⟧
-// 해설 L508: 값을 대상에 대입합니다: previousErrors[index] = ""
-L000508 |                             previousErrors[index] = ""; ⟦EOL⟧
-// 해설 L509: 구문 블록 경계입니다 · 소속 Monitor.
-L000509 |                         } ⟦EOL⟧
-// 해설 L510: 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested)
-L000510 |                         catch (OperationCanceledException)when (token.IsCancellationRequested) ⟦EOL⟧
+L000495 |                             { ⟦EOL⟧
+// 해설 L496: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Debug.WriteLine(reportException)
+L000496 |                                 System.Diagnostics.Debug.WriteLine(reportException); ⟦EOL⟧
+// 해설 L497: 구문 블록 경계입니다 · 소속 Monitor.
+L000497 |                             } ⟦EOL⟧
+// 해설 L498: 구문 블록 경계입니다 · 소속 Monitor.
+L000498 |                         } ⟦EOL⟧
+L000499 |  ⟦EOL⟧
+// 해설 L500: 다음 반복으로 진행합니다: continue;
+L000500 |                         continue; // No SetAlarm/Build/device snapshot checks until catalog recovery succeeds. ⟦EOL⟧
+// 해설 L501: 구문 블록 경계입니다 · 소속 Monitor.
+L000501 |                     } ⟦EOL⟧
+L000502 |  ⟦EOL⟧
+// 해설 L503: 값을 대상에 대입합니다: previousDefinitionError = ""
+L000503 |                     previousDefinitionError = ""; ⟦EOL⟧
+// 해설 L504: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < checks.Length; index++) / 변수의 초기값을 지정합니다: index = 0
+L000504 |                     for (var index = 0; index < checks.Length; index++) ⟦EOL⟧
+// 해설 L505: 구문 블록 경계입니다 · 소속 Monitor.
+L000505 |                     { ⟦EOL⟧
+// 해설 L506: 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested()
+L000506 |                         token.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L507: 예외 처리 범위입니다: try
+L000507 |                         try ⟦EOL⟧
+// 해설 L508: 구문 블록 경계입니다 · 소속 Monitor.
+L000508 |                         { ⟦EOL⟧
+// 해설 L509: 함수·델리게이트 또는 객체 생성자를 호출합니다: checks[index](token)
+L000509 |                             checks[index](token); ⟦EOL⟧
+// 해설 L510: 값을 대상에 대입합니다: previousErrors[index] = ""
+L000510 |                             previousErrors[index] = ""; ⟦EOL⟧
 // 해설 L511: 구문 블록 경계입니다 · 소속 Monitor.
-L000511 |                         { ⟦EOL⟧
-// 해설 L512: 예외를 발생/전달합니다: throw;
-L000512 |                             throw; ⟦EOL⟧
+L000511 |                         } ⟦EOL⟧
+// 해설 L512: 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested)
+L000512 |                         catch (OperationCanceledException)when (token.IsCancellationRequested) ⟦EOL⟧
 // 해설 L513: 구문 블록 경계입니다 · 소속 Monitor.
-L000513 |                         } ⟦EOL⟧
-// 해설 L514: 지정 예외를 처리합니다: catch (Exception exception)
-L000514 |                         catch (Exception exception) ⟦EOL⟧
+L000513 |                         { ⟦EOL⟧
+// 해설 L514: 예외를 발생/전달합니다: throw;
+L000514 |                             throw; ⟦EOL⟧
 // 해설 L515: 구문 블록 경계입니다 · 소속 Monitor.
-L000515 |                         { ⟦EOL⟧
-// 해설 L516: 지역 변수를 선언합니다: var message = $"Alarm check {index + 1}: {exception.Message}"; / 변수의 초기값을 지정합니다: message = $"Alarm check {index + 1}: {exception.Message}"
-L000516 |                             var message = $"Alarm check {index + 1}: {exception.Message}"; ⟦EOL⟧
-// 해설 L517: 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add(message)
-L000517 |                             errors.Add(message); ⟦EOL⟧
-// 해설 L518: 조건에 따라 분기합니다: if (previousErrors[index] != message)
-L000518 |                             if (previousErrors[index] != message) ⟦EOL⟧
-// 해설 L519: 구문 블록 경계입니다 · 소속 Monitor.
-L000519 |                             { ⟦EOL⟧
-// 해설 L520: 값을 대상에 대입합니다: previousErrors[index] = message
-L000520 |                                 previousErrors[index] = message; ⟦EOL⟧
-// 해설 L521: 예외 처리 범위입니다: try
-L000521 |                                 try ⟦EOL⟧
-// 해설 L522: 구문 블록 경계입니다 · 소속 Monitor.
-L000522 |                                 { ⟦EOL⟧
-// 해설 L523: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(exception)
-L000523 |                                     reportError?.Invoke(exception); ⟦EOL⟧
+L000515 |                         } ⟦EOL⟧
+// 해설 L516: 지정 예외를 처리합니다: catch (Exception exception)
+L000516 |                         catch (Exception exception) ⟦EOL⟧
+// 해설 L517: 구문 블록 경계입니다 · 소속 Monitor.
+L000517 |                         { ⟦EOL⟧
+// 해설 L518: 지역 변수를 선언합니다: var message = $"Alarm check {index + 1}: {exception.Message}"; / 변수의 초기값을 지정합니다: message = $"Alarm check {index + 1}: {exception.Message}"
+L000518 |                             var message = $"Alarm check {index + 1}: {exception.Message}"; ⟦EOL⟧
+// 해설 L519: 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add(message)
+L000519 |                             errors.Add(message); ⟦EOL⟧
+// 해설 L520: 조건에 따라 분기합니다: if (previousErrors[index] != message)
+L000520 |                             if (previousErrors[index] != message) ⟦EOL⟧
+// 해설 L521: 구문 블록 경계입니다 · 소속 Monitor.
+L000521 |                             { ⟦EOL⟧
+// 해설 L522: 값을 대상에 대입합니다: previousErrors[index] = message
+L000522 |                                 previousErrors[index] = message; ⟦EOL⟧
+// 해설 L523: 예외 처리 범위입니다: try
+L000523 |                                 try ⟦EOL⟧
 // 해설 L524: 구문 블록 경계입니다 · 소속 Monitor.
-L000524 |                                 } ⟦EOL⟧
-// 해설 L525: 지정 예외를 처리합니다: catch (Exception reportException)
-L000525 |                                 catch (Exception reportException) ⟦EOL⟧
+L000524 |                                 { ⟦EOL⟧
+// 해설 L525: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(exception)
+L000525 |                                     reportError?.Invoke(exception); ⟦EOL⟧
 // 해설 L526: 구문 블록 경계입니다 · 소속 Monitor.
-L000526 |                                 { ⟦EOL⟧
-// 해설 L527: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Debug.WriteLine(reportException)
-L000527 |                                     System.Diagnostics.Debug.WriteLine(reportException); ⟦EOL⟧
+L000526 |                                 } ⟦EOL⟧
+// 해설 L527: 지정 예외를 처리합니다: catch (Exception reportException)
+L000527 |                                 catch (Exception reportException) ⟦EOL⟧
 // 해설 L528: 구문 블록 경계입니다 · 소속 Monitor.
-L000528 |                                 } ⟦EOL⟧
-// 해설 L529: 구문 블록 경계입니다 · 소속 Monitor.
-L000529 |                             } ⟦EOL⟧
+L000528 |                                 { ⟦EOL⟧
+// 해설 L529: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Debug.WriteLine(reportException)
+L000529 |                                     System.Diagnostics.Debug.WriteLine(reportException); ⟦EOL⟧
 // 해설 L530: 구문 블록 경계입니다 · 소속 Monitor.
-L000530 |                         } ⟦EOL⟧
+L000530 |                                 } ⟦EOL⟧
 // 해설 L531: 구문 블록 경계입니다 · 소속 Monitor.
-L000531 |                     } ⟦EOL⟧
-L000532 |  ⟦EOL⟧
-// 해설 L533: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _monitoringError, string.Join(Environment.NewLine, errors)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(Environment.NewLine, errors)
-L000533 |                     Volatile.Write(ref _monitoringError, string.Join(Environment.NewLine, errors)); ⟦EOL⟧
-// 해설 L534: 구문 블록 경계입니다 · 소속 Monitor.
-L000534 |                 } ⟦EOL⟧
-// 해설 L535: 비동기 완료를 기다립니다: await timer.WaitForNextTickAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: timer.WaitForNextTickAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: timer.WaitForNextTickAsync(token)
-L000535 |                 while (await timer.WaitForNextTickAsync(token).ConfigureAwait(false)); ⟦EOL⟧
+L000531 |                             } ⟦EOL⟧
+// 해설 L532: 구문 블록 경계입니다 · 소속 Monitor.
+L000532 |                         } ⟦EOL⟧
+// 해설 L533: 구문 블록 경계입니다 · 소속 Monitor.
+L000533 |                     } ⟦EOL⟧
+L000534 |  ⟦EOL⟧
+// 해설 L535: 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _monitoringError, string.Join(Environment.NewLine, errors)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(Environment.NewLine, errors)
+L000535 |                     Volatile.Write(ref _monitoringError, string.Join(Environment.NewLine, errors)); ⟦EOL⟧
 // 해설 L536: 구문 블록 경계입니다 · 소속 Monitor.
-L000536 |             } ⟦EOL⟧
-// 해설 L537: 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested)
-L000537 |             catch (OperationCanceledException)when (token.IsCancellationRequested) ⟦EOL⟧
+L000536 |                 } ⟦EOL⟧
+// 해설 L537: 비동기 완료를 기다립니다: await timer.WaitForNextTickAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: timer.WaitForNextTickAsync(token).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: timer.WaitForNextTickAsync(token)
+L000537 |                 while (await timer.WaitForNextTickAsync(token).ConfigureAwait(false)); ⟦EOL⟧
 // 해설 L538: 구문 블록 경계입니다 · 소속 Monitor.
-L000538 |             { ⟦EOL⟧
-// 해설 L539: 구문 블록 경계입니다 · 소속 Monitor.
-L000539 |             } ⟦EOL⟧
+L000538 |             } ⟦EOL⟧
+// 해설 L539: 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested)
+L000539 |             catch (OperationCanceledException)when (token.IsCancellationRequested) ⟦EOL⟧
 // 해설 L540: 구문 블록 경계입니다 · 소속 Monitor.
-L000540 |         } ⟦EOL⟧
-// 해설 L541: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
-L000541 | #endregion ⟦EOL⟧
-// 해설 L542: 구문 블록 경계입니다.
-L000542 |     } ⟦EOL⟧
-L000543 |  ⟦EOL⟧
-// 해설 L544: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_DEFINITION(int Code, string Group, string Id, string Level, string Cause, string Solution, string CimAddress);
-L000544 |     public sealed record ST_ALARM_DEFINITION(int Code, string Group, string Id, string Level, string Cause, string Solution, string CimAddress); ⟦EOL⟧
-// 해설 L545: 타입의 구조/상속 선언입니다: public abstract class CAlarmListFileBase
-L000545 |     public abstract class CAlarmListFileBase ⟦EOL⟧
-// 해설 L546: 구문 블록 경계입니다.
-L000546 |     { ⟦EOL⟧
-// 해설 L547: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION> Drilling.Common.Alarm.CAlarmListFileBase.Load()
-L000547 |         public abstract IReadOnlyList<ST_ALARM_DEFINITION> Load(); ⟦EOL⟧
+L000540 |             { ⟦EOL⟧
+// 해설 L541: 구문 블록 경계입니다 · 소속 Monitor.
+L000541 |             } ⟦EOL⟧
+// 해설 L542: 구문 블록 경계입니다 · 소속 Monitor.
+L000542 |         } ⟦EOL⟧
+// 해설 L543: 전처리/영역 지시문입니다. 활성 빌드 조건을 확인합니다: #endregion
+L000543 | #endregion ⟦EOL⟧
+// 해설 L544: 구문 블록 경계입니다.
+L000544 |     } ⟦EOL⟧
+L000545 |  ⟦EOL⟧
+// 해설 L546: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_DEFINITION(int Code, string Group, string Id, string Level, string Cause, string Solution, string CimAddress);
+L000546 |     public sealed record ST_ALARM_DEFINITION(int Code, string Group, string Id, string Level, string Cause, string Solution, string CimAddress); ⟦EOL⟧
+// 해설 L547: 타입의 구조/상속 선언입니다: public abstract class CAlarmListFileBase
+L000547 |     public abstract class CAlarmListFileBase ⟦EOL⟧
 // 해설 L548: 구문 블록 경계입니다.
-L000548 |     } ⟦EOL⟧
-L000549 |  ⟦EOL⟧
-// 해설 L550: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_DEFINITION_SNAPSHOT(IReadOnlyList<ST_ALARM_DEFINITION> Rows, string Error);
-L000550 |     public sealed record ST_ALARM_DEFINITION_SNAPSHOT(IReadOnlyList<ST_ALARM_DEFINITION> Rows, string Error); ⟦EOL⟧
-// 해설 L551: 타입의 구조/상속 선언입니다: public enum EN_ALARM_LEVEL
-L000551 |     public enum EN_ALARM_LEVEL ⟦EOL⟧
-// 해설 L552: 구문 블록 경계입니다.
-L000552 |     { ⟦EOL⟧
-// 해설 L553: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.EN_ALARM_LEVEL.Info
-L000553 |         Info, ⟦EOL⟧
-// 해설 L554: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.EN_ALARM_LEVEL.Warning
-L000554 |         Warning, ⟦EOL⟧
-// 해설 L555: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.EN_ALARM_LEVEL.Critical
-L000555 |         Critical ⟦EOL⟧
-// 해설 L556: 구문 블록 경계입니다.
-L000556 |     } ⟦EOL⟧
-L000557 |  ⟦EOL⟧
-// 해설 L558: 타입의 구조/상속 선언입니다: public enum EN_ALARM_STATE
-L000558 |     public enum EN_ALARM_STATE ⟦EOL⟧
-// 해설 L559: 구문 블록 경계입니다.
-L000559 |     { ⟦EOL⟧
-// 해설 L560: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.EN_ALARM_STATE.Clear
-L000560 |         Clear, ⟦EOL⟧
-// 해설 L561: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.EN_ALARM_STATE.Occur
-L000561 |         Occur ⟦EOL⟧
-// 해설 L562: 구문 블록 경계입니다.
-L000562 |     } ⟦EOL⟧
-L000563 |  ⟦EOL⟧
-// 해설 L564: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_DATA(int Code, EN_ALARM_LEVEL Severity, string Message, string RecoveryAction, DateTimeOffset OccurredAt, string Device = "SYSTEM", string StationName = "COMMON")
-L000564 |     public sealed record ST_ALARM_DATA(int Code, EN_ALARM_LEVEL Severity, string Message, string RecoveryAction, DateTimeOffset OccurredAt, string Device = "SYSTEM", string StationName = "COMMON") ⟦EOL⟧
-// 해설 L565: 구문 블록 경계입니다.
-L000565 |     { ⟦EOL⟧
-// 해설 L566: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.ST_ALARM_DATA.Id
-L000566 |         public string Id { get; init; } = ""; ⟦EOL⟧
-// 해설 L567: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.ST_ALARM_DATA.Group
-L000567 |         public string Group { get; init; } = ""; ⟦EOL⟧
-// 해설 L568: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.ST_ALARM_DATA.CimAddress
-L000568 |         public string CimAddress { get; init; } = ""; ⟦EOL⟧
-// 해설 L569: 구문 블록 경계입니다.
-L000569 |     } ⟦EOL⟧
-L000570 |  ⟦EOL⟧
-// 해설 L571: 타입의 구조/상속 선언입니다: public sealed record ST_CURRENT_ALARM_SNAPSHOT(long Revision, long OccurrenceVersion, IReadOnlyList<ST_ALARM_DATA> Rows, string LogError);
-L000571 |     public sealed record ST_CURRENT_ALARM_SNAPSHOT(long Revision, long OccurrenceVersion, IReadOnlyList<ST_ALARM_DATA> Rows, string LogError); ⟦EOL⟧
-// 해설 L572: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000572 |     // Uses the shared settings/Automation caches regardless of the currently selected menu or heads. ⟦EOL⟧
-// 해설 L573: 타입의 구조/상속 선언입니다: internal sealed class CScannerTemperatureAlarmMonitor(CAlarmManager alarms, CSettingManager settings, CAutomationManager automation)
-L000573 |     internal sealed class CScannerTemperatureAlarmMonitor(CAlarmManager alarms, CSettingManager settings, CAutomationManager automation) ⟦EOL⟧
-// 해설 L574: 구문 블록 경계입니다.
-L000574 |     { ⟦EOL⟧
-// 해설 L575: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CScannerTemperatureAlarmMonitor.Check()
-L000575 |         public void Check() ⟦EOL⟧
-// 해설 L576: 구문 블록 경계입니다 · 소속 Check.
-L000576 |         { ⟦EOL⟧
-// 해설 L577: 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LoadSection(EN_SETTING_TAB.Option) / 지역 변수를 선언합니다: var options = settings.LoadSection(EN_SETTING_TAB.Option); / 변수의 초기값을 지정합니다: options = settings.LoadSection(EN_SETTING_TAB.Option)
-L000577 |             var options = settings.LoadSection(EN_SETTING_TAB.Option); ⟦EOL⟧
-// 해설 L578: 함수·델리게이트 또는 객체 생성자를 호출합니다: options.FirstOrDefault(option => option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) || option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var limitText = options.FirstOrDefault(option => option.Key.Equals("SCANNER_TEMP_LIMIT", StringC
-L000578 |             var limitText = options.FirstOrDefault(option => option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) || option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase))?.Value; ⟦EOL⟧
-// 해설 L579: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(limitText, NumberStyles.Float, CultureInfo.InvariantCulture, out var limit) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(limitText, NumberStyles.Float, CultureInfo.CurrentCulture, out limit) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(limit) / 조건에 따라 분기합니다: if ((!double.TryParse(limitText, NumberStyles.Float, CultureInfo.InvariantCulture, out var limit) && !double.TryParse(limitText, NumberStyles.Float, CultureInfo.CurrentCulture, out limit)) || !double.IsFinite(limit) || limit…)
-L000579 |             if ((!double.TryParse(limitText, NumberStyles.Float, CultureInfo.InvariantCulture, out var limit) && !double.TryParse(limitText, NumberStyles.Float, CultureInfo.CurrentCulture, out limit)) || !double.IsFinite(limit) || limit < 0) ⟦EOL⟧
-// 해설 L580: 구문 블록 경계입니다 · 소속 Check.
-L000580 |             { ⟦EOL⟧
-// 해설 L581: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(limitText) / 조건에 따라 결과식을 선택합니다: limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText / 지역 변수를 선언합니다: var displayedValue = limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText; / 변수의 초기값을 지정합니다: displayedValue = limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText
-L000581 |                 var displayedValue = limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText; ⟦EOL⟧
-// 해설 L582: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000582 |                 // Let the owning monitor expose MonitoringError and reportError instead of ⟦EOL⟧
-// 해설 L583: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000583 |                 // silently treating a disabled temperature check as a successful cycle. ⟦EOL⟧
-// 해설 L584: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Scanner Temp Limit (SCANNER_TEMP_LIMIT) 설정 오류: " + $"0 이상의 유한한 온도(°C)가 필요합니다. 현재 값: {displayedValue}. " + "Setting > OPTION > INTERLOCK에서 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Scanner Temp Limit (SCANNER_TEMP_LIMIT) 설정 오류: " + $"0 이상의 유한한 온도(°C)가 필요합니다. 현재 값: {displayedValue}. " + "Setting > OPTION > INTERLOCK에서 확인해 주세요.");
-L000584 |                 throw new InvalidDataException($"Scanner Temp Limit (SCANNER_TEMP_LIMIT) 설정 오류: " + $"0 이상의 유한한 온도(°C)가 필요합니다. 현재 값: {displayedValue}. " + "Setting > OPTION > INTERLOCK에서 확인해 주세요."); ⟦EOL⟧
-// 해설 L585: 구문 블록 경계입니다 · 소속 Check.
-L000585 |             } ⟦EOL⟧
-L000586 |  ⟦EOL⟧
-// 해설 L587: 초기화·조건·증감이 있는 반복입니다: for (var headNo = 1; headNo <= 8; headNo++) / 변수의 초기값을 지정합니다: headNo = 1
-L000587 |             for (var headNo = 1; headNo <= 8; headNo++) ⟦EOL⟧
-// 해설 L588: 구문 블록 경계입니다 · 소속 Check.
-L000588 |             { ⟦EOL⟧
-// 해설 L589: 지역 변수를 선언합니다: var overLimit = false; / 변수의 초기값을 지정합니다: overLimit = false
-L000589 |                 var overLimit = false; ⟦EOL⟧
-// 해설 L590: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.BuildAxisDefinitions(options, headNo) / 컬렉션 요소를 순회합니다: foreach (var axis in CScannerAxisConfiguration.BuildAxisDefinitions(options, headNo))
-L000590 |                 foreach (var axis in CScannerAxisConfiguration.BuildAxisDefinitions(options, headNo)) ⟦EOL⟧
-// 해설 L591: 구문 블록 경계입니다 · 소속 Check.
-L000591 |                 { ⟦EOL⟧
-// 해설 L592: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(axis.ConfigurationError) / 조건에 따라 분기합니다: if (!axis.IsUsed || !axis.ReadExtendedStatus || !string.IsNullOrEmpty(axis.ConfigurationError))
-L000592 |                     if (!axis.IsUsed || !axis.ReadExtendedStatus || !string.IsNullOrEmpty(axis.ConfigurationError)) ⟦EOL⟧
-// 해설 L593: 다음 반복으로 진행합니다: continue;
-L000593 |                         continue; ⟦EOL⟧
-// 해설 L594: 함수·델리게이트 또는 객체 생성자를 호출합니다: automation.IsSimul(axis.AutomationNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: automation.IsConnect(axis.AutomationNo) / 조건에 따라 분기합니다: if (!automation.IsSimul(axis.AutomationNo) && !automation.IsConnect(axis.AutomationNo))
-L000594 |                     if (!automation.IsSimul(axis.AutomationNo) && !automation.IsConnect(axis.AutomationNo)) ⟦EOL⟧
+L000548 |     { ⟦EOL⟧
+// 해설 L549: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION> Drilling.Common.Alarm.CAlarmListFileBase.Load()
+L000549 |         public abstract IReadOnlyList<ST_ALARM_DEFINITION> Load(); ⟦EOL⟧
+// 해설 L550: 구문 블록 경계입니다.
+L000550 |     } ⟦EOL⟧
+L000551 |  ⟦EOL⟧
+// 해설 L552: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_DEFINITION_SNAPSHOT(IReadOnlyList<ST_ALARM_DEFINITION> Rows, string Error);
+L000552 |     public sealed record ST_ALARM_DEFINITION_SNAPSHOT(IReadOnlyList<ST_ALARM_DEFINITION> Rows, string Error); ⟦EOL⟧
+// 해설 L553: 타입의 구조/상속 선언입니다: public enum EN_ALARM_LEVEL
+L000553 |     public enum EN_ALARM_LEVEL ⟦EOL⟧
+// 해설 L554: 구문 블록 경계입니다.
+L000554 |     { ⟦EOL⟧
+// 해설 L555: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.EN_ALARM_LEVEL.Info
+L000555 |         Info, ⟦EOL⟧
+// 해설 L556: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.EN_ALARM_LEVEL.Warning
+L000556 |         Warning, ⟦EOL⟧
+// 해설 L557: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.EN_ALARM_LEVEL.Critical
+L000557 |         Critical ⟦EOL⟧
+// 해설 L558: 구문 블록 경계입니다.
+L000558 |     } ⟦EOL⟧
+L000559 |  ⟦EOL⟧
+// 해설 L560: 타입의 구조/상속 선언입니다: public enum EN_ALARM_STATE
+L000560 |     public enum EN_ALARM_STATE ⟦EOL⟧
+// 해설 L561: 구문 블록 경계입니다.
+L000561 |     { ⟦EOL⟧
+// 해설 L562: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.EN_ALARM_STATE.Clear
+L000562 |         Clear, ⟦EOL⟧
+// 해설 L563: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.EN_ALARM_STATE.Occur
+L000563 |         Occur ⟦EOL⟧
+// 해설 L564: 구문 블록 경계입니다.
+L000564 |     } ⟦EOL⟧
+L000565 |  ⟦EOL⟧
+// 해설 L566: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_DATA(int Code, EN_ALARM_LEVEL Severity, string Message, string RecoveryAction, DateTimeOffset OccurredAt, string Device = "SYSTEM", string StationName = "COMMON")
+L000566 |     public sealed record ST_ALARM_DATA(int Code, EN_ALARM_LEVEL Severity, string Message, string RecoveryAction, DateTimeOffset OccurredAt, string Device = "SYSTEM", string StationName = "COMMON") ⟦EOL⟧
+// 해설 L567: 구문 블록 경계입니다.
+L000567 |     { ⟦EOL⟧
+// 해설 L568: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.ST_ALARM_DATA.Id
+L000568 |         public string Id { get; init; } = ""; ⟦EOL⟧
+// 해설 L569: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.ST_ALARM_DATA.Group
+L000569 |         public string Group { get; init; } = ""; ⟦EOL⟧
+// 해설 L570: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.ST_ALARM_DATA.CimAddress
+L000570 |         public string CimAddress { get; init; } = ""; ⟦EOL⟧
+// 해설 L571: 구문 블록 경계입니다.
+L000571 |     } ⟦EOL⟧
+L000572 |  ⟦EOL⟧
+// 해설 L573: 타입의 구조/상속 선언입니다: public sealed record ST_CURRENT_ALARM_SNAPSHOT(long Revision, long OccurrenceVersion, IReadOnlyList<ST_ALARM_DATA> Rows, string LogError);
+L000573 |     public sealed record ST_CURRENT_ALARM_SNAPSHOT(long Revision, long OccurrenceVersion, IReadOnlyList<ST_ALARM_DATA> Rows, string LogError); ⟦EOL⟧
+// 해설 L574: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000574 |     // Uses the shared settings/Automation caches regardless of the currently selected menu or heads. ⟦EOL⟧
+// 해설 L575: 타입의 구조/상속 선언입니다: internal sealed class CScannerTemperatureAlarmMonitor(CAlarmManager alarms, CSettingManager settings, CAutomationManager automation)
+L000575 |     internal sealed class CScannerTemperatureAlarmMonitor(CAlarmManager alarms, CSettingManager settings, CAutomationManager automation) ⟦EOL⟧
+// 해설 L576: 구문 블록 경계입니다.
+L000576 |     { ⟦EOL⟧
+// 해설 L577: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CScannerTemperatureAlarmMonitor.Check()
+L000577 |         public void Check() ⟦EOL⟧
+// 해설 L578: 구문 블록 경계입니다 · 소속 Check.
+L000578 |         { ⟦EOL⟧
+// 해설 L579: 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LoadSection(EN_SETTING_TAB.Option) / 지역 변수를 선언합니다: var options = settings.LoadSection(EN_SETTING_TAB.Option); / 변수의 초기값을 지정합니다: options = settings.LoadSection(EN_SETTING_TAB.Option)
+L000579 |             var options = settings.LoadSection(EN_SETTING_TAB.Option); ⟦EOL⟧
+// 해설 L580: 함수·델리게이트 또는 객체 생성자를 호출합니다: options.FirstOrDefault(option => option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) || option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var limitText = options.FirstOrDefault(option => option.Key.Equals("SCANNER_TEMP_LIMIT", StringC
+L000580 |             var limitText = options.FirstOrDefault(option => option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) || option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase))?.Value; ⟦EOL⟧
+// 해설 L581: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(limitText, NumberStyles.Float, CultureInfo.InvariantCulture, out var limit) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(limitText, NumberStyles.Float, CultureInfo.CurrentCulture, out limit) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(limit) / 조건에 따라 분기합니다: if ((!double.TryParse(limitText, NumberStyles.Float, CultureInfo.InvariantCulture, out var limit) && !double.TryParse(limitText, NumberStyles.Float, CultureInfo.CurrentCulture, out limit)) || !double.IsFinite(limit) || limit…)
+L000581 |             if ((!double.TryParse(limitText, NumberStyles.Float, CultureInfo.InvariantCulture, out var limit) && !double.TryParse(limitText, NumberStyles.Float, CultureInfo.CurrentCulture, out limit)) || !double.IsFinite(limit) || limit < 0) ⟦EOL⟧
+// 해설 L582: 구문 블록 경계입니다 · 소속 Check.
+L000582 |             { ⟦EOL⟧
+// 해설 L583: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(limitText) / 조건에 따라 결과식을 선택합니다: limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText / 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText / 지역 변수를 선언합니다: var displayedValue = limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText; / 변수의 초기값을 지정합니다: displayedValue = limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText
+L000583 |                 var displayedValue = limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText; ⟦EOL⟧
+// 해설 L584: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000584 |                 // Let the owning monitor expose MonitoringError and reportError instead of ⟦EOL⟧
+// 해설 L585: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000585 |                 // silently treating a disabled temperature check as a successful cycle. ⟦EOL⟧
+// 해설 L586: 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Scanner Temp Limit (SCANNER_TEMP_LIMIT) 설정 오류: " + $"0 이상의 유한한 온도(°C)가 필요합니다. 현재 값: {displayedValue}. " + "Setting > OPTION > INTERLOCK에서 확인해 주세요.") / 예외를 발생/전달합니다: throw new InvalidDataException($"Scanner Temp Limit (SCANNER_TEMP_LIMIT) 설정 오류: " + $"0 이상의 유한한 온도(°C)가 필요합니다. 현재 값: {displayedValue}. " + "Setting > OPTION > INTERLOCK에서 확인해 주세요.");
+L000586 |                 throw new InvalidDataException($"Scanner Temp Limit (SCANNER_TEMP_LIMIT) 설정 오류: " + $"0 이상의 유한한 온도(°C)가 필요합니다. 현재 값: {displayedValue}. " + "Setting > OPTION > INTERLOCK에서 확인해 주세요."); ⟦EOL⟧
+// 해설 L587: 구문 블록 경계입니다 · 소속 Check.
+L000587 |             } ⟦EOL⟧
+L000588 |  ⟦EOL⟧
+// 해설 L589: 초기화·조건·증감이 있는 반복입니다: for (var headNo = 1; headNo <= 8; headNo++) / 변수의 초기값을 지정합니다: headNo = 1
+L000589 |             for (var headNo = 1; headNo <= 8; headNo++) ⟦EOL⟧
+// 해설 L590: 구문 블록 경계입니다 · 소속 Check.
+L000590 |             { ⟦EOL⟧
+// 해설 L591: 지역 변수를 선언합니다: var overLimit = false; / 변수의 초기값을 지정합니다: overLimit = false
+L000591 |                 var overLimit = false; ⟦EOL⟧
+// 해설 L592: 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.BuildAxisDefinitions(options, headNo) / 컬렉션 요소를 순회합니다: foreach (var axis in CScannerAxisConfiguration.BuildAxisDefinitions(options, headNo))
+L000592 |                 foreach (var axis in CScannerAxisConfiguration.BuildAxisDefinitions(options, headNo)) ⟦EOL⟧
+// 해설 L593: 구문 블록 경계입니다 · 소속 Check.
+L000593 |                 { ⟦EOL⟧
+// 해설 L594: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(axis.ConfigurationError) / 조건에 따라 분기합니다: if (!axis.IsUsed || !axis.ReadExtendedStatus || !string.IsNullOrEmpty(axis.ConfigurationError))
+L000594 |                     if (!axis.IsUsed || !axis.ReadExtendedStatus || !string.IsNullOrEmpty(axis.ConfigurationError)) ⟦EOL⟧
 // 해설 L595: 다음 반복으로 진행합니다: continue;
 L000595 |                         continue; ⟦EOL⟧
-// 해설 L596: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000596 |                     // GetAxis only registers/reads the cache; the shared acquisition service owns device reads. ⟦EOL⟧
-// 해설 L597: 함수·델리게이트 또는 객체 생성자를 호출합니다: automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus) / 지역 변수를 선언합니다: var snapshot = automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus); / 변수의 초기값을 지정합니다: snapshot = automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus)
-L000597 |                     var snapshot = automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus); ⟦EOL⟧
-// 해설 L598: 조건에 따라 분기합니다: if (snapshot.State != "OK" || snapshot.Value is not { } status)
-L000598 |                     if (snapshot.State != "OK" || snapshot.Value is not { } status) ⟦EOL⟧
-// 해설 L599: 다음 반복으로 진행합니다: continue;
-L000599 |                         continue; ⟦EOL⟧
-// 해설 L600: 값을 대상에 대입합니다: overLimit |= double.IsFinite(status.MotorTemperature) && status.MotorTemperature > limit / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(status.MotorTemperature)
-L000600 |                     overLimit |= double.IsFinite(status.MotorTemperature) && status.MotorTemperature > limit; ⟦EOL⟧
-// 해설 L601: 구문 블록 경계입니다 · 소속 Check.
-L000601 |                 } ⟦EOL⟧
-L000602 |  ⟦EOL⟧
-// 해설 L603: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000603 |                 // 1048..1055 correspond to SCANNER 1..8. Keep both X/Y subscribed even when one is hot. ⟦EOL⟧
-// 해설 L604: 조건에 따라 분기합니다: if (overLimit)
-L000604 |                 if (overLimit) ⟦EOL⟧
-// 해설 L605: 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.SetAlarm(1047 + headNo)
-L000605 |                     alarms.SetAlarm(1047 + headNo); ⟦EOL⟧
-// 해설 L606: 구문 블록 경계입니다 · 소속 Check.
-L000606 |             } ⟦EOL⟧
-// 해설 L607: 구문 블록 경계입니다 · 소속 Check.
-L000607 |         } ⟦EOL⟧
-// 해설 L608: 구문 블록 경계입니다.
-L000608 |     } ⟦EOL⟧
-L000609 |  ⟦EOL⟧
-// 해설 L610: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000610 |     /// <summary>Preserve the innermost failing scenario/action or signal across nested sequence calls.</summary> ⟦EOL⟧
-// 해설 L611: 타입의 구조/상속 선언입니다: public sealed class CSequenceFailureException : InvalidOperationException
-L000611 |     public sealed class CSequenceFailureException : InvalidOperationException ⟦EOL⟧
-// 해설 L612: 구문 블록 경계입니다.
-L000612 |     { ⟦EOL⟧
-// 해설 L613: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Alarm.CSequenceFailureException._reported
-L000613 |         private int _reported; ⟦EOL⟧
-// 해설 L614: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception)
-L000614 |         private CSequenceFailureException(string scenario, string subject, string kind, Exception error) ⟦EOL⟧
-// 해설 L615: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception)
-L000615 |             : base($"{scenario} / {subject} {kind}: {error.Message}", error) ⟦EOL⟧
-// 해설 L616: 값을 대상에 대입합니다: Scenario = scenario / 값을 대상에 대입합니다: Subject = subject / 값을 대상에 대입합니다: Kind = kind
-L000616 |         { Scenario = scenario; Subject = subject; Kind = kind; } ⟦EOL⟧
-// 해설 L617: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CSequenceFailureException.Scenario
-L000617 |         public string Scenario { get; } ⟦EOL⟧
-// 해설 L618: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CSequenceFailureException.Subject
-L000618 |         public string Subject { get; } ⟦EOL⟧
-// 해설 L619: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CSequenceFailureException.Kind
-L000619 |         public string Kind { get; } ⟦EOL⟧
-// 해설 L620: 조건에 따라 결과식을 선택합니다: Subject.Length == 0 ? $"SEQ_{Scenario}_NG" : $"SEQ_{Scenario}_{Subject}_{Kind}"
-L000620 |         public string AlarmId => Subject.Length == 0 ? $"SEQ_{Scenario}_NG" : $"SEQ_{Scenario}_{Subject}_{Kind}"; ⟦EOL⟧
-// 해설 L621: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("MOVE_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("MOVE_", StringComparison.Ordinal) ? "PROCESS_MOVE" : id.StartsWith("DISTORTION_", StringComparison.Ordinal) ? "DISTORTION" : id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" : id.StartsWith("DOREADY_", String
-L000621 |         public static string ActionScenario(string id) => id.StartsWith("MOVE_", StringComparison.Ordinal) ? "PROCESS_MOVE" ⟦EOL⟧
-// 해설 L622: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("DISTORTION_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("DISTORTION_", StringComparison.Ordinal) ? "DISTORTION" : id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" : id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" : id.StartsWith("PROCESS_", StringCo
-L000622 |             : id.StartsWith("DISTORTION_", StringComparison.Ordinal) ? "DISTORTION" ⟦EOL⟧
-// 해설 L623: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("IOF_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" : id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" : id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" : id.StartsWith("REVIEW_", StringCompariso
-L000623 |             : id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" ⟦EOL⟧
-// 해설 L624: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("DOREADY_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" : id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" : id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" : id.StartsWith("TPM_", StringCompar
-L000624 |             : id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" ⟦EOL⟧
-// 해설 L625: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("PROCESS_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" : id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" : id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO"
-L000625 |             : id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" ⟦EOL⟧
-// 해설 L626: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("REVIEW_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" : id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO"
-L000626 |             : id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" ⟦EOL⟧
-// 해설 L627: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("TPM_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO"
-L000627 |             : id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO"; ⟦EOL⟧
-// 해설 L628: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CSequenceFailureException.SignalScenario(string, string)
-L000628 |         public static string SignalScenario(string id, string fallback) ⟦EOL⟧
-// 해설 L629: 구문 블록 경계입니다 · 소속 SignalScenario.
-L000629 |         { ⟦EOL⟧
-// 해설 L630: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("DISTORTION", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("DISTORTION", StringComparison.Ordinal)) / 호출자에게 값 또는 제어를 반환합니다: return "DISTORTION";
-L000630 |             if (id.Contains("DISTORTION", StringComparison.Ordinal)) return "DISTORTION"; ⟦EOL⟧
-// 해설 L631: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("TOP_POWERMETER", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("TOP_POWERMETER", StringComparison.Ordinal) || id == "PROCESS_SEQUENCE_TPM_LASER_ON") / 호출자에게 값 또는 제어를 반환합니다: return "TPM";
-L000631 |             if (id.Contains("TOP_POWERMETER", StringComparison.Ordinal) || id == "PROCESS_SEQUENCE_TPM_LASER_ON") return "TPM"; ⟦EOL⟧
-// 해설 L632: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("DOREADY", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("DOREADY", StringComparison.Ordinal)) / 호출자에게 값 또는 제어를 반환합니다: return "DOREADY";
-L000632 |             if (id.Contains("DOREADY", StringComparison.Ordinal)) return "DOREADY"; ⟦EOL⟧
-// 해설 L633: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("DO_ALIGN", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("DO_ALIGN", StringComparison.Ordinal) || id == "STAGE_MCC_BUSY_FLAGS") / 호출자에게 값 또는 제어를 반환합니다: return "DO_ALIGN";
-L000633 |             if (id.Contains("DO_ALIGN", StringComparison.Ordinal) || id == "STAGE_MCC_BUSY_FLAGS") return "DO_ALIGN"; ⟦EOL⟧
-// 해설 L634: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("IOF", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("IOF", StringComparison.Ordinal)) / 호출자에게 값 또는 제어를 반환합니다: return "IOF";
-L000634 |             if (id.Contains("IOF", StringComparison.Ordinal)) return "IOF"; ⟦EOL⟧
-// 해설 L635: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_SDC", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("REVIEW_MOVE_START", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("REVIEW_GENERAL_RUNNING", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("PROCESS_REVIEW_", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("_SDC", StringComparison.Ordinal) || id.Contains("REVIEW_MOVE_START", StringComparison.Ordinal) || id.Contains("REVIEW_GENERAL_RUNNING", StringComparison.Ordinal) ||
-L000635 |             if (id.Contains("_SDC", StringComparison.Ordinal) || id.Contains("REVIEW_MOVE_START", StringComparison.Ordinal) || id.Contains("REVIEW_GENERAL_RUNNING", StringComparison.Ordinal) || id.StartsWith("PROCESS_REVIEW_", StringComparison.Ordinal)) return "PROCESS_MOVE"; ⟦EOL⟧
-// 해설 L636: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("HANDSHAKE_", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_PROCESS_", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("HANDSHAKE_", StringComparison.Ordinal) && id.Contains("_PROCESS_", StringComparison.Ordinal)) / 호출자에게 값 또는 제어를 반환합니다: return "PROCESS";
-L000636 |             if (id.Contains("HANDSHAKE_", StringComparison.Ordinal) && id.Contains("_PROCESS_", StringComparison.Ordinal)) return "PROCESS"; ⟦EOL⟧
-// 해설 L637: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("HANDSHAKE_", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_REVIEW_", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("HANDSHAKE_", StringComparison.Ordinal) && id.Contains("_REVIEW_", StringComparison.Ordinal)) / 호출자에게 값 또는 제어를 반환합니다: return "REVIEW";
-L000637 |             if (id.Contains("HANDSHAKE_", StringComparison.Ordinal) && id.Contains("_REVIEW_", StringComparison.Ordinal)) return "REVIEW"; ⟦EOL⟧
-// 해설 L638: 호출자에게 값 또는 제어를 반환합니다: return fallback;
-L000638 |             return fallback; ⟦EOL⟧
-// 해설 L639: 구문 블록 경계입니다 · 소속 SignalScenario.
-L000639 |         } ⟦EOL⟧
-// 해설 L640: 조건에 따라 결과식을 선택합니다: error is CSequenceFailureException found ? found : error is AggregateException group ? group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) : error.InnerException is { } inner ? Existing(inner) : null
-L000640 |         private static CSequenceFailureException? Existing(Exception error) => error is CSequenceFailureException found ? found ⟦EOL⟧
-// 해설 L641: 함수·델리게이트 또는 객체 생성자를 호출합니다: group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) / 함수·델리게이트 또는 객체 생성자를 호출합니다: group.InnerExceptions.Select(Existing) / 조건에 따라 결과식을 선택합니다: error is AggregateException group ? group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) : error.InnerException is { } inner ? Existing(inner) : null
-L000641 |             : error is AggregateException group ? group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) ⟦EOL⟧
-// 해설 L642: 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(inner) / 조건에 따라 결과식을 선택합니다: error.InnerException is { } inner ? Existing(inner) : null
-L000642 |             : error.InnerException is { } inner ? Existing(inner) : null; ⟦EOL⟧
-// 해설 L643: 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(error)
-L000643 |         public static CSequenceFailureException Action(string id, Exception error) => Existing(error) ⟦EOL⟧
-// 해설 L644: 함수·델리게이트 또는 객체 생성자를 호출합니다: Signal(wait.Scenario, wait.Signal, true, error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(ActionScenario(id), id, "NG", error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ActionScenario(id) / 조건에 따라 결과식을 선택합니다: error is CSequenceSignalCanceledException wait ? Signal(wait.Scenario, wait.Signal, true, error) : new(ActionScenario(id), id, "NG", error)
-L000644 |             ?? (error is CSequenceSignalCanceledException wait ? Signal(wait.Scenario, wait.Signal, true, error) : new(ActionScenario(id), id, "NG", error)); ⟦EOL⟧
+// 해설 L596: 함수·델리게이트 또는 객체 생성자를 호출합니다: automation.IsSimul(axis.AutomationNo) / 함수·델리게이트 또는 객체 생성자를 호출합니다: automation.IsConnect(axis.AutomationNo) / 조건에 따라 분기합니다: if (!automation.IsSimul(axis.AutomationNo) && !automation.IsConnect(axis.AutomationNo))
+L000596 |                     if (!automation.IsSimul(axis.AutomationNo) && !automation.IsConnect(axis.AutomationNo)) ⟦EOL⟧
+// 해설 L597: 다음 반복으로 진행합니다: continue;
+L000597 |                         continue; ⟦EOL⟧
+// 해설 L598: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000598 |                     // GetAxis only registers/reads the cache; the shared acquisition service owns device reads. ⟦EOL⟧
+// 해설 L599: 함수·델리게이트 또는 객체 생성자를 호출합니다: automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus) / 지역 변수를 선언합니다: var snapshot = automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus); / 변수의 초기값을 지정합니다: snapshot = automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus)
+L000599 |                     var snapshot = automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus); ⟦EOL⟧
+// 해설 L600: 조건에 따라 분기합니다: if (snapshot.State != "OK" || snapshot.Value is not { } status)
+L000600 |                     if (snapshot.State != "OK" || snapshot.Value is not { } status) ⟦EOL⟧
+// 해설 L601: 다음 반복으로 진행합니다: continue;
+L000601 |                         continue; ⟦EOL⟧
+// 해설 L602: 값을 대상에 대입합니다: overLimit |= double.IsFinite(status.MotorTemperature) && status.MotorTemperature > limit / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(status.MotorTemperature)
+L000602 |                     overLimit |= double.IsFinite(status.MotorTemperature) && status.MotorTemperature > limit; ⟦EOL⟧
+// 해설 L603: 구문 블록 경계입니다 · 소속 Check.
+L000603 |                 } ⟦EOL⟧
+L000604 |  ⟦EOL⟧
+// 해설 L605: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000605 |                 // 1048..1055 correspond to SCANNER 1..8. Keep both X/Y subscribed even when one is hot. ⟦EOL⟧
+// 해설 L606: 조건에 따라 분기합니다: if (overLimit)
+L000606 |                 if (overLimit) ⟦EOL⟧
+// 해설 L607: 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.SetAlarm(1047 + headNo)
+L000607 |                     alarms.SetAlarm(1047 + headNo); ⟦EOL⟧
+// 해설 L608: 구문 블록 경계입니다 · 소속 Check.
+L000608 |             } ⟦EOL⟧
+// 해설 L609: 구문 블록 경계입니다 · 소속 Check.
+L000609 |         } ⟦EOL⟧
+// 해설 L610: 구문 블록 경계입니다.
+L000610 |     } ⟦EOL⟧
+L000611 |  ⟦EOL⟧
+// 해설 L612: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000612 |     /// <summary>Preserve the innermost failing scenario/action or signal across nested sequence calls.</summary> ⟦EOL⟧
+// 해설 L613: 타입의 구조/상속 선언입니다: public sealed class CSequenceFailureException : InvalidOperationException
+L000613 |     public sealed class CSequenceFailureException : InvalidOperationException ⟦EOL⟧
+// 해설 L614: 구문 블록 경계입니다.
+L000614 |     { ⟦EOL⟧
+// 해설 L615: 선언·서명/매개변수·접근 조건입니다 · int Drilling.Common.Alarm.CSequenceFailureException._reported
+L000615 |         private int _reported; ⟦EOL⟧
+// 해설 L616: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception)
+L000616 |         private CSequenceFailureException(string scenario, string subject, string kind, Exception error) ⟦EOL⟧
+// 해설 L617: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception)
+L000617 |             : base($"{scenario} / {subject} {kind}: {error.Message}", error) ⟦EOL⟧
+// 해설 L618: 값을 대상에 대입합니다: Scenario = scenario / 값을 대상에 대입합니다: Subject = subject / 값을 대상에 대입합니다: Kind = kind
+L000618 |         { Scenario = scenario; Subject = subject; Kind = kind; } ⟦EOL⟧
+// 해설 L619: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CSequenceFailureException.Scenario
+L000619 |         public string Scenario { get; } ⟦EOL⟧
+// 해설 L620: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CSequenceFailureException.Subject
+L000620 |         public string Subject { get; } ⟦EOL⟧
+// 해설 L621: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CSequenceFailureException.Kind
+L000621 |         public string Kind { get; } ⟦EOL⟧
+// 해설 L622: 조건에 따라 결과식을 선택합니다: Subject.Length == 0 ? $"SEQ_{Scenario}_NG" : $"SEQ_{Scenario}_{Subject}_{Kind}"
+L000622 |         public string AlarmId => Subject.Length == 0 ? $"SEQ_{Scenario}_NG" : $"SEQ_{Scenario}_{Subject}_{Kind}"; ⟦EOL⟧
+// 해설 L623: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("MOVE_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("MOVE_", StringComparison.Ordinal) ? "PROCESS_MOVE" : id.StartsWith("DISTORTION_", StringComparison.Ordinal) ? "DISTORTION" : id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" : id.StartsWith("DOREADY_", String
+L000623 |         public static string ActionScenario(string id) => id.StartsWith("MOVE_", StringComparison.Ordinal) ? "PROCESS_MOVE" ⟦EOL⟧
+// 해설 L624: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("DISTORTION_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("DISTORTION_", StringComparison.Ordinal) ? "DISTORTION" : id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" : id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" : id.StartsWith("PROCESS_", StringCo
+L000624 |             : id.StartsWith("DISTORTION_", StringComparison.Ordinal) ? "DISTORTION" ⟦EOL⟧
+// 해설 L625: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("IOF_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" : id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" : id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" : id.StartsWith("REVIEW_", StringCompariso
+L000625 |             : id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" ⟦EOL⟧
+// 해설 L626: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("DOREADY_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" : id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" : id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" : id.StartsWith("TPM_", StringCompar
+L000626 |             : id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" ⟦EOL⟧
+// 해설 L627: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("PROCESS_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" : id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" : id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO"
+L000627 |             : id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" ⟦EOL⟧
+// 해설 L628: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("REVIEW_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" : id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO"
+L000628 |             : id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" ⟦EOL⟧
+// 해설 L629: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("TPM_", StringComparison.Ordinal) / 조건에 따라 결과식을 선택합니다: id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO"
+L000629 |             : id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO"; ⟦EOL⟧
+// 해설 L630: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CSequenceFailureException.SignalScenario(string, string)
+L000630 |         public static string SignalScenario(string id, string fallback) ⟦EOL⟧
+// 해설 L631: 구문 블록 경계입니다 · 소속 SignalScenario.
+L000631 |         { ⟦EOL⟧
+// 해설 L632: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("DISTORTION", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("DISTORTION", StringComparison.Ordinal)) / 호출자에게 값 또는 제어를 반환합니다: return "DISTORTION";
+L000632 |             if (id.Contains("DISTORTION", StringComparison.Ordinal)) return "DISTORTION"; ⟦EOL⟧
+// 해설 L633: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("TOP_POWERMETER", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("TOP_POWERMETER", StringComparison.Ordinal) || id == "PROCESS_SEQUENCE_TPM_LASER_ON") / 호출자에게 값 또는 제어를 반환합니다: return "TPM";
+L000633 |             if (id.Contains("TOP_POWERMETER", StringComparison.Ordinal) || id == "PROCESS_SEQUENCE_TPM_LASER_ON") return "TPM"; ⟦EOL⟧
+// 해설 L634: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("DOREADY", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("DOREADY", StringComparison.Ordinal)) / 호출자에게 값 또는 제어를 반환합니다: return "DOREADY";
+L000634 |             if (id.Contains("DOREADY", StringComparison.Ordinal)) return "DOREADY"; ⟦EOL⟧
+// 해설 L635: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("DO_ALIGN", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("DO_ALIGN", StringComparison.Ordinal) || id == "STAGE_MCC_BUSY_FLAGS") / 호출자에게 값 또는 제어를 반환합니다: return "DO_ALIGN";
+L000635 |             if (id.Contains("DO_ALIGN", StringComparison.Ordinal) || id == "STAGE_MCC_BUSY_FLAGS") return "DO_ALIGN"; ⟦EOL⟧
+// 해설 L636: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("IOF", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("IOF", StringComparison.Ordinal)) / 호출자에게 값 또는 제어를 반환합니다: return "IOF";
+L000636 |             if (id.Contains("IOF", StringComparison.Ordinal)) return "IOF"; ⟦EOL⟧
+// 해설 L637: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_SDC", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("REVIEW_MOVE_START", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("REVIEW_GENERAL_RUNNING", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("PROCESS_REVIEW_", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("_SDC", StringComparison.Ordinal) || id.Contains("REVIEW_MOVE_START", StringComparison.Ordinal) || id.Contains("REVIEW_GENERAL_RUNNING", StringComparison.Ordinal) ||
+L000637 |             if (id.Contains("_SDC", StringComparison.Ordinal) || id.Contains("REVIEW_MOVE_START", StringComparison.Ordinal) || id.Contains("REVIEW_GENERAL_RUNNING", StringComparison.Ordinal) || id.StartsWith("PROCESS_REVIEW_", StringComparison.Ordinal)) return "PROCESS_MOVE"; ⟦EOL⟧
+// 해설 L638: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("HANDSHAKE_", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_PROCESS_", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("HANDSHAKE_", StringComparison.Ordinal) && id.Contains("_PROCESS_", StringComparison.Ordinal)) / 호출자에게 값 또는 제어를 반환합니다: return "PROCESS";
+L000638 |             if (id.Contains("HANDSHAKE_", StringComparison.Ordinal) && id.Contains("_PROCESS_", StringComparison.Ordinal)) return "PROCESS"; ⟦EOL⟧
+// 해설 L639: 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("HANDSHAKE_", StringComparison.Ordinal) / 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_REVIEW_", StringComparison.Ordinal) / 조건에 따라 분기합니다: if (id.Contains("HANDSHAKE_", StringComparison.Ordinal) && id.Contains("_REVIEW_", StringComparison.Ordinal)) / 호출자에게 값 또는 제어를 반환합니다: return "REVIEW";
+L000639 |             if (id.Contains("HANDSHAKE_", StringComparison.Ordinal) && id.Contains("_REVIEW_", StringComparison.Ordinal)) return "REVIEW"; ⟦EOL⟧
+// 해설 L640: 호출자에게 값 또는 제어를 반환합니다: return fallback;
+L000640 |             return fallback; ⟦EOL⟧
+// 해설 L641: 구문 블록 경계입니다 · 소속 SignalScenario.
+L000641 |         } ⟦EOL⟧
+// 해설 L642: 조건에 따라 결과식을 선택합니다: error is CSequenceFailureException found ? found : error is AggregateException group ? group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) : error.InnerException is { } inner ? Existing(inner) : null
+L000642 |         private static CSequenceFailureException? Existing(Exception error) => error is CSequenceFailureException found ? found ⟦EOL⟧
+// 해설 L643: 함수·델리게이트 또는 객체 생성자를 호출합니다: group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) / 함수·델리게이트 또는 객체 생성자를 호출합니다: group.InnerExceptions.Select(Existing) / 조건에 따라 결과식을 선택합니다: error is AggregateException group ? group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) : error.InnerException is { } inner ? Existing(inner) : null
+L000643 |             : error is AggregateException group ? group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) ⟦EOL⟧
+// 해설 L644: 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(inner) / 조건에 따라 결과식을 선택합니다: error.InnerException is { } inner ? Existing(inner) : null
+L000644 |             : error.InnerException is { } inner ? Existing(inner) : null; ⟦EOL⟧
 // 해설 L645: 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(error)
-L000645 |         public static CSequenceFailureException Signal(string scenario, string id, bool timeout, Exception error) => Existing(error) ⟦EOL⟧
-// 해설 L646: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(SignalScenario(id, scenario), id, timeout ? "TIMEOUT" : "NG", error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SignalScenario(id, scenario) / 조건에 따라 결과식을 선택합니다: timeout ? "TIMEOUT" : "NG"
-L000646 |             ?? new(SignalScenario(id, scenario), id, timeout ? "TIMEOUT" : "NG", error); ⟦EOL⟧
-// 해설 L647: 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(scenario, "", "NG", error)
-L000647 |         public static CSequenceFailureException ScenarioFailure(string scenario, Exception error) => Existing(error) ?? new(scenario, "", "NG", error); ⟦EOL⟧
-// 해설 L648: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CSequenceFailureException.Publish(System.Action<Drilling.Common.Alarm.CSequenceFailureException>?)
-L000648 |         public void Publish(Action<CSequenceFailureException>? subscribers) ⟦EOL⟧
-// 해설 L649: 구문 블록 경계입니다 · 소속 Publish.
-L000649 |         { ⟦EOL⟧
-// 해설 L650: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Exchange(ref _reported, 1) / 조건에 따라 분기합니다: if (subscribers is null || Interlocked.Exchange(ref _reported, 1) != 0) / 호출자에게 값 또는 제어를 반환합니다: return;
-L000650 |             if (subscribers is null || Interlocked.Exchange(ref _reported, 1) != 0) return; ⟦EOL⟧
-// 해설 L651: 함수·델리게이트 또는 객체 생성자를 호출합니다: subscribers.GetInvocationList() / 컬렉션 요소를 순회합니다: foreach (var subscriber in subscribers.GetInvocationList())
-L000651 |             foreach (var subscriber in subscribers.GetInvocationList()) ⟦EOL⟧
-// 해설 L652: 함수·델리게이트 또는 객체 생성자를 호출합니다: ((Action<CSequenceFailureException>)subscriber)(this) / 예외 처리 범위입니다: try
-L000652 |                 try { ((Action<CSequenceFailureException>)subscriber)(this); } ⟦EOL⟧
-// 해설 L653: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Trace.TraceError($"Sequence alarm publish failed: {AlarmId}: {error}") / 지정 예외를 처리합니다: catch (Exception error) / 지정 예외를 처리합니다: catch  / 예외 처리 범위입니다: try
-L000653 |                 catch (Exception error) { try { System.Diagnostics.Trace.TraceError($"Sequence alarm publish failed: {AlarmId}: {error}"); } catch { } } ⟦EOL⟧
-// 해설 L654: 구문 블록 경계입니다 · 소속 Publish.
-L000654 |         } ⟦EOL⟧
-// 해설 L655: 구문 블록 경계입니다.
-L000655 |     } ⟦EOL⟧
-// 해설 L656: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000656 |     // A parent Action can distinguish its own deadline from an operator's cancellation ⟦EOL⟧
-// 해설 L657: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000657 |     // while retaining the exact signal being awaited. ⟦EOL⟧
-// 해설 L658: 타입의 구조/상속 선언입니다: public sealed class CSequenceSignalCanceledException(string scenario, string signal, OperationCanceledException error)
-L000658 |     public sealed class CSequenceSignalCanceledException(string scenario, string signal, OperationCanceledException error) ⟦EOL⟧
-// 해설 L659: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
-L000659 |         : OperationCanceledException(error.Message, error, error.CancellationToken) ⟦EOL⟧
-// 해설 L660: 구문 블록 경계입니다.
-L000660 |     { ⟦EOL⟧
-// 해설 L661: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CSequenceSignalCanceledException.Scenario
-L000661 |         public string Scenario { get; } = scenario; ⟦EOL⟧
-// 해설 L662: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CSequenceSignalCanceledException.Signal
-L000662 |         public string Signal { get; } = signal; ⟦EOL⟧
-// 해설 L663: 구문 블록 경계입니다.
-L000663 |     } ⟦EOL⟧
-L000664 |  ⟦EOL⟧
-// 해설 L665: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_HISTORY_ENTRY(DateTimeOffset OccurredAt, int Code, string Id, string Group, string Level, string Cause, string Solution, string CimAddress);
-L000665 |     public sealed record ST_ALARM_HISTORY_ENTRY(DateTimeOffset OccurredAt, int Code, string Id, string Group, string Level, string Cause, string Solution, string CimAddress); ⟦EOL⟧
-// 해설 L666: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_HISTORY_RESULT(IReadOnlyList<ST_ALARM_HISTORY_ENTRY> Rows, string Warning);
-L000666 |     public sealed record ST_ALARM_HISTORY_RESULT(IReadOnlyList<ST_ALARM_HISTORY_ENTRY> Rows, string Warning); ⟦EOL⟧
-// 해설 L667: 타입의 구조/상속 선언입니다: public interface IAlarmHistoryStore
-L000667 |     public interface IAlarmHistoryStore ⟦EOL⟧
-// 해설 L668: 구문 블록 경계입니다.
-L000668 |     { ⟦EOL⟧
-// 해설 L669: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000669 |         // Called in FIFO order by a dedicated writer, outside the alarm-state lock and monitoring worker. ⟦EOL⟧
-// 해설 L670: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
-L000670 |         // Implementations synchronize shared storage with readers/other manager instances themselves. ⟦EOL⟧
-// 해설 L671: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.IAlarmHistoryStore.Append(Drilling.Common.Alarm.ST_ALARM_DATA)
-L000671 |         void Append(ST_ALARM_DATA alarm); ⟦EOL⟧
-// 해설 L672: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT Drilling.Common.Alarm.IAlarmHistoryStore.Read(System.DateTime, System.DateTime, System.Threading.CancellationToken)
-L000672 |         ST_ALARM_HISTORY_RESULT Read(DateTime from, DateTime through, CancellationToken token = default); ⟦EOL⟧
-// 해설 L673: 구문 블록 경계입니다.
-L000673 |     } ⟦EOL⟧
-// 해설 L674: 구문 블록 경계입니다.
-L000674 | } ⟦EOL⟧
+L000645 |         public static CSequenceFailureException Action(string id, Exception error) => Existing(error) ⟦EOL⟧
+// 해설 L646: 함수·델리게이트 또는 객체 생성자를 호출합니다: Signal(wait.Scenario, wait.Signal, true, error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(ActionScenario(id), id, "NG", error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ActionScenario(id) / 조건에 따라 결과식을 선택합니다: error is CSequenceSignalCanceledException wait ? Signal(wait.Scenario, wait.Signal, true, error) : new(ActionScenario(id), id, "NG", error)
+L000646 |             ?? (error is CSequenceSignalCanceledException wait ? Signal(wait.Scenario, wait.Signal, true, error) : new(ActionScenario(id), id, "NG", error)); ⟦EOL⟧
+// 해설 L647: 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(error)
+L000647 |         public static CSequenceFailureException Signal(string scenario, string id, bool timeout, Exception error) => Existing(error) ⟦EOL⟧
+// 해설 L648: 함수·델리게이트 또는 객체 생성자를 호출합니다: new(SignalScenario(id, scenario), id, timeout ? "TIMEOUT" : "NG", error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: SignalScenario(id, scenario) / 조건에 따라 결과식을 선택합니다: timeout ? "TIMEOUT" : "NG"
+L000648 |             ?? new(SignalScenario(id, scenario), id, timeout ? "TIMEOUT" : "NG", error); ⟦EOL⟧
+// 해설 L649: 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(error) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new(scenario, "", "NG", error)
+L000649 |         public static CSequenceFailureException ScenarioFailure(string scenario, Exception error) => Existing(error) ?? new(scenario, "", "NG", error); ⟦EOL⟧
+// 해설 L650: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.CSequenceFailureException.Publish(System.Action<Drilling.Common.Alarm.CSequenceFailureException>?)
+L000650 |         public void Publish(Action<CSequenceFailureException>? subscribers) ⟦EOL⟧
+// 해설 L651: 구문 블록 경계입니다 · 소속 Publish.
+L000651 |         { ⟦EOL⟧
+// 해설 L652: 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Exchange(ref _reported, 1) / 조건에 따라 분기합니다: if (subscribers is null || Interlocked.Exchange(ref _reported, 1) != 0) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000652 |             if (subscribers is null || Interlocked.Exchange(ref _reported, 1) != 0) return; ⟦EOL⟧
+// 해설 L653: 함수·델리게이트 또는 객체 생성자를 호출합니다: subscribers.GetInvocationList() / 컬렉션 요소를 순회합니다: foreach (var subscriber in subscribers.GetInvocationList())
+L000653 |             foreach (var subscriber in subscribers.GetInvocationList()) ⟦EOL⟧
+// 해설 L654: 함수·델리게이트 또는 객체 생성자를 호출합니다: ((Action<CSequenceFailureException>)subscriber)(this) / 예외 처리 범위입니다: try
+L000654 |                 try { ((Action<CSequenceFailureException>)subscriber)(this); } ⟦EOL⟧
+// 해설 L655: 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Trace.TraceError($"Sequence alarm publish failed: {AlarmId}: {error}") / 지정 예외를 처리합니다: catch (Exception error) / 지정 예외를 처리합니다: catch  / 예외 처리 범위입니다: try
+L000655 |                 catch (Exception error) { try { System.Diagnostics.Trace.TraceError($"Sequence alarm publish failed: {AlarmId}: {error}"); } catch { } } ⟦EOL⟧
+// 해설 L656: 구문 블록 경계입니다 · 소속 Publish.
+L000656 |         } ⟦EOL⟧
+// 해설 L657: 구문 블록 경계입니다.
+L000657 |     } ⟦EOL⟧
+// 해설 L658: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000658 |     // A parent Action can distinguish its own deadline from an operator's cancellation ⟦EOL⟧
+// 해설 L659: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000659 |     // while retaining the exact signal being awaited. ⟦EOL⟧
+// 해설 L660: 타입의 구조/상속 선언입니다: public sealed class CSequenceSignalCanceledException(string scenario, string signal, OperationCanceledException error)
+L000660 |     public sealed class CSequenceSignalCanceledException(string scenario, string signal, OperationCanceledException error) ⟦EOL⟧
+// 해설 L661: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000661 |         : OperationCanceledException(error.Message, error, error.CancellationToken) ⟦EOL⟧
+// 해설 L662: 구문 블록 경계입니다.
+L000662 |     { ⟦EOL⟧
+// 해설 L663: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CSequenceSignalCanceledException.Scenario
+L000663 |         public string Scenario { get; } = scenario; ⟦EOL⟧
+// 해설 L664: 선언·서명/매개변수·접근 조건입니다 · string Drilling.Common.Alarm.CSequenceSignalCanceledException.Signal
+L000664 |         public string Signal { get; } = signal; ⟦EOL⟧
+// 해설 L665: 구문 블록 경계입니다.
+L000665 |     } ⟦EOL⟧
+L000666 |  ⟦EOL⟧
+// 해설 L667: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_HISTORY_ENTRY(DateTimeOffset OccurredAt, int Code, string Id, string Group, string Level, string Cause, string Solution, string CimAddress);
+L000667 |     public sealed record ST_ALARM_HISTORY_ENTRY(DateTimeOffset OccurredAt, int Code, string Id, string Group, string Level, string Cause, string Solution, string CimAddress); ⟦EOL⟧
+// 해설 L668: 타입의 구조/상속 선언입니다: public sealed record ST_ALARM_HISTORY_RESULT(IReadOnlyList<ST_ALARM_HISTORY_ENTRY> Rows, string Warning);
+L000668 |     public sealed record ST_ALARM_HISTORY_RESULT(IReadOnlyList<ST_ALARM_HISTORY_ENTRY> Rows, string Warning); ⟦EOL⟧
+// 해설 L669: 타입의 구조/상속 선언입니다: public interface IAlarmHistoryStore
+L000669 |     public interface IAlarmHistoryStore ⟦EOL⟧
+// 해설 L670: 구문 블록 경계입니다.
+L000670 |     { ⟦EOL⟧
+// 해설 L671: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000671 |         // Called in FIFO order by a dedicated writer, outside the alarm-state lock and monitoring worker. ⟦EOL⟧
+// 해설 L672: 원본 작성자의 주석/설명입니다. 새 해설과 원본 주석을 구분합니다.
+L000672 |         // Implementations synchronize shared storage with readers/other manager instances themselves. ⟦EOL⟧
+// 해설 L673: 선언·서명/매개변수·접근 조건입니다 · void Drilling.Common.Alarm.IAlarmHistoryStore.Append(Drilling.Common.Alarm.ST_ALARM_DATA)
+L000673 |         void Append(ST_ALARM_DATA alarm); ⟦EOL⟧
+// 해설 L674: 선언·서명/매개변수·접근 조건입니다 · Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT Drilling.Common.Alarm.IAlarmHistoryStore.Read(System.DateTime, System.DateTime, System.Threading.CancellationToken)
+L000674 |         ST_ALARM_HISTORY_RESULT Read(DateTime from, DateTime through, CancellationToken token = default); ⟦EOL⟧
+// 해설 L675: 구문 블록 경계입니다.
+L000675 |     } ⟦EOL⟧
+// 해설 L676: 구문 블록 경계입니다.
+L000676 | } ⟦EOL⟧

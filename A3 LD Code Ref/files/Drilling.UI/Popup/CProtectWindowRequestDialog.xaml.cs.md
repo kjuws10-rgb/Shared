@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | 01b6fb02245335c153d26ac244fda71d7d2b56e74ffde769294ca6d5f435719d |
 | 파일 분류 | code |
 | 원본 크기/행 | 4,685 bytes / 122 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -53,7 +53,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L11–17
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:11–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L11-L17)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:11–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L11-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -72,7 +72,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L41-L41) | new | False |
+| [Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L41-L41) | new | False |
 
 호출하는 대상과 해석 범위:
 
@@ -97,7 +97,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CloseClicked` · L19–19
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L19-L19)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -131,7 +131,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_interfaces` · L25–25
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L25-L25)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -146,7 +146,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_owner` · L26–26
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L26-L26)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -161,7 +161,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_createDialog` · L27–27
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L27-L27)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -176,7 +176,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_timer` · L28–28
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L28-L28)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -191,7 +191,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_dialog` · L29–29
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L29-L29)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -206,7 +206,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_pending` · L30–30
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L30-L30)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -221,7 +221,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_disposed` · L31–31
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L31-L31)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -236,7 +236,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastError` · L32–32
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L32-L32)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -257,7 +257,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Status` · L33–33
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L33-L33)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -272,7 +272,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 33 | new | resolved | Drilling.UI.Menu.Menus.CMainProtectWindowPanel.CMainProtectWindowPanel() · Drilling.UI/Menu/Menus/CMenuMain.cs:2634 |
+| 33 | new | resolved | Drilling.UI.Menu.Menus.CMainProtectWindowPanel.CMainProtectWindowPanel() · Drilling.UI/Menu/Menus/CMenuMain.cs:2720 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -284,7 +284,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Status` · L33–33
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L33-L33)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -299,7 +299,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CurrentDialog` · L34–34
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L34-L34)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -314,7 +314,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `RefreshInterval` · L35–35
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L35-L35)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -329,7 +329,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L37–48
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:37–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L37-L48)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:37–48](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L37-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -350,7 +350,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2764–2764](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2764-L2764) | new | False |
+| [Drilling.UI/CRootView.cs:3158–3158](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3158-L3158) | new | False |
 
 호출하는 대상과 해석 범위:
 
@@ -379,7 +379,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `Start` · L50–57
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:50–57](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L50-L57)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:50–57](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L50-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -392,7 +392,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2765–2765](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2765-L2765) | _protectWindowNotice.Start | False |
+| [Drilling.UI/CRootView.cs:3159–3159](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3159-L3159) | _protectWindowNotice.Start | False |
 
 호출하는 대상과 해석 범위:
 
@@ -425,7 +425,7 @@ flowchart TD
 
 ### MethodDeclaration `Refresh` · L59–92
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:59–92](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L59-L92)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:59–92](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L59-L92)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -438,18 +438,18 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L55-L55) | Refresh | False |
-| [Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L98-L98) | Refresh | False |
+| [Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L55-L55) | Refresh | False |
+| [Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L98-L98) | Refresh | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 61 | _owner.Dispatcher.VerifyAccess | unresolved | None |
-| 64 | _interfaces.Melsec.GetCachedSnapshot | resolved | System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE> Drilling.Common.Interface.CMelsec.GetCachedSnapshot(System.Collections.Generic.IEnumerable<string>, out System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>) · Drilling.Common/Interface/Melsec/CMelsec.cs:2550 |
+| 64 | _interfaces.Melsec.GetCachedSnapshot | resolved | System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE> Drilling.Common.Interface.CMelsec.GetCachedSnapshot(System.Collections.Generic.IEnumerable<string>, out System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>) · Drilling.Common/Interface/Melsec/CMelsec.cs:2551 |
 | 65 | _interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary | resolved | System.Collections.Generic.Dictionary<int, Drilling.Common.Interface.EN_COMM_STATE> System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS>.ToDictionary<Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS, int, Drilling.Common.Interface.EN_COMM_STATE>(System.Func<Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS, int>, System.Func<Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS, Drilling.Common.Interface.EN_COMM_STATE>) |
 | 65 | _interfaces.GetInterfaceCommunicationList | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS> Drilling.Common.Interface.CInterfaceManager.GetInterfaceCommunicationList(Drilling.Common.Interface.EN_EQP_MODULE?) · Drilling.Common/Interface/CInterfaceManager.cs:472 |
-| 66 | Status.RefreshSignals | resolved | void Drilling.UI.Menu.Menus.CMainProtectWindowPanel.RefreshSignals(System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE>, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>, System.Collections.Generic.IReadOnlyDictionary<int, Drilling.Common.Interface.EN_COMM_STATE>) · Drilling.UI/Menu/Menus/CMenuMain.cs:2696 |
+| 66 | Status.RefreshSignals | resolved | void Drilling.UI.Menu.Menus.CMainProtectWindowPanel.RefreshSignals(System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE>, System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>, System.Collections.Generic.IReadOnlyDictionary<int, Drilling.Common.Interface.EN_COMM_STATE>) · Drilling.UI/Menu/Menus/CMenuMain.cs:2782 |
 | 72 | .Close | unresolved | None |
 | 80 | _createDialog | resolved · 동적 구현 선택 가능 | Drilling.UI.Popup.CProtectWindowRequestDialog System.Func<Drilling.UI.Menu.Menus.CMainProtectWindowPanel, Drilling.UI.Popup.CProtectWindowRequestDialog>.Invoke(Drilling.UI.Menu.Menus.CMainProtectWindowPanel) |
 | 84 | ReferenceEquals | resolved | bool object.ReferenceEquals(object?, object?) |
@@ -521,7 +521,7 @@ flowchart TD
 
 ### MethodDeclaration `Tick` · L94–107
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:94–107](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L94-L107)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:94–107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L94-L107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -575,7 +575,7 @@ flowchart TD
 
 ### MethodDeclaration `OwnerClosed` · L109–109
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L109-L109)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L109-L109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -609,7 +609,7 @@ flowchart TD
 
 ### MethodDeclaration `Dispose` · L110–120
 
-[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:110–120](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L110-L120)
+[Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:110–120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L110-L120)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -622,9 +622,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L250-L250) | .Dispose | False |
-| [Drilling.UI/CRootView.cs:2763–2763](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2763-L2763) | .Dispose | False |
-| [Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L109-L109) | Dispose | False |
+| [Drilling.UI/CRootView.cs:280–280](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L280-L280) | .Dispose | False |
+| [Drilling.UI/CRootView.cs:3157–3157](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3157-L3157) | .Dispose | False |
+| [Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CProtectWindowRequestDialog.xaml.cs#L109-L109) | Dispose | False |
 
 호출하는 대상과 해석 범위:
 

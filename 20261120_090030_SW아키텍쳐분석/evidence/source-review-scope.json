@@ -1,0 +1,3410 @@
+{
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "comparisonBaseCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+  "reviewedBy": [
+    "architecture source trace + crosscheck",
+    "review/correction source trace + crosscheck",
+    "tool/model/document independent QA"
+  ],
+  "architecture": {
+    "schema": "a3-architecture-analysis-v2",
+    "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+    "baselineCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+    "version": "11.19.0",
+    "commitCount": 2,
+    "scope": {
+      "write": [
+        "manual/architecture/**",
+        "analysis-parts/architecture-*"
+      ],
+      "equipmentBuild": "not run",
+      "equipmentExecution": "not run",
+      "vendorLoadOrDecompile": "not run",
+      "sourceModified": false,
+      "operatingCsvRecordsCopied": false,
+      "fullSourceRereadClaim": false,
+      "readSourceUnchanged": {
+        "checkedFiles": 73,
+        "violations": 0
+      }
+    },
+    "reviewedFiles": [
+      {
+        "path": "Config/JHMI_ALARMLIST.csv",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 320,
+            "endLine": 320
+          }
+        ],
+        "sha256": "9d847611bd656c4e3fd40fc366f5a42bfa83ae7f9680b934359d08b76196b91f"
+      },
+      {
+        "path": "Config/JHMI_RCP.csv",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 175,
+            "endLine": 177
+          },
+          {
+            "startLine": 26,
+            "endLine": 36
+          },
+          {
+            "startLine": 32,
+            "endLine": 36
+          }
+        ],
+        "sha256": "8c2bb6c0a14548ec3af322c43ac54da57966afc536385335ca60c2bc14277e33"
+      },
+      {
+        "path": "Drilling.Common/Alarm/CAlarmManager.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 245,
+            "endLine": 268
+          },
+          {
+            "startLine": 323,
+            "endLine": 340
+          },
+          {
+            "startLine": 245,
+            "endLine": 268
+          }
+        ],
+        "sha256": "5cbff85f66cfcf6744d14dd9955a75c2eb21a6536e0f7fd7517472b7f95fa872"
+      },
+      {
+        "path": "Drilling.Common/Automation/CAutomationManager.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 315,
+            "endLine": 334
+          },
+          {
+            "startLine": 365,
+            "endLine": 370
+          },
+          {
+            "startLine": 324,
+            "endLine": 334
+          },
+          {
+            "startLine": 301,
+            "endLine": 344
+          },
+          {
+            "startLine": 347,
+            "endLine": 370
+          },
+          {
+            "startLine": 1673,
+            "endLine": 1728
+          },
+          {
+            "startLine": 1673,
+            "endLine": 1767
+          },
+          {
+            "startLine": 1683,
+            "endLine": 1728
+          },
+          {
+            "startLine": 324,
+            "endLine": 334
+          }
+        ],
+        "sha256": "5c7cfe44322a363450d005c89c67859d143e0a6fd8aa944d64b932529ef1df72"
+      },
+      {
+        "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 276,
+            "endLine": 308
+          },
+          {
+            "startLine": 181,
+            "endLine": 214
+          },
+          {
+            "startLine": 276,
+            "endLine": 308
+          },
+          {
+            "startLine": 334,
+            "endLine": 370
+          },
+          {
+            "startLine": 190,
+            "endLine": 214
+          }
+        ],
+        "sha256": "52be19d632488f70435f9c08a0b0ae82c36635c914161a731333839df3aaa94b"
+      },
+      {
+        "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 29,
+            "endLine": 62
+          },
+          {
+            "startLine": 64,
+            "endLine": 91
+          },
+          {
+            "startLine": 29,
+            "endLine": 62
+          },
+          {
+            "startLine": 299,
+            "endLine": 321
+          },
+          {
+            "startLine": 146,
+            "endLine": 159
+          },
+          {
+            "startLine": 193,
+            "endLine": 235
+          },
+          {
+            "startLine": 241,
+            "endLine": 294
+          },
+          {
+            "startLine": 14,
+            "endLine": 19
+          },
+          {
+            "startLine": 29,
+            "endLine": 62
+          }
+        ],
+        "sha256": "806ffafa140d6f0baa1d791225aec09a033f799f8a440b1aa07effeb3602a641"
+      },
+      {
+        "path": "Drilling.Common/Drilling.Common.csproj",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [],
+        "sha256": "ab342673559ca1997b4dfdd797c33d99226d6ccf01ac85cad022cc09319e7e75"
+      },
+      {
+        "path": "Drilling.Common/Interface/Automation1/CAutomation1Comm.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 13,
+            "endLine": 25
+          },
+          {
+            "startLine": 76,
+            "endLine": 157
+          },
+          {
+            "startLine": 123,
+            "endLine": 143
+          },
+          {
+            "startLine": 16,
+            "endLine": 25
+          }
+        ],
+        "sha256": "d2a75a6585fbb0315c9c2611d912e1b958ff6e9629e5fe8c05d1ebf2fb33ddc8"
+      },
+      {
+        "path": "Drilling.Common/Interface/CComm.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 12,
+            "endLine": 60
+          },
+          {
+            "startLine": 138,
+            "endLine": 153
+          }
+        ],
+        "sha256": "6e793d154d708b514ef2940d287181a6e6a49473e2501e3f8981c0ed9095c46e"
+      },
+      {
+        "path": "Drilling.Common/Interface/CInterfaceManager.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 658,
+            "endLine": 695
+          },
+          {
+            "startLine": 630,
+            "endLine": 655
+          },
+          {
+            "startLine": 2987,
+            "endLine": 3006
+          },
+          {
+            "startLine": 97,
+            "endLine": 107
+          },
+          {
+            "startLine": 3147,
+            "endLine": 3164
+          },
+          {
+            "startLine": 168,
+            "endLine": 180
+          },
+          {
+            "startLine": 3147,
+            "endLine": 3152
+          },
+          {
+            "startLine": 1656,
+            "endLine": 1664
+          },
+          {
+            "startLine": 2047,
+            "endLine": 2056
+          }
+        ],
+        "sha256": "abcba67628431513583ebafd5d0a27a1d3feb991a17d7c46ed5373fbab571b0f"
+      },
+      {
+        "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 15,
+            "endLine": 58
+          },
+          {
+            "startLine": 613,
+            "endLine": 630
+          },
+          {
+            "startLine": 546,
+            "endLine": 577
+          }
+        ],
+        "sha256": "af222cf9ca1c7c8ce0f4893d34885139a992b16821c0943f3e644f107d83a145"
+      },
+      {
+        "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 274,
+            "endLine": 303
+          }
+        ],
+        "sha256": "5534448198c3a9db2dd6342cd0e3f2fdc2c30e0cb86326d4ade8d5ed8e09123f"
+      },
+      {
+        "path": "Drilling.Common/Managers/CAlignKeyMarginSettings.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 6,
+            "endLine": 51
+          },
+          {
+            "startLine": 6,
+            "endLine": 51
+          }
+        ],
+        "sha256": "1d5a5568cadfa7d9c22efe92232696811c540a7535f971bc50cdeb845f216f37"
+      },
+      {
+        "path": "Drilling.Common/Managers/CManager.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 93,
+            "endLine": 142
+          },
+          {
+            "startLine": 212,
+            "endLine": 226
+          },
+          {
+            "startLine": 267,
+            "endLine": 276
+          },
+          {
+            "startLine": 278,
+            "endLine": 286
+          },
+          {
+            "startLine": 228,
+            "endLine": 265
+          },
+          {
+            "startLine": 126,
+            "endLine": 151
+          },
+          {
+            "startLine": 267,
+            "endLine": 276
+          },
+          {
+            "startLine": 288,
+            "endLine": 311
+          },
+          {
+            "startLine": 146,
+            "endLine": 151
+          }
+        ],
+        "sha256": "6db41ef7d7938136bce10c0d3acd4d9293a57cc4336ff26dc3a79041db2914f8"
+      },
+      {
+        "path": "Drilling.Common/Managers/CRecipeManager.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 408,
+            "endLine": 420
+          },
+          {
+            "startLine": 357,
+            "endLine": 407
+          },
+          {
+            "startLine": 349,
+            "endLine": 355
+          },
+          {
+            "startLine": 73,
+            "endLine": 93
+          },
+          {
+            "startLine": 148,
+            "endLine": 170
+          },
+          {
+            "startLine": 74,
+            "endLine": 93
+          },
+          {
+            "startLine": 74,
+            "endLine": 110
+          },
+          {
+            "startLine": 427,
+            "endLine": 451
+          },
+          {
+            "startLine": 94,
+            "endLine": 109
+          },
+          {
+            "startLine": 11,
+            "endLine": 32
+          },
+          {
+            "startLine": 94,
+            "endLine": 109
+          }
+        ],
+        "sha256": "b8d208d8945081e6a6d500f40d51e3f4fca414124329325c36c7fffedb86c9b9"
+      },
+      {
+        "path": "Drilling.Common/Managers/CSettingManager.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 254,
+            "endLine": 286
+          },
+          {
+            "startLine": 26,
+            "endLine": 71
+          },
+          {
+            "startLine": 73,
+            "endLine": 103
+          },
+          {
+            "startLine": 105,
+            "endLine": 156
+          },
+          {
+            "startLine": 16,
+            "endLine": 22
+          },
+          {
+            "startLine": 105,
+            "endLine": 156
+          },
+          {
+            "startLine": 133,
+            "endLine": 150
+          },
+          {
+            "startLine": 116,
+            "endLine": 155
+          },
+          {
+            "startLine": 23,
+            "endLine": 50
+          },
+          {
+            "startLine": 127,
+            "endLine": 155
+          }
+        ],
+        "sha256": "ab5eedee3d573b21ff626315c37803e06fd4d9d7d0e8709e0bf89e55f838743c"
+      },
+      {
+        "path": "Drilling.Common/Motion/CMotionManager.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 376,
+            "endLine": 396
+          },
+          {
+            "startLine": 362,
+            "endLine": 396
+          },
+          {
+            "startLine": 96,
+            "endLine": 123
+          }
+        ],
+        "sha256": "893675dbcdfcd93124de264b55511666a561a2dc747eba79a07e13e6c8be02c7"
+      },
+      {
+        "path": "Drilling.Common/Product/CProductManager.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 822,
+            "endLine": 846
+          },
+          {
+            "startLine": 996,
+            "endLine": 1053
+          },
+          {
+            "startLine": 959,
+            "endLine": 994
+          },
+          {
+            "startLine": 558,
+            "endLine": 602
+          },
+          {
+            "startLine": 129,
+            "endLine": 199
+          },
+          {
+            "startLine": 789,
+            "endLine": 819
+          },
+          {
+            "startLine": 25,
+            "endLine": 47
+          },
+          {
+            "startLine": 49,
+            "endLine": 88
+          },
+          {
+            "startLine": 996,
+            "endLine": 1003
+          },
+          {
+            "startLine": 25,
+            "endLine": 45
+          },
+          {
+            "startLine": 789,
+            "endLine": 819
+          },
+          {
+            "startLine": 789,
+            "endLine": 819
+          }
+        ],
+        "sha256": "93d3416633fddbcbd2ea9efe7958bd79a32c00eff8c017fb6cebfe757068596d"
+      },
+      {
+        "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 716,
+            "endLine": 728
+          },
+          {
+            "startLine": 11,
+            "endLine": 36
+          },
+          {
+            "startLine": 204,
+            "endLine": 210
+          },
+          {
+            "startLine": 23,
+            "endLine": 57
+          },
+          {
+            "startLine": 213,
+            "endLine": 215
+          },
+          {
+            "startLine": 52,
+            "endLine": 89
+          },
+          {
+            "startLine": 92,
+            "endLine": 140
+          },
+          {
+            "startLine": 141,
+            "endLine": 157
+          },
+          {
+            "startLine": 158,
+            "endLine": 201
+          },
+          {
+            "startLine": 11,
+            "endLine": 66
+          },
+          {
+            "startLine": 223,
+            "endLine": 249
+          },
+          {
+            "startLine": 455,
+            "endLine": 463
+          },
+          {
+            "startLine": 223,
+            "endLine": 249
+          },
+          {
+            "startLine": 141,
+            "endLine": 157
+          }
+        ],
+        "sha256": "18c6b5e5afc1fdb76dafc1fd6bc33a810af4a84492b53c686eef336adb989831"
+      },
+      {
+        "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 203,
+            "endLine": 231
+          }
+        ],
+        "sha256": "086ad178a8c91e4954f749894b4589b6b7b1a06190f2bfad4b2cf8ffe1def688"
+      },
+      {
+        "path": "Drilling.Common/Review/CReviewManager.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 505,
+            "endLine": 536
+          },
+          {
+            "startLine": 140,
+            "endLine": 172
+          },
+          {
+            "startLine": 177,
+            "endLine": 196
+          },
+          {
+            "startLine": 1664,
+            "endLine": 1680
+          },
+          {
+            "startLine": 1381,
+            "endLine": 1425
+          },
+          {
+            "startLine": 1127,
+            "endLine": 1159
+          }
+        ],
+        "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d"
+      },
+      {
+        "path": "Drilling.Common/Review/CReviewResultLevelSettings.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 23,
+            "endLine": 55
+          },
+          {
+            "startLine": 59,
+            "endLine": 174
+          },
+          {
+            "startLine": 23,
+            "endLine": 55
+          }
+        ],
+        "sha256": "2e2d5efacbed39982d3eb49b8137ee70d1a18546f11dae358822584ee0e95c39"
+      },
+      {
+        "path": "Drilling.Common/Review/CZeroDefenceRecipePlan.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 18,
+            "endLine": 39
+          },
+          {
+            "startLine": 65,
+            "endLine": 80
+          }
+        ],
+        "sha256": "2e2845eaeefb78debf2e3eae3e71ae7a8dab3a2001a77c93678fa69dc5662008"
+      },
+      {
+        "path": "Drilling.Common/Station/CStageReviewSequences.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 654,
+            "endLine": 702
+          }
+        ],
+        "sha256": "6b514f35c8c764d7eeee10a1930cfc7948d52ff079e9e0c17c320dbdf12d3e5d"
+      },
+      {
+        "path": "Drilling.Common/Station/CStationManager.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 32,
+            "endLine": 67
+          },
+          {
+            "startLine": 301,
+            "endLine": 339
+          },
+          {
+            "startLine": 264,
+            "endLine": 298
+          },
+          {
+            "startLine": 28,
+            "endLine": 32
+          }
+        ],
+        "sha256": "0d239bcb1b55c4a0653a684b3e2f7e8235917dbee1a61d0cace96489442db63b"
+      },
+      {
+        "path": "Drilling.Common/Station/CStationProcess.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 1528,
+            "endLine": 1563
+          },
+          {
+            "startLine": 1528,
+            "endLine": 1563
+          },
+          {
+            "startLine": 4039,
+            "endLine": 4051
+          },
+          {
+            "startLine": 1608,
+            "endLine": 1644
+          },
+          {
+            "startLine": 1608,
+            "endLine": 1678
+          },
+          {
+            "startLine": 658,
+            "endLine": 690
+          },
+          {
+            "startLine": 693,
+            "endLine": 750
+          },
+          {
+            "startLine": 1528,
+            "endLine": 1545
+          },
+          {
+            "startLine": 4026,
+            "endLine": 4039
+          },
+          {
+            "startLine": 4026,
+            "endLine": 4039
+          },
+          {
+            "startLine": 5088,
+            "endLine": 5123
+          },
+          {
+            "startLine": 4039,
+            "endLine": 4071
+          },
+          {
+            "startLine": 5258,
+            "endLine": 5275
+          },
+          {
+            "startLine": 5303,
+            "endLine": 5330
+          },
+          {
+            "startLine": 211,
+            "endLine": 269
+          },
+          {
+            "startLine": 272,
+            "endLine": 322
+          },
+          {
+            "startLine": 1567,
+            "endLine": 1600
+          },
+          {
+            "startLine": 325,
+            "endLine": 381
+          },
+          {
+            "startLine": 384,
+            "endLine": 432
+          },
+          {
+            "startLine": 3770,
+            "endLine": 3795
+          },
+          {
+            "startLine": 4422,
+            "endLine": 4461
+          },
+          {
+            "startLine": 4659,
+            "endLine": 4674
+          },
+          {
+            "startLine": 4708,
+            "endLine": 4761
+          },
+          {
+            "startLine": 4787,
+            "endLine": 4797
+          },
+          {
+            "startLine": 4687,
+            "endLine": 4698
+          },
+          {
+            "startLine": 3912,
+            "endLine": 3958
+          },
+          {
+            "startLine": 4340,
+            "endLine": 4385
+          },
+          {
+            "startLine": 4843,
+            "endLine": 4897
+          },
+          {
+            "startLine": 5166,
+            "endLine": 5220
+          },
+          {
+            "startLine": 4469,
+            "endLine": 4513
+          },
+          {
+            "startLine": 4799,
+            "endLine": 4820
+          },
+          {
+            "startLine": 3912,
+            "endLine": 3958
+          },
+          {
+            "startLine": 297,
+            "endLine": 321
+          },
+          {
+            "startLine": 373,
+            "endLine": 405
+          },
+          {
+            "startLine": 221,
+            "endLine": 225
+          },
+          {
+            "startLine": 4638,
+            "endLine": 4645
+          },
+          {
+            "startLine": 4787,
+            "endLine": 4797
+          },
+          {
+            "startLine": 3912,
+            "endLine": 3958
+          },
+          {
+            "startLine": 3912,
+            "endLine": 3958
+          },
+          {
+            "startLine": 1528,
+            "endLine": 1563
+          },
+          {
+            "startLine": 3917,
+            "endLine": 3953
+          }
+        ],
+        "sha256": "7e5b1fd549370e222890c0882624bd116e1375ae160cb55e0d94cf3513f8b917"
+      },
+      {
+        "path": "Drilling.Common/Threading/CtrlThread.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 4,
+            "endLine": 15
+          },
+          {
+            "startLine": 232,
+            "endLine": 281
+          },
+          {
+            "startLine": 286,
+            "endLine": 293
+          },
+          {
+            "startLine": 128,
+            "endLine": 186
+          }
+        ],
+        "sha256": "072b00b00719220875cbf64c016f85320d0262f45f10e5f599a4abb7e673a5a3"
+      },
+      {
+        "path": "Drilling.File/Correction/CAlignOffsetLogFile.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 14,
+            "endLine": 35
+          },
+          {
+            "startLine": 14,
+            "endLine": 35
+          }
+        ],
+        "sha256": "d54f0d5549ef3e6e1e267335827bed9c80245464d87c9d23091f7bb76b39330d"
+      },
+      {
+        "path": "Drilling.File/Drilling.File.csproj",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [],
+        "sha256": "0da8fcca8cb81f0c9d9c69b9e5b40ca65cd70c77d2b65d02ecf49d5032f9230a"
+      },
+      {
+        "path": "Drilling.File/JHMI/CInterfaceFile.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 107,
+            "endLine": 110
+          }
+        ],
+        "sha256": "3046cea2bed6865cf48591ecedf5b5806bdb0add4df1414a37247b8d6f9e9419"
+      },
+      {
+        "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 26,
+            "endLine": 30
+          },
+          {
+            "startLine": 848,
+            "endLine": 887
+          },
+          {
+            "startLine": 890,
+            "endLine": 924
+          },
+          {
+            "startLine": 120,
+            "endLine": 165
+          },
+          {
+            "startLine": 166,
+            "endLine": 242
+          },
+          {
+            "startLine": 188,
+            "endLine": 206
+          },
+          {
+            "startLine": 481,
+            "endLine": 529
+          },
+          {
+            "startLine": 148,
+            "endLine": 206
+          },
+          {
+            "startLine": 26,
+            "endLine": 30
+          },
+          {
+            "startLine": 850,
+            "endLine": 872
+          }
+        ],
+        "sha256": "83965473a623f54f27fccf5d963e476d696721927341629e26b0a525581bada4"
+      },
+      {
+        "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 1659,
+            "endLine": 1670
+          }
+        ],
+        "sha256": "863b88795376e9f8437929d4a2ce99c68bb76d990d0e087d3962b3057c6ffe5a"
+      },
+      {
+        "path": "Drilling.File/JHMI/CSettingFile.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 328,
+            "endLine": 385
+          },
+          {
+            "startLine": 53,
+            "endLine": 123
+          },
+          {
+            "startLine": 367,
+            "endLine": 406
+          },
+          {
+            "startLine": 196,
+            "endLine": 220
+          },
+          {
+            "startLine": 290,
+            "endLine": 326
+          },
+          {
+            "startLine": 408,
+            "endLine": 451
+          },
+          {
+            "startLine": 272,
+            "endLine": 287
+          },
+          {
+            "startLine": 20,
+            "endLine": 50
+          },
+          {
+            "startLine": 196,
+            "endLine": 219
+          },
+          {
+            "startLine": 469,
+            "endLine": 486
+          },
+          {
+            "startLine": 14,
+            "endLine": 19
+          }
+        ],
+        "sha256": "c049c9c77518b5df70fe76f234c4c5d952c9ef880aed3cd8cdd8845be89c0ab4"
+      },
+      {
+        "path": "Drilling.File/Parser/CCsvParser.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 8,
+            "endLine": 10
+          },
+          {
+            "startLine": 58,
+            "endLine": 93
+          },
+          {
+            "startLine": 432,
+            "endLine": 475
+          }
+        ],
+        "sha256": "8d9850f57f3552310d7aec82c11c7a08ab13b30c9a0e6daf8ee9e649077fb644"
+      },
+      {
+        "path": "Drilling.File/Product/CProductFile.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 8,
+            "endLine": 11
+          },
+          {
+            "startLine": 8,
+            "endLine": 11
+          },
+          {
+            "startLine": 258,
+            "endLine": 265
+          },
+          {
+            "startLine": 109,
+            "endLine": 178
+          },
+          {
+            "startLine": 73,
+            "endLine": 106
+          },
+          {
+            "startLine": 182,
+            "endLine": 201
+          },
+          {
+            "startLine": 168,
+            "endLine": 176
+          },
+          {
+            "startLine": 298,
+            "endLine": 325
+          }
+        ],
+        "sha256": "95c7adb3e3b691e4df22deaf53a5cc713ff2a1e77cd066c911935f963b79b965"
+      },
+      {
+        "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 412,
+            "endLine": 448
+          }
+        ],
+        "sha256": "f14cd0667a5687200ac831d5c70d988e7c3493c5e8c285e946d98b246fb3be6f"
+      },
+      {
+        "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 719,
+            "endLine": 722
+          }
+        ],
+        "sha256": "5a8c29eaaf994eab9e46a077532ed9c6027381a95e2ef253f83dd57b40a756c3"
+      },
+      {
+        "path": "Drilling.File/Script/CAutomation1ScriptFile.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 9,
+            "endLine": 19
+          },
+          {
+            "startLine": 51,
+            "endLine": 108
+          },
+          {
+            "startLine": 175,
+            "endLine": 244
+          },
+          {
+            "startLine": 433,
+            "endLine": 514
+          },
+          {
+            "startLine": 703,
+            "endLine": 715
+          },
+          {
+            "startLine": 51,
+            "endLine": 108
+          },
+          {
+            "startLine": 713,
+            "endLine": 715
+          }
+        ],
+        "sha256": "1681351dcfa412fcae7313a2ff470b23be816cad1047ee586e3fb79f35850ac4"
+      },
+      {
+        "path": "Drilling.UI/CApp.xaml.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 23,
+            "endLine": 45
+          },
+          {
+            "startLine": 53,
+            "endLine": 71
+          },
+          {
+            "startLine": 47,
+            "endLine": 51
+          }
+        ],
+        "sha256": "9690a272cdb61d231b85decbd9bfaf354e81d09c7bbab7671264d5fc3e11a7ee"
+      },
+      {
+        "path": "Drilling.UI/CAppStartup.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 14,
+            "endLine": 69
+          },
+          {
+            "startLine": 36,
+            "endLine": 68
+          },
+          {
+            "startLine": 16,
+            "endLine": 35
+          },
+          {
+            "startLine": 121,
+            "endLine": 135
+          },
+          {
+            "startLine": 137,
+            "endLine": 151
+          }
+        ],
+        "sha256": "98e8716b093e6970d73233f8488d538acf7fa02f5d140ab1baebd9e8abdcd9b9"
+      },
+      {
+        "path": "Drilling.UI/CRootView.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 274,
+            "endLine": 285
+          },
+          {
+            "startLine": 140,
+            "endLine": 177
+          },
+          {
+            "startLine": 256,
+            "endLine": 261
+          },
+          {
+            "startLine": 655,
+            "endLine": 668
+          },
+          {
+            "startLine": 2614,
+            "endLine": 2648
+          },
+          {
+            "startLine": 274,
+            "endLine": 285
+          },
+          {
+            "startLine": 340,
+            "endLine": 382
+          },
+          {
+            "startLine": 549,
+            "endLine": 654
+          },
+          {
+            "startLine": 1272,
+            "endLine": 1330
+          },
+          {
+            "startLine": 1442,
+            "endLine": 1499
+          },
+          {
+            "startLine": 3280,
+            "endLine": 3293
+          },
+          {
+            "startLine": 1992,
+            "endLine": 2018
+          },
+          {
+            "startLine": 1798,
+            "endLine": 1814
+          },
+          {
+            "startLine": 1825,
+            "endLine": 1861
+          },
+          {
+            "startLine": 724,
+            "endLine": 735
+          },
+          {
+            "startLine": 1992,
+            "endLine": 2018
+          },
+          {
+            "startLine": 3280,
+            "endLine": 3293
+          },
+          {
+            "startLine": 233,
+            "endLine": 249
+          },
+          {
+            "startLine": 758,
+            "endLine": 799
+          },
+          {
+            "startLine": 763,
+            "endLine": 771
+          },
+          {
+            "startLine": 1272,
+            "endLine": 1390
+          },
+          {
+            "startLine": 127,
+            "endLine": 130
+          },
+          {
+            "startLine": 1442,
+            "endLine": 1499
+          },
+          {
+            "startLine": 2313,
+            "endLine": 2345
+          },
+          {
+            "startLine": 1340,
+            "endLine": 1370
+          },
+          {
+            "startLine": 549,
+            "endLine": 654
+          },
+          {
+            "startLine": 1272,
+            "endLine": 1330
+          },
+          {
+            "startLine": 3280,
+            "endLine": 3293
+          },
+          {
+            "startLine": 2614,
+            "endLine": 2627
+          },
+          {
+            "startLine": 778,
+            "endLine": 799
+          },
+          {
+            "startLine": 1307,
+            "endLine": 1327
+          },
+          {
+            "startLine": 1467,
+            "endLine": 1495
+          }
+        ],
+        "sha256": "09f2e5df917b40012488baaad112bcba54488350e86e3bdc181cffa5ffeee8ab"
+      },
+      {
+        "path": "Drilling.UI/CUiLogService.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 17,
+            "endLine": 69
+          },
+          {
+            "startLine": 72,
+            "endLine": 92
+          }
+        ],
+        "sha256": "e26730fb54b010598ad048992b59d5537b05e268bf8f8b7e3a478a0e8d633cf7"
+      },
+      {
+        "path": "Drilling.UI/Drilling.UI.csproj",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [],
+        "sha256": "4659d4287c6a4034ba3ff922ed0e5efb0a4ab0fab34a68a98375f8aea6d6beec"
+      },
+      {
+        "path": "Drilling.UI/Menu/CBindingBase.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 766,
+            "endLine": 889
+          },
+          {
+            "startLine": 766,
+            "endLine": 889
+          },
+          {
+            "startLine": 766,
+            "endLine": 794
+          },
+          {
+            "startLine": 766,
+            "endLine": 802
+          }
+        ],
+        "sha256": "7ee36a35d9f2245fb0207f302e75751ba8b3f02e211631d5a474b0d9946988ac"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 209,
+            "endLine": 271
+          },
+          {
+            "startLine": 485,
+            "endLine": 518
+          },
+          {
+            "startLine": 545,
+            "endLine": 568
+          },
+          {
+            "startLine": 852,
+            "endLine": 887
+          },
+          {
+            "startLine": 14,
+            "endLine": 43
+          },
+          {
+            "startLine": 209,
+            "endLine": 243
+          },
+          {
+            "startLine": 316,
+            "endLine": 320
+          },
+          {
+            "startLine": 790,
+            "endLine": 850
+          },
+          {
+            "startLine": 571,
+            "endLine": 611
+          },
+          {
+            "startLine": 852,
+            "endLine": 887
+          },
+          {
+            "startLine": 916,
+            "endLine": 946
+          },
+          {
+            "startLine": 394,
+            "endLine": 405
+          },
+          {
+            "startLine": 545,
+            "endLine": 611
+          },
+          {
+            "startLine": 633,
+            "endLine": 704
+          },
+          {
+            "startLine": 711,
+            "endLine": 774
+          },
+          {
+            "startLine": 1275,
+            "endLine": 1332
+          },
+          {
+            "startLine": 1033,
+            "endLine": 1107
+          },
+          {
+            "startLine": 1145,
+            "endLine": 1161
+          },
+          {
+            "startLine": 1475,
+            "endLine": 1534
+          },
+          {
+            "startLine": 451,
+            "endLine": 477
+          },
+          {
+            "startLine": 485,
+            "endLine": 518
+          },
+          {
+            "startLine": 1038,
+            "endLine": 1044
+          }
+        ],
+        "sha256": "fb9a8f1f07a8aa9c53c455b2db44e2dd39ace8b00cc33f5efab5736239555dd9"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 9,
+            "endLine": 43
+          }
+        ],
+        "sha256": "8d2a3f1e2aa8de3a7f87950633058eb294c7145af6ddfcbceb2b0904dde75439"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 29,
+            "endLine": 58
+          },
+          {
+            "startLine": 116,
+            "endLine": 152
+          },
+          {
+            "startLine": 41,
+            "endLine": 113
+          },
+          {
+            "startLine": 155,
+            "endLine": 171
+          }
+        ],
+        "sha256": "d3b041057f97f293e1e40e189c5e655ae966c8c8430c73148b6cb20c0fedc931"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [],
+        "sha256": "ef3282c96c44f07071d06b6f9a2cfed5da7c3867bafed66a79c680df8f72df6f"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuAlarm.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 289,
+            "endLine": 319
+          },
+          {
+            "startLine": 418,
+            "endLine": 425
+          }
+        ],
+        "sha256": "07a42cddff502aa5fbbfd6307875e5166b943dc369cbb4b00d5a0536b842d694"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuBase.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 434,
+            "endLine": 446
+          }
+        ],
+        "sha256": "31fc7fd5d1bc8a106d960e109ec096c8b31569f20f8cefb2480daf82d4302047"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 252,
+            "endLine": 336
+          },
+          {
+            "startLine": 1078,
+            "endLine": 1093
+          },
+          {
+            "startLine": 241,
+            "endLine": 253
+          },
+          {
+            "startLine": 223,
+            "endLine": 237
+          },
+          {
+            "startLine": 279,
+            "endLine": 301
+          }
+        ],
+        "sha256": "d8d2bcf72b26adb6ef00ec04f3dc0b1e4cae885c706852e0f9cc98eaf219f6a5"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 471,
+            "endLine": 480
+          }
+        ],
+        "sha256": "1ad1b1ae961d9eb67727f9b4f8207c291ba8ec3e1baa4ed50b33f3cb387f8a9d"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [],
+        "sha256": "acec42fd57de6832c2dce11d4f8d0456adb8d2c4ce2591e05034c89b0be66926"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 261,
+            "endLine": 277
+          },
+          {
+            "startLine": 139,
+            "endLine": 166
+          },
+          {
+            "startLine": 403,
+            "endLine": 416
+          },
+          {
+            "startLine": 509,
+            "endLine": 518
+          },
+          {
+            "startLine": 553,
+            "endLine": 589
+          },
+          {
+            "startLine": 4572,
+            "endLine": 4590
+          },
+          {
+            "startLine": 3893,
+            "endLine": 3924
+          },
+          {
+            "startLine": 4572,
+            "endLine": 4584
+          },
+          {
+            "startLine": 3902,
+            "endLine": 3924
+          },
+          {
+            "startLine": 139,
+            "endLine": 166
+          }
+        ],
+        "sha256": "e45f235bab8991eba535014da51ef0da0d745b5b191a05123186e9e1a8a21f70"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuMain.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [],
+        "sha256": "3485c150c0dc3db9e11c362bc8e8073e2271380d250c79788896db50e2992ecb"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuManual.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 137,
+            "endLine": 146
+          }
+        ],
+        "sha256": "5388b0e131f67c29c83cc2c5e8c5695226a1cc7764080a5e92b0510afdcc49f7"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 3077,
+            "endLine": 3134
+          },
+          {
+            "startLine": 3317,
+            "endLine": 3344
+          },
+          {
+            "startLine": 3447,
+            "endLine": 3487
+          },
+          {
+            "startLine": 3531,
+            "endLine": 3595
+          },
+          {
+            "startLine": 4190,
+            "endLine": 4196
+          },
+          {
+            "startLine": 2859,
+            "endLine": 2887
+          },
+          {
+            "startLine": 3802,
+            "endLine": 3809
+          },
+          {
+            "startLine": 2665,
+            "endLine": 2676
+          },
+          {
+            "startLine": 3177,
+            "endLine": 3233
+          }
+        ],
+        "sha256": "b2df0de85807d47b52d150c3b330a2ca7efc53508992d570526320565af64e42"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuPm.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 34,
+            "endLine": 56
+          },
+          {
+            "startLine": 80,
+            "endLine": 140
+          },
+          {
+            "startLine": 93,
+            "endLine": 108
+          }
+        ],
+        "sha256": "1393394dca1a9500052acf8e9238a1ce0db7006515a36cc5c68d3d88fccb3258"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuRecipe.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 331,
+            "endLine": 335
+          },
+          {
+            "startLine": 567,
+            "endLine": 575
+          },
+          {
+            "startLine": 1976,
+            "endLine": 1984
+          },
+          {
+            "startLine": 331,
+            "endLine": 335
+          },
+          {
+            "startLine": 1375,
+            "endLine": 1384
+          }
+        ],
+        "sha256": "e0104bc6649a3788f1f485c67e9f75eba049577a527e0e75bd7a04395ed65425"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 244,
+            "endLine": 272
+          },
+          {
+            "startLine": 841,
+            "endLine": 915
+          },
+          {
+            "startLine": 1813,
+            "endLine": 1827
+          },
+          {
+            "startLine": 4747,
+            "endLine": 4767
+          },
+          {
+            "startLine": 4981,
+            "endLine": 5024
+          }
+        ],
+        "sha256": "6bd252e598a2748bb393a0607d32ac786f36cfb0c4e377330cf44e1964388376"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMenuSetting.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 1134,
+            "endLine": 1153
+          },
+          {
+            "startLine": 1180,
+            "endLine": 1204
+          }
+        ],
+        "sha256": "0e4f1b5b0d411d973a36aef3b0526650d3c6bb3c08dd3e83b90b9802864c1cd4"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 17,
+            "endLine": 31
+          },
+          {
+            "startLine": 9,
+            "endLine": 59
+          },
+          {
+            "startLine": 108,
+            "endLine": 136
+          }
+        ],
+        "sha256": "0d6e2a5a06d85d5eb080923fa2ce8f837d2ecdf3da6f45ae7c489026fcbef15f"
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [],
+        "sha256": "141e3b12b439092785cb9f41f3565aa688d69bac23e5bd4bb884893d9c6b4992"
+      },
+      {
+        "path": "Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 15,
+            "endLine": 37
+          },
+          {
+            "startLine": 95,
+            "endLine": 139
+          }
+        ],
+        "sha256": "71a00f66738e1f87fbb411a2657b4a1c61ce145703a47e03c3a70d971511f288"
+      },
+      {
+        "path": "Drilling.UI/Popup/CColorPickerDialog.xaml.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 11,
+            "endLine": 24
+          }
+        ],
+        "sha256": "208deb9d594a450aecd78fe90dfd57632bb00b6efad605e65c78c0b6d976bd9e"
+      },
+      {
+        "path": "Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 91,
+            "endLine": 159
+          }
+        ],
+        "sha256": "6da348dcf0687c8c85b5e241eb570146077fd861f7f80f92d77b596ffcc59a53"
+      },
+      {
+        "path": "Drilling.UI/Views/CCorrectionView.xaml",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 259,
+            "endLine": 264
+          }
+        ],
+        "sha256": "d83d8ae20a08304d97cafeba8399cc5d7ddc23e40c5173ef770547085808daed"
+      },
+      {
+        "path": "Drilling.UI/Views/CDefaultOffsetView.xaml.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 78,
+            "endLine": 114
+          }
+        ],
+        "sha256": "c9bbf573db3ad2daf7010f437df04fd305f212a3b0960e8ffad05d986239f2a7"
+      },
+      {
+        "path": "Drilling.UI/Views/CPmView.xaml.cs",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [],
+        "sha256": "2bc4898263b350dd75b8a7510b2377d23112ee311aab33838794268788959dbd"
+      },
+      {
+        "path": "Drilling.UI/Views/CRecipeView.xaml",
+        "reviewMode": "current diff and targeted current function/caller ranges; not whole-file semantic coverage",
+        "citedRanges": [
+          {
+            "startLine": 763,
+            "endLine": 790
+          },
+          {
+            "startLine": 763,
+            "endLine": 790
+          }
+        ],
+        "sha256": "12f20241df43233b1a70df521106cdf4be52f7ca2af3f8862b324330d282cc3c"
+      },
+      {
+        "path": "Drilling.UI/Views/CReviewShotMapControl.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 13,
+            "endLine": 111
+          },
+          {
+            "startLine": 179,
+            "endLine": 241
+          },
+          {
+            "startLine": 114,
+            "endLine": 132
+          },
+          {
+            "startLine": 156,
+            "endLine": 177
+          },
+          {
+            "startLine": 324,
+            "endLine": 356
+          }
+        ],
+        "sha256": "4b948d74cec87fc29244a8bbec94452a92aa3b70e04a1f1ea6b59876d3bd1223"
+      },
+      {
+        "path": "Drilling.UI/Views/CSettingView.xaml",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 632,
+            "endLine": 646
+          }
+        ],
+        "sha256": "cb1e9d77570c06b60cfd8503078299de4a9ce7ba559a3db9e0e6e475d2c0a60a"
+      },
+      {
+        "path": "Drilling.UI/Views/CSettingView.xaml.cs",
+        "reviewMode": "inherited cited span retained after current text/hash and diff mapping check",
+        "citedRanges": [
+          {
+            "startLine": 49,
+            "endLine": 69
+          }
+        ],
+        "sha256": "41315a13e21fdd45679d75223bb422d2aff28a4eee55c2dfa7b21f617d5cbf91"
+      }
+    ],
+    "excluded": [
+      "Data/ 운영 측정 CSV 원문 및 Config/RECIPE/* 값/보정 실레코드: diff 경로·변경량만 확인, 본문 복제 없음",
+      "vendor binaries: 파일 존재·C# 경계만; 실행·로드·역컴파일 없음",
+      "manual/review and tools: 다른 담당, 읽기 전용 교차검토만"
+    ],
+    "changes": [
+      {
+        "id": "ARCH-C01",
+        "title": "공통 AK Margin 소유권·필수 검증",
+        "change": "Recipe 정의 제거, Setting built-in 보충/저장검증, 명시적 Margin 인자, 옛 Recipe 자동 이관 없음",
+        "evidence": [
+          {
+            "path": "Drilling.Common/Managers/CAlignKeyMarginSettings.cs",
+            "startLine": 6,
+            "endLine": 51,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L6-L51"
+          },
+          {
+            "path": "Drilling.File/JHMI/CSettingFile.cs",
+            "startLine": 272,
+            "endLine": 287,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L272-L287"
+          },
+          {
+            "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+            "startLine": 276,
+            "endLine": 308,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CAlignInterpolation.cs#L276-L308"
+          },
+          {
+            "path": "Drilling.Common/Managers/CRecipeManager.cs",
+            "startLine": 94,
+            "endLine": 109,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CRecipeManager.cs#L94-L109"
+          }
+        ]
+      },
+      {
+        "id": "ARCH-C02",
+        "title": "Distortion 설계Y 표시와 실제 StageY 분리",
+        "change": "DISTORTION_PAIR*_Y 편집 표시는 돌아왔지만 실제 Key/보간/이동은 Motor StageY",
+        "evidence": [
+          {
+            "path": "Config/JHMI_RCP.csv",
+            "startLine": 32,
+            "endLine": 36,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Config/JHMI_RCP.csv#L32-L36"
+          },
+          {
+            "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+            "startLine": 181,
+            "endLine": 214,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CAlignInterpolation.cs#L181-L214"
+          }
+        ]
+      },
+      {
+        "id": "ARCH-C03",
+        "title": "AUTO INIT와 강제 완료0",
+        "change": "시퀀스 정리 gate, Worker/Session 정지 확인, PC 출력OFF readback, ActionReset, AUTO감시 재시작",
+        "evidence": [
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 758,
+            "endLine": 799,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L758-L799"
+          },
+          {
+            "path": "Drilling.Common/Station/CStationProcess.cs",
+            "startLine": 3912,
+            "endLine": 3958,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3912-L3958"
+          },
+          {
+            "path": "Drilling.Common/Station/CStationProcess.cs",
+            "startLine": 5166,
+            "endLine": 5220,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5166-L5220"
+          }
+        ]
+      },
+      {
+        "id": "ARCH-C04",
+        "title": "PM 진입·해제·수명 표시",
+        "change": "Manual 진행동작·사유·이력 성공 조건, cached ThgHour/count, IsActive 대기/JOG집계",
+        "evidence": [
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 1272,
+            "endLine": 1390,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1272-L1390"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuPm.cs",
+            "startLine": 80,
+            "endLine": 140,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L80-L140"
+          },
+          {
+            "path": "Drilling.Common/Automation/CAutomationManager.cs",
+            "startLine": 1673,
+            "endLine": 1767,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Automation/CAutomationManager.cs#L1673-L1767"
+          }
+        ]
+      },
+      {
+        "id": "ARCH-C05",
+        "title": "검사 RUN/RESULT와 메뉴 캐시/취소",
+        "change": "SIMPLE0/INSPECTION1, 별도 InspectionReviewData,6모드, Build CTS와 게시 재확인",
+        "evidence": [
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+            "startLine": 139,
+            "endLine": 166,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L139-L166"
+          },
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 549,
+            "endLine": 654,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L549-L654"
+          }
+        ]
+      },
+      {
+        "id": "ARCH-C06",
+        "title": "주석 보강과 실제 동작 변경을 분리",
+        "change": "Alarm/CMelsec/Vision/StageReviewSequences/Script는 확인 diff범위에서 주석 보강; 새로운 프로토콜·장비검증으로 세지 않음",
+        "evidence": [
+          {
+            "path": "Drilling.Common/Alarm/CAlarmManager.cs",
+            "startLine": 245,
+            "endLine": 268,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L245-L268"
+          },
+          {
+            "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+            "startLine": 613,
+            "endLine": 630,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Melsec/CMelsec.cs#L613-L630"
+          },
+          {
+            "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+            "startLine": 274,
+            "endLine": 303,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/Vision/CVisionComm.cs#L274-L303"
+          }
+        ]
+      }
+    ],
+    "dataflows": [
+      {
+        "id": "ARCH-F01",
+        "producers": [
+          "JHMI_SETTING built-in",
+          "Setting.csv"
+        ],
+        "transforms": [
+          "CAlignKeyMarginSettings finite/nonnegative",
+          "Station Recipe→Option/Motor 합성",
+          "Review 명시 Margin",
+          "Distortion Prepare frozen"
+        ],
+        "consumers": [
+          "Cell/Shot design",
+          "Head assignment",
+          "Review/ZeroDefence/Fine",
+          "Recipe/Correction preview"
+        ],
+        "storage": [
+          "공통 Setting",
+          "Recipe Shot Align Offset",
+          "별도 ReviewOffset"
+        ],
+        "units": "design mm; camera/stage/scanner separate",
+        "limits": "기존 Recipe 자동 이관/Setting version compare 없음; 동일 Margin 재생성시 Review Design−Margin 상쇄가능"
+      },
+      {
+        "id": "ARCH-F02",
+        "producers": [
+          "RootView INIT Command"
+        ],
+        "transforms": [
+          "Station Reset gate",
+          "Stop/cleanup",
+          "PC output write/readback",
+          "forced MachiningComplete0",
+          "owner check/Action reset"
+        ],
+        "consumers": [
+          "AUTO Stage worker restarted"
+        ],
+        "storage": [
+          "Process log"
+        ],
+        "units": "logical handshake values",
+        "limits": "Stage input/Home/physical stop guarantee 아님"
+      },
+      {
+        "id": "ARCH-F03",
+        "producers": [
+          "RootView PM entry/reason",
+          "cached Talon status",
+          "selected Recipe"
+        ],
+        "transforms": [
+          "manual blocker",
+          "Start/CompletePmSession calls"
+        ],
+        "consumers": [
+          "PM lock UI",
+          "PM life/history tables"
+        ],
+        "storage": [
+          "memory PM state",
+          "log implementation unknown"
+        ],
+        "units": "ThgHour/count; device mapping Hn→Talon n−1",
+        "limits": "cached numbers freshness/auto-life interlock/session restore unverified"
+      }
+    ],
+    "newRisks": [
+      {
+        "id": "ARCH-1119-R01",
+        "priority": "P1",
+        "status": "static_compatibility_risk_not_runtime_reproduced",
+        "title": "공통 AK Margin 이전의 구버전 이관·보정 기준 적합성 확인 필요",
+        "detail": "최신 Recipe 정의에서 AK가 빠지고 공통 Setting 필수값을 소비한다. 옛 Recipe별 값 자동 이관은 없고 Distortion 저장은 Recipe만 비교한다. 같은 ID의 기존 Align/Review Offset·과거 결과가 공통값 변경 후에도 적합한지 별도 검증이 필요하다. Review Design−Margin 상쇄 조건이 있으므로 모든 물리목표 이동으로 단정하지 않는다.",
+        "scope": "AK migration, prepared model, saved offsets and result replay",
+        "evidence": [
+          {
+            "path": "Drilling.Common/Managers/CAlignKeyMarginSettings.cs",
+            "startLine": 6,
+            "endLine": 51,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L6-L51"
+          },
+          {
+            "path": "Drilling.File/JHMI/CSettingFile.cs",
+            "startLine": 272,
+            "endLine": 287,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L272-L287"
+          },
+          {
+            "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+            "startLine": 276,
+            "endLine": 308,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CAlignInterpolation.cs#L276-L308"
+          },
+          {
+            "path": "Drilling.Common/Managers/CRecipeManager.cs",
+            "startLine": 94,
+            "endLine": 109,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CRecipeManager.cs#L94-L109"
+          }
+        ],
+        "testIds": [
+          "ARCH-T01",
+          "ARCH-T02",
+          "ARCH-T03"
+        ],
+        "testPlan": "서로 다른 구형 Recipe Margin, Setting 값 부재, 준비/측정/저장 사이 공통값 변경, 기존 Offset/결과 재적용을 합성 입력으로 대조",
+        "runtimeReproduced": false
+      },
+      {
+        "id": "ARCH-1119-R02",
+        "priority": "P1",
+        "status": "source_dependency_contract_unknown_no_build_run",
+        "title": "PM 로그 타입·서비스 구현이 tracked 소스에 없어 저장·배포 계약 미확인",
+        "detail": "새 PM은 CLogManager Start/Complete/ReadPmHistory와 ST_PM_HISTORY_ENTRY를 사용한다. tracked C#과 Common csproj에서 해당 로그 구현/참조를 찾지 못했다. 호출부 순서만 확인했으며 정식 빌드 실패나 로그 파일 형식을 실행으로 확정하지 않는다.",
+        "scope": "PM and existing log dependency boundary",
+        "evidence": [
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 127,
+            "endLine": 130,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L127-L130"
+          },
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 1307,
+            "endLine": 1327,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1307-L1327"
+          },
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 1467,
+            "endLine": 1495,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1467-L1495"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuPm.cs",
+            "startLine": 34,
+            "endLine": 42,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L34-L42"
+          },
+          {
+            "path": "Drilling.Common/Drilling.Common.csproj",
+            "startLine": 1,
+            "endLine": 49,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Drilling.Common.csproj#L1-L49"
+          }
+        ],
+        "testIds": [
+          "ARCH-T04"
+        ],
+        "testPlan": "정식 지원 소스/의존성 확인 후 별도 승인 환경에서 빌드·PM 이력 저장/재읽기·오류 경계 검증",
+        "runtimeReproduced": false
+      },
+      {
+        "id": "ARCH-1119-R03",
+        "priority": "P2",
+        "status": "documented_behavior_requires_operating_scenario_verification",
+        "title": "AUTO INIT 후 상대 Stage ON이 새 요청으로 처리될 수 있음",
+        "detail": "INIT는 PC 출력·소유권·Action을 정리하고 AUTO 감시를 재시작한다. 상대 입력/Home/물리 에너지 정지를 초기화하지 않으며 UI도 Stage ON의 재요청 가능성을 경고한다.",
+        "scope": "AUTO INIT and Stage handshake lifecycle",
+        "evidence": [
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 758,
+            "endLine": 799,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L758-L799"
+          },
+          {
+            "path": "Drilling.Common/Station/CStationProcess.cs",
+            "startLine": 3912,
+            "endLine": 3958,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3912-L3958"
+          },
+          {
+            "path": "Drilling.Common/Station/CStationProcess.cs",
+            "startLine": 5166,
+            "endLine": 5220,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5166-L5220"
+          }
+        ],
+        "testIds": [
+          "ARCH-T05",
+          "ARCH-T06"
+        ],
+        "testPlan": "각 시퀀스 단계에서 INIT, STOP/cleanup/readback 실패, Stage ABLE/START/COMPLETE 잔류, 중복 클릭·모드 변경을 독립 관측",
+        "runtimeReproduced": false
+      },
+      {
+        "id": "ARCH-1119-R04",
+        "priority": "P2",
+        "status": "static_lifecycle_boundary_not_runtime_reproduced",
+        "title": "PM 활성 잠금·세션은 메모리 상태이며 재시작 복원 미확인",
+        "detail": "RootView 잠금과 활성 세션 참조는 새 객체 초기값이고 현재 호출부에서 열린 이력 복원은 찾지 못했다. 이력 서비스 구현도 없어 재시작 중단 세션 처리·완료 기록의 원자성은 미확인이다.",
+        "scope": "PM session persistence",
+        "evidence": [
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 127,
+            "endLine": 130,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L127-L130"
+          },
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 1272,
+            "endLine": 1330,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1272-L1330"
+          },
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 1445,
+            "endLine": 1499,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1445-L1499"
+          }
+        ],
+        "testIds": [
+          "ARCH-T07"
+        ],
+        "testPlan": "PM 잠금/해제 중 종료·재시작, 시작/완료 I/O 실패 후 UI lock과 열린 이력 상태 확인",
+        "runtimeReproduced": false
+      },
+      {
+        "id": "ARCH-1119-R05",
+        "priority": "P2",
+        "status": "static_display_freshness_candidate",
+        "title": "PM 수명값이 STALE 상태여도 숫자로 남는 경로",
+        "detail": "PM은 Optic snapshot.Value가 null인지 확인하고 값이 있으면 별도 Talon cached ThgHour를 표시한다. 비어 있지 않은 STALE/ERROR snapshot의 상태를 숫자 옆에 전파하지 않아 최신성 오해 후보가 있다. 자동 수명 초과 차단을 추가한 코드는 아니다.",
+        "scope": "PM Talon life display",
+        "evidence": [
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuPm.cs",
+            "startLine": 93,
+            "endLine": 108,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L93-L108"
+          },
+          {
+            "path": "Drilling.Common/Interface/CInterfaceManager.cs",
+            "startLine": 2047,
+            "endLine": 2056,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CInterfaceManager.cs#L2047-L2056"
+          }
+        ],
+        "testIds": [
+          "ARCH-T08"
+        ],
+        "testPlan": "정상값 수집 후 Offline/STALE/ERROR 전환, 구성되지 않은 Head, 한계값 부재/경계 비교",
+        "runtimeReproduced": false
+      },
+      {
+        "id": "ARCH-1119-R06",
+        "priority": "P2",
+        "status": "static_property_notification_candidate_wpf_not_run",
+        "title": "Recipe 공통 Margin 텍스트의 즉시 Changed 통지 누락 후보",
+        "detail": "AkMarginXText/YText에 OnPropertyChanged 요청은 있으나 CBindingBase 대응 이벤트/switch case가 없다. 캐시 재바인딩/뷰 재생성으로 갱신될 가능성은 미실행이므로 표시가 반드시 틀리거나 저장이 실패한다고 단정하지 않는다.",
+        "scope": "WPF Recipe display with cache",
+        "evidence": [
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuRecipe.cs",
+            "startLine": 331,
+            "endLine": 335,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L331-L335"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuRecipe.cs",
+            "startLine": 1375,
+            "endLine": 1384,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1375-L1384"
+          },
+          {
+            "path": "Drilling.UI/Views/CRecipeView.xaml",
+            "startLine": 763,
+            "endLine": 790,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml#L763-L790"
+          },
+          {
+            "path": "Drilling.UI/Menu/CBindingBase.cs",
+            "startLine": 766,
+            "endLine": 802,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/CBindingBase.cs#L766-L802"
+          }
+        ],
+        "testIds": [
+          "ARCH-T09"
+        ],
+        "testPlan": "같은 메뉴 객체의 Margin 변경 전후 캐시 재진입·뷰 재생성·완전 재시작 표시 비교",
+        "runtimeReproduced": false
+      }
+    ],
+    "risks": [
+      {
+        "id": "ARCH-1119-R01",
+        "priority": "P1",
+        "status": "static_compatibility_risk_not_runtime_reproduced",
+        "title": "공통 AK Margin 이전의 구버전 이관·보정 기준 적합성 확인 필요",
+        "detail": "최신 Recipe 정의에서 AK가 빠지고 공통 Setting 필수값을 소비한다. 옛 Recipe별 값 자동 이관은 없고 Distortion 저장은 Recipe만 비교한다. 같은 ID의 기존 Align/Review Offset·과거 결과가 공통값 변경 후에도 적합한지 별도 검증이 필요하다. Review Design−Margin 상쇄 조건이 있으므로 모든 물리목표 이동으로 단정하지 않는다.",
+        "scope": "AK migration, prepared model, saved offsets and result replay",
+        "evidence": [
+          {
+            "path": "Drilling.Common/Managers/CAlignKeyMarginSettings.cs",
+            "startLine": 6,
+            "endLine": 51,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CAlignKeyMarginSettings.cs#L6-L51"
+          },
+          {
+            "path": "Drilling.File/JHMI/CSettingFile.cs",
+            "startLine": 272,
+            "endLine": 287,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/JHMI/CSettingFile.cs#L272-L287"
+          },
+          {
+            "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+            "startLine": 276,
+            "endLine": 308,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CAlignInterpolation.cs#L276-L308"
+          },
+          {
+            "path": "Drilling.Common/Managers/CRecipeManager.cs",
+            "startLine": 94,
+            "endLine": 109,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CRecipeManager.cs#L94-L109"
+          }
+        ],
+        "testIds": [
+          "ARCH-T01",
+          "ARCH-T02",
+          "ARCH-T03"
+        ],
+        "testPlan": "서로 다른 구형 Recipe Margin, Setting 값 부재, 준비/측정/저장 사이 공통값 변경, 기존 Offset/결과 재적용을 합성 입력으로 대조",
+        "runtimeReproduced": false
+      },
+      {
+        "id": "ARCH-1119-R02",
+        "priority": "P1",
+        "status": "source_dependency_contract_unknown_no_build_run",
+        "title": "PM 로그 타입·서비스 구현이 tracked 소스에 없어 저장·배포 계약 미확인",
+        "detail": "새 PM은 CLogManager Start/Complete/ReadPmHistory와 ST_PM_HISTORY_ENTRY를 사용한다. tracked C#과 Common csproj에서 해당 로그 구현/참조를 찾지 못했다. 호출부 순서만 확인했으며 정식 빌드 실패나 로그 파일 형식을 실행으로 확정하지 않는다.",
+        "scope": "PM and existing log dependency boundary",
+        "evidence": [
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 127,
+            "endLine": 130,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L127-L130"
+          },
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 1307,
+            "endLine": 1327,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1307-L1327"
+          },
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 1467,
+            "endLine": 1495,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1467-L1495"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuPm.cs",
+            "startLine": 34,
+            "endLine": 42,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L34-L42"
+          },
+          {
+            "path": "Drilling.Common/Drilling.Common.csproj",
+            "startLine": 1,
+            "endLine": 49,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Drilling.Common.csproj#L1-L49"
+          }
+        ],
+        "testIds": [
+          "ARCH-T04"
+        ],
+        "testPlan": "정식 지원 소스/의존성 확인 후 별도 승인 환경에서 빌드·PM 이력 저장/재읽기·오류 경계 검증",
+        "runtimeReproduced": false
+      },
+      {
+        "id": "ARCH-1119-R03",
+        "priority": "P2",
+        "status": "documented_behavior_requires_operating_scenario_verification",
+        "title": "AUTO INIT 후 상대 Stage ON이 새 요청으로 처리될 수 있음",
+        "detail": "INIT는 PC 출력·소유권·Action을 정리하고 AUTO 감시를 재시작한다. 상대 입력/Home/물리 에너지 정지를 초기화하지 않으며 UI도 Stage ON의 재요청 가능성을 경고한다.",
+        "scope": "AUTO INIT and Stage handshake lifecycle",
+        "evidence": [
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 758,
+            "endLine": 799,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L758-L799"
+          },
+          {
+            "path": "Drilling.Common/Station/CStationProcess.cs",
+            "startLine": 3912,
+            "endLine": 3958,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L3912-L3958"
+          },
+          {
+            "path": "Drilling.Common/Station/CStationProcess.cs",
+            "startLine": 5166,
+            "endLine": 5220,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5166-L5220"
+          }
+        ],
+        "testIds": [
+          "ARCH-T05",
+          "ARCH-T06"
+        ],
+        "testPlan": "각 시퀀스 단계에서 INIT, STOP/cleanup/readback 실패, Stage ABLE/START/COMPLETE 잔류, 중복 클릭·모드 변경을 독립 관측",
+        "runtimeReproduced": false
+      },
+      {
+        "id": "ARCH-1119-R04",
+        "priority": "P2",
+        "status": "static_lifecycle_boundary_not_runtime_reproduced",
+        "title": "PM 활성 잠금·세션은 메모리 상태이며 재시작 복원 미확인",
+        "detail": "RootView 잠금과 활성 세션 참조는 새 객체 초기값이고 현재 호출부에서 열린 이력 복원은 찾지 못했다. 이력 서비스 구현도 없어 재시작 중단 세션 처리·완료 기록의 원자성은 미확인이다.",
+        "scope": "PM session persistence",
+        "evidence": [
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 127,
+            "endLine": 130,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L127-L130"
+          },
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 1272,
+            "endLine": 1330,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1272-L1330"
+          },
+          {
+            "path": "Drilling.UI/CRootView.cs",
+            "startLine": 1445,
+            "endLine": 1499,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L1445-L1499"
+          }
+        ],
+        "testIds": [
+          "ARCH-T07"
+        ],
+        "testPlan": "PM 잠금/해제 중 종료·재시작, 시작/완료 I/O 실패 후 UI lock과 열린 이력 상태 확인",
+        "runtimeReproduced": false
+      },
+      {
+        "id": "ARCH-1119-R05",
+        "priority": "P2",
+        "status": "static_display_freshness_candidate",
+        "title": "PM 수명값이 STALE 상태여도 숫자로 남는 경로",
+        "detail": "PM은 Optic snapshot.Value가 null인지 확인하고 값이 있으면 별도 Talon cached ThgHour를 표시한다. 비어 있지 않은 STALE/ERROR snapshot의 상태를 숫자 옆에 전파하지 않아 최신성 오해 후보가 있다. 자동 수명 초과 차단을 추가한 코드는 아니다.",
+        "scope": "PM Talon life display",
+        "evidence": [
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuPm.cs",
+            "startLine": 93,
+            "endLine": 108,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L93-L108"
+          },
+          {
+            "path": "Drilling.Common/Interface/CInterfaceManager.cs",
+            "startLine": 2047,
+            "endLine": 2056,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Interface/CInterfaceManager.cs#L2047-L2056"
+          }
+        ],
+        "testIds": [
+          "ARCH-T08"
+        ],
+        "testPlan": "정상값 수집 후 Offline/STALE/ERROR 전환, 구성되지 않은 Head, 한계값 부재/경계 비교",
+        "runtimeReproduced": false
+      },
+      {
+        "id": "ARCH-1119-R06",
+        "priority": "P2",
+        "status": "static_property_notification_candidate_wpf_not_run",
+        "title": "Recipe 공통 Margin 텍스트의 즉시 Changed 통지 누락 후보",
+        "detail": "AkMarginXText/YText에 OnPropertyChanged 요청은 있으나 CBindingBase 대응 이벤트/switch case가 없다. 캐시 재바인딩/뷰 재생성으로 갱신될 가능성은 미실행이므로 표시가 반드시 틀리거나 저장이 실패한다고 단정하지 않는다.",
+        "scope": "WPF Recipe display with cache",
+        "evidence": [
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuRecipe.cs",
+            "startLine": 331,
+            "endLine": 335,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L331-L335"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuRecipe.cs",
+            "startLine": 1375,
+            "endLine": 1384,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuRecipe.cs#L1375-L1384"
+          },
+          {
+            "path": "Drilling.UI/Views/CRecipeView.xaml",
+            "startLine": 763,
+            "endLine": 790,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml#L763-L790"
+          },
+          {
+            "path": "Drilling.UI/Menu/CBindingBase.cs",
+            "startLine": 766,
+            "endLine": 802,
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/CBindingBase.cs#L766-L802"
+          }
+        ],
+        "testIds": [
+          "ARCH-T09"
+        ],
+        "testPlan": "같은 메뉴 객체의 Margin 변경 전후 캐시 재진입·뷰 재생성·완전 재시작 표시 비교",
+        "runtimeReproduced": false
+      }
+    ],
+    "retainedRisks": [
+      {
+        "id": "ARCH-OLD-PRODUCT",
+        "status": "unchanged_blob",
+        "title": "Product compact가 NG 부가정보를 보존하지 않는 잔건",
+        "testIds": [
+          "ARCH-T11"
+        ]
+      },
+      {
+        "id": "ARCH-OLD-PTW",
+        "status": "retained_comments_only",
+        "title": "보호윈도우 LIGHT·AUTO 계속, 재시도 상태 메모리 및 재시작 경계",
+        "testIds": [
+          "ARCH-T12"
+        ]
+      },
+      {
+        "id": "ARCH-OLD-ALARM",
+        "status": "unchanged_analysis_blob",
+        "title": "원인 후보 heuristic·상관키·시간순·전체파일I/O 한계",
+        "testIds": [
+          "ARCH-T13"
+        ]
+      },
+      {
+        "id": "ARCH-OLD-LEVEL",
+        "status": "retained_level_helper_unchanged",
+        "title": "표시 Level과 실제 측정JUDGE 구분, swatch Changed 누락 후보 유지"
+      },
+      {
+        "id": "ARCH-OLD-FINE-RETAINED",
+        "status": "partially_superseded",
+        "title": "파일 MeasuredRows는 RETAINED/EDITED를 포함하도록 개선; Lagrange/Use/계보 잔건은 별도"
+      },
+      {
+        "id": "ARCH-OLD-DUPLICATE-DATE",
+        "status": "partially_superseded",
+        "title": "Recipe 전체 날짜 이력 색인으로 익일 같은경로 중복 개선; 경로복제·Revision 계보·외부writer cache는 별도"
+      }
+    ],
+    "residualBlobChecks": [
+      {
+        "path": "Drilling.File/Product/CProductFile.cs",
+        "baselineBlob": "053e3dd302aa9811f1ce4d734f62a5204653c1ab",
+        "currentBlob": "053e3dd302aa9811f1ce4d734f62a5204653c1ab",
+        "unchanged": true
+      },
+      {
+        "path": "Drilling.Common/Product/CProductManager.cs",
+        "baselineBlob": "5489f3d814626a5ea84465e8fcd426c2e2fd256d",
+        "currentBlob": "5489f3d814626a5ea84465e8fcd426c2e2fd256d",
+        "unchanged": true
+      },
+      {
+        "path": "Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs",
+        "baselineBlob": "b39af8948347c6171ea49df257729177f409817f",
+        "currentBlob": "b39af8948347c6171ea49df257729177f409817f",
+        "unchanged": true
+      },
+      {
+        "path": "Drilling.UI/Views/CReviewShotMapControl.cs",
+        "baselineBlob": "b957f0cedad7e02d3ea9f5f583009a9df701ffb2",
+        "currentBlob": "b957f0cedad7e02d3ea9f5f583009a9df701ffb2",
+        "unchanged": true
+      },
+      {
+        "path": "Drilling.Common/Review/CReviewResultLevelSettings.cs",
+        "baselineBlob": "0b1a5b6d2847e9bdc6566a3b3edff2b2c9d11a9f",
+        "currentBlob": "0b1a5b6d2847e9bdc6566a3b3edff2b2c9d11a9f",
+        "unchanged": true
+      }
+    ],
+    "tests": [
+      {
+        "id": "ARCH-T00",
+        "status": "passed_parent_harness",
+        "scenario": "현재 원문 계산기 복사 순수 Margin 회귀34/34",
+        "artifact": "<private-run>/verification/margins/margin-results.json",
+        "limits": "정식 WPF/장비/SDK/Controller Script 빌드·실행 아님",
+        "verifiedArtifactSummary": 34
+      },
+      {
+        "id": "ARCH-T01",
+        "status": "planned_not_run",
+        "scenario": "구형 정의/값·Recipe별 옛 Margin 배포와 공통값 선택"
+      },
+      {
+        "id": "ARCH-T02",
+        "status": "planned_not_run",
+        "scenario": "Margin 누락/음수/비유한/범위·작은 Glass 기하"
+      },
+      {
+        "id": "ARCH-T03",
+        "status": "planned_not_run",
+        "scenario": "준비/측정/저장 사이 Setting 변경 및 과거 Offset 재사용"
+      },
+      {
+        "id": "ARCH-T04",
+        "status": "planned_not_run",
+        "scenario": "누락 로그 타입·PM 저장형식·지원 배포 의존성"
+      },
+      {
+        "id": "ARCH-T05",
+        "status": "planned_not_run",
+        "scenario": "INIT 각 시퀀스 단계와 상대 입력 잔류"
+      },
+      {
+        "id": "ARCH-T06",
+        "status": "planned_not_run",
+        "scenario": "INIT STOP/cleanup/OFF readback 실패·소유권 미해제"
+      },
+      {
+        "id": "ARCH-T07",
+        "status": "planned_not_run",
+        "scenario": "PM 잠금·이력 실패와 종료/재시작"
+      },
+      {
+        "id": "ARCH-T08",
+        "status": "planned_not_run",
+        "scenario": "PM 수명 snapshot stale/offline/한계값"
+      },
+      {
+        "id": "ARCH-T09",
+        "status": "planned_not_run",
+        "scenario": "Recipe Margin·Setting swatch 즉시 갱신·캐시 재바인딩"
+      },
+      {
+        "id": "ARCH-T10",
+        "status": "planned_not_run",
+        "scenario": "느린 Build 중 메뉴 연속전환/취소/종료와 이전 결과 게시"
+      },
+      {
+        "id": "ARCH-T11",
+        "status": "planned_not_run",
+        "scenario": "Product NG 부가필드 compact round-trip 잔건"
+      },
+      {
+        "id": "ARCH-T12",
+        "status": "planned_not_run",
+        "scenario": "보호윈도우 카운터/추가재시도 재시작 잔건"
+      },
+      {
+        "id": "ARCH-T13",
+        "status": "planned_not_run",
+        "scenario": "Alarm 로그 시간역전·큰파일·상관키 잔건"
+      }
+    ],
+    "staticDocumentationChecks": {
+      "sourceReferences": 352,
+      "referenceInvalidCount": 0,
+      "inheritedReferences": 254,
+      "inheritedTextUnchanged": 206,
+      "changedInheritedSpansReviewed": 48,
+      "markdownFencesBalanced": true,
+      "localLinkErrors": [],
+      "svgXmlParsePassed": true,
+      "screenshotVisualQaPerformed": false,
+      "note": "line mapping은 보조검사이며 변경된 함수 본문/소비자 의미도 재검토. 새 SVG시각QA는 Root최종통합 담당.",
+      "independentReviewCrosscheck": "review agent compared current wiring/margin/INIT/PM and found no mandatory correction; 2026-11-20"
+    }
+  },
+  "review": {
+    "sourceRepository": "https://github.com/kjuws10-rgb/A3Drilling.git",
+    "sourceBranch": "master",
+    "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+    "baselineCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+    "commits": [
+      {
+        "sha": "8c07af269fc0470de943cd3dd48d51be568fb0fb",
+        "subject": "A3_LD_11.18.0"
+      },
+      {
+        "sha": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+        "subject": "Ver 11.19.0"
+      }
+    ],
+    "scope": {
+      "manualChapters": 7,
+      "diagrams": 7,
+      "sourceOnly": false,
+      "analysisMethod": "정적 소스 추적과 원문 복사 순수함수 회귀",
+      "applicationRuntimeTests": false,
+      "equipmentTests": false,
+      "vendorBinaryExecution": false,
+      "productionCsvRecordsCopied": false,
+      "readOnlySource": true,
+      "independentPureHarness": true,
+      "formalEquipmentBuild": false
+    },
+    "changes": [
+      {
+        "area": "AK Margin 출처",
+        "data": "AK_MARGIN_X/Y는 Setting Common ALIGN의 유한한 0이상 mm",
+        "producer": "CSettingManager.GetAlignKeyMargins / CAlignKeyMarginSettings.Read",
+        "consumer": "일반Review/CreateShotBeamPositionCalculator/AUTO Fine/ZeroDefence/Fine·Rough preview/Align 보간",
+        "boundary": "REVIEW_CAMERA_ALIGN_KEY_POS_X/Y는 여전히 Recipe. 기존 Offset·결과에 Setting geometry hash를 추가하는 변경은 아님",
+        "evidence": [
+          {
+            "path": "Drilling.Common/Review/CReviewManager.cs",
+            "start": 139,
+            "end": 196,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L139-L196"
+          },
+          {
+            "path": "Drilling.Common/Review/CReviewManager.cs",
+            "start": 506,
+            "end": 545,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L506-L545"
+          },
+          {
+            "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+            "start": 202,
+            "end": 230,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L202-L230"
+          }
+        ]
+      },
+      {
+        "area": "검사 화면 통합",
+        "data": "상위 SIMPLE0 / INSPECTION1; INSPECTION내6모드와 RUN/RESULT",
+        "producer": "CMenuCorrection.AttachReview + CMenuReview workspace/mode",
+        "consumer": "별도 InspectionReviewData panel, 현재Recipe/모드 결과트리, 저장완료 자동OpenResult",
+        "boundary": "BEAM_INSPECTION은Offset금지. UI 성능·동시성 정식실행 미검증",
+        "evidence": [
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+            "start": 405,
+            "end": 517,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L405-L517"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs",
+            "start": 274,
+            "end": 307,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L274-L307"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs",
+            "start": 415,
+            "end": 523,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L415-L523"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+            "start": 745,
+            "end": 793,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L745-L793"
+          }
+        ]
+      },
+      {
+        "area": "보정 입력",
+        "data": "MEASURED/RETAINED/EDITED 후보, ONE_LINE DIRECT_LINE 지원",
+        "producer": "ReviewResult 원측정/보존/편집 Revision",
+        "consumer": "BuildDirectDeltas/BuildRoughDeltas/BuildFineDeltas",
+        "boundary": "Direct·Rough는OK만; Fine/AUTO는후보중비OK전체차단; EDITED는새실측아님",
+        "evidence": [
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+            "start": 385,
+            "end": 480,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L385-L480"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+            "start": 515,
+            "end": 531,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L515-L531"
+          }
+        ]
+      },
+      {
+        "area": "결과 숫자 저장",
+        "data": "Number: F3 반올림→FormatDouble(F6mm)",
+        "producer": "CReviewResultFile.Number",
+        "consumer": "Fine/Auto 등 Number 호출부의 CSV와 재LOAD",
+        "boundary": "UI COPY F3와 최종Offset0.001mm반올림유지; 무손실저장아님",
+        "evidence": [
+          {
+            "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+            "start": 719,
+            "end": 722,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L719-L722"
+          },
+          {
+            "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+            "start": 1328,
+            "end": 1328,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L1328-L1328"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs",
+            "start": 665,
+            "end": 666,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L665-L666"
+          },
+          {
+            "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+            "start": 663,
+            "end": 674,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L663-L674"
+          }
+        ]
+      },
+      {
+        "area": "중복 적용 이력",
+        "data": "Recipe의 모든일자AppliedSources.csv를Source경로로색인",
+        "producer": "SaveNewFromSource→AppendApplyHistory→Recipecache갱신",
+        "consumer": "FindSourceApplication 및 SaveLock내중복검사",
+        "boundary": "allowDuplicate명시허용·다른경로계보·외부수정cache는별도; Rollback무효화",
+        "evidence": [
+          {
+            "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+            "start": 131,
+            "end": 202,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L131-L202"
+          },
+          {
+            "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+            "start": 306,
+            "end": 385,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L306-L385"
+          },
+          {
+            "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+            "start": 409,
+            "end": 472,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L409-L472"
+          }
+        ]
+      },
+      {
+        "area": "대표값 복사",
+        "data": "COPY X / COPY Y / COPY JUDGE / COPY ALL",
+        "producer": "OriginalXText/YText/OriginalJudge",
+        "consumer": "편집후보→새EDIT Revision→별도LOAD/APPLY",
+        "boundary": "COPY ALL만좌표+판정함께. VisionResultCode삭제·NG_REASON=RESULT_EDIT,원대표상세NG전체복사아님",
+        "evidence": [
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs",
+            "start": 371,
+            "end": 419,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L371-L419"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs",
+            "start": 439,
+            "end": 459,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L439-L459"
+          },
+          {
+            "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+            "start": 377,
+            "end": 404,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L377-L404"
+          }
+        ]
+      }
+    ],
+    "dataflow": [
+      "Setting AKMargin + Recipe패턴/CameraAK → 공통좌표맵 → Head/Masking → ReviewPlan",
+      "Shot/선택Beam/Shift → 카메라X·StageY목표 → StageIOF; Vision에는별도식별자요청",
+      "Vision(Target−Hole)px → CameraResolution*nResolutionmm → Flip → Tolerance/Judge/NgReason → 결과CSV(F6)",
+      "INSPECTION RUN 저장성공 → 모드별RESULT자동LOAD → 선택EDIT/REINSP → 새Revision",
+      "MEASURED/RETAINED/EDITED → Direct/Rough OK또는Fine전체OK가드 → Current+Delta·0.001mm최종Round → 새DESIGNOffset",
+      "Source경로·Recipe전일자이력 → duplicate확인/명시허용 → snapshot+history → 다음DoReady변환·Scale적용",
+      "Default Head별DOE 1or16점 → zeroorder중심 → 중앙±55/110목표 → 현재Default−오차 → 새가공검증"
+    ],
+    "findings": [
+      {
+        "id": "RV20-N1",
+        "severity": "medium",
+        "origin": "new_diff",
+        "status": "정적 확인·정책 검증 필요",
+        "title": "수동 EDITED/OK도 보정 앵커가 됨",
+        "condition": "NG를 COPY JUDGE 또는 KEY IN으로 OK로 바꾼 뒤 EDIT Revision을 LOAD/APPLY",
+        "impact": "수정값이 실측과 같은 계산 후보가 되지만 SaveResultEdit는 tolerance 재판정을 하지 않음. Grid에는 출처·Vision원인표시가 충분하지 않음",
+        "test": "EDITED OK/NG를 각 결과형식별로 시험하고 source·판정·사용자사유·Current/Delta/Final을 대조",
+        "evidence": [
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+            "start": 385,
+            "end": 480,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L385-L480"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs",
+            "start": 422,
+            "end": 459,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs#L422-L459"
+          },
+          {
+            "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+            "start": 377,
+            "end": 404,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L377-L404"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+            "start": 274,
+            "end": 300,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L274-L300"
+          }
+        ]
+      },
+      {
+        "id": "RV20-N2",
+        "severity": "medium",
+        "origin": "inherited_boundary",
+        "status": "경로 한계 순수회귀 재현·Revision 영향 정적 추적",
+        "title": "날짜 중복은 개선됐지만 새 Revision 계보까지 중복 제거하지 않음",
+        "condition": "BASE를 이미 적용한 후 다른경로의 EDIT/REINSP 결과를 다시 적용",
+        "impact": "경로identity가달라허용될수있고유지된앵커의오차도다시누적될수있음. 내용hash/부모결과/기준OffsetRevision연결없음",
+        "test": "BASE→일부EDIT/REINSP 재적용의행별Current/Delta/Final과지속이력비교",
+        "evidence": [
+          {
+            "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+            "start": 409,
+            "end": 472,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L409-L472"
+          },
+          {
+            "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+            "start": 633,
+            "end": 677,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L633-L677"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+            "start": 326,
+            "end": 350,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L326-L350"
+          },
+          {
+            "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+            "start": 228,
+            "end": 267,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewResult/CReviewResultFile.cs#L228-L267"
+          }
+        ]
+      },
+      {
+        "id": "RV20-N3",
+        "severity": "low",
+        "origin": "new_diff",
+        "status": "독립 두 writer 합성시험 재현·앱 운영조건 미확인",
+        "title": "전일자 이력 cache는 외부 writer 변경을 자동 재색인하지 않음",
+        "condition": "한 writer가 Recipe history를 먼저색인한후다른writer/프로세스가새Source이력추가",
+        "impact": "첫writer가외부이력을못볼수있음. 실제앱다중인스턴스운영이확인됐다는뜻은아님",
+        "test": "단일writer소유계약확인; 필요시외부변경감지/프로세스간Lock으로별도검증",
+        "evidence": [
+          {
+            "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+            "start": 409,
+            "end": 472,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/ReviewOffset/CReviewOffsetFile.cs#L409-L472"
+          }
+        ]
+      },
+      {
+        "id": "RV20-N4",
+        "severity": "high",
+        "origin": "new_coordinate_setting",
+        "status": "정적 계약 경계·별도 Margin 회귀는 Root 담당",
+        "title": "Setting Margin 변경과 기존 보정·과거 결과의 기준 일치",
+        "condition": "같은RecipeID로Margin을변경하고기존Align/ReviewOffset을재사용하거나옛결과LOAD",
+        "impact": "좌표는새Setting으로재계산되지만저장파일의동일기준검증/자동재기준화계약이추가되지않음",
+        "test": "Migration시Setting값/기준hash/Offset재생성정책과freshDoReady를검증",
+        "evidence": [
+          {
+            "path": "Drilling.Common/Review/CReviewManager.cs",
+            "start": 152,
+            "end": 196,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L152-L196"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+            "start": 2732,
+            "end": 2822,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L2732-L2822"
+          },
+          {
+            "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+            "start": 704,
+            "end": 730,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L704-L730"
+          }
+        ]
+      },
+      {
+        "id": "RV20-L1",
+        "severity": "medium",
+        "origin": "inherited_unchanged",
+        "status": "핵심 계산 동일·현재 순수함수 회귀",
+        "title": "Fine는 전역 Lagrange와 외삽을 사용",
+        "condition": "Cell/X열3개이상anchor또는anchor바깥대상",
+        "impact": "중간/끝오차가단순선형예상과다를수있음. 1점상수·0점열유지도유지",
+        "test": "비균등3/5/7줄·끝마스킹·미검사중간행/격자에서독립새가공잔차확인",
+        "evidence": [
+          {
+            "path": "Drilling.Common/Review/CReviewManager.cs",
+            "start": 3616,
+            "end": 3683,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L3616-L3683"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+            "start": 443,
+            "end": 468,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L443-L468"
+          }
+        ]
+      },
+      {
+        "id": "RV20-L2",
+        "severity": "high",
+        "origin": "inherited_unchanged",
+        "status": "Nov18 재현 결과의 코드불변 대조·현재 재실행 아님",
+        "title": "Fine 기하학 행 선정 후 마스킹된 행 자동 대체 없음",
+        "condition": "요청3줄중첫행전부Masking또는특정X열앵커부족",
+        "impact": "명목LineCount와실제유효행/열별앵커수가다를수있음. 0앵커열은기존값유지",
+        "test": "모두마스킹된첫/끝행과열별0/1/2/3앵커를시험하고미보정열수를별도표시",
+        "evidence": [
+          {
+            "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+            "start": 282,
+            "end": 296,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L282-L296"
+          },
+          {
+            "path": "Drilling.Common/Review/CReviewRulePlanBuilder.cs",
+            "start": 434,
+            "end": 447,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L434-L447"
+          },
+          {
+            "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+            "start": 241,
+            "end": 284,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L241-L284"
+          },
+          {
+            "path": "Drilling.Common/Review/CReviewManager.cs",
+            "start": 3631,
+            "end": 3657,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L3631-L3657"
+          }
+        ]
+      },
+      {
+        "id": "RV20-L3",
+        "severity": "high",
+        "origin": "inherited_unchanged",
+        "status": "핵심 계산/호출 정적 대조",
+        "title": "Default 최초마크와 기판밖 예상 가공은 현장확인 필요",
+        "condition": "초기Q/헤드티칭이기판/FOV범위밖이거나AK에Y기울기존재",
+        "impact": "현재중앙은두X평균이고최초검색·2D회전피팅은없음. Preview경고를실행차단과동일시금지",
+        "test": "실제설비범위내Q·최초마크가시성·AK자세·가공점한계차단을분리검증",
+        "evidence": [
+          {
+            "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+            "start": 65,
+            "end": 120,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L65-L120"
+          },
+          {
+            "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+            "start": 241,
+            "end": 269,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L241-L269"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+            "start": 4533,
+            "end": 4538,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L4533-L4538"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+            "start": 3279,
+            "end": 3340,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L3279-L3340"
+          }
+        ]
+      },
+      {
+        "id": "RV20-L4",
+        "severity": "high",
+        "origin": "inherited_unchanged",
+        "status": "정적 확인",
+        "title": "AUTO Shift 유지 반복평가는 기존경로 그대로 지원되지 않음",
+        "condition": "Shift를유지한AUTO가공10회및AUTO Fine을요구",
+        "impact": "일반ManualReview는성공ManualMOF Shift선택가능하나AUTO가공/AUTOFine은명시적0",
+        "test": "수동MOF/일반Review/AUTO평가시퀀스를분리하고요청정책과확정",
+        "evidence": [
+          {
+            "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+            "start": 202,
+            "end": 230,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L202-L230"
+          },
+          {
+            "path": "Drilling.Common/Station/CStationProcess.cs",
+            "start": 4039,
+            "end": 4052,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L4039-L4052"
+          },
+          {
+            "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+            "start": 2536,
+            "end": 2562,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L2536-L2562"
+          }
+        ]
+      },
+      {
+        "id": "RV20-L5",
+        "severity": "medium",
+        "origin": "inherited_unchanged",
+        "status": "정적 범위 확인",
+        "title": "혼합 DOE/원빔 자동 대응은 Default에 한정",
+        "condition": "DOE_EXIST=OFF Head에서일반Review/BeamInspection Beam11사용",
+        "impact": "Default는중앙1점이나일반Review는전역SPLITED_BEAM_COUNT와선택Beam유지",
+        "test": "원빔zeroorder와평가Beam위치간FirstBeam세팅·실측좌표와광학위치일치검증",
+        "evidence": [
+          {
+            "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+            "start": 32,
+            "end": 50,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L32-L50"
+          },
+          {
+            "path": "Drilling.Common/Review/CReviewManager.cs",
+            "start": 139,
+            "end": 196,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L139-L196"
+          },
+          {
+            "path": "Drilling.Common/Review/CReviewManager.cs",
+            "start": 1381,
+            "end": 1426,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L1381-L1426"
+          }
+        ]
+      },
+      {
+        "id": "RV20-L6",
+        "severity": "medium",
+        "origin": "inherited_unchanged",
+        "status": "정적 소비자 확인",
+        "title": "Product compact 저장은 Vision 원인 metadata와 수명이 다름",
+        "condition": "NGmetadata를메모리에서표시한후ActiveProduct저장/재시작",
+        "impact": "CSV에는남아도Product compact6필드저장에서는VisionResultCode/NgReason가누락될수있음",
+        "test": "NGCSV/메모리/재시작Product를각각대조하고조회와복원책임구분",
+        "evidence": [
+          {
+            "path": "Drilling.File/Product/CProductFile.cs",
+            "start": 168,
+            "end": 175,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L168-L175"
+          },
+          {
+            "path": "Drilling.File/Product/CProductFile.cs",
+            "start": 309,
+            "end": 320,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.File/Product/CProductFile.cs#L309-L320"
+          },
+          {
+            "path": "Drilling.Common/Review/CReviewManager.cs",
+            "start": 1667,
+            "end": 1683,
+            "commit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+            "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L1667-L1683"
+          }
+        ]
+      }
+    ],
+    "setupReportComparison": [
+      {
+        "item": "동일 source 익일 중복",
+        "previous": "날짜별 당일조회라다음날허용",
+        "current": "Recipe전일자검색으로기본차단",
+        "verified": "현재writer같은/새인스턴스로재현,명시allowDuplicate와Rollback포함",
+        "state": "해당 반례 해결"
+      },
+      {
+        "item": "RETAINED앵커live/file차이",
+        "previous": "MEASURED만선택해보존앵커가탈락",
+        "current": "RETAINED포함",
+        "verified": "현재Lagrange함수:live/file7.5µm,과거필터15µm",
+        "state": "해당 반례 해결"
+      },
+      {
+        "item": "결과 F3 중간반올림",
+        "previous": "0.000600mm를0.001mm저장",
+        "current": "F6 0.000600mm",
+        "verified": "기존0.000600+새0.000600의최종값현재/live1µm,과거2µm",
+        "state": "해당 반례 해결·최종1µm/COPY F3잔존"
+      },
+      {
+        "item": "ONE_LINE보정",
+        "previous": "지원타입아님",
+        "current": "DIRECT_LINE로같은Shot의OK오차누적",
+        "verified": "switch와적격타입/설명/명령바인딩정적추적",
+        "state": "기능추가·WPF실행검증남음"
+      },
+      {
+        "item": "Default/첫빔/θ/가공Q",
+        "previous": "초기마크검색없음·두X평균·기판밖경고",
+        "current": "식동일,Setting Margin공급변경만간접영향",
+        "verified": "핵심diff/생산자소비자대조",
+        "state": "잔건 유지"
+      },
+      {
+        "item": "Fine 마스킹/0앵커열/Lagrange",
+        "previous": "빈줄대체없음·0앵커열유지·전역다항식",
+        "current": "주요알고리즘동일",
+        "verified": "현재본문대조,1앵커/NG/3점순수회귀",
+        "state": "잔건 유지"
+      },
+      {
+        "item": "AUTO Shift",
+        "previous": "가공/AUTOFine에서0",
+        "current": "0유지",
+        "verified": "활성준비경로본문대조",
+        "state": "잔건 유지"
+      },
+      {
+        "item": "혼합 DOE",
+        "previous": "Default만Head별1/16점",
+        "current": "일반Review선택Beam유지",
+        "verified": "Default및일반계산기/BeamInspection소비자대조",
+        "state": "잔건 유지"
+      }
+    ],
+    "validation": {
+      "sourceLinks": "모두현재Commit고정;실제파일/줄범위검증;주요변경함수본문과호출자재독",
+      "harness": "현재원문19단위복사/독립Console23개;실제writer/파서/순수함수만실행",
+      "harnessResult": "review-harness/review-harness-results.json",
+      "extraction": "review-harness-source-extraction.json",
+      "notPerformed": [
+        "설비정식빌드",
+        "장비/레이저/WPF실행",
+        "벤더DLL로드/역컴파일",
+        "AeroScript실행",
+        "실제Vision/MELSEC통신",
+        "운영CSV레코드복제"
+      ],
+      "crosscheck": "review-crosscheck.json: 독립 아키텍처 담당과 상호 검토 완료"
+    }
+  },
+  "scope": "Selected critical source traces; entire tracked-file syntax and provenance coverage are separate. Not all source semantics human-certified."
+}

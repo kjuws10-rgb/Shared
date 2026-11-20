@@ -1,832 +1,170 @@
 {
-  "schema": "a3-architecture-review-crosscheck-v1",
-  "sourceCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
-  "baselineCommit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
-  "conclusion": "No major implementation contradiction found. All four precision recommendations and follow-up Current citation corrected in final manual.",
-  "documentsRead": [
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "status": "passed_no_mandatory_correction",
+  "reviewedDocuments": [
     {
       "path": "manual/review/01_Review_계획과_좌표계.md",
-      "sha256": "bf2bc6bb1e2d0715c6888db3cf71e7142beeede6cc87a32ec04be991390d0e59",
-      "readScope": "Complete prose/tables/Mermaid read; repeated GitHub URLs shortened only in tool display",
-      "stagedPath": "staging-final/A3Ref/manual/review/01_Review_계획과_좌표계.md",
-      "stagedExists": true,
-      "stagedMatches": true,
-      "stagedBytesMatchedAtInitialCheck": true,
-      "stagedTextMatchedAtInitialCheck": true
+      "sha256": "80c75f2d101c6f43fa988a8f04cba5f6ba9f216a303c037e73b6bf0a5eb666d0",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
     },
     {
       "path": "manual/review/02_Masking_Sampling_IOF.md",
-      "sha256": "2e5a4233e96667a3d08d14cdd50c37a31d6c37229d2841a2ce99d0e79a6148c8",
-      "readScope": "Complete prose/tables/Mermaid read; repeated GitHub URLs shortened only in tool display",
-      "stagedPath": "staging-final/A3Ref/manual/review/02_Masking_Sampling_IOF.md",
-      "stagedExists": true,
-      "stagedMatches": true,
-      "stagedBytesMatchedAtInitialCheck": true,
-      "stagedTextMatchedAtInitialCheck": true
+      "sha256": "52027b8d063f11d7eee5d3f6bcdacb267d0ae7d0c64b5f47c1b21db703a9663f",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
     },
     {
       "path": "manual/review/03_Vision_패킷과_단위.md",
-      "sha256": "0d67b77610e9d097e6c1b293dd9a7b2baf1ef3ff657273418444c61babd23a79",
-      "readScope": "Complete prose/tables/Mermaid read; repeated GitHub URLs shortened only in tool display",
-      "stagedPath": "staging-final/A3Ref/manual/review/03_Vision_패킷과_단위.md",
-      "stagedExists": true,
-      "stagedMatches": false,
-      "stagedBytesMatchedAtInitialCheck": false,
-      "stagedTextMatchedAtInitialCheck": true
+      "sha256": "71e56b1e8f69ca1e0a8257c595d8ffcc3ee7cf3303771950f4ec62302fb9ccb0",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
     },
     {
       "path": "manual/review/04_ReviewOffset_적용과_롤백.md",
-      "sha256": "e21609292a74fe296a04e0d19c4e0822ba501b9c530689533f84f043c4d719bf",
-      "readScope": "Complete prose/tables/Mermaid read; repeated GitHub URLs shortened only in tool display",
-      "stagedPath": "staging-final/A3Ref/manual/review/04_ReviewOffset_적용과_롤백.md",
-      "stagedExists": true,
-      "stagedMatches": false,
-      "stagedBytesMatchedAtInitialCheck": false,
-      "stagedTextMatchedAtInitialCheck": true
+      "sha256": "9cca44b67da7c3f7a82e23d5813238d498953c816594136adb2df514b0d1d7ba",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
     },
     {
       "path": "manual/review/05_결과_Revision_Product_연결.md",
-      "sha256": "18d3ef44e99fd14ba78fa7b4b7fcbf8df8366252b7fbb80ca0993af4ddf478c9",
-      "readScope": "Complete prose/tables/Mermaid read; repeated GitHub URLs shortened only in tool display",
-      "stagedPath": "staging-final/A3Ref/manual/review/05_결과_Revision_Product_연결.md",
-      "stagedExists": true,
-      "stagedMatches": true,
-      "stagedBytesMatchedAtInitialCheck": true,
-      "stagedTextMatchedAtInitialCheck": true
+      "sha256": "9356941839f561c82ead8b9d7104c2ff69568374fef8df4c65c888b9a1311187",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
     },
     {
       "path": "manual/review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
-      "sha256": "7948e0281b0a6b357c583a99c88c2dc5c8026e1eac044bda8b376b7b8ce08fb5",
-      "readScope": "Complete prose/tables/Mermaid read; repeated GitHub URLs shortened only in tool display",
-      "stagedPath": "staging-final/A3Ref/manual/review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
-      "stagedExists": true,
-      "stagedMatches": true,
-      "stagedBytesMatchedAtInitialCheck": true,
-      "stagedTextMatchedAtInitialCheck": true
+      "sha256": "89697106e4c14a7ebeb5bd94ce549dae95847a75ff220be22e3607f346c62a9a",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
     },
     {
       "path": "manual/review/07_Align_Distortion_윈도우_복구.md",
-      "sha256": "5c8cf566c07a2bad70d9391ee7b105992ad07431d010374e648e09dc93d88614",
-      "readScope": "Complete prose/tables/Mermaid read; repeated GitHub URLs shortened only in tool display",
-      "stagedPath": "staging-final/A3Ref/manual/review/07_Align_Distortion_윈도우_복구.md",
-      "stagedExists": true,
-      "stagedMatches": false,
-      "stagedBytesMatchedAtInitialCheck": false,
-      "stagedTextMatchedAtInitialCheck": true
-    },
-    {
-      "path": "analysis-parts/review-analysis.md",
-      "sha256": "b101bc6e8365a9512c1b15acccec2594d30c6d730e0bca72a79e77167ce08d19",
-      "readScope": "Complete text read"
-    },
-    {
-      "path": "analysis-parts/review-analysis.json",
-      "sha256": "867da51d2d487cb8ee8649c720fa250d1843fb031291e228344fff70a3ab2ddb",
-      "readScope": "Complete text read"
+      "sha256": "dcb7a940bbe7a0487e4b48ac14f1c0f837fecce049acd600394f7597bbb6c2ad",
+      "reviewMode": "현재 변경절·상충 위험·기존 잔건 교차확인; 모든 원문 전체를 새 정독한 것과 구분"
     }
   ],
-  "sourceRead": [
-    {
-      "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
-      "ranges": [
-        [
-          2405,
-          2606
-        ],
-        [
-          4515,
-          4543
-        ],
-        [
-          4701,
-          4745
-        ],
-        [
-          4924,
-          5008
-        ],
-        [
-          5428,
-          5472
-        ]
-      ],
-      "sha256": "e56a9321e321f09bf23bfe26056488d7c3e681f9c1b4aa301f878e68a498b568"
-    },
-    {
-      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
-      "ranges": [
-        [
-          269,
-          336
-        ],
-        [
-          782,
-          814
-        ],
-        [
-          1181,
-          1207
-        ]
-      ],
-      "sha256": "a5fd313a6503970a4276055c7fff0f362b1eaaa8137a33ae7afb8cc77b112bd5"
-    },
-    {
-      "path": "Drilling.UI/Views/CReviewShotMapControl.cs",
-      "ranges": [
-        [
-          13,
-          17
-        ],
-        [
-          243,
-          302
-        ]
-      ],
-      "sha256": "4b948d74cec87fc29244a8bbec94452a92aa3b70e04a1f1ea6b59876d3bd1223"
-    },
-    {
-      "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
-      "ranges": [
-        [
-          29,
-          63
-        ],
-        [
-          196,
-          209
-        ],
-        [
-          301,
-          323
-        ]
-      ],
-      "sha256": "78d4de2136b4064e0353724a236b91dd5fd8f523de5838e626817a64dac683b6"
-    },
+  "reviewedAnalysis": [
+    "analysis-parts/review-analysis.md",
+    "analysis-parts/review-analysis.json"
+  ],
+  "readSourceRanges": [
     {
       "path": "Drilling.Common/Review/CReviewManager.cs",
-      "ranges": [
-        [
-          1557,
-          1579
-        ]
-      ],
-      "sha256": "51cd44cba1090a800dd7270850b99bb1ae12b76c6c12b5bf661d0f949f5b6c9a"
+      "startLine": 153,
+      "endLine": 196,
+      "selectedSourceSha256": "45c5984ac9020707236e29f8642a5722be8da48415420598d0bd373f5f77808a"
+    },
+    {
+      "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+      "startLine": 276,
+      "endLine": 308,
+      "selectedSourceSha256": "5f13d33e6e0302d0e5901ea04c4093c1a7170feb1bba8dd0b23464ab87deedae"
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+      "startLine": 264,
+      "endLine": 302,
+      "selectedSourceSha256": "a16baf2122424d603411ad5fb27e13cffb55352d12cc09d43846f5d380cf3322"
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+      "startLine": 385,
+      "endLine": 480,
+      "selectedSourceSha256": "546814c29f9c4b7e152c2c464225906b2c78d57e20184b18909a0cad47c64024"
+    },
+    {
+      "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "startLine": 412,
+      "endLine": 472,
+      "selectedSourceSha256": "fce579fcd722290e08645c066045287ba9c84d5c869815be13ee1c7a080489eb"
     },
     {
       "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
-      "ranges": [
-        [
-          479,
-          578
-        ],
-        [
-          1010,
-          1079
-        ]
-      ],
-      "sha256": "6a0a8dc27d14e56e7e5bfb3abff4845393e6bfb266763edeee713a9ae4e0e1aa"
+      "startLine": 719,
+      "endLine": 722,
+      "selectedSourceSha256": "38e8206b6c7cc028f6dca5783411275c0124889227afd2e83ffbe769bf1b6e2d"
     },
     {
-      "path": "Drilling.File/ReviewResult/CReviewResultFile.Catalog.cs",
-      "ranges": [
-        [
-          1,
-          30
-        ]
-      ],
-      "sha256": "62c91dbbe4eb79d3c06d029eba2f74922a821d6894662af9bab29a52d5f2e69e"
+      "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+      "startLine": 1327,
+      "endLine": 1328,
+      "selectedSourceSha256": "7c25e0f49ec79924de9c15657b8545594252824fce453357b0e9a5741a53fa99"
     },
     {
-      "path": "Drilling.Common/Review/CReviewResultLevelSettings.cs",
-      "ranges": [
-        [
-          23,
-          55
-        ]
-      ],
-      "sha256": "2e2d5efacbed39982d3eb49b8137ee70d1a18546f11dae358822584ee0e95c39"
+      "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+      "startLine": 29,
+      "endLine": 62,
+      "selectedSourceSha256": "ea988b0b93429a12d7cd628c35a36bc685279673f78c4bed3ff2c501dd7f2765"
+    },
+    {
+      "path": "Drilling.UI/Views/CReviewShotMapControl.cs",
+      "startLine": 282,
+      "endLine": 299,
+      "selectedSourceSha256": "d860d16ef72bada3d845adb2ebd65a2444ec164a7e2921f49875b9df4052e791"
     }
   ],
-  "findings": [
+  "results": [
     {
-      "id": "ARCH-X01",
-      "priority": "low",
-      "kind": "unit_wording",
-      "document": "manual/review/01_Review_계획과_좌표계.md",
-      "line": 151,
-      "also": "analysis-parts/review-analysis.json:59",
-      "recommendation": "Use WPF screen coordinates/DIP rather than literal physical pixels for Cell18/Pitch19 and clamped Shift vector24..82.",
-      "evidence": [
-        {
-          "path": "Drilling.UI/Views/CReviewShotMapControl.cs",
-          "startLine": 13,
-          "endLine": 17,
-          "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewShotMapControl.cs#L13-L17"
-        }
-      ],
-      "runtimeReproduced": false,
-      "resolution": {
-        "status": "resolved_in_final_manual",
-        "verifiedBy": "Read final changed prose and semantic source citation",
-        "note": "Public manual uses WPF DIP; original analysis JSON is retained as input record"
-      }
+      "id": "XC-01",
+      "status": "consistent",
+      "topic": "공통 Margin과 Recipe 카메라 AK 위치는 별도",
+      "detail": "Review의 Design−Margin 상쇄 조건을 함께 명시함. 모든 물리목표 이동 단정 없음."
     },
     {
-      "id": "ARCH-X02",
-      "priority": "low",
-      "kind": "new_vs_inherited_wording",
-      "document": "manual/review/02_Masking_Sampling_IOF.md",
-      "line": 111,
-      "recommendation": "Mark ONE LINE reuse as 11.13.0 history, because baseline already contains ONE_LINE; current diff extends composition/beam assignment rather than introducing it.",
-      "baselineEvidence": {
-        "commit": "dfa5920e6301d9ec4b0eab1452ae59521aafc986",
-        "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
-        "lines": [
-          943,
-          3181
-        ]
-      },
-      "runtimeReproduced": false,
-      "resolution": {
-        "status": "resolved_in_final_manual",
-        "verifiedBy": "Read final changed prose and semantic source citation",
-        "note": "Root final manual correction verified"
-      }
+      "id": "XC-02",
+      "status": "consistent",
+      "topic": "RETAINED·EDITED 적용 후보와 기존 Fine 보간",
+      "detail": "새 후보 필터와 이전 Lagrange/Use/계보 잔건을 구분. Direct/Rough OK선택·Fine 비OK전체차단과 일치."
     },
     {
-      "id": "ARCH-X03",
-      "priority": "medium",
-      "kind": "test_matrix_condition",
-      "document": "manual/review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
-      "line": 137,
-      "also": "same file:155",
-      "recommendation": "Capture test should be Shot/Cross × DOE ON/OFF × nominal grid1/4. OFF+grid4 is one capture; ON16 example requires nominal grid4.",
-      "evidence": [
-        {
-          "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
-          "startLine": 45,
-          "endLine": 54,
-          "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Correction/CDefaultOffsetCalibration.cs#L45-L54"
-        }
-      ],
-      "runtimeReproduced": false,
-      "resolution": {
-        "status": "resolved_in_final_manual",
-        "verifiedBy": "Read final changed prose and semantic source citation",
-        "note": "Root final manual correction verified"
-      }
+      "id": "XC-03",
+      "status": "consistent",
+      "topic": "전일자 적용 이력과 경로/계보 한계",
+      "detail": "날짜 전체 cache 개선과 외부writer/다른경로/Revision 한계가 분리됨."
     },
     {
-      "id": "ARCH-X04",
-      "priority": "medium",
-      "kind": "display_path_precision",
-      "document": "analysis-parts/review-analysis.json",
-      "reference": "RV-N1 and manual/review/05 section14",
-      "recommendation": "Distinguish recent LAST RESULT LOAD from REVIEW DATA. Recent LOAD preserves NgReason and normalizes any non-OK matching row to NG; REVIEW DATA carries source Judge but computes Level for all rows. Current blink green is progress, not L1/quality.",
-      "evidence": [
-        {
-          "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
-          "startLine": 2539,
-          "endLine": 2582,
-          "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2539-L2582"
-        },
-        {
-          "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
-          "startLine": 4701,
-          "endLine": 4744,
-          "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4701-L4744"
-        },
-        {
-          "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
-          "startLine": 274,
-          "endLine": 301,
-          "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L274-L301"
-        },
-        {
-          "path": "Drilling.UI/Views/CReviewShotMapControl.cs",
-          "startLine": 243,
-          "endLine": 299,
-          "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewShotMapControl.cs#L243-L299"
-        }
-      ],
-      "runtimeReproduced": false,
-      "resolution": {
-        "status": "resolved_in_final_manual",
-        "verifiedBy": "Read final changed prose and semantic source citation",
-        "note": "Three display paths differentiated; Current wording and actual draw-site citation 282-299 verified"
-      }
+      "id": "XC-04",
+      "status": "consistent",
+      "topic": "SIMPLE0/INSPECTION1·RUN/RESULT·별도 panel",
+      "detail": "현재 구성과 모드별 결과필터·BEAM_INSPECTION Offset금지를 구분함."
+    },
+    {
+      "id": "XC-05",
+      "status": "consistent",
+      "topic": "Level과 JUDGE/미측정 색상",
+      "detail": "Live/최근MANUAL LOAD/REVIEW DATA의 각 표시 경로를 구분. 낮은 Level이 실측OK를 입증하지 않음."
+    },
+    {
+      "id": "XC-06",
+      "status": "consistent",
+      "topic": "Default DOE 혼합과 현재 source 한계",
+      "detail": "DOE ON1/16·OFF1·일반 Review 선택Beam·Default Setting후Recipe덮기 예외를 유지."
+    },
+    {
+      "id": "XC-07",
+      "status": "consistent",
+      "topic": "23회귀와 장비 정식 빌드",
+      "detail": "별도 원문 복사회귀23개는 파일/순수계산 반례 검사. WPF/실기/장비정식빌드 통과로 확대하지 않음."
     }
   ],
-  "colorMatrix": [
+  "recommendations": [
     {
-      "path": "Live Ready/WAIT",
-      "predicate": "No completed result / HasReviewLevelResult=false",
-      "colorMeaning": "Ready gray; Error0 alone is not L1",
-      "evidence": [
-        {
-          "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
-          "startLine": 4732,
-          "endLine": 4744,
-          "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L4732-L4744"
-        },
-        {
-          "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
-          "startLine": 5432,
-          "endLine": 5472,
-          "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L5432-L5472"
-        }
-      ]
+      "id": "XC-MARGIN",
+      "status": "resolved_by_review_agent",
+      "detail": "같은Margin으로설계점재생성시상쇄문장Review01추가"
     },
     {
-      "path": "Live Current",
-      "predicate": "shot.IsCurrent",
-      "colorMeaning": "Green blink overrides result background; progress state, not measured OK",
-      "evidence": [
-        {
-          "path": "Drilling.UI/Views/CReviewShotMapControl.cs",
-          "startLine": 282,
-          "endLine": 299,
-          "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewShotMapControl.cs#L282-L299"
-        }
-      ]
-    },
-    {
-      "path": "Recent LAST RESULT LOAD",
-      "predicate": "File row matches current plan",
-      "colorMeaning": "Only source Judge OK becomes Ok; all other values become Ng/NG. NgReason preserved, so VisionFind still excluded from level. Small numeric non-OK/empty-reason row can become L1.",
-      "evidence": [
-        {
-          "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
-          "startLine": 2566,
-          "endLine": 2582,
-          "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2566-L2582"
-        }
-      ]
-    },
-    {
-      "path": "REVIEW DATA",
-      "predicate": "Every loaded numeric row",
-      "colorMeaning": "Level from numeric ErrorX/Y regardless of source Judge/NgReason; source Judge kept in DTO",
-      "evidence": [
-        {
-          "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
-          "startLine": 274,
-          "endLine": 301,
-          "url": "https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs#L274-L301"
-        }
-      ]
+      "id": "XC-DEFAULT",
+      "status": "resolved_by_review_agent",
+      "detail": "Default의Setting→Recipe덮기예외Review06추가"
     }
   ],
-  "confirmedAlignment": [
-    "Level is maxabs mm display classification, not quality judge or provenance",
-    "DOE flag changes only Default inspection; OFF center1 and ON nominal grid squared",
-    "Recent selection is MANUAL + RecipeId + ResultType and saved-time ordering; current Recipe geometry is reconstructed",
-    "Single Shot map is index-grid rendering, not physical2D routing/virtualization or verified FPS",
-    "Prior Product/retry/alarm/Fine residual issues are not falsely marked fixed"
-  ],
-  "sourcePreservation": {
-    "head": "96e22cd027c84bf302b23f2949b98985d7f301bb",
-    "expectedHead": "96e22cd027c84bf302b23f2949b98985d7f301bb",
-    "headMatches": true,
-    "trackedWorkingTreeClean": true,
-    "selectedFrozenFingerprintsCompared": 59,
-    "allSelectedSourceHashesUnchanged": true,
-    "comparisons": [
-      {
-        "path": "Config/JHMI_ALARMLIST.csv",
-        "earlierFrozenSha256": "9d847611bd656c4e3fd40fc366f5a42bfa83ae7f9680b934359d08b76196b91f",
-        "currentSha256": "9d847611bd656c4e3fd40fc366f5a42bfa83ae7f9680b934359d08b76196b91f",
-        "unchanged": true
-      },
-      {
-        "path": "Config/JHMI_RCP.csv",
-        "earlierFrozenSha256": "cbd09f08cf09905ba3cf0938b75bc1afd006ac7e1e9775a4de17e0872290d6a2",
-        "currentSha256": "cbd09f08cf09905ba3cf0938b75bc1afd006ac7e1e9775a4de17e0872290d6a2",
-        "unchanged": true
-      },
-      {
-        "path": "Config/JHMI_SETTING.csv",
-        "earlierFrozenSha256": "00e0fbdf30bfaff043ab12e06339069ab56ac2ebb63ffbabffed58f9d30a4c01",
-        "currentSha256": "00e0fbdf30bfaff043ab12e06339069ab56ac2ebb63ffbabffed58f9d30a4c01",
-        "unchanged": true
-      },
-      {
-        "path": "Config/Setting/Setting.csv",
-        "earlierFrozenSha256": "22d2060226c16324b6cac659fa3c6bcf45dcc85a164d9d9523abb640c01b3ed0",
-        "currentSha256": "22d2060226c16324b6cac659fa3c6bcf45dcc85a164d9d9523abb640c01b3ed0",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Automation/CAutomationManager.cs",
-        "earlierFrozenSha256": "078cdb5110b41429bfa891ea3d01e39801f9263b6c0671e448bb891ab30dfc31",
-        "currentSha256": "078cdb5110b41429bfa891ea3d01e39801f9263b6c0671e448bb891ab30dfc31",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
-        "earlierFrozenSha256": "78d4de2136b4064e0353724a236b91dd5fd8f523de5838e626817a64dac683b6",
-        "currentSha256": "78d4de2136b4064e0353724a236b91dd5fd8f523de5838e626817a64dac683b6",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Interface/Automation1/CAutomation1Comm.cs",
-        "earlierFrozenSha256": "d2a75a6585fbb0315c9c2611d912e1b958ff6e9629e5fe8c05d1ebf2fb33ddc8",
-        "currentSha256": "d2a75a6585fbb0315c9c2611d912e1b958ff6e9629e5fe8c05d1ebf2fb33ddc8",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Interface/CComm.cs",
-        "earlierFrozenSha256": "6e793d154d708b514ef2940d287181a6e6a49473e2501e3f8981c0ed9095c46e",
-        "currentSha256": "6e793d154d708b514ef2940d287181a6e6a49473e2501e3f8981c0ed9095c46e",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Interface/CInterfaceManager.cs",
-        "earlierFrozenSha256": "119b05a1473c02e2bedc9b1ca726d1333c24337f72e3997e4e61a1d19b464a4b",
-        "currentSha256": "119b05a1473c02e2bedc9b1ca726d1333c24337f72e3997e4e61a1d19b464a4b",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
-        "earlierFrozenSha256": "f1e5c66984fae8c63362e88fa113717a2a9c463417b5ab3e1600bb3ca848204b",
-        "currentSha256": "f1e5c66984fae8c63362e88fa113717a2a9c463417b5ab3e1600bb3ca848204b",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Managers/CManager.cs",
-        "earlierFrozenSha256": "6db41ef7d7938136bce10c0d3acd4d9293a57cc4336ff26dc3a79041db2914f8",
-        "currentSha256": "6db41ef7d7938136bce10c0d3acd4d9293a57cc4336ff26dc3a79041db2914f8",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Managers/CRecipeManager.cs",
-        "earlierFrozenSha256": "c09f70d09f8225715c4b53f6d42a78fcc00001814dc1dfd4c961ceedec099d22",
-        "currentSha256": "c09f70d09f8225715c4b53f6d42a78fcc00001814dc1dfd4c961ceedec099d22",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Managers/CSettingManager.cs",
-        "earlierFrozenSha256": "bd511ffda485b9128bb4224e03a7ebd563271e3530dfdb9d1aac0fe58787605f",
-        "currentSha256": "bd511ffda485b9128bb4224e03a7ebd563271e3530dfdb9d1aac0fe58787605f",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Motion/CMotionManager.cs",
-        "earlierFrozenSha256": "893675dbcdfcd93124de264b55511666a561a2dc747eba79a07e13e6c8be02c7",
-        "currentSha256": "893675dbcdfcd93124de264b55511666a561a2dc747eba79a07e13e6c8be02c7",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Product/CProductManager.cs",
-        "earlierFrozenSha256": "93d3416633fddbcbd2ea9efe7958bd79a32c00eff8c017fb6cebfe757068596d",
-        "currentSha256": "93d3416633fddbcbd2ea9efe7958bd79a32c00eff8c017fb6cebfe757068596d",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
-        "earlierFrozenSha256": "b3ef33b6730ad5543213def4ca3b239fae82634ff288777d2ff05af311cd1b16",
-        "currentSha256": "b3ef33b6730ad5543213def4ca3b239fae82634ff288777d2ff05af311cd1b16",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Review/CReviewManager.cs",
-        "earlierFrozenSha256": "51cd44cba1090a800dd7270850b99bb1ae12b76c6c12b5bf661d0f949f5b6c9a",
-        "currentSha256": "51cd44cba1090a800dd7270850b99bb1ae12b76c6c12b5bf661d0f949f5b6c9a",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Review/CReviewResultLevelSettings.cs",
-        "earlierFrozenSha256": "2e2d5efacbed39982d3eb49b8137ee70d1a18546f11dae358822584ee0e95c39",
-        "currentSha256": "2e2d5efacbed39982d3eb49b8137ee70d1a18546f11dae358822584ee0e95c39",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Station/CStationManager.cs",
-        "earlierFrozenSha256": "c375c6a07673237ba95c136309ffdcfe9d1407ec899ac959e371b074dc47982b",
-        "currentSha256": "c375c6a07673237ba95c136309ffdcfe9d1407ec899ac959e371b074dc47982b",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Station/CStationProcess.cs",
-        "earlierFrozenSha256": "934432b2d9173acb24fcb516330ef562c117dac79dfbc626e7b25755e64924c1",
-        "currentSha256": "934432b2d9173acb24fcb516330ef562c117dac79dfbc626e7b25755e64924c1",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.Common/Threading/CtrlThread.cs",
-        "earlierFrozenSha256": "072b00b00719220875cbf64c016f85320d0262f45f10e5f599a4abb7e673a5a3",
-        "currentSha256": "072b00b00719220875cbf64c016f85320d0262f45f10e5f599a4abb7e673a5a3",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.File/Correction/CAlignOffsetLogFile.cs",
-        "earlierFrozenSha256": "d54f0d5549ef3e6e1e267335827bed9c80245464d87c9d23091f7bb76b39330d",
-        "currentSha256": "d54f0d5549ef3e6e1e267335827bed9c80245464d87c9d23091f7bb76b39330d",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.File/JHMI/CInterfaceFile.cs",
-        "earlierFrozenSha256": "3046cea2bed6865cf48591ecedf5b5806bdb0add4df1414a37247b8d6f9e9419",
-        "currentSha256": "3046cea2bed6865cf48591ecedf5b5806bdb0add4df1414a37247b8d6f9e9419",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
-        "earlierFrozenSha256": "a95ebf1032bfebd2e92472e5e9a87c4fd9eb19ee42684da6e97e8adbac9fe882",
-        "currentSha256": "a95ebf1032bfebd2e92472e5e9a87c4fd9eb19ee42684da6e97e8adbac9fe882",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.File/JHMI/CMelsecMapFile.cs",
-        "earlierFrozenSha256": "863b88795376e9f8437929d4a2ce99c68bb76d990d0e087d3962b3057c6ffe5a",
-        "currentSha256": "863b88795376e9f8437929d4a2ce99c68bb76d990d0e087d3962b3057c6ffe5a",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.File/JHMI/CSettingFile.cs",
-        "earlierFrozenSha256": "6d1362259a02839cce3137dbe025917b2b38573ea77d785fdbd0e0df6701cde4",
-        "currentSha256": "6d1362259a02839cce3137dbe025917b2b38573ea77d785fdbd0e0df6701cde4",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.File/Parser/CCsvParser.cs",
-        "earlierFrozenSha256": "8d9850f57f3552310d7aec82c11c7a08ab13b30c9a0e6daf8ee9e649077fb644",
-        "currentSha256": "8d9850f57f3552310d7aec82c11c7a08ab13b30c9a0e6daf8ee9e649077fb644",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.File/Product/CProductFile.cs",
-        "earlierFrozenSha256": "95c7adb3e3b691e4df22deaf53a5cc713ff2a1e77cd066c911935f963b79b965",
-        "currentSha256": "95c7adb3e3b691e4df22deaf53a5cc713ff2a1e77cd066c911935f963b79b965",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.File/Script/CAutomation1ScriptFile.cs",
-        "earlierFrozenSha256": "4219f835bc4212ca9c897f64971874f0ddcaf15451e7fd2f74b11e17f5fc5f49",
-        "currentSha256": "4219f835bc4212ca9c897f64971874f0ddcaf15451e7fd2f74b11e17f5fc5f49",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/CApp.xaml.cs",
-        "earlierFrozenSha256": "9690a272cdb61d231b85decbd9bfaf354e81d09c7bbab7671264d5fc3e11a7ee",
-        "currentSha256": "9690a272cdb61d231b85decbd9bfaf354e81d09c7bbab7671264d5fc3e11a7ee",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/CAppStartup.cs",
-        "earlierFrozenSha256": "98e8716b093e6970d73233f8488d538acf7fa02f5d140ab1baebd9e8abdcd9b9",
-        "currentSha256": "98e8716b093e6970d73233f8488d538acf7fa02f5d140ab1baebd9e8abdcd9b9",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/CRootView.cs",
-        "earlierFrozenSha256": "29134b161e9492cd7db3577c724a977eea1cb76e76b54394362220952ba37609",
-        "currentSha256": "29134b161e9492cd7db3577c724a977eea1cb76e76b54394362220952ba37609",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/CUiLogService.cs",
-        "earlierFrozenSha256": "e26730fb54b010598ad048992b59d5537b05e268bf8f8b7e3a478a0e8d633cf7",
-        "currentSha256": "e26730fb54b010598ad048992b59d5537b05e268bf8f8b7e3a478a0e8d633cf7",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Drilling.UI.csproj",
-        "earlierFrozenSha256": "c9fb6e18ea81e5407807123be20a93bd4e68bf482b88165f07daab3b507305a8",
-        "currentSha256": "c9fb6e18ea81e5407807123be20a93bd4e68bf482b88165f07daab3b507305a8",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/CBindingBase.cs",
-        "earlierFrozenSha256": "01795a251314993e883d1ac9e1d745defa2846dccf73dcf173b7ef0c4c1e3f43",
-        "currentSha256": "01795a251314993e883d1ac9e1d745defa2846dccf73dcf173b7ef0c4c1e3f43",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CAlarmCauseAnalysis.cs",
-        "earlierFrozenSha256": "fb9a8f1f07a8aa9c53c455b2db44e2dd39ace8b00cc33f5efab5736239555dd9",
-        "currentSha256": "fb9a8f1f07a8aa9c53c455b2db44e2dd39ace8b00cc33f5efab5736239555dd9",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CCellPreviewDrawing.cs",
-        "earlierFrozenSha256": "e8d1e770ca290e624ac07f1b8a323d7fa8f49ee5081261953a633331679f2962",
-        "currentSha256": "e8d1e770ca290e624ac07f1b8a323d7fa8f49ee5081261953a633331679f2962",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CCoordinateOffsetPreviewDrawing.cs",
-        "earlierFrozenSha256": "8d2a3f1e2aa8de3a7f87950633058eb294c7145af6ddfcbceb2b0904dde75439",
-        "currentSha256": "8d2a3f1e2aa8de3a7f87950633058eb294c7145af6ddfcbceb2b0904dde75439",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CCoordinateShotMapPreviewDrawing.cs",
-        "earlierFrozenSha256": "d3b041057f97f293e1e40e189c5e655ae966c8c8430c73148b6cb20c0fedc931",
-        "currentSha256": "d3b041057f97f293e1e40e189c5e655ae966c8c8430c73148b6cb20c0fedc931",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CMenuAlarm.cs",
-        "earlierFrozenSha256": "07a42cddff502aa5fbbfd6307875e5166b943dc369cbb4b00d5a0536b842d694",
-        "currentSha256": "07a42cddff502aa5fbbfd6307875e5166b943dc369cbb4b00d5a0536b842d694",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CMenuBase.cs",
-        "earlierFrozenSha256": "31fc7fd5d1bc8a106d960e109ec096c8b31569f20f8cefb2480daf82d4302047",
-        "currentSha256": "31fc7fd5d1bc8a106d960e109ec096c8b31569f20f8cefb2480daf82d4302047",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
-        "earlierFrozenSha256": "a5fd313a6503970a4276055c7fff0f362b1eaaa8137a33ae7afb8cc77b112bd5",
-        "currentSha256": "a5fd313a6503970a4276055c7fff0f362b1eaaa8137a33ae7afb8cc77b112bd5",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
-        "earlierFrozenSha256": "ea173bcee0bbe1c62106f99652d39792042e442224a41c087eed63f32e234d79",
-        "currentSha256": "ea173bcee0bbe1c62106f99652d39792042e442224a41c087eed63f32e234d79",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CMenuMonitor.cs",
-        "earlierFrozenSha256": "b2df0de85807d47b52d150c3b330a2ca7efc53508992d570526320565af64e42",
-        "currentSha256": "b2df0de85807d47b52d150c3b330a2ca7efc53508992d570526320565af64e42",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
-        "earlierFrozenSha256": "e56a9321e321f09bf23bfe26056488d7c3e681f9c1b4aa301f878e68a498b568",
-        "currentSha256": "e56a9321e321f09bf23bfe26056488d7c3e681f9c1b4aa301f878e68a498b568",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CMenuSetting.cs",
-        "earlierFrozenSha256": "0e4f1b5b0d411d973a36aef3b0526650d3c6bb3c08dd3e83b90b9802864c1cd4",
-        "currentSha256": "0e4f1b5b0d411d973a36aef3b0526650d3c6bb3c08dd3e83b90b9802864c1cd4",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CMonitorStatusPollingService.cs",
-        "earlierFrozenSha256": "0d6e2a5a06d85d5eb080923fa2ce8f837d2ecdf3da6f45ae7c489026fcbef15f",
-        "currentSha256": "0d6e2a5a06d85d5eb080923fa2ce8f837d2ecdf3da6f45ae7c489026fcbef15f",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs",
-        "earlierFrozenSha256": "2ec72fec55b5ce7cd56bf3db85b110250db36f8109c3bc3c6021c9616ea6651e",
-        "currentSha256": "2ec72fec55b5ce7cd56bf3db85b110250db36f8109c3bc3c6021c9616ea6651e",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Popup/CAlarmCauseAnalysisDialog.xaml.cs",
-        "earlierFrozenSha256": "71a00f66738e1f87fbb411a2657b4a1c61ce145703a47e03c3a70d971511f288",
-        "currentSha256": "71a00f66738e1f87fbb411a2657b4a1c61ce145703a47e03c3a70d971511f288",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Popup/CColorPickerDialog.xaml",
-        "earlierFrozenSha256": "714ae8b17abfcfbcdff85afb9c2d731328c52143ae2d69fe441cedad74cbe10b",
-        "currentSha256": "714ae8b17abfcfbcdff85afb9c2d731328c52143ae2d69fe441cedad74cbe10b",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Popup/CColorPickerDialog.xaml.cs",
-        "earlierFrozenSha256": "208deb9d594a450aecd78fe90dfd57632bb00b6efad605e65c78c0b6d976bd9e",
-        "currentSha256": "208deb9d594a450aecd78fe90dfd57632bb00b6efad605e65c78c0b6d976bd9e",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Popup/CShiftOffsetDialog.xaml.cs",
-        "earlierFrozenSha256": "6da348dcf0687c8c85b5e241eb570146077fd861f7f80f92d77b596ffcc59a53",
-        "currentSha256": "6da348dcf0687c8c85b5e241eb570146077fd861f7f80f92d77b596ffcc59a53",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Views/CCorrectionView.xaml",
-        "earlierFrozenSha256": "3265891a261a9bd0a59175212987714d773b6feb52d5807f16084dbb42f95118",
-        "currentSha256": "3265891a261a9bd0a59175212987714d773b6feb52d5807f16084dbb42f95118",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Views/CCorrectionView.xaml.cs",
-        "earlierFrozenSha256": "0c50f6d0fff8377b209e515e5b47c7dae4a602af84612140cd384d0f05a675e5",
-        "currentSha256": "0c50f6d0fff8377b209e515e5b47c7dae4a602af84612140cd384d0f05a675e5",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Views/CDefaultOffsetView.xaml.cs",
-        "earlierFrozenSha256": "c9bbf573db3ad2daf7010f437df04fd305f212a3b0960e8ffad05d986239f2a7",
-        "currentSha256": "c9bbf573db3ad2daf7010f437df04fd305f212a3b0960e8ffad05d986239f2a7",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Views/CReviewShotMapControl.cs",
-        "earlierFrozenSha256": "4b948d74cec87fc29244a8bbec94452a92aa3b70e04a1f1ea6b59876d3bd1223",
-        "currentSha256": "4b948d74cec87fc29244a8bbec94452a92aa3b70e04a1f1ea6b59876d3bd1223",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Views/CReviewView.xaml",
-        "earlierFrozenSha256": "e523762220e84ac7bb60f8fd50d54721fbcc27d603b9314200297550f128c567",
-        "currentSha256": "e523762220e84ac7bb60f8fd50d54721fbcc27d603b9314200297550f128c567",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Views/CSettingView.xaml",
-        "earlierFrozenSha256": "cb1e9d77570c06b60cfd8503078299de4a9ce7ba559a3db9e0e6e475d2c0a60a",
-        "currentSha256": "cb1e9d77570c06b60cfd8503078299de4a9ce7ba559a3db9e0e6e475d2c0a60a",
-        "unchanged": true
-      },
-      {
-        "path": "Drilling.UI/Views/CSettingView.xaml.cs",
-        "earlierFrozenSha256": "41315a13e21fdd45679d75223bb422d2aff28a4eee55c2dfa7b21f617d5cbf91",
-        "currentSha256": "41315a13e21fdd45679d75223bb422d2aff28a4eee55c2dfa7b21f617d5cbf91",
-        "unchanged": true
-      }
-    ],
-    "note": "This crosscheck proves selected source fingerprints and clean clone status; Root owns complete source-preservation audit"
-  },
-  "execution": {
-    "equipmentBuild": false,
-    "equipmentApp": false,
-    "vendorSdkOrDll": false,
-    "aeroScript": false,
-    "productionCsvRecordsParsedOrCopied": false,
-    "modifiedReviewOrArchitectureManual": false,
-    "modifiedStaging": false
+  "scope": {
+    "sourceReadOnly": true,
+    "sourceModified": false,
+    "otherManualEdited": false,
+    "equipmentBuildRun": false,
+    "equipmentExecution": false,
+    "vendorExecution": false,
+    "productionRowsCopied": false
   },
   "limitations": [
-    "Static prose/source review only; no WPF rebinding/render/runtime tests",
-    "Staged-copy hashes are a point-in-time read; Root may incorporate recommendations afterward"
-  ],
-  "finalManualRecheck": [
-    {
-      "path": "manual-final/review/01_Review_계획과_좌표계.md",
-      "sha256": "bf2bc6bb1e2d0715c6888db3cf71e7142beeede6cc87a32ec04be991390d0e59",
-      "stagedPath": "staging-final/A3Ref/manual/review/01_Review_계획과_좌표계.md",
-      "stagedExists": true,
-      "stagedBytesMatch": true,
-      "stagedTextMatchesAfterLineEndingNormalization": true
-    },
-    {
-      "path": "manual-final/review/02_Masking_Sampling_IOF.md",
-      "sha256": "2e5a4233e96667a3d08d14cdd50c37a31d6c37229d2841a2ce99d0e79a6148c8",
-      "stagedPath": "staging-final/A3Ref/manual/review/02_Masking_Sampling_IOF.md",
-      "stagedExists": true,
-      "stagedBytesMatch": true,
-      "stagedTextMatchesAfterLineEndingNormalization": true
-    },
-    {
-      "path": "manual-final/review/03_Vision_패킷과_단위.md",
-      "sha256": "0d67b77610e9d097e6c1b293dd9a7b2baf1ef3ff657273418444c61babd23a79",
-      "stagedPath": "staging-final/A3Ref/manual/review/03_Vision_패킷과_단위.md",
-      "stagedExists": true,
-      "stagedBytesMatch": false,
-      "stagedTextMatchesAfterLineEndingNormalization": true
-    },
-    {
-      "path": "manual-final/review/04_ReviewOffset_적용과_롤백.md",
-      "sha256": "e21609292a74fe296a04e0d19c4e0822ba501b9c530689533f84f043c4d719bf",
-      "stagedPath": "staging-final/A3Ref/manual/review/04_ReviewOffset_적용과_롤백.md",
-      "stagedExists": true,
-      "stagedBytesMatch": false,
-      "stagedTextMatchesAfterLineEndingNormalization": true
-    },
-    {
-      "path": "manual-final/review/05_결과_Revision_Product_연결.md",
-      "sha256": "c66bf362edc899f6e47dd2449ee8684ec934d99a7cee3c0402636d919d6d1261",
-      "stagedPath": "staging-final/A3Ref/manual/review/05_결과_Revision_Product_연결.md",
-      "stagedExists": true,
-      "stagedBytesMatch": true,
-      "stagedTextMatchesAfterLineEndingNormalization": true
-    },
-    {
-      "path": "manual-final/review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
-      "sha256": "7948e0281b0a6b357c583a99c88c2dc5c8026e1eac044bda8b376b7b8ce08fb5",
-      "stagedPath": "staging-final/A3Ref/manual/review/06_DefaultOffset_ZeroOrder_FirstBeam.md",
-      "stagedExists": true,
-      "stagedBytesMatch": true,
-      "stagedTextMatchesAfterLineEndingNormalization": true
-    },
-    {
-      "path": "manual-final/review/07_Align_Distortion_윈도우_복구.md",
-      "sha256": "5c8cf566c07a2bad70d9391ee7b105992ad07431d010374e648e09dc93d88614",
-      "stagedPath": "staging-final/A3Ref/manual/review/07_Align_Distortion_윈도우_복구.md",
-      "stagedExists": true,
-      "stagedBytesMatch": false,
-      "stagedTextMatchesAfterLineEndingNormalization": true
-    }
-  ],
-  "followupCitationCorrection": {
-    "document": "manual-final/review/05_결과_Revision_Product_연결.md",
-    "line": 223,
-    "previousWrongRange": "CReviewShotMapControl.cs:164-184",
-    "correctRange": "CReviewShotMapControl.cs:282-299",
-    "status": "resolved",
-    "meaning": "Current green blink overrides rendering, not right-click handler"
-  },
-  "openRecommendations": 0
+    "Review7장 변경절·관련기존설명과 분석 md/json을 교차검토. 모든 소스원문의 새 전체 정독/장비 실행은 아님",
+    "SVG 시각 QA는 Root 최종후보 담당"
+  ]
 }

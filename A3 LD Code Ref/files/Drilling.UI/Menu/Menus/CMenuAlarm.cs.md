@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | 07a42cddff502aa5fbbfd6307875e5166b943dc369cbb4b00d5a0536b842d694 |
 | 파일 분류 | code |
 | 원본 크기/행 | 26,581 bytes / 618 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -194,7 +194,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_selectedTabIndex` · L19–19
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L19-L19)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -209,7 +209,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### EventFieldDeclaration `SelectedTabIndexChanged` · L20–20
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L20-L20)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -224,7 +224,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `SelectedTabIndex` · L21–33
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:21–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L21-L33)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:21–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L21-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -239,7 +239,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_SelectedTabIndex` · L23–23
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L23-L23)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -254,7 +254,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_SelectedTabIndex` · L24–32
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:24–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L24-L32)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:24–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L24-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -304,7 +304,7 @@ flowchart TD
 
 ### PropertyDeclaration `ListPanel` · L35–35
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L35-L35)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -331,7 +331,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ListPanel` · L35–35
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L35-L35)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -346,7 +346,7 @@ flowchart TD
 
 ### PropertyDeclaration `HistoryPanel` · L36–36
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L36-L36)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -373,7 +373,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HistoryPanel` · L36–36
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L36-L36)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -388,7 +388,7 @@ flowchart TD
 
 ### EventFieldDeclaration `LogErrorChanged` · L38–38
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L38-L38)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -403,7 +403,7 @@ flowchart TD
 
 ### PropertyDeclaration `LogError` · L39–39
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L39-L39)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -430,7 +430,7 @@ flowchart TD
 
 ### PropertyDeclaration `Menu` · L41–47
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:41–47](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L41-L47)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:41–47](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L41-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -445,7 +445,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Menu` · L43–46
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:43–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L43-L46)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:43–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L43-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -466,7 +466,7 @@ flowchart TD
 
 ### PropertyDeclaration `AlarmResetCommand` · L49–60
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:49–60](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L49-L60)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:49–60](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L49-L60)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -481,7 +481,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AlarmResetCommand` · L51–59
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:51–59](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L51-L59)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:51–59](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L51-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -509,7 +509,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ResetAlarmCallback` · L53–56
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:53–56](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L53-L56)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:53–56](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L53-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -543,7 +543,7 @@ flowchart TD
 
 ### PropertyDeclaration `BuzzerOffCommand` · L62–73
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:62–73](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L62-L73)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:62–73](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L62-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -558,7 +558,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_BuzzerOffCommand` · L64–72
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:64–72](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L64-L72)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:64–72](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L64-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -586,7 +586,7 @@ flowchart TD
 
 ### LocalFunctionStatement `setStatusMessageCallback` · L66–69
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:66–69](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L66-L69)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:66–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L66-L69)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -619,7 +619,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentAlarms` · L75–75
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L75-L75)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L75-L75)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -634,7 +634,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CurrentAlarms` · L75–75
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L75-L75)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L75-L75)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -649,7 +649,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CurrentAlarms` · L75–75
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L75-L75)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L75-L75)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -670,7 +670,7 @@ flowchart TD
 
 ### PropertyDeclaration `AlarmDetail` · L76–76
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L76-L76)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L76-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -685,7 +685,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AlarmDetail` · L76–76
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L76-L76)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L76-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -700,7 +700,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_AlarmDetail` · L76–76
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L76-L76)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:76–76](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L76-L76)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -721,7 +721,7 @@ flowchart TD
 
 ### PropertyDeclaration `RecoveryCommands` · L77–77
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L77-L77)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L77-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -736,7 +736,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_RecoveryCommands` · L77–77
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L77-L77)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L77-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -751,7 +751,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_RecoveryCommands` · L77–77
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L77-L77)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L77-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -772,7 +772,7 @@ flowchart TD
 
 ### PropertyDeclaration `History` · L78–78
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L78-L78)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L78-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -787,7 +787,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_History` · L78–78
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L78-L78)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L78-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -802,7 +802,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_History` · L78–78
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L78-L78)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:78–78](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L78-L78)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -823,7 +823,7 @@ flowchart TD
 
 ### PropertyDeclaration `Trend` · L79–79
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L79-L79)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L79-L79)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -838,7 +838,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Trend` · L79–79
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L79-L79)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L79-L79)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -853,7 +853,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Trend` · L79–79
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L79-L79)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:79–79](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L79-L79)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -874,7 +874,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentAlarmRows` · L80–80
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L80-L80)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L80-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -889,7 +889,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CurrentAlarmRows` · L80–80
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L80-L80)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L80-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -904,7 +904,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_CurrentAlarmRows` · L80–80
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L80-L80)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L80-L80)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -925,7 +925,7 @@ flowchart TD
 
 ### PropertyDeclaration `DetailRows` · L81–81
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L81-L81)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L81-L81)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -940,7 +940,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DetailRows` · L81–81
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L81-L81)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L81-L81)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -955,7 +955,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_DetailRows` · L81–81
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L81-L81)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:81–81](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L81-L81)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -976,7 +976,7 @@ flowchart TD
 
 ### PropertyDeclaration `HistoryRows` · L82–82
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L82-L82)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L82-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -991,7 +991,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HistoryRows` · L82–82
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L82-L82)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L82-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1006,7 +1006,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_HistoryRows` · L82–82
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L82-L82)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:82–82](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L82-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1027,7 +1027,7 @@ flowchart TD
 
 ### PropertyDeclaration `TrendBars` · L83–83
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L83-L83)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L83-L83)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1042,7 +1042,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_TrendBars` · L83–83
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L83-L83)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L83-L83)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1057,7 +1057,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_TrendBars` · L83–83
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L83-L83)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L83-L83)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1078,7 +1078,7 @@ flowchart TD
 
 ### PropertyDeclaration `SummaryItems` · L84–84
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L84-L84)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L84-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1093,7 +1093,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SummaryItems` · L84–84
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L84-L84)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L84-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1108,7 +1108,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SummaryItems` · L84–84
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L84-L84)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:84–84](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L84-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1129,7 +1129,7 @@ flowchart TD
 
 ### MethodDeclaration `Build` · L86–117
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:86–117](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L86-L117)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:86–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L86-L117)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1167,7 +1167,7 @@ flowchart TD
 | 105 | new | resolved | Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43 |
 | 108 | BuildCurrentAlarmRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_CURRENT_ROW> Drilling.UI.Menu.Menus.CMenuAlarm.BuildCurrentAlarmRows(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DATA>) · Drilling.UI/Menu/Menus/CMenuAlarm.cs:164 |
 | 109 | BuildDetailRows | resolved | System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_ALARM_DETAIL_ROW> Drilling.UI.Menu.Menus.CMenuAlarm.BuildDetailRows(Drilling.Common.Alarm.ST_ALARM_DATA?) · Drilling.UI/Menu/Menus/CMenuAlarm.cs:176 |
-| 114 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:784 |
+| 114 | OnPropertyChanged | resolved | void Drilling.UI.Menu.CBindingBase.OnPropertyChanged(string?) · Drilling.UI/Menu/CBindingBase.cs:790 |
 | 114 | nameof | unresolved | None |
 | 115 | .Invoke | resolved · 동적 구현 선택 가능 | void System.EventHandler.Invoke(object?, System.EventArgs) |
 | 116 | Task.FromResult | resolved | System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> System.Threading.Tasks.Task.FromResult<Drilling.UI.Menu.Menus.CScreenViewModel>(Drilling.UI.Menu.Menus.CScreenViewModel) |
@@ -1217,7 +1217,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildDisplay` · L91–94
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:91–94](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L91-L94)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:91–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L91-L94)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1255,7 +1255,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetAlarmAsync` · L119–137
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:119–137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L119-L137)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:119–137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L119-L137)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1268,20 +1268,20 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2618–2618](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2618-L2618) | ((CMenuAlarm)_menus[EN_MENU.Alarm]).ResetAlarmAsync | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L55-L55) | ResetAlarmAsync | False |
+| [Drilling.UI/CRootView.cs:3011–3011](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3011-L3011) | ((CMenuAlarm)_menus[EN_MENU.Alarm]).ResetAlarmAsync | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L55-L55) | ResetAlarmAsync | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 123 | setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
-| 126 | stationManager.Reset | resolved | Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationManager.Reset(System.Threading.CancellationToken) · Drilling.Common/Station/CStationManager.cs:109 |
+| 126 | stationManager.Reset | resolved | Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationManager.Reset(System.Threading.CancellationToken) · Drilling.Common/Station/CStationManager.cs:110 |
 | 128 | DateTimeOffset.UtcNow.AddSeconds | resolved | System.DateTimeOffset System.DateTimeOffset.AddSeconds(double) |
-| 129 | stationManager.GetStatus | resolved | Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationManager.GetStatus(System.Threading.CancellationToken) · Drilling.Common/Station/CStationManager.cs:65 |
+| 129 | stationManager.GetStatus | resolved | Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationManager.GetStatus(System.Threading.CancellationToken) · Drilling.Common/Station/CStationManager.cs:66 |
 | 130 | Task.Delay | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.Delay(int) |
-| 131 | stationManager.GetStatus | resolved | Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationManager.GetStatus(System.Threading.CancellationToken) · Drilling.Common/Station/CStationManager.cs:65 |
-| 133 | alarmManager.Reset | resolved | void Drilling.Common.Alarm.CAlarmManager.Reset() · Drilling.Common/Alarm/CAlarmManager.cs:266 |
+| 131 | stationManager.GetStatus | resolved | Drilling.Common.Station.ST_STATION_PROCESS_STATUS Drilling.Common.Station.CStationManager.GetStatus(System.Threading.CancellationToken) · Drilling.Common/Station/CStationManager.cs:66 |
+| 133 | alarmManager.Reset | resolved | void Drilling.Common.Alarm.CAlarmManager.Reset() · Drilling.Common/Alarm/CAlarmManager.cs:267 |
 | 134 | setStatusMessage | resolved · 동적 구현 선택 가능 | void System.Action<string>.Invoke(string) |
 | 135 | refreshShellStatus | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
 | 136 | refreshCurrentScreen | resolved · 동적 구현 선택 가능 | System.Threading.Tasks.Task System.Func<System.Threading.Tasks.Task>.Invoke() |
@@ -1331,7 +1331,7 @@ flowchart TD
 
 ### MethodDeclaration `Apply` · L139–162
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:139–162](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L139-L162)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:139–162](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L139-L162)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1359,7 +1359,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:98–113](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L98-L113) | Apply | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:98–113](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L98-L113) | Apply | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1380,7 +1380,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildCurrentAlarmRows` · L164–174
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:164–174](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L164-L174)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:164–174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L164-L174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1399,7 +1399,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L108-L108) | BuildCurrentAlarmRows | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:108–108](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L108-L108) | BuildCurrentAlarmRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1426,7 +1426,7 @@ flowchart TD
 
 ### LocalFunctionStatement `BuildAlarm` · L167–171
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:167–171](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L167-L171)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:167–171](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L167-L171)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1472,7 +1472,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildDetailRows` · L176–191
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:176–191](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L176-L191)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:176–191](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L176-L191)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1491,7 +1491,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L109-L109) | BuildDetailRows | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:109–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L109-L109) | BuildDetailRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1551,7 +1551,7 @@ flowchart TD
 
 ### MethodDeclaration `FormatSeverity` · L193–201
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:193–201](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L193-L201)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:193–201](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L193-L201)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1570,8 +1570,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L170-L170) | FormatSeverity | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L183-L183) | FormatSeverity | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L170-L170) | FormatSeverity | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:183–183](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L183-L183) | FormatSeverity | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1593,7 +1593,7 @@ flowchart TD
 
 ### MethodDeclaration `SeverityState` · L203–211
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:203–211](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L203-L211)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:203–211](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L203-L211)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1612,8 +1612,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L185-L185) | SeverityState | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L187-L187) | SeverityState | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:185–185](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L185-L185) | SeverityState | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:187–187](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L187-L187) | SeverityState | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1635,7 +1635,7 @@ flowchart TD
 
 ### FieldDeclaration `_read` · L216–216
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L216-L216)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:216–216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L216-L216)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1650,7 +1650,7 @@ flowchart TD
 
 ### FieldDeclaration `_logDirectory` · L217–217
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L217-L217)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L217-L217)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1665,7 +1665,7 @@ flowchart TD
 
 ### FieldDeclaration `_now` · L218–218
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L218-L218)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:218–218](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L218-L218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1680,7 +1680,7 @@ flowchart TD
 
 ### FieldDeclaration `_from` · L219–219
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L219-L219)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:219–219](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L219-L219)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1701,7 +1701,7 @@ flowchart TD
 
 ### FieldDeclaration `_through` · L220–220
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L220-L220)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L220-L220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1722,7 +1722,7 @@ flowchart TD
 
 ### FieldDeclaration `_fromTime` · L221–221
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L221-L221)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L221-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1743,7 +1743,7 @@ flowchart TD
 
 ### FieldDeclaration `_throughTime` · L222–222
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L222-L222)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:222–222](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L222-L222)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1764,7 +1764,7 @@ flowchart TD
 
 ### FieldDeclaration `_hasOpened` · L223–223
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L223-L223)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L223-L223)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1779,7 +1779,7 @@ flowchart TD
 
 ### FieldDeclaration `_isCodeView` · L224–224
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L224-L224)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:224–224](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L224-L224)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1800,7 +1800,7 @@ flowchart TD
 
 ### FieldDeclaration `_loadedRows` · L225–225
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L225-L225)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L225-L225)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1821,7 +1821,7 @@ flowchart TD
 
 ### FieldDeclaration `_searchedFrom` · L226–226
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L226-L226)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:226–226](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L226-L226)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1836,7 +1836,7 @@ flowchart TD
 
 ### FieldDeclaration `_searchedThrough` · L227–227
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L227-L227)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L227-L227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1851,7 +1851,7 @@ flowchart TD
 
 ### FieldDeclaration `_selectedRow` · L228–228
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L228-L228)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:228–228](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L228-L228)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1866,7 +1866,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L229–240
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:229–240](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L229-L240)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:229–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L229-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1887,7 +1887,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L36-L36) | new | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L36-L36) | new | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1935,7 +1935,7 @@ flowchart TD
 
 ### EventFieldDeclaration `PropertyChanged` · L242–242
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L242-L242)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L242-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1950,7 +1950,7 @@ flowchart TD
 
 ### PropertyDeclaration `From` · L243–251
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:243–251](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L243-L251)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:243–251](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L243-L251)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1965,7 +1965,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_From` · L245–245
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L245-L245)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L245-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1980,7 +1980,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_From` · L246–250
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:246–250](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L246-L250)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:246–250](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L246-L250)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2014,7 +2014,7 @@ flowchart TD
 
 ### PropertyDeclaration `Through` · L253–261
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:253–261](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L253-L261)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:253–261](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L253-L261)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2029,7 +2029,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Through` · L255–255
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L255-L255)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L255-L255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2044,7 +2044,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Through` · L256–260
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:256–260](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L256-L260)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:256–260](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L256-L260)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2078,7 +2078,7 @@ flowchart TD
 
 ### PropertyDeclaration `FromTime` · L263–271
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:263–271](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L263-L271)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:263–271](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L263-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2093,7 +2093,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_FromTime` · L265–265
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L265-L265)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L265-L265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2108,7 +2108,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_FromTime` · L266–270
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:266–270](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L266-L270)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:266–270](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L266-L270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2142,7 +2142,7 @@ flowchart TD
 
 ### PropertyDeclaration `ThroughTime` · L273–281
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:273–281](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L273-L281)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:273–281](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L273-L281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2157,7 +2157,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ThroughTime` · L275–275
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L275-L275)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:275–275](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L275-L275)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2172,7 +2172,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ThroughTime` · L276–280
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:276–280](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L276-L280)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:276–280](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L276-L280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2206,7 +2206,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsBusy` · L283–283
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L283-L283)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L283-L283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2221,7 +2221,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsBusy` · L283–283
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L283-L283)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L283-L283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2236,7 +2236,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_IsBusy` · L283–283
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L283-L283)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L283-L283)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2257,7 +2257,7 @@ flowchart TD
 
 ### PropertyDeclaration `CanEdit` · L284–284
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L284-L284)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:284–284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L284-L284)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2272,7 +2272,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsCodeView` · L285–285
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L285-L285)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:285–285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L285-L285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2287,7 +2287,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsHourView` · L286–286
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L286-L286)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L286-L286)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2302,7 +2302,7 @@ flowchart TD
 
 ### PropertyDeclaration `Status` · L287–287
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L287-L287)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L287-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2317,7 +2317,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Status` · L287–287
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L287-L287)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L287-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2332,7 +2332,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Status` · L287–287
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L287-L287)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L287-L287)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2353,7 +2353,7 @@ flowchart TD
 
 ### PropertyDeclaration `TrendCaption` · L288–288
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L288-L288)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L288-L288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2368,7 +2368,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_TrendCaption` · L288–288
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L288-L288)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L288-L288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2383,7 +2383,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_TrendCaption` · L288–288
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L288-L288)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L288-L288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2404,7 +2404,7 @@ flowchart TD
 
 ### PropertyDeclaration `EmptyMessage` · L289–289
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L289-L289)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L289-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2419,7 +2419,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_EmptyMessage` · L289–289
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L289-L289)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L289-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2434,7 +2434,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_EmptyMessage` · L289–289
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L289-L289)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:289–289](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L289-L289)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2455,7 +2455,7 @@ flowchart TD
 
 ### PropertyDeclaration `Rows` · L290–290
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L290-L290)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L290-L290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2470,7 +2470,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Rows` · L290–290
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L290-L290)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L290-L290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2485,7 +2485,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Rows` · L290–290
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L290-L290)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:290–290](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L290-L290)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2506,7 +2506,7 @@ flowchart TD
 
 ### PropertyDeclaration `Bars` · L291–291
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L291-L291)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L291-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2521,7 +2521,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Bars` · L291–291
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L291-L291)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L291-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2536,7 +2536,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Bars` · L291–291
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L291-L291)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L291-L291)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2557,7 +2557,7 @@ flowchart TD
 
 ### PropertyDeclaration `SelectedRow` · L292–303
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:292–303](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L292-L303)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:292–303](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L292-L303)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2572,7 +2572,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SelectedRow` · L294–294
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L294-L294)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:294–294](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L294-L294)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2587,7 +2587,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_SelectedRow` · L295–302
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:295–302](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L295-L302)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:295–302](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L295-L302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2636,7 +2636,7 @@ flowchart TD
 
 ### PropertyDeclaration `SearchCommand` · L304–304
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L304-L304)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L304-L304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2651,7 +2651,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SearchCommand` · L304–304
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L304-L304)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:304–304](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L304-L304)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2666,7 +2666,7 @@ flowchart TD
 
 ### PropertyDeclaration `Last24HoursCommand` · L305–305
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L305-L305)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L305-L305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2681,7 +2681,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Last24HoursCommand` · L305–305
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L305-L305)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:305–305](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L305-L305)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2696,7 +2696,7 @@ flowchart TD
 
 ### PropertyDeclaration `HourViewCommand` · L306–306
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L306-L306)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L306-L306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2711,7 +2711,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HourViewCommand` · L306–306
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L306-L306)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:306–306](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L306-L306)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2726,7 +2726,7 @@ flowchart TD
 
 ### PropertyDeclaration `CodeViewCommand` · L307–307
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L307-L307)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L307-L307)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2741,7 +2741,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CodeViewCommand` · L307–307
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L307-L307)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:307–307](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L307-L307)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2756,7 +2756,7 @@ flowchart TD
 
 ### PropertyDeclaration `CauseAnalysisCommand` · L308–308
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L308-L308)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L308-L308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2771,7 +2771,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_CauseAnalysisCommand` · L308–308
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L308-L308)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:308–308](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L308-L308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2786,7 +2786,7 @@ flowchart TD
 
 ### MethodDeclaration `ShowCauseAnalysis` · L310–318
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:310–318](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L310-L318)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:310–318](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L310-L318)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2799,7 +2799,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L239-L239) | ShowCauseAnalysis | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L239-L239) | ShowCauseAnalysis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2836,7 +2836,7 @@ flowchart TD
 
 ### MethodDeclaration `InitializeOnFirstOpen` · L320–326
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:320–326](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L320-L326)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:320–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L320-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2849,7 +2849,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L30-L30) | HistoryPanel.InitializeOnFirstOpen | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L30-L30) | HistoryPanel.InitializeOnFirstOpen | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2879,7 +2879,7 @@ flowchart TD
 
 ### MethodDeclaration `SetDefaultRange` · L328–334
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:328–334](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L328-L334)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:328–334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L328-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2892,8 +2892,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L234-L234) | SetDefaultRange | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L325-L325) | SetDefaultRange | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:234–234](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L234-L234) | SetDefaultRange | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:325–325](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L325-L325) | SetDefaultRange | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2919,7 +2919,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectTrendView` · L336–352
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:336–352](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L336-L352)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:336–352](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L336-L352)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2938,8 +2938,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L237-L237) | SelectTrendView | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L238-L238) | SelectTrendView | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L237-L237) | SelectTrendView | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L238-L238) | SelectTrendView | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2982,7 +2982,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshTrend` · L354–366
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:354–366](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L354-L366)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:354–366](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L354-L366)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2995,8 +2995,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L341-L341) | RefreshTrend | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:426–426](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L426-L426) | RefreshTrend | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:341–341](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L341-L341) | RefreshTrend | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:426–426](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L426-L426) | RefreshTrend | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3036,7 +3036,7 @@ flowchart TD
 
 ### MethodDeclaration `SearchLast24HoursAsync` · L368–381
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:368–381](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L368-L381)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:368–381](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L368-L381)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3049,7 +3049,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L236-L236) | SearchLast24HoursAsync | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L236-L236) | SearchLast24HoursAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3099,7 +3099,7 @@ flowchart TD
 
 ### MethodDeclaration `SearchAsync` · L383–461
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:383–461](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L383-L461)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:383–461](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L383-L461)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3112,8 +3112,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L235-L235) | SearchAsync | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L380-L380) | SearchAsync | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L235-L235) | SearchAsync | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:380–380](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L380-L380) | SearchAsync | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3269,7 +3269,7 @@ flowchart TD
 
 ### MethodDeclaration `TryReadTime` · L463–469
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:463–469](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L463-L469)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:463–469](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L463-L469)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3289,8 +3289,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L387-L387) | TryReadTime | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L387-L387) | TryReadTime | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L387-L387) | TryReadTime | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:387–387](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L387-L387) | TryReadTime | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3316,7 +3316,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildCodeBars` · L471–485
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:471–485](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L471-L485)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:471–485](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L471-L485)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3335,7 +3335,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L363-L363) | BuildCodeBars | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L363-L363) | BuildCodeBars | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3393,7 +3393,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildHourBars` · L487–511
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:487–511](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L487-L511)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:487–511](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L487-L511)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3414,7 +3414,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L363-L363) | BuildHourBars | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L363-L363) | BuildHourBars | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3491,7 +3491,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Hour` · L489–489
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L489-L489)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:489–489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L489-L489)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3510,9 +3510,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:490–490](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L490-L490) | Hour | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:493–493](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L493-L493) | Hour | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L494-L494) | Hour | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:490–490](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L490-L490) | Hour | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:493–493](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L493-L493) | Hour | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:494–494](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L494-L494) | Hour | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3530,7 +3530,7 @@ flowchart TD
 
 ### MethodDeclaration `Notify` · L513–513
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L513-L513)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L513-L513)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3549,18 +3549,18 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L249-L249) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L259-L259) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L269-L269) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L279-L279) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L300-L300) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L351-L351) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L390-L390) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L399-L399) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:405–405](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L405-L405) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:406–406](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L406-L406) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L407-L407) | Notify | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:456–456](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L456-L456) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L249-L249) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L259-L259) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L269-L269) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:279–279](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L279-L279) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L300-L300) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:351–351](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L351-L351) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:390–390](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L390-L390) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:399–399](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L399-L399) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:405–405](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L405-L405) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:406–406](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L406-L406) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L407-L407) | Notify | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:456–456](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L456-L456) | Notify | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3580,7 +3580,7 @@ flowchart TD
 
 ### FieldDeclaration `_alarms` · L519–519
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L519-L519)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L519-L519)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3595,7 +3595,7 @@ flowchart TD
 
 ### FieldDeclaration `_displayedSnapshot` · L520–520
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L520-L520)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L520-L520)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3610,7 +3610,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L521–525
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:521–525](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L521-L525)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:521–525](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L521-L525)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3629,7 +3629,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L35-L35) | new | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L35-L35) | new | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3648,7 +3648,7 @@ flowchart TD
 
 ### EventFieldDeclaration `PropertyChanged` · L527–527
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:527–527](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L527-L527)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:527–527](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L527-L527)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3663,7 +3663,7 @@ flowchart TD
 
 ### PropertyDeclaration `Rows` · L528–528
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L528-L528)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L528-L528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3678,7 +3678,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Rows` · L528–528
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L528-L528)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L528-L528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3693,7 +3693,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Rows` · L528–528
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L528-L528)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:528–528](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L528-L528)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3714,7 +3714,7 @@ flowchart TD
 
 ### PropertyDeclaration `Status` · L529–529
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L529-L529)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L529-L529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3729,7 +3729,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Status` · L529–529
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L529-L529)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L529-L529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3744,7 +3744,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_Status` · L529–529
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L529-L529)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L529-L529)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3765,7 +3765,7 @@ flowchart TD
 
 ### PropertyDeclaration `HasError` · L530–530
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L530-L530)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L530-L530)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3780,7 +3780,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_HasError` · L530–530
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L530-L530)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L530-L530)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3795,7 +3795,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_HasError` · L530–530
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L530-L530)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L530-L530)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3816,7 +3816,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshSnapshot` · L532–544
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:532–544](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L532-L544)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:532–544](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L532-L544)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3829,8 +3829,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L89-L89) | ListPanel.RefreshSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L524-L524) | RefreshSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L89-L89) | ListPanel.RefreshSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:524–524](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L524-L524) | RefreshSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -3895,7 +3895,7 @@ flowchart TD
 
 ### PropertyDeclaration `LevelBrush` · L550–562
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:550–562](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L550-L562)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:550–562](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L550-L562)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3910,7 +3910,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LevelBrush` · L552–561
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:552–561](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L552-L561)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:552–561](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L552-L561)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3941,7 +3941,7 @@ flowchart TD
 
 ### PropertyDeclaration `ValueBrush` · L567–580
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:567–580](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L567-L580)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:567–580](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L567-L580)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3956,7 +3956,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ValueBrush` · L569–579
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:569–579](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L569-L579)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:569–579](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L569-L579)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3987,7 +3987,7 @@ flowchart TD
 
 ### PropertyDeclaration `LevelBrush` · L585–597
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:585–597](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L585-L597)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:585–597](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L585-L597)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4002,7 +4002,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_LevelBrush` · L587–596
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:587–596](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L587-L596)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:587–596](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L587-L596)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4033,7 +4033,7 @@ flowchart TD
 
 ### PropertyDeclaration `ValueBrush` · L603–616
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:603–616](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L603-L616)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:603–616](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L603-L616)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -4048,7 +4048,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ValueBrush` · L605–615
 
-[Drilling.UI/Menu/Menus/CMenuAlarm.cs:605–615](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L605-L615)
+[Drilling.UI/Menu/Menus/CMenuAlarm.cs:605–615](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L605-L615)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

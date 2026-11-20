@@ -4,16 +4,16 @@
 
 - [오프라인 HTML 목차](index.html) · [전체 파일 목차](FILE_INDEX.md)
 - [전체 구조 그림](diagrams/architecture.svg) · [Offline Studio 첨부 방법](offline-studio/README.md)
-- [원본 저장소](https://github.com/kjuws10-rgb/A3Drilling) · 기준 master Commit `96e22cd027c84bf302b23f2949b98985d7f301bb`
+- [원본 저장소](https://github.com/kjuws10-rgb/A3Drilling) · 기준 master Commit `28764c91d521777b8ee068dd7aaf2d3902ce9fe2`
 
 |범위|수량|
 |---|---:|
-|Git 추적 파일/개별 문서|668 / 668|
-|C#|156|
-|타입/멤버|923 / 16191|
-|호출 구문|42161|
-|전체 행 주석 해설본|350파일|
-|RAG 근거 레코드|31737|
+|Git 추적 파일/개별 문서|699 / 699|
+|C#|157|
+|타입/멤버|931 / 16360|
+|호출 구문|42608|
+|전체 행 주석 해설본|352파일|
+|RAG 근거 레코드|32001|
 
 ## 읽는 순서
 

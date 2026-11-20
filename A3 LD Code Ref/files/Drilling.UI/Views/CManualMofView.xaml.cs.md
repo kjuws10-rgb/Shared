@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | 8dca38d642205125b987195e1b7797628ad8406001ce494af68bf55f743d69e1 |
 | 파일 분류 | code |
 | 원본 크기/행 | 5,646 bytes / 161 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -49,7 +49,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `PreviewZoomMinimum` · L11–11
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L11-L11)
+[Drilling.UI/Views/CManualMofView.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -70,7 +70,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isGlassPreviewDragging` · L12–12
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L12-L12)
+[Drilling.UI/Views/CManualMofView.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -85,7 +85,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_glassPreviewDragStart` · L13–13
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L13-L13)
+[Drilling.UI/Views/CManualMofView.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -100,7 +100,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_glassPreviewDragStartX` · L14–14
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L14-L14)
+[Drilling.UI/Views/CManualMofView.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -115,7 +115,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_glassPreviewDragStartY` · L15–15
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L15-L15)
+[Drilling.UI/Views/CManualMofView.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -130,7 +130,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L16–19
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:16–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L16-L19)
+[Drilling.UI/Views/CManualMofView.xaml.cs:16–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L16-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -157,7 +157,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `GlassPreview_PreviewMouseLeftButtonDown` · L21–40
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:21–40](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L21-L40)
+[Drilling.UI/Views/CManualMofView.xaml.cs:21–40](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L21-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -216,7 +216,7 @@ flowchart TD
 
 ### MethodDeclaration `GlassPreview_PreviewMouseMove` · L42–54
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:42–54](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L42-L54)
+[Drilling.UI/Views/CManualMofView.xaml.cs:42–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L42-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -268,7 +268,7 @@ flowchart TD
 
 ### MethodDeclaration `GlassPreview_PreviewMouseLeftButtonUp` · L56–65
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:56–65](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L56-L65)
+[Drilling.UI/Views/CManualMofView.xaml.cs:56–65](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L56-L65)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -314,7 +314,7 @@ flowchart TD
 
 ### MethodDeclaration `GlassPreview_LostMouseCapture` · L67–73
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:67–73](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L67-L73)
+[Drilling.UI/Views/CManualMofView.xaml.cs:67–73](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L67-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -358,7 +358,7 @@ flowchart TD
 
 ### MethodDeclaration `EndGlassPreviewDrag` · L75–84
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:75–84](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L75-L84)
+[Drilling.UI/Views/CManualMofView.xaml.cs:75–84](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L75-L84)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -377,8 +377,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CManualMofView.xaml.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L63-L63) | EndGlassPreviewDrag | False |
-| [Drilling.UI/Views/CManualMofView.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L71-L71) | EndGlassPreviewDrag | False |
+| [Drilling.UI/Views/CManualMofView.xaml.cs:63–63](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L63-L63) | EndGlassPreviewDrag | False |
+| [Drilling.UI/Views/CManualMofView.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L71-L71) | EndGlassPreviewDrag | False |
 
 호출하는 대상과 해석 범위:
 
@@ -408,7 +408,7 @@ flowchart TD
 
 ### MethodDeclaration `CellPreviewLabel_MouseMove` · L86–97
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:86–97](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L86-L97)
+[Drilling.UI/Views/CManualMofView.xaml.cs:86–97](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L86-L97)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -459,7 +459,7 @@ flowchart TD
 
 ### MethodDeclaration `CellPreviewLabel_MouseLeave` · L99–102
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:99–102](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L99-L102)
+[Drilling.UI/Views/CManualMofView.xaml.cs:99–102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L99-L102)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -493,7 +493,7 @@ flowchart TD
 
 ### MethodDeclaration `PositionGlassPreviewHoverTip` · L104–125
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:104–125](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L104-L125)
+[Drilling.UI/Views/CManualMofView.xaml.cs:104–125](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L104-L125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -565,7 +565,7 @@ flowchart TD
 
 ### MethodDeclaration `HideGlassPreviewHoverTip` · L127–131
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:127–131](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L127-L131)
+[Drilling.UI/Views/CManualMofView.xaml.cs:127–131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L127-L131)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -578,10 +578,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CManualMofView.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L23-L23) | HideGlassPreviewHoverTip | False |
-| [Drilling.UI/Views/CManualMofView.xaml.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L90-L90) | HideGlassPreviewHoverTip | False |
-| [Drilling.UI/Views/CManualMofView.xaml.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L101-L101) | HideGlassPreviewHoverTip | False |
-| [Drilling.UI/Views/CManualMofView.xaml.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L154-L154) | HideGlassPreviewHoverTip | False |
+| [Drilling.UI/Views/CManualMofView.xaml.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L23-L23) | HideGlassPreviewHoverTip | False |
+| [Drilling.UI/Views/CManualMofView.xaml.cs:90–90](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L90-L90) | HideGlassPreviewHoverTip | False |
+| [Drilling.UI/Views/CManualMofView.xaml.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L101-L101) | HideGlassPreviewHoverTip | False |
+| [Drilling.UI/Views/CManualMofView.xaml.cs:154–154](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L154-L154) | HideGlassPreviewHoverTip | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -594,7 +594,7 @@ flowchart TD
 
 ### MethodDeclaration `ClampGlassPreviewTranslation` · L133–144
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:133–144](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L133-L144)
+[Drilling.UI/Views/CManualMofView.xaml.cs:133–144](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L133-L144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -613,7 +613,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CManualMofView.xaml.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L52-L52) | ClampGlassPreviewTranslation | False |
+| [Drilling.UI/Views/CManualMofView.xaml.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L52-L52) | ClampGlassPreviewTranslation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -651,7 +651,7 @@ flowchart TD
 
 ### MethodDeclaration `MofView_IsVisibleChanged` · L146–160
 
-[Drilling.UI/Views/CManualMofView.xaml.cs:146–160](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CManualMofView.xaml.cs#L146-L160)
+[Drilling.UI/Views/CManualMofView.xaml.cs:146–160](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CManualMofView.xaml.cs#L146-L160)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

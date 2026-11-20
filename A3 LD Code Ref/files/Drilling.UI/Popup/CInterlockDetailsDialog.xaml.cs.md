@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | 67d1fcd11cf57ceb4b6f2b9bf458a8d537a5a1e903930bdcdfe534d9ae62183a |
 | 파일 분류 | code |
 | 원본 크기/행 | 423 bytes / 16 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CInterlockDetailsDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CInterlockDetailsDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -34,7 +34,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L8–13
 
-[Drilling.UI/Popup/CInterlockDetailsDialog.xaml.cs:8–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CInterlockDetailsDialog.xaml.cs#L8-L13)
+[Drilling.UI/Popup/CInterlockDetailsDialog.xaml.cs:8–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CInterlockDetailsDialog.xaml.cs#L8-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -53,8 +53,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:3321–3321](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L3321-L3321) | new CInterlockDetailsDialog | False |
-| [Drilling.UI/Views/CMainView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CMainView.xaml.cs#L17-L17) | new CInterlockDetailsDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:3329–3329](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L3329-L3329) | new CInterlockDetailsDialog | False |
+| [Drilling.UI/Views/CMainView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CMainView.xaml.cs#L17-L17) | new CInterlockDetailsDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -74,7 +74,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnCloseClicked` · L15–15
 
-[Drilling.UI/Popup/CInterlockDetailsDialog.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CInterlockDetailsDialog.xaml.cs#L15-L15)
+[Drilling.UI/Popup/CInterlockDetailsDialog.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CInterlockDetailsDialog.xaml.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

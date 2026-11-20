@@ -2,11 +2,20 @@
 from pathlib import Path
 import argparse, collections, hashlib, json, subprocess, tempfile, unittest, xml.etree.ElementTree as ET
 from unittest.mock import patch
-from build_reference import Builder, definition_cells, normalize_document_whitespace, xaml_structure
+from build_reference import Builder, definition_cells, markdown, normalize_document_whitespace, xaml_structure
 from validate_reference import validate, expected_xaml_events
 
 
 class ReferenceRegression(unittest.TestCase):
+    def test_tilde_fences_render_code_and_require_matching_delimiters(self):
+        source='~~~mermaid\nflowchart LR\nA --> B\n~~~\n\n~~~text\n[not navigation](missing.md)\n```\nx < y\n~~~\n'
+        rendered=ET.fromstring('<root>'+markdown(source)+'</root>')
+        blocks=list(rendered.iter('pre'))
+        self.assertEqual([block.attrib['data-language'] for block in blocks],['mermaid','text'])
+        self.assertEqual(''.join(blocks[0].itertext()),'flowchart LR\nA --> B')
+        self.assertEqual(''.join(blocks[1].itertext()),'[not navigation](missing.md)\n```\nx < y')
+        self.assertFalse(list(rendered.iter('a')))
+
     def test_normalizer_converts_physical_crlf_and_preserves_marked_source_spaces(self):
         with tempfile.TemporaryDirectory(prefix='a3-newline-regression-') as tmp:
             root=Path(tmp);document=root/'document.md';metadata=root/'metadata.json';unchanged=root/'unchanged.md'
@@ -44,6 +53,14 @@ class ReferenceRegression(unittest.TestCase):
         self.assertEqual({(item['event'],item['handler']) for item in model['events']},expected)
         self.assertEqual(len(model['events']),5)
 
+    def test_xaml_password_changed_event_is_inventoried_and_independently_validated(self):
+        source='<PasswordBox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" PasswordChanged="PmPasswordChanged"/>'
+        members=[{'kind':'MethodDeclaration','name':'PmPasswordChanged','parameters':[{'type':'object'},{'type':'System.Windows.RoutedEventArgs'}]}]
+        actual=collections.Counter((entry['event'],entry['handler']) for entry in xaml_structure(source)['events'])
+        expected,_=expected_xaml_events(ET.fromstring(source),members)
+        self.assertEqual(actual,collections.Counter({('PasswordChanged','PmPasswordChanged'):1}))
+        self.assertEqual(actual,expected)
+
     def test_xaml_event_validator_is_independent_of_generator_whitelist(self):
         source = '<Grid PreviewTextInput="OnText" LostMouseCapture="OnCapture" TreeViewItem.Expanded="OnExpand" LoadingRow="OnRow" AutoGeneratingColumn="OnColumn"/>'
         expected,_=expected_xaml_events(ET.fromstring(source))
@@ -80,6 +97,7 @@ class ReferenceRegression(unittest.TestCase):
     def test_synthetic_pipeline_preserves_lines_and_separates_generated_data(self):
         with tempfile.TemporaryDirectory(prefix='a3-doc-regression-') as tmp:
             root=Path(tmp);source=root/'source';source.mkdir();output=root/'output';manual=root/'manual';manual.mkdir()
+            (manual/'tilde-fixture.md').write_text('# Tilde fixture\n\n~~~text\n[not navigation](missing.md)\n```\n~~~\n',encoding='utf-8',newline='\n')
             fixtures={
                 'Drilling.File/Generator.cs':'// Source generator fixture.  \n// A fence is source evidence: ```  \n',
                 'Drilling.UI/Fixture.xaml':'<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="Root" SizeChanged="OnSize"/>\n',

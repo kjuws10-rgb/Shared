@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | 71b53c57cc61b41bc390045668d7c3d12d15ea7db282c75749b741836d516ca0 |
 | 파일 분류 | code |
 | 원본 크기/행 | 4,880 bytes / 168 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -43,7 +43,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L12–15
 
-[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:12–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L12-L15)
+[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:12–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L12-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -70,7 +70,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `PicoMonitorPreviewMouseLeftButtonDown` · L17–44
 
-[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:17–44](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L17-L44)
+[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:17–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L17-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -140,7 +140,7 @@ flowchart TD
 
 ### MethodDeclaration `PicoValueEditorLostKeyboardFocus` · L46–54
 
-[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:46–54](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L46-L54)
+[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:46–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L46-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -180,7 +180,7 @@ flowchart TD
 
 ### MethodDeclaration `EndAllValueEdits` · L56–74
 
-[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:56–74](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L56-L74)
+[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:56–74](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L56-L74)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -199,7 +199,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L22-L22) | EndAllValueEdits | False |
+| [Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L22-L22) | EndAllValueEdits | False |
 
 호출하는 대상과 해석 범위:
 
@@ -241,7 +241,7 @@ flowchart TD
 
 ### MethodDeclaration `FindAncestor` · L76–90
 
-[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:76–90](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L76-L90)
+[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:76–90](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L76-L90)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -290,7 +290,7 @@ flowchart TD
 
 ### MethodDeclaration `FindVisualChildren` · L92–108
 
-[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:92–108](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L92-L108)
+[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:92–108](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L92-L108)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -348,7 +348,7 @@ flowchart TD
 
 ### MethodDeclaration `PicoJogButtonPreviewMouseDown` · L110–118
 
-[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:110–118](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L110-L118)
+[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:110–118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L110-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -395,7 +395,7 @@ flowchart TD
 
 ### MethodDeclaration `PicoJogButtonPreviewMouseUp` · L120–129
 
-[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:120–129](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L120-L129)
+[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:120–129](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L120-L129)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -442,7 +442,7 @@ flowchart TD
 
 ### MethodDeclaration `PicoJogButtonMouseLeave` · L131–138
 
-[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:131–138](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L131-L138)
+[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:131–138](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L131-L138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -488,7 +488,7 @@ flowchart TD
 
 ### MethodDeclaration `StopPicoJog` · L140–146
 
-[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:140–146](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L140-L146)
+[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:140–146](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L140-L146)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -501,8 +501,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L127-L127) | StopPicoJog | False |
-| [Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L136-L136) | StopPicoJog | False |
+| [Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:127–127](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L127-L127) | StopPicoJog | False |
+| [Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L136-L136) | StopPicoJog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -530,7 +530,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenPicoValueInput` · L148–167
 
-[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:148–167](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L148-L167)
+[Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs:148–167](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CPicoMotorMonitorView.xaml.cs#L148-L167)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

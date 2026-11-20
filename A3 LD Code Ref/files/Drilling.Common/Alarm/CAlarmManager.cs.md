@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
-| 원본 SHA256 | a9e72b5f3e4553cbf47278dcc84b14dc8d7a4071846a288c52f90dd6f22376c2 |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 SHA256 | 5cbff85f66cfcf6744d14dd9955a75c2eb21a6536e0f7fd7517472b7f95fa872 |
 | 파일 분류 | code |
-| 원본 크기/행 | 34,319 bytes / 674 physical lines |
+| 원본 크기/행 | 34,651 bytes / 676 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -21,22 +21,22 @@
 
 | 타입 | 구분 | 원본 범위 | 선언/상속 |
 | --- | --- | --- | --- |
-| CAlarmManager | ClassDeclaration | 12–542 | CAlarmManager |
+| CAlarmManager | ClassDeclaration | 12–544 | CAlarmManager |
 | ST_ALARM_RULE | RecordDeclaration | 123–123 | ST_ALARM_RULE |
 | ST_ALARM_CANDIDATE | RecordDeclaration | 124–124 | ST_ALARM_CANDIDATE |
-| ST_ALARM_DEFINITION | RecordDeclaration | 544–544 | ST_ALARM_DEFINITION |
-| CAlarmListFileBase | ClassDeclaration | 545–548 | CAlarmListFileBase |
-| ST_ALARM_DEFINITION_SNAPSHOT | RecordDeclaration | 550–550 | ST_ALARM_DEFINITION_SNAPSHOT |
-| EN_ALARM_LEVEL | EnumDeclaration | 551–556 | EN_ALARM_LEVEL |
-| EN_ALARM_STATE | EnumDeclaration | 558–562 | EN_ALARM_STATE |
-| ST_ALARM_DATA | RecordDeclaration | 564–569 | ST_ALARM_DATA |
-| ST_CURRENT_ALARM_SNAPSHOT | RecordDeclaration | 571–571 | ST_CURRENT_ALARM_SNAPSHOT |
-| CScannerTemperatureAlarmMonitor | ClassDeclaration | 573–608 | CScannerTemperatureAlarmMonitor |
-| CSequenceFailureException | ClassDeclaration | 611–655 | CSequenceFailureException: InvalidOperationException |
-| CSequenceSignalCanceledException | ClassDeclaration | 658–663 | CSequenceSignalCanceledException: OperationCanceledException(error.Message, error, error.CancellationToken) |
-| ST_ALARM_HISTORY_ENTRY | RecordDeclaration | 665–665 | ST_ALARM_HISTORY_ENTRY |
-| ST_ALARM_HISTORY_RESULT | RecordDeclaration | 666–666 | ST_ALARM_HISTORY_RESULT |
-| IAlarmHistoryStore | InterfaceDeclaration | 667–673 | IAlarmHistoryStore |
+| ST_ALARM_DEFINITION | RecordDeclaration | 546–546 | ST_ALARM_DEFINITION |
+| CAlarmListFileBase | ClassDeclaration | 547–550 | CAlarmListFileBase |
+| ST_ALARM_DEFINITION_SNAPSHOT | RecordDeclaration | 552–552 | ST_ALARM_DEFINITION_SNAPSHOT |
+| EN_ALARM_LEVEL | EnumDeclaration | 553–558 | EN_ALARM_LEVEL |
+| EN_ALARM_STATE | EnumDeclaration | 560–564 | EN_ALARM_STATE |
+| ST_ALARM_DATA | RecordDeclaration | 566–571 | ST_ALARM_DATA |
+| ST_CURRENT_ALARM_SNAPSHOT | RecordDeclaration | 573–573 | ST_CURRENT_ALARM_SNAPSHOT |
+| CScannerTemperatureAlarmMonitor | ClassDeclaration | 575–610 | CScannerTemperatureAlarmMonitor |
+| CSequenceFailureException | ClassDeclaration | 613–657 | CSequenceFailureException: InvalidOperationException |
+| CSequenceSignalCanceledException | ClassDeclaration | 660–665 | CSequenceSignalCanceledException: OperationCanceledException(error.Message, error, error.CancellationToken) |
+| ST_ALARM_HISTORY_ENTRY | RecordDeclaration | 667–667 | ST_ALARM_HISTORY_ENTRY |
+| ST_ALARM_HISTORY_RESULT | RecordDeclaration | 668–668 | ST_ALARM_HISTORY_RESULT |
+| IAlarmHistoryStore | InterfaceDeclaration | 669–675 | IAlarmHistoryStore |
 
 ## 멤버 빠른 목록
 
@@ -86,66 +86,66 @@
 | SetAlarm | MethodDeclaration | L233–237 | bool Drilling.Common.Alarm.CAlarmManager.SetAlarm(int) |
 | SetAlarm | MethodDeclaration | L239–243 | bool Drilling.Common.Alarm.CAlarmManager.SetAlarm(string) |
 | SetAlarm | MethodDeclaration | L245–245 | bool Drilling.Common.Alarm.CAlarmManager.SetAlarm(Drilling.Common.Alarm.ST_ALARM_DEFINITION) |
-| AddCurrent | MethodDeclaration | L246–264 | bool Drilling.Common.Alarm.CAlarmManager.AddCurrent(Drilling.Common.Alarm.ST_ALARM_DATA) |
-| Reset | MethodDeclaration | L266–277 | void Drilling.Common.Alarm.CAlarmManager.Reset() |
-| NotifyCurrentChanged | MethodDeclaration | L279–301 | void Drilling.Common.Alarm.CAlarmManager.NotifyCurrentChanged() |
-| PublishCurrent | MethodDeclaration | L303–307 | void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string) |
-| ReadHistory | MethodDeclaration | L309–309 | Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT Drilling.Common.Alarm.CAlarmManager.ReadHistory(System.DateTime, System.DateTime, System.Threading.CancellationToken) |
-| HistoryStorageError | PropertyDeclaration | L310–320 | string Drilling.Common.Alarm.CAlarmManager.HistoryStorageError |
-| get_HistoryStorageError | GetAccessorDeclaration | L312–319 | string Drilling.Common.Alarm.CAlarmManager.HistoryStorageError.get |
-| QueueHistory | MethodDeclaration | L323–335 | bool Drilling.Common.Alarm.CAlarmManager.QueueHistory(Drilling.Common.Alarm.ST_ALARM_DATA) |
-| WriteQueuedHistory | MethodDeclaration | L337–374 | void Drilling.Common.Alarm.CAlarmManager.WriteQueuedHistory() |
-| FlushHistoryAsync | MethodDeclaration | L377–383 | System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.FlushHistoryAsync(System.Threading.CancellationToken) |
-| MonitoringError | PropertyDeclaration | L387–395 | string Drilling.Common.Alarm.CAlarmManager.MonitoringError |
-| get_MonitoringError | GetAccessorDeclaration | L389–394 | string Drilling.Common.Alarm.CAlarmManager.MonitoringError.get |
-| StartMonitoring | MethodDeclaration | L404–427 | void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling.Common.InterLock.CInterLockManager, System.Action<System.Exception>?) |
-| StartMonitoring | MethodDeclaration | L430–445 | void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(System.Action<System.Threading.CancellationToken>[], System.Action<System.Exception>?, System.TimeSpan) |
-| StopMonitoringAsync | MethodDeclaration | L447–469 | System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.StopMonitoringAsync() |
-| Monitor | MethodDeclaration | L471–540 | System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.Monitor(System.Action<System.Threading.CancellationToken>[], System.Action<System.Exception>?, System.TimeSpan, System.Threading.CancellationToken) |
-| Load | MethodDeclaration | L547–547 | System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION> Drilling.Common.Alarm.CAlarmListFileBase.Load() |
-| Info | EnumMemberDeclaration | L553–553 | Drilling.Common.Alarm.EN_ALARM_LEVEL.Info |
-| Warning | EnumMemberDeclaration | L554–554 | Drilling.Common.Alarm.EN_ALARM_LEVEL.Warning |
-| Critical | EnumMemberDeclaration | L555–555 | Drilling.Common.Alarm.EN_ALARM_LEVEL.Critical |
-| Clear | EnumMemberDeclaration | L560–560 | Drilling.Common.Alarm.EN_ALARM_STATE.Clear |
-| Occur | EnumMemberDeclaration | L561–561 | Drilling.Common.Alarm.EN_ALARM_STATE.Occur |
-| Id | PropertyDeclaration | L566–566 | string Drilling.Common.Alarm.ST_ALARM_DATA.Id |
-| get_Id | GetAccessorDeclaration | L566–566 | string Drilling.Common.Alarm.ST_ALARM_DATA.Id.get |
-| set_Id | InitAccessorDeclaration | L566–566 | void Drilling.Common.Alarm.ST_ALARM_DATA.Id.init |
-| Group | PropertyDeclaration | L567–567 | string Drilling.Common.Alarm.ST_ALARM_DATA.Group |
-| get_Group | GetAccessorDeclaration | L567–567 | string Drilling.Common.Alarm.ST_ALARM_DATA.Group.get |
-| set_Group | InitAccessorDeclaration | L567–567 | void Drilling.Common.Alarm.ST_ALARM_DATA.Group.init |
-| CimAddress | PropertyDeclaration | L568–568 | string Drilling.Common.Alarm.ST_ALARM_DATA.CimAddress |
-| get_CimAddress | GetAccessorDeclaration | L568–568 | string Drilling.Common.Alarm.ST_ALARM_DATA.CimAddress.get |
-| set_CimAddress | InitAccessorDeclaration | L568–568 | void Drilling.Common.Alarm.ST_ALARM_DATA.CimAddress.init |
-| Check | MethodDeclaration | L575–607 | void Drilling.Common.Alarm.CScannerTemperatureAlarmMonitor.Check() |
-| _reported | FieldDeclaration | L613–613 | int Drilling.Common.Alarm.CSequenceFailureException._reported |
-| .ctor | ConstructorDeclaration | L614–616 | Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception) |
-| Scenario | PropertyDeclaration | L617–617 | string Drilling.Common.Alarm.CSequenceFailureException.Scenario |
-| get_Scenario | GetAccessorDeclaration | L617–617 | string Drilling.Common.Alarm.CSequenceFailureException.Scenario.get |
-| Subject | PropertyDeclaration | L618–618 | string Drilling.Common.Alarm.CSequenceFailureException.Subject |
-| get_Subject | GetAccessorDeclaration | L618–618 | string Drilling.Common.Alarm.CSequenceFailureException.Subject.get |
-| Kind | PropertyDeclaration | L619–619 | string Drilling.Common.Alarm.CSequenceFailureException.Kind |
-| get_Kind | GetAccessorDeclaration | L619–619 | string Drilling.Common.Alarm.CSequenceFailureException.Kind.get |
-| AlarmId | PropertyDeclaration | L620–620 | string Drilling.Common.Alarm.CSequenceFailureException.AlarmId |
-| ActionScenario | MethodDeclaration | L621–627 | string Drilling.Common.Alarm.CSequenceFailureException.ActionScenario(string) |
-| SignalScenario | MethodDeclaration | L628–639 | string Drilling.Common.Alarm.CSequenceFailureException.SignalScenario(string, string) |
-| Existing | MethodDeclaration | L640–642 | Drilling.Common.Alarm.CSequenceFailureException? Drilling.Common.Alarm.CSequenceFailureException.Existing(System.Exception) |
-| Action | MethodDeclaration | L643–644 | Drilling.Common.Alarm.CSequenceFailureException Drilling.Common.Alarm.CSequenceFailureException.Action(string, System.Exception) |
-| Signal | MethodDeclaration | L645–646 | Drilling.Common.Alarm.CSequenceFailureException Drilling.Common.Alarm.CSequenceFailureException.Signal(string, string, bool, System.Exception) |
-| ScenarioFailure | MethodDeclaration | L647–647 | Drilling.Common.Alarm.CSequenceFailureException Drilling.Common.Alarm.CSequenceFailureException.ScenarioFailure(string, System.Exception) |
-| Publish | MethodDeclaration | L648–654 | void Drilling.Common.Alarm.CSequenceFailureException.Publish(System.Action<Drilling.Common.Alarm.CSequenceFailureException>?) |
-| Scenario | PropertyDeclaration | L661–661 | string Drilling.Common.Alarm.CSequenceSignalCanceledException.Scenario |
-| get_Scenario | GetAccessorDeclaration | L661–661 | string Drilling.Common.Alarm.CSequenceSignalCanceledException.Scenario.get |
-| Signal | PropertyDeclaration | L662–662 | string Drilling.Common.Alarm.CSequenceSignalCanceledException.Signal |
-| get_Signal | GetAccessorDeclaration | L662–662 | string Drilling.Common.Alarm.CSequenceSignalCanceledException.Signal.get |
-| Append | MethodDeclaration | L671–671 | void Drilling.Common.Alarm.IAlarmHistoryStore.Append(Drilling.Common.Alarm.ST_ALARM_DATA) |
-| Read | MethodDeclaration | L672–672 | Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT Drilling.Common.Alarm.IAlarmHistoryStore.Read(System.DateTime, System.DateTime, System.Threading.CancellationToken) |
+| AddCurrent | MethodDeclaration | L246–265 | bool Drilling.Common.Alarm.CAlarmManager.AddCurrent(Drilling.Common.Alarm.ST_ALARM_DATA) |
+| Reset | MethodDeclaration | L267–278 | void Drilling.Common.Alarm.CAlarmManager.Reset() |
+| NotifyCurrentChanged | MethodDeclaration | L280–302 | void Drilling.Common.Alarm.CAlarmManager.NotifyCurrentChanged() |
+| PublishCurrent | MethodDeclaration | L304–308 | void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string) |
+| ReadHistory | MethodDeclaration | L310–310 | Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT Drilling.Common.Alarm.CAlarmManager.ReadHistory(System.DateTime, System.DateTime, System.Threading.CancellationToken) |
+| HistoryStorageError | PropertyDeclaration | L311–321 | string Drilling.Common.Alarm.CAlarmManager.HistoryStorageError |
+| get_HistoryStorageError | GetAccessorDeclaration | L313–320 | string Drilling.Common.Alarm.CAlarmManager.HistoryStorageError.get |
+| QueueHistory | MethodDeclaration | L324–337 | bool Drilling.Common.Alarm.CAlarmManager.QueueHistory(Drilling.Common.Alarm.ST_ALARM_DATA) |
+| WriteQueuedHistory | MethodDeclaration | L339–376 | void Drilling.Common.Alarm.CAlarmManager.WriteQueuedHistory() |
+| FlushHistoryAsync | MethodDeclaration | L379–385 | System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.FlushHistoryAsync(System.Threading.CancellationToken) |
+| MonitoringError | PropertyDeclaration | L389–397 | string Drilling.Common.Alarm.CAlarmManager.MonitoringError |
+| get_MonitoringError | GetAccessorDeclaration | L391–396 | string Drilling.Common.Alarm.CAlarmManager.MonitoringError.get |
+| StartMonitoring | MethodDeclaration | L406–429 | void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager, System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>, Drilling.Common.InterLock.CInterLockManager, System.Action<System.Exception>?) |
+| StartMonitoring | MethodDeclaration | L432–447 | void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(System.Action<System.Threading.CancellationToken>[], System.Action<System.Exception>?, System.TimeSpan) |
+| StopMonitoringAsync | MethodDeclaration | L449–471 | System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.StopMonitoringAsync() |
+| Monitor | MethodDeclaration | L473–542 | System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.Monitor(System.Action<System.Threading.CancellationToken>[], System.Action<System.Exception>?, System.TimeSpan, System.Threading.CancellationToken) |
+| Load | MethodDeclaration | L549–549 | System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION> Drilling.Common.Alarm.CAlarmListFileBase.Load() |
+| Info | EnumMemberDeclaration | L555–555 | Drilling.Common.Alarm.EN_ALARM_LEVEL.Info |
+| Warning | EnumMemberDeclaration | L556–556 | Drilling.Common.Alarm.EN_ALARM_LEVEL.Warning |
+| Critical | EnumMemberDeclaration | L557–557 | Drilling.Common.Alarm.EN_ALARM_LEVEL.Critical |
+| Clear | EnumMemberDeclaration | L562–562 | Drilling.Common.Alarm.EN_ALARM_STATE.Clear |
+| Occur | EnumMemberDeclaration | L563–563 | Drilling.Common.Alarm.EN_ALARM_STATE.Occur |
+| Id | PropertyDeclaration | L568–568 | string Drilling.Common.Alarm.ST_ALARM_DATA.Id |
+| get_Id | GetAccessorDeclaration | L568–568 | string Drilling.Common.Alarm.ST_ALARM_DATA.Id.get |
+| set_Id | InitAccessorDeclaration | L568–568 | void Drilling.Common.Alarm.ST_ALARM_DATA.Id.init |
+| Group | PropertyDeclaration | L569–569 | string Drilling.Common.Alarm.ST_ALARM_DATA.Group |
+| get_Group | GetAccessorDeclaration | L569–569 | string Drilling.Common.Alarm.ST_ALARM_DATA.Group.get |
+| set_Group | InitAccessorDeclaration | L569–569 | void Drilling.Common.Alarm.ST_ALARM_DATA.Group.init |
+| CimAddress | PropertyDeclaration | L570–570 | string Drilling.Common.Alarm.ST_ALARM_DATA.CimAddress |
+| get_CimAddress | GetAccessorDeclaration | L570–570 | string Drilling.Common.Alarm.ST_ALARM_DATA.CimAddress.get |
+| set_CimAddress | InitAccessorDeclaration | L570–570 | void Drilling.Common.Alarm.ST_ALARM_DATA.CimAddress.init |
+| Check | MethodDeclaration | L577–609 | void Drilling.Common.Alarm.CScannerTemperatureAlarmMonitor.Check() |
+| _reported | FieldDeclaration | L615–615 | int Drilling.Common.Alarm.CSequenceFailureException._reported |
+| .ctor | ConstructorDeclaration | L616–618 | Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception) |
+| Scenario | PropertyDeclaration | L619–619 | string Drilling.Common.Alarm.CSequenceFailureException.Scenario |
+| get_Scenario | GetAccessorDeclaration | L619–619 | string Drilling.Common.Alarm.CSequenceFailureException.Scenario.get |
+| Subject | PropertyDeclaration | L620–620 | string Drilling.Common.Alarm.CSequenceFailureException.Subject |
+| get_Subject | GetAccessorDeclaration | L620–620 | string Drilling.Common.Alarm.CSequenceFailureException.Subject.get |
+| Kind | PropertyDeclaration | L621–621 | string Drilling.Common.Alarm.CSequenceFailureException.Kind |
+| get_Kind | GetAccessorDeclaration | L621–621 | string Drilling.Common.Alarm.CSequenceFailureException.Kind.get |
+| AlarmId | PropertyDeclaration | L622–622 | string Drilling.Common.Alarm.CSequenceFailureException.AlarmId |
+| ActionScenario | MethodDeclaration | L623–629 | string Drilling.Common.Alarm.CSequenceFailureException.ActionScenario(string) |
+| SignalScenario | MethodDeclaration | L630–641 | string Drilling.Common.Alarm.CSequenceFailureException.SignalScenario(string, string) |
+| Existing | MethodDeclaration | L642–644 | Drilling.Common.Alarm.CSequenceFailureException? Drilling.Common.Alarm.CSequenceFailureException.Existing(System.Exception) |
+| Action | MethodDeclaration | L645–646 | Drilling.Common.Alarm.CSequenceFailureException Drilling.Common.Alarm.CSequenceFailureException.Action(string, System.Exception) |
+| Signal | MethodDeclaration | L647–648 | Drilling.Common.Alarm.CSequenceFailureException Drilling.Common.Alarm.CSequenceFailureException.Signal(string, string, bool, System.Exception) |
+| ScenarioFailure | MethodDeclaration | L649–649 | Drilling.Common.Alarm.CSequenceFailureException Drilling.Common.Alarm.CSequenceFailureException.ScenarioFailure(string, System.Exception) |
+| Publish | MethodDeclaration | L650–656 | void Drilling.Common.Alarm.CSequenceFailureException.Publish(System.Action<Drilling.Common.Alarm.CSequenceFailureException>?) |
+| Scenario | PropertyDeclaration | L663–663 | string Drilling.Common.Alarm.CSequenceSignalCanceledException.Scenario |
+| get_Scenario | GetAccessorDeclaration | L663–663 | string Drilling.Common.Alarm.CSequenceSignalCanceledException.Scenario.get |
+| Signal | PropertyDeclaration | L664–664 | string Drilling.Common.Alarm.CSequenceSignalCanceledException.Signal |
+| get_Signal | GetAccessorDeclaration | L664–664 | string Drilling.Common.Alarm.CSequenceSignalCanceledException.Signal.get |
+| Append | MethodDeclaration | L673–673 | void Drilling.Common.Alarm.IAlarmHistoryStore.Append(Drilling.Common.Alarm.ST_ALARM_DATA) |
+| Read | MethodDeclaration | L674–674 | Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT Drilling.Common.Alarm.IAlarmHistoryStore.Read(System.DateTime, System.DateTime, System.Threading.CancellationToken) |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
 ### FieldDeclaration `InterLockAlarmRules` · L15–22
 
-[Drilling.Common/Alarm/CAlarmManager.cs:15–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L15-L22)
+[Drilling.Common/Alarm/CAlarmManager.cs:15–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L15-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -188,7 +188,7 @@
 
 ### FieldDeclaration `_definitionLock` · L23–23
 
-[Drilling.Common/Alarm/CAlarmManager.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L23-L23)
+[Drilling.Common/Alarm/CAlarmManager.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L23-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -216,7 +216,7 @@
 
 ### FieldDeclaration `_definitionsInitialized` · L24–24
 
-[Drilling.Common/Alarm/CAlarmManager.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L24-L24)
+[Drilling.Common/Alarm/CAlarmManager.cs:24–24](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L24-L24)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -231,7 +231,7 @@
 
 ### FieldDeclaration `_definitionInitializationRequested` · L25–25
 
-[Drilling.Common/Alarm/CAlarmManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L25-L25)
+[Drilling.Common/Alarm/CAlarmManager.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L25-L25)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -246,7 +246,7 @@
 
 ### FieldDeclaration `_definitionRetryTask` · L26–26
 
-[Drilling.Common/Alarm/CAlarmManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L26-L26)
+[Drilling.Common/Alarm/CAlarmManager.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L26-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -261,7 +261,7 @@
 
 ### FieldDeclaration `_definitionFile` · L27–27
 
-[Drilling.Common/Alarm/CAlarmManager.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L27-L27)
+[Drilling.Common/Alarm/CAlarmManager.cs:27–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L27-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -276,7 +276,7 @@
 
 ### FieldDeclaration `_definitionRetriesRemaining` · L28–28
 
-[Drilling.Common/Alarm/CAlarmManager.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L28-L28)
+[Drilling.Common/Alarm/CAlarmManager.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -291,7 +291,7 @@
 
 ### FieldDeclaration `_nextDefinitionRetryAt` · L29–29
 
-[Drilling.Common/Alarm/CAlarmManager.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L29-L29)
+[Drilling.Common/Alarm/CAlarmManager.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L29-L29)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -306,7 +306,7 @@
 
 ### FieldDeclaration `_definitions` · L30–30
 
-[Drilling.Common/Alarm/CAlarmManager.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L30-L30)
+[Drilling.Common/Alarm/CAlarmManager.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L30-L30)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -321,7 +321,7 @@
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 30 | new | resolved | Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT.ST_ALARM_DEFINITION_SNAPSHOT(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION>, string) · Drilling.Common/Alarm/CAlarmManager.cs:550 |
+| 30 | new | resolved | Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT.ST_ALARM_DEFINITION_SNAPSHOT(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION>, string) · Drilling.Common/Alarm/CAlarmManager.cs:552 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -334,7 +334,7 @@
 
 ### FieldDeclaration `_currentLock` · L31–31
 
-[Drilling.Common/Alarm/CAlarmManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L31-L31)
+[Drilling.Common/Alarm/CAlarmManager.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L31-L31)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -362,7 +362,7 @@
 
 ### FieldDeclaration `_curAlarm` · L32–32
 
-[Drilling.Common/Alarm/CAlarmManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L32-L32)
+[Drilling.Common/Alarm/CAlarmManager.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L32-L32)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -383,7 +383,7 @@
 
 ### FieldDeclaration `_history` · L33–33
 
-[Drilling.Common/Alarm/CAlarmManager.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L33-L33)
+[Drilling.Common/Alarm/CAlarmManager.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L33-L33)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -398,7 +398,7 @@
 
 ### FieldDeclaration `_now` · L34–34
 
-[Drilling.Common/Alarm/CAlarmManager.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L34-L34)
+[Drilling.Common/Alarm/CAlarmManager.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L34-L34)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -413,7 +413,7 @@
 
 ### FieldDeclaration `_current` · L35–35
 
-[Drilling.Common/Alarm/CAlarmManager.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L35-L35)
+[Drilling.Common/Alarm/CAlarmManager.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L35-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -428,7 +428,7 @@
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 35 | new | resolved | Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT.ST_CURRENT_ALARM_SNAPSHOT(long, long, System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DATA>, string) · Drilling.Common/Alarm/CAlarmManager.cs:571 |
+| 35 | new | resolved | Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT.ST_CURRENT_ALARM_SNAPSHOT(long, long, System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DATA>, string) · Drilling.Common/Alarm/CAlarmManager.cs:573 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -441,7 +441,7 @@
 
 ### FieldDeclaration `_notificationError` · L36–36
 
-[Drilling.Common/Alarm/CAlarmManager.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L36-L36)
+[Drilling.Common/Alarm/CAlarmManager.cs:36–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L36-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -462,7 +462,7 @@
 
 ### EventFieldDeclaration `CurrentChanged` · L45–45
 
-[Drilling.Common/Alarm/CAlarmManager.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L45-L45)
+[Drilling.Common/Alarm/CAlarmManager.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -490,7 +490,7 @@
 
 ### FieldDeclaration `HistoryQueueCapacity` · L46–46
 
-[Drilling.Common/Alarm/CAlarmManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L46-L46)
+[Drilling.Common/Alarm/CAlarmManager.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -511,7 +511,7 @@
 
 ### FieldDeclaration `_historyQueueLock` · L47–47
 
-[Drilling.Common/Alarm/CAlarmManager.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L47-L47)
+[Drilling.Common/Alarm/CAlarmManager.cs:47–47](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L47-L47)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -539,7 +539,7 @@
 
 ### FieldDeclaration `_historyQueue` · L48–48
 
-[Drilling.Common/Alarm/CAlarmManager.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L48-L48)
+[Drilling.Common/Alarm/CAlarmManager.cs:48–48](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L48-L48)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -560,7 +560,7 @@
 
 ### FieldDeclaration `_historyTask` · L49–49
 
-[Drilling.Common/Alarm/CAlarmManager.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L49-L49)
+[Drilling.Common/Alarm/CAlarmManager.cs:49–49](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L49-L49)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -575,7 +575,7 @@
 
 ### FieldDeclaration `_historyError` · L50–50
 
-[Drilling.Common/Alarm/CAlarmManager.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L50-L50)
+[Drilling.Common/Alarm/CAlarmManager.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L50-L50)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -596,7 +596,7 @@
 
 ### FieldDeclaration `_historyWriteStartedAt` · L51–51
 
-[Drilling.Common/Alarm/CAlarmManager.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L51-L51)
+[Drilling.Common/Alarm/CAlarmManager.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L51-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -611,7 +611,7 @@
 
 ### FieldDeclaration `_monitoringLock` · L52–52
 
-[Drilling.Common/Alarm/CAlarmManager.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L52-L52)
+[Drilling.Common/Alarm/CAlarmManager.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L52-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -639,7 +639,7 @@
 
 ### FieldDeclaration `_monitoringStop` · L53–53
 
-[Drilling.Common/Alarm/CAlarmManager.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L53-L53)
+[Drilling.Common/Alarm/CAlarmManager.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L53-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -654,7 +654,7 @@
 
 ### FieldDeclaration `_monitoringTask` · L54–54
 
-[Drilling.Common/Alarm/CAlarmManager.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L54-L54)
+[Drilling.Common/Alarm/CAlarmManager.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -669,7 +669,7 @@
 
 ### FieldDeclaration `_monitoringError` · L55–55
 
-[Drilling.Common/Alarm/CAlarmManager.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L55-L55)
+[Drilling.Common/Alarm/CAlarmManager.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L55-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -690,7 +690,7 @@
 
 ### ConstructorDeclaration `.ctor` · L58–62
 
-[Drilling.Common/Alarm/CAlarmManager.cs:58–62](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L58-L62)
+[Drilling.Common/Alarm/CAlarmManager.cs:58–62](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L58-L62)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -719,7 +719,7 @@
 
 ### MethodDeclaration `Build` · L66–91
 
-[Drilling.Common/Alarm/CAlarmManager.cs:66–91](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L66-L91)
+[Drilling.Common/Alarm/CAlarmManager.cs:66–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L66-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -739,7 +739,7 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:423–423](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L423-L423) | Build | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:425–425](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L425-L425) | Build | False |
 
 호출하는 대상과 해석 범위:
 
@@ -754,7 +754,7 @@
 | 82 | candidates.Add | resolved | void System.Collections.Generic.List<Drilling.Common.Alarm.CAlarmManager.ST_ALARM_CANDIDATE>.Add(Drilling.Common.Alarm.CAlarmManager.ST_ALARM_CANDIDATE) |
 | 82 | new ST_ALARM_CANDIDATE | resolved | Drilling.Common.Alarm.CAlarmManager.ST_ALARM_CANDIDATE.ST_ALARM_CANDIDATE(int, Drilling.Common.Alarm.EN_ALARM_LEVEL, string, string, string, string) · Drilling.Common/Alarm/CAlarmManager.cs:124 |
 | 87 | AddCurrent | resolved | bool Drilling.Common.Alarm.CAlarmManager.AddCurrent(Drilling.Common.Alarm.ST_ALARM_DATA) · Drilling.Common/Alarm/CAlarmManager.cs:246 |
-| 87 | new | resolved | Drilling.Common.Alarm.ST_ALARM_DATA.ST_ALARM_DATA(int, Drilling.Common.Alarm.EN_ALARM_LEVEL, string, string, System.DateTimeOffset, string, string) · Drilling.Common/Alarm/CAlarmManager.cs:564 |
+| 87 | new | resolved | Drilling.Common.Alarm.ST_ALARM_DATA.ST_ALARM_DATA(int, Drilling.Common.Alarm.EN_ALARM_LEVEL, string, string, System.DateTimeOffset, string, string) · Drilling.Common/Alarm/CAlarmManager.cs:566 |
 | 87 | _now | resolved · 동적 구현 선택 가능 | System.DateTimeOffset System.Func<System.DateTimeOffset>.Invoke() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -797,7 +797,7 @@ flowchart TD
 
 ### LocalFunctionStatement `IsAlarmOn` · L70–73
 
-[Drilling.Common/Alarm/CAlarmManager.cs:70–73](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L70-L73)
+[Drilling.Common/Alarm/CAlarmManager.cs:70–73](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L70-L73)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -824,7 +824,7 @@ flowchart TD
 
 ### MethodDeclaration `AddInterLockAlarms` · L93–109
 
-[Drilling.Common/Alarm/CAlarmManager.cs:93–109](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L93-L109)
+[Drilling.Common/Alarm/CAlarmManager.cs:93–109](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L93-L109)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -844,7 +844,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L69-L69) | AddInterLockAlarms | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:69–69](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L69-L69) | AddInterLockAlarms | False |
 
 호출하는 대상과 해석 범위:
 
@@ -882,7 +882,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ShouldIncludeItem` · L95–98
 
-[Drilling.Common/Alarm/CAlarmManager.cs:95–98](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L95-L98)
+[Drilling.Common/Alarm/CAlarmManager.cs:95–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L95-L98)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -909,7 +909,7 @@ flowchart TD
 
 ### MethodDeclaration `GetStationNameFromAxis` · L111–121
 
-[Drilling.Common/Alarm/CAlarmManager.cs:111–121](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L111-L121)
+[Drilling.Common/Alarm/CAlarmManager.cs:111–121](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L111-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -928,7 +928,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L77-L77) | GetStationNameFromAxis | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:77–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L77-L77) | GetStationNameFromAxis | False |
 
 호출하는 대상과 해석 범위:
 
@@ -969,7 +969,7 @@ flowchart TD
 
 ### MethodDeclaration `GetDefinitionsSnapshot` · L125–125
 
-[Drilling.Common/Alarm/CAlarmManager.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L125-L125)
+[Drilling.Common/Alarm/CAlarmManager.cs:125–125](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L125-L125)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -982,12 +982,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L178-L178) | GetDefinitionsSnapshot | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L227-L227) | GetDefinitionsSnapshot | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L235-L235) | GetDefinitionsSnapshot | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L241-L241) | GetDefinitionsSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L166-L166) | alarmManager.GetDefinitionsSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L534-L534) | _alarms.GetDefinitionsSnapshot | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:178–178](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L178-L178) | GetDefinitionsSnapshot | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:227–227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L227-L227) | GetDefinitionsSnapshot | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L235-L235) | GetDefinitionsSnapshot | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L241-L241) | GetDefinitionsSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:166–166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L166-L166) | alarmManager.GetDefinitionsSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:534–534](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L534-L534) | _alarms.GetDefinitionsSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1005,7 +1005,7 @@ flowchart TD
 
 ### MethodDeclaration `InitializeDefinitions` · L126–139
 
-[Drilling.Common/Alarm/CAlarmManager.cs:126–139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L126-L139)
+[Drilling.Common/Alarm/CAlarmManager.cs:126–139](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L126-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1024,7 +1024,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Managers/CManager.cs#L89-L89) | _alarmManager.InitializeDefinitions | False |
+| [Drilling.Common/Managers/CManager.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L89-L89) | _alarmManager.InitializeDefinitions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1063,7 +1063,7 @@ flowchart TD
 
 ### MethodDeclaration `LoadDefinitionsLocked` · L141–174
 
-[Drilling.Common/Alarm/CAlarmManager.cs:141–174](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L141-L174)
+[Drilling.Common/Alarm/CAlarmManager.cs:141–174](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L141-L174)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1082,8 +1082,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L136-L136) | LoadDefinitionsLocked | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L201-L201) | LoadDefinitionsLocked | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L136-L136) | LoadDefinitionsLocked | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L201-L201) | LoadDefinitionsLocked | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1093,7 +1093,7 @@ flowchart TD
 | 146 | new HashSet<string> | resolved | System.Collections.Generic.HashSet<string>.HashSet(System.Collections.Generic.IEqualityComparer<string>?) |
 | 147 | file.Load().Select(row => { var level = row.Level?.Trim().ToUpperInvariant(); var id = row.Id?.Trim(); if (level is not ("HEAVY" or "LIGHT")) throw new InvalidDataException($"알람 {row.Code}: LEVEL은 HEAVY 또는 LIGHT여야 합니다."); if (string.IsNullOrEmpty(id) &#124;&#124; !codes.Add(row.Code) &#124;&#124; !ids.Add(id)) throw new InvalidDataException($"알람 {row.Code}: CODE/ID가 중… | resolved | Drilling.Common.Alarm.ST_ALARM_DEFINITION[] System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.ST_ALARM_DEFINITION>.ToArray<Drilling.Common.Alarm.ST_ALARM_DEFINITION>() |
 | 147 | file.Load().Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.ST_ALARM_DEFINITION> System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.ST_ALARM_DEFINITION>.Select<Drilling.Common.Alarm.ST_ALARM_DEFINITION, Drilling.Common.Alarm.ST_ALARM_DEFINITION>(System.Func<Drilling.Common.Alarm.ST_ALARM_DEFINITION, Drilling.Common.Alarm.ST_ALARM_DEFINITION>) |
-| 147 | file.Load | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION> Drilling.Common.Alarm.CAlarmListFileBase.Load() · Drilling.Common/Alarm/CAlarmManager.cs:547 |
+| 147 | file.Load | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION> Drilling.Common.Alarm.CAlarmListFileBase.Load() · Drilling.Common/Alarm/CAlarmManager.cs:549 |
 | 149 | .Trim().ToUpperInvariant | resolved | string string.ToUpperInvariant() |
 | 149 | .Trim | resolved | string string.Trim() |
 | 150 | .Trim | resolved | string string.Trim() |
@@ -1104,10 +1104,10 @@ flowchart TD
 | 154 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
 | 162 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
 | 163 | Volatile.Write | resolved | void System.Threading.Volatile.Write<Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT>(ref Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT, Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT) |
-| 163 | new | resolved | Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT.ST_ALARM_DEFINITION_SNAPSHOT(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION>, string) · Drilling.Common/Alarm/CAlarmManager.cs:550 |
+| 163 | new | resolved | Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT.ST_ALARM_DEFINITION_SNAPSHOT(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION>, string) · Drilling.Common/Alarm/CAlarmManager.cs:552 |
 | 163 | Array.AsReadOnly | resolved | System.Collections.ObjectModel.ReadOnlyCollection<Drilling.Common.Alarm.ST_ALARM_DEFINITION> System.Array.AsReadOnly<Drilling.Common.Alarm.ST_ALARM_DEFINITION>(Drilling.Common.Alarm.ST_ALARM_DEFINITION[]) |
 | 171 | Volatile.Write | resolved | void System.Threading.Volatile.Write<Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT>(ref Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT, Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT) |
-| 171 | new | resolved | Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT.ST_ALARM_DEFINITION_SNAPSHOT(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION>, string) · Drilling.Common/Alarm/CAlarmManager.cs:550 |
+| 171 | new | resolved | Drilling.Common.Alarm.ST_ALARM_DEFINITION_SNAPSHOT.ST_ALARM_DEFINITION_SNAPSHOT(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DEFINITION>, string) · Drilling.Common/Alarm/CAlarmManager.cs:552 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1179,7 +1179,7 @@ flowchart TD
 
 ### MethodDeclaration `RetryDefinitionInitialization` · L176–212
 
-[Drilling.Common/Alarm/CAlarmManager.cs:176–212](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L176-L212)
+[Drilling.Common/Alarm/CAlarmManager.cs:176–212](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L176-L212)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1192,7 +1192,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:481–481](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L481-L481) | RetryDefinitionInitialization | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:483–483](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L483-L483) | RetryDefinitionInitialization | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1262,7 +1262,7 @@ flowchart TD
 
 ### MethodDeclaration `EnsureDefinitionsRequested` · L214–218
 
-[Drilling.Common/Alarm/CAlarmManager.cs:214–218](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L214-L218)
+[Drilling.Common/Alarm/CAlarmManager.cs:214–218](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L214-L218)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1275,9 +1275,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:412–412](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L412-L412) | EnsureDefinitionsRequested | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L433-L433) | EnsureDefinitionsRequested | False |
-| [Drilling.Common/Managers/CManager.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Managers/CManager.cs#L271-L271) | _alarmManager.EnsureDefinitionsRequested | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:414–414](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L414-L414) | EnsureDefinitionsRequested | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:435–435](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L435-L435) | EnsureDefinitionsRequested | False |
+| [Drilling.Common/Managers/CManager.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L271-L271) | _alarmManager.EnsureDefinitionsRequested | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1308,7 +1308,7 @@ flowchart TD
 
 ### PropertyDeclaration `NotificationError` · L220–220
 
-[Drilling.Common/Alarm/CAlarmManager.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L220-L220)
+[Drilling.Common/Alarm/CAlarmManager.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L220-L220)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1335,7 +1335,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurAlarm` · L221–221
 
-[Drilling.Common/Alarm/CAlarmManager.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L221-L221)
+[Drilling.Common/Alarm/CAlarmManager.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L221-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1362,7 +1362,7 @@ flowchart TD
 
 ### MethodDeclaration `GetCurrentSnapshot` · L223–223
 
-[Drilling.Common/Alarm/CAlarmManager.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L223-L223)
+[Drilling.Common/Alarm/CAlarmManager.cs:223–223](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L223-L223)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1375,10 +1375,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L221-L221) | GetCurrentSnapshot | False |
-| [Drilling.UI/CRootView.cs:2737–2737](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2737-L2737) | _alarmManager.GetCurrentSnapshot | False |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L39-L39) | alarmManager.GetCurrentSnapshot | False |
-| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L93-L93) | alarms.GetCurrentSnapshot | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:221–221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L221-L221) | GetCurrentSnapshot | False |
+| [Drilling.UI/CRootView.cs:3131–3131](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3131-L3131) | _alarmManager.GetCurrentSnapshot | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L39-L39) | alarmManager.GetCurrentSnapshot | False |
+| [Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs:93–93](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CAlarmPopupDialog.xaml.cs#L93-L93) | alarms.GetCurrentSnapshot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1396,7 +1396,7 @@ flowchart TD
 
 ### MethodDeclaration `SetSequenceFailure` · L224–231
 
-[Drilling.Common/Alarm/CAlarmManager.cs:224–231](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L224-L231)
+[Drilling.Common/Alarm/CAlarmManager.cs:224–231](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L224-L231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1441,7 +1441,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAlarm` · L233–237
 
-[Drilling.Common/Alarm/CAlarmManager.cs:233–237](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L233-L237)
+[Drilling.Common/Alarm/CAlarmManager.cs:233–237](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L233-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1460,7 +1460,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:605–605](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L605-L605) | alarms.SetAlarm | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:607–607](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L607-L607) | alarms.SetAlarm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1490,7 +1490,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAlarm` · L239–243
 
-[Drilling.Common/Alarm/CAlarmManager.cs:239–243](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L239-L243)
+[Drilling.Common/Alarm/CAlarmManager.cs:239–243](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L239-L243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1509,10 +1509,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L230-L230) | SetAlarm | False |
-| [Drilling.Common/Managers/CManager.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Managers/CManager.cs#L104-L104) | _alarmManager.SetAlarm | False |
-| [Drilling.Common/Managers/CManager.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Managers/CManager.cs#L150-L150) | _alarmManager.SetAlarm | False |
-| [Drilling.UI/CRootView.cs:2789–2789](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2789-L2789) | _alarmManager.SetAlarm | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:230–230](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L230-L230) | SetAlarm | False |
+| [Drilling.Common/Managers/CManager.cs:104–104](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L104-L104) | _alarmManager.SetAlarm | False |
+| [Drilling.Common/Managers/CManager.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L150-L150) | _alarmManager.SetAlarm | False |
+| [Drilling.UI/CRootView.cs:3183–3183](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3183-L3183) | _alarmManager.SetAlarm | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1544,7 +1544,7 @@ flowchart TD
 
 ### MethodDeclaration `SetAlarm` · L245–245
 
-[Drilling.Common/Alarm/CAlarmManager.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L245-L245)
+[Drilling.Common/Alarm/CAlarmManager.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L245-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1563,15 +1563,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L236-L236) | SetAlarm | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L242-L242) | SetAlarm | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L236-L236) | SetAlarm | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L242-L242) | SetAlarm | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 245 | AddCurrent | resolved | bool Drilling.Common.Alarm.CAlarmManager.AddCurrent(Drilling.Common.Alarm.ST_ALARM_DATA) · Drilling.Common/Alarm/CAlarmManager.cs:246 |
-| 245 | new | resolved | Drilling.Common.Alarm.ST_ALARM_DATA.ST_ALARM_DATA(int, Drilling.Common.Alarm.EN_ALARM_LEVEL, string, string, System.DateTimeOffset, string, string) · Drilling.Common/Alarm/CAlarmManager.cs:564 |
+| 245 | new | resolved | Drilling.Common.Alarm.ST_ALARM_DATA.ST_ALARM_DATA(int, Drilling.Common.Alarm.EN_ALARM_LEVEL, string, string, System.DateTimeOffset, string, string) · Drilling.Common/Alarm/CAlarmManager.cs:566 |
 | 245 | _now | resolved · 동적 구현 선택 가능 | System.DateTimeOffset System.Func<System.DateTimeOffset>.Invoke() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -1588,9 +1588,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `AddCurrent` · L246–264
+### MethodDeclaration `AddCurrent` · L246–265
 
-[Drilling.Common/Alarm/CAlarmManager.cs:246–264](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L246-L264)
+[Drilling.Common/Alarm/CAlarmManager.cs:246–265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L246-L265)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1609,56 +1609,56 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L87-L87) | AddCurrent | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L245-L245) | AddCurrent | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:87–87](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L87-L87) | AddCurrent | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L245-L245) | AddCurrent | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 250 | _curAlarm.TryAdd | resolved | bool System.Collections.Generic.Dictionary<int, Drilling.Common.Alarm.ST_ALARM_DATA>.TryAdd(int, Drilling.Common.Alarm.ST_ALARM_DATA) |
-| 252 | PublishCurrent | resolved | void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string) · Drilling.Common/Alarm/CAlarmManager.cs:303 |
-| 254 | QueueHistory | resolved | bool Drilling.Common.Alarm.CAlarmManager.QueueHistory(Drilling.Common.Alarm.ST_ALARM_DATA) · Drilling.Common/Alarm/CAlarmManager.cs:323 |
-| 257 | Volatile.Write | resolved | void System.Threading.Volatile.Write<string>(ref string, string) |
-| 258 | PublishCurrent | resolved | void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string) · Drilling.Common/Alarm/CAlarmManager.cs:303 |
-| 262 | NotifyCurrentChanged | resolved | void Drilling.Common.Alarm.CAlarmManager.NotifyCurrentChanged() · Drilling.Common/Alarm/CAlarmManager.cs:279 |
+| 251 | _curAlarm.TryAdd | resolved | bool System.Collections.Generic.Dictionary<int, Drilling.Common.Alarm.ST_ALARM_DATA>.TryAdd(int, Drilling.Common.Alarm.ST_ALARM_DATA) |
+| 253 | PublishCurrent | resolved | void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string) · Drilling.Common/Alarm/CAlarmManager.cs:304 |
+| 255 | QueueHistory | resolved | bool Drilling.Common.Alarm.CAlarmManager.QueueHistory(Drilling.Common.Alarm.ST_ALARM_DATA) · Drilling.Common/Alarm/CAlarmManager.cs:324 |
+| 258 | Volatile.Write | resolved | void System.Threading.Volatile.Write<string>(ref string, string) |
+| 259 | PublishCurrent | resolved | void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string) · Drilling.Common/Alarm/CAlarmManager.cs:304 |
+| 263 | NotifyCurrentChanged | resolved | void Drilling.Common.Alarm.CAlarmManager.NotifyCurrentChanged() · Drilling.Common/Alarm/CAlarmManager.cs:280 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 248 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_currentLock) |
-| 250 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.TryAdd(alarm.Code, alarm) |
-| 250 | if | 조건에 따라 분기합니다: if (!_curAlarm.TryAdd(alarm.Code, alarm)) |
-| 251 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
-| 252 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion + 1, _current.LogError) |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: QueueHistory(alarm) |
-| 254 | if | 조건에 따라 분기합니다: if (!QueueHistory(alarm)) |
-| 256 | local-declaration | 지역 변수를 선언합니다: var error = $"알람 {alarm.Code} 로그 저장 대기열 포화: {HistoryQueueCapacity}건. 해당 이력은 저장되지 않았습니다."; |
-| 256 | variable-initializer | 변수의 초기값을 지정합니다: error = $"알람 {alarm.Code} 로그 저장 대기열 포화: {HistoryQueueCapacity}건. 해당 이력은 저장되지 않았습니다." |
-| 257 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyError, error) |
-| 258 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion, error) |
-| 262 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCurrentChanged() |
-| 263 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
+| 249 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_currentLock) |
+| 251 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.TryAdd(alarm.Code, alarm) |
+| 251 | if | 조건에 따라 분기합니다: if (!_curAlarm.TryAdd(alarm.Code, alarm)) |
+| 252 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 253 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion + 1, _current.LogError) |
+| 255 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: QueueHistory(alarm) |
+| 255 | if | 조건에 따라 분기합니다: if (!QueueHistory(alarm)) |
+| 257 | local-declaration | 지역 변수를 선언합니다: var error = $"알람 {alarm.Code} 로그 저장 대기열 포화: {HistoryQueueCapacity}건. 해당 이력은 저장되지 않았습니다."; |
+| 257 | variable-initializer | 변수의 초기값을 지정합니다: error = $"알람 {alarm.Code} 로그 저장 대기열 포화: {HistoryQueueCapacity}건. 해당 이력은 저장되지 않았습니다." |
+| 258 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyError, error) |
+| 259 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion, error) |
+| 263 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCurrentChanged() |
+| 264 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["AddCurrent"]
- N0["L248 lock"]
+ N0["L249 lock"]
  M -->|포함| N0
- N1["L250 if"]
+ N1["L251 if"]
  N0 -->|포함| N1
- N2["L254 if"]
+ N2["L255 if"]
  N0 -->|포함| N2
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Reset` · L266–277
+### MethodDeclaration `Reset` · L267–278
 
-[Drilling.Common/Alarm/CAlarmManager.cs:266–277](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L266-L277)
+[Drilling.Common/Alarm/CAlarmManager.cs:267–278](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L267-L278)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1671,43 +1671,43 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L133-L133) | alarmManager.Reset | False |
+| [Drilling.UI/Menu/Menus/CMenuAlarm.cs:133–133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuAlarm.cs#L133-L133) | alarmManager.Reset | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 272 | _curAlarm.Clear | resolved | void System.Collections.Generic.Dictionary<int, Drilling.Common.Alarm.ST_ALARM_DATA>.Clear() |
-| 273 | PublishCurrent | resolved | void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string) · Drilling.Common/Alarm/CAlarmManager.cs:303 |
-| 276 | NotifyCurrentChanged | resolved | void Drilling.Common.Alarm.CAlarmManager.NotifyCurrentChanged() · Drilling.Common/Alarm/CAlarmManager.cs:279 |
+| 273 | _curAlarm.Clear | resolved | void System.Collections.Generic.Dictionary<int, Drilling.Common.Alarm.ST_ALARM_DATA>.Clear() |
+| 274 | PublishCurrent | resolved | void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string) · Drilling.Common/Alarm/CAlarmManager.cs:304 |
+| 277 | NotifyCurrentChanged | resolved | void Drilling.Common.Alarm.CAlarmManager.NotifyCurrentChanged() · Drilling.Common/Alarm/CAlarmManager.cs:280 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 268 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_currentLock) |
-| 270 | if | 조건에 따라 분기합니다: if (_curAlarm.Count == 0) |
-| 271 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 272 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Clear() |
-| 273 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion, _current.LogError) |
-| 276 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCurrentChanged() |
+| 269 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_currentLock) |
+| 271 | if | 조건에 따라 분기합니다: if (_curAlarm.Count == 0) |
+| 272 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 273 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Clear() |
+| 274 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion, _current.LogError) |
+| 277 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCurrentChanged() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["Reset"]
- N0["L268 lock"]
+ N0["L269 lock"]
  M -->|포함| N0
- N1["L270 if"]
+ N1["L271 if"]
  N0 -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `NotifyCurrentChanged` · L279–301
+### MethodDeclaration `NotifyCurrentChanged` · L280–302
 
-[Drilling.Common/Alarm/CAlarmManager.cs:279–301](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L279-L301)
+[Drilling.Common/Alarm/CAlarmManager.cs:280–302](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L280-L302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1720,60 +1720,60 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L262-L262) | NotifyCurrentChanged | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:276–276](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L276-L276) | NotifyCurrentChanged | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:366–366](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L366-L366) | NotifyCurrentChanged | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L263-L263) | NotifyCurrentChanged | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:277–277](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L277-L277) | NotifyCurrentChanged | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:368–368](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L368-L368) | NotifyCurrentChanged | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 282 | new List<string> | resolved | System.Collections.Generic.List<string>.List() |
-| 285 | handlers.GetInvocationList | resolved · 동적 구현 선택 가능 | System.Delegate[] System.MulticastDelegate.GetInvocationList() |
-| 289 | handler | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
-| 295 | errors.Add | resolved | void System.Collections.Generic.List<string>.Add(string) |
-| 300 | Volatile.Write | resolved | void System.Threading.Volatile.Write<string>(ref string, string) |
-| 300 | string.Join | resolved | string string.Join(string?, System.Collections.Generic.IEnumerable<string?>) |
+| 283 | new List<string> | resolved | System.Collections.Generic.List<string>.List() |
+| 286 | handlers.GetInvocationList | resolved · 동적 구현 선택 가능 | System.Delegate[] System.MulticastDelegate.GetInvocationList() |
+| 290 | handler | resolved · 동적 구현 선택 가능 | void System.Action.Invoke() |
+| 296 | errors.Add | resolved | void System.Collections.Generic.List<string>.Add(string) |
+| 301 | Volatile.Write | resolved | void System.Threading.Volatile.Write<string>(ref string, string) |
+| 301 | string.Join | resolved | string string.Join(string?, System.Collections.Generic.IEnumerable<string?>) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 281 | local-declaration | 지역 변수를 선언합니다: var handlers = CurrentChanged; |
-| 281 | variable-initializer | 변수의 초기값을 지정합니다: handlers = CurrentChanged |
-| 282 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() |
-| 282 | local-declaration | 지역 변수를 선언합니다: var errors = new List<string>(); |
-| 282 | variable-initializer | 변수의 초기값을 지정합니다: errors = new List<string>() |
-| 283 | if | 조건에 따라 분기합니다: if (handlers is not null) |
-| 285 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: handlers.GetInvocationList() |
-| 285 | foreach | 컬렉션 요소를 순회합니다: foreach (Action handler in handlers.GetInvocationList()) |
-| 287 | try | 예외 처리 범위입니다: try |
-| 289 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: handler() |
-| 291 | catch | 지정 예외를 처리합니다: catch (Exception exception) |
-| 295 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add($"{handler.Method.Name}: {exception.Message}") |
-| 300 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _notificationError, string.Join(Environment.NewLine, errors)) |
-| 300 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(Environment.NewLine, errors) |
+| 282 | local-declaration | 지역 변수를 선언합니다: var handlers = CurrentChanged; |
+| 282 | variable-initializer | 변수의 초기값을 지정합니다: handlers = CurrentChanged |
+| 283 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() |
+| 283 | local-declaration | 지역 변수를 선언합니다: var errors = new List<string>(); |
+| 283 | variable-initializer | 변수의 초기값을 지정합니다: errors = new List<string>() |
+| 284 | if | 조건에 따라 분기합니다: if (handlers is not null) |
+| 286 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: handlers.GetInvocationList() |
+| 286 | foreach | 컬렉션 요소를 순회합니다: foreach (Action handler in handlers.GetInvocationList()) |
+| 288 | try | 예외 처리 범위입니다: try |
+| 290 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: handler() |
+| 292 | catch | 지정 예외를 처리합니다: catch (Exception exception) |
+| 296 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add($"{handler.Method.Name}: {exception.Message}") |
+| 301 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _notificationError, string.Join(Environment.NewLine, errors)) |
+| 301 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(Environment.NewLine, errors) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["NotifyCurrentChanged"]
- N0["L283 if"]
+ N0["L284 if"]
  M -->|포함| N0
- N1["L285 foreach"]
+ N1["L286 foreach"]
  N0 -->|포함| N1
- N2["L287 try"]
+ N2["L288 try"]
  N1 -->|포함| N2
- N3["L291 catch"]
+ N3["L292 catch"]
  N2 -->|포함| N3
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `PublishCurrent` · L303–307
+### MethodDeclaration `PublishCurrent` · L304–308
 
-[Drilling.Common/Alarm/CAlarmManager.cs:303–307](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L303-L307)
+[Drilling.Common/Alarm/CAlarmManager.cs:304–308](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L304-L308)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1793,42 +1793,42 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L252-L252) | PublishCurrent | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L258-L258) | PublishCurrent | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:273–273](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L273-L273) | PublishCurrent | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L363-L363) | PublishCurrent | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L253-L253) | PublishCurrent | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L259-L259) | PublishCurrent | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:274–274](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L274-L274) | PublishCurrent | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L365-L365) | PublishCurrent | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 305 | Array.AsReadOnly | resolved | System.Collections.ObjectModel.ReadOnlyCollection<Drilling.Common.Alarm.ST_ALARM_DATA> System.Array.AsReadOnly<Drilling.Common.Alarm.ST_ALARM_DATA>(Drilling.Common.Alarm.ST_ALARM_DATA[]) |
-| 305 | _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray | resolved | Drilling.Common.Alarm.ST_ALARM_DATA[] System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA>.ToArray<Drilling.Common.Alarm.ST_ALARM_DATA>() |
-| 305 | _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA> System.Linq.IOrderedEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA>.ThenBy<Drilling.Common.Alarm.ST_ALARM_DATA, int>(System.Func<Drilling.Common.Alarm.ST_ALARM_DATA, int>) |
-| 305 | _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA> System.Linq.IOrderedEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA>.ThenBy<Drilling.Common.Alarm.ST_ALARM_DATA, System.DateTimeOffset>(System.Func<Drilling.Common.Alarm.ST_ALARM_DATA, System.DateTimeOffset>) |
-| 305 | _curAlarm.Values.OrderByDescending | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA> System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA>.OrderByDescending<Drilling.Common.Alarm.ST_ALARM_DATA, Drilling.Common.Alarm.EN_ALARM_LEVEL>(System.Func<Drilling.Common.Alarm.ST_ALARM_DATA, Drilling.Common.Alarm.EN_ALARM_LEVEL>) |
-| 306 | Volatile.Write | resolved | void System.Threading.Volatile.Write<Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT>(ref Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT, Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT) |
-| 306 | new | resolved | Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT.ST_CURRENT_ALARM_SNAPSHOT(long, long, System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DATA>, string) · Drilling.Common/Alarm/CAlarmManager.cs:571 |
+| 306 | Array.AsReadOnly | resolved | System.Collections.ObjectModel.ReadOnlyCollection<Drilling.Common.Alarm.ST_ALARM_DATA> System.Array.AsReadOnly<Drilling.Common.Alarm.ST_ALARM_DATA>(Drilling.Common.Alarm.ST_ALARM_DATA[]) |
+| 306 | _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray | resolved | Drilling.Common.Alarm.ST_ALARM_DATA[] System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA>.ToArray<Drilling.Common.Alarm.ST_ALARM_DATA>() |
+| 306 | _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA> System.Linq.IOrderedEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA>.ThenBy<Drilling.Common.Alarm.ST_ALARM_DATA, int>(System.Func<Drilling.Common.Alarm.ST_ALARM_DATA, int>) |
+| 306 | _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA> System.Linq.IOrderedEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA>.ThenBy<Drilling.Common.Alarm.ST_ALARM_DATA, System.DateTimeOffset>(System.Func<Drilling.Common.Alarm.ST_ALARM_DATA, System.DateTimeOffset>) |
+| 306 | _curAlarm.Values.OrderByDescending | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA> System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.ST_ALARM_DATA>.OrderByDescending<Drilling.Common.Alarm.ST_ALARM_DATA, Drilling.Common.Alarm.EN_ALARM_LEVEL>(System.Func<Drilling.Common.Alarm.ST_ALARM_DATA, Drilling.Common.Alarm.EN_ALARM_LEVEL>) |
+| 307 | Volatile.Write | resolved | void System.Threading.Volatile.Write<Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT>(ref Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT, Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT) |
+| 307 | new | resolved | Drilling.Common.Alarm.ST_CURRENT_ALARM_SNAPSHOT.ST_CURRENT_ALARM_SNAPSHOT(long, long, System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DATA>, string) · Drilling.Common/Alarm/CAlarmManager.cs:573 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 305 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(_curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray()) |
-| 305 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray() |
-| 305 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code) |
-| 305 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt) |
-| 305 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity) |
-| 305 | local-declaration | 지역 변수를 선언합니다: var rows = Array.AsReadOnly(_curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray()); |
-| 305 | variable-initializer | 변수의 초기값을 지정합니다: rows = Array.AsReadOnly(_curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray()) |
-| 306 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _current, new(_current.Revision + 1, occurrenceVersion, rows, error)) |
-| 306 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_current.Revision + 1, occurrenceVersion, rows, error) |
+| 306 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Array.AsReadOnly(_curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray()) |
+| 306 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray() |
+| 306 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code) |
+| 306 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt) |
+| 306 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _curAlarm.Values.OrderByDescending(row => row.Severity) |
+| 306 | local-declaration | 지역 변수를 선언합니다: var rows = Array.AsReadOnly(_curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray()); |
+| 306 | variable-initializer | 변수의 초기값을 지정합니다: rows = Array.AsReadOnly(_curAlarm.Values.OrderByDescending(row => row.Severity).ThenBy(row => row.OccurredAt).ThenBy(row => row.Code).ToArray()) |
+| 307 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _current, new(_current.Revision + 1, occurrenceVersion, rows, error)) |
+| 307 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(_current.Revision + 1, occurrenceVersion, rows, error) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReadHistory` · L309–309
+### MethodDeclaration `ReadHistory` · L310–310
 
-[Drilling.Common/Alarm/CAlarmManager.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L309-L309)
+[Drilling.Common/Alarm/CAlarmManager.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L310-L310)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1851,21 +1851,21 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 309 | .Read | resolved · 동적 구현 선택 가능 | Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT Drilling.Common.Alarm.IAlarmHistoryStore.Read(System.DateTime, System.DateTime, System.Threading.CancellationToken) · Drilling.Common/Alarm/CAlarmManager.cs:672 |
-| 309 | new | resolved | Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT.ST_ALARM_HISTORY_RESULT(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_HISTORY_ENTRY>, string) · Drilling.Common/Alarm/CAlarmManager.cs:666 |
+| 310 | .Read | resolved · 동적 구현 선택 가능 | Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT Drilling.Common.Alarm.IAlarmHistoryStore.Read(System.DateTime, System.DateTime, System.Threading.CancellationToken) · Drilling.Common/Alarm/CAlarmManager.cs:674 |
+| 310 | new | resolved | Drilling.Common.Alarm.ST_ALARM_HISTORY_RESULT.ST_ALARM_HISTORY_RESULT(System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_HISTORY_ENTRY>, string) · Drilling.Common/Alarm/CAlarmManager.cs:668 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 309 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .Read(from, through, token) |
-| 309 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new([], "알람 로그 저장소가 연결되지 않았습니다.") |
+| 310 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .Read(from, through, token) |
+| 310 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new([], "알람 로그 저장소가 연결되지 않았습니다.") |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `HistoryStorageError` · L310–320
+### PropertyDeclaration `HistoryStorageError` · L311–321
 
-[Drilling.Common/Alarm/CAlarmManager.cs:310–320](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L310-L320)
+[Drilling.Common/Alarm/CAlarmManager.cs:311–321](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L311-L321)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1878,9 +1878,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_HistoryStorageError` · L312–319
+### GetAccessorDeclaration `get_HistoryStorageError` · L313–320
 
-[Drilling.Common/Alarm/CAlarmManager.cs:312–319](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L312-L319)
+[Drilling.Common/Alarm/CAlarmManager.cs:313–320](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L313-L320)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1895,40 +1895,40 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 314 | Volatile.Read | resolved | string System.Threading.Volatile.Read<string>(ref readonly string) |
-| 315 | Volatile.Read | resolved | long System.Threading.Volatile.Read(ref readonly long) |
-| 317 | string.IsNullOrEmpty | resolved | bool string.IsNullOrEmpty(string?) |
+| 315 | Volatile.Read | resolved | string System.Threading.Volatile.Read<string>(ref readonly string) |
+| 316 | Volatile.Read | resolved | long System.Threading.Volatile.Read(ref readonly long) |
+| 318 | string.IsNullOrEmpty | resolved | bool string.IsNullOrEmpty(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 314 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _historyError) |
-| 314 | local-declaration | 지역 변수를 선언합니다: var error = Volatile.Read(ref _historyError); |
-| 314 | variable-initializer | 변수의 초기값을 지정합니다: error = Volatile.Read(ref _historyError) |
-| 315 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _historyWriteStartedAt) |
-| 315 | local-declaration | 지역 변수를 선언합니다: var startedAt = Volatile.Read(ref _historyWriteStartedAt); |
-| 315 | variable-initializer | 변수의 초기값을 지정합니다: startedAt = Volatile.Read(ref _historyWriteStartedAt) |
-| 316 | if | 조건에 따라 분기합니다: if (startedAt > 0 && Environment.TickCount64 - startedAt >= 5000) |
-| 317 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(error) |
-| 317 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(error) ? "알람 이력 저장이 5초 이상 지연되고 있습니다." : error + Environment.NewLine + "알람 이력 저장이 5초 이상 지연되고 있습니다." |
-| 317 | return | 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrEmpty(error) ? "알람 이력 저장이 5초 이상 지연되고 있습니다." : error + Environment.NewLine + "알람 이력 저장이 5초 이상 지연되고 있습니다."; |
-| 318 | return | 호출자에게 값 또는 제어를 반환합니다: return error; |
+| 315 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _historyError) |
+| 315 | local-declaration | 지역 변수를 선언합니다: var error = Volatile.Read(ref _historyError); |
+| 315 | variable-initializer | 변수의 초기값을 지정합니다: error = Volatile.Read(ref _historyError) |
+| 316 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _historyWriteStartedAt) |
+| 316 | local-declaration | 지역 변수를 선언합니다: var startedAt = Volatile.Read(ref _historyWriteStartedAt); |
+| 316 | variable-initializer | 변수의 초기값을 지정합니다: startedAt = Volatile.Read(ref _historyWriteStartedAt) |
+| 317 | if | 조건에 따라 분기합니다: if (startedAt > 0 && Environment.TickCount64 - startedAt >= 5000) |
+| 318 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(error) |
+| 318 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(error) ? "알람 이력 저장이 5초 이상 지연되고 있습니다." : error + Environment.NewLine + "알람 이력 저장이 5초 이상 지연되고 있습니다." |
+| 318 | return | 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrEmpty(error) ? "알람 이력 저장이 5초 이상 지연되고 있습니다." : error + Environment.NewLine + "알람 이력 저장이 5초 이상 지연되고 있습니다."; |
+| 319 | return | 호출자에게 값 또는 제어를 반환합니다: return error; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["get_HistoryStorageError"]
- N0["L316 if"]
+ N0["L317 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `QueueHistory` · L323–335
+### MethodDeclaration `QueueHistory` · L324–337
 
-[Drilling.Common/Alarm/CAlarmManager.cs:323–335](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L323-L335)
+[Drilling.Common/Alarm/CAlarmManager.cs:324–337](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L324-L337)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1947,47 +1947,47 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L254-L254) | QueueHistory | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L255-L255) | QueueHistory | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 331 | _historyQueue.Enqueue | resolved | void System.Collections.Generic.Queue<Drilling.Common.Alarm.ST_ALARM_DATA>.Enqueue(Drilling.Common.Alarm.ST_ALARM_DATA) |
-| 332 | Task.Run | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.Run(System.Action) |
+| 333 | _historyQueue.Enqueue | resolved | void System.Collections.Generic.Queue<Drilling.Common.Alarm.ST_ALARM_DATA>.Enqueue(Drilling.Common.Alarm.ST_ALARM_DATA) |
+| 334 | Task.Run | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.Run(System.Action) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 325 | if | 조건에 따라 분기합니다: if (_history is null) |
-| 326 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
-| 327 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_historyQueueLock) |
-| 329 | if | 조건에 따라 분기합니다: if (_historyQueue.Count >= HistoryQueueCapacity) |
-| 330 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
-| 331 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _historyQueue.Enqueue(alarm) |
-| 332 | assignment | 값을 대상에 대입합니다: _historyTask ??= Task.Run(WriteQueuedHistory) |
-| 332 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(WriteQueuedHistory) |
-| 333 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
+| 327 | if | 조건에 따라 분기합니다: if (_history is null) |
+| 328 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
+| 329 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_historyQueueLock) |
+| 331 | if | 조건에 따라 분기합니다: if (_historyQueue.Count >= HistoryQueueCapacity) |
+| 332 | return | 호출자에게 값 또는 제어를 반환합니다: return false; |
+| 333 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _historyQueue.Enqueue(alarm) |
+| 334 | assignment | 값을 대상에 대입합니다: _historyTask ??= Task.Run(WriteQueuedHistory) |
+| 334 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(WriteQueuedHistory) |
+| 335 | return | 호출자에게 값 또는 제어를 반환합니다: return true; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["QueueHistory"]
- N0["L325 if"]
+ N0["L327 if"]
  M -->|포함| N0
- N1["L327 lock"]
+ N1["L329 lock"]
  M -->|포함| N1
- N2["L329 if"]
+ N2["L331 if"]
  N1 -->|포함| N2
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `WriteQueuedHistory` · L337–374
+### MethodDeclaration `WriteQueuedHistory` · L339–376
 
-[Drilling.Common/Alarm/CAlarmManager.cs:337–374](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L337-L374)
+[Drilling.Common/Alarm/CAlarmManager.cs:339–376](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L339-L376)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2002,64 +2002,64 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 344 | _historyQueue.TryDequeue | resolved | bool System.Collections.Generic.Queue<Drilling.Common.Alarm.ST_ALARM_DATA>.TryDequeue(out Drilling.Common.Alarm.ST_ALARM_DATA) |
-| 351 | Volatile.Write | resolved | void System.Threading.Volatile.Write(ref long, long) |
-| 354 | _history!.Append | resolved · 동적 구현 선택 가능 | void Drilling.Common.Alarm.IAlarmHistoryStore.Append(Drilling.Common.Alarm.ST_ALARM_DATA) · Drilling.Common/Alarm/CAlarmManager.cs:671 |
-| 359 | Volatile.Write | resolved | void System.Threading.Volatile.Write<string>(ref string, string) |
-| 363 | PublishCurrent | resolved | void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string) · Drilling.Common/Alarm/CAlarmManager.cs:303 |
-| 366 | NotifyCurrentChanged | resolved | void Drilling.Common.Alarm.CAlarmManager.NotifyCurrentChanged() · Drilling.Common/Alarm/CAlarmManager.cs:279 |
-| 370 | Volatile.Write | resolved | void System.Threading.Volatile.Write(ref long, long) |
+| 346 | _historyQueue.TryDequeue | resolved | bool System.Collections.Generic.Queue<Drilling.Common.Alarm.ST_ALARM_DATA>.TryDequeue(out Drilling.Common.Alarm.ST_ALARM_DATA) |
+| 353 | Volatile.Write | resolved | void System.Threading.Volatile.Write(ref long, long) |
+| 356 | _history!.Append | resolved · 동적 구현 선택 가능 | void Drilling.Common.Alarm.IAlarmHistoryStore.Append(Drilling.Common.Alarm.ST_ALARM_DATA) · Drilling.Common/Alarm/CAlarmManager.cs:673 |
+| 361 | Volatile.Write | resolved | void System.Threading.Volatile.Write<string>(ref string, string) |
+| 365 | PublishCurrent | resolved | void Drilling.Common.Alarm.CAlarmManager.PublishCurrent(long, string) · Drilling.Common/Alarm/CAlarmManager.cs:304 |
+| 368 | NotifyCurrentChanged | resolved | void Drilling.Common.Alarm.CAlarmManager.NotifyCurrentChanged() · Drilling.Common/Alarm/CAlarmManager.cs:280 |
+| 372 | Volatile.Write | resolved | void System.Threading.Volatile.Write(ref long, long) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 339 | while | 조건을 먼저 확인하며 반복합니다: while (true) |
-| 341 | local-declaration | 지역 변수를 선언합니다: ST_ALARM_DATA alarm; |
-| 342 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_historyQueueLock) |
-| 344 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _historyQueue.TryDequeue(out alarm!) |
-| 344 | if | 조건에 따라 분기합니다: if (!_historyQueue.TryDequeue(out alarm!)) |
-| 346 | assignment | 값을 대상에 대입합니다: _historyTask = null |
-| 347 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 351 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyWriteStartedAt, Environment.TickCount64) |
-| 352 | try | 예외 처리 범위입니다: try |
-| 354 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _history!.Append(alarm) |
-| 356 | catch | 지정 예외를 처리합니다: catch (Exception exception) |
-| 358 | local-declaration | 지역 변수를 선언합니다: var error = $"알람 {alarm.Code} 로그 저장 실패: {exception.Message}"; |
-| 358 | variable-initializer | 변수의 초기값을 지정합니다: error = $"알람 {alarm.Code} 로그 저장 실패: {exception.Message}" |
-| 359 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyError, error) |
-| 360 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_currentLock) |
-| 363 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion, error) |
-| 366 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCurrentChanged() |
-| 368 | finally | 종료 정리 구간입니다: finally |
-| 370 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyWriteStartedAt, 0) |
+| 341 | while | 조건을 먼저 확인하며 반복합니다: while (true) |
+| 343 | local-declaration | 지역 변수를 선언합니다: ST_ALARM_DATA alarm; |
+| 344 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_historyQueueLock) |
+| 346 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _historyQueue.TryDequeue(out alarm!) |
+| 346 | if | 조건에 따라 분기합니다: if (!_historyQueue.TryDequeue(out alarm!)) |
+| 348 | assignment | 값을 대상에 대입합니다: _historyTask = null |
+| 349 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 353 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyWriteStartedAt, Environment.TickCount64) |
+| 354 | try | 예외 처리 범위입니다: try |
+| 356 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _history!.Append(alarm) |
+| 358 | catch | 지정 예외를 처리합니다: catch (Exception exception) |
+| 360 | local-declaration | 지역 변수를 선언합니다: var error = $"알람 {alarm.Code} 로그 저장 실패: {exception.Message}"; |
+| 360 | variable-initializer | 변수의 초기값을 지정합니다: error = $"알람 {alarm.Code} 로그 저장 실패: {exception.Message}" |
+| 361 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyError, error) |
+| 362 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_currentLock) |
+| 365 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: PublishCurrent(_current.OccurrenceVersion, error) |
+| 368 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyCurrentChanged() |
+| 370 | finally | 종료 정리 구간입니다: finally |
+| 372 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _historyWriteStartedAt, 0) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["WriteQueuedHistory"]
- N0["L339 while"]
+ N0["L341 while"]
  M -->|포함| N0
- N1["L342 lock"]
+ N1["L344 lock"]
  N0 -->|포함| N1
- N2["L344 if"]
+ N2["L346 if"]
  N1 -->|포함| N2
- N3["L352 try"]
+ N3["L354 try"]
  N0 -->|포함| N3
- N4["L356 catch"]
+ N4["L358 catch"]
  N3 -->|포함| N4
- N5["L360 lock"]
+ N5["L362 lock"]
  N4 -->|포함| N5
- N6["L368 finally"]
+ N6["L370 finally"]
  N3 -->|포함| N6
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `FlushHistoryAsync` · L377–383
+### MethodDeclaration `FlushHistoryAsync` · L379–385
 
-[Drilling.Common/Alarm/CAlarmManager.cs:377–383](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L377-L383)
+[Drilling.Common/Alarm/CAlarmManager.cs:379–385](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L379-L385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2084,38 +2084,38 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Managers/CManager.cs#L235-L235) | _alarmManager.FlushHistoryAsync | False |
+| [Drilling.Common/Managers/CManager.cs:235–235](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L235-L235) | _alarmManager.FlushHistoryAsync | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 382 | pending.WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.WaitAsync(System.Threading.CancellationToken) |
+| 384 | pending.WaitAsync | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.WaitAsync(System.Threading.CancellationToken) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 379 | local-declaration | 지역 변수를 선언합니다: Task pending; |
-| 380 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_historyQueueLock) |
-| 381 | assignment | 값을 대상에 대입합니다: pending = _historyTask ?? Task.CompletedTask |
-| 382 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: pending.WaitAsync(cancellationToken) |
-| 382 | return | 호출자에게 값 또는 제어를 반환합니다: return pending.WaitAsync(cancellationToken); |
+| 381 | local-declaration | 지역 변수를 선언합니다: Task pending; |
+| 382 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_historyQueueLock) |
+| 383 | assignment | 값을 대상에 대입합니다: pending = _historyTask ?? Task.CompletedTask |
+| 384 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: pending.WaitAsync(cancellationToken) |
+| 384 | return | 호출자에게 값 또는 제어를 반환합니다: return pending.WaitAsync(cancellationToken); |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["FlushHistoryAsync"]
- N0["L380 lock"]
+ N0["L382 lock"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `MonitoringError` · L387–395
+### PropertyDeclaration `MonitoringError` · L389–397
 
-[Drilling.Common/Alarm/CAlarmManager.cs:387–395](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L387-L395)
+[Drilling.Common/Alarm/CAlarmManager.cs:389–397](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L389-L397)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2128,9 +2128,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_MonitoringError` · L389–394
+### GetAccessorDeclaration `get_MonitoringError` · L391–396
 
-[Drilling.Common/Alarm/CAlarmManager.cs:389–394](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L389-L394)
+[Drilling.Common/Alarm/CAlarmManager.cs:391–396](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L391-L396)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2145,30 +2145,30 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 391 | Volatile.Read | resolved | string System.Threading.Volatile.Read<string>(ref readonly string) |
-| 393 | string.IsNullOrEmpty | resolved | bool string.IsNullOrEmpty(string?) |
-| 393 | string.IsNullOrEmpty | resolved | bool string.IsNullOrEmpty(string?) |
+| 393 | Volatile.Read | resolved | string System.Threading.Volatile.Read<string>(ref readonly string) |
+| 395 | string.IsNullOrEmpty | resolved | bool string.IsNullOrEmpty(string?) |
+| 395 | string.IsNullOrEmpty | resolved | bool string.IsNullOrEmpty(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 391 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _monitoringError) |
-| 391 | local-declaration | 지역 변수를 선언합니다: var checks = Volatile.Read(ref _monitoringError); |
-| 391 | variable-initializer | 변수의 초기값을 지정합니다: checks = Volatile.Read(ref _monitoringError) |
-| 392 | local-declaration | 지역 변수를 선언합니다: var history = HistoryStorageError; |
-| 392 | variable-initializer | 변수의 초기값을 지정합니다: history = HistoryStorageError |
-| 393 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(history) |
-| 393 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(checks) |
-| 393 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(history) ? checks : string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history |
-| 393 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history |
-| 393 | return | 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrEmpty(history) ? checks : string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history; |
+| 393 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Read(ref _monitoringError) |
+| 393 | local-declaration | 지역 변수를 선언합니다: var checks = Volatile.Read(ref _monitoringError); |
+| 393 | variable-initializer | 변수의 초기값을 지정합니다: checks = Volatile.Read(ref _monitoringError) |
+| 394 | local-declaration | 지역 변수를 선언합니다: var history = HistoryStorageError; |
+| 394 | variable-initializer | 변수의 초기값을 지정합니다: history = HistoryStorageError |
+| 395 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(history) |
+| 395 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(checks) |
+| 395 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(history) ? checks : string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history |
+| 395 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history |
+| 395 | return | 호출자에게 값 또는 제어를 반환합니다: return string.IsNullOrEmpty(history) ? checks : string.IsNullOrEmpty(checks) ? history : checks + Environment.NewLine + history; |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StartMonitoring` · L404–427
+### MethodDeclaration `StartMonitoring` · L406–429
 
-[Drilling.Common/Alarm/CAlarmManager.cs:404–427](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L404-L427)
+[Drilling.Common/Alarm/CAlarmManager.cs:406–429](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L406-L429)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2205,58 +2205,58 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 412 | EnsureDefinitionsRequested | resolved | void Drilling.Common.Alarm.CAlarmManager.EnsureDefinitionsRequested() · Drilling.Common/Alarm/CAlarmManager.cs:214 |
-| 413 | ArgumentNullException.ThrowIfNull | resolved | void System.ArgumentNullException.ThrowIfNull(object?, string?) |
-| 414 | new CScannerTemperatureAlarmMonitor | resolved | Drilling.Common.Alarm.CScannerTemperatureAlarmMonitor.CScannerTemperatureAlarmMonitor(Drilling.Common.Alarm.CAlarmManager, Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager) · Drilling.Common/Alarm/CAlarmManager.cs:573 |
-| 415 | StartMonitoring | resolved | void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(System.Action<System.Threading.CancellationToken>[], System.Action<System.Exception>?, System.TimeSpan) · Drilling.Common/Alarm/CAlarmManager.cs:430 |
-| 417 | token.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 418 | temperatures.Check | resolved | void Drilling.Common.Alarm.CScannerTemperatureAlarmMonitor.Check() · Drilling.Common/Alarm/CAlarmManager.cs:575 |
-| 421 | token.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 422 | readDeviceSnapshot | resolved · 동적 구현 선택 가능 | Drilling.Common.Managers.ST_DEVICE_STATUS System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>.Invoke() |
-| 423 | Build | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DATA> Drilling.Common.Alarm.CAlarmManager.Build(Drilling.Common.Managers.ST_DEVICE_STATUS, Drilling.Common.InterLock.ST_INTERLOCK_SUMMARY) · Drilling.Common/Alarm/CAlarmManager.cs:66 |
-| 423 | interLocks.Evaluate | resolved | Drilling.Common.InterLock.ST_INTERLOCK_SUMMARY Drilling.Common.InterLock.CInterLockManager.Evaluate(Drilling.Common.Managers.ST_DEVICE_STATUS) · Drilling.Common/InterLock/CInterLockManager.cs:28 |
-| 424 | string.IsNullOrEmpty | resolved | bool string.IsNullOrEmpty(string?) |
-| 425 | new IOException | resolved | System.IO.IOException.IOException(string?) |
-| 426 | TimeSpan.FromSeconds | resolved | System.TimeSpan System.TimeSpan.FromSeconds(long) |
+| 414 | EnsureDefinitionsRequested | resolved | void Drilling.Common.Alarm.CAlarmManager.EnsureDefinitionsRequested() · Drilling.Common/Alarm/CAlarmManager.cs:214 |
+| 415 | ArgumentNullException.ThrowIfNull | resolved | void System.ArgumentNullException.ThrowIfNull(object?, string?) |
+| 416 | new CScannerTemperatureAlarmMonitor | resolved | Drilling.Common.Alarm.CScannerTemperatureAlarmMonitor.CScannerTemperatureAlarmMonitor(Drilling.Common.Alarm.CAlarmManager, Drilling.Common.Managers.CSettingManager, Drilling.Common.Automation.CAutomationManager) · Drilling.Common/Alarm/CAlarmManager.cs:575 |
+| 417 | StartMonitoring | resolved | void Drilling.Common.Alarm.CAlarmManager.StartMonitoring(System.Action<System.Threading.CancellationToken>[], System.Action<System.Exception>?, System.TimeSpan) · Drilling.Common/Alarm/CAlarmManager.cs:432 |
+| 419 | token.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 420 | temperatures.Check | resolved | void Drilling.Common.Alarm.CScannerTemperatureAlarmMonitor.Check() · Drilling.Common/Alarm/CAlarmManager.cs:577 |
+| 423 | token.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 424 | readDeviceSnapshot | resolved · 동적 구현 선택 가능 | Drilling.Common.Managers.ST_DEVICE_STATUS System.Func<Drilling.Common.Managers.ST_DEVICE_STATUS>.Invoke() |
+| 425 | Build | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Alarm.ST_ALARM_DATA> Drilling.Common.Alarm.CAlarmManager.Build(Drilling.Common.Managers.ST_DEVICE_STATUS, Drilling.Common.InterLock.ST_INTERLOCK_SUMMARY) · Drilling.Common/Alarm/CAlarmManager.cs:66 |
+| 425 | interLocks.Evaluate | resolved | Drilling.Common.InterLock.ST_INTERLOCK_SUMMARY Drilling.Common.InterLock.CInterLockManager.Evaluate(Drilling.Common.Managers.ST_DEVICE_STATUS) · Drilling.Common/InterLock/CInterLockManager.cs:28 |
+| 426 | string.IsNullOrEmpty | resolved | bool string.IsNullOrEmpty(string?) |
+| 427 | new IOException | resolved | System.IO.IOException.IOException(string?) |
+| 428 | TimeSpan.FromSeconds | resolved | System.TimeSpan System.TimeSpan.FromSeconds(long) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 412 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDefinitionsRequested() |
-| 413 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(readDeviceSnapshot) |
-| 414 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CScannerTemperatureAlarmMonitor(this, settings, automation) |
-| 414 | local-declaration | 지역 변수를 선언합니다: var temperatures = new CScannerTemperatureAlarmMonitor(this, settings, automation); |
-| 414 | variable-initializer | 변수의 초기값을 지정합니다: temperatures = new CScannerTemperatureAlarmMonitor(this, settings, automation) |
-| 415 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: StartMonitoring([token => { token.ThrowIfCancellationRequested(); temperatures.Check(); }, token => { token.ThrowIfCancellationRequested(); var status = readDeviceSnapshot(); Build(status, interLocks.Evaluate(status)); i… |
-| 417 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested() |
-| 418 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: temperatures.Check() |
-| 421 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested() |
-| 422 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: readDeviceSnapshot() |
-| 422 | local-declaration | 지역 변수를 선언합니다: var status = readDeviceSnapshot(); |
-| 422 | variable-initializer | 변수의 초기값을 지정합니다: status = readDeviceSnapshot() |
-| 423 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Build(status, interLocks.Evaluate(status)) |
-| 423 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interLocks.Evaluate(status) |
-| 424 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(status.SnapshotError) |
-| 424 | if | 조건에 따라 분기합니다: if (!string.IsNullOrEmpty(status.SnapshotError)) |
-| 425 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException(status.SnapshotError) |
-| 425 | throw | 예외를 발생/전달합니다: throw new IOException(status.SnapshotError); |
-| 426 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(1) |
+| 414 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDefinitionsRequested() |
+| 415 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(readDeviceSnapshot) |
+| 416 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CScannerTemperatureAlarmMonitor(this, settings, automation) |
+| 416 | local-declaration | 지역 변수를 선언합니다: var temperatures = new CScannerTemperatureAlarmMonitor(this, settings, automation); |
+| 416 | variable-initializer | 변수의 초기값을 지정합니다: temperatures = new CScannerTemperatureAlarmMonitor(this, settings, automation) |
+| 417 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: StartMonitoring([token => { token.ThrowIfCancellationRequested(); temperatures.Check(); }, token => { token.ThrowIfCancellationRequested(); var status = readDeviceSnapshot(); Build(status, interLocks.Evaluate(status)); i… |
+| 419 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested() |
+| 420 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: temperatures.Check() |
+| 423 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested() |
+| 424 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: readDeviceSnapshot() |
+| 424 | local-declaration | 지역 변수를 선언합니다: var status = readDeviceSnapshot(); |
+| 424 | variable-initializer | 변수의 초기값을 지정합니다: status = readDeviceSnapshot() |
+| 425 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Build(status, interLocks.Evaluate(status)) |
+| 425 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: interLocks.Evaluate(status) |
+| 426 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(status.SnapshotError) |
+| 426 | if | 조건에 따라 분기합니다: if (!string.IsNullOrEmpty(status.SnapshotError)) |
+| 427 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new IOException(status.SnapshotError) |
+| 427 | throw | 예외를 발생/전달합니다: throw new IOException(status.SnapshotError); |
+| 428 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: TimeSpan.FromSeconds(1) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["StartMonitoring"]
- N0["L424 if"]
+ N0["L426 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StartMonitoring` · L430–445
+### MethodDeclaration `StartMonitoring` · L432–447
 
-[Drilling.Common/Alarm/CAlarmManager.cs:430–445](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L430-L445)
+[Drilling.Common/Alarm/CAlarmManager.cs:432–447](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L432-L447)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2277,63 +2277,63 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:415–426](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L415-L426) | StartMonitoring | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:417–428](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L417-L428) | StartMonitoring | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 432 | ArgumentNullException.ThrowIfNull | resolved | void System.ArgumentNullException.ThrowIfNull(object?, string?) |
-| 433 | EnsureDefinitionsRequested | resolved | void Drilling.Common.Alarm.CAlarmManager.EnsureDefinitionsRequested() · Drilling.Common/Alarm/CAlarmManager.cs:214 |
-| 435 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?) |
-| 435 | nameof | unresolved | None |
-| 436 | checks.ToArray | resolved | System.Action<System.Threading.CancellationToken>[] System.Collections.Generic.IEnumerable<System.Action<System.Threading.CancellationToken>>.ToArray<System.Action<System.Threading.CancellationToken>>() |
-| 441 | new CancellationTokenSource | resolved | System.Threading.CancellationTokenSource.CancellationTokenSource() |
-| 443 | Task.Run | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.Run(System.Func<System.Threading.Tasks.Task?>) |
-| 443 | Monitor | resolved | System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.Monitor(System.Action<System.Threading.CancellationToken>[], System.Action<System.Exception>?, System.TimeSpan, System.Threading.CancellationToken) · Drilling.Common/Alarm/CAlarmManager.cs:471 |
+| 434 | ArgumentNullException.ThrowIfNull | resolved | void System.ArgumentNullException.ThrowIfNull(object?, string?) |
+| 435 | EnsureDefinitionsRequested | resolved | void Drilling.Common.Alarm.CAlarmManager.EnsureDefinitionsRequested() · Drilling.Common/Alarm/CAlarmManager.cs:214 |
+| 437 | new ArgumentOutOfRangeException | resolved | System.ArgumentOutOfRangeException.ArgumentOutOfRangeException(string?) |
+| 437 | nameof | unresolved | None |
+| 438 | checks.ToArray | resolved | System.Action<System.Threading.CancellationToken>[] System.Collections.Generic.IEnumerable<System.Action<System.Threading.CancellationToken>>.ToArray<System.Action<System.Threading.CancellationToken>>() |
+| 443 | new CancellationTokenSource | resolved | System.Threading.CancellationTokenSource.CancellationTokenSource() |
+| 445 | Task.Run | resolved | System.Threading.Tasks.Task System.Threading.Tasks.Task.Run(System.Func<System.Threading.Tasks.Task?>) |
+| 445 | Monitor | resolved | System.Threading.Tasks.Task Drilling.Common.Alarm.CAlarmManager.Monitor(System.Action<System.Threading.CancellationToken>[], System.Action<System.Exception>?, System.TimeSpan, System.Threading.CancellationToken) · Drilling.Common/Alarm/CAlarmManager.cs:473 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 432 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(checks) |
-| 433 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDefinitionsRequested() |
-| 434 | if | 조건에 따라 분기합니다: if (interval <= TimeSpan.Zero) |
-| 435 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(interval)) |
-| 435 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(interval) |
-| 435 | throw | 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(interval)); |
-| 436 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: checks.ToArray() |
-| 436 | local-declaration | 지역 변수를 선언합니다: var registeredChecks = checks.ToArray(); |
-| 436 | variable-initializer | 변수의 초기값을 지정합니다: registeredChecks = checks.ToArray() |
-| 437 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_monitoringLock) |
-| 439 | if | 조건에 따라 분기합니다: if (_monitoringTask is not null) |
-| 440 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 441 | assignment | 값을 대상에 대입합니다: _monitoringStop = new CancellationTokenSource() |
-| 441 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource() |
-| 442 | local-declaration | 지역 변수를 선언합니다: var token = _monitoringStop.Token; |
-| 442 | variable-initializer | 변수의 초기값을 지정합니다: token = _monitoringStop.Token |
-| 443 | assignment | 값을 대상에 대입합니다: _monitoringTask = Task.Run(() => Monitor(registeredChecks, reportError, interval, token)) |
-| 443 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => Monitor(registeredChecks, reportError, interval, token)) |
-| 443 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Monitor(registeredChecks, reportError, interval, token) |
+| 434 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ArgumentNullException.ThrowIfNull(checks) |
+| 435 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: EnsureDefinitionsRequested() |
+| 436 | if | 조건에 따라 분기합니다: if (interval <= TimeSpan.Zero) |
+| 437 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new ArgumentOutOfRangeException(nameof(interval)) |
+| 437 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(interval) |
+| 437 | throw | 예외를 발생/전달합니다: throw new ArgumentOutOfRangeException(nameof(interval)); |
+| 438 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: checks.ToArray() |
+| 438 | local-declaration | 지역 변수를 선언합니다: var registeredChecks = checks.ToArray(); |
+| 438 | variable-initializer | 변수의 초기값을 지정합니다: registeredChecks = checks.ToArray() |
+| 439 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_monitoringLock) |
+| 441 | if | 조건에 따라 분기합니다: if (_monitoringTask is not null) |
+| 442 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 443 | assignment | 값을 대상에 대입합니다: _monitoringStop = new CancellationTokenSource() |
+| 443 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new CancellationTokenSource() |
+| 444 | local-declaration | 지역 변수를 선언합니다: var token = _monitoringStop.Token; |
+| 444 | variable-initializer | 변수의 초기값을 지정합니다: token = _monitoringStop.Token |
+| 445 | assignment | 값을 대상에 대입합니다: _monitoringTask = Task.Run(() => Monitor(registeredChecks, reportError, interval, token)) |
+| 445 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run(() => Monitor(registeredChecks, reportError, interval, token)) |
+| 445 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Monitor(registeredChecks, reportError, interval, token) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["StartMonitoring"]
- N0["L434 if"]
+ N0["L436 if"]
  M -->|포함| N0
- N1["L437 lock"]
+ N1["L439 lock"]
  M -->|포함| N1
- N2["L439 if"]
+ N2["L441 if"]
  N1 -->|포함| N2
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `StopMonitoringAsync` · L447–469
+### MethodDeclaration `StopMonitoringAsync` · L449–471
 
-[Drilling.Common/Alarm/CAlarmManager.cs:447–469](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L447-L469)
+[Drilling.Common/Alarm/CAlarmManager.cs:449–471](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L449-L471)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2346,59 +2346,59 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Managers/CManager.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Managers/CManager.cs#L283-L283) | _alarmManager.StopMonitoringAsync | False |
+| [Drilling.Common/Managers/CManager.cs:283–283](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Managers/CManager.cs#L283-L283) | _alarmManager.StopMonitoringAsync | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 457 | stop.Cancel | resolved | void System.Threading.CancellationTokenSource.Cancel() |
-| 460 | task.ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool) |
-| 463 | ReferenceEquals | resolved | bool object.ReferenceEquals(object?, object?) |
-| 467 | stop.Dispose | resolved | void System.Threading.CancellationTokenSource.Dispose() |
+| 459 | stop.Cancel | resolved | void System.Threading.CancellationTokenSource.Cancel() |
+| 462 | task.ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredTaskAwaitable System.Threading.Tasks.Task.ConfigureAwait(bool) |
+| 465 | ReferenceEquals | resolved | bool object.ReferenceEquals(object?, object?) |
+| 469 | stop.Dispose | resolved | void System.Threading.CancellationTokenSource.Dispose() |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 449 | local-declaration | 지역 변수를 선언합니다: Task task; |
-| 450 | local-declaration | 지역 변수를 선언합니다: CancellationTokenSource stop; |
-| 451 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_monitoringLock) |
-| 453 | if | 조건에 따라 분기합니다: if (_monitoringTask is null &#124;&#124; _monitoringStop is null) |
-| 454 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 455 | assignment | 값을 대상에 대입합니다: task = _monitoringTask |
-| 456 | assignment | 값을 대상에 대입합니다: stop = _monitoringStop |
-| 457 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: stop.Cancel() |
-| 460 | await | 비동기 완료를 기다립니다: await task.ConfigureAwait(false) |
-| 460 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: task.ConfigureAwait(false) |
-| 461 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_monitoringLock) |
-| 463 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_monitoringTask, task) |
-| 463 | if | 조건에 따라 분기합니다: if (!ReferenceEquals(_monitoringTask, task)) |
-| 464 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 465 | assignment | 값을 대상에 대입합니다: _monitoringTask = null |
-| 466 | assignment | 값을 대상에 대입합니다: _monitoringStop = null |
-| 467 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: stop.Dispose() |
+| 451 | local-declaration | 지역 변수를 선언합니다: Task task; |
+| 452 | local-declaration | 지역 변수를 선언합니다: CancellationTokenSource stop; |
+| 453 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_monitoringLock) |
+| 455 | if | 조건에 따라 분기합니다: if (_monitoringTask is null &#124;&#124; _monitoringStop is null) |
+| 456 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 457 | assignment | 값을 대상에 대입합니다: task = _monitoringTask |
+| 458 | assignment | 값을 대상에 대입합니다: stop = _monitoringStop |
+| 459 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: stop.Cancel() |
+| 462 | await | 비동기 완료를 기다립니다: await task.ConfigureAwait(false) |
+| 462 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: task.ConfigureAwait(false) |
+| 463 | lock | 공유 상태의 임계 구역에 진입합니다: lock (_monitoringLock) |
+| 465 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(_monitoringTask, task) |
+| 465 | if | 조건에 따라 분기합니다: if (!ReferenceEquals(_monitoringTask, task)) |
+| 466 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 467 | assignment | 값을 대상에 대입합니다: _monitoringTask = null |
+| 468 | assignment | 값을 대상에 대입합니다: _monitoringStop = null |
+| 469 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: stop.Dispose() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["StopMonitoringAsync"]
- N0["L451 lock"]
+ N0["L453 lock"]
  M -->|포함| N0
- N1["L453 if"]
+ N1["L455 if"]
  N0 -->|포함| N1
- N2["L461 lock"]
+ N2["L463 lock"]
  M -->|포함| N2
- N3["L463 if"]
+ N3["L465 if"]
  N2 -->|포함| N3
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Monitor` · L471–540
+### MethodDeclaration `Monitor` · L473–542
 
-[Drilling.Common/Alarm/CAlarmManager.cs:471–540](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L471-L540)
+[Drilling.Common/Alarm/CAlarmManager.cs:473–542](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L473-L542)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2420,126 +2420,126 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:443–443](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L443-L443) | Monitor | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:445–445](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L445-L445) | Monitor | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 473 | new PeriodicTimer | resolved | System.Threading.PeriodicTimer.PeriodicTimer(System.TimeSpan) |
-| 480 | new List<string> | resolved | System.Collections.Generic.List<string>.List() |
-| 481 | RetryDefinitionInitialization | resolved | string Drilling.Common.Alarm.CAlarmManager.RetryDefinitionInitialization() · Drilling.Common/Alarm/CAlarmManager.cs:176 |
-| 482 | string.IsNullOrEmpty | resolved | bool string.IsNullOrEmpty(string?) |
-| 484 | Volatile.Write | resolved | void System.Threading.Volatile.Write<string>(ref string, string) |
-| 490 | .Invoke | resolved · 동적 구현 선택 가능 | void System.Action<System.Exception>.Invoke(System.Exception) |
-| 490 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
-| 494 | System.Diagnostics.Debug.WriteLine | resolved | void System.Diagnostics.Debug.WriteLine(object?) |
-| 504 | token.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
-| 507 | checks[index] | resolved · 동적 구현 선택 가능 | void System.Action<System.Threading.CancellationToken>.Invoke(System.Threading.CancellationToken) |
-| 517 | errors.Add | resolved | void System.Collections.Generic.List<string>.Add(string) |
-| 523 | .Invoke | resolved · 동적 구현 선택 가능 | void System.Action<System.Exception>.Invoke(System.Exception) |
-| 527 | System.Diagnostics.Debug.WriteLine | resolved | void System.Diagnostics.Debug.WriteLine(object?) |
-| 533 | Volatile.Write | resolved | void System.Threading.Volatile.Write<string>(ref string, string) |
-| 533 | string.Join | resolved | string string.Join(string?, System.Collections.Generic.IEnumerable<string?>) |
-| 535 | timer.WaitForNextTickAsync(token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable<bool> System.Threading.Tasks.ValueTask<bool>.ConfigureAwait(bool) |
-| 535 | timer.WaitForNextTickAsync | resolved | System.Threading.Tasks.ValueTask<bool> System.Threading.PeriodicTimer.WaitForNextTickAsync(System.Threading.CancellationToken) |
+| 475 | new PeriodicTimer | resolved | System.Threading.PeriodicTimer.PeriodicTimer(System.TimeSpan) |
+| 482 | new List<string> | resolved | System.Collections.Generic.List<string>.List() |
+| 483 | RetryDefinitionInitialization | resolved | string Drilling.Common.Alarm.CAlarmManager.RetryDefinitionInitialization() · Drilling.Common/Alarm/CAlarmManager.cs:176 |
+| 484 | string.IsNullOrEmpty | resolved | bool string.IsNullOrEmpty(string?) |
+| 486 | Volatile.Write | resolved | void System.Threading.Volatile.Write<string>(ref string, string) |
+| 492 | .Invoke | resolved · 동적 구현 선택 가능 | void System.Action<System.Exception>.Invoke(System.Exception) |
+| 492 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
+| 496 | System.Diagnostics.Debug.WriteLine | resolved | void System.Diagnostics.Debug.WriteLine(object?) |
+| 506 | token.ThrowIfCancellationRequested | resolved | void System.Threading.CancellationToken.ThrowIfCancellationRequested() |
+| 509 | checks[index] | resolved · 동적 구현 선택 가능 | void System.Action<System.Threading.CancellationToken>.Invoke(System.Threading.CancellationToken) |
+| 519 | errors.Add | resolved | void System.Collections.Generic.List<string>.Add(string) |
+| 525 | .Invoke | resolved · 동적 구현 선택 가능 | void System.Action<System.Exception>.Invoke(System.Exception) |
+| 529 | System.Diagnostics.Debug.WriteLine | resolved | void System.Diagnostics.Debug.WriteLine(object?) |
+| 535 | Volatile.Write | resolved | void System.Threading.Volatile.Write<string>(ref string, string) |
+| 535 | string.Join | resolved | string string.Join(string?, System.Collections.Generic.IEnumerable<string?>) |
+| 537 | timer.WaitForNextTickAsync(token).ConfigureAwait | resolved | System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable<bool> System.Threading.Tasks.ValueTask<bool>.ConfigureAwait(bool) |
+| 537 | timer.WaitForNextTickAsync | resolved | System.Threading.Tasks.ValueTask<bool> System.Threading.PeriodicTimer.WaitForNextTickAsync(System.Threading.CancellationToken) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 473 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new PeriodicTimer(interval) |
-| 473 | using-declaration | 정리할 자원을 선언합니다: using var timer = new PeriodicTimer(interval); |
-| 473 | variable-initializer | 변수의 초기값을 지정합니다: timer = new PeriodicTimer(interval) |
-| 474 | local-declaration | 지역 변수를 선언합니다: var previousErrors = new string[checks.Length]; |
-| 474 | variable-initializer | 변수의 초기값을 지정합니다: previousErrors = new string[checks.Length] |
-| 475 | local-declaration | 지역 변수를 선언합니다: var previousDefinitionError = ""; |
-| 475 | variable-initializer | 변수의 초기값을 지정합니다: previousDefinitionError = "" |
-| 476 | try | 예외 처리 범위입니다: try |
-| 478 | do | 본문 실행 후 반복 조건을 확인합니다: do ... while (await timer.WaitForNextTickAsync(token).ConfigureAwait(false)) |
-| 480 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() |
-| 480 | local-declaration | 지역 변수를 선언합니다: var errors = new List<string>(); |
-| 480 | variable-initializer | 변수의 초기값을 지정합니다: errors = new List<string>() |
-| 481 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RetryDefinitionInitialization() |
-| 481 | local-declaration | 지역 변수를 선언합니다: var definitionError = RetryDefinitionInitialization(); |
-| 481 | variable-initializer | 변수의 초기값을 지정합니다: definitionError = RetryDefinitionInitialization() |
-| 482 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(definitionError) |
-| 482 | if | 조건에 따라 분기합니다: if (!string.IsNullOrEmpty(definitionError)) |
-| 484 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _monitoringError, $"Alarm definitions: {definitionError}") |
-| 485 | if | 조건에 따라 분기합니다: if (previousDefinitionError != definitionError) |
-| 487 | assignment | 값을 대상에 대입합니다: previousDefinitionError = definitionError |
-| 488 | try | 예외 처리 범위입니다: try |
-| 490 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(new InvalidOperationException($"알람 정의 초기화 대기: {definitionError}")) |
-| 490 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"알람 정의 초기화 대기: {definitionError}") |
-| 492 | catch | 지정 예외를 처리합니다: catch (Exception reportException) |
-| 494 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Debug.WriteLine(reportException) |
-| 498 | continue | 다음 반복으로 진행합니다: continue; |
-| 501 | assignment | 값을 대상에 대입합니다: previousDefinitionError = "" |
-| 502 | variable-initializer | 변수의 초기값을 지정합니다: index = 0 |
-| 502 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < checks.Length; index++) |
-| 504 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested() |
-| 505 | try | 예외 처리 범위입니다: try |
-| 507 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: checks[index]&#40;token) |
-| 508 | assignment | 값을 대상에 대입합니다: previousErrors[index] = "" |
-| 510 | catch | 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested) |
-| 512 | throw | 예외를 발생/전달합니다: throw; |
-| 514 | catch | 지정 예외를 처리합니다: catch (Exception exception) |
-| 516 | local-declaration | 지역 변수를 선언합니다: var message = $"Alarm check {index + 1}: {exception.Message}"; |
-| 516 | variable-initializer | 변수의 초기값을 지정합니다: message = $"Alarm check {index + 1}: {exception.Message}" |
-| 517 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add(message) |
-| 518 | if | 조건에 따라 분기합니다: if (previousErrors[index] != message) |
-| 520 | assignment | 값을 대상에 대입합니다: previousErrors[index] = message |
-| 521 | try | 예외 처리 범위입니다: try |
-| 523 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(exception) |
-| 525 | catch | 지정 예외를 처리합니다: catch (Exception reportException) |
-| 527 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Debug.WriteLine(reportException) |
-| 533 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _monitoringError, string.Join(Environment.NewLine, errors)) |
-| 533 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(Environment.NewLine, errors) |
-| 535 | await | 비동기 완료를 기다립니다: await timer.WaitForNextTickAsync(token).ConfigureAwait(false) |
-| 535 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: timer.WaitForNextTickAsync(token).ConfigureAwait(false) |
-| 535 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: timer.WaitForNextTickAsync(token) |
-| 537 | catch | 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested) |
+| 475 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new PeriodicTimer(interval) |
+| 475 | using-declaration | 정리할 자원을 선언합니다: using var timer = new PeriodicTimer(interval); |
+| 475 | variable-initializer | 변수의 초기값을 지정합니다: timer = new PeriodicTimer(interval) |
+| 476 | local-declaration | 지역 변수를 선언합니다: var previousErrors = new string[checks.Length]; |
+| 476 | variable-initializer | 변수의 초기값을 지정합니다: previousErrors = new string[checks.Length] |
+| 477 | local-declaration | 지역 변수를 선언합니다: var previousDefinitionError = ""; |
+| 477 | variable-initializer | 변수의 초기값을 지정합니다: previousDefinitionError = "" |
+| 478 | try | 예외 처리 범위입니다: try |
+| 480 | do | 본문 실행 후 반복 조건을 확인합니다: do ... while (await timer.WaitForNextTickAsync(token).ConfigureAwait(false)) |
+| 482 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<string>() |
+| 482 | local-declaration | 지역 변수를 선언합니다: var errors = new List<string>(); |
+| 482 | variable-initializer | 변수의 초기값을 지정합니다: errors = new List<string>() |
+| 483 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: RetryDefinitionInitialization() |
+| 483 | local-declaration | 지역 변수를 선언합니다: var definitionError = RetryDefinitionInitialization(); |
+| 483 | variable-initializer | 변수의 초기값을 지정합니다: definitionError = RetryDefinitionInitialization() |
+| 484 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(definitionError) |
+| 484 | if | 조건에 따라 분기합니다: if (!string.IsNullOrEmpty(definitionError)) |
+| 486 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _monitoringError, $"Alarm definitions: {definitionError}") |
+| 487 | if | 조건에 따라 분기합니다: if (previousDefinitionError != definitionError) |
+| 489 | assignment | 값을 대상에 대입합니다: previousDefinitionError = definitionError |
+| 490 | try | 예외 처리 범위입니다: try |
+| 492 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(new InvalidOperationException($"알람 정의 초기화 대기: {definitionError}")) |
+| 492 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidOperationException($"알람 정의 초기화 대기: {definitionError}") |
+| 494 | catch | 지정 예외를 처리합니다: catch (Exception reportException) |
+| 496 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Debug.WriteLine(reportException) |
+| 500 | continue | 다음 반복으로 진행합니다: continue; |
+| 503 | assignment | 값을 대상에 대입합니다: previousDefinitionError = "" |
+| 504 | variable-initializer | 변수의 초기값을 지정합니다: index = 0 |
+| 504 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < checks.Length; index++) |
+| 506 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: token.ThrowIfCancellationRequested() |
+| 507 | try | 예외 처리 범위입니다: try |
+| 509 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: checks[index]&#40;token) |
+| 510 | assignment | 값을 대상에 대입합니다: previousErrors[index] = "" |
+| 512 | catch | 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested) |
+| 514 | throw | 예외를 발생/전달합니다: throw; |
+| 516 | catch | 지정 예외를 처리합니다: catch (Exception exception) |
+| 518 | local-declaration | 지역 변수를 선언합니다: var message = $"Alarm check {index + 1}: {exception.Message}"; |
+| 518 | variable-initializer | 변수의 초기값을 지정합니다: message = $"Alarm check {index + 1}: {exception.Message}" |
+| 519 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: errors.Add(message) |
+| 520 | if | 조건에 따라 분기합니다: if (previousErrors[index] != message) |
+| 522 | assignment | 값을 대상에 대입합니다: previousErrors[index] = message |
+| 523 | try | 예외 처리 범위입니다: try |
+| 525 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(exception) |
+| 527 | catch | 지정 예외를 처리합니다: catch (Exception reportException) |
+| 529 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Debug.WriteLine(reportException) |
+| 535 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Volatile.Write(ref _monitoringError, string.Join(Environment.NewLine, errors)) |
+| 535 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.Join(Environment.NewLine, errors) |
+| 537 | await | 비동기 완료를 기다립니다: await timer.WaitForNextTickAsync(token).ConfigureAwait(false) |
+| 537 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: timer.WaitForNextTickAsync(token).ConfigureAwait(false) |
+| 537 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: timer.WaitForNextTickAsync(token) |
+| 539 | catch | 지정 예외를 처리합니다: catch (OperationCanceledException) when (token.IsCancellationRequested) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["Monitor"]
- N0["L476 try"]
+ N0["L478 try"]
  M -->|포함| N0
- N1["L478 do"]
+ N1["L480 do"]
  N0 -->|포함| N1
- N2["L482 if"]
+ N2["L484 if"]
  N1 -->|포함| N2
- N3["L485 if"]
+ N3["L487 if"]
  N2 -->|포함| N3
- N4["L488 try"]
+ N4["L490 try"]
  N3 -->|포함| N4
- N5["L492 catch"]
+ N5["L494 catch"]
  N4 -->|포함| N5
- N6["L502 for"]
+ N6["L504 for"]
  N1 -->|포함| N6
- N7["L505 try"]
+ N7["L507 try"]
  N6 -->|포함| N7
- N8["L510 catch"]
+ N8["L512 catch"]
  N7 -->|포함| N8
- N9["L514 catch"]
+ N9["L516 catch"]
  N7 -->|포함| N9
- N10["L518 if"]
+ N10["L520 if"]
  N9 -->|포함| N10
- N11["L521 try"]
+ N11["L523 try"]
  N10 -->|포함| N11
- N12["L525 catch"]
+ N12["L527 catch"]
  N11 -->|포함| N12
- N13["L537 catch"]
+ N13["L539 catch"]
  N0 -->|포함| N13
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Load` · L547–547
+### MethodDeclaration `Load` · L549–549
 
-[Drilling.Common/Alarm/CAlarmManager.cs:547–547](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L547-L547)
+[Drilling.Common/Alarm/CAlarmManager.cs:549–549](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L549-L549)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2552,13 +2552,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L147-L147) | file.Load | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:147–147](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L147-L147) | file.Load | False |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### EnumMemberDeclaration `Info` · L553–553
+### EnumMemberDeclaration `Info` · L555–555
 
-[Drilling.Common/Alarm/CAlarmManager.cs:553–553](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L553-L553)
+[Drilling.Common/Alarm/CAlarmManager.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L555-L555)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2571,9 +2571,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### EnumMemberDeclaration `Warning` · L554–554
+### EnumMemberDeclaration `Warning` · L556–556
 
-[Drilling.Common/Alarm/CAlarmManager.cs:554–554](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L554-L554)
+[Drilling.Common/Alarm/CAlarmManager.cs:556–556](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L556-L556)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2586,9 +2586,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### EnumMemberDeclaration `Critical` · L555–555
+### EnumMemberDeclaration `Critical` · L557–557
 
-[Drilling.Common/Alarm/CAlarmManager.cs:555–555](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L555-L555)
+[Drilling.Common/Alarm/CAlarmManager.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L557-L557)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2601,9 +2601,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### EnumMemberDeclaration `Clear` · L560–560
+### EnumMemberDeclaration `Clear` · L562–562
 
-[Drilling.Common/Alarm/CAlarmManager.cs:560–560](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L560-L560)
+[Drilling.Common/Alarm/CAlarmManager.cs:562–562](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L562-L562)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2616,9 +2616,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### EnumMemberDeclaration `Occur` · L561–561
+### EnumMemberDeclaration `Occur` · L563–563
 
-[Drilling.Common/Alarm/CAlarmManager.cs:561–561](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L561-L561)
+[Drilling.Common/Alarm/CAlarmManager.cs:563–563](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L563-L563)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2631,9 +2631,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Id` · L566–566
+### PropertyDeclaration `Id` · L568–568
 
-[Drilling.Common/Alarm/CAlarmManager.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L566-L566)
+[Drilling.Common/Alarm/CAlarmManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2646,9 +2646,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Id` · L566–566
+### GetAccessorDeclaration `get_Id` · L568–568
 
-[Drilling.Common/Alarm/CAlarmManager.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L566-L566)
+[Drilling.Common/Alarm/CAlarmManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2661,9 +2661,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_Id` · L566–566
+### InitAccessorDeclaration `set_Id` · L568–568
 
-[Drilling.Common/Alarm/CAlarmManager.cs:566–566](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L566-L566)
+[Drilling.Common/Alarm/CAlarmManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2682,9 +2682,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Group` · L567–567
+### PropertyDeclaration `Group` · L569–569
 
-[Drilling.Common/Alarm/CAlarmManager.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L567-L567)
+[Drilling.Common/Alarm/CAlarmManager.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2697,9 +2697,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Group` · L567–567
+### GetAccessorDeclaration `get_Group` · L569–569
 
-[Drilling.Common/Alarm/CAlarmManager.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L567-L567)
+[Drilling.Common/Alarm/CAlarmManager.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2712,9 +2712,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_Group` · L567–567
+### InitAccessorDeclaration `set_Group` · L569–569
 
-[Drilling.Common/Alarm/CAlarmManager.cs:567–567](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L567-L567)
+[Drilling.Common/Alarm/CAlarmManager.cs:569–569](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L569-L569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2733,9 +2733,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `CimAddress` · L568–568
+### PropertyDeclaration `CimAddress` · L570–570
 
-[Drilling.Common/Alarm/CAlarmManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568)
+[Drilling.Common/Alarm/CAlarmManager.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2748,9 +2748,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_CimAddress` · L568–568
+### GetAccessorDeclaration `get_CimAddress` · L570–570
 
-[Drilling.Common/Alarm/CAlarmManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568)
+[Drilling.Common/Alarm/CAlarmManager.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2763,9 +2763,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### InitAccessorDeclaration `set_CimAddress` · L568–568
+### InitAccessorDeclaration `set_CimAddress` · L570–570
 
-[Drilling.Common/Alarm/CAlarmManager.cs:568–568](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L568-L568)
+[Drilling.Common/Alarm/CAlarmManager.cs:570–570](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L570-L570)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2784,9 +2784,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Check` · L575–607
+### MethodDeclaration `Check` · L577–609
 
-[Drilling.Common/Alarm/CAlarmManager.cs:575–607](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L575-L607)
+[Drilling.Common/Alarm/CAlarmManager.cs:577–609](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L577-L609)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2799,101 +2799,101 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:418–418](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L418-L418) | temperatures.Check | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:420–420](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L420-L420) | temperatures.Check | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 577 | settings.LoadSection | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> Drilling.Common.Managers.CSettingManager.LoadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:26 |
-| 578 | options.FirstOrDefault | resolved | Drilling.Common.Managers.ST_SYSTEM_PARAMETER? System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>.FirstOrDefault<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>(System.Func<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, bool>) |
-| 578 | option.Key.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 578 | option.Name.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
-| 579 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
-| 579 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
-| 579 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 581 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
-| 584 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
-| 590 | CScannerAxisConfiguration.BuildAxisDefinitions | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING> Drilling.Common.Automation.CScannerAxisConfiguration.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, int) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:8 |
-| 592 | string.IsNullOrEmpty | resolved | bool string.IsNullOrEmpty(string?) |
-| 594 | automation.IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
-| 594 | automation.IsConnect | resolved | bool Drilling.Common.Automation.CAutomationManager.IsConnect(int) · Drilling.Common/Automation/CAutomationManager.cs:58 |
-| 597 | automation.StatusSnapshots.GetAxis | resolved | Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT<Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS> Drilling.Common.Automation.CAutomationStatusSnapshotService.GetAxis(string, int, int, bool) · Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:23 |
-| 600 | double.IsFinite | resolved | bool double.IsFinite(double) |
-| 605 | alarms.SetAlarm | resolved | bool Drilling.Common.Alarm.CAlarmManager.SetAlarm(int) · Drilling.Common/Alarm/CAlarmManager.cs:233 |
+| 579 | settings.LoadSection | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER> Drilling.Common.Managers.CSettingManager.LoadSection(Drilling.Common.Managers.EN_SETTING_TAB, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:26 |
+| 580 | options.FirstOrDefault | resolved | Drilling.Common.Managers.ST_SYSTEM_PARAMETER? System.Collections.Generic.IEnumerable<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>.FirstOrDefault<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>(System.Func<Drilling.Common.Managers.ST_SYSTEM_PARAMETER, bool>) |
+| 580 | option.Key.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 580 | option.Name.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
+| 581 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
+| 581 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
+| 581 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 583 | string.IsNullOrWhiteSpace | resolved | bool string.IsNullOrWhiteSpace(string?) |
+| 586 | new InvalidDataException | resolved | System.IO.InvalidDataException.InvalidDataException(string?) |
+| 592 | CScannerAxisConfiguration.BuildAxisDefinitions | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Automation.ST_SCANNER_AXIS_SETTING> Drilling.Common.Automation.CScannerAxisConfiguration.BuildAxisDefinitions(System.Collections.Generic.IReadOnlyList<Drilling.Common.Managers.ST_SYSTEM_PARAMETER>, int) · Drilling.Common/Automation/CScannerAxisConfiguration.cs:8 |
+| 594 | string.IsNullOrEmpty | resolved | bool string.IsNullOrEmpty(string?) |
+| 596 | automation.IsSimul | resolved | bool Drilling.Common.Automation.CAutomationManager.IsSimul(int) · Drilling.Common/Automation/CAutomationManager.cs:63 |
+| 596 | automation.IsConnect | resolved | bool Drilling.Common.Automation.CAutomationManager.IsConnect(int) · Drilling.Common/Automation/CAutomationManager.cs:58 |
+| 599 | automation.StatusSnapshots.GetAxis | resolved | Drilling.Common.Automation.ST_AUTOMATION_STATUS_SNAPSHOT<Drilling.Common.Automation.ST_AUTOMATION_AXIS_STATUS> Drilling.Common.Automation.CAutomationStatusSnapshotService.GetAxis(string, int, int, bool) · Drilling.Common/Automation/CAutomationStatusSnapshotService.cs:23 |
+| 602 | double.IsFinite | resolved | bool double.IsFinite(double) |
+| 607 | alarms.SetAlarm | resolved | bool Drilling.Common.Alarm.CAlarmManager.SetAlarm(int) · Drilling.Common/Alarm/CAlarmManager.cs:233 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 577 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LoadSection(EN_SETTING_TAB.Option) |
-| 577 | local-declaration | 지역 변수를 선언합니다: var options = settings.LoadSection(EN_SETTING_TAB.Option); |
-| 577 | variable-initializer | 변수의 초기값을 지정합니다: options = settings.LoadSection(EN_SETTING_TAB.Option) |
-| 578 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: options.FirstOrDefault(option => option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) &#124;&#124; option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase)) |
-| 578 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) |
-| 578 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) |
-| 578 | local-declaration | 지역 변수를 선언합니다: var limitText = options.FirstOrDefault(option => option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) &#124;&#124; option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase))?.Value; |
-| 578 | variable-initializer | 변수의 초기값을 지정합니다: limitText = options.FirstOrDefault(option => option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) &#124;&#124; option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase))?.Value |
-| 579 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(limitText, NumberStyles.Float, CultureInfo.InvariantCulture, out var limit) |
-| 579 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(limitText, NumberStyles.Float, CultureInfo.CurrentCulture, out limit) |
-| 579 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(limit) |
-| 579 | if | 조건에 따라 분기합니다: if ((!double.TryParse(limitText, NumberStyles.Float, CultureInfo.InvariantCulture, out var limit) && !double.TryParse(limitText, NumberStyles.Float, CultureInfo.CurrentCulture, out limit)) &#124;&#124; !double.IsFinite(limit) &#124;&#124; limit…) |
-| 581 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(limitText) |
-| 581 | conditional-expression | 조건에 따라 결과식을 선택합니다: limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText |
-| 581 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText |
-| 581 | local-declaration | 지역 변수를 선언합니다: var displayedValue = limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText; |
-| 581 | variable-initializer | 변수의 초기값을 지정합니다: displayedValue = limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText |
-| 584 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Scanner Temp Limit (SCANNER_TEMP_LIMIT) 설정 오류: " + $"0 이상의 유한한 온도(°C)가 필요합니다. 현재 값: {displayedValue}. " + "Setting > OPTION > INTERLOCK에서 확인해 주세요.") |
-| 584 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"Scanner Temp Limit (SCANNER_TEMP_LIMIT) 설정 오류: " + $"0 이상의 유한한 온도(°C)가 필요합니다. 현재 값: {displayedValue}. " + "Setting > OPTION > INTERLOCK에서 확인해 주세요."); |
-| 587 | variable-initializer | 변수의 초기값을 지정합니다: headNo = 1 |
-| 587 | for | 초기화·조건·증감이 있는 반복입니다: for (var headNo = 1; headNo <= 8; headNo++) |
-| 589 | local-declaration | 지역 변수를 선언합니다: var overLimit = false; |
-| 589 | variable-initializer | 변수의 초기값을 지정합니다: overLimit = false |
-| 590 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.BuildAxisDefinitions(options, headNo) |
-| 590 | foreach | 컬렉션 요소를 순회합니다: foreach (var axis in CScannerAxisConfiguration.BuildAxisDefinitions(options, headNo)) |
-| 592 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(axis.ConfigurationError) |
-| 592 | if | 조건에 따라 분기합니다: if (!axis.IsUsed &#124;&#124; !axis.ReadExtendedStatus &#124;&#124; !string.IsNullOrEmpty(axis.ConfigurationError)) |
-| 593 | continue | 다음 반복으로 진행합니다: continue; |
-| 594 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: automation.IsSimul(axis.AutomationNo) |
-| 594 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: automation.IsConnect(axis.AutomationNo) |
-| 594 | if | 조건에 따라 분기합니다: if (!automation.IsSimul(axis.AutomationNo) && !automation.IsConnect(axis.AutomationNo)) |
+| 579 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: settings.LoadSection(EN_SETTING_TAB.Option) |
+| 579 | local-declaration | 지역 변수를 선언합니다: var options = settings.LoadSection(EN_SETTING_TAB.Option); |
+| 579 | variable-initializer | 변수의 초기값을 지정합니다: options = settings.LoadSection(EN_SETTING_TAB.Option) |
+| 580 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: options.FirstOrDefault(option => option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) &#124;&#124; option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase)) |
+| 580 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) |
+| 580 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) |
+| 580 | local-declaration | 지역 변수를 선언합니다: var limitText = options.FirstOrDefault(option => option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) &#124;&#124; option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase))?.Value; |
+| 580 | variable-initializer | 변수의 초기값을 지정합니다: limitText = options.FirstOrDefault(option => option.Key.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase) &#124;&#124; option.Name.Equals("SCANNER_TEMP_LIMIT", StringComparison.OrdinalIgnoreCase))?.Value |
+| 581 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(limitText, NumberStyles.Float, CultureInfo.InvariantCulture, out var limit) |
+| 581 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(limitText, NumberStyles.Float, CultureInfo.CurrentCulture, out limit) |
+| 581 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(limit) |
+| 581 | if | 조건에 따라 분기합니다: if ((!double.TryParse(limitText, NumberStyles.Float, CultureInfo.InvariantCulture, out var limit) && !double.TryParse(limitText, NumberStyles.Float, CultureInfo.CurrentCulture, out limit)) &#124;&#124; !double.IsFinite(limit) &#124;&#124; limit…) |
+| 583 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(limitText) |
+| 583 | conditional-expression | 조건에 따라 결과식을 선택합니다: limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText |
+| 583 | conditional-expression | 조건에 따라 결과식을 선택합니다: string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText |
+| 583 | local-declaration | 지역 변수를 선언합니다: var displayedValue = limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText; |
+| 583 | variable-initializer | 변수의 초기값을 지정합니다: displayedValue = limitText is null ? "<누락>" : string.IsNullOrWhiteSpace(limitText) ? "<빈 값>" : limitText |
+| 586 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new InvalidDataException($"Scanner Temp Limit (SCANNER_TEMP_LIMIT) 설정 오류: " + $"0 이상의 유한한 온도(°C)가 필요합니다. 현재 값: {displayedValue}. " + "Setting > OPTION > INTERLOCK에서 확인해 주세요.") |
+| 586 | throw | 예외를 발생/전달합니다: throw new InvalidDataException($"Scanner Temp Limit (SCANNER_TEMP_LIMIT) 설정 오류: " + $"0 이상의 유한한 온도(°C)가 필요합니다. 현재 값: {displayedValue}. " + "Setting > OPTION > INTERLOCK에서 확인해 주세요."); |
+| 589 | variable-initializer | 변수의 초기값을 지정합니다: headNo = 1 |
+| 589 | for | 초기화·조건·증감이 있는 반복입니다: for (var headNo = 1; headNo <= 8; headNo++) |
+| 591 | local-declaration | 지역 변수를 선언합니다: var overLimit = false; |
+| 591 | variable-initializer | 변수의 초기값을 지정합니다: overLimit = false |
+| 592 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CScannerAxisConfiguration.BuildAxisDefinitions(options, headNo) |
+| 592 | foreach | 컬렉션 요소를 순회합니다: foreach (var axis in CScannerAxisConfiguration.BuildAxisDefinitions(options, headNo)) |
+| 594 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrEmpty(axis.ConfigurationError) |
+| 594 | if | 조건에 따라 분기합니다: if (!axis.IsUsed &#124;&#124; !axis.ReadExtendedStatus &#124;&#124; !string.IsNullOrEmpty(axis.ConfigurationError)) |
 | 595 | continue | 다음 반복으로 진행합니다: continue; |
-| 597 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus) |
-| 597 | local-declaration | 지역 변수를 선언합니다: var snapshot = automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus); |
-| 597 | variable-initializer | 변수의 초기값을 지정합니다: snapshot = automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus) |
-| 598 | if | 조건에 따라 분기합니다: if (snapshot.State != "OK" &#124;&#124; snapshot.Value is not { } status) |
-| 599 | continue | 다음 반복으로 진행합니다: continue; |
-| 600 | assignment | 값을 대상에 대입합니다: overLimit &#124;= double.IsFinite(status.MotorTemperature) && status.MotorTemperature > limit |
-| 600 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(status.MotorTemperature) |
-| 604 | if | 조건에 따라 분기합니다: if (overLimit) |
-| 605 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.SetAlarm(1047 + headNo) |
+| 596 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: automation.IsSimul(axis.AutomationNo) |
+| 596 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: automation.IsConnect(axis.AutomationNo) |
+| 596 | if | 조건에 따라 분기합니다: if (!automation.IsSimul(axis.AutomationNo) && !automation.IsConnect(axis.AutomationNo)) |
+| 597 | continue | 다음 반복으로 진행합니다: continue; |
+| 599 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus) |
+| 599 | local-declaration | 지역 변수를 선언합니다: var snapshot = automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus); |
+| 599 | variable-initializer | 변수의 초기값을 지정합니다: snapshot = automation.StatusSnapshots.GetAxis(axis.AxisReference, axis.AutomationNo, axis.AioNo, axis.ReadExtendedStatus) |
+| 600 | if | 조건에 따라 분기합니다: if (snapshot.State != "OK" &#124;&#124; snapshot.Value is not { } status) |
+| 601 | continue | 다음 반복으로 진행합니다: continue; |
+| 602 | assignment | 값을 대상에 대입합니다: overLimit &#124;= double.IsFinite(status.MotorTemperature) && status.MotorTemperature > limit |
+| 602 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(status.MotorTemperature) |
+| 606 | if | 조건에 따라 분기합니다: if (overLimit) |
+| 607 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: alarms.SetAlarm(1047 + headNo) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["Check"]
- N0["L579 if"]
+ N0["L581 if"]
  M -->|포함| N0
- N1["L587 for"]
+ N1["L589 for"]
  M -->|포함| N1
- N2["L590 foreach"]
+ N2["L592 foreach"]
  N1 -->|포함| N2
- N3["L592 if"]
+ N3["L594 if"]
  N2 -->|포함| N3
- N4["L594 if"]
+ N4["L596 if"]
  N2 -->|포함| N4
- N5["L598 if"]
+ N5["L600 if"]
  N2 -->|포함| N5
- N6["L604 if"]
+ N6["L606 if"]
  N1 -->|포함| N6
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_reported` · L613–613
+### FieldDeclaration `_reported` · L615–615
 
-[Drilling.Common/Alarm/CAlarmManager.cs:613–613](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L613-L613)
+[Drilling.Common/Alarm/CAlarmManager.cs:615–615](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L615-L615)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2906,9 +2906,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### ConstructorDeclaration `.ctor` · L614–616
+### ConstructorDeclaration `.ctor` · L616–618
 
-[Drilling.Common/Alarm/CAlarmManager.cs:614–616](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L614-L616)
+[Drilling.Common/Alarm/CAlarmManager.cs:616–618](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L616-L618)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2930,23 +2930,23 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L644-L644) | new | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646) | new | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L647-L647) | new | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646) | new | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L648-L648) | new | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649) | new | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 616 | assignment | 값을 대상에 대입합니다: Scenario = scenario |
-| 616 | assignment | 값을 대상에 대입합니다: Subject = subject |
-| 616 | assignment | 값을 대상에 대입합니다: Kind = kind |
+| 618 | assignment | 값을 대상에 대입합니다: Scenario = scenario |
+| 618 | assignment | 값을 대상에 대입합니다: Subject = subject |
+| 618 | assignment | 값을 대상에 대입합니다: Kind = kind |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Scenario` · L617–617
+### PropertyDeclaration `Scenario` · L619–619
 
-[Drilling.Common/Alarm/CAlarmManager.cs:617–617](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L617-L617)
+[Drilling.Common/Alarm/CAlarmManager.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L619-L619)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2959,9 +2959,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Scenario` · L617–617
+### GetAccessorDeclaration `get_Scenario` · L619–619
 
-[Drilling.Common/Alarm/CAlarmManager.cs:617–617](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L617-L617)
+[Drilling.Common/Alarm/CAlarmManager.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L619-L619)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2974,9 +2974,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Subject` · L618–618
+### PropertyDeclaration `Subject` · L620–620
 
-[Drilling.Common/Alarm/CAlarmManager.cs:618–618](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L618-L618)
+[Drilling.Common/Alarm/CAlarmManager.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L620-L620)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2989,9 +2989,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Subject` · L618–618
+### GetAccessorDeclaration `get_Subject` · L620–620
 
-[Drilling.Common/Alarm/CAlarmManager.cs:618–618](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L618-L618)
+[Drilling.Common/Alarm/CAlarmManager.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L620-L620)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3004,9 +3004,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Kind` · L619–619
+### PropertyDeclaration `Kind` · L621–621
 
-[Drilling.Common/Alarm/CAlarmManager.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L619-L619)
+[Drilling.Common/Alarm/CAlarmManager.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L621-L621)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3019,9 +3019,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Kind` · L619–619
+### GetAccessorDeclaration `get_Kind` · L621–621
 
-[Drilling.Common/Alarm/CAlarmManager.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L619-L619)
+[Drilling.Common/Alarm/CAlarmManager.cs:621–621](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L621-L621)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3034,9 +3034,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `AlarmId` · L620–620
+### PropertyDeclaration `AlarmId` · L622–622
 
-[Drilling.Common/Alarm/CAlarmManager.cs:620–620](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L620-L620)
+[Drilling.Common/Alarm/CAlarmManager.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L622-L622)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3051,13 +3051,13 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 620 | conditional-expression | 조건에 따라 결과식을 선택합니다: Subject.Length == 0 ? $"SEQ_{Scenario}_NG" : $"SEQ_{Scenario}_{Subject}_{Kind}" |
+| 622 | conditional-expression | 조건에 따라 결과식을 선택합니다: Subject.Length == 0 ? $"SEQ_{Scenario}_NG" : $"SEQ_{Scenario}_{Subject}_{Kind}" |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ActionScenario` · L621–627
+### MethodDeclaration `ActionScenario` · L623–629
 
-[Drilling.Common/Alarm/CAlarmManager.cs:621–627](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L621-L627)
+[Drilling.Common/Alarm/CAlarmManager.cs:623–629](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L623-L629)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3076,44 +3076,44 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L644-L644) | ActionScenario | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646) | ActionScenario | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 621 | id.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
-| 622 | id.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
 | 623 | id.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
 | 624 | id.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
 | 625 | id.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
 | 626 | id.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
 | 627 | id.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
+| 628 | id.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
+| 629 | id.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 621 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("MOVE_", StringComparison.Ordinal) |
-| 621 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("MOVE_", StringComparison.Ordinal) ? "PROCESS_MOVE" : id.StartsWith("DISTORTION_", StringComparison.Ordinal) ? "DISTORTION" : id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" : id.StartsWith("DOREADY_", String |
-| 622 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("DISTORTION_", StringComparison.Ordinal) |
-| 622 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("DISTORTION_", StringComparison.Ordinal) ? "DISTORTION" : id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" : id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" : id.StartsWith("PROCESS_", StringCo |
-| 623 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("IOF_", StringComparison.Ordinal) |
-| 623 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" : id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" : id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" : id.StartsWith("REVIEW_", StringCompariso |
-| 624 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("DOREADY_", StringComparison.Ordinal) |
-| 624 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" : id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" : id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" : id.StartsWith("TPM_", StringCompar |
-| 625 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("PROCESS_", StringComparison.Ordinal) |
-| 625 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" : id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" : id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO" |
-| 626 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("REVIEW_", StringComparison.Ordinal) |
-| 626 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" : id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO" |
-| 627 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("TPM_", StringComparison.Ordinal) |
-| 627 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO" |
+| 623 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("MOVE_", StringComparison.Ordinal) |
+| 623 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("MOVE_", StringComparison.Ordinal) ? "PROCESS_MOVE" : id.StartsWith("DISTORTION_", StringComparison.Ordinal) ? "DISTORTION" : id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" : id.StartsWith("DOREADY_", String |
+| 624 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("DISTORTION_", StringComparison.Ordinal) |
+| 624 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("DISTORTION_", StringComparison.Ordinal) ? "DISTORTION" : id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" : id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" : id.StartsWith("PROCESS_", StringCo |
+| 625 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("IOF_", StringComparison.Ordinal) |
+| 625 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("IOF_", StringComparison.Ordinal) ? "IOF" : id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" : id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" : id.StartsWith("REVIEW_", StringCompariso |
+| 626 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("DOREADY_", StringComparison.Ordinal) |
+| 626 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("DOREADY_", StringComparison.Ordinal) ? "DOREADY" : id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" : id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" : id.StartsWith("TPM_", StringCompar |
+| 627 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("PROCESS_", StringComparison.Ordinal) |
+| 627 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("PROCESS_", StringComparison.Ordinal) ? "PROCESS" : id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" : id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO" |
+| 628 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("REVIEW_", StringComparison.Ordinal) |
+| 628 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("REVIEW_", StringComparison.Ordinal) ? "REVIEW" : id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO" |
+| 629 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("TPM_", StringComparison.Ordinal) |
+| 629 | conditional-expression | 조건에 따라 결과식을 선택합니다: id.StartsWith("TPM_", StringComparison.Ordinal) ? "TPM" : "AUTO" |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `SignalScenario` · L628–639
+### MethodDeclaration `SignalScenario` · L630–641
 
-[Drilling.Common/Alarm/CAlarmManager.cs:628–639](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L628-L639)
+[Drilling.Common/Alarm/CAlarmManager.cs:630–641](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L630-L641)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3133,89 +3133,89 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646) | SignalScenario | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:648–648](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L648-L648) | SignalScenario | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 630 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
-| 631 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
 | 632 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
 | 633 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
 | 634 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
 | 635 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
-| 635 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
-| 635 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
-| 635 | id.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
-| 636 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
 | 636 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
 | 637 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
 | 637 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
+| 637 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
+| 637 | id.StartsWith | resolved | bool string.StartsWith(string, System.StringComparison) |
+| 638 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
+| 638 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
+| 639 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
+| 639 | id.Contains | resolved | bool string.Contains(string, System.StringComparison) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 630 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("DISTORTION", StringComparison.Ordinal) |
-| 630 | if | 조건에 따라 분기합니다: if (id.Contains("DISTORTION", StringComparison.Ordinal)) |
-| 630 | return | 호출자에게 값 또는 제어를 반환합니다: return "DISTORTION"; |
-| 631 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("TOP_POWERMETER", StringComparison.Ordinal) |
-| 631 | if | 조건에 따라 분기합니다: if (id.Contains("TOP_POWERMETER", StringComparison.Ordinal) &#124;&#124; id == "PROCESS_SEQUENCE_TPM_LASER_ON") |
-| 631 | return | 호출자에게 값 또는 제어를 반환합니다: return "TPM"; |
-| 632 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("DOREADY", StringComparison.Ordinal) |
-| 632 | if | 조건에 따라 분기합니다: if (id.Contains("DOREADY", StringComparison.Ordinal)) |
-| 632 | return | 호출자에게 값 또는 제어를 반환합니다: return "DOREADY"; |
-| 633 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("DO_ALIGN", StringComparison.Ordinal) |
-| 633 | if | 조건에 따라 분기합니다: if (id.Contains("DO_ALIGN", StringComparison.Ordinal) &#124;&#124; id == "STAGE_MCC_BUSY_FLAGS") |
-| 633 | return | 호출자에게 값 또는 제어를 반환합니다: return "DO_ALIGN"; |
-| 634 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("IOF", StringComparison.Ordinal) |
-| 634 | if | 조건에 따라 분기합니다: if (id.Contains("IOF", StringComparison.Ordinal)) |
-| 634 | return | 호출자에게 값 또는 제어를 반환합니다: return "IOF"; |
-| 635 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_SDC", StringComparison.Ordinal) |
-| 635 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("REVIEW_MOVE_START", StringComparison.Ordinal) |
-| 635 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("REVIEW_GENERAL_RUNNING", StringComparison.Ordinal) |
-| 635 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("PROCESS_REVIEW_", StringComparison.Ordinal) |
-| 635 | if | 조건에 따라 분기합니다: if (id.Contains("_SDC", StringComparison.Ordinal) &#124;&#124; id.Contains("REVIEW_MOVE_START", StringComparison.Ordinal) &#124;&#124; id.Contains("REVIEW_GENERAL_RUNNING", StringComparison.Ordinal) &#124;&#124; id.StartsWith("PROCESS_REVIEW_", StringCom…) |
-| 635 | return | 호출자에게 값 또는 제어를 반환합니다: return "PROCESS_MOVE"; |
-| 636 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("HANDSHAKE_", StringComparison.Ordinal) |
-| 636 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_PROCESS_", StringComparison.Ordinal) |
-| 636 | if | 조건에 따라 분기합니다: if (id.Contains("HANDSHAKE_", StringComparison.Ordinal) && id.Contains("_PROCESS_", StringComparison.Ordinal)) |
-| 636 | return | 호출자에게 값 또는 제어를 반환합니다: return "PROCESS"; |
-| 637 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("HANDSHAKE_", StringComparison.Ordinal) |
-| 637 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_REVIEW_", StringComparison.Ordinal) |
-| 637 | if | 조건에 따라 분기합니다: if (id.Contains("HANDSHAKE_", StringComparison.Ordinal) && id.Contains("_REVIEW_", StringComparison.Ordinal)) |
-| 637 | return | 호출자에게 값 또는 제어를 반환합니다: return "REVIEW"; |
-| 638 | return | 호출자에게 값 또는 제어를 반환합니다: return fallback; |
+| 632 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("DISTORTION", StringComparison.Ordinal) |
+| 632 | if | 조건에 따라 분기합니다: if (id.Contains("DISTORTION", StringComparison.Ordinal)) |
+| 632 | return | 호출자에게 값 또는 제어를 반환합니다: return "DISTORTION"; |
+| 633 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("TOP_POWERMETER", StringComparison.Ordinal) |
+| 633 | if | 조건에 따라 분기합니다: if (id.Contains("TOP_POWERMETER", StringComparison.Ordinal) &#124;&#124; id == "PROCESS_SEQUENCE_TPM_LASER_ON") |
+| 633 | return | 호출자에게 값 또는 제어를 반환합니다: return "TPM"; |
+| 634 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("DOREADY", StringComparison.Ordinal) |
+| 634 | if | 조건에 따라 분기합니다: if (id.Contains("DOREADY", StringComparison.Ordinal)) |
+| 634 | return | 호출자에게 값 또는 제어를 반환합니다: return "DOREADY"; |
+| 635 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("DO_ALIGN", StringComparison.Ordinal) |
+| 635 | if | 조건에 따라 분기합니다: if (id.Contains("DO_ALIGN", StringComparison.Ordinal) &#124;&#124; id == "STAGE_MCC_BUSY_FLAGS") |
+| 635 | return | 호출자에게 값 또는 제어를 반환합니다: return "DO_ALIGN"; |
+| 636 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("IOF", StringComparison.Ordinal) |
+| 636 | if | 조건에 따라 분기합니다: if (id.Contains("IOF", StringComparison.Ordinal)) |
+| 636 | return | 호출자에게 값 또는 제어를 반환합니다: return "IOF"; |
+| 637 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_SDC", StringComparison.Ordinal) |
+| 637 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("REVIEW_MOVE_START", StringComparison.Ordinal) |
+| 637 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("REVIEW_GENERAL_RUNNING", StringComparison.Ordinal) |
+| 637 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.StartsWith("PROCESS_REVIEW_", StringComparison.Ordinal) |
+| 637 | if | 조건에 따라 분기합니다: if (id.Contains("_SDC", StringComparison.Ordinal) &#124;&#124; id.Contains("REVIEW_MOVE_START", StringComparison.Ordinal) &#124;&#124; id.Contains("REVIEW_GENERAL_RUNNING", StringComparison.Ordinal) &#124;&#124; id.StartsWith("PROCESS_REVIEW_", StringCom…) |
+| 637 | return | 호출자에게 값 또는 제어를 반환합니다: return "PROCESS_MOVE"; |
+| 638 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("HANDSHAKE_", StringComparison.Ordinal) |
+| 638 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_PROCESS_", StringComparison.Ordinal) |
+| 638 | if | 조건에 따라 분기합니다: if (id.Contains("HANDSHAKE_", StringComparison.Ordinal) && id.Contains("_PROCESS_", StringComparison.Ordinal)) |
+| 638 | return | 호출자에게 값 또는 제어를 반환합니다: return "PROCESS"; |
+| 639 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("HANDSHAKE_", StringComparison.Ordinal) |
+| 639 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: id.Contains("_REVIEW_", StringComparison.Ordinal) |
+| 639 | if | 조건에 따라 분기합니다: if (id.Contains("HANDSHAKE_", StringComparison.Ordinal) && id.Contains("_REVIEW_", StringComparison.Ordinal)) |
+| 639 | return | 호출자에게 값 또는 제어를 반환합니다: return "REVIEW"; |
+| 640 | return | 호출자에게 값 또는 제어를 반환합니다: return fallback; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["SignalScenario"]
- N0["L630 if"]
+ N0["L632 if"]
  M -->|포함| N0
- N1["L631 if"]
+ N1["L633 if"]
  M -->|포함| N1
- N2["L632 if"]
+ N2["L634 if"]
  M -->|포함| N2
- N3["L633 if"]
+ N3["L635 if"]
  M -->|포함| N3
- N4["L634 if"]
+ N4["L636 if"]
  M -->|포함| N4
- N5["L635 if"]
+ N5["L637 if"]
  M -->|포함| N5
- N6["L636 if"]
+ N6["L638 if"]
  M -->|포함| N6
- N7["L637 if"]
+ N7["L639 if"]
  M -->|포함| N7
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Existing` · L640–642
+### MethodDeclaration `Existing` · L642–644
 
-[Drilling.Common/Alarm/CAlarmManager.cs:640–642](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L640-L642)
+[Drilling.Common/Alarm/CAlarmManager.cs:642–644](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L642-L644)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3234,35 +3234,35 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:642–642](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L642-L642) | Existing | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:643–643](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L643-L643) | Existing | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:645–645](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L645-L645) | Existing | False |
-| [Drilling.Common/Alarm/CAlarmManager.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L647-L647) | Existing | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L644-L644) | Existing | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:645–645](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L645-L645) | Existing | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L647-L647) | Existing | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649) | Existing | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 641 | group.InnerExceptions.Select(Existing).FirstOrDefault | resolved | Drilling.Common.Alarm.CSequenceFailureException? System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.CSequenceFailureException?>.FirstOrDefault<Drilling.Common.Alarm.CSequenceFailureException?>(System.Func<Drilling.Common.Alarm.CSequenceFailureException?, bool>) |
-| 641 | group.InnerExceptions.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.CSequenceFailureException?> System.Collections.Generic.IEnumerable<System.Exception>.Select<System.Exception, Drilling.Common.Alarm.CSequenceFailureException?>(System.Func<System.Exception, Drilling.Common.Alarm.CSequenceFailureException?>) |
-| 642 | Existing | resolved | Drilling.Common.Alarm.CSequenceFailureException? Drilling.Common.Alarm.CSequenceFailureException.Existing(System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:640 |
+| 643 | group.InnerExceptions.Select(Existing).FirstOrDefault | resolved | Drilling.Common.Alarm.CSequenceFailureException? System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.CSequenceFailureException?>.FirstOrDefault<Drilling.Common.Alarm.CSequenceFailureException?>(System.Func<Drilling.Common.Alarm.CSequenceFailureException?, bool>) |
+| 643 | group.InnerExceptions.Select | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Alarm.CSequenceFailureException?> System.Collections.Generic.IEnumerable<System.Exception>.Select<System.Exception, Drilling.Common.Alarm.CSequenceFailureException?>(System.Func<System.Exception, Drilling.Common.Alarm.CSequenceFailureException?>) |
+| 644 | Existing | resolved | Drilling.Common.Alarm.CSequenceFailureException? Drilling.Common.Alarm.CSequenceFailureException.Existing(System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:642 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 640 | conditional-expression | 조건에 따라 결과식을 선택합니다: error is CSequenceFailureException found ? found : error is AggregateException group ? group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) : error.InnerException is { } inner ? Existing(inner) : null |
-| 641 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) |
-| 641 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.InnerExceptions.Select(Existing) |
-| 641 | conditional-expression | 조건에 따라 결과식을 선택합니다: error is AggregateException group ? group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) : error.InnerException is { } inner ? Existing(inner) : null |
-| 642 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(inner) |
-| 642 | conditional-expression | 조건에 따라 결과식을 선택합니다: error.InnerException is { } inner ? Existing(inner) : null |
+| 642 | conditional-expression | 조건에 따라 결과식을 선택합니다: error is CSequenceFailureException found ? found : error is AggregateException group ? group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) : error.InnerException is { } inner ? Existing(inner) : null |
+| 643 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) |
+| 643 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: group.InnerExceptions.Select(Existing) |
+| 643 | conditional-expression | 조건에 따라 결과식을 선택합니다: error is AggregateException group ? group.InnerExceptions.Select(Existing).FirstOrDefault(item => item is not null) : error.InnerException is { } inner ? Existing(inner) : null |
+| 644 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(inner) |
+| 644 | conditional-expression | 조건에 따라 결과식을 선택합니다: error.InnerException is { } inner ? Existing(inner) : null |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Action` · L643–644
+### MethodDeclaration `Action` · L645–646
 
-[Drilling.Common/Alarm/CAlarmManager.cs:643–644](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L643-L644)
+[Drilling.Common/Alarm/CAlarmManager.cs:645–646](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L645-L646)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3282,40 +3282,40 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:468–468](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStageReviewSequences.cs#L468-L468) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:622–622](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStageReviewSequences.cs#L622-L622) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:715–715](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStageReviewSequences.cs#L715-L715) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:821–821](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStageReviewSequences.cs#L821-L821) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5314–5314](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L5314-L5314) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5329–5329](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L5329-L5329) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5390–5390](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L5390-L5390) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:5472–5472](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L5472-L5472) | CSequenceFailureException.Action | False |
-| [Drilling.Common/Station/CStationProcess.cs:6314–6314](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L6314-L6314) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L470-L470) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:619–619](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L619-L619) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:713–713](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L713-L713) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:816–816](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L816-L816) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5374–5374](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5374-L5374) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5389–5389](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5389-L5389) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5450–5450](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5450-L5450) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:5532–5532](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5532-L5532) | CSequenceFailureException.Action | False |
+| [Drilling.Common/Station/CStationProcess.cs:6378–6378](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L6378-L6378) | CSequenceFailureException.Action | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 643 | Existing | resolved | Drilling.Common.Alarm.CSequenceFailureException? Drilling.Common.Alarm.CSequenceFailureException.Existing(System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:640 |
-| 644 | Signal | resolved | Drilling.Common.Alarm.CSequenceFailureException Drilling.Common.Alarm.CSequenceFailureException.Signal(string, string, bool, System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:645 |
-| 644 | new | resolved | Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:614 |
-| 644 | ActionScenario | resolved | string Drilling.Common.Alarm.CSequenceFailureException.ActionScenario(string) · Drilling.Common/Alarm/CAlarmManager.cs:621 |
+| 645 | Existing | resolved | Drilling.Common.Alarm.CSequenceFailureException? Drilling.Common.Alarm.CSequenceFailureException.Existing(System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:642 |
+| 646 | Signal | resolved | Drilling.Common.Alarm.CSequenceFailureException Drilling.Common.Alarm.CSequenceFailureException.Signal(string, string, bool, System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:647 |
+| 646 | new | resolved | Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:616 |
+| 646 | ActionScenario | resolved | string Drilling.Common.Alarm.CSequenceFailureException.ActionScenario(string) · Drilling.Common/Alarm/CAlarmManager.cs:623 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 643 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(error) |
-| 644 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Signal(wait.Scenario, wait.Signal, true, error) |
-| 644 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(ActionScenario(id), id, "NG", error) |
-| 644 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ActionScenario(id) |
-| 644 | conditional-expression | 조건에 따라 결과식을 선택합니다: error is CSequenceSignalCanceledException wait ? Signal(wait.Scenario, wait.Signal, true, error) : new(ActionScenario(id), id, "NG", error) |
+| 645 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(error) |
+| 646 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Signal(wait.Scenario, wait.Signal, true, error) |
+| 646 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(ActionScenario(id), id, "NG", error) |
+| 646 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ActionScenario(id) |
+| 646 | conditional-expression | 조건에 따라 결과식을 선택합니다: error is CSequenceSignalCanceledException wait ? Signal(wait.Scenario, wait.Signal, true, error) : new(ActionScenario(id), id, "NG", error) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Signal` · L645–646
+### MethodDeclaration `Signal` · L647–648
 
-[Drilling.Common/Alarm/CAlarmManager.cs:645–646](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L645-L646)
+[Drilling.Common/Alarm/CAlarmManager.cs:647–648](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L647-L648)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3337,39 +3337,39 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:644–644](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L644-L644) | Signal | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStageReviewSequences.cs#L356-L356) | CSequenceFailureException.Signal | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStageReviewSequences.cs#L363-L363) | CSequenceFailureException.Signal | False |
-| [Drilling.Common/Station/CStageReviewSequences.cs:451–451](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStageReviewSequences.cs#L451-L451) | CSequenceFailureException.Signal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5349–5349](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L5349-L5349) | CSequenceFailureException.Signal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5379–5379](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L5379-L5379) | CSequenceFailureException.Signal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5411–5411](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L5411-L5411) | CSequenceFailureException.Signal | False |
-| [Drilling.Common/Station/CStationProcess.cs:5464–5464](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L5464-L5464) | CSequenceFailureException.Signal | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6946–6946](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6946-L6946) | Drilling.Common.Alarm.CSequenceFailureException.Signal | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6971–6971](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6971-L6971) | Drilling.Common.Alarm.CSequenceFailureException.Signal | False |
+| [Drilling.Common/Alarm/CAlarmManager.cs:646–646](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L646-L646) | Signal | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L358-L358) | CSequenceFailureException.Signal | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:365–365](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L365-L365) | CSequenceFailureException.Signal | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:453–453](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L453-L453) | CSequenceFailureException.Signal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5409–5409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5409-L5409) | CSequenceFailureException.Signal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5439–5439](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5439-L5439) | CSequenceFailureException.Signal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5471–5471](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5471-L5471) | CSequenceFailureException.Signal | False |
+| [Drilling.Common/Station/CStationProcess.cs:5524–5524](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5524-L5524) | CSequenceFailureException.Signal | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6954–6954](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6954-L6954) | Drilling.Common.Alarm.CSequenceFailureException.Signal | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6979–6979](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6979-L6979) | Drilling.Common.Alarm.CSequenceFailureException.Signal | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 645 | Existing | resolved | Drilling.Common.Alarm.CSequenceFailureException? Drilling.Common.Alarm.CSequenceFailureException.Existing(System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:640 |
-| 646 | new | resolved | Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:614 |
-| 646 | SignalScenario | resolved | string Drilling.Common.Alarm.CSequenceFailureException.SignalScenario(string, string) · Drilling.Common/Alarm/CAlarmManager.cs:628 |
+| 647 | Existing | resolved | Drilling.Common.Alarm.CSequenceFailureException? Drilling.Common.Alarm.CSequenceFailureException.Existing(System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:642 |
+| 648 | new | resolved | Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:616 |
+| 648 | SignalScenario | resolved | string Drilling.Common.Alarm.CSequenceFailureException.SignalScenario(string, string) · Drilling.Common/Alarm/CAlarmManager.cs:630 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 645 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(error) |
-| 646 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(SignalScenario(id, scenario), id, timeout ? "TIMEOUT" : "NG", error) |
-| 646 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SignalScenario(id, scenario) |
-| 646 | conditional-expression | 조건에 따라 결과식을 선택합니다: timeout ? "TIMEOUT" : "NG" |
+| 647 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(error) |
+| 648 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(SignalScenario(id, scenario), id, timeout ? "TIMEOUT" : "NG", error) |
+| 648 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SignalScenario(id, scenario) |
+| 648 | conditional-expression | 조건에 따라 결과식을 선택합니다: timeout ? "TIMEOUT" : "NG" |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ScenarioFailure` · L647–647
+### MethodDeclaration `ScenarioFailure` · L649–649
 
-[Drilling.Common/Alarm/CAlarmManager.cs:647–647](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L647-L647)
+[Drilling.Common/Alarm/CAlarmManager.cs:649–649](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L649-L649)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3389,27 +3389,27 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStationProcess.cs:5286–5286](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L5286-L5286) | CSequenceFailureException.ScenarioFailure | False |
+| [Drilling.Common/Station/CStationProcess.cs:5346–5346](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5346-L5346) | CSequenceFailureException.ScenarioFailure | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 647 | Existing | resolved | Drilling.Common.Alarm.CSequenceFailureException? Drilling.Common.Alarm.CSequenceFailureException.Existing(System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:640 |
-| 647 | new | resolved | Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:614 |
+| 649 | Existing | resolved | Drilling.Common.Alarm.CSequenceFailureException? Drilling.Common.Alarm.CSequenceFailureException.Existing(System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:642 |
+| 649 | new | resolved | Drilling.Common.Alarm.CSequenceFailureException.CSequenceFailureException(string, string, string, System.Exception) · Drilling.Common/Alarm/CAlarmManager.cs:616 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 647 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(error) |
-| 647 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(scenario, "", "NG", error) |
+| 649 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Existing(error) |
+| 649 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new(scenario, "", "NG", error) |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Publish` · L648–654
+### MethodDeclaration `Publish` · L650–656
 
-[Drilling.Common/Alarm/CAlarmManager.cs:648–654](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L648-L654)
+[Drilling.Common/Alarm/CAlarmManager.cs:650–656](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L650-L656)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3428,60 +3428,60 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Station/CStageReviewSequences.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStageReviewSequences.cs#L23-L23) | failure.Publish | False |
-| [Drilling.Common/Station/CStationProcess.cs:5014–5014](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStationProcess.cs#L5014-L5014) | failure.Publish | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6946–6946](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6946-L6946) | Drilling.Common.Alarm.CSequenceFailureException.Signal("DO_ALIGN", RequestId, exception is TimeoutException or OperationCanceledException, exception).Publish | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:6971–6971](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L6971-L6971) | Drilling.Common.Alarm.CSequenceFailureException.Signal("DO_ALIGN", RequestId, exception is TimeoutException or OperationCanceledException, exception).Publish | False |
+| [Drilling.Common/Station/CStageReviewSequences.cs:23–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L23-L23) | failure.Publish | False |
+| [Drilling.Common/Station/CStationProcess.cs:5074–5074](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStationProcess.cs#L5074-L5074) | failure.Publish | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6954–6954](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6954-L6954) | Drilling.Common.Alarm.CSequenceFailureException.Signal("DO_ALIGN", RequestId, exception is TimeoutException or OperationCanceledException, exception).Publish | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:6979–6979](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L6979-L6979) | Drilling.Common.Alarm.CSequenceFailureException.Signal("DO_ALIGN", RequestId, exception is TimeoutException or OperationCanceledException, exception).Publish | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 650 | Interlocked.Exchange | resolved | int System.Threading.Interlocked.Exchange(ref int, int) |
-| 651 | subscribers.GetInvocationList | resolved · 동적 구현 선택 가능 | System.Delegate[] System.MulticastDelegate.GetInvocationList() |
-| 652 | ((Action<CSequenceFailureException>)subscriber) | resolved · 동적 구현 선택 가능 | void System.Action<Drilling.Common.Alarm.CSequenceFailureException>.Invoke(Drilling.Common.Alarm.CSequenceFailureException) |
-| 653 | System.Diagnostics.Trace.TraceError | resolved | void System.Diagnostics.Trace.TraceError(string?) |
+| 652 | Interlocked.Exchange | resolved | int System.Threading.Interlocked.Exchange(ref int, int) |
+| 653 | subscribers.GetInvocationList | resolved · 동적 구현 선택 가능 | System.Delegate[] System.MulticastDelegate.GetInvocationList() |
+| 654 | ((Action<CSequenceFailureException>)subscriber) | resolved · 동적 구현 선택 가능 | void System.Action<Drilling.Common.Alarm.CSequenceFailureException>.Invoke(Drilling.Common.Alarm.CSequenceFailureException) |
+| 655 | System.Diagnostics.Trace.TraceError | resolved | void System.Diagnostics.Trace.TraceError(string?) |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 650 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Exchange(ref _reported, 1) |
-| 650 | if | 조건에 따라 분기합니다: if (subscribers is null &#124;&#124; Interlocked.Exchange(ref _reported, 1) != 0) |
-| 650 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 651 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: subscribers.GetInvocationList() |
-| 651 | foreach | 컬렉션 요소를 순회합니다: foreach (var subscriber in subscribers.GetInvocationList()) |
-| 652 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ((Action<CSequenceFailureException>)subscriber)(this) |
-| 652 | try | 예외 처리 범위입니다: try |
-| 653 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Trace.TraceError($"Sequence alarm publish failed: {AlarmId}: {error}") |
-| 653 | catch | 지정 예외를 처리합니다: catch (Exception error) |
-| 653 | catch | 지정 예외를 처리합니다: catch  |
-| 653 | try | 예외 처리 범위입니다: try |
+| 652 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Interlocked.Exchange(ref _reported, 1) |
+| 652 | if | 조건에 따라 분기합니다: if (subscribers is null &#124;&#124; Interlocked.Exchange(ref _reported, 1) != 0) |
+| 652 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 653 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: subscribers.GetInvocationList() |
+| 653 | foreach | 컬렉션 요소를 순회합니다: foreach (var subscriber in subscribers.GetInvocationList()) |
+| 654 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ((Action<CSequenceFailureException>)subscriber)(this) |
+| 654 | try | 예외 처리 범위입니다: try |
+| 655 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: System.Diagnostics.Trace.TraceError($"Sequence alarm publish failed: {AlarmId}: {error}") |
+| 655 | catch | 지정 예외를 처리합니다: catch (Exception error) |
+| 655 | catch | 지정 예외를 처리합니다: catch  |
+| 655 | try | 예외 처리 범위입니다: try |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["Publish"]
- N0["L650 if"]
+ N0["L652 if"]
  M -->|포함| N0
- N1["L651 foreach"]
+ N1["L653 foreach"]
  M -->|포함| N1
- N2["L652 try"]
+ N2["L654 try"]
  N1 -->|포함| N2
- N3["L653 catch"]
+ N3["L655 catch"]
  N2 -->|포함| N3
- N4["L653 catch"]
+ N4["L655 catch"]
  N2 -->|포함| N4
- N5["L653 try"]
+ N5["L655 try"]
  N2 -->|포함| N5
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Scenario` · L661–661
+### PropertyDeclaration `Scenario` · L663–663
 
-[Drilling.Common/Alarm/CAlarmManager.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L661-L661)
+[Drilling.Common/Alarm/CAlarmManager.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L663-L663)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3494,9 +3494,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Scenario` · L661–661
+### GetAccessorDeclaration `get_Scenario` · L663–663
 
-[Drilling.Common/Alarm/CAlarmManager.cs:661–661](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L661-L661)
+[Drilling.Common/Alarm/CAlarmManager.cs:663–663](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L663-L663)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3509,9 +3509,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### PropertyDeclaration `Signal` · L662–662
+### PropertyDeclaration `Signal` · L664–664
 
-[Drilling.Common/Alarm/CAlarmManager.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L662-L662)
+[Drilling.Common/Alarm/CAlarmManager.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L664-L664)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3524,9 +3524,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### GetAccessorDeclaration `get_Signal` · L662–662
+### GetAccessorDeclaration `get_Signal` · L664–664
 
-[Drilling.Common/Alarm/CAlarmManager.cs:662–662](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L662-L662)
+[Drilling.Common/Alarm/CAlarmManager.cs:664–664](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L664-L664)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3539,9 +3539,9 @@ flowchart TD
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Append` · L671–671
+### MethodDeclaration `Append` · L673–673
 
-[Drilling.Common/Alarm/CAlarmManager.cs:671–671](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L671-L671)
+[Drilling.Common/Alarm/CAlarmManager.cs:673–673](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L673-L673)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3560,13 +3560,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:354–354](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L354-L354) | _history!.Append | True |
+| [Drilling.Common/Alarm/CAlarmManager.cs:356–356](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L356-L356) | _history!.Append | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `Read` · L672–672
+### MethodDeclaration `Read` · L674–674
 
-[Drilling.Common/Alarm/CAlarmManager.cs:672–672](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L672-L672)
+[Drilling.Common/Alarm/CAlarmManager.cs:674–674](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L674-L674)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -3587,7 +3587,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Alarm/CAlarmManager.cs:309–309](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Alarm/CAlarmManager.cs#L309-L309) | .Read | True |
+| [Drilling.Common/Alarm/CAlarmManager.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Alarm/CAlarmManager.cs#L310-L310) | .Read | True |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 

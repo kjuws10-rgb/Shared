@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
-| 원본 SHA256 | 0a2ab0d2de63faefcb4eba373bb8b3f2b46cf50e9897e3ddfbbb500bd7ac2138 |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 SHA256 | cda913ec08362b88f72e77af2cf827694ff81e3c0de244ab4ef70b87e457653a |
 | 파일 분류 | code |
-| 원본 크기/행 | 13,295 bytes / 349 physical lines |
+| 원본 크기/행 | 13,846 bytes / 366 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -22,7 +22,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 타입 | 구분 | 원본 범위 | 선언/상속 |
 | --- | --- | --- | --- |
 | CBindingProxy | ClassDeclaration | 11–28 | CBindingProxy: Freezable |
-| CReviewDataView | ClassDeclaration | 30–348 | CReviewDataView: UserControl |
+| CReviewDataView | ClassDeclaration | 30–365 | CReviewDataView: UserControl |
 
 ## 멤버 빠른 목록
 
@@ -33,35 +33,39 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | get_Data | GetAccessorDeclaration | L20–20 | object? Drilling.UI.Views.CBindingProxy.Data.get |
 | set_Data | SetAccessorDeclaration | L21–21 | void Drilling.UI.Views.CBindingProxy.Data.set |
 | CreateInstanceCore | MethodDeclaration | L24–27 | Freezable Drilling.UI.Views.CBindingProxy.CreateInstanceCore() |
-| _resultEditDragSurface | FieldDeclaration | L32–32 | FrameworkElement? Drilling.UI.Views.CReviewDataView._resultEditDragSurface |
-| _resultEditDragRectangle | FieldDeclaration | L33–33 | Rectangle? Drilling.UI.Views.CReviewDataView._resultEditDragRectangle |
-| _resultEditDragStart | FieldDeclaration | L34–34 | Point Drilling.UI.Views.CReviewDataView._resultEditDragStart |
-| _resultEditDragIsScatter | FieldDeclaration | L35–35 | bool Drilling.UI.Views.CReviewDataView._resultEditDragIsScatter |
-| .ctor | ConstructorDeclaration | L37–40 | Drilling.UI.Views.CReviewDataView.CReviewDataView() |
-| ReviewDataView_IsVisibleChanged | MethodDeclaration | L42–50 | void Drilling.UI.Views.CReviewDataView.ReviewDataView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs) |
-| ReviewResultsTree_SelectedItemChanged | MethodDeclaration | L52–65 | void Drilling.UI.Views.CReviewDataView.ReviewResultsTree_SelectedItemChanged(object, RoutedPropertyChangedEventArgs<object>) |
-| ReviewDataShotMap_MouseLeftButtonDown | MethodDeclaration | L67–83 | void Drilling.UI.Views.CReviewDataView.ReviewDataShotMap_MouseLeftButtonDown(object, MouseButtonEventArgs) |
-| ReviewDataScatterPlot_MouseLeftButtonDown | MethodDeclaration | L85–106 | void Drilling.UI.Views.CReviewDataView.ReviewDataScatterPlot_MouseLeftButtonDown(object, MouseButtonEventArgs) |
-| BeginResultEditDrag | MethodDeclaration | L108–130 | void Drilling.UI.Views.CReviewDataView.BeginResultEditDrag(FrameworkElement, Rectangle, bool, MouseButtonEventArgs) |
-| ReviewDataEditSurface_MouseMove | MethodDeclaration | L132–149 | void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_MouseMove(object, MouseEventArgs) |
-| ReviewDataEditSurface_MouseLeftButtonUp | MethodDeclaration | L151–202 | void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_MouseLeftButtonUp(object, MouseButtonEventArgs) |
-| ReviewDataEditSurface_LostMouseCapture | MethodDeclaration | L204–210 | void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_LostMouseCapture(object, MouseEventArgs) |
-| UpdateResultEditDragRectangle | MethodDeclaration | L212–225 | void Drilling.UI.Views.CReviewDataView.UpdateResultEditDragRectangle(Point) |
-| CancelResultEditDrag | MethodDeclaration | L227–241 | void Drilling.UI.Views.CReviewDataView.CancelResultEditDrag() |
-| ReviewDataResultGrid_SelectionChanged | MethodDeclaration | L243–258 | void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_SelectionChanged(object, SelectionChangedEventArgs) |
-| ReviewDataResultGrid_LoadingRow | MethodDeclaration | L260–268 | void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_LoadingRow(object, DataGridRowEventArgs) |
-| ReviewDataReinspectionGrid_SelectionChanged | MethodDeclaration | L270–282 | void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionGrid_SelectionChanged(object, SelectionChangedEventArgs) |
-| ReviewDataReinspectionCheckBox_Changed | MethodDeclaration | L284–295 | void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionCheckBox_Changed(object, RoutedEventArgs) |
-| ReviewDataResultEditCheckBox_Changed | MethodDeclaration | L297–308 | void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditCheckBox_Changed(object, RoutedEventArgs) |
-| ReviewDataResultEditKeyInGrid_SelectionChanged | MethodDeclaration | L310–317 | void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditKeyInGrid_SelectionChanged(object, SelectionChangedEventArgs) |
-| ReviewDataResultEditCopyGrid_SelectionChanged | MethodDeclaration | L319–326 | void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditCopyGrid_SelectionChanged(object, SelectionChangedEventArgs) |
-| FindVisualChild | MethodDeclaration | L328–347 | T? Drilling.UI.Views.CReviewDataView.FindVisualChild<T>(DependencyObject) |
+| IsInspectionModeProperty | FieldDeclaration | L32–36 | DependencyProperty Drilling.UI.Views.CReviewDataView.IsInspectionModeProperty |
+| _resultEditDragSurface | FieldDeclaration | L38–38 | FrameworkElement? Drilling.UI.Views.CReviewDataView._resultEditDragSurface |
+| _resultEditDragRectangle | FieldDeclaration | L39–39 | Rectangle? Drilling.UI.Views.CReviewDataView._resultEditDragRectangle |
+| _resultEditDragStart | FieldDeclaration | L40–40 | Point Drilling.UI.Views.CReviewDataView._resultEditDragStart |
+| _resultEditDragIsScatter | FieldDeclaration | L41–41 | bool Drilling.UI.Views.CReviewDataView._resultEditDragIsScatter |
+| .ctor | ConstructorDeclaration | L43–46 | Drilling.UI.Views.CReviewDataView.CReviewDataView() |
+| IsInspectionMode | PropertyDeclaration | L48–52 | bool Drilling.UI.Views.CReviewDataView.IsInspectionMode |
+| get_IsInspectionMode | GetAccessorDeclaration | L50–50 | bool Drilling.UI.Views.CReviewDataView.IsInspectionMode.get |
+| set_IsInspectionMode | SetAccessorDeclaration | L51–51 | void Drilling.UI.Views.CReviewDataView.IsInspectionMode.set |
+| ReviewDataView_IsVisibleChanged | MethodDeclaration | L54–67 | void Drilling.UI.Views.CReviewDataView.ReviewDataView_IsVisibleChanged(object, DependencyPropertyChangedEventArgs) |
+| ReviewResultsTree_SelectedItemChanged | MethodDeclaration | L69–82 | void Drilling.UI.Views.CReviewDataView.ReviewResultsTree_SelectedItemChanged(object, RoutedPropertyChangedEventArgs<object>) |
+| ReviewDataShotMap_MouseLeftButtonDown | MethodDeclaration | L84–100 | void Drilling.UI.Views.CReviewDataView.ReviewDataShotMap_MouseLeftButtonDown(object, MouseButtonEventArgs) |
+| ReviewDataScatterPlot_MouseLeftButtonDown | MethodDeclaration | L102–123 | void Drilling.UI.Views.CReviewDataView.ReviewDataScatterPlot_MouseLeftButtonDown(object, MouseButtonEventArgs) |
+| BeginResultEditDrag | MethodDeclaration | L125–147 | void Drilling.UI.Views.CReviewDataView.BeginResultEditDrag(FrameworkElement, Rectangle, bool, MouseButtonEventArgs) |
+| ReviewDataEditSurface_MouseMove | MethodDeclaration | L149–166 | void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_MouseMove(object, MouseEventArgs) |
+| ReviewDataEditSurface_MouseLeftButtonUp | MethodDeclaration | L168–219 | void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_MouseLeftButtonUp(object, MouseButtonEventArgs) |
+| ReviewDataEditSurface_LostMouseCapture | MethodDeclaration | L221–227 | void Drilling.UI.Views.CReviewDataView.ReviewDataEditSurface_LostMouseCapture(object, MouseEventArgs) |
+| UpdateResultEditDragRectangle | MethodDeclaration | L229–242 | void Drilling.UI.Views.CReviewDataView.UpdateResultEditDragRectangle(Point) |
+| CancelResultEditDrag | MethodDeclaration | L244–258 | void Drilling.UI.Views.CReviewDataView.CancelResultEditDrag() |
+| ReviewDataResultGrid_SelectionChanged | MethodDeclaration | L260–275 | void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_SelectionChanged(object, SelectionChangedEventArgs) |
+| ReviewDataResultGrid_LoadingRow | MethodDeclaration | L277–285 | void Drilling.UI.Views.CReviewDataView.ReviewDataResultGrid_LoadingRow(object, DataGridRowEventArgs) |
+| ReviewDataReinspectionGrid_SelectionChanged | MethodDeclaration | L287–299 | void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionGrid_SelectionChanged(object, SelectionChangedEventArgs) |
+| ReviewDataReinspectionCheckBox_Changed | MethodDeclaration | L301–312 | void Drilling.UI.Views.CReviewDataView.ReviewDataReinspectionCheckBox_Changed(object, RoutedEventArgs) |
+| ReviewDataResultEditCheckBox_Changed | MethodDeclaration | L314–325 | void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditCheckBox_Changed(object, RoutedEventArgs) |
+| ReviewDataResultEditKeyInGrid_SelectionChanged | MethodDeclaration | L327–334 | void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditKeyInGrid_SelectionChanged(object, SelectionChangedEventArgs) |
+| ReviewDataResultEditCopyGrid_SelectionChanged | MethodDeclaration | L336–343 | void Drilling.UI.Views.CReviewDataView.ReviewDataResultEditCopyGrid_SelectionChanged(object, SelectionChangedEventArgs) |
+| FindVisualChild | MethodDeclaration | L345–364 | T? Drilling.UI.Views.CReviewDataView.FindVisualChild<T>(DependencyObject) |
 
 ## 멤버별 상세 계약·호출·처리 해설
 
 ### FieldDeclaration `DataProperty` · L13–16
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:13–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L13-L16)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:13–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L13-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -91,7 +95,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Data` · L18–22
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:18–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L18-L22)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:18–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L18-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -106,7 +110,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Data` · L20–20
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L20-L20)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -133,7 +137,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_Data` · L21–21
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L21-L21)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -166,7 +170,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CreateInstanceCore` · L24–27
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:24–27](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L24-L27)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:24–27](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L24-L27)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -192,9 +196,41 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_resultEditDragSurface` · L32–32
+### FieldDeclaration `IsInspectionModeProperty` · L32–36
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L32-L32)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:32–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L32-L36)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | DependencyProperty Drilling.UI.Views.CReviewDataView.IsInspectionModeProperty |
+| 접근/수식자 | Public / public, static, readonly |
+| 반환/값 타입 | DependencyProperty |
+| 소속 타입 | NamedType:Drilling.UI.Views.CReviewDataView |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 32 | DependencyProperty.Register | unresolved | None |
+| 33 | nameof | unresolved | None |
+| 36 | new PropertyMetadata | unresolved | None |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 32 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: DependencyProperty.Register( nameof(IsInspectionMode), typeof(bool), typeof(CReviewDataView), new PropertyMetadata(false)) |
+| 32 | variable-initializer | 변수의 초기값을 지정합니다: IsInspectionModeProperty = DependencyProperty.Register( nameof(IsInspectionMode), typeof(bool), typeof(CReviewDataView), new PropertyMetadata(false)) |
+| 33 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsInspectionMode) |
+| 36 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyMetadata(false) |
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### FieldDeclaration `_resultEditDragSurface` · L38–38
+
+[Drilling.UI/Views/CReviewDataView.xaml.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L38-L38)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -207,9 +243,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_resultEditDragRectangle` · L33–33
+### FieldDeclaration `_resultEditDragRectangle` · L39–39
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L33-L33)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:39–39](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L39-L39)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -222,9 +258,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_resultEditDragStart` · L34–34
+### FieldDeclaration `_resultEditDragStart` · L40–40
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:34–34](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L34-L34)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:40–40](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L40-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -237,9 +273,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### FieldDeclaration `_resultEditDragIsScatter` · L35–35
+### FieldDeclaration `_resultEditDragIsScatter` · L41–41
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:35–35](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L35-L35)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L41-L41)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -252,9 +288,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### ConstructorDeclaration `.ctor` · L37–40
+### ConstructorDeclaration `.ctor` · L43–46
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:37–40](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L37-L40)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:43–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L43-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -269,19 +305,94 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 39 | InitializeComponent | unresolved | None |
+| 45 | InitializeComponent | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 39 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent() |
+| 45 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: InitializeComponent() |
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataView_IsVisibleChanged` · L42–50
+### PropertyDeclaration `IsInspectionMode` · L48–52
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:42–50](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L42-L50)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:48–52](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L48-L52)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | bool Drilling.UI.Views.CReviewDataView.IsInspectionMode |
+| 접근/수식자 | Public / public |
+| 반환/값 타입 | bool |
+| 소속 타입 | NamedType:Drilling.UI.Views.CReviewDataView |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### GetAccessorDeclaration `get_IsInspectionMode` · L50–50
+
+[Drilling.UI/Views/CReviewDataView.xaml.cs:50–50](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L50-L50)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | bool Drilling.UI.Views.CReviewDataView.IsInspectionMode.get |
+| 접근/수식자 | Public / get |
+| 반환/값 타입 | bool |
+| 소속 타입 | NamedType:Drilling.UI.Views.CReviewDataView |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 50 | GetValue | unresolved | None |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 50 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: GetValue(IsInspectionModeProperty) |
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### SetAccessorDeclaration `set_IsInspectionMode` · L51–51
+
+[Drilling.UI/Views/CReviewDataView.xaml.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L51-L51)
+
+| 항목 | 실제 추출 값 |
+| --- | --- |
+| 서명 | void Drilling.UI.Views.CReviewDataView.IsInspectionMode.set |
+| 접근/수식자 | Public / set |
+| 반환/값 타입 | void |
+| 소속 타입 | NamedType:Drilling.UI.Views.CReviewDataView |
+
+입력 계약:
+
+| 이름 | 타입 | 전달 | 선택/기본값 |
+| --- | --- | --- | --- |
+| value | bool | None | False /  |
+
+현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.
+
+호출하는 대상과 해석 범위:
+
+| 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
+| --- | --- | --- | --- |
+| 51 | SetValue | unresolved | None |
+
+본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
+
+| 원본 행 | 종류 | 주석 해설 |
+| --- | --- | --- |
+| 51 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: SetValue(IsInspectionModeProperty, value) |
+
+변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
+
+### MethodDeclaration `ReviewDataView_IsVisibleChanged` · L54–67
+
+[Drilling.UI/Views/CReviewDataView.xaml.cs:54–67](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L54-L67)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -303,30 +414,34 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 48 | panel.ReloadWhenVisible | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReloadWhenVisible(System.Threading.CancellationToken) · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:111 |
+| 65 | panel.ReloadWhenVisible | resolved | System.Threading.Tasks.Task Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReloadWhenVisible(System.Threading.CancellationToken) · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:179 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 46 | if | 조건에 따라 분기합니다: if (IsVisible && DataContext is CMenuCorrection.CReviewDataPanel panel) |
-| 48 | await | 비동기 완료를 기다립니다: await panel.ReloadWhenVisible() |
-| 48 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.ReloadWhenVisible() |
+| 58 | if | 조건에 따라 분기합니다: if (IsVisible && DataContext is CMenuCorrection.CReviewDataPanel panel) |
+| 60 | if | 조건에 따라 분기합니다: if (IsInspectionMode) |
+| 62 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 65 | await | 비동기 완료를 기다립니다: await panel.ReloadWhenVisible() |
+| 65 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.ReloadWhenVisible() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataView_IsVisibleChanged"]
- N0["L46 if"]
+ N0["L58 if"]
  M -->|포함| N0
+ N1["L60 if"]
+ N0 -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewResultsTree_SelectedItemChanged` · L52–65
+### MethodDeclaration `ReviewResultsTree_SelectedItemChanged` · L69–82
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:52–65](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L52-L65)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:69–82](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L69-L82)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -348,37 +463,37 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 59 | panel.Select | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Select(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE) · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:141 |
-| 62 | ReviewResultsTree.Dispatcher.BeginInvoke | unresolved | None |
-| 64 | new Action | unresolved | None |
-| 64 | FindVisualChild<ScrollViewer> | candidate | OverloadResolutionFailure |
-| 64 | .ScrollToLeftEnd | unresolved | None |
+| 76 | panel.Select | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Select(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE) · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs:209 |
+| 79 | ReviewResultsTree.Dispatcher.BeginInvoke | unresolved | None |
+| 81 | new Action | unresolved | None |
+| 81 | FindVisualChild<ScrollViewer> | candidate | OverloadResolutionFailure |
+| 81 | .ScrollToLeftEnd | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 56 | if | 조건에 따라 분기합니다: if (DataContext is CMenuCorrection.CReviewDataPanel panel && eventArgs.NewValue is CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE node) |
-| 59 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Select(node) |
-| 62 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReviewResultsTree.Dispatcher.BeginInvoke( DispatcherPriority.ContextIdle, new Action(() => FindVisualChild<ScrollViewer>(ReviewResultsTree)?.ScrollToLeftEnd())) |
-| 64 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Action(() => FindVisualChild<ScrollViewer>(ReviewResultsTree)?.ScrollToLeftEnd()) |
-| 64 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FindVisualChild<ScrollViewer>(ReviewResultsTree) |
-| 64 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .ScrollToLeftEnd() |
+| 73 | if | 조건에 따라 분기합니다: if (DataContext is CMenuCorrection.CReviewDataPanel panel && eventArgs.NewValue is CMenuCorrection.ST_REVIEW_RESULT_TREE_NODE node) |
+| 76 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.Select(node) |
+| 79 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReviewResultsTree.Dispatcher.BeginInvoke( DispatcherPriority.ContextIdle, new Action(() => FindVisualChild<ScrollViewer>(ReviewResultsTree)?.ScrollToLeftEnd())) |
+| 81 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Action(() => FindVisualChild<ScrollViewer>(ReviewResultsTree)?.ScrollToLeftEnd()) |
+| 81 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FindVisualChild<ScrollViewer>(ReviewResultsTree) |
+| 81 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: .ScrollToLeftEnd() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewResultsTree_SelectedItemChanged"]
- N0["L56 if"]
+ N0["L73 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataShotMap_MouseLeftButtonDown` · L67–83
+### MethodDeclaration `ReviewDataShotMap_MouseLeftButtonDown` · L84–100
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:67–83](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L67-L83)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:84–100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L84-L100)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -400,41 +515,41 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 76 | BeginResultEditDrag | candidate | OverloadResolutionFailure |
-| 80 | eventArgs.GetPosition | unresolved | None |
-| 81 | panel.SelectShotAt | candidate | OverloadResolutionFailure |
+| 93 | BeginResultEditDrag | candidate | OverloadResolutionFailure |
+| 97 | eventArgs.GetPosition | unresolved | None |
+| 98 | panel.SelectShotAt | candidate | OverloadResolutionFailure |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 69 | if | 조건에 따라 분기합니다: if (sender is not FrameworkElement map &#124;&#124; DataContext is not CMenuCorrection.CReviewDataPanel panel) |
-| 71 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 74 | if | 조건에 따라 분기합니다: if (panel.IsResultEditMode) |
-| 76 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BeginResultEditDrag(map, ShotMapEditSelectionRectangle, isScatter: false, eventArgs) |
-| 77 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 80 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(map) |
-| 80 | local-declaration | 지역 변수를 선언합니다: var point = eventArgs.GetPosition(map); |
-| 80 | variable-initializer | 변수의 초기값을 지정합니다: point = eventArgs.GetPosition(map) |
-| 81 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectShotAt(point.X, point.Y) |
-| 82 | assignment | 값을 대상에 대입합니다: eventArgs.Handled = true |
+| 86 | if | 조건에 따라 분기합니다: if (sender is not FrameworkElement map &#124;&#124; DataContext is not CMenuCorrection.CReviewDataPanel panel) |
+| 88 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 91 | if | 조건에 따라 분기합니다: if (panel.IsResultEditMode) |
+| 93 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BeginResultEditDrag(map, ShotMapEditSelectionRectangle, isScatter: false, eventArgs) |
+| 94 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 97 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(map) |
+| 97 | local-declaration | 지역 변수를 선언합니다: var point = eventArgs.GetPosition(map); |
+| 97 | variable-initializer | 변수의 초기값을 지정합니다: point = eventArgs.GetPosition(map) |
+| 98 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectShotAt(point.X, point.Y) |
+| 99 | assignment | 값을 대상에 대입합니다: eventArgs.Handled = true |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataShotMap_MouseLeftButtonDown"]
- N0["L69 if"]
+ N0["L86 if"]
  M -->|포함| N0
- N1["L74 if"]
+ N1["L91 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataScatterPlot_MouseLeftButtonDown` · L85–106
+### MethodDeclaration `ReviewDataScatterPlot_MouseLeftButtonDown` · L102–123
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:85–106](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L85-L106)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:102–123](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L102-L123)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -456,41 +571,41 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 97 | BeginResultEditDrag | candidate | OverloadResolutionFailure |
-| 101 | eventArgs.GetPosition | unresolved | None |
-| 102 | panel.SelectScatterPointAt | candidate | OverloadResolutionFailure |
+| 114 | BeginResultEditDrag | candidate | OverloadResolutionFailure |
+| 118 | eventArgs.GetPosition | unresolved | None |
+| 119 | panel.SelectScatterPointAt | candidate | OverloadResolutionFailure |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 87 | if | 조건에 따라 분기합니다: if (sender is not FrameworkElement plot &#124;&#124; plot.ActualWidth <= 0.0 &#124;&#124; plot.ActualHeight <= 0.0 &#124;&#124; DataContext is not CMenuCorrection.CReviewDataPanel panel) |
-| 92 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 95 | if | 조건에 따라 분기합니다: if (panel.IsResultEditMode) |
-| 97 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BeginResultEditDrag(plot, ScatterEditSelectionRectangle, isScatter: true, eventArgs) |
-| 98 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 101 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(plot) |
-| 101 | local-declaration | 지역 변수를 선언합니다: var point = eventArgs.GetPosition(plot); |
-| 101 | variable-initializer | 변수의 초기값을 지정합니다: point = eventArgs.GetPosition(plot) |
-| 102 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectScatterPointAt( point.X * panel.ScatterPlotSurfaceWidth / plot.ActualWidth, point.Y * panel.ScatterPlotSurfaceHeight / plot.ActualHeight) |
-| 105 | assignment | 값을 대상에 대입합니다: eventArgs.Handled = true |
+| 104 | if | 조건에 따라 분기합니다: if (sender is not FrameworkElement plot &#124;&#124; plot.ActualWidth <= 0.0 &#124;&#124; plot.ActualHeight <= 0.0 &#124;&#124; DataContext is not CMenuCorrection.CReviewDataPanel panel) |
+| 109 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 112 | if | 조건에 따라 분기합니다: if (panel.IsResultEditMode) |
+| 114 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: BeginResultEditDrag(plot, ScatterEditSelectionRectangle, isScatter: true, eventArgs) |
+| 115 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 118 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(plot) |
+| 118 | local-declaration | 지역 변수를 선언합니다: var point = eventArgs.GetPosition(plot); |
+| 118 | variable-initializer | 변수의 초기값을 지정합니다: point = eventArgs.GetPosition(plot) |
+| 119 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectScatterPointAt( point.X * panel.ScatterPlotSurfaceWidth / plot.ActualWidth, point.Y * panel.ScatterPlotSurfaceHeight / plot.ActualHeight) |
+| 122 | assignment | 값을 대상에 대입합니다: eventArgs.Handled = true |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataScatterPlot_MouseLeftButtonDown"]
- N0["L87 if"]
+ N0["L104 if"]
  M -->|포함| N0
- N1["L95 if"]
+ N1["L112 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `BeginResultEditDrag` · L108–130
+### MethodDeclaration `BeginResultEditDrag` · L125–147
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:108–130](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L108-L130)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:125–147](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L125-L147)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -514,44 +629,44 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 122 | eventArgs.GetPosition | unresolved | None |
-| 125 | Canvas.SetLeft | unresolved | None |
-| 126 | Canvas.SetTop | unresolved | None |
-| 128 | surface.CaptureMouse | unresolved | None |
+| 139 | eventArgs.GetPosition | unresolved | None |
+| 142 | Canvas.SetLeft | unresolved | None |
+| 143 | Canvas.SetTop | unresolved | None |
+| 145 | surface.CaptureMouse | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 114 | if | 조건에 따라 분기합니다: if (eventArgs.ChangedButton != MouseButton.Left) |
-| 116 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 119 | assignment | 값을 대상에 대입합니다: _resultEditDragSurface = surface |
-| 120 | assignment | 값을 대상에 대입합니다: _resultEditDragRectangle = rectangle |
-| 121 | assignment | 값을 대상에 대입합니다: _resultEditDragIsScatter = isScatter |
-| 122 | assignment | 값을 대상에 대입합니다: _resultEditDragStart = eventArgs.GetPosition(surface) |
-| 122 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(surface) |
-| 123 | assignment | 값을 대상에 대입합니다: rectangle.Width = 0.0 |
-| 124 | assignment | 값을 대상에 대입합니다: rectangle.Height = 0.0 |
-| 125 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(rectangle, _resultEditDragStart.X) |
-| 126 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(rectangle, _resultEditDragStart.Y) |
-| 127 | assignment | 값을 대상에 대입합니다: rectangle.Visibility = Visibility.Visible |
-| 128 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: surface.CaptureMouse() |
-| 129 | assignment | 값을 대상에 대입합니다: eventArgs.Handled = true |
+| 131 | if | 조건에 따라 분기합니다: if (eventArgs.ChangedButton != MouseButton.Left) |
+| 133 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 136 | assignment | 값을 대상에 대입합니다: _resultEditDragSurface = surface |
+| 137 | assignment | 값을 대상에 대입합니다: _resultEditDragRectangle = rectangle |
+| 138 | assignment | 값을 대상에 대입합니다: _resultEditDragIsScatter = isScatter |
+| 139 | assignment | 값을 대상에 대입합니다: _resultEditDragStart = eventArgs.GetPosition(surface) |
+| 139 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(surface) |
+| 140 | assignment | 값을 대상에 대입합니다: rectangle.Width = 0.0 |
+| 141 | assignment | 값을 대상에 대입합니다: rectangle.Height = 0.0 |
+| 142 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(rectangle, _resultEditDragStart.X) |
+| 143 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(rectangle, _resultEditDragStart.Y) |
+| 144 | assignment | 값을 대상에 대입합니다: rectangle.Visibility = Visibility.Visible |
+| 145 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: surface.CaptureMouse() |
+| 146 | assignment | 값을 대상에 대입합니다: eventArgs.Handled = true |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["BeginResultEditDrag"]
- N0["L114 if"]
+ N0["L131 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataEditSurface_MouseMove` · L132–149
+### MethodDeclaration `ReviewDataEditSurface_MouseMove` · L149–166
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:132–149](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L132-L149)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:149–166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L149-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -573,41 +688,41 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 134 | ReferenceEquals | candidate | OverloadResolutionFailure |
-| 143 | CancelResultEditDrag | resolved | void Drilling.UI.Views.CReviewDataView.CancelResultEditDrag() · Drilling.UI/Views/CReviewDataView.xaml.cs:227 |
-| 147 | UpdateResultEditDragRectangle | candidate | OverloadResolutionFailure |
-| 147 | eventArgs.GetPosition | unresolved | None |
+| 151 | ReferenceEquals | candidate | OverloadResolutionFailure |
+| 160 | CancelResultEditDrag | resolved | void Drilling.UI.Views.CReviewDataView.CancelResultEditDrag() · Drilling.UI/Views/CReviewDataView.xaml.cs:244 |
+| 164 | UpdateResultEditDragRectangle | candidate | OverloadResolutionFailure |
+| 164 | eventArgs.GetPosition | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 134 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(sender, _resultEditDragSurface) |
-| 134 | if | 조건에 따라 분기합니다: if (!ReferenceEquals(sender, _resultEditDragSurface) &#124;&#124; _resultEditDragSurface is null &#124;&#124; _resultEditDragRectangle is null) |
-| 138 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 141 | if | 조건에 따라 분기합니다: if (eventArgs.LeftButton != MouseButtonState.Pressed) |
-| 143 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelResultEditDrag() |
-| 144 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 147 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateResultEditDragRectangle(eventArgs.GetPosition(_resultEditDragSurface)) |
-| 147 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(_resultEditDragSurface) |
-| 148 | assignment | 값을 대상에 대입합니다: eventArgs.Handled = true |
+| 151 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(sender, _resultEditDragSurface) |
+| 151 | if | 조건에 따라 분기합니다: if (!ReferenceEquals(sender, _resultEditDragSurface) &#124;&#124; _resultEditDragSurface is null &#124;&#124; _resultEditDragRectangle is null) |
+| 155 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 158 | if | 조건에 따라 분기합니다: if (eventArgs.LeftButton != MouseButtonState.Pressed) |
+| 160 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelResultEditDrag() |
+| 161 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 164 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateResultEditDragRectangle(eventArgs.GetPosition(_resultEditDragSurface)) |
+| 164 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(_resultEditDragSurface) |
+| 165 | assignment | 값을 대상에 대입합니다: eventArgs.Handled = true |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataEditSurface_MouseMove"]
- N0["L134 if"]
+ N0["L151 if"]
  M -->|포함| N0
- N1["L141 if"]
+ N1["L158 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataEditSurface_MouseLeftButtonUp` · L151–202
+### MethodDeclaration `ReviewDataEditSurface_MouseLeftButtonUp` · L168–219
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:151–202](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L151-L202)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:168–219](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L168-L219)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -629,101 +744,101 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 153 | ReferenceEquals | candidate | OverloadResolutionFailure |
-| 162 | eventArgs.GetPosition | unresolved | None |
-| 163 | UpdateResultEditDragRectangle | candidate | OverloadResolutionFailure |
-| 164 | Math.Abs | candidate | OverloadResolutionFailure |
-| 165 | Math.Abs | candidate | OverloadResolutionFailure |
-| 170 | panel.SelectScatterPointAt | candidate | OverloadResolutionFailure |
-| 171 | Math.Max | candidate | OverloadResolutionFailure |
-| 172 | Math.Max | candidate | OverloadResolutionFailure |
-| 176 | panel.SelectShotAt | candidate | OverloadResolutionFailure |
-| 177 | Math.Max | candidate | OverloadResolutionFailure |
-| 178 | Math.Max | candidate | OverloadResolutionFailure |
-| 181 | panel.SelectCurrentShotForResultEdit | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectCurrentShotForResultEdit() · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:144 |
-| 185 | panel.SelectResultEditShotsInScatter | candidate | OverloadResolutionFailure |
-| 186 | Math.Max | candidate | OverloadResolutionFailure |
-| 187 | Math.Max | candidate | OverloadResolutionFailure |
+| 170 | ReferenceEquals | candidate | OverloadResolutionFailure |
+| 179 | eventArgs.GetPosition | unresolved | None |
+| 180 | UpdateResultEditDragRectangle | candidate | OverloadResolutionFailure |
+| 181 | Math.Abs | candidate | OverloadResolutionFailure |
+| 182 | Math.Abs | candidate | OverloadResolutionFailure |
+| 187 | panel.SelectScatterPointAt | candidate | OverloadResolutionFailure |
 | 188 | Math.Max | candidate | OverloadResolutionFailure |
 | 189 | Math.Max | candidate | OverloadResolutionFailure |
-| 193 | panel.SelectResultEditShotsInMap | candidate | OverloadResolutionFailure |
+| 193 | panel.SelectShotAt | candidate | OverloadResolutionFailure |
 | 194 | Math.Max | candidate | OverloadResolutionFailure |
 | 195 | Math.Max | candidate | OverloadResolutionFailure |
-| 196 | Math.Max | candidate | OverloadResolutionFailure |
-| 197 | Math.Max | candidate | OverloadResolutionFailure |
-| 200 | CancelResultEditDrag | resolved | void Drilling.UI.Views.CReviewDataView.CancelResultEditDrag() · Drilling.UI/Views/CReviewDataView.xaml.cs:227 |
+| 198 | panel.SelectCurrentShotForResultEdit | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectCurrentShotForResultEdit() · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:146 |
+| 202 | panel.SelectResultEditShotsInScatter | candidate | OverloadResolutionFailure |
+| 203 | Math.Max | candidate | OverloadResolutionFailure |
+| 204 | Math.Max | candidate | OverloadResolutionFailure |
+| 205 | Math.Max | candidate | OverloadResolutionFailure |
+| 206 | Math.Max | candidate | OverloadResolutionFailure |
+| 210 | panel.SelectResultEditShotsInMap | candidate | OverloadResolutionFailure |
+| 211 | Math.Max | candidate | OverloadResolutionFailure |
+| 212 | Math.Max | candidate | OverloadResolutionFailure |
+| 213 | Math.Max | candidate | OverloadResolutionFailure |
+| 214 | Math.Max | candidate | OverloadResolutionFailure |
+| 217 | CancelResultEditDrag | resolved | void Drilling.UI.Views.CReviewDataView.CancelResultEditDrag() · Drilling.UI/Views/CReviewDataView.xaml.cs:244 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 153 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(sender, _resultEditDragSurface) |
-| 153 | if | 조건에 따라 분기합니다: if (!ReferenceEquals(sender, _resultEditDragSurface) &#124;&#124; _resultEditDragSurface is null &#124;&#124; _resultEditDragRectangle is null &#124;&#124; DataContext is not CMenuCorrection.CReviewDataPanel panel) |
-| 158 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 161 | local-declaration | 지역 변수를 선언합니다: var surface = _resultEditDragSurface; |
-| 161 | variable-initializer | 변수의 초기값을 지정합니다: surface = _resultEditDragSurface |
-| 162 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(surface) |
-| 162 | local-declaration | 지역 변수를 선언합니다: var end = eventArgs.GetPosition(surface); |
-| 162 | variable-initializer | 변수의 초기값을 지정합니다: end = eventArgs.GetPosition(surface) |
-| 163 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateResultEditDragRectangle(end) |
-| 164 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(end.X - _resultEditDragStart.X) |
-| 164 | local-declaration | 지역 변수를 선언합니다: var deltaX = Math.Abs(end.X - _resultEditDragStart.X); |
-| 164 | variable-initializer | 변수의 초기값을 지정합니다: deltaX = Math.Abs(end.X - _resultEditDragStart.X) |
-| 165 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(end.Y - _resultEditDragStart.Y) |
-| 165 | local-declaration | 지역 변수를 선언합니다: var deltaY = Math.Abs(end.Y - _resultEditDragStart.Y); |
-| 165 | variable-initializer | 변수의 초기값을 지정합니다: deltaY = Math.Abs(end.Y - _resultEditDragStart.Y) |
-| 166 | if | 조건에 따라 분기합니다: if (deltaX < 5.0 && deltaY < 5.0) |
-| 168 | if | 조건에 따라 분기합니다: if (_resultEditDragIsScatter) |
-| 170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectScatterPointAt( end.X * panel.ScatterPlotSurfaceWidth / Math.Max(1.0, surface.ActualWidth), end.Y * panel.ScatterPlotSurfaceHeight / Math.Max(1.0, surface.ActualHeight)) |
-| 171 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth) |
-| 172 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight) |
-| 174 | else | 앞 조건이 거짓인 경로입니다: else |
-| 176 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectShotAt( end.X * panel.ShotMapSurfaceWidth / Math.Max(1.0, surface.ActualWidth), end.Y * panel.ShotMapSurfaceHeight / Math.Max(1.0, surface.ActualHeight)) |
-| 177 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth) |
-| 178 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight) |
-| 181 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectCurrentShotForResultEdit() |
-| 183 | else | 앞 조건이 거짓인 경로입니다: else |
-| 183 | if | 조건에 따라 분기합니다: if (_resultEditDragIsScatter) |
-| 185 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectResultEditShotsInScatter( _resultEditDragStart.X * panel.ScatterPlotSurfaceWidth / Math.Max(1.0, surface.ActualWidth), _resultEditDragStart.Y * panel.ScatterPlotSurfaceHeight / Math.Max(1.0, surface.ActualHei… |
-| 186 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth) |
-| 187 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight) |
+| 170 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(sender, _resultEditDragSurface) |
+| 170 | if | 조건에 따라 분기합니다: if (!ReferenceEquals(sender, _resultEditDragSurface) &#124;&#124; _resultEditDragSurface is null &#124;&#124; _resultEditDragRectangle is null &#124;&#124; DataContext is not CMenuCorrection.CReviewDataPanel panel) |
+| 175 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 178 | local-declaration | 지역 변수를 선언합니다: var surface = _resultEditDragSurface; |
+| 178 | variable-initializer | 변수의 초기값을 지정합니다: surface = _resultEditDragSurface |
+| 179 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.GetPosition(surface) |
+| 179 | local-declaration | 지역 변수를 선언합니다: var end = eventArgs.GetPosition(surface); |
+| 179 | variable-initializer | 변수의 초기값을 지정합니다: end = eventArgs.GetPosition(surface) |
+| 180 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: UpdateResultEditDragRectangle(end) |
+| 181 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(end.X - _resultEditDragStart.X) |
+| 181 | local-declaration | 지역 변수를 선언합니다: var deltaX = Math.Abs(end.X - _resultEditDragStart.X); |
+| 181 | variable-initializer | 변수의 초기값을 지정합니다: deltaX = Math.Abs(end.X - _resultEditDragStart.X) |
+| 182 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(end.Y - _resultEditDragStart.Y) |
+| 182 | local-declaration | 지역 변수를 선언합니다: var deltaY = Math.Abs(end.Y - _resultEditDragStart.Y); |
+| 182 | variable-initializer | 변수의 초기값을 지정합니다: deltaY = Math.Abs(end.Y - _resultEditDragStart.Y) |
+| 183 | if | 조건에 따라 분기합니다: if (deltaX < 5.0 && deltaY < 5.0) |
+| 185 | if | 조건에 따라 분기합니다: if (_resultEditDragIsScatter) |
+| 187 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectScatterPointAt( end.X * panel.ScatterPlotSurfaceWidth / Math.Max(1.0, surface.ActualWidth), end.Y * panel.ScatterPlotSurfaceHeight / Math.Max(1.0, surface.ActualHeight)) |
 | 188 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth) |
 | 189 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight) |
 | 191 | else | 앞 조건이 거짓인 경로입니다: else |
-| 193 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectResultEditShotsInMap( _resultEditDragStart.X * panel.ShotMapSurfaceWidth / Math.Max(1.0, surface.ActualWidth), _resultEditDragStart.Y * panel.ShotMapSurfaceHeight / Math.Max(1.0, surface.ActualHeight), end.X … |
+| 193 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectShotAt( end.X * panel.ShotMapSurfaceWidth / Math.Max(1.0, surface.ActualWidth), end.Y * panel.ShotMapSurfaceHeight / Math.Max(1.0, surface.ActualHeight)) |
 | 194 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth) |
 | 195 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight) |
-| 196 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth) |
-| 197 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight) |
-| 200 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelResultEditDrag() |
-| 201 | assignment | 값을 대상에 대입합니다: eventArgs.Handled = true |
+| 198 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectCurrentShotForResultEdit() |
+| 200 | else | 앞 조건이 거짓인 경로입니다: else |
+| 200 | if | 조건에 따라 분기합니다: if (_resultEditDragIsScatter) |
+| 202 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectResultEditShotsInScatter( _resultEditDragStart.X * panel.ScatterPlotSurfaceWidth / Math.Max(1.0, surface.ActualWidth), _resultEditDragStart.Y * panel.ScatterPlotSurfaceHeight / Math.Max(1.0, surface.ActualHei… |
+| 203 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth) |
+| 204 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight) |
+| 205 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth) |
+| 206 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight) |
+| 208 | else | 앞 조건이 거짓인 경로입니다: else |
+| 210 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectResultEditShotsInMap( _resultEditDragStart.X * panel.ShotMapSurfaceWidth / Math.Max(1.0, surface.ActualWidth), _resultEditDragStart.Y * panel.ShotMapSurfaceHeight / Math.Max(1.0, surface.ActualHeight), end.X … |
+| 211 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth) |
+| 212 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight) |
+| 213 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualWidth) |
+| 214 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Max(1.0, surface.ActualHeight) |
+| 217 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelResultEditDrag() |
+| 218 | assignment | 값을 대상에 대입합니다: eventArgs.Handled = true |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataEditSurface_MouseLeftButtonUp"]
- N0["L153 if"]
+ N0["L170 if"]
  M -->|포함| N0
- N1["L166 if"]
+ N1["L183 if"]
  M -->|포함| N1
- N2["L168 if"]
+ N2["L185 if"]
  N1 -->|포함| N2
- N3["L174 else"]
+ N3["L191 else"]
  N2 -->|포함| N3
- N4["L183 else"]
+ N4["L200 else"]
  N1 -->|포함| N4
- N5["L183 if"]
+ N5["L200 if"]
  N1 -->|포함| N5
- N6["L191 else"]
+ N6["L208 else"]
  N4 -->|포함| N6
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataEditSurface_LostMouseCapture` · L204–210
+### MethodDeclaration `ReviewDataEditSurface_LostMouseCapture` · L221–227
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:204–210](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L204-L210)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:221–227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L221-L227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -745,31 +860,31 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 206 | ReferenceEquals | candidate | OverloadResolutionFailure |
-| 208 | CancelResultEditDrag | resolved | void Drilling.UI.Views.CReviewDataView.CancelResultEditDrag() · Drilling.UI/Views/CReviewDataView.xaml.cs:227 |
+| 223 | ReferenceEquals | candidate | OverloadResolutionFailure |
+| 225 | CancelResultEditDrag | resolved | void Drilling.UI.Views.CReviewDataView.CancelResultEditDrag() · Drilling.UI/Views/CReviewDataView.xaml.cs:244 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 206 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(sender, _resultEditDragSurface) |
-| 206 | if | 조건에 따라 분기합니다: if (ReferenceEquals(sender, _resultEditDragSurface)) |
-| 208 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelResultEditDrag() |
+| 223 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(sender, _resultEditDragSurface) |
+| 223 | if | 조건에 따라 분기합니다: if (ReferenceEquals(sender, _resultEditDragSurface)) |
+| 225 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: CancelResultEditDrag() |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataEditSurface_LostMouseCapture"]
- N0["L206 if"]
+ N0["L223 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `UpdateResultEditDragRectangle` · L212–225
+### MethodDeclaration `UpdateResultEditDragRectangle` · L229–242
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:212–225](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L212-L225)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:229–242](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L229-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -790,46 +905,46 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 219 | Math.Min | candidate | OverloadResolutionFailure |
-| 220 | Math.Min | candidate | OverloadResolutionFailure |
-| 221 | Canvas.SetLeft | unresolved | None |
-| 222 | Canvas.SetTop | unresolved | None |
-| 223 | Math.Abs | candidate | OverloadResolutionFailure |
-| 224 | Math.Abs | candidate | OverloadResolutionFailure |
+| 236 | Math.Min | candidate | OverloadResolutionFailure |
+| 237 | Math.Min | candidate | OverloadResolutionFailure |
+| 238 | Canvas.SetLeft | unresolved | None |
+| 239 | Canvas.SetTop | unresolved | None |
+| 240 | Math.Abs | candidate | OverloadResolutionFailure |
+| 241 | Math.Abs | candidate | OverloadResolutionFailure |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 214 | if | 조건에 따라 분기합니다: if (_resultEditDragRectangle is null) |
-| 216 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 219 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(_resultEditDragStart.X, end.X) |
-| 219 | local-declaration | 지역 변수를 선언합니다: var left = Math.Min(_resultEditDragStart.X, end.X); |
-| 219 | variable-initializer | 변수의 초기값을 지정합니다: left = Math.Min(_resultEditDragStart.X, end.X) |
-| 220 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(_resultEditDragStart.Y, end.Y) |
-| 220 | local-declaration | 지역 변수를 선언합니다: var top = Math.Min(_resultEditDragStart.Y, end.Y); |
-| 220 | variable-initializer | 변수의 초기값을 지정합니다: top = Math.Min(_resultEditDragStart.Y, end.Y) |
-| 221 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(_resultEditDragRectangle, left) |
-| 222 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(_resultEditDragRectangle, top) |
-| 223 | assignment | 값을 대상에 대입합니다: _resultEditDragRectangle.Width = Math.Abs(end.X - _resultEditDragStart.X) |
-| 223 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(end.X - _resultEditDragStart.X) |
-| 224 | assignment | 값을 대상에 대입합니다: _resultEditDragRectangle.Height = Math.Abs(end.Y - _resultEditDragStart.Y) |
-| 224 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(end.Y - _resultEditDragStart.Y) |
+| 231 | if | 조건에 따라 분기합니다: if (_resultEditDragRectangle is null) |
+| 233 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 236 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(_resultEditDragStart.X, end.X) |
+| 236 | local-declaration | 지역 변수를 선언합니다: var left = Math.Min(_resultEditDragStart.X, end.X); |
+| 236 | variable-initializer | 변수의 초기값을 지정합니다: left = Math.Min(_resultEditDragStart.X, end.X) |
+| 237 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(_resultEditDragStart.Y, end.Y) |
+| 237 | local-declaration | 지역 변수를 선언합니다: var top = Math.Min(_resultEditDragStart.Y, end.Y); |
+| 237 | variable-initializer | 변수의 초기값을 지정합니다: top = Math.Min(_resultEditDragStart.Y, end.Y) |
+| 238 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetLeft(_resultEditDragRectangle, left) |
+| 239 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Canvas.SetTop(_resultEditDragRectangle, top) |
+| 240 | assignment | 값을 대상에 대입합니다: _resultEditDragRectangle.Width = Math.Abs(end.X - _resultEditDragStart.X) |
+| 240 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(end.X - _resultEditDragStart.X) |
+| 241 | assignment | 값을 대상에 대입합니다: _resultEditDragRectangle.Height = Math.Abs(end.Y - _resultEditDragStart.Y) |
+| 241 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(end.Y - _resultEditDragStart.Y) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["UpdateResultEditDragRectangle"]
- N0["L214 if"]
+ N0["L231 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `CancelResultEditDrag` · L227–241
+### MethodDeclaration `CancelResultEditDrag` · L244–258
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:227–241](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L227-L241)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:244–258](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L244-L258)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -842,43 +957,43 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CReviewDataView.xaml.cs:143–143](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L143-L143) | CancelResultEditDrag | False |
-| [Drilling.UI/Views/CReviewDataView.xaml.cs:200–200](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L200-L200) | CancelResultEditDrag | False |
-| [Drilling.UI/Views/CReviewDataView.xaml.cs:208–208](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L208-L208) | CancelResultEditDrag | False |
+| [Drilling.UI/Views/CReviewDataView.xaml.cs:160–160](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L160-L160) | CancelResultEditDrag | False |
+| [Drilling.UI/Views/CReviewDataView.xaml.cs:217–217](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L217-L217) | CancelResultEditDrag | False |
+| [Drilling.UI/Views/CReviewDataView.xaml.cs:225–225](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L225-L225) | CancelResultEditDrag | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 236 | _resultEditDragSurface.ReleaseMouseCapture | unresolved | None |
+| 253 | _resultEditDragSurface.ReleaseMouseCapture | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 229 | if | 조건에 따라 분기합니다: if (_resultEditDragRectangle is not null) |
-| 231 | assignment | 값을 대상에 대입합니다: _resultEditDragRectangle.Visibility = Visibility.Collapsed |
-| 234 | if | 조건에 따라 분기합니다: if (_resultEditDragSurface?.IsMouseCaptured == true) |
-| 236 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditDragSurface.ReleaseMouseCapture() |
-| 239 | assignment | 값을 대상에 대입합니다: _resultEditDragSurface = null |
-| 240 | assignment | 값을 대상에 대입합니다: _resultEditDragRectangle = null |
+| 246 | if | 조건에 따라 분기합니다: if (_resultEditDragRectangle is not null) |
+| 248 | assignment | 값을 대상에 대입합니다: _resultEditDragRectangle.Visibility = Visibility.Collapsed |
+| 251 | if | 조건에 따라 분기합니다: if (_resultEditDragSurface?.IsMouseCaptured == true) |
+| 253 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditDragSurface.ReleaseMouseCapture() |
+| 256 | assignment | 값을 대상에 대입합니다: _resultEditDragSurface = null |
+| 257 | assignment | 값을 대상에 대입합니다: _resultEditDragRectangle = null |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["CancelResultEditDrag"]
- N0["L229 if"]
+ N0["L246 if"]
  M -->|포함| N0
- N1["L234 if"]
+ N1["L251 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataResultGrid_SelectionChanged` · L243–258
+### MethodDeclaration `ReviewDataResultGrid_SelectionChanged` · L260–275
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:243–258](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L243-L258)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:260–275](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L260-L275)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -900,39 +1015,39 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 251 | panel.SelectRow | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectRow(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW) · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:610 |
-| 254 | ReviewDataResultGrid.Dispatcher.BeginInvoke | unresolved | None |
-| 256 | new Action | unresolved | None |
-| 256 | ReviewDataResultGrid.ScrollIntoView | unresolved | None |
+| 268 | panel.SelectRow | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectRow(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW) · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs:609 |
+| 271 | ReviewDataResultGrid.Dispatcher.BeginInvoke | unresolved | None |
+| 273 | new Action | unresolved | None |
+| 273 | ReviewDataResultGrid.ScrollIntoView | unresolved | None |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 245 | if | 조건에 따라 분기합니다: if (sender is not DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row } &#124;&#124; DataContext is not CMenuCorrection.CReviewDataPanel panel) |
-| 248 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
-| 251 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectRow(row) |
-| 252 | if | 조건에 따라 분기합니다: if (panel.SelectedRow is { } selectedRow) |
-| 254 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReviewDataResultGrid.Dispatcher.BeginInvoke( DispatcherPriority.Background, new Action(() => ReviewDataResultGrid.ScrollIntoView(selectedRow))) |
-| 256 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Action(() => ReviewDataResultGrid.ScrollIntoView(selectedRow)) |
-| 256 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReviewDataResultGrid.ScrollIntoView(selectedRow) |
+| 262 | if | 조건에 따라 분기합니다: if (sender is not DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row } &#124;&#124; DataContext is not CMenuCorrection.CReviewDataPanel panel) |
+| 265 | return | 호출자에게 값 또는 제어를 반환합니다: return; |
+| 268 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectRow(row) |
+| 269 | if | 조건에 따라 분기합니다: if (panel.SelectedRow is { } selectedRow) |
+| 271 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReviewDataResultGrid.Dispatcher.BeginInvoke( DispatcherPriority.Background, new Action(() => ReviewDataResultGrid.ScrollIntoView(selectedRow))) |
+| 273 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: new Action(() => ReviewDataResultGrid.ScrollIntoView(selectedRow)) |
+| 273 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReviewDataResultGrid.ScrollIntoView(selectedRow) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataResultGrid_SelectionChanged"]
- N0["L245 if"]
+ N0["L262 if"]
  M -->|포함| N0
- N1["L252 if"]
+ N1["L269 if"]
  M -->|포함| N1
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataResultGrid_LoadingRow` · L260–268
+### MethodDeclaration `ReviewDataResultGrid_LoadingRow` · L277–285
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:260–268](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L260-L268)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:277–285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L277-L285)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -954,31 +1069,31 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 264 | eventArgs.Row.SetCurrentValue | unresolved | None |
-| 266 | ReferenceEquals | candidate | OverloadResolutionFailure |
+| 281 | eventArgs.Row.SetCurrentValue | unresolved | None |
+| 283 | ReferenceEquals | candidate | OverloadResolutionFailure |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 262 | if | 조건에 따라 분기합니다: if (DataContext is CMenuCorrection.CReviewDataPanel panel) |
-| 264 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.Row.SetCurrentValue( DataGridRow.IsSelectedProperty, ReferenceEquals(eventArgs.Row.Item, panel.SelectedRow)) |
-| 266 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(eventArgs.Row.Item, panel.SelectedRow) |
+| 279 | if | 조건에 따라 분기합니다: if (DataContext is CMenuCorrection.CReviewDataPanel panel) |
+| 281 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: eventArgs.Row.SetCurrentValue( DataGridRow.IsSelectedProperty, ReferenceEquals(eventArgs.Row.Item, panel.SelectedRow)) |
+| 283 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(eventArgs.Row.Item, panel.SelectedRow) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataResultGrid_LoadingRow"]
- N0["L262 if"]
+ N0["L279 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataReinspectionGrid_SelectionChanged` · L270–282
+### MethodDeclaration `ReviewDataReinspectionGrid_SelectionChanged` · L287–299
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:270–282](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L270-L282)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:287–299](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L287-L299)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1000,29 +1115,29 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 280 | panel.SelectReinspectionShot | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectReinspectionShot(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM) · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:628 |
+| 297 | panel.SelectReinspectionShot | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectReinspectionShot(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM) · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:628 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 274 | if | 조건에 따라 분기합니다: if (sender is DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM item } && DataContext is CMenuCorrection.CReviewDataPanel panel) |
-| 280 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectReinspectionShot(item) |
+| 291 | if | 조건에 따라 분기합니다: if (sender is DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_REINSPECTION_ITEM item } && DataContext is CMenuCorrection.CReviewDataPanel panel) |
+| 297 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SelectReinspectionShot(item) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataReinspectionGrid_SelectionChanged"]
- N0["L274 if"]
+ N0["L291 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataReinspectionCheckBox_Changed` · L284–295
+### MethodDeclaration `ReviewDataReinspectionCheckBox_Changed` · L301–312
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:284–295](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L284-L295)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:301–312](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L301-L312)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1044,29 +1159,29 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 293 | panel.SetReinspectionRowSelection | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetReinspectionRowSelection(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW, bool) · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:622 |
+| 310 | panel.SetReinspectionRowSelection | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetReinspectionRowSelection(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW, bool) · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Reinspection.cs:622 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 286 | if | 조건에 따라 분기합니다: if (sender is CheckBox { DataContext: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row, IsChecked: var isChecked } && DataContext is CMenuCorrection.CReviewDataPanel panel) |
-| 293 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SetReinspectionRowSelection(row, isChecked == true) |
+| 303 | if | 조건에 따라 분기합니다: if (sender is CheckBox { DataContext: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row, IsChecked: var isChecked } && DataContext is CMenuCorrection.CReviewDataPanel panel) |
+| 310 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SetReinspectionRowSelection(row, isChecked == true) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataReinspectionCheckBox_Changed"]
- N0["L286 if"]
+ N0["L303 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataResultEditCheckBox_Changed` · L297–308
+### MethodDeclaration `ReviewDataResultEditCheckBox_Changed` · L314–325
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:297–308](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L297-L308)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:314–325](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L314-L325)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1088,29 +1203,29 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 306 | panel.SetResultEditRowSelection | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetResultEditRowSelection(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW, bool) · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:133 |
+| 323 | panel.SetResultEditRowSelection | resolved | void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetResultEditRowSelection(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW, bool) · Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs:135 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 299 | if | 조건에 따라 분기합니다: if (sender is CheckBox { DataContext: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row, IsChecked: var isChecked } && DataContext is CMenuCorrection.CReviewDataPanel panel) |
-| 306 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SetResultEditRowSelection(row, isChecked == true) |
+| 316 | if | 조건에 따라 분기합니다: if (sender is CheckBox { DataContext: CMenuCorrection.ST_REVIEW_DATA_GRID_ROW row, IsChecked: var isChecked } && DataContext is CMenuCorrection.CReviewDataPanel panel) |
+| 323 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: panel.SetResultEditRowSelection(row, isChecked == true) |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataResultEditCheckBox_Changed"]
- N0["L299 if"]
+ N0["L316 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataResultEditKeyInGrid_SelectionChanged` · L310–317
+### MethodDeclaration `ReviewDataResultEditKeyInGrid_SelectionChanged` · L327–334
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:310–317](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L310-L317)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:327–334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L327-L334)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1132,23 +1247,23 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 312 | if | 조건에 따라 분기합니다: if (sender is DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM item } && DataContext is CMenuCorrection.CReviewDataPanel panel) |
-| 315 | assignment | 값을 대상에 대입합니다: panel.SelectedResultEditKeyInItem = item |
+| 329 | if | 조건에 따라 분기합니다: if (sender is DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM item } && DataContext is CMenuCorrection.CReviewDataPanel panel) |
+| 332 | assignment | 값을 대상에 대입합니다: panel.SelectedResultEditKeyInItem = item |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataResultEditKeyInGrid_SelectionChanged"]
- N0["L312 if"]
+ N0["L329 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `ReviewDataResultEditCopyGrid_SelectionChanged` · L319–326
+### MethodDeclaration `ReviewDataResultEditCopyGrid_SelectionChanged` · L336–343
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:319–326](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L319-L326)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:336–343](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L336-L343)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1170,23 +1285,23 @@ flowchart TD
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 321 | if | 조건에 따라 분기합니다: if (sender is DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM item } && DataContext is CMenuCorrection.CReviewDataPanel panel) |
-| 324 | assignment | 값을 대상에 대입합니다: panel.SelectedResultEditCopyTarget = item |
+| 338 | if | 조건에 따라 분기합니다: if (sender is DataGrid { SelectedItem: CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM item } && DataContext is CMenuCorrection.CReviewDataPanel panel) |
+| 341 | assignment | 값을 대상에 대입합니다: panel.SelectedResultEditCopyTarget = item |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["ReviewDataResultEditCopyGrid_SelectionChanged"]
- N0["L321 if"]
+ N0["L338 if"]
  M -->|포함| N0
 ```
 
 변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.
 
-### MethodDeclaration `FindVisualChild` · L328–347
+### MethodDeclaration `FindVisualChild` · L345–364
 
-[Drilling.UI/Views/CReviewDataView.xaml.cs:328–347](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml.cs#L328-L347)
+[Drilling.UI/Views/CReviewDataView.xaml.cs:345–364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml.cs#L345-L364)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1207,39 +1322,39 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 331 | VisualTreeHelper.GetChildrenCount | unresolved | None |
-| 333 | VisualTreeHelper.GetChild | unresolved | None |
-| 339 | FindVisualChild<T> | candidate | OverloadResolutionFailure |
+| 348 | VisualTreeHelper.GetChildrenCount | unresolved | None |
+| 350 | VisualTreeHelper.GetChild | unresolved | None |
+| 356 | FindVisualChild<T> | candidate | OverloadResolutionFailure |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
 | 원본 행 | 종류 | 주석 해설 |
 | --- | --- | --- |
-| 331 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChildrenCount(parent) |
-| 331 | variable-initializer | 변수의 초기값을 지정합니다: index = 0 |
-| 331 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < VisualTreeHelper.GetChildrenCount(parent); index++) |
-| 333 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChild(parent, index) |
-| 333 | local-declaration | 지역 변수를 선언합니다: var child = VisualTreeHelper.GetChild(parent, index); |
-| 333 | variable-initializer | 변수의 초기값을 지정합니다: child = VisualTreeHelper.GetChild(parent, index) |
-| 334 | if | 조건에 따라 분기합니다: if (child is T match) |
-| 336 | return | 호출자에게 값 또는 제어를 반환합니다: return match; |
-| 339 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FindVisualChild<T>(child) |
-| 339 | local-declaration | 지역 변수를 선언합니다: var descendant = FindVisualChild<T>(child); |
-| 339 | variable-initializer | 변수의 초기값을 지정합니다: descendant = FindVisualChild<T>(child) |
-| 340 | if | 조건에 따라 분기합니다: if (descendant is not null) |
-| 342 | return | 호출자에게 값 또는 제어를 반환합니다: return descendant; |
-| 346 | return | 호출자에게 값 또는 제어를 반환합니다: return null; |
+| 348 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChildrenCount(parent) |
+| 348 | variable-initializer | 변수의 초기값을 지정합니다: index = 0 |
+| 348 | for | 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < VisualTreeHelper.GetChildrenCount(parent); index++) |
+| 350 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: VisualTreeHelper.GetChild(parent, index) |
+| 350 | local-declaration | 지역 변수를 선언합니다: var child = VisualTreeHelper.GetChild(parent, index); |
+| 350 | variable-initializer | 변수의 초기값을 지정합니다: child = VisualTreeHelper.GetChild(parent, index) |
+| 351 | if | 조건에 따라 분기합니다: if (child is T match) |
+| 353 | return | 호출자에게 값 또는 제어를 반환합니다: return match; |
+| 356 | call | 함수·델리게이트 또는 객체 생성자를 호출합니다: FindVisualChild<T>(child) |
+| 356 | local-declaration | 지역 변수를 선언합니다: var descendant = FindVisualChild<T>(child); |
+| 356 | variable-initializer | 변수의 초기값을 지정합니다: descendant = FindVisualChild<T>(child) |
+| 357 | if | 조건에 따라 분기합니다: if (descendant is not null) |
+| 359 | return | 호출자에게 값 또는 제어를 반환합니다: return descendant; |
+| 363 | return | 호출자에게 값 또는 제어를 반환합니다: return null; |
 
 제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):
 
 ```mermaid
 flowchart TD
  M["FindVisualChild"]
- N0["L331 for"]
+ N0["L348 for"]
  M -->|포함| N0
- N1["L334 if"]
+ N1["L351 if"]
  N0 -->|포함| N1
- N2["L340 if"]
+ N2["L357 if"]
  N0 -->|포함| N2
 ```
 

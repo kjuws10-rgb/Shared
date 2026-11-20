@@ -1,104 +1,364 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Menu/Menus/CMenuPm.cs
-Commit: 96e22cd027c84bf302b23f2949b98985d7f301bb
+Commit: 28764c91d521777b8ee068dd7aaf2d3902ce9fe2
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
-// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
-L000001 | using Drilling.Common.Managers; ⟦EOL⟧
-// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
-L000002 | using Drilling.Common.Interface; ⟦EOL⟧
-// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Motion;
-L000003 | using Drilling.Common.Motion; ⟦EOL⟧
-// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Alarm;
-L000004 | using Drilling.Common.Alarm; ⟦EOL⟧
-// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.InterLock;
-L000005 | using Drilling.Common.InterLock; ⟦EOL⟧
-// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Station;
-L000006 | using Drilling.Common.Station; ⟦EOL⟧
+// 해설 L1: 네임스페이스 또는 자원 사용 선언입니다: using System.Globalization;
+L000001 | using System.Globalization; ⟦EOL⟧
+// 해설 L2: 네임스페이스 또는 자원 사용 선언입니다: using System.IO;
+L000002 | using System.IO; ⟦EOL⟧
+// 해설 L3: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Interface;
+L000003 | using Drilling.Common.Interface; ⟦EOL⟧
+// 해설 L4: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Log;
+L000004 | using Drilling.Common.Log; ⟦EOL⟧
+// 해설 L5: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Managers;
+L000005 | using Drilling.Common.Managers; ⟦EOL⟧
+// 해설 L6: 네임스페이스 또는 자원 사용 선언입니다: using Drilling.Common.Recipe;
+L000006 | using Drilling.Common.Recipe; ⟦EOL⟧
 L000007 |  ⟦EOL⟧
 // 해설 L8: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus;
 L000008 | namespace Drilling.UI.Menu.Menus; ⟦EOL⟧
-// 해설 L9: 타입의 구조/상속 선언입니다: public sealed class CMenuPm(Func<ST_PM_LOCK_STATUS> lockStatusProvider, Action enterLock) : CMenuBase
-L000009 | public sealed class CMenuPm(Func<ST_PM_LOCK_STATUS> lockStatusProvider, Action enterLock) : CMenuBase ⟦EOL⟧
-// 해설 L10: 구문 블록 경계입니다.
-L000010 | { ⟦EOL⟧
-// 해설 L11: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuPm.Menu
-L000011 |     public override EN_MENU Menu ⟦EOL⟧
-// 해설 L12: 구문 블록 경계입니다 · 소속 Menu.
-L000012 |     { ⟦EOL⟧
-// 해설 L13: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuPm.Menu.get
-L000013 |         get ⟦EOL⟧
-// 해설 L14: 구문 블록 경계입니다 · 소속 get_Menu.
-L000014 |         { ⟦EOL⟧
-// 해설 L15: 호출자에게 값 또는 제어를 반환합니다: return EN_MENU.Pm;
-L000015 |             return EN_MENU.Pm; ⟦EOL⟧
-// 해설 L16: 구문 블록 경계입니다 · 소속 get_Menu.
-L000016 |         } ⟦EOL⟧
-// 해설 L17: 구문 블록 경계입니다 · 소속 Menu.
-L000017 |     } ⟦EOL⟧
+// 해설 L9: 타입의 구조/상속 선언입니다: public sealed class CMenuPm(
+L000009 | public sealed class CMenuPm( ⟦EOL⟧
+// 해설 L10: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000010 |     CInterfaceManager interfaceManager, ⟦EOL⟧
+// 해설 L11: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000011 |     CRecipeManager recipeManager, ⟦EOL⟧
+// 해설 L12: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000012 |     CSettingManager settingManager, ⟦EOL⟧
+// 해설 L13: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000013 |     CLogManager logManager, ⟦EOL⟧
+// 해설 L14: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000014 |     Func<string> selectedRecipeIdProvider, ⟦EOL⟧
+// 해설 L15: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000015 |     Func<ST_PM_LOCK_STATUS> lockStatusProvider) : CMenuBase ⟦EOL⟧
+// 해설 L16: 구문 블록 경계입니다.
+L000016 | { ⟦EOL⟧
+// 해설 L17: 변수의 초기값을 지정합니다: LaserThgHourLimitKey = "LASER_THG_HOUR_LIMIT"
+L000017 |     private const string LaserThgHourLimitKey = "LASER_THG_HOUR_LIMIT"; ⟦EOL⟧
 L000018 |  ⟦EOL⟧
-// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuPm.StartTime
-L000019 |     public string StartTime { get; private set; } = ""; ⟦EOL⟧
-// 해설 L20: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuPm.LockItems
-L000020 |     public IReadOnlyList<ST_DISPLAY_ITEM> LockItems { get; private set; } = []; ⟦EOL⟧
-// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuPm.BlockedItems
-L000021 |     public IReadOnlyList<ST_DISPLAY_ITEM> BlockedItems { get; private set; } = []; ⟦EOL⟧
-L000022 |  ⟦EOL⟧
-// 해설 L23: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
-L000023 |     public override Task<CScreenViewModel> Build(CancellationToken cancellationToken = default) ⟦EOL⟧
-// 해설 L24: 구문 블록 경계입니다 · 소속 Build.
-L000024 |     { ⟦EOL⟧
-// 해설 L25: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
-L000025 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
-// 해설 L26: 함수·델리게이트 또는 객체 생성자를 호출합니다: lockStatusProvider() / 지역 변수를 선언합니다: var current = lockStatusProvider(); / 변수의 초기값을 지정합니다: current = lockStatusProvider()
-L000026 |         var current = lockStatusProvider(); ⟦EOL⟧
-// 해설 L27: 조건에 따라 분기합니다: if (!current.IsLocked)
-L000027 |         if (!current.IsLocked) ⟦EOL⟧
-// 해설 L28: 구문 블록 경계입니다 · 소속 Build.
-L000028 |         { ⟦EOL⟧
-// 해설 L29: 함수·델리게이트 또는 객체 생성자를 호출합니다: enterLock()
-L000029 |             enterLock(); ⟦EOL⟧
-// 해설 L30: 값을 대상에 대입합니다: current = lockStatusProvider() / 함수·델리게이트 또는 객체 생성자를 호출합니다: lockStatusProvider()
-L000030 |             current = lockStatusProvider(); ⟦EOL⟧
-// 해설 L31: 구문 블록 경계입니다 · 소속 Build.
-L000031 |         } ⟦EOL⟧
-L000032 |  ⟦EOL⟧
-// 해설 L33: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("HH:mm:ss") / 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTime.Now.ToString("HH:mm:ss") / 지역 변수를 선언합니다: var startTime = current.LockedAt?.ToString("HH:mm:ss") ?? DateTime.Now.ToString("HH:mm:ss"); / 변수의 초기값을 지정합니다: startTime = current.LockedAt?.ToString("HH:mm:ss") ?? DateTime.Now.ToString("HH:mm:ss")
-L000033 |         var startTime = current.LockedAt?.ToString("HH:mm:ss") ?? DateTime.Now.ToString("HH:mm:ss"); ⟦EOL⟧
-// 해설 L34: 함수·델리게이트 또는 객체 생성자를 호출합니다: Apply(startTime, [new("Lock State", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", startTime), new("Exit", "Password required")], [new("Equipment Operation", "Blocked"), new("Manual Command", "Blocked"), new… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Lock State", current.IsLocked ? "LOCKED" : "UNLOCKED") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Locked At", startTime) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Exit", "Password required") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Equipment Operation", "Blocked") / 함수·델리게이트 또는 객체
-L000034 |         Apply(startTime, [new("Lock State", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", startTime), new("Exit", "Password required")], [new("Equipment Operation", "Blocked"), new("Manual Command", "Blocked"), new("Cycle Start", "Blocked")]); ⟦EOL⟧
-// 해설 L35: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CScreenViewModel( EN_MENU.Pm, "PM", "Operation lock screen. Password is required to exit PM.", [new("Lock", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", current.LockedAt?.ToString("HH:mm:ss") ?? "-")],… / 지역 변수를 선언합니다: var screen = new CScreenViewModel( EN_MENU.Pm, "PM", "Operation lock screen. Password is required to exit PM.", [new("Lock", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", current.LockedAt?.ToString("HH:mm:ss") ?? "-" / 변수의 초기값을 지정합니다: screen = new CScreenViewMo
-L000035 |         var screen = new CScreenViewModel( ⟦EOL⟧
-// 해설 L36: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
-L000036 |             EN_MENU.Pm,  ⟦EOL⟧
-// 해설 L37: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
-L000037 |             "PM",  ⟦EOL⟧
-// 해설 L38: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
-L000038 |             "Operation lock screen. Password is required to exit PM.",  ⟦EOL⟧
-// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Lock", current.IsLocked ? "LOCKED" : "UNLOCKED") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Locked At", current.LockedAt?.ToString("HH:mm:ss") ?? "-") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("HH:mm:ss") / 조건에 따라 결과식을 선택합니다: current.IsLocked ? "LOCKED" : "UNLOCKED"
-L000039 |             [new("Lock", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", current.LockedAt?.ToString("HH:mm:ss") ?? "-")],  ⟦EOL⟧
-// 해설 L40: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Operation", [new("Equipment Control", "Blocked"), new("Exit PM", "Password required")]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Equipment Control", "Blocked") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Exit PM", "Password required")
-L000040 |             [new("Operation", [new("Equipment Control", "Blocked"), new("Exit PM", "Password required")])],  ⟦EOL⟧
-// 해설 L41: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
-L000041 |             pm: this ⟦EOL⟧
-// 해설 L42: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
-L000042 |         ); ⟦EOL⟧
-// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(screen) / 호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(screen);
-L000043 |         return Task.FromResult(screen); ⟦EOL⟧
-// 해설 L44: 구문 블록 경계입니다 · 소속 Build.
-L000044 |     } ⟦EOL⟧
-L000045 |  ⟦EOL⟧
-// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuPm.Apply(string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITE
-L000046 |     private void Apply(string startTime, IReadOnlyList<ST_DISPLAY_ITEM> lockItems, IReadOnlyList<ST_DISPLAY_ITEM> blockedItems) ⟦EOL⟧
-// 해설 L47: 구문 블록 경계입니다 · 소속 Apply.
-L000047 |     { ⟦EOL⟧
-// 해설 L48: 값을 대상에 대입합니다: StartTime = startTime
-L000048 |         StartTime = startTime; ⟦EOL⟧
-// 해설 L49: 값을 대상에 대입합니다: LockItems = lockItems
-L000049 |         LockItems = lockItems; ⟦EOL⟧
-// 해설 L50: 값을 대상에 대입합니다: BlockedItems = blockedItems
-L000050 |         BlockedItems = blockedItems; ⟦EOL⟧
-// 해설 L51: 구문 블록 경계입니다 · 소속 Apply.
-L000051 |     } ⟦EOL⟧
-// 해설 L52: 구문 블록 경계입니다.
-L000052 | } ⟦EOL⟧
+// 해설 L19: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuPm.Menu
+L000019 |     public override EN_MENU Menu ⟦EOL⟧
+// 해설 L20: 구문 블록 경계입니다 · 소속 Menu.
+L000020 |     { ⟦EOL⟧
+// 해설 L21: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuPm.Menu.get
+L000021 |         get ⟦EOL⟧
+// 해설 L22: 구문 블록 경계입니다 · 소속 get_Menu.
+L000022 |         { ⟦EOL⟧
+// 해설 L23: 호출자에게 값 또는 제어를 반환합니다: return EN_MENU.Pm;
+L000023 |             return EN_MENU.Pm; ⟦EOL⟧
+// 해설 L24: 구문 블록 경계입니다 · 소속 get_Menu.
+L000024 |         } ⟦EOL⟧
+// 해설 L25: 구문 블록 경계입니다 · 소속 Menu.
+L000025 |     } ⟦EOL⟧
+L000026 |  ⟦EOL⟧
+// 해설 L27: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuPm.IsLocked
+L000027 |     public bool IsLocked { get; private set; } ⟦EOL⟧
+// 해설 L28: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuPm.StartTime
+L000028 |     public string StartTime { get; private set; } = ""; ⟦EOL⟧
+// 해설 L29: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuPm.LockItems
+L000029 |     public IReadOnlyList<ST_DISPLAY_ITEM> LockItems { get; private set; } = []; ⟦EOL⟧
+// 해설 L30: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuPm.BlockedItems
+L000030 |     public IReadOnlyList<ST_DISPLAY_ITEM> BlockedItems { get; private set; } = []; ⟦EOL⟧
+// 해설 L31: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateEmptyPartLifeRows()
+L000031 |     public IReadOnlyList<ST_PM_PART_LIFE_ROW> PartLifeRows { get; private set; } = CreateEmptyPartLifeRows(); ⟦EOL⟧
+// 해설 L32: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateEmptyProtectWindowItems()
+L000032 |     public IReadOnlyList<ST_DISPLAY_ITEM> ProtectWindowItems { get; private set; } = CreateEmptyProtectWindowItems(); ⟦EOL⟧
+// 해설 L33: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW> Drilling.UI.Menu.Menus.CMenuPm.HistoryRows
+L000033 |     public IReadOnlyList<ST_PM_HISTORY_ROW> HistoryRows { get; private set; } = []; ⟦EOL⟧
+L000034 |  ⟦EOL⟧
+// 해설 L35: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000035 |     public override async Task<CScreenViewModel> Build(CancellationToken cancellationToken = default) ⟦EOL⟧
+// 해설 L36: 구문 블록 경계입니다 · 소속 Build.
+L000036 |     { ⟦EOL⟧
+// 해설 L37: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000037 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L38: 함수·델리게이트 또는 객체 생성자를 호출합니다: lockStatusProvider() / 지역 변수를 선언합니다: var current = lockStatusProvider(); / 변수의 초기값을 지정합니다: current = lockStatusProvider()
+L000038 |         var current = lockStatusProvider(); ⟦EOL⟧
+// 해설 L39: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreatePartLifeRows(cancellationToken) / 지역 변수를 선언합니다: var partLifeRows = CreatePartLifeRows(cancellationToken); / 변수의 초기값을 지정합니다: partLifeRows = CreatePartLifeRows(cancellationToken)
+L000039 |         var partLifeRows = CreatePartLifeRows(cancellationToken); ⟦EOL⟧
+// 해설 L40: 비동기 완료를 기다립니다: await CreateProtectWindowItems(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProtectWindowItems(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProtectWindowItems(cancellationToken) / 지역 변수를 선언합니다: var protectWindowItems = await CreateProtectWindowItems(cancellationToken).ConfigureAwait(false); / 변수의 초기값을 지정합니다: protectWindowItems = await CreateProtectWindowItems(cancellationToken).ConfigureAwait(false)
+L000040 |         var protectWindowItems = await CreateProtectWindowItems(cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L41: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHistoryRows(logManager.ReadPmHistory()) / 함수·델리게이트 또는 객체 생성자를 호출합니다: logManager.ReadPmHistory() / 지역 변수를 선언합니다: var historyRows = CreateHistoryRows(logManager.ReadPmHistory()); / 변수의 초기값을 지정합니다: historyRows = CreateHistoryRows(logManager.ReadPmHistory())
+L000041 |         var historyRows = CreateHistoryRows(logManager.ReadPmHistory()); ⟦EOL⟧
+// 해설 L42: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var startTime = current.LockedAt?.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) ?? DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture); / 변수의 초기값을 지정합니다: startTime = current.LockedAt?.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) ?? DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
+L000042 |         var startTime = current.LockedAt?.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) ⟦EOL⟧
+// 해설 L43: 함수·델리게이트 또는 객체 생성자를 호출합니다: DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
+L000043 |             ?? DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L44: 함수·델리게이트 또는 객체 생성자를 호출합니다: Apply( current.IsLocked, startTime, [new("Lock State", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", startTime), new("Exit", "Password required")], [new("Equipment Operation", "Blocked"), new("Manual Comman…
+L000044 |         Apply( ⟦EOL⟧
+// 해설 L45: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000045 |             current.IsLocked, ⟦EOL⟧
+// 해설 L46: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000046 |             startTime, ⟦EOL⟧
+// 해설 L47: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Lock State", current.IsLocked ? "LOCKED" : "UNLOCKED") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Locked At", startTime) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Exit", "Password required") / 조건에 따라 결과식을 선택합니다: current.IsLocked ? "LOCKED" : "UNLOCKED"
+L000047 |             [new("Lock State", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", startTime), new("Exit", "Password required")], ⟦EOL⟧
+// 해설 L48: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Equipment Operation", "Blocked") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Manual Command", "Blocked") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Cycle Start", "Blocked")
+L000048 |             [new("Equipment Operation", "Blocked"), new("Manual Command", "Blocked"), new("Cycle Start", "Blocked")], ⟦EOL⟧
+// 해설 L49: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000049 |             partLifeRows, ⟦EOL⟧
+// 해설 L50: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000050 |             protectWindowItems, ⟦EOL⟧
+// 해설 L51: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000051 |             historyRows); ⟦EOL⟧
+// 해설 L52: 함수·델리게이트 또는 객체 생성자를 호출합니다: new CScreenViewModel( EN_MENU.Pm, "PM", "Operation lock screen. Password is required to exit PM.", [new("Lock", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", current.LockedAt?.ToString("HH:mm:ss") ?? "-")],… / 호출자에게 값 또는 제어를 반환합니다: return new CScreenViewModel( EN_MENU.Pm, "PM", "Operation lock screen. Password is required to exit PM.", [new("Lock", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", current.LockedAt?.ToString("HH:mm:ss") ?? "-")], [n
+L000052 |         return new CScreenViewModel( ⟦EOL⟧
+// 해설 L53: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000053 |             EN_MENU.Pm, ⟦EOL⟧
+// 해설 L54: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000054 |             "PM", ⟦EOL⟧
+// 해설 L55: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000055 |             "Operation lock screen. Password is required to exit PM.", ⟦EOL⟧
+// 해설 L56: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Lock", current.IsLocked ? "LOCKED" : "UNLOCKED") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Locked At", current.LockedAt?.ToString("HH:mm:ss") ?? "-") / 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("HH:mm:ss") / 조건에 따라 결과식을 선택합니다: current.IsLocked ? "LOCKED" : "UNLOCKED"
+L000056 |             [new("Lock", current.IsLocked ? "LOCKED" : "UNLOCKED"), new("Locked At", current.LockedAt?.ToString("HH:mm:ss") ?? "-")], ⟦EOL⟧
+// 해설 L57: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Operation", [new("Equipment Control", "Blocked"), new("Exit PM", "Password required")]) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Equipment Control", "Blocked") / 함수·델리게이트 또는 객체 생성자를 호출합니다: new("Exit PM", "Password required")
+L000057 |             [new("Operation", [new("Equipment Control", "Blocked"), new("Exit PM", "Password required")])], ⟦EOL⟧
+// 해설 L58: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000058 |             pm: this ⟦EOL⟧
+// 해설 L59: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<Drilling.UI.Menu.Menus.CScreenViewModel> Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)
+L000059 |         ); ⟦EOL⟧
+// 해설 L60: 구문 블록 경계입니다 · 소속 Build.
+L000060 |     } ⟦EOL⟧
+L000061 |  ⟦EOL⟧
+// 해설 L62: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuPm.Apply(bool, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPL
+L000062 |     private void Apply( ⟦EOL⟧
+// 해설 L63: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuPm.Apply(bool, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPL
+L000063 |         bool isLocked, ⟦EOL⟧
+// 해설 L64: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuPm.Apply(bool, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPL
+L000064 |         string startTime, ⟦EOL⟧
+// 해설 L65: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuPm.Apply(bool, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPL
+L000065 |         IReadOnlyList<ST_DISPLAY_ITEM> lockItems, ⟦EOL⟧
+// 해설 L66: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuPm.Apply(bool, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPL
+L000066 |         IReadOnlyList<ST_DISPLAY_ITEM> blockedItems, ⟦EOL⟧
+// 해설 L67: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuPm.Apply(bool, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPL
+L000067 |         IReadOnlyList<ST_PM_PART_LIFE_ROW> partLifeRows, ⟦EOL⟧
+// 해설 L68: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuPm.Apply(bool, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPL
+L000068 |         IReadOnlyList<ST_DISPLAY_ITEM> protectWindowItems, ⟦EOL⟧
+// 해설 L69: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuPm.Apply(bool, string, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>, System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPL
+L000069 |         IReadOnlyList<ST_PM_HISTORY_ROW> historyRows) ⟦EOL⟧
+// 해설 L70: 구문 블록 경계입니다 · 소속 Apply.
+L000070 |     { ⟦EOL⟧
+// 해설 L71: 값을 대상에 대입합니다: IsLocked = isLocked
+L000071 |         IsLocked = isLocked; ⟦EOL⟧
+// 해설 L72: 값을 대상에 대입합니다: StartTime = startTime
+L000072 |         StartTime = startTime; ⟦EOL⟧
+// 해설 L73: 값을 대상에 대입합니다: LockItems = lockItems
+L000073 |         LockItems = lockItems; ⟦EOL⟧
+// 해설 L74: 값을 대상에 대입합니다: BlockedItems = blockedItems
+L000074 |         BlockedItems = blockedItems; ⟦EOL⟧
+// 해설 L75: 값을 대상에 대입합니다: PartLifeRows = partLifeRows
+L000075 |         PartLifeRows = partLifeRows; ⟦EOL⟧
+// 해설 L76: 값을 대상에 대입합니다: ProtectWindowItems = protectWindowItems
+L000076 |         ProtectWindowItems = protectWindowItems; ⟦EOL⟧
+// 해설 L77: 값을 대상에 대입합니다: HistoryRows = historyRows
+L000077 |         HistoryRows = historyRows; ⟦EOL⟧
+// 해설 L78: 구문 블록 경계입니다 · 소속 Apply.
+L000078 |     } ⟦EOL⟧
+L000079 |  ⟦EOL⟧
+// 해설 L80: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW> Drilling.UI.Menu.Menus.CMenuPm.CreatePartLifeRows(System.Threading.CancellationToken)
+L000080 |     private IReadOnlyList<ST_PM_PART_LIFE_ROW> CreatePartLifeRows(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L81: 구문 블록 경계입니다 · 소속 CreatePartLifeRows.
+L000081 |     { ⟦EOL⟧
+// 해설 L82: 함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()
+L000082 |         cancellationToken.ThrowIfCancellationRequested(); ⟦EOL⟧
+// 해설 L83: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCrystalLimit(cancellationToken) / 지역 변수를 선언합니다: var limit = ReadCrystalLimit(cancellationToken); / 변수의 초기값을 지정합니다: limit = ReadCrystalLimit(cancellationToken)
+L000083 |         var limit = ReadCrystalLimit(cancellationToken); ⟦EOL⟧
+// 해설 L84: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.GetInterfaceList(EN_EQP_MODULE.TalonLaser) .Select(item => item.Number) .ToHashSet() / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.GetInterfaceList(EN_EQP_MODULE.TalonLaser) .Select(item => item.Number) / 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.GetInterfaceList(EN_EQP_MODULE.TalonLaser) / 지역 변수를 선언합니다: var laserNumbers = interfaceManager.GetInterfaceList(EN_EQP_MODULE.TalonLaser) .Select(item => item.Number) .ToHashSet(); / 변수의 초기값을 지정합니다: laserNumbers = interfaceManager.GetInterfaceList
+L000084 |         var laserNumbers = interfaceManager.GetInterfaceList(EN_EQP_MODULE.TalonLaser) ⟦EOL⟧
+// 해설 L85: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW> Drilling.UI.Menu.Menus.CMenuPm.CreatePartLifeRows(System.Threading.CancellationToken)
+L000085 |             .Select(item => item.Number) ⟦EOL⟧
+// 해설 L86: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW> Drilling.UI.Menu.Menus.CMenuPm.CreatePartLifeRows(System.Threading.CancellationToken)
+L000086 |             .ToHashSet(); ⟦EOL⟧
+L000087 |  ⟦EOL⟧
+// 해설 L88: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8) .Select(headNo => CreatePartLifeRow(headNo, limit, laserNumbers)) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8) .Select(headNo => CreatePartLifeRow(headNo, limit, laserNumbers)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8) / 호출자에게 값 또는 제어를 반환합니다: return Enumerable.Range(1, 8) .Select(headNo => CreatePartLifeRow(headNo, limit, laserNumbers)) .ToArray();
+L000088 |         return Enumerable.Range(1, 8) ⟦EOL⟧
+// 해설 L89: 함수·델리게이트 또는 객체 생성자를 호출합니다: CreatePartLifeRow(headNo, limit, laserNumbers)
+L000089 |             .Select(headNo => CreatePartLifeRow(headNo, limit, laserNumbers)) ⟦EOL⟧
+// 해설 L90: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW> Drilling.UI.Menu.Menus.CMenuPm.CreatePartLifeRows(System.Threading.CancellationToken)
+L000090 |             .ToArray(); ⟦EOL⟧
+// 해설 L91: 구문 블록 경계입니다 · 소속 CreatePartLifeRows.
+L000091 |     } ⟦EOL⟧
+L000092 |  ⟦EOL⟧
+// 해설 L93: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW Drilling.UI.Menu.Menus.CMenuPm.CreatePartLifeRow(int, double?, System.Collections.Generic.IReadOnlySet<int>)
+L000093 |     private ST_PM_PART_LIFE_ROW CreatePartLifeRow(int headNo, double? limit, IReadOnlySet<int> laserNumbers) ⟦EOL⟧
+// 해설 L94: 구문 블록 경계입니다 · 소속 CreatePartLifeRow.
+L000094 |     { ⟦EOL⟧
+// 해설 L95: 지역 변수를 선언합니다: var laserNo = headNo - 1; / 변수의 초기값을 지정합니다: laserNo = headNo - 1
+L000095 |         var laserNo = headNo - 1; ⟦EOL⟧
+// 해설 L96: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("0.0", CultureInfo.InvariantCulture) / 지역 변수를 선언합니다: var limitText = limit?.ToString("0.0", CultureInfo.InvariantCulture) ?? "-"; / 변수의 초기값을 지정합니다: limitText = limit?.ToString("0.0", CultureInfo.InvariantCulture) ?? "-"
+L000096 |         var limitText = limit?.ToString("0.0", CultureInfo.InvariantCulture) ?? "-"; ⟦EOL⟧
+// 해설 L97: 함수·델리게이트 또는 객체 생성자를 호출합니다: laserNumbers.Contains(laserNo) / 조건에 따라 분기합니다: if (!laserNumbers.Contains(laserNo))
+L000097 |         if (!laserNumbers.Contains(laserNo)) ⟦EOL⟧
+// 해설 L98: 함수·델리게이트 또는 객체 생성자를 호출합니다: new($"H{headNo:00}", "N/C", limitText) / 호출자에게 값 또는 제어를 반환합니다: return new($"H{headNo:00}", "N/C", limitText);
+L000098 |             return new($"H{headNo:00}", "N/C", limitText); ⟦EOL⟧
+L000099 |  ⟦EOL⟧
+// 해설 L100: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.OpticSnapshots.GetLaser(laserNo) / 지역 변수를 선언합니다: var snapshot = interfaceManager.OpticSnapshots.GetLaser(laserNo); / 변수의 초기값을 지정합니다: snapshot = interfaceManager.OpticSnapshots.GetLaser(laserNo)
+L000100 |         var snapshot = interfaceManager.OpticSnapshots.GetLaser(laserNo); ⟦EOL⟧
+// 해설 L101: 조건에 따라 분기합니다: if (snapshot.Value is null)
+L000101 |         if (snapshot.Value is null) ⟦EOL⟧
+// 해설 L102: 함수·델리게이트 또는 객체 생성자를 호출합니다: new($"H{headNo:00}", NormalizeSnapshotState(snapshot.State), limitText) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSnapshotState(snapshot.State) / 호출자에게 값 또는 제어를 반환합니다: return new($"H{headNo:00}", NormalizeSnapshotState(snapshot.State), limitText);
+L000102 |             return new($"H{headNo:00}", NormalizeSnapshotState(snapshot.State), limitText); ⟦EOL⟧
+L000103 |  ⟦EOL⟧
+// 해설 L104: 함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.GetCachedTalonStatus(laserNo) / 지역 변수를 선언합니다: var status = interfaceManager.GetCachedTalonStatus(laserNo); / 변수의 초기값을 지정합니다: status = interfaceManager.GetCachedTalonStatus(laserNo)
+L000104 |         var status = interfaceManager.GetCachedTalonStatus(laserNo); ⟦EOL⟧
+// 해설 L105: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(status.ThgHour) / 조건에 따라 결과식을 선택합니다: double.IsFinite(status.ThgHour) ? status.ThgHour.ToString("0.0", CultureInfo.InvariantCulture) : "ERR" / 지역 변수를 선언합니다: var useText = double.IsFinite(status.ThgHour) ? status.ThgHour.ToString("0.0", CultureInfo.InvariantCulture) : "ERR"; / 변수의 초기값을 지정합니다: useText = double.IsFinite(status.ThgHour) ? status.ThgHour.ToString("0.0", CultureInfo.InvariantCulture) : "ERR"
+L000105 |         var useText = double.IsFinite(status.ThgHour) ⟦EOL⟧
+// 해설 L106: 함수·델리게이트 또는 객체 생성자를 호출합니다: status.ThgHour.ToString("0.0", CultureInfo.InvariantCulture)
+L000106 |             ? status.ThgHour.ToString("0.0", CultureInfo.InvariantCulture) ⟦EOL⟧
+// 해설 L107: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW Drilling.UI.Menu.Menus.CMenuPm.CreatePartLifeRow(int, double?, System.Collections.Generic.IReadOnlySet<int>)
+L000107 |             : "ERR"; ⟦EOL⟧
+// 해설 L108: 함수·델리게이트 또는 객체 생성자를 호출합니다: new($"H{headNo:00}", useText, limitText) / 호출자에게 값 또는 제어를 반환합니다: return new($"H{headNo:00}", useText, limitText);
+L000108 |         return new($"H{headNo:00}", useText, limitText); ⟦EOL⟧
+// 해설 L109: 구문 블록 경계입니다 · 소속 CreatePartLifeRow.
+L000109 |     } ⟦EOL⟧
+L000110 |  ⟦EOL⟧
+// 해설 L111: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuPm.ReadCrystalLimit(System.Threading.CancellationToken)
+L000111 |     private double? ReadCrystalLimit(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L112: 구문 블록 경계입니다 · 소속 ReadCrystalLimit.
+L000112 |     { ⟦EOL⟧
+// 해설 L113: 함수·델리게이트 또는 객체 생성자를 호출합니다: settingManager.GetValue(EN_SETTING_TAB.Option, LaserThgHourLimitKey, "", cancellationToken) / 지역 변수를 선언합니다: var text = settingManager.GetValue(EN_SETTING_TAB.Option, LaserThgHourLimitKey, "", cancellationToken); / 변수의 초기값을 지정합니다: text = settingManager.GetValue(EN_SETTING_TAB.Option, LaserThgHourLimitKey, "", cancellationToken)
+L000113 |         var text = settingManager.GetValue(EN_SETTING_TAB.Option, LaserThgHourLimitKey, "", cancellationToken); ⟦EOL⟧
+// 해설 L114: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) / 조건에 따라 결과식을 선택합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) && value >= 0.0 ? value : null / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) && double.IsFinite(value) && value >= 0.0 ? value : null;
+L000114 |         return double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) ⟦EOL⟧
+// 해설 L115: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)
+L000115 |             && double.IsFinite(value) ⟦EOL⟧
+// 해설 L116: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuPm.ReadCrystalLimit(System.Threading.CancellationToken)
+L000116 |             && value >= 0.0 ⟦EOL⟧
+// 해설 L117: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuPm.ReadCrystalLimit(System.Threading.CancellationToken)
+L000117 |             ? value ⟦EOL⟧
+// 해설 L118: 선언·서명/매개변수·접근 조건입니다 · double? Drilling.UI.Menu.Menus.CMenuPm.ReadCrystalLimit(System.Threading.CancellationToken)
+L000118 |             : null; ⟦EOL⟧
+// 해설 L119: 구문 블록 경계입니다 · 소속 ReadCrystalLimit.
+L000119 |     } ⟦EOL⟧
+L000120 |  ⟦EOL⟧
+// 해설 L121: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>> Drilling.UI.Menu.Menus.CMenuPm.CreateProtectWindowItems(System.Threading.CancellationToken)
+L000121 |     private async Task<IReadOnlyList<ST_DISPLAY_ITEM>> CreateProtectWindowItems(CancellationToken cancellationToken) ⟦EOL⟧
+// 해설 L122: 구문 블록 경계입니다 · 소속 CreateProtectWindowItems.
+L000122 |     { ⟦EOL⟧
+// 해설 L123: 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedRecipeIdProvider().Trim() / 함수·델리게이트 또는 객체 생성자를 호출합니다: selectedRecipeIdProvider() / 지역 변수를 선언합니다: var recipeId = selectedRecipeIdProvider().Trim(); / 변수의 초기값을 지정합니다: recipeId = selectedRecipeIdProvider().Trim()
+L000123 |         var recipeId = selectedRecipeIdProvider().Trim(); ⟦EOL⟧
+// 해설 L124: 비동기 완료를 기다립니다: await recipeManager.LoadRecipes(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeManager.LoadRecipes(cancellationToken).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: recipeManager.LoadRecipes(cancellationToken) / 지역 변수를 선언합니다: var recipes = await recipeManager.LoadRecipes(cancellationToken).ConfigureAwait(false); / 변수의 초기값을 지정합니다: recipes = await recipeManager.LoadRecipes(cancellationToken).ConfigureAwait(false)
+L000124 |         var recipes = await recipeManager.LoadRecipes(cancellationToken).ConfigureAwait(false); ⟦EOL⟧
+// 해설 L125: 함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.FirstOrDefault(item => item.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var recipe = recipes.FirstOrDefault(item => item.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase)); / 변수의 초기값을 지정합니다: recipe = recipes.FirstOrDefault(item => item.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase))
+L000125 |         var recipe = recipes.FirstOrDefault(item => item.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase)); ⟦EOL⟧
+// 해설 L126: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Parameters .FirstOrDefault(item => item.Key.Equals(key, StringComparison.OrdinalIgnoreCase) || item.Name.Equals(key, StringComparison.OrdinalIgnoreCase))
+L000126 |         string ReadRecipeValue(string key) => recipe?.Parameters ⟦EOL⟧
+// 해설 L127: 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Key.Equals(key, StringComparison.OrdinalIgnoreCase)
+L000127 |             .FirstOrDefault(item => item.Key.Equals(key, StringComparison.OrdinalIgnoreCase) ⟦EOL⟧
+// 해설 L128: 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Name.Equals(key, StringComparison.OrdinalIgnoreCase)
+L000128 |                 || item.Name.Equals(key, StringComparison.OrdinalIgnoreCase))?.Value ?? ""; ⟦EOL⟧
+L000129 |  ⟦EOL⟧
+// 해설 L130: 호출자에게 값 또는 제어를 반환합니다: return [ new("CURRENT COUNT", FormatRecipeCount(ReadRecipeValue(CProtectWindowRecipeData.CurrentCountKey), CProtectWindowRecipeData.CurrentCountKey), "count"), new("MAX COUNT", FormatRecipeCount(ReadRecipeValue(CProtectWindowRecip
+L000130 |         return ⟦EOL⟧
+// 해설 L131: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>> Drilling.UI.Menu.Menus.CMenuPm.CreateProtectWindowItems(System.Threading.CancellationToken)
+L000131 |         [ ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("CURRENT COUNT", FormatRecipeCount(ReadRecipeValue(CProtectWindowRecipeData.CurrentCountKey), CProtectWindowRecipeData.CurrentCountKey), "count") / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatRecipeCount(ReadRecipeValue(CProtectWindowRecipeData.CurrentCountKey), CProtectWindowRecipeData.CurrentCountKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRecipeValue(CProtectWindowRecipeData.CurrentCountKey)
+L000132 |             new("CURRENT COUNT", FormatRecipeCount(ReadRecipeValue(CProtectWindowRecipeData.CurrentCountKey), CProtectWindowRecipeData.CurrentCountKey), "count"), ⟦EOL⟧
+// 해설 L133: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("MAX COUNT", FormatRecipeCount(ReadRecipeValue(CProtectWindowRecipeData.MaximumCountKey), CProtectWindowRecipeData.MaximumCountKey), "count") / 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatRecipeCount(ReadRecipeValue(CProtectWindowRecipeData.MaximumCountKey), CProtectWindowRecipeData.MaximumCountKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRecipeValue(CProtectWindowRecipeData.MaximumCountKey)
+L000133 |             new("MAX COUNT", FormatRecipeCount(ReadRecipeValue(CProtectWindowRecipeData.MaximumCountKey), CProtectWindowRecipeData.MaximumCountKey), "count") ⟦EOL⟧
+// 해설 L134: 선언·서명/매개변수·접근 조건입니다 · System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM>> Drilling.UI.Menu.Menus.CMenuPm.CreateProtectWindowItems(System.Threading.CancellationToken)
+L000134 |         ]; ⟦EOL⟧
+// 해설 L135: 구문 블록 경계입니다 · 소속 CreateProtectWindowItems.
+L000135 |     } ⟦EOL⟧
+L000136 |  ⟦EOL⟧
+// 해설 L137: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuPm.FormatRecipeCount(string, string)
+L000137 |     private static string FormatRecipeCount(string text, string key) ⟦EOL⟧
+// 해설 L138: 구문 블록 경계입니다 · 소속 FormatRecipeCount.
+L000138 |     { ⟦EOL⟧
+// 해설 L139: 예외 처리 범위입니다: try
+L000139 |         try ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 FormatRecipeCount.
+L000140 |         { ⟦EOL⟧
+// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: CProtectWindowRecipeData.ParseCount(text, key).ToString("N0", CultureInfo.InvariantCulture) / 함수·델리게이트 또는 객체 생성자를 호출합니다: CProtectWindowRecipeData.ParseCount(text, key) / 호출자에게 값 또는 제어를 반환합니다: return CProtectWindowRecipeData.ParseCount(text, key).ToString("N0", CultureInfo.InvariantCulture);
+L000141 |             return CProtectWindowRecipeData.ParseCount(text, key).ToString("N0", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L142: 구문 블록 경계입니다 · 소속 FormatRecipeCount.
+L000142 |         } ⟦EOL⟧
+// 해설 L143: 지정 예외를 처리합니다: catch (InvalidDataException)
+L000143 |         catch (InvalidDataException) ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 FormatRecipeCount.
+L000144 |         { ⟦EOL⟧
+// 해설 L145: 호출자에게 값 또는 제어를 반환합니다: return "INVALID";
+L000145 |             return "INVALID"; ⟦EOL⟧
+// 해설 L146: 구문 블록 경계입니다 · 소속 FormatRecipeCount.
+L000146 |         } ⟦EOL⟧
+// 해설 L147: 구문 블록 경계입니다 · 소속 FormatRecipeCount.
+L000147 |     } ⟦EOL⟧
+L000148 |  ⟦EOL⟧
+// 해설 L149: 함수·델리게이트 또는 객체 생성자를 호출합니다: state.ToUpperInvariant() / 값별 결과식을 선택합니다: state.ToUpperInvariant() switch { "OFFLINE" => "OFFLINE", "N/C" => "N/C", "STALE" => "STALE", "ERROR" => "ERR", _ => "LOADING" }
+L000149 |     private static string NormalizeSnapshotState(string state) => state.ToUpperInvariant() switch ⟦EOL⟧
+// 해설 L150: 구문 블록 경계입니다 · 소속 NormalizeSnapshotState.
+L000150 |     { ⟦EOL⟧
+// 해설 L151: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuPm.NormalizeSnapshotState(string)
+L000151 |         "OFFLINE" => "OFFLINE", ⟦EOL⟧
+// 해설 L152: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuPm.NormalizeSnapshotState(string)
+L000152 |         "N/C" => "N/C", ⟦EOL⟧
+// 해설 L153: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuPm.NormalizeSnapshotState(string)
+L000153 |         "STALE" => "STALE", ⟦EOL⟧
+// 해설 L154: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuPm.NormalizeSnapshotState(string)
+L000154 |         "ERROR" => "ERR", ⟦EOL⟧
+// 해설 L155: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuPm.NormalizeSnapshotState(string)
+L000155 |         _ => "LOADING" ⟦EOL⟧
+// 해설 L156: 구문 블록 경계입니다 · 소속 NormalizeSnapshotState.
+L000156 |     }; ⟦EOL⟧
+L000157 |  ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8) .Select(index => new ST_PM_PART_LIFE_ROW($"H{index:00}", "-", "-")) .ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8) .Select(index => new ST_PM_PART_LIFE_ROW($"H{index:00}", "-", "-")) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8)
+L000158 |     private static IReadOnlyList<ST_PM_PART_LIFE_ROW> CreateEmptyPartLifeRows() => Enumerable.Range(1, 8) ⟦EOL⟧
+// 해설 L159: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PM_PART_LIFE_ROW($"H{index:00}", "-", "-")
+L000159 |         .Select(index => new ST_PM_PART_LIFE_ROW($"H{index:00}", "-", "-")) ⟦EOL⟧
+// 해설 L160: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW> Drilling.UI.Menu.Menus.CMenuPm.CreateEmptyPartLifeRows()
+L000160 |         .ToArray(); ⟦EOL⟧
+L000161 |  ⟦EOL⟧
+// 해설 L162: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuPm.CreateEmptyProtectWindowItems()
+L000162 |     private static IReadOnlyList<ST_DISPLAY_ITEM> CreateEmptyProtectWindowItems() => ⟦EOL⟧
+// 해설 L163: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuPm.CreateEmptyProtectWindowItems()
+L000163 |     [ ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("CURRENT COUNT", "-", "count")
+L000164 |         new("CURRENT COUNT", "-", "count"), ⟦EOL⟧
+// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: new("MAX COUNT", "-", "count")
+L000165 |         new("MAX COUNT", "-", "count") ⟦EOL⟧
+// 해설 L166: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM> Drilling.UI.Menu.Menus.CMenuPm.CreateEmptyProtectWindowItems()
+L000166 |     ]; ⟦EOL⟧
+L000167 |  ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: entries .Select(entry => new ST_PM_HISTORY_ROW( entry.LockedAt.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture), entry.UnlockedAt?.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) ?? "-", entry.…
+L000168 |     private static IReadOnlyList<ST_PM_HISTORY_ROW> CreateHistoryRows(IReadOnlyList<ST_PM_HISTORY_ENTRY> entries) => entries ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PM_HISTORY_ROW( entry.LockedAt.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture), entry.UnlockedAt?.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) ?? "-", entry.UnlockedAt is { } unlocke…
+L000169 |         .Select(entry => new ST_PM_HISTORY_ROW( ⟦EOL⟧
+// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: entry.LockedAt.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
+L000170 |             entry.LockedAt.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture), ⟦EOL⟧
+// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
+L000171 |             entry.UnlockedAt?.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) ?? "-", ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDuration(unlockedAt - entry.LockedAt) / 조건에 따라 결과식을 선택합니다: entry.UnlockedAt is { } unlockedAt ? FormatDuration(unlockedAt - entry.LockedAt) : "-"
+L000172 |             entry.UnlockedAt is { } unlockedAt ? FormatDuration(unlockedAt - entry.LockedAt) : "-", ⟦EOL⟧
+// 해설 L173: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW> Drilling.UI.Menu.Menus.CMenuPm.CreateHistoryRows(System.Collections.Generic.IReadOnlyList<ST_PM_HISTORY_ENTRY>)
+L000173 |             entry.Reason)) ⟦EOL⟧
+// 해설 L174: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW> Drilling.UI.Menu.Menus.CMenuPm.CreateHistoryRows(System.Collections.Generic.IReadOnlyList<ST_PM_HISTORY_ENTRY>)
+L000174 |         .ToArray(); ⟦EOL⟧
+L000175 |  ⟦EOL⟧
+// 해설 L176: 조건에 따라 결과식을 선택합니다: duration.TotalHours >= 100 ? $"{(int)duration.TotalHours}:{duration.Minutes:00}:{duration.Seconds:00}" : duration.ToString(@"hh\:mm\:ss", CultureInfo.InvariantCulture)
+L000176 |     private static string FormatDuration(TimeSpan duration) => duration.TotalHours >= 100 ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuPm.FormatDuration(System.TimeSpan)
+L000177 |         ? $"{(int)duration.TotalHours}:{duration.Minutes:00}:{duration.Seconds:00}" ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: duration.ToString(@"hh\:mm\:ss", CultureInfo.InvariantCulture)
+L000178 |         : duration.ToString(@"hh\:mm\:ss", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다.
+L000179 | } ⟦EOL⟧
+L000180 |  ⟦EOL⟧
+// 해설 L181: 타입의 구조/상속 선언입니다: public sealed record ST_PM_PART_LIFE_ROW(
+L000181 | public sealed record ST_PM_PART_LIFE_ROW( ⟦EOL⟧
+// 해설 L182: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000182 |     string Head, ⟦EOL⟧
+// 해설 L183: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000183 |     string CrystalUse, ⟦EOL⟧
+// 해설 L184: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000184 |     string CrystalLimit); ⟦EOL⟧
+L000185 |  ⟦EOL⟧
+// 해설 L186: 타입의 구조/상속 선언입니다: public sealed record ST_PM_HISTORY_ROW(
+L000186 | public sealed record ST_PM_HISTORY_ROW( ⟦EOL⟧
+// 해설 L187: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000187 |     string LockTime, ⟦EOL⟧
+// 해설 L188: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000188 |     string UnlockTime, ⟦EOL⟧
+// 해설 L189: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000189 |     string Duration, ⟦EOL⟧
+// 해설 L190: 위 선언/연산에 이어지는 원문입니다. 문맥은 아래 원문 줄과 해당 멤버 해설을 함께 읽습니다.
+L000190 |     string Reason); ⟦EOL⟧

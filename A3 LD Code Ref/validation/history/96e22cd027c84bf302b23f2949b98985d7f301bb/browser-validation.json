@@ -1,0 +1,104 @@
+{
+  "sourceCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+  "indexSha256": "ee2573ad30c2df50cb9b11f5583b8fa097d901b8fd5134d744d962474105154b",
+  "passed": true,
+  "passedChecks": 19,
+  "total": 19,
+  "checks": [
+    {
+      "name": "offline file index renders all 668 files",
+      "pass": true
+    },
+    {
+      "name": "home architecture SVG loaded",
+      "pass": true
+    },
+    {
+      "name": "source filename search finds correct file",
+      "pass": true
+    },
+    {
+      "name": "source member search finds CReviewManager",
+      "pass": true
+    },
+    {
+      "name": "multi-word Korean source search returns relevant Review paths",
+      "pass": true,
+      "evidence": "182 / 668 파일"
+    },
+    {
+      "name": "empty search results are explicit",
+      "pass": true
+    },
+    {
+      "name": "binary filter shows 12 DLL metadata entries",
+      "pass": true
+    },
+    {
+      "name": "schema filter shows 306 CSV/Bak entries",
+      "pass": true
+    },
+    {
+      "name": "clearing filters restores all tracked files",
+      "pass": true
+    },
+    {
+      "name": "source page title contains exact source path",
+      "pass": true
+    },
+    {
+      "name": "source file relationship SVG loaded",
+      "pass": true
+    },
+    {
+      "name": "source page has offline annotated-source link",
+      "pass": true
+    },
+    {
+      "name": "source links pin current commit",
+      "pass": true
+    },
+    {
+      "name": "all 16 manual HTML chapters render headings and complete images",
+      "pass": true,
+      "evidence": {
+        "manualPages": 16,
+        "totalImageInstances": 15,
+        "broken": []
+      }
+    },
+    {
+      "name": "review Product manual source link labels are current",
+      "pass": true
+    },
+    {
+      "name": "reference home stays within 320px viewport",
+      "pass": true,
+      "evidence": {
+        "width": 320,
+        "document": 320
+      }
+    },
+    {
+      "name": "reference home stays within 768px viewport",
+      "pass": true,
+      "evidence": {
+        "width": 768,
+        "document": 768
+      }
+    },
+    {
+      "name": "no JS or console errors",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "no external HTTP(S) request attempted",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "scope": "Local file HTML search/navigation/image rendering with HTTP routes blocked; no Studio model inference or equipment execution."
+}

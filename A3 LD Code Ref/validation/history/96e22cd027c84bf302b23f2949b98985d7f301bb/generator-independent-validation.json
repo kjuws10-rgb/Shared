@@ -1,0 +1,37 @@
+{
+  "sourceCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+  "generatorVersion": "1.1.2",
+  "passed": true,
+  "counts": {
+    "assertions": 1009413,
+    "annotated_files": 350,
+    "annotated_lines": 667370,
+    "file_diagrams": 668,
+    "types": 923,
+    "members": 16191,
+    "calls": 42161,
+    "rag_raw_line_mentions": 719271,
+    "rag_primary": 21409,
+    "rag_optional": 10328,
+    "manual_source_links": 556,
+    "manual_html_files": 16,
+    "manual_svg_files": 15,
+    "trackedFiles": 668,
+    "csharpFiles": 156,
+    "xamlFiles": 58,
+    "csvSchemaFiles": 306,
+    "binaryMetadataFiles": 12,
+    "ragRecords": 31737,
+    "ragShards": 9
+  },
+  "xamlTotals": {
+    "files": 58,
+    "events": 305,
+    "namedElements": 377,
+    "bindings": 2904
+  },
+  "errors": [],
+  "sourceUnchanged": true,
+  "elapsedSeconds": 14.518,
+  "scope": "Independent staged-file/provenance/annotation/RAG/XML/CSV-binary policy validation; no original program or vendor SDK load/build; browser checks reported separately."
+}

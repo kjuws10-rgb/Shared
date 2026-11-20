@@ -1,6 +1,6 @@
 A3 LD Code Ref · 문서용 전체 주석 해설본
 원본: Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs
-Commit: 96e22cd027c84bf302b23f2949b98985d7f301bb
+Commit: 28764c91d521777b8ee068dd7aaf2d3902ce9fe2
 각 L 행은 원본 행이며 // 해설은 구문 기반 보조 설명입니다. 행 끝의 ⟦EOL⟧ 표시는 원문에 없는 경계표시로, 이를 제거하면 끝 공백까지 원문 행을 복원할 수 있습니다. 이 사본을 빌드·장비 실행에 사용하지 마세요.
 
 // 해설 L1: 타입 이름의 논리적 범위를 선언합니다: namespace Drilling.UI.Menu.Menus
@@ -188,1168 +188,1190 @@ L000094 |             public CButtonCommand AddResultEditCopyTargetsCommand { ge
 L000095 |             public CButtonCommand RemoveResultEditCopyTargetCommand { get; private set; } = null!; ⟦EOL⟧
 // 해설 L96: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ClearResultEditCopyTargetsCommand
 L000096 |             public CButtonCommand ClearResultEditCopyTargetsCommand { get; private set; } = null!; ⟦EOL⟧
-// 해설 L97: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditXyCommand
-L000097 |             public CButtonCommand CopyResultEditXyCommand { get; private set; } = null!; ⟦EOL⟧
-// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditJudgeCommand
-L000098 |             public CButtonCommand CopyResultEditJudgeCommand { get; private set; } = null!; ⟦EOL⟧
-// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditAllCommand
-L000099 |             public CButtonCommand CopyResultEditAllCommand { get; private set; } = null!; ⟦EOL⟧
-// 해설 L100: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEditCommand
-L000100 |             public CButtonCommand SaveResultEditCommand { get; private set; } = null!; ⟦EOL⟧
-L000101 |  ⟦EOL⟧
-// 해설 L102: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InitializeResultEditCommands()
-L000102 |             private void InitializeResultEditCommands() ⟦EOL⟧
-// 해설 L103: 구문 블록 경계입니다 · 소속 InitializeResultEditCommands.
-L000103 |             { ⟦EOL⟧
-// 해설 L104: 값을 대상에 대입합니다: SelectResultEditSubModeCommand = new CButtonCommand(SelectResultEditSubMode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SelectResultEditSubMode)
-L000104 |                 SelectResultEditSubModeCommand = new CButtonCommand(SelectResultEditSubMode); ⟦EOL⟧
-// 해설 L105: 값을 대상에 대입합니다: AddResultEditKeyInCommand = new CButtonCommand(AddResultEditKeyIn, _ => CanAddResultEditKeyIn) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddResultEditKeyIn, _ => CanAddResultEditKeyIn)
-L000105 |                 AddResultEditKeyInCommand = new CButtonCommand(AddResultEditKeyIn, _ => CanAddResultEditKeyIn); ⟦EOL⟧
-// 해설 L106: 값을 대상에 대입합니다: AddSelectedResultEditKeyInCommand = new CButtonCommand(AddSelectedResultEditKeyIn, _ => CanAddSelectedResultEditKeyIn) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddSelectedResultEditKeyIn, _ => CanAddSelectedResultEditKeyIn)
-L000106 |                 AddSelectedResultEditKeyInCommand = new CButtonCommand(AddSelectedResultEditKeyIn, _ => CanAddSelectedResultEditKeyIn); ⟦EOL⟧
-// 해설 L107: 값을 대상에 대입합니다: AddNgResultEditKeyInCommand = new CButtonCommand(AddNgResultEditKeyIn, _ => CanAddNgResultEditKeyIn) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddNgResultEditKeyIn, _ => CanAddNgResultEditKeyIn)
-L000107 |                 AddNgResultEditKeyInCommand = new CButtonCommand(AddNgResultEditKeyIn, _ => CanAddNgResultEditKeyIn); ⟦EOL⟧
-// 해설 L108: 값을 대상에 대입합니다: RemoveResultEditKeyInCommand = new CButtonCommand(RemoveResultEditKeyIn, _ => CanRemoveResultEditKeyIn) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(RemoveResultEditKeyIn, _ => CanRemoveResultEditKeyIn)
-L000108 |                 RemoveResultEditKeyInCommand = new CButtonCommand(RemoveResultEditKeyIn, _ => CanRemoveResultEditKeyIn); ⟦EOL⟧
-// 해설 L109: 값을 대상에 대입합니다: ClearResultEditKeyInCommand = new CButtonCommand(ClearResultEditKeyIn, _ => CanClearResultEditKeyIn) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(ClearResultEditKeyIn, _ => CanClearResultEditKeyIn)
-L000109 |                 ClearResultEditKeyInCommand = new CButtonCommand(ClearResultEditKeyIn, _ => CanClearResultEditKeyIn); ⟦EOL⟧
-// 해설 L110: 값을 대상에 대입합니다: AddResultEditCopySourceCommand = new CButtonCommand(AddResultEditCopySource, _ => CanAddResultEditCopySource) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddResultEditCopySource, _ => CanAddResultEditCopySource)
-L000110 |                 AddResultEditCopySourceCommand = new CButtonCommand(AddResultEditCopySource, _ => CanAddResultEditCopySource); ⟦EOL⟧
-// 해설 L111: 값을 대상에 대입합니다: AddResultEditCopyTargetsCommand = new CButtonCommand(AddResultEditCopyTargets, _ => CanAddResultEditCopyTargets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddResultEditCopyTargets, _ => CanAddResultEditCopyTargets)
-L000111 |                 AddResultEditCopyTargetsCommand = new CButtonCommand(AddResultEditCopyTargets, _ => CanAddResultEditCopyTargets); ⟦EOL⟧
-// 해설 L112: 값을 대상에 대입합니다: RemoveResultEditCopyTargetCommand = new CButtonCommand(RemoveResultEditCopyTarget, _ => CanRemoveResultEditCopyTarget) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(RemoveResultEditCopyTarget, _ => CanRemoveResultEditCopyTarget)
-L000112 |                 RemoveResultEditCopyTargetCommand = new CButtonCommand(RemoveResultEditCopyTarget, _ => CanRemoveResultEditCopyTarget); ⟦EOL⟧
-// 해설 L113: 값을 대상에 대입합니다: ClearResultEditCopyTargetsCommand = new CButtonCommand(ClearResultEditCopyTargets, _ => CanClearResultEditCopyTargets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(ClearResultEditCopyTargets, _ => CanClearResultEditCopyTargets)
-L000113 |                 ClearResultEditCopyTargetsCommand = new CButtonCommand(ClearResultEditCopyTargets, _ => CanClearResultEditCopyTargets); ⟦EOL⟧
-// 해설 L114: 값을 대상에 대입합니다: CopyResultEditXyCommand = new CButtonCommand(CopyResultEditXy, _ => CanApplyResultEditCopy) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(CopyResultEditXy, _ => CanApplyResultEditCopy)
-L000114 |                 CopyResultEditXyCommand = new CButtonCommand(CopyResultEditXy, _ => CanApplyResultEditCopy); ⟦EOL⟧
-// 해설 L115: 값을 대상에 대입합니다: CopyResultEditJudgeCommand = new CButtonCommand(CopyResultEditJudge, _ => CanApplyResultEditCopy) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(CopyResultEditJudge, _ => CanApplyResultEditCopy)
-L000115 |                 CopyResultEditJudgeCommand = new CButtonCommand(CopyResultEditJudge, _ => CanApplyResultEditCopy); ⟦EOL⟧
-// 해설 L116: 값을 대상에 대입합니다: CopyResultEditAllCommand = new CButtonCommand(CopyResultEditAll, _ => CanApplyResultEditCopy) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(CopyResultEditAll, _ => CanApplyResultEditCopy)
-L000116 |                 CopyResultEditAllCommand = new CButtonCommand(CopyResultEditAll, _ => CanApplyResultEditCopy); ⟦EOL⟧
-// 해설 L117: 값을 대상에 대입합니다: SaveResultEditCommand = new CButtonCommand(SaveResultEdit, _ => CanSaveResultEdit) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SaveResultEdit, _ => CanSaveResultEdit)
-L000117 |                 SaveResultEditCommand = new CButtonCommand(SaveResultEdit, _ => CanSaveResultEdit); ⟦EOL⟧
-// 해설 L118: 구문 블록 경계입니다 · 소속 InitializeResultEditCommands.
-L000118 |             } ⟦EOL⟧
-L000119 |  ⟦EOL⟧
-// 해설 L120: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectResultEditSubMode(object?)
-L000120 |             private void SelectResultEditSubMode(object? parameter) ⟦EOL⟧
-// 해설 L121: 구문 블록 경계입니다 · 소속 SelectResultEditSubMode.
-L000121 |             { ⟦EOL⟧
-// 해설 L122: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim() / 지역 변수를 선언합니다: var mode = parameter?.ToString()?.Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: mode = parameter?.ToString()?.Trim().ToUpperInvariant()
-L000122 |                 var mode = parameter?.ToString()?.Trim().ToUpperInvariant(); ⟦EOL⟧
-// 해설 L123: 조건에 따라 분기합니다: if (mode is not (ResultEditKeyInMode or ResultEditCopyMode) || _resultEditMode == mode)
-L000123 |                 if (mode is not (ResultEditKeyInMode or ResultEditCopyMode) || _resultEditMode == mode) ⟦EOL⟧
-// 해설 L124: 구문 블록 경계입니다 · 소속 SelectResultEditSubMode.
-L000124 |                 { ⟦EOL⟧
-// 해설 L125: 호출자에게 값 또는 제어를 반환합니다: return;
-L000125 |                     return; ⟦EOL⟧
+// 해설 L97: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditXCommand
+L000097 |             public CButtonCommand CopyResultEditXCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L98: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditYCommand
+L000098 |             public CButtonCommand CopyResultEditYCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L99: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditJudgeCommand
+L000099 |             public CButtonCommand CopyResultEditJudgeCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L100: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditAllCommand
+L000100 |             public CButtonCommand CopyResultEditAllCommand { get; private set; } = null!; ⟦EOL⟧
+// 해설 L101: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.CButtonCommand Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEditCommand
+L000101 |             public CButtonCommand SaveResultEditCommand { get; private set; } = null!; ⟦EOL⟧
+L000102 |  ⟦EOL⟧
+// 해설 L103: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.InitializeResultEditCommands()
+L000103 |             private void InitializeResultEditCommands() ⟦EOL⟧
+// 해설 L104: 구문 블록 경계입니다 · 소속 InitializeResultEditCommands.
+L000104 |             { ⟦EOL⟧
+// 해설 L105: 값을 대상에 대입합니다: SelectResultEditSubModeCommand = new CButtonCommand(SelectResultEditSubMode) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SelectResultEditSubMode)
+L000105 |                 SelectResultEditSubModeCommand = new CButtonCommand(SelectResultEditSubMode); ⟦EOL⟧
+// 해설 L106: 값을 대상에 대입합니다: AddResultEditKeyInCommand = new CButtonCommand(AddResultEditKeyIn, _ => CanAddResultEditKeyIn) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddResultEditKeyIn, _ => CanAddResultEditKeyIn)
+L000106 |                 AddResultEditKeyInCommand = new CButtonCommand(AddResultEditKeyIn, _ => CanAddResultEditKeyIn); ⟦EOL⟧
+// 해설 L107: 값을 대상에 대입합니다: AddSelectedResultEditKeyInCommand = new CButtonCommand(AddSelectedResultEditKeyIn, _ => CanAddSelectedResultEditKeyIn) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddSelectedResultEditKeyIn, _ => CanAddSelectedResultEditKeyIn)
+L000107 |                 AddSelectedResultEditKeyInCommand = new CButtonCommand(AddSelectedResultEditKeyIn, _ => CanAddSelectedResultEditKeyIn); ⟦EOL⟧
+// 해설 L108: 값을 대상에 대입합니다: AddNgResultEditKeyInCommand = new CButtonCommand(AddNgResultEditKeyIn, _ => CanAddNgResultEditKeyIn) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddNgResultEditKeyIn, _ => CanAddNgResultEditKeyIn)
+L000108 |                 AddNgResultEditKeyInCommand = new CButtonCommand(AddNgResultEditKeyIn, _ => CanAddNgResultEditKeyIn); ⟦EOL⟧
+// 해설 L109: 값을 대상에 대입합니다: RemoveResultEditKeyInCommand = new CButtonCommand(RemoveResultEditKeyIn, _ => CanRemoveResultEditKeyIn) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(RemoveResultEditKeyIn, _ => CanRemoveResultEditKeyIn)
+L000109 |                 RemoveResultEditKeyInCommand = new CButtonCommand(RemoveResultEditKeyIn, _ => CanRemoveResultEditKeyIn); ⟦EOL⟧
+// 해설 L110: 값을 대상에 대입합니다: ClearResultEditKeyInCommand = new CButtonCommand(ClearResultEditKeyIn, _ => CanClearResultEditKeyIn) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(ClearResultEditKeyIn, _ => CanClearResultEditKeyIn)
+L000110 |                 ClearResultEditKeyInCommand = new CButtonCommand(ClearResultEditKeyIn, _ => CanClearResultEditKeyIn); ⟦EOL⟧
+// 해설 L111: 값을 대상에 대입합니다: AddResultEditCopySourceCommand = new CButtonCommand(AddResultEditCopySource, _ => CanAddResultEditCopySource) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddResultEditCopySource, _ => CanAddResultEditCopySource)
+L000111 |                 AddResultEditCopySourceCommand = new CButtonCommand(AddResultEditCopySource, _ => CanAddResultEditCopySource); ⟦EOL⟧
+// 해설 L112: 값을 대상에 대입합니다: AddResultEditCopyTargetsCommand = new CButtonCommand(AddResultEditCopyTargets, _ => CanAddResultEditCopyTargets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(AddResultEditCopyTargets, _ => CanAddResultEditCopyTargets)
+L000112 |                 AddResultEditCopyTargetsCommand = new CButtonCommand(AddResultEditCopyTargets, _ => CanAddResultEditCopyTargets); ⟦EOL⟧
+// 해설 L113: 값을 대상에 대입합니다: RemoveResultEditCopyTargetCommand = new CButtonCommand(RemoveResultEditCopyTarget, _ => CanRemoveResultEditCopyTarget) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(RemoveResultEditCopyTarget, _ => CanRemoveResultEditCopyTarget)
+L000113 |                 RemoveResultEditCopyTargetCommand = new CButtonCommand(RemoveResultEditCopyTarget, _ => CanRemoveResultEditCopyTarget); ⟦EOL⟧
+// 해설 L114: 값을 대상에 대입합니다: ClearResultEditCopyTargetsCommand = new CButtonCommand(ClearResultEditCopyTargets, _ => CanClearResultEditCopyTargets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(ClearResultEditCopyTargets, _ => CanClearResultEditCopyTargets)
+L000114 |                 ClearResultEditCopyTargetsCommand = new CButtonCommand(ClearResultEditCopyTargets, _ => CanClearResultEditCopyTargets); ⟦EOL⟧
+// 해설 L115: 값을 대상에 대입합니다: CopyResultEditXCommand = new CButtonCommand(CopyResultEditX, _ => CanApplyResultEditCopy) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(CopyResultEditX, _ => CanApplyResultEditCopy)
+L000115 |                 CopyResultEditXCommand = new CButtonCommand(CopyResultEditX, _ => CanApplyResultEditCopy); ⟦EOL⟧
+// 해설 L116: 값을 대상에 대입합니다: CopyResultEditYCommand = new CButtonCommand(CopyResultEditY, _ => CanApplyResultEditCopy) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(CopyResultEditY, _ => CanApplyResultEditCopy)
+L000116 |                 CopyResultEditYCommand = new CButtonCommand(CopyResultEditY, _ => CanApplyResultEditCopy); ⟦EOL⟧
+// 해설 L117: 값을 대상에 대입합니다: CopyResultEditJudgeCommand = new CButtonCommand(CopyResultEditJudge, _ => CanApplyResultEditCopy) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(CopyResultEditJudge, _ => CanApplyResultEditCopy)
+L000117 |                 CopyResultEditJudgeCommand = new CButtonCommand(CopyResultEditJudge, _ => CanApplyResultEditCopy); ⟦EOL⟧
+// 해설 L118: 값을 대상에 대입합니다: CopyResultEditAllCommand = new CButtonCommand(CopyResultEditAll, _ => CanApplyResultEditCopy) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(CopyResultEditAll, _ => CanApplyResultEditCopy)
+L000118 |                 CopyResultEditAllCommand = new CButtonCommand(CopyResultEditAll, _ => CanApplyResultEditCopy); ⟦EOL⟧
+// 해설 L119: 값을 대상에 대입합니다: SaveResultEditCommand = new CButtonCommand(SaveResultEdit, _ => CanSaveResultEdit) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new CButtonCommand(SaveResultEdit, _ => CanSaveResultEdit)
+L000119 |                 SaveResultEditCommand = new CButtonCommand(SaveResultEdit, _ => CanSaveResultEdit); ⟦EOL⟧
+// 해설 L120: 구문 블록 경계입니다 · 소속 InitializeResultEditCommands.
+L000120 |             } ⟦EOL⟧
+L000121 |  ⟦EOL⟧
+// 해설 L122: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectResultEditSubMode(object?)
+L000122 |             private void SelectResultEditSubMode(object? parameter) ⟦EOL⟧
+// 해설 L123: 구문 블록 경계입니다 · 소속 SelectResultEditSubMode.
+L000123 |             { ⟦EOL⟧
+// 해설 L124: 함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString() / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim().ToUpperInvariant() / 함수·델리게이트 또는 객체 생성자를 호출합니다: .Trim() / 지역 변수를 선언합니다: var mode = parameter?.ToString()?.Trim().ToUpperInvariant(); / 변수의 초기값을 지정합니다: mode = parameter?.ToString()?.Trim().ToUpperInvariant()
+L000124 |                 var mode = parameter?.ToString()?.Trim().ToUpperInvariant(); ⟦EOL⟧
+// 해설 L125: 조건에 따라 분기합니다: if (mode is not (ResultEditKeyInMode or ResultEditCopyMode) || _resultEditMode == mode)
+L000125 |                 if (mode is not (ResultEditKeyInMode or ResultEditCopyMode) || _resultEditMode == mode) ⟦EOL⟧
 // 해설 L126: 구문 블록 경계입니다 · 소속 SelectResultEditSubMode.
-L000126 |                 } ⟦EOL⟧
-L000127 |  ⟦EOL⟧
-// 해설 L128: 값을 대상에 대입합니다: _resultEditMode = mode
-L000128 |                 _resultEditMode = mode; ⟦EOL⟧
-// 해설 L129: 값을 대상에 대입합니다: _resultEditStatusText = mode == ResultEditKeyInMode ? "KEY IN MODE READY" : "COPY MODE READY" / 조건에 따라 결과식을 선택합니다: mode == ResultEditKeyInMode ? "KEY IN MODE READY" : "COPY MODE READY"
-L000129 |                 _resultEditStatusText = mode == ResultEditKeyInMode ? "KEY IN MODE READY" : "COPY MODE READY"; ⟦EOL⟧
-// 해설 L130: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
-L000130 |                 NotifyResultEditState(); ⟦EOL⟧
-// 해설 L131: 구문 블록 경계입니다 · 소속 SelectResultEditSubMode.
-L000131 |             } ⟦EOL⟧
-L000132 |  ⟦EOL⟧
-// 해설 L133: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetResultEditRowSelection(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW, bool)
-L000133 |             public void SetResultEditRowSelection(ST_REVIEW_DATA_GRID_ROW row, bool isSelected) ⟦EOL⟧
-// 해설 L134: 구문 블록 경계입니다 · 소속 SetResultEditRowSelection.
-L000134 |             { ⟦EOL⟧
-// 해설 L135: 조건에 따라 분기합니다: if (!_isResultEditMode || row is null)
-L000135 |                 if (!_isResultEditMode || row is null) ⟦EOL⟧
+L000126 |                 { ⟦EOL⟧
+// 해설 L127: 호출자에게 값 또는 제어를 반환합니다: return;
+L000127 |                     return; ⟦EOL⟧
+// 해설 L128: 구문 블록 경계입니다 · 소속 SelectResultEditSubMode.
+L000128 |                 } ⟦EOL⟧
+L000129 |  ⟦EOL⟧
+// 해설 L130: 값을 대상에 대입합니다: _resultEditMode = mode
+L000130 |                 _resultEditMode = mode; ⟦EOL⟧
+// 해설 L131: 값을 대상에 대입합니다: _resultEditStatusText = mode == ResultEditKeyInMode ? "KEY IN MODE READY" : "COPY MODE READY" / 조건에 따라 결과식을 선택합니다: mode == ResultEditKeyInMode ? "KEY IN MODE READY" : "COPY MODE READY"
+L000131 |                 _resultEditStatusText = mode == ResultEditKeyInMode ? "KEY IN MODE READY" : "COPY MODE READY"; ⟦EOL⟧
+// 해설 L132: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
+L000132 |                 NotifyResultEditState(); ⟦EOL⟧
+// 해설 L133: 구문 블록 경계입니다 · 소속 SelectResultEditSubMode.
+L000133 |             } ⟦EOL⟧
+L000134 |  ⟦EOL⟧
+// 해설 L135: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetResultEditRowSelection(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW, bool)
+L000135 |             public void SetResultEditRowSelection(ST_REVIEW_DATA_GRID_ROW row, bool isSelected) ⟦EOL⟧
 // 해설 L136: 구문 블록 경계입니다 · 소속 SetResultEditRowSelection.
-L000136 |                 { ⟦EOL⟧
-// 해설 L137: 호출자에게 값 또는 제어를 반환합니다: return;
-L000137 |                     return; ⟦EOL⟧
+L000136 |             { ⟦EOL⟧
+// 해설 L137: 조건에 따라 분기합니다: if (!_isResultEditMode || row is null)
+L000137 |                 if (!_isResultEditMode || row is null) ⟦EOL⟧
 // 해설 L138: 구문 블록 경계입니다 · 소속 SetResultEditRowSelection.
-L000138 |                 } ⟦EOL⟧
-L000139 |  ⟦EOL⟧
-// 해설 L140: 값을 대상에 대입합니다: row.IsResultEditSelected = isSelected
-L000140 |                 row.IsResultEditSelected = isSelected; ⟦EOL⟧
-// 해설 L141: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditSelectionChanged()
-L000141 |                 NotifyResultEditSelectionChanged(); ⟦EOL⟧
-// 해설 L142: 구문 블록 경계입니다 · 소속 SetResultEditRowSelection.
-L000142 |             } ⟦EOL⟧
-L000143 |  ⟦EOL⟧
-// 해설 L144: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectCurrentShotForResultEdit()
-L000144 |             public void SelectCurrentShotForResultEdit() ⟦EOL⟧
-// 해설 L145: 구문 블록 경계입니다 · 소속 SelectCurrentShotForResultEdit.
-L000145 |             { ⟦EOL⟧
-// 해설 L146: 조건에 따라 분기합니다: if (!_isResultEditMode || SelectedRow is null)
-L000146 |                 if (!_isResultEditMode || SelectedRow is null) ⟦EOL⟧
+L000138 |                 { ⟦EOL⟧
+// 해설 L139: 호출자에게 값 또는 제어를 반환합니다: return;
+L000139 |                     return; ⟦EOL⟧
+// 해설 L140: 구문 블록 경계입니다 · 소속 SetResultEditRowSelection.
+L000140 |                 } ⟦EOL⟧
+L000141 |  ⟦EOL⟧
+// 해설 L142: 값을 대상에 대입합니다: row.IsResultEditSelected = isSelected
+L000142 |                 row.IsResultEditSelected = isSelected; ⟦EOL⟧
+// 해설 L143: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditSelectionChanged()
+L000143 |                 NotifyResultEditSelectionChanged(); ⟦EOL⟧
+// 해설 L144: 구문 블록 경계입니다 · 소속 SetResultEditRowSelection.
+L000144 |             } ⟦EOL⟧
+L000145 |  ⟦EOL⟧
+// 해설 L146: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectCurrentShotForResultEdit()
+L000146 |             public void SelectCurrentShotForResultEdit() ⟦EOL⟧
 // 해설 L147: 구문 블록 경계입니다 · 소속 SelectCurrentShotForResultEdit.
-L000147 |                 { ⟦EOL⟧
-// 해설 L148: 호출자에게 값 또는 제어를 반환합니다: return;
-L000148 |                     return; ⟦EOL⟧
+L000147 |             { ⟦EOL⟧
+// 해설 L148: 조건에 따라 분기합니다: if (!_isResultEditMode || SelectedRow is null)
+L000148 |                 if (!_isResultEditMode || SelectedRow is null) ⟦EOL⟧
 // 해설 L149: 구문 블록 경계입니다 · 소속 SelectCurrentShotForResultEdit.
-L000149 |                 } ⟦EOL⟧
-L000150 |  ⟦EOL⟧
-// 해설 L151: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReplaceResultEditSelection([SelectedRow])
-L000151 |                 ReplaceResultEditSelection([SelectedRow]); ⟦EOL⟧
-// 해설 L152: 구문 블록 경계입니다 · 소속 SelectCurrentShotForResultEdit.
-L000152 |             } ⟦EOL⟧
-L000153 |  ⟦EOL⟧
-// 해설 L154: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectResultEditShotsInMap(double, double, double, double)
-L000154 |             public void SelectResultEditShotsInMap(double left, double top, double right, double bottom) ⟦EOL⟧
-// 해설 L155: 구문 블록 경계입니다 · 소속 SelectResultEditShotsInMap.
-L000155 |             { ⟦EOL⟧
-// 해설 L156: 함수·델리게이트 또는 객체 생성자를 호출합니다: _shotsByCell.TryGetValue(_selectedCellNo, out var shots) / 조건에 따라 분기합니다: if (!_isResultEditMode || !_shotsByCell.TryGetValue(_selectedCellNo, out var shots) || shots.Count == 0)
-L000156 |                 if (!_isResultEditMode || !_shotsByCell.TryGetValue(_selectedCellNo, out var shots) || shots.Count == 0) ⟦EOL⟧
+L000149 |                 { ⟦EOL⟧
+// 해설 L150: 호출자에게 값 또는 제어를 반환합니다: return;
+L000150 |                     return; ⟦EOL⟧
+// 해설 L151: 구문 블록 경계입니다 · 소속 SelectCurrentShotForResultEdit.
+L000151 |                 } ⟦EOL⟧
+L000152 |  ⟦EOL⟧
+// 해설 L153: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReplaceResultEditSelection([SelectedRow])
+L000153 |                 ReplaceResultEditSelection([SelectedRow]); ⟦EOL⟧
+// 해설 L154: 구문 블록 경계입니다 · 소속 SelectCurrentShotForResultEdit.
+L000154 |             } ⟦EOL⟧
+L000155 |  ⟦EOL⟧
+// 해설 L156: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectResultEditShotsInMap(double, double, double, double)
+L000156 |             public void SelectResultEditShotsInMap(double left, double top, double right, double bottom) ⟦EOL⟧
 // 해설 L157: 구문 블록 경계입니다 · 소속 SelectResultEditShotsInMap.
-L000157 |                 { ⟦EOL⟧
-// 해설 L158: 호출자에게 값 또는 제어를 반환합니다: return;
-L000158 |                     return; ⟦EOL⟧
+L000157 |             { ⟦EOL⟧
+// 해설 L158: 함수·델리게이트 또는 객체 생성자를 호출합니다: _shotsByCell.TryGetValue(_selectedCellNo, out var shots) / 조건에 따라 분기합니다: if (!_isResultEditMode || !_shotsByCell.TryGetValue(_selectedCellNo, out var shots) || shots.Count == 0)
+L000158 |                 if (!_isResultEditMode || !_shotsByCell.TryGetValue(_selectedCellNo, out var shots) || shots.Count == 0) ⟦EOL⟧
 // 해설 L159: 구문 블록 경계입니다 · 소속 SelectResultEditShotsInMap.
-L000159 |                 } ⟦EOL⟧
-L000160 |  ⟦EOL⟧
-// 해설 L161: 지역 변수를 선언합니다: var first = shots[0]; / 변수의 초기값을 지정합니다: first = shots[0]
-L000161 |                 var first = shots[0]; ⟦EOL⟧
-// 해설 L162: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetReviewDataShotMapRect(first.GroupCountX, first.GroupCountY) / 지역 변수를 선언합니다: var mapRect = GetReviewDataShotMapRect(first.GroupCountX, first.GroupCountY); / 변수의 초기값을 지정합니다: mapRect = GetReviewDataShotMapRect(first.GroupCountX, first.GroupCountY)
-L000162 |                 var mapRect = GetReviewDataShotMapRect(first.GroupCountX, first.GroupCountY); ⟦EOL⟧
-// 해설 L163: 함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Windows.Rect( Math.Min(left, right), Math.Min(top, bottom), Math.Abs(right - left), Math.Abs(bottom - top)) / 지역 변수를 선언합니다: var selection = new System.Windows.Rect( Math.Min(left, right), Math.Min(top, bottom), Math.Abs(right - left), Math.Abs(bottom - top)); / 변수의 초기값을 지정합니다: selection = new System.Windows.Rect( Math.Min(left, right), Math.Min(top, bottom), Math.Abs(right - left), Math.Abs(bottom - top))
-L000163 |                 var selection = new System.Windows.Rect( ⟦EOL⟧
-// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(left, right)
-L000164 |                     Math.Min(left, right), ⟦EOL⟧
-// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(top, bottom)
-L000165 |                     Math.Min(top, bottom), ⟦EOL⟧
-// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(right - left)
-L000166 |                     Math.Abs(right - left), ⟦EOL⟧
-// 해설 L167: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(bottom - top)
-L000167 |                     Math.Abs(bottom - top)); ⟦EOL⟧
-// 해설 L168: 지역 변수를 선언합니다: var cellWidth = mapRect.Width / first.GroupCountX; / 변수의 초기값을 지정합니다: cellWidth = mapRect.Width / first.GroupCountX
-L000168 |                 var cellWidth = mapRect.Width / first.GroupCountX; ⟦EOL⟧
-// 해설 L169: 지역 변수를 선언합니다: var cellHeight = mapRect.Height / first.GroupCountY; / 변수의 초기값을 지정합니다: cellHeight = mapRect.Height / first.GroupCountY
-L000169 |                 var cellHeight = mapRect.Height / first.GroupCountY; ⟦EOL⟧
-// 해설 L170: 함수·델리게이트 또는 객체 생성자를 호출합니다: shots .Where(shot => selection.Contains(new System.Windows.Point( mapRect.Left + (shot.GroupColumn + 0.5) * cellWidth, mapRect.Top + (shot.GroupRow + 0.5) * cellHeight))) .Select(shot => shot.ShotKey) .ToHashSet(StringCo… / 함수·델리게이트 또는 객체 생성자를 호출합니다: shots .Where(shot => selection.Contains(new System.Windows.Point( mapRect.Left + (shot.GroupColumn + 0.5) * cellWidth, mapRect.Top + (shot.GroupRow + 0.5) * cellHeight))) .Select(shot => shot.ShotKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: shots .Where(shot => selection.C
-L000170 |                 var keys = shots ⟦EOL⟧
-// 해설 L171: 함수·델리게이트 또는 객체 생성자를 호출합니다: selection.Contains(new System.Windows.Point( mapRect.Left + (shot.GroupColumn + 0.5) * cellWidth, mapRect.Top + (shot.GroupRow + 0.5) * cellHeight)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Windows.Point( mapRect.Left + (shot.GroupColumn + 0.5) * cellWidth, mapRect.Top + (shot.GroupRow + 0.5) * cellHeight)
-L000171 |                     .Where(shot => selection.Contains(new System.Windows.Point( ⟦EOL⟧
-// 해설 L172: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectResultEditShotsInMap(double, double, double, double)
-L000172 |                         mapRect.Left + (shot.GroupColumn + 0.5) * cellWidth, ⟦EOL⟧
-// 해설 L173: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectResultEditShotsInMap(double, double, double, double)
-L000173 |                         mapRect.Top + (shot.GroupRow + 0.5) * cellHeight))) ⟦EOL⟧
+L000159 |                 { ⟦EOL⟧
+// 해설 L160: 호출자에게 값 또는 제어를 반환합니다: return;
+L000160 |                     return; ⟦EOL⟧
+// 해설 L161: 구문 블록 경계입니다 · 소속 SelectResultEditShotsInMap.
+L000161 |                 } ⟦EOL⟧
+L000162 |  ⟦EOL⟧
+// 해설 L163: 지역 변수를 선언합니다: var first = shots[0]; / 변수의 초기값을 지정합니다: first = shots[0]
+L000163 |                 var first = shots[0]; ⟦EOL⟧
+// 해설 L164: 함수·델리게이트 또는 객체 생성자를 호출합니다: GetReviewDataShotMapRect(first.GroupCountX, first.GroupCountY) / 지역 변수를 선언합니다: var mapRect = GetReviewDataShotMapRect(first.GroupCountX, first.GroupCountY); / 변수의 초기값을 지정합니다: mapRect = GetReviewDataShotMapRect(first.GroupCountX, first.GroupCountY)
+L000164 |                 var mapRect = GetReviewDataShotMapRect(first.GroupCountX, first.GroupCountY); ⟦EOL⟧
+// 해설 L165: 함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Windows.Rect( Math.Min(left, right), Math.Min(top, bottom), Math.Abs(right - left), Math.Abs(bottom - top)) / 지역 변수를 선언합니다: var selection = new System.Windows.Rect( Math.Min(left, right), Math.Min(top, bottom), Math.Abs(right - left), Math.Abs(bottom - top)); / 변수의 초기값을 지정합니다: selection = new System.Windows.Rect( Math.Min(left, right), Math.Min(top, bottom), Math.Abs(right - left), Math.Abs(bottom - top))
+L000165 |                 var selection = new System.Windows.Rect( ⟦EOL⟧
+// 해설 L166: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(left, right)
+L000166 |                     Math.Min(left, right), ⟦EOL⟧
+// 해설 L167: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(top, bottom)
+L000167 |                     Math.Min(top, bottom), ⟦EOL⟧
+// 해설 L168: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(right - left)
+L000168 |                     Math.Abs(right - left), ⟦EOL⟧
+// 해설 L169: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(bottom - top)
+L000169 |                     Math.Abs(bottom - top)); ⟦EOL⟧
+// 해설 L170: 지역 변수를 선언합니다: var cellWidth = mapRect.Width / first.GroupCountX; / 변수의 초기값을 지정합니다: cellWidth = mapRect.Width / first.GroupCountX
+L000170 |                 var cellWidth = mapRect.Width / first.GroupCountX; ⟦EOL⟧
+// 해설 L171: 지역 변수를 선언합니다: var cellHeight = mapRect.Height / first.GroupCountY; / 변수의 초기값을 지정합니다: cellHeight = mapRect.Height / first.GroupCountY
+L000171 |                 var cellHeight = mapRect.Height / first.GroupCountY; ⟦EOL⟧
+// 해설 L172: 함수·델리게이트 또는 객체 생성자를 호출합니다: shots .Where(shot => selection.Contains(new System.Windows.Point( mapRect.Left + (shot.GroupColumn + 0.5) * cellWidth, mapRect.Top + (shot.GroupRow + 0.5) * cellHeight))) .Select(shot => shot.ShotKey) .ToHashSet(StringCo… / 함수·델리게이트 또는 객체 생성자를 호출합니다: shots .Where(shot => selection.Contains(new System.Windows.Point( mapRect.Left + (shot.GroupColumn + 0.5) * cellWidth, mapRect.Top + (shot.GroupRow + 0.5) * cellHeight))) .Select(shot => shot.ShotKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: shots .Where(shot => selection.C
+L000172 |                 var keys = shots ⟦EOL⟧
+// 해설 L173: 함수·델리게이트 또는 객체 생성자를 호출합니다: selection.Contains(new System.Windows.Point( mapRect.Left + (shot.GroupColumn + 0.5) * cellWidth, mapRect.Top + (shot.GroupRow + 0.5) * cellHeight)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Windows.Point( mapRect.Left + (shot.GroupColumn + 0.5) * cellWidth, mapRect.Top + (shot.GroupRow + 0.5) * cellHeight)
+L000173 |                     .Where(shot => selection.Contains(new System.Windows.Point( ⟦EOL⟧
 // 해설 L174: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectResultEditShotsInMap(double, double, double, double)
-L000174 |                     .Select(shot => shot.ShotKey) ⟦EOL⟧
+L000174 |                         mapRect.Left + (shot.GroupColumn + 0.5) * cellWidth, ⟦EOL⟧
 // 해설 L175: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectResultEditShotsInMap(double, double, double, double)
-L000175 |                     .ToHashSet(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
-// 해설 L176: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReplaceResultEditSelection(_allRows.Where(row => row.CellNo == _selectedCellNo && keys.Contains(row.ShotKey))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.CellNo == _selectedCellNo && keys.Contains(row.ShotKey)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: keys.Contains(row.ShotKey)
-L000176 |                 ReplaceResultEditSelection(_allRows.Where(row => row.CellNo == _selectedCellNo && keys.Contains(row.ShotKey))); ⟦EOL⟧
-// 해설 L177: 구문 블록 경계입니다 · 소속 SelectResultEditShotsInMap.
-L000177 |             } ⟦EOL⟧
-L000178 |  ⟦EOL⟧
-// 해설 L179: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectResultEditShotsInScatter(double, double, double, double)
-L000179 |             public void SelectResultEditShotsInScatter(double left, double top, double right, double bottom) ⟦EOL⟧
-// 해설 L180: 구문 블록 경계입니다 · 소속 SelectResultEditShotsInScatter.
-L000180 |             { ⟦EOL⟧
-// 해설 L181: 조건에 따라 분기합니다: if (!_isResultEditMode)
-L000181 |                 if (!_isResultEditMode) ⟦EOL⟧
+L000175 |                         mapRect.Top + (shot.GroupRow + 0.5) * cellHeight))) ⟦EOL⟧
+// 해설 L176: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectResultEditShotsInMap(double, double, double, double)
+L000176 |                     .Select(shot => shot.ShotKey) ⟦EOL⟧
+// 해설 L177: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectResultEditShotsInMap(double, double, double, double)
+L000177 |                     .ToHashSet(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L178: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReplaceResultEditSelection(_allRows.Where(row => row.CellNo == _selectedCellNo && keys.Contains(row.ShotKey))) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.CellNo == _selectedCellNo && keys.Contains(row.ShotKey)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: keys.Contains(row.ShotKey)
+L000178 |                 ReplaceResultEditSelection(_allRows.Where(row => row.CellNo == _selectedCellNo && keys.Contains(row.ShotKey))); ⟦EOL⟧
+// 해설 L179: 구문 블록 경계입니다 · 소속 SelectResultEditShotsInMap.
+L000179 |             } ⟦EOL⟧
+L000180 |  ⟦EOL⟧
+// 해설 L181: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SelectResultEditShotsInScatter(double, double, double, double)
+L000181 |             public void SelectResultEditShotsInScatter(double left, double top, double right, double bottom) ⟦EOL⟧
 // 해설 L182: 구문 블록 경계입니다 · 소속 SelectResultEditShotsInScatter.
-L000182 |                 { ⟦EOL⟧
-// 해설 L183: 호출자에게 값 또는 제어를 반환합니다: return;
-L000183 |                     return; ⟦EOL⟧
+L000182 |             { ⟦EOL⟧
+// 해설 L183: 조건에 따라 분기합니다: if (!_isResultEditMode)
+L000183 |                 if (!_isResultEditMode) ⟦EOL⟧
 // 해설 L184: 구문 블록 경계입니다 · 소속 SelectResultEditShotsInScatter.
-L000184 |                 } ⟦EOL⟧
-L000185 |  ⟦EOL⟧
-// 해설 L186: 함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Windows.Rect( Math.Min(left, right), Math.Min(top, bottom), Math.Abs(right - left), Math.Abs(bottom - top)) / 지역 변수를 선언합니다: var selection = new System.Windows.Rect( Math.Min(left, right), Math.Min(top, bottom), Math.Abs(right - left), Math.Abs(bottom - top)); / 변수의 초기값을 지정합니다: selection = new System.Windows.Rect( Math.Min(left, right), Math.Min(top, bottom), Math.Abs(right - left), Math.Abs(bottom - top))
-L000186 |                 var selection = new System.Windows.Rect( ⟦EOL⟧
-// 해설 L187: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(left, right)
-L000187 |                     Math.Min(left, right), ⟦EOL⟧
-// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(top, bottom)
-L000188 |                     Math.Min(top, bottom), ⟦EOL⟧
-// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(right - left)
-L000189 |                     Math.Abs(right - left), ⟦EOL⟧
-// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(bottom - top)
-L000190 |                     Math.Abs(bottom - top)); ⟦EOL⟧
-// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReplaceResultEditSelection(_scatterPlotHits.Where(hit => selection.Contains(hit.Point)).Select(hit => hit.Row)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _scatterPlotHits.Where(hit => selection.Contains(hit.Point)).Select(hit => hit.Row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _scatterPlotHits.Where(hit => selection.Contains(hit.Point)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: selection.Contains(hit.Point)
-L000191 |                 ReplaceResultEditSelection(_scatterPlotHits.Where(hit => selection.Contains(hit.Point)).Select(hit => hit.Row)); ⟦EOL⟧
-// 해설 L192: 구문 블록 경계입니다 · 소속 SelectResultEditShotsInScatter.
-L000192 |             } ⟦EOL⟧
-L000193 |  ⟦EOL⟧
-// 해설 L194: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReplaceResultEditSelection(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>)
-L000194 |             private void ReplaceResultEditSelection(IEnumerable<ST_REVIEW_DATA_GRID_ROW> rows) ⟦EOL⟧
-// 해설 L195: 구문 블록 경계입니다 · 소속 ReplaceResultEditSelection.
-L000195 |             { ⟦EOL⟧
-// 해설 L196: 컬렉션 요소를 순회합니다: foreach (var row in _allRows)
-L000196 |                 foreach (var row in _allRows) ⟦EOL⟧
+L000184 |                 { ⟦EOL⟧
+// 해설 L185: 호출자에게 값 또는 제어를 반환합니다: return;
+L000185 |                     return; ⟦EOL⟧
+// 해설 L186: 구문 블록 경계입니다 · 소속 SelectResultEditShotsInScatter.
+L000186 |                 } ⟦EOL⟧
+L000187 |  ⟦EOL⟧
+// 해설 L188: 함수·델리게이트 또는 객체 생성자를 호출합니다: new System.Windows.Rect( Math.Min(left, right), Math.Min(top, bottom), Math.Abs(right - left), Math.Abs(bottom - top)) / 지역 변수를 선언합니다: var selection = new System.Windows.Rect( Math.Min(left, right), Math.Min(top, bottom), Math.Abs(right - left), Math.Abs(bottom - top)); / 변수의 초기값을 지정합니다: selection = new System.Windows.Rect( Math.Min(left, right), Math.Min(top, bottom), Math.Abs(right - left), Math.Abs(bottom - top))
+L000188 |                 var selection = new System.Windows.Rect( ⟦EOL⟧
+// 해설 L189: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(left, right)
+L000189 |                     Math.Min(left, right), ⟦EOL⟧
+// 해설 L190: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Min(top, bottom)
+L000190 |                     Math.Min(top, bottom), ⟦EOL⟧
+// 해설 L191: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(right - left)
+L000191 |                     Math.Abs(right - left), ⟦EOL⟧
+// 해설 L192: 함수·델리게이트 또는 객체 생성자를 호출합니다: Math.Abs(bottom - top)
+L000192 |                     Math.Abs(bottom - top)); ⟦EOL⟧
+// 해설 L193: 함수·델리게이트 또는 객체 생성자를 호출합니다: ReplaceResultEditSelection(_scatterPlotHits.Where(hit => selection.Contains(hit.Point)).Select(hit => hit.Row)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _scatterPlotHits.Where(hit => selection.Contains(hit.Point)).Select(hit => hit.Row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _scatterPlotHits.Where(hit => selection.Contains(hit.Point)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: selection.Contains(hit.Point)
+L000193 |                 ReplaceResultEditSelection(_scatterPlotHits.Where(hit => selection.Contains(hit.Point)).Select(hit => hit.Row)); ⟦EOL⟧
+// 해설 L194: 구문 블록 경계입니다 · 소속 SelectResultEditShotsInScatter.
+L000194 |             } ⟦EOL⟧
+L000195 |  ⟦EOL⟧
+// 해설 L196: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ReplaceResultEditSelection(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>)
+L000196 |             private void ReplaceResultEditSelection(IEnumerable<ST_REVIEW_DATA_GRID_ROW> rows) ⟦EOL⟧
 // 해설 L197: 구문 블록 경계입니다 · 소속 ReplaceResultEditSelection.
-L000197 |                 { ⟦EOL⟧
-// 해설 L198: 값을 대상에 대입합니다: row.IsResultEditSelected = false
-L000198 |                     row.IsResultEditSelected = false; ⟦EOL⟧
+L000197 |             { ⟦EOL⟧
+// 해설 L198: 컬렉션 요소를 순회합니다: foreach (var row in _allRows)
+L000198 |                 foreach (var row in _allRows) ⟦EOL⟧
 // 해설 L199: 구문 블록 경계입니다 · 소속 ReplaceResultEditSelection.
-L000199 |                 } ⟦EOL⟧
-L000200 |  ⟦EOL⟧
-// 해설 L201: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Distinct() / 컬렉션 요소를 순회합니다: foreach (var row in rows.Distinct())
-L000201 |                 foreach (var row in rows.Distinct()) ⟦EOL⟧
-// 해설 L202: 구문 블록 경계입니다 · 소속 ReplaceResultEditSelection.
-L000202 |                 { ⟦EOL⟧
-// 해설 L203: 값을 대상에 대입합니다: row.IsResultEditSelected = true
-L000203 |                     row.IsResultEditSelected = true; ⟦EOL⟧
+L000199 |                 { ⟦EOL⟧
+// 해설 L200: 값을 대상에 대입합니다: row.IsResultEditSelected = false
+L000200 |                     row.IsResultEditSelected = false; ⟦EOL⟧
+// 해설 L201: 구문 블록 경계입니다 · 소속 ReplaceResultEditSelection.
+L000201 |                 } ⟦EOL⟧
+L000202 |  ⟦EOL⟧
+// 해설 L203: 함수·델리게이트 또는 객체 생성자를 호출합니다: rows.Distinct() / 컬렉션 요소를 순회합니다: foreach (var row in rows.Distinct())
+L000203 |                 foreach (var row in rows.Distinct()) ⟦EOL⟧
 // 해설 L204: 구문 블록 경계입니다 · 소속 ReplaceResultEditSelection.
-L000204 |                 } ⟦EOL⟧
-L000205 |  ⟦EOL⟧
-// 해설 L206: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditSelectionChanged()
-L000206 |                 NotifyResultEditSelectionChanged(); ⟦EOL⟧
-// 해설 L207: 구문 블록 경계입니다 · 소속 ReplaceResultEditSelection.
-L000207 |             } ⟦EOL⟧
-L000208 |  ⟦EOL⟧
-// 해설 L209: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ClearResultEditSelection()
-L000209 |             private void ClearResultEditSelection() ⟦EOL⟧
-// 해설 L210: 구문 블록 경계입니다 · 소속 ClearResultEditSelection.
-L000210 |             { ⟦EOL⟧
-// 해설 L211: 컬렉션 요소를 순회합니다: foreach (var row in _allRows)
-L000211 |                 foreach (var row in _allRows) ⟦EOL⟧
+L000204 |                 { ⟦EOL⟧
+// 해설 L205: 값을 대상에 대입합니다: row.IsResultEditSelected = true
+L000205 |                     row.IsResultEditSelected = true; ⟦EOL⟧
+// 해설 L206: 구문 블록 경계입니다 · 소속 ReplaceResultEditSelection.
+L000206 |                 } ⟦EOL⟧
+L000207 |  ⟦EOL⟧
+// 해설 L208: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditSelectionChanged()
+L000208 |                 NotifyResultEditSelectionChanged(); ⟦EOL⟧
+// 해설 L209: 구문 블록 경계입니다 · 소속 ReplaceResultEditSelection.
+L000209 |             } ⟦EOL⟧
+L000210 |  ⟦EOL⟧
+// 해설 L211: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ClearResultEditSelection()
+L000211 |             private void ClearResultEditSelection() ⟦EOL⟧
 // 해설 L212: 구문 블록 경계입니다 · 소속 ClearResultEditSelection.
-L000212 |                 { ⟦EOL⟧
-// 해설 L213: 값을 대상에 대입합니다: row.IsResultEditSelected = false
-L000213 |                     row.IsResultEditSelected = false; ⟦EOL⟧
+L000212 |             { ⟦EOL⟧
+// 해설 L213: 컬렉션 요소를 순회합니다: foreach (var row in _allRows)
+L000213 |                 foreach (var row in _allRows) ⟦EOL⟧
 // 해설 L214: 구문 블록 경계입니다 · 소속 ClearResultEditSelection.
-L000214 |                 } ⟦EOL⟧
-L000215 |  ⟦EOL⟧
-// 해설 L216: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditSelectionChanged()
-L000216 |                 NotifyResultEditSelectionChanged(); ⟦EOL⟧
-// 해설 L217: 구문 블록 경계입니다 · 소속 ClearResultEditSelection.
-L000217 |             } ⟦EOL⟧
-L000218 |  ⟦EOL⟧
-// 해설 L219: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.NotifyResultEditSelectionChanged()
-L000219 |             private void NotifyResultEditSelectionChanged() ⟦EOL⟧
-// 해설 L220: 구문 블록 경계입니다 · 소속 NotifyResultEditSelectionChanged.
-L000220 |             { ⟦EOL⟧
-// 해설 L221: 값을 대상에 대입합니다: Rows = _allRows.Where(row => row.CellNo == _selectedCellNo).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.CellNo == _selectedCellNo).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.CellNo == _selectedCellNo)
-L000221 |                 Rows = _allRows.Where(row => row.CellNo == _selectedCellNo).ToArray(); ⟦EOL⟧
-// 해설 L222: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(Rows)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Rows)
-L000222 |                 Notify(nameof(Rows)); ⟦EOL⟧
-// 해설 L223: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditSelectionSummary)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditSelectionSummary)
-L000223 |                 Notify(nameof(ResultEditSelectionSummary)); ⟦EOL⟧
-// 해설 L224: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshScatterPlot()
-L000224 |                 RefreshScatterPlot(); ⟦EOL⟧
-// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: QueueShotMapRender(_selectedCellNo, _selectedShotKey)
-L000225 |                 QueueShotMapRender(_selectedCellNo, _selectedShotKey); ⟦EOL⟧
-// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditCommandState()
-L000226 |                 NotifyResultEditCommandState(); ⟦EOL⟧
-// 해설 L227: 구문 블록 경계입니다 · 소속 NotifyResultEditSelectionChanged.
-L000227 |             } ⟦EOL⟧
-L000228 |  ⟦EOL⟧
-// 해설 L229: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ResolveResultEditSelection()
-L000229 |             private IReadOnlyList<ST_REVIEW_DATA_GRID_ROW> ResolveResultEditSelection() ⟦EOL⟧
-// 해설 L230: 구문 블록 경계입니다 · 소속 ResolveResultEditSelection.
-L000230 |             { ⟦EOL⟧
-// 해설 L231: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.IsResultEditSelected).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.IsResultEditSelected) / 지역 변수를 선언합니다: var selected = _allRows.Where(row => row.IsResultEditSelected).ToArray(); / 변수의 초기값을 지정합니다: selected = _allRows.Where(row => row.IsResultEditSelected).ToArray()
-L000231 |                 var selected = _allRows.Where(row => row.IsResultEditSelected).ToArray(); ⟦EOL⟧
-// 해설 L232: 조건에 따라 결과식을 선택합니다: selected.Length > 0 ? selected : SelectedRow is null ? [] : [SelectedRow] / 조건에 따라 결과식을 선택합니다: SelectedRow is null ? [] : [SelectedRow] / 호출자에게 값 또는 제어를 반환합니다: return selected.Length > 0 ? selected : SelectedRow is null ? [] : [SelectedRow];
-L000232 |                 return selected.Length > 0 ? selected : SelectedRow is null ? [] : [SelectedRow]; ⟦EOL⟧
-// 해설 L233: 구문 블록 경계입니다 · 소속 ResolveResultEditSelection.
-L000233 |             } ⟦EOL⟧
-L000234 |  ⟦EOL⟧
-// 해설 L235: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditKeyIn(object?)
-L000235 |             private void AddResultEditKeyIn(object? parameter) ⟦EOL⟧
-// 해설 L236: 구문 블록 경계입니다 · 소속 AddResultEditKeyIn.
-L000236 |             { ⟦EOL⟧
-// 해설 L237: 조건에 따라 분기합니다: if (SelectedRow is not { } selectedRow)
-L000237 |                 if (SelectedRow is not { } selectedRow) ⟦EOL⟧
+L000214 |                 { ⟦EOL⟧
+// 해설 L215: 값을 대상에 대입합니다: row.IsResultEditSelected = false
+L000215 |                     row.IsResultEditSelected = false; ⟦EOL⟧
+// 해설 L216: 구문 블록 경계입니다 · 소속 ClearResultEditSelection.
+L000216 |                 } ⟦EOL⟧
+L000217 |  ⟦EOL⟧
+// 해설 L218: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditSelectionChanged()
+L000218 |                 NotifyResultEditSelectionChanged(); ⟦EOL⟧
+// 해설 L219: 구문 블록 경계입니다 · 소속 ClearResultEditSelection.
+L000219 |             } ⟦EOL⟧
+L000220 |  ⟦EOL⟧
+// 해설 L221: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.NotifyResultEditSelectionChanged()
+L000221 |             private void NotifyResultEditSelectionChanged() ⟦EOL⟧
+// 해설 L222: 구문 블록 경계입니다 · 소속 NotifyResultEditSelectionChanged.
+L000222 |             { ⟦EOL⟧
+// 해설 L223: 값을 대상에 대입합니다: Rows = _allRows.Where(row => row.CellNo == _selectedCellNo).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.CellNo == _selectedCellNo).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.CellNo == _selectedCellNo)
+L000223 |                 Rows = _allRows.Where(row => row.CellNo == _selectedCellNo).ToArray(); ⟦EOL⟧
+// 해설 L224: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(Rows)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(Rows)
+L000224 |                 Notify(nameof(Rows)); ⟦EOL⟧
+// 해설 L225: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditSelectionSummary)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditSelectionSummary)
+L000225 |                 Notify(nameof(ResultEditSelectionSummary)); ⟦EOL⟧
+// 해설 L226: 함수·델리게이트 또는 객체 생성자를 호출합니다: RefreshScatterPlot()
+L000226 |                 RefreshScatterPlot(); ⟦EOL⟧
+// 해설 L227: 함수·델리게이트 또는 객체 생성자를 호출합니다: QueueShotMapRender(_selectedCellNo, _selectedShotKey)
+L000227 |                 QueueShotMapRender(_selectedCellNo, _selectedShotKey); ⟦EOL⟧
+// 해설 L228: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditCommandState()
+L000228 |                 NotifyResultEditCommandState(); ⟦EOL⟧
+// 해설 L229: 구문 블록 경계입니다 · 소속 NotifyResultEditSelectionChanged.
+L000229 |             } ⟦EOL⟧
+L000230 |  ⟦EOL⟧
+// 해설 L231: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ResolveResultEditSelection()
+L000231 |             private IReadOnlyList<ST_REVIEW_DATA_GRID_ROW> ResolveResultEditSelection() ⟦EOL⟧
+// 해설 L232: 구문 블록 경계입니다 · 소속 ResolveResultEditSelection.
+L000232 |             { ⟦EOL⟧
+// 해설 L233: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.IsResultEditSelected).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.IsResultEditSelected) / 지역 변수를 선언합니다: var selected = _allRows.Where(row => row.IsResultEditSelected).ToArray(); / 변수의 초기값을 지정합니다: selected = _allRows.Where(row => row.IsResultEditSelected).ToArray()
+L000233 |                 var selected = _allRows.Where(row => row.IsResultEditSelected).ToArray(); ⟦EOL⟧
+// 해설 L234: 조건에 따라 결과식을 선택합니다: selected.Length > 0 ? selected : SelectedRow is null ? [] : [SelectedRow] / 조건에 따라 결과식을 선택합니다: SelectedRow is null ? [] : [SelectedRow] / 호출자에게 값 또는 제어를 반환합니다: return selected.Length > 0 ? selected : SelectedRow is null ? [] : [SelectedRow];
+L000234 |                 return selected.Length > 0 ? selected : SelectedRow is null ? [] : [SelectedRow]; ⟦EOL⟧
+// 해설 L235: 구문 블록 경계입니다 · 소속 ResolveResultEditSelection.
+L000235 |             } ⟦EOL⟧
+L000236 |  ⟦EOL⟧
+// 해설 L237: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditKeyIn(object?)
+L000237 |             private void AddResultEditKeyIn(object? parameter) ⟦EOL⟧
 // 해설 L238: 구문 블록 경계입니다 · 소속 AddResultEditKeyIn.
-L000238 |                 { ⟦EOL⟧
-// 해설 L239: 호출자에게 값 또는 제어를 반환합니다: return;
-L000239 |                     return; ⟦EOL⟧
+L000238 |             { ⟦EOL⟧
+// 해설 L239: 조건에 따라 분기합니다: if (SelectedRow is not { } selectedRow)
+L000239 |                 if (SelectedRow is not { } selectedRow) ⟦EOL⟧
 // 해설 L240: 구문 블록 경계입니다 · 소속 AddResultEditKeyIn.
-L000240 |                 } ⟦EOL⟧
-L000241 |  ⟦EOL⟧
-// 해설 L242: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddResultEditKeyInRows([selectedRow], "CURRENT SHOT")
-L000242 |                 AddResultEditKeyInRows([selectedRow], "CURRENT SHOT"); ⟦EOL⟧
-// 해설 L243: 구문 블록 경계입니다 · 소속 AddResultEditKeyIn.
-L000243 |             } ⟦EOL⟧
-L000244 |  ⟦EOL⟧
-// 해설 L245: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddSelectedResultEditKeyIn(object?)
-L000245 |             private void AddSelectedResultEditKeyIn(object? parameter) ⟦EOL⟧
-// 해설 L246: 구문 블록 경계입니다 · 소속 AddSelectedResultEditKeyIn.
-L000246 |             { ⟦EOL⟧
-// 해설 L247: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddResultEditKeyInRows( _allRows.Where(row => row.IsResultEditSelected), "SELECTED SHOTS")
-L000247 |                 AddResultEditKeyInRows( ⟦EOL⟧
-// 해설 L248: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.IsResultEditSelected)
-L000248 |                     _allRows.Where(row => row.IsResultEditSelected), ⟦EOL⟧
-// 해설 L249: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddSelectedResultEditKeyIn(object?)
-L000249 |                     "SELECTED SHOTS"); ⟦EOL⟧
-// 해설 L250: 구문 블록 경계입니다 · 소속 AddSelectedResultEditKeyIn.
-L000250 |             } ⟦EOL⟧
-L000251 |  ⟦EOL⟧
-// 해설 L252: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddNgResultEditKeyIn(object?)
-L000252 |             private void AddNgResultEditKeyIn(object? parameter) ⟦EOL⟧
-// 해설 L253: 구문 블록 경계입니다 · 소속 AddNgResultEditKeyIn.
-L000253 |             { ⟦EOL⟧
-// 해설 L254: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddResultEditKeyInRows( _allRows.Where(IsNgResultRow), "NG SHOTS")
-L000254 |                 AddResultEditKeyInRows( ⟦EOL⟧
-// 해설 L255: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(IsNgResultRow)
-L000255 |                     _allRows.Where(IsNgResultRow), ⟦EOL⟧
-// 해설 L256: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddNgResultEditKeyIn(object?)
-L000256 |                     "NG SHOTS"); ⟦EOL⟧
-// 해설 L257: 구문 블록 경계입니다 · 소속 AddNgResultEditKeyIn.
-L000257 |             } ⟦EOL⟧
-L000258 |  ⟦EOL⟧
-// 해설 L259: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditKeyInRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
-L000259 |             private void AddResultEditKeyInRows( ⟦EOL⟧
-// 해설 L260: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditKeyInRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
-L000260 |                 IEnumerable<ST_REVIEW_DATA_GRID_ROW> sourceRows, ⟦EOL⟧
+L000240 |                 { ⟦EOL⟧
+// 해설 L241: 호출자에게 값 또는 제어를 반환합니다: return;
+L000241 |                     return; ⟦EOL⟧
+// 해설 L242: 구문 블록 경계입니다 · 소속 AddResultEditKeyIn.
+L000242 |                 } ⟦EOL⟧
+L000243 |  ⟦EOL⟧
+// 해설 L244: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddResultEditKeyInRows([selectedRow], "CURRENT SHOT")
+L000244 |                 AddResultEditKeyInRows([selectedRow], "CURRENT SHOT"); ⟦EOL⟧
+// 해설 L245: 구문 블록 경계입니다 · 소속 AddResultEditKeyIn.
+L000245 |             } ⟦EOL⟧
+L000246 |  ⟦EOL⟧
+// 해설 L247: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddSelectedResultEditKeyIn(object?)
+L000247 |             private void AddSelectedResultEditKeyIn(object? parameter) ⟦EOL⟧
+// 해설 L248: 구문 블록 경계입니다 · 소속 AddSelectedResultEditKeyIn.
+L000248 |             { ⟦EOL⟧
+// 해설 L249: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddResultEditKeyInRows( _allRows.Where(row => row.IsResultEditSelected), "SELECTED SHOTS")
+L000249 |                 AddResultEditKeyInRows( ⟦EOL⟧
+// 해설 L250: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(row => row.IsResultEditSelected)
+L000250 |                     _allRows.Where(row => row.IsResultEditSelected), ⟦EOL⟧
+// 해설 L251: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddSelectedResultEditKeyIn(object?)
+L000251 |                     "SELECTED SHOTS"); ⟦EOL⟧
+// 해설 L252: 구문 블록 경계입니다 · 소속 AddSelectedResultEditKeyIn.
+L000252 |             } ⟦EOL⟧
+L000253 |  ⟦EOL⟧
+// 해설 L254: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddNgResultEditKeyIn(object?)
+L000254 |             private void AddNgResultEditKeyIn(object? parameter) ⟦EOL⟧
+// 해설 L255: 구문 블록 경계입니다 · 소속 AddNgResultEditKeyIn.
+L000255 |             { ⟦EOL⟧
+// 해설 L256: 함수·델리게이트 또는 객체 생성자를 호출합니다: AddResultEditKeyInRows( _allRows.Where(IsNgResultRow), "NG SHOTS")
+L000256 |                 AddResultEditKeyInRows( ⟦EOL⟧
+// 해설 L257: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows.Where(IsNgResultRow)
+L000257 |                     _allRows.Where(IsNgResultRow), ⟦EOL⟧
+// 해설 L258: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddNgResultEditKeyIn(object?)
+L000258 |                     "NG SHOTS"); ⟦EOL⟧
+// 해설 L259: 구문 블록 경계입니다 · 소속 AddNgResultEditKeyIn.
+L000259 |             } ⟦EOL⟧
+L000260 |  ⟦EOL⟧
 // 해설 L261: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditKeyInRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
-L000261 |                 string sourceName) ⟦EOL⟧
-// 해설 L262: 구문 블록 경계입니다 · 소속 AddResultEditKeyInRows.
-L000262 |             { ⟦EOL⟧
-// 해설 L263: 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditKeyInItems.ToList() / 지역 변수를 선언합니다: var items = _resultEditKeyInItems.ToList(); / 변수의 초기값을 지정합니다: items = _resultEditKeyInItems.ToList()
-L000263 |                 var items = _resultEditKeyInItems.ToList(); ⟦EOL⟧
-// 해설 L264: 지역 변수를 선언합니다: var addedCount = 0; / 변수의 초기값을 지정합니다: addedCount = 0
-L000264 |                 var addedCount = 0; ⟦EOL⟧
-// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: sourceRows.Distinct() / 컬렉션 요소를 순회합니다: foreach (var row in sourceRows.Distinct())
-L000265 |                 foreach (var row in sourceRows.Distinct()) ⟦EOL⟧
-// 해설 L266: 구문 블록 경계입니다 · 소속 AddResultEditKeyInRows.
-L000266 |                 { ⟦EOL⟧
-// 해설 L267: 함수·델리게이트 또는 객체 생성자를 호출합니다: items.All(item => !item.Matches(row)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Matches(row) / 조건에 따라 분기합니다: if (items.All(item => !item.Matches(row)))
-L000267 |                     if (items.All(item => !item.Matches(row))) ⟦EOL⟧
+L000261 |             private void AddResultEditKeyInRows( ⟦EOL⟧
+// 해설 L262: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditKeyInRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
+L000262 |                 IEnumerable<ST_REVIEW_DATA_GRID_ROW> sourceRows, ⟦EOL⟧
+// 해설 L263: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditKeyInRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
+L000263 |                 string sourceName) ⟦EOL⟧
+// 해설 L264: 구문 블록 경계입니다 · 소속 AddResultEditKeyInRows.
+L000264 |             { ⟦EOL⟧
+// 해설 L265: 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditKeyInItems.ToList() / 지역 변수를 선언합니다: var items = _resultEditKeyInItems.ToList(); / 변수의 초기값을 지정합니다: items = _resultEditKeyInItems.ToList()
+L000265 |                 var items = _resultEditKeyInItems.ToList(); ⟦EOL⟧
+// 해설 L266: 지역 변수를 선언합니다: var addedCount = 0; / 변수의 초기값을 지정합니다: addedCount = 0
+L000266 |                 var addedCount = 0; ⟦EOL⟧
+// 해설 L267: 함수·델리게이트 또는 객체 생성자를 호출합니다: sourceRows.Distinct() / 컬렉션 요소를 순회합니다: foreach (var row in sourceRows.Distinct())
+L000267 |                 foreach (var row in sourceRows.Distinct()) ⟦EOL⟧
 // 해설 L268: 구문 블록 경계입니다 · 소속 AddResultEditKeyInRows.
-L000268 |                     { ⟦EOL⟧
-// 해설 L269: 함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(new ST_REVIEW_DATA_EDIT_ITEM(row, items.Count + 1)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_DATA_EDIT_ITEM(row, items.Count + 1)
-L000269 |                         items.Add(new ST_REVIEW_DATA_EDIT_ITEM(row, items.Count + 1)); ⟦EOL⟧
-// 해설 L270: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditKeyInRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
-L000270 |                         addedCount++; ⟦EOL⟧
-// 해설 L271: 구문 블록 경계입니다 · 소속 AddResultEditKeyInRows.
-L000271 |                     } ⟦EOL⟧
-// 해설 L272: 구문 블록 경계입니다 · 소속 AddResultEditKeyInRows.
-L000272 |                 } ⟦EOL⟧
-L000273 |  ⟦EOL⟧
-// 해설 L274: 값을 대상에 대입합니다: _resultEditKeyInItems = Renumber(items) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Renumber(items)
-L000274 |                 _resultEditKeyInItems = Renumber(items); ⟦EOL⟧
-// 해설 L275: 값을 대상에 대입합니다: _selectedResultEditKeyInItem = _resultEditKeyInItems.LastOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditKeyInItems.LastOrDefault()
-L000275 |                 _selectedResultEditKeyInItem = _resultEditKeyInItems.LastOrDefault(); ⟦EOL⟧
-// 해설 L276: 값을 대상에 대입합니다: _resultEditStatusText = $"{addedCount:N0} {sourceName} ADDED / {_resultEditKeyInItems.Count:N0} TOTAL"
-L000276 |                 _resultEditStatusText = $"{addedCount:N0} {sourceName} ADDED / {_resultEditKeyInItems.Count:N0} TOTAL"; ⟦EOL⟧
-// 해설 L277: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
-L000277 |                 NotifyResultEditState(); ⟦EOL⟧
-// 해설 L278: 구문 블록 경계입니다 · 소속 AddResultEditKeyInRows.
-L000278 |             } ⟦EOL⟧
-L000279 |  ⟦EOL⟧
-// 해설 L280: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RemoveResultEditKeyIn(object?)
-L000280 |             private void RemoveResultEditKeyIn(object? parameter) ⟦EOL⟧
-// 해설 L281: 구문 블록 경계입니다 · 소속 RemoveResultEditKeyIn.
-L000281 |             { ⟦EOL⟧
-// 해설 L282: 조건에 따라 분기합니다: if (_selectedResultEditKeyInItem is null)
-L000282 |                 if (_selectedResultEditKeyInItem is null) ⟦EOL⟧
+L000268 |                 { ⟦EOL⟧
+// 해설 L269: 함수·델리게이트 또는 객체 생성자를 호출합니다: items.All(item => !item.Matches(row)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Matches(row) / 조건에 따라 분기합니다: if (items.All(item => !item.Matches(row)))
+L000269 |                     if (items.All(item => !item.Matches(row))) ⟦EOL⟧
+// 해설 L270: 구문 블록 경계입니다 · 소속 AddResultEditKeyInRows.
+L000270 |                     { ⟦EOL⟧
+// 해설 L271: 함수·델리게이트 또는 객체 생성자를 호출합니다: items.Add(new ST_REVIEW_DATA_EDIT_ITEM(row, items.Count + 1)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_DATA_EDIT_ITEM(row, items.Count + 1)
+L000271 |                         items.Add(new ST_REVIEW_DATA_EDIT_ITEM(row, items.Count + 1)); ⟦EOL⟧
+// 해설 L272: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditKeyInRows(System.Collections.Generic.IEnumerable<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW>, string)
+L000272 |                         addedCount++; ⟦EOL⟧
+// 해설 L273: 구문 블록 경계입니다 · 소속 AddResultEditKeyInRows.
+L000273 |                     } ⟦EOL⟧
+// 해설 L274: 구문 블록 경계입니다 · 소속 AddResultEditKeyInRows.
+L000274 |                 } ⟦EOL⟧
+L000275 |  ⟦EOL⟧
+// 해설 L276: 값을 대상에 대입합니다: _resultEditKeyInItems = Renumber(items) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Renumber(items)
+L000276 |                 _resultEditKeyInItems = Renumber(items); ⟦EOL⟧
+// 해설 L277: 값을 대상에 대입합니다: _selectedResultEditKeyInItem = _resultEditKeyInItems.LastOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditKeyInItems.LastOrDefault()
+L000277 |                 _selectedResultEditKeyInItem = _resultEditKeyInItems.LastOrDefault(); ⟦EOL⟧
+// 해설 L278: 값을 대상에 대입합니다: _resultEditStatusText = $"{addedCount:N0} {sourceName} ADDED / {_resultEditKeyInItems.Count:N0} TOTAL"
+L000278 |                 _resultEditStatusText = $"{addedCount:N0} {sourceName} ADDED / {_resultEditKeyInItems.Count:N0} TOTAL"; ⟦EOL⟧
+// 해설 L279: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
+L000279 |                 NotifyResultEditState(); ⟦EOL⟧
+// 해설 L280: 구문 블록 경계입니다 · 소속 AddResultEditKeyInRows.
+L000280 |             } ⟦EOL⟧
+L000281 |  ⟦EOL⟧
+// 해설 L282: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RemoveResultEditKeyIn(object?)
+L000282 |             private void RemoveResultEditKeyIn(object? parameter) ⟦EOL⟧
 // 해설 L283: 구문 블록 경계입니다 · 소속 RemoveResultEditKeyIn.
-L000283 |                 { ⟦EOL⟧
-// 해설 L284: 호출자에게 값 또는 제어를 반환합니다: return;
-L000284 |                     return; ⟦EOL⟧
+L000283 |             { ⟦EOL⟧
+// 해설 L284: 조건에 따라 분기합니다: if (_selectedResultEditKeyInItem is null)
+L000284 |                 if (_selectedResultEditKeyInItem is null) ⟦EOL⟧
 // 해설 L285: 구문 블록 경계입니다 · 소속 RemoveResultEditKeyIn.
-L000285 |                 } ⟦EOL⟧
-L000286 |  ⟦EOL⟧
-// 해설 L287: 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditKeyInItems.Where(item => !ReferenceEquals(item, _selectedResultEditKeyInItem)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditKeyInItems.Where(item => !ReferenceEquals(item, _selectedResultEditKeyInItem)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(item, _selectedResultEditKeyInItem) / 지역 변수를 선언합니다: var items = _resultEditKeyInItems.Where(item => !ReferenceEquals(item, _selectedResultEditKeyInItem)).ToArray(); / 변수의 초기값을 지정합니다: items = _resultEditKeyInItems.Where(item => !ReferenceEquals(item,
-L000287 |                 var items = _resultEditKeyInItems.Where(item => !ReferenceEquals(item, _selectedResultEditKeyInItem)).ToArray(); ⟦EOL⟧
-// 해설 L288: 값을 대상에 대입합니다: _resultEditKeyInItems = Renumber(items) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Renumber(items)
-L000288 |                 _resultEditKeyInItems = Renumber(items); ⟦EOL⟧
-// 해설 L289: 값을 대상에 대입합니다: _selectedResultEditKeyInItem = _resultEditKeyInItems.FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditKeyInItems.FirstOrDefault()
-L000289 |                 _selectedResultEditKeyInItem = _resultEditKeyInItems.FirstOrDefault(); ⟦EOL⟧
-// 해설 L290: 값을 대상에 대입합니다: _resultEditStatusText = "KEY IN ITEM REMOVED"
-L000290 |                 _resultEditStatusText = "KEY IN ITEM REMOVED"; ⟦EOL⟧
-// 해설 L291: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
-L000291 |                 NotifyResultEditState(); ⟦EOL⟧
-// 해설 L292: 구문 블록 경계입니다 · 소속 RemoveResultEditKeyIn.
-L000292 |             } ⟦EOL⟧
-L000293 |  ⟦EOL⟧
-// 해설 L294: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ClearResultEditKeyIn(object?)
-L000294 |             private void ClearResultEditKeyIn(object? parameter) ⟦EOL⟧
-// 해설 L295: 구문 블록 경계입니다 · 소속 ClearResultEditKeyIn.
-L000295 |             { ⟦EOL⟧
-// 해설 L296: 값을 대상에 대입합니다: _resultEditKeyInItems = []
-L000296 |                 _resultEditKeyInItems = []; ⟦EOL⟧
-// 해설 L297: 값을 대상에 대입합니다: _selectedResultEditKeyInItem = null
-L000297 |                 _selectedResultEditKeyInItem = null; ⟦EOL⟧
-// 해설 L298: 값을 대상에 대입합니다: _resultEditStatusText = "KEY IN LIST CLEARED"
-L000298 |                 _resultEditStatusText = "KEY IN LIST CLEARED"; ⟦EOL⟧
-// 해설 L299: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
-L000299 |                 NotifyResultEditState(); ⟦EOL⟧
-// 해설 L300: 구문 블록 경계입니다 · 소속 ClearResultEditKeyIn.
-L000300 |             } ⟦EOL⟧
-L000301 |  ⟦EOL⟧
-// 해설 L302: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditCopySource(object?)
-L000302 |             private void AddResultEditCopySource(object? parameter) ⟦EOL⟧
-// 해설 L303: 구문 블록 경계입니다 · 소속 AddResultEditCopySource.
-L000303 |             { ⟦EOL⟧
-// 해설 L304: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveResultEditSelection() / 지역 변수를 선언합니다: var selected = ResolveResultEditSelection(); / 변수의 초기값을 지정합니다: selected = ResolveResultEditSelection()
-L000304 |                 var selected = ResolveResultEditSelection(); ⟦EOL⟧
-// 해설 L305: 조건에 따라 분기합니다: if (selected.Count != 1)
-L000305 |                 if (selected.Count != 1) ⟦EOL⟧
-// 해설 L306: 구문 블록 경계입니다 · 소속 AddResultEditCopySource.
-L000306 |                 { ⟦EOL⟧
-// 해설 L307: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning( "Result Edit Source 확인", selected.Count == 0 ? "SOURCE로 지정할 Shot을 하나 선택해 주세요." : $"SOURCE는 하나의 Shot만 지정할 수 있습니다. 현재 {selected.Count:N0}개가 선택되었습니다.")
-L000307 |                     CRecipeConfirmDialog.ShowWarning( ⟦EOL⟧
-// 해설 L308: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditCopySource(object?)
-L000308 |                         "Result Edit Source 확인", ⟦EOL⟧
-// 해설 L309: 조건에 따라 결과식을 선택합니다: selected.Count == 0 ? "SOURCE로 지정할 Shot을 하나 선택해 주세요." : $"SOURCE는 하나의 Shot만 지정할 수 있습니다. 현재 {selected.Count:N0}개가 선택되었습니다."
-L000309 |                         selected.Count == 0 ⟦EOL⟧
+L000285 |                 { ⟦EOL⟧
+// 해설 L286: 호출자에게 값 또는 제어를 반환합니다: return;
+L000286 |                     return; ⟦EOL⟧
+// 해설 L287: 구문 블록 경계입니다 · 소속 RemoveResultEditKeyIn.
+L000287 |                 } ⟦EOL⟧
+L000288 |  ⟦EOL⟧
+// 해설 L289: 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditKeyInItems.Where(item => !ReferenceEquals(item, _selectedResultEditKeyInItem)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditKeyInItems.Where(item => !ReferenceEquals(item, _selectedResultEditKeyInItem)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(item, _selectedResultEditKeyInItem) / 지역 변수를 선언합니다: var items = _resultEditKeyInItems.Where(item => !ReferenceEquals(item, _selectedResultEditKeyInItem)).ToArray(); / 변수의 초기값을 지정합니다: items = _resultEditKeyInItems.Where(item => !ReferenceEquals(item,
+L000289 |                 var items = _resultEditKeyInItems.Where(item => !ReferenceEquals(item, _selectedResultEditKeyInItem)).ToArray(); ⟦EOL⟧
+// 해설 L290: 값을 대상에 대입합니다: _resultEditKeyInItems = Renumber(items) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Renumber(items)
+L000290 |                 _resultEditKeyInItems = Renumber(items); ⟦EOL⟧
+// 해설 L291: 값을 대상에 대입합니다: _selectedResultEditKeyInItem = _resultEditKeyInItems.FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditKeyInItems.FirstOrDefault()
+L000291 |                 _selectedResultEditKeyInItem = _resultEditKeyInItems.FirstOrDefault(); ⟦EOL⟧
+// 해설 L292: 값을 대상에 대입합니다: _resultEditStatusText = "KEY IN ITEM REMOVED"
+L000292 |                 _resultEditStatusText = "KEY IN ITEM REMOVED"; ⟦EOL⟧
+// 해설 L293: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
+L000293 |                 NotifyResultEditState(); ⟦EOL⟧
+// 해설 L294: 구문 블록 경계입니다 · 소속 RemoveResultEditKeyIn.
+L000294 |             } ⟦EOL⟧
+L000295 |  ⟦EOL⟧
+// 해설 L296: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ClearResultEditKeyIn(object?)
+L000296 |             private void ClearResultEditKeyIn(object? parameter) ⟦EOL⟧
+// 해설 L297: 구문 블록 경계입니다 · 소속 ClearResultEditKeyIn.
+L000297 |             { ⟦EOL⟧
+// 해설 L298: 값을 대상에 대입합니다: _resultEditKeyInItems = []
+L000298 |                 _resultEditKeyInItems = []; ⟦EOL⟧
+// 해설 L299: 값을 대상에 대입합니다: _selectedResultEditKeyInItem = null
+L000299 |                 _selectedResultEditKeyInItem = null; ⟦EOL⟧
+// 해설 L300: 값을 대상에 대입합니다: _resultEditStatusText = "KEY IN LIST CLEARED"
+L000300 |                 _resultEditStatusText = "KEY IN LIST CLEARED"; ⟦EOL⟧
+// 해설 L301: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
+L000301 |                 NotifyResultEditState(); ⟦EOL⟧
+// 해설 L302: 구문 블록 경계입니다 · 소속 ClearResultEditKeyIn.
+L000302 |             } ⟦EOL⟧
+L000303 |  ⟦EOL⟧
+// 해설 L304: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditCopySource(object?)
+L000304 |             private void AddResultEditCopySource(object? parameter) ⟦EOL⟧
+// 해설 L305: 구문 블록 경계입니다 · 소속 AddResultEditCopySource.
+L000305 |             { ⟦EOL⟧
+// 해설 L306: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveResultEditSelection() / 지역 변수를 선언합니다: var selected = ResolveResultEditSelection(); / 변수의 초기값을 지정합니다: selected = ResolveResultEditSelection()
+L000306 |                 var selected = ResolveResultEditSelection(); ⟦EOL⟧
+// 해설 L307: 조건에 따라 분기합니다: if (selected.Count != 1)
+L000307 |                 if (selected.Count != 1) ⟦EOL⟧
+// 해설 L308: 구문 블록 경계입니다 · 소속 AddResultEditCopySource.
+L000308 |                 { ⟦EOL⟧
+// 해설 L309: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning( "Result Edit Source 확인", selected.Count == 0 ? "SOURCE로 지정할 Shot을 하나 선택해 주세요." : $"SOURCE는 하나의 Shot만 지정할 수 있습니다. 현재 {selected.Count:N0}개가 선택되었습니다.")
+L000309 |                     CRecipeConfirmDialog.ShowWarning( ⟦EOL⟧
 // 해설 L310: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditCopySource(object?)
-L000310 |                             ? "SOURCE로 지정할 Shot을 하나 선택해 주세요." ⟦EOL⟧
-// 해설 L311: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditCopySource(object?)
-L000311 |                             : $"SOURCE는 하나의 Shot만 지정할 수 있습니다. 현재 {selected.Count:N0}개가 선택되었습니다."); ⟦EOL⟧
-// 해설 L312: 호출자에게 값 또는 제어를 반환합니다: return;
-L000312 |                     return; ⟦EOL⟧
-// 해설 L313: 구문 블록 경계입니다 · 소속 AddResultEditCopySource.
-L000313 |                 } ⟦EOL⟧
-L000314 |  ⟦EOL⟧
-// 해설 L315: 값을 대상에 대입합니다: _resultEditCopySource = new ST_REVIEW_DATA_EDIT_ITEM(selected[0], 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_DATA_EDIT_ITEM(selected[0], 1)
-L000315 |                 _resultEditCopySource = new ST_REVIEW_DATA_EDIT_ITEM(selected[0], 1); ⟦EOL⟧
-// 해설 L316: 값을 대상에 대입합니다: _resultEditCopyTargets = _resultEditCopyTargets.Where(item => !item.Matches(selected[0])).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.Where(item => !item.Matches(selected[0])).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.Where(item => !item.Matches(selected[0])) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Matches(selected[0])
-L000316 |                 _resultEditCopyTargets = _resultEditCopyTargets.Where(item => !item.Matches(selected[0])).ToArray(); ⟦EOL⟧
-// 해설 L317: 값을 대상에 대입합니다: _selectedResultEditCopyTarget = _resultEditCopyTargets.FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.FirstOrDefault()
-L000317 |                 _selectedResultEditCopyTarget = _resultEditCopyTargets.FirstOrDefault(); ⟦EOL⟧
-// 해설 L318: 값을 대상에 대입합니다: _resultEditStatusText = $"SOURCE: {_resultEditCopySource.Identity}"
-L000318 |                 _resultEditStatusText = $"SOURCE: {_resultEditCopySource.Identity}"; ⟦EOL⟧
-// 해설 L319: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
-L000319 |                 NotifyResultEditState(); ⟦EOL⟧
-// 해설 L320: 구문 블록 경계입니다 · 소속 AddResultEditCopySource.
-L000320 |             } ⟦EOL⟧
-L000321 |  ⟦EOL⟧
-// 해설 L322: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditCopyTargets(object?)
-L000322 |             private void AddResultEditCopyTargets(object? parameter) ⟦EOL⟧
-// 해설 L323: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
-L000323 |             { ⟦EOL⟧
-// 해설 L324: 조건에 따라 분기합니다: if (_resultEditCopySource is null)
-L000324 |                 if (_resultEditCopySource is null) ⟦EOL⟧
+L000310 |                         "Result Edit Source 확인", ⟦EOL⟧
+// 해설 L311: 조건에 따라 결과식을 선택합니다: selected.Count == 0 ? "SOURCE로 지정할 Shot을 하나 선택해 주세요." : $"SOURCE는 하나의 Shot만 지정할 수 있습니다. 현재 {selected.Count:N0}개가 선택되었습니다."
+L000311 |                         selected.Count == 0 ⟦EOL⟧
+// 해설 L312: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditCopySource(object?)
+L000312 |                             ? "SOURCE로 지정할 Shot을 하나 선택해 주세요." ⟦EOL⟧
+// 해설 L313: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditCopySource(object?)
+L000313 |                             : $"SOURCE는 하나의 Shot만 지정할 수 있습니다. 현재 {selected.Count:N0}개가 선택되었습니다."); ⟦EOL⟧
+// 해설 L314: 호출자에게 값 또는 제어를 반환합니다: return;
+L000314 |                     return; ⟦EOL⟧
+// 해설 L315: 구문 블록 경계입니다 · 소속 AddResultEditCopySource.
+L000315 |                 } ⟦EOL⟧
+L000316 |  ⟦EOL⟧
+// 해설 L317: 값을 대상에 대입합니다: _resultEditCopySource = new ST_REVIEW_DATA_EDIT_ITEM(selected[0], 1) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_DATA_EDIT_ITEM(selected[0], 1)
+L000317 |                 _resultEditCopySource = new ST_REVIEW_DATA_EDIT_ITEM(selected[0], 1); ⟦EOL⟧
+// 해설 L318: 값을 대상에 대입합니다: _resultEditCopyTargets = _resultEditCopyTargets.Where(item => !item.Matches(selected[0])).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.Where(item => !item.Matches(selected[0])).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.Where(item => !item.Matches(selected[0])) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Matches(selected[0])
+L000318 |                 _resultEditCopyTargets = _resultEditCopyTargets.Where(item => !item.Matches(selected[0])).ToArray(); ⟦EOL⟧
+// 해설 L319: 값을 대상에 대입합니다: _selectedResultEditCopyTarget = _resultEditCopyTargets.FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.FirstOrDefault()
+L000319 |                 _selectedResultEditCopyTarget = _resultEditCopyTargets.FirstOrDefault(); ⟦EOL⟧
+// 해설 L320: 값을 대상에 대입합니다: _resultEditStatusText = $"SOURCE: {_resultEditCopySource.Identity}"
+L000320 |                 _resultEditStatusText = $"SOURCE: {_resultEditCopySource.Identity}"; ⟦EOL⟧
+// 해설 L321: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
+L000321 |                 NotifyResultEditState(); ⟦EOL⟧
+// 해설 L322: 구문 블록 경계입니다 · 소속 AddResultEditCopySource.
+L000322 |             } ⟦EOL⟧
+L000323 |  ⟦EOL⟧
+// 해설 L324: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.AddResultEditCopyTargets(object?)
+L000324 |             private void AddResultEditCopyTargets(object? parameter) ⟦EOL⟧
 // 해설 L325: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
-L000325 |                 { ⟦EOL⟧
-// 해설 L326: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("Result Edit Copy 확인", "먼저 ADD TO SOURCE로 기준 Shot을 지정해 주세요.")
-L000326 |                     CRecipeConfirmDialog.ShowWarning("Result Edit Copy 확인", "먼저 ADD TO SOURCE로 기준 Shot을 지정해 주세요."); ⟦EOL⟧
-// 해설 L327: 호출자에게 값 또는 제어를 반환합니다: return;
-L000327 |                     return; ⟦EOL⟧
-// 해설 L328: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
-L000328 |                 } ⟦EOL⟧
-L000329 |  ⟦EOL⟧
-// 해설 L330: 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.ToList() / 지역 변수를 선언합니다: var targets = _resultEditCopyTargets.ToList(); / 변수의 초기값을 지정합니다: targets = _resultEditCopyTargets.ToList()
-L000330 |                 var targets = _resultEditCopyTargets.ToList(); ⟦EOL⟧
-// 해설 L331: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveResultEditSelection() / 컬렉션 요소를 순회합니다: foreach (var row in ResolveResultEditSelection())
-L000331 |                 foreach (var row in ResolveResultEditSelection()) ⟦EOL⟧
-// 해설 L332: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
-L000332 |                 { ⟦EOL⟧
-// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopySource.Matches(row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Any(item => item.Matches(row)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Matches(row) / 조건에 따라 분기합니다: if (_resultEditCopySource.Matches(row) || targets.Any(item => item.Matches(row)))
-L000333 |                     if (_resultEditCopySource.Matches(row) || targets.Any(item => item.Matches(row))) ⟦EOL⟧
+L000325 |             { ⟦EOL⟧
+// 해설 L326: 조건에 따라 분기합니다: if (_resultEditCopySource is null)
+L000326 |                 if (_resultEditCopySource is null) ⟦EOL⟧
+// 해설 L327: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
+L000327 |                 { ⟦EOL⟧
+// 해설 L328: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("Result Edit Copy 확인", "먼저 ADD TO SOURCE로 기준 Shot을 지정해 주세요.")
+L000328 |                     CRecipeConfirmDialog.ShowWarning("Result Edit Copy 확인", "먼저 ADD TO SOURCE로 기준 Shot을 지정해 주세요."); ⟦EOL⟧
+// 해설 L329: 호출자에게 값 또는 제어를 반환합니다: return;
+L000329 |                     return; ⟦EOL⟧
+// 해설 L330: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
+L000330 |                 } ⟦EOL⟧
+L000331 |  ⟦EOL⟧
+// 해설 L332: 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.ToList() / 지역 변수를 선언합니다: var targets = _resultEditCopyTargets.ToList(); / 변수의 초기값을 지정합니다: targets = _resultEditCopyTargets.ToList()
+L000332 |                 var targets = _resultEditCopyTargets.ToList(); ⟦EOL⟧
+// 해설 L333: 함수·델리게이트 또는 객체 생성자를 호출합니다: ResolveResultEditSelection() / 컬렉션 요소를 순회합니다: foreach (var row in ResolveResultEditSelection())
+L000333 |                 foreach (var row in ResolveResultEditSelection()) ⟦EOL⟧
 // 해설 L334: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
-L000334 |                     { ⟦EOL⟧
-// 해설 L335: 다음 반복으로 진행합니다: continue;
-L000335 |                         continue; ⟦EOL⟧
+L000334 |                 { ⟦EOL⟧
+// 해설 L335: 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopySource.Matches(row) / 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Any(item => item.Matches(row)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: item.Matches(row) / 조건에 따라 분기합니다: if (_resultEditCopySource.Matches(row) || targets.Any(item => item.Matches(row)))
+L000335 |                     if (_resultEditCopySource.Matches(row) || targets.Any(item => item.Matches(row))) ⟦EOL⟧
 // 해설 L336: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
-L000336 |                     } ⟦EOL⟧
-L000337 |  ⟦EOL⟧
-// 해설 L338: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Add(new ST_REVIEW_DATA_EDIT_ITEM(row, targets.Count + 1)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_DATA_EDIT_ITEM(row, targets.Count + 1)
-L000338 |                     targets.Add(new ST_REVIEW_DATA_EDIT_ITEM(row, targets.Count + 1)); ⟦EOL⟧
-// 해설 L339: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
-L000339 |                 } ⟦EOL⟧
-L000340 |  ⟦EOL⟧
-// 해설 L341: 값을 대상에 대입합니다: _resultEditCopyTargets = Renumber(targets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Renumber(targets)
-L000341 |                 _resultEditCopyTargets = Renumber(targets); ⟦EOL⟧
-// 해설 L342: 값을 대상에 대입합니다: _selectedResultEditCopyTarget = _resultEditCopyTargets.LastOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.LastOrDefault()
-L000342 |                 _selectedResultEditCopyTarget = _resultEditCopyTargets.LastOrDefault(); ⟦EOL⟧
-// 해설 L343: 값을 대상에 대입합니다: _resultEditStatusText = $"{_resultEditCopyTargets.Count:N0} COPY TARGETS READY"
-L000343 |                 _resultEditStatusText = $"{_resultEditCopyTargets.Count:N0} COPY TARGETS READY"; ⟦EOL⟧
-// 해설 L344: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
-L000344 |                 NotifyResultEditState(); ⟦EOL⟧
-// 해설 L345: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
-L000345 |             } ⟦EOL⟧
-L000346 |  ⟦EOL⟧
-// 해설 L347: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RemoveResultEditCopyTarget(object?)
-L000347 |             private void RemoveResultEditCopyTarget(object? parameter) ⟦EOL⟧
-// 해설 L348: 구문 블록 경계입니다 · 소속 RemoveResultEditCopyTarget.
-L000348 |             { ⟦EOL⟧
-// 해설 L349: 조건에 따라 분기합니다: if (_selectedResultEditCopyTarget is null)
-L000349 |                 if (_selectedResultEditCopyTarget is null) ⟦EOL⟧
+L000336 |                     { ⟦EOL⟧
+// 해설 L337: 다음 반복으로 진행합니다: continue;
+L000337 |                         continue; ⟦EOL⟧
+// 해설 L338: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
+L000338 |                     } ⟦EOL⟧
+L000339 |  ⟦EOL⟧
+// 해설 L340: 함수·델리게이트 또는 객체 생성자를 호출합니다: targets.Add(new ST_REVIEW_DATA_EDIT_ITEM(row, targets.Count + 1)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_DATA_EDIT_ITEM(row, targets.Count + 1)
+L000340 |                     targets.Add(new ST_REVIEW_DATA_EDIT_ITEM(row, targets.Count + 1)); ⟦EOL⟧
+// 해설 L341: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
+L000341 |                 } ⟦EOL⟧
+L000342 |  ⟦EOL⟧
+// 해설 L343: 값을 대상에 대입합니다: _resultEditCopyTargets = Renumber(targets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Renumber(targets)
+L000343 |                 _resultEditCopyTargets = Renumber(targets); ⟦EOL⟧
+// 해설 L344: 값을 대상에 대입합니다: _selectedResultEditCopyTarget = _resultEditCopyTargets.LastOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.LastOrDefault()
+L000344 |                 _selectedResultEditCopyTarget = _resultEditCopyTargets.LastOrDefault(); ⟦EOL⟧
+// 해설 L345: 값을 대상에 대입합니다: _resultEditStatusText = $"{_resultEditCopyTargets.Count:N0} COPY TARGETS READY"
+L000345 |                 _resultEditStatusText = $"{_resultEditCopyTargets.Count:N0} COPY TARGETS READY"; ⟦EOL⟧
+// 해설 L346: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
+L000346 |                 NotifyResultEditState(); ⟦EOL⟧
+// 해설 L347: 구문 블록 경계입니다 · 소속 AddResultEditCopyTargets.
+L000347 |             } ⟦EOL⟧
+L000348 |  ⟦EOL⟧
+// 해설 L349: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.RemoveResultEditCopyTarget(object?)
+L000349 |             private void RemoveResultEditCopyTarget(object? parameter) ⟦EOL⟧
 // 해설 L350: 구문 블록 경계입니다 · 소속 RemoveResultEditCopyTarget.
-L000350 |                 { ⟦EOL⟧
-// 해설 L351: 호출자에게 값 또는 제어를 반환합니다: return;
-L000351 |                     return; ⟦EOL⟧
+L000350 |             { ⟦EOL⟧
+// 해설 L351: 조건에 따라 분기합니다: if (_selectedResultEditCopyTarget is null)
+L000351 |                 if (_selectedResultEditCopyTarget is null) ⟦EOL⟧
 // 해설 L352: 구문 블록 경계입니다 · 소속 RemoveResultEditCopyTarget.
-L000352 |                 } ⟦EOL⟧
-L000353 |  ⟦EOL⟧
-// 해설 L354: 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.Where(item => !ReferenceEquals(item, _selectedResultEditCopyTarget)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.Where(item => !ReferenceEquals(item, _selectedResultEditCopyTarget)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(item, _selectedResultEditCopyTarget) / 지역 변수를 선언합니다: var targets = _resultEditCopyTargets.Where(item => !ReferenceEquals(item, _selectedResultEditCopyTarget)).ToArray(); / 변수의 초기값을 지정합니다: targets = _resultEditCopyTargets.Where(item => !Reference
-L000354 |                 var targets = _resultEditCopyTargets.Where(item => !ReferenceEquals(item, _selectedResultEditCopyTarget)).ToArray(); ⟦EOL⟧
-// 해설 L355: 값을 대상에 대입합니다: _resultEditCopyTargets = Renumber(targets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Renumber(targets)
-L000355 |                 _resultEditCopyTargets = Renumber(targets); ⟦EOL⟧
-// 해설 L356: 값을 대상에 대입합니다: _selectedResultEditCopyTarget = _resultEditCopyTargets.FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.FirstOrDefault()
-L000356 |                 _selectedResultEditCopyTarget = _resultEditCopyTargets.FirstOrDefault(); ⟦EOL⟧
-// 해설 L357: 값을 대상에 대입합니다: _resultEditStatusText = "COPY TARGET REMOVED"
-L000357 |                 _resultEditStatusText = "COPY TARGET REMOVED"; ⟦EOL⟧
-// 해설 L358: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
-L000358 |                 NotifyResultEditState(); ⟦EOL⟧
-// 해설 L359: 구문 블록 경계입니다 · 소속 RemoveResultEditCopyTarget.
-L000359 |             } ⟦EOL⟧
-L000360 |  ⟦EOL⟧
-// 해설 L361: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ClearResultEditCopyTargets(object?)
-L000361 |             private void ClearResultEditCopyTargets(object? parameter) ⟦EOL⟧
-// 해설 L362: 구문 블록 경계입니다 · 소속 ClearResultEditCopyTargets.
-L000362 |             { ⟦EOL⟧
-// 해설 L363: 값을 대상에 대입합니다: _resultEditCopyTargets = []
-L000363 |                 _resultEditCopyTargets = []; ⟦EOL⟧
-// 해설 L364: 값을 대상에 대입합니다: _selectedResultEditCopyTarget = null
-L000364 |                 _selectedResultEditCopyTarget = null; ⟦EOL⟧
-// 해설 L365: 값을 대상에 대입합니다: _resultEditStatusText = "COPY TARGET LIST CLEARED"
-L000365 |                 _resultEditStatusText = "COPY TARGET LIST CLEARED"; ⟦EOL⟧
-// 해설 L366: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
-L000366 |                 NotifyResultEditState(); ⟦EOL⟧
-// 해설 L367: 구문 블록 경계입니다 · 소속 ClearResultEditCopyTargets.
-L000367 |             } ⟦EOL⟧
-L000368 |  ⟦EOL⟧
-// 해설 L369: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditXy(object?)
-L000369 |             private void CopyResultEditXy(object? parameter) ⟦EOL⟧
-// 해설 L370: 구문 블록 경계입니다 · 소속 CopyResultEditXy.
-L000370 |             { ⟦EOL⟧
-// 해설 L371: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyResultEditCopy(copyXy: true, copyJudge: false, "RESULT X/Y COPIED")
-L000371 |                 ApplyResultEditCopy(copyXy: true, copyJudge: false, "RESULT X/Y COPIED"); ⟦EOL⟧
-// 해설 L372: 구문 블록 경계입니다 · 소속 CopyResultEditXy.
-L000372 |             } ⟦EOL⟧
-L000373 |  ⟦EOL⟧
-// 해설 L374: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditJudge(object?)
-L000374 |             private void CopyResultEditJudge(object? parameter) ⟦EOL⟧
-// 해설 L375: 구문 블록 경계입니다 · 소속 CopyResultEditJudge.
-L000375 |             { ⟦EOL⟧
-// 해설 L376: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyResultEditCopy(copyXy: false, copyJudge: true, "JUDGE COPIED")
-L000376 |                 ApplyResultEditCopy(copyXy: false, copyJudge: true, "JUDGE COPIED"); ⟦EOL⟧
-// 해설 L377: 구문 블록 경계입니다 · 소속 CopyResultEditJudge.
-L000377 |             } ⟦EOL⟧
-L000378 |  ⟦EOL⟧
-// 해설 L379: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditAll(object?)
-L000379 |             private void CopyResultEditAll(object? parameter) ⟦EOL⟧
-// 해설 L380: 구문 블록 경계입니다 · 소속 CopyResultEditAll.
-L000380 |             { ⟦EOL⟧
-// 해설 L381: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyResultEditCopy(copyXy: true, copyJudge: true, "RESULT X/Y AND JUDGE COPIED")
-L000381 |                 ApplyResultEditCopy(copyXy: true, copyJudge: true, "RESULT X/Y AND JUDGE COPIED"); ⟦EOL⟧
-// 해설 L382: 구문 블록 경계입니다 · 소속 CopyResultEditAll.
-L000382 |             } ⟦EOL⟧
-L000383 |  ⟦EOL⟧
-// 해설 L384: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ApplyResultEditCopy(bool, bool, string)
-L000384 |             private void ApplyResultEditCopy(bool copyXy, bool copyJudge, string status) ⟦EOL⟧
-// 해설 L385: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
-L000385 |             { ⟦EOL⟧
-// 해설 L386: 조건에 따라 분기합니다: if (_resultEditCopySource is null)
-L000386 |                 if (_resultEditCopySource is null) ⟦EOL⟧
-// 해설 L387: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
-L000387 |                 { ⟦EOL⟧
-// 해설 L388: 호출자에게 값 또는 제어를 반환합니다: return;
-L000388 |                     return; ⟦EOL⟧
-// 해설 L389: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
-L000389 |                 } ⟦EOL⟧
+L000352 |                 { ⟦EOL⟧
+// 해설 L353: 호출자에게 값 또는 제어를 반환합니다: return;
+L000353 |                     return; ⟦EOL⟧
+// 해설 L354: 구문 블록 경계입니다 · 소속 RemoveResultEditCopyTarget.
+L000354 |                 } ⟦EOL⟧
+L000355 |  ⟦EOL⟧
+// 해설 L356: 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.Where(item => !ReferenceEquals(item, _selectedResultEditCopyTarget)).ToArray() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.Where(item => !ReferenceEquals(item, _selectedResultEditCopyTarget)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: ReferenceEquals(item, _selectedResultEditCopyTarget) / 지역 변수를 선언합니다: var targets = _resultEditCopyTargets.Where(item => !ReferenceEquals(item, _selectedResultEditCopyTarget)).ToArray(); / 변수의 초기값을 지정합니다: targets = _resultEditCopyTargets.Where(item => !Reference
+L000356 |                 var targets = _resultEditCopyTargets.Where(item => !ReferenceEquals(item, _selectedResultEditCopyTarget)).ToArray(); ⟦EOL⟧
+// 해설 L357: 값을 대상에 대입합니다: _resultEditCopyTargets = Renumber(targets) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Renumber(targets)
+L000357 |                 _resultEditCopyTargets = Renumber(targets); ⟦EOL⟧
+// 해설 L358: 값을 대상에 대입합니다: _selectedResultEditCopyTarget = _resultEditCopyTargets.FirstOrDefault() / 함수·델리게이트 또는 객체 생성자를 호출합니다: _resultEditCopyTargets.FirstOrDefault()
+L000358 |                 _selectedResultEditCopyTarget = _resultEditCopyTargets.FirstOrDefault(); ⟦EOL⟧
+// 해설 L359: 값을 대상에 대입합니다: _resultEditStatusText = "COPY TARGET REMOVED"
+L000359 |                 _resultEditStatusText = "COPY TARGET REMOVED"; ⟦EOL⟧
+// 해설 L360: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
+L000360 |                 NotifyResultEditState(); ⟦EOL⟧
+// 해설 L361: 구문 블록 경계입니다 · 소속 RemoveResultEditCopyTarget.
+L000361 |             } ⟦EOL⟧
+L000362 |  ⟦EOL⟧
+// 해설 L363: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ClearResultEditCopyTargets(object?)
+L000363 |             private void ClearResultEditCopyTargets(object? parameter) ⟦EOL⟧
+// 해설 L364: 구문 블록 경계입니다 · 소속 ClearResultEditCopyTargets.
+L000364 |             { ⟦EOL⟧
+// 해설 L365: 값을 대상에 대입합니다: _resultEditCopyTargets = []
+L000365 |                 _resultEditCopyTargets = []; ⟦EOL⟧
+// 해설 L366: 값을 대상에 대입합니다: _selectedResultEditCopyTarget = null
+L000366 |                 _selectedResultEditCopyTarget = null; ⟦EOL⟧
+// 해설 L367: 값을 대상에 대입합니다: _resultEditStatusText = "COPY TARGET LIST CLEARED"
+L000367 |                 _resultEditStatusText = "COPY TARGET LIST CLEARED"; ⟦EOL⟧
+// 해설 L368: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
+L000368 |                 NotifyResultEditState(); ⟦EOL⟧
+// 해설 L369: 구문 블록 경계입니다 · 소속 ClearResultEditCopyTargets.
+L000369 |             } ⟦EOL⟧
+L000370 |  ⟦EOL⟧
+// 해설 L371: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditX(object?)
+L000371 |             private void CopyResultEditX(object? parameter) ⟦EOL⟧
+// 해설 L372: 구문 블록 경계입니다 · 소속 CopyResultEditX.
+L000372 |             { ⟦EOL⟧
+// 해설 L373: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyResultEditCopy(copyX: true, copyY: false, copyJudge: false, "RESULT X COPIED")
+L000373 |                 ApplyResultEditCopy(copyX: true, copyY: false, copyJudge: false, "RESULT X COPIED"); ⟦EOL⟧
+// 해설 L374: 구문 블록 경계입니다 · 소속 CopyResultEditX.
+L000374 |             } ⟦EOL⟧
+L000375 |  ⟦EOL⟧
+// 해설 L376: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditY(object?)
+L000376 |             private void CopyResultEditY(object? parameter) ⟦EOL⟧
+// 해설 L377: 구문 블록 경계입니다 · 소속 CopyResultEditY.
+L000377 |             { ⟦EOL⟧
+// 해설 L378: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyResultEditCopy(copyX: false, copyY: true, copyJudge: false, "RESULT Y COPIED")
+L000378 |                 ApplyResultEditCopy(copyX: false, copyY: true, copyJudge: false, "RESULT Y COPIED"); ⟦EOL⟧
+// 해설 L379: 구문 블록 경계입니다 · 소속 CopyResultEditY.
+L000379 |             } ⟦EOL⟧
+L000380 |  ⟦EOL⟧
+// 해설 L381: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditJudge(object?)
+L000381 |             private void CopyResultEditJudge(object? parameter) ⟦EOL⟧
+// 해설 L382: 구문 블록 경계입니다 · 소속 CopyResultEditJudge.
+L000382 |             { ⟦EOL⟧
+// 해설 L383: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyResultEditCopy(copyX: false, copyY: false, copyJudge: true, "JUDGE COPIED")
+L000383 |                 ApplyResultEditCopy(copyX: false, copyY: false, copyJudge: true, "JUDGE COPIED"); ⟦EOL⟧
+// 해설 L384: 구문 블록 경계입니다 · 소속 CopyResultEditJudge.
+L000384 |             } ⟦EOL⟧
+L000385 |  ⟦EOL⟧
+// 해설 L386: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.CopyResultEditAll(object?)
+L000386 |             private void CopyResultEditAll(object? parameter) ⟦EOL⟧
+// 해설 L387: 구문 블록 경계입니다 · 소속 CopyResultEditAll.
+L000387 |             { ⟦EOL⟧
+// 해설 L388: 함수·델리게이트 또는 객체 생성자를 호출합니다: ApplyResultEditCopy(copyX: true, copyY: true, copyJudge: true, "RESULT X/Y AND JUDGE COPIED")
+L000388 |                 ApplyResultEditCopy(copyX: true, copyY: true, copyJudge: true, "RESULT X/Y AND JUDGE COPIED"); ⟦EOL⟧
+// 해설 L389: 구문 블록 경계입니다 · 소속 CopyResultEditAll.
+L000389 |             } ⟦EOL⟧
 L000390 |  ⟦EOL⟧
-// 해설 L391: 컬렉션 요소를 순회합니다: foreach (var target in _resultEditCopyTargets)
-L000391 |                 foreach (var target in _resultEditCopyTargets) ⟦EOL⟧
+// 해설 L391: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ApplyResultEditCopy(bool, bool, bool, string)
+L000391 |             private void ApplyResultEditCopy(bool copyX, bool copyY, bool copyJudge, string status) ⟦EOL⟧
 // 해설 L392: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
-L000392 |                 { ⟦EOL⟧
-// 해설 L393: 조건에 따라 분기합니다: if (copyXy)
-L000393 |                     if (copyXy) ⟦EOL⟧
+L000392 |             { ⟦EOL⟧
+// 해설 L393: 조건에 따라 분기합니다: if (_resultEditCopySource is null)
+L000393 |                 if (_resultEditCopySource is null) ⟦EOL⟧
 // 해설 L394: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
-L000394 |                     { ⟦EOL⟧
-// 해설 L395: 값을 대상에 대입합니다: target.EditedXText = _resultEditCopySource.OriginalXText
-L000395 |                         target.EditedXText = _resultEditCopySource.OriginalXText; ⟦EOL⟧
-// 해설 L396: 값을 대상에 대입합니다: target.EditedYText = _resultEditCopySource.OriginalYText
-L000396 |                         target.EditedYText = _resultEditCopySource.OriginalYText; ⟦EOL⟧
-// 해설 L397: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
-L000397 |                     } ⟦EOL⟧
-L000398 |  ⟦EOL⟧
-// 해설 L399: 조건에 따라 분기합니다: if (copyJudge)
-L000399 |                     if (copyJudge) ⟦EOL⟧
-// 해설 L400: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
-L000400 |                     { ⟦EOL⟧
-// 해설 L401: 값을 대상에 대입합니다: target.EditedJudge = _resultEditCopySource.OriginalJudge
-L000401 |                         target.EditedJudge = _resultEditCopySource.OriginalJudge; ⟦EOL⟧
-// 해설 L402: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
-L000402 |                     } ⟦EOL⟧
+L000394 |                 { ⟦EOL⟧
+// 해설 L395: 호출자에게 값 또는 제어를 반환합니다: return;
+L000395 |                     return; ⟦EOL⟧
+// 해설 L396: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
+L000396 |                 } ⟦EOL⟧
+L000397 |  ⟦EOL⟧
+// 해설 L398: 컬렉션 요소를 순회합니다: foreach (var target in _resultEditCopyTargets)
+L000398 |                 foreach (var target in _resultEditCopyTargets) ⟦EOL⟧
+// 해설 L399: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
+L000399 |                 { ⟦EOL⟧
+// 해설 L400: 조건에 따라 분기합니다: if (copyX)
+L000400 |                     if (copyX) ⟦EOL⟧
+// 해설 L401: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
+L000401 |                     { ⟦EOL⟧
+// 해설 L402: 값을 대상에 대입합니다: target.EditedXText = _resultEditCopySource.OriginalXText
+L000402 |                         target.EditedXText = _resultEditCopySource.OriginalXText; ⟦EOL⟧
 // 해설 L403: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
-L000403 |                 } ⟦EOL⟧
+L000403 |                     } ⟦EOL⟧
 L000404 |  ⟦EOL⟧
-// 해설 L405: 값을 대상에 대입합니다: _resultEditStatusText = status
-L000405 |                 _resultEditStatusText = status; ⟦EOL⟧
-// 해설 L406: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
-L000406 |                 NotifyResultEditState(); ⟦EOL⟧
-// 해설 L407: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
-L000407 |             } ⟦EOL⟧
-L000408 |  ⟦EOL⟧
-// 해설 L409: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000409 |             private async void SaveResultEdit(object? parameter) ⟦EOL⟧
-// 해설 L410: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000410 |             { ⟦EOL⟧
-// 해설 L411: 조건에 따라 분기합니다: if (!CanSaveResultEdit || _loadedResultFile is not { } source)
-L000411 |                 if (!CanSaveResultEdit || _loadedResultFile is not { } source) ⟦EOL⟧
-// 해설 L412: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000412 |                 { ⟦EOL⟧
-// 해설 L413: 호출자에게 값 또는 제어를 반환합니다: return;
-L000413 |                     return; ⟦EOL⟧
-// 해설 L414: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+// 해설 L405: 조건에 따라 분기합니다: if (copyY)
+L000405 |                     if (copyY) ⟦EOL⟧
+// 해설 L406: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
+L000406 |                     { ⟦EOL⟧
+// 해설 L407: 값을 대상에 대입합니다: target.EditedYText = _resultEditCopySource.OriginalYText
+L000407 |                         target.EditedYText = _resultEditCopySource.OriginalYText; ⟦EOL⟧
+// 해설 L408: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
+L000408 |                     } ⟦EOL⟧
+L000409 |  ⟦EOL⟧
+// 해설 L410: 조건에 따라 분기합니다: if (copyJudge)
+L000410 |                     if (copyJudge) ⟦EOL⟧
+// 해설 L411: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
+L000411 |                     { ⟦EOL⟧
+// 해설 L412: 값을 대상에 대입합니다: target.EditedJudge = _resultEditCopySource.OriginalJudge
+L000412 |                         target.EditedJudge = _resultEditCopySource.OriginalJudge; ⟦EOL⟧
+// 해설 L413: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
+L000413 |                     } ⟦EOL⟧
+// 해설 L414: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
 L000414 |                 } ⟦EOL⟧
 L000415 |  ⟦EOL⟧
-// 해설 L416: 조건에 따라 결과식을 선택합니다: IsResultEditKeyInMode ? _resultEditKeyInItems : _resultEditCopyTargets / 지역 변수를 선언합니다: var sourceItems = IsResultEditKeyInMode ? _resultEditKeyInItems : _resultEditCopyTargets; / 변수의 초기값을 지정합니다: sourceItems = IsResultEditKeyInMode ? _resultEditKeyInItems : _resultEditCopyTargets
-L000416 |                 var sourceItems = IsResultEditKeyInMode ⟦EOL⟧
-// 해설 L417: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000417 |                     ? _resultEditKeyInItems ⟦EOL⟧
-// 해설 L418: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000418 |                     : _resultEditCopyTargets; ⟦EOL⟧
-// 해설 L419: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_REVIEW_RESULT_EDIT_UPDATE>() / 지역 변수를 선언합니다: var updates = new List<ST_REVIEW_RESULT_EDIT_UPDATE>(); / 변수의 초기값을 지정합니다: updates = new List<ST_REVIEW_RESULT_EDIT_UPDATE>()
-L000419 |                 var updates = new List<ST_REVIEW_RESULT_EDIT_UPDATE>(); ⟦EOL⟧
-// 해설 L420: 컬렉션 요소를 순회합니다: foreach (var item in sourceItems)
-L000420 |                 foreach (var item in sourceItems) ⟦EOL⟧
+// 해설 L416: 값을 대상에 대입합니다: _resultEditStatusText = status
+L000416 |                 _resultEditStatusText = status; ⟦EOL⟧
+// 해설 L417: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
+L000417 |                 NotifyResultEditState(); ⟦EOL⟧
+// 해설 L418: 구문 블록 경계입니다 · 소속 ApplyResultEditCopy.
+L000418 |             } ⟦EOL⟧
+L000419 |  ⟦EOL⟧
+// 해설 L420: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000420 |             private async void SaveResultEdit(object? parameter) ⟦EOL⟧
 // 해설 L421: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000421 |                 { ⟦EOL⟧
-// 해설 L422: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseResultEditValue(item.EditedXText, out var editedX) / 조건에 따라 분기합니다: if (!TryParseResultEditValue(item.EditedXText, out var editedX) || !TryParseResultEditValue(item.EditedYText, out var editedY))
-L000422 |                     if (!TryParseResultEditValue(item.EditedXText, out var editedX) ⟦EOL⟧
-// 해설 L423: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseResultEditValue(item.EditedYText, out var editedY)
-L000423 |                         || !TryParseResultEditValue(item.EditedYText, out var editedY)) ⟦EOL⟧
-// 해설 L424: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000424 |                     { ⟦EOL⟧
-// 해설 L425: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning( "결과 수정 저장 불가", $"{item.Identity}의 EDIT X/Y는 유한한 숫자로 입력해 주세요.")
-L000425 |                         CRecipeConfirmDialog.ShowWarning( ⟦EOL⟧
-// 해설 L426: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000426 |                             "결과 수정 저장 불가", ⟦EOL⟧
-// 해설 L427: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000427 |                             $"{item.Identity}의 EDIT X/Y는 유한한 숫자로 입력해 주세요."); ⟦EOL⟧
-// 해설 L428: 호출자에게 값 또는 제어를 반환합니다: return;
-L000428 |                         return; ⟦EOL⟧
-// 해설 L429: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000429 |                     } ⟦EOL⟧
-L000430 |  ⟦EOL⟧
-// 해설 L431: 값을 대상에 대입합니다: _ = double.TryParse(item.OriginalXText, NumberStyles.Float, CultureInfo.InvariantCulture, out var displayedOriginalX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(item.OriginalXText, NumberStyles.Float, CultureInfo.InvariantCulture, out var displayedOriginalX)
-L000431 |                     _ = double.TryParse(item.OriginalXText, NumberStyles.Float, CultureInfo.InvariantCulture, out var displayedOriginalX); ⟦EOL⟧
-// 해설 L432: 값을 대상에 대입합니다: _ = double.TryParse(item.OriginalYText, NumberStyles.Float, CultureInfo.InvariantCulture, out var displayedOriginalY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(item.OriginalYText, NumberStyles.Float, CultureInfo.InvariantCulture, out var displayedOriginalY)
-L000432 |                     _ = double.TryParse(item.OriginalYText, NumberStyles.Float, CultureInfo.InvariantCulture, out var displayedOriginalY); ⟦EOL⟧
-// 해설 L433: 함수·델리게이트 또는 객체 생성자를 호출합니다: editedX.Equals(displayedOriginalX) / 지역 변수를 선언합니다: var xChanged = !editedX.Equals(displayedOriginalX); / 변수의 초기값을 지정합니다: xChanged = !editedX.Equals(displayedOriginalX)
-L000433 |                     var xChanged = !editedX.Equals(displayedOriginalX); ⟦EOL⟧
-// 해설 L434: 함수·델리게이트 또는 객체 생성자를 호출합니다: editedY.Equals(displayedOriginalY) / 지역 변수를 선언합니다: var yChanged = !editedY.Equals(displayedOriginalY); / 변수의 초기값을 지정합니다: yChanged = !editedY.Equals(displayedOriginalY)
-L000434 |                     var yChanged = !editedY.Equals(displayedOriginalY); ⟦EOL⟧
-// 해설 L435: 함수·델리게이트 또는 객체 생성자를 호출합니다: item.EditedJudge.Equals(item.OriginalJudge, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var judgeChanged = !item.EditedJudge.Equals(item.OriginalJudge, StringComparison.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: judgeChanged = !item.EditedJudge.Equals(item.OriginalJudge, StringComparison.OrdinalIgnoreCase)
-L000435 |                     var judgeChanged = !item.EditedJudge.Equals(item.OriginalJudge, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
-// 해설 L436: 조건에 따라 분기합니다: if (!xChanged && !yChanged && !judgeChanged)
-L000436 |                     if (!xChanged && !yChanged && !judgeChanged) ⟦EOL⟧
-// 해설 L437: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000437 |                     { ⟦EOL⟧
-// 해설 L438: 다음 반복으로 진행합니다: continue;
-L000438 |                         continue; ⟦EOL⟧
-// 해설 L439: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000439 |                     } ⟦EOL⟧
-L000440 |  ⟦EOL⟧
-// 해설 L441: 함수·델리게이트 또는 객체 생성자를 호출합니다: updates.Add(new ST_REVIEW_RESULT_EDIT_UPDATE( item.Source.CellNo, item.Source.ShotKey, item.Source.ShotName, item.Source.BeamNo, xChanged ? editedX : item.Source.ResultX, yChanged ? editedY : item.Source.ResultY, item.Ed… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_EDIT_UPDATE( item.Source.CellNo, item.Source.ShotKey, item.Source.ShotName, item.Source.BeamNo, xChanged ? editedX : item.Source.ResultX, yChanged ? editedY : item.Source.ResultY, item.EditedJudge)
-L000441 |                     updates.Add(new ST_REVIEW_RESULT_EDIT_UPDATE( ⟦EOL⟧
-// 해설 L442: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000442 |                         item.Source.CellNo, ⟦EOL⟧
-// 해설 L443: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000443 |                         item.Source.ShotKey, ⟦EOL⟧
-// 해설 L444: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000444 |                         item.Source.ShotName, ⟦EOL⟧
-// 해설 L445: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000445 |                         item.Source.BeamNo, ⟦EOL⟧
-// 해설 L446: 조건에 따라 결과식을 선택합니다: xChanged ? editedX : item.Source.ResultX
-L000446 |                         xChanged ? editedX : item.Source.ResultX, ⟦EOL⟧
-// 해설 L447: 조건에 따라 결과식을 선택합니다: yChanged ? editedY : item.Source.ResultY
-L000447 |                         yChanged ? editedY : item.Source.ResultY, ⟦EOL⟧
-// 해설 L448: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000448 |                         item.EditedJudge)); ⟦EOL⟧
-// 해설 L449: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000449 |                 } ⟦EOL⟧
-L000450 |  ⟦EOL⟧
-// 해설 L451: 조건에 따라 분기합니다: if (updates.Count == 0)
-L000451 |                 if (updates.Count == 0) ⟦EOL⟧
-// 해설 L452: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000452 |                 { ⟦EOL⟧
-// 해설 L453: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning( "결과 수정 저장 불가", "원본과 달라진 RESULT X/Y 또는 JUDGE가 없습니다.")
-L000453 |                     CRecipeConfirmDialog.ShowWarning( ⟦EOL⟧
+L000421 |             { ⟦EOL⟧
+// 해설 L422: 조건에 따라 분기합니다: if (!CanSaveResultEdit || _loadedResultFile is not { } source)
+L000422 |                 if (!CanSaveResultEdit || _loadedResultFile is not { } source) ⟦EOL⟧
+// 해설 L423: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000423 |                 { ⟦EOL⟧
+// 해설 L424: 호출자에게 값 또는 제어를 반환합니다: return;
+L000424 |                     return; ⟦EOL⟧
+// 해설 L425: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000425 |                 } ⟦EOL⟧
+L000426 |  ⟦EOL⟧
+// 해설 L427: 조건에 따라 결과식을 선택합니다: IsResultEditKeyInMode ? _resultEditKeyInItems : _resultEditCopyTargets / 지역 변수를 선언합니다: var sourceItems = IsResultEditKeyInMode ? _resultEditKeyInItems : _resultEditCopyTargets; / 변수의 초기값을 지정합니다: sourceItems = IsResultEditKeyInMode ? _resultEditKeyInItems : _resultEditCopyTargets
+L000427 |                 var sourceItems = IsResultEditKeyInMode ⟦EOL⟧
+// 해설 L428: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000428 |                     ? _resultEditKeyInItems ⟦EOL⟧
+// 해설 L429: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000429 |                     : _resultEditCopyTargets; ⟦EOL⟧
+// 해설 L430: 함수·델리게이트 또는 객체 생성자를 호출합니다: new List<ST_REVIEW_RESULT_EDIT_UPDATE>() / 지역 변수를 선언합니다: var updates = new List<ST_REVIEW_RESULT_EDIT_UPDATE>(); / 변수의 초기값을 지정합니다: updates = new List<ST_REVIEW_RESULT_EDIT_UPDATE>()
+L000430 |                 var updates = new List<ST_REVIEW_RESULT_EDIT_UPDATE>(); ⟦EOL⟧
+// 해설 L431: 컬렉션 요소를 순회합니다: foreach (var item in sourceItems)
+L000431 |                 foreach (var item in sourceItems) ⟦EOL⟧
+// 해설 L432: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000432 |                 { ⟦EOL⟧
+// 해설 L433: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseResultEditValue(item.EditedXText, out var editedX) / 조건에 따라 분기합니다: if (!TryParseResultEditValue(item.EditedXText, out var editedX) || !TryParseResultEditValue(item.EditedYText, out var editedY))
+L000433 |                     if (!TryParseResultEditValue(item.EditedXText, out var editedX) ⟦EOL⟧
+// 해설 L434: 함수·델리게이트 또는 객체 생성자를 호출합니다: TryParseResultEditValue(item.EditedYText, out var editedY)
+L000434 |                         || !TryParseResultEditValue(item.EditedYText, out var editedY)) ⟦EOL⟧
+// 해설 L435: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000435 |                     { ⟦EOL⟧
+// 해설 L436: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning( "결과 수정 저장 불가", $"{item.Identity}의 EDIT X/Y는 유한한 숫자로 입력해 주세요.")
+L000436 |                         CRecipeConfirmDialog.ShowWarning( ⟦EOL⟧
+// 해설 L437: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000437 |                             "결과 수정 저장 불가", ⟦EOL⟧
+// 해설 L438: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000438 |                             $"{item.Identity}의 EDIT X/Y는 유한한 숫자로 입력해 주세요."); ⟦EOL⟧
+// 해설 L439: 호출자에게 값 또는 제어를 반환합니다: return;
+L000439 |                         return; ⟦EOL⟧
+// 해설 L440: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000440 |                     } ⟦EOL⟧
+L000441 |  ⟦EOL⟧
+// 해설 L442: 값을 대상에 대입합니다: _ = double.TryParse(item.OriginalXText, NumberStyles.Float, CultureInfo.InvariantCulture, out var displayedOriginalX) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(item.OriginalXText, NumberStyles.Float, CultureInfo.InvariantCulture, out var displayedOriginalX)
+L000442 |                     _ = double.TryParse(item.OriginalXText, NumberStyles.Float, CultureInfo.InvariantCulture, out var displayedOriginalX); ⟦EOL⟧
+// 해설 L443: 값을 대상에 대입합니다: _ = double.TryParse(item.OriginalYText, NumberStyles.Float, CultureInfo.InvariantCulture, out var displayedOriginalY) / 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(item.OriginalYText, NumberStyles.Float, CultureInfo.InvariantCulture, out var displayedOriginalY)
+L000443 |                     _ = double.TryParse(item.OriginalYText, NumberStyles.Float, CultureInfo.InvariantCulture, out var displayedOriginalY); ⟦EOL⟧
+// 해설 L444: 함수·델리게이트 또는 객체 생성자를 호출합니다: editedX.Equals(displayedOriginalX) / 지역 변수를 선언합니다: var xChanged = !editedX.Equals(displayedOriginalX); / 변수의 초기값을 지정합니다: xChanged = !editedX.Equals(displayedOriginalX)
+L000444 |                     var xChanged = !editedX.Equals(displayedOriginalX); ⟦EOL⟧
+// 해설 L445: 함수·델리게이트 또는 객체 생성자를 호출합니다: editedY.Equals(displayedOriginalY) / 지역 변수를 선언합니다: var yChanged = !editedY.Equals(displayedOriginalY); / 변수의 초기값을 지정합니다: yChanged = !editedY.Equals(displayedOriginalY)
+L000445 |                     var yChanged = !editedY.Equals(displayedOriginalY); ⟦EOL⟧
+// 해설 L446: 함수·델리게이트 또는 객체 생성자를 호출합니다: item.EditedJudge.Equals(item.OriginalJudge, StringComparison.OrdinalIgnoreCase) / 지역 변수를 선언합니다: var judgeChanged = !item.EditedJudge.Equals(item.OriginalJudge, StringComparison.OrdinalIgnoreCase); / 변수의 초기값을 지정합니다: judgeChanged = !item.EditedJudge.Equals(item.OriginalJudge, StringComparison.OrdinalIgnoreCase)
+L000446 |                     var judgeChanged = !item.EditedJudge.Equals(item.OriginalJudge, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L447: 조건에 따라 분기합니다: if (!xChanged && !yChanged && !judgeChanged)
+L000447 |                     if (!xChanged && !yChanged && !judgeChanged) ⟦EOL⟧
+// 해설 L448: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000448 |                     { ⟦EOL⟧
+// 해설 L449: 다음 반복으로 진행합니다: continue;
+L000449 |                         continue; ⟦EOL⟧
+// 해설 L450: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000450 |                     } ⟦EOL⟧
+L000451 |  ⟦EOL⟧
+// 해설 L452: 함수·델리게이트 또는 객체 생성자를 호출합니다: updates.Add(new ST_REVIEW_RESULT_EDIT_UPDATE( item.Source.CellNo, item.Source.ShotKey, item.Source.ShotName, item.Source.BeamNo, xChanged ? editedX : item.Source.ResultX, yChanged ? editedY : item.Source.ResultY, item.Ed… / 함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_REVIEW_RESULT_EDIT_UPDATE( item.Source.CellNo, item.Source.ShotKey, item.Source.ShotName, item.Source.BeamNo, xChanged ? editedX : item.Source.ResultX, yChanged ? editedY : item.Source.ResultY, item.EditedJudge)
+L000452 |                     updates.Add(new ST_REVIEW_RESULT_EDIT_UPDATE( ⟦EOL⟧
+// 해설 L453: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000453 |                         item.Source.CellNo, ⟦EOL⟧
 // 해설 L454: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000454 |                         "결과 수정 저장 불가", ⟦EOL⟧
+L000454 |                         item.Source.ShotKey, ⟦EOL⟧
 // 해설 L455: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000455 |                         "원본과 달라진 RESULT X/Y 또는 JUDGE가 없습니다."); ⟦EOL⟧
-// 해설 L456: 호출자에게 값 또는 제어를 반환합니다: return;
-L000456 |                     return; ⟦EOL⟧
-// 해설 L457: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000457 |                 } ⟦EOL⟧
-L000458 |  ⟦EOL⟧
-// 해설 L459: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation( "결과 수정 저장", $"BASE 결과: {source.FileName}\n" + $"수정 Shot: {updates.Count:N0}개\n\n" + "수정 결과를 새 파일로 저장하시겠습니까?", "저장") / 조건에 따라 분기합니다: if (!CRecipeConfirmDialog.ShowConfirmation( "결과 수정 저장", $"BASE 결과: {source.FileName}\n" + $"수정 Shot: {updates.Count:N0}개\n\n" + "수정 결과를 새 파일로 저장하시겠습니까?", "저장"))
-L000459 |                 if (!CRecipeConfirmDialog.ShowConfirmation( ⟦EOL⟧
-// 해설 L460: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000460 |                         "결과 수정 저장", ⟦EOL⟧
-// 해설 L461: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000461 |                         $"BASE 결과: {source.FileName}\n" ⟦EOL⟧
-// 해설 L462: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000462 |                         + $"수정 Shot: {updates.Count:N0}개\n\n" ⟦EOL⟧
-// 해설 L463: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000463 |                         + "수정 결과를 새 파일로 저장하시겠습니까?", ⟦EOL⟧
-// 해설 L464: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000464 |                         "저장")) ⟦EOL⟧
-// 해설 L465: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000465 |                 { ⟦EOL⟧
-// 해설 L466: 호출자에게 값 또는 제어를 반환합니다: return;
-L000466 |                     return; ⟦EOL⟧
-// 해설 L467: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000467 |                 } ⟦EOL⟧
-L000468 |  ⟦EOL⟧
-// 해설 L469: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetResultEditSaving(true)
-L000469 |                 SetResultEditSaving(true); ⟦EOL⟧
-// 해설 L470: 값을 대상에 대입합니다: _resultEditStatusText = $"RESULT SAVE - {updates.Count:N0} SHOTS"
-L000470 |                 _resultEditStatusText = $"RESULT SAVE - {updates.Count:N0} SHOTS"; ⟦EOL⟧
-// 해설 L471: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditStatusText)
-L000471 |                 Notify(nameof(ResultEditStatusText)); ⟦EOL⟧
-// 해설 L472: 지역 변수를 선언합니다: string? savedPath = null; / 변수의 초기값을 지정합니다: savedPath = null
-L000472 |                 string? savedPath = null; ⟦EOL⟧
-// 해설 L473: 예외 처리 범위입니다: try
-L000473 |                 try ⟦EOL⟧
-// 해설 L474: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000474 |                 { ⟦EOL⟧
-// 해설 L475: 값을 대상에 대입합니다: savedPath = await Task.Run( async () => await _reviewResultFile.SaveEditedRevision( source, updates, DateTimeOffset.Now, CancellationToken.None).ConfigureAwait(false)) / 비동기 완료를 기다립니다: await Task.Run( async () => await _reviewResultFile.SaveEditedRevision( source, updates, DateTimeOffset.Now, CancellationToken.None).ConfigureAwait(false)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run( async () => await _reviewResultFile.SaveEditedRevision( source, updates, DateTimeOffset.Now, CancellationToken.None).ConfigureAwait(false))
-L000475 |                     savedPath = await Task.Run( ⟦EOL⟧
-// 해설 L476: 비동기 완료를 기다립니다: await _reviewResultFile.SaveEditedRevision( source, updates, DateTimeOffset.Now, CancellationToken.None).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewResultFile.SaveEditedRevision( source, updates, DateTimeOffset.Now, CancellationToken.None).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewResultFile.SaveEditedRevision( source, updates, DateTimeOffset.Now, CancellationToken.None)
-L000476 |                         async () => await _reviewResultFile.SaveEditedRevision( ⟦EOL⟧
-// 해설 L477: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000477 |                             source, ⟦EOL⟧
-// 해설 L478: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000478 |                             updates, ⟦EOL⟧
-// 해설 L479: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000479 |                             DateTimeOffset.Now, ⟦EOL⟧
-// 해설 L480: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000480 |                             CancellationToken.None).ConfigureAwait(false)); ⟦EOL⟧
-// 해설 L481: 값을 대상에 대입합니다: _resultEditStatusText = $"RESULT SAVE COMPLETED - {Path.GetFileName(savedPath)}" / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(savedPath)
-L000481 |                     _resultEditStatusText = $"RESULT SAVE COMPLETED - {Path.GetFileName(savedPath)}"; ⟦EOL⟧
-// 해설 L482: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter($"Edited review result saved: {savedPath}")
-L000482 |                     _statusReporter($"Edited review result saved: {savedPath}"); ⟦EOL⟧
-// 해설 L483: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000483 |                 } ⟦EOL⟧
-// 해설 L484: 지정 예외를 처리합니다: catch (Exception exception)
-L000484 |                 catch (Exception exception) ⟦EOL⟧
+L000455 |                         item.Source.ShotName, ⟦EOL⟧
+// 해설 L456: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000456 |                         item.Source.BeamNo, ⟦EOL⟧
+// 해설 L457: 조건에 따라 결과식을 선택합니다: xChanged ? editedX : item.Source.ResultX
+L000457 |                         xChanged ? editedX : item.Source.ResultX, ⟦EOL⟧
+// 해설 L458: 조건에 따라 결과식을 선택합니다: yChanged ? editedY : item.Source.ResultY
+L000458 |                         yChanged ? editedY : item.Source.ResultY, ⟦EOL⟧
+// 해설 L459: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000459 |                         item.EditedJudge)); ⟦EOL⟧
+// 해설 L460: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000460 |                 } ⟦EOL⟧
+L000461 |  ⟦EOL⟧
+// 해설 L462: 조건에 따라 분기합니다: if (updates.Count == 0)
+L000462 |                 if (updates.Count == 0) ⟦EOL⟧
+// 해설 L463: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000463 |                 { ⟦EOL⟧
+// 해설 L464: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning( "결과 수정 저장 불가", "원본과 달라진 RESULT X/Y 또는 JUDGE가 없습니다.")
+L000464 |                     CRecipeConfirmDialog.ShowWarning( ⟦EOL⟧
+// 해설 L465: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000465 |                         "결과 수정 저장 불가", ⟦EOL⟧
+// 해설 L466: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000466 |                         "원본과 달라진 RESULT X/Y 또는 JUDGE가 없습니다."); ⟦EOL⟧
+// 해설 L467: 호출자에게 값 또는 제어를 반환합니다: return;
+L000467 |                     return; ⟦EOL⟧
+// 해설 L468: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000468 |                 } ⟦EOL⟧
+L000469 |  ⟦EOL⟧
+// 해설 L470: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowConfirmation( "결과 수정 저장", $"BASE 결과: {source.FileName}\n" + $"수정 Shot: {updates.Count:N0}개\n\n" + "수정 결과를 새 파일로 저장하시겠습니까?", "저장") / 조건에 따라 분기합니다: if (!CRecipeConfirmDialog.ShowConfirmation( "결과 수정 저장", $"BASE 결과: {source.FileName}\n" + $"수정 Shot: {updates.Count:N0}개\n\n" + "수정 결과를 새 파일로 저장하시겠습니까?", "저장"))
+L000470 |                 if (!CRecipeConfirmDialog.ShowConfirmation( ⟦EOL⟧
+// 해설 L471: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000471 |                         "결과 수정 저장", ⟦EOL⟧
+// 해설 L472: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000472 |                         $"BASE 결과: {source.FileName}\n" ⟦EOL⟧
+// 해설 L473: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000473 |                         + $"수정 Shot: {updates.Count:N0}개\n\n" ⟦EOL⟧
+// 해설 L474: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000474 |                         + "수정 결과를 새 파일로 저장하시겠습니까?", ⟦EOL⟧
+// 해설 L475: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000475 |                         "저장")) ⟦EOL⟧
+// 해설 L476: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000476 |                 { ⟦EOL⟧
+// 해설 L477: 호출자에게 값 또는 제어를 반환합니다: return;
+L000477 |                     return; ⟦EOL⟧
+// 해설 L478: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000478 |                 } ⟦EOL⟧
+L000479 |  ⟦EOL⟧
+// 해설 L480: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetResultEditSaving(true)
+L000480 |                 SetResultEditSaving(true); ⟦EOL⟧
+// 해설 L481: 값을 대상에 대입합니다: _resultEditStatusText = $"RESULT SAVE - {updates.Count:N0} SHOTS"
+L000481 |                 _resultEditStatusText = $"RESULT SAVE - {updates.Count:N0} SHOTS"; ⟦EOL⟧
+// 해설 L482: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditStatusText)
+L000482 |                 Notify(nameof(ResultEditStatusText)); ⟦EOL⟧
+// 해설 L483: 지역 변수를 선언합니다: string? savedPath = null; / 변수의 초기값을 지정합니다: savedPath = null
+L000483 |                 string? savedPath = null; ⟦EOL⟧
+// 해설 L484: 예외 처리 범위입니다: try
+L000484 |                 try ⟦EOL⟧
 // 해설 L485: 구문 블록 경계입니다 · 소속 SaveResultEdit.
 L000485 |                 { ⟦EOL⟧
-// 해설 L486: 값을 대상에 대입합니다: _resultEditStatusText = $"RESULT SAVE FAILED - {exception.Message}"
-L000486 |                     _resultEditStatusText = $"RESULT SAVE FAILED - {exception.Message}"; ⟦EOL⟧
-// 해설 L487: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter(_resultEditStatusText)
-L000487 |                     _statusReporter(_resultEditStatusText); ⟦EOL⟧
-// 해설 L488: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("결과 수정 저장 실패", exception.Message)
-L000488 |                     CRecipeConfirmDialog.ShowWarning("결과 수정 저장 실패", exception.Message); ⟦EOL⟧
-// 해설 L489: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000489 |                 } ⟦EOL⟧
-// 해설 L490: 종료 정리 구간입니다: finally
-L000490 |                 finally ⟦EOL⟧
-// 해설 L491: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000491 |                 { ⟦EOL⟧
-// 해설 L492: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetResultEditSaving(false)
-L000492 |                     SetResultEditSaving(false); ⟦EOL⟧
-// 해설 L493: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditStatusText)
-L000493 |                     Notify(nameof(ResultEditStatusText)); ⟦EOL⟧
+// 해설 L486: 값을 대상에 대입합니다: savedPath = await Task.Run( async () => await _reviewResultFile.SaveEditedRevision( source, updates, DateTimeOffset.Now, CancellationToken.None).ConfigureAwait(false)) / 비동기 완료를 기다립니다: await Task.Run( async () => await _reviewResultFile.SaveEditedRevision( source, updates, DateTimeOffset.Now, CancellationToken.None).ConfigureAwait(false)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Task.Run( async () => await _reviewResultFile.SaveEditedRevision( source, updates, DateTimeOffset.Now, CancellationToken.None).ConfigureAwait(false))
+L000486 |                     savedPath = await Task.Run( ⟦EOL⟧
+// 해설 L487: 비동기 완료를 기다립니다: await _reviewResultFile.SaveEditedRevision( source, updates, DateTimeOffset.Now, CancellationToken.None).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewResultFile.SaveEditedRevision( source, updates, DateTimeOffset.Now, CancellationToken.None).ConfigureAwait(false) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _reviewResultFile.SaveEditedRevision( source, updates, DateTimeOffset.Now, CancellationToken.None)
+L000487 |                         async () => await _reviewResultFile.SaveEditedRevision( ⟦EOL⟧
+// 해설 L488: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000488 |                             source, ⟦EOL⟧
+// 해설 L489: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000489 |                             updates, ⟦EOL⟧
+// 해설 L490: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000490 |                             DateTimeOffset.Now, ⟦EOL⟧
+// 해설 L491: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000491 |                             CancellationToken.None).ConfigureAwait(false)); ⟦EOL⟧
+// 해설 L492: 값을 대상에 대입합니다: _resultEditStatusText = $"RESULT SAVE COMPLETED - {Path.GetFileName(savedPath)}" / 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(savedPath)
+L000492 |                     _resultEditStatusText = $"RESULT SAVE COMPLETED - {Path.GetFileName(savedPath)}"; ⟦EOL⟧
+// 해설 L493: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter($"Edited review result saved: {savedPath}")
+L000493 |                     _statusReporter($"Edited review result saved: {savedPath}"); ⟦EOL⟧
 // 해설 L494: 구문 블록 경계입니다 · 소속 SaveResultEdit.
 L000494 |                 } ⟦EOL⟧
-L000495 |  ⟦EOL⟧
-// 해설 L496: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(savedPath) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(savedPath) || !CRecipeConfirmDialog.ShowSavedResultLoadConfirmation( "결과 수정 저장 완료", $"저장이 완료되었습니다.\n\n{Path.GetFileName(savedPath)}\n\n새로 저장한 결과를 LOAD하시겠습니까?"))
-L000496 |                 if (string.IsNullOrWhiteSpace(savedPath) ⟦EOL⟧
-// 해설 L497: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowSavedResultLoadConfirmation( "결과 수정 저장 완료", $"저장이 완료되었습니다.\n\n{Path.GetFileName(savedPath)}\n\n새로 저장한 결과를 LOAD하시겠습니까?")
-L000497 |                     || !CRecipeConfirmDialog.ShowSavedResultLoadConfirmation( ⟦EOL⟧
-// 해설 L498: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000498 |                         "결과 수정 저장 완료", ⟦EOL⟧
-// 해설 L499: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(savedPath)
-L000499 |                         $"저장이 완료되었습니다.\n\n{Path.GetFileName(savedPath)}\n\n새로 저장한 결과를 LOAD하시겠습니까?")) ⟦EOL⟧
+// 해설 L495: 지정 예외를 처리합니다: catch (Exception exception)
+L000495 |                 catch (Exception exception) ⟦EOL⟧
+// 해설 L496: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000496 |                 { ⟦EOL⟧
+// 해설 L497: 값을 대상에 대입합니다: _resultEditStatusText = $"RESULT SAVE FAILED - {exception.Message}"
+L000497 |                     _resultEditStatusText = $"RESULT SAVE FAILED - {exception.Message}"; ⟦EOL⟧
+// 해설 L498: 함수·델리게이트 또는 객체 생성자를 호출합니다: _statusReporter(_resultEditStatusText)
+L000498 |                     _statusReporter(_resultEditStatusText); ⟦EOL⟧
+// 해설 L499: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning("결과 수정 저장 실패", exception.Message)
+L000499 |                     CRecipeConfirmDialog.ShowWarning("결과 수정 저장 실패", exception.Message); ⟦EOL⟧
 // 해설 L500: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000500 |                 { ⟦EOL⟧
-// 해설 L501: 호출자에게 값 또는 제어를 반환합니다: return;
-L000501 |                     return; ⟦EOL⟧
+L000500 |                 } ⟦EOL⟧
+// 해설 L501: 종료 정리 구간입니다: finally
+L000501 |                 finally ⟦EOL⟧
 // 해설 L502: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000502 |                 } ⟦EOL⟧
-L000503 |  ⟦EOL⟧
-// 해설 L504: 비동기 완료를 기다립니다: await Refresh(CancellationToken.None, savedPath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh(CancellationToken.None, savedPath)
-L000504 |                 await Refresh(CancellationToken.None, savedPath); ⟦EOL⟧
-// 해설 L505: 조건에 따라 분기합니다: if (_selectedNode?.Result is not { } savedResult || !savedResult.FilePath.Equals(savedPath, StringComparison.OrdinalIgnoreCase))
-L000505 |                 if (_selectedNode?.Result is not { } savedResult ⟦EOL⟧
-// 해설 L506: 함수·델리게이트 또는 객체 생성자를 호출합니다: savedResult.FilePath.Equals(savedPath, StringComparison.OrdinalIgnoreCase)
-L000506 |                     || !savedResult.FilePath.Equals(savedPath, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
-// 해설 L507: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000507 |                 { ⟦EOL⟧
-// 해설 L508: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning( "수정 결과 LOAD 실패", "저장된 파일을 결과 트리에서 찾지 못했습니다. REFRESH 후 파일을 직접 선택해 주세요.")
-L000508 |                     CRecipeConfirmDialog.ShowWarning( ⟦EOL⟧
+L000502 |                 { ⟦EOL⟧
+// 해설 L503: 함수·델리게이트 또는 객체 생성자를 호출합니다: SetResultEditSaving(false)
+L000503 |                     SetResultEditSaving(false); ⟦EOL⟧
+// 해설 L504: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditStatusText)
+L000504 |                     Notify(nameof(ResultEditStatusText)); ⟦EOL⟧
+// 해설 L505: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000505 |                 } ⟦EOL⟧
+L000506 |  ⟦EOL⟧
+// 해설 L507: 함수·델리게이트 또는 객체 생성자를 호출합니다: string.IsNullOrWhiteSpace(savedPath) / 조건에 따라 분기합니다: if (string.IsNullOrWhiteSpace(savedPath) || !CRecipeConfirmDialog.ShowSavedResultLoadConfirmation( "결과 수정 저장 완료", $"저장이 완료되었습니다.\n\n{Path.GetFileName(savedPath)}\n\n새로 저장한 결과를 LOAD하시겠습니까?"))
+L000507 |                 if (string.IsNullOrWhiteSpace(savedPath) ⟦EOL⟧
+// 해설 L508: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowSavedResultLoadConfirmation( "결과 수정 저장 완료", $"저장이 완료되었습니다.\n\n{Path.GetFileName(savedPath)}\n\n새로 저장한 결과를 LOAD하시겠습니까?")
+L000508 |                     || !CRecipeConfirmDialog.ShowSavedResultLoadConfirmation( ⟦EOL⟧
 // 해설 L509: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000509 |                         "수정 결과 LOAD 실패", ⟦EOL⟧
-// 해설 L510: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
-L000510 |                         "저장된 파일을 결과 트리에서 찾지 못했습니다. REFRESH 후 파일을 직접 선택해 주세요."); ⟦EOL⟧
-// 해설 L511: 호출자에게 값 또는 제어를 반환합니다: return;
-L000511 |                     return; ⟦EOL⟧
-// 해설 L512: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000512 |                 } ⟦EOL⟧
-L000513 |  ⟦EOL⟧
-// 해설 L514: 비동기 완료를 기다립니다: await LoadSelectedData() / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadSelectedData()
-L000514 |                 await LoadSelectedData(); ⟦EOL⟧
-// 해설 L515: 구문 블록 경계입니다 · 소속 SaveResultEdit.
-L000515 |             } ⟦EOL⟧
-L000516 |  ⟦EOL⟧
-// 해설 L517: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.TryParseResultEditValue(string?, out double)
-L000517 |             private static bool TryParseResultEditValue(string? text, out double value) ⟦EOL⟧
-// 해설 L518: 구문 블록 경계입니다 · 소속 TryParseResultEditValue.
-L000518 |             { ⟦EOL⟧
-// 해설 L519: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) && double.IsFinite(value);
-L000519 |                 return double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) ⟦EOL⟧
-// 해설 L520: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)
-L000520 |                     && double.IsFinite(value); ⟦EOL⟧
-// 해설 L521: 구문 블록 경계입니다 · 소속 TryParseResultEditValue.
-L000521 |             } ⟦EOL⟧
-L000522 |  ⟦EOL⟧
-// 해설 L523: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetResultEditSaving(bool)
-L000523 |             private void SetResultEditSaving(bool value) ⟦EOL⟧
-// 해설 L524: 구문 블록 경계입니다 · 소속 SetResultEditSaving.
-L000524 |             { ⟦EOL⟧
-// 해설 L525: 조건에 따라 분기합니다: if (_isResultEditSaving == value)
-L000525 |                 if (_isResultEditSaving == value) ⟦EOL⟧
-// 해설 L526: 구문 블록 경계입니다 · 소속 SetResultEditSaving.
-L000526 |                 { ⟦EOL⟧
-// 해설 L527: 호출자에게 값 또는 제어를 반환합니다: return;
-L000527 |                     return; ⟦EOL⟧
-// 해설 L528: 구문 블록 경계입니다 · 소속 SetResultEditSaving.
-L000528 |                 } ⟦EOL⟧
-L000529 |  ⟦EOL⟧
-// 해설 L530: 값을 대상에 대입합니다: _isResultEditSaving = value
-L000530 |                 _isResultEditSaving = value; ⟦EOL⟧
-// 해설 L531: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsResultEditSaving)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsResultEditSaving)
-L000531 |                 Notify(nameof(IsResultEditSaving)); ⟦EOL⟧
-// 해설 L532: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditCommandState()
-L000532 |                 NotifyResultEditCommandState(); ⟦EOL⟧
-// 해설 L533: 구문 블록 경계입니다 · 소속 SetResultEditSaving.
-L000533 |             } ⟦EOL⟧
-L000534 |  ⟦EOL⟧
-// 해설 L535: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Renumber(System.Collections.Generic.IEnumerable<
-L000535 |             private static IReadOnlyList<ST_REVIEW_DATA_EDIT_ITEM> Renumber(IEnumerable<ST_REVIEW_DATA_EDIT_ITEM> source) ⟦EOL⟧
-// 해설 L536: 구문 블록 경계입니다 · 소속 Renumber.
-L000536 |             { ⟦EOL⟧
-// 해설 L537: 함수·델리게이트 또는 객체 생성자를 호출합니다: source.ToArray() / 지역 변수를 선언합니다: var items = source.ToArray(); / 변수의 초기값을 지정합니다: items = source.ToArray()
-L000537 |                 var items = source.ToArray(); ⟦EOL⟧
-// 해설 L538: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < items.Length; index++) / 변수의 초기값을 지정합니다: index = 0
-L000538 |                 for (var index = 0; index < items.Length; index++) ⟦EOL⟧
-// 해설 L539: 구문 블록 경계입니다 · 소속 Renumber.
-L000539 |                 { ⟦EOL⟧
-// 해설 L540: 값을 대상에 대입합니다: items[index].No = index + 1
-L000540 |                     items[index].No = index + 1; ⟦EOL⟧
-// 해설 L541: 구문 블록 경계입니다 · 소속 Renumber.
-L000541 |                 } ⟦EOL⟧
-L000542 |  ⟦EOL⟧
-// 해설 L543: 호출자에게 값 또는 제어를 반환합니다: return items;
-L000543 |                 return items; ⟦EOL⟧
-// 해설 L544: 구문 블록 경계입니다 · 소속 Renumber.
+L000509 |                         "결과 수정 저장 완료", ⟦EOL⟧
+// 해설 L510: 함수·델리게이트 또는 객체 생성자를 호출합니다: Path.GetFileName(savedPath)
+L000510 |                         $"저장이 완료되었습니다.\n\n{Path.GetFileName(savedPath)}\n\n새로 저장한 결과를 LOAD하시겠습니까?")) ⟦EOL⟧
+// 해설 L511: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000511 |                 { ⟦EOL⟧
+// 해설 L512: 호출자에게 값 또는 제어를 반환합니다: return;
+L000512 |                     return; ⟦EOL⟧
+// 해설 L513: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000513 |                 } ⟦EOL⟧
+L000514 |  ⟦EOL⟧
+// 해설 L515: 비동기 완료를 기다립니다: await Refresh(CancellationToken.None, savedPath) / 함수·델리게이트 또는 객체 생성자를 호출합니다: Refresh(CancellationToken.None, savedPath)
+L000515 |                 await Refresh(CancellationToken.None, savedPath); ⟦EOL⟧
+// 해설 L516: 조건에 따라 분기합니다: if (_selectedNode?.Result is not { } savedResult || !savedResult.FilePath.Equals(savedPath, StringComparison.OrdinalIgnoreCase))
+L000516 |                 if (_selectedNode?.Result is not { } savedResult ⟦EOL⟧
+// 해설 L517: 함수·델리게이트 또는 객체 생성자를 호출합니다: savedResult.FilePath.Equals(savedPath, StringComparison.OrdinalIgnoreCase)
+L000517 |                     || !savedResult.FilePath.Equals(savedPath, StringComparison.OrdinalIgnoreCase)) ⟦EOL⟧
+// 해설 L518: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000518 |                 { ⟦EOL⟧
+// 해설 L519: 함수·델리게이트 또는 객체 생성자를 호출합니다: CRecipeConfirmDialog.ShowWarning( "수정 결과 LOAD 실패", "저장된 파일을 결과 트리에서 찾지 못했습니다. REFRESH 후 파일을 직접 선택해 주세요.")
+L000519 |                     CRecipeConfirmDialog.ShowWarning( ⟦EOL⟧
+// 해설 L520: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000520 |                         "수정 결과 LOAD 실패", ⟦EOL⟧
+// 해설 L521: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SaveResultEdit(object?)
+L000521 |                         "저장된 파일을 결과 트리에서 찾지 못했습니다. REFRESH 후 파일을 직접 선택해 주세요."); ⟦EOL⟧
+// 해설 L522: 호출자에게 값 또는 제어를 반환합니다: return;
+L000522 |                     return; ⟦EOL⟧
+// 해설 L523: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000523 |                 } ⟦EOL⟧
+L000524 |  ⟦EOL⟧
+// 해설 L525: 비동기 완료를 기다립니다: await LoadSelectedData() / 함수·델리게이트 또는 객체 생성자를 호출합니다: LoadSelectedData()
+L000525 |                 await LoadSelectedData(); ⟦EOL⟧
+// 해설 L526: 구문 블록 경계입니다 · 소속 SaveResultEdit.
+L000526 |             } ⟦EOL⟧
+L000527 |  ⟦EOL⟧
+// 해설 L528: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.TryParseResultEditValue(string?, out double)
+L000528 |             private static bool TryParseResultEditValue(string? text, out double value) ⟦EOL⟧
+// 해설 L529: 구문 블록 경계입니다 · 소속 TryParseResultEditValue.
+L000529 |             { ⟦EOL⟧
+// 해설 L530: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) / 호출자에게 값 또는 제어를 반환합니다: return double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) && double.IsFinite(value);
+L000530 |                 return double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out value) ⟦EOL⟧
+// 해설 L531: 함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)
+L000531 |                     && double.IsFinite(value); ⟦EOL⟧
+// 해설 L532: 구문 블록 경계입니다 · 소속 TryParseResultEditValue.
+L000532 |             } ⟦EOL⟧
+L000533 |  ⟦EOL⟧
+// 해설 L534: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.SetResultEditSaving(bool)
+L000534 |             private void SetResultEditSaving(bool value) ⟦EOL⟧
+// 해설 L535: 구문 블록 경계입니다 · 소속 SetResultEditSaving.
+L000535 |             { ⟦EOL⟧
+// 해설 L536: 조건에 따라 분기합니다: if (_isResultEditSaving == value)
+L000536 |                 if (_isResultEditSaving == value) ⟦EOL⟧
+// 해설 L537: 구문 블록 경계입니다 · 소속 SetResultEditSaving.
+L000537 |                 { ⟦EOL⟧
+// 해설 L538: 호출자에게 값 또는 제어를 반환합니다: return;
+L000538 |                     return; ⟦EOL⟧
+// 해설 L539: 구문 블록 경계입니다 · 소속 SetResultEditSaving.
+L000539 |                 } ⟦EOL⟧
+L000540 |  ⟦EOL⟧
+// 해설 L541: 값을 대상에 대입합니다: _isResultEditSaving = value
+L000541 |                 _isResultEditSaving = value; ⟦EOL⟧
+// 해설 L542: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsResultEditSaving)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsResultEditSaving)
+L000542 |                 Notify(nameof(IsResultEditSaving)); ⟦EOL⟧
+// 해설 L543: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditCommandState()
+L000543 |                 NotifyResultEditCommandState(); ⟦EOL⟧
+// 해설 L544: 구문 블록 경계입니다 · 소속 SetResultEditSaving.
 L000544 |             } ⟦EOL⟧
 L000545 |  ⟦EOL⟧
-// 해설 L546: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlySet<string> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.GetResultEditSelectedShotKeys(int)
-L000546 |             private IReadOnlySet<string> GetResultEditSelectedShotKeys(int cellNo) ⟦EOL⟧
-// 해설 L547: 구문 블록 경계입니다 · 소속 GetResultEditSelectedShotKeys.
+// 해설 L546: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlyList<Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.Renumber(System.Collections.Generic.IEnumerable<
+L000546 |             private static IReadOnlyList<ST_REVIEW_DATA_EDIT_ITEM> Renumber(IEnumerable<ST_REVIEW_DATA_EDIT_ITEM> source) ⟦EOL⟧
+// 해설 L547: 구문 블록 경계입니다 · 소속 Renumber.
 L000547 |             { ⟦EOL⟧
-// 해설 L548: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows .Where(row => row.IsResultEditSelected && row.CellNo == cellNo) .Select(row => row.ShotKey) .ToHashSet(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows .Where(row => row.IsResultEditSelected && row.CellNo == cellNo) .Select(row => row.ShotKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows .Where(row => row.IsResultEditSelected && row.CellNo == cellNo) / 호출자에게 값 또는 제어를 반환합니다: return _allRows .Where(row => row.IsResultEditSelected && row.CellNo == cellNo) .Select(row => row.ShotKey) .To
-L000548 |                 return _allRows ⟦EOL⟧
-// 해설 L549: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlySet<string> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.GetResultEditSelectedShotKeys(int)
-L000549 |                     .Where(row => row.IsResultEditSelected && row.CellNo == cellNo) ⟦EOL⟧
-// 해설 L550: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlySet<string> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.GetResultEditSelectedShotKeys(int)
-L000550 |                     .Select(row => row.ShotKey) ⟦EOL⟧
-// 해설 L551: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlySet<string> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.GetResultEditSelectedShotKeys(int)
-L000551 |                     .ToHashSet(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
-// 해설 L552: 구문 블록 경계입니다 · 소속 GetResultEditSelectedShotKeys.
-L000552 |             } ⟦EOL⟧
+// 해설 L548: 함수·델리게이트 또는 객체 생성자를 호출합니다: source.ToArray() / 지역 변수를 선언합니다: var items = source.ToArray(); / 변수의 초기값을 지정합니다: items = source.ToArray()
+L000548 |                 var items = source.ToArray(); ⟦EOL⟧
+// 해설 L549: 초기화·조건·증감이 있는 반복입니다: for (var index = 0; index < items.Length; index++) / 변수의 초기값을 지정합니다: index = 0
+L000549 |                 for (var index = 0; index < items.Length; index++) ⟦EOL⟧
+// 해설 L550: 구문 블록 경계입니다 · 소속 Renumber.
+L000550 |                 { ⟦EOL⟧
+// 해설 L551: 값을 대상에 대입합니다: items[index].No = index + 1
+L000551 |                     items[index].No = index + 1; ⟦EOL⟧
+// 해설 L552: 구문 블록 경계입니다 · 소속 Renumber.
+L000552 |                 } ⟦EOL⟧
 L000553 |  ⟦EOL⟧
-// 해설 L554: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ResetResultEditState()
-L000554 |             private void ResetResultEditState() ⟦EOL⟧
-// 해설 L555: 구문 블록 경계입니다 · 소속 ResetResultEditState.
-L000555 |             { ⟦EOL⟧
-// 해설 L556: 값을 대상에 대입합니다: _isResultEditMode = false
-L000556 |                 _isResultEditMode = false; ⟦EOL⟧
-// 해설 L557: 값을 대상에 대입합니다: _resultEditMode = ResultEditKeyInMode
-L000557 |                 _resultEditMode = ResultEditKeyInMode; ⟦EOL⟧
-// 해설 L558: 값을 대상에 대입합니다: _resultEditKeyInItems = []
-L000558 |                 _resultEditKeyInItems = []; ⟦EOL⟧
-// 해설 L559: 값을 대상에 대입합니다: _selectedResultEditKeyInItem = null
-L000559 |                 _selectedResultEditKeyInItem = null; ⟦EOL⟧
-// 해설 L560: 값을 대상에 대입합니다: _resultEditCopySource = null
-L000560 |                 _resultEditCopySource = null; ⟦EOL⟧
-// 해설 L561: 값을 대상에 대입합니다: _resultEditCopyTargets = []
-L000561 |                 _resultEditCopyTargets = []; ⟦EOL⟧
-// 해설 L562: 값을 대상에 대입합니다: _selectedResultEditCopyTarget = null
-L000562 |                 _selectedResultEditCopyTarget = null; ⟦EOL⟧
-// 해설 L563: 값을 대상에 대입합니다: _resultEditStatusText = "NO EDIT ITEMS"
-L000563 |                 _resultEditStatusText = "NO EDIT ITEMS"; ⟦EOL⟧
-// 해설 L564: 값을 대상에 대입합니다: _isResultEditSaving = false
-L000564 |                 _isResultEditSaving = false; ⟦EOL⟧
-// 해설 L565: 컬렉션 요소를 순회합니다: foreach (var row in _allRows)
-L000565 |                 foreach (var row in _allRows) ⟦EOL⟧
+// 해설 L554: 호출자에게 값 또는 제어를 반환합니다: return items;
+L000554 |                 return items; ⟦EOL⟧
+// 해설 L555: 구문 블록 경계입니다 · 소속 Renumber.
+L000555 |             } ⟦EOL⟧
+L000556 |  ⟦EOL⟧
+// 해설 L557: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlySet<string> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.GetResultEditSelectedShotKeys(int)
+L000557 |             private IReadOnlySet<string> GetResultEditSelectedShotKeys(int cellNo) ⟦EOL⟧
+// 해설 L558: 구문 블록 경계입니다 · 소속 GetResultEditSelectedShotKeys.
+L000558 |             { ⟦EOL⟧
+// 해설 L559: 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows .Where(row => row.IsResultEditSelected && row.CellNo == cellNo) .Select(row => row.ShotKey) .ToHashSet(StringComparer.OrdinalIgnoreCase) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows .Where(row => row.IsResultEditSelected && row.CellNo == cellNo) .Select(row => row.ShotKey) / 함수·델리게이트 또는 객체 생성자를 호출합니다: _allRows .Where(row => row.IsResultEditSelected && row.CellNo == cellNo) / 호출자에게 값 또는 제어를 반환합니다: return _allRows .Where(row => row.IsResultEditSelected && row.CellNo == cellNo) .Select(row => row.ShotKey) .To
+L000559 |                 return _allRows ⟦EOL⟧
+// 해설 L560: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlySet<string> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.GetResultEditSelectedShotKeys(int)
+L000560 |                     .Where(row => row.IsResultEditSelected && row.CellNo == cellNo) ⟦EOL⟧
+// 해설 L561: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlySet<string> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.GetResultEditSelectedShotKeys(int)
+L000561 |                     .Select(row => row.ShotKey) ⟦EOL⟧
+// 해설 L562: 선언·서명/매개변수·접근 조건입니다 · System.Collections.Generic.IReadOnlySet<string> Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.GetResultEditSelectedShotKeys(int)
+L000562 |                     .ToHashSet(StringComparer.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L563: 구문 블록 경계입니다 · 소속 GetResultEditSelectedShotKeys.
+L000563 |             } ⟦EOL⟧
+L000564 |  ⟦EOL⟧
+// 해설 L565: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.ResetResultEditState()
+L000565 |             private void ResetResultEditState() ⟦EOL⟧
 // 해설 L566: 구문 블록 경계입니다 · 소속 ResetResultEditState.
-L000566 |                 { ⟦EOL⟧
-// 해설 L567: 값을 대상에 대입합니다: row.IsResultEditSelected = false
-L000567 |                     row.IsResultEditSelected = false; ⟦EOL⟧
-// 해설 L568: 구문 블록 경계입니다 · 소속 ResetResultEditState.
-L000568 |                 } ⟦EOL⟧
-L000569 |  ⟦EOL⟧
-// 해설 L570: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
-L000570 |                 NotifyResultEditState(); ⟦EOL⟧
-// 해설 L571: 구문 블록 경계입니다 · 소속 ResetResultEditState.
-L000571 |             } ⟦EOL⟧
-L000572 |  ⟦EOL⟧
-// 해설 L573: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.NotifyResultEditState()
-L000573 |             private void NotifyResultEditState() ⟦EOL⟧
-// 해설 L574: 구문 블록 경계입니다 · 소속 NotifyResultEditState.
-L000574 |             { ⟦EOL⟧
-// 해설 L575: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsResultEditKeyInMode)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsResultEditKeyInMode)
-L000575 |                 Notify(nameof(IsResultEditKeyInMode)); ⟦EOL⟧
-// 해설 L576: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsResultEditCopyMode)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsResultEditCopyMode)
-L000576 |                 Notify(nameof(IsResultEditCopyMode)); ⟦EOL⟧
-// 해설 L577: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditKeyInItems)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditKeyInItems)
-L000577 |                 Notify(nameof(ResultEditKeyInItems)); ⟦EOL⟧
-// 해설 L578: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedResultEditKeyInItem)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedResultEditKeyInItem)
-L000578 |                 Notify(nameof(SelectedResultEditKeyInItem)); ⟦EOL⟧
-// 해설 L579: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditCopySourceRows)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditCopySourceRows)
-L000579 |                 Notify(nameof(ResultEditCopySourceRows)); ⟦EOL⟧
-// 해설 L580: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditCopyTargets)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditCopyTargets)
-L000580 |                 Notify(nameof(ResultEditCopyTargets)); ⟦EOL⟧
-// 해설 L581: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedResultEditCopyTarget)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedResultEditCopyTarget)
-L000581 |                 Notify(nameof(SelectedResultEditCopyTarget)); ⟦EOL⟧
-// 해설 L582: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditSelectionSummary)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditSelectionSummary)
-L000582 |                 Notify(nameof(ResultEditSelectionSummary)); ⟦EOL⟧
-// 해설 L583: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditKeyInSummary)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditKeyInSummary)
-L000583 |                 Notify(nameof(ResultEditKeyInSummary)); ⟦EOL⟧
-// 해설 L584: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditCopySummary)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditCopySummary)
-L000584 |                 Notify(nameof(ResultEditCopySummary)); ⟦EOL⟧
-// 해설 L585: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditStatusText)
-L000585 |                 Notify(nameof(ResultEditStatusText)); ⟦EOL⟧
-// 해설 L586: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsResultEditSaving)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsResultEditSaving)
-L000586 |                 Notify(nameof(IsResultEditSaving)); ⟦EOL⟧
-// 해설 L587: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditCommandState()
-L000587 |                 NotifyResultEditCommandState(); ⟦EOL⟧
-// 해설 L588: 구문 블록 경계입니다 · 소속 NotifyResultEditState.
-L000588 |             } ⟦EOL⟧
-L000589 |  ⟦EOL⟧
-// 해설 L590: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.NotifyResultEditCommandState()
-L000590 |             private void NotifyResultEditCommandState() ⟦EOL⟧
-// 해설 L591: 구문 블록 경계입니다 · 소속 NotifyResultEditCommandState.
-L000591 |             { ⟦EOL⟧
-// 해설 L592: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddResultEditKeyIn)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddResultEditKeyIn)
-L000592 |                 Notify(nameof(CanAddResultEditKeyIn)); ⟦EOL⟧
-// 해설 L593: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddSelectedResultEditKeyIn)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddSelectedResultEditKeyIn)
-L000593 |                 Notify(nameof(CanAddSelectedResultEditKeyIn)); ⟦EOL⟧
-// 해설 L594: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddNgResultEditKeyIn)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddNgResultEditKeyIn)
-L000594 |                 Notify(nameof(CanAddNgResultEditKeyIn)); ⟦EOL⟧
-// 해설 L595: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanRemoveResultEditKeyIn)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanRemoveResultEditKeyIn)
-L000595 |                 Notify(nameof(CanRemoveResultEditKeyIn)); ⟦EOL⟧
-// 해설 L596: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanClearResultEditKeyIn)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanClearResultEditKeyIn)
-L000596 |                 Notify(nameof(CanClearResultEditKeyIn)); ⟦EOL⟧
-// 해설 L597: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddResultEditCopySource)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddResultEditCopySource)
-L000597 |                 Notify(nameof(CanAddResultEditCopySource)); ⟦EOL⟧
-// 해설 L598: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddResultEditCopyTargets)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddResultEditCopyTargets)
-L000598 |                 Notify(nameof(CanAddResultEditCopyTargets)); ⟦EOL⟧
-// 해설 L599: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanRemoveResultEditCopyTarget)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanRemoveResultEditCopyTarget)
-L000599 |                 Notify(nameof(CanRemoveResultEditCopyTarget)); ⟦EOL⟧
-// 해설 L600: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanClearResultEditCopyTargets)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanClearResultEditCopyTargets)
-L000600 |                 Notify(nameof(CanClearResultEditCopyTargets)); ⟦EOL⟧
-// 해설 L601: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanApplyResultEditCopy)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanApplyResultEditCopy)
-L000601 |                 Notify(nameof(CanApplyResultEditCopy)); ⟦EOL⟧
-// 해설 L602: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanSaveResultEdit)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanSaveResultEdit)
-L000602 |                 Notify(nameof(CanSaveResultEdit)); ⟦EOL⟧
-// 해설 L603: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000603 |                 AddResultEditKeyInCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L604: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000604 |                 AddSelectedResultEditKeyInCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L605: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000605 |                 AddNgResultEditKeyInCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L606: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000606 |                 RemoveResultEditKeyInCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L607: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000607 |                 ClearResultEditKeyInCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L608: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000608 |                 AddResultEditCopySourceCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L609: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000609 |                 AddResultEditCopyTargetsCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L610: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000610 |                 RemoveResultEditCopyTargetCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L611: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000611 |                 ClearResultEditCopyTargetsCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L612: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000612 |                 CopyResultEditXyCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L613: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000613 |                 CopyResultEditJudgeCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+L000566 |             { ⟦EOL⟧
+// 해설 L567: 값을 대상에 대입합니다: _isResultEditMode = false
+L000567 |                 _isResultEditMode = false; ⟦EOL⟧
+// 해설 L568: 값을 대상에 대입합니다: _resultEditMode = ResultEditKeyInMode
+L000568 |                 _resultEditMode = ResultEditKeyInMode; ⟦EOL⟧
+// 해설 L569: 값을 대상에 대입합니다: _resultEditKeyInItems = []
+L000569 |                 _resultEditKeyInItems = []; ⟦EOL⟧
+// 해설 L570: 값을 대상에 대입합니다: _selectedResultEditKeyInItem = null
+L000570 |                 _selectedResultEditKeyInItem = null; ⟦EOL⟧
+// 해설 L571: 값을 대상에 대입합니다: _resultEditCopySource = null
+L000571 |                 _resultEditCopySource = null; ⟦EOL⟧
+// 해설 L572: 값을 대상에 대입합니다: _resultEditCopyTargets = []
+L000572 |                 _resultEditCopyTargets = []; ⟦EOL⟧
+// 해설 L573: 값을 대상에 대입합니다: _selectedResultEditCopyTarget = null
+L000573 |                 _selectedResultEditCopyTarget = null; ⟦EOL⟧
+// 해설 L574: 값을 대상에 대입합니다: _resultEditStatusText = "NO EDIT ITEMS"
+L000574 |                 _resultEditStatusText = "NO EDIT ITEMS"; ⟦EOL⟧
+// 해설 L575: 값을 대상에 대입합니다: _isResultEditSaving = false
+L000575 |                 _isResultEditSaving = false; ⟦EOL⟧
+// 해설 L576: 컬렉션 요소를 순회합니다: foreach (var row in _allRows)
+L000576 |                 foreach (var row in _allRows) ⟦EOL⟧
+// 해설 L577: 구문 블록 경계입니다 · 소속 ResetResultEditState.
+L000577 |                 { ⟦EOL⟧
+// 해설 L578: 값을 대상에 대입합니다: row.IsResultEditSelected = false
+L000578 |                     row.IsResultEditSelected = false; ⟦EOL⟧
+// 해설 L579: 구문 블록 경계입니다 · 소속 ResetResultEditState.
+L000579 |                 } ⟦EOL⟧
+L000580 |  ⟦EOL⟧
+// 해설 L581: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditState()
+L000581 |                 NotifyResultEditState(); ⟦EOL⟧
+// 해설 L582: 구문 블록 경계입니다 · 소속 ResetResultEditState.
+L000582 |             } ⟦EOL⟧
+L000583 |  ⟦EOL⟧
+// 해설 L584: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.NotifyResultEditState()
+L000584 |             private void NotifyResultEditState() ⟦EOL⟧
+// 해설 L585: 구문 블록 경계입니다 · 소속 NotifyResultEditState.
+L000585 |             { ⟦EOL⟧
+// 해설 L586: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsResultEditKeyInMode)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsResultEditKeyInMode)
+L000586 |                 Notify(nameof(IsResultEditKeyInMode)); ⟦EOL⟧
+// 해설 L587: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsResultEditCopyMode)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsResultEditCopyMode)
+L000587 |                 Notify(nameof(IsResultEditCopyMode)); ⟦EOL⟧
+// 해설 L588: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditKeyInItems)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditKeyInItems)
+L000588 |                 Notify(nameof(ResultEditKeyInItems)); ⟦EOL⟧
+// 해설 L589: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedResultEditKeyInItem)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedResultEditKeyInItem)
+L000589 |                 Notify(nameof(SelectedResultEditKeyInItem)); ⟦EOL⟧
+// 해설 L590: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditCopySourceRows)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditCopySourceRows)
+L000590 |                 Notify(nameof(ResultEditCopySourceRows)); ⟦EOL⟧
+// 해설 L591: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditCopyTargets)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditCopyTargets)
+L000591 |                 Notify(nameof(ResultEditCopyTargets)); ⟦EOL⟧
+// 해설 L592: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(SelectedResultEditCopyTarget)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(SelectedResultEditCopyTarget)
+L000592 |                 Notify(nameof(SelectedResultEditCopyTarget)); ⟦EOL⟧
+// 해설 L593: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditSelectionSummary)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditSelectionSummary)
+L000593 |                 Notify(nameof(ResultEditSelectionSummary)); ⟦EOL⟧
+// 해설 L594: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditKeyInSummary)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditKeyInSummary)
+L000594 |                 Notify(nameof(ResultEditKeyInSummary)); ⟦EOL⟧
+// 해설 L595: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditCopySummary)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditCopySummary)
+L000595 |                 Notify(nameof(ResultEditCopySummary)); ⟦EOL⟧
+// 해설 L596: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(ResultEditStatusText)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(ResultEditStatusText)
+L000596 |                 Notify(nameof(ResultEditStatusText)); ⟦EOL⟧
+// 해설 L597: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(IsResultEditSaving)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(IsResultEditSaving)
+L000597 |                 Notify(nameof(IsResultEditSaving)); ⟦EOL⟧
+// 해설 L598: 함수·델리게이트 또는 객체 생성자를 호출합니다: NotifyResultEditCommandState()
+L000598 |                 NotifyResultEditCommandState(); ⟦EOL⟧
+// 해설 L599: 구문 블록 경계입니다 · 소속 NotifyResultEditState.
+L000599 |             } ⟦EOL⟧
+L000600 |  ⟦EOL⟧
+// 해설 L601: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.CReviewDataPanel.NotifyResultEditCommandState()
+L000601 |             private void NotifyResultEditCommandState() ⟦EOL⟧
+// 해설 L602: 구문 블록 경계입니다 · 소속 NotifyResultEditCommandState.
+L000602 |             { ⟦EOL⟧
+// 해설 L603: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddResultEditKeyIn)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddResultEditKeyIn)
+L000603 |                 Notify(nameof(CanAddResultEditKeyIn)); ⟦EOL⟧
+// 해설 L604: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddSelectedResultEditKeyIn)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddSelectedResultEditKeyIn)
+L000604 |                 Notify(nameof(CanAddSelectedResultEditKeyIn)); ⟦EOL⟧
+// 해설 L605: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddNgResultEditKeyIn)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddNgResultEditKeyIn)
+L000605 |                 Notify(nameof(CanAddNgResultEditKeyIn)); ⟦EOL⟧
+// 해설 L606: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanRemoveResultEditKeyIn)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanRemoveResultEditKeyIn)
+L000606 |                 Notify(nameof(CanRemoveResultEditKeyIn)); ⟦EOL⟧
+// 해설 L607: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanClearResultEditKeyIn)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanClearResultEditKeyIn)
+L000607 |                 Notify(nameof(CanClearResultEditKeyIn)); ⟦EOL⟧
+// 해설 L608: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddResultEditCopySource)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddResultEditCopySource)
+L000608 |                 Notify(nameof(CanAddResultEditCopySource)); ⟦EOL⟧
+// 해설 L609: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanAddResultEditCopyTargets)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanAddResultEditCopyTargets)
+L000609 |                 Notify(nameof(CanAddResultEditCopyTargets)); ⟦EOL⟧
+// 해설 L610: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanRemoveResultEditCopyTarget)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanRemoveResultEditCopyTarget)
+L000610 |                 Notify(nameof(CanRemoveResultEditCopyTarget)); ⟦EOL⟧
+// 해설 L611: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanClearResultEditCopyTargets)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanClearResultEditCopyTargets)
+L000611 |                 Notify(nameof(CanClearResultEditCopyTargets)); ⟦EOL⟧
+// 해설 L612: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanApplyResultEditCopy)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanApplyResultEditCopy)
+L000612 |                 Notify(nameof(CanApplyResultEditCopy)); ⟦EOL⟧
+// 해설 L613: 함수·델리게이트 또는 객체 생성자를 호출합니다: Notify(nameof(CanSaveResultEdit)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(CanSaveResultEdit)
+L000613 |                 Notify(nameof(CanSaveResultEdit)); ⟦EOL⟧
 // 해설 L614: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000614 |                 CopyResultEditAllCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+L000614 |                 AddResultEditKeyInCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
 // 해설 L615: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
-L000615 |                 SaveResultEditCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
-// 해설 L616: 구문 블록 경계입니다 · 소속 NotifyResultEditCommandState.
-L000616 |             } ⟦EOL⟧
-// 해설 L617: 구문 블록 경계입니다.
-L000617 |         } ⟦EOL⟧
-L000618 |  ⟦EOL⟧
-// 해설 L619: 타입의 구조/상속 선언입니다: public sealed class ST_REVIEW_DATA_EDIT_ITEM : INotifyPropertyChanged
-L000619 |         public sealed class ST_REVIEW_DATA_EDIT_ITEM : INotifyPropertyChanged ⟦EOL⟧
-// 해설 L620: 구문 블록 경계입니다.
-L000620 |         { ⟦EOL⟧
-// 해설 L621: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM._no
-L000621 |             private int _no; ⟦EOL⟧
-// 해설 L622: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM._editedXText
-L000622 |             private string _editedXText; ⟦EOL⟧
-// 해설 L623: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM._editedYText
-L000623 |             private string _editedYText; ⟦EOL⟧
-// 해설 L624: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM._editedJudge
-L000624 |             private string _editedJudge; ⟦EOL⟧
-L000625 |  ⟦EOL⟧
-// 해설 L626: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.ST_REVIEW_DATA_EDIT_ITEM(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW, int)
-L000626 |             public ST_REVIEW_DATA_EDIT_ITEM(ST_REVIEW_DATA_GRID_ROW source, int no) ⟦EOL⟧
-// 해설 L627: 구문 블록 경계입니다 · 소속 .ctor.
-L000627 |             { ⟦EOL⟧
-// 해설 L628: 값을 대상에 대입합니다: Source = source
-L000628 |                 Source = source; ⟦EOL⟧
-// 해설 L629: 값을 대상에 대입합니다: _no = no
-L000629 |                 _no = no; ⟦EOL⟧
-// 해설 L630: 값을 대상에 대입합니다: _editedXText = OriginalXText
-L000630 |                 _editedXText = OriginalXText; ⟦EOL⟧
-// 해설 L631: 값을 대상에 대입합니다: _editedYText = OriginalYText
-L000631 |                 _editedYText = OriginalYText; ⟦EOL⟧
-// 해설 L632: 값을 대상에 대입합니다: _editedJudge = NormalizeJudge(source.Judge) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeJudge(source.Judge)
-L000632 |                 _editedJudge = NormalizeJudge(source.Judge); ⟦EOL⟧
-// 해설 L633: 구문 블록 경계입니다 · 소속 .ctor.
-L000633 |             } ⟦EOL⟧
-L000634 |  ⟦EOL⟧
-// 해설 L635: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.PropertyChanged
-L000635 |             public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
-// 해설 L636: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Source
-L000636 |             public ST_REVIEW_DATA_GRID_ROW Source { get; } ⟦EOL⟧
-// 해설 L637: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.No
-L000637 |             public int No ⟦EOL⟧
-// 해설 L638: 구문 블록 경계입니다 · 소속 No.
-L000638 |             { ⟦EOL⟧
-// 해설 L639: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.No.get
-L000639 |                 get => _no; ⟦EOL⟧
-// 해설 L640: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.No.set
-L000640 |                 set ⟦EOL⟧
-// 해설 L641: 구문 블록 경계입니다 · 소속 set_No.
-L000641 |                 { ⟦EOL⟧
-// 해설 L642: 조건에 따라 분기합니다: if (_no == value) / 호출자에게 값 또는 제어를 반환합니다: return;
-L000642 |                     if (_no == value) return; ⟦EOL⟧
-// 해설 L643: 값을 대상에 대입합니다: _no = value
-L000643 |                     _no = value; ⟦EOL⟧
-// 해설 L644: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
-L000644 |                     OnPropertyChanged(); ⟦EOL⟧
-// 해설 L645: 구문 블록 경계입니다 · 소속 set_No.
-L000645 |                 } ⟦EOL⟧
-// 해설 L646: 구문 블록 경계입니다 · 소속 No.
-L000646 |             } ⟦EOL⟧
-L000647 |  ⟦EOL⟧
-// 해설 L648: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Identity
-L000648 |             public string Identity => $"{Source.Cell} / {Source.ShotName} / B{Source.BeamNo:00}"; ⟦EOL⟧
-// 해설 L649: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Head
-L000649 |             public string Head => Source.Head; ⟦EOL⟧
-// 해설 L650: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Cell
-L000650 |             public string Cell => Source.Cell; ⟦EOL⟧
-// 해설 L651: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.ShotName
-L000651 |             public string ShotName => Source.ShotName; ⟦EOL⟧
-// 해설 L652: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Beam
-L000652 |             public string Beam => Source.Beam; ⟦EOL⟧
-// 해설 L653: 함수·델리게이트 또는 객체 생성자를 호출합니다: Source.ResultX.ToString("F3", CultureInfo.InvariantCulture)
-L000653 |             public string OriginalXText => Source.ResultX.ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
-// 해설 L654: 함수·델리게이트 또는 객체 생성자를 호출합니다: Source.ResultY.ToString("F3", CultureInfo.InvariantCulture)
-L000654 |             public string OriginalYText => Source.ResultY.ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
-// 해설 L655: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeJudge(Source.Judge)
-L000655 |             public string OriginalJudge => NormalizeJudge(Source.Judge); ⟦EOL⟧
-// 해설 L656: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForDisplayState(OriginalJudge)
-L000656 |             public Brush OriginalJudgeBrush => CStatusBrush.ForDisplayState(OriginalJudge); ⟦EOL⟧
-// 해설 L657: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedXText
-L000657 |             public string EditedXText ⟦EOL⟧
-// 해설 L658: 구문 블록 경계입니다 · 소속 EditedXText.
-L000658 |             { ⟦EOL⟧
-// 해설 L659: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedXText.get
-L000659 |                 get => _editedXText; ⟦EOL⟧
-// 해설 L660: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedXText.set
-L000660 |                 set ⟦EOL⟧
-// 해설 L661: 구문 블록 경계입니다 · 소속 set_EditedXText.
-L000661 |                 { ⟦EOL⟧
-// 해설 L662: 조건에 따라 분기합니다: if (_editedXText == value) / 호출자에게 값 또는 제어를 반환합니다: return;
-L000662 |                     if (_editedXText == value) return; ⟦EOL⟧
-// 해설 L663: 값을 대상에 대입합니다: _editedXText = value
-L000663 |                     _editedXText = value; ⟦EOL⟧
-// 해설 L664: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
-L000664 |                     OnPropertyChanged(); ⟦EOL⟧
-// 해설 L665: 구문 블록 경계입니다 · 소속 set_EditedXText.
-L000665 |                 } ⟦EOL⟧
-// 해설 L666: 구문 블록 경계입니다 · 소속 EditedXText.
-L000666 |             } ⟦EOL⟧
-L000667 |  ⟦EOL⟧
-// 해설 L668: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedYText
-L000668 |             public string EditedYText ⟦EOL⟧
-// 해설 L669: 구문 블록 경계입니다 · 소속 EditedYText.
-L000669 |             { ⟦EOL⟧
-// 해설 L670: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedYText.get
-L000670 |                 get => _editedYText; ⟦EOL⟧
-// 해설 L671: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedYText.set
-L000671 |                 set ⟦EOL⟧
-// 해설 L672: 구문 블록 경계입니다 · 소속 set_EditedYText.
-L000672 |                 { ⟦EOL⟧
-// 해설 L673: 조건에 따라 분기합니다: if (_editedYText == value) / 호출자에게 값 또는 제어를 반환합니다: return;
-L000673 |                     if (_editedYText == value) return; ⟦EOL⟧
-// 해설 L674: 값을 대상에 대입합니다: _editedYText = value
-L000674 |                     _editedYText = value; ⟦EOL⟧
-// 해설 L675: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
-L000675 |                     OnPropertyChanged(); ⟦EOL⟧
-// 해설 L676: 구문 블록 경계입니다 · 소속 set_EditedYText.
-L000676 |                 } ⟦EOL⟧
-// 해설 L677: 구문 블록 경계입니다 · 소속 EditedYText.
-L000677 |             } ⟦EOL⟧
-L000678 |  ⟦EOL⟧
-// 해설 L679: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedJudge
-L000679 |             public string EditedJudge ⟦EOL⟧
-// 해설 L680: 구문 블록 경계입니다 · 소속 EditedJudge.
-L000680 |             { ⟦EOL⟧
-// 해설 L681: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedJudge.get
-L000681 |                 get => _editedJudge; ⟦EOL⟧
-// 해설 L682: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedJudge.set
-L000682 |                 set ⟦EOL⟧
-// 해설 L683: 구문 블록 경계입니다 · 소속 set_EditedJudge.
-L000683 |                 { ⟦EOL⟧
-// 해설 L684: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeJudge(value) / 지역 변수를 선언합니다: var normalized = NormalizeJudge(value); / 변수의 초기값을 지정합니다: normalized = NormalizeJudge(value)
-L000684 |                     var normalized = NormalizeJudge(value); ⟦EOL⟧
-// 해설 L685: 조건에 따라 분기합니다: if (_editedJudge == normalized) / 호출자에게 값 또는 제어를 반환합니다: return;
-L000685 |                     if (_editedJudge == normalized) return; ⟦EOL⟧
-// 해설 L686: 값을 대상에 대입합니다: _editedJudge = normalized
-L000686 |                     _editedJudge = normalized; ⟦EOL⟧
+L000615 |                 AddSelectedResultEditKeyInCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L616: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000616 |                 AddNgResultEditKeyInCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L617: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000617 |                 RemoveResultEditKeyInCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L618: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000618 |                 ClearResultEditKeyInCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L619: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000619 |                 AddResultEditCopySourceCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L620: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000620 |                 AddResultEditCopyTargetsCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L621: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000621 |                 RemoveResultEditCopyTargetCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L622: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000622 |                 ClearResultEditCopyTargetsCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L623: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000623 |                 CopyResultEditXCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L624: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000624 |                 CopyResultEditYCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L625: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000625 |                 CopyResultEditJudgeCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L626: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000626 |                 CopyResultEditAllCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L627: 함수·델리게이트 또는 객체 생성자를 호출합니다: .NotifyCanExecuteChanged()
+L000627 |                 SaveResultEditCommand?.NotifyCanExecuteChanged(); ⟦EOL⟧
+// 해설 L628: 구문 블록 경계입니다 · 소속 NotifyResultEditCommandState.
+L000628 |             } ⟦EOL⟧
+// 해설 L629: 구문 블록 경계입니다.
+L000629 |         } ⟦EOL⟧
+L000630 |  ⟦EOL⟧
+// 해설 L631: 타입의 구조/상속 선언입니다: public sealed class ST_REVIEW_DATA_EDIT_ITEM : INotifyPropertyChanged
+L000631 |         public sealed class ST_REVIEW_DATA_EDIT_ITEM : INotifyPropertyChanged ⟦EOL⟧
+// 해설 L632: 구문 블록 경계입니다.
+L000632 |         { ⟦EOL⟧
+// 해설 L633: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM._no
+L000633 |             private int _no; ⟦EOL⟧
+// 해설 L634: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM._editedXText
+L000634 |             private string _editedXText; ⟦EOL⟧
+// 해설 L635: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM._editedYText
+L000635 |             private string _editedYText; ⟦EOL⟧
+// 해설 L636: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM._editedJudge
+L000636 |             private string _editedJudge; ⟦EOL⟧
+L000637 |  ⟦EOL⟧
+// 해설 L638: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.ST_REVIEW_DATA_EDIT_ITEM(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW, int)
+L000638 |             public ST_REVIEW_DATA_EDIT_ITEM(ST_REVIEW_DATA_GRID_ROW source, int no) ⟦EOL⟧
+// 해설 L639: 구문 블록 경계입니다 · 소속 .ctor.
+L000639 |             { ⟦EOL⟧
+// 해설 L640: 값을 대상에 대입합니다: Source = source
+L000640 |                 Source = source; ⟦EOL⟧
+// 해설 L641: 값을 대상에 대입합니다: _no = no
+L000641 |                 _no = no; ⟦EOL⟧
+// 해설 L642: 값을 대상에 대입합니다: _editedXText = OriginalXText
+L000642 |                 _editedXText = OriginalXText; ⟦EOL⟧
+// 해설 L643: 값을 대상에 대입합니다: _editedYText = OriginalYText
+L000643 |                 _editedYText = OriginalYText; ⟦EOL⟧
+// 해설 L644: 값을 대상에 대입합니다: _editedJudge = NormalizeJudge(source.Judge) / 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeJudge(source.Judge)
+L000644 |                 _editedJudge = NormalizeJudge(source.Judge); ⟦EOL⟧
+// 해설 L645: 구문 블록 경계입니다 · 소속 .ctor.
+L000645 |             } ⟦EOL⟧
+L000646 |  ⟦EOL⟧
+// 해설 L647: 선언·서명/매개변수·접근 조건입니다 · System.ComponentModel.PropertyChangedEventHandler? Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.PropertyChanged
+L000647 |             public event PropertyChangedEventHandler? PropertyChanged; ⟦EOL⟧
+// 해설 L648: 선언·서명/매개변수·접근 조건입니다 · Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Source
+L000648 |             public ST_REVIEW_DATA_GRID_ROW Source { get; } ⟦EOL⟧
+// 해설 L649: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.No
+L000649 |             public int No ⟦EOL⟧
+// 해설 L650: 구문 블록 경계입니다 · 소속 No.
+L000650 |             { ⟦EOL⟧
+// 해설 L651: 선언·서명/매개변수·접근 조건입니다 · int Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.No.get
+L000651 |                 get => _no; ⟦EOL⟧
+// 해설 L652: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.No.set
+L000652 |                 set ⟦EOL⟧
+// 해설 L653: 구문 블록 경계입니다 · 소속 set_No.
+L000653 |                 { ⟦EOL⟧
+// 해설 L654: 조건에 따라 분기합니다: if (_no == value) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000654 |                     if (_no == value) return; ⟦EOL⟧
+// 해설 L655: 값을 대상에 대입합니다: _no = value
+L000655 |                     _no = value; ⟦EOL⟧
+// 해설 L656: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
+L000656 |                     OnPropertyChanged(); ⟦EOL⟧
+// 해설 L657: 구문 블록 경계입니다 · 소속 set_No.
+L000657 |                 } ⟦EOL⟧
+// 해설 L658: 구문 블록 경계입니다 · 소속 No.
+L000658 |             } ⟦EOL⟧
+L000659 |  ⟦EOL⟧
+// 해설 L660: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Identity
+L000660 |             public string Identity => $"{Source.Cell} / {Source.ShotName} / B{Source.BeamNo:00}"; ⟦EOL⟧
+// 해설 L661: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Head
+L000661 |             public string Head => Source.Head; ⟦EOL⟧
+// 해설 L662: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Cell
+L000662 |             public string Cell => Source.Cell; ⟦EOL⟧
+// 해설 L663: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.ShotName
+L000663 |             public string ShotName => Source.ShotName; ⟦EOL⟧
+// 해설 L664: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Beam
+L000664 |             public string Beam => Source.Beam; ⟦EOL⟧
+// 해설 L665: 함수·델리게이트 또는 객체 생성자를 호출합니다: Source.ResultX.ToString("F3", CultureInfo.InvariantCulture)
+L000665 |             public string OriginalXText => Source.ResultX.ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L666: 함수·델리게이트 또는 객체 생성자를 호출합니다: Source.ResultY.ToString("F3", CultureInfo.InvariantCulture)
+L000666 |             public string OriginalYText => Source.ResultY.ToString("F3", CultureInfo.InvariantCulture); ⟦EOL⟧
+// 해설 L667: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeJudge(Source.Judge)
+L000667 |             public string OriginalJudge => NormalizeJudge(Source.Judge); ⟦EOL⟧
+// 해설 L668: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForDisplayState(OriginalJudge)
+L000668 |             public Brush OriginalJudgeBrush => CStatusBrush.ForDisplayState(OriginalJudge); ⟦EOL⟧
+// 해설 L669: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedXText
+L000669 |             public string EditedXText ⟦EOL⟧
+// 해설 L670: 구문 블록 경계입니다 · 소속 EditedXText.
+L000670 |             { ⟦EOL⟧
+// 해설 L671: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedXText.get
+L000671 |                 get => _editedXText; ⟦EOL⟧
+// 해설 L672: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedXText.set
+L000672 |                 set ⟦EOL⟧
+// 해설 L673: 구문 블록 경계입니다 · 소속 set_EditedXText.
+L000673 |                 { ⟦EOL⟧
+// 해설 L674: 조건에 따라 분기합니다: if (_editedXText == value) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000674 |                     if (_editedXText == value) return; ⟦EOL⟧
+// 해설 L675: 값을 대상에 대입합니다: _editedXText = value
+L000675 |                     _editedXText = value; ⟦EOL⟧
+// 해설 L676: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
+L000676 |                     OnPropertyChanged(); ⟦EOL⟧
+// 해설 L677: 구문 블록 경계입니다 · 소속 set_EditedXText.
+L000677 |                 } ⟦EOL⟧
+// 해설 L678: 구문 블록 경계입니다 · 소속 EditedXText.
+L000678 |             } ⟦EOL⟧
+L000679 |  ⟦EOL⟧
+// 해설 L680: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedYText
+L000680 |             public string EditedYText ⟦EOL⟧
+// 해설 L681: 구문 블록 경계입니다 · 소속 EditedYText.
+L000681 |             { ⟦EOL⟧
+// 해설 L682: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedYText.get
+L000682 |                 get => _editedYText; ⟦EOL⟧
+// 해설 L683: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedYText.set
+L000683 |                 set ⟦EOL⟧
+// 해설 L684: 구문 블록 경계입니다 · 소속 set_EditedYText.
+L000684 |                 { ⟦EOL⟧
+// 해설 L685: 조건에 따라 분기합니다: if (_editedYText == value) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000685 |                     if (_editedYText == value) return; ⟦EOL⟧
+// 해설 L686: 값을 대상에 대입합니다: _editedYText = value
+L000686 |                     _editedYText = value; ⟦EOL⟧
 // 해설 L687: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
 L000687 |                     OnPropertyChanged(); ⟦EOL⟧
-// 해설 L688: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(EditedJudgeBrush)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(EditedJudgeBrush)
-L000688 |                     OnPropertyChanged(nameof(EditedJudgeBrush)); ⟦EOL⟧
-// 해설 L689: 구문 블록 경계입니다 · 소속 set_EditedJudge.
-L000689 |                 } ⟦EOL⟧
-// 해설 L690: 구문 블록 경계입니다 · 소속 EditedJudge.
-L000690 |             } ⟦EOL⟧
-L000691 |  ⟦EOL⟧
-// 해설 L692: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForDisplayState(EditedJudge)
-L000692 |             public Brush EditedJudgeBrush => CStatusBrush.ForDisplayState(EditedJudge); ⟦EOL⟧
-L000693 |  ⟦EOL⟧
-// 해설 L694: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Matches(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW)
-L000694 |             public bool Matches(ST_REVIEW_DATA_GRID_ROW row) ⟦EOL⟧
-// 해설 L695: 구문 블록 경계입니다 · 소속 Matches.
-L000695 |             { ⟦EOL⟧
-// 해설 L696: 호출자에게 값 또는 제어를 반환합니다: return Source.CellNo == row.CellNo && Source.BeamNo == row.BeamNo && Source.ShotKey.Equals(row.ShotKey, StringComparison.OrdinalIgnoreCase);
-L000696 |                 return Source.CellNo == row.CellNo ⟦EOL⟧
-// 해설 L697: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Matches(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW)
-L000697 |                     && Source.BeamNo == row.BeamNo ⟦EOL⟧
-// 해설 L698: 함수·델리게이트 또는 객체 생성자를 호출합니다: Source.ShotKey.Equals(row.ShotKey, StringComparison.OrdinalIgnoreCase)
-L000698 |                     && Source.ShotKey.Equals(row.ShotKey, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
-// 해설 L699: 구문 블록 경계입니다 · 소속 Matches.
-L000699 |             } ⟦EOL⟧
-L000700 |  ⟦EOL⟧
-// 해설 L701: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.NormalizeJudge(string?)
-L000701 |             private static string NormalizeJudge(string? value) ⟦EOL⟧
-// 해설 L702: 구문 블록 경계입니다 · 소속 NormalizeJudge.
-L000702 |             { ⟦EOL⟧
-// 해설 L703: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Equals("OK", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: value?.Equals("OK", StringComparison.OrdinalIgnoreCase) == true || value?.Equals("PASS", StringComparison.OrdinalIgnoreCase) == true ? "OK" : "NG" / 호출자에게 값 또는 제어를 반환합니다: return value?.Equals("OK", StringComparison.OrdinalIgnoreCase) == true || value?.Equals("PASS", StringComparison.OrdinalIgnoreCase) == true ? "OK" : "NG";
-L000703 |                 return value?.Equals("OK", StringComparison.OrdinalIgnoreCase) == true ⟦EOL⟧
-// 해설 L704: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Equals("PASS", StringComparison.OrdinalIgnoreCase)
-L000704 |                     || value?.Equals("PASS", StringComparison.OrdinalIgnoreCase) == true ⟦EOL⟧
-// 해설 L705: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.NormalizeJudge(string?)
-L000705 |                     ? "OK" ⟦EOL⟧
-// 해설 L706: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.NormalizeJudge(string?)
-L000706 |                     : "NG"; ⟦EOL⟧
-// 해설 L707: 구문 블록 경계입니다 · 소속 NormalizeJudge.
-L000707 |             } ⟦EOL⟧
-L000708 |  ⟦EOL⟧
-// 해설 L709: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.OnPropertyChanged(string?)
-L000709 |             private void OnPropertyChanged([CallerMemberName] string? propertyName = null) ⟦EOL⟧
-// 해설 L710: 구문 블록 경계입니다 · 소속 OnPropertyChanged.
-L000710 |             { ⟦EOL⟧
-// 해설 L711: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(propertyName)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(propertyName)
-L000711 |                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); ⟦EOL⟧
-// 해설 L712: 구문 블록 경계입니다 · 소속 OnPropertyChanged.
-L000712 |             } ⟦EOL⟧
-// 해설 L713: 구문 블록 경계입니다.
-L000713 |         } ⟦EOL⟧
-// 해설 L714: 구문 블록 경계입니다.
-L000714 |     } ⟦EOL⟧
-// 해설 L715: 구문 블록 경계입니다.
-L000715 | } ⟦EOL⟧
+// 해설 L688: 구문 블록 경계입니다 · 소속 set_EditedYText.
+L000688 |                 } ⟦EOL⟧
+// 해설 L689: 구문 블록 경계입니다 · 소속 EditedYText.
+L000689 |             } ⟦EOL⟧
+L000690 |  ⟦EOL⟧
+// 해설 L691: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedJudge
+L000691 |             public string EditedJudge ⟦EOL⟧
+// 해설 L692: 구문 블록 경계입니다 · 소속 EditedJudge.
+L000692 |             { ⟦EOL⟧
+// 해설 L693: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedJudge.get
+L000693 |                 get => _editedJudge; ⟦EOL⟧
+// 해설 L694: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.EditedJudge.set
+L000694 |                 set ⟦EOL⟧
+// 해설 L695: 구문 블록 경계입니다 · 소속 set_EditedJudge.
+L000695 |                 { ⟦EOL⟧
+// 해설 L696: 함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeJudge(value) / 지역 변수를 선언합니다: var normalized = NormalizeJudge(value); / 변수의 초기값을 지정합니다: normalized = NormalizeJudge(value)
+L000696 |                     var normalized = NormalizeJudge(value); ⟦EOL⟧
+// 해설 L697: 조건에 따라 분기합니다: if (_editedJudge == normalized) / 호출자에게 값 또는 제어를 반환합니다: return;
+L000697 |                     if (_editedJudge == normalized) return; ⟦EOL⟧
+// 해설 L698: 값을 대상에 대입합니다: _editedJudge = normalized
+L000698 |                     _editedJudge = normalized; ⟦EOL⟧
+// 해설 L699: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged()
+L000699 |                     OnPropertyChanged(); ⟦EOL⟧
+// 해설 L700: 함수·델리게이트 또는 객체 생성자를 호출합니다: OnPropertyChanged(nameof(EditedJudgeBrush)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: nameof(EditedJudgeBrush)
+L000700 |                     OnPropertyChanged(nameof(EditedJudgeBrush)); ⟦EOL⟧
+// 해설 L701: 구문 블록 경계입니다 · 소속 set_EditedJudge.
+L000701 |                 } ⟦EOL⟧
+// 해설 L702: 구문 블록 경계입니다 · 소속 EditedJudge.
+L000702 |             } ⟦EOL⟧
+L000703 |  ⟦EOL⟧
+// 해설 L704: 함수·델리게이트 또는 객체 생성자를 호출합니다: CStatusBrush.ForDisplayState(EditedJudge)
+L000704 |             public Brush EditedJudgeBrush => CStatusBrush.ForDisplayState(EditedJudge); ⟦EOL⟧
+L000705 |  ⟦EOL⟧
+// 해설 L706: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Matches(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW)
+L000706 |             public bool Matches(ST_REVIEW_DATA_GRID_ROW row) ⟦EOL⟧
+// 해설 L707: 구문 블록 경계입니다 · 소속 Matches.
+L000707 |             { ⟦EOL⟧
+// 해설 L708: 호출자에게 값 또는 제어를 반환합니다: return Source.CellNo == row.CellNo && Source.BeamNo == row.BeamNo && Source.ShotKey.Equals(row.ShotKey, StringComparison.OrdinalIgnoreCase);
+L000708 |                 return Source.CellNo == row.CellNo ⟦EOL⟧
+// 해설 L709: 선언·서명/매개변수·접근 조건입니다 · bool Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.Matches(Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_GRID_ROW)
+L000709 |                     && Source.BeamNo == row.BeamNo ⟦EOL⟧
+// 해설 L710: 함수·델리게이트 또는 객체 생성자를 호출합니다: Source.ShotKey.Equals(row.ShotKey, StringComparison.OrdinalIgnoreCase)
+L000710 |                     && Source.ShotKey.Equals(row.ShotKey, StringComparison.OrdinalIgnoreCase); ⟦EOL⟧
+// 해설 L711: 구문 블록 경계입니다 · 소속 Matches.
+L000711 |             } ⟦EOL⟧
+L000712 |  ⟦EOL⟧
+// 해설 L713: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.NormalizeJudge(string?)
+L000713 |             private static string NormalizeJudge(string? value) ⟦EOL⟧
+// 해설 L714: 구문 블록 경계입니다 · 소속 NormalizeJudge.
+L000714 |             { ⟦EOL⟧
+// 해설 L715: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Equals("OK", StringComparison.OrdinalIgnoreCase) / 조건에 따라 결과식을 선택합니다: value?.Equals("OK", StringComparison.OrdinalIgnoreCase) == true || value?.Equals("PASS", StringComparison.OrdinalIgnoreCase) == true ? "OK" : "NG" / 호출자에게 값 또는 제어를 반환합니다: return value?.Equals("OK", StringComparison.OrdinalIgnoreCase) == true || value?.Equals("PASS", StringComparison.OrdinalIgnoreCase) == true ? "OK" : "NG";
+L000715 |                 return value?.Equals("OK", StringComparison.OrdinalIgnoreCase) == true ⟦EOL⟧
+// 해설 L716: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Equals("PASS", StringComparison.OrdinalIgnoreCase)
+L000716 |                     || value?.Equals("PASS", StringComparison.OrdinalIgnoreCase) == true ⟦EOL⟧
+// 해설 L717: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.NormalizeJudge(string?)
+L000717 |                     ? "OK" ⟦EOL⟧
+// 해설 L718: 선언·서명/매개변수·접근 조건입니다 · string Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.NormalizeJudge(string?)
+L000718 |                     : "NG"; ⟦EOL⟧
+// 해설 L719: 구문 블록 경계입니다 · 소속 NormalizeJudge.
+L000719 |             } ⟦EOL⟧
+L000720 |  ⟦EOL⟧
+// 해설 L721: 선언·서명/매개변수·접근 조건입니다 · void Drilling.UI.Menu.Menus.CMenuCorrection.ST_REVIEW_DATA_EDIT_ITEM.OnPropertyChanged(string?)
+L000721 |             private void OnPropertyChanged([CallerMemberName] string? propertyName = null) ⟦EOL⟧
+// 해설 L722: 구문 블록 경계입니다 · 소속 OnPropertyChanged.
+L000722 |             { ⟦EOL⟧
+// 해설 L723: 함수·델리게이트 또는 객체 생성자를 호출합니다: .Invoke(this, new PropertyChangedEventArgs(propertyName)) / 함수·델리게이트 또는 객체 생성자를 호출합니다: new PropertyChangedEventArgs(propertyName)
+L000723 |                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); ⟦EOL⟧
+// 해설 L724: 구문 블록 경계입니다 · 소속 OnPropertyChanged.
+L000724 |             } ⟦EOL⟧
+// 해설 L725: 구문 블록 경계입니다.
+L000725 |         } ⟦EOL⟧
+// 해설 L726: 구문 블록 경계입니다.
+L000726 |     } ⟦EOL⟧
+// 해설 L727: 구문 블록 경계입니다.
+L000727 | } ⟦EOL⟧

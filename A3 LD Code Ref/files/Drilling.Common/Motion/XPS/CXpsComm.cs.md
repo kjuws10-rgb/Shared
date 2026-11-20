@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | fb8437e505770f0e968b5f9f4a04c1860f3f79bc3e030c29faa51327a33131c1 |
 | 파일 분류 | code |
 | 원본 크기/행 | 24,133 bytes / 622 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -74,7 +74,7 @@
 
 ### FieldDeclaration `_commLock` · L15–15
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L15-L15)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -102,7 +102,7 @@
 
 ### FieldDeclaration `_diagnosticLock` · L16–16
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L16-L16)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -130,7 +130,7 @@
 
 ### FieldDeclaration `_diagnosticSequence` · L17–17
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L17-L17)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -145,7 +145,7 @@
 
 ### FieldDeclaration `_lastAppliedDiagnosticSequence` · L18–18
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L18-L18)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -160,7 +160,7 @@
 
 ### FieldDeclaration `_priorityStopGeneration` · L19–19
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L19-L19)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -175,7 +175,7 @@
 
 ### FieldDeclaration `_api` · L20–20
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L20-L20)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -190,7 +190,7 @@
 
 ### MethodDeclaration `Connect` · L21–37
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:21–37](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L21-L37)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:21–37](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L21-L37)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -248,7 +248,7 @@ flowchart TD
 
 ### MethodDeclaration `Disconnect` · L39–51
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:39–51](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L39-L51)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:39–51](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L39-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -301,7 +301,7 @@ flowchart TD
 
 ### MethodDeclaration `Execute` · L53–107
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:53–107](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L53-L107)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:53–107](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L53-L107)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -413,7 +413,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ThrowIfPriorityStopOccurredCallback` · L63–66
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:63–66](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L63-L66)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:63–66](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L63-L66)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -440,7 +440,7 @@ flowchart TD
 
 ### MethodDeclaration `ConnectLocked` · L109–121
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:109–121](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L109-L121)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:109–121](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L109-L121)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -453,8 +453,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L26-L26) | ConnectLocked | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L80-L80) | ConnectLocked | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:26–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L26-L26) | ConnectLocked | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:80–80](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L80-L80) | ConnectLocked | False |
 
 호출하는 대상과 해석 범위:
 
@@ -498,7 +498,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteXpsFunction` · L123–138
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:123–138](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L123-L138)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:123–138](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L123-L138)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -520,7 +520,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L518-L518) | ExecuteXpsFunction | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:518–518](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L518-L518) | ExecuteXpsFunction | False |
 
 호출하는 대상과 해석 범위:
 
@@ -571,7 +571,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteAxisFunction` · L140–254
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:140–254](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L140-L254)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:140–254](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L140-L254)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -593,7 +593,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L135-L135) | ExecuteAxisFunction | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:135–135](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L135-L135) | ExecuteAxisFunction | False |
 
 호출하는 대상과 해석 범위:
 
@@ -827,7 +827,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteIoFunction` · L256–281
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:256–281](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L256-L281)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:256–281](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L256-L281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -847,7 +847,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L136-L136) | ExecuteIoFunction | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:136–136](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L136-L136) | ExecuteIoFunction | False |
 
 호출하는 대상과 해석 범위:
 
@@ -914,7 +914,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecuteRawCommand` · L283–302
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:283–302](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L283-L302)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:283–302](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L283-L302)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -934,8 +934,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L130-L130) | ExecuteRawCommand | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L137-L137) | ExecuteRawCommand | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:130–130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L130-L130) | ExecuteRawCommand | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:137–137](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L137-L137) | ExecuteRawCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -973,7 +973,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ExecuteStatus` · L290–295
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:290–295](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L290-L295)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:290–295](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L290-L295)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -992,7 +992,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L287-L287) | ExecuteStatus | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:287–287](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L287-L287) | ExecuteStatus | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1017,7 +1017,7 @@ flowchart TD
 
 ### LocalFunctionStatement `ExecuteSockets` · L297–301
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:297–301](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L297-L301)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:297–301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L297-L301)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1036,7 +1036,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L288-L288) | ExecuteSockets | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:288–288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L288-L288) | ExecuteSockets | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1057,7 +1057,7 @@ flowchart TD
 
 ### MethodDeclaration `CloseApi` · L304–323
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:304–323](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L304-L323)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:304–323](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L304-L323)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1070,9 +1070,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L30-L30) | CloseApi | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L44-L44) | CloseApi | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L111-L111) | CloseApi | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:30–30](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L30-L30) | CloseApi | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:44–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L44-L44) | CloseApi | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:111–111](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L111-L111) | CloseApi | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1111,7 +1111,7 @@ flowchart TD
 
 ### MethodDeclaration `CheckResult` · L325–344
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:325–344](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L325-L344)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:325–344](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L325-L344)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1175,7 +1175,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadDouble` · L346–354
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:346–354](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L346-L354)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:346–354](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L346-L354)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1196,10 +1196,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L167-L167) | ReadDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L170-L170) | ReadDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L176-L176) | ReadDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:580–580](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L580-L580) | ReadDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:167–167](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L167-L167) | ReadDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:170–170](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L170-L170) | ReadDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:176–176](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L176-L176) | ReadDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:580–580](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L580-L580) | ReadDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1233,7 +1233,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecutePriorityStop` · L356–385
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:356–385](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L356-L385)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:356–385](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L356-L385)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1253,7 +1253,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L59-L59) | ExecutePriorityStop | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L59-L59) | ExecutePriorityStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1313,7 +1313,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectValue` · L359–362
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:359–362](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L359-L362)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:359–362](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L359-L362)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1341,7 +1341,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectAggregateexception` · L364–367
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:364–367](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L364-L367)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:364–367](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L364-L367)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1369,7 +1369,7 @@ flowchart TD
 
 ### MethodDeclaration `BeginCommandDiagnostic` · L387–398
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:387–398](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L387-L398)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:387–398](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L387-L398)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1388,8 +1388,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L75-L75) | BeginCommandDiagnostic | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L358-L358) | BeginCommandDiagnostic | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L75-L75) | BeginCommandDiagnostic | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:358–358](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L358-L358) | BeginCommandDiagnostic | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1417,7 +1417,7 @@ flowchart TD
 
 ### MethodDeclaration `CompletePrimaryCommand` · L400–413
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:400–413](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L400-L413)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:400–413](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L400-L413)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1437,7 +1437,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L91-L91) | CompletePrimaryCommand | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L91-L91) | CompletePrimaryCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1471,7 +1471,7 @@ flowchart TD
 
 ### MethodDeclaration `FailPrimaryCommand` · L415–430
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:415–430](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L415-L430)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:415–430](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L415-L430)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1491,7 +1491,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L100-L100) | FailPrimaryCommand | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:100–100](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L100-L100) | FailPrimaryCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1530,7 +1530,7 @@ flowchart TD
 
 ### MethodDeclaration `CompletePriorityStop` · L432–444
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:432–444](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L432-L444)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:432–444](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L432-L444)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1550,7 +1550,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L374-L374) | CompletePriorityStop | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:374–374](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L374-L374) | CompletePriorityStop | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1577,7 +1577,7 @@ flowchart TD
 
 ### MethodDeclaration `FailPriorityStop` · L446–461
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:446–461](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L446-L461)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:446–461](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L446-L461)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1597,8 +1597,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L379-L379) | FailPriorityStop | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L383-L383) | FailPriorityStop | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:379–379](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L379-L379) | FailPriorityStop | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:383–383](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L383-L383) | FailPriorityStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1636,7 +1636,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateErrorResponse` · L463–466
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:463–466](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L463-L466)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:463–466](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L463-L466)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1655,8 +1655,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L417-L417) | CreateErrorResponse | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:448–448](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L448-L448) | CreateErrorResponse | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L417-L417) | CreateErrorResponse | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:448–448](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L448-L448) | CreateErrorResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1675,7 +1675,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateErrorResponse` · L468–472
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:468–472](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L468-L472)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:468–472](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L468-L472)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1694,8 +1694,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L72-L72) | CreateErrorResponse | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:465–465](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L465-L465) | CreateErrorResponse | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:72–72](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L72-L72) | CreateErrorResponse | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:465–465](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L465-L465) | CreateErrorResponse | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1719,7 +1719,7 @@ flowchart TD
 
 ### MethodDeclaration `ThrowIfPriorityStopOccurred` · L474–480
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:474–480](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L474-L480)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:474–480](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L474-L480)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1738,8 +1738,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L65-L65) | ThrowIfPriorityStopOccurred | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L89-L89) | ThrowIfPriorityStopOccurred | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:65–65](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L65-L65) | ThrowIfPriorityStopOccurred | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:89–89](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L89-L89) | ThrowIfPriorityStopOccurred | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1770,7 +1770,7 @@ flowchart TD
 
 ### MethodDeclaration `SetPrimaryConnected` · L482–489
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:482–489](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L482-L489)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:482–489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L482-L489)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1783,7 +1783,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L120-L120) | SetPrimaryConnected | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L120-L120) | SetPrimaryConnected | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1812,7 +1812,7 @@ flowchart TD
 
 ### MethodDeclaration `SetPrimaryState` · L491–497
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:491–497](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L491-L497)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:491–497](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L491-L497)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1831,7 +1831,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L45-L45) | SetPrimaryState | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L45-L45) | SetPrimaryState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1859,7 +1859,7 @@ flowchart TD
 
 ### MethodDeclaration `SetPrimaryError` · L499–505
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:499–505](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L499-L505)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:499–505](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L499-L505)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1878,7 +1878,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L31-L31) | SetPrimaryError | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:31–31](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L31-L31) | SetPrimaryError | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1906,7 +1906,7 @@ flowchart TD
 
 ### MethodDeclaration `ExecutePriorityStopCore` · L507–531
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:507–531](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L507-L531)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:507–531](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L507-L531)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1925,7 +1925,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L361-L361) | ExecutePriorityStopCore | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:361–361](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L361-L361) | ExecutePriorityStopCore | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1981,7 +1981,7 @@ flowchart TD
 
 ### MethodDeclaration `IsPriorityStopCommand` · L533–543
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:533–543](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L533-L543)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:533–543](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L533-L543)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2000,7 +2000,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L56-L56) | IsPriorityStopCommand | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L56-L56) | IsPriorityStopCommand | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2043,7 +2043,7 @@ flowchart TD
 
 ### MethodDeclaration `StopJogAndDisable` · L545–569
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:545–569](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L545-L569)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:545–569](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L545-L569)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2063,8 +2063,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:197–197](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L197-L197) | StopJogAndDisable | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L209-L209) | StopJogAndDisable | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:197–197](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L197-L197) | StopJogAndDisable | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:209–209](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L209-L209) | StopJogAndDisable | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2123,7 +2123,7 @@ flowchart TD
 
 ### MethodDeclaration `IsGroupJogging` · L571–576
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:571–576](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L571-L576)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:571–576](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L571-L576)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2143,7 +2143,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L557-L557) | IsGroupJogging | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:557–557](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L557-L557) | IsGroupJogging | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2170,7 +2170,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadPositiveDouble` · L578–587
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:578–587](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L578-L587)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:578–587](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L578-L587)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2191,9 +2191,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L173-L173) | ReadPositiveDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L173-L173) | ReadPositiveDouble | False |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:177–177](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L177-L177) | ReadPositiveDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L173-L173) | ReadPositiveDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L173-L173) | ReadPositiveDouble | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:177–177](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L177-L177) | ReadPositiveDouble | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2227,7 +2227,7 @@ flowchart TD
 
 ### MethodDeclaration `ReadRequiredFirst` · L589–597
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:589–597](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L589-L597)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:589–597](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L589-L597)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2275,7 +2275,7 @@ flowchart TD
 
 ### MethodDeclaration `ParseDigitalIoAddress` · L599–616
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:599–616](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L599-L616)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:599–616](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L599-L616)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2294,7 +2294,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L264-L264) | ParseDigitalIoAddress | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:264–264](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L264-L264) | ParseDigitalIoAddress | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2352,7 +2352,7 @@ flowchart TD
 
 ### MethodDeclaration `SanitizeResponseText` · L618–621
 
-[Drilling.Common/Motion/XPS/CXpsComm.cs:618–621](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L618-L621)
+[Drilling.Common/Motion/XPS/CXpsComm.cs:618–621](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L618-L621)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2371,7 +2371,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Motion/XPS/CXpsComm.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/XPS/CXpsComm.cs#L470-L470) | SanitizeResponseText | False |
+| [Drilling.Common/Motion/XPS/CXpsComm.cs:470–470](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/XPS/CXpsComm.cs#L470-L470) | SanitizeResponseText | False |
 
 호출하는 대상과 해석 범위:
 

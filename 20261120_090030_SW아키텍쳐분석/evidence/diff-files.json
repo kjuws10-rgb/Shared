@@ -1,0 +1,451 @@
+{
+  "base": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+  "head": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "files": [
+    {
+      "path": "Config/JHMI_RCP.csv",
+      "added": 3,
+      "removed": 5
+    },
+    {
+      "path": "Config/JHMI_SETTING.csv",
+      "added": 3,
+      "removed": 0
+    },
+    {
+      "path": "Config/RECIPE/DRILL_A01.csv",
+      "added": 0,
+      "removed": 2
+    },
+    {
+      "path": "Config/RECIPE/animotion.csv",
+      "added": 0,
+      "removed": 2
+    },
+    {
+      "path": "Config/RECIPE/simple2.csv",
+      "added": 0,
+      "removed": 2
+    },
+    {
+      "path": "Config/RECIPE/test0929.csv",
+      "added": 1,
+      "removed": 3
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261118_075556_342_reviewoffset.csv",
+      "added": 21421,
+      "removed": 0
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261118_075616_547_reviewoffset.csv",
+      "added": 21421,
+      "removed": 0
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/20261118_080920_594_reviewoffset.csv",
+      "added": 21421,
+      "removed": 0
+    },
+    {
+      "path": "Config/RECIPE/test0929_reviewoffset/_apply/2026/11/18/AppliedSources.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Config/RECIPE/wizardtest.csv",
+      "added": 0,
+      "removed": 2
+    },
+    {
+      "path": "Config/Setting/Setting.csv",
+      "added": 3,
+      "removed": 0
+    },
+    {
+      "path": "DEBUG_COMMENT_RULES.txt",
+      "added": 283,
+      "removed": 0
+    },
+    {
+      "path": "Data/Product/ActiveProduct.csv",
+      "added": 8,
+      "removed": 1232
+    },
+    {
+      "path": "Data/Product/History/20261118/ProductHistory_20261118.csv",
+      "added": 3,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Auto/test0929/CODEX_REVIEW_1118_113623_20261118_115445_872.csv",
+      "added": 1221,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Auto/test0929/CODEX_REVIEW_1118_113623_20261118_115639_385.csv",
+      "added": 3571,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Auto/test0929/CODEX_REVIEW_1118_113623_20261118_115936_895.csv",
+      "added": 5786,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Auto/test0929/CODEX_REVIEW_1119_103658_20261119_105517_728.csv",
+      "added": 1221,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Auto/test0929/CODEX_REVIEW_1119_103658_20261119_105713_171.csv",
+      "added": 3571,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Auto/test0929/CODEX_REVIEW_1119_103658_20261119_110012_057.csv",
+      "added": 5786,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Auto/test0929/DUMMY_20261118_112525615_20261119_123052_292.csv",
+      "added": 1221,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ALL_SHOT/CODEX_REVIEW_1118_113623_20261118_114620_012.csv",
+      "added": 19526,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ALL_SHOT/CODEX_REVIEW_1119_103658_20261119_104650_110.csv",
+      "added": 19526,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/BEAM_INSPECTION/CODEX_REVIEW_1118_113623_20261118_114655_831.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/BEAM_INSPECTION/CODEX_REVIEW_1119_103658_20261119_104724_225.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/FINE/-_20261118_080106_904.csv",
+      "added": 3571,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/FINE/CODEX_REVIEW_1118_113623_20261118_114802_454.csv",
+      "added": 1221,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/FINE/CODEX_REVIEW_1118_113623_20261118_114955_072.csv",
+      "added": 3571,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/FINE/CODEX_REVIEW_1118_113623_20261118_115355_890.csv",
+      "added": 8001,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/FINE/CODEX_REVIEW_1119_103658_20261119_104831_536.csv",
+      "added": 1221,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/FINE/CODEX_REVIEW_1119_103658_20261119_105024_337.csv",
+      "added": 3571,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/FINE/CODEX_REVIEW_1119_103658_20261119_105427_921.csv",
+      "added": 8001,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_LINE/CODEX_REVIEW_1118_113623_20261118_114638_600.csv",
+      "added": 236,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_LINE/CODEX_REVIEW_1119_103658_20261119_104707_121.csv",
+      "added": 236,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_SHOT/CODEX_REVIEW_1118_113623_20261118_114630_634.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ONE_SHOT/CODEX_REVIEW_1119_103658_20261119_104700_323.csv",
+      "added": 2,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ROUGH/CODEX_REVIEW_1118_113623_20261118_114717_304.csv",
+      "added": 9,
+      "removed": 0
+    },
+    {
+      "path": "Data/Review/Manual/test0929/ROUGH/CODEX_REVIEW_1119_103658_20261119_104744_585.csv",
+      "added": 9,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.Common/Alarm/CAlarmManager.cs",
+      "added": 3,
+      "removed": 1
+    },
+    {
+      "path": "Drilling.Common/Automation/CAutomationManager.cs",
+      "added": 34,
+      "removed": 19
+    },
+    {
+      "path": "Drilling.Common/Correction/CAlignInterpolation.cs",
+      "added": 25,
+      "removed": 7
+    },
+    {
+      "path": "Drilling.Common/Correction/CDefaultOffsetCalibration.cs",
+      "added": 3,
+      "removed": 5
+    },
+    {
+      "path": "Drilling.Common/Interface/CInterfaceManager.cs",
+      "added": 3,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.Common/Interface/Melsec/CMelsec.cs",
+      "added": 8,
+      "removed": 11
+    },
+    {
+      "path": "Drilling.Common/Interface/Vision/CVisionComm.cs",
+      "added": 5,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.Common/Managers/CAlignKeyMarginSettings.cs",
+      "added": 53,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.Common/Managers/CRecipeManager.cs",
+      "added": 6,
+      "removed": 4
+    },
+    {
+      "path": "Drilling.Common/Managers/CSettingManager.cs",
+      "added": 7,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "added": 44,
+      "removed": 21
+    },
+    {
+      "path": "Drilling.Common/Review/CAutoFineReviewCoordinator.cs",
+      "added": 8,
+      "removed": 6
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "added": 38,
+      "removed": 17
+    },
+    {
+      "path": "Drilling.Common/Review/CZeroDefenceRecipePlan.cs",
+      "added": 5,
+      "removed": 3
+    },
+    {
+      "path": "Drilling.Common/Station/CStageReviewSequences.cs",
+      "added": 17,
+      "removed": 22
+    },
+    {
+      "path": "Drilling.Common/Station/CStationManager.cs",
+      "added": 1,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.Common/Station/CStationProcess.cs",
+      "added": 69,
+      "removed": 5
+    },
+    {
+      "path": "Drilling.File/JHMI/CJhmiRecipeFile.cs",
+      "added": 7,
+      "removed": 4
+    },
+    {
+      "path": "Drilling.File/JHMI/CSettingFile.cs",
+      "added": 11,
+      "removed": 1
+    },
+    {
+      "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "added": 79,
+      "removed": 11
+    },
+    {
+      "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+      "added": 6,
+      "removed": 1
+    },
+    {
+      "path": "Drilling.File/Script/CAutomation1ScriptFile.cs",
+      "added": 5,
+      "removed": 3
+    },
+    {
+      "path": "Drilling.UI/CRootView.cs",
+      "added": 422,
+      "removed": 28
+    },
+    {
+      "path": "Drilling.UI/CRootView.xaml",
+      "added": 2,
+      "removed": 1
+    },
+    {
+      "path": "Drilling.UI/Drilling.UI.csproj",
+      "added": 1,
+      "removed": 1
+    },
+    {
+      "path": "Drilling.UI/Menu/CBindingBase.cs",
+      "added": 32,
+      "removed": 8
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CHeadAssignmentPreviewBuilder.cs",
+      "added": 3,
+      "removed": 3
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Display.cs",
+      "added": 6,
+      "removed": 6
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Edit.cs",
+      "added": 21,
+      "removed": 9
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+      "added": 19,
+      "removed": 4
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs",
+      "added": 194,
+      "removed": 5
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.cs",
+      "added": 193,
+      "removed": 68
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuMain.cs",
+      "added": 116,
+      "removed": 11
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuManual.cs",
+      "added": 8,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuPm.cs",
+      "added": 162,
+      "removed": 24
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuRecipe.cs",
+      "added": 55,
+      "removed": 38
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuReview.cs",
+      "added": 344,
+      "removed": 62
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CReviewGlassPreviewBuilder.cs",
+      "added": 18,
+      "removed": 2
+    },
+    {
+      "path": "Drilling.UI/Popup/CAutoReviewMonitorDialog.xaml",
+      "added": 37,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Popup/CRecipeNameDialog.xaml",
+      "added": 1,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Popup/CZeroLineResultsDialog.xaml",
+      "added": 37,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Views/CCorrectionView.xaml",
+      "added": 3,
+      "removed": 12
+    },
+    {
+      "path": "Drilling.UI/Views/CCorrectionView.xaml.cs",
+      "added": 1,
+      "removed": 1
+    },
+    {
+      "path": "Drilling.UI/Views/CMainSequenceStatusView.xaml",
+      "added": 8,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Views/CPmView.xaml",
+      "added": 421,
+      "removed": 245
+    },
+    {
+      "path": "Drilling.UI/Views/CPmView.xaml.cs",
+      "added": 30,
+      "removed": 1
+    },
+    {
+      "path": "Drilling.UI/Views/CRecipeView.xaml",
+      "added": 17,
+      "removed": 8
+    },
+    {
+      "path": "Drilling.UI/Views/CReviewDataView.xaml",
+      "added": 49,
+      "removed": 8
+    },
+    {
+      "path": "Drilling.UI/Views/CReviewDataView.xaml.cs",
+      "added": 17,
+      "removed": 0
+    },
+    {
+      "path": "Drilling.UI/Views/CReviewView.xaml",
+      "added": 90,
+      "removed": 36
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "passed": true,
+  "count": 23,
+  "tests": [
+    {
+      "name": "same_day_duplicate_blocked",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "cross_day_same_instance_duplicate_blocked",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "cross_day_new_instance_duplicate_blocked",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "explicit_duplicate_allowed",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rollback_latest_keeps_older_duplicate_guard",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "rollback_all_clears_source_history",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "reapply_after_all_rollbacks_allowed",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "different_path_same_content_not_deduplicated",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "other_recipe_independent",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "nan_rejected",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "pre_cancelled_save_stopped",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "external_change_fixture_cache_empty",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "external_second_instance_history_cache_can_be_stale",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "metadata_candidates_measured_retained_edited_only",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "legacy_ok_ng_fallback",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "edited_ng_kept_for_fine_guard",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "retained_anchor_live_file_lagrange_equal",
+      "passed": true,
+      "actual": {
+        "live_mm": 0.0075,
+        "file_mm": 0.0075
+      }
+    },
+    {
+      "name": "old_measured_only_counterexample_reproduced",
+      "passed": true,
+      "actual": {
+        "old_file_mm": 0.015,
+        "current_file_mm": 0.0075
+      }
+    },
+    {
+      "name": "fine_any_ng_still_blocks_all",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "fine_single_anchor_constant",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "name": "result_number_now_six_decimals",
+      "passed": true,
+      "actual": "0.000600"
+    },
+    {
+      "name": "result_f3_extra_rounding_counterexample_fixed",
+      "passed": true,
+      "actual": {
+        "live_mm": 0.001,
+        "current_file_mm": 0.001,
+        "old_file_mm": 0.002
+      }
+    },
+    {
+      "name": "final_offset_rounding_remains_001_mm",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "limits": "실제 writer와 추출된 순수함수만 별도 Console에서 실행. 합성 데이터만 사용. 원본/설비/WPF/장비통신/벤더DLL/AeroScript 미실행. 외부 history 변경 항목은 서로 다른 writer 인스턴스로 재현한 캐시 계약 한계이며 실제 앱의 다중 인스턴스 운영을 확인한 것이 아님."
+}

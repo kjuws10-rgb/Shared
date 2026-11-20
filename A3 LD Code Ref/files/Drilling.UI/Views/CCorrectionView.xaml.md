@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
-| 원본 SHA256 | 3265891a261a9bd0a59175212987714d773b6feb52d5807f16084dbb42f95118 |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 SHA256 | d83d8ae20a08304d97cafeba8399cc5d7ddc23e40c5173ef770547085808daed |
 | 파일 분류 | code |
-| 원본 크기/행 | 59,499 bytes / 911 physical lines |
+| 원본 크기/행 | 58,949 bytes / 902 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CCorrectionView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CCorrectionView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -24,7 +24,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 코드 비하인드 후보 | Drilling.UI/Views/CCorrectionView.xaml.cs |
 | 이름 있는 요소 | DefaultWorkspace, CorrectionReviewTabControl, OutputViewerPreviewViewport, OutputViewerPreviewHoverTip, OutputViewerPreviewHoverTipTranslateTransform, OutputViewerPreviewHoverTipText, OutputViewerCellShotMapSurface, OutputOffsetKinds, OutputOffsetGrid |
 | 이벤트 개수 | 5 |
-| Binding 표현 개수 | 108 |
+| Binding 표현 개수 | 105 |
 
 이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
@@ -32,21 +32,21 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | --- | --- |
 | DefaultWorkspace | L217–217 |
 | CorrectionReviewTabControl | L228–228 |
-| OutputViewerPreviewViewport | L539–539 |
-| OutputViewerPreviewHoverTip | L595–595 |
-| OutputViewerPreviewHoverTipTranslateTransform | L607–607 |
-| OutputViewerPreviewHoverTipText | L609–609 |
-| OutputViewerCellShotMapSurface | L664–664 |
-| OutputOffsetKinds | L707–707 |
-| OutputOffsetGrid | L775–775 |
+| OutputViewerPreviewViewport | L530–530 |
+| OutputViewerPreviewHoverTip | L586–586 |
+| OutputViewerPreviewHoverTipTranslateTransform | L598–598 |
+| OutputViewerPreviewHoverTipText | L600–600 |
+| OutputViewerCellShotMapSurface | L655–655 |
+| OutputOffsetKinds | L698–698 |
+| OutputOffsetGrid | L766–766 |
 
 | 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
 | --- | --- | --- | --- |
 | SelectionChanged | CorrectionReviewTabControl_SelectionChanged | L229–229 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| MouseMove | OutputViewerCellPreviewLabel_MouseMove | L558–558 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| MouseLeave | OutputViewerCellPreviewLabel_MouseLeave | L559–559 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| MouseLeftButtonDown | SelectOutputViewerShotFromMap | L669–669 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| SelectionChanged | OutputOffsetGrid_SelectionChanged | L793–793 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| MouseMove | OutputViewerCellPreviewLabel_MouseMove | L549–549 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| MouseLeave | OutputViewerCellPreviewLabel_MouseLeave | L550–550 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| MouseLeftButtonDown | SelectOutputViewerShotFromMap | L660–660 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| SelectionChanged | OutputOffsetGrid_SelectionChanged | L784–784 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 
 | Binding 표현 | 원본 범위 |
 | --- | --- |
@@ -78,86 +78,83 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | {Binding CurrentScreen.Correction.AlignDistortion} | L225–225 |
 | {Binding CurrentScreen.Correction.SelectedReviewTabIndex, Mode=TwoWay} | L230–230 |
 | {Binding CurrentScreen.Correction.IsReviewCorrectionTab, Converter={StaticResource BooleanToVisibilityConverter}} | L232–232 |
-| {Binding CurrentScreen.Correction.Simple} | L263–263 |
-| {Binding CurrentScreen.Correction.Rough} | L266–266 |
-| {Binding CurrentScreen.Correction.Fine} | L269–269 |
-| {Binding CurrentScreen.Correction.ReviewData} | L272–272 |
-| {Binding CurrentScreen.Correction.SummaryItems} | L277–277 |
-| {Binding CurrentScreen.Correction.IsOtherCorrectionTab, Converter={StaticResource BooleanToVisibilityConverter}} | L278–278 |
-| {Binding Name} | L295–295 |
-| {Binding Value} | L298–298 |
-| {Binding ValueBrush} | L299–299 |
-| {Binding CurrentScreen.Correction.IsOtherCorrectionTab, Converter={StaticResource BooleanToVisibilityConverter}} | L311–311 |
-| {Binding CurrentScreen.Correction.SourceRows} | L326–326 |
-| {Binding Type} | L335–335 |
-| {Binding Name} | L336–336 |
-| {Binding Value} | L337–337 |
-| {Binding State} | L338–338 |
-| {Binding StateBrush} | L341–341 |
-| {Binding Source} | L346–346 |
-| {Binding CurrentScreen.Correction.CandidateRows} | L360–360 |
-| {Binding Item} | L369–369 |
-| {Binding Target} | L370–370 |
-| {Binding Value} | L371–371 |
-| {Binding ValueBrush} | L374–374 |
-| {Binding Unit} | L379–379 |
-| {Binding State} | L380–380 |
-| {Binding StateBrush} | L383–383 |
-| {Binding CurrentScreen.Correction.DetailItems} | L412–412 |
-| {Binding Name} | L420–420 |
-| {Binding Value} | L423–423 |
-| {Binding CurrentScreen.Correction.ApplyRows} | L441–441 |
-| {Binding Item} | L450–450 |
-| {Binding Target} | L451–451 |
-| {Binding Value} | L452–452 |
-| {Binding ValueBrush} | L455–455 |
-| {Binding Unit} | L460–460 |
-| {Binding State} | L461–461 |
-| {Binding CurrentScreen.Correction.IsOutputHistoryTab, Converter={StaticResource BooleanToVisibilityConverter}} | L471–471 |
-| {Binding CurrentScreen.Correction.OutputViewerSummary} | L499–499 |
-| {Binding CurrentScreen.Correction.OutputViewerHeadCards} | L508–508 |
-| {Binding Background} | L519–519 |
-| {Binding BorderBrush} | L520–520 |
-| {Binding Name} | L523–523 |
-| {Binding Foreground} | L524–524 |
-| {Binding CurrentScreen.Correction.OutputViewerGlassPreviewImage} | L540–540 |
-| {Binding CurrentScreen.Correction.OutputViewerCellPreviewLabels} | L544–544 |
-| {Binding CellNo} | L549–549 |
-| {Binding Width} | L550–550 |
-| {Binding Height} | L551–551 |
-| {Binding DataContext.CurrentScreen.Correction.SelectOutputViewerCellCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L552–552 |
-| {Binding CellNo} | L553–553 |
-| {Binding IsSelected} | L582–582 |
-| {Binding CurrentScreen.Correction.OutputViewerSelectedShotName} | L637–637 |
-| {Binding CurrentScreen.Correction.OutputViewerCellShotMapSurfaceWidth} | L665–665 |
-| {Binding CurrentScreen.Correction.OutputViewerCellShotMapSurfaceHeight} | L666–666 |
-| {Binding CurrentScreen.Correction.OutputViewerCellShotMapImage} | L670–670 |
-| {Binding CurrentScreen.Correction.OutputViewerHasNoCellSelection, Converter={StaticResource BooleanToVisibilityConverter}} | L676–676 |
-| {Binding CurrentScreen.Correction.OutputOffsets.Kinds} | L708–708 |
-| {Binding Name} | L715–715 |
-| {Binding Key} | L716–716 |
-| {Binding DataContext.CurrentScreen.Correction.OutputOffsets.SelectKindCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L718–718 |
-| {Binding CurrentScreen.Correction.OutputOffsets.Description} | L723–723 |
-| {Binding CurrentScreen.Correction.OutputViewerSelectedCellName} | L741–741 |
-| {Binding CurrentScreen.Correction.OutputViewerSelectedShotName} | L747–747 |
-| {Binding CurrentScreen.Correction.OutputViewerSelectedShotDetail} | L755–755 |
-| {Binding CurrentScreen.Correction.OutputViewerHasNoCellSelection, Converter={StaticResource BooleanToVisibilityConverter}} | L763–763 |
-| {Binding CurrentScreen.Correction.OutputViewerIsCellDetailVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L776–776 |
-| {Binding CurrentScreen.Correction.OutputOffsets.ShotItems} | L777–777 |
-| {Binding CurrentScreen.Correction.OutputOffsets.SelectedShotItem, Mode=OneWay} | L778–778 |
-| {Binding CoordinateDetail} | L800–800 |
-| {Binding IsSelected} | L802–802 |
-| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L821–821 |
-| {Binding ShotName} | L834–834 |
-| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L835–835 |
-| {Binding Head} | L846–846 |
-| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L847–847 |
-| {Binding DesignOffsetX} | L858–858 |
-| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L859–859 |
-| {Binding DesignOffsetY} | L870–870 |
-| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L871–871 |
-| {Binding ScannerOffsetGx} | L882–882 |
-| {Binding ScannerOffsetGy} | L894–894 |
+| {Binding CurrentScreen.Correction.Simple} | L260–260 |
+| {Binding CurrentScreen.Correction.SummaryItems} | L268–268 |
+| {Binding CurrentScreen.Correction.IsOtherCorrectionTab, Converter={StaticResource BooleanToVisibilityConverter}} | L269–269 |
+| {Binding Name} | L286–286 |
+| {Binding Value} | L289–289 |
+| {Binding ValueBrush} | L290–290 |
+| {Binding CurrentScreen.Correction.IsOtherCorrectionTab, Converter={StaticResource BooleanToVisibilityConverter}} | L302–302 |
+| {Binding CurrentScreen.Correction.SourceRows} | L317–317 |
+| {Binding Type} | L326–326 |
+| {Binding Name} | L327–327 |
+| {Binding Value} | L328–328 |
+| {Binding State} | L329–329 |
+| {Binding StateBrush} | L332–332 |
+| {Binding Source} | L337–337 |
+| {Binding CurrentScreen.Correction.CandidateRows} | L351–351 |
+| {Binding Item} | L360–360 |
+| {Binding Target} | L361–361 |
+| {Binding Value} | L362–362 |
+| {Binding ValueBrush} | L365–365 |
+| {Binding Unit} | L370–370 |
+| {Binding State} | L371–371 |
+| {Binding StateBrush} | L374–374 |
+| {Binding CurrentScreen.Correction.DetailItems} | L403–403 |
+| {Binding Name} | L411–411 |
+| {Binding Value} | L414–414 |
+| {Binding CurrentScreen.Correction.ApplyRows} | L432–432 |
+| {Binding Item} | L441–441 |
+| {Binding Target} | L442–442 |
+| {Binding Value} | L443–443 |
+| {Binding ValueBrush} | L446–446 |
+| {Binding Unit} | L451–451 |
+| {Binding State} | L452–452 |
+| {Binding CurrentScreen.Correction.IsOutputHistoryTab, Converter={StaticResource BooleanToVisibilityConverter}} | L462–462 |
+| {Binding CurrentScreen.Correction.OutputViewerSummary} | L490–490 |
+| {Binding CurrentScreen.Correction.OutputViewerHeadCards} | L499–499 |
+| {Binding Background} | L510–510 |
+| {Binding BorderBrush} | L511–511 |
+| {Binding Name} | L514–514 |
+| {Binding Foreground} | L515–515 |
+| {Binding CurrentScreen.Correction.OutputViewerGlassPreviewImage} | L531–531 |
+| {Binding CurrentScreen.Correction.OutputViewerCellPreviewLabels} | L535–535 |
+| {Binding CellNo} | L540–540 |
+| {Binding Width} | L541–541 |
+| {Binding Height} | L542–542 |
+| {Binding DataContext.CurrentScreen.Correction.SelectOutputViewerCellCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L543–543 |
+| {Binding CellNo} | L544–544 |
+| {Binding IsSelected} | L573–573 |
+| {Binding CurrentScreen.Correction.OutputViewerSelectedShotName} | L628–628 |
+| {Binding CurrentScreen.Correction.OutputViewerCellShotMapSurfaceWidth} | L656–656 |
+| {Binding CurrentScreen.Correction.OutputViewerCellShotMapSurfaceHeight} | L657–657 |
+| {Binding CurrentScreen.Correction.OutputViewerCellShotMapImage} | L661–661 |
+| {Binding CurrentScreen.Correction.OutputViewerHasNoCellSelection, Converter={StaticResource BooleanToVisibilityConverter}} | L667–667 |
+| {Binding CurrentScreen.Correction.OutputOffsets.Kinds} | L699–699 |
+| {Binding Name} | L706–706 |
+| {Binding Key} | L707–707 |
+| {Binding DataContext.CurrentScreen.Correction.OutputOffsets.SelectKindCommand, RelativeSource={RelativeSource AncestorType=UserControl}} | L709–709 |
+| {Binding CurrentScreen.Correction.OutputOffsets.Description} | L714–714 |
+| {Binding CurrentScreen.Correction.OutputViewerSelectedCellName} | L732–732 |
+| {Binding CurrentScreen.Correction.OutputViewerSelectedShotName} | L738–738 |
+| {Binding CurrentScreen.Correction.OutputViewerSelectedShotDetail} | L746–746 |
+| {Binding CurrentScreen.Correction.OutputViewerHasNoCellSelection, Converter={StaticResource BooleanToVisibilityConverter}} | L754–754 |
+| {Binding CurrentScreen.Correction.OutputViewerIsCellDetailVisible, Converter={StaticResource BooleanToVisibilityConverter}} | L767–767 |
+| {Binding CurrentScreen.Correction.OutputOffsets.ShotItems} | L768–768 |
+| {Binding CurrentScreen.Correction.OutputOffsets.SelectedShotItem, Mode=OneWay} | L769–769 |
+| {Binding CoordinateDetail} | L791–791 |
+| {Binding IsSelected} | L793–793 |
+| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L812–812 |
+| {Binding ShotName} | L825–825 |
+| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L826–826 |
+| {Binding Head} | L837–837 |
+| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L838–838 |
+| {Binding DesignOffsetX} | L849–849 |
+| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L850–850 |
+| {Binding DesignOffsetY} | L861–861 |
+| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L862–862 |
+| {Binding ScannerOffsetGx} | L873–873 |
+| {Binding ScannerOffsetGy} | L885–885 |
 
 ## 원문 전체 주석 해설본
 

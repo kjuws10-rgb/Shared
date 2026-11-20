@@ -1,40 +1,80 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CMenuPm.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CMenuPm.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CMenuPm.cs</h1>
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drilling.UI/Menu/Menus/CMenuPm.cs</title><style>body{overflow-wrap:anywhere;word-break:normal;margin:0;background:#f2f5fa;color:#213149;font:16px/1.65 system-ui,Segoe UI,sans-serif}header{background:#142d40;color:white;padding:24px}header a{color:#9ee5eb}main{max-width:1280px;margin:auto;padding:24px}a{color:#145c9a}h1{font-size:30px}h2{margin-top:38px;border-bottom:2px solid #d6e2ed;padding-bottom:8px}h3{margin-top:28px}table{width:100%;border-collapse:collapse;background:white;font-size:14px;margin:18px 0}th,td{border:1px solid #d7e2ec;padding:9px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102638;color:#dcf3ef;padding:20px;border-radius:8px;font:13px/1.6 Consolas,monospace}code{background:#e6edf5;padding:2px 5px;border-radius:4px}pre code{background:none;padding:0}.note{border-left:4px solid #1d8a98;background:#e5f4f5;padding:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:white;border:1px solid #d7e2ec;border-radius:10px;padding:18px}input,select{box-sizing:border-box;padding:12px;border:1px solid #b9cadb;border-radius:6px;font:inherit;max-width:95%}img{max-width:100%;background:white}details{background:white;border:1px solid #d7e2ec;border-radius:8px;margin:10px 0;padding:12px}summary{cursor:pointer;font-weight:bold}.small{font-size:13px;color:#617183}button{padding:10px 16px;border:0;background:#195f86;color:white;border-radius:6px;cursor:pointer}@media(max-width:650px){main{padding:12px}table{font-size:12px}th,td{padding:6px}h1{font-size:24px}}@media print{header,input,button{display:none}main{max-width:none}body{background:white}pre{color:black;background:#f2f4f7}}</style><header><b>A3 LD Code Ref</b> · <a href="../index.html">전체 목차</a> <button onclick="print()">인쇄</button></header><main><p><a href="../files/Drilling.UI/Menu/Menus/CMenuPm.cs.md">Markdown 원문</a> · <a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs">Git 원본</a></p><h1>Drilling.UI/Menu/Menus/CMenuPm.cs</h1>
 <table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody>
 <tr><td>원본 저장소</td><td>https://github.com/kjuws10-rgb/A3Drilling.git</td></tr>
-<tr><td>원본 Commit</td><td>96e22cd027c84bf302b23f2949b98985d7f301bb</td></tr>
-<tr><td>원본 SHA256</td><td>485dc2492d90c8008cf87f55f9e58a9f4c93d89eb4080f09205a4bab2a9e66b1</td></tr>
+<tr><td>원본 Commit</td><td>28764c91d521777b8ee068dd7aaf2d3902ce9fe2</td></tr>
+<tr><td>원본 SHA256</td><td>1393394dca1a9500052acf8e9238a1ce0db7006515a36cc5c68d3d88fccb3258</td></tr>
 <tr><td>파일 분류</td><td>code</td></tr>
-<tr><td>원본 크기/행</td><td>2,116 bytes / 52 physical lines</td></tr>
+<tr><td>원본 크기/행</td><td>8,226 bytes / 190 physical lines</td></tr>
 <tr><td>인코딩</td><td>utf-8-sig</td></tr>
 <tr><td>검토 범위</td><td>구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다.</td></tr>
-<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs">고정 Commit 원본</a></td></tr>
+<tr><td>원본 링크</td><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs">고정 Commit 원본</a></td></tr>
 </tbody></table>
 <h2>파일의 역할과 읽는 순서</h2>
 <p>WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트와 코드 비하인드, RootView의 조립 경로를 함께 추적합니다.</p>
 <p><img alt="파일 관계도" src="../diagrams/files/e709c3e8663f26e17af3.svg"></p>
 <h2>네임스페이스·타입·상속</h2>
 <table><thead><tr><th>타입</th><th>구분</th><th>원본 범위</th><th>선언/상속</th></tr></thead><tbody>
-<tr><td>CMenuPm</td><td>ClassDeclaration</td><td>9–52</td><td>CMenuPm: CMenuBase</td></tr>
+<tr><td>CMenuPm</td><td>ClassDeclaration</td><td>9–179</td><td>CMenuPm: CMenuBase</td></tr>
+<tr><td>ST_PM_PART_LIFE_ROW</td><td>RecordDeclaration</td><td>181–184</td><td>ST_PM_PART_LIFE_ROW</td></tr>
+<tr><td>ST_PM_HISTORY_ROW</td><td>RecordDeclaration</td><td>186–190</td><td>ST_PM_HISTORY_ROW</td></tr>
 </tbody></table>
 <h2>멤버 빠른 목록</h2>
 <table><thead><tr><th>이름</th><th>종류</th><th>범위</th><th>서명</th></tr></thead><tbody>
-<tr><td>Menu</td><td>PropertyDeclaration</td><td>L11–17</td><td>Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuPm.Menu</td></tr>
-<tr><td>get_Menu</td><td>GetAccessorDeclaration</td><td>L13–16</td><td>Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuPm.Menu.get</td></tr>
-<tr><td>StartTime</td><td>PropertyDeclaration</td><td>L19–19</td><td>string Drilling.UI.Menu.Menus.CMenuPm.StartTime</td></tr>
-<tr><td>get_StartTime</td><td>GetAccessorDeclaration</td><td>L19–19</td><td>string Drilling.UI.Menu.Menus.CMenuPm.StartTime.get</td></tr>
-<tr><td>set_StartTime</td><td>SetAccessorDeclaration</td><td>L19–19</td><td>void Drilling.UI.Menu.Menus.CMenuPm.StartTime.set</td></tr>
-<tr><td>LockItems</td><td>PropertyDeclaration</td><td>L20–20</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.LockItems</td></tr>
-<tr><td>get_LockItems</td><td>GetAccessorDeclaration</td><td>L20–20</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.LockItems.get</td></tr>
-<tr><td>set_LockItems</td><td>SetAccessorDeclaration</td><td>L20–20</td><td>void Drilling.UI.Menu.Menus.CMenuPm.LockItems.set</td></tr>
-<tr><td>BlockedItems</td><td>PropertyDeclaration</td><td>L21–21</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.BlockedItems</td></tr>
-<tr><td>get_BlockedItems</td><td>GetAccessorDeclaration</td><td>L21–21</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.BlockedItems.get</td></tr>
-<tr><td>set_BlockedItems</td><td>SetAccessorDeclaration</td><td>L21–21</td><td>void Drilling.UI.Menu.Menus.CMenuPm.BlockedItems.set</td></tr>
-<tr><td>Build</td><td>MethodDeclaration</td><td>L23–44</td><td>System.Threading.Tasks.Task&lt;Drilling.UI.Menu.Menus.CScreenViewModel&gt; Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)</td></tr>
-<tr><td>Apply</td><td>MethodDeclaration</td><td>L46–51</td><td>void Drilling.UI.Menu.Menus.CMenuPm.Apply(string, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;)</td></tr>
+<tr><td>LaserThgHourLimitKey</td><td>FieldDeclaration</td><td>L17–17</td><td>string Drilling.UI.Menu.Menus.CMenuPm.LaserThgHourLimitKey</td></tr>
+<tr><td>Menu</td><td>PropertyDeclaration</td><td>L19–25</td><td>Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuPm.Menu</td></tr>
+<tr><td>get_Menu</td><td>GetAccessorDeclaration</td><td>L21–24</td><td>Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuPm.Menu.get</td></tr>
+<tr><td>IsLocked</td><td>PropertyDeclaration</td><td>L27–27</td><td>bool Drilling.UI.Menu.Menus.CMenuPm.IsLocked</td></tr>
+<tr><td>get_IsLocked</td><td>GetAccessorDeclaration</td><td>L27–27</td><td>bool Drilling.UI.Menu.Menus.CMenuPm.IsLocked.get</td></tr>
+<tr><td>set_IsLocked</td><td>SetAccessorDeclaration</td><td>L27–27</td><td>void Drilling.UI.Menu.Menus.CMenuPm.IsLocked.set</td></tr>
+<tr><td>StartTime</td><td>PropertyDeclaration</td><td>L28–28</td><td>string Drilling.UI.Menu.Menus.CMenuPm.StartTime</td></tr>
+<tr><td>get_StartTime</td><td>GetAccessorDeclaration</td><td>L28–28</td><td>string Drilling.UI.Menu.Menus.CMenuPm.StartTime.get</td></tr>
+<tr><td>set_StartTime</td><td>SetAccessorDeclaration</td><td>L28–28</td><td>void Drilling.UI.Menu.Menus.CMenuPm.StartTime.set</td></tr>
+<tr><td>LockItems</td><td>PropertyDeclaration</td><td>L29–29</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.LockItems</td></tr>
+<tr><td>get_LockItems</td><td>GetAccessorDeclaration</td><td>L29–29</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.LockItems.get</td></tr>
+<tr><td>set_LockItems</td><td>SetAccessorDeclaration</td><td>L29–29</td><td>void Drilling.UI.Menu.Menus.CMenuPm.LockItems.set</td></tr>
+<tr><td>BlockedItems</td><td>PropertyDeclaration</td><td>L30–30</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.BlockedItems</td></tr>
+<tr><td>get_BlockedItems</td><td>GetAccessorDeclaration</td><td>L30–30</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.BlockedItems.get</td></tr>
+<tr><td>set_BlockedItems</td><td>SetAccessorDeclaration</td><td>L30–30</td><td>void Drilling.UI.Menu.Menus.CMenuPm.BlockedItems.set</td></tr>
+<tr><td>PartLifeRows</td><td>PropertyDeclaration</td><td>L31–31</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.PartLifeRows</td></tr>
+<tr><td>get_PartLifeRows</td><td>GetAccessorDeclaration</td><td>L31–31</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.PartLifeRows.get</td></tr>
+<tr><td>set_PartLifeRows</td><td>SetAccessorDeclaration</td><td>L31–31</td><td>void Drilling.UI.Menu.Menus.CMenuPm.PartLifeRows.set</td></tr>
+<tr><td>ProtectWindowItems</td><td>PropertyDeclaration</td><td>L32–32</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.ProtectWindowItems</td></tr>
+<tr><td>get_ProtectWindowItems</td><td>GetAccessorDeclaration</td><td>L32–32</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.ProtectWindowItems.get</td></tr>
+<tr><td>set_ProtectWindowItems</td><td>SetAccessorDeclaration</td><td>L32–32</td><td>void Drilling.UI.Menu.Menus.CMenuPm.ProtectWindowItems.set</td></tr>
+<tr><td>HistoryRows</td><td>PropertyDeclaration</td><td>L33–33</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.HistoryRows</td></tr>
+<tr><td>get_HistoryRows</td><td>GetAccessorDeclaration</td><td>L33–33</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.HistoryRows.get</td></tr>
+<tr><td>set_HistoryRows</td><td>SetAccessorDeclaration</td><td>L33–33</td><td>void Drilling.UI.Menu.Menus.CMenuPm.HistoryRows.set</td></tr>
+<tr><td>Build</td><td>MethodDeclaration</td><td>L35–60</td><td>System.Threading.Tasks.Task&lt;Drilling.UI.Menu.Menus.CScreenViewModel&gt; Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)</td></tr>
+<tr><td>Apply</td><td>MethodDeclaration</td><td>L62–78</td><td>void Drilling.UI.Menu.Menus.CMenuPm.Apply(bool, string, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt;)</td></tr>
+<tr><td>CreatePartLifeRows</td><td>MethodDeclaration</td><td>L80–91</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.CreatePartLifeRows(System.Threading.CancellationToken)</td></tr>
+<tr><td>CreatePartLifeRow</td><td>MethodDeclaration</td><td>L93–109</td><td>Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW Drilling.UI.Menu.Menus.CMenuPm.CreatePartLifeRow(int, double?, System.Collections.Generic.IReadOnlySet&lt;int&gt;)</td></tr>
+<tr><td>ReadCrystalLimit</td><td>MethodDeclaration</td><td>L111–119</td><td>double? Drilling.UI.Menu.Menus.CMenuPm.ReadCrystalLimit(System.Threading.CancellationToken)</td></tr>
+<tr><td>CreateProtectWindowItems</td><td>MethodDeclaration</td><td>L121–135</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;&gt; Drilling.UI.Menu.Menus.CMenuPm.CreateProtectWindowItems(System.Threading.CancellationToken)</td></tr>
+<tr><td>ReadRecipeValue</td><td>LocalFunctionStatement</td><td>L126–128</td><td>string ReadRecipeValue(string)</td></tr>
+<tr><td>FormatRecipeCount</td><td>MethodDeclaration</td><td>L137–147</td><td>string Drilling.UI.Menu.Menus.CMenuPm.FormatRecipeCount(string, string)</td></tr>
+<tr><td>NormalizeSnapshotState</td><td>MethodDeclaration</td><td>L149–156</td><td>string Drilling.UI.Menu.Menus.CMenuPm.NormalizeSnapshotState(string)</td></tr>
+<tr><td>CreateEmptyPartLifeRows</td><td>MethodDeclaration</td><td>L158–160</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.CreateEmptyPartLifeRows()</td></tr>
+<tr><td>CreateEmptyProtectWindowItems</td><td>MethodDeclaration</td><td>L162–166</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.CreateEmptyProtectWindowItems()</td></tr>
+<tr><td>CreateHistoryRows</td><td>MethodDeclaration</td><td>L168–174</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.CreateHistoryRows(System.Collections.Generic.IReadOnlyList&lt;ST_PM_HISTORY_ENTRY&gt;)</td></tr>
+<tr><td>FormatDuration</td><td>MethodDeclaration</td><td>L176–178</td><td>string Drilling.UI.Menu.Menus.CMenuPm.FormatDuration(System.TimeSpan)</td></tr>
 </tbody></table>
 <h2>멤버별 상세 계약·호출·처리 해설</h2>
-<h3 id="L11">PropertyDeclaration <code>Menu</code> · L11–17</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L11-L17">Drilling.UI/Menu/Menus/CMenuPm.cs:11–17</a></p>
+<h3 id="L17">FieldDeclaration <code>LaserThgHourLimitKey</code> · L17–17</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L17-L17">Drilling.UI/Menu/Menus/CMenuPm.cs:17–17</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMenuPm.LaserThgHourLimitKey</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, const</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>17</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: LaserThgHourLimitKey = &quot;LASER_THG_HOUR_LIMIT&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L19">PropertyDeclaration <code>Menu</code> · L19–25</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L19-L25">Drilling.UI/Menu/Menus/CMenuPm.cs:19–25</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuPm.Menu</td></tr>
 <tr><td>접근/수식자</td><td>Public / public, override</td></tr>
@@ -43,8 +83,8 @@
 </tbody></table>
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
-<h3 id="L13">GetAccessorDeclaration <code>get_Menu</code> · L13–16</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L13-L16">Drilling.UI/Menu/Menus/CMenuPm.cs:13–16</a></p>
+<h3 id="L21">GetAccessorDeclaration <code>get_Menu</code> · L21–24</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L21-L24">Drilling.UI/Menu/Menus/CMenuPm.cs:21–24</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>Drilling.UI.Menu.Menus.EN_MENU Drilling.UI.Menu.Menus.CMenuPm.Menu.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -54,11 +94,45 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
-<tr><td>15</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return EN_MENU.Pm;</td></tr>
+<tr><td>23</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return EN_MENU.Pm;</td></tr>
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
-<h3 id="L19">PropertyDeclaration <code>StartTime</code> · L19–19</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L19-L19">Drilling.UI/Menu/Menus/CMenuPm.cs:19–19</a></p>
+<h3 id="L27">PropertyDeclaration <code>IsLocked</code> · L27–27</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L27-L27">Drilling.UI/Menu/Menus/CMenuPm.cs:27–27</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CMenuPm.IsLocked</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L27">GetAccessorDeclaration <code>get_IsLocked</code> · L27–27</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L27-L27">Drilling.UI/Menu/Menus/CMenuPm.cs:27–27</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>bool Drilling.UI.Menu.Menus.CMenuPm.IsLocked.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>bool</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L27">SetAccessorDeclaration <code>set_IsLocked</code> · L27–27</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L27-L27">Drilling.UI/Menu/Menus/CMenuPm.cs:27–27</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMenuPm.IsLocked.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>bool</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L28">PropertyDeclaration <code>StartTime</code> · L28–28</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L28-L28">Drilling.UI/Menu/Menus/CMenuPm.cs:28–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMenuPm.StartTime</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -67,8 +141,8 @@
 </tbody></table>
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
-<h3 id="L19">GetAccessorDeclaration <code>get_StartTime</code> · L19–19</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L19-L19">Drilling.UI/Menu/Menus/CMenuPm.cs:19–19</a></p>
+<h3 id="L28">GetAccessorDeclaration <code>get_StartTime</code> · L28–28</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L28-L28">Drilling.UI/Menu/Menus/CMenuPm.cs:28–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMenuPm.StartTime.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -77,8 +151,8 @@
 </tbody></table>
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
-<h3 id="L19">SetAccessorDeclaration <code>set_StartTime</code> · L19–19</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L19-L19">Drilling.UI/Menu/Menus/CMenuPm.cs:19–19</a></p>
+<h3 id="L28">SetAccessorDeclaration <code>set_StartTime</code> · L28–28</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L28-L28">Drilling.UI/Menu/Menus/CMenuPm.cs:28–28</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMenuPm.StartTime.set</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, set</td></tr>
@@ -91,8 +165,8 @@
 </tbody></table>
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
-<h3 id="L20">PropertyDeclaration <code>LockItems</code> · L20–20</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L20-L20">Drilling.UI/Menu/Menus/CMenuPm.cs:20–20</a></p>
+<h3 id="L29">PropertyDeclaration <code>LockItems</code> · L29–29</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L29-L29">Drilling.UI/Menu/Menus/CMenuPm.cs:29–29</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.LockItems</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -101,8 +175,8 @@
 </tbody></table>
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
-<h3 id="L20">GetAccessorDeclaration <code>get_LockItems</code> · L20–20</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L20-L20">Drilling.UI/Menu/Menus/CMenuPm.cs:20–20</a></p>
+<h3 id="L29">GetAccessorDeclaration <code>get_LockItems</code> · L29–29</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L29-L29">Drilling.UI/Menu/Menus/CMenuPm.cs:29–29</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.LockItems.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -111,8 +185,8 @@
 </tbody></table>
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
-<h3 id="L20">SetAccessorDeclaration <code>set_LockItems</code> · L20–20</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L20-L20">Drilling.UI/Menu/Menus/CMenuPm.cs:20–20</a></p>
+<h3 id="L29">SetAccessorDeclaration <code>set_LockItems</code> · L29–29</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L29-L29">Drilling.UI/Menu/Menus/CMenuPm.cs:29–29</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMenuPm.LockItems.set</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, set</td></tr>
@@ -125,8 +199,8 @@
 </tbody></table>
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
-<h3 id="L21">PropertyDeclaration <code>BlockedItems</code> · L21–21</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L21-L21">Drilling.UI/Menu/Menus/CMenuPm.cs:21–21</a></p>
+<h3 id="L30">PropertyDeclaration <code>BlockedItems</code> · L30–30</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L30-L30">Drilling.UI/Menu/Menus/CMenuPm.cs:30–30</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.BlockedItems</td></tr>
 <tr><td>접근/수식자</td><td>Public / public</td></tr>
@@ -135,8 +209,8 @@
 </tbody></table>
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
-<h3 id="L21">GetAccessorDeclaration <code>get_BlockedItems</code> · L21–21</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L21-L21">Drilling.UI/Menu/Menus/CMenuPm.cs:21–21</a></p>
+<h3 id="L30">GetAccessorDeclaration <code>get_BlockedItems</code> · L30–30</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L30-L30">Drilling.UI/Menu/Menus/CMenuPm.cs:30–30</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.BlockedItems.get</td></tr>
 <tr><td>접근/수식자</td><td>Public / get</td></tr>
@@ -145,8 +219,8 @@
 </tbody></table>
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
-<h3 id="L21">SetAccessorDeclaration <code>set_BlockedItems</code> · L21–21</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L21-L21">Drilling.UI/Menu/Menus/CMenuPm.cs:21–21</a></p>
+<h3 id="L30">SetAccessorDeclaration <code>set_BlockedItems</code> · L30–30</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L30-L30">Drilling.UI/Menu/Menus/CMenuPm.cs:30–30</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMenuPm.BlockedItems.set</td></tr>
 <tr><td>접근/수식자</td><td>Private / private, set</td></tr>
@@ -159,11 +233,129 @@
 </tbody></table>
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
-<h3 id="L23">MethodDeclaration <code>Build</code> · L23–44</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L23-L44">Drilling.UI/Menu/Menus/CMenuPm.cs:23–44</a></p>
+<h3 id="L31">PropertyDeclaration <code>PartLifeRows</code> · L31–31</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L31-L31">Drilling.UI/Menu/Menus/CMenuPm.cs:31–31</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.PartLifeRows</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>31</td><td>CreateEmptyPartLifeRows</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.CreateEmptyPartLifeRows() · Drilling.UI/Menu/Menus/CMenuPm.cs:158</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>31</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateEmptyPartLifeRows()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L31">GetAccessorDeclaration <code>get_PartLifeRows</code> · L31–31</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L31-L31">Drilling.UI/Menu/Menus/CMenuPm.cs:31–31</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.PartLifeRows.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L31">SetAccessorDeclaration <code>set_PartLifeRows</code> · L31–31</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L31-L31">Drilling.UI/Menu/Menus/CMenuPm.cs:31–31</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMenuPm.PartLifeRows.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L32">PropertyDeclaration <code>ProtectWindowItems</code> · L32–32</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L32-L32">Drilling.UI/Menu/Menus/CMenuPm.cs:32–32</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.ProtectWindowItems</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>32</td><td>CreateEmptyProtectWindowItems</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.CreateEmptyProtectWindowItems() · Drilling.UI/Menu/Menus/CMenuPm.cs:162</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>32</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateEmptyProtectWindowItems()</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L32">GetAccessorDeclaration <code>get_ProtectWindowItems</code> · L32–32</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L32-L32">Drilling.UI/Menu/Menus/CMenuPm.cs:32–32</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.ProtectWindowItems.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L32">SetAccessorDeclaration <code>set_ProtectWindowItems</code> · L32–32</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L32-L32">Drilling.UI/Menu/Menus/CMenuPm.cs:32–32</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMenuPm.ProtectWindowItems.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L33">PropertyDeclaration <code>HistoryRows</code> · L33–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L33-L33">Drilling.UI/Menu/Menus/CMenuPm.cs:33–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.HistoryRows</td></tr>
+<tr><td>접근/수식자</td><td>Public / public</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L33">GetAccessorDeclaration <code>get_HistoryRows</code> · L33–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L33-L33">Drilling.UI/Menu/Menus/CMenuPm.cs:33–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.HistoryRows.get</td></tr>
+<tr><td>접근/수식자</td><td>Public / get</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L33">SetAccessorDeclaration <code>set_HistoryRows</code> · L33–33</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L33-L33">Drilling.UI/Menu/Menus/CMenuPm.cs:33–33</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMenuPm.HistoryRows.set</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, set</td></tr>
+<tr><td>반환/값 타입</td><td>void</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>value</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L35">MethodDeclaration <code>Build</code> · L35–60</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L35-L60">Drilling.UI/Menu/Menus/CMenuPm.cs:35–60</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
 <tr><td>서명</td><td>System.Threading.Tasks.Task&lt;Drilling.UI.Menu.Menus.CScreenViewModel&gt; Drilling.UI.Menu.Menus.CMenuPm.Build(System.Threading.CancellationToken)</td></tr>
-<tr><td>접근/수식자</td><td>Public / public, override</td></tr>
+<tr><td>접근/수식자</td><td>Public / public, override, async</td></tr>
 <tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;Drilling.UI.Menu.Menus.CScreenViewModel&gt;</td></tr>
 <tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
 </tbody></table>
@@ -174,92 +366,511 @@
 <p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
 <p>호출하는 대상과 해석 범위:</p>
 <table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
-<tr><td>25</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
-<tr><td>26</td><td>lockStatusProvider</td><td>resolved · 동적 구현 선택 가능</td><td>Drilling.Common.Managers.ST_PM_LOCK_STATUS System.Func&lt;Drilling.Common.Managers.ST_PM_LOCK_STATUS&gt;.Invoke()</td></tr>
-<tr><td>29</td><td>enterLock</td><td>resolved · 동적 구현 선택 가능</td><td>void System.Action.Invoke()</td></tr>
-<tr><td>30</td><td>lockStatusProvider</td><td>resolved · 동적 구현 선택 가능</td><td>Drilling.Common.Managers.ST_PM_LOCK_STATUS System.Func&lt;Drilling.Common.Managers.ST_PM_LOCK_STATUS&gt;.Invoke()</td></tr>
-<tr><td>33</td><td>.ToString</td><td>resolved</td><td>string System.DateTimeOffset.ToString(string?)</td></tr>
-<tr><td>33</td><td>DateTime.Now.ToString</td><td>resolved</td><td>string System.DateTime.ToString(string?)</td></tr>
-<tr><td>34</td><td>Apply</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CMenuPm.Apply(string, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;) · Drilling.UI/Menu/Menus/CMenuPm.cs:46</td></tr>
-<tr><td>34</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
-<tr><td>34</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
-<tr><td>34</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
-<tr><td>34</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
-<tr><td>34</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
-<tr><td>34</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
-<tr><td>35</td><td>new CScreenViewModel</td><td>resolved</td><td>Drilling.UI.Menu.Menus.CScreenViewModel.CScreenViewModel(Drilling.UI.Menu.Menus.EN_MENU, string, string, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_SCREEN_SECTION&gt;, bool, Drilling.UI.Menu.Menus.CMenuMain?, Drilling.UI.Menu.Menus.CMenuManual?, Drilling.UI.Menu.Menus.CMenuRecipe?, Drilling.UI.Menu.Menus.CMenuSetting?, Drilling.UI.Menu.Menus.CMenuAlarm?, Drilling.UI.Menu.Menus.CMenuMonitor?, Drilling.UI.Menu.Menus.CMenuReview?, Drilling.UI.Menu.Menus.CMenuCorrection?, Drilling.UI.Menu.Menus.CMenuPm?) · Drilling.UI/Menu/Menus/CMenuBase.cs:411</td></tr>
-<tr><td>39</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
-<tr><td>39</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
-<tr><td>39</td><td>.ToString</td><td>resolved</td><td>string System.DateTimeOffset.ToString(string?)</td></tr>
-<tr><td>40</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCREEN_SECTION.ST_SCREEN_SECTION(string, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;) · Drilling.UI/Menu/Menus/CMenuBase.cs:410</td></tr>
-<tr><td>40</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
-<tr><td>40</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
-<tr><td>43</td><td>Task.FromResult</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;Drilling.UI.Menu.Menus.CScreenViewModel&gt; System.Threading.Tasks.Task.FromResult&lt;Drilling.UI.Menu.Menus.CScreenViewModel&gt;(Drilling.UI.Menu.Menus.CScreenViewModel)</td></tr>
+<tr><td>37</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>38</td><td>lockStatusProvider</td><td>resolved · 동적 구현 선택 가능</td><td>Drilling.Common.Managers.ST_PM_LOCK_STATUS System.Func&lt;Drilling.Common.Managers.ST_PM_LOCK_STATUS&gt;.Invoke()</td></tr>
+<tr><td>39</td><td>CreatePartLifeRows</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.CreatePartLifeRows(System.Threading.CancellationToken) · Drilling.UI/Menu/Menus/CMenuPm.cs:80</td></tr>
+<tr><td>40</td><td>CreateProtectWindowItems(cancellationToken).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;&gt; System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;&gt;.ConfigureAwait(bool)</td></tr>
+<tr><td>40</td><td>CreateProtectWindowItems</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;&gt; Drilling.UI.Menu.Menus.CMenuPm.CreateProtectWindowItems(System.Threading.CancellationToken) · Drilling.UI/Menu/Menus/CMenuPm.cs:121</td></tr>
+<tr><td>41</td><td>CreateHistoryRows</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>41</td><td>logManager.ReadPmHistory</td><td>unresolved</td><td>None</td></tr>
+<tr><td>42</td><td>.ToString</td><td>resolved</td><td>string System.DateTimeOffset.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>43</td><td>DateTime.Now.ToString</td><td>resolved</td><td>string System.DateTime.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>44</td><td>Apply</td><td>resolved</td><td>void Drilling.UI.Menu.Menus.CMenuPm.Apply(bool, string, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt;) · Drilling.UI/Menu/Menus/CMenuPm.cs:62</td></tr>
+<tr><td>47</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+<tr><td>47</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+<tr><td>47</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+<tr><td>48</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+<tr><td>48</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+<tr><td>48</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+<tr><td>52</td><td>new CScreenViewModel</td><td>resolved</td><td>Drilling.UI.Menu.Menus.CScreenViewModel.CScreenViewModel(Drilling.UI.Menu.Menus.EN_MENU, string, string, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_SCREEN_SECTION&gt;, bool, Drilling.UI.Menu.Menus.CMenuMain?, Drilling.UI.Menu.Menus.CMenuManual?, Drilling.UI.Menu.Menus.CMenuRecipe?, Drilling.UI.Menu.Menus.CMenuSetting?, Drilling.UI.Menu.Menus.CMenuAlarm?, Drilling.UI.Menu.Menus.CMenuMonitor?, Drilling.UI.Menu.Menus.CMenuReview?, Drilling.UI.Menu.Menus.CMenuCorrection?, Drilling.UI.Menu.Menus.CMenuPm?) · Drilling.UI/Menu/Menus/CMenuBase.cs:411</td></tr>
+<tr><td>56</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+<tr><td>56</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+<tr><td>56</td><td>.ToString</td><td>resolved</td><td>string System.DateTimeOffset.ToString(string?)</td></tr>
+<tr><td>57</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_SCREEN_SECTION.ST_SCREEN_SECTION(string, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;) · Drilling.UI/Menu/Menus/CMenuBase.cs:410</td></tr>
+<tr><td>57</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+<tr><td>57</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
-<tr><td>25</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
-<tr><td>26</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: lockStatusProvider()</td></tr>
-<tr><td>26</td><td>local-declaration</td><td>지역 변수를 선언합니다: var current = lockStatusProvider();</td></tr>
-<tr><td>26</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: current = lockStatusProvider()</td></tr>
-<tr><td>27</td><td>if</td><td>조건에 따라 분기합니다: if (!current.IsLocked)</td></tr>
-<tr><td>29</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: enterLock()</td></tr>
-<tr><td>30</td><td>assignment</td><td>값을 대상에 대입합니다: current = lockStatusProvider()</td></tr>
-<tr><td>30</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: lockStatusProvider()</td></tr>
-<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString(&quot;HH:mm:ss&quot;)</td></tr>
-<tr><td>33</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DateTime.Now.ToString(&quot;HH:mm:ss&quot;)</td></tr>
-<tr><td>33</td><td>local-declaration</td><td>지역 변수를 선언합니다: var startTime = current.LockedAt?.ToString(&quot;HH:mm:ss&quot;) ?? DateTime.Now.ToString(&quot;HH:mm:ss&quot;);</td></tr>
-<tr><td>33</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: startTime = current.LockedAt?.ToString(&quot;HH:mm:ss&quot;) ?? DateTime.Now.ToString(&quot;HH:mm:ss&quot;)</td></tr>
-<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Apply(startTime, [new(&quot;Lock State&quot;, current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;), new(&quot;Locked At&quot;, startTime), new(&quot;Exit&quot;, &quot;Password required&quot;)], [new(&quot;Equipment Operation&quot;, &quot;Blocked&quot;), new(&quot;Manual Command&quot;, &quot;Blocked&quot;), new…</td></tr>
-<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Lock State&quot;, current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;)</td></tr>
-<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Locked At&quot;, startTime)</td></tr>
-<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Exit&quot;, &quot;Password required&quot;)</td></tr>
-<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Equipment Operation&quot;, &quot;Blocked&quot;)</td></tr>
-<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Manual Command&quot;, &quot;Blocked&quot;)</td></tr>
-<tr><td>34</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Cycle Start&quot;, &quot;Blocked&quot;)</td></tr>
-<tr><td>34</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;</td></tr>
-<tr><td>35</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CScreenViewModel( EN_MENU.Pm, &quot;PM&quot;, &quot;Operation lock screen. Password is required to exit PM.&quot;, [new(&quot;Lock&quot;, current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;), new(&quot;Locked At&quot;, current.LockedAt?.ToString(&quot;HH:mm:ss&quot;) ?? &quot;-&quot;)],…</td></tr>
-<tr><td>35</td><td>local-declaration</td><td>지역 변수를 선언합니다: var screen = new CScreenViewModel( EN_MENU.Pm, &quot;PM&quot;, &quot;Operation lock screen. Password is required to exit PM.&quot;, [new(&quot;Lock&quot;, current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;), new(&quot;Locked At&quot;, current.LockedAt?.ToString(&quot;HH:mm:ss&quot;) ?? &quot;-&quot;</td></tr>
-<tr><td>35</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: screen = new CScreenViewModel( EN_MENU.Pm, &quot;PM&quot;, &quot;Operation lock screen. Password is required to exit PM.&quot;, [new(&quot;Lock&quot;, current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;), new(&quot;Locked At&quot;, current.LockedAt?.ToString(&quot;HH:mm:ss&quot;) ?? &quot;-&quot;)],</td></tr>
-<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Lock&quot;, current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;)</td></tr>
-<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Locked At&quot;, current.LockedAt?.ToString(&quot;HH:mm:ss&quot;) ?? &quot;-&quot;)</td></tr>
-<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString(&quot;HH:mm:ss&quot;)</td></tr>
-<tr><td>39</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;</td></tr>
-<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Operation&quot;, [new(&quot;Equipment Control&quot;, &quot;Blocked&quot;), new(&quot;Exit PM&quot;, &quot;Password required&quot;)])</td></tr>
-<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Equipment Control&quot;, &quot;Blocked&quot;)</td></tr>
-<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Exit PM&quot;, &quot;Password required&quot;)</td></tr>
-<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Task.FromResult(screen)</td></tr>
-<tr><td>43</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Task.FromResult(screen);</td></tr>
+<tr><td>37</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>38</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: lockStatusProvider()</td></tr>
+<tr><td>38</td><td>local-declaration</td><td>지역 변수를 선언합니다: var current = lockStatusProvider();</td></tr>
+<tr><td>38</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: current = lockStatusProvider()</td></tr>
+<tr><td>39</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreatePartLifeRows(cancellationToken)</td></tr>
+<tr><td>39</td><td>local-declaration</td><td>지역 변수를 선언합니다: var partLifeRows = CreatePartLifeRows(cancellationToken);</td></tr>
+<tr><td>39</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: partLifeRows = CreatePartLifeRows(cancellationToken)</td></tr>
+<tr><td>40</td><td>await</td><td>비동기 완료를 기다립니다: await CreateProtectWindowItems(cancellationToken).ConfigureAwait(false)</td></tr>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProtectWindowItems(cancellationToken).ConfigureAwait(false)</td></tr>
+<tr><td>40</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateProtectWindowItems(cancellationToken)</td></tr>
+<tr><td>40</td><td>local-declaration</td><td>지역 변수를 선언합니다: var protectWindowItems = await CreateProtectWindowItems(cancellationToken).ConfigureAwait(false);</td></tr>
+<tr><td>40</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: protectWindowItems = await CreateProtectWindowItems(cancellationToken).ConfigureAwait(false)</td></tr>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreateHistoryRows(logManager.ReadPmHistory())</td></tr>
+<tr><td>41</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: logManager.ReadPmHistory()</td></tr>
+<tr><td>41</td><td>local-declaration</td><td>지역 변수를 선언합니다: var historyRows = CreateHistoryRows(logManager.ReadPmHistory());</td></tr>
+<tr><td>41</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: historyRows = CreateHistoryRows(logManager.ReadPmHistory())</td></tr>
+<tr><td>42</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>42</td><td>local-declaration</td><td>지역 변수를 선언합니다: var startTime = current.LockedAt?.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture) ?? DateTime.Now.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture);</td></tr>
+<tr><td>42</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: startTime = current.LockedAt?.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture) ?? DateTime.Now.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>43</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: DateTime.Now.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>44</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Apply( current.IsLocked, startTime, [new(&quot;Lock State&quot;, current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;), new(&quot;Locked At&quot;, startTime), new(&quot;Exit&quot;, &quot;Password required&quot;)], [new(&quot;Equipment Operation&quot;, &quot;Blocked&quot;), new(&quot;Manual Comman…</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Lock State&quot;, current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;)</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Locked At&quot;, startTime)</td></tr>
+<tr><td>47</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Exit&quot;, &quot;Password required&quot;)</td></tr>
+<tr><td>47</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Equipment Operation&quot;, &quot;Blocked&quot;)</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Manual Command&quot;, &quot;Blocked&quot;)</td></tr>
+<tr><td>48</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Cycle Start&quot;, &quot;Blocked&quot;)</td></tr>
+<tr><td>52</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new CScreenViewModel( EN_MENU.Pm, &quot;PM&quot;, &quot;Operation lock screen. Password is required to exit PM.&quot;, [new(&quot;Lock&quot;, current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;), new(&quot;Locked At&quot;, current.LockedAt?.ToString(&quot;HH:mm:ss&quot;) ?? &quot;-&quot;)],…</td></tr>
+<tr><td>52</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new CScreenViewModel( EN_MENU.Pm, &quot;PM&quot;, &quot;Operation lock screen. Password is required to exit PM.&quot;, [new(&quot;Lock&quot;, current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;), new(&quot;Locked At&quot;, current.LockedAt?.ToString(&quot;HH:mm:ss&quot;) ?? &quot;-&quot;)], [n</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Lock&quot;, current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;)</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Locked At&quot;, current.LockedAt?.ToString(&quot;HH:mm:ss&quot;) ?? &quot;-&quot;)</td></tr>
+<tr><td>56</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString(&quot;HH:mm:ss&quot;)</td></tr>
+<tr><td>56</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: current.IsLocked ? &quot;LOCKED&quot; : &quot;UNLOCKED&quot;</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Operation&quot;, [new(&quot;Equipment Control&quot;, &quot;Blocked&quot;), new(&quot;Exit PM&quot;, &quot;Password required&quot;)])</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Equipment Control&quot;, &quot;Blocked&quot;)</td></tr>
+<tr><td>57</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;Exit PM&quot;, &quot;Password required&quot;)</td></tr>
 </tbody></table>
-<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
-<pre data-language="mermaid"><code>flowchart TD
- M[&quot;Build&quot;]
- N0[&quot;L27 if&quot;]
- M --&gt;|포함| N0</code></pre>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
-<h3 id="L46">MethodDeclaration <code>Apply</code> · L46–51</h3>
-<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L46-L51">Drilling.UI/Menu/Menus/CMenuPm.cs:46–51</a></p>
+<h3 id="L62">MethodDeclaration <code>Apply</code> · L62–78</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L62-L78">Drilling.UI/Menu/Menus/CMenuPm.cs:62–78</a></p>
 <table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
-<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMenuPm.Apply(string, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;)</td></tr>
+<tr><td>서명</td><td>void Drilling.UI.Menu.Menus.CMenuPm.Apply(bool, string, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;, System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt;)</td></tr>
 <tr><td>접근/수식자</td><td>Private / private</td></tr>
 <tr><td>반환/값 타입</td><td>void</td></tr>
 <tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
 </tbody></table>
 <p>입력 계약:</p>
 <table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>isLocked</td><td>bool</td><td>None</td><td>False /</td></tr>
 <tr><td>startTime</td><td>string</td><td>None</td><td>False /</td></tr>
 <tr><td>lockItems</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;</td><td>None</td><td>False /</td></tr>
 <tr><td>blockedItems</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>partLifeRows</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>protectWindowItems</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;</td><td>None</td><td>False /</td></tr>
+<tr><td>historyRows</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt;</td><td>None</td><td>False /</td></tr>
 </tbody></table>
 <p>정적 호출자로 확인된 위치:</p>
 <table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
-<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuPm.cs#L34-L34">Drilling.UI/Menu/Menus/CMenuPm.cs:34–34</a></td><td>Apply</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L44-L51">Drilling.UI/Menu/Menus/CMenuPm.cs:44–51</a></td><td>Apply</td><td>False</td></tr>
 </tbody></table>
 <p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
 <table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
-<tr><td>48</td><td>assignment</td><td>값을 대상에 대입합니다: StartTime = startTime</td></tr>
-<tr><td>49</td><td>assignment</td><td>값을 대상에 대입합니다: LockItems = lockItems</td></tr>
-<tr><td>50</td><td>assignment</td><td>값을 대상에 대입합니다: BlockedItems = blockedItems</td></tr>
+<tr><td>71</td><td>assignment</td><td>값을 대상에 대입합니다: IsLocked = isLocked</td></tr>
+<tr><td>72</td><td>assignment</td><td>값을 대상에 대입합니다: StartTime = startTime</td></tr>
+<tr><td>73</td><td>assignment</td><td>값을 대상에 대입합니다: LockItems = lockItems</td></tr>
+<tr><td>74</td><td>assignment</td><td>값을 대상에 대입합니다: BlockedItems = blockedItems</td></tr>
+<tr><td>75</td><td>assignment</td><td>값을 대상에 대입합니다: PartLifeRows = partLifeRows</td></tr>
+<tr><td>76</td><td>assignment</td><td>값을 대상에 대입합니다: ProtectWindowItems = protectWindowItems</td></tr>
+<tr><td>77</td><td>assignment</td><td>값을 대상에 대입합니다: HistoryRows = historyRows</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L80">MethodDeclaration <code>CreatePartLifeRows</code> · L80–91</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L80-L91">Drilling.UI/Menu/Menus/CMenuPm.cs:80–91</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.CreatePartLifeRows(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L39-L39">Drilling.UI/Menu/Menus/CMenuPm.cs:39–39</a></td><td>CreatePartLifeRows</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>82</td><td>cancellationToken.ThrowIfCancellationRequested</td><td>resolved</td><td>void System.Threading.CancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>83</td><td>ReadCrystalLimit</td><td>resolved</td><td>double? Drilling.UI.Menu.Menus.CMenuPm.ReadCrystalLimit(System.Threading.CancellationToken) · Drilling.UI/Menu/Menus/CMenuPm.cs:111</td></tr>
+<tr><td>84</td><td>interfaceManager.GetInterfaceList(EN_EQP_MODULE.TalonLaser) .Select(item =&gt; item.Number) .ToHashSet</td><td>resolved</td><td>System.Collections.Generic.HashSet&lt;int&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.ToHashSet&lt;int&gt;()</td></tr>
+<tr><td>84</td><td>interfaceManager.GetInterfaceList(EN_EQP_MODULE.TalonLaser) .Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Collections.Generic.IEnumerable&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt;.Select&lt;Drilling.Common.Interface.ST_INTERFACE_DATA, int&gt;(System.Func&lt;Drilling.Common.Interface.ST_INTERFACE_DATA, int&gt;)</td></tr>
+<tr><td>84</td><td>interfaceManager.GetInterfaceList</td><td>resolved</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Interface.ST_INTERFACE_DATA&gt; Drilling.Common.Interface.CInterfaceManager.GetInterfaceList(Drilling.Common.Interface.EN_EQP_MODULE?) · Drilling.Common/Interface/CInterfaceManager.cs:442</td></tr>
+<tr><td>88</td><td>Enumerable.Range(1, 8) .Select(headNo =&gt; CreatePartLifeRow(headNo, limit, laserNumbers)) .ToArray</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW[] System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;.ToArray&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;()</td></tr>
+<tr><td>88</td><td>Enumerable.Range(1, 8) .Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Select&lt;int, Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;(System.Func&lt;int, Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;)</td></tr>
+<tr><td>88</td><td>Enumerable.Range</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Linq.Enumerable.Range(int, int)</td></tr>
+<tr><td>89</td><td>CreatePartLifeRow</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW Drilling.UI.Menu.Menus.CMenuPm.CreatePartLifeRow(int, double?, System.Collections.Generic.IReadOnlySet&lt;int&gt;) · Drilling.UI/Menu/Menus/CMenuPm.cs:93</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>82</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: cancellationToken.ThrowIfCancellationRequested()</td></tr>
+<tr><td>83</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadCrystalLimit(cancellationToken)</td></tr>
+<tr><td>83</td><td>local-declaration</td><td>지역 변수를 선언합니다: var limit = ReadCrystalLimit(cancellationToken);</td></tr>
+<tr><td>83</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: limit = ReadCrystalLimit(cancellationToken)</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.GetInterfaceList(EN_EQP_MODULE.TalonLaser)</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.GetInterfaceList(EN_EQP_MODULE.TalonLaser) .Select(item =&gt; item.Number)</td></tr>
+<tr><td>84</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.GetInterfaceList(EN_EQP_MODULE.TalonLaser) .Select(item =&gt; item.Number) .ToHashSet()</td></tr>
+<tr><td>84</td><td>local-declaration</td><td>지역 변수를 선언합니다: var laserNumbers = interfaceManager.GetInterfaceList(EN_EQP_MODULE.TalonLaser) .Select(item =&gt; item.Number) .ToHashSet();</td></tr>
+<tr><td>84</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: laserNumbers = interfaceManager.GetInterfaceList(EN_EQP_MODULE.TalonLaser) .Select(item =&gt; item.Number) .ToHashSet()</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8)</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8) .Select(headNo =&gt; CreatePartLifeRow(headNo, limit, laserNumbers))</td></tr>
+<tr><td>88</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8) .Select(headNo =&gt; CreatePartLifeRow(headNo, limit, laserNumbers)) .ToArray()</td></tr>
+<tr><td>88</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return Enumerable.Range(1, 8) .Select(headNo =&gt; CreatePartLifeRow(headNo, limit, laserNumbers)) .ToArray();</td></tr>
+<tr><td>89</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CreatePartLifeRow(headNo, limit, laserNumbers)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L93">MethodDeclaration <code>CreatePartLifeRow</code> · L93–109</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L93-L109">Drilling.UI/Menu/Menus/CMenuPm.cs:93–109</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW Drilling.UI.Menu.Menus.CMenuPm.CreatePartLifeRow(int, double?, System.Collections.Generic.IReadOnlySet&lt;int&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>headNo</td><td>int</td><td>None</td><td>False /</td></tr>
+<tr><td>limit</td><td>double?</td><td>None</td><td>False /</td></tr>
+<tr><td>laserNumbers</td><td>System.Collections.Generic.IReadOnlySet&lt;int&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L89-L89">Drilling.UI/Menu/Menus/CMenuPm.cs:89–89</a></td><td>CreatePartLifeRow</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>96</td><td>.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>97</td><td>laserNumbers.Contains</td><td>resolved · 동적 구현 선택 가능</td><td>bool System.Collections.Generic.IReadOnlySet&lt;int&gt;.Contains(int)</td></tr>
+<tr><td>98</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW.ST_PM_PART_LIFE_ROW(string, string, string) · Drilling.UI/Menu/Menus/CMenuPm.cs:181</td></tr>
+<tr><td>100</td><td>interfaceManager.OpticSnapshots.GetLaser</td><td>resolved</td><td>Drilling.Common.Interface.ST_SHARED_DEVICE_SNAPSHOT&lt;Drilling.Common.Interface.ST_LASER_STATUS&gt; Drilling.Common.Interface.COpticStatusSnapshotService.GetLaser(int) · Drilling.Common/Interface/CInterfaceManager.cs:3380</td></tr>
+<tr><td>102</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW.ST_PM_PART_LIFE_ROW(string, string, string) · Drilling.UI/Menu/Menus/CMenuPm.cs:181</td></tr>
+<tr><td>102</td><td>NormalizeSnapshotState</td><td>resolved</td><td>string Drilling.UI.Menu.Menus.CMenuPm.NormalizeSnapshotState(string) · Drilling.UI/Menu/Menus/CMenuPm.cs:149</td></tr>
+<tr><td>104</td><td>interfaceManager.GetCachedTalonStatus</td><td>resolved</td><td>Drilling.Common.Interface.ST_TALON_STATUS Drilling.Common.Interface.CInterfaceManager.GetCachedTalonStatus(int) · Drilling.Common/Interface/CInterfaceManager.cs:2054</td></tr>
+<tr><td>105</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+<tr><td>106</td><td>status.ThgHour.ToString</td><td>resolved</td><td>string double.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>108</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW.ST_PM_PART_LIFE_ROW(string, string, string) · Drilling.UI/Menu/Menus/CMenuPm.cs:181</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>95</td><td>local-declaration</td><td>지역 변수를 선언합니다: var laserNo = headNo - 1;</td></tr>
+<tr><td>95</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: laserNo = headNo - 1</td></tr>
+<tr><td>96</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString(&quot;0.0&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>96</td><td>local-declaration</td><td>지역 변수를 선언합니다: var limitText = limit?.ToString(&quot;0.0&quot;, CultureInfo.InvariantCulture) ?? &quot;-&quot;;</td></tr>
+<tr><td>96</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: limitText = limit?.ToString(&quot;0.0&quot;, CultureInfo.InvariantCulture) ?? &quot;-&quot;</td></tr>
+<tr><td>97</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: laserNumbers.Contains(laserNo)</td></tr>
+<tr><td>97</td><td>if</td><td>조건에 따라 분기합니다: if (!laserNumbers.Contains(laserNo))</td></tr>
+<tr><td>98</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new($&quot;H{headNo:00}&quot;, &quot;N/C&quot;, limitText)</td></tr>
+<tr><td>98</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new($&quot;H{headNo:00}&quot;, &quot;N/C&quot;, limitText);</td></tr>
+<tr><td>100</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.OpticSnapshots.GetLaser(laserNo)</td></tr>
+<tr><td>100</td><td>local-declaration</td><td>지역 변수를 선언합니다: var snapshot = interfaceManager.OpticSnapshots.GetLaser(laserNo);</td></tr>
+<tr><td>100</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: snapshot = interfaceManager.OpticSnapshots.GetLaser(laserNo)</td></tr>
+<tr><td>101</td><td>if</td><td>조건에 따라 분기합니다: if (snapshot.Value is null)</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new($&quot;H{headNo:00}&quot;, NormalizeSnapshotState(snapshot.State), limitText)</td></tr>
+<tr><td>102</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: NormalizeSnapshotState(snapshot.State)</td></tr>
+<tr><td>102</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new($&quot;H{headNo:00}&quot;, NormalizeSnapshotState(snapshot.State), limitText);</td></tr>
+<tr><td>104</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: interfaceManager.GetCachedTalonStatus(laserNo)</td></tr>
+<tr><td>104</td><td>local-declaration</td><td>지역 변수를 선언합니다: var status = interfaceManager.GetCachedTalonStatus(laserNo);</td></tr>
+<tr><td>104</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: status = interfaceManager.GetCachedTalonStatus(laserNo)</td></tr>
+<tr><td>105</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(status.ThgHour)</td></tr>
+<tr><td>105</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: double.IsFinite(status.ThgHour) ? status.ThgHour.ToString(&quot;0.0&quot;, CultureInfo.InvariantCulture) : &quot;ERR&quot;</td></tr>
+<tr><td>105</td><td>local-declaration</td><td>지역 변수를 선언합니다: var useText = double.IsFinite(status.ThgHour) ? status.ThgHour.ToString(&quot;0.0&quot;, CultureInfo.InvariantCulture) : &quot;ERR&quot;;</td></tr>
+<tr><td>105</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: useText = double.IsFinite(status.ThgHour) ? status.ThgHour.ToString(&quot;0.0&quot;, CultureInfo.InvariantCulture) : &quot;ERR&quot;</td></tr>
+<tr><td>106</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: status.ThgHour.ToString(&quot;0.0&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>108</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new($&quot;H{headNo:00}&quot;, useText, limitText)</td></tr>
+<tr><td>108</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return new($&quot;H{headNo:00}&quot;, useText, limitText);</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;CreatePartLifeRow&quot;]
+ N0[&quot;L97 if&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L101 if&quot;]
+ M --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L111">MethodDeclaration <code>ReadCrystalLimit</code> · L111–119</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L111-L119">Drilling.UI/Menu/Menus/CMenuPm.cs:111–119</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>double? Drilling.UI.Menu.Menus.CMenuPm.ReadCrystalLimit(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private</td></tr>
+<tr><td>반환/값 타입</td><td>double?</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L83-L83">Drilling.UI/Menu/Menus/CMenuPm.cs:83–83</a></td><td>ReadCrystalLimit</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>113</td><td>settingManager.GetValue</td><td>resolved</td><td>string Drilling.Common.Managers.CSettingManager.GetValue(Drilling.Common.Managers.EN_SETTING_TAB, string, string, System.Threading.CancellationToken) · Drilling.Common/Managers/CSettingManager.cs:60</td></tr>
+<tr><td>114</td><td>double.TryParse</td><td>resolved</td><td>bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double)</td></tr>
+<tr><td>115</td><td>double.IsFinite</td><td>resolved</td><td>bool double.IsFinite(double)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>113</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: settingManager.GetValue(EN_SETTING_TAB.Option, LaserThgHourLimitKey, &quot;&quot;, cancellationToken)</td></tr>
+<tr><td>113</td><td>local-declaration</td><td>지역 변수를 선언합니다: var text = settingManager.GetValue(EN_SETTING_TAB.Option, LaserThgHourLimitKey, &quot;&quot;, cancellationToken);</td></tr>
+<tr><td>113</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: text = settingManager.GetValue(EN_SETTING_TAB.Option, LaserThgHourLimitKey, &quot;&quot;, cancellationToken)</td></tr>
+<tr><td>114</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value)</td></tr>
+<tr><td>114</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) &amp;&amp; double.IsFinite(value) &amp;&amp; value &gt;= 0.0 ? value : null</td></tr>
+<tr><td>114</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var value) &amp;&amp; double.IsFinite(value) &amp;&amp; value &gt;= 0.0 ? value : null;</td></tr>
+<tr><td>115</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: double.IsFinite(value)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L121">MethodDeclaration <code>CreateProtectWindowItems</code> · L121–135</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L121-L135">Drilling.UI/Menu/Menus/CMenuPm.cs:121–135</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;&gt; Drilling.UI.Menu.Menus.CMenuPm.CreateProtectWindowItems(System.Threading.CancellationToken)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, async</td></tr>
+<tr><td>반환/값 타입</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>cancellationToken</td><td>System.Threading.CancellationToken</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L40-L40">Drilling.UI/Menu/Menus/CMenuPm.cs:40–40</a></td><td>CreateProtectWindowItems</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>123</td><td>selectedRecipeIdProvider().Trim</td><td>resolved</td><td>string string.Trim()</td></tr>
+<tr><td>123</td><td>selectedRecipeIdProvider</td><td>resolved · 동적 구현 선택 가능</td><td>string System.Func&lt;string&gt;.Invoke()</td></tr>
+<tr><td>124</td><td>recipeManager.LoadRecipes(cancellationToken).ConfigureAwait</td><td>resolved</td><td>System.Runtime.CompilerServices.ConfiguredTaskAwaitable&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION&gt;&gt; System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION&gt;&gt;.ConfigureAwait(bool)</td></tr>
+<tr><td>124</td><td>recipeManager.LoadRecipes</td><td>resolved</td><td>System.Threading.Tasks.Task&lt;System.Collections.Generic.IReadOnlyList&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION&gt;&gt; Drilling.Common.Managers.CRecipeManager.LoadRecipes(System.Threading.CancellationToken) · Drilling.Common/Managers/CRecipeManager.cs:40</td></tr>
+<tr><td>125</td><td>recipes.FirstOrDefault</td><td>resolved</td><td>Drilling.Common.Managers.ST_RECIPE_DEFINITION? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION&gt;.FirstOrDefault&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION&gt;(System.Func&lt;Drilling.Common.Managers.ST_RECIPE_DEFINITION, bool&gt;)</td></tr>
+<tr><td>125</td><td>item.Id.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>132</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+<tr><td>132</td><td>FormatRecipeCount</td><td>resolved</td><td>string Drilling.UI.Menu.Menus.CMenuPm.FormatRecipeCount(string, string) · Drilling.UI/Menu/Menus/CMenuPm.cs:137</td></tr>
+<tr><td>132</td><td>ReadRecipeValue</td><td>resolved</td><td>string ReadRecipeValue(string) · Drilling.UI/Menu/Menus/CMenuPm.cs:126</td></tr>
+<tr><td>133</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+<tr><td>133</td><td>FormatRecipeCount</td><td>resolved</td><td>string Drilling.UI.Menu.Menus.CMenuPm.FormatRecipeCount(string, string) · Drilling.UI/Menu/Menus/CMenuPm.cs:137</td></tr>
+<tr><td>133</td><td>ReadRecipeValue</td><td>resolved</td><td>string ReadRecipeValue(string) · Drilling.UI/Menu/Menus/CMenuPm.cs:126</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>123</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: selectedRecipeIdProvider().Trim()</td></tr>
+<tr><td>123</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: selectedRecipeIdProvider()</td></tr>
+<tr><td>123</td><td>local-declaration</td><td>지역 변수를 선언합니다: var recipeId = selectedRecipeIdProvider().Trim();</td></tr>
+<tr><td>123</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: recipeId = selectedRecipeIdProvider().Trim()</td></tr>
+<tr><td>124</td><td>await</td><td>비동기 완료를 기다립니다: await recipeManager.LoadRecipes(cancellationToken).ConfigureAwait(false)</td></tr>
+<tr><td>124</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: recipeManager.LoadRecipes(cancellationToken).ConfigureAwait(false)</td></tr>
+<tr><td>124</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: recipeManager.LoadRecipes(cancellationToken)</td></tr>
+<tr><td>124</td><td>local-declaration</td><td>지역 변수를 선언합니다: var recipes = await recipeManager.LoadRecipes(cancellationToken).ConfigureAwait(false);</td></tr>
+<tr><td>124</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: recipes = await recipeManager.LoadRecipes(cancellationToken).ConfigureAwait(false)</td></tr>
+<tr><td>125</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: recipes.FirstOrDefault(item =&gt; item.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>125</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: item.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>125</td><td>local-declaration</td><td>지역 변수를 선언합니다: var recipe = recipes.FirstOrDefault(item =&gt; item.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase));</td></tr>
+<tr><td>125</td><td>variable-initializer</td><td>변수의 초기값을 지정합니다: recipe = recipes.FirstOrDefault(item =&gt; item.Id.Equals(recipeId, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>130</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return [ new(&quot;CURRENT COUNT&quot;, FormatRecipeCount(ReadRecipeValue(CProtectWindowRecipeData.CurrentCountKey), CProtectWindowRecipeData.CurrentCountKey), &quot;count&quot;), new(&quot;MAX COUNT&quot;, FormatRecipeCount(ReadRecipeValue(CProtectWindowRecip</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;CURRENT COUNT&quot;, FormatRecipeCount(ReadRecipeValue(CProtectWindowRecipeData.CurrentCountKey), CProtectWindowRecipeData.CurrentCountKey), &quot;count&quot;)</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatRecipeCount(ReadRecipeValue(CProtectWindowRecipeData.CurrentCountKey), CProtectWindowRecipeData.CurrentCountKey)</td></tr>
+<tr><td>132</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRecipeValue(CProtectWindowRecipeData.CurrentCountKey)</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;MAX COUNT&quot;, FormatRecipeCount(ReadRecipeValue(CProtectWindowRecipeData.MaximumCountKey), CProtectWindowRecipeData.MaximumCountKey), &quot;count&quot;)</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatRecipeCount(ReadRecipeValue(CProtectWindowRecipeData.MaximumCountKey), CProtectWindowRecipeData.MaximumCountKey)</td></tr>
+<tr><td>133</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: ReadRecipeValue(CProtectWindowRecipeData.MaximumCountKey)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L126">LocalFunctionStatement <code>ReadRecipeValue</code> · L126–128</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L126-L128">Drilling.UI/Menu/Menus/CMenuPm.cs:126–128</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string ReadRecipeValue(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private /</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>key</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L132-L132">Drilling.UI/Menu/Menus/CMenuPm.cs:132–132</a></td><td>ReadRecipeValue</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L133-L133">Drilling.UI/Menu/Menus/CMenuPm.cs:133–133</a></td><td>ReadRecipeValue</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>126</td><td>.Parameters .FirstOrDefault</td><td>resolved</td><td>Drilling.Common.Managers.ST_RECIPE_PARAMETER? System.Collections.Generic.IEnumerable&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;.FirstOrDefault&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER&gt;(System.Func&lt;Drilling.Common.Managers.ST_RECIPE_PARAMETER, bool&gt;)</td></tr>
+<tr><td>127</td><td>item.Key.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+<tr><td>128</td><td>item.Name.Equals</td><td>resolved</td><td>bool string.Equals(string?, System.StringComparison)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>126</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .Parameters .FirstOrDefault(item =&gt; item.Key.Equals(key, StringComparison.OrdinalIgnoreCase) || item.Name.Equals(key, StringComparison.OrdinalIgnoreCase))</td></tr>
+<tr><td>127</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: item.Key.Equals(key, StringComparison.OrdinalIgnoreCase)</td></tr>
+<tr><td>128</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: item.Name.Equals(key, StringComparison.OrdinalIgnoreCase)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L137">MethodDeclaration <code>FormatRecipeCount</code> · L137–147</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L137-L147">Drilling.UI/Menu/Menus/CMenuPm.cs:137–147</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMenuPm.FormatRecipeCount(string, string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>text</td><td>string</td><td>None</td><td>False /</td></tr>
+<tr><td>key</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L132-L132">Drilling.UI/Menu/Menus/CMenuPm.cs:132–132</a></td><td>FormatRecipeCount</td><td>False</td></tr>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L133-L133">Drilling.UI/Menu/Menus/CMenuPm.cs:133–133</a></td><td>FormatRecipeCount</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>141</td><td>CProtectWindowRecipeData.ParseCount(text, key).ToString</td><td>resolved</td><td>string int.ToString(string?, System.IFormatProvider?)</td></tr>
+<tr><td>141</td><td>CProtectWindowRecipeData.ParseCount</td><td>resolved</td><td>int Drilling.Common.Recipe.CProtectWindowRecipeData.ParseCount(string?, string) · Drilling.Common/Managers/CRecipeManager.cs:435</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>139</td><td>try</td><td>예외 처리 범위입니다: try</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CProtectWindowRecipeData.ParseCount(text, key).ToString(&quot;N0&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>141</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: CProtectWindowRecipeData.ParseCount(text, key)</td></tr>
+<tr><td>141</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return CProtectWindowRecipeData.ParseCount(text, key).ToString(&quot;N0&quot;, CultureInfo.InvariantCulture);</td></tr>
+<tr><td>143</td><td>catch</td><td>지정 예외를 처리합니다: catch (InvalidDataException)</td></tr>
+<tr><td>145</td><td>return</td><td>호출자에게 값 또는 제어를 반환합니다: return &quot;INVALID&quot;;</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;FormatRecipeCount&quot;]
+ N0[&quot;L139 try&quot;]
+ M --&gt;|포함| N0
+ N1[&quot;L143 catch&quot;]
+ N0 --&gt;|포함| N1</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L149">MethodDeclaration <code>NormalizeSnapshotState</code> · L149–156</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L149-L156">Drilling.UI/Menu/Menus/CMenuPm.cs:149–156</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMenuPm.NormalizeSnapshotState(string)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>state</td><td>string</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L102-L102">Drilling.UI/Menu/Menus/CMenuPm.cs:102–102</a></td><td>NormalizeSnapshotState</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>149</td><td>state.ToUpperInvariant</td><td>resolved</td><td>string string.ToUpperInvariant()</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>149</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: state.ToUpperInvariant()</td></tr>
+<tr><td>149</td><td>switch-expression</td><td>값별 결과식을 선택합니다: state.ToUpperInvariant() switch { &quot;OFFLINE&quot; =&gt; &quot;OFFLINE&quot;, &quot;N/C&quot; =&gt; &quot;N/C&quot;, &quot;STALE&quot; =&gt; &quot;STALE&quot;, &quot;ERROR&quot; =&gt; &quot;ERR&quot;, _ =&gt; &quot;LOADING&quot; }</td></tr>
+</tbody></table>
+<p>제어 구문의 포함 구조(실제 실행 순서/CFG가 아닌 구문 탐색 그림):</p>
+<pre data-language="mermaid"><code>flowchart TD
+ M[&quot;NormalizeSnapshotState&quot;]
+ N0[&quot;L149 switch-expression&quot;]
+ M --&gt;|포함| N0</code></pre>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L158">MethodDeclaration <code>CreateEmptyPartLifeRows</code> · L158–160</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L158-L160">Drilling.UI/Menu/Menus/CMenuPm.cs:158–160</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.CreateEmptyPartLifeRows()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L31-L31">Drilling.UI/Menu/Menus/CMenuPm.cs:31–31</a></td><td>CreateEmptyPartLifeRows</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>158</td><td>Enumerable.Range(1, 8) .Select(index =&gt; new ST_PM_PART_LIFE_ROW($&quot;H{index:00}&quot;, &quot;-&quot;, &quot;-&quot;)) .ToArray</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW[] System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;.ToArray&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;()</td></tr>
+<tr><td>158</td><td>Enumerable.Range(1, 8) .Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt; System.Collections.Generic.IEnumerable&lt;int&gt;.Select&lt;int, Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;(System.Func&lt;int, Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW&gt;)</td></tr>
+<tr><td>158</td><td>Enumerable.Range</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;int&gt; System.Linq.Enumerable.Range(int, int)</td></tr>
+<tr><td>159</td><td>new ST_PM_PART_LIFE_ROW</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_PM_PART_LIFE_ROW.ST_PM_PART_LIFE_ROW(string, string, string) · Drilling.UI/Menu/Menus/CMenuPm.cs:181</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8)</td></tr>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8) .Select(index =&gt; new ST_PM_PART_LIFE_ROW($&quot;H{index:00}&quot;, &quot;-&quot;, &quot;-&quot;))</td></tr>
+<tr><td>158</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: Enumerable.Range(1, 8) .Select(index =&gt; new ST_PM_PART_LIFE_ROW($&quot;H{index:00}&quot;, &quot;-&quot;, &quot;-&quot;)) .ToArray()</td></tr>
+<tr><td>159</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PM_PART_LIFE_ROW($&quot;H{index:00}&quot;, &quot;-&quot;, &quot;-&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L162">MethodDeclaration <code>CreateEmptyProtectWindowItems</code> · L162–166</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L162-L166">Drilling.UI/Menu/Menus/CMenuPm.cs:162–166</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt; Drilling.UI.Menu.Menus.CMenuPm.CreateEmptyProtectWindowItems()</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>정적 호출자로 확인된 위치:</p>
+<table><thead><tr><th>호출 파일/행</th><th>호출 표현식</th><th>런타임 분기 가능</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L32-L32">Drilling.UI/Menu/Menus/CMenuPm.cs:32–32</a></td><td>CreateEmptyProtectWindowItems</td><td>False</td></tr>
+</tbody></table>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>164</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+<tr><td>165</td><td>new</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_DISPLAY_ITEM.ST_DISPLAY_ITEM(string, string, string) · Drilling.UI/Menu/Menus/CMenuBase.cs:43</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>164</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;CURRENT COUNT&quot;, &quot;-&quot;, &quot;count&quot;)</td></tr>
+<tr><td>165</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new(&quot;MAX COUNT&quot;, &quot;-&quot;, &quot;count&quot;)</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L168">MethodDeclaration <code>CreateHistoryRows</code> · L168–174</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L168-L174">Drilling.UI/Menu/Menus/CMenuPm.cs:168–174</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt; Drilling.UI.Menu.Menus.CMenuPm.CreateHistoryRows(System.Collections.Generic.IReadOnlyList&lt;ST_PM_HISTORY_ENTRY&gt;)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>System.Collections.Generic.IReadOnlyList&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt;</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>entries</td><td>System.Collections.Generic.IReadOnlyList&lt;ST_PM_HISTORY_ENTRY&gt;</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>168</td><td>entries .Select(entry =&gt; new ST_PM_HISTORY_ROW( entry.LockedAt.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture), entry.UnlockedAt?.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture) ?? &quot;-&quot;, entry.UnlockedAt is { } unlockedAt ? FormatDuration(unlockedAt - entry.LockedAt) : &quot;-&quot;, entry.Reason)) .ToArray</td><td>resolved</td><td>Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW[] System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt;.ToArray&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt;()</td></tr>
+<tr><td>168</td><td>entries .Select</td><td>resolved</td><td>System.Collections.Generic.IEnumerable&lt;Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt; System.Collections.Generic.IEnumerable&lt;ST_PM_HISTORY_ENTRY&gt;.Select&lt;ST_PM_HISTORY_ENTRY, Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt;(System.Func&lt;ST_PM_HISTORY_ENTRY, Drilling.UI.Menu.Menus.ST_PM_HISTORY_ROW&gt;)</td></tr>
+<tr><td>169</td><td>new ST_PM_HISTORY_ROW</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+<tr><td>170</td><td>entry.LockedAt.ToString</td><td>unresolved</td><td>None</td></tr>
+<tr><td>171</td><td>.ToString</td><td>unresolved</td><td>None</td></tr>
+<tr><td>172</td><td>FormatDuration</td><td>candidate</td><td>OverloadResolutionFailure</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>168</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: entries .Select(entry =&gt; new ST_PM_HISTORY_ROW( entry.LockedAt.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture), entry.UnlockedAt?.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture) ?? &quot;-&quot;, entry.…</td></tr>
+<tr><td>168</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: entries .Select(entry =&gt; new ST_PM_HISTORY_ROW( entry.LockedAt.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture), entry.UnlockedAt?.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture) ?? &quot;-&quot;, entry.…</td></tr>
+<tr><td>169</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: new ST_PM_HISTORY_ROW( entry.LockedAt.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture), entry.UnlockedAt?.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture) ?? &quot;-&quot;, entry.UnlockedAt is { } unlocke…</td></tr>
+<tr><td>170</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: entry.LockedAt.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>171</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: .ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>172</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: FormatDuration(unlockedAt - entry.LockedAt)</td></tr>
+<tr><td>172</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: entry.UnlockedAt is { } unlockedAt ? FormatDuration(unlockedAt - entry.LockedAt) : &quot;-&quot;</td></tr>
+</tbody></table>
+<p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
+<h3 id="L176">MethodDeclaration <code>FormatDuration</code> · L176–178</h3>
+<p><a href="https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuPm.cs#L176-L178">Drilling.UI/Menu/Menus/CMenuPm.cs:176–178</a></p>
+<table><thead><tr><th>항목</th><th>실제 추출 값</th></tr></thead><tbody>
+<tr><td>서명</td><td>string Drilling.UI.Menu.Menus.CMenuPm.FormatDuration(System.TimeSpan)</td></tr>
+<tr><td>접근/수식자</td><td>Private / private, static</td></tr>
+<tr><td>반환/값 타입</td><td>string</td></tr>
+<tr><td>소속 타입</td><td>NamedType:Drilling.UI.Menu.Menus.CMenuPm</td></tr>
+</tbody></table>
+<p>입력 계약:</p>
+<table><thead><tr><th>이름</th><th>타입</th><th>전달</th><th>선택/기본값</th></tr></thead><tbody>
+<tr><td>duration</td><td>System.TimeSpan</td><td>None</td><td>False /</td></tr>
+</tbody></table>
+<p>현재 부분 분석에서 직접 연결된 호출자는 없습니다. XAML/이벤트/인터페이스·델리게이트·외부 진입을 추가 확인해야 하며, 미사용으로 판정한 것이 아닙니다.</p>
+<p>호출하는 대상과 해석 범위:</p>
+<table><thead><tr><th>원본 행</th><th>표현식</th><th>분석 상태</th><th>대상/소스 위치</th></tr></thead><tbody>
+<tr><td>178</td><td>duration.ToString</td><td>resolved</td><td>string System.TimeSpan.ToString(string?, System.IFormatProvider?)</td></tr>
+</tbody></table>
+<p>본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):</p>
+<table><thead><tr><th>원본 행</th><th>종류</th><th>주석 해설</th></tr></thead><tbody>
+<tr><td>176</td><td>conditional-expression</td><td>조건에 따라 결과식을 선택합니다: duration.TotalHours &gt;= 100 ? $&quot;{(int)duration.TotalHours}:{duration.Minutes:00}:{duration.Seconds:00}&quot; : duration.ToString(@&quot;hh\:mm\:ss&quot;, CultureInfo.InvariantCulture)</td></tr>
+<tr><td>178</td><td>call</td><td>함수·델리게이트 또는 객체 생성자를 호출합니다: duration.ToString(@&quot;hh\:mm\:ss&quot;, CultureInfo.InvariantCulture)</td></tr>
 </tbody></table>
 <p>변경 전 점검: 입력/반환 타입, 위 호출자, 예외/취소 경로, 공유 상태와 저장·전송 소비자를 함께 확인합니다. 값의 단위나 물리 방향을 이름만으로 확정하지 않습니다.</p>
 <h2>구문·바인딩 한계</h2>

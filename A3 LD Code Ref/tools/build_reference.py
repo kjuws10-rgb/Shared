@@ -9,7 +9,7 @@ from pathlib import Path
 from urllib.parse import quote,unquote
 from datetime import datetime, timezone
 
-VERSION = '1.1.2'
+VERSION = '1.1.4'
 REPO = 'https://github.com/kjuws10-rgb/A3Drilling'
 CODE_EXT = {'.cs','.xaml','.ascript','.scan','.csproj','.sln','.config','.xml','.json'}
 TEXT_EXT = CODE_EXT | {'.md','.txt','.gitignore','.gitattributes','.editorconfig','.props','.targets','.csv','.bak'}
@@ -34,7 +34,7 @@ def digest(p):
 
 PRIVATE_IP = re.compile(r'(?<![\w.])(?:10\.(?:\d{1,3}\.){2}\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3})(?![\w.])')
 SENSITIVE_KEY = re.compile(r'(?i)password|passwd|credential|secret|api.?key|access.?token|client.?secret')
-WPF_EVENTS = set('Click Loaded Unloaded Initialized Closing Closed Activated Deactivated ContentRendered SourceInitialized DataContextChanged IsVisibleChanged IsEnabledChanged SizeChanged LayoutUpdated SelectionChanged SelectedItemChanged TextChanged Checked Unchecked Indeterminate KeyDown KeyUp PreviewKeyDown PreviewKeyUp GotFocus LostFocus GotKeyboardFocus LostKeyboardFocus MouseDown MouseUp MouseMove MouseEnter MouseLeave MouseWheel MouseDoubleClick MouseLeftButtonDown MouseLeftButtonUp MouseRightButtonDown MouseRightButtonUp PreviewMouseDown PreviewMouseUp PreviewMouseMove PreviewMouseWheel PreviewMouseDoubleClick PreviewMouseLeftButtonDown PreviewMouseLeftButtonUp PreviewMouseRightButtonDown PreviewMouseRightButtonUp TouchDown TouchUp TouchMove PreviewTouchDown PreviewTouchUp PreviewTouchMove DragEnter DragLeave DragOver Drop PreviewDragEnter PreviewDragLeave PreviewDragOver PreviewDrop ScrollChanged ValueChanged DropDownOpened DropDownClosed TargetUpdated SourceUpdated RequestBringIntoView PreviewTextInput LostMouseCapture Expanded LoadingRow AutoGeneratingColumn ContextMenuOpening ContextMenuClosing ToolTipOpening ToolTipClosing'.split())
+WPF_EVENTS = set('Click Loaded Unloaded Initialized Closing Closed Activated Deactivated ContentRendered SourceInitialized DataContextChanged IsVisibleChanged IsEnabledChanged SizeChanged LayoutUpdated SelectionChanged SelectedItemChanged TextChanged PasswordChanged Checked Unchecked Indeterminate KeyDown KeyUp PreviewKeyDown PreviewKeyUp GotFocus LostFocus GotKeyboardFocus LostKeyboardFocus MouseDown MouseUp MouseMove MouseEnter MouseLeave MouseWheel MouseDoubleClick MouseLeftButtonDown MouseLeftButtonUp MouseRightButtonDown MouseRightButtonUp PreviewMouseDown PreviewMouseUp PreviewMouseMove PreviewMouseWheel PreviewMouseDoubleClick PreviewMouseLeftButtonDown PreviewMouseLeftButtonUp PreviewMouseRightButtonDown PreviewMouseRightButtonUp TouchDown TouchUp TouchMove PreviewTouchDown PreviewTouchUp PreviewTouchMove DragEnter DragLeave DragOver Drop PreviewDragEnter PreviewDragLeave PreviewDragOver PreviewDrop ScrollChanged ValueChanged DropDownOpened DropDownClosed TargetUpdated SourceUpdated RequestBringIntoView PreviewTextInput LostMouseCapture Expanded LoadingRow AutoGeneratingColumn ContextMenuOpening ContextMenuClosing ToolTipOpening ToolTipClosing'.split())
 
 def definition_cells(row):
     # Definition keys/types are useful; site endpoints and authentication values are not.
@@ -85,9 +85,10 @@ def markdown(s):
     out=[];lines=s.splitlines();i=0
     while i<len(lines):
         line=lines[i]
-        if line.startswith('```'):
-            fence=re.match(r'`+',line)[0];lang=line[len(fence):];i+=1;body=[]
-            while i<len(lines) and not lines[i].startswith(fence):body.append(lines[i]);i+=1
+        fence_match=re.match(r'^ {0,3}(`{3,}|~{3,})(.*)$',line)
+        if fence_match:
+            fence=fence_match[1];lang=fence_match[2].strip();closing=re.compile(r'^ {0,3}'+re.escape(fence[0])+'{'+str(len(fence))+r',}[ \t]*$');i+=1;body=[]
+            while i<len(lines) and not closing.match(lines[i]):body.append(lines[i]);i+=1
             out.append('<pre data-language="'+H(lang)+'"><code>'+H('\n'.join(body))+'</code></pre>')
         elif line.startswith('#'):
             m=re.match(r'^(#{1,6})\s+(.+)$',line)

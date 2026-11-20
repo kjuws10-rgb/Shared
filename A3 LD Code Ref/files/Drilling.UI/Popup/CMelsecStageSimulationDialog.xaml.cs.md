@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | b75bcb130de52c566f7614c506f2f4dbee49d2c4c9a2146420c8d1a76599698f |
 | 파일 분류 | code |
 | 원본 크기/행 | 20,622 bytes / 419 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -115,7 +115,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_timer` · L17–17
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L17-L17)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -130,7 +130,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `Panel` · L18–18
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L18-L18)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -145,7 +145,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_Panel` · L18–18
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L18-L18)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -160,7 +160,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L20–42
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:20–42](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L20-L42)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:20–42](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L20-L42)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -180,7 +180,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/CRootView.cs:2929–2932](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/CRootView.cs#L2929-L2932) | new CMelsecStageSimulationDialog | False |
+| [Drilling.UI/CRootView.cs:3323–3326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/CRootView.cs#L3323-L3326) | new CMelsecStageSimulationDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -223,7 +223,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `RefreshSnapshot` · L45–45
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L45-L45)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L45-L45)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -257,7 +257,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CloseClicked` · L46–46
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L46-L46)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L46-L46)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -291,7 +291,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_map` · L51–51
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L51-L51)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:51–51](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L51-L51)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -312,7 +312,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_connectionText` · L52–52
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L52-L52)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:52–52](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L52-L52)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -333,7 +333,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastCanChangeReplies` · L53–53
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L53-L53)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L53-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -354,7 +354,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastAutomaticReplies` · L53–53
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L53-L53)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L53-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -375,7 +375,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastCanSetZeroSegments` · L53–53
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L53-L53)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L53-L53)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -390,7 +390,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_zeroSegmentInput` · L54–54
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L54-L54)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -411,7 +411,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastZeroSegmentState` · L54–54
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L54-L54)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L54-L54)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -432,7 +432,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_setZeroSegments` · L55–55
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L55-L55)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:55–55](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L55-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -447,7 +447,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_seedMeasurements` · L56–56
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L56-L56)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:56–56](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L56-L56)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -462,7 +462,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_seeding` · L57–57
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L57-L57)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L57-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -477,7 +477,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_lastCanSeed` · L57–57
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L57-L57)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:57–57](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L57-L57)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -492,7 +492,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_measurementStatus` · L58–58
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L58-L58)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:58–58](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L58-L58)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -513,7 +513,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `MeasurementStatus` · L59–59
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L59-L59)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L59-L59)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -528,7 +528,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `CanSeedMeasurements` · L60–61
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:60–61](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L60-L61)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:60–61](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L60-L61)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -559,7 +559,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `SeedMeasurementsCommand` · L62–87
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:62–87](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L62-L87)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:62–87](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L62-L87)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -584,8 +584,8 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 75 | double.TryParse | resolved | bool double.TryParse(string?, System.Globalization.NumberStyles, System.IFormatProvider?, out double) |
 | 75 | double.IsFinite | resolved | bool double.IsFinite(double) |
 | 76 | new InvalidOperationException | resolved | System.InvalidOperationException.InvalidOperationException(string?) |
-| 77 | CAlignDistortionCycle.ResultId | resolved | string Drilling.Common.Correction.CAlignDistortionCycle.ResultId(string) · Drilling.Common/Correction/CAlignInterpolation.cs:237 |
-| 79 | interfaces.Melsec.SetDistortionMeasurementSimulationValues | resolved | void Drilling.Common.Interface.CMelsec.SetDistortionMeasurementSimulationValues(System.Collections.Generic.IReadOnlyDictionary<string, double>) · Drilling.Common/Interface/Melsec/CMelsec.cs:3062 |
+| 77 | CAlignDistortionCycle.ResultId | resolved | string Drilling.Common.Correction.CAlignDistortionCycle.ResultId(string) · Drilling.Common/Correction/CAlignInterpolation.cs:247 |
+| 79 | interfaces.Melsec.SetDistortionMeasurementSimulationValues | resolved | void Drilling.Common.Interface.CMelsec.SetDistortionMeasurementSimulationValues(System.Collections.Generic.IReadOnlyDictionary<string, double>) · Drilling.Common/Interface/Melsec/CMelsec.cs:3061 |
 | 80 | Rows.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.UI.Popup.CMelsecStageSimulationRow> System.Collections.Generic.IEnumerable<Drilling.UI.Popup.CMelsecStageSimulationRow>.Where<Drilling.UI.Popup.CMelsecStageSimulationRow>(System.Func<Drilling.UI.Popup.CMelsecStageSimulationRow, bool>) |
 | 80 | values[row.Id].ToString | resolved | string double.ToString(string?, System.IFormatProvider?) |
 | 82 | .Invoke | resolved · 동적 구현 선택 가능 | void System.ComponentModel.PropertyChangedEventHandler.Invoke(object?, System.ComponentModel.PropertyChangedEventArgs) |
@@ -675,7 +675,7 @@ flowchart TD
 
 ### PropertyDeclaration `ZeroSegmentInput` · L89–99
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:89–99](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L89-L99)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:89–99](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L89-L99)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -690,7 +690,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ZeroSegmentInput` · L91–91
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L91-L91)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:91–91](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L91-L91)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -705,7 +705,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_ZeroSegmentInput` · L92–98
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:92–98](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L92-L98)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:92–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L92-L98)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -754,7 +754,7 @@ flowchart TD
 
 ### PropertyDeclaration `ZeroSegmentState` · L101–101
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L101-L101)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:101–101](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L101-L101)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -775,7 +775,7 @@ flowchart TD
 
 ### PropertyDeclaration `CanSetZeroSegments` · L102–102
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L102-L102)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L102-L102)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -804,7 +804,7 @@ flowchart TD
 
 ### PropertyDeclaration `SetZeroSegmentsCommand` · L103–115
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:103–115](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L103-L115)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:103–115](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L103-L115)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -857,7 +857,7 @@ flowchart TD
 
 ### EventFieldDeclaration `PropertyChanged` · L117–117
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L117-L117)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L117-L117)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -872,7 +872,7 @@ flowchart TD
 
 ### PropertyDeclaration `Rows` · L118–118
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L118-L118)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L118-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -887,7 +887,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Rows` · L118–118
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L118-L118)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L118-L118)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -902,7 +902,7 @@ flowchart TD
 
 ### PropertyDeclaration `ConnectionText` · L119–119
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L119-L119)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:119–119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L119-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -917,7 +917,7 @@ flowchart TD
 
 ### PropertyDeclaration `CanChangeAutomaticReplies` · L120–120
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L120-L120)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L120-L120)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -932,7 +932,7 @@ flowchart TD
 
 ### PropertyDeclaration `AutomaticReplies` · L122–141
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:122–141](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L122-L141)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:122–141](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L122-L141)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -947,7 +947,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AutomaticReplies` · L124–124
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L124-L124)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L124-L124)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -962,7 +962,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_AutomaticReplies` · L125–140
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:125–140](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L125-L140)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:125–140](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L125-L140)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1020,7 +1020,7 @@ flowchart TD
 
 ### MethodDeclaration `Refresh` · L143–215
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:143–215](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L143-L215)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:143–215](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L143-L215)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1033,10 +1033,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L33-L33) | Panel.Refresh | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L41-L41) | Panel.Refresh | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L45-L45) | Panel.Refresh | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L83-L83) | Refresh | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:33–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L33-L33) | Panel.Refresh | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L41-L41) | Panel.Refresh | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:45–45](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L45-L45) | Panel.Refresh | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L83-L83) | Refresh | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1049,32 +1049,32 @@ flowchart TD
 | 154 | new | resolved | System.ComponentModel.PropertyChangedEventArgs.PropertyChangedEventArgs(string?) |
 | 154 | nameof | unresolved | None |
 | 155 | .NotifyCanExecuteChanged | resolved | void Drilling.UI.Menu.CButtonCommand.NotifyCanExecuteChanged() · Drilling.UI/Menu/CButtonCommand.cs:24 |
-| 158 | interfaces.Melsec.GetCachedSnapshot | resolved | System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE> Drilling.Common.Interface.CMelsec.GetCachedSnapshot(out System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>) · Drilling.Common/Interface/Melsec/CMelsec.cs:2538 |
+| 158 | interfaces.Melsec.GetCachedSnapshot | resolved | System.Collections.Generic.IReadOnlyDictionary<string, Drilling.Common.Interface.ST_MELSEC_CACHED_VALUE> Drilling.Common.Interface.CMelsec.GetCachedSnapshot(out System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>) · Drilling.Common/Interface/Melsec/CMelsec.cs:2539 |
 | 159 | map.Where(row => CMelsec.IsStageFlowSimulationSignal(row) &#124;&#124; CMelsec.IsStageSimulationSignal(row) &#124;&#124; CMelsec.IsStageAlignSimulationSignal(row) &#124;&#124; CMelsec.IsStageProtectWindowSimulationSignal(row) &#124;&#124; CMelsec.IsDistortionMeasurementSimulationValue(row)).OrderBy(row => ScenarioOrder(row.Group)).ThenBy(row => row.DeviceNo).ThenBy(row => SignalOrder(row… | resolved | Drilling.Common.Interface.ST_MELSEC_MAP_DATA[] System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>.ToArray<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>() |
 | 159 | map.Where(row => CMelsec.IsStageFlowSimulationSignal(row) &#124;&#124; CMelsec.IsStageSimulationSignal(row) &#124;&#124; CMelsec.IsStageAlignSimulationSignal(row) &#124;&#124; CMelsec.IsStageProtectWindowSimulationSignal(row) &#124;&#124; CMelsec.IsDistortionMeasurementSimulationValue(row)).OrderBy(row => ScenarioOrder(row.Group)).ThenBy(row => row.DeviceNo).ThenBy(row => SignalOrder(row… | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA> System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>.ThenBy<Drilling.Common.Interface.ST_MELSEC_MAP_DATA, string>(System.Func<Drilling.Common.Interface.ST_MELSEC_MAP_DATA, string>) |
 | 159 | map.Where(row => CMelsec.IsStageFlowSimulationSignal(row) &#124;&#124; CMelsec.IsStageSimulationSignal(row) &#124;&#124; CMelsec.IsStageAlignSimulationSignal(row) &#124;&#124; CMelsec.IsStageProtectWindowSimulationSignal(row) &#124;&#124; CMelsec.IsDistortionMeasurementSimulationValue(row)).OrderBy(row => ScenarioOrder(row.Group)).ThenBy(row => row.DeviceNo).ThenBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA> System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>.ThenBy<Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int>(System.Func<Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int>) |
 | 159 | map.Where(row => CMelsec.IsStageFlowSimulationSignal(row) &#124;&#124; CMelsec.IsStageSimulationSignal(row) &#124;&#124; CMelsec.IsStageAlignSimulationSignal(row) &#124;&#124; CMelsec.IsStageProtectWindowSimulationSignal(row) &#124;&#124; CMelsec.IsDistortionMeasurementSimulationValue(row)).OrderBy(row => ScenarioOrder(row.Group)).ThenBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA> System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>.ThenBy<Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int>(System.Func<Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int>) |
 | 159 | map.Where(row => CMelsec.IsStageFlowSimulationSignal(row) &#124;&#124; CMelsec.IsStageSimulationSignal(row) &#124;&#124; CMelsec.IsStageAlignSimulationSignal(row) &#124;&#124; CMelsec.IsStageProtectWindowSimulationSignal(row) &#124;&#124; CMelsec.IsDistortionMeasurementSimulationValue(row)).OrderBy | resolved | System.Linq.IOrderedEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA> System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>.OrderBy<Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int>(System.Func<Drilling.Common.Interface.ST_MELSEC_MAP_DATA, int>) |
 | 159 | map.Where | resolved | System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA> System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>.Where<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>(System.Func<Drilling.Common.Interface.ST_MELSEC_MAP_DATA, bool>) |
-| 159 | CMelsec.IsStageFlowSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageFlowSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3091 |
-| 159 | CMelsec.IsStageSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3128 |
-| 159 | CMelsec.IsStageAlignSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageAlignSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3129 |
-| 159 | CMelsec.IsStageProtectWindowSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageProtectWindowSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3108 |
-| 159 | CMelsec.IsDistortionMeasurementSimulationValue | resolved | bool Drilling.Common.Interface.CMelsec.IsDistortionMeasurementSimulationValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3059 |
+| 159 | CMelsec.IsStageFlowSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageFlowSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3090 |
+| 159 | CMelsec.IsStageSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3127 |
+| 159 | CMelsec.IsStageAlignSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageAlignSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3128 |
+| 159 | CMelsec.IsStageProtectWindowSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageProtectWindowSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3107 |
+| 159 | CMelsec.IsDistortionMeasurementSimulationValue | resolved | bool Drilling.Common.Interface.CMelsec.IsDistortionMeasurementSimulationValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3058 |
 | 159 | ScenarioOrder | resolved | int Drilling.UI.Popup.CMelsecStageSimulationPanel.ScenarioOrder(string) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:217 |
 | 159 | SignalOrder | resolved | int Drilling.UI.Popup.CMelsecStageSimulationPanel.SignalOrder(string) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:231 |
 | 160 | _map.SequenceEqual | resolved | bool System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>.SequenceEqual<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>(System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_MELSEC_MAP_DATA>) |
 | 163 | Rows.Clear | resolved | void System.Collections.ObjectModel.Collection<Drilling.UI.Popup.CMelsecStageSimulationRow>.Clear() |
 | 165 | Rows.Add | resolved | void System.Collections.ObjectModel.Collection<Drilling.UI.Popup.CMelsecStageSimulationRow>.Add(Drilling.UI.Popup.CMelsecStageSimulationRow) |
 | 165 | new | resolved | Drilling.UI.Popup.CMelsecStageSimulationRow.CMelsecStageSimulationRow(Drilling.Common.Interface.ST_MELSEC_MAP_DATA, System.Action<int>, System.Action<string>?, System.Action<double>?) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:273 |
-| 167 | CMelsec.IsStageAlignSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageAlignSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3129 |
-| 168 | interfaces.Melsec.SetStageAlignSimulationValue | resolved | void Drilling.Common.Interface.CMelsec.SetStageAlignSimulationValue(string, int) · Drilling.Common/Interface/Melsec/CMelsec.cs:3131 |
-| 169 | CMelsec.IsStageProtectWindowSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageProtectWindowSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3108 |
-| 170 | interfaces.Melsec.SetStageProtectWindowSimulationValue | resolved | void Drilling.Common.Interface.CMelsec.SetStageProtectWindowSimulationValue(string, int) · Drilling.Common/Interface/Melsec/CMelsec.cs:3110 |
-| 171 | CMelsec.IsStageFlowSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageFlowSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3091 |
-| 172 | interfaces.Melsec.SetStageFlowSimulationValue | resolved | void Drilling.Common.Interface.CMelsec.SetStageFlowSimulationValue(string, int) · Drilling.Common/Interface/Melsec/CMelsec.cs:3092 |
-| 174 | interfaces.Melsec.SetStageSimulationSignal | resolved | void Drilling.Common.Interface.CMelsec.SetStageSimulationSignal(string, bool) · Drilling.Common/Interface/Melsec/CMelsec.cs:3152 |
-| 175 | interfaces.Melsec.SetDistortionMeasurementSimulationValue | resolved | void Drilling.Common.Interface.CMelsec.SetDistortionMeasurementSimulationValue(string, double) · Drilling.Common/Interface/Melsec/CMelsec.cs:3061 |
+| 167 | CMelsec.IsStageAlignSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageAlignSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3128 |
+| 168 | interfaces.Melsec.SetStageAlignSimulationValue | resolved | void Drilling.Common.Interface.CMelsec.SetStageAlignSimulationValue(string, int) · Drilling.Common/Interface/Melsec/CMelsec.cs:3130 |
+| 169 | CMelsec.IsStageProtectWindowSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageProtectWindowSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3107 |
+| 170 | interfaces.Melsec.SetStageProtectWindowSimulationValue | resolved | void Drilling.Common.Interface.CMelsec.SetStageProtectWindowSimulationValue(string, int) · Drilling.Common/Interface/Melsec/CMelsec.cs:3109 |
+| 171 | CMelsec.IsStageFlowSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageFlowSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3090 |
+| 172 | interfaces.Melsec.SetStageFlowSimulationValue | resolved | void Drilling.Common.Interface.CMelsec.SetStageFlowSimulationValue(string, int) · Drilling.Common/Interface/Melsec/CMelsec.cs:3091 |
+| 174 | interfaces.Melsec.SetStageSimulationSignal | resolved | void Drilling.Common.Interface.CMelsec.SetStageSimulationSignal(string, bool) · Drilling.Common/Interface/Melsec/CMelsec.cs:3148 |
+| 175 | interfaces.Melsec.SetDistortionMeasurementSimulationValue | resolved | void Drilling.Common.Interface.CMelsec.SetDistortionMeasurementSimulationValue(string, double) · Drilling.Common/Interface/Melsec/CMelsec.cs:3060 |
 | 178 | interfaces.GetInterfaceCommunicationList(EN_EQP_MODULE.Melsec).ToDictionary | resolved | System.Collections.Generic.Dictionary<int, Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS> System.Collections.Generic.IEnumerable<Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS>.ToDictionary<Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS, int>(System.Func<Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS, int>) |
 | 178 | interfaces.GetInterfaceCommunicationList | resolved | System.Collections.Generic.IReadOnlyList<Drilling.Common.Interface.ST_INTERFACE_COMM_STATUS> Drilling.Common.Interface.CInterfaceManager.GetInterfaceCommunicationList(Drilling.Common.Interface.EN_EQP_MODULE?) · Drilling.Common/Interface/CInterfaceManager.cs:472 |
 | 179 | string.Join | resolved | string string.Join(string?, System.Collections.Generic.IEnumerable<string?>) |
@@ -1244,7 +1244,7 @@ flowchart TD
 
 ### MethodDeclaration `ScenarioOrder` · L217–230
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:217–230](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L217-L230)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:217–230](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L217-L230)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1263,7 +1263,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L159-L159) | ScenarioOrder | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L159-L159) | ScenarioOrder | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1291,7 +1291,7 @@ flowchart TD
 
 ### MethodDeclaration `SignalOrder` · L231–231
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L231-L231)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L231-L231)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1310,7 +1310,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L159-L159) | SignalOrder | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:159–159](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L159-L159) | SignalOrder | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1338,7 +1338,7 @@ flowchart TD
 
 ### FieldDeclaration `_canSet` · L236–236
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L236-L236)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:236–236](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L236-L236)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1353,7 +1353,7 @@ flowchart TD
 
 ### FieldDeclaration `_currentValue` · L237–237
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L237-L237)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:237–237](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L237-L237)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1374,7 +1374,7 @@ flowchart TD
 
 ### FieldDeclaration `_inputValue` · L238–238
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L238-L238)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:238–238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L238-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1389,7 +1389,7 @@ flowchart TD
 
 ### FieldDeclaration `_readScale` · L239–239
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L239-L239)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:239–239](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L239-L239)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1404,7 +1404,7 @@ flowchart TD
 
 ### FieldDeclaration `_stateBrush` · L240–240
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L240-L240)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:240–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L240-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1425,7 +1425,7 @@ flowchart TD
 
 ### EventFieldDeclaration `PropertyChanged` · L241–241
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L241-L241)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:241–241](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L241-L241)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1440,7 +1440,7 @@ flowchart TD
 
 ### PropertyDeclaration `Id` · L242–242
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L242-L242)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L242-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1455,7 +1455,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Id` · L242–242
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L242-L242)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:242–242](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L242-L242)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1470,7 +1470,7 @@ flowchart TD
 
 ### PropertyDeclaration `DeviceNo` · L243–243
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L243-L243)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L243-L243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1485,7 +1485,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_DeviceNo` · L243–243
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L243-L243)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:243–243](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L243-L243)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1500,7 +1500,7 @@ flowchart TD
 
 ### PropertyDeclaration `Scenario` · L244–244
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L244-L244)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L244-L244)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1515,7 +1515,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Scenario` · L244–244
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L244-L244)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:244–244](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L244-L244)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1530,7 +1530,7 @@ flowchart TD
 
 ### PropertyDeclaration `Name` · L245–245
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L245-L245)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L245-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1545,7 +1545,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Name` · L245–245
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L245-L245)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:245–245](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L245-L245)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1560,7 +1560,7 @@ flowchart TD
 
 ### PropertyDeclaration `Address` · L246–246
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L246-L246)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L246-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1575,7 +1575,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Address` · L246–246
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L246-L246)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L246-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1590,7 +1590,7 @@ flowchart TD
 
 ### PropertyDeclaration `Description` · L247–247
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L247-L247)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L247-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1605,7 +1605,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Description` · L247–247
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L247-L247)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L247-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1620,7 +1620,7 @@ flowchart TD
 
 ### PropertyDeclaration `CurrentValue` · L248–248
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L248-L248)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L248-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1635,7 +1635,7 @@ flowchart TD
 
 ### PropertyDeclaration `StateBrush` · L249–249
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L249-L249)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:249–249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L249-L249)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1650,7 +1650,7 @@ flowchart TD
 
 ### PropertyDeclaration `CanSet` · L250–250
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L250-L250)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:250–250](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L250-L250)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1665,7 +1665,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsNumeric` · L251–251
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L251-L251)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L251-L251)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1680,7 +1680,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsNumeric` · L251–251
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L251-L251)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:251–251](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L251-L251)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1695,7 +1695,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsCount` · L252–252
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L252-L252)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L252-L252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1710,7 +1710,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsCount` · L252–252
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L252-L252)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:252–252](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L252-L252)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1725,7 +1725,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsMeasurement` · L253–253
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L253-L253)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L253-L253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1740,7 +1740,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsMeasurement` · L253–253
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L253-L253)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L253-L253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1755,7 +1755,7 @@ flowchart TD
 
 ### PropertyDeclaration `InputHint` · L254–254
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L254-L254)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:254–254](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L254-L254)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1776,7 +1776,7 @@ flowchart TD
 
 ### PropertyDeclaration `IsAlignBusyWord` · L255–255
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L255-L255)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L255-L255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1791,7 +1791,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_IsAlignBusyWord` · L255–255
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L255-L255)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:255–255](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L255-L255)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1806,7 +1806,7 @@ flowchart TD
 
 ### PropertyDeclaration `InputValue` · L257–267
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:257–267](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L257-L267)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:257–267](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L257-L267)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1821,7 +1821,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_InputValue` · L259–259
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L259-L259)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:259–259](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L259-L259)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1836,7 +1836,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_InputValue` · L260–266
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:260–266](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L260-L266)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:260–266](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L260-L266)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1881,7 +1881,7 @@ flowchart TD
 
 ### PropertyDeclaration `SetOnCommand` · L269–269
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L269-L269)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L269-L269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1896,7 +1896,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SetOnCommand` · L269–269
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L269-L269)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:269–269](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L269-L269)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1911,7 +1911,7 @@ flowchart TD
 
 ### PropertyDeclaration `SetOffCommand` · L270–270
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L270-L270)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L270-L270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1926,7 +1926,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SetOffCommand` · L270–270
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L270-L270)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:270–270](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L270-L270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1941,7 +1941,7 @@ flowchart TD
 
 ### PropertyDeclaration `SetValueCommand` · L271–271
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L271-L271)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L271-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1956,7 +1956,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_SetValueCommand` · L271–271
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L271-L271)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:271–271](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L271-L271)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1971,7 +1971,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L273–357
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:273–357](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L273-L357)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:273–357](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L273-L357)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1993,13 +1993,13 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:165–175](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L165-L175) | new | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:165–175](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L165-L175) | new | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 276 | CMelsec.IsDistortionMeasurementSimulationValue | resolved | bool Drilling.Common.Interface.CMelsec.IsDistortionMeasurementSimulationValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3059 |
+| 276 | CMelsec.IsDistortionMeasurementSimulationValue | resolved | bool Drilling.Common.Interface.CMelsec.IsDistortionMeasurementSimulationValue(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3058 |
 | 278 | data.Group.ToUpperInvariant | resolved | string string.ToUpperInvariant() |
 | 292 | data.Id.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
 | 293 | data.Id.Equals | resolved | bool string.Equals(string?, System.StringComparison) |
@@ -2008,8 +2008,8 @@ flowchart TD
 | 307 | parts[1].AsSpan | resolved | System.ReadOnlySpan<char> string?.AsSpan(int) |
 | 308 | int.Parse | resolved | int int.Parse(System.ReadOnlySpan<char>, System.IFormatProvider?) |
 | 308 | parts[2].AsSpan | resolved | System.ReadOnlySpan<char> string?.AsSpan(int, int) |
-| 311 | CMelsec.IsSimulationOnlyRoute | resolved | bool Drilling.Common.Interface.CMelsec.IsSimulationOnlyRoute(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3055 |
-| 313 | CMelsec.IsStageAlignSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageAlignSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3129 |
+| 311 | CMelsec.IsSimulationOnlyRoute | resolved | bool Drilling.Common.Interface.CMelsec.IsSimulationOnlyRoute(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3054 |
+| 313 | CMelsec.IsStageAlignSimulationSignal | resolved | bool Drilling.Common.Interface.CMelsec.IsStageAlignSimulationSignal(Drilling.Common.Interface.ST_MELSEC_MAP_DATA) · Drilling.Common/Interface/Melsec/CMelsec.cs:3128 |
 | 316 | CRecipeConfirmDialog.ShowWarning | resolved | void Drilling.UI.Popup.CRecipeConfirmDialog.ShowWarning(string, string, Window?) · Drilling.UI/Popup/CRecipeConfirmDialog.xaml.cs:86 |
 | 331 | new | resolved | Drilling.UI.Menu.CButtonCommand.CButtonCommand(System.Action<object?>, System.Predicate<object?>?) · Drilling.UI/Menu/CButtonCommand.cs:9 |
 | 331 | Set | resolved | void Set(int) · Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:317 |
@@ -2135,7 +2135,7 @@ flowchart TD
 
 ### LocalFunctionStatement `Set` · L317–329
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:317–329](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L317-L329)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:317–329](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L317-L329)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2154,9 +2154,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L331-L331) | Set | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L332-L332) | Set | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:355–355](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L355-L355) | Set | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:331–331](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L331-L331) | Set | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:332–332](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L332-L332) | Set | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:355–355](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L355-L355) | Set | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2193,7 +2193,7 @@ flowchart TD
 
 ### MethodDeclaration `Refresh` · L359–415
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:359–415](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L359-L415)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:359–415](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L359-L415)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2213,7 +2213,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L195-L195) | row.Refresh | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:195–195](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L195-L195) | row.Refresh | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2322,7 +2322,7 @@ flowchart TD
 
 ### MethodDeclaration `Changed` · L417–417
 
-[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L417-L417)
+[Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:417–417](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L417-L417)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2341,10 +2341,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L265-L265) | Changed | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L364-L364) | Changed | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L407-L407) | Changed | False |
-| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L413-L413) | Changed | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:265–265](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L265-L265) | Changed | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L364-L364) | Changed | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L407-L407) | Changed | False |
+| [Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs:413–413](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CMelsecStageSimulationDialog.xaml.cs#L413-L413) | Changed | False |
 
 호출하는 대상과 해석 범위:
 

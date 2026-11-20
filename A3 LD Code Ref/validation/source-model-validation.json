@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "a3-tool-source-model-audit/1",
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "extractorVersion": "1.0.3",
+  "passed": true,
+  "checks": {
+    "correctSourceCommit": true,
+    "csharpModelPathsExactlyOnce": true,
+    "allCSharpByteHashesMatch": true,
+    "allMemberIdsUnique": true,
+    "allModelRangesValid": true,
+    "explicitMemberASTCoverageAudited": true,
+    "original699ByteHashesMatchSnapshot": true
+  },
+  "summary": {
+    "trackedFiles": 699,
+    "csharpFiles": 157,
+    "sourceLines": 122835,
+    "types": 931,
+    "members": 16360,
+    "calls": 42608,
+    "operations": 96335,
+    "callResolution": {
+      "resolved": 38122,
+      "unresolved": 3766,
+      "candidate": 720
+    },
+    "compilationDiagnostics": {
+      "Error": 4413,
+      "Hidden": 444,
+      "Warning": 3
+    },
+    "diagnosticCodes": [
+      {
+        "code": "CS0246",
+        "count": 2381
+      },
+      {
+        "code": "CS0103",
+        "count": 1551
+      },
+      {
+        "code": "CS8019",
+        "count": 423
+      },
+      {
+        "code": "CS1061",
+        "count": 210
+      },
+      {
+        "code": "CS0234",
+        "count": 167
+      },
+      {
+        "code": "CS0117",
+        "count": 63
+      },
+      {
+        "code": "CS1503",
+        "count": 16
+      },
+      {
+        "code": "CS8933",
+        "count": 15
+      },
+      {
+        "code": "CS1069",
+        "count": 9
+      },
+      {
+        "code": "CS0165",
+        "count": 9
+      },
+      {
+        "code": "CS9335",
+        "count": 6
+      },
+      {
+        "code": "CS0403",
+        "count": 3
+      },
+      {
+        "code": "CS7036",
+        "count": 1
+      },
+      {
+        "code": "CS0029",
+        "count": 1
+      },
+      {
+        "code": "CS8506",
+        "count": 1
+      },
+      {
+        "code": "CS0019",
+        "count": 1
+      },
+      {
+        "code": "CS8619",
+        "count": 1
+      },
+      {
+        "code": "CS8602",
+        "count": 1
+      },
+      {
+        "code": "CS8604",
+        "count": 1
+      }
+    ]
+  },
+  "parseErrorCount": 0,
+  "disabledRegions": 0,
+  "extensionCounts": {
+    "[none]": 2,
+    ".csv": 327,
+    ".scan": 11,
+    ".txt": 8,
+    ".bak": 8,
+    ".json": 1,
+    ".ascript": 109,
+    ".cs": 157,
+    ".csproj": 3,
+    ".dll": 12,
+    ".xml": 1,
+    ".xaml": 58,
+    ".sln": 1,
+    ".config": 1
+  },
+  "scope": "Explicit declaration/metadata checks only. Partial compilation diagnostics are documentation limitations, not an equipment build result."
+}

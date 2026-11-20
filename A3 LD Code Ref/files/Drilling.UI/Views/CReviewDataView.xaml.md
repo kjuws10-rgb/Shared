@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
-| 원본 SHA256 | 450819ac7b205a5cd1839a31ca71e0d0fda98768978c6027855778a5faefcaef |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 SHA256 | f8e18084f8df71fcbaac42026fcd20249576eaee7bcbfe4791bedd663f5b6b57 |
 | 파일 분류 | code |
-| 원본 크기/행 | 112,944 bytes / 1,523 physical lines |
+| 원본 크기/행 | 116,418 bytes / 1,564 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewDataView.xaml) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewDataView.xaml) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -24,7 +24,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | 코드 비하인드 후보 | Drilling.UI/Views/CReviewDataView.xaml.cs |
 | 이름 있는 요소 | ReviewDataRoot, ReviewResultsTree, ShotMapEditSelectionRectangle, ScatterEditSelectionRectangle, ReviewDataResultGrid, ReinspectionRunningPulse |
 | 이벤트 개수 | 17 |
-| Binding 표현 개수 | 209 |
+| Binding 표현 개수 | 219 |
 
 이름 있는 요소는 WPF가 필드를 생성할 수 있는 XAML 선언입니다. 문서 추출기는 WPF 생성 코드를 만들거나 로드하지 않으므로 C# 원문 멤버 수에 합산하지 않습니다.
 
@@ -35,7 +35,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | ShotMapEditSelectionRectangle | L432–432 |
 | ScatterEditSelectionRectangle | L542–542 |
 | ReviewDataResultGrid | L596–596 |
-| ReinspectionRunningPulse | L1052–1052 |
+| ReinspectionRunningPulse | L1088–1088 |
 
 | 이벤트 | 핸들러 이름 | 원본 범위 | 해석 |
 | --- | --- | --- | --- |
@@ -53,9 +53,9 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | SelectionChanged | ReviewDataResultGrid_SelectionChanged | L602–602 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 | Click | ReviewDataReinspectionCheckBox_Changed | L635–635 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 | Click | ReviewDataResultEditCheckBox_Changed | L647–647 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| SelectionChanged | ReviewDataReinspectionGrid_SelectionChanged | L1035–1035 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| SelectionChanged | ReviewDataResultEditKeyInGrid_SelectionChanged | L1299–1299 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
-| SelectionChanged | ReviewDataResultEditCopyGrid_SelectionChanged | L1413–1413 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| SelectionChanged | ReviewDataReinspectionGrid_SelectionChanged | L1071–1071 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| SelectionChanged | ReviewDataResultEditKeyInGrid_SelectionChanged | L1335–1335 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
+| SelectionChanged | ReviewDataResultEditCopyGrid_SelectionChanged | L1449–1449 | 코드 비하인드/이벤트 라우팅에서 실제 연결 확인 필요 |
 
 | Binding 표현 | 원본 범위 |
 | --- | --- |
@@ -73,6 +73,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | {Binding IsReinspectionMode} | L97–97 |
 | {Binding IsResultEditMode} | L100–100 |
 | {Binding RefreshCommand} | L125–125 |
+| {Binding ResultListTitle} | L126–126 |
 | {Binding Nodes} | L130–130 |
 | {Binding StatusText} | L148–148 |
 | {Binding StatusText} | L148–148 |
@@ -164,110 +165,119 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 | {Binding IsReinspectionMode} | L722–722 |
 | {Binding ToggleResultEditModeCommand} | L737–737 |
 | {Binding IsResultEditMode} | L741–741 |
-| {Binding IsReinspectionMode} | L757–757 |
-| {Binding IsResultEditMode} | L760–760 |
-| {Binding OffsetApplyCommand} | L779–779 |
-| {Binding OffsetRollbackCommand} | L790–790 |
-| {Binding OffsetInitCommand} | L800–800 |
-| {Binding OffsetViewCommand} | L808–808 |
-| {Binding IsReinspectionMode} | L816–816 |
-| {Binding AddReinspectionShotCommand} | L834–834 |
-| {Binding AddSelectedReinspectionShotsCommand} | L842–842 |
-| {Binding AddNgReinspectionShotsCommand} | L852–852 |
-| {Binding IsResultEditMode} | L862–862 |
-| {Binding IsResultEditKeyInMode} | L863–863 |
-| {Binding AddResultEditKeyInCommand} | L881–881 |
-| {Binding AddSelectedResultEditKeyInCommand} | L889–889 |
-| {Binding AddNgResultEditKeyInCommand} | L899–899 |
-| {Binding IsResultEditMode} | L909–909 |
-| {Binding IsResultEditCopyMode} | L910–910 |
-| {Binding AddResultEditCopySourceCommand} | L930–930 |
-| {Binding AddResultEditCopyTargetsCommand} | L938–938 |
-| {Binding OffsetActionHint} | L942–942 |
-| {Binding OffsetActionHint} | L947–947 |
-| {Binding IsReinspectionMode} | L951–951 |
-| {Binding IsResultEditMode} | L954–954 |
-| {Binding IsReinspectionMode} | L971–971 |
-| {Binding ReinspectionSummary} | L998–998 |
-| {Binding DeleteReinspectionShotCommand} | L1016–1016 |
-| {Binding ClearReinspectionShotsCommand} | L1027–1027 |
-| {Binding ReinspectionShots} | L1031–1031 |
-| {Binding SelectedReinspectionShot, Mode=OneWay} | L1032–1032 |
-| {Binding IsRunning} | L1048–1048 |
-| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L1072–1072 |
-| {Binding No} | L1076–1076 |
-| {Binding Cell} | L1077–1077 |
-| {Binding ShotName} | L1078–1078 |
-| {Binding Head} | L1079–1079 |
-| {Binding DataContext.CanEditReinspectionList, RelativeSource={RelativeSource AncestorType=DataGrid}} | L1087–1087 |
-| {Binding DataContext.ReinspectionBeamOptions, RelativeSource={RelativeSource AncestorType=DataGrid}} | L1088–1088 |
-| {Binding BeamNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L1089–1089 |
-| {Binding ResultXText} | L1093–1093 |
-| {Binding ResultBrush} | L1096–1096 |
-| {Binding ResultYText} | L1102–1102 |
-| {Binding ResultBrush} | L1105–1105 |
-| {Binding State} | L1111–1111 |
-| {Binding StateBrush} | L1114–1114 |
-| {Binding ReinspectionStatusText} | L1129–1129 |
-| {Binding ReinspectionStatusText} | L1134–1134 |
-| {Binding MoveToReinspectionShotCommand} | L1149–1149 |
-| {Binding MoveAndInspectReinspectionShotCommand} | L1156–1156 |
-| {Binding InspectAllReinspectionShotsCommand} | L1165–1165 |
-| {Binding StopReinspectionCommand} | L1174–1174 |
-| {Binding SaveReinspectionResultCommand} | L1188–1188 |
-| {Binding IsResultEditMode} | L1197–1197 |
-| {Binding SelectResultEditSubModeCommand} | L1219–1219 |
-| {Binding IsResultEditKeyInMode} | L1223–1223 |
-| {Binding SelectResultEditSubModeCommand} | L1238–1238 |
-| {Binding IsResultEditCopyMode} | L1242–1242 |
-| {Binding ResultEditSelectionSummary} | L1270–1270 |
-| {Binding IsResultEditKeyInMode} | L1283–1283 |
-| {Binding ResultEditKeyInItems} | L1295–1295 |
-| {Binding SelectedResultEditKeyInItem, Mode=TwoWay} | L1296–1296 |
-| {Binding No} | L1302–1302 |
-| {Binding Identity} | L1303–1303 |
-| {Binding OriginalXText} | L1304–1304 |
-| {Binding OriginalYText} | L1305–1305 |
-| {Binding OriginalJudge} | L1306–1306 |
-| {Binding EditedXText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L1310–1310 |
-| {Binding EditedYText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L1318–1318 |
-| {Binding DataContext.ResultEditJudgeOptions, RelativeSource={RelativeSource AncestorType=DataGrid}} | L1326–1326 |
-| {Binding EditedJudge, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L1327–1327 |
-| {Binding RemoveResultEditKeyInCommand} | L1347–1347 |
-| {Binding ClearResultEditKeyInCommand} | L1356–1356 |
-| {Binding IsResultEditCopyMode} | L1365–1365 |
-| {Binding ResultEditCopySourceRows} | L1378–1378 |
-| {Binding Identity} | L1382–1382 |
-| {Binding OriginalXText} | L1383–1383 |
-| {Binding OriginalYText} | L1384–1384 |
-| {Binding OriginalJudge} | L1385–1385 |
-| {Binding RemoveResultEditCopyTargetCommand} | L1398–1398 |
-| {Binding ClearResultEditCopyTargetsCommand} | L1407–1407 |
-| {Binding ResultEditCopyTargets} | L1410–1410 |
-| {Binding SelectedResultEditCopyTarget, Mode=TwoWay} | L1411–1411 |
-| {Binding No} | L1416–1416 |
-| {Binding Identity} | L1417–1417 |
-| {Binding OriginalXText} | L1418–1418 |
-| {Binding OriginalYText} | L1419–1419 |
-| {Binding OriginalJudge} | L1420–1420 |
-| {Binding EditedXText} | L1421–1421 |
-| {Binding EditedYText} | L1422–1422 |
-| {Binding EditedJudge} | L1423–1423 |
-| {Binding CopyResultEditXyCommand} | L1431–1431 |
-| {Binding CopyResultEditJudgeCommand} | L1436–1436 |
-| {Binding CopyResultEditAllCommand} | L1441–1441 |
-| {Binding SaveResultEditCommand} | L1457–1457 |
-| {Binding ResultEditStatusText} | L1466–1466 |
-| {Binding ResultEditStatusText} | L1471–1471 |
-| {Binding ShowDataPlaceholder} | L1482–1482 |
-| {Binding CanLoadData} | L1494–1494 |
-| {Binding LoadDataCommand} | L1496–1496 |
-| {Binding DataLoadHint} | L1497–1497 |
-| {Binding DataLoadHintBrush} | L1497–1497 |
-| {Binding IsDataLoading} | L1506–1506 |
-| {Binding LoadProgress, Mode=OneWay} | L1513–1513 |
-| {Binding LoadProgressText} | L1515–1515 |
-| {Binding LoadProgress, StringFormat={}{0:0}%} | L1516–1516 |
+| {Binding IsReinspectionMode} | L760–760 |
+| {Binding IsResultEditMode} | L763–763 |
+| {Binding IsInspectionOffsetRestricted} | L766–766 |
+| {Binding InspectionOffsetRestrictionText} | L769–769 |
+| {Binding OffsetApplyCommand} | L787–787 |
+| {Binding OffsetRollbackCommand} | L798–798 |
+| {Binding OffsetInitCommand} | L808–808 |
+| {Binding OffsetViewCommand} | L816–816 |
+| {Binding IsReinspectionMode} | L824–824 |
+| {Binding AddReinspectionShotCommand} | L842–842 |
+| {Binding AddSelectedReinspectionShotsCommand} | L850–850 |
+| {Binding AddNgReinspectionShotsCommand} | L860–860 |
+| {Binding IsResultEditMode} | L870–870 |
+| {Binding IsResultEditKeyInMode} | L871–871 |
+| {Binding AddResultEditKeyInCommand} | L889–889 |
+| {Binding AddSelectedResultEditKeyInCommand} | L897–897 |
+| {Binding AddNgResultEditKeyInCommand} | L907–907 |
+| {Binding IsResultEditMode} | L917–917 |
+| {Binding IsResultEditCopyMode} | L918–918 |
+| {Binding AddResultEditCopySourceCommand} | L938–938 |
+| {Binding AddResultEditCopyTargetsCommand} | L946–946 |
+| {Binding OffsetActionHint} | L950–950 |
+| {Binding OffsetActionHint} | L955–955 |
+| {Binding IsReinspectionMode} | L959–959 |
+| {Binding IsResultEditMode} | L962–962 |
+| {Binding IsInspectionOffsetRestricted} | L965–965 |
+| {Binding InspectionOffsetRestrictionText} | L973–973 |
+| {Binding InspectionOffsetRestrictionText} | L979–979 |
+| {Binding IsInspectionOffsetRestricted} | L984–984 |
+| {Binding IsReinspectionMode} | L987–987 |
+| {Binding IsResultEditMode} | L990–990 |
+| {Binding IsReinspectionMode} | L1007–1007 |
+| {Binding ReinspectionSummary} | L1034–1034 |
+| {Binding DeleteReinspectionShotCommand} | L1052–1052 |
+| {Binding ClearReinspectionShotsCommand} | L1063–1063 |
+| {Binding ReinspectionShots} | L1067–1067 |
+| {Binding SelectedReinspectionShot, Mode=OneWay} | L1068–1068 |
+| {Binding IsRunning} | L1084–1084 |
+| {Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=Foreground} | L1108–1108 |
+| {Binding No} | L1112–1112 |
+| {Binding Cell} | L1113–1113 |
+| {Binding ShotName} | L1114–1114 |
+| {Binding Head} | L1115–1115 |
+| {Binding DataContext.CanEditReinspectionList, RelativeSource={RelativeSource AncestorType=DataGrid}} | L1123–1123 |
+| {Binding DataContext.ReinspectionBeamOptions, RelativeSource={RelativeSource AncestorType=DataGrid}} | L1124–1124 |
+| {Binding BeamNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L1125–1125 |
+| {Binding ResultXText} | L1129–1129 |
+| {Binding ResultBrush} | L1132–1132 |
+| {Binding ResultYText} | L1138–1138 |
+| {Binding ResultBrush} | L1141–1141 |
+| {Binding State} | L1147–1147 |
+| {Binding StateBrush} | L1150–1150 |
+| {Binding ReinspectionStatusText} | L1165–1165 |
+| {Binding ReinspectionStatusText} | L1170–1170 |
+| {Binding MoveToReinspectionShotCommand} | L1185–1185 |
+| {Binding MoveAndInspectReinspectionShotCommand} | L1192–1192 |
+| {Binding InspectAllReinspectionShotsCommand} | L1201–1201 |
+| {Binding StopReinspectionCommand} | L1210–1210 |
+| {Binding SaveReinspectionResultCommand} | L1224–1224 |
+| {Binding IsResultEditMode} | L1233–1233 |
+| {Binding SelectResultEditSubModeCommand} | L1255–1255 |
+| {Binding IsResultEditKeyInMode} | L1259–1259 |
+| {Binding SelectResultEditSubModeCommand} | L1274–1274 |
+| {Binding IsResultEditCopyMode} | L1278–1278 |
+| {Binding ResultEditSelectionSummary} | L1306–1306 |
+| {Binding IsResultEditKeyInMode} | L1319–1319 |
+| {Binding ResultEditKeyInItems} | L1331–1331 |
+| {Binding SelectedResultEditKeyInItem, Mode=TwoWay} | L1332–1332 |
+| {Binding No} | L1338–1338 |
+| {Binding Identity} | L1339–1339 |
+| {Binding OriginalXText} | L1340–1340 |
+| {Binding OriginalYText} | L1341–1341 |
+| {Binding OriginalJudge} | L1342–1342 |
+| {Binding EditedXText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L1346–1346 |
+| {Binding EditedYText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L1354–1354 |
+| {Binding DataContext.ResultEditJudgeOptions, RelativeSource={RelativeSource AncestorType=DataGrid}} | L1362–1362 |
+| {Binding EditedJudge, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged} | L1363–1363 |
+| {Binding RemoveResultEditKeyInCommand} | L1383–1383 |
+| {Binding ClearResultEditKeyInCommand} | L1392–1392 |
+| {Binding IsResultEditCopyMode} | L1401–1401 |
+| {Binding ResultEditCopySourceRows} | L1414–1414 |
+| {Binding Identity} | L1418–1418 |
+| {Binding OriginalXText} | L1419–1419 |
+| {Binding OriginalYText} | L1420–1420 |
+| {Binding OriginalJudge} | L1421–1421 |
+| {Binding RemoveResultEditCopyTargetCommand} | L1434–1434 |
+| {Binding ClearResultEditCopyTargetsCommand} | L1443–1443 |
+| {Binding ResultEditCopyTargets} | L1446–1446 |
+| {Binding SelectedResultEditCopyTarget, Mode=TwoWay} | L1447–1447 |
+| {Binding No} | L1452–1452 |
+| {Binding Identity} | L1453–1453 |
+| {Binding OriginalXText} | L1454–1454 |
+| {Binding OriginalYText} | L1455–1455 |
+| {Binding OriginalJudge} | L1456–1456 |
+| {Binding EditedXText} | L1457–1457 |
+| {Binding EditedYText} | L1458–1458 |
+| {Binding EditedJudge} | L1459–1459 |
+| {Binding CopyResultEditXCommand} | L1467–1467 |
+| {Binding CopyResultEditYCommand} | L1472–1472 |
+| {Binding CopyResultEditJudgeCommand} | L1477–1477 |
+| {Binding CopyResultEditAllCommand} | L1482–1482 |
+| {Binding SaveResultEditCommand} | L1498–1498 |
+| {Binding ResultEditStatusText} | L1507–1507 |
+| {Binding ResultEditStatusText} | L1512–1512 |
+| {Binding ShowDataPlaceholder} | L1523–1523 |
+| {Binding CanLoadData} | L1535–1535 |
+| {Binding LoadDataCommand} | L1537–1537 |
+| {Binding DataLoadHint} | L1538–1538 |
+| {Binding DataLoadHintBrush} | L1538–1538 |
+| {Binding IsDataLoading} | L1547–1547 |
+| {Binding LoadProgress, Mode=OneWay} | L1554–1554 |
+| {Binding LoadProgressText} | L1556–1556 |
+| {Binding LoadProgress, StringFormat={}{0:0}%} | L1557–1557 |
 
 ## 원문 전체 주석 해설본
 

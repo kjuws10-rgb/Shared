@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | fec50e7ea6890b4831eeed538aee7eff6c6570e4f1d7ea3f009368fa2bafb84b |
 | 파일 분류 | code |
 | 원본 크기/행 | 24,934 bytes / 537 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -81,7 +81,7 @@
 
 ### MethodDeclaration `Build` · L5–17
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:5–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L5-L17)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:5–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L5-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -101,9 +101,9 @@
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:258–258](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L258-L258) | CReviewRulePlanBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6216–6216](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6216-L6216) | CReviewRulePlanBuilder.Build | False |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2205–2205](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2205-L2205) | CReviewRulePlanBuilder.Build | False |
+| [Drilling.Common/Review/CAutoFineReviewCoordinator.cs:260–260](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L260-L260) | CReviewRulePlanBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuCorrection.cs:6337–6337](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.cs#L6337-L6337) | CReviewRulePlanBuilder.Build | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2354–2354](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L2354-L2354) | CReviewRulePlanBuilder.Build | False |
 
 호출하는 대상과 해석 범위:
 
@@ -144,7 +144,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildSimple` · L19–23
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:19–23](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L19-L23)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:19–23](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L19-L23)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -164,14 +164,14 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L10-L10) | BuildSimple | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L10-L10) | BuildSimple | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 21 | TryGetPoint | resolved | Drilling.Common.Review.ST_REVIEW_PLAN_POINT? Drilling.Common.Review.CReviewRulePlanBuilder.TryGetPoint(Drilling.Common.Review.ST_REVIEW_PLAN, string) · Drilling.Common/Review/CReviewRulePlanBuilder.cs:454 |
-| 21 | CReviewManager.NormalizeShotKey | resolved | string Drilling.Common.Review.CReviewManager.NormalizeShotKey(string) · Drilling.Common/Review/CReviewManager.cs:1238 |
+| 21 | CReviewManager.NormalizeShotKey | resolved | string Drilling.Common.Review.CReviewManager.NormalizeShotKey(string) · Drilling.Common/Review/CReviewManager.cs:1245 |
 | 22 | CreateTarget | resolved | Drilling.Common.Review.ST_REVIEW_RULE_TARGET Drilling.Common.Review.CReviewRulePlanBuilder.CreateTarget(Drilling.Common.Review.ST_REVIEW_PLAN_POINT, string) · Drilling.Common/Review/CReviewRulePlanBuilder.cs:447 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
@@ -190,7 +190,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildRough` · L25–67
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:25–67](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L25-L67)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:25–67](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L25-L67)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -211,7 +211,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L11-L11) | BuildRough | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L11-L11) | BuildRough | False |
 
 호출하는 대상과 해석 범위:
 
@@ -322,7 +322,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildRoughByHeadCell` · L69–133
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:69–133](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L69-L133)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:69–133](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L69-L133)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -342,7 +342,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L29-L29) | BuildRoughByHeadCell | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:29–29](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L29-L29) | BuildRoughByHeadCell | False |
 
 호출하는 대상과 해석 범위:
 
@@ -470,7 +470,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveRoughCellSelectionY` · L135–166
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:135–166](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L135-L166)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:135–166](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L135-L166)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -492,7 +492,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L98-L98) | ResolveRoughCellSelectionY | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:98–98](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L98-L98) | ResolveRoughCellSelectionY | False |
 
 호출하는 대상과 해석 범위:
 
@@ -563,7 +563,7 @@ flowchart TD
 
 ### MethodDeclaration `CellContainsHead` · L168–179
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:168–179](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L168-L179)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:168–179](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L168-L179)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -584,7 +584,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L145-L145) | CellContainsHead | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L145-L145) | CellContainsHead | False |
 
 호출하는 대상과 해석 범위:
 
@@ -620,7 +620,7 @@ flowchart TD
 
 ### MethodDeclaration `PreferRoughCellSelectionY` · L181–184
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:181–184](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L181-L184)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:181–184](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L181-L184)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -641,7 +641,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L152-L152) | PreferRoughCellSelectionY | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:152–152](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L152-L152) | PreferRoughCellSelectionY | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -654,7 +654,7 @@ flowchart TD
 
 ### MethodDeclaration `TryGetCellYRange` · L186–211
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:186–211](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L186-L211)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:186–211](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L186-L211)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -676,8 +676,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L102-L102) | TryGetCellYRange | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L145-L145) | TryGetCellYRange | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:102–102](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L102-L102) | TryGetCellYRange | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:145–145](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L145-L145) | TryGetCellYRange | False |
 
 호출하는 대상과 해석 범위:
 
@@ -740,7 +740,7 @@ flowchart TD
 
 ### MethodDeclaration `ResolveReferenceY` · L213–221
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:213–221](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L213-L221)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:213–221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L213-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -760,8 +760,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L46-L46) | ResolveReferenceY | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L140-L140) | ResolveReferenceY | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:46–46](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L46-L46) | ResolveReferenceY | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:140–140](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L140-L140) | ResolveReferenceY | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -783,7 +783,7 @@ flowchart TD
 
 ### MethodDeclaration `UpdateHeadRange` · L223–238
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:223–238](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L223-L238)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:223–238](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L223-L238)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -803,10 +803,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L38-L38) | UpdateHeadRange | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L41-L41) | UpdateHeadRange | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L85-L85) | UpdateHeadRange | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L88-L88) | UpdateHeadRange | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L38-L38) | UpdateHeadRange | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L41-L41) | UpdateHeadRange | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L85-L85) | UpdateHeadRange | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L88-L88) | UpdateHeadRange | False |
 
 호출하는 대상과 해석 범위:
 
@@ -851,7 +851,7 @@ flowchart TD
 
 ### MethodDeclaration `FindNearestRow` · L240–254
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:240–254](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L240-L254)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:240–254](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L240-L254)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -873,7 +873,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L384-L384) | FindNearestRow | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:384–384](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L384-L384) | FindNearestRow | False |
 
 호출하는 대상과 해석 범위:
 
@@ -921,7 +921,7 @@ flowchart TD
 
 ### MethodDeclaration `IsEarlierRoughPoint` · L256–280
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:256–280](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L256-L280)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:256–280](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L256-L280)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -942,8 +942,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L59-L59) | IsEarlierRoughPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L124-L124) | IsEarlierRoughPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:59–59](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L59-L59) | IsEarlierRoughPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:124–124](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L124-L124) | IsEarlierRoughPoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1004,7 +1004,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildFine` · L282–294
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:282–294](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L282-L294)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:282–294](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L282-L294)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1024,7 +1024,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L12-L12) | BuildFine | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L12-L12) | BuildFine | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1091,7 +1091,7 @@ flowchart TD
 
 ### MethodDeclaration `IsExecutableRoughPoint` · L296–296
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L296-L296)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:296–296](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L296-L296)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1110,8 +1110,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L54-L54) | IsExecutableRoughPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L118-L118) | IsExecutableRoughPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L54-L54) | IsExecutableRoughPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:118–118](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L118-L118) | IsExecutableRoughPoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1133,7 +1133,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildEdge` · L297–319
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:297–319](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L297-L319)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:297–319](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L297-L319)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1152,7 +1152,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L13-L13) | BuildEdge | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L13-L13) | BuildEdge | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1208,7 +1208,7 @@ flowchart TD
 
 ### MethodDeclaration `EnumerateCells` · L321–359
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:321–359](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L321-L359)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:321–359](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L321-L359)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1227,16 +1227,16 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L32-L32) | EnumerateCells | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L74-L74) | EnumerateCells | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L300-L300) | EnumerateCells | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L363-L363) | EnumerateCells | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:32–32](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L32-L32) | EnumerateCells | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:74–74](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L74-L74) | EnumerateCells | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:300–300](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L300-L300) | EnumerateCells | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:363–363](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L363-L363) | EnumerateCells | False |
 
 호출하는 대상과 해석 범위:
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 327 | cellSource.GetCellRange | resolved · 동적 구현 선택 가능 | Drilling.Common.Review.ST_REVIEW_CELL_POINT_RANGE Drilling.Common.Review.IReviewCellPointSource.GetCellRange(int) · Drilling.Common/Review/CReviewManager.cs:4012 |
+| 327 | cellSource.GetCellRange | resolved · 동적 구현 선택 가능 | Drilling.Common.Review.ST_REVIEW_CELL_POINT_RANGE Drilling.Common.Review.IReviewCellPointSource.GetCellRange(int) · Drilling.Common/Review/CReviewManager.cs:4033 |
 | 333 | new | resolved | Drilling.Common.Review.CReviewRulePlanBuilder.CellSlice.CellSlice(int, int, int, System.Collections.Generic.IReadOnlyList<Drilling.Common.Review.ST_REVIEW_PLAN_POINT>?) · Drilling.Common/Review/CReviewRulePlanBuilder.cs:464 |
 | 333 | Math.Max | resolved | int System.Math.Max(int, int) |
 | 333 | Math.Max | resolved | int System.Math.Max(int, int) |
@@ -1318,7 +1318,7 @@ flowchart TD
 
 ### MethodDeclaration `BuildFineFromCellSource` · L361–401
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:361–401](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L361-L401)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:361–401](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L361-L401)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1338,7 +1338,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L286-L286) | BuildFineFromCellSource | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:286–286](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L286-L286) | BuildFineFromCellSource | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1466,7 +1466,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateFineCellRange` · L403–421
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:403–421](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L403-L421)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:403–421](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L403-L421)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1486,7 +1486,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L364-L364) | CreateFineCellRange | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:364–364](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L364-L364) | CreateFineCellRange | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1560,7 +1560,7 @@ flowchart TD
 
 ### MethodDeclaration `DistanceToRange` · L423–431
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:423–431](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L423-L431)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:423–431](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L423-L431)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1581,7 +1581,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L150-L150) | DistanceToRange | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L150-L150) | DistanceToRange | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1605,7 +1605,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPoint` · L433–433
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L433-L433)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:433–433](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L433-L433)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1627,22 +1627,22 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L38-L38) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L41-L41) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L53-L53) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L85-L85) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L88-L88) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L117-L117) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L172-L172) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L172-L172) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:192–192](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L192-L192) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L201-L201) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L310-L310) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L391-L391) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L407-L407) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:408–408](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L408-L408) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L409-L409) | GetPoint | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:410–410](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L410-L410) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:38–38](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L38-L38) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:41–41](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L41-L41) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:53–53](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L53-L53) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:85–85](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L85-L85) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:88–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L88-L88) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L117-L117) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L172-L172) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:172–172](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L172-L172) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:192–192](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L192-L192) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L201-L201) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:310–310](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L310-L310) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L391-L391) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:407–407](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L407-L407) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:408–408](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L408-L408) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:409–409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L409-L409) | GetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:410–410](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L410-L410) | GetPoint | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1654,7 +1654,7 @@ flowchart TD
 
 ### MethodDeclaration `FineCellRows` · L434–445
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:434–445](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L434-L445)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:434–445](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L434-L445)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1676,7 +1676,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L292-L292) | FineCellRows | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L292-L292) | FineCellRows | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1737,7 +1737,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateTarget` · L447–452
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:447–452](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L447-L452)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:447–452](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L447-L452)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1757,12 +1757,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L22-L22) | CreateTarget | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L66-L66) | CreateTarget | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L132-L132) | CreateTarget | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L292-L292) | CreateTarget | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L313-L313) | CreateTarget | False |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:394–394](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L394-L394) | CreateTarget | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L22-L22) | CreateTarget | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:66–66](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L66-L66) | CreateTarget | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:132–132](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L132-L132) | CreateTarget | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:292–292](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L292-L292) | CreateTarget | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L313-L313) | CreateTarget | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:394–394](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L394-L394) | CreateTarget | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1789,7 +1789,7 @@ flowchart TD
 
 ### MethodDeclaration `TryGetPoint` · L454–460
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:454–460](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L454-L460)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:454–460](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L454-L460)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1809,7 +1809,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L21-L21) | TryGetPoint | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L21-L21) | TryGetPoint | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1820,7 +1820,7 @@ flowchart TD
 | 457 | key.AsSpan | resolved | System.ReadOnlySpan<char> string?.AsSpan(int, int) |
 | 457 | int.TryParse | resolved | bool int.TryParse(System.ReadOnlySpan<char>, out int) |
 | 457 | key.AsSpan | resolved | System.ReadOnlySpan<char> string?.AsSpan(int) |
-| 459 | plan.FindPoint | resolved | Drilling.Common.Review.ST_REVIEW_PLAN_POINT? Drilling.Common.Review.ST_REVIEW_PLAN.FindPoint(int, int) · Drilling.Common/Review/CReviewManager.cs:4182 |
+| 459 | plan.FindPoint | resolved | Drilling.Common.Review.ST_REVIEW_PLAN_POINT? Drilling.Common.Review.ST_REVIEW_PLAN.FindPoint(int, int) · Drilling.Common/Review/CReviewManager.cs:4203 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1852,7 +1852,7 @@ flowchart TD
 
 ### MethodDeclaration `CoordinateKey` · L462–462
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:462–462](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L462-L462)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:462–462](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L462-L462)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1871,7 +1871,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L291-L291) | CoordinateKey | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:291–291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L291-L291) | CoordinateKey | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1889,7 +1889,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectEdgeShotKeys` · L466–474
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:466–474](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L466-L474)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:466–474](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L466-L474)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1908,7 +1908,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2142–2142](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2142-L2142) | CReviewRulePlanBuilder.SelectEdgeShotKeys | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2291–2291](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L2291-L2291) | CReviewRulePlanBuilder.SelectEdgeShotKeys | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1933,7 +1933,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectShotKey` · L468–471
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:468–471](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L468-L471)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:468–471](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L468-L471)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1960,7 +1960,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectCenterShotKeys` · L476–484
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:476–484](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L476-L484)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:476–484](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L476-L484)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1979,7 +1979,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuReview.cs:2148–2148](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L2148-L2148) | CReviewRulePlanBuilder.SelectCenterShotKeys | False |
+| [Drilling.UI/Menu/Menus/CMenuReview.cs:2297–2297](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L2297-L2297) | CReviewRulePlanBuilder.SelectCenterShotKeys | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2004,7 +2004,7 @@ flowchart TD
 
 ### LocalFunctionStatement `SelectShotKey` · L478–481
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:478–481](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L478-L481)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:478–481](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L478-L481)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2031,7 +2031,7 @@ flowchart TD
 
 ### MethodDeclaration `IsCellEdgeShot` · L486–494
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:486–494](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L486-L494)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:486–494](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L486-L494)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2050,7 +2050,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:498–498](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L498-L498) | IsCellEdgeShot | False |
+| [Drilling.Common/Review/CReviewRulePlanBuilder.cs:498–498](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L498-L498) | IsCellEdgeShot | False |
 
 호출하는 대상과 해석 범위:
 
@@ -2083,7 +2083,7 @@ flowchart TD
 
 ### MethodDeclaration `IsCellCenterShot` · L496–499
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:496–499](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L496-L499)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:496–499](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L496-L499)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2117,7 +2117,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Simple` · L505–505
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L505-L505)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:505–505](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L505-L505)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2132,7 +2132,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Rough` · L506–506
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L506-L506)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:506–506](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L506-L506)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2147,7 +2147,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Fine` · L507–507
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L507-L507)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:507–507](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L507-L507)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2162,7 +2162,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Edge` · L508–508
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:508–508](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L508-L508)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:508–508](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L508-L508)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2177,7 +2177,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Head` · L513–513
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L513-L513)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:513–513](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L513-L513)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2192,7 +2192,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `HeadCell` · L514–514
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L514-L514)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:514–514](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L514-L514)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2207,7 +2207,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `First` · L519–519
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L519-L519)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:519–519](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L519-L519)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2222,7 +2222,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Center` · L520–520
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L520-L520)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:520–520](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L520-L520)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2237,7 +2237,7 @@ flowchart TD
 
 ### EnumMemberDeclaration `Last` · L521–521
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:521–521](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L521-L521)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:521–521](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L521-L521)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2252,7 +2252,7 @@ flowchart TD
 
 ### PropertyDeclaration `ShotKeys` · L535–535
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L535-L535)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L535-L535)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2283,7 +2283,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_ShotKeys` · L535–535
 
-[Drilling.Common/Review/CReviewRulePlanBuilder.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L535-L535)
+[Drilling.Common/Review/CReviewRulePlanBuilder.cs:535–535](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L535-L535)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

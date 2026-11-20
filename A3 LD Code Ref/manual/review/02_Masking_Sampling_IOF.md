@@ -3,15 +3,15 @@
 ![오프라인 흐름 그림](diagrams/review-02.svg)
 
 
-원본: `kjuws10-rgb/A3Drilling` · `master` · `96e22cd027c84bf302b23f2949b98985d7f301bb`
+원본: `kjuws10-rgb/A3Drilling` · `master` · `28764c91d521777b8ee068dd7aaf2d3902ce9fe2`
 
-현재 재검토: **11.17.0 / 2026-11-18**, 비교 기준 11.13.0(`dfa5920e6301d9ec4b0eab1452ae59521aafc986`). 아래 변경 항목과 기존 잔건을 구분합니다. 파일·함수·호출 경계의 정적 확인이며 장비 실행 시험 결과가 아닙니다.
+현재 재검토: **11.19.0 / 2026-11-20**, 비교 기준 11.17.0(`96e22cd027c84bf302b23f2949b98985d7f301bb`). 11.18/11.19 두 Commit의 변경과 이전부터 남아 있는 경계를 함께 확인했습니다. 아래 변경 항목과 기존 잔건을 구분합니다. 파일·함수·호출 경계의 정적 확인이며 장비 실행 시험 결과가 아닙니다.
 
 이 장의 **코드 확인**은 해당 Commit의 실제 함수 본문을 정적으로 추적한 사실입니다. **해설**은 그 구조를 이해하기 위한 설명이며, **검증 과제**는 앞으로 실행할 시험입니다. 실장비의 부호·광학 상태·통신 타이밍·정밀도가 검증되었다는 뜻은 아닙니다. 예시 숫자는 설명용 가상값입니다.
 
 ## 1. 서로 다른 세 가지 문제
 
-**Masking 판정**은 어느 설계 Shot이 사용 금지 영역과 겹치는지 정하는 문제입니다. **Sampling**은 사용 가능한 Shot 중 어느 줄·점을 검사할지 고르는 문제입니다. **IOF 준비**는 선택된 순서의 위치를 Stage에 넘겨 Trigger 동작을 준비하는 문제입니다. 세 기능의 입력과 출력이 다르므로 “Masking 반영됨”이라는 한 문장만으로 실제 경로가 마스크를 물리적으로 지나지 않는다고 판단하면 안 됩니다. [CShotCoordinatePlanBuilder.cs:853–910](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L853-L910) [CReviewRulePlanBuilder.cs:361–401](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L361-L401) [CStageReviewSequences.cs:742–805](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStageReviewSequences.cs#L742-L805)
+**Masking 판정**은 어느 설계 Shot이 사용 금지 영역과 겹치는지 정하는 문제입니다. **Sampling**은 사용 가능한 Shot 중 어느 줄·점을 검사할지 고르는 문제입니다. **IOF 준비**는 선택된 순서의 위치를 Stage에 넘겨 Trigger 동작을 준비하는 문제입니다. 세 기능의 입력과 출력이 다르므로 “Masking 반영됨”이라는 한 문장만으로 실제 경로가 마스크를 물리적으로 지나지 않는다고 판단하면 안 됩니다. [CShotCoordinatePlanBuilder.cs:876–933](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L876-L933) [CReviewRulePlanBuilder.cs:361–401](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L361-L401) [CStageReviewSequences.cs:740–800](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L740-L800)
 
 ```mermaid
 flowchart TD
@@ -26,9 +26,9 @@ flowchart TD
 
 ## 2. Masking이 참조하는 기준 좌표
 
-`CRecipeShotMaskingPlan.Build`는 모델별 Pixel 크기, ProcessPitch, 분기 수, Masking hole, edge 조건을 준비합니다. 코드 상수는 모델 최대 5종, hole 최대 3개입니다. 그룹 피치와 Beam 피치는 `groupPitch = pixelSize × ProcessPitch`, `beamPitch = groupPitch / splitBeamCount`로 계산합니다. 이 수치는 실제 광학 측정 피치가 아니라 Recipe에서 구성한 footprint입니다. [CShotCoordinatePlanBuilder.cs:788–850](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L788-L850)
+`CRecipeShotMaskingPlan.Build`는 모델별 Pixel 크기, ProcessPitch, 분기 수, Masking hole, edge 조건을 준비합니다. 코드 상수는 모델 최대 5종, hole 최대 3개입니다. 그룹 피치와 Beam 피치는 `groupPitch = pixelSize × ProcessPitch`, `beamPitch = groupPitch / splitBeamCount`로 계산합니다. 이 수치는 실제 광학 측정 피치가 아니라 Recipe에서 구성한 footprint입니다. [CShotCoordinatePlanBuilder.cs:811–873](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L811-L873)
 
-`EvaluateShot`의 핵심은 **설계 좌표 기준 불변성**입니다. Recipe/Default/FirstBeam/Align/Review/Shift의 보정값이나 Head flip을 바꿨다고 동일 Shot의 Masking 결과가 달라지면 안 된다는 주석이 있습니다. local 중심은 `GroupColumn × GroupPitch`, `GroupRow × GroupPitch`입니다. 각 Beam을 작은 사각 footprint로 만들고 hole과의 교차 또는 edge 이탈을 검사합니다. [CShotCoordinatePlanBuilder.cs:853–910](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L853-L910)
+`EvaluateShot`의 핵심은 **설계 좌표 기준 불변성**입니다. Recipe/Default/FirstBeam/Align/Review/Shift의 보정값이나 Head flip을 바꿨다고 동일 Shot의 Masking 결과가 달라지면 안 된다는 주석이 있습니다. local 중심은 `GroupColumn × GroupPitch`, `GroupRow × GroupPitch`입니다. 각 Beam을 작은 사각 footprint로 만들고 hole과의 교차 또는 edge 이탈을 검사합니다. [CShotCoordinatePlanBuilder.cs:876–933](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L876-L933)
 
 | 입력 | 실제 사용 목적 | 혼동하면 안 되는 것 |
 |---|---|---|
@@ -38,25 +38,25 @@ flowchart TD
 | `CHESS` / `CHESS_TYPE` | 그룹 row/column의 주기적인 사용 여부 | Masking hole과는 별도 제외 이유다. |
 | `BeamNumbers` | 마스크와 겹친 Beam 번호 목록 | 이번 Review에서 고른 Beam11 하나만의 결과가 아니다. |
 
-필드의 계산 근거는 모델 구성과 Beam 루프, CHESS 판정입니다. [CShotCoordinatePlanBuilder.cs:813–850](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L813-L850) [CShotCoordinatePlanBuilder.cs:881–947](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L881-L947)
+필드의 계산 근거는 모델 구성과 Beam 루프, CHESS 판정입니다. [CShotCoordinatePlanBuilder.cs:836–873](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L836-L873) [CShotCoordinatePlanBuilder.cs:904–970](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L904-L970)
 
 ## 3. 한 Beam이라도 겹치면 Shot 사용은 어떻게 되는가
 
-`ST_RECIPE_SHOT_MASKING_RESULT.IsMasked`는 `BeamNumbers.Count > 0`이고, `ShouldSkipLaser`는 `IsMasked || IsChessSkipped`입니다. AUTO Review 계획은 이 값이 참인 Shot을 사용하지 않습니다. 따라서 현재 이 경로의 Review 제외 기준은 “검사 Beam11의 중심만 hole 밖이면 허용”이 아니라 **Shot footprint 평가 결과 전체**입니다. [CShotCoordinatePlanBuilder.cs:767–785](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L767-L785) [CAutoFineReviewCoordinator.cs:226–246](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L226-L246)
+`ST_RECIPE_SHOT_MASKING_RESULT.IsMasked`는 `BeamNumbers.Count > 0`이고, `ShouldSkipLaser`는 `IsMasked || IsChessSkipped`입니다. AUTO Review 계획은 이 값이 참인 Shot을 사용하지 않습니다. 따라서 현재 이 경로의 Review 제외 기준은 “검사 Beam11의 중심만 hole 밖이면 허용”이 아니라 **Shot footprint 평가 결과 전체**입니다. [CShotCoordinatePlanBuilder.cs:790–808](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L790-L808) [CAutoFineReviewCoordinator.cs:228–248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L228-L248)
 
-**검토 포인트:** HIAA/Round라는 현장 용어 자체가 임의 원형 path solver를 뜻하지 않습니다. 현재 검토한 evaluator는 모델 hole 사각형과 edge 구성을 이용합니다. 현장에 필요한 곡선 경계가 해당 Recipe 표현으로 충분한지, 실제 Masking 도형이 어떤 키로 전달되는지는 별도 설계 확인이 필요합니다. 원·곡선 장애물을 정확히 따라 피해가는 알고리즘이 구현되었다고 확대 설명하지 않습니다. [CShotCoordinatePlanBuilder.cs:928–974](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L928-L974)
+**검토 포인트:** HIAA/Round라는 현장 용어 자체가 임의 원형 path solver를 뜻하지 않습니다. 현재 검토한 evaluator는 모델 hole 사각형과 edge 구성을 이용합니다. 현장에 필요한 곡선 경계가 해당 Recipe 표현으로 충분한지, 실제 Masking 도형이 어떤 키로 전달되는지는 별도 설계 확인이 필요합니다. 원·곡선 장애물을 정확히 따라 피해가는 알고리즘이 구현되었다고 확대 설명하지 않습니다. [CShotCoordinatePlanBuilder.cs:951–997](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L951-L997)
 
-잘못된 hole 크기나 유한하지 않은 값은 `BuildModel`에서 건너뛰는 분기가 있습니다. 데이터 오입력으로 의도한 마스크가 사라지는 상황을 잡으려면 UI 또는 Recipe 검증에서 별도 오류 표시가 필요한지 검토해야 합니다. “무시됨”은 “안전하게 전부 차단됨”과 다릅니다. [CShotCoordinatePlanBuilder.cs:928–947](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L928-L947)
+잘못된 hole 크기나 유한하지 않은 값은 `BuildModel`에서 건너뛰는 분기가 있습니다. 데이터 오입력으로 의도한 마스크가 사라지는 상황을 잡으려면 UI 또는 Recipe 검증에서 별도 오류 표시가 필요한지 검토해야 합니다. “무시됨”은 “안전하게 전부 차단됨”과 다릅니다. [CShotCoordinatePlanBuilder.cs:951–970](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs#L951-L970)
 
 ## 4. FINE 줄 선택의 실제 단위
 
-`BuildFineFromCellSource`는 Head가 배정된 점이 있는 Cell별 범위를 만듭니다. 줄 수는 해당 범위의 row 수와 최대 7줄 사이에서 제한됩니다. 한 줄이면 중앙, 여러 줄이면 최소·최대 Y 사이에 균등한 목표 Y를 잡고, 가까운 row 및 인접 row 후보를 확인합니다. 선택한 row에서 Head가 있고 좌표가 유한한 점을 모은 뒤 ShotKey 중복을 제거합니다. [CReviewRulePlanBuilder.cs:361–401](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L361-L401)
+`BuildFineFromCellSource`는 Head가 배정된 점이 있는 Cell별 범위를 만듭니다. 줄 수는 해당 범위의 row 수와 최대 7줄 사이에서 제한됩니다. 한 줄이면 중앙, 여러 줄이면 최소·최대 Y 사이에 균등한 목표 Y를 잡고, 가까운 row 및 인접 row 후보를 확인합니다. 선택한 row에서 Head가 있고 좌표가 유한한 점을 모은 뒤 ShotKey 중복을 제거합니다. [CReviewRulePlanBuilder.cs:361–401](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L361-L401)
 
-**해설:** 이는 row Sampling입니다. “첫 줄이 막혔으면 다음 유효 row로 바꾸는가”, “마스크를 모두 피하면서 세 줄의 높이 간격을 최적화하는가”, “선택 Beam만 유효한 점을 허용하는가”는 서로 다른 요구입니다. 이 함수 하나를 보고 세 요구가 모두 충족되었다고 판단할 수 없습니다. AUTO 계획은 나중에 `Use` 점과 선택 키를 결합하고 실제 line을 만듭니다. [CAutoFineReviewCoordinator.cs:246–283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L246-L283)
+**해설:** 이는 row Sampling입니다. “첫 줄이 막혔으면 다음 유효 row로 바꾸는가”, “마스크를 모두 피하면서 세 줄의 높이 간격을 최적화하는가”, “선택 Beam만 유효한 점을 허용하는가”는 서로 다른 요구입니다. 이 함수 하나를 보고 세 요구가 모두 충족되었다고 판단할 수 없습니다. AUTO 계획은 나중에 `Use` 점과 선택 키를 결합하고 실제 line을 만듭니다. [CAutoFineReviewCoordinator.cs:248–285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L248-L285)
 
 ## 5. IOF에 보내는 위치는 Vision의 1001 식별자와 다르다
 
-`CStageReviewSequences.PrepareIof`의 입력은 **순서가 있는 `ST_STAGE_IOF_POINT` 목록**입니다. 빈 배열, 비유한 X/Y, 일반 IOF 500점 초과를 거부합니다. zero-line은 점 수가 2 또는 4여야 합니다. Review X 전용 motion owner가 IOF buffer를 쓰는 것도 금지합니다. [CStageReviewSequences.cs:742–761](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStageReviewSequences.cs#L742-L761)
+`CStageReviewSequences.PrepareIof`의 입력은 **순서가 있는 `ST_STAGE_IOF_POINT` 목록**입니다. 빈 배열, 비유한 X/Y, 일반 IOF 500점 초과를 거부합니다. zero-line은 점 수가 2 또는 4여야 합니다. Review X 전용 motion owner가 IOF buffer를 쓰는 것도 금지합니다. [CStageReviewSequences.cs:740–758](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L740-L758)
 
 | 준비 단계 | 코드가 하는 일 | 왜 필요한가 |
 |---|---|---|
@@ -67,13 +67,13 @@ flowchart TD
 | readback | 기록 값과 읽은 값의 오차가 `0.000051`보다 크면 실패 | 쓰기 함수 호출 성공과 실제 데이터 확인을 구분한다. |
 | Start 요청 | 동결한 계획을 소유 상태로 보관하고 요청·완료 wait | 그 시도의 순서와 데이터가 끝까지 같은지 보장한다. |
 
-표의 논리 이름과 검증 수치는 소스의 현재 구현 기준입니다. 실제 현장 주소는 해당 버전의 MELSEC map과 장비 사양을 같이 확인해야 합니다. 소스 주석에는 요청 `W8238`, 완료 `WC13C`, ACK `W823A`가 나오지만 주소 고정 사실을 모든 설비에 일반화하지 않습니다. [CStageReviewSequences.cs:753–805](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Station/CStageReviewSequences.cs#L753-L805)
+표의 논리 이름과 검증 수치는 소스의 현재 구현 기준입니다. 실제 현장 주소는 해당 버전의 MELSEC map과 장비 사양을 같이 확인해야 합니다. 소스 주석에는 요청 `W8238`, 완료 `WC13C`, ACK `W823A`가 나오지만 주소 고정 사실을 모든 설비에 일반화하지 않습니다. [CStageReviewSequences.cs:751–800](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L751-L800)
 
 ## 6. 재시도 때 배열과 결과를 맞추는 방법
 
-Fine flying은 시도마다 새 `triggerBuffer`를 만듭니다. 해당 배열로 IOF를 준비하고, 같은 순서로 `FLYING_READY`를 전송한 뒤 끝점으로 이동합니다. `FLYING_MOVE_DONE`의 count mismatch가 발생하면 허용된 조건에서 순서를 뒤집어 재시도합니다. 이때 실패 시도의 `1003`을 요청하지 않는 분기가 있습니다. [CReviewManager.cs:2824–2875](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewManager.cs#L2824-L2875)
+Fine flying은 시도마다 새 `triggerBuffer`를 만듭니다. 해당 배열로 IOF를 준비하고, 같은 순서로 `FLYING_READY`를 전송한 뒤 끝점으로 이동합니다. `FLYING_MOVE_DONE`의 count mismatch가 발생하면 허용된 조건에서 순서를 뒤집어 재시도합니다. 이때 실패 시도의 `1003`을 요청하지 않는 분기가 있습니다. [CReviewManager.cs:2844–2895](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2844-L2895)
 
-수신 결과 개수는 그 시도의 frozen buffer 개수와 일치해야 합니다. 측정 결과를 현재 화면 정렬이나 Recipe 전체 목록에 순서대로 붙이면 재시도 후 다른 Shot에 오차를 넣을 수 있습니다. 저장 전에는 coordinator가 식별자 집합을 다시 검증합니다. [CReviewManager.cs:2878–2909](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewManager.cs#L2878-L2909) [CAutoFineReviewCoordinator.cs:171–198](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L171-L198)
+수신 결과 개수는 그 시도의 frozen buffer 개수와 일치해야 합니다. 측정 결과를 현재 화면 정렬이나 Recipe 전체 목록에 순서대로 붙이면 재시도 후 다른 Shot에 오차를 넣을 수 있습니다. 저장 전에는 coordinator가 식별자 집합을 다시 검증합니다. [CReviewManager.cs:2898–2929](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2898-L2929) [CAutoFineReviewCoordinator.cs:171–198](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L171-L198)
 
 ## 7. 원하는 개선사항을 검증 가능한 요구로 바꾸기
 
@@ -98,7 +98,7 @@ Fine flying은 시도마다 새 `triggerBuffer`를 만듭니다. 해당 배열�
 
 ## 9. 새 ONE LINE과 기존 FINE Sampling의 경계
 
-ONE LINE은 사용자가 Shot 하나를 골라 **Glass 설계 Y가 같은 실행 가능한 줄**을 선택하는 기능입니다. FINE은 Cell별로 여러 row를 샘플링하고 같은 열의 보정값을 계산하기 위한 기능입니다. 화면에서 둘 다 줄처럼 보여도 선택 기준과 결과 소비자가 다릅니다. CreateIofLines의 줄 허용차는 0.001 mm이며 줄의 시작 기준 Y와 비교해 묶습니다. 인접 두 점만의 차이가 작은지를 계속 이어 붙이는 방식으로 해석하면 안 됩니다. [CReviewManager.cs:27–33](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewManager.cs#L27-L33) [CReviewManager.cs:211–246](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewManager.cs#L211-L246) [CReviewManager.cs:2185–2203](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewManager.cs#L2185-L2203)
+ONE LINE은 사용자가 Shot 하나를 골라 **Glass 설계 Y가 같은 실행 가능한 줄**을 선택하는 기능입니다. FINE은 Cell별로 여러 row를 샘플링하고 같은 열의 보정값을 계산하기 위한 기능입니다. 화면에서 둘 다 줄처럼 보여도 선택 기준과 결과 소비자가 다릅니다. CreateIofLines의 줄 허용차는 0.001 mm이며 줄의 시작 기준 Y와 비교해 묶습니다. 인접 두 점만의 차이가 작은지를 계속 이어 붙이는 방식으로 해석하면 안 됩니다. [CReviewManager.cs:27–33](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L27-L33) [CReviewManager.cs:214–249](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L214-L249) [CReviewManager.cs:2201–2219](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L2201-L2219)
 
 | 확인할 상황 | ONE LINE의 코드 경계 | 검증할 관찰값 |
 |---|---|---|
@@ -106,15 +106,15 @@ ONE LINE은 사용자가 Shot 하나를 골라 **Glass 설계 Y가 같은 실행
 | 줄 중간이 Masking | 남아 있는 Use 점으로 줄 구성 | 제외 Shot이 결과와 trigger 개수에 들어가지 않음 |
 | 같은 Y에 Cell 2개 | Cell별 필터가 없어 같은 Glass 줄에 함께 포함 가능 | Cell별 count 합과 전체 line count |
 | Mask 영역 위를 Stage가 지나감 | 검사점 제외와 이동선분은 다른 문제 | 실제 시작/끝·가감속·Trigger window를 별도 검증 |
-| ONE LINE을 FINE 결과로 취급 | ResultType=ONE_LINE이며 OffsetApply는 지원하지 않음 | ONE_LINE 저장/트리와 OFFSET APPLY 차단을 각각 확인 |
+| ONE LINE을 FINE 결과로 취급 | ResultType=ONE_LINE, DIRECT_LINE으로 동일Shot OK만 누적 | FINE 보간과 구분하고 ONE_LINE 직접 적용을 확인 |
 
-설계 Masking 판정 함수와 FINE row 선택 함수의 본문은 이전 기준에서 바뀌지 않았습니다. 수동 ONE LINE의 기존 IOF 줄 묶음 재사용은 11.13.0에도 있던 기능이며 이번에도 유지합니다. 따라서 “Masking 형상을 피해 Stage 경로까지 자동 우회”하거나 “가려진 줄을 항상 원하는 개수로 대체”하는 새 기능이 추가되었다고 결론낼 근거는 없습니다. [CMenuReview.cs:1297–1331](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuReview.cs#L1297-L1331) [CMenuCorrection.ReviewData.Offset.cs:274–283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L274-L283)
+설계 Masking 판정 함수와 FINE row 선택 함수의 본문은 이전 기준에서 바뀌지 않았습니다. 수동 ONE LINE의 기존 IOF 줄 묶음 재사용은 11.13.0에도 있던 기능이며 이번에도 유지합니다. 따라서 “Masking 형상을 피해 Stage 경로까지 자동 우회”하거나 “가려진 줄을 항상 원하는 개수로 대체”하는 새 기능이 추가되었다고 결론낼 근거는 없습니다. [CMenuReview.cs:1432–1466](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuReview.cs#L1432-L1466) [CMenuCorrection.ReviewData.Offset.cs:284–293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L284-L293)
 
 ## 10. 11.17.0 교차 확인: 기하학 줄 선택과 마스크 제거 순서
 
-이번 두 Commit에서 RulePlanBuilder·StageReviewSequences·ShotCoordinatePlanBuilder의 마스크/IOF 엔진은 바뀌지 않았습니다. ShotMap의 빨간 X는 제외 상태를 더 명확하게 그리는 **표시 변경**입니다. 물리 경로 우회 완료를 뜻하지 않습니다. [CReviewShotMapControl.cs:262–302](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CReviewShotMapControl.cs#L262-L302)
+이번 두 Commit에서 RulePlanBuilder·StageReviewSequences·ShotCoordinatePlanBuilder의 마스크/IOF 엔진은 바뀌지 않았습니다. ShotMap의 빨간 X는 제외 상태를 더 명확하게 그리는 **표시 변경**입니다. 물리 경로 우회 완료를 뜻하지 않습니다. [CReviewShotMapControl.cs:262–302](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CReviewShotMapControl.cs#L262-L302)
 
-Fine은 기하학 범위에서 첫/중간/마지막 등에 가까운 row를 먼저 고릅니다. 이웃 row 탐색은 목표 Y에 가까운 기하학 row를 찾는 것이며 “마스크 없는 다음 줄” 조건이 없습니다. AUTO는 그 뒤 선택 키와 Use를 결합하여 제외점을 뺍니다. 한 선택 row가 전부 마스크라면 다른 유효 row로 자동 대체한다고 설명할 근거가 없고, 열에 남는 anchor 수도0~3개로 달라질 수 있습니다. [CReviewRulePlanBuilder.cs:361–420](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L361-L420) [CAutoFineReviewCoordinator.cs:246–283](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L246-L283)
+Fine은 기하학 범위에서 첫/중간/마지막 등에 가까운 row를 먼저 고릅니다. 이웃 row 탐색은 목표 Y에 가까운 기하학 row를 찾는 것이며 “마스크 없는 다음 줄” 조건이 없습니다. AUTO는 그 뒤 선택 키와 Use를 결합하여 제외점을 뺍니다. 한 선택 row가 전부 마스크라면 다른 유효 row로 자동 대체한다고 설명할 근거가 없고, 열에 남는 anchor 수도0~3개로 달라질 수 있습니다. [CReviewRulePlanBuilder.cs:361–420](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L361-L420) [CAutoFineReviewCoordinator.cs:248–285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CAutoFineReviewCoordinator.cs#L248-L285)
 
 | 조건 | 확인 결과 | 해석 |
 |---|---|---|
@@ -125,3 +125,11 @@ Fine은 기하학 범위에서 첫/중간/마지막 등에 가까운 row를 먼�
 | DOE OFF Head | footprint·검사 Beam | Default 전용 flag는 일반 마스크를 바꾸지 않음 |
 
 위 시험은 후속 과제이며 실제 측정·운영 CSV 레코드를 문서에 복제하지 않습니다.
+
+## 13. ONE LINE 보정 추가와 여전히 남는 Masking 경계
+
+ONE LINE의 측정 결과를 다시 LOAD하면 이제 `DIRECT_LINE`으로 같은 Shot에만 OK 오차를 누적할 수 있습니다. 전체 Cell이나 주변 라인으로 자동 보간하는 동작이 아닙니다. Beam Inspection 결과는 측정 상태 확인용으로 보정을 금지합니다. [CMenuCorrection.ReviewData.Offset.cs:285–295](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L285-L295) [CMenuCorrection.ReviewData.Offset.cs:515–531](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs#L515-L531) [CMenuCorrection.ReviewData.cs:86–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.cs#L86-L94)
+
+Fine의 1/3/5/7줄 선정·Masking 판정·IOF 경로 알고리즘은 이번 두 Commit에서 바뀌지 않았습니다. `FineCellRows`는 기하학 행을 먼저 선정하고 실제 실행점의 Use/제외 여부는 뒤에서 거릅니다. 따라서 한 줄이 전부 Masking이면 다음 유효 행으로 자동 대체하는 기능이 추가되었다고 볼 수 없습니다. 실제 측정된 행/열/점 수와 요청 LINE_COUNT를 함께 검증해야 합니다. [CReviewRulePlanBuilder.cs:282–301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L282-L301) [CReviewRulePlanBuilder.cs:434–458](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewRulePlanBuilder.cs#L434-L458)
+
+Stage·Vision 통신 파일의 이번 변경은 주로 보호 주석입니다. 점의 Trigger를 빼는 것과 물리 이동 선분이 HIAA/Round 영역을 우회하는 것은 별개이며, 원본 코드에 우회 경로가 새로 생긴 것으로 설명하지 않습니다. 취소·Count 불일치·Trigger 누락·역방향 재시도는 실제 Peer와의 연동 시험이 남습니다. [CReviewManager.cs:1967–1989](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Review/CReviewManager.cs#L1967-L1989) [CStageReviewSequences.cs:740–764](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Station/CStageReviewSequences.cs#L740-L764)

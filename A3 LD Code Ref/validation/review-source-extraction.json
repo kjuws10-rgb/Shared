@@ -1,0 +1,158 @@
+{
+  "sourceCommit": "28764c91d521777b8ee068dd7aaf2d3902ce9fe2",
+  "scope": "원본 함수를 문서검증용 폴더에 복사. 통신/장비/벤더DLL/AeroScript/원본빌드 미실행.",
+  "extractions": [
+    {
+      "path": "Drilling.File/ReviewOffset/CReviewOffsetFile.cs",
+      "startLine": 1,
+      "endLine": 819,
+      "sha256": "f14cd0667a5687200ac831d5c70d988e7c3493c5e8c285e946d98b246fb3be6f",
+      "extractedSha256": "61f714f5c6648964ed3e71a5c1ab4ca6237500b7fdadb1597d616e8f71e61e2f",
+      "what": "whole file"
+    },
+    {
+      "path": "Drilling.File/Parser/CCsvParser.cs",
+      "startLine": 1,
+      "endLine": 478,
+      "sha256": "8d9850f57f3552310d7aec82c11c7a08ab13b30c9a0e6daf8ee9e649077fb644",
+      "extractedSha256": "2ff4e22f666d931d9718e7ba5b33fdbe6d2e17d44b15827ebfe5f6f57b19e557",
+      "what": "whole file"
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "startLine": 4357,
+      "endLine": 4415,
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "extractedSha256": "cf726abec2961ddfea1a996ef76de8520187ab0f99d5b3a91aa5a0630ee732fb",
+      "what": "    public sealed record ST_REVIEW_OFFSET_ROW("
+    },
+    {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "startLine": 1163,
+      "endLine": 1188,
+      "sha256": "18c6b5e5afc1fdb76dafc1fd6bc33a810af4a84492b53c686eef336adb989831",
+      "extractedSha256": "e9ea6143496d30f33253c321fa276a03c208530430e2b46e09c2ca58fe3d2cc2",
+      "what": "public static ST_REVIEW_OFFSET_ROW[] ValidateRows"
+    },
+    {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "startLine": 1219,
+      "endLine": 1229,
+      "sha256": "18c6b5e5afc1fdb76dafc1fd6bc33a810af4a84492b53c686eef336adb989831",
+      "extractedSha256": "965bc2291ad06793415ec888b2d8db417bab0b48661202749772b0ff769a4c89",
+      "what": "public sealed class CReviewOffsetValidationException"
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "startLine": 3616,
+      "endLine": 3654,
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "extractedSha256": "d1760945ae7a7eb1feb7d7f57b7e6c817e63177c183691f76000418c2e0d819c",
+      "what": "public static IReadOnlyList<ST_FINE_OFFSET_DELTA> CalculateFineOffsets"
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "startLine": 3657,
+      "endLine": 3683,
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "extractedSha256": "e2e2b85b5d88294b3fb7f79b159931d425195a95fcc4a60dd1bd8eb4f051d166",
+      "what": "private static double InterpolateFineOffsetColumn"
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "startLine": 3687,
+      "endLine": 3708,
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "extractedSha256": "f62b142d6534c3eae52efde25186684ca75d0f12b8c293602ad0c93618f113ae",
+      "what": "public static ST_REVIEW_COORDINATE_OFFSET VisionErrorToStageOffset"
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "startLine": 3656,
+      "endLine": 3656,
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "extractedSha256": "43f962718537a4b571f4c8e21cf82ee398777af3026cb8f9fc2d715d4d459035",
+      "what": "private static (int Cell, double X) FineOffsetColumnKey"
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "startLine": 4067,
+      "endLine": 4092,
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "extractedSha256": "9bd20591437a8c603eab2b8c2f0ed0775ae497d8556510df8663137efa4d50e1",
+      "what": "public sealed record ST_REVIEW_PLAN_POINT("
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "startLine": 3782,
+      "endLine": 3788,
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "extractedSha256": "b04afecf56b1c63a594dfc43161cf476e946316d5d54e5ef142750aaec3bb0d6",
+      "what": "public enum EN_VISION_FLIP_TYPE"
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "startLine": 4036,
+      "endLine": 4043,
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "extractedSha256": "7c48268ddb5285c7c4bb359fe1d128f5a9030cd845245238bd9c7f42cb9de39e",
+      "what": "public enum EN_REVIEW_POINT_STATE"
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "startLine": 3779,
+      "endLine": 3779,
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "extractedSha256": "c001631dd737dd55eadb26265c8f43adc60ba3e69d68fe81203004c8e87efea1",
+      "what": "public sealed record ST_FINE_OFFSET_DELTA"
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "startLine": 3790,
+      "endLine": 3790,
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "extractedSha256": "655c784c930e37f5f2a7fda2ddea90e974b61f7add0033f12e7195c5ec90c98b",
+      "what": "public readonly record struct ST_REVIEW_COORDINATE_OFFSET"
+    },
+    {
+      "path": "Drilling.UI/Menu/Menus/CMenuCorrection.ReviewData.Offset.cs",
+      "startLine": 471,
+      "endLine": 481,
+      "sha256": "1ad1b1ae961d9eb67727f9b4f8207c291ba8ec3e1baa4ed50b33f3cb387f8a9d",
+      "extractedSha256": "497afd792a7663182baad5d5dc638e0ef6fa25767e50f9b4ee9e84ce780b02b8",
+      "what": "private static IEnumerable<ST_REVIEW_RESULT_FILE_ROW> MeasuredRows"
+    },
+    {
+      "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+      "startLine": 719,
+      "endLine": 722,
+      "sha256": "5a8c29eaaf994eab9e46a077532ed9c6027381a95e2ef253f83dd57b40a756c3",
+      "extractedSha256": "38e8206b6c7cc028f6dca5783411275c0124889227afd2e83ffbe769bf1b6e2d",
+      "what": "private static string FormatDouble"
+    },
+    {
+      "path": "Drilling.File/ReviewResult/CReviewResultFile.cs",
+      "startLine": 1328,
+      "endLine": 1328,
+      "sha256": "5a8c29eaaf994eab9e46a077532ed9c6027381a95e2ef253f83dd57b40a756c3",
+      "extractedSha256": "5fc1aa6175c6c8bb388686f25116d9c91d9c20f652a1bb3013a9d372b60b814b",
+      "what": "private static string Number(double value)"
+    },
+    {
+      "path": "Drilling.Common/Review/CReviewManager.cs",
+      "startLine": 4260,
+      "endLine": 4270,
+      "sha256": "e7121d384d692a2b5c876054643f670ac17bc34d4aebf4ae6b70af6e070cab7d",
+      "extractedSha256": "4699e3ebff8a988338268bb41c4c56af60ddb729e26df2464cb125152a409bc6",
+      "what": "public sealed record ST_REVIEW_RESULT_FILE_ROW("
+    },
+    {
+      "path": "Drilling.Common/Recipe/CShotCoordinatePlanBuilder.cs",
+      "startLine": 663,
+      "endLine": 670,
+      "sha256": "18c6b5e5afc1fdb76dafc1fd6bc33a810af4a84492b53c686eef336adb989831",
+      "extractedSha256": "31e41eb871fd40613e5fbc78e8034df45bf48fc244a9631e89b77db14d722f84",
+      "what": "public static double RoundValue(double value)"
+    }
+  ]
+}

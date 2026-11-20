@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | c86eaea23488269858f5f7ab77c38948fc5a547cd5903e2c0ee8dabb50076480 |
 | 파일 분류 | code |
 | 원본 크기/행 | 536 bytes / 19 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/PMAC/CPmacMotion.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/PMAC/CPmacMotion.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -34,7 +34,7 @@
 
 ### PropertyDeclaration `CommandPrefix` · L12–18
 
-[Drilling.Common/Motion/PMAC/CPmacMotion.cs:12–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/PMAC/CPmacMotion.cs#L12-L18)
+[Drilling.Common/Motion/PMAC/CPmacMotion.cs:12–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/PMAC/CPmacMotion.cs#L12-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -49,7 +49,7 @@
 
 ### GetAccessorDeclaration `get_CommandPrefix` · L14–17
 
-[Drilling.Common/Motion/PMAC/CPmacMotion.cs:14–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.Common/Motion/PMAC/CPmacMotion.cs#L14-L17)
+[Drilling.Common/Motion/PMAC/CPmacMotion.cs:14–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.Common/Motion/PMAC/CPmacMotion.cs#L14-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

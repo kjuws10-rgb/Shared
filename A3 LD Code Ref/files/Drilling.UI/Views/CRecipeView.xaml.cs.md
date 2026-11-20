@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | c3d27bc81b7f9cdd0b8dd2bad10ef87e51ba22c93e2f192c6897b746e8fe704d |
 | 파일 분류 | code |
 | 원본 크기/행 | 20,953 bytes / 549 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -76,7 +76,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `PreviewZoomMinimum` · L15–15
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L15-L15)
+[Drilling.UI/Views/CRecipeView.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -97,7 +97,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `PreviewZoomMaximum` · L16–16
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L16-L16)
+[Drilling.UI/Views/CRecipeView.xaml.cs:16–16](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L16-L16)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -118,7 +118,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `PreviewZoomStep` · L17–17
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L17-L17)
+[Drilling.UI/Views/CRecipeView.xaml.cs:17–17](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L17-L17)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -139,7 +139,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isRecipePreviewDragging` · L18–18
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L18-L18)
+[Drilling.UI/Views/CRecipeView.xaml.cs:18–18](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L18-L18)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -154,7 +154,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_recipePreviewDragStart` · L19–19
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L19-L19)
+[Drilling.UI/Views/CRecipeView.xaml.cs:19–19](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L19-L19)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -169,7 +169,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_recipePreviewDragStartX` · L20–20
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L20-L20)
+[Drilling.UI/Views/CRecipeView.xaml.cs:20–20](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L20-L20)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -184,7 +184,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_recipePreviewDragStartY` · L21–21
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L21-L21)
+[Drilling.UI/Views/CRecipeView.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L21-L21)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -199,7 +199,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isHistoryExpanded` · L22–22
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L22-L22)
+[Drilling.UI/Views/CRecipeView.xaml.cs:22–22](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L22-L22)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -214,7 +214,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L23–26
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:23–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L23-L26)
+[Drilling.UI/Views/CRecipeView.xaml.cs:23–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L23-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -241,7 +241,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `ToggleHistory_Click` · L28–40
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:28–40](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L28-L40)
+[Drilling.UI/Views/CRecipeView.xaml.cs:28–40](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L28-L40)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -299,7 +299,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `RecipePreview_PreviewMouseWheel` · L42–79
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:42–79](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L42-L79)
+[Drilling.UI/Views/CRecipeView.xaml.cs:42–79](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L42-L79)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -396,7 +396,7 @@ flowchart TD
 
 ### MethodDeclaration `GetPreviewZoomTranslation` · L81–85
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:81–85](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L81-L85)
+[Drilling.UI/Views/CRecipeView.xaml.cs:81–85](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L81-L85)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -430,7 +430,7 @@ flowchart TD
 
 ### MethodDeclaration `RecipePreview_PreviewMouseLeftButtonDown` · L87–105
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:87–105](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L87-L105)
+[Drilling.UI/Views/CRecipeView.xaml.cs:87–105](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L87-L105)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -489,7 +489,7 @@ flowchart TD
 
 ### MethodDeclaration `RecipePreview_PreviewMouseMove` · L107–119
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:107–119](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L107-L119)
+[Drilling.UI/Views/CRecipeView.xaml.cs:107–119](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L107-L119)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -541,7 +541,7 @@ flowchart TD
 
 ### MethodDeclaration `RecipePreview_PreviewMouseLeftButtonUp` · L121–130
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:121–130](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L121-L130)
+[Drilling.UI/Views/CRecipeView.xaml.cs:121–130](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L121-L130)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -587,7 +587,7 @@ flowchart TD
 
 ### MethodDeclaration `RecipePreview_PreviewMouseRightButtonDown` · L132–144
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:132–144](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L132-L144)
+[Drilling.UI/Views/CRecipeView.xaml.cs:132–144](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L132-L144)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -637,7 +637,7 @@ flowchart TD
 
 ### MethodDeclaration `RecipePreview_LostMouseCapture` · L146–152
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:146–152](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L146-L152)
+[Drilling.UI/Views/CRecipeView.xaml.cs:146–152](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L146-L152)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -681,7 +681,7 @@ flowchart TD
 
 ### MethodDeclaration `RecipePreviewResize_Click` · L154–158
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:154–158](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L154-L158)
+[Drilling.UI/Views/CRecipeView.xaml.cs:154–158](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L154-L158)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -716,7 +716,7 @@ flowchart TD
 
 ### MethodDeclaration `CellShotMap_PreviewMouseWheel` · L160–197
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:160–197](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L160-L197)
+[Drilling.UI/Views/CRecipeView.xaml.cs:160–197](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L160-L197)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -813,7 +813,7 @@ flowchart TD
 
 ### MethodDeclaration `CellShotMap_PreviewMouseRightButtonDown` · L199–210
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:199–210](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L199-L210)
+[Drilling.UI/Views/CRecipeView.xaml.cs:199–210](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L199-L210)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -861,7 +861,7 @@ flowchart TD
 
 ### MethodDeclaration `CellShotMapResize_Click` · L212–216
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:212–216](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L212-L216)
+[Drilling.UI/Views/CRecipeView.xaml.cs:212–216](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L212-L216)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -896,7 +896,7 @@ flowchart TD
 
 ### MethodDeclaration `EndRecipePreviewDrag` · L218–227
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:218–227](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L218-L227)
+[Drilling.UI/Views/CRecipeView.xaml.cs:218–227](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L218-L227)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -915,8 +915,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L128-L128) | EndRecipePreviewDrag | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L150-L150) | EndRecipePreviewDrag | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:128–128](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L128-L128) | EndRecipePreviewDrag | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:150–150](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L150-L150) | EndRecipePreviewDrag | False |
 
 호출하는 대상과 해석 범위:
 
@@ -946,7 +946,7 @@ flowchart TD
 
 ### MethodDeclaration `ClampRecipePreviewTranslation` · L229–240
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:229–240](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L229-L240)
+[Drilling.UI/Views/CRecipeView.xaml.cs:229–240](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L229-L240)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -965,8 +965,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L75-L75) | ClampRecipePreviewTranslation | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L117-L117) | ClampRecipePreviewTranslation | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:75–75](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L75-L75) | ClampRecipePreviewTranslation | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:117–117](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L117-L117) | ClampRecipePreviewTranslation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1004,7 +1004,7 @@ flowchart TD
 
 ### MethodDeclaration `ClampCellShotMapTranslation` · L242–253
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:242–253](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L242-L253)
+[Drilling.UI/Views/CRecipeView.xaml.cs:242–253](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L242-L253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1023,7 +1023,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L193-L193) | ClampCellShotMapTranslation | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:193–193](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L193-L193) | ClampCellShotMapTranslation | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1061,7 +1061,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetRecipePreviewZoom` · L255–264
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:255–264](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L255-L264)
+[Drilling.UI/Views/CRecipeView.xaml.cs:255–264](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L255-L264)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1074,8 +1074,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L156-L156) | ResetRecipePreviewZoom | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L529-L529) | ResetRecipePreviewZoom | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:156–156](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L156-L156) | ResetRecipePreviewZoom | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:529–529](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L529-L529) | ResetRecipePreviewZoom | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1102,7 +1102,7 @@ flowchart TD
 
 ### MethodDeclaration `ResetCellShotMapZoom` · L266–274
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:266–274](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L266-L274)
+[Drilling.UI/Views/CRecipeView.xaml.cs:266–274](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L266-L274)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1115,8 +1115,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L214-L214) | ResetCellShotMapZoom | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L530-L530) | ResetCellShotMapZoom | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:214–214](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L214-L214) | ResetCellShotMapZoom | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:530–530](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L530-L530) | ResetCellShotMapZoom | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1141,7 +1141,7 @@ flowchart TD
 
 ### MethodDeclaration `CellContentScrollViewer_PreviewMouseWheel` · L276–288
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:276–288](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L276-L288)
+[Drilling.UI/Views/CRecipeView.xaml.cs:276–288](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L276-L288)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1195,7 +1195,7 @@ flowchart TD
 
 ### MethodDeclaration `ToggleCellPlacement_Click` · L290–303
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:290–303](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L290-L303)
+[Drilling.UI/Views/CRecipeView.xaml.cs:290–303](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L290-L303)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1217,7 +1217,7 @@ flowchart TD
 
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
-| 294 | recipe.ToggleCellPlacementExpanded | resolved | void Drilling.UI.Menu.Menus.CMenuRecipe.ToggleCellPlacementExpanded() · Drilling.UI/Menu/Menus/CMenuRecipe.cs:936 |
+| 294 | recipe.ToggleCellPlacementExpanded | resolved | void Drilling.UI.Menu.Menus.CMenuRecipe.ToggleCellPlacementExpanded() · Drilling.UI/Menu/Menus/CMenuRecipe.cs:942 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1246,7 +1246,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenCellPlacementWizard_Click` · L305–326
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:305–326](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L305-L326)
+[Drilling.UI/Views/CRecipeView.xaml.cs:305–326](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L305-L326)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1270,10 +1270,10 @@ flowchart TD
 | --- | --- | --- | --- |
 | 313 | CanEditCurrentRecipe | resolved | bool Drilling.UI.Views.CRecipeView.CanEditCurrentRecipe() · Drilling.UI/Views/CRecipeView.xaml.cs:406 |
 | 318 | new CCellPlacementWizardDialog | resolved | Drilling.UI.Popup.CCellPlacementWizardDialog.CCellPlacementWizardDialog(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_CONTEXT) · Drilling.UI/Popup/CCellPlacementWizardDialog.xaml.cs:27 |
-| 318 | recipe.CreateCellPlacementWizardContext | resolved | Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_CONTEXT Drilling.UI.Menu.Menus.CMenuRecipe.CreateCellPlacementWizardContext() · Drilling.UI/Menu/Menus/CMenuRecipe.cs:943 |
+| 318 | recipe.CreateCellPlacementWizardContext | resolved | Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_CONTEXT Drilling.UI.Menu.Menus.CMenuRecipe.CreateCellPlacementWizardContext() · Drilling.UI/Menu/Menus/CMenuRecipe.cs:949 |
 | 320 | Window.GetWindow | unresolved | None |
 | 322 | dialog.ShowDialog | unresolved | None |
-| 324 | recipe.ApplyCellPlacementWizard | resolved | void Drilling.UI.Menu.Menus.CMenuRecipe.ApplyCellPlacementWizard(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:957 |
+| 324 | recipe.ApplyCellPlacementWizard | resolved | void Drilling.UI.Menu.Menus.CMenuRecipe.ApplyCellPlacementWizard(Drilling.UI.Popup.ST_CELL_PLACEMENT_WIZARD_RESULT) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:963 |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1312,7 +1312,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenManagedItemInput` · L328–341
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:328–341](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L328-L341)
+[Drilling.UI/Views/CRecipeView.xaml.cs:328–341](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L328-L341)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1375,7 +1375,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenCellOverviewInput` · L343–383
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:343–383](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L343-L383)
+[Drilling.UI/Views/CRecipeView.xaml.cs:343–383](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L343-L383)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1398,7 +1398,7 @@ flowchart TD
 | 원본 행 | 표현식 | 분석 상태 | 대상/소스 위치 |
 | --- | --- | --- | --- |
 | 348 | CanEditCurrentRecipe | resolved | bool Drilling.UI.Views.CRecipeView.CanEditCurrentRecipe() · Drilling.UI/Views/CRecipeView.xaml.cs:406 |
-| 364 | row.GetItem | resolved | Drilling.UI.Menu.Menus.ST_RECIPE_PARAMETER_EDITOR_ITEM? Drilling.UI.Menu.Menus.ST_RECIPE_CELL_OVERVIEW_ROW.GetItem(string) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:3576 |
+| 364 | row.GetItem | resolved | Drilling.UI.Menu.Menus.ST_RECIPE_PARAMETER_EDITOR_ITEM? Drilling.UI.Menu.Menus.ST_RECIPE_CELL_OVERVIEW_ROW.GetItem(string) · Drilling.UI/Menu/Menus/CMenuRecipe.cs:3593 |
 | 365 | new CValueInputDialog | resolved | Drilling.UI.Popup.CValueInputDialog.CValueInputDialog(string, string, Drilling.Common.Managers.EN_RECIPE_DATA_TYPE, double, double) · Drilling.UI/Popup/CValueInputDialog.xaml.cs:13 |
 | 367 | Window.GetWindow | unresolved | None |
 | 369 | dialog.ShowDialog | unresolved | None |
@@ -1464,7 +1464,7 @@ flowchart TD
 
 ### MethodDeclaration `OpenShotGroupOffsetInput` · L385–404
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:385–404](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L385-L404)
+[Drilling.UI/Views/CRecipeView.xaml.cs:385–404](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L385-L404)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1540,7 +1540,7 @@ flowchart TD
 
 ### MethodDeclaration `CanEditCurrentRecipe` · L406–409
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:406–409](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L406-L409)
+[Drilling.UI/Views/CRecipeView.xaml.cs:406–409](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L406-L409)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1553,10 +1553,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L313-L313) | CanEditCurrentRecipe | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L333-L333) | CanEditCurrentRecipe | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L348-L348) | CanEditCurrentRecipe | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L391-L391) | CanEditCurrentRecipe | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:313–313](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L313-L313) | CanEditCurrentRecipe | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:333–333](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L333-L333) | CanEditCurrentRecipe | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:348–348](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L348-L348) | CanEditCurrentRecipe | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:391–391](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L391-L391) | CanEditCurrentRecipe | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1568,7 +1568,7 @@ flowchart TD
 
 ### MethodDeclaration `SelectShotGroupFromMap` · L411–421
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:411–421](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L411-L421)
+[Drilling.UI/Views/CRecipeView.xaml.cs:411–421](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L411-L421)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1618,7 +1618,7 @@ flowchart TD
 
 ### MethodDeclaration `CellPreviewLabel_MouseMove` · L423–434
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:423–434](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L423-L434)
+[Drilling.UI/Views/CRecipeView.xaml.cs:423–434](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L423-L434)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1669,7 +1669,7 @@ flowchart TD
 
 ### MethodDeclaration `CellPreviewLabel_MouseLeave` · L436–439
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:436–439](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L436-L439)
+[Drilling.UI/Views/CRecipeView.xaml.cs:436–439](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L436-L439)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1703,7 +1703,7 @@ flowchart TD
 
 ### MethodDeclaration `PositionRecipePreviewHoverTip` · L441–462
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:441–462](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L441-L462)
+[Drilling.UI/Views/CRecipeView.xaml.cs:441–462](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L441-L462)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1775,7 +1775,7 @@ flowchart TD
 
 ### MethodDeclaration `HideRecipePreviewHoverTip` · L464–468
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:464–468](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L464-L468)
+[Drilling.UI/Views/CRecipeView.xaml.cs:464–468](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L464-L468)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1788,10 +1788,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L134-L134) | HideRecipePreviewHoverTip | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L257-L257) | HideRecipePreviewHoverTip | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L427-L427) | HideRecipePreviewHoverTip | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L438-L438) | HideRecipePreviewHoverTip | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:134–134](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L134-L134) | HideRecipePreviewHoverTip | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:257–257](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L257-L257) | HideRecipePreviewHoverTip | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:427–427](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L427-L427) | HideRecipePreviewHoverTip | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:438–438](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L438-L438) | HideRecipePreviewHoverTip | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1804,7 +1804,7 @@ flowchart TD
 
 ### MethodDeclaration `CellShotMapSurface_MouseMove` · L470–489
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:470–489](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L470-L489)
+[Drilling.UI/Views/CRecipeView.xaml.cs:470–489](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L470-L489)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1871,7 +1871,7 @@ flowchart TD
 
 ### MethodDeclaration `CellShotMapSurface_MouseLeave` · L491–494
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:491–494](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L491-L494)
+[Drilling.UI/Views/CRecipeView.xaml.cs:491–494](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L491-L494)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1905,7 +1905,7 @@ flowchart TD
 
 ### MethodDeclaration `PositionCellShotMapHoverTip` · L496–517
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:496–517](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L496-L517)
+[Drilling.UI/Views/CRecipeView.xaml.cs:496–517](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L496-L517)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1977,7 +1977,7 @@ flowchart TD
 
 ### MethodDeclaration `HideCellShotMapHoverTip` · L519–523
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:519–523](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L519-L523)
+[Drilling.UI/Views/CRecipeView.xaml.cs:519–523](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L519-L523)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1990,11 +1990,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L201-L201) | HideCellShotMapHoverTip | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L268-L268) | HideCellShotMapHoverTip | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:474–474](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L474-L474) | HideCellShotMapHoverTip | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L482-L482) | HideCellShotMapHoverTip | False |
-| [Drilling.UI/Views/CRecipeView.xaml.cs:493–493](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L493-L493) | HideCellShotMapHoverTip | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:201–201](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L201-L201) | HideCellShotMapHoverTip | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:268–268](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L268-L268) | HideCellShotMapHoverTip | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:474–474](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L474-L474) | HideCellShotMapHoverTip | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:482–482](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L482-L482) | HideCellShotMapHoverTip | False |
+| [Drilling.UI/Views/CRecipeView.xaml.cs:493–493](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L493-L493) | HideCellShotMapHoverTip | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -2007,7 +2007,7 @@ flowchart TD
 
 ### MethodDeclaration `RecipeView_IsVisibleChanged` · L525–532
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:525–532](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L525-L532)
+[Drilling.UI/Views/CRecipeView.xaml.cs:525–532](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L525-L532)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -2053,7 +2053,7 @@ flowchart TD
 
 ### MethodDeclaration `FindAncestor` · L534–548
 
-[Drilling.UI/Views/CRecipeView.xaml.cs:534–548](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CRecipeView.xaml.cs#L534-L548)
+[Drilling.UI/Views/CRecipeView.xaml.cs:534–548](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CRecipeView.xaml.cs#L534-L548)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
-| 원본 SHA256 | 703e6b0ddf82a128195b76e2b19f27ecd408ead9d173af5f17405a45e52a9f1f |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
+| 원본 SHA256 | e77d5e8f792691734aff890ad19f5284677497951087cdb5c41b4f063989fea8 |
 | 파일 분류 | data_schema |
-| 원본 크기/행 | 33,404 bytes / 1,033 physical lines |
+| 원본 크기/행 | 33,352 bytes / 1,031 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Config/RECIPE/simple2.csv) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Config/RECIPE/simple2.csv) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -23,7 +23,7 @@
 
 | 항목 | 값 |
 | --- | --- |
-| 레코드 수 | 1033 |
+| 레코드 수 | 1031 |
 | 첫 행 필드 개수 | 3 |
 | 첫 행 컬럼 후보 | [데이터 값 미복제/소비 파서로 형식 확인] / [데이터 값 미복제/소비 파서로 형식 확인] / [데이터 값 미복제/소비 파서로 형식 확인] |
 

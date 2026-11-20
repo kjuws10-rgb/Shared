@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | cc146b6aaeadced9e271f13f370eb4d120ece8b9b948570b6e009c83c5dedcb9 |
 | 파일 분류 | code |
 | 원본 크기/행 | 9,160 bytes / 283 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -80,7 +80,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_controllerOptions` · L9–9
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L9-L9)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:9–9](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L9-L9)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -95,7 +95,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_targetOptions` · L10–10
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L10-L10)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:10–10](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L10-L10)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -110,7 +110,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_executeSequence` · L11–11
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L11-L11)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:11–11](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L11-L11)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -125,7 +125,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_sequenceBlocks` · L12–12
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L12-L12)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:12–12](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L12-L12)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -146,7 +146,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_runCancellation` · L13–13
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L13-L13)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:13–13](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L13-L13)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -161,7 +161,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_isRunning` · L14–14
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L14-L14)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:14–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L14-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -176,7 +176,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### FieldDeclaration `_stopRequested` · L15–15
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L15-L15)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:15–15](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L15-L15)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -191,7 +191,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L16–26
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:16–26](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L16-L26)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:16–26](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L16-L26)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -211,7 +211,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2159–2162](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2159-L2162) | new CControllerResetSequenceDialog | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2167–2170](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2167-L2170) | new CControllerResetSequenceDialog | False |
 
 호출하는 대상과 해석 범위:
 
@@ -242,7 +242,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `SelectedTarget` · L28–28
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L28-L28)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -257,7 +257,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_SelectedTarget` · L28–28
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L28-L28)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -272,7 +272,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### SetAccessorDeclaration `set_SelectedTarget` · L28–28
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L28-L28)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:28–28](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L28-L28)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -293,7 +293,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### PropertyDeclaration `IsStopRequested` · L30–36
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:30–36](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L30-L36)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:30–36](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L30-L36)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -308,7 +308,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### GetAccessorDeclaration `get_IsStopRequested` · L32–35
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:32–35](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L32-L35)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:32–35](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L32-L35)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -329,7 +329,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `CreateTargetOptions` · L38–44
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:38–44](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L38-L44)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:38–44](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L38-L44)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -348,7 +348,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L21-L21) | CreateTargetOptions | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:21–21](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L21-L21) | CreateTargetOptions | False |
 
 호출하는 대상과 해석 범위:
 
@@ -375,7 +375,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### MethodDeclaration `OnTargetSelectionChanged` · L46–55
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:46–55](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L46-L55)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:46–55](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L46-L55)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -421,7 +421,7 @@ flowchart TD
 
 ### MethodDeclaration `RefreshSequenceBlocks` · L57–67
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:57–67](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L57-L67)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:57–67](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L57-L67)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -434,9 +434,9 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L25-L25) | RefreshSequenceBlocks | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L54-L54) | RefreshSequenceBlocks | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L173-L173) | RefreshSequenceBlocks | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:25–25](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L25-L25) | RefreshSequenceBlocks | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:54–54](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L54-L54) | RefreshSequenceBlocks | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:173–173](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L173-L173) | RefreshSequenceBlocks | False |
 
 호출하는 대상과 해석 범위:
 
@@ -476,7 +476,7 @@ flowchart TD
 
 ### MethodDeclaration `CreateSteps` · L69–72
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:69–72](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L69-L72)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:69–72](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L69-L72)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -489,7 +489,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L64-L64) | CreateSteps | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L64-L64) | CreateSteps | False |
 
 호출하는 대상과 해석 범위:
 
@@ -516,7 +516,7 @@ flowchart TD
 
 ### MethodDeclaration `GetSelectedControllers` · L74–77
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:74–77](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L74-L77)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:74–77](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L74-L77)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -529,8 +529,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L64-L64) | GetSelectedControllers | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:182–182](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L182-L182) | GetSelectedControllers | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L64-L64) | GetSelectedControllers | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:182–182](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L182-L182) | GetSelectedControllers | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -543,7 +543,7 @@ flowchart TD
 
 ### MethodDeclaration `SetStatusMessage` · L79–88
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:79–88](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L79-L88)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:79–88](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L79-L88)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -562,15 +562,15 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2301–2301](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2301-L2301) | dialog.SetStatusMessage | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2316–2316](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2316-L2316) | dialog.SetStatusMessage | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2322–2322](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2322-L2322) | dialog.SetStatusMessage | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L83-L83) | SetStatusMessage | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L180-L180) | SetStatusMessage | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L186-L186) | SetStatusMessage | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L190-L190) | SetStatusMessage | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L220-L220) | SetStatusMessage | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L232-L232) | SetStatusMessage | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2309–2309](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2309-L2309) | dialog.SetStatusMessage | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2324–2324](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2324-L2324) | dialog.SetStatusMessage | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2330–2330](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2330-L2330) | dialog.SetStatusMessage | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:83–83](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L83-L83) | SetStatusMessage | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:180–180](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L180-L180) | SetStatusMessage | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:186–186](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L186-L186) | SetStatusMessage | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:190–190](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L190-L190) | SetStatusMessage | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:220–220](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L220-L220) | SetStatusMessage | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:232–232](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L232-L232) | SetStatusMessage | False |
 
 호출하는 대상과 해석 범위:
 
@@ -604,7 +604,7 @@ flowchart TD
 
 ### MethodDeclaration `SetStepState` · L90–114
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:90–114](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L90-L114)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:90–114](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L90-L114)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -625,11 +625,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2300–2300](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2300-L2300) | dialog.SetStepState | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2317–2317](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2317-L2317) | dialog.SetStepState | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2321–2321](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2321-L2321) | dialog.SetStepState | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2326–2326](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2326-L2326) | dialog.SetStepState | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L94-L94) | SetStepState | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2308–2308](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2308-L2308) | dialog.SetStepState | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2325–2325](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2325-L2325) | dialog.SetStepState | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2329–2329](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2329-L2329) | dialog.SetStepState | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2334–2334](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2334-L2334) | dialog.SetStepState | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:94–94](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L94-L94) | SetStepState | False |
 
 호출하는 대상과 해석 범위:
 
@@ -677,7 +677,7 @@ flowchart TD
 
 ### MethodDeclaration `SkipWaitingSteps` · L116–139
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:116–139](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L116-L139)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:116–139](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L116-L139)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -696,10 +696,10 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2267–2267](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2267-L2267) | dialog.SkipWaitingSteps | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2276–2276](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2276-L2276) | dialog.SkipWaitingSteps | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2284–2284](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2284-L2284) | dialog.SkipWaitingSteps | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L120-L120) | SkipWaitingSteps | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2275–2275](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2275-L2275) | dialog.SkipWaitingSteps | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2284–2284](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2284-L2284) | dialog.SkipWaitingSteps | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2292–2292](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2292-L2292) | dialog.SkipWaitingSteps | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:120–120](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L120-L120) | SkipWaitingSteps | False |
 
 호출하는 대상과 해석 범위:
 
@@ -748,7 +748,7 @@ flowchart TD
 
 ### MethodDeclaration `SkipAllWaitingSteps` · L141–159
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:141–159](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L141-L159)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:141–159](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L141-L159)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -761,12 +761,12 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2260–2260](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2260-L2260) | dialog.SkipAllWaitingSteps | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2268–2268](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2268-L2268) | dialog.SkipAllWaitingSteps | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2277–2277](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2277-L2277) | dialog.SkipAllWaitingSteps | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2285–2285](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2285-L2285) | dialog.SkipAllWaitingSteps | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2293–2293](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2293-L2293) | dialog.SkipAllWaitingSteps | False |
-| [Drilling.UI/Menu/Menus/CMenuManual.cs:2327–2327](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuManual.cs#L2327-L2327) | dialog.SkipAllWaitingSteps | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2268–2268](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2268-L2268) | dialog.SkipAllWaitingSteps | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2276–2276](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2276-L2276) | dialog.SkipAllWaitingSteps | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2285–2285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2285-L2285) | dialog.SkipAllWaitingSteps | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2293–2293](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2293-L2293) | dialog.SkipAllWaitingSteps | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2301–2301](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2301-L2301) | dialog.SkipAllWaitingSteps | False |
+| [Drilling.UI/Menu/Menus/CMenuManual.cs:2335–2335](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuManual.cs#L2335-L2335) | dialog.SkipAllWaitingSteps | False |
 
 호출하는 대상과 해석 범위:
 
@@ -809,7 +809,7 @@ flowchart TD
 
 ### MethodDeclaration `OnStartClicked` · L161–164
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:161–164](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L161-L164)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:161–164](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L161-L164)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -844,7 +844,7 @@ flowchart TD
 
 ### MethodDeclaration `OnStopClicked` · L166–169
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:166–169](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L166-L169)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:166–169](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L166-L169)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -878,7 +878,7 @@ flowchart TD
 
 ### MethodDeclaration `RunSequence` · L171–203
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:171–203](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L171-L203)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:171–203](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L171-L203)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -891,7 +891,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L163-L163) | RunSequence | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:163–163](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L163-L163) | RunSequence | False |
 
 호출하는 대상과 해석 범위:
 
@@ -957,7 +957,7 @@ flowchart TD
 
 ### MethodDeclaration `OnCloseClicked` · L205–208
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:205–208](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L205-L208)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:205–208](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L205-L208)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -985,7 +985,7 @@ flowchart TD
 
 ### MethodDeclaration `RequestStop` · L210–221
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:210–221](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L210-L221)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:210–221](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L210-L221)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -998,8 +998,8 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L168-L168) | RequestStop | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L231-L231) | RequestStop | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:168–168](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L168-L168) | RequestStop | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:231–231](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L231-L231) | RequestStop | False |
 
 호출하는 대상과 해석 범위:
 
@@ -1031,7 +1031,7 @@ flowchart TD
 
 ### MethodDeclaration `OnWindowClosing` · L223–233
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:223–233](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L223-L233)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:223–233](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L223-L233)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1079,7 +1079,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L239–244
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:239–244](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L239-L244)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:239–244](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L239-L244)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1100,7 +1100,7 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L64-L64) | new ST_CONTROLLER_RESET_SEQUENCE_BLOCK | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:64–64](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L64-L64) | new ST_CONTROLLER_RESET_SEQUENCE_BLOCK | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1114,7 +1114,7 @@ flowchart TD
 
 ### PropertyDeclaration `AutomationNo` · L246–246
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L246-L246)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L246-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1129,7 +1129,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_AutomationNo` · L246–246
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L246-L246)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:246–246](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L246-L246)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1144,7 +1144,7 @@ flowchart TD
 
 ### PropertyDeclaration `Title` · L247–247
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L247-L247)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L247-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1159,7 +1159,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Title` · L247–247
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L247-L247)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:247–247](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L247-L247)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1174,7 +1174,7 @@ flowchart TD
 
 ### PropertyDeclaration `Steps` · L248–248
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L248-L248)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L248-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1189,7 +1189,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Steps` · L248–248
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L248-L248)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:248–248](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L248-L248)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1204,7 +1204,7 @@ flowchart TD
 
 ### FieldDeclaration `_state` · L253–253
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L253-L253)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:253–253](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L253-L253)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1219,7 +1219,7 @@ flowchart TD
 
 ### ConstructorDeclaration `.ctor` · L254–259
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:254–259](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L254-L259)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:254–259](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L254-L259)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1240,11 +1240,11 @@ flowchart TD
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71) | new | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71) | new | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71) | new | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71) | new | False |
-| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71) | new | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71) | new | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71) | new | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71) | new | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71) | new | False |
+| [Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:71–71](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L71-L71) | new | False |
 
 본문의 실제 연산·분기·예외·반환 순서(원문 위치 순):
 
@@ -1258,7 +1258,7 @@ flowchart TD
 
 ### EventFieldDeclaration `PropertyChanged` · L261–261
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L261-L261)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:261–261](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L261-L261)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1273,7 +1273,7 @@ flowchart TD
 
 ### PropertyDeclaration `No` · L262–262
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L262-L262)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L262-L262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1288,7 +1288,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_No` · L262–262
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L262-L262)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:262–262](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L262-L262)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1303,7 +1303,7 @@ flowchart TD
 
 ### PropertyDeclaration `Name` · L263–263
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L263-L263)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L263-L263)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1318,7 +1318,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_Name` · L263–263
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L263-L263)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:263–263](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L263-L263)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1333,7 +1333,7 @@ flowchart TD
 
 ### PropertyDeclaration `State` · L265–282
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:265–282](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L265-L282)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:265–282](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L265-L282)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1348,7 +1348,7 @@ flowchart TD
 
 ### GetAccessorDeclaration `get_State` · L267–270
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:267–270](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L267-L270)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:267–270](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L267-L270)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -1369,7 +1369,7 @@ flowchart TD
 
 ### SetAccessorDeclaration `set_State` · L272–281
 
-[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:272–281](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L272-L281)
+[Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs:272–281](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Popup/CControllerResetSequenceDialog.xaml.cs#L272-L281)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |

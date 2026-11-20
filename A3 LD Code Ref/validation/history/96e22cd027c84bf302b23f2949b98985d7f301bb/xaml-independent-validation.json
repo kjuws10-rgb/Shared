@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "96e22cd027c84bf302b23f2949b98985d7f301bb",
+  "counts": {
+    "xaml_files": 58,
+    "events_after": 305,
+    "namedElements": 377,
+    "bindings": 2904,
+    "five_event_name_declarations": 16,
+    "added_whitelist_declarations": 15,
+    "events_before": 290
+  },
+  "independentXmlCounterMismatches": [],
+  "unrecognizedCodeBehindHandlerCandidates": [],
+  "scope": "full58XAML XML declaration and metadata handler-signature cross-check; no WPF runtime or equipment code load"
+}

@@ -3,13 +3,13 @@
 | 항목 | 내용 |
 | --- | --- |
 | 원본 저장소 | https://github.com/kjuws10-rgb/A3Drilling.git |
-| 원본 Commit | 96e22cd027c84bf302b23f2949b98985d7f301bb |
+| 원본 Commit | 28764c91d521777b8ee068dd7aaf2d3902ce9fe2 |
 | 원본 SHA256 | 274e999463ceecd888056c6e05ac0a2f693fc443828d811a875a1001a7c66c8e |
 | 파일 분류 | code |
 | 원본 크기/행 | 507 bytes / 15 physical lines |
 | 인코딩 | utf-8-sig |
 | 검토 범위 | 구문/부분 의미 분석에서 추출한 사실. 동작·물리 단위·실장비 합격을 보증하지 않습니다. |
-| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAlignDistortionView.xaml.cs) |
+| 원본 링크 | [고정 Commit 원본](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAlignDistortionView.xaml.cs) |
 
 ## 파일의 역할과 읽는 순서
 
@@ -34,7 +34,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L7–7
 
-[Drilling.UI/Views/CAlignDistortionView.xaml.cs:7–7](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAlignDistortionView.xaml.cs#L7-L7)
+[Drilling.UI/Views/CAlignDistortionView.xaml.cs:7–7](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAlignDistortionView.xaml.cs#L7-L7)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -61,7 +61,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 ### ConstructorDeclaration `.ctor` · L8–14
 
-[Drilling.UI/Views/CAlignDistortionView.xaml.cs:8–14](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Views/CAlignDistortionView.xaml.cs#L8-L14)
+[Drilling.UI/Views/CAlignDistortionView.xaml.cs:8–14](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Views/CAlignDistortionView.xaml.cs#L8-L14)
 
 | 항목 | 실제 추출 값 |
 | --- | --- |
@@ -80,7 +80,7 @@ WPF 화면·사용자 명령·표시 상태를 구성합니다. XAML 이벤트�
 
 | 호출 파일/행 | 호출 표현식 | 런타임 분기 가능 |
 | --- | --- | --- |
-| [Drilling.UI/Menu/Menus/CMenuMain.cs:2285–2285](https://github.com/kjuws10-rgb/A3Drilling/blob/96e22cd027c84bf302b23f2949b98985d7f301bb/Drilling.UI/Menu/Menus/CMenuMain.cs#L2285-L2285) | new Drilling.UI.Views.CAlignDistortionView | False |
+| [Drilling.UI/Menu/Menus/CMenuMain.cs:2285–2285](https://github.com/kjuws10-rgb/A3Drilling/blob/28764c91d521777b8ee068dd7aaf2d3902ce9fe2/Drilling.UI/Menu/Menus/CMenuMain.cs#L2285-L2285) | new Drilling.UI.Views.CAlignDistortionView | False |
 
 호출하는 대상과 해석 범위:
 
