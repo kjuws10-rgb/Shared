@@ -1,0 +1,67 @@
+2) PROCESS SW 개발
+폴더: pages/00_PROCESS_SW_개발
+첨부: p19_00_A.png
+
+01. 프로그램 한눈에 보기
+폴더: pages/01_프로그램_한눈에_보기
+첨부: p19_01_A.png, p19_01_B.png
+
+02. 장비 역할과 공정 흐름
+폴더: pages/02_장비_역할과_공정_흐름
+첨부: p19_02_A.png
+
+03. 프로그램 구조와 실행 데이터
+폴더: pages/03_프로그램_구조와_실행_데이터
+첨부: p17_03_객체_연결.png, p19_03_B.png
+
+04. 실행 준비와 설정 관리
+폴더: pages/04_실행_준비와_설정_관리
+첨부: p19_04_A.png
+
+05. Recipe·PPID·운전 조건
+폴더: pages/05_Recipe·PPID·운전_조건
+첨부: p19_05_A.png, new_ppid-boundary.png
+
+06. 좌표 변환과 Head 분담
+폴더: pages/06_좌표_변환과_Head_분담
+첨부: p19_06_A.png, new_head-field.png, new_mask-filter.png, new_offset-branches.png, p17_06_DOE_배열_중심.png
+
+07. Scanner·MOF 실행
+폴더: pages/07_Scanner·MOF_실행
+첨부: p19_07_A.png, p19_07_B.png
+
+08. Align·Review·검사·보정
+폴더: pages/08_Align·Review·검사·보정
+첨부: p19_08_A.png, new_valid-zero.png, new_fine-lagrange.png, new_distortion-interpolation.png, new_correction-scope.png, new_correction-lifecycle.png
+
+09. 통신과 장비 인터페이스
+폴더: pages/09_통신과_장비_인터페이스
+첨부: p19_09_A.png, p19_09_B.png
+
+10. 광학 장치와 Power 측정
+폴더: pages/10_광학_장치와_Power_측정
+첨부: new_optic-roles.png, p17_10_Power_수집구간.png, p19_10_B.png
+
+11. 운전 화면과 Manual·Auto
+폴더: pages/11_운전_화면과_Manual·Auto
+첨부: p19_11_B.png
+
+12. Alarm·Interlock·Stop·Reset
+폴더: pages/12_Alarm·Interlock·Stop·Reset
+첨부: p19_12_B.png, p17_12_윈도우_교체요청.png, new_recovery-gates.png
+
+13. 개발 시험과 결과 확인
+폴더: pages/13_개발_시험과_결과_확인
+첨부: p19_13_A.png, p19_13_B.png
+
+14. 현재 기능과 개발 확인사항
+폴더: pages/14_현재_기능과_개발_확인사항
+첨부: p19_14_A.png
+
+15. 증상별 개발 확인
+폴더: pages/15_증상별_개발_확인
+첨부: p19_15_A.png, p17_15_알람_시간축.png
+
+16. 데이터 관리와 변경 반영
+폴더: pages/16_데이터_관리와_변경_반영
+첨부: p19_16_A.png, p19_16_B.png

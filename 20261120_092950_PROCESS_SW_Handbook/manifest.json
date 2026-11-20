@@ -1,0 +1,780 @@
+{
+  "title": "2) PROCESS SW 개발",
+  "pageCount": 17,
+  "figureCount": 38,
+  "figureUses": 38,
+  "pages": [
+    {
+      "id": "p00",
+      "title": "2) PROCESS SW 개발",
+      "parent": null,
+      "folder": "pages/00_PROCESS_SW_개발",
+      "file": "pages/00_PROCESS_SW_개발/페이지소스.storage.xhtml.txt",
+      "bodyChars": 743,
+      "sectionCount": 3,
+      "figureCount": 1,
+      "tableCount": 1,
+      "sha256": "96b9bb91ebef9ec5bdb4430577cdf103233ee7be79f4820c2f16b67a34dce800",
+      "images": [
+        {
+          "file": "p19_00_A.png",
+          "svg": "p19_00_A.svg",
+          "asset": "p19:00_A",
+          "caption": "왼쪽 조건에서 시작해 좌표 계산, 가공, 검사와 보정으로 읽는다. 마지막 보정은 다음 가공을 준비할 때 사용하며 이미 가공한 홀을 이동시키지 않는다.",
+          "purpose": "장비 명칭을 보기 전에 한 기판의 입력·계산·실행·검사·보정 관계를 잡는다.",
+          "sha256": "0912b196d23fd32c2b13c1d546af9fde97f2349b95aebc4505fe85bfde4ddc36"
+        }
+      ]
+    },
+    {
+      "id": "p01",
+      "title": "01. 프로그램 한눈에 보기",
+      "parent": "p00",
+      "folder": "pages/01_프로그램_한눈에_보기",
+      "file": "pages/01_프로그램_한눈에_보기/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1142,
+      "sectionCount": 3,
+      "figureCount": 2,
+      "tableCount": 1,
+      "sha256": "59031d9832a22ef6a9ef0cc22ad3566adbc9f629bc6aba14dc5c3a92a736dcae",
+      "images": [
+        {
+          "file": "p19_01_A.png",
+          "svg": "p19_01_A.svg",
+          "asset": "p19:01_A",
+          "caption": "왼쪽 기판에서 선택한 Cell을 가운데로 확대하고, 그 안의 한 가공 동작을 오른쪽 Shot으로 따라 읽는다. 배열과 개수는 개념 예시다.",
+          "purpose": "기판·Cell·Shot의 포함 관계를 확대 그림으로 설명한다.",
+          "sha256": "cfdf64e51ce9a9918d7966a468b034c5eeaa7c85fe5bcf31b37da8681d5a56c5"
+        },
+        {
+          "file": "p19_01_B.png",
+          "svg": "p19_01_B.svg",
+          "asset": "p19:01_B",
+          "caption": "Head에서 나온 가공 위치를 Beam 배열로 보고, 오른쪽 ID 태그로 결과를 추적한다. 4×4 배열은 DOE 설명용이며 모든 조건이 16 Beam이라는 뜻은 아니다.",
+          "purpose": "장치, 분기된 가공 위치, 결과 식별자의 역할을 분리한다.",
+          "sha256": "2fed1971aef2c506b2c909e186c85208e545a93a10c355ab78fde518993e241b"
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "title": "02. 장비 역할과 공정 흐름",
+      "parent": "p00",
+      "folder": "pages/02_장비_역할과_공정_흐름",
+      "file": "pages/02_장비_역할과_공정_흐름/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1259,
+      "sectionCount": 3,
+      "figureCount": 1,
+      "tableCount": 1,
+      "sha256": "574bd17f3fadba9895d807233e1526b96dcf952e039a7e1189032120155df1af",
+      "images": [
+        {
+          "file": "p19_02_A.png",
+          "svg": "p19_02_A.svg",
+          "asset": "p19:02_A",
+          "caption": "기판 아래의 Stage 이동, 위쪽의 Scanner·Laser, 오른쪽의 Vision을 나누어 본다. 제어 요청과 실제 장치 동작은 별도로 확인한다.",
+          "purpose": "기판 이동·가공·측정의 물리적 역할을 한 화면에 연결한다.",
+          "sha256": "a4cb2843997ff20c25e192cd1f967786ebb4f982f67ea65fc7ff7b5ac07946b7"
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "title": "03. 프로그램 구조와 실행 데이터",
+      "parent": "p00",
+      "folder": "pages/03_프로그램_구조와_실행_데이터",
+      "file": "pages/03_프로그램_구조와_실행_데이터/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1224,
+      "sectionCount": 3,
+      "figureCount": 2,
+      "tableCount": 1,
+      "sha256": "05d08794e317ada4b03e937eec818c30290fe87b216aa1da04a5cd6146bce118",
+      "images": [
+        {
+          "file": "p17_03_객체_연결.png",
+          "svg": "p17_03_객체_연결.svg",
+          "asset": "p17:03_객체_연결",
+          "caption": "CAppStartup에서 공유 객체를 조립한 뒤 RootView와 각 기능으로 전달되는 화살표를 따라 읽는다. 모든 선이 장치 명령의 실행 순서를 뜻하는 것은 아니다.",
+          "purpose": "시작부와 화면·Station이 같은 관리 객체를 공유하는 관계를 보여준다.",
+          "sha256": "cefe4ec1b2d9ae9ee95518eedc36dc718ffa3e9f1cd118bb84f1ecfeec9b286f"
+        },
+        {
+          "file": "p19_03_B.png",
+          "svg": "p19_03_B.svg",
+          "asset": "p19:03_B",
+          "caption": "준비 화살표를 지난 값이 실행 사본이다. 아래의 끊긴 편집 경로는 나중 편집이 사본을 직접 바꾸지 않음을 뜻하며, 보정본 변경 후 실행에는 재준비 검사가 따른다.",
+          "purpose": "편집값과 준비 사본의 수명이 다르다는 점을 설명한다.",
+          "sha256": "00a6b738028480762d464c77c14b604fcf1c4b8ae5129f944ab36a1e6e28b597"
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "title": "04. 실행 준비와 설정 관리",
+      "parent": "p00",
+      "folder": "pages/04_실행_준비와_설정_관리",
+      "file": "pages/04_실행_준비와_설정_관리/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1155,
+      "sectionCount": 3,
+      "figureCount": 1,
+      "tableCount": 1,
+      "sha256": "cbf2f94fbe48d753c3fa6bbf3ad701808b5c71095c049f5d498606ffb2fbf246",
+      "images": [
+        {
+          "file": "p19_04_A.png",
+          "svg": "p19_04_A.svg",
+          "asset": "p19:04_A",
+          "caption": "실행 위치에서 상위 탐색 화살표를 따라가고, Drilling.sln 발견 여부에 따라 옆 Config 또는 작업 폴더 Config로 갈라 읽는다.",
+          "purpose": "상위 탐색과 작업 폴더 대체 경로를 분기 그림으로 설명한다.",
+          "sha256": "215df1e50aaadd30c9d774d45dbe1c24f5af7b73729adbb324cb9d9ea6a1dc32"
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "title": "05. Recipe·PPID·운전 조건",
+      "parent": "p00",
+      "folder": "pages/05_Recipe·PPID·운전_조건",
+      "file": "pages/05_Recipe·PPID·운전_조건/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1469,
+      "sectionCount": 4,
+      "figureCount": 2,
+      "tableCount": 1,
+      "sha256": "2a60e3f61b9603c738b736a6e58955bfb50504660036a6cd16ef420371055bac",
+      "images": [
+        {
+          "file": "p19_05_A.png",
+          "svg": "p19_05_A.svg",
+          "asset": "p19:05_A",
+          "caption": "화면은 편집 대상, 문서는 운전 Recipe, 자물쇠는 준비된 실행 사본을 나타낸다. 화살표는 선택·준비 동작을 거친 연결이며 열기만으로 가공 조건이 바뀐다는 뜻은 아니다.",
+          "purpose": "화면에서 보는 대상과 운전 선택, 실행 사본을 분리한다.",
+          "sha256": "4f100e758b6d1f1cccafa64ce45fcbf261b14574bc1fa7d0fe254e534eb749d6"
+        },
+        {
+          "file": "new_ppid-boundary.png",
+          "svg": "new_ppid-boundary.svg",
+          "asset": "new:ppid-boundary",
+          "caption": "왼쪽 PPID 요청과 로컬 Recipe 선택은 다른 단계다. 회색 점선은 상위 수신·매칭과 연동 확인의 경계이며 로컬 선택 성공만으로 전체 전환 완료를 뜻하지 않는다.",
+          "purpose": "상위 요청과 로컬 선택·준비·장치 적용 확인의 경계를 나눈다.",
+          "sha256": "4d9f2481338902fce5f842ef573ff30216dc3d9da386fbfcabed2a00acc70836"
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "title": "06. 좌표 변환과 Head 분담",
+      "parent": "p00",
+      "folder": "pages/06_좌표_변환과_Head_분담",
+      "file": "pages/06_좌표_변환과_Head_분담/페이지소스.storage.xhtml.txt",
+      "bodyChars": 2980,
+      "sectionCount": 6,
+      "figureCount": 5,
+      "tableCount": 1,
+      "sha256": "721487dd1bc90f58891c22a909a53a6d59dec5a9426e673d9c1c5a834b866919",
+      "images": [
+        {
+          "file": "p19_06_A.png",
+          "svg": "p19_06_A.svg",
+          "asset": "p19:06_A",
+          "caption": "세 패널의 목표점과 원점에서 목표로 향하는 벡터를 비교한다. 그림은 기준 변화의 개념도이며 특정 장비의 실제 교정값을 나타내지 않는다.",
+          "purpose": "원점이 달라지면 같은 점의 좌표 표현이 달라짐을 보여준다.",
+          "sha256": "3e3316132b948cacd2b7d64539fbcd5068edac1354bf753da143c1053eecf58f"
+        },
+        {
+          "file": "new_head-field.png",
+          "svg": "new_head-field.svg",
+          "asset": "new:head-field",
+          "caption": "각 Head 중심과 영역 안의 점을 본다. 경계가 겹치면 후보가 여럿일 수 있으므로 실제 배정 결과를 함께 확인한다. 영역 폭과 점 위치는 설명용이다.",
+          "purpose": "Head 중심과 X범위로 담당 후보를 구성하는 이유를 시각화한다.",
+          "sha256": "af216917dccbe08620e05b0e89744d5a9f3a455128a43bdcd22661fce099866e"
+        },
+        {
+          "file": "new_mask-filter.png",
+          "svg": "new_mask-filter.svg",
+          "asset": "new:mask-filter",
+          "caption": "왼쪽의 Mask 영역과 오른쪽의 검사 선택점을 비교한다. 빨간 영역은 대상 제외, 초록 점은 선택한 측정 대상이며 화살표는 장치가 장애물을 우회하는 이동 경로가 아니다.",
+          "purpose": "가공 제외 판정과 그 이후 검사점 선택을 서로 다른 판단으로 설명한다.",
+          "sha256": "eae013b1832a63c910fc29318a62c73069b01f84093b6b3b14e7d0325de91728"
+        },
+        {
+          "file": "new_offset-branches.png",
+          "svg": "new_offset-branches.svg",
+          "asset": "new:offset-branches",
+          "caption": "위쪽은 기준과 방향을 맞추는 좌표 보정이다. 아래 Y Shift가 대기거리를 바꾸면 Scanner Base Y와 Encoder Count도 함께 달라진다. 합성한 보정을 최종 좌표에 다시 더하지 않는다.",
+          "purpose": "좌표 보정의 합성과 Y Shift가 Scanner Base·Encoder Count로 함께 이어지는 관계를 보여준다.",
+          "sha256": "3df3d0d17abd9d964bc9d750a58758f1142a8270ebfd8a0c0146c92e76a18c07"
+        },
+        {
+          "file": "p17_06_DOE_배열_중심.png",
+          "svg": "p17_06_DOE_배열_중심.svg",
+          "asset": "p17:06_DOE_배열_중심",
+          "caption": "왼쪽의 실제 배열점과 오른쪽의 계산 중심을 비교한다. 중앙 표시가 실제 Hole이나 원빔 출사점을 의미하는지 먼저 구분해야 한다.",
+          "purpose": "실제 배열점과 계산으로 얻은 빈 중심을 구분한다.",
+          "sha256": "20a2e52353b8df62a502e6acf4824981618913c630bfe2202b19f910c330a56a"
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "title": "07. Scanner·MOF 실행",
+      "parent": "p00",
+      "folder": "pages/07_Scanner·MOF_실행",
+      "file": "pages/07_Scanner·MOF_실행/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1455,
+      "sectionCount": 4,
+      "figureCount": 2,
+      "tableCount": 0,
+      "sha256": "d3d69b35e474ffc465bbc5052faa3337bda10dcb600f5b43868c196d9c060da1",
+      "images": [
+        {
+          "file": "p19_07_A.png",
+          "svg": "p19_07_A.svg",
+          "asset": "p19:07_A",
+          "caption": "위의 Encoder 진행에서 아래 Point로 내려오는 점선을 따라 읽는다. 눈금과 간격은 개념 예시이며 실제 Count나 가공 간격을 뜻하지 않는다.",
+          "purpose": "Encoder 임계값과 개별 Point 실행의 대응 관계를 보여준다.",
+          "sha256": "acaf32cd2aefd3ba7c247146cff61838f5243dae1beade86bf94a5052e5d6bc6"
+        },
+        {
+          "file": "p19_07_B.png",
+          "svg": "p19_07_B.svg",
+          "asset": "p19:07_B",
+          "caption": "왼쪽은 컴파일한 Program, 오른쪽은 명령을 담는 Queue다. 두 경로를 같은 실행 함수나 같은 완료 표시로 합쳐 읽지 않는다.",
+          "purpose": "Program 실행과 Queue 공급의 차이를 비교한다.",
+          "sha256": "28d3f7170182449ae259b4d1fe18a64a2b61e583f6ef38538858a9040d3bbcf8"
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "title": "08. Align·Review·검사·보정",
+      "parent": "p00",
+      "folder": "pages/08_Align·Review·검사·보정",
+      "file": "pages/08_Align·Review·검사·보정/페이지소스.storage.xhtml.txt",
+      "bodyChars": 3343,
+      "sectionCount": 6,
+      "figureCount": 6,
+      "tableCount": 2,
+      "sha256": "83f90fe53bcced72cb2bb09d045e0e63e9eb7c21c50de54f8c32134ebfce142b",
+      "images": [
+        {
+          "file": "p19_08_A.png",
+          "svg": "p19_08_A.svg",
+          "asset": "p19:08_A",
+          "caption": "위의 현재 기판→Align→가공→Review를 읽은 뒤, 보정본에서 아래의 다음 가공 준비로 이어지는 화살표를 본다. 현재 홀을 다시 이동시키는 흐름이 아니다.",
+          "purpose": "현재 기판의 Align과 다음 준비로 이어지는 Review의 적용 시점을 구분한다.",
+          "sha256": "d52e3ca875b646c18c6fe7e88d2d32457f2c9154b42964e16710408044e2ee2f"
+        },
+        {
+          "file": "new_valid-zero.png",
+          "svg": "new_valid-zero.svg",
+          "asset": "new:valid-zero",
+          "caption": "왼쪽의 0.000은 성공한 측정의 유효한 오차일 수 있다. 오른쪽 실패·미수신은 숫자 0으로 대체하지 않고 검출 상태와 Point·회차를 함께 확인한다.",
+          "purpose": "측정 성공의 오차 0과 측정 실패·미수신을 값과 상태로 구분한다.",
+          "sha256": "1b38530891a98c39b8309bcbdba95e9df92a1f1293af0f93f58c160618e49171"
+        },
+        {
+          "file": "new_fine-lagrange.png",
+          "svg": "new_fine-lagrange.svg",
+          "asset": "new:fine-lagrange",
+          "caption": "파란 측정점과 청록 보간곡선, 회색 점선을 비교한다. 숫자는 계산 방식 설명용 합성 예시이며 실제 측정값이나 장비 허용오차가 아니다.",
+          "purpose": "Cell의 같은 X열에서 Y방향 라그랑주를 사용하는 현재 Fine과 구간 선형의 차이를 보여준다.",
+          "sha256": "451fd63b5a297592d175d65e65473505ff8dad1a21eef629c43d66c777efc3d7"
+        },
+        {
+          "file": "new_distortion-interpolation.png",
+          "svg": "new_distortion-interpolation.svg",
+          "asset": "new:distortion-interpolation",
+          "caption": "각 행의 좌우 측정점에서 먼저 같은 X위치의 값을 구하고, 그 값들을 세로로 모아 Y보간하는 순서로 읽는다. X/Y는 여기서 공간 방향을 뜻한다.",
+          "purpose": "각 행의 좌우 X선형 계산 다음에 행 사이 Y라그랑주를 수행하는 순서를 보여준다.",
+          "sha256": "e6a0cdd635978ac7fbcd52669dc17628bc61e69f04a38f020a39b0fdc21bfcfa"
+        },
+        {
+          "file": "new_correction-scope.png",
+          "svg": "new_correction-scope.svg",
+          "asset": "new:correction-scope",
+          "caption": "왼쪽은 여러 Cell에서 같은 Head가 담당하는 범위, 오른쪽은 선택한 Cell·Head 조합이다. 대표 측정값의 적용 범위를 정하기 위한 비교이며 두 범위를 무조건 겹쳐 누적하지 않는다.",
+          "purpose": "같은 Head 전체와 특정 Head–Cell 조합에 적용하는 범위를 구분한다.",
+          "sha256": "68cd373fc2a2b52183414a35a7d0dd9ffb5e146f29cc0756b13d7a370298afd8"
+        },
+        {
+          "file": "new_correction-lifecycle.png",
+          "svg": "new_correction-lifecycle.svg",
+          "asset": "new:correction-lifecycle",
+          "caption": "측정 결과에서 후보 계산과 보정본 저장을 거쳐 다음 준비로 이어진다. 0선 후속은 기존 보정을 유지하며, 같은 결과를 새 측정처럼 다시 누적하지 않는다.",
+          "purpose": "결과·후보·저장본·다음 준비의 수명과 중복 적용 경계를 보여준다.",
+          "sha256": "5ec19083395d3d0a60293a2e80b31f6cbd1561869a25a5c895603b8a2baed708"
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "title": "09. 통신과 장비 인터페이스",
+      "parent": "p00",
+      "folder": "pages/09_통신과_장비_인터페이스",
+      "file": "pages/09_통신과_장비_인터페이스/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1484,
+      "sectionCount": 3,
+      "figureCount": 2,
+      "tableCount": 1,
+      "sha256": "3795ccb0828ba462fdb192a181b2a50bb7ac51bfd7da684e7ad6e0a2da04ba41",
+      "images": [
+        {
+          "file": "p19_09_A.png",
+          "svg": "p19_09_A.svg",
+          "asset": "p19:09_A",
+          "caption": "위에서 아래로 요청→Driver→장치 전달과 되돌아오는 응답을 따라간다. 마지막 응답을 현재 요청의 수락·진행·완료 중 어떤 상태로 사용할지 구분한다.",
+          "purpose": "요청과 반환 경로를 순서대로 읽는다.",
+          "sha256": "72eafd95b2792c6202bf98e9903c865464aad43400b9d466d61a46761745ebfe"
+        },
+        {
+          "file": "p19_09_B.png",
+          "svg": "p19_09_B.svg",
+          "asset": "p19:09_B",
+          "caption": "시계는 수신 시각, 문서는 Snapshot을 뜻한다. 연결이 살아 있어도 오래된 값이나 읽기 오류는 현재 상태 판정에서 구분해야 한다.",
+          "purpose": "연결 상태와 데이터 최신성을 분리한다.",
+          "sha256": "9f282bcc9a268b7430b3d4bdf5c58f3ca676bb36f63f4e0b056c25d811b17a92"
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "title": "10. 광학 장치와 Power 측정",
+      "parent": "p00",
+      "folder": "pages/10_광학_장치와_Power_측정",
+      "file": "pages/10_광학_장치와_Power_측정/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1856,
+      "sectionCount": 4,
+      "figureCount": 3,
+      "tableCount": 1,
+      "sha256": "a1558eeea48b9277e3211539bb84684dc756d4f1d5d6107b04f7b4ec3c059d6b",
+      "images": [
+        {
+          "file": "new_optic-roles.png",
+          "svg": "new_optic-roles.svg",
+          "asset": "new:optic-roles",
+          "caption": "각 칸은 장치의 역할을 병렬로 비교한 것이다. 설치 순서를 뜻하지 않는다. Laser의 출사 조건, ATT 각도, BEX의 빔 조건과 PowerMeter의 실제 W를 서로 다른 값으로 읽는다.",
+          "purpose": "약어로만 보이던 광학 장치의 기능과 관측 단위를 물체 그림으로 구분한다.",
+          "sha256": "6e3aef4caf731fd0e9cb6bc5768753f7159cb1a316154e64aa49d15fe91042fc"
+        },
+        {
+          "file": "p17_10_Power_수집구간.png",
+          "svg": "p17_10_Power_수집구간.svg",
+          "asset": "p17:10_Power_수집구간",
+          "caption": "가로 방향은 시간이다. 출사 직후 구간은 평균에서 제외하고 유효 수집 구간의 새 샘플을 사용한다. 그림의 파형은 구간 설명이며 실제 출력 실측값이나 고정 시간 기준이 아니다.",
+          "purpose": "안정화·수집·종료 구간의 의미를 설명한다.",
+          "sha256": "c8a73751a74383de793141b96d8bab6471f836a1bf5de460d460bd1a851e43b4"
+        },
+        {
+          "file": "p19_10_B.png",
+          "svg": "p19_10_B.svg",
+          "asset": "p19:10_B",
+          "caption": "왼쪽은 결과 보고, 가운데는 측정 대상 전체의 OK 판정이다. 정상 경로에서만 각도 저장으로 진행하고 NG 경로는 기존 각도를 유지한다. 보고 존재와 저장 완료를 같은 표시로 묶지 않는다.",
+          "purpose": "측정 보고와 Recipe 저장 조건을 분리한다.",
+          "sha256": "a4ef083eedb16bba5f9019b56fa3e56697d7de289cfa62144b59ef2c1c98a4b3"
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "title": "11. 운전 화면과 Manual·Auto",
+      "parent": "p00",
+      "folder": "pages/11_운전_화면과_Manual·Auto",
+      "file": "pages/11_운전_화면과_Manual·Auto/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1312,
+      "sectionCount": 3,
+      "figureCount": 1,
+      "tableCount": 1,
+      "sha256": "681e5caa01d36520966322022de199a858af77b8aa2bd737bff905deeefa3821",
+      "images": [
+        {
+          "file": "p19_11_B.png",
+          "svg": "p19_11_B.svg",
+          "asset": "p19:11_B",
+          "caption": "네 칸은 시간 순서가 아니라 값의 출처다. 편집값·준비 사본·장치 피드백·측정 결과를 비교하여 값이 달라진 경계를 찾는다.",
+          "purpose": "표시값 네 종류를 한눈에 구분한다.",
+          "sha256": "cf539aaa966f54df3957c8a21bffcd3f386252b9024048ee5506f4053c13fc6f"
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "title": "12. Alarm·Interlock·Stop·Reset",
+      "parent": "p00",
+      "folder": "pages/12_Alarm·Interlock·Stop·Reset",
+      "file": "pages/12_Alarm·Interlock·Stop·Reset/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1774,
+      "sectionCount": 5,
+      "figureCount": 3,
+      "tableCount": 0,
+      "sha256": "7c5fc101f51de9b078a7918ac8db7e81d895836553f40a39212bf40060365c53",
+      "images": [
+        {
+          "file": "p19_12_B.png",
+          "svg": "p19_12_B.svg",
+          "asset": "p19:12_B",
+          "caption": "알람 목록 Reset과 원인 해소 사이의 ≠ 표시는 별도 확인이 필요하다는 뜻이다. 목록이 비어도 실제 장치와 남은 작업을 확인해야 한다.",
+          "purpose": "목록 초기화와 실제 원인 해소의 경계를 설명한다.",
+          "sha256": "d086e7e28e52ff2227b216ee3b2ebe37793bbf6aefec8b5de4d7accb1c6343dc"
+        },
+        {
+          "file": "p17_12_윈도우_교체요청.png",
+          "svg": "p17_12_윈도우_교체요청.svg",
+          "asset": "p17:12_윈도우_교체요청",
+          "caption": "처음 Request와 추가 요청을 분리해 따라간다. Stage 인계값을 저장·보고한 뒤 OFF를 확인하고, 남은 추가 횟수와 소진 경로를 판단한다.",
+          "purpose": "인계 매수·신호 OFF·추가 요청의 순서를 설명한다.",
+          "sha256": "a835ef165d38444733e6393035aa71e25deeea421e4af727de727f695f40b894"
+        },
+        {
+          "file": "new_recovery-gates.png",
+          "svg": "new_recovery-gates.svg",
+          "asset": "new:recovery-gates",
+          "caption": "Task·Queue의 처리, 축·출력의 실제 상태, 기판의 완료/미완료 구간을 확인한 뒤 재준비로 진행한다. 화살표는 판단 순서이며 모든 항목을 한 번에 자동 복구하는 기능을 뜻하지 않는다.",
+          "purpose": "중단 뒤 재개 전에 확인할 상태를 한 흐름으로 묶는다.",
+          "sha256": "d509ee052c8367c2b166574bdb0368f75adbaf20ea7def04956c6e88068fd838"
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "title": "13. 개발 시험과 결과 확인",
+      "parent": "p00",
+      "folder": "pages/13_개발_시험과_결과_확인",
+      "file": "pages/13_개발_시험과_결과_확인/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1337,
+      "sectionCount": 3,
+      "figureCount": 2,
+      "tableCount": 1,
+      "sha256": "57d79b8452b207b31c1683190106d730d08736e4a2526b0cdadd17d2faea0642",
+      "images": [
+        {
+          "file": "p19_13_A.png",
+          "svg": "p19_13_A.svg",
+          "asset": "p19:13_A",
+          "caption": "입력 고정과 기대값 정의를 먼저 하고, 실행해서 얻은 관찰값을 비교한다. 마지막 판정은 실제 기록에 근거하며 그림 자체가 통과 기록은 아니다.",
+          "purpose": "시험의 네 요소를 한 흐름으로 읽는다.",
+          "sha256": "43b972cc1d6489f0e7a3ad1ccf28652c32de20f4d68e7e5c32f2b592b5c64ecb"
+        },
+        {
+          "file": "p19_13_B.png",
+          "svg": "p19_13_B.svg",
+          "asset": "p19:13_B",
+          "caption": "계산·모의·출력 차단·가공/측정은 확인하는 대상이 다르다. 단계마다 조건과 결과를 남기며, 아래의 미실행 ≠ 통과가 모든 단계에 적용된다.",
+          "purpose": "시험 환경의 확대와 범위 구분을 보여준다.",
+          "sha256": "cb126bd5df0fece9e433a8da2e0fe59640acbe52363ce645214c2e7ac6e9c944"
+        }
+      ]
+    },
+    {
+      "id": "p14",
+      "title": "14. 현재 기능과 개발 확인사항",
+      "parent": "p00",
+      "folder": "pages/14_현재_기능과_개발_확인사항",
+      "file": "pages/14_현재_기능과_개발_확인사항/페이지소스.storage.xhtml.txt",
+      "bodyChars": 909,
+      "sectionCount": 2,
+      "figureCount": 1,
+      "tableCount": 1,
+      "sha256": "bbb57a2f4ec13106127bd00e6465e70e3e011284edd5056b2906642f96d08e65",
+      "images": [
+        {
+          "file": "p19_14_A.png",
+          "svg": "p19_14_A.svg",
+          "asset": "p19:14_A",
+          "caption": "입력·실행값·장치·저장 결과를 같은 대상으로 대조한다. 특정 화면이 완성됐다는 사실을 전체 기능의 완료로 확대하지 않는다.",
+          "purpose": "한 기능의 입력부터 저장까지 연결한다.",
+          "sha256": "6c636e0d672221b9e7181e5a7dc23611b7d10178a6d662222dafb7f36a8a1247"
+        }
+      ]
+    },
+    {
+      "id": "p15",
+      "title": "15. 증상별 개발 확인",
+      "parent": "p00",
+      "folder": "pages/15_증상별_개발_확인",
+      "file": "pages/15_증상별_개발_확인/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1882,
+      "sectionCount": 6,
+      "figureCount": 2,
+      "tableCount": 0,
+      "sha256": "3e6f6ce239ffcc3339a22a72cee9a36b1de34b33d74c6fc109be858782e7ad4d",
+      "images": [
+        {
+          "file": "p19_15_A.png",
+          "svg": "p19_15_A.svg",
+          "asset": "p19:15_A",
+          "caption": "입력→준비값→장치 상태→저장 결과를 순서대로 비교해 처음 달라진 단계를 찾는다. 빨간 변화는 비교 위치의 개념 표시이며 특정 장치의 실측 이상 파형은 아니다.",
+          "purpose": "실패 위치를 데이터 흐름에서 찾는다.",
+          "sha256": "d3152b9db246723a4de3a027eb1d829952364847b74c30488aa0f59030c71232"
+        },
+        {
+          "file": "p17_15_알람_시간축.png",
+          "svg": "p17_15_알람_시간축.svg",
+          "asset": "p17:15_알람_시간축",
+          "caption": "알람 전후 시간창에서 후보를 좁히되 같은 작업 식별자와 원문으로 확인한다. 가까운 행이나 규칙 순위만으로 물리 원인을 확정하지 않는다.",
+          "purpose": "알람 시각과 관련 로그의 상관 범위를 설명한다.",
+          "sha256": "56898ba80c8d716ef58450f909e3e3f350da1b5e580f5420df79333a90a76d03"
+        }
+      ]
+    },
+    {
+      "id": "p16",
+      "title": "16. 데이터 관리와 변경 반영",
+      "parent": "p00",
+      "folder": "pages/16_데이터_관리와_변경_반영",
+      "file": "pages/16_데이터_관리와_변경_반영/페이지소스.storage.xhtml.txt",
+      "bodyChars": 1437,
+      "sectionCount": 3,
+      "figureCount": 2,
+      "tableCount": 1,
+      "sha256": "9866fe9ba4744539243ffe5b4aa60fc74df45949295b39625a9b3d9f60b3418c",
+      "images": [
+        {
+          "file": "p19_16_A.png",
+          "svg": "p19_16_A.svg",
+          "asset": "p19:16_A",
+          "caption": "가로 배치는 처리 순서가 아니다. 각 아이콘은 서로 다른 역할의 자료이며, 결과를 복사한 것과 보정 적용본을 만든 것은 다른 작업이다.",
+          "purpose": "다섯 종류를 병렬 자료로 구분한다.",
+          "sha256": "c138a4666fb31a181cddb3504a9e1b58b8fcdca2b3a9dd6e58fe7130df4e415e"
+        },
+        {
+          "file": "p19_16_B.png",
+          "svg": "p19_16_B.svg",
+          "asset": "p19:16_B",
+          "caption": "이전값 보관→저장·재로드→재준비→결과 비교의 순서로 읽는다. 파일이 존재하거나 저장됐다는 사실만으로 실제 실행값의 반영을 확정하지 않는다.",
+          "purpose": "변경 전 보관부터 실제 반영 확인까지 따라간다.",
+          "sha256": "ffa1f15b657fb9937f197eac4ee2917d521b81b557dc7c701ebe1d1d283211c1"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset": "p19:00_A",
+      "file": "attachments/p19_00_A.png",
+      "svg": "attachments/p19_00_A.svg",
+      "sha256": "0912b196d23fd32c2b13c1d546af9fde97f2349b95aebc4505fe85bfde4ddc36"
+    },
+    {
+      "asset": "p19:01_A",
+      "file": "attachments/p19_01_A.png",
+      "svg": "attachments/p19_01_A.svg",
+      "sha256": "cfdf64e51ce9a9918d7966a468b034c5eeaa7c85fe5bcf31b37da8681d5a56c5"
+    },
+    {
+      "asset": "p19:01_B",
+      "file": "attachments/p19_01_B.png",
+      "svg": "attachments/p19_01_B.svg",
+      "sha256": "2fed1971aef2c506b2c909e186c85208e545a93a10c355ab78fde518993e241b"
+    },
+    {
+      "asset": "p19:02_A",
+      "file": "attachments/p19_02_A.png",
+      "svg": "attachments/p19_02_A.svg",
+      "sha256": "a4cb2843997ff20c25e192cd1f967786ebb4f982f67ea65fc7ff7b5ac07946b7"
+    },
+    {
+      "asset": "p17:03_객체_연결",
+      "file": "attachments/p17_03_객체_연결.png",
+      "svg": "attachments/p17_03_객체_연결.svg",
+      "sha256": "cefe4ec1b2d9ae9ee95518eedc36dc718ffa3e9f1cd118bb84f1ecfeec9b286f"
+    },
+    {
+      "asset": "p19:03_B",
+      "file": "attachments/p19_03_B.png",
+      "svg": "attachments/p19_03_B.svg",
+      "sha256": "00a6b738028480762d464c77c14b604fcf1c4b8ae5129f944ab36a1e6e28b597"
+    },
+    {
+      "asset": "p19:04_A",
+      "file": "attachments/p19_04_A.png",
+      "svg": "attachments/p19_04_A.svg",
+      "sha256": "215df1e50aaadd30c9d774d45dbe1c24f5af7b73729adbb324cb9d9ea6a1dc32"
+    },
+    {
+      "asset": "p19:05_A",
+      "file": "attachments/p19_05_A.png",
+      "svg": "attachments/p19_05_A.svg",
+      "sha256": "4f100e758b6d1f1cccafa64ce45fcbf261b14574bc1fa7d0fe254e534eb749d6"
+    },
+    {
+      "asset": "new:ppid-boundary",
+      "file": "attachments/new_ppid-boundary.png",
+      "svg": "attachments/new_ppid-boundary.svg",
+      "sha256": "4d9f2481338902fce5f842ef573ff30216dc3d9da386fbfcabed2a00acc70836"
+    },
+    {
+      "asset": "p19:06_A",
+      "file": "attachments/p19_06_A.png",
+      "svg": "attachments/p19_06_A.svg",
+      "sha256": "3e3316132b948cacd2b7d64539fbcd5068edac1354bf753da143c1053eecf58f"
+    },
+    {
+      "asset": "new:head-field",
+      "file": "attachments/new_head-field.png",
+      "svg": "attachments/new_head-field.svg",
+      "sha256": "af216917dccbe08620e05b0e89744d5a9f3a455128a43bdcd22661fce099866e"
+    },
+    {
+      "asset": "new:mask-filter",
+      "file": "attachments/new_mask-filter.png",
+      "svg": "attachments/new_mask-filter.svg",
+      "sha256": "eae013b1832a63c910fc29318a62c73069b01f84093b6b3b14e7d0325de91728"
+    },
+    {
+      "asset": "new:offset-branches",
+      "file": "attachments/new_offset-branches.png",
+      "svg": "attachments/new_offset-branches.svg",
+      "sha256": "3df3d0d17abd9d964bc9d750a58758f1142a8270ebfd8a0c0146c92e76a18c07"
+    },
+    {
+      "asset": "p17:06_DOE_배열_중심",
+      "file": "attachments/p17_06_DOE_배열_중심.png",
+      "svg": "attachments/p17_06_DOE_배열_중심.svg",
+      "sha256": "20a2e52353b8df62a502e6acf4824981618913c630bfe2202b19f910c330a56a"
+    },
+    {
+      "asset": "p19:07_A",
+      "file": "attachments/p19_07_A.png",
+      "svg": "attachments/p19_07_A.svg",
+      "sha256": "acaf32cd2aefd3ba7c247146cff61838f5243dae1beade86bf94a5052e5d6bc6"
+    },
+    {
+      "asset": "p19:07_B",
+      "file": "attachments/p19_07_B.png",
+      "svg": "attachments/p19_07_B.svg",
+      "sha256": "28d3f7170182449ae259b4d1fe18a64a2b61e583f6ef38538858a9040d3bbcf8"
+    },
+    {
+      "asset": "p19:08_A",
+      "file": "attachments/p19_08_A.png",
+      "svg": "attachments/p19_08_A.svg",
+      "sha256": "d52e3ca875b646c18c6fe7e88d2d32457f2c9154b42964e16710408044e2ee2f"
+    },
+    {
+      "asset": "new:valid-zero",
+      "file": "attachments/new_valid-zero.png",
+      "svg": "attachments/new_valid-zero.svg",
+      "sha256": "1b38530891a98c39b8309bcbdba95e9df92a1f1293af0f93f58c160618e49171"
+    },
+    {
+      "asset": "new:fine-lagrange",
+      "file": "attachments/new_fine-lagrange.png",
+      "svg": "attachments/new_fine-lagrange.svg",
+      "sha256": "451fd63b5a297592d175d65e65473505ff8dad1a21eef629c43d66c777efc3d7"
+    },
+    {
+      "asset": "new:distortion-interpolation",
+      "file": "attachments/new_distortion-interpolation.png",
+      "svg": "attachments/new_distortion-interpolation.svg",
+      "sha256": "e6a0cdd635978ac7fbcd52669dc17628bc61e69f04a38f020a39b0fdc21bfcfa"
+    },
+    {
+      "asset": "new:correction-scope",
+      "file": "attachments/new_correction-scope.png",
+      "svg": "attachments/new_correction-scope.svg",
+      "sha256": "68cd373fc2a2b52183414a35a7d0dd9ffb5e146f29cc0756b13d7a370298afd8"
+    },
+    {
+      "asset": "new:correction-lifecycle",
+      "file": "attachments/new_correction-lifecycle.png",
+      "svg": "attachments/new_correction-lifecycle.svg",
+      "sha256": "5ec19083395d3d0a60293a2e80b31f6cbd1561869a25a5c895603b8a2baed708"
+    },
+    {
+      "asset": "p19:09_A",
+      "file": "attachments/p19_09_A.png",
+      "svg": "attachments/p19_09_A.svg",
+      "sha256": "72eafd95b2792c6202bf98e9903c865464aad43400b9d466d61a46761745ebfe"
+    },
+    {
+      "asset": "p19:09_B",
+      "file": "attachments/p19_09_B.png",
+      "svg": "attachments/p19_09_B.svg",
+      "sha256": "9f282bcc9a268b7430b3d4bdf5c58f3ca676bb36f63f4e0b056c25d811b17a92"
+    },
+    {
+      "asset": "new:optic-roles",
+      "file": "attachments/new_optic-roles.png",
+      "svg": "attachments/new_optic-roles.svg",
+      "sha256": "6e3aef4caf731fd0e9cb6bc5768753f7159cb1a316154e64aa49d15fe91042fc"
+    },
+    {
+      "asset": "p17:10_Power_수집구간",
+      "file": "attachments/p17_10_Power_수집구간.png",
+      "svg": "attachments/p17_10_Power_수집구간.svg",
+      "sha256": "c8a73751a74383de793141b96d8bab6471f836a1bf5de460d460bd1a851e43b4"
+    },
+    {
+      "asset": "p19:10_B",
+      "file": "attachments/p19_10_B.png",
+      "svg": "attachments/p19_10_B.svg",
+      "sha256": "a4ef083eedb16bba5f9019b56fa3e56697d7de289cfa62144b59ef2c1c98a4b3"
+    },
+    {
+      "asset": "p19:11_B",
+      "file": "attachments/p19_11_B.png",
+      "svg": "attachments/p19_11_B.svg",
+      "sha256": "cf539aaa966f54df3957c8a21bffcd3f386252b9024048ee5506f4053c13fc6f"
+    },
+    {
+      "asset": "p19:12_B",
+      "file": "attachments/p19_12_B.png",
+      "svg": "attachments/p19_12_B.svg",
+      "sha256": "d086e7e28e52ff2227b216ee3b2ebe37793bbf6aefec8b5de4d7accb1c6343dc"
+    },
+    {
+      "asset": "p17:12_윈도우_교체요청",
+      "file": "attachments/p17_12_윈도우_교체요청.png",
+      "svg": "attachments/p17_12_윈도우_교체요청.svg",
+      "sha256": "a835ef165d38444733e6393035aa71e25deeea421e4af727de727f695f40b894"
+    },
+    {
+      "asset": "new:recovery-gates",
+      "file": "attachments/new_recovery-gates.png",
+      "svg": "attachments/new_recovery-gates.svg",
+      "sha256": "d509ee052c8367c2b166574bdb0368f75adbaf20ea7def04956c6e88068fd838"
+    },
+    {
+      "asset": "p19:13_A",
+      "file": "attachments/p19_13_A.png",
+      "svg": "attachments/p19_13_A.svg",
+      "sha256": "43b972cc1d6489f0e7a3ad1ccf28652c32de20f4d68e7e5c32f2b592b5c64ecb"
+    },
+    {
+      "asset": "p19:13_B",
+      "file": "attachments/p19_13_B.png",
+      "svg": "attachments/p19_13_B.svg",
+      "sha256": "cb126bd5df0fece9e433a8da2e0fe59640acbe52363ce645214c2e7ac6e9c944"
+    },
+    {
+      "asset": "p19:14_A",
+      "file": "attachments/p19_14_A.png",
+      "svg": "attachments/p19_14_A.svg",
+      "sha256": "6c636e0d672221b9e7181e5a7dc23611b7d10178a6d662222dafb7f36a8a1247"
+    },
+    {
+      "asset": "p19:15_A",
+      "file": "attachments/p19_15_A.png",
+      "svg": "attachments/p19_15_A.svg",
+      "sha256": "d3152b9db246723a4de3a027eb1d829952364847b74c30488aa0f59030c71232"
+    },
+    {
+      "asset": "p17:15_알람_시간축",
+      "file": "attachments/p17_15_알람_시간축.png",
+      "svg": "attachments/p17_15_알람_시간축.svg",
+      "sha256": "56898ba80c8d716ef58450f909e3e3f350da1b5e580f5420df79333a90a76d03"
+    },
+    {
+      "asset": "p19:16_A",
+      "file": "attachments/p19_16_A.png",
+      "svg": "attachments/p19_16_A.svg",
+      "sha256": "c138a4666fb31a181cddb3504a9e1b58b8fcdca2b3a9dd6e58fe7130df4e415e"
+    },
+    {
+      "asset": "p19:16_B",
+      "file": "attachments/p19_16_B.png",
+      "svg": "attachments/p19_16_B.svg",
+      "sha256": "ffa1f15b657fb9937f197eac4ee2917d521b81b557dc7c701ebe1d1d283211c1"
+    }
+  ]
+}
